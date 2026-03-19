@@ -8,315 +8,368 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
 :root {
-  --ink:        #1a1a18;
-  --cream:      #f5f0e8;
-  --parch:      #ede7d9;
-  --sage:       #4a6b5a;
-  --sage-mid:   #5c8470;
-  --sage-light: #6d9b80;
-  --sage-pale:  #e8ede9;
-  --gold:       #a07c3a;
-  --gold-light: #c9a35e;
-  --gold-pale:  #f5edde;
-  --rust:       #7a3e28;
-  --ink-50:     rgba(26,26,24,.5);
-  --ink-30:     rgba(26,26,24,.3);
+  --ink:       #1a1a18;
+  --cream:     #f5f0e8;
+  --parch:     #ede7d9;
+  --sage:      #4a6b5a;
+  --sage-pale: #e8ede9;
+  --gold:      #a07c3a;
+  --gold-l:    #c9a35e;
+  --i50: rgba(26,26,24,.5);
+  --i30: rgba(26,26,24,.3);
+  --i10: rgba(26,26,24,.08);
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{font-family:'DM Sans',sans-serif;background:var(--cream);color:var(--ink);overflow-x:hidden}
 
-/* HEADER */
-header{position:fixed;top:0;left:0;right:0;z-index:200;height:62px;display:flex;align-items:center;justify-content:space-between;padding:0 48px;background:rgba(245,240,232,.94);backdrop-filter:blur(14px);border-bottom:1px solid rgba(160,124,58,.18);transition:box-shadow .3s}
-header.scrolled{box-shadow:0 4px 24px rgba(26,26,24,.07)}
-.h-brand{font-family:'Cormorant Garamond',serif;font-size:.95rem;font-weight:400;letter-spacing:.1em;text-transform:uppercase;color:var(--sage);text-decoration:none}
-nav{display:flex;gap:28px;align-items:center}
-nav a{font-size:.72rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;color:var(--ink);opacity:.6;transition:opacity .2s,color .2s}
+/* ── HEADER ── */
+header{position:fixed;top:0;left:0;right:0;z-index:200;height:62px;display:flex;align-items:center;justify-content:space-between;padding:0 52px;background:rgba(245,240,232,.95);backdrop-filter:blur(16px);border-bottom:1px solid rgba(160,124,58,.16);transition:box-shadow .3s}
+header.sc{box-shadow:0 4px 28px rgba(26,26,24,.07)}
+.h-logo{font-family:'Cormorant Garamond',serif;font-size:.95rem;font-weight:400;letter-spacing:.1em;text-transform:uppercase;color:var(--sage);text-decoration:none}
+nav{display:flex;gap:26px;align-items:center}
+nav a{font-size:.71rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;color:var(--ink);opacity:.6;transition:opacity .2s,color .2s}
 nav a:hover{opacity:1;color:var(--sage)}
-nav .nav-cta{background:var(--sage);color:var(--cream)!important;opacity:1!important;padding:8px 20px;border-radius:2px;font-size:.7rem;transition:background .2s!important}
-nav .nav-cta:hover{background:#3a5a4a!important}
+.n-cta{background:var(--sage)!important;color:var(--cream)!important;opacity:1!important;padding:8px 20px;border-radius:2px;transition:background .2s!important}
+.n-cta:hover{background:#3a5a4a!important}
 
-/* HERO */
-#hero{min-height:100vh;padding-top:62px;display:grid;grid-template-columns:55% 45%;position:relative;overflow:hidden}
-.hero-l{background:var(--sage);display:flex;flex-direction:column;justify-content:center;padding:90px 64px 90px 80px;position:relative;overflow:hidden}
-.hero-l::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 10% 90%,rgba(160,124,58,.22) 0%,transparent 55%),radial-gradient(ellipse at 85% 15%,rgba(245,240,232,.05) 0%,transparent 45%)}
-.hero-orb{position:absolute;top:32px;left:32px;width:100px;height:100px;border:1px solid rgba(245,240,232,.12);border-radius:50%}
-.hero-orb::after{content:'';position:absolute;top:10px;left:10px;right:10px;bottom:10px;border:1px solid rgba(245,240,232,.07);border-radius:50%}
-.hero-badge{position:relative;z-index:1;display:inline-block;margin-bottom:30px;font-size:.68rem;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-light);border:1px solid rgba(201,163,94,.35);padding:6px 18px;border-radius:2px;width:fit-content}
-.hero-title{position:relative;z-index:1;font-family:'Cormorant Garamond',serif;font-size:clamp(3rem,5vw,4.4rem);font-weight:300;line-height:1.05;color:var(--cream);margin-bottom:6px}
-.hero-title em{font-style:italic;color:var(--gold-light)}
-.hero-sub{position:relative;z-index:1;font-family:'Cormorant Garamond',serif;font-size:1.05rem;font-weight:300;font-style:italic;line-height:1.7;color:rgba(245,240,232,.6);margin-bottom:20px}
-.hero-topics{position:relative;z-index:1;display:flex;flex-wrap:wrap;gap:8px;margin-bottom:44px}
-.hero-tag{font-size:.65rem;padding:4px 12px;border:1px solid rgba(201,163,94,.25);border-radius:20px;color:rgba(245,240,232,.55);letter-spacing:.06em}
-.hero-author{position:relative;z-index:1;border-top:1px solid rgba(245,240,232,.14);padding-top:26px}
-.hero-author-name{font-family:'Cormorant Garamond',serif;font-size:1.25rem;font-weight:400;color:var(--cream);margin-bottom:3px}
-.hero-author-role{font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(245,240,232,.42)}
-.hero-r{background:var(--parch);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:80px 64px;position:relative;overflow:hidden}
-.hero-r::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='500' height='500'%3E%3Ccircle cx='250' cy='250' r='220' fill='none' stroke='%234a6b5a' stroke-width='.4' stroke-dasharray='4 10' opacity='.1'/%3E%3Ccircle cx='250' cy='250' r='170' fill='none' stroke='%234a6b5a' stroke-width='.4' stroke-dasharray='4 10' opacity='.07'/%3E%3Ccircle cx='250' cy='250' r='120' fill='none' stroke='%234a6b5a' stroke-width='.4' stroke-dasharray='4 10' opacity='.05'/%3E%3Ccircle cx='250' cy='250' r='70' fill='none' stroke='%23a07c3a' stroke-width='.4' stroke-dasharray='2 6' opacity='.1'/%3E%3C/svg%3E") center/80% no-repeat}
-.book-wrap{position:relative;z-index:1;perspective:800px;margin-bottom:44px;animation:book-float 7s ease-in-out infinite}
-@keyframes book-float{0%,100%{transform:translateY(0) rotateX(1deg)}50%{transform:translateY(-14px) rotateX(-1deg)}}
-.book{width:200px;height:280px;background:linear-gradient(150deg,#4a6b5a 0%,#253e2f 100%);border-radius:3px 8px 8px 3px;box-shadow:-6px 0 0 #1b2d22,10px 14px 50px rgba(26,26,24,.4),22px 22px 70px rgba(26,26,24,.18);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:28px 22px;text-align:center;position:relative;overflow:hidden;transform-style:preserve-3d}
-.book::before{content:'';position:absolute;top:0;left:4px;right:0;bottom:0;background:linear-gradient(110deg,rgba(245,240,232,.07) 0%,transparent 35%)}
-.book::after{content:'';position:absolute;top:18px;left:18px;right:18px;bottom:18px;border:.5px solid rgba(201,163,94,.25);border-radius:1px;pointer-events:none}
-.bk-num{font-size:.6rem;letter-spacing:.25em;text-transform:uppercase;color:var(--gold-light);margin-bottom:14px;position:relative;z-index:1}
-.bk-line{width:28px;height:.5px;background:rgba(201,163,94,.4);margin:0 auto 14px;position:relative;z-index:1}
-.bk-title{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:300;line-height:1.25;color:var(--cream);margin-bottom:6px;position:relative;z-index:1}
-.bk-title em{font-style:italic;color:var(--gold-light)}
-.bk-sub{font-family:'Cormorant Garamond',serif;font-size:.68rem;font-style:italic;color:rgba(245,240,232,.5);line-height:1.5;margin-bottom:16px;position:relative;z-index:1}
-.bk-author{font-family:'Cormorant Garamond',serif;font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(245,240,232,.4);position:relative;z-index:1}
-.hero-ctas{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;position:relative;z-index:1}
+/* ── HERO ── */
+#hero{min-height:100vh;padding-top:62px;display:grid;grid-template-columns:54% 46%}
+.hl{background:var(--sage);display:flex;flex-direction:column;justify-content:center;padding:88px 60px 88px 80px;position:relative;overflow:hidden}
+.hl::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 8% 88%,rgba(160,124,58,.24) 0%,transparent 52%),radial-gradient(ellipse at 88% 12%,rgba(245,240,232,.05) 0%,transparent 44%)}
+.hl-orb{position:absolute;top:30px;left:30px;width:96px;height:96px;border:1px solid rgba(245,240,232,.11);border-radius:50%}
+.hl-orb::after{content:'';position:absolute;top:9px;left:9px;right:9px;bottom:9px;border:1px solid rgba(245,240,232,.06);border-radius:50%}
+.hl-badge{position:relative;z-index:1;display:inline-block;margin-bottom:28px;font-size:.67rem;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-l);border:1px solid rgba(201,163,94,.33);padding:6px 16px;border-radius:2px;width:fit-content}
+h1{position:relative;z-index:1;font-family:'Cormorant Garamond',serif;font-size:clamp(2.9rem,4.8vw,4.3rem);font-weight:300;line-height:1.06;color:var(--cream);margin-bottom:6px}
+h1 em{font-style:italic;color:var(--gold-l)}
+.hl-sub{position:relative;z-index:1;font-family:'Cormorant Garamond',serif;font-size:1.04rem;font-weight:300;font-style:italic;line-height:1.7;color:rgba(245,240,232,.58);margin-bottom:20px}
+.hl-tags{position:relative;z-index:1;display:flex;flex-wrap:wrap;gap:7px;margin-bottom:44px}
+.hl-tag{font-size:.64rem;padding:4px 11px;border:1px solid rgba(201,163,94,.23);border-radius:20px;color:rgba(245,240,232,.52);letter-spacing:.05em}
+.hl-author{position:relative;z-index:1;border-top:1px solid rgba(245,240,232,.13);padding-top:24px}
+.hl-name{font-family:'Cormorant Garamond',serif;font-size:1.22rem;font-weight:400;color:var(--cream);margin-bottom:3px}
+.hl-role{font-size:.71rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(245,240,232,.4)}
+.hr{background:var(--parch);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:78px 60px;position:relative;overflow:hidden}
+.hr::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='480' height='480'%3E%3Ccircle cx='240' cy='240' r='210' fill='none' stroke='%234a6b5a' stroke-width='.4' stroke-dasharray='4 10' opacity='.1'/%3E%3Ccircle cx='240' cy='240' r='160' fill='none' stroke='%234a6b5a' stroke-width='.4' stroke-dasharray='4 10' opacity='.07'/%3E%3Ccircle cx='240' cy='240' r='110' fill='none' stroke='%234a6b5a' stroke-width='.4' stroke-dasharray='4 10' opacity='.05'/%3E%3Ccircle cx='240' cy='240' r='60' fill='none' stroke='%23a07c3a' stroke-width='.4' stroke-dasharray='2 6' opacity='.09'/%3E%3C/svg%3E") center/80% no-repeat}
+.bk-wrap{position:relative;z-index:1;margin-bottom:42px;animation:bkf 7s ease-in-out infinite}
+@keyframes bkf{0%,100%{transform:translateY(0) rotateX(1deg)}50%{transform:translateY(-13px) rotateX(-1deg)}}
+.bk{width:196px;height:274px;background:linear-gradient(150deg,#4a6b5a 0%,#243d2c 100%);border-radius:3px 7px 7px 3px;box-shadow:-6px 0 0 #1b2d22,10px 14px 48px rgba(26,26,24,.38),22px 22px 68px rgba(26,26,24,.17);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:26px 20px;text-align:center;position:relative;overflow:hidden}
+.bk::before{content:'';position:absolute;top:0;left:4px;right:0;bottom:0;background:linear-gradient(112deg,rgba(245,240,232,.07) 0%,transparent 34%)}
+.bk::after{content:'';position:absolute;top:17px;left:17px;right:17px;bottom:17px;border:.5px solid rgba(201,163,94,.23);border-radius:1px;pointer-events:none}
+.bk-n{font-size:.59rem;letter-spacing:.24em;text-transform:uppercase;color:var(--gold-l);margin-bottom:13px;position:relative;z-index:1}
+.bk-ln{width:26px;height:.5px;background:rgba(201,163,94,.38);margin:0 auto 13px;position:relative;z-index:1}
+.bk-t{font-family:'Cormorant Garamond',serif;font-size:1.18rem;font-weight:300;line-height:1.22;color:var(--cream);margin-bottom:6px;position:relative;z-index:1}
+.bk-t em{font-style:italic;color:var(--gold-l)}
+.bk-s{font-family:'Cormorant Garamond',serif;font-size:.67rem;font-style:italic;color:rgba(245,240,232,.48);line-height:1.5;margin-bottom:14px;position:relative;z-index:1}
+.bk-a{font-family:'Cormorant Garamond',serif;font-size:.69rem;letter-spacing:.11em;text-transform:uppercase;color:rgba(245,240,232,.38);position:relative;z-index:1}
+.hero-ctas{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;position:relative;z-index:1}
 
-/* BUTTONS */
-.btn{display:inline-block;padding:13px 30px;font-family:'DM Sans',sans-serif;font-size:.73rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;cursor:pointer;border:none;border-radius:2px;transition:transform .22s,box-shadow .22s,background .22s}
-.btn-sage{background:var(--sage);color:var(--cream);box-shadow:0 4px 18px rgba(74,107,90,.3)}
-.btn-sage:hover{background:#3a5a4a;transform:translateY(-2px);box-shadow:0 8px 28px rgba(74,107,90,.42)}
-.btn-outline{background:transparent;color:var(--sage);border:1px solid var(--sage)}
-.btn-outline:hover{background:var(--sage);color:var(--cream);transform:translateY(-2px)}
-.btn-gold{background:var(--gold);color:var(--cream);box-shadow:0 4px 18px rgba(160,124,58,.3)}
-.btn-gold:hover{background:var(--gold-light);transform:translateY(-2px);box-shadow:0 8px 28px rgba(160,124,58,.4)}
-.btn-ghost-cream{background:transparent;color:var(--cream);border:1px solid rgba(245,240,232,.35)}
-.btn-ghost-cream:hover{background:rgba(245,240,232,.1);transform:translateY(-2px)}
+/* ── BUTTONS ── */
+.btn{display:inline-block;padding:12px 28px;font-family:'DM Sans',sans-serif;font-size:.72rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;cursor:pointer;border:none;border-radius:2px;transition:transform .22s,box-shadow .22s,background .22s}
+.b-sage{background:var(--sage);color:var(--cream);box-shadow:0 4px 16px rgba(74,107,90,.28)}
+.b-sage:hover{background:#3a5a4a;transform:translateY(-2px);box-shadow:0 8px 26px rgba(74,107,90,.4)}
+.b-out{background:transparent;color:var(--sage);border:1px solid var(--sage)}
+.b-out:hover{background:var(--sage);color:var(--cream);transform:translateY(-2px)}
+.b-gold{background:var(--gold);color:var(--cream);box-shadow:0 4px 16px rgba(160,124,58,.28)}
+.b-gold:hover{background:var(--gold-l);transform:translateY(-2px);box-shadow:0 8px 26px rgba(160,124,58,.38)}
+.b-ghost{background:transparent;color:var(--cream);border:1px solid rgba(245,240,232,.32)}
+.b-ghost:hover{background:rgba(245,240,232,.09);transform:translateY(-2px)}
 
-/* SECTIONS */
-section{padding:100px 80px}
-.s-label{font-size:.67rem;font-weight:500;letter-spacing:.25em;text-transform:uppercase;color:var(--sage);display:flex;align-items:center;gap:12px;margin-bottom:14px}
-.s-label::before{content:'';width:28px;height:1px;background:var(--sage);opacity:.5}
-.s-label.gold{color:var(--gold-light)}
-.s-label.gold::before{background:var(--gold-light)}
-.s-label.cream{color:rgba(245,240,232,.55)}
-.s-label.cream::before{background:rgba(245,240,232,.4)}
-h2{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,3.5vw,2.8rem);font-weight:300;line-height:1.15;margin-bottom:22px}
+/* ── SECTIONS ── */
+section{padding:96px 80px}
+.lbl{font-size:.66rem;font-weight:500;letter-spacing:.25em;text-transform:uppercase;color:var(--sage);display:flex;align-items:center;gap:11px;margin-bottom:13px}
+.lbl::before{content:'';width:26px;height:1px;background:var(--sage);opacity:.5}
+.lbl.g{color:var(--gold-l)}.lbl.g::before{background:var(--gold-l)}
+.lbl.c{color:rgba(245,240,232,.52)}.lbl.c::before{background:rgba(245,240,232,.38)}
+.lbl.ctr{justify-content:center}
+.lbl.ctr::before{display:none}
+h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.9rem,3.3vw,2.75rem);font-weight:300;line-height:1.15;margin-bottom:20px}
 h2 em{font-style:italic;color:var(--sage)}
-h2.on-dark{color:var(--cream)}
-h2.on-dark em{color:var(--gold-light)}
+h2.dk{color:var(--cream)}.h2.dk em{color:var(--gold-l)}
+.on-dk{color:var(--cream)}
+.on-dk em{color:var(--gold-l)}
 
-/* INTRO */
-#intro{background:var(--ink);padding:80px;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
-.intro-text p{font-size:.95rem;line-height:1.9;color:rgba(245,240,232,.62);margin-bottom:18px}
-.intro-stats{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:40px}
-.i-stat{border:1px solid rgba(245,240,232,.07);padding:22px 24px;border-radius:2px}
-.i-stat-n{font-family:'Cormorant Garamond',serif;font-size:2.2rem;font-weight:300;color:var(--gold-light);line-height:1;margin-bottom:5px}
-.i-stat-l{font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:rgba(245,240,232,.3)}
-.quote-block{background:linear-gradient(145deg,var(--sage) 0%,#233d2c 100%);padding:52px;border-radius:2px;position:relative;overflow:hidden}
-.quote-block::before{content:'\201C';position:absolute;top:-28px;left:22px;font-family:'Cormorant Garamond',serif;font-size:11rem;color:rgba(245,240,232,.05);line-height:1}
-.quote-block blockquote{font-family:'Cormorant Garamond',serif;font-size:1.28rem;font-weight:300;font-style:italic;line-height:1.75;color:var(--cream);position:relative;z-index:1;margin-bottom:22px}
-.quote-block cite{font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-light);font-style:normal}
+/* ── GENÈSE (Ch 0 — intro perso) ── */
+#genese{background:var(--ink);display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.gen-text p{font-size:.94rem;line-height:1.92;color:rgba(245,240,232,.62);margin-bottom:16px}
+.gen-timeline{margin-top:36px;border-left:1px solid rgba(201,163,94,.25);padding-left:28px;display:flex;flex-direction:column;gap:24px}
+.gen-evt{}
+.gen-yr{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:300;color:var(--gold-l);line-height:1;margin-bottom:4px}
+.gen-lbl{font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:rgba(245,240,232,.35);margin-bottom:3px}
+.gen-desc{font-size:.84rem;line-height:1.7;color:rgba(245,240,232,.55)}
+.gen-quote{background:linear-gradient(145deg,var(--sage) 0%,#223c2b 100%);padding:50px;border-radius:2px;position:relative;overflow:hidden}
+.gen-quote::before{content:'\201C';position:absolute;top:-28px;left:20px;font-family:'Cormorant Garamond',serif;font-size:10rem;color:rgba(245,240,232,.05);line-height:1}
+.gen-quote blockquote{font-family:'Cormorant Garamond',serif;font-size:1.28rem;font-weight:300;font-style:italic;line-height:1.75;color:var(--cream);position:relative;z-index:1;margin-bottom:22px}
+.gen-quote cite{font-size:.71rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-l);font-style:normal}
 
-/* ARCHITECTURE */
+/* ── STATS BAND ── */
+#stats{background:var(--parch);padding:56px 80px}
+.stats-row{display:grid;grid-template-columns:repeat(4,1fr);gap:2px}
+.stat{background:white;padding:36px 28px;text-align:center}
+.stat:first-child{border-left:3px solid var(--sage)}
+.stat-n{font-family:'Cormorant Garamond',serif;font-size:3rem;font-weight:300;color:var(--sage);line-height:1;margin-bottom:6px}
+.stat-l{font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--i30);line-height:1.4}
+
+/* ── ARCHITECTURE ── */
 #architecture{background:var(--cream)}
-.arch-intro{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:end;margin-bottom:72px}
-.arch-desc{font-size:.95rem;line-height:1.85;color:var(--ink-50)}
-.flow-wrapper{display:grid;grid-template-columns:repeat(3,1fr);gap:0;position:relative}
-.flow-wrapper::before{content:'';position:absolute;top:50px;left:calc(16.66% + 20px);right:calc(16.66% + 20px);height:1px;background:linear-gradient(to right,transparent,var(--sage),transparent);opacity:.25}
-.flow-col{text-align:center;padding:0 12px}
-.flow-icon{width:56px;height:56px;margin:0 auto 16px;background:var(--sage-pale);border:1px solid rgba(74,107,90,.15);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.3rem;position:relative;z-index:1}
-.flow-icon.gold-bg{background:rgba(160,124,58,.08);border-color:rgba(160,124,58,.18)}
-.flow-col-title{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:400;color:var(--ink);margin-bottom:6px}
-.flow-col-sub{font-size:.78rem;color:var(--ink-50);line-height:1.65;margin-bottom:12px}
-.flow-chapters{display:flex;flex-wrap:wrap;gap:5px;justify-content:center}
-.flow-ch{font-size:.63rem;padding:3px 9px;background:var(--parch);border-radius:20px;color:var(--ink-30);letter-spacing:.04em}
-.flow-ch.free{background:rgba(74,107,90,.1);color:var(--sage)}
+.arch-intro{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:end;margin-bottom:68px}
+.arch-desc{font-size:.94rem;line-height:1.84;color:var(--i50)}
+.flow{display:grid;grid-template-columns:repeat(4,1fr);gap:0;position:relative}
+.flow::before{content:'';position:absolute;top:44px;left:calc(12.5% + 20px);right:calc(12.5% + 20px);height:1px;background:linear-gradient(to right,transparent,var(--sage),transparent);opacity:.2}
+.fc{text-align:center;padding:0 10px}
+.fc-icon{width:52px;height:52px;margin:0 auto 14px;background:var(--sage-pale);border:1px solid rgba(74,107,90,.14);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.2rem;position:relative;z-index:1}
+.fc-icon.go{background:rgba(160,124,58,.08);border-color:rgba(160,124,58,.16)}
+.fc-t{font-family:'Cormorant Garamond',serif;font-size:1.08rem;font-weight:400;color:var(--ink);margin-bottom:5px}
+.fc-s{font-size:.76rem;color:var(--i50);line-height:1.6;margin-bottom:10px}
+.fc-chs{display:flex;flex-wrap:wrap;gap:4px;justify-content:center}
+.fch{font-size:.62rem;padding:3px 8px;background:var(--parch);border-radius:20px;color:var(--i30);letter-spacing:.03em}
+.fch.fr{background:rgba(74,107,90,.1);color:var(--sage)}
 
-/* CHAPITRES */
+/* ── CHAPITRES ── */
 #chapitres{background:var(--sage-pale)}
-.ch-header{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:end;margin-bottom:60px}
-.ch-header-desc{font-size:.93rem;line-height:1.85;color:var(--ink-50)}
-.ch-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:22px}
-.ch-card{background:white;border-radius:3px;overflow:hidden;position:relative;box-shadow:0 2px 18px rgba(26,26,24,.06);transition:transform .3s,box-shadow .3s;display:flex;flex-direction:column}
-.ch-card:hover{transform:translateY(-5px);box-shadow:0 12px 36px rgba(26,26,24,.11)}
-.ch-card.is-free{border:1px solid rgba(74,107,90,.2)}
-.ch-card.is-free::before{content:'';position:absolute;top:0;left:0;width:3px;height:100%;background:var(--sage)}
-.ch-card-top{padding:28px 28px 0;display:flex;justify-content:space-between;align-items:flex-start}
-.ch-num{font-family:'Cormorant Garamond',serif;font-size:3.5rem;font-weight:300;color:rgba(26,26,24,.06);line-height:1}
-.badge{font-size:.62rem;font-weight:500;letter-spacing:.16em;text-transform:uppercase;padding:5px 11px;border-radius:2px}
-.badge-free{background:rgba(74,107,90,.1);color:var(--sage)}
-.badge-paid{background:rgba(160,124,58,.1);color:var(--gold)}
-.ch-card-body{padding:12px 28px 28px;flex:1}
-.ch-card-label{font-size:.65rem;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-30);margin-bottom:6px}
-.ch-title{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:400;line-height:1.2;color:var(--ink);margin-bottom:14px}
-.ch-excerpt{font-size:.84rem;line-height:1.82;color:var(--ink-50);margin-bottom:22px}
-.ch-tags{display:flex;flex-wrap:wrap;gap:6px}
-.ch-tag{font-size:.65rem;padding:3px 9px;background:var(--sage-pale);border-radius:2px;color:var(--ink-30);letter-spacing:.04em}
-.ch-card-foot{padding:18px 28px;border-top:1px solid rgba(26,26,24,.05);display:flex;justify-content:space-between;align-items:center}
-.ch-price{font-family:'Cormorant Garamond',serif;font-size:1.15rem;color:var(--gold)}
-.ch-price small{font-family:'DM Sans',sans-serif;font-size:.68rem;color:var(--ink-30);display:block}
+.ch-hd{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:end;margin-bottom:56px}
+.ch-hd-d{font-size:.92rem;line-height:1.84;color:var(--i50)}
+.ch-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(305px,1fr));gap:20px}
+.cc{background:white;border-radius:3px;overflow:hidden;position:relative;box-shadow:0 2px 16px rgba(26,26,24,.055);transition:transform .28s,box-shadow .28s;display:flex;flex-direction:column}
+.cc:hover{transform:translateY(-5px);box-shadow:0 12px 34px rgba(26,26,24,.1)}
+.cc.fr{border:1px solid rgba(74,107,90,.19)}
+.cc.fr::before{content:'';position:absolute;top:0;left:0;width:3px;height:100%;background:var(--sage)}
+.cc.intro{border:1px solid rgba(160,124,58,.2)}
+.cc.intro::before{content:'';position:absolute;top:0;left:0;width:3px;height:100%;background:var(--gold)}
+.cc-top{padding:26px 26px 0;display:flex;justify-content:space-between;align-items:flex-start}
+.cc-n{font-family:'Cormorant Garamond',serif;font-size:3.3rem;font-weight:300;color:var(--i10);line-height:1}
+.badge{font-size:.61rem;font-weight:500;letter-spacing:.15em;text-transform:uppercase;padding:4px 10px;border-radius:2px}
+.bf{background:rgba(74,107,90,.1);color:var(--sage)}
+.bp{background:rgba(160,124,58,.1);color:var(--gold)}
+.bi{background:rgba(160,124,58,.08);color:var(--gold);border:1px solid rgba(160,124,58,.2)}
+.cc-body{padding:11px 26px 26px;flex:1}
+.cc-lbl{font-size:.64rem;letter-spacing:.17em;text-transform:uppercase;color:var(--i30);margin-bottom:5px}
+.cc-title{font-family:'Cormorant Garamond',serif;font-size:1.38rem;font-weight:400;line-height:1.2;color:var(--ink);margin-bottom:13px}
+.cc-txt{font-size:.83rem;line-height:1.82;color:var(--i50);margin-bottom:20px}
+.cc-tags{display:flex;flex-wrap:wrap;gap:5px}
+.ct{font-size:.64rem;padding:3px 8px;background:var(--sage-pale);border-radius:2px;color:var(--i30);letter-spacing:.03em}
+.cc-ft{padding:17px 26px;border-top:1px solid rgba(26,26,24,.05);display:flex;justify-content:space-between;align-items:center}
+.cc-pr{font-family:'Cormorant Garamond',serif;font-size:1.12rem;color:var(--gold)}
+.cc-pr small{font-family:'DM Sans',sans-serif;font-size:.67rem;color:var(--i30);display:block}
 
-/* PEDAGOGIE */
+/* ── PROTOCOL HIGHLIGHT (Ch 2) ── */
+#protocole{background:var(--ink);padding:80px}
+.prot-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start;margin-top:56px}
+.prot-steps{display:flex;flex-direction:column;gap:0}
+.pstep{display:grid;grid-template-columns:48px 1fr;gap:20px;padding:28px 0;border-bottom:1px solid rgba(245,240,232,.06)}
+.pstep:last-child{border-bottom:none}
+.pstep-num{width:48px;height:48px;background:rgba(74,107,90,.25);border:1px solid rgba(74,107,90,.4);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:1.3rem;color:var(--sage-pale);flex-shrink:0;margin-top:2px}
+.pstep-t{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:400;color:var(--cream);margin-bottom:6px}
+.pstep-d{font-size:.84rem;line-height:1.75;color:rgba(245,240,232,.55)}
+.prot-right{}
+.prot-card{background:rgba(245,240,232,.05);border:1px solid rgba(245,240,232,.1);border-radius:3px;padding:36px;margin-bottom:20px}
+.prot-card-t{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:400;color:var(--gold-l);margin-bottom:12px}
+.prot-card-items{list-style:none;display:flex;flex-direction:column;gap:8px}
+.prot-card-items li{font-size:.83rem;line-height:1.65;color:rgba(245,240,232,.55);padding-left:14px;position:relative}
+.prot-card-items li::before{content:'—';position:absolute;left:0;color:rgba(201,163,94,.4);font-size:.7rem}
+.hier-row{display:flex;gap:2px;margin-top:8px}
+.hier-step{flex:1;background:rgba(245,240,232,.06);border:1px solid rgba(245,240,232,.09);padding:14px;text-align:center;border-radius:2px}
+.hier-step-n{font-size:.6rem;letter-spacing:.15em;text-transform:uppercase;color:rgba(245,240,232,.35);margin-bottom:4px}
+.hier-step-t{font-family:'Cormorant Garamond',serif;font-size:.92rem;color:var(--cream)}
+.hier-arr{display:flex;align-items:center;color:rgba(201,163,94,.4);font-size:.8rem;padding:0 4px}
+
+/* ── PEDAGOGIE ── */
 #pedagogie{background:var(--parch);padding:80px}
-.ped-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:32px;margin-top:56px}
-.ped-card{border:1px solid rgba(26,26,24,.07);padding:36px;border-radius:2px;background:white}
-.ped-icon{font-size:1.8rem;margin-bottom:16px}
-.ped-title{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:400;margin-bottom:10px}
-.ped-body{font-size:.84rem;line-height:1.8;color:var(--ink-50)}
-.ped-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px}
-.ped-tag{font-size:.62rem;padding:3px 9px;background:var(--sage-pale);border-radius:20px;color:var(--sage)}
+.ped-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:28px;margin-top:52px}
+.ped-c{border:1px solid rgba(26,26,24,.07);padding:34px;border-radius:2px;background:white}
+.ped-ico{font-size:1.7rem;margin-bottom:14px}
+.ped-t{font-family:'Cormorant Garamond',serif;font-size:1.18rem;font-weight:400;margin-bottom:9px}
+.ped-d{font-size:.83rem;line-height:1.8;color:var(--i50)}
+.ped-tags{display:flex;flex-wrap:wrap;gap:5px;margin-top:12px}
+.ped-tag{font-size:.61rem;padding:3px 8px;background:var(--sage-pale);border-radius:20px;color:var(--sage)}
 
-/* FORM */
+/* ── FORM ── */
 #acces-libre{background:var(--sage);display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;position:relative;overflow:hidden}
-#acces-libre::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 0% 100%,rgba(160,124,58,.22) 0%,transparent 50%),radial-gradient(ellipse at 100% 0%,rgba(245,240,232,.04) 0%,transparent 50%)}
-.form-left{position:relative;z-index:1}
-.form-left p{font-size:.93rem;line-height:1.88;color:rgba(245,240,232,.65);margin-bottom:18px}
-.form-left .excerpt-label{display:inline-block;margin-top:28px;font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-light);border-top:1px solid rgba(201,163,94,.3);padding-top:16px}
-.form-card{position:relative;z-index:1;background:rgba(245,240,232,.07);border:1px solid rgba(245,240,232,.14);backdrop-filter:blur(10px);border-radius:4px;padding:48px}
-.form-card h3{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:300;color:var(--cream);margin-bottom:6px}
-.form-card>p{font-size:.82rem;color:rgba(245,240,232,.45);margin-bottom:26px}
-.f-group{margin-bottom:15px}
-.f-group label{display:block;font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(245,240,232,.45);margin-bottom:5px}
-.f-group input{width:100%;background:rgba(245,240,232,.08);border:1px solid rgba(245,240,232,.14);border-radius:2px;padding:11px 15px;font-family:'DM Sans',sans-serif;font-size:.88rem;color:var(--cream);outline:none;transition:border-color .2s}
-.f-group input::placeholder{color:rgba(245,240,232,.25)}
-.f-group input:focus{border-color:rgba(201,163,94,.5)}
-.f-notice{font-size:.7rem;color:rgba(245,240,232,.3);margin-top:10px;line-height:1.5}
-.form-success{display:none;text-align:center;padding:10px}
-.form-success.active{display:block}
-.success-circle{width:54px;height:54px;margin:0 auto 14px;background:rgba(201,163,94,.15);border:1px solid var(--gold-light);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.4rem}
-.success-dl{display:inline-block;margin-top:14px;padding:11px 26px;background:var(--gold);color:var(--cream);text-decoration:none;border-radius:2px;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;font-weight:500;transition:background .2s}
-.success-dl:hover{background:var(--gold-light)}
+#acces-libre::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 0% 100%,rgba(160,124,58,.2) 0%,transparent 50%),radial-gradient(ellipse at 100% 0%,rgba(245,240,232,.04) 0%,transparent 50%)}
+.fl{position:relative;z-index:1}
+.fl p{font-size:.93rem;line-height:1.88;color:rgba(245,240,232,.65);margin-bottom:16px}
+.fl-note{display:inline-block;margin-top:26px;font-size:.67rem;letter-spacing:.17em;text-transform:uppercase;color:var(--gold-l);border-top:1px solid rgba(201,163,94,.28);padding-top:14px}
+.fcard{position:relative;z-index:1;background:rgba(245,240,232,.07);border:1px solid rgba(245,240,232,.13);backdrop-filter:blur(10px);border-radius:4px;padding:46px}
+.fcard h3{font-family:'Cormorant Garamond',serif;font-size:1.48rem;font-weight:300;color:var(--cream);margin-bottom:5px}
+.fcard>.fs{font-size:.81rem;color:rgba(245,240,232,.43);margin-bottom:24px}
+.fg{margin-bottom:14px}
+.fg label{display:block;font-size:.67rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(245,240,232,.44);margin-bottom:5px}
+.fg input{width:100%;background:rgba(245,240,232,.08);border:1px solid rgba(245,240,232,.13);border-radius:2px;padding:11px 14px;font-family:'DM Sans',sans-serif;font-size:.87rem;color:var(--cream);outline:none;transition:border-color .2s}
+.fg input::placeholder{color:rgba(245,240,232,.24)}
+.fg input:focus{border-color:rgba(201,163,94,.48)}
+.fnote{font-size:.69rem;color:rgba(245,240,232,.28);margin-top:9px;line-height:1.5}
+.fsuccess{display:none;text-align:center;padding:8px}
+.fsuccess.on{display:block}
+.fok{width:52px;height:52px;margin:0 auto 13px;background:rgba(201,163,94,.14);border:1px solid var(--gold-l);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.35rem}
+.fdl{display:inline-block;margin-top:13px;padding:11px 24px;background:var(--gold);color:var(--cream);text-decoration:none;border-radius:2px;font-size:.77rem;letter-spacing:.1em;text-transform:uppercase;font-weight:500;transition:background .2s}
+.fdl:hover{background:var(--gold-l)}
 
-/* QUOTES */
-#temoignages{background:var(--ink);text-align:center}
-.quotes-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:28px;margin-top:56px}
-.q-card{border:1px solid rgba(245,240,232,.07);padding:36px;border-radius:2px;text-align:left;position:relative}
-.q-card::before{content:'\201C';position:absolute;top:8px;left:22px;font-family:'Cormorant Garamond',serif;font-size:4rem;color:rgba(201,163,94,.18);line-height:1}
-.q-text{font-family:'Cormorant Garamond',serif;font-size:1.08rem;font-style:italic;font-weight:300;line-height:1.75;color:rgba(245,240,232,.7);margin-bottom:20px;padding-top:20px}
-.q-source{font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-light)}
+/* ── QUOTES ── */
+#citations{background:var(--ink);text-align:center}
+.qt-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:24px;margin-top:52px}
+.qt{border:1px solid rgba(245,240,232,.07);padding:34px;border-radius:2px;text-align:left;position:relative}
+.qt::before{content:'\201C';position:absolute;top:6px;left:20px;font-family:'Cormorant Garamond',serif;font-size:3.8rem;color:rgba(201,163,94,.16);line-height:1}
+.qt-t{font-family:'Cormorant Garamond',serif;font-size:1.06rem;font-style:italic;font-weight:300;line-height:1.74;color:rgba(245,240,232,.68);margin-bottom:18px;padding-top:18px}
+.qt-s{font-size:.67rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-l)}
 
-/* AUTEUR */
-#auteur{background:var(--cream);display:grid;grid-template-columns:280px 1fr;gap:80px;align-items:start}
-.author-portrait{width:100%;aspect-ratio:3/4;background:linear-gradient(160deg,var(--parch) 0%,var(--sage-pale) 100%);border-radius:2px;overflow:hidden;display:flex;align-items:center;justify-content:center;box-shadow:8px 12px 40px rgba(26,26,24,.1);position:relative}
-.author-monogram{font-family:'Cormorant Garamond',serif;font-size:5rem;font-weight:300;color:rgba(74,107,90,.18);letter-spacing:.4em}
-.author-portrait-border{position:absolute;inset:12px;border:1px solid rgba(74,107,90,.1);border-radius:1px;pointer-events:none}
-.prev-works{margin-top:28px}
-.prev-works h5{font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-30);margin-bottom:14px}
-.prev-books-row{display:flex;gap:14px}
-.prev-bk{width:58px;height:82px;border-radius:2px;display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:300;color:var(--cream);box-shadow:3px 5px 18px rgba(26,26,24,.15)}
-.prev-bk.i{background:linear-gradient(145deg,#4a3028,#6b4539)}
-.prev-bk.ii{background:linear-gradient(145deg,#2d3a4a,#3a4f6b)}
-.author-body .chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:28px}
-.chip{font-size:.7rem;padding:5px 14px;background:var(--sage-pale);border-radius:20px;color:var(--sage);font-weight:500}
-.author-body p{font-size:.93rem;line-height:1.88;color:var(--ink-50);margin-bottom:18px}
+/* ── AUTEUR ── */
+#auteur{background:var(--cream);display:grid;grid-template-columns:270px 1fr;gap:78px;align-items:start}
+.ap{width:100%;aspect-ratio:3/4;background:linear-gradient(160deg,var(--parch) 0%,var(--sage-pale) 100%);border-radius:2px;overflow:hidden;display:flex;align-items:center;justify-content:center;box-shadow:8px 12px 38px rgba(26,26,24,.1);position:relative}
+.ap-mono{font-family:'Cormorant Garamond',serif;font-size:4.5rem;font-weight:300;color:rgba(74,107,90,.17);letter-spacing:.4em}
+.ap-b{position:absolute;inset:11px;border:1px solid rgba(74,107,90,.1);border-radius:1px;pointer-events:none}
+.prev{margin-top:26px}
+.prev h5{font-size:.65rem;letter-spacing:.2em;text-transform:uppercase;color:var(--i30);margin-bottom:13px}
+.prev-r{display:flex;gap:12px}
+.pb{width:56px;height:80px;border-radius:2px;display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:1.25rem;font-weight:300;color:var(--cream);box-shadow:3px 5px 16px rgba(26,26,24,.14)}
+.pb.i{background:linear-gradient(145deg,#4a3028,#6b4539)}
+.pb.ii{background:linear-gradient(145deg,#2d3a4a,#3a4f6b)}
+.ab .chips{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:26px}
+.chip{font-size:.69rem;padding:5px 13px;background:var(--sage-pale);border-radius:20px;color:var(--sage);font-weight:500}
+.ab p{font-size:.92rem;line-height:1.88;color:var(--i50);margin-bottom:16px}
 
-/* PRICING */
+/* ── PRICING ── */
 #acheter{background:var(--parch);text-align:center}
-#acheter>.s-label{justify-content:center}
-#acheter>p{font-size:.93rem;color:var(--ink-50);max-width:520px;margin:0 auto 60px;line-height:1.7}
-.price-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(275px,1fr));gap:22px;max-width:980px;margin:0 auto}
-.p-card{background:white;border-radius:3px;padding:40px;text-align:left;box-shadow:0 2px 18px rgba(26,26,24,.06);transition:transform .3s,box-shadow .3s;position:relative;overflow:hidden}
-.p-card:hover{transform:translateY(-4px);box-shadow:0 10px 36px rgba(26,26,24,.1)}
-.p-card.star{background:var(--sage)}
-.p-card.star::before{content:'Recommandé';position:absolute;top:14px;right:-28px;background:var(--gold);color:var(--cream);font-size:.6rem;font-weight:500;letter-spacing:.15em;text-transform:uppercase;padding:5px 40px;transform:rotate(45deg)}
-.p-name{font-family:'Cormorant Garamond',serif;font-size:1.25rem;font-weight:400;margin-bottom:8px}
-.p-card.star .p-name{color:var(--cream)}
-.p-desc{font-size:.8rem;color:var(--ink-50);margin-bottom:26px;line-height:1.6}
-.p-card.star .p-desc{color:rgba(245,240,232,.55)}
-.p-amount{font-family:'Cormorant Garamond',serif;font-size:3rem;font-weight:300;color:var(--ink);line-height:1}
-.p-card.star .p-amount{color:var(--gold-light)}
-.p-cur{font-size:1.1rem;vertical-align:super}
-.p-sub{font-size:.75rem;color:var(--ink-30);margin-bottom:30px}
-.p-card.star .p-sub{color:rgba(245,240,232,.4)}
-.p-list{list-style:none;margin-bottom:30px}
-.p-list li{font-size:.84rem;padding:8px 0;border-bottom:1px solid rgba(26,26,24,.05);color:var(--ink-50);display:flex;align-items:center;gap:10px}
-.p-card.star .p-list li{color:rgba(245,240,232,.65);border-color:rgba(245,240,232,.08)}
-.p-list li::before{content:'✓';color:var(--sage);font-weight:600;font-size:.78rem;flex-shrink:0}
-.p-card.star .p-list li::before{color:var(--gold-light)}
+#acheter>p{font-size:.92rem;color:var(--i50);max-width:510px;margin:0 auto 56px;line-height:1.7}
+.pg{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:20px;max-width:960px;margin:0 auto}
+.pc{background:white;border-radius:3px;padding:38px;text-align:left;box-shadow:0 2px 16px rgba(26,26,24,.055);transition:transform .28s,box-shadow .28s;position:relative;overflow:hidden}
+.pc:hover{transform:translateY(-4px);box-shadow:0 10px 34px rgba(26,26,24,.1)}
+.pc.star{background:var(--sage)}
+.pc.star::before{content:'Recommandé';position:absolute;top:13px;right:-28px;background:var(--gold);color:var(--cream);font-size:.59rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;padding:5px 38px;transform:rotate(45deg)}
+.pc-n{font-family:'Cormorant Garamond',serif;font-size:1.22rem;font-weight:400;margin-bottom:7px}
+.pc.star .pc-n{color:var(--cream)}
+.pc-d{font-size:.79rem;color:var(--i50);margin-bottom:24px;line-height:1.6}
+.pc.star .pc-d{color:rgba(245,240,232,.54)}
+.pc-a{font-family:'Cormorant Garamond',serif;font-size:2.9rem;font-weight:300;color:var(--ink);line-height:1}
+.pc.star .pc-a{color:var(--gold-l)}
+.pc-c{font-size:1.05rem;vertical-align:super}
+.pc-s{font-size:.74rem;color:var(--i30);margin-bottom:28px}
+.pc.star .pc-s{color:rgba(245,240,232,.38)}
+.pc-l{list-style:none;margin-bottom:28px}
+.pc-l li{font-size:.82rem;padding:7px 0;border-bottom:1px solid rgba(26,26,24,.05);color:var(--i50);display:flex;align-items:center;gap:9px}
+.pc.star .pc-l li{color:rgba(245,240,232,.63);border-color:rgba(245,240,232,.07)}
+.pc-l li::before{content:'✓';color:var(--sage);font-weight:600;font-size:.77rem;flex-shrink:0}
+.pc.star .pc-l li::before{color:var(--gold-l)}
 
-/* FOOTER */
-footer{background:var(--ink);padding:64px 80px;display:grid;grid-template-columns:2fr 1fr 1fr;gap:64px}
-.f-brand{font-family:'Cormorant Garamond',serif;font-size:1.25rem;font-weight:300;color:var(--cream);margin-bottom:12px}
-footer>div>p{font-size:.8rem;color:rgba(245,240,232,.32);line-height:1.7;max-width:320px}
-.f-col h5{font-size:.65rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(245,240,232,.28);margin-bottom:14px}
-.f-col a{display:block;font-size:.82rem;color:rgba(245,240,232,.5);text-decoration:none;margin-bottom:9px;transition:color .2s}
-.f-col a:hover{color:var(--gold-light)}
-.f-bottom{background:rgba(0,0,0,.2);padding:18px 80px;display:flex;justify-content:space-between;align-items:center;font-size:.72rem;color:rgba(245,240,232,.18)}
+/* ── FOOTER ── */
+footer{background:var(--ink);padding:62px 80px;display:grid;grid-template-columns:2fr 1fr 1fr;gap:60px}
+.f-br{font-family:'Cormorant Garamond',serif;font-size:1.22rem;font-weight:300;color:var(--cream);margin-bottom:11px}
+footer>div>p{font-size:.79rem;color:rgba(245,240,232,.3);line-height:1.7;max-width:310px}
+.fc h5{font-size:.64rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(245,240,232,.27);margin-bottom:13px}
+.fc a{display:block;font-size:.81rem;color:rgba(245,240,232,.48);text-decoration:none;margin-bottom:8px;transition:color .2s}
+.fc a:hover{color:var(--gold-l)}
+.f-bot{background:rgba(0,0,0,.2);padding:17px 80px;display:flex;justify-content:space-between;align-items:center;font-size:.71rem;color:rgba(245,240,232,.17)}
 
-/* FADE IN */
-.fi{opacity:0;transform:translateY(22px);transition:opacity .65s ease,transform .65s ease}
+/* ── ANIM ── */
+.fi{opacity:0;transform:translateY(20px);transition:opacity .62s ease,transform .62s ease}
 .fi.in{opacity:1;transform:none}
-.fi-d1{transition-delay:.1s}.fi-d2{transition-delay:.2s}.fi-d3{transition-delay:.3s}.fi-d4{transition-delay:.4s}
+.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}.d4{transition-delay:.4s}
 
-/* MOBILE */
+/* ── MOBILE ── */
 @media(max-width:960px){
-  #hero,#intro,.arch-intro,#acces-libre,#auteur,footer{grid-template-columns:1fr!important;gap:40px!important}
-  .hero-l,.hero-r{padding:60px 36px!important}
-  section{padding:70px 32px!important}
-  #pedagogie{padding:70px 32px!important}
-  .ped-grid,.quotes-row,.flow-wrapper{grid-template-columns:1fr!important}
-  .ch-header{grid-template-columns:1fr!important;gap:20px}
-  header{padding:0 24px}
+  #hero,#genese,.arch-intro,#acces-libre,#auteur,footer,#protocole .prot-grid{grid-template-columns:1fr!important;gap:36px!important}
+  .hl,.hr{padding:58px 32px!important}
+  section{padding:68px 28px!important}
+  #pedagogie,#stats{padding:68px 28px!important}
+  .ped-grid,.qt-row,.flow,.stats-row,.hier-row{grid-template-columns:1fr!important}
+  .ch-hd{grid-template-columns:1fr!important;gap:18px}
+  header{padding:0 22px}
   nav{display:none}
-  .f-bottom{padding:16px 28px;flex-direction:column;gap:6px}
+  .f-bot{padding:15px 26px;flex-direction:column;gap:5px}
 }
 </style>
 </head>
 <body>
 
-<header id="site-header">
-  <a class="h-brand" href="#">R.O.P. — Guy Boitout</a>
+<!-- HEADER -->
+<header id="hdr">
+  <a class="h-logo" href="#">R.O.P. — Guy Boitout</a>
   <nav>
+    <a href="#genese">Genèse</a>
     <a href="#chapitres">Sommaire</a>
+    <a href="#protocole">Protocole</a>
     <a href="#acces-libre">Accès libre</a>
-    <a href="#auteur">Auteur</a>
     <a href="#acheter">Commander</a>
-    <a href="#acces-libre" class="nav-cta">Chapitre gratuit</a>
+    <a href="#acces-libre" class="n-cta">Chapitre gratuit</a>
   </nav>
 </header>
 
 <!-- HERO -->
 <section id="hero">
-  <div class="hero-l">
-    <div class="hero-orb"></div>
-    <span class="hero-badge">3ᵉ ouvrage · Institut R.O.P. · Guy Boitout</span>
-    <h1 class="hero-title">Le Corps<br>en <em>Dialogue</em></h1>
-    <p class="hero-sub">Système nerveux, viscères &amp; stress —<br>une lecture clinique en Réflexologie<br>Occipito-Podale</p>
-    <div class="hero-topics">
-      <span class="hero-tag">Mobilité viscérale</span>
-      <span class="hero-tag">Système nerveux central</span>
-      <span class="hero-tag">Système nerveux autonome</span>
-      <span class="hero-tag">Mécanisme de stress</span>
-      <span class="hero-tag">Théorie polyvagale</span>
-      <span class="hero-tag">Intestin grêle</span>
+  <div class="hl">
+    <div class="hl-orb"></div>
+    <span class="hl-badge">3ᵉ ouvrage · Institut R.O.P. · Guy Boitout</span>
+    <h1>Le Corps<br>en <em>Dialogue</em></h1>
+    <p class="hl-sub">Système nerveux, viscères &amp; stress —<br>une lecture clinique en Réflexologie<br>Occipito-Podale</p>
+    <div class="hl-tags">
+      <span class="hl-tag">Mobilité viscérale</span>
+      <span class="hl-tag">Système nerveux central</span>
+      <span class="hl-tag">Système nerveux autonome</span>
+      <span class="hl-tag">Mécanisme de stress</span>
+      <span class="hl-tag">Théorie polyvagale</span>
+      <span class="hl-tag">Protocole R.O.P.</span>
     </div>
-    <div class="hero-author">
-      <div class="hero-author-name">Guy Boitout</div>
-      <div class="hero-author-role">Réflexothérapeute · Ostéopathe · Fondateur de la R.O.P.</div>
+    <div class="hl-author">
+      <div class="hl-name">Guy Boitout</div>
+      <div class="hl-role">Réflexothérapeute · Ostéopathe · Fondateur de la R.O.P.</div>
     </div>
   </div>
-  <div class="hero-r">
-    <div class="book-wrap">
-      <div class="book">
-        <div class="bk-num">3ᵉ ouvrage R.O.P.</div>
-        <div class="bk-line"></div>
-        <div class="bk-title">Le Corps<br>en <em>Dialogue</em></div>
-        <div class="bk-sub">SNC · SNA · Stress<br>Polyvagale · Viscères</div>
-        <div class="bk-line"></div>
-        <div class="bk-author">Guy Boitout</div>
+  <div class="hr">
+    <div class="bk-wrap">
+      <div class="bk">
+        <div class="bk-n">3ᵉ ouvrage R.O.P.</div>
+        <div class="bk-ln"></div>
+        <div class="bk-t">Le Corps<br>en <em>Dialogue</em></div>
+        <div class="bk-s">SNC · SNA · Stress<br>Polyvagale · Viscères</div>
+        <div class="bk-ln"></div>
+        <div class="bk-a">Guy Boitout</div>
       </div>
     </div>
     <div class="hero-ctas">
-      <a href="#acces-libre" class="btn btn-sage">Lire un chapitre gratuit</a>
-      <a href="#chapitres" class="btn btn-ghost-cream">Voir le sommaire</a>
+      <a href="#acces-libre" class="btn b-sage">Lire un chapitre gratuit</a>
+      <a href="#chapitres" class="btn b-ghost">Voir le sommaire</a>
     </div>
   </div>
 </section>
 
-<!-- INTRO -->
-<section id="intro">
-  <div class="intro-text fi">
-    <div class="s-label cream">L'ouvrage</div>
-    <h2 class="on-dark">Une synthèse <em>inédite</em> corps-esprit</h2>
-    <p>Ce troisième volume de Guy Boitout prolonge la méthode R.O.P. en intégrant les avancées des neurosciences cliniques modernes. Du cadre mécanique de la mobilité viscérale aux subtilités du système nerveux autonome, en passant par la théorie polyvagale de Stephen Porges, l'ouvrage offre au praticien une grille de lecture complète et rigoureuse.</p>
-    <p>Chaque chapitre distingue clairement les données <em style="color:var(--gold-light);font-style:italic">Établies</em>, les <em style="color:var(--gold-light);font-style:italic">Modèles discutés</em> et les <em style="color:var(--gold-light);font-style:italic">Applications R.O.P.</em> — une rigueur éditoriale rare dans la littérature de santé naturelle.</p>
-    <div class="intro-stats">
-      <div class="i-stat"><div class="i-stat-n">20+</div><div class="i-stat-l">Chapitres anatomiques</div></div>
-      <div class="i-stat"><div class="i-stat-n">3</div><div class="i-stat-l">Grands systèmes intégrés</div></div>
-      <div class="i-stat"><div class="i-stat-n">30+</div><div class="i-stat-l">Années de pratique clinique</div></div>
-      <div class="i-stat"><div class="i-stat-n">R.O.P.</div><div class="i-stat-l">Applications cliniques codifiées</div></div>
+<!-- GENÈSE — basé sur le Chapitre 0 (préface personnelle) -->
+<section id="genese">
+  <div class="gen-text fi">
+    <div class="lbl c">Genèse de l'ouvrage</div>
+    <h2 class="on-dk">Un parcours de <em>trente ans</em></h2>
+    <p>Ce troisième volume s'inscrit dans la continuité de ce qui fait l'originalité de la Réflexothérapie Occipito-Podale : une représentation globale du corps en 3D sous la forme d'un bébé en position fœtale dans les pieds, les zones réflexes occipitales, et une référence constante à l'anatomie et à la physiologie.</p>
+    <p>Après un premier livre consacré au système ostéo-musculo-articulaire, au thorax et au crâne, puis un deuxième centré sur les nerfs somatiques spinaux et crâniens, cet ouvrage aborde le système nerveux autonome, le mécanisme de stress, et les viscères — le cœur invisible de la régulation du corps.</p>
+    <div class="gen-timeline">
+      <div class="gen-evt">
+        <div class="gen-yr">1978</div>
+        <div class="gen-lbl">Première rencontre</div>
+        <div class="gen-desc">Découverte de la réflexologie (méthode Ingham) — première étape décisive pour comprendre les troubles fonctionnels reliant le rachis et le système nerveux.</div>
+      </div>
+      <div class="gen-evt">
+        <div class="gen-yr">1980s</div>
+        <div class="gen-lbl">L'ostéopathie viscérale</div>
+        <div class="gen-desc">Jean-Pierre Barral montre que le système viscéral est non seulement manipulable, mais qu'en lui rendant sa mobilité primitive, on peut restaurer la mobilité de la colonne vertébrale.</div>
+      </div>
+      <div class="gen-evt">
+        <div class="gen-yr">R.O.P.</div>
+        <div class="gen-lbl">Création de la méthode</div>
+        <div class="gen-desc">Avec Jean-Pierre Vadala, Guy Boitout synthétise réflexologie et ostéopathie viscérale en une cartographie réflexe originale en 3D, publiée aux Éditions Elsevier-Masson.</div>
+      </div>
     </div>
   </div>
-  <div class="fi fi-d2">
-    <div class="quote-block">
-      <blockquote>"Le mécanisme de stress est un phénomène protecteur fondamental de la vie. À court terme, il est protecteur en vue du retour à l'homéostasie. Quand il devient intense, durable et répétitif, il a un coût énergétique que le praticien doit savoir lire dans le corps."</blockquote>
-      <cite>— Guy Boitout · Chapitre 5 — Mécanisme de stress</cite>
+  <div class="fi d2">
+    <div class="gen-quote">
+      <blockquote>"Il ne pouvait en être autrement en réflexologie. Comme en ostéopathie viscérale, le système neurovégétatif est au cœur de tout : c'est lui qui gouverne, régule et restaure — et c'est lui que la R.O.P. cherche à atteindre en priorité."</blockquote>
+      <cite>— Guy Boitout · Préface du 3ᵉ ouvrage</cite>
     </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section id="stats">
+  <div class="stats-row fi">
+    <div class="stat"><div class="stat-n">3</div><div class="stat-l">Livres publiés<br>aux Éd. Elsevier-Masson</div></div>
+    <div class="stat"><div class="stat-n">8</div><div class="stat-l">Chapitres<br>présentés sur ce site</div></div>
+    <div class="stat"><div class="stat-n">20+</div><div class="stat-l">Chapitres<br>dans l'ouvrage complet</div></div>
+    <div class="stat"><div class="stat-n">1978</div><div class="stat-l">Début du parcours<br>réflexologique</div></div>
   </div>
 </section>
 
@@ -324,227 +377,310 @@ footer>div>p{font-size:.8rem;color:rgba(245,240,232,.32);line-height:1.7;max-wid
 <section id="architecture">
   <div class="arch-intro fi">
     <div>
-      <div class="s-label">Architecture de l'ouvrage</div>
-      <h2>Un fil conducteur <em>logique</em></h2>
+      <div class="lbl">Architecture de l'ouvrage</div>
+      <h2>Un fil conducteur <em>progressif</em></h2>
     </div>
-    <p class="arch-desc">L'ouvrage est structuré en trois grandes parties progressives : des fondements mécaniques aux systèmes nerveux, puis à la régulation du stress et aux viscères. Chaque partie s'appuie sur la précédente pour construire une compréhension clinique globale.</p>
+    <p class="arch-desc">De la préface personnelle aux viscères, l'ouvrage construit une progression logique en quatre grandes parties. Chaque couche s'appuie sur la précédente pour offrir au praticien une compréhension clinique complète et opérationnelle.</p>
   </div>
-  <div class="flow-wrapper">
-    <div class="flow-col fi fi-d1">
-      <div class="flow-icon">🏗️</div>
-      <div class="flow-col-title">Fondements</div>
-      <div class="flow-col-sub">Mobilité viscérale, séreuses, turgor, pressions intra-cavitaires et biorythmes — le cadre mécanique et neurophysiologique du praticien.</div>
-      <div class="flow-chapters">
-        <span class="flow-ch">Ch. 1 · Généralités</span>
-        <span class="flow-ch">Ch. 2 · …</span>
-      </div>
+  <div class="flow">
+    <div class="fc fi d1">
+      <div class="fc-icon">✍️</div>
+      <div class="fc-t">Introduction</div>
+      <div class="fc-s">Genèse de la méthode, trajectoire personnelle de l'auteur, ADN de la R.O.P.</div>
+      <div class="fc-chs"><span class="fch">Ch. 0 · Préface</span></div>
     </div>
-    <div class="flow-col fi fi-d2">
-      <div class="flow-icon">🧠</div>
-      <div class="flow-col-title">Systèmes nerveux</div>
-      <div class="flow-col-sub">SNC (cerveau reptilien, tronc cérébral, système limbique, cortex) et SNA (parasympathique, sympathique, nerf vague) — la physiologie de la régulation.</div>
-      <div class="flow-chapters">
-        <span class="flow-ch">Ch. 3 · SNC</span>
-        <span class="flow-ch">Ch. 4 · SNA</span>
-      </div>
+    <div class="fc fi d2">
+      <div class="fc-icon">🏗️</div>
+      <div class="fc-t">Fondements</div>
+      <div class="fc-s">Mobilité viscérale, séreuses, turgor, biorythmes et protocole R.O.P. complet.</div>
+      <div class="fc-chs"><span class="fch">Ch. 1 · Généralités</span><span class="fch">Ch. 2 · Traitement R.O.P.</span></div>
     </div>
-    <div class="flow-col fi fi-d3">
-      <div class="flow-icon gold-bg">⚖️</div>
-      <div class="flow-col-title">Stress &amp; Viscères</div>
-      <div class="flow-col-sub">Mécanisme de stress, théorie polyvagale et anatomie viscérale — les applications cliniques R.O.P. au cœur de la pratique quotidienne.</div>
-      <div class="flow-chapters">
-        <span class="flow-ch free">Ch. 5 · Stress ✦ Gratuit</span>
-        <span class="flow-ch">Ch. 6 · Polyvagale</span>
-        <span class="flow-ch">Ch. 14 · Intestin grêle</span>
-      </div>
+    <div class="fc fi d3">
+      <div class="fc-icon">🧠</div>
+      <div class="fc-t">Systèmes nerveux</div>
+      <div class="fc-s">SNC (trois cerveaux, tronc cérébral) et SNA (parasympathique, sympathique, nerf vague).</div>
+      <div class="fc-chs"><span class="fch">Ch. 3 · SNC</span><span class="fch">Ch. 4 · SNA</span></div>
+    </div>
+    <div class="fc fi d4">
+      <div class="fc-icon go">⚖️</div>
+      <div class="fc-t">Stress &amp; Viscères</div>
+      <div class="fc-s">Mécanisme de stress, théorie polyvagale, anatomie viscérale et cartographies R.O.P.</div>
+      <div class="fc-chs"><span class="fch fr">Ch. 5 · Stress ✦</span><span class="fch">Ch. 6 · Polyvagale</span><span class="fch">Ch. 14 · Intestin grêle</span></div>
     </div>
   </div>
 </section>
 
-<!-- CHAPITRES -->
+<!-- CHAPITRES — 8 fiches -->
 <section id="chapitres">
-  <div class="ch-header fi">
+  <div class="ch-hd fi">
     <div>
-      <div class="s-label">Extraits du sommaire</div>
-      <h2>Six chapitres <em>présentés</em></h2>
+      <div class="lbl">Extraits du sommaire</div>
+      <h2>Huit chapitres <em>présentés</em></h2>
     </div>
-    <p class="ch-header-desc">Le Chapitre 5 est en accès libre après inscription. Les autres sont disponibles à l'achat individuel ou dans le pack complet. Chaque fiche résume les thèmes abordés et les applications R.O.P. spécifiques.</p>
+    <p class="ch-hd-d">Du chapitre d'introduction (préface personnelle de l'auteur) au protocole clinique complet, en passant par les systèmes nerveux et les viscères — le Chapitre 5 est en accès libre sur inscription.</p>
   </div>
   <div class="ch-grid">
 
-    <div class="ch-card fi fi-d1">
-      <div class="ch-card-top"><div class="ch-num">01</div><span class="badge badge-paid">Payant</span></div>
-      <div class="ch-card-body">
-        <div class="ch-card-label">Chapitre 1</div>
-        <h3 class="ch-title">Généralités — Mobilité viscérale</h3>
-        <p class="ch-excerpt">Le cadre mécanique et neurophysiologique du praticien : mobilité vs motilité, quatre moteurs viscéraux (somatique, autonome, motilité intrinsèque, biorythmes), turgor, pressions intra-cavitaires et glissement des séreuses. Un chapitre fondateur pour comprendre la logique d'action R.O.P.</p>
-        <div class="ch-tags">
-          <span class="ch-tag">Mobilité viscérale</span><span class="ch-tag">Turgor</span><span class="ch-tag">Séreuses</span><span class="ch-tag">Biorythmes</span><span class="ch-tag">Diaphragme</span><span class="ch-tag">MRP</span>
-        </div>
+    <!-- Ch 0 -->
+    <div class="cc intro fi d1">
+      <div class="cc-top"><div class="cc-n">00</div><span class="badge bi">Préface</span></div>
+      <div class="cc-body">
+        <div class="cc-lbl">Introduction</div>
+        <h3 class="cc-title">Genèse de la méthode R.O.P.</h3>
+        <p class="cc-txt">La voix de l'auteur : de la kinésithérapie à la réflexologie (méthode Ingham, 1978), puis à l'ostéopathie viscérale (J.-P. Barral) jusqu'à la création de la R.O.P. avec Jean-Pierre Vadala. L'ADN de la méthode en quelques pages denses et personnelles.</p>
+        <div class="cc-tags"><span class="ct">Parcours de l'auteur</span><span class="ct">Méthode Ingham</span><span class="ct">Ostéopathie viscérale</span><span class="ct">ADN R.O.P.</span><span class="ct">3D réflexe</span></div>
       </div>
-      <div class="ch-card-foot">
-        <div class="ch-price"><span style="font-size:.8rem">€</span>9<small>Accès immédiat</small></div>
-        <a href="#acheter" class="btn btn-gold" style="padding:9px 20px;font-size:.68rem;">Commander →</a>
-      </div>
-    </div>
-
-    <div class="ch-card fi fi-d2">
-      <div class="ch-card-top"><div class="ch-num">03</div><span class="badge badge-paid">Payant</span></div>
-      <div class="ch-card-body">
-        <div class="ch-card-label">Chapitre 3</div>
-        <h3 class="ch-title">Système nerveux central</h3>
-        <p class="ch-excerpt">Des trois cerveaux de MacLean à la formation réticulaire : tronc cérébral, cervelet, système limbique et cortex, ganglions de la base et neurotransmetteurs. Inclut les zones réflexes podales et occipitales correspondantes pour chaque structure cérébrale.</p>
-        <div class="ch-tags">
-          <span class="ch-tag">Cerveau reptilien</span><span class="ch-tag">Tronc cérébral</span><span class="ch-tag">Système limbique</span><span class="ch-tag">Neurotransmetteurs</span><span class="ch-tag">Zones réflexes</span><span class="ch-tag">Dopamine</span>
-        </div>
-      </div>
-      <div class="ch-card-foot">
-        <div class="ch-price"><span style="font-size:.8rem">€</span>9<small>Accès immédiat</small></div>
-        <a href="#acheter" class="btn btn-gold" style="padding:9px 20px;font-size:.68rem;">Commander →</a>
+      <div class="cc-ft">
+        <div class="cc-pr"><span style="font-size:.8rem">€</span>5<small>Inclus dans tous les packs</small></div>
+        <a href="#acheter" class="btn b-gold" style="padding:8px 18px;font-size:.67rem;">Commander →</a>
       </div>
     </div>
 
-    <div class="ch-card fi fi-d3">
-      <div class="ch-card-top"><div class="ch-num">04</div><span class="badge badge-paid">Payant</span></div>
-      <div class="ch-card-body">
-        <div class="ch-card-label">Chapitre 4</div>
-        <h3 class="ch-title">Système nerveux autonome</h3>
-        <p class="ch-excerpt">Parasympathique et Sympathique : fonctions différentielles, homéostasie, relation SNA-sommeil, système nerveux entérique. Le nerf vague, composé à 70–80 % de fibres sensitives afférentes, et son rôle anti-inflammatoire. Cadre clinique complet des déséquilibres neurovégétatifs en R.O.P.</p>
-        <div class="ch-tags">
-          <span class="ch-tag">Parasympathique</span><span class="ch-tag">Sympathique</span><span class="ch-tag">Nerf vague</span><span class="ch-tag">Homéostasie</span><span class="ch-tag">SNE</span><span class="ch-tag">Acétylcholine</span>
-        </div>
+    <!-- Ch 1 -->
+    <div class="cc fi d2">
+      <div class="cc-top"><div class="cc-n">01</div><span class="badge bp">Payant</span></div>
+      <div class="cc-body">
+        <div class="cc-lbl">Chapitre 1</div>
+        <h3 class="cc-title">Généralités — Mobilité viscérale</h3>
+        <p class="cc-txt">Le cadre mécanique et neurophysiologique du praticien : mobilité vs motilité, quatre moteurs viscéraux (somatique, autonome, motilité intrinsèque, biorythmes), turgor, pressions intra-cavitaires et glissement des séreuses.</p>
+        <div class="cc-tags"><span class="ct">Mobilité viscérale</span><span class="ct">Turgor</span><span class="ct">Séreuses</span><span class="ct">Biorythmes</span><span class="ct">Diaphragme</span><span class="ct">MRP</span></div>
       </div>
-      <div class="ch-card-foot">
-        <div class="ch-price"><span style="font-size:.8rem">€</span>9<small>Accès immédiat</small></div>
-        <a href="#acheter" class="btn btn-gold" style="padding:9px 20px;font-size:.68rem;">Commander →</a>
-      </div>
-    </div>
-
-    <div class="ch-card is-free fi fi-d1">
-      <div class="ch-card-top"><div class="ch-num">05</div><span class="badge badge-free">✦ Accès libre</span></div>
-      <div class="ch-card-body">
-        <div class="ch-card-label">Chapitre 5</div>
-        <h3 class="ch-title">Mécanisme de stress</h3>
-        <p class="ch-excerpt">De l'homéostasie de Walter Cannon au syndrome général d'adaptation de Hans Selye : distress, eustress, stresseurs physiques, biochimiques et émotionnels. Le rôle central du SNA et du système limbique, et les stratégies d'intervention en Réflexologie Occipito-Podale.</p>
-        <div class="ch-tags">
-          <span class="ch-tag">Homéostasie</span><span class="ch-tag">Allostasie</span><span class="ch-tag">Cortisol</span><span class="ch-tag">Distress / Eustress</span><span class="ch-tag">Axe HPA</span><span class="ch-tag">Applications R.O.P.</span>
-        </div>
-      </div>
-      <div class="ch-card-foot">
-        <div class="ch-price">Gratuit<small>Sur inscription</small></div>
-        <a href="#acces-libre" class="btn btn-sage" style="padding:9px 20px;font-size:.68rem;">Accéder →</a>
+      <div class="cc-ft">
+        <div class="cc-pr"><span style="font-size:.8rem">€</span>9<small>Accès immédiat</small></div>
+        <a href="#acheter" class="btn b-gold" style="padding:8px 18px;font-size:.67rem;">Commander →</a>
       </div>
     </div>
 
-    <div class="ch-card fi fi-d2">
-      <div class="ch-card-top"><div class="ch-num">06</div><span class="badge badge-paid">Payant</span></div>
-      <div class="ch-card-body">
-        <div class="ch-card-label">Chapitre 6</div>
-        <h3 class="ch-title">Théorie polyvagale</h3>
-        <p class="ch-excerpt">Le Dr Stephen Porges propose une lecture du SNA à trois niveaux phylogénétiques : immobilisation (vagal ancien), mobilisation (sympathique) et engagement social (vagal nouveau). Implications cliniques pour la régulation du nerf vague et les comportements socio-émotionnels en R.O.P.</p>
-        <div class="ch-tags">
-          <span class="ch-tag">Nerf vague ancien/nouveau</span><span class="ch-tag">Engagement social</span><span class="ch-tag">Malaise vagal</span><span class="ch-tag">Phylogénèse</span><span class="ch-tag">Régulation émotionnelle</span>
-        </div>
+    <!-- Ch 2 -->
+    <div class="cc fi d3">
+      <div class="cc-top"><div class="cc-n">02</div><span class="badge bp">Payant</span></div>
+      <div class="cc-body">
+        <div class="cc-lbl">Chapitre 2</div>
+        <h3 class="cc-title">Traitement par la R.O.P.</h3>
+        <p class="cc-txt">Le protocole clinique complet : technique gestuelle (pulpe du pouce), dosage textural (peau de tambour), les 3 temps d'une séance, et la hiérarchisation du traitement — Syndrome général → Loco-régional → Limbique. Bases neurophysiologiques (mécanorécepteurs, gate control).</p>
+        <div class="cc-tags"><span class="ct">Technique manuelle</span><span class="ct">Dosage textural</span><span class="ct">3 temps de séance</span><span class="ct">Mécanorécepteurs</span><span class="ct">Hiérarchisation</span></div>
       </div>
-      <div class="ch-card-foot">
-        <div class="ch-price"><span style="font-size:.8rem">€</span>9<small>Accès immédiat</small></div>
-        <a href="#acheter" class="btn btn-gold" style="padding:9px 20px;font-size:.68rem;">Commander →</a>
-      </div>
-    </div>
-
-    <div class="ch-card fi fi-d3">
-      <div class="ch-card-top"><div class="ch-num">14</div><span class="badge badge-paid">Payant</span></div>
-      <div class="ch-card-body">
-        <div class="ch-card-label">Chapitre 14</div>
-        <h3 class="ch-title">Intestin grêle</h3>
-        <p class="ch-excerpt">Anatomie complète du jéjunum-iléum et du mésentère, avec une lecture R.O.P. détaillée : racine du mésentère comme zone hautement réflexogène, nutcracker syndrome, axe intestin-cerveau et connexion microbiote-immunité-émotions. Cartographies réflexes incluses.</p>
-        <div class="ch-tags">
-          <span class="ch-tag">Jéjunum-iléum</span><span class="ch-tag">Mésentère</span><span class="ch-tag">Microbiote</span><span class="ch-tag">Axe intestin-cerveau</span><span class="ch-tag">Cartographie R.O.P.</span><span class="ch-tag">SNE</span>
-        </div>
-      </div>
-      <div class="ch-card-foot">
-        <div class="ch-price"><span style="font-size:.8rem">€</span>9<small>Accès immédiat</small></div>
-        <a href="#acheter" class="btn btn-gold" style="padding:9px 20px;font-size:.68rem;">Commander →</a>
+      <div class="cc-ft">
+        <div class="cc-pr"><span style="font-size:.8rem">€</span>9<small>Accès immédiat</small></div>
+        <a href="#acheter" class="btn b-gold" style="padding:8px 18px;font-size:.67rem;">Commander →</a>
       </div>
     </div>
 
+    <!-- Ch 3 -->
+    <div class="cc fi d1">
+      <div class="cc-top"><div class="cc-n">03</div><span class="badge bp">Payant</span></div>
+      <div class="cc-body">
+        <div class="cc-lbl">Chapitre 3</div>
+        <h3 class="cc-title">Système nerveux central</h3>
+        <p class="cc-txt">Des trois cerveaux de MacLean à la formation réticulaire : tronc cérébral, cervelet, système limbique et cortex, ganglions de la base et neurotransmetteurs. Inclut les zones réflexes podales et occipitales pour chaque structure cérébrale.</p>
+        <div class="cc-tags"><span class="ct">Cerveau reptilien</span><span class="ct">Tronc cérébral</span><span class="ct">Système limbique</span><span class="ct">Neurotransmetteurs</span><span class="ct">Zones réflexes</span></div>
+      </div>
+      <div class="cc-ft">
+        <div class="cc-pr"><span style="font-size:.8rem">€</span>9<small>Accès immédiat</small></div>
+        <a href="#acheter" class="btn b-gold" style="padding:8px 18px;font-size:.67rem;">Commander →</a>
+      </div>
+    </div>
+
+    <!-- Ch 4 -->
+    <div class="cc fi d2">
+      <div class="cc-top"><div class="cc-n">04</div><span class="badge bp">Payant</span></div>
+      <div class="cc-body">
+        <div class="cc-lbl">Chapitre 4</div>
+        <h3 class="cc-title">Système nerveux autonome</h3>
+        <p class="cc-txt">Parasympathique et Sympathique : fonctions, homéostasie, relation SNA-sommeil, système nerveux entérique. Le nerf vague — 70 à 80 % de fibres sensitives afférentes — et son rôle anti-inflammatoire. Cadre clinique des déséquilibres neurovégétatifs en R.O.P.</p>
+        <div class="cc-tags"><span class="ct">Parasympathique</span><span class="ct">Sympathique</span><span class="ct">Nerf vague</span><span class="ct">SNE</span><span class="ct">Homéostasie</span></div>
+      </div>
+      <div class="cc-ft">
+        <div class="cc-pr"><span style="font-size:.8rem">€</span>9<small>Accès immédiat</small></div>
+        <a href="#acheter" class="btn b-gold" style="padding:8px 18px;font-size:.67rem;">Commander →</a>
+      </div>
+    </div>
+
+    <!-- Ch 5 FREE -->
+    <div class="cc fr fi d3">
+      <div class="cc-top"><div class="cc-n">05</div><span class="badge bf">✦ Accès libre</span></div>
+      <div class="cc-body">
+        <div class="cc-lbl">Chapitre 5</div>
+        <h3 class="cc-title">Mécanisme de stress</h3>
+        <p class="cc-txt">De l'homéostasie de Walter Cannon au syndrome général d'adaptation de Hans Selye : distress, eustress, stresseurs physiques, biochimiques et émotionnels. Le rôle central du SNA et du système limbique — et les interventions R.O.P.</p>
+        <div class="cc-tags"><span class="ct">Homéostasie</span><span class="ct">Allostasie</span><span class="ct">Cortisol</span><span class="ct">Distress / Eustress</span><span class="ct">Axe HPA</span></div>
+      </div>
+      <div class="cc-ft">
+        <div class="cc-pr">Gratuit<small>Sur inscription</small></div>
+        <a href="#acces-libre" class="btn b-sage" style="padding:8px 18px;font-size:.67rem;">Accéder →</a>
+      </div>
+    </div>
+
+    <!-- Ch 6 -->
+    <div class="cc fi d1">
+      <div class="cc-top"><div class="cc-n">06</div><span class="badge bp">Payant</span></div>
+      <div class="cc-body">
+        <div class="cc-lbl">Chapitre 6</div>
+        <h3 class="cc-title">Théorie polyvagale</h3>
+        <p class="cc-txt">Le Dr Stephen Porges : trois niveaux phylogénétiques du SNA — immobilisation (vagal ancien), mobilisation (sympathique), engagement social (vagal nouveau). Implications cliniques pour la régulation du nerf vague en R.O.P.</p>
+        <div class="cc-tags"><span class="ct">Vagal ancien/nouveau</span><span class="ct">Engagement social</span><span class="ct">Malaise vagal</span><span class="ct">Phylogénèse</span></div>
+      </div>
+      <div class="cc-ft">
+        <div class="cc-pr"><span style="font-size:.8rem">€</span>9<small>Accès immédiat</small></div>
+        <a href="#acheter" class="btn b-gold" style="padding:8px 18px;font-size:.67rem;">Commander →</a>
+      </div>
+    </div>
+
+    <!-- Ch 14 -->
+    <div class="cc fi d2">
+      <div class="cc-top"><div class="cc-n">14</div><span class="badge bp">Payant</span></div>
+      <div class="cc-body">
+        <div class="cc-lbl">Chapitre 14</div>
+        <h3 class="cc-title">Intestin grêle</h3>
+        <p class="cc-txt">Anatomie du jéjunum-iléum et du mésentère avec lecture R.O.P. : racine mésentérique comme zone hautement réflexogène, nutcracker syndrome, axe intestin-cerveau, microbiote-immunité. Cartographies réflexes incluses.</p>
+        <div class="cc-tags"><span class="ct">Jéjunum-iléum</span><span class="ct">Mésentère</span><span class="ct">Microbiote</span><span class="ct">Axe intestin-cerveau</span><span class="ct">Cartographie R.O.P.</span></div>
+      </div>
+      <div class="cc-ft">
+        <div class="cc-pr"><span style="font-size:.8rem">€</span>9<small>Accès immédiat</small></div>
+        <a href="#acheter" class="btn b-gold" style="padding:8px 18px;font-size:.67rem;">Commander →</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- PROTOCOLE — basé sur le Chapitre 2 -->
+<section id="protocole">
+  <div class="fi">
+    <div class="lbl c">Chapitre 2 — Mise en lumière</div>
+    <h2 class="on-dk">Le protocole clinique <em>R.O.P.</em> en détail</h2>
+    <p style="font-size:.93rem;color:rgba(245,240,232,.55);max-width:580px;line-height:1.8;margin-top:-6px">Le Chapitre 2 est le chapitre "comment faire" — le cœur opérationnel de l'ouvrage pour le praticien. Il décrit précisément le geste, le dosage, et la logique de traitement.</p>
+  </div>
+  <div class="prot-grid">
+    <div class="prot-steps fi d1">
+      <div class="pstep">
+        <div class="pstep-num">1</div>
+        <div>
+          <div class="pstep-t">Diagnostic textural</div>
+          <div class="pstep-d">Repérer les zones réflexes par la modification de texture de la peau : "peau de tambour", densification, rugosité, perte de glissement. Échelle 0–3 pour objectiver l'évolution entre séances.</div>
+        </div>
+      </div>
+      <div class="pstep">
+        <div class="pstep-num">2</div>
+        <div>
+          <div class="pstep-t">Temps thérapeutique</div>
+          <div class="pstep-d">Outil : pulpe du pouce (prioritaire) ou interphalangienne proximale de l'index. Pression progressive, brève, orientée — sans force ni trituration. La qualité de la stimulation prime sur la quantité.</div>
+        </div>
+      </div>
+      <div class="pstep">
+        <div class="pstep-num">3</div>
+        <div>
+          <div class="pstep-t">Temps de latence</div>
+          <div class="pstep-d">L'organisme a besoin de temps pour intégrer les adaptations neuro-végétatives et tissulaires. Espacer les séances de 2 à 3 semaines. Règle : si l'évolution n'est pas nette après 3 séances, changer de stratégie.</div>
+        </div>
+      </div>
+    </div>
+    <div class="prot-right fi d2">
+      <div class="prot-card">
+        <div class="prot-card-t">Bases neurophysiologiques</div>
+        <ul class="prot-card-items">
+          <li><strong style="color:rgba(245,240,232,.8)">Corpuscules de Meissner</strong> — sensibilité fine (pression légère), particulièrement présents sur la peau glabre.</li>
+          <li><strong style="color:rgba(245,240,232,.8)">Disques de Merkel</strong> — pression douce et statique, à la base de l'épiderme.</li>
+          <li>Ces afférences rapides moduleraient la transmission nociceptive au niveau médullaire (modèle gate control), éclairant le geste antalgique R.O.P.</li>
+        </ul>
+      </div>
+      <div class="prot-card">
+        <div class="prot-card-t">Hiérarchisation du traitement</div>
+        <p style="font-size:.79rem;color:rgba(245,240,232,.45);margin-bottom:14px;line-height:1.5">Traiter d'abord le terrain, puis la zone, puis si nécessaire la composante limbique.</p>
+        <div class="hier-row">
+          <div class="hier-step"><div class="hier-step-n">1er</div><div class="hier-step-t">Syndrome général</div></div>
+          <div class="hier-arr">→</div>
+          <div class="hier-step"><div class="hier-step-n">2e</div><div class="hier-step-t">Loco-régional</div></div>
+          <div class="hier-arr">→</div>
+          <div class="hier-step"><div class="hier-step-n">3e</div><div class="hier-step-t">Limbique</div></div>
+        </div>
+      </div>
+      <div class="prot-card">
+        <div class="prot-card-t">Erreurs à éviter</div>
+        <ul class="prot-card-items">
+          <li>Appuyer fort pour "sentir" — on perd la lecture fine du tissu.</li>
+          <li>Chercher la douleur comme preuve d'efficacité — souvent un artefact de surdosage.</li>
+          <li>Traiter trop longtemps la même zone — stimulations courtes, ré-évaluées.</li>
+        </ul>
+      </div>
+    </div>
   </div>
 </section>
 
 <!-- PEDAGOGIE -->
 <section id="pedagogie">
-  <div class="fi" style="text-align:center;max-width:640px;margin:0 auto">
-    <div class="s-label" style="justify-content:center;">Rigueur éditoriale</div>
+  <div class="fi" style="text-align:center;max-width:620px;margin:0 auto">
+    <div class="lbl ctr">Rigueur éditoriale</div>
     <h2 style="text-align:center;">Trois niveaux de <em>lecture</em></h2>
-    <p style="font-size:.93rem;color:var(--ink-50);line-height:1.8;">Chaque affirmation est catégorisée selon son niveau de preuve, permettant au praticien de distinguer ce qui est acquis, ce qui est en débat, et ce qui est propre au modèle R.O.P.</p>
+    <p style="font-size:.93rem;color:var(--i50);line-height:1.8;">Chaque affirmation est catégorisée selon son niveau de preuve — une transparence scientifique rare dans la littérature paramédicale.</p>
   </div>
   <div class="ped-grid">
-    <div class="ped-card fi fi-d1">
-      <div class="ped-icon">✅</div>
-      <div class="ped-title">Données Établies</div>
-      <p class="ped-body">Faits anatomiques et physiologiques validés par la littérature scientifique et consensuels dans les milieux médicaux et paramédicaux.</p>
+    <div class="ped-c fi d1">
+      <div class="ped-ico">✅</div>
+      <div class="ped-t">Données Établies</div>
+      <p class="ped-d">Faits anatomiques et physiologiques validés par la littérature scientifique et consensuels dans les milieux médicaux et paramédicaux.</p>
       <div class="ped-tags"><span class="ped-tag">Anatomie descriptive</span><span class="ped-tag">Physiologie</span><span class="ped-tag">Neurologie</span></div>
     </div>
-    <div class="ped-card fi fi-d2">
-      <div class="ped-icon">🔬</div>
-      <div class="ped-title">Modèles Discutés</div>
-      <p class="ped-body">Concepts issus de la recherche en cours, de théories cliniques plausibles mais non encore totalement validées — clairement signalés comme tels dans chaque chapitre.</p>
+    <div class="ped-c fi d2">
+      <div class="ped-ico">🔬</div>
+      <div class="ped-t">Modèles Discutés</div>
+      <p class="ped-d">Théories cliniques plausibles mais non encore totalement consensuelles — clairement signalées dans le texte pour permettre un regard critique.</p>
       <div class="ped-tags"><span class="ped-tag">Théorie polyvagale</span><span class="ped-tag">3 cerveaux</span><span class="ped-tag">MRP</span></div>
     </div>
-    <div class="ped-card fi fi-d3">
-      <div class="ped-icon">🦶</div>
-      <div class="ped-title">Modèle R.O.P.</div>
-      <p class="ped-body">Applications spécifiques à la Réflexologie Occipito-Podale : zones réflexes, cartographies, protocoles de sollicitation et logique d'intervention propres à la méthode.</p>
-      <div class="ped-tags"><span class="ped-tag">Zones réflexes</span><span class="ped-tag">Cartographie podale</span><span class="ped-tag">Protocoles ROP</span></div>
+    <div class="ped-c fi d3">
+      <div class="ped-ico">🦶</div>
+      <div class="ped-t">Modèle R.O.P.</div>
+      <p class="ped-d">Applications spécifiques à la Réflexologie Occipito-Podale : zones réflexes, cartographies podales et occipitales, protocoles de sollicitation.</p>
+      <div class="ped-tags"><span class="ped-tag">Zones réflexes</span><span class="ped-tag">Cartographie podale</span><span class="ped-tag">Protocoles</span></div>
     </div>
   </div>
 </section>
 
 <!-- FORM -->
 <section id="acces-libre">
-  <div class="form-left fi">
-    <div class="s-label gold">Chapitre offert</div>
-    <h2 class="on-dark">Lire le Chapitre 5<br><em>gratuitement</em></h2>
-    <p>Ce chapitre sur le mécanisme de stress est mis en accès libre pour vous permettre de découvrir la rigueur pédagogique et la profondeur clinique de cet ouvrage.</p>
-    <p>Il couvre l'intégralité du parcours stress : de l'homéostasie à l'allostasie, des stresseurs physiques aux stresseurs biochimiques, de l'axe HPA aux applications concrètes en R.O.P.</p>
-    <span class="excerpt-label">Chapitre 5 · PDF · 30+ pages · Références bibliographiques</span>
+  <div class="fl fi">
+    <div class="lbl g">Chapitre offert</div>
+    <h2 class="on-dk">Lire le Chapitre 5<br><em>gratuitement</em></h2>
+    <p>Le chapitre sur le mécanisme de stress est mis en accès libre pour découvrir la rigueur pédagogique et la profondeur clinique de cet ouvrage.</p>
+    <p>Il couvre l'intégralité du parcours stress : de l'homéostasie à l'allostasie, des stresseurs physiques aux stresseurs biochimiques, et les interventions concrètes en R.O.P.</p>
+    <span class="fl-note">Chapitre 5 · PDF · 30+ pages · Références bibliographiques incluses</span>
   </div>
-  <div class="form-card fi fi-d2">
-    <div id="form-inner">
+  <div class="fcard fi d2">
+    <div id="fi">
       <h3>Accès au chapitre gratuit</h3>
-      <p>Mécanisme de stress — PDF · Accès immédiat</p>
-      <div class="f-group"><label>Prénom &amp; Nom</label><input type="text" id="f-name" placeholder="ex. Marie Dupont"></div>
-      <div class="f-group"><label>Adresse e-mail</label><input type="email" id="f-email" placeholder="votre@email.com"></div>
-      <div class="f-group"><label>Profession <span style="opacity:.4">(optionnel)</span></label><input type="text" id="f-job" placeholder="ex. Réflexothérapeute, Ostéopathe, Kiné…"></div>
-      <button class="btn btn-gold" onclick="submitForm()" style="width:100%;margin-top:8px;padding:14px;">Recevoir le chapitre →</button>
-      <p class="f-notice">Vos données ne seront jamais partagées. Désabonnement possible à tout moment.</p>
+      <p class="fs">Mécanisme de stress — PDF · Accès immédiat après inscription</p>
+      <div class="fg"><label>Prénom &amp; Nom</label><input type="text" id="fn" placeholder="ex. Marie Dupont"></div>
+      <div class="fg"><label>Adresse e-mail</label><input type="email" id="fe" placeholder="votre@email.com"></div>
+      <div class="fg"><label>Profession <span style="opacity:.4">(optionnel)</span></label><input type="text" id="fj" placeholder="ex. Réflexothérapeute, Ostéopathe, Kiné…"></div>
+      <button class="btn b-gold" onclick="sub()" style="width:100%;margin-top:8px;padding:13px;">Recevoir le chapitre →</button>
+      <p class="fnote">Vos données ne seront jamais partagées. Désabonnement possible à tout moment.</p>
     </div>
-    <div class="form-success" id="form-success">
-      <div class="success-circle">✓</div>
-      <h3 style="color:var(--cream);font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:300;margin-bottom:8px;">Merci !</h3>
-      <p style="font-size:.86rem;color:rgba(245,240,232,.55);">Le lien de téléchargement a été envoyé à votre adresse e-mail.</p>
-      <a href="#" class="success-dl" onclick="return false;">⬇ Télécharger le Chapitre 5 (PDF)</a>
-      <p style="font-size:.68rem;color:rgba(245,240,232,.28);margin-top:14px;">Vérifiez aussi votre dossier spam.</p>
+    <div class="fsuccess" id="fs">
+      <div class="fok">✓</div>
+      <h3 style="color:var(--cream);font-family:'Cormorant Garamond',serif;font-size:1.38rem;font-weight:300;margin-bottom:7px;">Merci !</h3>
+      <p style="font-size:.85rem;color:rgba(245,240,232,.52);">Le lien de téléchargement a été envoyé à votre adresse e-mail.</p>
+      <a href="#" class="fdl" onclick="return false;">⬇ Télécharger le Chapitre 5 (PDF)</a>
+      <p style="font-size:.67rem;color:rgba(245,240,232,.27);margin-top:12px;">Vérifiez aussi votre dossier spam.</p>
     </div>
   </div>
 </section>
 
 <!-- CITATIONS -->
-<section id="temoignages">
-  <div class="s-label cream fi" style="justify-content:center;">Extraits de l'ouvrage</div>
-  <h2 class="on-dark fi fi-d1" style="text-align:center;">La voix de l'<em>auteur</em></h2>
-  <div class="quotes-row">
-    <div class="q-card fi fi-d1">
-      <p class="q-text">"La mobilité viscérale est rendue possible par quatre grands moteurs : le système nerveux somatique, le système nerveux autonome, la motilité intrinsèque et les biorythmes. Leur interaction définit le terrain clinique du praticien."</p>
-      <span class="q-source">Chapitre 1 — Généralités</span>
+<section id="citations">
+  <div class="lbl c ctr fi">Extraits de l'ouvrage</div>
+  <h2 class="on-dk fi d1" style="text-align:center;">La voix de l'<em>auteur</em></h2>
+  <div class="qt-row">
+    <div class="qt fi d1">
+      <p class="qt-t">"La mobilité viscérale est rendue possible par quatre grands moteurs : le système nerveux somatique, le système nerveux autonome, la motilité intrinsèque et les biorythmes. Leur interaction définit le terrain clinique du praticien."</p>
+      <span class="qt-s">Chapitre 1 — Généralités</span>
     </div>
-    <div class="q-card fi fi-d2">
-      <p class="q-text">"Le SNA est la clé de notre action. Fidèles à notre principe 'priorité au nerf', c'est d'abord en portant notre action sur le SNA que nous restituons les fonctions viscéro-glandulaires."</p>
-      <span class="q-source">Chapitre 4 — Système nerveux autonome</span>
+    <div class="qt fi d2">
+      <p class="qt-t">"Force et trituration sont proscrites : on perd la lecture fine, les repères osseux deviennent moins nets, et on crée un stress tissulaire inutile. Le geste juste, c'est la pression progressive, brève, orientée."</p>
+      <span class="qt-s">Chapitre 2 — Protocole R.O.P.</span>
     </div>
-    <div class="q-card fi fi-d3">
-      <p class="q-text">"Notre rôle en R.O.P. est de favoriser la régulation du nerf vague. Ce qui se passe dans le corps peut influencer et s'accompagner de variations de notre état mental et émotionnel."</p>
-      <span class="q-source">Chapitre 6 — Théorie polyvagale</span>
+    <div class="qt fi d3">
+      <p class="qt-t">"Notre rôle en R.O.P. est de favoriser la régulation du nerf vague. Ce qui se passe dans le corps peut influencer et s'accompagner de variations de notre état mental et émotionnel."</p>
+      <span class="qt-s">Chapitre 6 — Théorie polyvagale</span>
     </div>
   </div>
 </section>
@@ -552,20 +688,17 @@ footer>div>p{font-size:.8rem;color:rgba(245,240,232,.32);line-height:1.7;max-wid
 <!-- AUTEUR -->
 <section id="auteur">
   <div class="fi">
-    <div class="author-portrait">
-      <div class="author-monogram">GB</div>
-      <div class="author-portrait-border"></div>
-    </div>
-    <div class="prev-works">
+    <div class="ap"><div class="ap-mono">GB</div><div class="ap-b"></div></div>
+    <div class="prev">
       <h5>Ouvrages précédents</h5>
-      <div class="prev-books-row">
-        <div class="prev-bk i" title="1er ouvrage R.O.P.">I</div>
-        <div class="prev-bk ii" title="2e ouvrage R.O.P.">II</div>
+      <div class="prev-r">
+        <div class="pb i" title="1er ouvrage — Système ostéo-musculo-articulaire">I</div>
+        <div class="pb ii" title="2e ouvrage — Système neuro-méningé">II</div>
       </div>
     </div>
   </div>
-  <div class="author-body fi fi-d1">
-    <div class="s-label">L'auteur</div>
+  <div class="ab fi d1">
+    <div class="lbl">L'auteur</div>
     <h2>Guy <em>Boitout</em></h2>
     <div class="chips">
       <span class="chip">Réflexothérapeute</span>
@@ -574,62 +707,62 @@ footer>div>p{font-size:.8rem;color:rgba(245,240,232,.32);line-height:1.7;max-wid
       <span class="chip">Formateur certifié</span>
     </div>
     <p>Guy Boitout est le fondateur de la Réflexologie Occipito-Podale (R.O.P.), une technique de massage basée sur la représentation tridimensionnelle du corps sur le pied et l'occiput. Depuis plus de trente ans, il enseigne et diffuse cette approche à travers l'Institut de Formation R.O.P., basé à Sully-sur-Loire.</p>
-    <p>En collaboration avec Jean-Pierre Vadala, il a développé les fondements théoriques et la cartographie réflexe de la méthode R.O.P., publiés aux Éditions Elsevier-Masson. Ses deux premiers ouvrages, références pour les praticiens, couvrent respectivement l'anatomie réflexe et le système neuro-méningé (nerfs spinaux et crâniens).</p>
-    <p>Ce troisième volume enrichit la démarche en intégrant les apports des neurosciences contemporaines : phylogénèse du système nerveux, théorie polyvagale, mécanismes du stress et anatomie viscérale fonctionnelle — avec, à chaque étape, les applications cliniques spécifiques à la R.O.P.</p>
-    <p>Ses formations sont agréées pour la formation continue (numéro d'agrément 24450434645, préfecture du Centre-Val de Loire) et s'adressent aux réflexothérapeutes, ostéopathes, kinésithérapeutes et professionnels de santé.</p>
-    <div style="display:flex;gap:14px;flex-wrap:wrap;margin-top:16px;">
-      <a href="https://www.reflexo-occipitopodale.com" target="_blank" class="btn btn-outline">Site de l'Institut R.O.P. →</a>
-      <a href="https://www.reflexo-occipitopodale.com/formations-réflexo-occipito-podale" target="_blank" class="btn btn-outline">Les formations →</a>
+    <p>Kinésithérapeute de formation, il découvre la réflexologie (méthode Ingham) en 1978, puis l'ostéopathie viscérale avec Jean-Pierre Barral — deux étapes décisives qui l'amèneront, avec Jean-Pierre Vadala, à créer la cartographie réflexe R.O.P. en 3D, publiée aux Éditions Elsevier-Masson.</p>
+    <p>Ce troisième volume synthétise trois décennies de pratique et d'enseignement : phylogénèse du système nerveux, théorie polyvagale, mécanismes du stress et anatomie viscérale fonctionnelle — avec, à chaque chapitre, les zones réflexes et les protocoles R.O.P. correspondants.</p>
+    <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:14px;">
+      <a href="https://www.reflexo-occipitopodale.com" target="_blank" class="btn b-out">Site de l'Institut R.O.P. →</a>
+      <a href="https://www.reflexo-occipitopodale.com/formations-réflexo-occipito-podale" target="_blank" class="btn b-out">Les formations →</a>
     </div>
   </div>
 </section>
 
 <!-- PRICING -->
 <section id="acheter">
-  <div class="s-label" style="justify-content:center;">Commander</div>
-  <h2 style="text-align:center;">Accédez aux <em>chapitres</em></h2>
-  <p>Chapitres en accès individuel ou pack complet — format numérique PDF, accès permanent.</p>
-  <div class="price-grid">
-    <div class="p-card fi fi-d1">
-      <div class="p-name">Chapitre individuel</div>
-      <p class="p-desc">Un chapitre au choix parmi les six présentés, en accès PDF immédiat.</p>
-      <div class="p-amount"><span class="p-cur">€</span>9</div>
-      <div class="p-sub">par chapitre</div>
-      <ul class="p-list">
+  <div class="lbl ctr fi">Commander</div>
+  <h2 class="fi d1" style="text-align:center;">Accédez aux <em>chapitres</em></h2>
+  <p>Format numérique PDF — accès permanent, livraison immédiate par e-mail.</p>
+  <div class="pg">
+    <div class="pc fi d1">
+      <div class="pc-n">Chapitre individuel</div>
+      <p class="pc-d">Un chapitre au choix parmi les huit présentés, en accès PDF immédiat.</p>
+      <div class="pc-a"><span class="pc-c">€</span>9</div>
+      <div class="pc-s">par chapitre (5 € pour la préface)</div>
+      <ul class="pc-l">
         <li>PDF haute résolution</li>
         <li>Références bibliographiques</li>
         <li>Schémas R.O.P. inclus</li>
         <li>Accès permanent</li>
       </ul>
-      <a href="mailto:contact@reflexo-occipitopodale.com?subject=Commande%20chapitre%20individuel" class="btn btn-outline" style="width:100%;text-align:center;">Choisir un chapitre</a>
+      <a href="mailto:contact@reflexo-occipitopodale.com?subject=Commande%20chapitre%20individuel" class="btn b-out" style="width:100%;text-align:center;">Choisir un chapitre</a>
     </div>
-    <div class="p-card star fi fi-d2">
-      <div class="p-name">Pack 5 chapitres</div>
-      <p class="p-desc">Chapitres 1, 3, 4, 6 &amp; 14 + le Chapitre 5 offert — l'essentiel de l'ouvrage.</p>
-      <div class="p-amount"><span class="p-cur">€</span>38</div>
-      <div class="p-sub">au lieu de 45 €</div>
-      <ul class="p-list">
-        <li>5 chapitres payants (PDF)</li>
+    <div class="pc star fi d2">
+      <div class="pc-n">Pack 7 chapitres</div>
+      <p class="pc-d">Préface + Ch. 1, 2, 3, 4, 6 &amp; 14 — plus le Ch. 5 offert sur inscription.</p>
+      <div class="pc-a"><span class="pc-c">€</span>49</div>
+      <div class="pc-s">au lieu de 62 €</div>
+      <ul class="pc-l">
+        <li>7 chapitres payants (PDF)</li>
         <li>Chapitre 5 offert</li>
         <li>Toutes les cartographies R.O.P.</li>
+        <li>Protocole clinique complet (Ch. 2)</li>
         <li>Accès permanent + mises à jour</li>
-        <li>Économisez 7 €</li>
+        <li>Économisez 13 €</li>
       </ul>
-      <a href="mailto:contact@reflexo-occipitopodale.com?subject=Commande%20pack%205%20chapitres" class="btn btn-gold" style="width:100%;text-align:center;">Commander le pack</a>
+      <a href="mailto:contact@reflexo-occipitopodale.com?subject=Commande%20pack%207%20chapitres" class="btn b-gold" style="width:100%;text-align:center;">Commander le pack</a>
     </div>
-    <div class="p-card fi fi-d3">
-      <div class="p-name">Ouvrage complet</div>
-      <p class="p-desc">Accès à l'intégralité des chapitres dès la publication, index clinique et bibliographie complète.</p>
-      <div class="p-amount"><span class="p-cur">€</span>49</div>
-      <div class="p-sub">édition numérique complète</div>
-      <ul class="p-list">
+    <div class="pc fi d3">
+      <div class="pc-n">Ouvrage complet</div>
+      <p class="pc-d">Accès à l'intégralité des 20+ chapitres dès la publication, avec index clinique.</p>
+      <div class="pc-a"><span class="pc-c">€</span>79</div>
+      <div class="pc-s">édition numérique complète</div>
+      <ul class="pc-l">
         <li>Tous les chapitres (20+) en PDF</li>
         <li>Cartographies complètes</li>
         <li>Index clinique R.O.P.</li>
         <li>Bibliographie exhaustive</li>
-        <li>Mises à jour incluses</li>
+        <li>Mises à jour incluses à vie</li>
       </ul>
-      <a href="mailto:contact@reflexo-occipitopodale.com?subject=Pr%C3%A9-commande%20ouvrage%20complet" class="btn btn-sage" style="width:100%;text-align:center;">Pré-commander</a>
+      <a href="mailto:contact@reflexo-occipitopodale.com?subject=Pr%C3%A9-commande%20ouvrage%20complet" class="btn b-sage" style="width:100%;text-align:center;">Pré-commander</a>
     </div>
   </div>
 </section>
@@ -637,17 +770,18 @@ footer>div>p{font-size:.8rem;color:rgba(245,240,232,.32);line-height:1.7;max-wid
 <!-- FOOTER -->
 <footer>
   <div>
-    <div class="f-brand">Le Corps en Dialogue</div>
-    <p>3ᵉ ouvrage de Guy Boitout sur la Réflexologie Occipito-Podale. Système nerveux, mobilité viscérale, stress et théorie polyvagale — une lecture clinique complète au service du praticien.</p>
+    <div class="f-br">Le Corps en Dialogue</div>
+    <p>3ᵉ ouvrage de Guy Boitout sur la Réflexologie Occipito-Podale. Système nerveux, mobilité viscérale, stress et protocole clinique complet — au service du praticien.</p>
   </div>
-  <div class="f-col">
+  <div class="fc">
     <h5>Navigation</h5>
-    <a href="#chapitres">Le sommaire</a>
+    <a href="#genese">Genèse</a>
+    <a href="#chapitres">Sommaire</a>
+    <a href="#protocole">Protocole R.O.P.</a>
     <a href="#acces-libre">Chapitre gratuit</a>
-    <a href="#auteur">L'auteur</a>
     <a href="#acheter">Commander</a>
   </div>
-  <div class="f-col">
+  <div class="fc">
     <h5>Institut R.O.P.</h5>
     <a href="https://www.reflexo-occipitopodale.com" target="_blank">Site officiel</a>
     <a href="https://www.reflexo-occipitopodale.com/formations-réflexo-occipito-podale" target="_blank">Les formations</a>
@@ -655,29 +789,23 @@ footer>div>p{font-size:.8rem;color:rgba(245,240,232,.32);line-height:1.7;max-wid
     <a href="https://www.reflexo-occipitopodale.com/contact-réflexo-occipito-podale" target="_blank">Contact</a>
   </div>
 </footer>
-<div class="f-bottom">
+<div class="f-bot">
   <span>© 2025 Guy Boitout · Institut R.O.P. · Sully-sur-Loire</span>
   <span>17 rue du Coq · 45600 Sully-sur-Loire · 06 10 35 78 22</span>
 </div>
 
 <script>
-window.addEventListener('scroll',()=>{
-  document.getElementById('site-header').classList.toggle('scrolled',window.scrollY>20);
-});
-const obs=new IntersectionObserver((entries)=>{
-  entries.forEach((e,i)=>{
-    if(e.isIntersecting){setTimeout(()=>e.target.classList.add('in'),i*75);obs.unobserve(e.target);}
-  });
-},{threshold:0.1});
-document.querySelectorAll('.fi').forEach(el=>obs.observe(el));
-function submitForm(){
-  const name=document.getElementById('f-name').value.trim();
-  const email=document.getElementById('f-email').value.trim();
-  if(!name||!email){alert('Veuillez renseigner votre nom et e-mail.');return;}
-  if(!email.includes('@')){alert('Adresse e-mail invalide.');return;}
-  document.getElementById('form-inner').style.display='none';
-  document.getElementById('form-success').classList.add('active');
-  // → brancher ici EmailJS ou votre backend
+window.addEventListener('scroll',()=>{document.getElementById('hdr').classList.toggle('sc',scrollY>20)});
+const ob=new IntersectionObserver((es)=>{es.forEach((e,i)=>{if(e.isIntersecting){setTimeout(()=>e.target.classList.add('in'),i*70);ob.unobserve(e.target)}})},{threshold:.1});
+document.querySelectorAll('.fi').forEach(el=>ob.observe(el));
+function sub(){
+  const n=document.getElementById('fn').value.trim();
+  const e=document.getElementById('fe').value.trim();
+  if(!n||!e){alert('Veuillez renseigner votre nom et e-mail.');return}
+  if(!e.includes('@')){alert('Adresse e-mail invalide.');return}
+  document.getElementById('fi').style.display='none';
+  document.getElementById('fs').classList.add('on');
+  // → brancher ici EmailJS ou backend
 }
 </script>
 </body>
