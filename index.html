@@ -219,10 +219,12 @@ h1 em { font-style:italic; color:var(--gold-l); }
 .ap-b { position:absolute; inset:11px; border:1px solid rgba(74,107,90,.1); border-radius:1px; pointer-events:none; }
 .prev { margin-top:26px; }
 .prev h5 { font-size:.65rem; letter-spacing:.2em; text-transform:uppercase; color:var(--i30); margin-bottom:13px; }
-.prev-r { display:flex; gap:12px; }
-.pb { width:56px; height:80px; border-radius:2px; display:flex; align-items:center; justify-content:center; font-family:'Cormorant Garamond',serif; font-size:1.25rem; font-weight:300; color:var(--cream); box-shadow:3px 5px 16px rgba(26,26,24,.14); }
-.pb.i { background:linear-gradient(145deg,#4a3028,#6b4539); }
-.pb.ii { background:linear-gradient(145deg,#2d3a4a,#3a4f6b); }
+.prev-r { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px; }
+.pb { display:block; text-decoration:none; color:inherit; }
+.pb img { width:100%; aspect-ratio:3/4; object-fit:cover; border-radius:3px; display:block; box-shadow:6px 10px 24px rgba(26,26,24,.14); transition:transform .24s, box-shadow .24s; }
+.pb:hover img { transform:translateY(-4px); box-shadow:10px 16px 32px rgba(26,26,24,.2); }
+.pb-cap { margin-top:8px; font-size:.67rem; line-height:1.45; color:var(--i50); }
+.pb-cap strong { display:block; font-size:.72rem; color:var(--ink); }
 .ab .chips { display:flex; flex-wrap:wrap; gap:7px; margin-bottom:26px; }
 .chip { font-size:.69rem; padding:5px 13px; background:var(--sage-pale); border-radius:20px; color:var(--sage); font-weight:500; }
 .ab p { font-size:.92rem; line-height:1.88; color:var(--i50); margin-bottom:16px; }
@@ -337,8 +339,14 @@ footer > div > p { font-size:.79rem; color:rgba(245,240,232,.68); line-height:1.
     <div class="prev">
       <h5>Ouvrages précédents</h5>
       <div class="prev-r">
-        <div class="pb i">I</div>
-        <div class="pb ii">II</div>
+        <a class="pb" href="https://www.amazon.fr/-/en/R%C3%A9flexoth%C3%A9rapie-occipito-podale-Guy-Boitout/dp/2294743814" target="_blank" rel="noopener noreferrer">
+          <img src="assets/book-1.svg" alt="Couverture du Livre 1 de Guy Boitout">
+          <div class="pb-cap"><strong>Livre 1</strong>Voir sur Amazon</div>
+        </a>
+        <a class="pb" href="https://www.amazon.fr/-/en/R%C3%A9flexoth%C3%A9rapie-occipito-podale-syst%C3%A8me-neuro-m%C3%A9ning%C3%A9-Boitout/dp/2294775791" target="_blank" rel="noopener noreferrer">
+          <img src="assets/book-2.svg" alt="Couverture du Livre 2 de Guy Boitout">
+          <div class="pb-cap"><strong>Livre 2</strong>Voir sur Amazon</div>
+        </a>
       </div>
     </div>
   </div>
