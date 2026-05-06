@@ -212,8 +212,9 @@ h1 em { font-style:italic; color:var(--gold-l); }
 .qt-s { font-size:.67rem; letter-spacing:.12em; text-transform:uppercase; color:var(--gold-l); }
 
 /* ── AUTEUR ── */
-#auteur { background:var(--cream); display:grid; grid-template-columns:270px 1fr; gap:78px; align-items:start; }
-.ap { width:100%; aspect-ratio:3/4; background:linear-gradient(160deg,var(--parch) 0%,var(--sage-pale) 100%); border-radius:2px; overflow:hidden; display:flex; align-items:center; justify-content:center; box-shadow:8px 12px 38px rgba(26,26,24,.1); position:relative; }
+#auteur { background:var(--cream); display:grid; grid-template-columns:360px 1fr; gap:78px; align-items:start; }
+.ap { width:100%; aspect-ratio:4/3; background:linear-gradient(160deg,var(--parch) 0%,var(--sage-pale) 100%); border-radius:2px; overflow:hidden; display:flex; align-items:center; justify-content:center; box-shadow:8px 12px 38px rgba(26,26,24,.1); position:relative; }
+.ap img { width:100%; height:100%; object-fit:cover; object-position:center; display:block; }
 .ap-mono { font-family:'Cormorant Garamond',serif; font-size:4.5rem; font-weight:300; color:rgba(74,107,90,.17); letter-spacing:.4em; }
 .ap-b { position:absolute; inset:11px; border:1px solid rgba(74,107,90,.1); border-radius:1px; pointer-events:none; }
 .prev { margin-top:26px; }
@@ -268,6 +269,7 @@ footer > div > p { font-size:.79rem; color:rgba(245,240,232,.3); line-height:1.7
   .ch-hd { grid-template-columns:1fr !important; gap:18px; }
   header { padding:0 22px; }
   nav { display:none; }
+  .ap { max-width:420px; }
   .f-bot { padding:15px 26px; flex-direction:column; gap:5px; }
 }
 </style>
@@ -321,6 +323,40 @@ footer > div > p { font-size:.79rem; color:rgba(245,240,232,.3); line-height:1.7
     <div class="hero-ctas">
       <a href="#acces-libre" class="btn b-sage">Lire un chapitre gratuit</a>
       <a href="#chapitres" class="btn b-ghost">Voir le sommaire</a>
+    </div>
+  </div>
+</section>
+
+<!-- AUTEUR -->
+<section id="auteur">
+  <div>
+    <div class="ap">
+      <img src="assets/photo-guy.png" alt="Guy Boitout présentant la Réflexothérapie Occipito-Podale">
+      <div class="ap-b"></div>
+    </div>
+    <div class="prev">
+      <h5>Ouvrages précédents</h5>
+      <div class="prev-r">
+        <div class="pb i">I</div>
+        <div class="pb ii">II</div>
+      </div>
+    </div>
+  </div>
+  <div class="ab">
+    <div class="lbl">L'auteur</div>
+    <h2>Guy <em>Boitout</em></h2>
+    <div class="chips">
+      <span class="chip">Réflexothérapeute</span>
+      <span class="chip">Ostéopathe</span>
+      <span class="chip">Fondateur R.O.P.</span>
+      <span class="chip">Formateur certifié</span>
+    </div>
+    <p>Guy Boitout est le fondateur de la Réflexologie Occipito-Podale (R.O.P.), une technique de massage basée sur la représentation tridimensionnelle du corps sur le pied et l'occiput. Depuis plus de trente ans, il enseigne et diffuse cette approche à travers l'Institut de Formation R.O.P., basé à Sully-sur-Loire.</p>
+    <p>Kinésithérapeute de formation, il découvre la réflexologie (méthode Ingham) en 1978, puis l'ostéopathie viscérale avec Jean-Pierre Barral — deux étapes décisives qui l'amèneront, avec Jean-Pierre Vadala, à créer la cartographie réflexe R.O.P. en 3D, publiée aux Éditions Elsevier-Masson.</p>
+    <p>Ses formations sont agréées pour la formation continue (numéro d'agrément 24450434645, préfecture du Centre-Val de Loire) et s'adressent aux réflexothérapeutes, ostéopathes, kinésithérapeutes et professionnels de santé.</p>
+    <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:14px;">
+      <a href="https://www.reflexo-occipitopodale.com" target="_blank" class="btn b-out">Site de l'Institut R.O.P. →</a>
+      <a href="https://www.reflexo-occipitopodale.com/formations-réflexo-occipito-podale" target="_blank" class="btn b-out">Les formations →</a>
     </div>
   </div>
 </section>
@@ -732,37 +768,6 @@ footer > div > p { font-size:.79rem; color:rgba(245,240,232,.3); line-height:1.7
     <div class="qt">
       <p class="qt-t">"Notre rôle en R.O.P. est de favoriser la régulation du nerf vague. Ce qui se passe dans le corps peut influencer et s'accompagner de variations de notre état mental et émotionnel."</p>
       <span class="qt-s">Chapitre 6 — Théorie polyvagale</span>
-    </div>
-  </div>
-</section>
-
-<!-- AUTEUR -->
-<section id="auteur">
-  <div>
-    <div class="ap"><div class="ap-mono">GB</div><div class="ap-b"></div></div>
-    <div class="prev">
-      <h5>Ouvrages précédents</h5>
-      <div class="prev-r">
-        <div class="pb i">I</div>
-        <div class="pb ii">II</div>
-      </div>
-    </div>
-  </div>
-  <div class="ab">
-    <div class="lbl">L'auteur</div>
-    <h2>Guy <em>Boitout</em></h2>
-    <div class="chips">
-      <span class="chip">Réflexothérapeute</span>
-      <span class="chip">Ostéopathe</span>
-      <span class="chip">Fondateur R.O.P.</span>
-      <span class="chip">Formateur certifié</span>
-    </div>
-    <p>Guy Boitout est le fondateur de la Réflexologie Occipito-Podale (R.O.P.), une technique de massage basée sur la représentation tridimensionnelle du corps sur le pied et l'occiput. Depuis plus de trente ans, il enseigne et diffuse cette approche à travers l'Institut de Formation R.O.P., basé à Sully-sur-Loire.</p>
-    <p>Kinésithérapeute de formation, il découvre la réflexologie (méthode Ingham) en 1978, puis l'ostéopathie viscérale avec Jean-Pierre Barral — deux étapes décisives qui l'amèneront, avec Jean-Pierre Vadala, à créer la cartographie réflexe R.O.P. en 3D, publiée aux Éditions Elsevier-Masson.</p>
-    <p>Ses formations sont agréées pour la formation continue (numéro d'agrément 24450434645, préfecture du Centre-Val de Loire) et s'adressent aux réflexothérapeutes, ostéopathes, kinésithérapeutes et professionnels de santé.</p>
-    <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:14px;">
-      <a href="https://www.reflexo-occipitopodale.com" target="_blank" class="btn b-out">Site de l'Institut R.O.P. →</a>
-      <a href="https://www.reflexo-occipitopodale.com/formations-réflexo-occipito-podale" target="_blank" class="btn b-out">Les formations →</a>
     </div>
   </div>
 </section>
