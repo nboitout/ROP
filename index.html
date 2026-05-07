@@ -144,6 +144,10 @@ h1 em { font-style:italic; color:var(--gold-l); }
 .cc.fr::before { content:''; position:absolute; top:0; left:0; width:3px; height:100%; background:var(--sage); }
 .cc.intro { border:1px solid rgba(160,124,58,.2); }
 .cc.intro::before { content:''; position:absolute; top:0; left:0; width:3px; height:100%; background:var(--gold); }
+.cc.intro .cc-body { background:linear-gradient(180deg, rgba(160,124,58,.05) 0%, rgba(255,255,255,0) 100%); }
+.cc.intro .cc-lbl { color:rgba(160,124,58,.9); font-weight:600; }
+.cc.intro .cc-title { font-size:1.54rem; line-height:1.16; margin-bottom:15px; }
+.cc.intro .cc-txt { font-size:.9rem; line-height:1.95; color:rgba(26,26,24,.84); }
 .cc-top { padding:26px 26px 0; display:flex; justify-content:space-between; align-items:flex-start; }
 .cc-n { font-family:'Cormorant Garamond',serif; font-size:3.3rem; font-weight:300; color:var(--i08); line-height:1; }
 .badge { font-size:.61rem; font-weight:500; letter-spacing:.15em; text-transform:uppercase; padding:4px 10px; border-radius:2px; }
@@ -747,35 +751,6 @@ footer > div > p { font-size:.79rem; color:rgba(245,240,232,.82); line-height:1.
   </div>
 </section>
 
-<!-- PEDAGOGIE -->
-<section id="pedagogie">
-  <div style="text-align:center;max-width:620px;margin:0 auto 52px">
-    <div class="lbl ctr">Rigueur éditoriale</div>
-    <h2 style="text-align:center;">Trois niveaux de <em>lecture</em></h2>
-    <p style="font-size:.93rem;color:var(--i50);line-height:1.8;">Chaque affirmation est catégorisée selon son niveau de preuve — une transparence scientifique rare dans la littérature paramédicale.</p>
-  </div>
-  <div class="ped-grid">
-    <div class="ped-c">
-      <div class="ped-ico">✅</div>
-      <div class="ped-t">Données Établies</div>
-      <p class="ped-d">Faits anatomiques et physiologiques validés par la littérature scientifique et consensuels dans les milieux médicaux et paramédicaux.</p>
-      <div class="ped-tags"><span class="ped-tag">Anatomie descriptive</span><span class="ped-tag">Physiologie</span><span class="ped-tag">Neurologie</span></div>
-    </div>
-    <div class="ped-c">
-      <div class="ped-ico">🔬</div>
-      <div class="ped-t">Modèles Discutés</div>
-      <p class="ped-d">Théories cliniques plausibles mais non encore totalement consensuelles — clairement signalées dans le texte pour permettre un regard critique.</p>
-      <div class="ped-tags"><span class="ped-tag">Théorie polyvagale</span><span class="ped-tag">3 cerveaux</span><span class="ped-tag">MRP</span></div>
-    </div>
-    <div class="ped-c">
-      <div class="ped-ico">🦶</div>
-      <div class="ped-t">Modèle R.O.P.</div>
-      <p class="ped-d">Applications spécifiques à la R.O.P. : zones réflexes, cartographies podales et occipitales, protocoles de sollicitation propres à la méthode.</p>
-      <div class="ped-tags"><span class="ped-tag">Zones réflexes</span><span class="ped-tag">Cartographie podale</span><span class="ped-tag">Protocoles</span></div>
-    </div>
-  </div>
-</section>
-
 <!-- FORM -->
 <section id="acces-libre">
   <div class="fl">
@@ -947,3 +922,4 @@ if (heroSlides.length && heroThumbs.length) {
 </script>
 </body>
 </html>
+
