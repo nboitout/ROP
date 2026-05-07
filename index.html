@@ -853,13 +853,38 @@ footer > div > p { font-size:1rem; color:rgba(245,240,232,.84); line-height:1.9;
 window.addEventListener('scroll', () => {
   document.querySelector('header').classList.toggle('scrolled', scrollY > 20);
 });
-function handleForm() {
+async function handleForm() {
   const n = document.getElementById('fn').value.trim();
   const e = document.getElementById('fe').value.trim();
+  const j = document.getElementById('fj').value.trim();
   if (!n || !e) { alert('Veuillez renseigner votre nom et e-mail.'); return; }
   if (!e.includes('@')) { alert('Adresse e-mail invalide.'); return; }
-  document.getElementById('form-inner').style.display = 'none';
-  document.getElementById('form-success').classList.add('on');
+
+  try {
+    const res = await fetch('https://script.google.com/macros/s/AKfycbyjG3fr0aFRO61s0h0VCSjXF6fJCXbW5BF2HeGOQ2pMdp0ifdWSZwupOLwZDT1cIT29ow/exec', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        fullName: n,
+        email: e,
+        profession: j,
+        source: 'chapter-5-free'
+      })
+    });
+
+    const result = await res.json();
+    if (!result.success) {
+      throw new Error(result.error || 'Submission failed');
+    }
+
+    document.getElementById('form-inner').style.display = 'none';
+    document.getElementById('form-success').classList.add('on');
+  } catch (error) {
+    alert(\"Erreur lors de l'envoi. Réessayez.\");
+    console.error(error);
+  }
 }
 const heroSlides = Array.from(document.querySelectorAll('.hero-main img'));
 const heroThumbs = Array.from(document.querySelectorAll('.hero-thumb'));
