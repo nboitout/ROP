@@ -63,7 +63,7 @@ h2 em { font-style:italic; color:var(--sage); }
 .on-dk em { color:var(--gold-l); }
 
 /* ── HERO ── */
-#hero { min-height:100vh; padding-top:62px; display:grid; grid-template-columns:54% 46%; }
+#hero { min-height:78vh; padding-top:62px; display:grid; grid-template-columns:54% 46%; }
 .hl { background:var(--sage); display:flex; flex-direction:column; justify-content:center; padding:88px 60px 88px 80px; position:relative; overflow:hidden; }
 .hl::before { content:''; position:absolute; inset:0; background:radial-gradient(ellipse at 8% 88%, rgba(160,124,58,.24) 0%, transparent 52%), radial-gradient(ellipse at 88% 12%, rgba(245,240,232,.05) 0%, transparent 44%); }
 .hl-orb { position:absolute; top:30px; left:30px; width:96px; height:96px; border:1px solid rgba(245,240,232,.11); border-radius:50%; }
@@ -79,25 +79,18 @@ h1 em { font-style:italic; color:var(--gold-l); }
 .hl-name { font-family:'Cormorant Garamond',serif; font-size:1.22rem; font-weight:400; color:var(--cream); margin-bottom:3px; }
 .hl-role { font-size:.71rem; letter-spacing:.1em; text-transform:uppercase; color:rgba(245,240,232,.8); }
 
-.hr { background:linear-gradient(180deg,#ece4d4 0%, #e4dccd 100%); display:flex; flex-direction:column; align-items:center; justify-content:center; padding:64px 54px; position:relative; overflow:hidden; }
+.hr { background:linear-gradient(180deg,#ece4d4 0%, #e4dccd 100%); display:flex; flex-direction:column; align-items:center; justify-content:center; padding:56px 54px; position:relative; overflow:hidden; }
 .hr::before { content:''; position:absolute; inset:-8% -16% auto auto; width:440px; height:440px; background:radial-gradient(circle, rgba(160,124,58,.17) 0%, rgba(160,124,58,0) 68%); pointer-events:none; }
 .hr::after { content:''; position:absolute; left:-90px; bottom:-110px; width:280px; height:280px; border-radius:50%; border:1px solid rgba(74,107,90,.12); pointer-events:none; }
 .hero-ctas { display:flex; gap:12px; flex-wrap:wrap; justify-content:flex-start; position:relative; z-index:1; margin-bottom:34px; }
-.hero-gallery { position:relative; z-index:1; width:min(100%, 540px); }
+.hero-gallery { position:relative; z-index:1; width:min(100%, 500px); }
 .hero-gallery-top { display:flex; justify-content:space-between; align-items:flex-start; gap:18px; margin-bottom:18px; }
 .hero-gallery-kicker { font-size:.64rem; letter-spacing:.22em; text-transform:uppercase; color:var(--sage); margin-bottom:10px; }
 .hero-gallery-title { font-family:'Cormorant Garamond',serif; font-size:1.55rem; font-weight:300; line-height:1.08; color:var(--ink); }
 .hero-carousel { position:relative; background:rgba(255,255,255,.48); padding:18px; border:1px solid rgba(74,107,90,.12); border-radius:22px; box-shadow:0 24px 60px rgba(26,26,24,.12); backdrop-filter:blur(6px); }
 .hr > .bk-wrap, .hr > .hero-ctas:last-child { display:none; }
-.hero-main { position:relative; aspect-ratio:4/5; overflow:hidden; border-radius:16px; background:#d6d0c4; }
-.hero-main img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center top; opacity:0; transition:opacity .45s ease; }
-.hero-main img.active { opacity:1; }
-.hero-thumbs { display:grid; grid-template-columns:repeat(4,1fr); gap:12px; margin-top:16px; }
-.hero-thumb { border:none; padding:0; background:none; cursor:pointer; text-align:left; }
-.hero-thumb-frame { position:relative; aspect-ratio:1/1; border-radius:12px; overflow:hidden; border:2px solid transparent; box-shadow:0 10px 24px rgba(26,26,24,.12); transition:transform .24s, border-color .24s, box-shadow .24s; }
-.hero-thumb:hover .hero-thumb-frame { transform:translateY(-3px); box-shadow:0 14px 28px rgba(26,26,24,.16); }
-.hero-thumb.is-active .hero-thumb-frame { border-color:var(--gold); box-shadow:0 14px 28px rgba(160,124,58,.2); }
-.hero-thumb img { width:100%; height:100%; object-fit:cover; object-position:center top; display:block; }
+.hero-main { position:relative; aspect-ratio:4/4.6; overflow:hidden; border-radius:16px; background:#d6d0c4; box-shadow:0 18px 38px rgba(26,26,24,.14); }
+.hero-main img { width:100%; height:100%; object-fit:cover; object-position:center top; display:block; }
 
 /* ── GENÈSE ── */
 #genese { background:var(--ink); display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:center; }
@@ -281,7 +274,6 @@ footer > div > p { font-size:.79rem; color:rgba(245,240,232,.82); line-height:1.
   .f-bot { padding:15px 26px; flex-direction:column; gap:5px; }
   .hero-gallery { width:100%; }
   .hero-gallery-top { flex-direction:column; }
-  .hero-thumbs { grid-template-columns:repeat(2,1fr); }
 }
 </style>
 </head>
@@ -336,24 +328,7 @@ footer > div > p { font-size:.79rem; color:rgba(245,240,232,.82); line-height:1.
       </div>
       <div class="hero-carousel">
         <div class="hero-main">
-          <img src="assets/Guy1.jpeg" alt="Guy Boitout photo 1" data-slide="0">
-          <img src="assets/Guy2.jpeg" alt="Guy Boitout photo 2" data-slide="1">
-          <img src="assets/Guy3.jpeg" alt="Guy Boitout photo principale" data-slide="2" class="active">
-          <img src="assets/Guy4.jpeg" alt="Guy Boitout photo 4" data-slide="3">
-        </div>
-        <div class="hero-thumbs">
-          <button class="hero-thumb" type="button" data-target="0" aria-label="Afficher Guy 1">
-            <div class="hero-thumb-frame"><img src="assets/Guy1.jpeg" alt=""></div>
-          </button>
-          <button class="hero-thumb" type="button" data-target="1" aria-label="Afficher Guy 2">
-            <div class="hero-thumb-frame"><img src="assets/Guy2.jpeg" alt=""></div>
-          </button>
-          <button class="hero-thumb is-active" type="button" data-target="2" aria-label="Afficher Guy 3">
-            <div class="hero-thumb-frame"><img src="assets/Guy3.jpeg" alt=""></div>
-          </button>
-          <button class="hero-thumb" type="button" data-target="3" aria-label="Afficher Guy 4">
-            <div class="hero-thumb-frame"><img src="assets/Guy4.jpeg" alt=""></div>
-          </button>
+          <img src="assets/Guy3.jpeg" alt="Guy Boitout en formation">
         </div>
       </div>
     </div>
@@ -914,35 +889,6 @@ function handleForm() {
   if (!e.includes('@')) { alert('Adresse e-mail invalide.'); return; }
   document.getElementById('form-inner').style.display = 'none';
   document.getElementById('form-success').classList.add('on');
-}
-const heroSlides = Array.from(document.querySelectorAll('.hero-main img'));
-const heroThumbs = Array.from(document.querySelectorAll('.hero-thumb'));
-let heroIndex = 2;
-let heroTimer;
-
-function showHeroSlide(index) {
-  heroSlides.forEach((slide, slideIndex) => slide.classList.toggle('active', slideIndex === index));
-  heroThumbs.forEach((thumb, thumbIndex) => thumb.classList.toggle('is-active', thumbIndex === index));
-  heroIndex = index;
-}
-
-function startHeroCarousel() {
-  clearInterval(heroTimer);
-  heroTimer = setInterval(() => {
-    showHeroSlide((heroIndex + 1) % heroSlides.length);
-  }, 4200);
-}
-
-heroThumbs.forEach((thumb) => {
-  thumb.addEventListener('click', () => {
-    showHeroSlide(Number(thumb.dataset.target));
-    startHeroCarousel();
-  });
-});
-
-if (heroSlides.length && heroThumbs.length) {
-  showHeroSlide(heroIndex);
-  startHeroCarousel();
 }
 </script>
 </body>
