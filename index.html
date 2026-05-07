@@ -74,24 +74,36 @@ h1 em { font-style:italic; color:var(--gold-l); }
 .hl-sub { position:relative; z-index:1; font-family:'Cormorant Garamond',serif; font-size:1.04rem; font-weight:300; font-style:italic; line-height:1.7; color:rgba(245,240,232,.88); margin-bottom:20px; }
 .hl-tags { position:relative; z-index:1; display:flex; flex-wrap:wrap; gap:7px; margin-bottom:44px; }
 .hl-tag { font-size:.64rem; padding:4px 11px; border:1px solid rgba(201,163,94,.38); border-radius:20px; color:rgba(245,240,232,.84); letter-spacing:.05em; }
+.hl-copy { max-width:720px; }
 .hl-author { position:relative; z-index:1; border-top:1px solid rgba(245,240,232,.13); padding-top:24px; }
 .hl-name { font-family:'Cormorant Garamond',serif; font-size:1.22rem; font-weight:400; color:var(--cream); margin-bottom:3px; }
 .hl-role { font-size:.71rem; letter-spacing:.1em; text-transform:uppercase; color:rgba(245,240,232,.8); }
 
-.hr { background:var(--parch); display:flex; flex-direction:column; align-items:center; justify-content:center; padding:78px 60px; position:relative; overflow:hidden; }
-.hr::before { content:''; position:absolute; inset:0; background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='480' height='480'%3E%3Ccircle cx='240' cy='240' r='210' fill='none' stroke='%234a6b5a' stroke-width='.4' stroke-dasharray='4 10' opacity='.1'/%3E%3Ccircle cx='240' cy='240' r='160' fill='none' stroke='%234a6b5a' stroke-width='.4' stroke-dasharray='4 10' opacity='.07'/%3E%3Ccircle cx='240' cy='240' r='110' fill='none' stroke='%234a6b5a' stroke-width='.3' stroke-dasharray='4 10' opacity='.05'/%3E%3Ccircle cx='240' cy='240' r='60' fill='none' stroke='%23a07c3a' stroke-width='.3' stroke-dasharray='2 6' opacity='.09'/%3E%3C/svg%3E") center/80% no-repeat; }
-.bk-wrap { position:relative; z-index:1; margin-bottom:42px; animation:bkf 7s ease-in-out infinite; }
-@keyframes bkf { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-13px)} }
-.bk { width:196px; height:274px; background:linear-gradient(150deg,#4a6b5a 0%,#243d2c 100%); border-radius:3px 7px 7px 3px; box-shadow:-6px 0 0 #1b2d22, 10px 14px 48px rgba(26,26,24,.38), 22px 22px 68px rgba(26,26,24,.17); display:flex; flex-direction:column; align-items:center; justify-content:center; padding:26px 20px; text-align:center; position:relative; overflow:hidden; }
-.bk::before { content:''; position:absolute; top:0; left:4px; right:0; bottom:0; background:linear-gradient(112deg,rgba(245,240,232,.07) 0%,transparent 34%); }
-.bk::after { content:''; position:absolute; top:17px; left:17px; right:17px; bottom:17px; border:.5px solid rgba(201,163,94,.23); border-radius:1px; pointer-events:none; }
-.bk-n { font-size:.59rem; letter-spacing:.24em; text-transform:uppercase; color:var(--gold-l); margin-bottom:13px; position:relative; z-index:1; }
-.bk-ln { width:26px; height:.5px; background:rgba(201,163,94,.38); margin:0 auto 13px; position:relative; z-index:1; }
-.bk-t { font-family:'Cormorant Garamond',serif; font-size:.92rem; font-weight:300; line-height:1.22; color:var(--cream); margin-bottom:8px; position:relative; z-index:1; }
-.bk-t em { font-style:italic; color:var(--gold-l); }
-.bk-s { font-family:'Cormorant Garamond',serif; font-size:.67rem; font-style:italic; color:rgba(245,240,232,.82); line-height:1.5; margin-bottom:14px; position:relative; z-index:1; }
-.bk-a { font-family:'Cormorant Garamond',serif; font-size:.69rem; letter-spacing:.11em; text-transform:uppercase; color:rgba(245,240,232,.78); position:relative; z-index:1; }
-.hero-ctas { display:flex; gap:12px; flex-wrap:wrap; justify-content:center; position:relative; z-index:1; }
+.hr { background:linear-gradient(180deg,#ece4d4 0%, #e4dccd 100%); display:flex; flex-direction:column; align-items:center; justify-content:center; padding:64px 54px; position:relative; overflow:hidden; }
+.hr::before { content:''; position:absolute; inset:-8% -16% auto auto; width:440px; height:440px; background:radial-gradient(circle, rgba(160,124,58,.17) 0%, rgba(160,124,58,0) 68%); pointer-events:none; }
+.hr::after { content:''; position:absolute; left:-90px; bottom:-110px; width:280px; height:280px; border-radius:50%; border:1px solid rgba(74,107,90,.12); pointer-events:none; }
+.hero-ctas { display:flex; gap:12px; flex-wrap:wrap; justify-content:flex-start; position:relative; z-index:1; margin-bottom:34px; }
+.hero-gallery { position:relative; z-index:1; width:min(100%, 540px); }
+.hero-gallery-top { display:flex; justify-content:space-between; align-items:flex-start; gap:18px; margin-bottom:18px; }
+.hero-gallery-kicker { font-size:.64rem; letter-spacing:.22em; text-transform:uppercase; color:var(--sage); margin-bottom:10px; }
+.hero-gallery-title { font-family:'Cormorant Garamond',serif; font-size:1.55rem; font-weight:300; line-height:1.08; color:var(--ink); }
+.hero-gallery-note { max-width:170px; font-size:.72rem; line-height:1.6; color:var(--i50); text-align:right; }
+.hero-carousel { position:relative; background:rgba(255,255,255,.48); padding:18px; border:1px solid rgba(74,107,90,.12); border-radius:22px; box-shadow:0 24px 60px rgba(26,26,24,.12); backdrop-filter:blur(6px); }
+.hr > .bk-wrap, .hr > .hero-ctas:last-child { display:none; }
+.hero-main { position:relative; aspect-ratio:4/5; overflow:hidden; border-radius:16px; background:#d6d0c4; }
+.hero-main img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center top; opacity:0; transition:opacity .45s ease; }
+.hero-main img.active { opacity:1; }
+.hero-main-overlay { position:absolute; inset:auto 0 0 0; padding:24px 24px 20px; background:linear-gradient(180deg, rgba(26,26,24,0) 0%, rgba(26,26,24,.74) 78%); display:flex; justify-content:space-between; align-items:end; gap:20px; z-index:2; }
+.hero-main-label strong { display:block; font-size:.7rem; letter-spacing:.18em; text-transform:uppercase; color:rgba(245,240,232,.78); margin-bottom:6px; }
+.hero-main-label span { font-family:'Cormorant Garamond',serif; font-size:1.32rem; color:var(--cream); }
+.hero-main-count { font-size:.72rem; letter-spacing:.2em; text-transform:uppercase; color:rgba(245,240,232,.74); }
+.hero-thumbs { display:grid; grid-template-columns:repeat(4,1fr); gap:12px; margin-top:16px; }
+.hero-thumb { border:none; padding:0; background:none; cursor:pointer; text-align:left; }
+.hero-thumb-frame { position:relative; aspect-ratio:1/1; border-radius:12px; overflow:hidden; border:2px solid transparent; box-shadow:0 10px 24px rgba(26,26,24,.12); transition:transform .24s, border-color .24s, box-shadow .24s; }
+.hero-thumb:hover .hero-thumb-frame { transform:translateY(-3px); box-shadow:0 14px 28px rgba(26,26,24,.16); }
+.hero-thumb.is-active .hero-thumb-frame { border-color:var(--gold); box-shadow:0 14px 28px rgba(160,124,58,.2); }
+.hero-thumb img { width:100%; height:100%; object-fit:cover; object-position:center top; display:block; }
+.hero-thumb-label { margin-top:8px; font-size:.67rem; color:var(--i50); text-align:center; }
 
 /* ── GENÈSE ── */
 #genese { background:var(--ink); display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:center; }
@@ -273,6 +285,10 @@ footer > div > p { font-size:.79rem; color:rgba(245,240,232,.82); line-height:1.
   nav { display:none; }
   .ap { max-width:420px; }
   .f-bot { padding:15px 26px; flex-direction:column; gap:5px; }
+  .hero-gallery { width:100%; }
+  .hero-gallery-top { flex-direction:column; }
+  .hero-gallery-note { max-width:none; text-align:left; }
+  .hero-thumbs { grid-template-columns:repeat(2,1fr); }
 }
 </style>
 </head>
@@ -295,6 +311,7 @@ footer > div > p { font-size:.79rem; color:rgba(245,240,232,.82); line-height:1.
 <section id="hero">
   <div class="hl">
     <div class="hl-orb"></div>
+    <div class="hl-copy">
     <span class="hl-badge">3ᵉ ouvrage · Institut R.O.P. · Guy Boitout</span>
     <h1>Réflexothérapie occipito-podale et viscères des cavités abdominale et pelvienne</h1>
     <p class="hl-sub">Système nerveux, viscères &amp; stress —<br>une lecture clinique en Réflexologie<br>Occipito-Podale</p>
@@ -306,12 +323,59 @@ footer > div > p { font-size:.79rem; color:rgba(245,240,232,.82); line-height:1.
       <span class="hl-tag">Diaphragme · Estomac · Duodénum</span>
       <span class="hl-tag">Protocole R.O.P.</span>
     </div>
+    <div class="hero-ctas">
+      <a href="#acces-libre" class="btn b-gold">Lire un chapitre gratuit</a>
+      <a href="#chapitres" class="btn b-ghost">Voir le sommaire</a>
+    </div>
     <div class="hl-author">
       <div class="hl-name">Guy Boitout</div>
       <div class="hl-role">Réflexothérapeute · Ostéopathe · Fondateur de la R.O.P.</div>
     </div>
+    </div>
   </div>
   <div class="hr">
+    <div class="hero-gallery">
+      <div class="hero-gallery-top">
+        <div>
+          <div class="hero-gallery-kicker">Galerie de l'auteur</div>
+          <div class="hero-gallery-title">Guy Boitout en formation, en transmission et en pratique.</div>
+        </div>
+        <div class="hero-gallery-note">Carrousel de 4 photos avec Guy3 comme visuel principal.</div>
+      </div>
+      <div class="hero-carousel">
+        <div class="hero-main">
+          <img src="assets/Guy1.jpeg" alt="Guy Boitout photo 1" data-slide="0">
+          <img src="assets/Guy2.jpeg" alt="Guy Boitout photo 2" data-slide="1">
+          <img src="assets/Guy3.jpeg" alt="Guy Boitout photo principale" data-slide="2" class="active">
+          <img src="assets/Guy4.jpeg" alt="Guy Boitout photo 4" data-slide="3">
+          <div class="hero-main-overlay">
+            <div class="hero-main-label">
+              <strong>Photo principale</strong>
+              <span id="hero-photo-label">Guy 3</span>
+            </div>
+            <div class="hero-main-count" id="hero-photo-count">03 / 04</div>
+          </div>
+        </div>
+        <div class="hero-thumbs">
+          <button class="hero-thumb" type="button" data-target="0" aria-label="Afficher Guy 1">
+            <div class="hero-thumb-frame"><img src="assets/Guy1.jpeg" alt=""></div>
+            <div class="hero-thumb-label">Guy 1</div>
+          </button>
+          <button class="hero-thumb" type="button" data-target="1" aria-label="Afficher Guy 2">
+            <div class="hero-thumb-frame"><img src="assets/Guy2.jpeg" alt=""></div>
+            <div class="hero-thumb-label">Guy 2</div>
+          </button>
+          <button class="hero-thumb is-active" type="button" data-target="2" aria-label="Afficher Guy 3">
+            <div class="hero-thumb-frame"><img src="assets/Guy3.jpeg" alt=""></div>
+            <div class="hero-thumb-label">Guy 3</div>
+          </button>
+          <button class="hero-thumb" type="button" data-target="3" aria-label="Afficher Guy 4">
+            <div class="hero-thumb-frame"><img src="assets/Guy4.jpeg" alt=""></div>
+            <div class="hero-thumb-label">Guy 4</div>
+          </button>
+        </div>
+      </div>
+    </div>
     <div class="bk-wrap">
       <div class="bk">
         <div class="bk-n">3ᵉ ouvrage R.O.P.</div>
@@ -869,6 +933,39 @@ function handleForm() {
   if (!e.includes('@')) { alert('Adresse e-mail invalide.'); return; }
   document.getElementById('form-inner').style.display = 'none';
   document.getElementById('form-success').classList.add('on');
+}
+const heroSlides = Array.from(document.querySelectorAll('.hero-main img'));
+const heroThumbs = Array.from(document.querySelectorAll('.hero-thumb'));
+const heroLabel = document.getElementById('hero-photo-label');
+const heroCount = document.getElementById('hero-photo-count');
+let heroIndex = 2;
+let heroTimer;
+
+function showHeroSlide(index) {
+  heroSlides.forEach((slide, slideIndex) => slide.classList.toggle('active', slideIndex === index));
+  heroThumbs.forEach((thumb, thumbIndex) => thumb.classList.toggle('is-active', thumbIndex === index));
+  heroLabel.textContent = `Guy ${index + 1}`;
+  heroCount.textContent = `${String(index + 1).padStart(2, '0')} / ${String(heroSlides.length).padStart(2, '0')}`;
+  heroIndex = index;
+}
+
+function startHeroCarousel() {
+  clearInterval(heroTimer);
+  heroTimer = setInterval(() => {
+    showHeroSlide((heroIndex + 1) % heroSlides.length);
+  }, 4200);
+}
+
+heroThumbs.forEach((thumb) => {
+  thumb.addEventListener('click', () => {
+    showHeroSlide(Number(thumb.dataset.target));
+    startHeroCarousel();
+  });
+});
+
+if (heroSlides.length && heroThumbs.length && heroLabel && heroCount) {
+  showHeroSlide(heroIndex);
+  startHeroCarousel();
 }
 </script>
 </body>
