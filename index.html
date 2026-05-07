@@ -87,23 +87,17 @@ h1 em { font-style:italic; color:var(--gold-l); }
 .hero-gallery-top { display:flex; justify-content:space-between; align-items:flex-start; gap:18px; margin-bottom:18px; }
 .hero-gallery-kicker { font-size:.64rem; letter-spacing:.22em; text-transform:uppercase; color:var(--sage); margin-bottom:10px; }
 .hero-gallery-title { font-family:'Cormorant Garamond',serif; font-size:1.55rem; font-weight:300; line-height:1.08; color:var(--ink); }
-.hero-gallery-note { max-width:170px; font-size:.72rem; line-height:1.6; color:var(--i50); text-align:right; }
 .hero-carousel { position:relative; background:rgba(255,255,255,.48); padding:18px; border:1px solid rgba(74,107,90,.12); border-radius:22px; box-shadow:0 24px 60px rgba(26,26,24,.12); backdrop-filter:blur(6px); }
 .hr > .bk-wrap, .hr > .hero-ctas:last-child { display:none; }
 .hero-main { position:relative; aspect-ratio:4/5; overflow:hidden; border-radius:16px; background:#d6d0c4; }
 .hero-main img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center top; opacity:0; transition:opacity .45s ease; }
 .hero-main img.active { opacity:1; }
-.hero-main-overlay { position:absolute; inset:auto 0 0 0; padding:24px 24px 20px; background:linear-gradient(180deg, rgba(26,26,24,0) 0%, rgba(26,26,24,.74) 78%); display:flex; justify-content:space-between; align-items:end; gap:20px; z-index:2; }
-.hero-main-label strong { display:block; font-size:.7rem; letter-spacing:.18em; text-transform:uppercase; color:rgba(245,240,232,.78); margin-bottom:6px; }
-.hero-main-label span { font-family:'Cormorant Garamond',serif; font-size:1.32rem; color:var(--cream); }
-.hero-main-count { font-size:.72rem; letter-spacing:.2em; text-transform:uppercase; color:rgba(245,240,232,.74); }
 .hero-thumbs { display:grid; grid-template-columns:repeat(4,1fr); gap:12px; margin-top:16px; }
 .hero-thumb { border:none; padding:0; background:none; cursor:pointer; text-align:left; }
 .hero-thumb-frame { position:relative; aspect-ratio:1/1; border-radius:12px; overflow:hidden; border:2px solid transparent; box-shadow:0 10px 24px rgba(26,26,24,.12); transition:transform .24s, border-color .24s, box-shadow .24s; }
 .hero-thumb:hover .hero-thumb-frame { transform:translateY(-3px); box-shadow:0 14px 28px rgba(26,26,24,.16); }
 .hero-thumb.is-active .hero-thumb-frame { border-color:var(--gold); box-shadow:0 14px 28px rgba(160,124,58,.2); }
 .hero-thumb img { width:100%; height:100%; object-fit:cover; object-position:center top; display:block; }
-.hero-thumb-label { margin-top:8px; font-size:.67rem; color:var(--i50); text-align:center; }
 
 /* ── GENÈSE ── */
 #genese { background:var(--ink); display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:center; }
@@ -287,7 +281,6 @@ footer > div > p { font-size:.79rem; color:rgba(245,240,232,.82); line-height:1.
   .f-bot { padding:15px 26px; flex-direction:column; gap:5px; }
   .hero-gallery { width:100%; }
   .hero-gallery-top { flex-direction:column; }
-  .hero-gallery-note { max-width:none; text-align:left; }
   .hero-thumbs { grid-template-columns:repeat(2,1fr); }
 }
 </style>
@@ -340,7 +333,6 @@ footer > div > p { font-size:.79rem; color:rgba(245,240,232,.82); line-height:1.
           <div class="hero-gallery-kicker">Galerie de l'auteur</div>
           <div class="hero-gallery-title">Guy Boitout en formation, en transmission et en pratique.</div>
         </div>
-        <div class="hero-gallery-note">Carrousel de 4 photos avec Guy3 comme visuel principal.</div>
       </div>
       <div class="hero-carousel">
         <div class="hero-main">
@@ -348,30 +340,19 @@ footer > div > p { font-size:.79rem; color:rgba(245,240,232,.82); line-height:1.
           <img src="assets/Guy2.jpeg" alt="Guy Boitout photo 2" data-slide="1">
           <img src="assets/Guy3.jpeg" alt="Guy Boitout photo principale" data-slide="2" class="active">
           <img src="assets/Guy4.jpeg" alt="Guy Boitout photo 4" data-slide="3">
-          <div class="hero-main-overlay">
-            <div class="hero-main-label">
-              <strong>Photo principale</strong>
-              <span id="hero-photo-label">Guy 3</span>
-            </div>
-            <div class="hero-main-count" id="hero-photo-count">03 / 04</div>
-          </div>
         </div>
         <div class="hero-thumbs">
           <button class="hero-thumb" type="button" data-target="0" aria-label="Afficher Guy 1">
             <div class="hero-thumb-frame"><img src="assets/Guy1.jpeg" alt=""></div>
-            <div class="hero-thumb-label">Guy 1</div>
           </button>
           <button class="hero-thumb" type="button" data-target="1" aria-label="Afficher Guy 2">
             <div class="hero-thumb-frame"><img src="assets/Guy2.jpeg" alt=""></div>
-            <div class="hero-thumb-label">Guy 2</div>
           </button>
           <button class="hero-thumb is-active" type="button" data-target="2" aria-label="Afficher Guy 3">
             <div class="hero-thumb-frame"><img src="assets/Guy3.jpeg" alt=""></div>
-            <div class="hero-thumb-label">Guy 3</div>
           </button>
           <button class="hero-thumb" type="button" data-target="3" aria-label="Afficher Guy 4">
             <div class="hero-thumb-frame"><img src="assets/Guy4.jpeg" alt=""></div>
-            <div class="hero-thumb-label">Guy 4</div>
           </button>
         </div>
       </div>
@@ -936,16 +917,12 @@ function handleForm() {
 }
 const heroSlides = Array.from(document.querySelectorAll('.hero-main img'));
 const heroThumbs = Array.from(document.querySelectorAll('.hero-thumb'));
-const heroLabel = document.getElementById('hero-photo-label');
-const heroCount = document.getElementById('hero-photo-count');
 let heroIndex = 2;
 let heroTimer;
 
 function showHeroSlide(index) {
   heroSlides.forEach((slide, slideIndex) => slide.classList.toggle('active', slideIndex === index));
   heroThumbs.forEach((thumb, thumbIndex) => thumb.classList.toggle('is-active', thumbIndex === index));
-  heroLabel.textContent = `Guy ${index + 1}`;
-  heroCount.textContent = `${String(index + 1).padStart(2, '0')} / ${String(heroSlides.length).padStart(2, '0')}`;
   heroIndex = index;
 }
 
@@ -963,7 +940,7 @@ heroThumbs.forEach((thumb) => {
   });
 });
 
-if (heroSlides.length && heroThumbs.length && heroLabel && heroCount) {
+if (heroSlides.length && heroThumbs.length) {
   showHeroSlide(heroIndex);
   startHeroCarousel();
 }
