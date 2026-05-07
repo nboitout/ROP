@@ -762,20 +762,20 @@ footer > div > p { font-size:1rem; color:rgba(245,240,232,.84); line-height:1.9;
   </div>
   <div class="fcard">
     <div id="form-inner">
-      <h3>AccÃ¨s au chapitre gratuit</h3>
-      <p class="fs">MÃ©canisme de stress â€” PDF Â· AccÃ¨s immÃ©diat aprÃ¨s inscription</p>
-      <div class="fg"><label>PrÃ©nom &amp; Nom</label><input type="text" id="fn" placeholder="ex. Marie Dupont"></div>
+      <h3>Acc&egrave;s au chapitre gratuit</h3>
+      <p class="fs">M&eacute;canisme de stress &mdash; PDF &middot; Acc&egrave;s imm&eacute;diat apr&egrave;s inscription</p>
+      <div class="fg"><label>Pr&eacute;nom &amp; Nom</label><input type="text" id="fn" placeholder="ex. Marie Dupont"></div>
       <div class="fg"><label>Adresse e-mail</label><input type="email" id="fe" placeholder="votre@email.com"></div>
-      <div class="fg"><label>Profession <span style="opacity:.4">(optionnel)</span></label><input type="text" id="fj" placeholder="ex. RÃ©flexothÃ©rapeute, OstÃ©opathe, KinÃ©â€¦"></div>
-      <button class="btn b-gold" id="form-submit" type="button" onclick="handleForm()" style="width:100%;margin-top:8px;padding:13px;">Recevoir le chapitre â†’</button>
-      <p class="fnote">Vos donnÃ©es ne seront jamais partagÃ©es. DÃ©sabonnement possible Ã  tout moment.</p>
+      <div class="fg"><label>Profession <span style="opacity:.4">(optionnel)</span></label><input type="text" id="fj" placeholder="ex. R&eacute;flexoth&eacute;rapeute, Ost&eacute;opathe, Kin&eacute;&hellip;"></div>
+      <button class="btn b-gold" id="form-submit" type="button" onclick="handleForm()" style="width:100%;margin-top:8px;padding:13px;">Recevoir le chapitre &rarr;</button>
+      <p class="fnote">Vos donn&eacute;es ne seront jamais partag&eacute;es. D&eacute;sabonnement possible &agrave; tout moment.</p>
     </div>
     <div class="fsuccess" id="form-success">
-      <div class="fok">âœ“</div>
+      <div class="fok">&#10003;</div>
       <h3 style="color:var(--cream);font-family:'Cormorant Garamond',serif;font-size:1.38rem;font-weight:300;margin-bottom:7px;">Merci !</h3>
-      <p style="font-size:.85rem;color:rgba(245,240,232,.72);">Le lien de tÃ©lÃ©chargement a Ã©tÃ© envoyÃ© Ã  votre adresse e-mail.</p>
-      <a href="#" class="fdl" onclick="return false;">â¬‡ TÃ©lÃ©charger le Chapitre 5 (PDF)</a>
-      <p style="font-size:.67rem;color:rgba(245,240,232,.5);margin-top:12px;">VÃ©rifiez aussi votre dossier spam.</p>
+      <p style="font-size:.85rem;color:rgba(245,240,232,.72);">Le lien de t&eacute;l&eacute;chargement a &eacute;t&eacute; envoy&eacute; &agrave; votre adresse e-mail.</p>
+      <a href="#" class="fdl" onclick="return false;">&#11015; T&eacute;l&eacute;charger le Chapitre 5 (PDF)</a>
+      <p style="font-size:.67rem;color:rgba(245,240,232,.5);margin-top:12px;">V&eacute;rifiez aussi votre dossier spam.</p>
     </div>
   </div>
 </section>
@@ -883,8 +883,8 @@ async function handleForm() {
     document.getElementById('form-success').classList.add('on');
   } catch (error) {
     submitButton.disabled = false;
-    submitButton.textContent = 'Recevoir le chapitre →';
-    alert("Erreur lors de l'envoi. Réessayez.");
+    submitButton.textContent = 'Recevoir le chapitre ->';
+    alert("Erreur lors de l'envoi. Reessayez.");
     console.error(error);
   }
 }
