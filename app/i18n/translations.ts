@@ -11,7 +11,7 @@ const fr = {
   },
   hero: {
     badge: '3ᵉ ouvrage · Institut R.O.P. · Guy Boitout',
-    h1: { before: 'Réflexothérapie occipito-podale et viscères des cavités', em: 'abdominale', after: ' et pelvienne' },
+    h1: { before: 'Réflexothérapie occipito-podale et viscères des cavités', em: 'abdominale et pelvienne', after: '' },
     sub: 'Système nerveux, viscères & stress — une lecture clinique en Réflexologie Occipito-Podale',
     tags: ['Mobilité viscérale', 'Système nerveux central', 'Système nerveux autonome', 'Mécanisme de stress', 'Diaphragme · Estomac · Duodénum', 'Protocole R.O.P.'],
     cta1: 'Lire un chapitre gratuit',
@@ -54,7 +54,7 @@ const fr = {
   ],
   architecture: {
     lbl: "Architecture de l'ouvrage",
-    h2: { before: 'Un fil conducteur ', em: 'progressif' },
+    h2: { before: 'Un fil conducteur ', em: 'progressif', after: '' },
     desc: "De la préface personnelle aux viscères abdominaux, l'ouvrage construit une progression logique en quatre grandes parties. Chaque couche s'appuie sur la précédente pour offrir au praticien une compréhension clinique complète et opérationnelle.",
     flow: [
       { icon: '✍️', t: 'Introduction', s: "Genèse de la méthode, trajectoire personnelle et ADN de la R.O.P.", chs: [['Ch. 0 · Préface', ''], ['Ch. 1 · Généralités', ''], ['Ch. 2 · Protocole', '']] },
@@ -65,7 +65,7 @@ const fr = {
   },
   chapters: {
     lbl: 'Extraits du sommaire',
-    h2: { before: 'Douze chapitres ', em: 'présentés' },
+    h2: { before: 'Douze chapitres ', em: 'présentés', after: '' },
     desc: "De la préface personnelle de l'auteur aux viscères abdominaux — ces extraits présentent le contenu du livre. L'accès se fait désormais par format complet : Livre en ligne ou Livre en ligne + Livre imprimé.",
     cards: [
       { num: '00', variant: 'intro' as const, badgeLabel: 'Préface', label: 'Introduction', title: 'Genèse de la méthode R.O.P.', tags: ["Parcours de l'auteur", 'Méthode Ingham', 'Ostéopathie viscérale', 'ADN R.O.P.'], btnClass: 'b-gold', btnLabel: 'Voir les formats →', body: "La voix de l'auteur : de la kinésithérapie à la réflexologie (méthode Ingham, 1978), puis à l'ostéopathie viscérale (J.-P. Barral) jusqu'à la création de la R.O.P. avec Jean-Pierre Vadala. L'ADN de la méthode en quelques pages denses et personnelles." },
@@ -223,7 +223,7 @@ const en: typeof fr = {
   },
   hero: {
     badge: '3rd work · R.O.P. Institute · Guy Boitout',
-    h1: { before: 'Occipito-Podal Reflexotherapy and viscera of the', em: 'abdominal', after: ' and pelvic cavities' },
+    h1: { before: 'Occipito-Podal Reflexotherapy and viscera of the', em: 'abdominal and pelvic cavities', after: '' },
     sub: 'Nervous system, viscera & stress — a clinical reading in Occipito-Podal Reflexology',
     tags: ['Visceral Mobility', 'Central Nervous System', 'Autonomic Nervous System', 'Stress Mechanism', 'Diaphragm · Stomach · Duodenum', 'R.O.P. Protocol'],
     cta1: 'Read a free chapter',
@@ -266,7 +266,7 @@ const en: typeof fr = {
   ],
   architecture: {
     lbl: 'Book structure',
-    h2: { before: 'A ', em: 'progressive', after: ' thread' } as typeof fr.architecture.h2,
+    h2: { before: 'A ', em: 'progressive', after: ' thread' },
     desc: 'From the personal preface to the abdominal viscera, the book builds a logical progression in four major parts. Each layer builds on the previous one to give the practitioner a complete and operational clinical understanding.',
     flow: [
       { icon: '✍️', t: 'Introduction', s: 'Genesis of the method, personal journey and the DNA of R.O.P.', chs: [['Ch. 0 · Preface', ''], ['Ch. 1 · Generalities', ''], ['Ch. 2 · Protocol', '']] },
@@ -277,7 +277,7 @@ const en: typeof fr = {
   },
   chapters: {
     lbl: 'Table of contents excerpts',
-    h2: { before: 'Twelve ', em: 'featured', after: ' chapters' } as typeof fr.chapters.h2,
+    h2: { before: 'Twelve ', em: 'featured', after: ' chapters' },
     desc: "From the author's personal preface to the abdominal viscera — these excerpts present the book's content. Access is by complete format: Online Book or Online Book + Printed Book.",
     cards: [
       { num: '00', variant: 'intro' as const, badgeLabel: 'Preface', label: 'Introduction', title: 'Genesis of the R.O.P. method', tags: ["Author's journey", 'Ingham method', 'Visceral osteopathy', 'R.O.P. DNA'], btnClass: 'b-gold', btnLabel: 'View formats →', body: "The author's own voice: from physiotherapy to reflexology (Ingham method, 1978), then visceral osteopathy (J.-P. Barral) through to the creation of R.O.P. with Jean-Pierre Vadala. The DNA of the method in a few dense, personal pages." },

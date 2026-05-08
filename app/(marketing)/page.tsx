@@ -163,7 +163,7 @@ export default function HomePage() {
         <div className="arch-intro">
           <div>
             <div className="lbl">{t.architecture.lbl}</div>
-            <h2>{t.architecture.h2.before}<em>{t.architecture.h2.em}</em></h2>
+            <h2>{t.architecture.h2.before}<em>{t.architecture.h2.em}</em>{t.architecture.h2.after}</h2>
           </div>
           <p className="arch-desc">{t.architecture.desc}</p>
         </div>
@@ -188,7 +188,7 @@ export default function HomePage() {
         <div className="ch-hd">
           <div>
             <div className="lbl">{t.chapters.lbl}</div>
-            <h2>{t.chapters.h2.before}<em>{t.chapters.h2.em}</em></h2>
+            <h2>{t.chapters.h2.before}<em>{t.chapters.h2.em}</em>{t.chapters.h2.after}</h2>
           </div>
           <p className="ch-hd-d">{t.chapters.desc}</p>
         </div>
