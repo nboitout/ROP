@@ -234,13 +234,13 @@ const en: typeof fr = {
   },
   author: {
     lbl: 'The author',
-    chips: ['Reflexotherapist', 'Osteopath', 'Founder R.O.P.', 'Certified Trainer'],
+    chips: ['Reflex Therapist', 'Osteopath', 'Founder of R.O.P.', 'Certified Instructor'],
     prevBooks: 'Previous works',
     viewOnAmazon: 'View on Amazon',
     bio: [
-      'Guy Boitout is the founder of Occipito-Podal Reflexology (R.O.P.), a massage technique based on the three-dimensional representation of the body on the foot and occiput. For over thirty years, he has taught and promoted this approach through the R.O.P. Training Institute, based in Sully-sur-Loire, France.',
-      'Trained as a physiotherapist, he discovered reflexology (the Ingham method) in 1978, then visceral osteopathy with Jean-Pierre Barral — two decisive steps that led him, together with Jean-Pierre Vadala, to create the original 3D R.O.P. reflex mapping, published by Elsevier-Masson.',
-      'His training programs are accredited for continuing professional development (accreditation number 24450434645, prefecture of Centre-Val de Loire) and are aimed at reflexotherapists, osteopaths, physiotherapists and healthcare professionals.',
+      'Guy Boitout is the founder of Occipito-Podal Reflexology (R.O.P.), a manual therapy approach based on a three-dimensional representation of the body on the foot and the occiput. For more than thirty years, he has taught and developed this approach through the R.O.P. Training Institute, based in Sully-sur-Loire, France.',
+      'Originally trained as a physiotherapist, he discovered reflexology — through the Ingham method — in 1978, and later visceral osteopathy with Jean-Pierre Barral. These two decisive influences led him, together with Jean-Pierre Vadala, to develop the original three-dimensional R.O.P. reflex mapping, published by Elsevier Masson.',
+      'His training programs are accredited for continuing professional development (registration number 24450434645, Prefecture of Centre–Val de Loire) and are designed for reflex therapists, osteopaths, physiotherapists, and other healthcare professionals.',
     ],
     btn1: 'R.O.P. Institute Website →',
     btn2: 'Training programs →',
