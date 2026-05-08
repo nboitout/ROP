@@ -267,12 +267,12 @@ const en: typeof fr = {
   architecture: {
     lbl: 'Book structure',
     h2: { before: 'A ', em: 'progressive', after: ' thread' },
-    desc: 'From the personal preface to the abdominal viscera, the book builds a logical progression in four major parts. Each layer builds on the previous one to give the practitioner a complete and operational clinical understanding.',
+    desc: 'From the personal preface to the abdominal viscera, the book follows a logical progression through four major parts. Each layer builds on the previous one, giving practitioners a complete, practical clinical understanding.',
     flow: [
       { icon: '✍️', t: 'Introduction', s: 'Genesis of the method, personal journey and the DNA of R.O.P.', chs: [['Ch. 0 · Preface', ''], ['Ch. 1 · Generalities', ''], ['Ch. 2 · Protocol', '']] },
-      { icon: '🧠', t: 'Nervous Systems', s: 'CNS (three brains, brainstem) and ANS (parasympathetic, sympathetic, vagus nerve).', chs: [['Ch. 3 · CNS', ''], ['Ch. 4 · ANS', '']] },
-      { icon: '⚖️', t: 'Stress & Regulation', s: 'Stress mechanism, polyvagal theory and neuro-vegetative regulation.', chs: [['Ch. 5 · Stress ✦', 'fr'], ['Ch. 6 · Polyvagal', '']] },
-      { icon: '🫁', t: 'Viscera', s: 'Cavities, diaphragm, stomach, duodenum, small intestine — anatomy and R.O.P. mappings.', chs: [['Ch. 7', ''], ['Ch. 8', ''], ['Ch. 9', ''], ['Ch. 10', ''], ['Ch. 14', '']] },
+      { icon: '🧠', t: 'Nervous Systems', s: 'CNS — the three brains and the brainstem — and ANS: parasympathetic, sympathetic, and vagus nerve pathways.', chs: [['Ch. 3 · CNS', ''], ['Ch. 4 · ANS', '']] },
+      { icon: '⚖️', t: 'Stress & Regulation', s: 'Stress mechanisms, polyvagal theory, and autonomic regulation.', chs: [['Ch. 5 · Stress ✦', 'fr'], ['Ch. 6 · Polyvagal Theory', '']] },
+      { icon: '🫁', t: 'Viscera', s: 'Body cavities, diaphragm, stomach, duodenum, and small intestine — anatomy and R.O.P. mapping.', chs: [['Ch. 7', ''], ['Ch. 8', ''], ['Ch. 9', ''], ['Ch. 10', ''], ['Ch. 14', '']] },
     ],
   },
   chapters: {
