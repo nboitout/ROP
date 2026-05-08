@@ -215,11 +215,21 @@ h1 em { font-style:italic; color:var(--gold-l); }
 
 /* ── CITATIONS ── */
 #citations { background:var(--ink); text-align:center; }
-.qt-row { display:grid; grid-template-columns:1fr 1fr 1fr; gap:24px; margin-top:52px; }
-.qt { border:1px solid rgba(245,240,232,.07); padding:34px; border-radius:2px; text-align:left; position:relative; }
+.qt-wrap { max-width:920px; margin:52px auto 0; }
+.qt-stage { position:relative; min-height:320px; }
+.qt-row { position:relative; }
+.qt { border:1px solid rgba(245,240,232,.07); padding:42px 42px 38px; border-radius:2px; text-align:left; position:absolute; inset:0; background:rgba(245,240,232,.02); opacity:0; transform:translateX(24px); pointer-events:none; transition:opacity .35s ease, transform .35s ease; }
+.qt.active { opacity:1; transform:translateX(0); pointer-events:auto; position:relative; }
 .qt::before { content:'\201C'; position:absolute; top:6px; left:20px; font-family:'Cormorant Garamond',serif; font-size:3.8rem; color:rgba(201,163,94,.16); line-height:1; }
 .qt-t { font-family:'Cormorant Garamond',serif; font-size:1.16rem; font-style:italic; font-weight:300; line-height:1.82; color:rgba(245,240,232,.82); margin-bottom:20px; padding-top:18px; }
 .qt-s { font-size:.77rem; letter-spacing:.12em; text-transform:uppercase; color:var(--gold-l); }
+.qt-controls { display:flex; align-items:center; justify-content:space-between; gap:18px; margin-top:24px; }
+.qt-nav { display:flex; gap:10px; }
+.qt-btn { width:48px; height:48px; border-radius:50%; border:1px solid rgba(201,163,94,.34); background:rgba(245,240,232,.04); color:var(--cream); font-size:1rem; cursor:pointer; transition:background .2s, border-color .2s, transform .2s; }
+.qt-btn:hover { background:rgba(201,163,94,.14); border-color:rgba(201,163,94,.6); transform:translateY(-2px); }
+.qt-dots { display:flex; align-items:center; justify-content:center; gap:10px; flex:1; }
+.qt-dot { width:10px; height:10px; border-radius:50%; border:none; background:rgba(245,240,232,.22); cursor:pointer; transition:transform .2s, background .2s; }
+.qt-dot.active { background:var(--gold-l); transform:scale(1.15); }
 
 /* ── AUTEUR ── */
 #auteur { background:var(--cream); display:grid; grid-template-columns:360px 1fr; gap:78px; align-items:start; padding-top:56px; }
@@ -784,18 +794,33 @@ footer > div > p { font-size:1rem; color:rgba(245,240,232,.84); line-height:1.9;
 <section id="citations">
   <div class="lbl c ctr">Extraits de l'ouvrage</div>
   <h2 class="on-dk" style="text-align:center;">La voix de l'<em>auteur</em></h2>
-  <div class="qt-row">
-    <div class="qt">
-      <p class="qt-t">"La mobilité viscérale est rendue possible par quatre grands moteurs : le système nerveux somatique, le système nerveux autonome, la motilité intrinsèque et les biorythmes. Leur interaction définit le terrain clinique du praticien."</p>
-      <span class="qt-s">Chapitre 1 — Généralités</span>
+  <div class="qt-wrap">
+    <div class="qt-stage">
+      <div class="qt-row">
+        <div class="qt active" data-quote-index="0">
+          <p class="qt-t">"La mobilité viscérale est rendue possible par quatre grands moteurs : le système nerveux somatique, le système nerveux autonome, la motilité intrinsèque et les biorythmes. Leur interaction définit le terrain clinique du praticien."</p>
+          <span class="qt-s">Chapitre 1 — Généralités</span>
+        </div>
+        <div class="qt" data-quote-index="1">
+          <p class="qt-t">"Force et trituration sont proscrites : on perd la lecture fine, les repères osseux deviennent moins nets, et on crée un stress tissulaire inutile. Le geste juste, c'est la pression progressive, brève, orientée."</p>
+          <span class="qt-s">Chapitre 2 — Protocole R.O.P.</span>
+        </div>
+        <div class="qt" data-quote-index="2">
+          <p class="qt-t">"Notre rôle en R.O.P. est de favoriser la régulation du nerf vague. Ce qui se passe dans le corps peut influencer et s'accompagner de variations de notre état mental et émotionnel."</p>
+          <span class="qt-s">Chapitre 6 — Théorie polyvagale</span>
+        </div>
+      </div>
     </div>
-    <div class="qt">
-      <p class="qt-t">"Force et trituration sont proscrites : on perd la lecture fine, les repères osseux deviennent moins nets, et on crée un stress tissulaire inutile. Le geste juste, c'est la pression progressive, brève, orientée."</p>
-      <span class="qt-s">Chapitre 2 — Protocole R.O.P.</span>
-    </div>
-    <div class="qt">
-      <p class="qt-t">"Notre rôle en R.O.P. est de favoriser la régulation du nerf vague. Ce qui se passe dans le corps peut influencer et s'accompagner de variations de notre état mental et émotionnel."</p>
-      <span class="qt-s">Chapitre 6 — Théorie polyvagale</span>
+    <div class="qt-controls" aria-label="Navigation des citations">
+      <div class="qt-nav">
+        <button class="qt-btn" type="button" id="quote-prev" aria-label="Citation précédente">←</button>
+        <button class="qt-btn" type="button" id="quote-next" aria-label="Citation suivante">→</button>
+      </div>
+      <div class="qt-dots" aria-label="Sélection des citations">
+        <button class="qt-dot active" type="button" data-quote-target="0" aria-label="Citation 1"></button>
+        <button class="qt-dot" type="button" data-quote-target="1" aria-label="Citation 2"></button>
+        <button class="qt-dot" type="button" data-quote-target="2" aria-label="Citation 3"></button>
+      </div>
     </div>
   </div>
 </section>
@@ -888,6 +913,36 @@ async function handleForm() {
     console.error(error);
   }
 }
+const quoteSlides = Array.from(document.querySelectorAll('.qt'));
+const quoteDots = Array.from(document.querySelectorAll('.qt-dot'));
+const quotePrev = document.getElementById('quote-prev');
+const quoteNext = document.getElementById('quote-next');
+let quoteIndex = 0;
+
+function showQuote(index) {
+  quoteSlides.forEach((slide, slideIndex) => slide.classList.toggle('active', slideIndex === index));
+  quoteDots.forEach((dot, dotIndex) => dot.classList.toggle('active', dotIndex === index));
+  quoteIndex = index;
+}
+
+if (quoteSlides.length && quoteDots.length && quotePrev && quoteNext) {
+  quotePrev.addEventListener('click', () => {
+    showQuote((quoteIndex - 1 + quoteSlides.length) % quoteSlides.length);
+  });
+
+  quoteNext.addEventListener('click', () => {
+    showQuote((quoteIndex + 1) % quoteSlides.length);
+  });
+
+  quoteDots.forEach((dot) => {
+    dot.addEventListener('click', () => {
+      showQuote(Number(dot.dataset.quoteTarget));
+    });
+  });
+
+  showQuote(quoteIndex);
+}
+
 const heroSlides = Array.from(document.querySelectorAll('.hero-main img'));
 const heroThumbs = Array.from(document.querySelectorAll('.hero-thumb'));
 let heroIndex = 2;
