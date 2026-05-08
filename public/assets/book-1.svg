@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800" role="img" aria-labelledby="title desc">
+  <title id="title">Livre 1 de Guy Boitout</title>
+  <desc id="desc">Illustration de couverture orange et rose inspiree de Reflexotherapie occipito-podale.</desc>
+  <rect width="600" height="800" fill="#f2b226"/>
+  <rect x="0" y="0" width="160" height="230" fill="#db726c"/>
+  <rect x="0" y="430" width="160" height="180" fill="#ec9716"/>
+  <line x1="0" y1="385" x2="600" y2="385" stroke="#f6d25b" stroke-width="8"/>
+  <g opacity=".18" stroke="#8c6413" fill="none">
+    <path d="M110 620c55-75 135-126 230-140 69-10 126-41 175-97"/>
+    <path d="M240 130c90 32 154 97 193 193"/>
+    <path d="M296 108c-25 57-20 135 13 190"/>
+    <ellipse cx="332" cy="218" rx="122" ry="113"/>
+  </g>
+  <rect x="280" y="425" width="190" height="125" fill="#111"/>
+  <path d="M355 520c18-37 39-55 66-58 21-3 36 8 52 25 12 13 22 31 35 42" stroke="#f0e8db" stroke-width="10" fill="none" stroke-linecap="round"/>
+  <path d="M395 454c-10 17-11 41 4 60" stroke="#f0e8db" stroke-width="11" fill="none" stroke-linecap="round"/>
+  <rect x="87" y="565" width="110" height="176" fill="#98a0a7"/>
+  <g fill="none" stroke="#f4f1eb" stroke-width="6" stroke-linecap="round">
+    <path d="M135 705c-9-72 2-138 18-198"/>
+    <path d="M114 530c-6 31-3 61 8 89"/>
+    <path d="M141 528c-5 40 5 84 19 123"/>
+    <path d="M166 524c-2 41 10 83 24 118"/>
+  </g>
+  <text x="180" y="275" font-family="Georgia, 'Times New Roman', serif" font-size="54" fill="#1f1c17">Réflexothérapie</text>
+  <text x="180" y="333" font-family="Georgia, 'Times New Roman', serif" font-size="54" fill="#1f1c17">occipito-podale</text>
+  <text x="415" y="645" font-family="Arial, sans-serif" font-size="24" fill="#3f3521">Guy Boitout</text>
+  <text x="415" y="680" font-family="Arial, sans-serif" font-size="24" fill="#3f3521">Jean-Pierre Vadala</text>
+  <text x="410" y="740" font-family="Arial, sans-serif" font-size="18" fill="#53462e">Préface de</text>
+  <text x="410" y="764" font-family="Arial, sans-serif" font-size="18" fill="#53462e">Jean-Pierre Barral</text>
+</svg>

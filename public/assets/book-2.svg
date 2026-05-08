@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800" role="img" aria-labelledby="title desc">
+  <title id="title">Livre 2 de Guy Boitout</title>
+  <desc id="desc">Illustration de couverture violette inspiree de Reflexotherapie occipito-podale et systeme neuro-meninge.</desc>
+  <rect width="600" height="800" fill="#d5c7eb"/>
+  <rect x="0" y="0" width="188" height="800" fill="#b9abd7"/>
+  <rect x="0" y="0" width="8" height="800" fill="#cfc3e9"/>
+  <line x1="0" y1="280" x2="600" y2="280" stroke="#5a5ca6" stroke-width="9"/>
+  <g opacity=".13" stroke="#70618f" fill="none">
+    <path d="M86 570c63-86 164-139 291-147"/>
+    <path d="M324 118c61 39 103 98 128 177"/>
+    <ellipse cx="404" cy="191" rx="92" ry="75"/>
+  </g>
+  <rect x="80" y="360" width="120" height="185" fill="#6f6a6d"/>
+  <path d="M111 406c10 44 32 81 74 111" stroke="#f3efe9" stroke-width="9" fill="none" stroke-linecap="round"/>
+  <path d="M129 389c20 33 27 71 19 116" stroke="#ece4dd" stroke-width="8" fill="none" stroke-linecap="round"/>
+  <rect x="250" y="310" width="160" height="135" fill="#9fa0aa"/>
+  <g fill="none" stroke="#f1ede8" stroke-width="7" stroke-linecap="round">
+    <path d="M302 421c4-49 13-88 27-126"/>
+    <path d="M330 295c-3 36 5 70 19 102"/>
+    <path d="M357 291c-2 35 7 70 21 99"/>
+    <path d="M385 292c2 30 9 58 20 82"/>
+  </g>
+  <text x="120" y="120" font-family="Georgia, 'Times New Roman', serif" font-size="48" fill="#1f1e2b">Réflexothérapie</text>
+  <text x="120" y="175" font-family="Georgia, 'Times New Roman', serif" font-size="48" fill="#1f1e2b">occipito-podale</text>
+  <text x="120" y="230" font-family="Georgia, 'Times New Roman', serif" font-size="46" fill="#1f1e2b">et système</text>
+  <text x="120" y="282" font-family="Georgia, 'Times New Roman', serif" font-size="46" fill="#1f1e2b">neuro-méningé</text>
+  <text x="415" y="470" font-family="Arial, sans-serif" font-size="23" fill="#4f4661">Guy Boitout</text>
+  <text x="415" y="503" font-family="Arial, sans-serif" font-size="23" fill="#4f4661">Jean-Pierre Vadala</text>
+  <text x="415" y="565" font-family="Arial, sans-serif" font-size="18" fill="#665b7d">Préface de</text>
+  <text x="415" y="589" font-family="Arial, sans-serif" font-size="18" fill="#665b7d">Jean-Pierre Barral</text>
+  <text x="410" y="742" font-family="Arial, sans-serif" font-size="23" fill="#d28f3c">Elsevier Masson</text>
+</svg>
