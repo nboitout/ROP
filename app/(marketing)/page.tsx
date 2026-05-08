@@ -15,15 +15,17 @@ export default function HomePage() {
       {/* HEADER */}
       <header>
         <a className="h-logo" href="#">R.O.P. — Guy Boitout</a>
-        <nav>
-          <a href="#genese">{t.nav.genese}</a>
-          <a href="#chapitres">{t.nav.sommaire}</a>
-          <a href="#protocole">{t.nav.protocole}</a>
-          <a href="#acces-libre">{t.nav.accesLibre}</a>
-          <a href="#acheter">{t.nav.commander}</a>
-          <a href="#acces-libre" className="n-cta">{t.nav.chapitreGratuit}</a>
+        <div className="h-right">
+          <nav>
+            <a href="#genese">{t.nav.genese}</a>
+            <a href="#chapitres">{t.nav.sommaire}</a>
+            <a href="#protocole">{t.nav.protocole}</a>
+            <a href="#acces-libre">{t.nav.accesLibre}</a>
+            <a href="#acheter">{t.nav.commander}</a>
+            <a href="#acces-libre" className="n-cta">{t.nav.chapitreGratuit}</a>
+          </nav>
           <LanguageToggle />
-        </nav>
+        </div>
       </header>
 
       {/* HERO */}
