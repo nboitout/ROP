@@ -259,10 +259,10 @@ const en: typeof fr = {
     cite: '— Guy Boitout · Preface of the 3rd work',
   },
   stats: [
-    { n: '3', l: ['Books published', 'by Elsevier-Masson'] },
-    { n: '12', l: ['Chapters', 'presented on this site'] },
-    { n: '20+', l: ['Chapters', 'in the complete work'] },
-    { n: '1978', l: ['Start of the', 'reflexological journey'] },
+    { n: '3', l: ['Books published', 'by Elsevier Masson'] },
+    { n: '12', l: ['Chapters', 'featured on this site'] },
+    { n: '20+', l: ['Chapters', 'in the complete book'] },
+    { n: '1978', l: ['Beginning of the', 'R.O.P. Journey'] },
   ],
   architecture: {
     lbl: 'Book structure',
