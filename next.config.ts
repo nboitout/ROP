@@ -1,3 +1,4 @@
+// Deployment target: Vercel (https://vercel.com)
 import type { NextConfig } from 'next'
 
 const securityHeaders = [
