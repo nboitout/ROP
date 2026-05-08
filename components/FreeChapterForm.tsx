@@ -1,10 +1,14 @@
 'use client'
 
 import { useState } from 'react'
+import { useLanguage } from '@/app/i18n/LanguageContext'
 
 type FieldErrors = { name?: string; email?: string }
 
 export default function FreeChapterForm() {
+  const { t } = useLanguage()
+  const f = t.form
+
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [profession, setProfession] = useState('')
@@ -16,10 +20,10 @@ export default function FreeChapterForm() {
 
   function validate(): FieldErrors {
     const errors: FieldErrors = {}
-    if (!name.trim()) errors.name = 'Veuillez renseigner votre prénom et nom.'
+    if (!name.trim()) errors.name = f.errorName
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
-    if (!email.trim()) errors.email = 'Veuillez renseigner votre adresse e-mail.'
-    else if (!emailRegex.test(email)) errors.email = 'Adresse e-mail invalide.'
+    if (!email.trim()) errors.email = f.errorEmail
+    else if (!emailRegex.test(email)) errors.email = f.errorEmailInvalid
     return errors
   }
 
@@ -30,7 +34,7 @@ export default function FreeChapterForm() {
     setFieldErrors(errors)
     if (Object.keys(errors).length > 0) return
     if (!consent) {
-      setServerError('Veuillez accepter la politique de confidentialité.')
+      setServerError(f.errorConsent)
       return
     }
 
@@ -44,7 +48,7 @@ export default function FreeChapterForm() {
       if (!res.ok) throw new Error('server')
       setSuccess(true)
     } catch {
-      setServerError("Une erreur est survenue. Veuillez réessayer.")
+      setServerError(f.errorServer)
     } finally {
       setLoading(false)
     }
@@ -54,26 +58,26 @@ export default function FreeChapterForm() {
     return (
       <div className="fsuccess on">
         <div className="fok">✓</div>
-        <h3 style={{ color: 'var(--cream)', fontFamily: "'Cormorant Garamond',serif", fontSize: '1.38rem', fontWeight: 300, marginBottom: 7 }}>Merci !</h3>
-        <p style={{ fontSize: '.85rem', color: 'rgba(245,240,232,.72)' }}>Le lien de téléchargement a été envoyé à votre adresse e-mail.</p>
-        <p style={{ fontSize: '.67rem', color: 'rgba(245,240,232,.5)', marginTop: 12 }}>Vérifiez aussi votre dossier spam.</p>
+        <h3 style={{ color: 'var(--cream)', fontFamily: "'Cormorant Garamond',serif", fontSize: '1.38rem', fontWeight: 300, marginBottom: 7 }}>{f.successTitle}</h3>
+        <p style={{ fontSize: '.85rem', color: 'rgba(245,240,232,.72)' }}>{f.successMsg}</p>
+        <p style={{ fontSize: '.67rem', color: 'rgba(245,240,232,.5)', marginTop: 12 }}>{f.successSpam}</p>
       </div>
     )
   }
 
   return (
     <form onSubmit={handleSubmit} noValidate>
-      <h3>Accès au chapitre gratuit</h3>
-      <p className="fs">Mécanisme de stress — PDF · Accès immédiat après inscription</p>
+      <h3>{f.title}</h3>
+      <p className="fs">{f.subtitle}</p>
 
       {serverError && <div className="ferror-banner on">{serverError}</div>}
 
       <div className={`fg${fieldErrors.name ? ' has-error' : ''}`}>
-        <label htmlFor="fn">Prénom &amp; Nom</label>
+        <label htmlFor="fn">{f.nameLbl}</label>
         <input
           id="fn"
           type="text"
-          placeholder="ex. Marie Dupont"
+          placeholder={f.namePlaceholder}
           value={name}
           onChange={(e) => setName(e.target.value)}
           autoComplete="name"
@@ -82,11 +86,11 @@ export default function FreeChapterForm() {
       </div>
 
       <div className={`fg${fieldErrors.email ? ' has-error' : ''}`}>
-        <label htmlFor="fe">Adresse e-mail</label>
+        <label htmlFor="fe">{f.emailLbl}</label>
         <input
           id="fe"
           type="email"
-          placeholder="votre@email.com"
+          placeholder={f.emailPlaceholder}
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           autoComplete="email"
@@ -95,11 +99,11 @@ export default function FreeChapterForm() {
       </div>
 
       <div className="fg">
-        <label htmlFor="fj">Profession <span style={{ opacity: .4 }}>(optionnel)</span></label>
+        <label htmlFor="fj">{f.professionLbl} <span style={{ opacity: .4 }}>{f.professionOptional}</span></label>
         <input
           id="fj"
           type="text"
-          placeholder="ex. Réflexothérapeute, Ostéopathe, Kiné…"
+          placeholder={f.professionPlaceholder}
           value={profession}
           onChange={(e) => setProfession(e.target.value)}
         />
@@ -114,7 +118,11 @@ export default function FreeChapterForm() {
           style={{ width: 'auto', marginTop: 2, flexShrink: 0 }}
         />
         <label htmlFor="fc" style={{ fontSize: '.72rem', lineHeight: 1.5, textTransform: 'none', letterSpacing: 0, opacity: 1 }}>
-          J&apos;accepte la <a href="/confidentialite" style={{ color: 'var(--gold-l)' }}>politique de confidentialité</a> et consens à recevoir ce chapitre par e-mail.
+          {f.consentText.split(f.privacyLink).map((part, i, arr) =>
+            i < arr.length - 1
+              ? [part, <a key={i} href="/confidentialite" style={{ color: 'var(--gold-l)' }}>{f.privacyLink}</a>]
+              : part
+          )}
         </label>
       </div>
 
@@ -124,9 +132,9 @@ export default function FreeChapterForm() {
         disabled={loading}
         style={{ width: '100%', marginTop: 8, padding: '13px', opacity: loading ? .7 : 1 }}
       >
-        {loading ? 'Envoi en cours…' : 'Recevoir le chapitre →'}
+        {loading ? f.submitting : f.submit}
       </button>
-      <p className="fnote">Vos données ne seront jamais partagées avec des tiers. Désabonnement possible à tout moment.</p>
+      <p className="fnote">{f.note}</p>
     </form>
   )
 }
