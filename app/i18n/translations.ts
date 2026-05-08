@@ -246,10 +246,10 @@ const en: typeof fr = {
     btn2: 'Training programs →',
   },
   genese: {
-    lbl: 'Genesis of the work',
-    h2: { before: 'A journey of ', em: 'thirty years' },
-    p1: 'This third volume continues what makes Occipito-Podal Reflexotherapy unique: a global 3D representation of the body as a baby in foetal position within the feet, occipital reflex zones, and a constant reference to anatomy and physiology.',
-    p2: 'Following a first book dedicated to the osteo-musculo-articular system and a second focused on spinal and cranial somatic nerves, this work addresses the autonomic nervous system, the stress mechanism and the abdominal viscera — the invisible heart of the body\'s regulation.',
+    lbl: 'Genesis of the Book',
+    h2: { before: 'A ', em: 'Thirty-Year Journey' },
+    p1: 'This third volume continues to explore what makes Occipito-Podal Reflexotherapy unique: a comprehensive three-dimensional representation of the body, in the fetal position, within the feet; occipital reflex zones; and a constant reference to anatomy and physiology.',
+    p2: 'After a first book dedicated to the osteo-musculo-articular system and a second focused on the spinal and cranial somatic nerves, this volume addresses the autonomic nervous system, stress mechanisms, and the abdominal viscera — the hidden core of the body\'s regulation.',
     timeline: [
       { yr: '1978', lbl: 'First encounter', desc: 'Discovery of reflexology (Ingham method) — a decisive first step toward understanding functional disorders linking the spine and the nervous system.' },
       { yr: '1980s', lbl: 'Visceral osteopathy', desc: 'Jean-Pierre Barral demonstrated that the visceral system is not only manipulable, but that by restoring its primitive mobility, spinal mobility can also be restored.' },
