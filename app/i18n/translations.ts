@@ -332,11 +332,11 @@ const en: typeof fr = {
   },
   pedagogie: {
     lbl: 'Educational approach',
-    h2: { before: 'A ', em: 'clinical', after: ' manual, not a theoretical treatise' },
+    h2: { before: 'A ', em: 'Clinical', after: ' Manual, Not a Theoretical Treatise' },
     cards: [
-      { ico: '🔬', t: 'Scientific grounding', d: 'Every concept is referenced: classical anatomy, neurophysiology, visceral osteopathy. The foundations are solid to enable clinical adaptation.', tags: ['Bibliography', 'References', 'Anatomy'] },
-      { ico: '🗺️', t: 'R.O.P. mappings', d: 'Original diagrams integrating the 3D representation of the body in foetal position within the feet and occipital reflex zones. Visual support for every organ.', tags: ['Diagrams', '3D', 'Podal zones', 'Occipital zones'] },
-      { ico: '⚕️', t: 'Applicable protocols', d: 'From textural diagnosis to hierarchical treatment, every visceral chapter concludes with practical indications directly transposable to a session.', tags: ['Protocol', 'Diagnosis', 'Direct application'] },
+      { ico: '🔬', t: 'Scientific Grounding', d: 'Every concept is grounded in references to classical anatomy, neurophysiology, and visceral osteopathy. These solid foundations support clinical adaptation.', tags: ['Bibliography', 'References', 'Anatomy'] },
+      { ico: '🗺️', t: 'R.O.P. Mapping', d: 'Original diagrams integrate the three-dimensional representation of the body, in the fetal position, within the feet and occipital reflex zones. Each organ is supported by dedicated visual material.', tags: ['Diagrams', '3D', 'Podal Zones', 'Occipital Zones'] },
+      { ico: '⚕️', t: 'Applicable Protocols', d: 'From textural diagnosis to hierarchical treatment, each visceral chapter concludes with practical guidance that can be applied directly in a session.', tags: ['Protocol', 'Diagnosis', 'Direct Application'] },
     ],
   },
   freeChapter: {
