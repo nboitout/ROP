@@ -30,10 +30,9 @@ nav a:hover { opacity:1; color:var(--sage); }
 .n-cta { background:var(--sage) !important; color:var(--cream) !important; opacity:1 !important; padding:8px 18px; border-radius:2px; }
 .n-cta:hover { background:#3a5a4a !important; opacity:1 !important; }
 .h-right { display:flex; align-items:center; gap:16px; }
-.lang-menu { display:flex; align-items:center; gap:2px; flex-shrink:0; }
-.lang-btn { font-size:.71rem; font-weight:500; letter-spacing:.09em; text-transform:uppercase; background:transparent; border:1px solid var(--ink); color:var(--ink); padding:5px 10px; border-radius:2px; cursor:pointer; transition:background .2s, color .2s; }
-.lang-btn:hover { background:var(--ink); color:var(--cream); }
-.lang-btn.active { background:var(--ink); color:var(--cream); }
+.lang-select-wrap { position:relative; flex-shrink:0; }
+.lang-select-wrap::after { content:'▾'; position:absolute; right:8px; top:50%; transform:translateY(-50%); color:var(--cream); font-size:.6rem; pointer-events:none; }
+.lang-select { appearance:none; font-family:'DM Sans',sans-serif; font-size:.71rem; font-weight:500; letter-spacing:.06em; background:var(--ink); border:none; color:var(--cream); padding:6px 28px 6px 12px; border-radius:2px; cursor:pointer; }
 
 /* BUTTONS */
 .btn { display:inline-block; padding:12px 28px; font-family:'DM Sans',sans-serif; font-size:.73rem; font-weight:500; letter-spacing:.09em; text-transform:uppercase; text-decoration:none; cursor:pointer; border:none; border-radius:2px; transition:transform .2s, box-shadow .2s, background .2s; }
