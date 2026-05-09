@@ -1,4 +1,4 @@
-export type Lang = 'fr' | 'en'
+export type Lang = 'fr' | 'en' | 'de'
 
 const fr = {
   nav: {
@@ -426,4 +426,217 @@ const en: typeof fr = {
   },
 }
 
-export const translations: Record<Lang, typeof fr> = { fr, en }
+const de: typeof fr = {
+  nav: {
+    genese: 'Entstehung',
+    sommaire: 'Inhalt',
+    protocole: 'Protokoll',
+    accesLibre: 'Kostenloser Zugang',
+    commander: 'Bestellen',
+    chapitreGratuit: 'Kostenloses Kapitel',
+  },
+  hero: {
+    badge: 'Drittes Buch · R.O.P.-Institut · Guy Boitout',
+    h1: { before: 'Okzipito-Podale Reflextherapie und die Viszera der', em: 'Bauch- und Beckenhöhle', after: '' },
+    sub: 'Nervensystem, Viszera und Stress — eine klinische Perspektive in der Okzipito-Podalen Reflexologie',
+    tags: ['Viszerale Mobilität', 'Zentrales Nervensystem', 'Autonomes Nervensystem', 'Stressmechanismen', 'Zwerchfell · Magen · Duodenum', 'R.O.P.-Protokoll'],
+    cta1: 'Ein kostenloses Kapitel lesen',
+    cta2: 'Inhaltsverzeichnis ansehen',
+    role: 'Reflextherapeut · Osteopath · Begründer der R.O.P.-Methode',
+    galleryKicker: 'Galerie des Autors',
+    galleryTitle: 'Guy Boitout in Ausbildung, Lehre und klinischer Praxis.',
+  },
+  author: {
+    lbl: 'Der Autor',
+    chips: ['Reflextherapeut', 'Osteopath', 'Begründer der R.O.P.-Methode', 'Zertifizierter Ausbilder'],
+    prevBooks: 'Frühere Veröffentlichungen',
+    viewOnAmazon: 'Auf Amazon ansehen',
+    bio: [
+      'Guy Boitout ist der Begründer der Okzipito-Podalen Reflexologie (R.O.P.), eines manualtherapeutischen Ansatzes, der auf einer dreidimensionalen Darstellung des Körpers am Fuß und am Okziput beruht. Seit mehr als dreißig Jahren unterrichtet und entwickelt er diesen Ansatz am R.O.P.-Ausbildungsinstitut mit Sitz in Sully-sur-Loire, Frankreich.',
+      'Ursprünglich als Physiotherapeut ausgebildet, entdeckte er 1978 die Reflexologie über die Ingham-Methode und später die viszerale Osteopathie bei Jean-Pierre Barral. Diese beiden entscheidenden Einflüsse führten ihn gemeinsam mit Jean-Pierre Vadala zur Entwicklung der ursprünglichen dreidimensionalen R.O.P.-Reflexkartierung, veröffentlicht bei Elsevier Masson.',
+      'Seine Ausbildungsprogramme sind für die berufliche Fortbildung registriert (Registrierungsnummer 24450434645, Präfektur Centre–Val de Loire) und richten sich an Reflextherapeuten, Osteopathen, Physiotherapeuten und weitere Gesundheitsfachpersonen.',
+    ],
+    btn1: 'Website des R.O.P.-Instituts →',
+    btn2: 'Ausbildungsprogramme →',
+  },
+  genese: {
+    lbl: 'Entstehung des Buches',
+    h2: { before: 'Eine ', em: 'dreißigjährige Reise' },
+    p1: 'Dieses dritte Buch führt weiter, was die Okzipito-Podale Reflextherapie einzigartig macht: eine umfassende dreidimensionale Darstellung des Körpers in Fötalstellung innerhalb der Füße, okzipitale Reflexzonen und ein ständiger Bezug zu Anatomie und Physiologie.',
+    p2: 'Nach einem ersten Buch über das osteo-muskulo-artikuläre System und einem zweiten über die spinalen und kranialen somatischen Nerven widmet sich dieser Band dem autonomen Nervensystem, den Stressmechanismen und den abdominalen Viszera — dem verborgenen Kern der körperlichen Regulation.',
+    timeline: [
+      { yr: '1978', lbl: 'Erste Begegnung', desc: 'Entdeckung der Reflexologie über die Ingham-Methode — ein entscheidender erster Schritt zum Verständnis funktioneller Störungen, die Wirbelsäule und Nervensystem betreffen.' },
+      { yr: '1980er', lbl: 'Viszerale Osteopathie', desc: 'Jean-Pierre Barral zeigte, dass das viszerale System manuell behandelt werden kann und dass durch die Wiederherstellung seiner primären Mobilität auch die Mobilität der Wirbelsäule wiederhergestellt werden kann.' },
+      { yr: 'R.O.P.', lbl: 'Entwicklung der Methode', desc: 'Gemeinsam mit Jean-Pierre Vadala verband Guy Boitout Reflexologie und viszerale Osteopathie zu einer ursprünglichen dreidimensionalen Reflexkartierung, veröffentlicht bei Elsevier Masson.' },
+    ],
+    quote: '„In der Reflexologie konnte es nicht anders sein. Wie in der viszeralen Osteopathie steht das autonome Nervensystem im Zentrum von allem: Es steuert, reguliert und stellt wieder her — und genau dieses System versucht R.O.P. vorrangig anzusprechen."',
+    cite: '— Guy Boitout · Vorwort zum dritten Buch',
+  },
+  stats: [
+    { n: '3', l: ['Bücher veröffentlicht', 'bei Elsevier Masson'] },
+    { n: '12', l: ['Auf dieser Website', 'vorgestellte Kapitel'] },
+    { n: '20+', l: ['Kapitel im', 'vollständigen Buch'] },
+    { n: '1978', l: ['Beginn der', 'R.O.P.-Reise'] },
+  ],
+  architecture: {
+    lbl: 'Aufbau des Buches',
+    h2: { before: 'Eine ', em: 'schrittweise', after: ' Progression' },
+    desc: 'Vom persönlichen Vorwort bis zu den abdominalen Viszera folgt das Buch einer logischen Progression in vier großen Teilen. Jede Ebene baut auf der vorherigen auf und vermittelt Praktikern ein vollständiges, praktisches klinisches Verständnis.',
+    flow: [
+      { icon: '✍️', t: 'Einführung', s: 'Entstehung der Methode, persönlicher Weg und die DNA der R.O.P.', chs: [['Kap. 0 · Vorwort', ''], ['Kap. 1 · Allgemeine Prinzipien', ''], ['Kap. 2 · Protokoll', '']] },
+      { icon: '🧠', t: 'Die Nervensysteme', s: 'ZNS — die drei Gehirne und der Hirnstamm — und ANS: parasympathische, sympathische und vagale Bahnen.', chs: [['Kap. 3 · ZNS', ''], ['Kap. 4 · ANS', '']] },
+      { icon: '⚖️', t: 'Stress und Regulation', s: 'Stressmechanismen, Polyvagaltheorie und autonome Regulation.', chs: [['Kap. 5 · Stress ✦', 'fr'], ['Kap. 6 · Polyvagaltheorie', '']] },
+      { icon: '🫁', t: 'Die Viszera', s: 'Körperhöhlen, Zwerchfell, Magen, Duodenum und Dünndarm — Anatomie und R.O.P.-Kartierung.', chs: [['Kap. 7', ''], ['Kap. 8', ''], ['Kap. 9', ''], ['Kap. 10', ''], ['Kap. 14', '']] },
+    ],
+  },
+  chapters: {
+    lbl: 'Ausgewähltes Inhaltsverzeichnis',
+    h2: { before: 'Zwölf ', em: 'ausgewählte', after: ' Kapitel' },
+    desc: 'Vom persönlichen Vorwort des Autors bis zu den abdominalen Viszera führen diese ausgewählten Kapitel in den Umfang des Buches ein. Der vollständige Inhalt ist in zwei Formaten verfügbar: Online-Buch oder Online-Buch + Druckausgabe.',
+    cards: [
+      { num: '00', variant: 'intro' as const, badgeLabel: 'Vorwort', label: 'Einführung', title: 'Entstehung der R.O.P.-Methode', tags: ['Weg des Autors', 'Ingham-Methode', 'Viszerale Osteopathie', 'DNA der R.O.P.'], btnClass: 'b-gold', btnLabel: 'Formate ansehen →', body: 'In der eigenen Stimme des Autors: von der Physiotherapie zur Reflexologie über die Ingham-Methode im Jahr 1978, dann zur viszeralen Osteopathie bei J.-P. Barral und schließlich zur Entwicklung der R.O.P. mit Jean-Pierre Vadala. Die DNA der Methode, dargestellt auf wenigen prägnanten und persönlichen Seiten.' },
+      { num: '01', badgeLabel: 'Enthalten', label: 'Kapitel 1', title: 'Allgemeine Prinzipien — Viszerale Mobilität', tags: ['Viszerale Mobilität', 'Turgor', 'Seröse Membranen', 'Biorhythmen', 'Zwerchfell', 'Primärer Respirationsmechanismus'], body: 'Ein mechanischer und neurophysiologischer Rahmen für Praktiker: Mobilität versus Motilität; die vier viszeralen Motoren — somatisch, autonom, intrinsische Motilität und Biorhythmen; Turgor; intrakavitäre Druckverhältnisse; und das Gleiten seröser Membranen.' },
+      { num: '02', badgeLabel: 'Enthalten', label: 'Kapitel 2', title: 'Das R.O.P.-Behandlungsprotokoll', tags: ['Manuelle Technik', 'Texturale Dosierung', 'Drei Sitzungsphasen', 'Mechanorezeptoren', 'Hierarchische Behandlung'], body: 'Das vollständige klinische Protokoll: manuelle Technik mit der Daumenkuppe, texturale Dosierung über den Trommelfelleffekt, die drei Phasen einer Sitzung und eine hierarchische Behandlungssequenz — allgemeines Syndrom → lokoregional → limbisch — neurophysiologisch fundiert.' },
+      { num: '03', badgeLabel: 'Enthalten', label: 'Kapitel 3', title: 'Zentrales Nervensystem', tags: ['Reptiliengehirn', 'Hirnstamm', 'Limbisches System', 'Neurotransmitter', 'Reflexzonen'], body: 'Von MacLeans Modell des dreieinigen Gehirns bis zur Formatio reticularis: Hirnstamm, Kleinhirn, limbisches System, Kortex, Basalganglien und Neurotransmitter. Podale und okzipitale Reflexzonen, die jeder zerebralen Struktur entsprechen.' },
+      { num: '04', badgeLabel: 'Enthalten', label: 'Kapitel 4', title: 'Autonomes Nervensystem', tags: ['Parasympathikus', 'Sympathikus', 'Vagusnerv', 'Enterisches Nervensystem', 'Homöostase'], body: 'Parasympathisches und sympathisches System: Funktionen, Homöostase, ANS-Schlaf-Beziehung und enterisches Nervensystem. Der Vagusnerv — mit 70 bis 80 % afferenten sensorischen Fasern — und seine entzündungshemmende Rolle. Ein klinischer Rahmen für autonome Dysbalancen in der R.O.P.' },
+      { num: '05', variant: 'fr' as const, badgeLabel: 'Enthalten', label: 'Kapitel 5', title: 'Stressmechanismen', tags: ['Homöostase', 'Allostase', 'Cortisol', 'Distress und Eustress', 'HPA-Achse'], btnClass: 'b-sage', body: 'Von Walter Cannons Konzept der Homöostase bis zu Hans Selyes allgemeinem Adaptationssyndrom: Distress, Eustress sowie physische, biochemische und emotionale Stressoren. Die zentrale Rolle des ANS und des limbischen Systems — und der Platz der R.O.P.-Interventionen.' },
+      { num: '06', badgeLabel: 'Enthalten', label: 'Kapitel 6', title: 'Polyvagaltheorie', tags: ['Alter und neuer vagaler Zustand', 'Soziales Engagement', 'Vasovagale Synkope', 'Phylogenie'], body: 'Dr. Stephen Porges: drei phylogenetische Ebenen des ANS — Immobilisation (alter vagaler Zustand); Mobilisation (sympathischer Zustand); und soziales Engagement (neuer vagaler Zustand). Klinische Implikationen für die vagale Regulation in der R.O.P.' },
+      { num: '07', badgeLabel: 'Enthalten', label: 'Kapitel 7', title: 'Bauch- und Peritonealhöhlen', tags: ['Peritoneum', 'Mesenterien', 'Faszien', 'Abdominalräume', 'Höhlendruck'], body: 'Vollständige Architektur der Bauchhöhle: Peritoneum; intra-, retro- und subperitoneale Räume; Faszien; und Mesenterien. Einfluss thorakaler Druckveränderungen auf die Viszera. Eine klinische R.O.P.-Interpretation faszialer und mechanischer Einschränkungen.' },
+      { num: '08', badgeLabel: 'Enthalten', label: 'Kapitel 8', title: 'Zwerchfell', tags: ['Respiratorischer Motor', 'Hiatus oesophageus', 'Venöser Rückfluss', 'Viszerale Kohäsion', 'Faszien'], body: 'Das Zwerchfell als respiratorischer Motor — etwa 16 Atemzüge pro Minute und zehntausende Zyklen pro 24 Stunden — mit viszeralen und venolymphatischen Funktionen. Zwerchfellansätze, Hiatus oesophageus, Druckgradienten und venöser Rückfluss. Klinische Anwendungen in der R.O.P.' },
+      { num: '09', badgeLabel: 'Enthalten', label: 'Kapitel 9', title: 'Magen', tags: ['Kardia und Pylorus', 'Unterer Ösophagussphinkter', 'Fundus', 'Magen-pH', 'Stress und Verdauung', 'Reflexzonen'], body: 'Vollständige Anatomie des Magens — J-Form, vier Segmente, unterer Ösophagussphinkter, Kardia, Fundus und Pylorus — die Physiologie der Säureverdauung, der Einfluss von Stress auf die Magensekretion und die emotionale Dimension des Organs in der R.O.P.' },
+      { num: '10', badgeLabel: 'Enthalten', label: 'Kapitel 10', title: 'Duodenum', tags: ['D1–D4', 'Sphinkter Oddi', 'Duodenale Papillen', 'Galle und Pankreas', 'Reflexzonen'], body: 'Das U-förmige Duodenum — etwa 25 cm lang — mit vier Segmenten, D1 bis D4; duodenalen Papillen; dem Sphinkter Oddi; und der biliopankreatischen Verbindung. Aortomesenteriale Kompression, der Einfluss von Stress auf die Mukosa und das R.O.P.-Protokoll für die duodenale Motilität.' },
+      { num: '14', badgeLabel: 'Enthalten', label: 'Kapitel 14', title: 'Dünndarm', tags: ['Jejunum–Ileum', 'Mesenterium', 'Mikrobiom', 'Darm-Hirn-Achse', 'R.O.P.-Kartierung'], body: 'Anatomie von Jejunum–Ileum und Mesenterium aus einer klinischen R.O.P.-Perspektive: die Mesenterialwurzel als stark reflexogene Zone, Nutcracker-Syndrom, Darm-Hirn-Achse und die Beziehung zwischen Mikrobiom und Immunität. Reflexkartierung enthalten.' },
+    ],
+    included: 'Enthalten',
+    includedSub: 'Im Online-Buch enthalten',
+    defaultBtn: 'Das Buch ansehen →',
+  },
+  protocole: {
+    lbl: 'Kapitel 2 — Im Fokus',
+    h2: { before: 'Das klinische ', em: 'R.O.P.', after: '-Protokoll im Detail' },
+    p: 'Kapitel 2 ist der operative Kern des Buches: Es beschreibt in präzisem Detail die manuelle Technik, die texturale Dosierung und die hierarchische Behandlungslogik.',
+    steps: [
+      { n: 1, t: 'Texturale Diagnose', d: 'Lokalisierung von Reflexzonen über Veränderungen der Hauttextur: der „Trommelfelleffekt", Verdichtung, Rauigkeit und Verlust des Gleitens. Eine Skala von 0 bis 3 dient dazu, den Fortschritt zwischen den Sitzungen objektiv zu verfolgen.' },
+      { n: 2, t: 'Therapeutische Phase', d: 'Bevorzugtes Werkzeug: die Daumenkuppe. Progressiver, kurzer, gerichteter Druck — ohne übermäßige Kraft und ohne Kneten. Die Qualität der Stimulation hat Vorrang vor der Quantität. Stechender Schmerz weist auf Überstimulation hin.' },
+      { n: 3, t: 'Latenzphase', d: 'Der Körper benötigt Zeit, um autonome Anpassungen zu integrieren. Die Sitzungen sollten im Abstand von 2 bis 3 Wochen erfolgen. Wenn nach drei Sitzungen keine klare Verbesserung eintritt, sollte die Behandlungsstrategie angepasst werden.' },
+    ],
+    neurophysio: {
+      t: 'Neurophysiologische Grundlagen',
+      items: [
+        'Meissner-Körperchen — feine taktile Sensibilität für leichten Druck, insbesondere in unbehaarter Haut.',
+        'Merkel-Zellen — sanfter statischer Druck, lokalisiert an der Basis der Epidermis.',
+        'Diese schnell leitenden Afferenzen können die nozizeptive Übertragung über das Gate-Control-Modell modulieren und so zur Erklärung der analgetischen Wirkung der R.O.P. beitragen.',
+      ],
+      boldItems: ['Meissner-Körperchen', 'Merkel-Zellen'],
+    },
+    hierarchy: {
+      t: 'Behandlungshierarchie',
+      p: 'Zuerst wird das allgemeine Terrain behandelt, dann die symptomatische Zone und schließlich, falls erforderlich, die limbische Komponente.',
+      steps: ['Allgemeines Syndrom', 'Lokoregional', 'Limbische Komponente'],
+      stepOrdinals: ['1.', '2.', '3.'],
+    },
+    errors: {
+      t: 'Zu vermeidende Fehler',
+      items: [
+        'Stark drücken, um zu „spüren" — die feine Gewebelesung geht verloren.',
+        'Schmerz als Wirksamkeitsnachweis suchen — ein Artefakt der Überdosierung.',
+        'Dieselbe Zone zu lange behandeln — kurze Stimulationen, jedes Mal neu bewertet.',
+      ],
+    },
+  },
+  pedagogie: {
+    lbl: 'Pädagogischer Ansatz',
+    h2: { before: 'Ein ', em: 'klinisches', after: ' Handbuch, keine theoretische Abhandlung' },
+    cards: [
+      { ico: '🔬', t: 'Wissenschaftliche Verankerung', d: 'Jedes Konzept ist durch Bezüge zur klassischen Anatomie, Neurophysiologie und viszeralen Osteopathie fundiert. Diese soliden Grundlagen unterstützen die klinische Anpassung.', tags: ['Bibliographie', 'Referenzen', 'Anatomie'] },
+      { ico: '🗺️', t: 'R.O.P.-Kartierung', d: 'Originaldiagramme integrieren die dreidimensionale Darstellung des Körpers in Fötalstellung innerhalb der Füße und der okzipitalen Reflexzonen. Jedes Organ wird durch eigenes visuelles Material unterstützt.', tags: ['Diagramme', 'Dreidimensional', 'Podale Zonen', 'Okzipitale Zonen'] },
+      { ico: '⚕️', t: 'Anwendbare Protokolle', d: 'Von der texturalen Diagnose bis zur hierarchischen Behandlung schließt jedes viszerale Kapitel mit praktischen Hinweisen, die direkt in einer Sitzung angewendet werden können.', tags: ['Protokoll', 'Diagnose', 'Direkte Anwendung'] },
+    ],
+  },
+  freeChapter: {
+    lbl: 'Kostenloses Kapitel',
+    h2: { before: 'Kapitel 5\n', em: 'kostenlos lesen' },
+    p1: 'Das Kapitel über den Stressmechanismus ist frei zugänglich, um die pädagogische Strenge und klinische Tiefe dieses Buches zu zeigen.',
+    p2: 'Es behandelt den gesamten Stress-Weg: von der Homöostase zur Allostase, von physischen zu biochemischen Stressoren und konkrete R.O.P.-Interventionen.',
+    note: 'Kapitel 5 · PDF · 30+ Seiten · Bibliographie enthalten',
+  },
+  citations: {
+    lbl: 'Auszüge aus dem Buch',
+    h2: { before: 'Die Stimme des ', em: 'Autors' },
+  },
+  pricing: {
+    lbl: 'Bestellen',
+    recommended: 'Empfohlen',
+    h2: { before: 'Online-Buch ', em: 'oder', after: ' Online-Buch + Druckausgabe' },
+    p: 'Zwei Formate sind für das vollständige Buch verfügbar: sofortiger Online-Zugang oder ein kombiniertes Digital- und Druckpaket.',
+    plan1: {
+      name: 'Online-Buch',
+      desc: 'Sofortiger digitaler Zugang zum vollständigen Buch, mit dauerhafter Online-Verfügbarkeit.',
+      price: '79',
+      sub: 'sofortiger Online-Zugang',
+      features: ['Vollständiges Buch online', 'Alle Kapitel enthalten', 'Vollständige R.O.P.-Kartierung', 'Klinischer Index', 'Dauerhafter Zugang'],
+      cta: 'Das Online-Buch bestellen',
+    },
+    plan2: {
+      name: 'Online-Buch + Druckausgabe',
+      desc: 'Das vollständige Paket: sofortiger digitaler Zugang plus ein gedrucktes Exemplar des Buches.',
+      price: '99',
+      sub: 'Digital + Druckausgabe',
+      features: ['Online-Buch enthalten', 'Gedrucktes Exemplar enthalten', 'Sofortiger Online-Zugang', 'Gedrucktes Exemplar wird versendet', 'Bibliographie und Diagramme enthalten'],
+      cta: 'Online-Buch + Druckausgabe bestellen',
+    },
+  },
+  footer: {
+    title: 'Okzipito-Podale Reflextherapie und die Viszera der Bauch- und Beckenhöhle',
+    p: 'Guy Boitouts drittes Buch zur Okzipito-Podalen Reflexologie. Nervensystem, abdominale Viszera, Stress und vollständiges klinisches Protokoll — eine praktische Ressource für Behandler.',
+    copy: '© 2026 Guy Boitout · R.O.P.-Institut',
+    address: '',
+  },
+  form: {
+    title: 'Kostenloses Kapitel erhalten',
+    subtitle: 'Stressmechanismus — PDF · Sofortiger Zugang nach Registrierung',
+    nameLbl: 'Vor- und Nachname',
+    namePlaceholder: 'z.B. Max Mustermann',
+    emailLbl: 'E-Mail-Adresse',
+    emailPlaceholder: 'ihre@email.de',
+    professionLbl: 'Beruf',
+    professionOptional: '(optional)',
+    professionPlaceholder: 'z.B. Reflextherapeut, Osteopath…',
+    consentText: 'Ich akzeptiere die Datenschutzrichtlinie und stimme zu, dieses Kapitel per E-Mail zu erhalten.',
+    privacyLink: 'Datenschutzrichtlinie',
+    submit: 'Kapitel erhalten →',
+    submitting: 'Wird gesendet…',
+    note: 'Ihre Daten werden niemals an Dritte weitergegeben. Abmeldung jederzeit möglich.',
+    errorName: 'Bitte geben Sie Ihren Vor- und Nachnamen ein.',
+    errorEmail: 'Bitte geben Sie Ihre E-Mail-Adresse ein.',
+    errorEmailInvalid: 'Ungültige E-Mail-Adresse.',
+    errorConsent: 'Bitte akzeptieren Sie die Datenschutzrichtlinie.',
+    errorServer: 'Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut.',
+    successTitle: 'Vielen Dank!',
+    successMsg: 'Der Download-Link wurde an Ihre E-Mail-Adresse gesendet.',
+    successSpam: 'Überprüfen Sie auch Ihren Spam-Ordner.',
+  },
+  quotes: [
+    {
+      text: '„Viszerale Mobilität wird durch vier Hauptantriebe ermöglicht: das somatische Nervensystem, das autonome Nervensystem, intrinsische Motilität und Biorhythmen. Ihr Zusammenspiel definiert das klinische Terrain des Praktikers."',
+      source: 'Kapitel 1 — Allgemeine Prinzipien',
+    },
+    {
+      text: '„Übermäßige Kraft und Kneten sollten vermieden werden: Die feine taktile Wahrnehmung geht verloren, knöcherne Orientierungspunkte werden weniger deutlich und unnötiger Gewebestress entsteht. Die korrekte manuelle Technik ist progressiver, kurzer, gerichteter Druck."',
+      source: 'Kapitel 2 — R.O.P.-Protokoll',
+    },
+    {
+      text: '„Unsere Aufgabe in der R.O.P. besteht darin, Regulation über den Vagusnerv zu fördern. Was im Körper geschieht, kann unseren mentalen und emotionalen Zustand beeinflussen — und von Veränderungen dieses Zustands begleitet sein."',
+      source: 'Kapitel 6 — Polyvagaltheorie',
+    },
+  ],
+  quoteNav: {
+    label: 'Zitatnavigation',
+    prev: 'Vorheriges Zitat',
+    next: 'Nächstes Zitat',
+    dotsLabel: 'Zitatauswahl',
+    dot: (i: number) => `Zitat ${i + 1}`,
+  },
+}
+
+export const translations: Record<Lang, typeof fr> = { fr, en, de }
