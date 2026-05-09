@@ -1,4 +1,4 @@
-export type Lang = 'fr' | 'en' | 'de' | 'es'
+export type Lang = 'fr' | 'en' | 'de' | 'es' | 'it'
 
 const fr = {
   nav: {
@@ -852,4 +852,217 @@ const es: typeof fr = {
   },
 }
 
-export const translations: Record<Lang, typeof fr> = { fr, en, de, es }
+const it: typeof fr = {
+  nav: {
+    genese: 'Genesi',
+    sommaire: 'Contenuti',
+    protocole: 'Protocollo',
+    accesLibre: 'Accesso gratuito',
+    commander: 'Ordina',
+    chapitreGratuit: 'Capitolo gratuito',
+  },
+  hero: {
+    badge: 'Terzo libro · Istituto R.O.P. · Guy Boitout',
+    h1: { before: 'Riflessoterapia Occipito-Podale e le viscere delle cavità', em: 'addominale e pelvica', after: '' },
+    sub: 'Sistema nervoso, viscere e stress — una prospettiva clinica in Riflessologia Occipito-Podale',
+    tags: ['Mobilità viscerale', 'Sistema nervoso centrale', 'Sistema nervoso autonomo', 'Meccanismi dello stress', 'Diaframma · Stomaco · Duodeno', 'Protocollo R.O.P.'],
+    cta1: 'Leggi un capitolo gratuito',
+    cta2: "Consulta l'indice",
+    role: 'Riflessoterapeuta · Osteopata · Fondatore del metodo R.O.P.',
+    galleryKicker: "Galleria dell'autore",
+    galleryTitle: 'Guy Boitout nella formazione, nell\'insegnamento e nella pratica clinica.',
+  },
+  author: {
+    lbl: "L'autore",
+    chips: ['Riflessoterapeuta', 'Osteopata', 'Fondatore del metodo R.O.P.', 'Formatore certificato'],
+    prevBooks: 'Pubblicazioni precedenti',
+    viewOnAmazon: 'Vedi su Amazon',
+    bio: [
+      "Guy Boitout è il fondatore della Riflessologia Occipito-Podale (R.O.P.), un approccio di terapia manuale basato su una rappresentazione tridimensionale del corpo sul piede e sull'occipite. Da oltre trent'anni insegna e sviluppa questo approccio attraverso l'Istituto di Formazione R.O.P., con sede a Sully-sur-Loire, in Francia.",
+      'Inizialmente formato come fisioterapista, scoprì la riflessologia attraverso il metodo Ingham nel 1978 e, successivamente, l\'osteopatia viscerale con Jean-Pierre Barral. Queste due influenze decisive lo portarono, insieme a Jean-Pierre Vadala, a sviluppare la cartografia riflessa tridimensionale originale della R.O.P., pubblicata da Elsevier Masson.',
+      'I suoi programmi di formazione sono registrati per lo sviluppo professionale continuo (numero di registrazione 24450434645, Prefettura del Centre–Val de Loire) e sono rivolti a riflessoterapeuti, osteopati, fisioterapisti e altri professionisti della salute.',
+    ],
+    btn1: "Sito web dell'Istituto R.O.P. →",
+    btn2: 'Programmi di formazione →',
+  },
+  genese: {
+    lbl: 'Genesi del libro',
+    h2: { before: 'Un percorso di ', em: "trent'anni" },
+    p1: 'Questo terzo libro continua a esplorare ciò che rende unica la Riflessoterapia Occipito-Podale: una rappresentazione tridimensionale completa del corpo, in posizione fetale, all\'interno dei piedi; zone riflesse occipitali; e un riferimento costante all\'anatomia e alla fisiologia.',
+    p2: 'Dopo un primo libro dedicato al sistema osteo-muscolo-articolare e un secondo centrato sui nervi somatici spinali e cranici, questo volume affronta il sistema nervoso autonomo, i meccanismi dello stress e le viscere addominali — il nucleo nascosto della regolazione corporea.',
+    timeline: [
+      { yr: '1978', lbl: 'Primo incontro', desc: 'Scoperta della riflessologia attraverso il metodo Ingham — un primo passo decisivo verso la comprensione dei disturbi funzionali che coinvolgono la colonna vertebrale e il sistema nervoso.' },
+      { yr: 'Anni 80', lbl: 'Osteopatia viscerale', desc: 'Jean-Pierre Barral dimostrò che il sistema viscerale può essere trattato manualmente e che, ripristinando la sua mobilità primaria, può essere ripristinata anche la mobilità vertebrale.' },
+      { yr: 'R.O.P.', lbl: 'Sviluppo del metodo', desc: 'Insieme a Jean-Pierre Vadala, Guy Boitout sintetizzò riflessologia e osteopatia viscerale in una cartografia riflessa tridimensionale originale, pubblicata da Elsevier Masson.' },
+    ],
+    quote: '«Non poteva essere altrimenti in riflessologia. Come nell\'osteopatia viscerale, il sistema nervoso autonomo è al centro di tutto: governa, regola e ristabilisce — ed è il sistema che la R.O.P. cerca di raggiungere in via prioritaria.»',
+    cite: '— Guy Boitout · Prefazione al terzo libro',
+  },
+  stats: [
+    { n: '3', l: ['Libri pubblicati', 'da Elsevier Masson'] },
+    { n: '12', l: ['Capitoli presentati', 'su questo sito'] },
+    { n: '20+', l: ['Capitoli nel', 'libro completo'] },
+    { n: '1978', l: ['Inizio del', 'percorso R.O.P.'] },
+  ],
+  architecture: {
+    lbl: 'Struttura del libro',
+    h2: { before: 'Una progressione ', em: 'passo dopo passo', after: '' },
+    desc: 'Dalla prefazione personale alle viscere addominali, il libro segue una progressione logica in quattro grandi parti. Ogni livello si basa sul precedente per offrire ai professionisti una comprensione clinica completa e pratica.',
+    flow: [
+      { icon: '✍️', t: 'Introduzione', s: 'Genesi del metodo, percorso personale e DNA della R.O.P.', chs: [['Cap. 0 · Prefazione', ''], ['Cap. 1 · Principi generali', ''], ['Cap. 2 · Protocollo', '']] },
+      { icon: '🧠', t: 'I sistemi nervosi', s: 'SNC — i tre cervelli e il tronco encefalico — e SNA: vie parasimpatiche, simpatiche e vagali.', chs: [['Cap. 3 · SNC', ''], ['Cap. 4 · SNA', '']] },
+      { icon: '⚖️', t: 'Stress e regolazione', s: 'Meccanismi dello stress, teoria polivagale e regolazione autonoma.', chs: [['Cap. 5 · Stress ✦', 'fr'], ['Cap. 6 · Teoria polivagale', '']] },
+      { icon: '🫁', t: 'Le viscere', s: 'Cavità corporee, diaframma, stomaco, duodeno e intestino tenue — anatomia e cartografia R.O.P.', chs: [['Cap. 7', ''], ['Cap. 8', ''], ['Cap. 9', ''], ['Cap. 10', ''], ['Cap. 14', '']] },
+    ],
+  },
+  chapters: {
+    lbl: 'Indice selezionato',
+    h2: { before: 'Dodici ', em: 'capitoli', after: ' in evidenza' },
+    desc: "Dalla prefazione personale dell'autore alle viscere addominali, questi capitoli selezionati introducono l'ampiezza del libro. Il contenuto completo è disponibile in due formati: Libro online o Libro online + Edizione cartacea.",
+    cards: [
+      { num: '00', variant: 'intro' as const, badgeLabel: 'Prefazione', label: 'Introduzione', title: 'Genesi del metodo R.O.P.', tags: ["Percorso dell'autore", 'Metodo Ingham', 'Osteopatia viscerale', 'DNA della R.O.P.'], btnClass: 'b-gold', btnLabel: 'Vedi i formati →', body: "Nella voce propria dell'autore: dalla fisioterapia alla riflessologia attraverso il metodo Ingham nel 1978, poi all'osteopatia viscerale con J.-P. Barral e infine allo sviluppo della R.O.P. con Jean-Pierre Vadala. Il DNA del metodo, presentato in poche pagine concise e personali." },
+      { num: '01', badgeLabel: 'Incluso', label: 'Capitolo 1', title: 'Principi generali — Mobilità viscerale', tags: ['Mobilità viscerale', 'Turgore', 'Membrane sierose', 'Bioritmi', 'Diaframma', 'Meccanismo respiratorio primario'], body: 'Un quadro meccanico e neurofisiologico per i professionisti: mobilità versus motilità; i quattro motori viscerali — somatico, autonomo, motilità intrinseca e bioritmi; turgore; pressione intracavitaria; e scorrimento delle membrane sierose.' },
+      { num: '02', badgeLabel: 'Incluso', label: 'Capitolo 2', title: 'Il protocollo di trattamento R.O.P.', tags: ['Tecnica manuale', 'Dosaggio testurale', 'Tre fasi della seduta', 'Meccanorecettori', 'Trattamento gerarchico'], body: 'Il protocollo clinico completo: tecnica manuale con il polpastrello del pollice, dosaggio testurale attraverso l\'effetto pelle di tamburo, le tre fasi di una seduta e una sequenza terapeutica gerarchica — sindrome generale → locoregionale → limbica — fondata sulla neurofisiologia.' },
+      { num: '03', badgeLabel: 'Incluso', label: 'Capitolo 3', title: 'Sistema nervoso centrale', tags: ['Cervello rettiliano', 'Tronco encefalico', 'Sistema limbico', 'Neurotrasmettitori', 'Zone riflesse'], body: 'Dal modello del cervello trino di MacLean alla formazione reticolare: tronco encefalico, cervelletto, sistema limbico, corteccia, gangli della base e neurotrasmettitori. Zone riflesse podali e occipitali corrispondenti a ciascuna struttura cerebrale.' },
+      { num: '04', badgeLabel: 'Incluso', label: 'Capitolo 4', title: 'Sistema nervoso autonomo', tags: ['Parasimpatico', 'Simpatico', 'Nervo vago', 'Sistema nervoso enterico', 'Omeostasi'], body: 'Sistemi parasimpatico e simpatico: funzioni, omeostasi, relazione SNA–sonno e sistema nervoso enterico. Il nervo vago — con il 70–80% di fibre sensoriali afferenti — e il suo ruolo antinfiammatorio. Un quadro clinico per gli squilibri autonomici nella R.O.P.' },
+      { num: '05', variant: 'fr' as const, badgeLabel: 'Incluso', label: 'Capitolo 5', title: 'Meccanismi dello stress', tags: ['Omeostasi', 'Allostasi', 'Cortisolo', 'Distress ed eustress', 'Asse HPA'], btnClass: 'b-sage', body: 'Dal concetto di omeostasi di Walter Cannon alla sindrome generale di adattamento di Hans Selye: distress, eustress e stressori fisici, biochimici ed emotivi. Il ruolo centrale del SNA e del sistema limbico — e il posto degli interventi R.O.P.' },
+      { num: '06', badgeLabel: 'Incluso', label: 'Capitolo 6', title: 'Teoria polivagale', tags: ['Vagale antico e nuovo', 'Coinvolgimento sociale', 'Sincope vasovagale', 'Filogenesi'], body: 'Dr. Stephen Porges: tre livelli filogenetici del SNA — immobilizzazione (stato vagale antico); mobilizzazione (stato simpatico); e coinvolgimento sociale (stato vagale nuovo). Implicazioni cliniche per la regolazione vagale nella R.O.P.' },
+      { num: '07', badgeLabel: 'Incluso', label: 'Capitolo 7', title: 'Cavità addominale e peritoneale', tags: ['Peritoneo', 'Mesenteri', 'Fasce', 'Spazi addominali', 'Pressioni cavitarie'], body: "Architettura completa della cavità addominale: peritoneo; spazi intra-, retro- e sottoperitoneali; fasce; e mesenteri. Influenza delle variazioni di pressione toracica sulle viscere. Un'interpretazione clinica R.O.P. delle restrizioni fasciali e meccaniche." },
+      { num: '08', badgeLabel: 'Incluso', label: 'Capitolo 8', title: 'Diaframma', tags: ['Motore respiratorio', 'Iato esofageo', 'Ritorno venoso', 'Coesione viscerale', 'Fasce'], body: 'Il diaframma come motore respiratorio — circa 16 respiri al minuto e decine di migliaia di cicli nelle 24 ore — con funzioni viscerali e venolinfatiche. Inserzioni diaframmatiche, iato esofageo, gradienti di pressione e ritorno venoso. Applicazioni cliniche nella R.O.P.' },
+      { num: '09', badgeLabel: 'Incluso', label: 'Capitolo 9', title: 'Stomaco', tags: ['Cardias e piloro', 'Sfintere esofageo inferiore', 'Fondo', 'pH gastrico', 'Stress e digestione', 'Zone riflesse'], body: 'Anatomia completa dello stomaco — forma a J, quattro segmenti, sfintere esofageo inferiore, cardias, fondo e piloro — la fisiologia della digestione acida, l\'impatto dello stress sulla secrezione gastrica e la dimensione emotiva dell\'organo nella R.O.P.' },
+      { num: '10', badgeLabel: 'Incluso', label: 'Capitolo 10', title: 'Duodeno', tags: ['D1–D4', 'Sfintere di Oddi', 'Papille duodenali', 'Bile e pancreas', 'Zone riflesse'], body: 'Il duodeno a forma di U — lungo circa 25 cm — con quattro segmenti, da D1 a D4; papille duodenali; lo sfintere di Oddi; e la giunzione biliopancreatica. Compressione aortomesenterica, impatto dello stress sulla mucosa e protocollo R.O.P. per la motilità duodenale.' },
+      { num: '14', badgeLabel: 'Incluso', label: 'Capitolo 14', title: 'Intestino tenue', tags: ['Digiuno–ileo', 'Mesentere', 'Microbioma', 'Asse intestino–cervello', 'Cartografia R.O.P.'], body: "Anatomia del digiuno–ileo e del mesentere attraverso un'interpretazione clinica R.O.P.: la radice mesenterica come zona altamente riflessogena, sindrome dello schiaccianoci, asse intestino–cervello e relazione microbioma–immunità. Cartografia riflessa inclusa." },
+    ],
+    included: 'Incluso',
+    includedSub: 'Incluso nel Libro online',
+    defaultBtn: 'Vedi il libro →',
+  },
+  protocole: {
+    lbl: 'Capitolo 2 — In dettaglio',
+    h2: { before: 'Il protocollo clinico ', em: 'R.O.P.', after: ' in dettaglio' },
+    p: 'Il capitolo 2 è il nucleo operativo del libro: descrive con precisione la tecnica manuale, il dosaggio testurale e la logica del trattamento gerarchico.',
+    steps: [
+      { n: 1, t: 'Diagnosi testurale', d: 'Localizzazione delle zone riflesse attraverso cambiamenti della texture cutanea: l\'"effetto pelle di tamburo", densificazione, rugosità e perdita di scorrimento. Una scala da 0 a 3 viene utilizzata per monitorare oggettivamente i progressi tra le sedute.' },
+      { n: 2, t: 'Fase terapeutica', d: 'Strumento preferito: il polpastrello del pollice. Pressione progressiva, breve e diretta — senza forza eccessiva né impastamento. La qualità della stimolazione ha priorità sulla quantità. Il dolore acuto indica sovrastimolazione.' },
+      { n: 3, t: 'Fase di latenza', d: 'Il corpo ha bisogno di tempo per integrare gli adattamenti autonomici. Le sedute dovrebbero essere distanziate di 2–3 settimane. Se non si osserva un miglioramento chiaro dopo tre sedute, la strategia terapeutica deve essere adattata.' },
+    ],
+    neurophysio: {
+      t: 'Fondamenti neurofisiologici',
+      items: [
+        "Corpuscoli di Meissner — sensibilità tattile fine alla pressione leggera, soprattutto nella cute glabra.",
+        "Dischi di Merkel — pressione statica delicata, localizzati alla base dell'epidermide.",
+        "Queste afferenze a conduzione rapida possono modulare la trasmissione nocicettiva attraverso il modello del gate control, contribuendo a spiegare l'effetto analgesico della R.O.P.",
+      ],
+      boldItems: ['Corpuscoli di Meissner', 'Dischi di Merkel'],
+    },
+    hierarchy: {
+      t: 'Gerarchia del trattamento',
+      p: 'Trattare prima il terreno generale, poi la zona sintomatica e infine, se necessario, la componente limbica.',
+      steps: ['Sindrome generale', 'Locoregionale', 'Componente limbica'],
+      stepOrdinals: ['1°', '2°', '3°'],
+    },
+    errors: {
+      t: 'Errori da evitare',
+      items: [
+        'Premere con forza per "sentire" — si perde la lettura fine del tessuto.',
+        "Cercare il dolore come prova di efficacia — un artefatto da sovradosaggio.",
+        'Trattare la stessa zona troppo a lungo — stimolazioni brevi, rivalutate ogni volta.',
+      ],
+    },
+  },
+  pedagogie: {
+    lbl: 'Approccio pedagogico',
+    h2: { before: 'Un ', em: 'manuale clinico', after: ', non un trattato teorico' },
+    cards: [
+      { ico: '🔬', t: 'Fondamento scientifico', d: "Ogni concetto si fonda su riferimenti all'anatomia classica, alla neurofisiologia e all'osteopatia viscerale. Queste basi solide sostengono l'adattamento clinico.", tags: ['Bibliografia', 'Riferimenti', 'Anatomia'] },
+      { ico: '🗺️', t: 'Cartografia R.O.P.', d: 'I diagrammi originali integrano la rappresentazione tridimensionale del corpo, in posizione fetale, all\'interno dei piedi e delle zone riflesse occipitali. Ogni organo è supportato da materiale visivo dedicato.', tags: ['Diagrammi', 'Tridimensionale', 'Zone podali', 'Zone occipitali'] },
+      { ico: '⚕️', t: 'Protocolli applicabili', d: 'Dalla diagnosi testurale al trattamento gerarchico, ogni capitolo viscerale si conclude con indicazioni pratiche applicabili direttamente in seduta.', tags: ['Protocollo', 'Diagnosi', 'Applicazione diretta'] },
+    ],
+  },
+  freeChapter: {
+    lbl: 'Capitolo gratuito',
+    h2: { before: 'Leggi il Capitolo 5\n', em: 'gratuitamente' },
+    p1: 'Il capitolo sui meccanismi dello stress è disponibile gratuitamente per mostrare il rigore pedagogico e la profondità clinica di questo libro.',
+    p2: 'Copre l\'intero percorso dello stress: dall\'omeostasi all\'allostasi, dagli stressori fisici a quelli biochimici, e gli interventi concreti nella R.O.P.',
+    note: 'Capitolo 5 · PDF · 30+ pagine · Bibliografia inclusa',
+  },
+  citations: {
+    lbl: 'Estratti dal libro',
+    h2: { before: "La voce dell'", em: 'autore' },
+  },
+  pricing: {
+    lbl: 'Ordina',
+    recommended: 'Consigliato',
+    h2: { before: 'Libro online ', em: 'o', after: ' Libro online + Edizione cartacea' },
+    p: 'Sono disponibili due formati per il libro completo: accesso online immediato oppure un pacchetto combinato digitale e cartaceo.',
+    plan1: {
+      name: 'Libro online',
+      desc: 'Accesso digitale immediato al libro completo, con disponibilità online permanente.',
+      price: '79',
+      sub: 'accesso online immediato',
+      features: ['Libro completo online', 'Tutti i capitoli inclusi', 'Cartografia R.O.P. completa', 'Indice clinico', 'Accesso permanente'],
+      cta: 'Ordina il Libro online',
+    },
+    plan2: {
+      name: 'Libro online + Edizione cartacea',
+      desc: 'Il pacchetto completo: accesso digitale immediato più una copia cartacea del libro.',
+      price: '99',
+      sub: 'digitale + edizione cartacea',
+      features: ['Libro online incluso', 'Copia cartacea inclusa', 'Accesso online immediato', 'Copia cartacea spedita', 'Bibliografia e diagrammi inclusi'],
+      cta: 'Ordina Libro online + Edizione cartacea',
+    },
+  },
+  footer: {
+    title: 'Riflessoterapia Occipito-Podale e le viscere delle cavità addominale e pelvica',
+    p: 'Terzo libro di Guy Boitout sulla Riflessologia Occipito-Podale. Sistema nervoso, viscere addominali, stress e protocollo clinico completo — una risorsa pratica per i professionisti.',
+    copy: '© 2026 Guy Boitout · Istituto R.O.P.',
+    address: '',
+  },
+  form: {
+    title: 'Accedi al capitolo gratuito',
+    subtitle: 'Meccanismi dello stress — PDF · Accesso immediato dopo la registrazione',
+    nameLbl: 'Nome e cognome',
+    namePlaceholder: 'es. Mario Rossi',
+    emailLbl: 'Indirizzo e-mail',
+    emailPlaceholder: 'la-tua@email.it',
+    professionLbl: 'Professione',
+    professionOptional: '(facoltativo)',
+    professionPlaceholder: 'es. Riflessoterapeuta, Osteopata…',
+    consentText: 'Accetto la politica sulla privacy e acconsento a ricevere questo capitolo via e-mail.',
+    privacyLink: 'politica sulla privacy',
+    submit: 'Ricevi il capitolo →',
+    submitting: 'Invio in corso…',
+    note: 'I tuoi dati non verranno mai condivisi con terzi. Cancellazione possibile in qualsiasi momento.',
+    errorName: 'Per favore, inserisci il tuo nome e cognome.',
+    errorEmail: 'Per favore, inserisci il tuo indirizzo e-mail.',
+    errorEmailInvalid: 'Indirizzo e-mail non valido.',
+    errorConsent: 'Per favore, accetta la politica sulla privacy.',
+    errorServer: 'Si è verificato un errore. Per favore, riprova.',
+    successTitle: 'Grazie!',
+    successMsg: 'Il link per il download è stato inviato al tuo indirizzo e-mail.',
+    successSpam: 'Controlla anche la cartella spam.',
+  },
+  quotes: [
+    {
+      text: '«La mobilità viscerale è resa possibile da quattro grandi motori: il sistema nervoso somatico, il sistema nervoso autonomo, la motilità intrinseca e i bioritmi. La loro interazione definisce il terreno clinico del professionista.»',
+      source: 'Capitolo 1 — Principi generali',
+    },
+    {
+      text: "«La forza eccessiva e l'impastamento devono essere evitati: si perde la percezione tattile fine, i punti di repere ossei diventano meno distinti e si crea uno stress tissutale inutile. La tecnica manuale corretta è una pressione progressiva, breve e diretta.»",
+      source: 'Capitolo 2 — Protocollo R.O.P.',
+    },
+    {
+      text: '«Il nostro ruolo nella R.O.P. è favorire la regolazione attraverso il nervo vago. Ciò che accade nel corpo può influenzare — ed essere accompagnato da — cambiamenti del nostro stato mentale ed emotivo.»',
+      source: 'Capitolo 6 — Teoria polivagale',
+    },
+  ],
+  quoteNav: {
+    label: 'Navigazione citazioni',
+    prev: 'Citazione precedente',
+    next: 'Citazione successiva',
+    dotsLabel: 'Selezione citazioni',
+    dot: (i: number) => `Citazione ${i + 1}`,
+  },
+}
+
+export const translations: Record<Lang, typeof fr> = { fr, en, de, es, it }
