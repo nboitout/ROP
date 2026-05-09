@@ -347,8 +347,8 @@ const en: typeof fr = {
     note: 'Chapter 5 · PDF · 30+ pages · Bibliography included',
   },
   citations: {
-    lbl: 'Excerpts from the work',
-    h2: { before: "The author's ", em: 'voice' },
+    lbl: 'Excerpts from the Book',
+    h2: { before: "The Author's ", em: 'Voice' },
   },
   pricing: {
     lbl: 'Order',
@@ -403,16 +403,16 @@ const en: typeof fr = {
   },
   quotes: [
     {
-      text: '"Visceral mobility is made possible by four main motors: the somatic nervous system, the autonomic nervous system, intrinsic motility and biorhythms. Their interaction defines the clinical terrain of the practitioner."',
-      source: 'Chapter 1 — Generalities',
+      text: '"Visceral mobility is made possible by four main drivers: the somatic nervous system, the autonomic nervous system, intrinsic motility, and biorhythms. Their interaction defines the practitioner\'s clinical terrain."',
+      source: 'Chapter 1 — General Principles',
     },
     {
-      text: '"Force and kneading are prohibited: fine reading is lost, bony landmarks become less distinct, and unnecessary tissue stress is created. The correct gesture is progressive, brief, directed pressure."',
+      text: '"Excessive force and kneading should be avoided: fine tactile perception is lost, bony landmarks become less distinct, and unnecessary tissue stress is created. The correct manual technique is progressive, brief, directed pressure."',
       source: 'Chapter 2 — R.O.P. Protocol',
     },
     {
-      text: '"Our role in R.O.P. is to promote regulation of the vagus nerve. What happens in the body can influence and be accompanied by variations in our mental and emotional state."',
-      source: 'Chapter 6 — Polyvagal theory',
+      text: '"Our role in R.O.P. is to promote regulation through the vagus nerve. What happens in the body can influence — and be accompanied by — changes in our mental and emotional state."',
+      source: 'Chapter 6 — Polyvagal Theory',
     },
   ],
   quoteNav: {
