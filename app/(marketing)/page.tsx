@@ -369,7 +369,6 @@ export default function HomePage() {
         </div>
         <div className="f-bot">
           <span>{t.footer.copy}</span>
-          <span>{t.footer.address}</span>
         </div>
       </footer>
     </main>

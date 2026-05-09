@@ -163,8 +163,8 @@ const fr = {
   footer: {
     title: 'Réflexothérapie occipito-podale et viscères des cavités abdominale et pelvienne',
     p: "3ᵉ ouvrage de Guy Boitout sur la Réflexologie Occipito-Podale. Système nerveux, viscères abdominaux, stress et protocole clinique complet — au service du praticien.",
-    copy: '© 2026 Guy Boitout · Institut R.O.P. · Sully-sur-Loire',
-    address: '17 rue du Coq · 45600 Sully-sur-Loire · 06 10 35 78 22',
+    copy: '© 2026 Guy Boitout · Institut R.O.P.',
+    address: '',
   },
   form: {
     title: 'Accès au chapitre gratuit',
@@ -374,10 +374,10 @@ const en: typeof fr = {
     },
   },
   footer: {
-    title: 'Occipito-Podal Reflexotherapy and viscera of the abdominal and pelvic cavities',
-    p: '3rd work by Guy Boitout on Occipito-Podal Reflexology. Nervous system, abdominal viscera, stress and complete clinical protocol — at the service of the practitioner.',
-    copy: '© 2026 Guy Boitout · R.O.P. Institute · Sully-sur-Loire',
-    address: '17 rue du Coq · 45600 Sully-sur-Loire · +33 6 10 35 78 22',
+    title: 'Occipito-Podal Reflexotherapy and the Viscera of the Abdominal and Pelvic Cavities',
+    p: "Guy Boitout's third book on Occipito-Podal Reflexology. Nervous system, abdominal viscera, stress, and complete clinical protocol — a practical resource for clinicians.",
+    copy: '© 2026 Guy Boitout · R.O.P. Institute',
+    address: '',
   },
   form: {
     title: 'Access the free chapter',
