@@ -338,7 +338,7 @@ export default function HomePage() {
         </h2>
         <p>{t.pricing.p}</p>
         <div className="pg">
-          <div className="pc star">
+          <div className="pc star" data-badge={t.pricing.recommended}>
             <div className="pc-n">{t.pricing.plan1.name}</div>
             <p className="pc-d">{t.pricing.plan1.desc}</p>
             <div className="pc-a"><span className="pc-c">€</span>{t.pricing.plan1.price}</div>
