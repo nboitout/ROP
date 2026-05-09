@@ -140,6 +140,7 @@ const fr = {
   },
   pricing: {
     lbl: 'Commander',
+    recommended: 'Recommandé',
     h2: { before: 'Livre en ligne ', em: 'ou', after: ' Livre en ligne + Livre imprimé' },
     p: "Deux formats d'accès à l'ouvrage complet : lecture en ligne immédiate, ou formule combinée numérique + imprimée.",
     plan1: {
@@ -352,23 +353,24 @@ const en: typeof fr = {
   },
   pricing: {
     lbl: 'Order',
-    h2: { before: 'Online Book ', em: 'or', after: ' Online Book + Printed Book' },
-    p: 'Two access formats for the complete work: immediate online reading, or a combined digital + print package.',
+    recommended: 'Recommended',
+    h2: { before: 'Online Book ', em: 'or', after: ' Online Book + Print Edition' },
+    p: 'Two formats are available for the complete book: immediate online access, or a combined digital and print package.',
     plan1: {
       name: 'Online Book',
-      desc: 'Immediate access to the complete work in digital format, with permanent consultation.',
+      desc: 'Immediate digital access to the complete book, with permanent online availability.',
       price: '79',
       sub: 'immediate online access',
-      features: ['Complete work online', 'All chapters included', 'Complete R.O.P. mappings', 'Clinical index', 'Permanent access'],
-      cta: 'Order Online Book',
+      features: ['Complete Book Online', 'All Chapters Included', 'Complete R.O.P. Mapping', 'Clinical Index', 'Permanent Access'],
+      cta: 'Order the Online Book',
     },
     plan2: {
-      name: 'Online Book + Printed Book',
-      desc: 'The complete package with immediate digital access and a printed copy of the book.',
+      name: 'Online Book + Print Edition',
+      desc: 'The complete package: immediate digital access plus a printed copy of the book.',
       price: '99',
-      sub: 'digital + printed book',
-      features: ['Online Book included', 'Printed book', 'Immediate reading', 'Printed copy shipped', 'Bibliography and diagrams included'],
-      cta: 'Order Online Book + Printed Book',
+      sub: 'digital + print edition',
+      features: ['Online Book Included', 'Printed Copy Included', 'Immediate Online Access', 'Printed Copy Shipped', 'Bibliography and Diagrams Included'],
+      cta: 'Order the Online Book + Print Edition',
     },
   },
   footer: {
