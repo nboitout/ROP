@@ -1,4 +1,4 @@
-export type Lang = 'fr' | 'en' | 'de'
+export type Lang = 'fr' | 'en' | 'de' | 'es'
 
 const fr = {
   nav: {
@@ -639,4 +639,217 @@ const de: typeof fr = {
   },
 }
 
-export const translations: Record<Lang, typeof fr> = { fr, en, de }
+const es: typeof fr = {
+  nav: {
+    genese: 'Génesis',
+    sommaire: 'Contenido',
+    protocole: 'Protocolo',
+    accesLibre: 'Acceso gratuito',
+    commander: 'Comprar',
+    chapitreGratuit: 'Capítulo gratuito',
+  },
+  hero: {
+    badge: 'Tercer libro · Instituto R.O.P. · Guy Boitout',
+    h1: { before: 'Reflexoterapia Occípito-Podal y las vísceras de las cavidades', em: 'abdominal y pélvica', after: '' },
+    sub: 'Sistema nervioso, vísceras y estrés — una perspectiva clínica en Reflexología Occípito-Podal',
+    tags: ['Movilidad visceral', 'Sistema nervioso central', 'Sistema nervioso autónomo', 'Mecanismos del estrés', 'Diafragma · Estómago · Duodeno', 'Protocolo R.O.P.'],
+    cta1: 'Leer un capítulo gratuito',
+    cta2: 'Ver el índice',
+    role: 'Reflexoterapeuta · Osteópata · Fundador del método R.O.P.',
+    galleryKicker: 'Galería del autor',
+    galleryTitle: 'Guy Boitout en formación, enseñanza y práctica clínica.',
+  },
+  author: {
+    lbl: 'El autor',
+    chips: ['Reflexoterapeuta', 'Osteópata', 'Fundador del método R.O.P.', 'Formador certificado'],
+    prevBooks: 'Publicaciones anteriores',
+    viewOnAmazon: 'Ver en Amazon',
+    bio: [
+      'Guy Boitout es el fundador de la Reflexología Occípito-Podal (R.O.P.), un enfoque de terapia manual basado en una representación tridimensional del cuerpo en el pie y el occipucio. Desde hace más de treinta años, enseña y desarrolla este enfoque a través del Instituto de Formación R.O.P., con sede en Sully-sur-Loire, Francia.',
+      'Formado inicialmente como fisioterapeuta, descubrió la reflexología a través del método Ingham en 1978 y, posteriormente, la osteopatía visceral con Jean-Pierre Barral. Estas dos influencias decisivas lo llevaron, junto con Jean-Pierre Vadala, a desarrollar la cartografía refleja tridimensional original de la R.O.P., publicada por Elsevier Masson.',
+      'Sus programas de formación están registrados para el desarrollo profesional continuo (número de registro 24450434645, Prefectura de Centre–Val de Loire) y están dirigidos a reflexoterapeutas, osteópatas, fisioterapeutas y otros profesionales de la salud.',
+    ],
+    btn1: 'Sitio web del Instituto R.O.P. →',
+    btn2: 'Programas de formación →',
+  },
+  genese: {
+    lbl: 'Génesis del libro',
+    h2: { before: 'Un recorrido de ', em: 'treinta años' },
+    p1: 'Este tercer libro continúa explorando lo que hace única a la Reflexoterapia Occípito-Podal: una representación tridimensional completa del cuerpo, en posición fetal, dentro de los pies; zonas reflejas occipitales; y una referencia constante a la anatomía y la fisiología.',
+    p2: "Después de un primer libro dedicado al sistema osteo-músculo-articular y un segundo centrado en los nervios somáticos espinales y craneales, este volumen aborda el sistema nervioso autónomo, los mecanismos del estrés y las vísceras abdominales — el núcleo oculto de la regulación corporal.",
+    timeline: [
+      { yr: '1978', lbl: 'Primer encuentro', desc: 'Descubrimiento de la reflexología a través del método Ingham — un primer paso decisivo hacia la comprensión de los trastornos funcionales que involucran la columna vertebral y el sistema nervioso.' },
+      { yr: '1980s', lbl: 'Osteopatía visceral', desc: 'Jean-Pierre Barral demostró que el sistema visceral puede tratarse manualmente y que, al restaurar su movilidad primaria, también puede restaurarse la movilidad vertebral.' },
+      { yr: 'R.O.P.', lbl: 'Desarrollo del método', desc: 'Junto con Jean-Pierre Vadala, Guy Boitout sintetizó la reflexología y la osteopatía visceral en una cartografía refleja tridimensional original, publicada por Elsevier Masson.' },
+    ],
+    quote: '«No podía ser de otra manera en reflexología. Como en la osteopatía visceral, el sistema nervioso autónomo está en el centro de todo: gobierna, regula y restaura — y es el sistema al que la R.O.P. busca dirigirse en primer lugar.»',
+    cite: '— Guy Boitout · Prefacio del tercer libro',
+  },
+  stats: [
+    { n: '3', l: ['Libros publicados', 'por Elsevier Masson'] },
+    { n: '12', l: ['Capítulos destacados', 'en este sitio'] },
+    { n: '20+', l: ['Capítulos en el', 'libro completo'] },
+    { n: '1978', l: ['Inicio del', 'recorrido R.O.P.'] },
+  ],
+  architecture: {
+    lbl: 'Estructura del libro',
+    h2: { before: 'Una progresión ', em: 'paso a paso', after: '' },
+    desc: 'Desde el prefacio personal hasta las vísceras abdominales, el libro sigue una progresión lógica en cuatro grandes partes. Cada nivel se apoya en el anterior para ofrecer a los profesionales una comprensión clínica completa y práctica.',
+    flow: [
+      { icon: '✍️', t: 'Introducción', s: 'Génesis del método, recorrido personal y ADN de la R.O.P.', chs: [['Cap. 0 · Prefacio', ''], ['Cap. 1 · Principios generales', ''], ['Cap. 2 · Protocolo', '']] },
+      { icon: '🧠', t: 'Los sistemas nerviosos', s: 'SNC — los tres cerebros y el tronco encefálico — y SNA: vías parasimpáticas, simpáticas y vagales.', chs: [['Cap. 3 · SNC', ''], ['Cap. 4 · SNA', '']] },
+      { icon: '⚖️', t: 'Estrés y regulación', s: 'Mecanismos del estrés, teoría polivagal y regulación autónoma.', chs: [['Cap. 5 · Estrés ✦', 'fr'], ['Cap. 6 · Teoría polivagal', '']] },
+      { icon: '🫁', t: 'Las vísceras', s: 'Cavidades corporales, diafragma, estómago, duodeno e intestino delgado — anatomía y cartografía R.O.P.', chs: [['Cap. 7', ''], ['Cap. 8', ''], ['Cap. 9', ''], ['Cap. 10', ''], ['Cap. 14', '']] },
+    ],
+  },
+  chapters: {
+    lbl: 'Índice seleccionado',
+    h2: { before: 'Doce ', em: 'capítulos', after: ' destacados' },
+    desc: 'Desde el prefacio personal del autor hasta las vísceras abdominales, estos capítulos seleccionados presentan el alcance del libro. El contenido completo está disponible en dos formatos: Libro online o Libro online + Edición impresa.',
+    cards: [
+      { num: '00', variant: 'intro' as const, badgeLabel: 'Prefacio', label: 'Introducción', title: 'Génesis del método R.O.P.', tags: ['Recorrido del autor', 'Método Ingham', 'Osteopatía visceral', 'ADN de la R.O.P.'], btnClass: 'b-gold', btnLabel: 'Ver los formatos →', body: 'En la propia voz del autor: de la fisioterapia a la reflexología a través del método Ingham en 1978, luego a la osteopatía visceral con J.-P. Barral, y finalmente al desarrollo de la R.O.P. con Jean-Pierre Vadala. El ADN del método, presentado en unas páginas concisas y personales.' },
+      { num: '01', badgeLabel: 'Incluido', label: 'Capítulo 1', title: 'Principios generales — Movilidad visceral', tags: ['Movilidad visceral', 'Turgencia', 'Membranas serosas', 'Biorritmos', 'Diafragma', 'Mecanismo respiratorio primario'], body: 'Un marco mecánico y neurofisiológico para profesionales: movilidad frente a motilidad; los cuatro motores viscerales — somático, autónomo, motilidad intrínseca y biorritmos; turgencia; presión intracavitaria; y deslizamiento de las membranas serosas.' },
+      { num: '02', badgeLabel: 'Incluido', label: 'Capítulo 2', title: 'El protocolo de tratamiento R.O.P.', tags: ['Técnica manual', 'Dosificación textural', 'Tres fases de sesión', 'Mecanorreceptores', 'Tratamiento jerárquico'], body: 'El protocolo clínico completo: técnica manual con la yema del pulgar, dosificación textural mediante el efecto de piel de tambor, las tres fases de una sesión y una secuencia de tratamiento jerárquica — síndrome general → locorregional → límbico — con fundamentos neurofisiológicos.' },
+      { num: '03', badgeLabel: 'Incluido', label: 'Capítulo 3', title: 'Sistema nervioso central', tags: ['Cerebro reptiliano', 'Tronco encefálico', 'Sistema límbico', 'Neurotransmisores', 'Zonas reflejas'], body: 'Desde el modelo del cerebro triuno de MacLean hasta la formación reticular: tronco encefálico, cerebelo, sistema límbico, corteza, ganglios basales y neurotransmisores. Zonas reflejas podales y occipitales correspondientes a cada estructura cerebral.' },
+      { num: '04', badgeLabel: 'Incluido', label: 'Capítulo 4', title: 'Sistema nervioso autónomo', tags: ['Parasimpático', 'Simpático', 'Nervio vago', 'Sistema nervioso entérico', 'Homeostasis'], body: 'Sistemas parasimpático y simpático: funciones, homeostasis, relación SNA–sueño y sistema nervioso entérico. El nervio vago — con un 70 a 80 % de fibras sensoriales aferentes — y su papel antiinflamatorio. Un marco clínico para los desequilibrios autónomos en R.O.P.' },
+      { num: '05', variant: 'fr' as const, badgeLabel: 'Incluido', label: 'Capítulo 5', title: 'Mecanismos del estrés', tags: ['Homeostasis', 'Alostasis', 'Cortisol', 'Distrés y eustrés', 'Eje HPA'], btnClass: 'b-sage', body: 'Del concepto de homeostasis de Walter Cannon al síndrome general de adaptación de Hans Selye: distrés, eustrés y estresores físicos, bioquímicos y emocionales. El papel central del SNA y del sistema límbico — y el lugar de las intervenciones R.O.P.' },
+      { num: '06', badgeLabel: 'Incluido', label: 'Capítulo 6', title: 'Teoría polivagal', tags: ['Vagal antiguo y nuevo', 'Compromiso social', 'Síncope vasovagal', 'Filogenia'], body: 'Dr. Stephen Porges: tres niveles filogenéticos del SNA — inmovilización (estado vagal antiguo); movilización (estado simpático); y compromiso social (estado vagal nuevo). Implicaciones clínicas para la regulación vagal en R.O.P.' },
+      { num: '07', badgeLabel: 'Incluido', label: 'Capítulo 7', title: 'Cavidades abdominal y peritoneal', tags: ['Peritoneo', 'Mesenterios', 'Fascias', 'Espacios abdominales', 'Presiones cavitarias'], body: 'Arquitectura completa de la cavidad abdominal: peritoneo; espacios intra-, retro- y subperitoneales; fascias; y mesenterios. Influencia de los cambios de presión torácica sobre las vísceras. Una interpretación clínica R.O.P. de las restricciones fasciales y mecánicas.' },
+      { num: '08', badgeLabel: 'Incluido', label: 'Capítulo 8', title: 'Diafragma', tags: ['Motor respiratorio', 'Hiato esofágico', 'Retorno venoso', 'Cohesión visceral', 'Fascias'], body: 'El diafragma como motor respiratorio — aproximadamente 16 respiraciones por minuto y decenas de miles de ciclos en 24 horas — con funciones viscerales y venolinfáticas. Inserciones diafragmáticas, hiato esofágico, gradientes de presión y retorno venoso. Aplicaciones clínicas en R.O.P.' },
+      { num: '09', badgeLabel: 'Incluido', label: 'Capítulo 9', title: 'Estómago', tags: ['Cardias y píloro', 'Esfínter esofágico inferior', 'Fundus', 'pH gástrico', 'Estrés y digestión', 'Zonas reflejas'], body: 'Anatomía completa del estómago — forma de J, cuatro segmentos, esfínter esofágico inferior, cardias, fundus y píloro — la fisiología de la digestión ácida, el impacto del estrés sobre la secreción gástrica y la dimensión emocional del órgano en R.O.P.' },
+      { num: '10', badgeLabel: 'Incluido', label: 'Capítulo 10', title: 'Duodeno', tags: ['D1–D4', 'Esfínter de Oddi', 'Papilas duodenales', 'Bilis y páncreas', 'Zonas reflejas'], body: 'El duodeno en forma de U — aproximadamente 25 cm de longitud — con cuatro segmentos, D1 a D4; papilas duodenales; el esfínter de Oddi; y la unión biliopancreática. Compresión aortomesentérica, impacto del estrés sobre la mucosa y protocolo R.O.P. para la motilidad duodenal.' },
+      { num: '14', badgeLabel: 'Incluido', label: 'Capítulo 14', title: 'Intestino delgado', tags: ['Yeyuno–íleon', 'Mesenterio', 'Microbioma', 'Eje intestino–cerebro', 'Cartografía R.O.P.'], body: 'Anatomía del yeyuno–íleon y del mesenterio desde una interpretación clínica R.O.P.: la raíz mesentérica como zona altamente reflexógena, síndrome de Nutcracker, eje intestino–cerebro y relación microbioma–inmunidad. Cartografía refleja incluida.' },
+    ],
+    included: 'Incluido',
+    includedSub: 'Incluido en el Libro online',
+    defaultBtn: 'Ver el libro →',
+  },
+  protocole: {
+    lbl: 'Capítulo 2 — En detalle',
+    h2: { before: 'El protocolo clínico ', em: 'R.O.P.', after: ' en detalle' },
+    p: 'El capítulo 2 es el núcleo operativo del libro: describe con precisión la técnica manual, la dosificación textural y la lógica del tratamiento jerárquico.',
+    steps: [
+      { n: 1, t: 'Diagnóstico textural', d: 'Localización de zonas reflejas a través de cambios en la textura de la piel: el "efecto piel de tambor", densificación, rugosidad y pérdida de deslizamiento. Se utiliza una escala de 0 a 3 para seguir objetivamente la evolución entre sesiones.' },
+      { n: 2, t: 'Fase terapéutica', d: 'Herramienta preferida: la yema del pulgar. Presión progresiva, breve y dirigida — sin fuerza excesiva ni amasamiento. La calidad de la estimulación tiene prioridad sobre la cantidad. El dolor agudo indica sobreestimulación.' },
+      { n: 3, t: 'Fase de latencia', d: 'El cuerpo necesita tiempo para integrar las adaptaciones autónomas. Las sesiones deben espaciarse de 2 a 3 semanas. Si no hay una mejora clara después de tres sesiones, debe ajustarse la estrategia terapéutica.' },
+    ],
+    neurophysio: {
+      t: 'Fundamentos neurofisiológicos',
+      items: [
+        'Corpúsculos de Meissner — sensibilidad táctil fina a la presión ligera, especialmente en la piel glabra.',
+        'Discos de Merkel — presión estática suave, localizados en la base de la epidermis.',
+        'Estas aferencias de conducción rápida pueden modular la transmisión nociceptiva mediante el modelo de control de compuerta, ayudando a explicar el efecto analgésico de la R.O.P.',
+      ],
+      boldItems: ['Corpúsculos de Meissner', 'Discos de Merkel'],
+    },
+    hierarchy: {
+      t: 'Jerarquía del tratamiento',
+      p: 'Tratar primero el terreno general, luego la zona sintomática y, finalmente, el componente límbico si es necesario.',
+      steps: ['Síndrome general', 'Locorregional', 'Componente límbico'],
+      stepOrdinals: ['1.º', '2.º', '3.º'],
+    },
+    errors: {
+      t: 'Errores a evitar',
+      items: [
+        'Presionar con fuerza para "sentir" — se pierde la lectura fina del tejido.',
+        'Buscar el dolor como prueba de eficacia — un artefacto de sobredosificación.',
+        'Tratar la misma zona demasiado tiempo — estimulaciones cortas, reevaluadas en cada sesión.',
+      ],
+    },
+  },
+  pedagogie: {
+    lbl: 'Enfoque pedagógico',
+    h2: { before: 'Un ', em: 'manual clínico', after: ', no un tratado teórico' },
+    cards: [
+      { ico: '🔬', t: 'Fundamento científico', d: 'Cada concepto se apoya en referencias a la anatomía clásica, la neurofisiología y la osteopatía visceral. Estas bases sólidas favorecen la adaptación clínica.', tags: ['Bibliografía', 'Referencias', 'Anatomía'] },
+      { ico: '🗺️', t: 'Cartografía R.O.P.', d: 'Los diagramas originales integran la representación tridimensional del cuerpo, en posición fetal, dentro de los pies y de las zonas reflejas occipitales. Cada órgano cuenta con material visual específico.', tags: ['Diagramas', 'Tridimensional', 'Zonas podales', 'Zonas occipitales'] },
+      { ico: '⚕️', t: 'Protocolos aplicables', d: 'Desde el diagnóstico textural hasta el tratamiento jerárquico, cada capítulo visceral concluye con indicaciones prácticas que pueden aplicarse directamente en una sesión.', tags: ['Protocolo', 'Diagnóstico', 'Aplicación directa'] },
+    ],
+  },
+  freeChapter: {
+    lbl: 'Capítulo gratuito',
+    h2: { before: 'Leer el Capítulo 5\n', em: 'de forma gratuita' },
+    p1: 'El capítulo sobre el mecanismo del estrés está disponible de forma gratuita para mostrar el rigor pedagógico y la profundidad clínica de este libro.',
+    p2: 'Abarca el recorrido completo del estrés: de la homeostasis a la alostasis, de los estresores físicos a los bioquímicos, y las intervenciones concretas en R.O.P.',
+    note: 'Capítulo 5 · PDF · 30+ páginas · Bibliografía incluida',
+  },
+  citations: {
+    lbl: 'Extractos del libro',
+    h2: { before: 'La voz del ', em: 'autor' },
+  },
+  pricing: {
+    lbl: 'Comprar',
+    recommended: 'Recomendado',
+    h2: { before: 'Libro online ', em: 'o', after: ' Libro online + Edición impresa' },
+    p: 'Hay dos formatos disponibles para el libro completo: acceso online inmediato o un paquete combinado digital e impreso.',
+    plan1: {
+      name: 'Libro online',
+      desc: 'Acceso digital inmediato al libro completo, con disponibilidad online permanente.',
+      price: '79',
+      sub: 'acceso online inmediato',
+      features: ['Libro completo online', 'Todos los capítulos incluidos', 'Cartografía R.O.P. completa', 'Índice clínico', 'Acceso permanente'],
+      cta: 'Comprar el Libro online',
+    },
+    plan2: {
+      name: 'Libro online + Edición impresa',
+      desc: 'El paquete completo: acceso digital inmediato más un ejemplar impreso del libro.',
+      price: '99',
+      sub: 'digital + edición impresa',
+      features: ['Libro online incluido', 'Ejemplar impreso incluido', 'Acceso online inmediato', 'Envío del ejemplar impreso', 'Bibliografía y diagramas incluidos'],
+      cta: 'Comprar Libro online + Edición impresa',
+    },
+  },
+  footer: {
+    title: 'Reflexoterapia Occípito-Podal y las vísceras de las cavidades abdominal y pélvica',
+    p: 'Tercer libro de Guy Boitout sobre Reflexología Occípito-Podal. Sistema nervioso, vísceras abdominales, estrés y protocolo clínico completo — un recurso práctico para profesionales.',
+    copy: '© 2026 Guy Boitout · Instituto R.O.P.',
+    address: '',
+  },
+  form: {
+    title: 'Acceder al capítulo gratuito',
+    subtitle: 'Mecanismo del estrés — PDF · Acceso inmediato tras el registro',
+    nameLbl: 'Nombre y apellidos',
+    namePlaceholder: 'p. ej. María García',
+    emailLbl: 'Dirección de correo electrónico',
+    emailPlaceholder: 'su@correo.com',
+    professionLbl: 'Profesión',
+    professionOptional: '(opcional)',
+    professionPlaceholder: 'p. ej. Reflexoterapeuta, Osteópata…',
+    consentText: 'Acepto la política de privacidad y consiento recibir este capítulo por correo electrónico.',
+    privacyLink: 'política de privacidad',
+    submit: 'Recibir el capítulo →',
+    submitting: 'Enviando…',
+    note: 'Sus datos nunca serán compartidos con terceros. Cancelación posible en cualquier momento.',
+    errorName: 'Por favor, introduzca su nombre y apellidos.',
+    errorEmail: 'Por favor, introduzca su dirección de correo electrónico.',
+    errorEmailInvalid: 'Dirección de correo electrónico no válida.',
+    errorConsent: 'Por favor, acepte la política de privacidad.',
+    errorServer: 'Se ha producido un error. Por favor, inténtelo de nuevo.',
+    successTitle: '¡Gracias!',
+    successMsg: 'El enlace de descarga ha sido enviado a su dirección de correo electrónico.',
+    successSpam: 'Revise también su carpeta de correo no deseado.',
+  },
+  quotes: [
+    {
+      text: '«La movilidad visceral es posible gracias a cuatro grandes impulsores: el sistema nervioso somático, el sistema nervioso autónomo, la motilidad intrínseca y los biorritmos. Su interacción define el terreno clínico del profesional.»',
+      source: 'Capítulo 1 — Principios generales',
+    },
+    {
+      text: '«La fuerza excesiva y el amasamiento deben evitarse: se pierde la percepción táctil fina, las referencias óseas se vuelven menos precisas y se genera un estrés tisular innecesario. La técnica manual correcta es una presión progresiva, breve y dirigida.»',
+      source: 'Capítulo 2 — Protocolo R.O.P.',
+    },
+    {
+      text: '«Nuestro papel en la R.O.P. consiste en favorecer la regulación a través del nervio vago. Lo que ocurre en el cuerpo puede influir — y estar acompañado por — cambios en nuestro estado mental y emocional.»',
+      source: 'Capítulo 6 — Teoría polivagal',
+    },
+  ],
+  quoteNav: {
+    label: 'Navegación de citas',
+    prev: 'Cita anterior',
+    next: 'Cita siguiente',
+    dotsLabel: 'Selección de citas',
+    dot: (i: number) => `Cita ${i + 1}`,
+  },
+}
+
+export const translations: Record<Lang, typeof fr> = { fr, en, de, es }
