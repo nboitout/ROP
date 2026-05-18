@@ -3,13 +3,20 @@ import { randomUUID } from 'crypto'
 
 async function forwardToAppsScript(payload: Record<string, unknown>) {
   const url = process.env.APPS_SCRIPT_URL
-  if (!url) return
+  if (!url) {
+    console.warn('[free-chapter] APPS_SCRIPT_URL is not set — skipping forward')
+    return
+  }
+  console.log('[free-chapter] forwarding to:', url.slice(0, 60) + '…')
   try {
-    await fetch(url, {
+    const r = await fetch(url, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(payload),
+      redirect: 'follow',
     })
+    const text = await r.text().catch(() => '')
+    console.log('[free-chapter] forward result:', r.status, text.slice(0, 200))
   } catch (err) {
     console.error('[free-chapter] apps script forward failed:', err)
   }
