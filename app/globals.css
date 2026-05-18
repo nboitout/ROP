@@ -319,7 +319,7 @@ footer > div > p { font-size:1rem; color:rgba(245,240,232,.84); line-height:1.9;
 
 .cr-layout { display:grid; grid-template-columns:1fr minmax(0,720px) 260px 1fr; gap:0; padding-top:62px; }
 
-.cr-toc { grid-column:3; padding:28px 32px 64px 24px; }
+.cr-toc { grid-column:3; grid-row:1; padding:28px 32px 64px 24px; }
 .cr-toc-inner { position:sticky; top:88px; }
 .cr-toc-label { font-size:.66rem; font-weight:600; letter-spacing:.22em; text-transform:uppercase; color:var(--sage); margin-bottom:18px; padding-bottom:12px; border-bottom:1px solid rgba(74,107,90,.18); }
 .cr-toc nav { display:flex; flex-direction:column; gap:4px; }
@@ -331,7 +331,7 @@ footer > div > p { font-size:1rem; color:rgba(245,240,232,.84); line-height:1.9;
 .cr-toc-num { font-family:'Cormorant Garamond',serif; font-size:1.05rem; font-style:italic; color:var(--gold); flex-shrink:0; min-width:18px; }
 .cr-toc-text { padding-top:1px; }
 
-.cr-article { grid-column:2; padding:20px 16px 120px; max-width:720px; }
+.cr-article { grid-column:2; grid-row:1; padding:20px 16px 120px; max-width:720px; }
 
 .cr-hero { padding:12px 0 24px; margin-bottom:8px; border-bottom:1px solid rgba(26,26,24,.1); }
 .cr-hero-eyebrow { font-size:.68rem; letter-spacing:.22em; text-transform:uppercase; color:var(--gold); font-weight:500; margin-bottom:10px; }
