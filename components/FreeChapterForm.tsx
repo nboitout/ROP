@@ -3,24 +3,29 @@
 import { useState } from 'react'
 import { useLanguage } from '@/app/i18n/LanguageContext'
 
-type FieldErrors = { name?: string; email?: string }
+type FieldErrors = { firstName?: string; lastName?: string; email?: string }
 
 export default function FreeChapterForm() {
   const { t } = useLanguage()
   const f = t.form
 
-  const [name, setName] = useState('')
+  const [firstName, setFirstName] = useState('')
+  const [lastName, setLastName] = useState('')
   const [email, setEmail] = useState('')
   const [profession, setProfession] = useState('')
+  const [professionOther, setProfessionOther] = useState('')
   const [consent, setConsent] = useState(false)
   const [fieldErrors, setFieldErrors] = useState<FieldErrors>({})
   const [serverError, setServerError] = useState('')
   const [loading, setLoading] = useState(false)
   const [success, setSuccess] = useState(false)
 
+  const isOther = profession === '__other__'
+
   function validate(): FieldErrors {
     const errors: FieldErrors = {}
-    if (!name.trim()) errors.name = f.errorName
+    if (!firstName.trim()) errors.firstName = f.errorName
+    if (!lastName.trim()) errors.lastName = f.errorName
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
     if (!email.trim()) errors.email = f.errorEmail
     else if (!emailRegex.test(email)) errors.email = f.errorEmailInvalid
@@ -38,18 +43,26 @@ export default function FreeChapterForm() {
       return
     }
 
+    const finalProfession = isOther ? professionOther.trim() : profession
+
     setLoading(true)
     try {
       const res = await fetch('/api/free-chapter', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ fullName: name, email, profession, source: 'chapter-5-free' }),
+        body: JSON.stringify({
+          firstName: firstName.trim(),
+          lastName: lastName.trim(),
+          fullName: `${firstName.trim()} ${lastName.trim()}`,
+          email,
+          profession: finalProfession,
+          source: 'chapter-5-free',
+        }),
       })
       if (!res.ok) throw new Error('server')
       const data = await res.json().catch(() => ({}))
       setSuccess(true)
       if (data && typeof data.redirect === 'string') {
-        // brief pause so the success state is visible, then send them to the chapter
         setTimeout(() => { window.location.href = data.redirect }, 900)
       }
     } catch {
@@ -65,7 +78,6 @@ export default function FreeChapterForm() {
         <div className="fok">✓</div>
         <h3 style={{ color: 'var(--cream)', fontFamily: "'Cormorant Garamond',serif", fontSize: '1.38rem', fontWeight: 300, marginBottom: 7 }}>{f.successTitle}</h3>
         <p style={{ fontSize: '.85rem', color: 'rgba(245,240,232,.72)' }}>{f.successMsg}</p>
-        <p style={{ fontSize: '.67rem', color: 'rgba(245,240,232,.5)', marginTop: 12 }}>{f.successSpam}</p>
       </div>
     )
   }
@@ -77,17 +89,32 @@ export default function FreeChapterForm() {
 
       {serverError && <div className="ferror-banner on">{serverError}</div>}
 
-      <div className={`fg${fieldErrors.name ? ' has-error' : ''}`}>
-        <label htmlFor="fn">{f.nameLbl}</label>
-        <input
-          id="fn"
-          type="text"
-          placeholder={f.namePlaceholder}
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-          autoComplete="name"
-        />
-        <span className="field-error">{fieldErrors.name}</span>
+      <div className="fg-row">
+        <div className={`fg${fieldErrors.firstName ? ' has-error' : ''}`}>
+          <label htmlFor="ffn">{f.firstNameLbl}</label>
+          <input
+            id="ffn"
+            type="text"
+            placeholder={f.firstNamePlaceholder}
+            value={firstName}
+            onChange={(e) => setFirstName(e.target.value)}
+            autoComplete="given-name"
+          />
+          <span className="field-error">{fieldErrors.firstName}</span>
+        </div>
+
+        <div className={`fg${fieldErrors.lastName ? ' has-error' : ''}`}>
+          <label htmlFor="fln">{f.lastNameLbl}</label>
+          <input
+            id="fln"
+            type="text"
+            placeholder={f.lastNamePlaceholder}
+            value={lastName}
+            onChange={(e) => setLastName(e.target.value)}
+            autoComplete="family-name"
+          />
+          <span className="field-error">{fieldErrors.lastName}</span>
+        </div>
       </div>
 
       <div className={`fg${fieldErrors.email ? ' has-error' : ''}`}>
@@ -105,14 +132,31 @@ export default function FreeChapterForm() {
 
       <div className="fg">
         <label htmlFor="fj">{f.professionLbl} <span style={{ opacity: .4 }}>{f.professionOptional}</span></label>
-        <input
+        <select
           id="fj"
-          type="text"
-          placeholder={f.professionPlaceholder}
           value={profession}
           onChange={(e) => setProfession(e.target.value)}
-        />
+          className="fselect"
+        >
+          <option value="">{f.professionSelectPlaceholder}</option>
+          {f.professionOptions.map((opt) => (
+            <option key={opt} value={opt}>{opt}</option>
+          ))}
+          <option value="__other__">{f.professionOther}</option>
+        </select>
       </div>
+
+      {isOther && (
+        <div className="fg">
+          <input
+            type="text"
+            placeholder={f.professionOtherPlaceholder}
+            value={professionOther}
+            onChange={(e) => setProfessionOther(e.target.value)}
+            autoComplete="off"
+          />
+        </div>
+      )}
 
       <div className="fg" style={{ display: 'flex', gap: 10, alignItems: 'flex-start', marginTop: 4 }}>
         <input
