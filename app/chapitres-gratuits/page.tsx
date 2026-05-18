@@ -54,14 +54,14 @@ export default async function ChapitresGratuitsPage() {
       </div>
 
       <main className="cg-main">
-        <header className="cg-hero">
+        <div className="cg-hero">
           <p className="cg-hero-eyebrow">Chapitres gratuits</p>
           <h1 className="cg-hero-title">Trois extraits, librement accessibles</h1>
           <p className="cg-hero-body">
             Guy Boitout met à disposition une sélection d’extraits du troisième tome.
             Choisissez votre point d’entrée — l’ordre du livre est suggéré, mais chaque texte se lit seul.
           </p>
-        </header>
+        </div>
 
         <ul className="cg-grid">
           {FREE_CHAPTERS.map((c) => (
@@ -82,12 +82,12 @@ export default async function ChapitresGratuitsPage() {
           </li>
         </ul>
 
-        <footer className="cg-foot">
+        <div className="cg-foot">
           <p>
             Vous lisez ces extraits sous accès gratuit. Le livre complet est en préparation —
             laissez votre adresse depuis l’<Link href="/">accueil</Link> pour être informé·e de sa parution.
           </p>
-        </footer>
+        </div>
       </main>
     </div>
   )
