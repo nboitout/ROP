@@ -168,7 +168,7 @@ const fr = {
   },
   form: {
     title: 'Accès au chapitre gratuit',
-    subtitle: 'Mécanisme de stress — PDF · Accès immédiat après inscription',
+    subtitle: 'Mécanisme de stress — lecture en ligne immédiate',
     nameLbl: 'Prénom & Nom',
     namePlaceholder: 'ex. Marie Dupont',
     emailLbl: 'Adresse e-mail',
@@ -187,8 +187,8 @@ const fr = {
     errorConsent: 'Veuillez accepter la politique de confidentialité.',
     errorServer: 'Une erreur est survenue. Veuillez réessayer.',
     successTitle: 'Merci !',
-    successMsg: 'Le lien de téléchargement a été envoyé à votre adresse e-mail.',
-    successSpam: 'Vérifiez aussi votre dossier spam.',
+    successMsg: 'Nous ouvrons votre chapitre…',
+    successSpam: '',
   },
   quotes: [
     {

@@ -46,7 +46,12 @@ export default function FreeChapterForm() {
         body: JSON.stringify({ fullName: name, email, profession, source: 'chapter-5-free' }),
       })
       if (!res.ok) throw new Error('server')
+      const data = await res.json().catch(() => ({}))
       setSuccess(true)
+      if (data && typeof data.redirect === 'string') {
+        // brief pause so the success state is visible, then send them to the chapter
+        setTimeout(() => { window.location.href = data.redirect }, 900)
+      }
     } catch {
       setServerError(f.errorServer)
     } finally {
