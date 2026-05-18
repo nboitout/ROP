@@ -15,7 +15,7 @@ const BOOK_TITLE = 'Réflexothérapie occipito-podale et viscères des cavités 
 export default async function Chapitre5Page() {
   const cookieStore = await cookies()
   if (!cookieStore.get('free_chapters_access')) {
-    redirect('/?gate=chapter5#acces-libre')
+    redirect('/?gate=free#acces-libre')
   }
 
   return <ChapterReader chapter={chapter5Fr} bookTitle={BOOK_TITLE} />

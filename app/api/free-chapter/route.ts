@@ -68,7 +68,7 @@ export async function POST(req: NextRequest) {
 
   console.log('[free-chapter] lead:', { readerId, fullName, email: body.email, profession, source })
 
-  const res = NextResponse.json({ ok: true, redirect: source === 'chapter-5-free' ? '/chapitre-5' : null })
+  const res = NextResponse.json({ ok: true, redirect: source === 'chapter-5-free' ? '/chapitres-gratuits' : null })
 
   const secure = process.env.NODE_ENV === 'production'
 

@@ -422,3 +422,53 @@ footer > div > p { font-size:1rem; color:rgba(245,240,232,.84); line-height:1.9;
 @media (min-width:1181px){
   .cr-toc-toggle { display:none; }
 }
+
+/* ========== FREE CHAPTERS HUB ========== */
+.cg-root { background:#fbf8f1; color:#1a1a18; min-height:100vh; font-family:'DM Sans',sans-serif; }
+
+.cg-topbar { position:fixed; top:0; left:0; right:0; height:62px; z-index:250; padding:0 32px;
+  background:rgba(251,248,241,.94); backdrop-filter:blur(14px);
+  border-bottom:1px solid rgba(26,26,24,.08);
+  display:flex; align-items:center; justify-content:space-between; gap:24px; }
+.cg-home { font-size:.78rem; letter-spacing:.06em; text-transform:uppercase; text-decoration:none; color:var(--sage); font-weight:500; flex-shrink:0; }
+.cg-home:hover { color:var(--gold); }
+.cg-topbar-title { font-family:'Cormorant Garamond',serif; font-size:.98rem; color:rgba(26,26,24,.7); flex:1; text-align:center; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.cg-eyebrow { font-style:italic; color:var(--sage); }
+.cg-sep { margin:0 8px; opacity:.4; }
+.cg-bookname { font-style:italic; }
+
+.cg-main { max-width:1080px; margin:0 auto; padding:120px 32px 80px; }
+
+.cg-hero { text-align:center; padding:0 0 56px; margin-bottom:24px; border-bottom:1px solid rgba(26,26,24,.1); }
+.cg-hero-eyebrow { font-size:.7rem; letter-spacing:.22em; text-transform:uppercase; color:var(--gold); font-weight:500; margin-bottom:16px; }
+.cg-hero-title { font-family:'Cormorant Garamond',serif; font-size:clamp(2rem,3.6vw,2.8rem); font-weight:300; line-height:1.12; color:var(--ink); margin-bottom:18px; }
+.cg-hero-body { font-size:1.06rem; line-height:1.65; color:rgba(26,26,24,.74); max-width:580px; margin:0 auto; }
+
+.cg-grid { list-style:none; padding:0; margin:0; display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:20px; padding-top:32px; }
+.cg-card { background:#fff; border:1px solid rgba(160,124,58,.18); border-radius:4px; transition:transform .2s, box-shadow .25s, border-color .2s; position:relative; }
+.cg-card:hover:not(.cg-card-coming) { transform:translateY(-3px); box-shadow:0 14px 40px rgba(26,26,24,.1); border-color:rgba(160,124,58,.5); }
+.cg-card-link { display:flex; flex-direction:column; gap:10px; padding:30px 28px 26px; text-decoration:none; color:inherit; height:100%; }
+.cg-card-eyebrow { font-size:.7rem; letter-spacing:.2em; text-transform:uppercase; color:var(--gold); font-weight:600; }
+.cg-card-title { font-family:'Cormorant Garamond',serif; font-size:1.7rem; font-weight:400; line-height:1.15; color:var(--ink); margin:2px 0 4px; }
+.cg-card-desc { font-size:.96rem; line-height:1.55; color:rgba(26,26,24,.74); flex:1; }
+.cg-card-meta { font-size:.78rem; color:rgba(26,26,24,.5); letter-spacing:.03em; margin-top:4px; }
+.cg-card-cta { display:inline-block; margin-top:14px; font-size:.78rem; font-weight:600; letter-spacing:.12em; text-transform:uppercase; color:var(--sage); }
+.cg-card:hover:not(.cg-card-coming) .cg-card-cta { color:var(--gold); }
+
+.cg-card-coming { padding:30px 28px 26px; background:transparent; border-style:dashed; opacity:.6; cursor:default; }
+.cg-card-coming .cg-card-title { color:rgba(26,26,24,.6); }
+.cg-card-coming .cg-card-desc { color:rgba(26,26,24,.55); font-style:italic; }
+
+.cg-foot { text-align:center; margin-top:64px; padding-top:32px; border-top:1px solid rgba(26,26,24,.08); }
+.cg-foot p { font-size:.92rem; line-height:1.65; color:rgba(26,26,24,.62); max-width:520px; margin:0 auto; }
+.cg-foot a { color:var(--sage); text-decoration:underline; text-underline-offset:3px; }
+.cg-foot a:hover { color:var(--gold); }
+
+@media (max-width:640px){
+  .cg-topbar { padding:0 16px; gap:12px; }
+  .cg-topbar-title .cg-bookname { display:none; }
+  .cg-topbar-title .cg-sep { display:none; }
+  .cg-main { padding:96px 18px 60px; }
+  .cg-hero { padding-bottom:36px; }
+  .cg-grid { grid-template-columns:1fr; gap:16px; }
+}
