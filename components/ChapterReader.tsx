@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from 'react'
 import Link from 'next/link'
-import type { Chapter, Block } from '@/content/chapter5.fr'
+import type { Chapter, Block } from '@/content/types'
 import BookNotifyForm from '@/components/BookNotifyForm'
 
 type Props = {
@@ -60,7 +60,7 @@ export default function ChapterReader({ chapter, bookTitle }: Props) {
         fetch('/api/track', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ chapter: chapter.number, event: 'read_start' }),
+          body: JSON.stringify({ chapter: chapter.slug, event: 'read_start' }),
           keepalive: true,
         }).catch(() => {})
       }
@@ -72,7 +72,7 @@ export default function ChapterReader({ chapter, bookTitle }: Props) {
       clearInterval(interval)
       document.removeEventListener('visibilitychange', onVis)
     }
-  }, [chapter.number])
+  }, [chapter.slug])
 
   useEffect(() => {
     if (!lightbox) return
@@ -101,7 +101,7 @@ export default function ChapterReader({ chapter, bookTitle }: Props) {
       <div className="cr-topbar">
         <Link href="/" className="cr-home">← Accueil</Link>
         <div className="cr-topbar-title">
-          <span className="cr-chap">Chapitre {chapter.number}</span>
+          <span className="cr-chap">{chapter.number ? `Chapitre ${chapter.number}` : chapter.title}</span>
           <span className="cr-sep">·</span>
           <span className="cr-bookname">{bookTitle}</span>
         </div>
@@ -133,7 +133,9 @@ export default function ChapterReader({ chapter, bookTitle }: Props) {
 
         <article ref={articleRef} className="cr-article">
           <div className="cr-hero">
-            <p className="cr-hero-eyebrow">Chapitre {chapter.number} · Extrait gratuit</p>
+            <p className="cr-hero-eyebrow">
+              {chapter.number ? `Chapitre ${chapter.number} · ` : ''}Extrait gratuit
+            </p>
             <h1 className="cr-hero-title">{chapter.title}</h1>
             <p className="cr-hero-book"><em>{bookTitle}</em></p>
             <p className="cr-hero-author">Guy Boitout</p>
@@ -150,11 +152,15 @@ export default function ChapterReader({ chapter, bookTitle }: Props) {
 
           <div className="cr-end">
             <div className="cr-end-card">
-              <p className="cr-end-eyebrow">Fin du chapitre 5</p>
+              <p className="cr-end-eyebrow">
+                {chapter.number ? `Fin du chapitre ${chapter.number}` : `Fin de l’${chapter.title.toLowerCase()}`}
+              </p>
               <h3 className="cr-end-title">La méthode complète se poursuit dans le livre</h3>
               <p className="cr-end-book"><em>{bookTitle}</em></p>
               <p className="cr-end-body">
-                Ce chapitre est un extrait du troisième ouvrage de Guy Boitout sur la Réflexothérapie Occipito-Podale. Le livre complet est en préparation — laissez votre adresse pour être informé·e de sa parution.
+                {chapter.number
+                  ? 'Ce chapitre est un extrait du troisième ouvrage de Guy Boitout sur la Réflexothérapie Occipito-Podale. Le livre complet est en préparation — laissez votre adresse pour être informé·e de sa parution.'
+                  : 'Cette introduction ouvre le troisième ouvrage de Guy Boitout sur la Réflexothérapie Occipito-Podale. Le livre complet est en préparation — laissez votre adresse pour être informé·e de sa parution.'}
               </p>
               <BookNotifyForm />
             </div>

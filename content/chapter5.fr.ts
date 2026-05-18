@@ -2,24 +2,12 @@
 // Source: assets/Chapitre 5 Mécanisme de Stress.docx (Guy Boitout)
 // Structured for i18n: same shape will be reused for /en/chapter-5 etc.
 
-export type Block =
-  | { type: 'para'; text: string }
-  | { type: 'lead'; label: string; text: string }
-  | { type: 'sub'; text: string }
-  | { type: 'bullets'; items: string[] }
-  | { type: 'leadBullets'; items: { label: string; text: string }[] }
-  | { type: 'figure'; src: string; caption: string; alt: string; orientation: 'landscape' | 'portrait' }
-  | { type: 'rop'; body: string[] }
+import type { Chapter } from './types'
 
-export type Section = { id: string; title: string; blocks: Block[] }
-
-export type Chapter = {
-  number: string
-  title: string
-  sections: Section[]
-}
+export type { Block, Section, Chapter } from './types'
 
 export const chapter5Fr: Chapter = {
+  slug: 'chapter-5',
   number: '5',
   title: 'Mécanisme de stress',
   sections: [
