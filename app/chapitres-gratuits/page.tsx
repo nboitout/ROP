@@ -80,7 +80,7 @@ export default async function ChapitresGratuitsPage() {
         </ul>
 
         <div className="cg-foot">
-          <p>Vous lisez ces extraits sous accès gratuit. Le livre complet est en préparation — laissez votre adresse depuis l’<Link href="/">accueil</Link> pour être informé·e de sa parution.</p>
+          <p>Vous lisez ces extraits sous accès gratuit. Le livre complet est en préparation.</p>
         </div>
       </main>
     </div>
