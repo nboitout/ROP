@@ -20,9 +20,9 @@ export default function HomePage() {
             <a href="#genese">{t.nav.genese}</a>
             <a href="#chapitres">{t.nav.sommaire}</a>
             <a href="#protocole">{t.nav.protocole}</a>
-            <a href="#acces-libre">{t.nav.accesLibre}</a>
+            <a href="/chapitres-gratuits">{t.nav.accesLibre}</a>
             <a href="#acheter">{t.nav.commander}</a>
-            <a href="#acces-libre" className="n-cta">{t.nav.chapitreGratuit}</a>
+            <a href="/chapitres-gratuits" className="n-cta">{t.nav.chapitreGratuit}</a>
           </nav>
           <LanguageToggle />
         </div>
@@ -46,7 +46,7 @@ export default function HomePage() {
               ))}
             </div>
             <div className="hero-ctas">
-              <a href="#acces-libre" className="btn b-gold">{t.hero.cta1}</a>
+              <a href="/chapitres-gratuits" className="btn b-gold">{t.hero.cta1}</a>
               <a href="#chapitres" className="btn b-ghost">{t.hero.cta2}</a>
             </div>
             <div className="hl-author">
