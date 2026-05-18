@@ -13,8 +13,26 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: 'Invalid email' }, { status: 400 })
   }
 
-  // Stub: log lead until Resend + DB are wired up
-  console.log('[free-chapter] lead:', { fullName: body.fullName, email: body.email, profession: body.profession })
+  const source: string = typeof body.source === 'string' ? body.source : 'chapter-5-free'
 
-  return NextResponse.json({ ok: true })
+  console.log('[free-chapter] lead:', {
+    fullName: body.fullName,
+    email: body.email,
+    profession: body.profession,
+    source,
+  })
+
+  const res = NextResponse.json({ ok: true, redirect: source === 'chapter-5-free' ? '/chapitre-5' : null })
+
+  if (source === 'chapter-5-free') {
+    // Session-only cookie — readers re-submit the form each visit (interest signal).
+    res.cookies.set('chapter5_access', '1', {
+      httpOnly: true,
+      sameSite: 'lax',
+      secure: process.env.NODE_ENV === 'production',
+      path: '/',
+    })
+  }
+
+  return res
 }
