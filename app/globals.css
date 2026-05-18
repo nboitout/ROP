@@ -396,6 +396,14 @@ footer > div > p { font-size:1rem; color:rgba(245,240,232,.84); line-height:1.9;
 
 .cr-toc-overlay { display:none; }
 
+/* Fiche de révision — floating bottom-right shortcut */
+.cr-fiche { position:fixed; right:22px; bottom:22px; z-index:240; display:flex; flex-direction:column; align-items:center; gap:6px;
+  background:#fbf8f1; border:1px solid rgba(160,124,58,.35); border-radius:6px; padding:8px 8px 6px; cursor:pointer;
+  box-shadow:0 6px 22px rgba(26,26,24,.18); transition:transform .18s, box-shadow .18s; }
+.cr-fiche:hover { transform:translateY(-2px); box-shadow:0 10px 28px rgba(26,26,24,.24); }
+.cr-fiche img { width:96px; height:124px; object-fit:cover; object-position:top center; border-radius:3px; background:#fff; }
+.cr-fiche-label { font-size:.66rem; letter-spacing:.14em; text-transform:uppercase; color:var(--gold); font-weight:600; }
+
 @media (max-width:1180px){
   .cr-layout { grid-template-columns:1fr minmax(0,720px) 1fr; }
   .cr-article { grid-column:2; }
@@ -417,6 +425,9 @@ footer > div > p { font-size:1rem; color:rgba(245,240,232,.84); line-height:1.9;
   .cr-fig-portrait { margin:32px auto; max-width:none; }
   .cr-end-card { padding:36px 24px; }
   .cr-toc { width:86%; }
+  .cr-fiche { right:12px; bottom:12px; padding:6px 6px 4px; }
+  .cr-fiche img { width:62px; height:80px; }
+  .cr-fiche-label { font-size:.58rem; }
 }
 
 @media (min-width:1181px){

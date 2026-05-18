@@ -168,6 +168,18 @@ export default function ChapterReader({ chapter, bookTitle }: Props) {
         </article>
       </div>
 
+      {chapter.revisionSheet && (
+        <button
+          type="button"
+          className="cr-fiche"
+          onClick={() => setLightbox(chapter.revisionSheet!)}
+          aria-label="Ouvrir la fiche de révision"
+        >
+          <img src={chapter.revisionSheet.src} alt="" aria-hidden />
+          <span className="cr-fiche-label">Fiche de révision</span>
+        </button>
+      )}
+
       {lightbox && (
         <div className="cr-lightbox" onClick={() => setLightbox(null)} role="dialog" aria-modal="true">
           <button className="cr-lightbox-close" aria-label="Fermer">×</button>

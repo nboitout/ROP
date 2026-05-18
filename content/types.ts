@@ -14,4 +14,5 @@ export type Chapter = {
   number?: string       // optional display number; when absent, no "Chapitre X" prefix is shown
   title: string         // display title shown as <h1> in the hero
   sections: Section[]
+  revisionSheet?: { src: string; caption: string; alt: string }
 }

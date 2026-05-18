@@ -181,4 +181,9 @@ export const chapter5Fr: Chapter = {
       ],
     },
   ],
+  revisionSheet: {
+    src: '/chapter-5/fiche-revision.png',
+    alt: 'Fiche de révision — Chapitre 5, Mécanisme de stress',
+    caption: 'Fiche de révision — Chapitre 5 · Mécanisme de stress',
+  },
 }
