@@ -45,6 +45,36 @@ export default function ChapterReader({ chapter, bookTitle }: Props) {
   }, [chapter.sections])
 
   useEffect(() => {
+    // Fire a single "read_start" event after 10 s of dwell time.
+    // visibilitychange resets the timer so background tabs don't count.
+    let elapsed = 0
+    let last = Date.now()
+    let fired = false
+    const tick = () => {
+      if (fired) return
+      if (document.visibilityState !== 'visible') { last = Date.now(); return }
+      elapsed += Date.now() - last
+      last = Date.now()
+      if (elapsed >= 10000) {
+        fired = true
+        fetch('/api/track', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ chapter: chapter.number, event: 'read_start' }),
+          keepalive: true,
+        }).catch(() => {})
+      }
+    }
+    const onVis = () => { last = Date.now() }
+    const interval = setInterval(tick, 1000)
+    document.addEventListener('visibilitychange', onVis)
+    return () => {
+      clearInterval(interval)
+      document.removeEventListener('visibilitychange', onVis)
+    }
+  }, [chapter.number])
+
+  useEffect(() => {
     if (!lightbox) return
     function onKey(e: KeyboardEvent) { if (e.key === 'Escape') setLightbox(null) }
     window.addEventListener('keydown', onKey)
