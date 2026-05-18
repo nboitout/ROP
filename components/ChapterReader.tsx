@@ -68,7 +68,7 @@ export default function ChapterReader({ chapter, bookTitle }: Props) {
     <div className="cr-root">
       <div className="cr-progress" aria-hidden><div className="cr-progress-bar" style={{ transform: `scaleX(${progress})` }} /></div>
 
-      <header className="cr-topbar">
+      <div className="cr-topbar">
         <Link href="/" className="cr-home">← Accueil</Link>
         <div className="cr-topbar-title">
           <span className="cr-chap">Chapitre {chapter.number}</span>
@@ -78,7 +78,7 @@ export default function ChapterReader({ chapter, bookTitle }: Props) {
         <button className="cr-toc-toggle" onClick={() => setTocOpen((v) => !v)} aria-label="Sommaire">
           <span /><span /><span />
         </button>
-      </header>
+      </div>
 
       <div className="cr-layout">
         <aside className={`cr-toc${tocOpen ? ' is-open' : ''}`}>
@@ -102,12 +102,12 @@ export default function ChapterReader({ chapter, bookTitle }: Props) {
         {tocOpen && <div className="cr-toc-overlay" onClick={() => setTocOpen(false)} />}
 
         <article ref={articleRef} className="cr-article">
-          <header className="cr-hero">
+          <div className="cr-hero">
             <p className="cr-hero-eyebrow">Chapitre {chapter.number} · Extrait gratuit</p>
             <h1 className="cr-hero-title">{chapter.title}</h1>
             <p className="cr-hero-book"><em>{bookTitle}</em></p>
             <p className="cr-hero-author">Guy Boitout</p>
-          </header>
+          </div>
 
           {chapter.sections.map((section) => (
             <section key={section.id} id={`sec-${section.id}`} data-section-id={section.id} className="cr-section">
@@ -118,7 +118,7 @@ export default function ChapterReader({ chapter, bookTitle }: Props) {
             </section>
           ))}
 
-          <footer className="cr-end">
+          <div className="cr-end">
             <div className="cr-end-card">
               <p className="cr-end-eyebrow">Fin du chapitre 5</p>
               <h3 className="cr-end-title">La méthode complète se poursuit dans le livre</h3>
@@ -128,7 +128,7 @@ export default function ChapterReader({ chapter, bookTitle }: Props) {
               </p>
               <BookNotifyForm />
             </div>
-          </footer>
+          </div>
         </article>
       </div>
 

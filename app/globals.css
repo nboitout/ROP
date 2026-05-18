@@ -351,9 +351,9 @@ footer > div > p { font-size:1rem; color:rgba(245,240,232,.84); line-height:1.9;
 .cr-ul li { position:relative; padding:0 0 0 26px; margin:0 0 14px; font-size:1.125rem; line-height:1.7; color:#22221f; }
 .cr-ul li::before { content:''; position:absolute; left:0; top:.78em; width:14px; height:1.5px; background:var(--gold); }
 
-.cr-fig { margin:36px -40px; }
-.cr-fig-portrait { margin:36px auto; max-width:520px; }
-.cr-fig-landscape { margin:36px -40px; }
+.cr-fig { margin:40px -80px; }
+.cr-fig-portrait { margin:40px auto; max-width:624px; }
+.cr-fig-landscape { margin:40px -80px; }
 .cr-fig-btn { display:block; width:100%; background:none; border:none; padding:0; cursor:zoom-in; position:relative; line-height:0; border-radius:4px; overflow:hidden; transition:box-shadow .25s; }
 .cr-fig-btn:hover { box-shadow:0 12px 36px rgba(26,26,24,.18); }
 .cr-fig-btn img { width:100%; height:auto; display:block; background:#fff; }
@@ -413,8 +413,8 @@ footer > div > p { font-size:1rem; color:rgba(245,240,232,.84); line-height:1.9;
   .cr-article { padding:32px 22px 100px; }
   .cr-hero { padding:16px 0 36px; }
   .cr-section { padding:36px 0 8px; }
-  .cr-fig, .cr-fig-landscape { margin:28px -10px; }
-  .cr-fig-portrait { margin:28px 0; }
+  .cr-fig, .cr-fig-landscape { margin:32px -14px; }
+  .cr-fig-portrait { margin:32px auto; max-width:none; }
   .cr-end-card { padding:36px 24px; }
   .cr-toc { width:86%; }
 }
