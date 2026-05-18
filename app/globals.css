@@ -442,7 +442,7 @@ footer > div > p { font-size:1rem; color:rgba(245,240,232,.84); line-height:1.9;
 .cg-hero { text-align:center; padding:0 0 56px; margin-bottom:24px; border-bottom:1px solid rgba(26,26,24,.1); }
 .cg-hero-eyebrow { font-size:.7rem; letter-spacing:.22em; text-transform:uppercase; color:var(--gold); font-weight:500; margin-bottom:16px; }
 .cg-hero-title { font-family:'Cormorant Garamond',serif; font-size:clamp(2rem,3.6vw,2.8rem); font-weight:300; line-height:1.12; color:var(--ink); margin-bottom:18px; }
-.cg-hero-body { font-size:1.06rem; line-height:1.65; color:rgba(26,26,24,.74); max-width:580px; margin:0 auto; }
+.cg-hero-body { font-size:1.06rem; line-height:1.65; color:rgba(26,26,24,.74); max-width:880px; margin:0 auto; }
 
 .cg-grid { list-style:none; padding:0; margin:0; display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:20px; padding-top:32px; }
 .cg-card { background:#fff; border:1px solid rgba(160,124,58,.18); border-radius:4px; transition:transform .2s, box-shadow .25s, border-color .2s; position:relative; }
@@ -460,7 +460,7 @@ footer > div > p { font-size:1rem; color:rgba(245,240,232,.84); line-height:1.9;
 .cg-card-coming .cg-card-desc { color:rgba(26,26,24,.55); font-style:italic; }
 
 .cg-foot { text-align:center; margin-top:64px; padding-top:32px; border-top:1px solid rgba(26,26,24,.08); }
-.cg-foot p { font-size:.92rem; line-height:1.65; color:rgba(26,26,24,.62); max-width:520px; margin:0 auto; }
+.cg-foot p { font-size:.92rem; line-height:1.65; color:rgba(26,26,24,.62); max-width:none; margin:0 auto; }
 .cg-foot a { color:var(--sage); text-decoration:underline; text-underline-offset:3px; }
 .cg-foot a:hover { color:var(--gold); }
 
