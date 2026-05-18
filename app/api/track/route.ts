@@ -1,5 +1,7 @@
-import { NextRequest, NextResponse } from 'next/server'
+import { NextRequest, NextResponse, after } from 'next/server'
 import { randomUUID } from 'crypto'
+
+export const maxDuration = 30
 
 async function forwardToAppsScript(payload: Record<string, unknown>) {
   const url = process.env.APPS_SCRIPT_URL
@@ -30,7 +32,7 @@ export async function POST(req: NextRequest) {
   const existing = req.cookies.get('reader_id')?.value
   const readerId = existing && /^[0-9a-f-]{36}$/i.test(existing) ? existing : randomUUID()
 
-  await forwardToAppsScript({
+  after(() => forwardToAppsScript({
     type: 'event',
     timestamp: new Date().toISOString(),
     readerId,
@@ -39,7 +41,7 @@ export async function POST(req: NextRequest) {
     data: body.data ?? null,
     userAgent: req.headers.get('user-agent') ?? '',
     referer: req.headers.get('referer') ?? '',
-  })
+  }))
 
   const res = NextResponse.json({ ok: true })
 

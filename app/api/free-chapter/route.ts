@@ -1,5 +1,7 @@
-import { NextRequest, NextResponse } from 'next/server'
+import { NextRequest, NextResponse, after } from 'next/server'
 import { randomUUID } from 'crypto'
+
+export const maxDuration = 30
 
 async function forwardToAppsScript(payload: Record<string, unknown>) {
   const url = process.env.APPS_SCRIPT_URL
@@ -49,7 +51,8 @@ export async function POST(req: NextRequest) {
   const existing = req.cookies.get('reader_id')?.value
   const readerId = existing && /^[0-9a-f-]{36}$/i.test(existing) ? existing : randomUUID()
 
-  await forwardToAppsScript({
+  // Forward in the background so the user isn't blocked by Apps Script latency.
+  after(() => forwardToAppsScript({
     type: 'lead',
     timestamp: new Date().toISOString(),
     readerId,
@@ -61,7 +64,7 @@ export async function POST(req: NextRequest) {
     source,
     userAgent: req.headers.get('user-agent') ?? '',
     referer: req.headers.get('referer') ?? '',
-  })
+  }))
 
   console.log('[free-chapter] lead:', { readerId, fullName, email: body.email, profession, source })
 
