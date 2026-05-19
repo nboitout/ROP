@@ -258,7 +258,7 @@ h1 em { font-style:italic; color:var(--gold-l); }
 .pc { background:white; border-radius:3px; padding:38px; text-align:left; box-shadow:0 2px 16px rgba(26,26,24,.055); transition:transform .28s, box-shadow .28s; position:relative; overflow:hidden; }
 .pc:hover { transform:translateY(-4px); box-shadow:0 10px 34px rgba(26,26,24,.1); }
 .pc.star { background:var(--sage); }
-.pc.star::before { content:attr(data-badge); position:absolute; top:13px; right:-28px; background:var(--gold); color:var(--cream); font-size:.59rem; font-weight:500; letter-spacing:.14em; text-transform:uppercase; padding:5px 38px; transform:rotate(45deg); }
+.pc.star::before { content:attr(data-badge); position:absolute; top:18px; right:-32px; background:var(--gold); color:var(--ink); font-size:.72rem; font-weight:700; letter-spacing:.12em; text-transform:uppercase; padding:6px 42px; transform:rotate(45deg); box-shadow:0 2px 6px rgba(0,0,0,.18); }
 .pc-n { font-family:'Cormorant Garamond',serif; font-size:1.22rem; font-weight:400; margin-bottom:7px; }
 .pc.star .pc-n { color:var(--cream); }
 .pc-d { font-size:.79rem; color:var(--i50); margin-bottom:24px; line-height:1.6; }
