@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import { useLanguage } from '@/app/i18n/LanguageContext'
 
-type FieldErrors = { firstName?: string; lastName?: string; email?: string }
+type FieldErrors = { firstName?: string; lastName?: string; email?: string; profession?: string }
 
 export default function FreeChapterForm() {
   const { t } = useLanguage()
@@ -29,6 +29,8 @@ export default function FreeChapterForm() {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
     if (!email.trim()) errors.email = f.errorEmail
     else if (!emailRegex.test(email)) errors.email = f.errorEmailInvalid
+    if (!profession) errors.profession = f.errorProfession
+    else if (profession === '__other__' && !professionOther.trim()) errors.profession = f.errorProfession
     return errors
   }
 
@@ -130,8 +132,8 @@ export default function FreeChapterForm() {
         <span className="field-error">{fieldErrors.email}</span>
       </div>
 
-      <div className="fg">
-        <label htmlFor="fj">{f.professionLbl} <span style={{ opacity: .4 }}>{f.professionOptional}</span></label>
+      <div className={`fg${fieldErrors.profession ? ' has-error' : ''}`}>
+        <label htmlFor="fj">{f.professionLbl}</label>
         <select
           id="fj"
           value={profession}
@@ -144,10 +146,11 @@ export default function FreeChapterForm() {
           ))}
           <option value="__other__">{f.professionOther}</option>
         </select>
+        {!isOther && <span className="field-error">{fieldErrors.profession}</span>}
       </div>
 
       {isOther && (
-        <div className="fg">
+        <div className={`fg${fieldErrors.profession ? ' has-error' : ''}`}>
           <input
             type="text"
             placeholder={f.professionOtherPlaceholder}
@@ -155,6 +158,7 @@ export default function FreeChapterForm() {
             onChange={(e) => setProfessionOther(e.target.value)}
             autoComplete="off"
           />
+          <span className="field-error">{fieldErrors.profession}</span>
         </div>
       )}
 
