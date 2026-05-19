@@ -360,6 +360,7 @@ export default function HomePage() {
           {t.pricing.h2.before}<em>{t.pricing.h2.em}</em>{t.pricing.h2.after}
         </h2>
         <p>{t.pricing.p}</p>
+        <p className="pricing-notice">{t.pricing.notice}</p>
         <div className="pg">
           <div className="pc">
             <div className="pc-n">{t.pricing.plan1.name}</div>
@@ -369,7 +370,7 @@ export default function HomePage() {
             <ul className="pc-l">
               {t.pricing.plan1.features.map((f) => <li key={f}>{f}</li>)}
             </ul>
-            <a href="#acheter" className="btn b-out" style={{ width: '100%', textAlign: 'center' }}>{t.pricing.plan1.cta}</a>
+            <a href="/chapitres-gratuits" className="btn b-out" style={{ width: '100%', textAlign: 'center' }}>{t.pricing.plan1.cta}</a>
           </div>
           <div className="pc star" data-badge={t.pricing.recommended}>
             <div className="pc-n">{t.pricing.plan2.name}</div>
@@ -379,7 +380,7 @@ export default function HomePage() {
             <ul className="pc-l">
               {t.pricing.plan2.features.map((f) => <li key={f}>{f}</li>)}
             </ul>
-            <a href="#acheter" className="btn b-gold" style={{ width: '100%', textAlign: 'center' }}>{t.pricing.plan2.cta}</a>
+            <a href="/chapitres-gratuits" className="btn b-gold" style={{ width: '100%', textAlign: 'center' }}>{t.pricing.plan2.cta}</a>
           </div>
           <div className="pc">
             <div className="pc-n">{t.pricing.plan3.name}</div>
@@ -389,7 +390,7 @@ export default function HomePage() {
             <ul className="pc-l">
               {t.pricing.plan3.features.map((f) => <li key={f}>{f}</li>)}
             </ul>
-            <a href="#acheter" className="btn b-out" style={{ width: '100%', textAlign: 'center' }}>{t.pricing.plan3.cta}</a>
+            <a href="/chapitres-gratuits" className="btn b-out" style={{ width: '100%', textAlign: 'center' }}>{t.pricing.plan3.cta}</a>
           </div>
         </div>
       </section>

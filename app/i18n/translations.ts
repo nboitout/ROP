@@ -159,13 +159,14 @@ const fr = {
     recommended: 'Recommandé',
     h2: { before: 'Livre imprimé, Livre en ligne ', em: 'ou', after: ' formule complète' },
     p: "Trois formules d'accès à l'ouvrage : livre imprimé seul, livre en ligne enrichi (illustrations supplémentaires, fiches de révision, visuels interactifs, quiz), ou les deux réunis.",
+    notice: "3 chapitres déjà disponibles en lecture libre — l'ouvrage complet et la version imprimée seront publiés prochainement.",
     plan1: {
       name: 'Livre imprimé',
       desc: "Édition papier de l'ouvrage complet, expédiée à domicile.",
       price: '60',
       sub: 'édition papier seule',
       features: ['Ouvrage complet imprimé', 'Tous les chapitres inclus', 'Cartographies R.O.P.', 'Bibliographie et schémas', 'Expédition à domicile'],
-      cta: 'Commander Livre imprimé',
+      cta: 'Être informé de la parution',
     },
     plan2: {
       name: 'Livre en ligne',
@@ -173,7 +174,7 @@ const fr = {
       price: '70',
       sub: 'accès en ligne immédiat',
       features: ['Illustrations supplémentaires', 'Fiches de révision', 'Visuels interactifs', "Quiz d'auto-évaluation", 'Lecture immédiate · Accès permanent'],
-      cta: 'Commander Livre en ligne',
+      cta: 'Lire les 3 chapitres disponibles',
     },
     plan3: {
       name: 'Livre en ligne + Livre imprimé',
@@ -181,7 +182,7 @@ const fr = {
       price: '100',
       sub: 'numérique enrichi + livre imprimé',
       features: ['Livre en ligne inclus (version enrichie)', 'Livre imprimé inclus', 'Lecture immédiate', 'Expédition du format papier', 'Économisez €30'],
-      cta: 'Commander la formule complète',
+      cta: 'Être informé de la parution',
     },
   },
   footer: {
@@ -415,13 +416,14 @@ const en: typeof fr = {
     recommended: 'Recommended',
     h2: { before: 'Print Edition, Online Book ', em: 'or', after: ' the complete package' },
     p: 'Three formats are available: print edition only, enriched online book (extra illustrations, review sheets, interactive visuals, self-assessment quizzes), or both combined.',
+    notice: '3 chapters are already free to read online — the full book and print edition will be published shortly.',
     plan1: {
       name: 'Print Edition',
       desc: 'Printed copy of the complete book, shipped to your address.',
       price: '60',
       sub: 'print edition only',
       features: ['Complete Printed Book', 'All Chapters Included', 'R.O.P. Mapping', 'Bibliography and Diagrams', 'Shipped to Your Address'],
-      cta: 'Order the Print Edition',
+      cta: 'Notify me on release',
     },
     plan2: {
       name: 'Online Book',
@@ -429,7 +431,7 @@ const en: typeof fr = {
       price: '70',
       sub: 'immediate online access',
       features: ['Extra Illustrations', 'Review Sheets', 'Interactive Visuals', 'Self-Assessment Quizzes', 'Immediate Access · Permanent'],
-      cta: 'Order the Online Book',
+      cta: 'Read the 3 available chapters',
     },
     plan3: {
       name: 'Online Book + Print Edition',
@@ -437,7 +439,7 @@ const en: typeof fr = {
       price: '100',
       sub: 'enriched digital + print edition',
       features: ['Online Book Included (enriched)', 'Printed Copy Included', 'Immediate Online Access', 'Printed Copy Shipped', 'Save €30'],
-      cta: 'Order the Complete Package',
+      cta: 'Notify me on release',
     },
   },
   footer: {
@@ -671,13 +673,14 @@ const de: typeof fr = {
     recommended: 'Empfohlen',
     h2: { before: 'Druckausgabe, Online-Buch ', em: 'oder', after: ' das Komplettpaket' },
     p: 'Drei Formate verfügbar: reine Druckausgabe, erweitertes Online-Buch (zusätzliche Illustrationen, Lernzettel, interaktive Grafiken, Quiz zur Selbstüberprüfung) oder beides kombiniert.',
+    notice: '3 Kapitel sind bereits kostenlos online lesbar — das vollständige Buch und die Druckausgabe erscheinen in Kürze.',
     plan1: {
       name: 'Druckausgabe',
       desc: 'Gedrucktes Exemplar des vollständigen Buches, an Ihre Adresse versandt.',
       price: '60',
       sub: 'nur Druckausgabe',
       features: ['Vollständiges gedrucktes Buch', 'Alle Kapitel enthalten', 'R.O.P.-Kartierung', 'Bibliographie und Diagramme', 'Versand an Ihre Adresse'],
-      cta: 'Druckausgabe bestellen',
+      cta: 'Bei Erscheinen benachrichtigen',
     },
     plan2: {
       name: 'Online-Buch',
@@ -685,7 +688,7 @@ const de: typeof fr = {
       price: '70',
       sub: 'sofortiger Online-Zugang',
       features: ['Zusätzliche Illustrationen', 'Lernzettel', 'Interaktive Grafiken', 'Selbstüberprüfungs-Quiz', 'Sofortzugang · Dauerhaft'],
-      cta: 'Online-Buch bestellen',
+      cta: 'Die 3 verfügbaren Kapitel lesen',
     },
     plan3: {
       name: 'Online-Buch + Druckausgabe',
@@ -693,7 +696,7 @@ const de: typeof fr = {
       price: '100',
       sub: 'erweitertes Digital + Druckausgabe',
       features: ['Online-Buch enthalten (erweiterte Version)', 'Gedrucktes Exemplar enthalten', 'Sofortiger Online-Zugang', 'Gedrucktes Exemplar wird versendet', 'Sparen Sie €30'],
-      cta: 'Komplettpaket bestellen',
+      cta: 'Bei Erscheinen benachrichtigen',
     },
   },
   footer: {
@@ -927,13 +930,14 @@ const es: typeof fr = {
     recommended: 'Recomendado',
     h2: { before: 'Edición impresa, Libro online ', em: 'o', after: ' el paquete completo' },
     p: 'Tres formatos disponibles: edición impresa sola, libro online enriquecido (ilustraciones adicionales, fichas de revisión, visuales interactivos, cuestionarios de autoevaluación) o ambos combinados.',
+    notice: '3 capítulos ya están disponibles para lectura gratuita — el libro completo y la edición impresa se publicarán próximamente.',
     plan1: {
       name: 'Edición impresa',
       desc: 'Ejemplar impreso del libro completo, enviado a tu domicilio.',
       price: '60',
       sub: 'solo edición impresa',
       features: ['Libro completo impreso', 'Todos los capítulos incluidos', 'Cartografía R.O.P.', 'Bibliografía y diagramas', 'Envío a domicilio'],
-      cta: 'Comprar Edición impresa',
+      cta: 'Avisarme cuando salga',
     },
     plan2: {
       name: 'Libro online',
@@ -941,7 +945,7 @@ const es: typeof fr = {
       price: '70',
       sub: 'acceso online inmediato',
       features: ['Ilustraciones adicionales', 'Fichas de revisión', 'Visuales interactivos', 'Cuestionarios de autoevaluación', 'Acceso inmediato · Permanente'],
-      cta: 'Comprar el Libro online',
+      cta: 'Leer los 3 capítulos disponibles',
     },
     plan3: {
       name: 'Libro online + Edición impresa',
@@ -949,7 +953,7 @@ const es: typeof fr = {
       price: '100',
       sub: 'digital enriquecido + edición impresa',
       features: ['Libro online incluido (versión enriquecida)', 'Ejemplar impreso incluido', 'Acceso online inmediato', 'Envío del ejemplar impreso', 'Ahorra €30'],
-      cta: 'Comprar el Paquete completo',
+      cta: 'Avisarme cuando salga',
     },
   },
   footer: {
@@ -1183,13 +1187,14 @@ const it: typeof fr = {
     recommended: 'Consigliato',
     h2: { before: 'Edizione cartacea, Libro online ', em: 'o', after: ' il pacchetto completo' },
     p: 'Tre formati disponibili: solo edizione cartacea, libro online arricchito (illustrazioni aggiuntive, schede di ripasso, visuali interattive, quiz di autovalutazione) o entrambi combinati.',
+    notice: '3 capitoli sono già disponibili in lettura gratuita — il libro completo e l\'edizione cartacea saranno pubblicati a breve.',
     plan1: {
       name: 'Edizione cartacea',
       desc: 'Copia cartacea del libro completo, spedita al tuo indirizzo.',
       price: '60',
       sub: 'solo edizione cartacea',
       features: ['Libro completo cartaceo', 'Tutti i capitoli inclusi', 'Cartografia R.O.P.', 'Bibliografia e diagrammi', 'Spedizione al tuo indirizzo'],
-      cta: 'Ordina Edizione cartacea',
+      cta: 'Avvisami alla pubblicazione',
     },
     plan2: {
       name: 'Libro online',
@@ -1197,7 +1202,7 @@ const it: typeof fr = {
       price: '70',
       sub: 'accesso online immediato',
       features: ['Illustrazioni aggiuntive', 'Schede di ripasso', 'Visuali interattive', 'Quiz di autovalutazione', 'Accesso immediato · Permanente'],
-      cta: 'Ordina il Libro online',
+      cta: 'Leggi i 3 capitoli disponibili',
     },
     plan3: {
       name: 'Libro online + Edizione cartacea',
@@ -1205,7 +1210,7 @@ const it: typeof fr = {
       price: '100',
       sub: 'digitale arricchito + edizione cartacea',
       features: ['Libro online incluso (versione arricchita)', 'Copia cartacea inclusa', 'Accesso online immediato', 'Copia cartacea spedita', 'Risparmi €30'],
-      cta: 'Ordina il Pacchetto completo',
+      cta: 'Avvisami alla pubblicazione',
     },
   },
   footer: {
