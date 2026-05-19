@@ -361,7 +361,7 @@ export default function HomePage() {
         </h2>
         <p>{t.pricing.p}</p>
         <div className="pg">
-          <div className="pc star" data-badge={t.pricing.recommended}>
+          <div className="pc">
             <div className="pc-n">{t.pricing.plan1.name}</div>
             <p className="pc-d">{t.pricing.plan1.desc}</p>
             <div className="pc-a"><span className="pc-c">€</span>{t.pricing.plan1.price}</div>
@@ -369,9 +369,9 @@ export default function HomePage() {
             <ul className="pc-l">
               {t.pricing.plan1.features.map((f) => <li key={f}>{f}</li>)}
             </ul>
-            <a href="#acheter" className="btn b-gold" style={{ width: '100%', textAlign: 'center' }}>{t.pricing.plan1.cta}</a>
+            <a href="#acheter" className="btn b-out" style={{ width: '100%', textAlign: 'center' }}>{t.pricing.plan1.cta}</a>
           </div>
-          <div className="pc">
+          <div className="pc star" data-badge={t.pricing.recommended}>
             <div className="pc-n">{t.pricing.plan2.name}</div>
             <p className="pc-d">{t.pricing.plan2.desc}</p>
             <div className="pc-a"><span className="pc-c">€</span>{t.pricing.plan2.price}</div>
@@ -379,7 +379,17 @@ export default function HomePage() {
             <ul className="pc-l">
               {t.pricing.plan2.features.map((f) => <li key={f}>{f}</li>)}
             </ul>
-            <a href="#acheter" className="btn b-out" style={{ width: '100%', textAlign: 'center' }}>{t.pricing.plan2.cta}</a>
+            <a href="#acheter" className="btn b-gold" style={{ width: '100%', textAlign: 'center' }}>{t.pricing.plan2.cta}</a>
+          </div>
+          <div className="pc">
+            <div className="pc-n">{t.pricing.plan3.name}</div>
+            <p className="pc-d">{t.pricing.plan3.desc}</p>
+            <div className="pc-a"><span className="pc-c">€</span>{t.pricing.plan3.price}</div>
+            <div className="pc-s">{t.pricing.plan3.sub}</div>
+            <ul className="pc-l">
+              {t.pricing.plan3.features.map((f) => <li key={f}>{f}</li>)}
+            </ul>
+            <a href="#acheter" className="btn b-out" style={{ width: '100%', textAlign: 'center' }}>{t.pricing.plan3.cta}</a>
           </div>
         </div>
       </section>
