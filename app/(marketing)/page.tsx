@@ -20,7 +20,6 @@ export default function HomePage() {
             <a href="#genese">{t.nav.genese}</a>
             <a href="#chapitres">{t.nav.sommaire}</a>
             <a href="#protocole">{t.nav.protocole}</a>
-            <a href="/chapitres-gratuits">{t.nav.accesLibre}</a>
             <a href="#acheter">{t.nav.commander}</a>
             <a href="/chapitres-gratuits" className="n-cta">{t.nav.chapitreGratuit}</a>
           </nav>
