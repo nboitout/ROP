@@ -1,15 +1,21 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
   <rect width="64" height="64" rx="10" fill="#4a6b5a"/>
   <g fill="#f5f0e8">
-    <!-- sole -->
-    <path d="M32 22 C24 22 20 30 20 38 C20 46 24 52 32 52 C40 52 44 46 44 38 C44 30 40 22 32 22 Z"/>
+    <!-- sole: wider ball, narrower heel, flatter top -->
+    <path d="M21.5 24
+             C 21 30, 19.5 36, 21 42
+             C 22.5 49, 27 53, 32 53
+             C 37 53, 41.5 49, 43 42
+             C 44.5 36, 43 30, 42.5 24
+             C 41.5 21, 38 20.5, 32 20.5
+             C 26 20.5, 22.5 21, 21.5 24 Z"/>
     <!-- big toe -->
-    <ellipse cx="26" cy="16" rx="3.6" ry="4.2"/>
+    <ellipse cx="25" cy="16.5" rx="3.3" ry="3.8"/>
     <!-- toes -->
-    <circle cx="32" cy="13.5" r="2.4"/>
-    <circle cx="37" cy="14"   r="2.1"/>
-    <circle cx="41" cy="15.5" r="1.9"/>
-    <circle cx="44.5" cy="17.8" r="1.7"/>
+    <circle cx="30.5" cy="14.5" r="2.3"/>
+    <circle cx="35"   cy="14.8" r="2.0"/>
+    <circle cx="38.8" cy="15.8" r="1.8"/>
+    <circle cx="42"   cy="17.4" r="1.6"/>
   </g>
   <!-- reflex point -->
   <circle cx="27" cy="34" r="2.6" fill="#a07c3a"/>
