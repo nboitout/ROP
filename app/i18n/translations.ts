@@ -224,7 +224,6 @@ const fr = {
     professionPlaceholder: 'ex. Réflexothérapeute, Ostéopathe, Kiné…',
     professionSelectPlaceholder: 'Sélectionnez votre profession',
     professionOptions: [
-      'Réflexothérapeute',
       'Réflexologue',
       'Ostéopathe',
       'Kinésithérapeute',
@@ -500,7 +499,6 @@ const en: typeof fr = {
     professionPlaceholder: 'e.g. Reflexotherapist, Osteopath…',
     professionSelectPlaceholder: 'Select your profession',
     professionOptions: [
-      'Reflexotherapist',
       'Reflexologist',
       'Osteopath',
       'Physiotherapist',
@@ -776,7 +774,6 @@ const de: typeof fr = {
     professionPlaceholder: 'z.B. Reflextherapeut, Osteopath…',
     professionSelectPlaceholder: 'Wählen Sie Ihren Beruf',
     professionOptions: [
-      'Reflextherapeut·in',
       'Reflexologe/Reflexologin',
       'Osteopath·in',
       'Physiotherapeut·in',
@@ -1052,7 +1049,6 @@ const es: typeof fr = {
     professionPlaceholder: 'p. ej. Reflexoterapeuta, Osteópata…',
     professionSelectPlaceholder: 'Seleccione su profesión',
     professionOptions: [
-      'Reflexoterapeuta',
       'Reflexólogo/a',
       'Osteópata',
       'Fisioterapeuta',
@@ -1328,7 +1324,6 @@ const it: typeof fr = {
     professionPlaceholder: 'es. Riflessoterapeuta, Osteopata…',
     professionSelectPlaceholder: 'Seleziona la tua professione',
     professionOptions: [
-      'Riflessoterapista',
       'Riflessologo/a',
       'Osteopata',
       'Fisioterapista',
