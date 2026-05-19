@@ -55,8 +55,7 @@ export default async function ChapitresGratuitsPage() {
 
       <main className="cg-main">
         <div className="cg-hero">
-          <p className="cg-hero-eyebrow">Chapitres gratuits</p>
-          <h1 className="cg-hero-title">Trois extraits, librement accessibles</h1>
+          <h1 className="cg-hero-title">Trois extraits du troisième ouvrage</h1>
           <p className="cg-hero-body">Choisissez votre point d’entrée — l’ordre du livre est suggéré, mais chaque texte se lit seul.</p>
         </div>
 
@@ -80,7 +79,7 @@ export default async function ChapitresGratuitsPage() {
         </ul>
 
         <div className="cg-foot">
-          <p>Vous lisez ces extraits sous accès gratuit. Le livre complet est en préparation.</p>
+          <p>Le livre complet est en préparation.</p>
         </div>
       </main>
     </div>
