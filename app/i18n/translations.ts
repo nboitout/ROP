@@ -47,7 +47,7 @@ const fr = {
     cite: '— Guy Boitout · Préface du 3ᵉ ouvrage',
   },
   stats: [
-    { n: '3', l: ['Livres publiés', 'aux Éd. Elsevier-Masson'] },
+    { n: '2', l: ['Livres publiés', 'aux Éd. Elsevier-Masson'] },
     { n: '12', l: ['Chapitres', 'présentés sur ce site'] },
     { n: '20+', l: ['Chapitres', "dans l'ouvrage complet"] },
     { n: '1978', l: ['Début du parcours', 'réflexologique'] },
@@ -295,7 +295,7 @@ const en: typeof fr = {
     cite: '— Guy Boitout · Preface of the 3rd work',
   },
   stats: [
-    { n: '3', l: ['Books published', 'by Elsevier Masson'] },
+    { n: '2', l: ['Books published', 'by Elsevier Masson'] },
     { n: '12', l: ['Chapters', 'featured on this site'] },
     { n: '20+', l: ['Chapters', 'in the complete book'] },
     { n: '1978', l: ['Beginning of the', 'R.O.P. Journey'] },
@@ -543,7 +543,7 @@ const de: typeof fr = {
     cite: '— Guy Boitout · Vorwort zum dritten Buch',
   },
   stats: [
-    { n: '3', l: ['Bücher veröffentlicht', 'bei Elsevier Masson'] },
+    { n: '2', l: ['Bücher veröffentlicht', 'bei Elsevier Masson'] },
     { n: '12', l: ['Auf dieser Website', 'vorgestellte Kapitel'] },
     { n: '20+', l: ['Kapitel im', 'vollständigen Buch'] },
     { n: '1978', l: ['Beginn der', 'R.O.P.-Reise'] },
@@ -791,7 +791,7 @@ const es: typeof fr = {
     cite: '— Guy Boitout · Prefacio del tercer libro',
   },
   stats: [
-    { n: '3', l: ['Libros publicados', 'por Elsevier Masson'] },
+    { n: '2', l: ['Libros publicados', 'por Elsevier Masson'] },
     { n: '12', l: ['Capítulos destacados', 'en este sitio'] },
     { n: '20+', l: ['Capítulos en el', 'libro completo'] },
     { n: '1978', l: ['Inicio del', 'recorrido R.O.P.'] },
@@ -1039,7 +1039,7 @@ const it: typeof fr = {
     cite: '— Guy Boitout · Prefazione al terzo libro',
   },
   stats: [
-    { n: '3', l: ['Libri pubblicati', 'da Elsevier Masson'] },
+    { n: '2', l: ['Libri pubblicati', 'da Elsevier Masson'] },
     { n: '12', l: ['Capitoli presentati', 'su questo sito'] },
     { n: '20+', l: ['Capitoli nel', 'libro completo'] },
     { n: '1978', l: ['Inizio del', 'percorso R.O.P.'] },
