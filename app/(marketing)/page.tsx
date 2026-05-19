@@ -14,7 +14,7 @@ export default function HomePage() {
     <main>
       {/* HEADER */}
       <header>
-        <a className="h-logo" href="#">R.O.P. — Guy Boitout</a>
+        <a className="h-logo" href="#">Guy Boitout</a>
         <div className="h-right">
           <nav>
             <a href="#genese">{t.nav.genese}</a>
@@ -81,7 +81,7 @@ export default function HomePage() {
             <div className="ap-b" />
           </div>
           <div className="prev">
-            <h5>{t.author.prevBooks}</h5>
+            <h5>{t.author.trilogyLbl}</h5>
             <div className="prev-r">
               <a
                 className="pb"
@@ -89,8 +89,12 @@ export default function HomePage() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Image src="/Livre1.png" alt="Book 1 cover" width={200} height={267} style={{ width: '100%', height: 'auto' }} />
-                <div className="pb-cap"><strong>Livre 1</strong>{t.author.viewOnAmazon}</div>
+                <Image src="/Livre1.png" alt="Réflexothérapie occipito-podale" width={200} height={267} style={{ width: '100%', height: 'auto' }} />
+                <div className="pb-cap">
+                  <strong>Livre 1 · 2015</strong>
+                  Réflexothérapie occipito-podale
+                  <span className="pb-pub">Éd. Elsevier-Masson</span>
+                </div>
               </a>
               <a
                 className="pb"
@@ -98,8 +102,20 @@ export default function HomePage() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Image src="/Livre2.png" alt="Book 2 cover" width={200} height={267} style={{ width: '100%', height: 'auto' }} />
-                <div className="pb-cap"><strong>Livre 2</strong>{t.author.viewOnAmazon}</div>
+                <Image src="/Livre2.png" alt="Réflexothérapie occipito-podale et système neuro-méningé" width={200} height={267} style={{ width: '100%', height: 'auto' }} />
+                <div className="pb-cap">
+                  <strong>Livre 2 · 2021</strong>
+                  Réflexothérapie occipito-podale et système neuro-méningé
+                  <span className="pb-pub">Éd. Elsevier-Masson</span>
+                </div>
+              </a>
+              <a className="pb" href="#acheter">
+                <div className="pb-soon">{t.author.comingSoon}</div>
+                <div className="pb-cap">
+                  <strong>Livre 3 · 2026</strong>
+                  Réflexothérapie occipito-podale et viscères des cavités abdominale et pelvienne
+                  <span className="pb-pub">{t.author.publisherSelf}</span>
+                </div>
               </a>
             </div>
           </div>
