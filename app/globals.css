@@ -107,7 +107,7 @@ h1 em { font-style:italic; color:var(--gold-l); }
 
 /* STATS */
 #stats { background:var(--parch); padding:56px 80px; }
-.stats-row { display:grid; grid-template-columns:repeat(4,1fr); gap:2px; }
+.stats-row { display:grid; grid-template-columns:repeat(3,1fr); gap:2px; }
 .stat { background:white; padding:36px 28px; text-align:center; }
 .stat:first-child { border-left:3px solid var(--sage); }
 .stat-n { font-family:'Cormorant Garamond',serif; font-size:3rem; font-weight:300; color:var(--sage); line-height:1; margin-bottom:6px; }

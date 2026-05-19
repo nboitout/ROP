@@ -48,8 +48,7 @@ const fr = {
   },
   stats: [
     { n: '2', l: ['Livres publiés', 'aux Éd. Elsevier-Masson'] },
-    { n: '12', l: ['Chapitres', 'présentés sur ce site'] },
-    { n: '20+', l: ['Chapitres', "dans l'ouvrage complet"] },
+    { n: '22', l: ['Chapitres — en ligne', 'et imprimé'] },
     { n: '1978', l: ['Début du parcours', 'réflexologique'] },
   ],
   architecture: {
@@ -296,8 +295,7 @@ const en: typeof fr = {
   },
   stats: [
     { n: '2', l: ['Books published', 'by Elsevier Masson'] },
-    { n: '12', l: ['Chapters', 'featured on this site'] },
-    { n: '20+', l: ['Chapters', 'in the complete book'] },
+    { n: '22', l: ['Chapters — online', 'and in print'] },
     { n: '1978', l: ['Beginning of the', 'R.O.P. Journey'] },
   ],
   architecture: {
@@ -544,8 +542,7 @@ const de: typeof fr = {
   },
   stats: [
     { n: '2', l: ['Bücher veröffentlicht', 'bei Elsevier Masson'] },
-    { n: '12', l: ['Auf dieser Website', 'vorgestellte Kapitel'] },
-    { n: '20+', l: ['Kapitel im', 'vollständigen Buch'] },
+    { n: '22', l: ['Kapitel — online', 'und im Druck'] },
     { n: '1978', l: ['Beginn der', 'R.O.P.-Reise'] },
   ],
   architecture: {
@@ -792,8 +789,7 @@ const es: typeof fr = {
   },
   stats: [
     { n: '2', l: ['Libros publicados', 'por Elsevier Masson'] },
-    { n: '12', l: ['Capítulos destacados', 'en este sitio'] },
-    { n: '20+', l: ['Capítulos en el', 'libro completo'] },
+    { n: '22', l: ['Capítulos — online', 'y en impreso'] },
     { n: '1978', l: ['Inicio del', 'recorrido R.O.P.'] },
   ],
   architecture: {
@@ -1040,8 +1036,7 @@ const it: typeof fr = {
   },
   stats: [
     { n: '2', l: ['Libri pubblicati', 'da Elsevier Masson'] },
-    { n: '12', l: ['Capitoli presentati', 'su questo sito'] },
-    { n: '20+', l: ['Capitoli nel', 'libro completo'] },
+    { n: '22', l: ['Capitoli — online', 'e a stampa'] },
     { n: '1978', l: ['Inizio del', 'percorso R.O.P.'] },
   ],
   architecture: {
