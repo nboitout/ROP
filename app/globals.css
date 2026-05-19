@@ -131,32 +131,29 @@ h1 em { font-style:italic; color:var(--gold-l); }
 #chapitres { background:var(--sage-pale); }
 .ch-hd { display:grid; grid-template-columns:1fr 1fr; gap:56px; align-items:end; margin-bottom:56px; }
 .ch-hd-d { font-size:.92rem; line-height:1.84; color:var(--i50); }
+.ch-part { margin-bottom:44px; }
+.ch-part:last-of-type { margin-bottom:0; }
+.ch-part-h { font-family:'Cormorant Garamond',serif; font-size:1.32rem; font-weight:500; color:var(--sage); letter-spacing:.02em; margin:0 0 18px; padding-bottom:10px; border-bottom:1px solid rgba(74,107,90,.18); }
 .ch-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(305px,1fr)); gap:20px; }
 .cc { background:white; border-radius:3px; overflow:hidden; position:relative; box-shadow:0 2px 16px rgba(26,26,24,.055); transition:transform .28s, box-shadow .28s; display:flex; flex-direction:column; }
 .cc:hover { transform:translateY(-5px); box-shadow:0 12px 34px rgba(26,26,24,.1); }
-.cc.fr { border:1px solid rgba(74,107,90,.2); }
-.cc.fr::before { content:''; position:absolute; top:0; left:0; width:3px; height:100%; background:var(--sage); }
-.cc.intro { border:1px solid rgba(160,124,58,.2); }
-.cc.intro::before { content:''; position:absolute; top:0; left:0; width:3px; height:100%; background:var(--gold); }
-.cc.intro .cc-body { background:linear-gradient(180deg, rgba(160,124,58,.05) 0%, rgba(255,255,255,0) 100%); }
-.cc.intro .cc-lbl { color:rgba(160,124,58,.9); font-weight:600; }
-.cc.intro .cc-title { font-size:1.54rem; line-height:1.16; margin-bottom:15px; }
-.cc.intro .cc-txt { font-size:.9rem; line-height:1.95; color:rgba(26,26,24,.84); }
-.cc-top { padding:26px 26px 0; display:flex; justify-content:space-between; align-items:flex-start; }
-.cc-n { font-family:'Cormorant Garamond',serif; font-size:3.3rem; font-weight:300; color:var(--i08); line-height:1; }
+.cc.free { border:1px solid rgba(74,107,90,.2); }
+.cc.free::before { content:''; position:absolute; top:0; left:0; width:3px; height:100%; background:var(--sage); }
+.cc-top { padding:22px 24px 0; display:flex; justify-content:space-between; align-items:flex-start; }
+.cc-n { font-family:'Cormorant Garamond',serif; font-size:2.8rem; font-weight:300; color:var(--i08); line-height:1; }
 .badge { font-size:.61rem; font-weight:500; letter-spacing:.15em; text-transform:uppercase; padding:4px 10px; border-radius:2px; }
 .bf { background:rgba(74,107,90,.1); color:var(--sage); }
 .bp { background:rgba(160,124,58,.1); color:var(--gold); }
 .bi { background:rgba(160,124,58,.08); color:var(--gold); border:1px solid rgba(160,124,58,.2); }
-.cc-body { padding:11px 26px 26px; flex:1; }
+.cc-body { padding:10px 24px 24px; flex:1; display:flex; flex-direction:column; }
 .cc-lbl { font-size:.64rem; letter-spacing:.17em; text-transform:uppercase; color:var(--i30); margin-bottom:5px; }
-.cc-title { font-family:'Cormorant Garamond',serif; font-size:1.38rem; font-weight:400; line-height:1.2; color:var(--ink); margin-bottom:13px; }
-.cc-txt { font-size:.83rem; line-height:1.82; color:var(--i50); margin-bottom:20px; }
+.cc-title { font-family:'Cormorant Garamond',serif; font-size:1.32rem; font-weight:400; line-height:1.22; color:var(--ink); margin-bottom:12px; }
+.cc-txt { font-size:.82rem; line-height:1.78; color:var(--i50); margin-bottom:18px; }
 .cc-tags { display:flex; flex-wrap:wrap; gap:5px; }
 .ct { font-size:.64rem; padding:3px 8px; background:var(--sage-pale); border-radius:2px; color:var(--i30); }
-.cc-ft { padding:17px 26px; border-top:1px solid rgba(26,26,24,.05); display:flex; justify-content:space-between; align-items:center; }
-.cc-pr { font-family:'Cormorant Garamond',serif; font-size:1.12rem; color:var(--gold); }
-.cc-pr small { font-family:'DM Sans',sans-serif; font-size:.67rem; color:var(--i30); display:block; }
+.cc-free-link { display:inline-block; margin-top:18px; font-size:.74rem; font-weight:500; color:var(--sage); letter-spacing:.02em; border-bottom:1px solid rgba(74,107,90,.35); padding-bottom:2px; align-self:flex-start; transition:color .2s, border-color .2s; }
+.cc-free-link:hover { color:#3a5a4a; border-color:var(--sage); }
+.ch-foot { display:flex; justify-content:center; margin-top:48px; }
 
 /* PROTOCOLE */
 #protocole { background:var(--ink); padding:80px; }

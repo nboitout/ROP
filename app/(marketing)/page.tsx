@@ -191,30 +191,38 @@ export default function HomePage() {
           </div>
           <p className="ch-hd-d">{t.chapters.desc}</p>
         </div>
-        <div className="ch-grid">
-          {t.chapters.cards.map((card) => (
-            <ChapterCard
-              key={card.num}
-              num={card.num}
-              badge={
-                card.variant === 'intro'
-                  ? <span className="badge bi">{card.badgeLabel}</span>
-                  : card.variant === 'fr'
-                  ? <span className="badge bf">{card.badgeLabel}</span>
-                  : <span className="badge bp">{card.badgeLabel}</span>
-              }
-              variant={card.variant}
-              label={card.label}
-              title={card.title}
-              tags={card.tags}
-              btnClass={card.btnClass}
-              btnLabel={card.btnLabel ?? t.chapters.defaultBtn}
-              included={t.chapters.included}
-              includedSub={t.chapters.includedSub}
-            >
-              {card.body}
-            </ChapterCard>
-          ))}
+        {t.chapters.parts.map((part) => {
+          const partCards = t.chapters.cards.filter((c) => c.part === part.id)
+          if (!partCards.length) return null
+          return (
+            <div key={part.id} className="ch-part">
+              <div className="ch-part-h">{part.title}</div>
+              <div className="ch-grid">
+                {partCards.map((card) => {
+                  const isFree = card.variant === 'free'
+                  return (
+                    <ChapterCard
+                      key={card.num}
+                      num={card.num}
+                      variant={card.variant}
+                      label={card.label}
+                      title={card.title}
+                      tags={card.tags}
+                      isFree={isFree}
+                      freeBadge={t.chapters.freeBadge}
+                      freeBtnLabel={t.chapters.freeBtnLabel}
+                      freeBtnHref="/chapitres-gratuits"
+                    >
+                      {card.body}
+                    </ChapterCard>
+                  )
+                })}
+              </div>
+            </div>
+          )
+        })}
+        <div className="ch-foot">
+          <a href="#acheter" className="btn b-gold">{t.chapters.cta}</a>
         </div>
       </section>
 
@@ -376,26 +384,24 @@ export default function HomePage() {
 
 /* ── Shared chapter card component ── */
 function ChapterCard({
-  num, badge, variant, label, title, tags, btnClass = 'b-gold', btnLabel = 'Voir le livre →',
-  included, includedSub, children,
+  num, variant, label, title, tags, isFree, freeBadge, freeBtnLabel, freeBtnHref, children,
 }: {
   num: string
-  badge: React.ReactNode
-  variant?: 'intro' | 'fr'
+  variant?: 'free'
   label: string
   title: string
   tags: string[]
-  btnClass?: string
-  btnLabel?: string
-  included: string
-  includedSub: string
+  isFree: boolean
+  freeBadge: string
+  freeBtnLabel: string
+  freeBtnHref: string
   children: React.ReactNode
 }) {
   return (
     <div className={`cc${variant ? ` ${variant}` : ''}`}>
       <div className="cc-top">
         <div className="cc-n">{num}</div>
-        {badge}
+        {isFree && <span className="badge bf">{freeBadge}</span>}
       </div>
       <div className="cc-body">
         <div className="cc-lbl">{label}</div>
@@ -404,10 +410,9 @@ function ChapterCard({
         <div className="cc-tags">
           {tags.map((tag) => <span key={tag} className="ct">{tag}</span>)}
         </div>
-      </div>
-      <div className="cc-ft">
-        <div className="cc-pr">{included}<small>{includedSub}</small></div>
-        <a href="#acheter" className={`btn ${btnClass}`} style={{ padding: '8px 18px', fontSize: '.67rem' }}>{btnLabel}</a>
+        {isFree && (
+          <a href={freeBtnHref} className="cc-free-link">{freeBtnLabel}</a>
+        )}
       </div>
     </div>
   )
