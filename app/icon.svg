@@ -1,8 +1,16 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
   <rect width="64" height="64" rx="10" fill="#4a6b5a"/>
-  <text x="32" y="46" text-anchor="middle"
-        font-family="'Cormorant Garamond', 'EB Garamond', Garamond, serif"
-        font-size="44" font-weight="400" font-style="italic"
-        fill="#f5f0e8">R</text>
-  <circle cx="47" cy="20" r="3.2" fill="#a07c3a"/>
+  <g fill="#f5f0e8">
+    <!-- sole -->
+    <path d="M32 22 C24 22 20 30 20 38 C20 46 24 52 32 52 C40 52 44 46 44 38 C44 30 40 22 32 22 Z"/>
+    <!-- big toe -->
+    <ellipse cx="26" cy="16" rx="3.6" ry="4.2"/>
+    <!-- toes -->
+    <circle cx="32" cy="13.5" r="2.4"/>
+    <circle cx="37" cy="14"   r="2.1"/>
+    <circle cx="41" cy="15.5" r="1.9"/>
+    <circle cx="44.5" cy="17.8" r="1.7"/>
+  </g>
+  <!-- reflex point -->
+  <circle cx="27" cy="34" r="2.6" fill="#a07c3a"/>
 </svg>
