@@ -49,11 +49,11 @@ const fr = {
   },
   stats: [
     { n: '2', l: ['Livres publiés', 'aux Éd. Elsevier-Masson'] },
-    { n: '22', l: ['Chapitres — en ligne', 'et imprimé'] },
+    { n: '22', l: ['Chapitres du 3ᵉ ouvrage', 'en ligne et imprimé'] },
     { n: '1978', l: ['Début du parcours', 'réflexologique'] },
   ],
   architecture: {
-    lbl: "Architecture de l'ouvrage",
+    lbl: "Architecture du 3ᵉ ouvrage",
     h2: { before: 'Un fil conducteur ', em: 'progressif', after: '' },
     desc: "De la préface personnelle aux viscères abdominaux, l'ouvrage construit une progression logique en quatre grandes parties. Chaque couche s'appuie sur la précédente pour offrir au praticien une compréhension clinique complète et opérationnelle.",
     flow: [
@@ -297,11 +297,11 @@ const en: typeof fr = {
   },
   stats: [
     { n: '2', l: ['Books published', 'by Elsevier Masson'] },
-    { n: '22', l: ['Chapters — online', 'and in print'] },
+    { n: '22', l: ['Chapters in the 3rd book', 'online and in print'] },
     { n: '1978', l: ['Beginning of the', 'R.O.P. Journey'] },
   ],
   architecture: {
-    lbl: 'Book structure',
+    lbl: 'Structure of the 3rd book',
     h2: { before: 'A ', em: 'progressive', after: ' thread' },
     desc: 'From the personal preface to the abdominal viscera, the book follows a logical progression through four major parts. Each layer builds on the previous one, giving practitioners a complete, practical clinical understanding.',
     flow: [
@@ -545,11 +545,11 @@ const de: typeof fr = {
   },
   stats: [
     { n: '2', l: ['Bücher veröffentlicht', 'bei Elsevier Masson'] },
-    { n: '22', l: ['Kapitel — online', 'und im Druck'] },
+    { n: '22', l: ['Kapitel im 3. Buch', 'online und im Druck'] },
     { n: '1978', l: ['Beginn der', 'R.O.P.-Reise'] },
   ],
   architecture: {
-    lbl: 'Aufbau des Buches',
+    lbl: 'Aufbau des 3. Buches',
     h2: { before: 'Eine ', em: 'schrittweise', after: ' Progression' },
     desc: 'Vom persönlichen Vorwort bis zu den abdominalen Viszera folgt das Buch einer logischen Progression in vier großen Teilen. Jede Ebene baut auf der vorherigen auf und vermittelt Praktikern ein vollständiges, praktisches klinisches Verständnis.',
     flow: [
@@ -793,11 +793,11 @@ const es: typeof fr = {
   },
   stats: [
     { n: '2', l: ['Libros publicados', 'por Elsevier Masson'] },
-    { n: '22', l: ['Capítulos — online', 'y en impreso'] },
+    { n: '22', l: ['Capítulos del 3ᵉʳ libro', 'en línea y en impreso'] },
     { n: '1978', l: ['Inicio del', 'recorrido R.O.P.'] },
   ],
   architecture: {
-    lbl: 'Estructura del libro',
+    lbl: 'Estructura del 3ᵉʳ libro',
     h2: { before: 'Una progresión ', em: 'paso a paso', after: '' },
     desc: 'Desde el prefacio personal hasta las vísceras abdominales, el libro sigue una progresión lógica en cuatro grandes partes. Cada nivel se apoya en el anterior para ofrecer a los profesionales una comprensión clínica completa y práctica.',
     flow: [
@@ -1041,11 +1041,11 @@ const it: typeof fr = {
   },
   stats: [
     { n: '2', l: ['Libri pubblicati', 'da Elsevier Masson'] },
-    { n: '22', l: ['Capitoli — online', 'e a stampa'] },
+    { n: '22', l: ['Capitoli del 3° libro', 'online e a stampa'] },
     { n: '1978', l: ['Inizio del', 'percorso R.O.P.'] },
   ],
   architecture: {
-    lbl: 'Struttura del libro',
+    lbl: 'Struttura del 3° libro',
     h2: { before: 'Una progressione ', em: 'passo dopo passo', after: '' },
     desc: 'Dalla prefazione personale alle viscere addominali, il libro segue una progressione logica in quattro grandi parti. Ogni livello si basa sul precedente per offrire ai professionisti una comprensione clinica completa e pratica.',
     flow: [
