@@ -114,7 +114,7 @@ export default function HomePage() {
           </div>
           {t.author.bio.map((p, i) => <p key={i}>{p}</p>)}
           <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap', marginTop: 14 }}>
-            <a href="https://www.reflexo-occipitopodale.com" target="_blank" rel="noopener noreferrer" className="btn b-out">{t.author.btn1}</a>
+            <a href="https://www.reflexo-occipitopodale.com/accueil" target="_blank" rel="noopener noreferrer" className="btn b-out">{t.author.btn1}</a>
             <a href="https://www.reflexo-occipitopodale.com/formations-réflexo-occipito-podale" target="_blank" rel="noopener noreferrer" className="btn b-out">{t.author.btn2}</a>
           </div>
         </div>
