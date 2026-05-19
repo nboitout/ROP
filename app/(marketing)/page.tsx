@@ -4,6 +4,7 @@ import Image from 'next/image'
 import HeroCarousel from '@/components/HeroCarousel'
 import QuoteSlider from '@/components/QuoteSlider'
 import FreeChapterForm from '@/components/FreeChapterForm'
+import BookNotifyForm from '@/components/BookNotifyForm'
 import LanguageToggle from '@/components/LanguageToggle'
 import { useLanguage } from '@/app/i18n/LanguageContext'
 
@@ -370,7 +371,7 @@ export default function HomePage() {
             <ul className="pc-l">
               {t.pricing.plan1.features.map((f) => <li key={f}>{f}</li>)}
             </ul>
-            <a href="/chapitres-gratuits" className="btn b-out" style={{ width: '100%', textAlign: 'center' }}>{t.pricing.plan1.cta}</a>
+            <a href="#notify" className="btn b-out" style={{ width: '100%', textAlign: 'center' }}>{t.pricing.plan1.cta}</a>
           </div>
           <div className="pc star" data-badge={t.pricing.recommended}>
             <div className="pc-n">{t.pricing.plan2.name}</div>
@@ -390,7 +391,17 @@ export default function HomePage() {
             <ul className="pc-l">
               {t.pricing.plan3.features.map((f) => <li key={f}>{f}</li>)}
             </ul>
-            <a href="/chapitres-gratuits" className="btn b-out" style={{ width: '100%', textAlign: 'center' }}>{t.pricing.plan3.cta}</a>
+            <a href="#notify" className="btn b-out" style={{ width: '100%', textAlign: 'center' }}>{t.pricing.plan3.cta}</a>
+          </div>
+        </div>
+
+        <div id="notify" className="cr-end" style={{ marginTop: 56, paddingTop: 0, borderTop: 'none' }}>
+          <div className="cr-end-card">
+            <p className="cr-end-eyebrow">{t.pricing.notify.eyebrow}</p>
+            <h3 className="cr-end-title">{t.pricing.notify.title}</h3>
+            <p className="cr-end-book"><em>{t.pricing.notify.book}</em></p>
+            <p className="cr-end-body">{t.pricing.notify.body}</p>
+            <BookNotifyForm labels={t.pricing.notify.form} source="book-notify-pricing" />
           </div>
         </div>
       </section>

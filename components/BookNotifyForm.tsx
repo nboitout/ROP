@@ -2,7 +2,35 @@
 
 import { useState } from 'react'
 
-export default function BookNotifyForm() {
+export type BookNotifyLabels = {
+  label: string
+  placeholder: string
+  submit: string
+  submitting: string
+  note: string
+  success: string
+  invalid: string
+  serverError: string
+}
+
+const DEFAULT_LABELS: BookNotifyLabels = {
+  label: 'Être notifié·e de la parution',
+  placeholder: 'votre@email.com',
+  submit: 'M’avertir',
+  submitting: 'Envoi…',
+  note: 'Une seule adresse, une seule notification à la parution.',
+  success: '✓ Merci, vous serez informé·e dès la parution.',
+  invalid: 'Adresse e-mail invalide.',
+  serverError: 'Une erreur est survenue. Veuillez réessayer.',
+}
+
+type Props = {
+  labels?: Partial<BookNotifyLabels>
+  source?: string
+}
+
+export default function BookNotifyForm({ labels, source = 'book-notify' }: Props = {}) {
+  const l = { ...DEFAULT_LABELS, ...labels }
   const [email, setEmail] = useState('')
   const [error, setError] = useState('')
   const [loading, setLoading] = useState(false)
@@ -13,7 +41,7 @@ export default function BookNotifyForm() {
     setError('')
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
     if (!emailRegex.test(email)) {
-      setError('Adresse e-mail invalide.')
+      setError(l.invalid)
       return
     }
     setLoading(true)
@@ -21,12 +49,12 @@ export default function BookNotifyForm() {
       const res = await fetch('/api/free-chapter', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ fullName: 'notify', email, source: 'book-notify' }),
+        body: JSON.stringify({ fullName: 'notify', email, source }),
       })
       if (!res.ok) throw new Error('server')
       setSuccess(true)
     } catch {
-      setError('Une erreur est survenue. Veuillez réessayer.')
+      setError(l.serverError)
     } finally {
       setLoading(false)
     }
@@ -35,30 +63,30 @@ export default function BookNotifyForm() {
   if (success) {
     return (
       <p className="cr-notify-success">
-        ✓ Merci, vous serez informé·e dès la parution.
+        {l.success}
       </p>
     )
   }
 
   return (
     <form className="cr-notify" onSubmit={handleSubmit} noValidate>
-      <label htmlFor="cr-notify-email" className="cr-notify-label">Être notifié·e de la parution</label>
+      <label htmlFor="cr-notify-email" className="cr-notify-label">{l.label}</label>
       <div className="cr-notify-row">
         <input
           id="cr-notify-email"
           type="email"
-          placeholder="votre@email.com"
+          placeholder={l.placeholder}
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           autoComplete="email"
           aria-invalid={!!error}
         />
         <button type="submit" className="btn b-sage" disabled={loading}>
-          {loading ? 'Envoi…' : 'M’avertir'}
+          {loading ? l.submitting : l.submit}
         </button>
       </div>
       {error && <p className="cr-notify-error">{error}</p>}
-      <p className="cr-notify-note">Une seule adresse, une seule notification à la parution.</p>
+      <p className="cr-notify-note">{l.note}</p>
     </form>
   )
 }
