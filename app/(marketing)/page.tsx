@@ -185,7 +185,7 @@ export default function HomePage() {
         <div className="flow">
           {t.architecture.flow.map((fc) => (
             <div key={fc.t} className="fc">
-              <div className={`fc-icon${fc.icon === '🫁' ? ' go' : ''}`}>{fc.icon}</div>
+              <div className={`fc-icon${fc.icon === '🫁' || fc.icon === '💧' ? ' go' : ''}`}>{fc.icon}</div>
               <div className="fc-t">{fc.t}</div>
               <div className="fc-s">{fc.s}</div>
               <div className="fc-chs">

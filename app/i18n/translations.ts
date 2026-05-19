@@ -55,12 +55,13 @@ const fr = {
   architecture: {
     lbl: "Architecture du 3ᵉ ouvrage",
     h2: { before: 'Un fil conducteur ', em: 'progressif', after: '' },
-    desc: "De la préface personnelle aux viscères abdominaux, l'ouvrage construit une progression logique en quatre grandes parties. Chaque couche s'appuie sur la précédente pour offrir au praticien une compréhension clinique complète et opérationnelle.",
+    desc: "De la préface personnelle aux organes uro-génitaux du pelvis, l'ouvrage construit une progression logique en cinq grandes parties. Chaque couche s'appuie sur la précédente pour offrir au praticien une compréhension clinique complète et opérationnelle.",
     flow: [
-      { icon: '✍️', t: 'Introduction', s: "Genèse de la méthode, trajectoire personnelle et ADN de la R.O.P.", chs: [['Ch. 0 · Préface', ''], ['Ch. 1 · Généralités', ''], ['Ch. 2 · Protocole', '']] },
-      { icon: '🧠', t: 'Systèmes nerveux', s: 'SNC (trois cerveaux, tronc cérébral) et SNA (parasympathique, sympathique, nerf vague).', chs: [['Ch. 3 · SNC', ''], ['Ch. 4 · SNA', '']] },
+      { icon: '✍️', t: 'Introduction', s: "Genèse de la méthode, généralités cliniques et protocole R.O.P.", chs: [['Ch. 0 · Préface ✦', 'fr'], ['Ch. 1 · Généralités', ''], ['Ch. 2 · Protocole', '']] },
+      { icon: '🧠', t: 'Systèmes nerveux', s: 'SNC (tronc cérébral, limbique, neurotransmetteurs) et SNA (sympathique, parasympathique, nerf vague).', chs: [['Ch. 3 · SNC ✦', 'fr'], ['Ch. 4 · SNA', '']] },
       { icon: '⚖️', t: 'Stress & Régulation', s: 'Mécanisme de stress, théorie polyvagale et régulation neuro-végétative.', chs: [['Ch. 5 · Stress ✦', 'fr'], ['Ch. 6 · Polyvagale', '']] },
-      { icon: '🫁', t: 'Viscères', s: "Cavités, diaphragme, estomac, duodénum, intestin grêle — anatomie et cartographies R.O.P.", chs: [['Ch. 7', ''], ['Ch. 8', ''], ['Ch. 9', ''], ['Ch. 10', ''], ['Ch. 14', '']] },
+      { icon: '🫁', t: 'Viscères abdominaux', s: "Cavités, diaphragme, tube digestif, glandes annexes et côlon — anatomie et cartographies R.O.P.", chs: [['Ch. 7-8 · Cadre', ''], ['Ch. 9-10 · Digestif', ''], ['Ch. 11-13 · Glandes', ''], ['Ch. 14-15 · Intestins', '']] },
+      { icon: '💧', t: 'Uro-génital & pelvien', s: "Reins, cavité pelvienne, vessie, organes génitaux et système érectile — anatomie et abords R.O.P.", chs: [['Ch. 16 · Reins', ''], ['Ch. 17 · Pelvis', ''], ['Ch. 18 · Vessie', ''], ['Ch. 19-21 · Génital', '']] },
     ],
   },
   chapters: {
@@ -312,12 +313,13 @@ const en: typeof fr = {
   architecture: {
     lbl: 'Structure of the 3rd book',
     h2: { before: 'A ', em: 'progressive', after: ' thread' },
-    desc: 'From the personal preface to the abdominal viscera, the book follows a logical progression through four major parts. Each layer builds on the previous one, giving practitioners a complete, practical clinical understanding.',
+    desc: 'From the personal preface to the urogenital organs of the pelvis, the book follows a logical progression through five major parts. Each layer builds on the previous one, giving practitioners a complete, practical clinical understanding.',
     flow: [
-      { icon: '✍️', t: 'Introduction', s: 'Genesis of the method, personal journey and the DNA of R.O.P.', chs: [['Ch. 0 · Preface', ''], ['Ch. 1 · Generalities', ''], ['Ch. 2 · Protocol', '']] },
-      { icon: '🧠', t: 'Nervous Systems', s: 'CNS — the three brains and the brainstem — and ANS: parasympathetic, sympathetic, and vagus nerve pathways.', chs: [['Ch. 3 · CNS', ''], ['Ch. 4 · ANS', '']] },
+      { icon: '✍️', t: 'Introduction', s: 'Genesis of the method, clinical generalities and the R.O.P. protocol.', chs: [['Ch. 0 · Preface ✦', 'fr'], ['Ch. 1 · Generalities', ''], ['Ch. 2 · Protocol', '']] },
+      { icon: '🧠', t: 'Nervous Systems', s: 'CNS (brainstem, limbic system, neurotransmitters) and ANS (sympathetic, parasympathetic, vagus nerve).', chs: [['Ch. 3 · CNS ✦', 'fr'], ['Ch. 4 · ANS', '']] },
       { icon: '⚖️', t: 'Stress & Regulation', s: 'Stress mechanisms, polyvagal theory, and autonomic regulation.', chs: [['Ch. 5 · Stress ✦', 'fr'], ['Ch. 6 · Polyvagal Theory', '']] },
-      { icon: '🫁', t: 'Viscera', s: 'Body cavities, diaphragm, stomach, duodenum, and small intestine — anatomy and R.O.P. mapping.', chs: [['Ch. 7', ''], ['Ch. 8', ''], ['Ch. 9', ''], ['Ch. 10', ''], ['Ch. 14', '']] },
+      { icon: '🫁', t: 'Abdominal Viscera', s: 'Cavities, diaphragm, digestive tract, accessory glands, and colon — anatomy and R.O.P. mapping.', chs: [['Ch. 7-8 · Framework', ''], ['Ch. 9-10 · Digestive', ''], ['Ch. 11-13 · Glands', ''], ['Ch. 14-15 · Intestines', '']] },
+      { icon: '💧', t: 'Urogenital & Pelvic', s: 'Kidneys, pelvic cavity, bladder, reproductive organs, and erectile system — anatomy and R.O.P. approach.', chs: [['Ch. 16 · Kidneys', ''], ['Ch. 17 · Pelvis', ''], ['Ch. 18 · Bladder', ''], ['Ch. 19-21 · Genital', '']] },
     ],
   },
   chapters: {
@@ -569,12 +571,13 @@ const de: typeof fr = {
   architecture: {
     lbl: 'Aufbau des 3. Buches',
     h2: { before: 'Eine ', em: 'schrittweise', after: ' Progression' },
-    desc: 'Vom persönlichen Vorwort bis zu den abdominalen Viszera folgt das Buch einer logischen Progression in vier großen Teilen. Jede Ebene baut auf der vorherigen auf und vermittelt Praktikern ein vollständiges, praktisches klinisches Verständnis.',
+    desc: 'Vom persönlichen Vorwort bis zu den urogenitalen Organen des Beckens folgt das Buch einer logischen Progression in fünf großen Teilen. Jede Ebene baut auf der vorherigen auf und vermittelt Praktikern ein vollständiges, praktisches klinisches Verständnis.',
     flow: [
-      { icon: '✍️', t: 'Einführung', s: 'Entstehung der Methode, persönlicher Weg und die DNA der R.O.P.', chs: [['Kap. 0 · Vorwort', ''], ['Kap. 1 · Allgemeine Prinzipien', ''], ['Kap. 2 · Protokoll', '']] },
-      { icon: '🧠', t: 'Die Nervensysteme', s: 'ZNS — die drei Gehirne und der Hirnstamm — und ANS: parasympathische, sympathische und vagale Bahnen.', chs: [['Kap. 3 · ZNS', ''], ['Kap. 4 · ANS', '']] },
+      { icon: '✍️', t: 'Einführung', s: 'Entstehung der Methode, klinische Grundlagen und das R.O.P.-Protokoll.', chs: [['Kap. 0 · Vorwort ✦', 'fr'], ['Kap. 1 · Allgemeine Prinzipien', ''], ['Kap. 2 · Protokoll', '']] },
+      { icon: '🧠', t: 'Die Nervensysteme', s: 'ZNS (Hirnstamm, limbisches System, Neurotransmitter) und ANS (Sympathikus, Parasympathikus, Vagusnerv).', chs: [['Kap. 3 · ZNS ✦', 'fr'], ['Kap. 4 · ANS', '']] },
       { icon: '⚖️', t: 'Stress und Regulation', s: 'Stressmechanismen, Polyvagaltheorie und autonome Regulation.', chs: [['Kap. 5 · Stress ✦', 'fr'], ['Kap. 6 · Polyvagaltheorie', '']] },
-      { icon: '🫁', t: 'Die Viszera', s: 'Körperhöhlen, Zwerchfell, Magen, Duodenum und Dünndarm — Anatomie und R.O.P.-Kartierung.', chs: [['Kap. 7', ''], ['Kap. 8', ''], ['Kap. 9', ''], ['Kap. 10', ''], ['Kap. 14', '']] },
+      { icon: '🫁', t: 'Bauchorgane', s: 'Höhlen, Zwerchfell, Verdauungstrakt, Drüsen und Kolon — Anatomie und R.O.P.-Kartierung.', chs: [['Kap. 7-8 · Rahmen', ''], ['Kap. 9-10 · Digestiv', ''], ['Kap. 11-13 · Drüsen', ''], ['Kap. 14-15 · Darm', '']] },
+      { icon: '💧', t: 'Urogenital & Becken', s: 'Nieren, Beckenhöhle, Harnblase, Geschlechtsorgane und Erektionssystem — Anatomie und R.O.P.-Ansatz.', chs: [['Kap. 16 · Nieren', ''], ['Kap. 17 · Becken', ''], ['Kap. 18 · Blase', ''], ['Kap. 19-21 · Genital', '']] },
     ],
   },
   chapters: {
@@ -826,12 +829,13 @@ const es: typeof fr = {
   architecture: {
     lbl: 'Estructura del 3ᵉʳ libro',
     h2: { before: 'Una progresión ', em: 'paso a paso', after: '' },
-    desc: 'Desde el prefacio personal hasta las vísceras abdominales, el libro sigue una progresión lógica en cuatro grandes partes. Cada nivel se apoya en el anterior para ofrecer a los profesionales una comprensión clínica completa y práctica.',
+    desc: 'Desde el prefacio personal hasta los órganos urogenitales de la pelvis, el libro sigue una progresión lógica en cinco grandes partes. Cada nivel se apoya en el anterior para ofrecer a los profesionales una comprensión clínica completa y práctica.',
     flow: [
-      { icon: '✍️', t: 'Introducción', s: 'Génesis del método, recorrido personal y ADN de la R.O.P.', chs: [['Cap. 0 · Prefacio', ''], ['Cap. 1 · Principios generales', ''], ['Cap. 2 · Protocolo', '']] },
-      { icon: '🧠', t: 'Los sistemas nerviosos', s: 'SNC — los tres cerebros y el tronco encefálico — y SNA: vías parasimpáticas, simpáticas y vagales.', chs: [['Cap. 3 · SNC', ''], ['Cap. 4 · SNA', '']] },
+      { icon: '✍️', t: 'Introducción', s: 'Génesis del método, principios clínicos y protocolo R.O.P.', chs: [['Cap. 0 · Prefacio ✦', 'fr'], ['Cap. 1 · Principios generales', ''], ['Cap. 2 · Protocolo', '']] },
+      { icon: '🧠', t: 'Los sistemas nerviosos', s: 'SNC (tronco encefálico, sistema límbico, neurotransmisores) y SNA (simpático, parasimpático, nervio vago).', chs: [['Cap. 3 · SNC ✦', 'fr'], ['Cap. 4 · SNA', '']] },
       { icon: '⚖️', t: 'Estrés y regulación', s: 'Mecanismos del estrés, teoría polivagal y regulación autónoma.', chs: [['Cap. 5 · Estrés ✦', 'fr'], ['Cap. 6 · Teoría polivagal', '']] },
-      { icon: '🫁', t: 'Las vísceras', s: 'Cavidades corporales, diafragma, estómago, duodeno e intestino delgado — anatomía y cartografía R.O.P.', chs: [['Cap. 7', ''], ['Cap. 8', ''], ['Cap. 9', ''], ['Cap. 10', ''], ['Cap. 14', '']] },
+      { icon: '🫁', t: 'Vísceras abdominales', s: 'Cavidades, diafragma, tracto digestivo, glándulas anexas y colon — anatomía y cartografía R.O.P.', chs: [['Cap. 7-8 · Marco', ''], ['Cap. 9-10 · Digestivo', ''], ['Cap. 11-13 · Glándulas', ''], ['Cap. 14-15 · Intestinos', '']] },
+      { icon: '💧', t: 'Urogenital y pélvico', s: 'Riñones, cavidad pélvica, vejiga, órganos genitales y sistema eréctil — anatomía y abordaje R.O.P.', chs: [['Cap. 16 · Riñones', ''], ['Cap. 17 · Pelvis', ''], ['Cap. 18 · Vejiga', ''], ['Cap. 19-21 · Genital', '']] },
     ],
   },
   chapters: {
@@ -1083,12 +1087,13 @@ const it: typeof fr = {
   architecture: {
     lbl: 'Struttura del 3° libro',
     h2: { before: 'Una progressione ', em: 'passo dopo passo', after: '' },
-    desc: 'Dalla prefazione personale alle viscere addominali, il libro segue una progressione logica in quattro grandi parti. Ogni livello si basa sul precedente per offrire ai professionisti una comprensione clinica completa e pratica.',
+    desc: 'Dalla prefazione personale agli organi uro-genitali del bacino, il libro segue una progressione logica in cinque grandi parti. Ogni livello si basa sul precedente per offrire ai professionisti una comprensione clinica completa e pratica.',
     flow: [
-      { icon: '✍️', t: 'Introduzione', s: 'Genesi del metodo, percorso personale e DNA della R.O.P.', chs: [['Cap. 0 · Prefazione', ''], ['Cap. 1 · Principi generali', ''], ['Cap. 2 · Protocollo', '']] },
-      { icon: '🧠', t: 'I sistemi nervosi', s: 'SNC — i tre cervelli e il tronco encefalico — e SNA: vie parasimpatiche, simpatiche e vagali.', chs: [['Cap. 3 · SNC', ''], ['Cap. 4 · SNA', '']] },
+      { icon: '✍️', t: 'Introduzione', s: 'Genesi del metodo, principi clinici e protocollo R.O.P.', chs: [['Cap. 0 · Prefazione ✦', 'fr'], ['Cap. 1 · Principi generali', ''], ['Cap. 2 · Protocollo', '']] },
+      { icon: '🧠', t: 'I sistemi nervosi', s: 'SNC (tronco encefalico, sistema limbico, neurotrasmettitori) e SNA (simpatico, parasimpatico, nervo vago).', chs: [['Cap. 3 · SNC ✦', 'fr'], ['Cap. 4 · SNA', '']] },
       { icon: '⚖️', t: 'Stress e regolazione', s: 'Meccanismi dello stress, teoria polivagale e regolazione autonoma.', chs: [['Cap. 5 · Stress ✦', 'fr'], ['Cap. 6 · Teoria polivagale', '']] },
-      { icon: '🫁', t: 'Le viscere', s: 'Cavità corporee, diaframma, stomaco, duodeno e intestino tenue — anatomia e cartografia R.O.P.', chs: [['Cap. 7', ''], ['Cap. 8', ''], ['Cap. 9', ''], ['Cap. 10', ''], ['Cap. 14', '']] },
+      { icon: '🫁', t: 'Visceri addominali', s: 'Cavità, diaframma, tubo digerente, ghiandole annesse e colon — anatomia e cartografia R.O.P.', chs: [['Cap. 7-8 · Cornice', ''], ['Cap. 9-10 · Digerente', ''], ['Cap. 11-13 · Ghiandole', ''], ['Cap. 14-15 · Intestini', '']] },
+      { icon: '💧', t: 'Uro-genitale e pelvico', s: 'Reni, cavità pelvica, vescica, organi genitali e sistema erettile — anatomia e approccio R.O.P.', chs: [['Cap. 16 · Reni', ''], ['Cap. 17 · Pelvi', ''], ['Cap. 18 · Vescica', ''], ['Cap. 19-21 · Genitale', '']] },
     ],
   },
   chapters: {
