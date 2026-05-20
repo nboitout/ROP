@@ -30,6 +30,9 @@ export default function ChapterReader({ chapter, bookTitle }: Props) {
   const [slideZoom, setSlideZoom] = useState(0.75)
   const viewerBodyRef = useRef<HTMLDivElement>(null)
   const [lightbox, setLightbox] = useState<{ src: string; alt: string; caption: string } | null>(null)
+  const [lightboxZoom, setLightboxZoom] = useState(1)
+
+  function closeLightbox() { setLightbox(null); setLightboxZoom(1) }
   const articleRef = useRef<HTMLElement>(null)
   const peekCloseRef = useRef<ReturnType<typeof setTimeout> | null>(null)
 
@@ -92,7 +95,7 @@ export default function ChapterReader({ chapter, bookTitle }: Props) {
 
   useEffect(() => {
     if (!lightbox) return
-    function onKey(e: KeyboardEvent) { if (e.key === 'Escape') setLightbox(null) }
+    function onKey(e: KeyboardEvent) { if (e.key === 'Escape') closeLightbox() }
     window.addEventListener('keydown', onKey)
     const prev = document.body.style.overflow
     document.body.style.overflow = 'hidden'
@@ -352,12 +355,22 @@ export default function ChapterReader({ chapter, bookTitle }: Props) {
       )}
 
       {lightbox && (
-        <div className="cr-lightbox" onClick={() => setLightbox(null)} role="dialog" aria-modal="true">
-          <button className="cr-lightbox-close" aria-label="Fermer">×</button>
-          <figure className="cr-lightbox-fig" onClick={(e) => e.stopPropagation()}>
-            <img src={lightbox.src} alt={lightbox.alt} />
-            <figcaption>{lightbox.caption}</figcaption>
-          </figure>
+        <div className="cr-lightbox" onClick={closeLightbox} role="dialog" aria-modal="true">
+          <div className="cr-lightbox-bar" onClick={(e) => e.stopPropagation()}>
+            <span className="cr-lightbox-caption">{lightbox.caption}</span>
+            <div className="cr-lightbox-controls">
+              <button className="cr-viewer-nav-btn" onClick={() => setLightboxZoom(z => Math.max(0.5, +(z - 0.25).toFixed(2)))} disabled={lightboxZoom <= 0.5} aria-label="Dézoomer">−</button>
+              <button className="cr-viewer-zoom-reset" onClick={() => setLightboxZoom(1)} title="Réinitialiser">{Math.round(lightboxZoom * 100)}%</button>
+              <button className="cr-viewer-nav-btn" onClick={() => setLightboxZoom(z => Math.min(4, +(z + 0.25).toFixed(2)))} disabled={lightboxZoom >= 4} aria-label="Zoomer">+</button>
+              <button className="cr-lightbox-close" onClick={closeLightbox} aria-label="Fermer">×</button>
+            </div>
+          </div>
+          <div className="cr-lightbox-scroll" onClick={(e) => e.stopPropagation()}>
+            <figure className="cr-lightbox-fig">
+              <img src={lightbox.src} alt={lightbox.alt} style={{ transform: `scale(${lightboxZoom})`, transformOrigin: 'top center' }} />
+              <figcaption>{lightbox.caption}</figcaption>
+            </figure>
+          </div>
         </div>
       )}
     </div>
