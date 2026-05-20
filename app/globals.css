@@ -328,7 +328,7 @@ footer > div > p { font-size:1rem; color:rgba(245,240,232,.84); line-height:1.9;
   font-family:'DM Sans',sans-serif; font-size:.86rem; line-height:1.4; color:rgba(26,26,24,.65); }
 .cr-toc-item:hover { background:rgba(74,107,90,.08); color:var(--ink); }
 .cr-toc-item.is-active { background:rgba(160,124,58,.1); color:var(--ink); font-weight:500; }
-.cr-toc-num { font-family:'Cormorant Garamond',serif; font-size:1.05rem; font-style:italic; color:var(--gold); flex-shrink:0; min-width:18px; }
+.cr-toc-num { font-family:'Cormorant Garamond',serif; font-size:1.05rem; font-style:italic; color:var(--gold); flex-shrink:0; width:20px; text-align:right; }
 .cr-toc-text { padding-top:1px; }
 
 .cr-article { grid-column:2; grid-row:1; padding:20px 16px 120px; max-width:720px; }
