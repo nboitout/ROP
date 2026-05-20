@@ -27,6 +27,7 @@ export default function ChapterReader({ chapter, bookTitle }: Props) {
   const [slideCount, setSlideCount] = useState<number>(0)
   const [slidePage, setSlidePage] = useState(1)
   const [slideWidth, setSlideWidth] = useState(800)
+  const [slideZoom, setSlideZoom] = useState(1)
   const viewerBodyRef = useRef<HTMLDivElement>(null)
   const [lightbox, setLightbox] = useState<{ src: string; alt: string; caption: string } | null>(null)
   const articleRef = useRef<HTMLElement>(null)
@@ -277,7 +278,24 @@ export default function ChapterReader({ chapter, bookTitle }: Props) {
                     aria-label="Diapositive suivante"
                   >›</button>
                 </div>
-                <button className="cr-viewer-close" onClick={() => { setSlidesViewer(false); setSlidePage(1) }} aria-label="Fermer">×</button>
+                <div className="cr-viewer-zoom">
+                  <button
+                    className="cr-viewer-nav-btn"
+                    onClick={() => setSlideZoom(z => Math.max(0.5, +(z - 0.25).toFixed(2)))}
+                    disabled={slideZoom <= 0.5}
+                    aria-label="Dézoomer"
+                  >−</button>
+                  <button className="cr-viewer-zoom-reset" onClick={() => setSlideZoom(1)} title="Réinitialiser le zoom">
+                    {Math.round(slideZoom * 100)}%
+                  </button>
+                  <button
+                    className="cr-viewer-nav-btn"
+                    onClick={() => setSlideZoom(z => Math.min(3, +(z + 0.25).toFixed(2)))}
+                    disabled={slideZoom >= 3}
+                    aria-label="Zoomer"
+                  >+</button>
+                </div>
+                <button className="cr-viewer-close" onClick={() => { setSlidesViewer(false); setSlidePage(1); setSlideZoom(1) }} aria-label="Fermer">×</button>
               </div>
               <div className="cr-viewer-body" ref={onViewerBodyRef}>
                 <Document
@@ -288,7 +306,7 @@ export default function ChapterReader({ chapter, bookTitle }: Props) {
                 >
                   <Page
                     pageNumber={slidePage}
-                    width={slideWidth || 800}
+                    width={(slideWidth || 800) * slideZoom}
                     renderTextLayer={false}
                     renderAnnotationLayer={false}
                   />
