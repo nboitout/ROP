@@ -14,6 +14,7 @@ export default function ChapterReader({ chapter, bookTitle }: Props) {
   const [progress, setProgress] = useState(0)
   const [activeSection, setActiveSection] = useState<string>(chapter.sections[0]?.id ?? '')
   const [tocOpen, setTocOpen] = useState(false)
+  const [slidesOpen, setSlidesOpen] = useState(false)
   const [lightbox, setLightbox] = useState<{ src: string; alt: string; caption: string } | null>(null)
   const articleRef = useRef<HTMLElement>(null)
 
@@ -167,6 +168,39 @@ export default function ChapterReader({ chapter, bookTitle }: Props) {
           </div>
         </article>
       </div>
+
+      {chapter.slides && (
+        <div className={`cr-slides${slidesOpen ? ' is-open' : ''}`}>
+          <button
+            className="cr-slides-tab"
+            onClick={() => setSlidesOpen((v) => !v)}
+            aria-expanded={slidesOpen}
+            aria-label={slidesOpen ? 'Fermer les diapositives' : 'Voir les diapositives'}
+          >
+            <span className="cr-slides-tab-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/>
+              </svg>
+            </span>
+            <span className="cr-slides-tab-label">{chapter.slides.label}</span>
+          </button>
+          <div className="cr-slides-panel" aria-hidden={!slidesOpen}>
+            <button className="cr-slides-close" onClick={() => setSlidesOpen(false)} aria-label="Fermer">×</button>
+            <p className="cr-slides-eyebrow">Chapitre {chapter.number}</p>
+            <p className="cr-slides-title">{chapter.slides.label}</p>
+            <p className="cr-slides-desc">{chapter.slides.description}</p>
+            <a
+              href={chapter.slides.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="cr-slides-cta"
+              onClick={() => setSlidesOpen(false)}
+            >
+              Ouvrir les diapositives →
+            </a>
+          </div>
+        </div>
+      )}
 
       {chapter.revisionSheet && (
         <button

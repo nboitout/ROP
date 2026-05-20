@@ -186,4 +186,9 @@ export const chapter5Fr: Chapter = {
     alt: 'Fiche de révision — Chapitre 5, Mécanisme de stress',
     caption: 'Fiche de révision — Chapitre 5 · Mécanisme de stress',
   },
+  slides: {
+    url: '/chapter-5/synthese.pdf',
+    label: 'Diapositives',
+    description: 'Synthèse visuelle du chapitre — mécanisme de stress, SGA et interventions R.O.P.',
+  },
 }
