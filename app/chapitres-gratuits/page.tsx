@@ -5,7 +5,7 @@ import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'Chapitres gratuits · R.O.P. · Guy Boitout',
-  description: 'Extraits gratuits du troisième ouvrage de Guy Boitout sur la Réflexothérapie Occipito-Podale.',
+  description: 'Chapitres complets gratuits du troisième ouvrage de Guy Boitout sur la Réflexothérapie Occipito-Podale.',
   robots: { index: false, follow: false },
 }
 
@@ -47,7 +47,7 @@ export default async function ChapitresGratuitsPage() {
       <div className="cg-topbar">
         <Link href="/" className="cg-home">← Accueil</Link>
         <div className="cg-topbar-title">
-          <span className="cg-eyebrow">Extraits gratuits</span>
+          <span className="cg-eyebrow">Chapitres complets</span>
           <span className="cg-sep">·</span>
           <span className="cg-bookname">{BOOK_TITLE}</span>
         </div>
@@ -55,7 +55,7 @@ export default async function ChapitresGratuitsPage() {
 
       <main className="cg-main">
         <div className="cg-hero">
-          <h1 className="cg-hero-title">Trois extraits du troisième ouvrage</h1>
+          <h1 className="cg-hero-title">Trois chapitres complets du troisième ouvrage</h1>
           <p className="cg-hero-body">Choisissez votre point d’entrée — l’ordre du livre est suggéré, mais chaque texte se lit seul.</p>
         </div>
 

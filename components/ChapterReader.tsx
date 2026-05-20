@@ -134,7 +134,7 @@ export default function ChapterReader({ chapter, bookTitle }: Props) {
         <article ref={articleRef} className="cr-article">
           <div className="cr-hero">
             <p className="cr-hero-eyebrow">
-              {chapter.number ? `Chapitre ${chapter.number} · ` : ''}Extrait gratuit
+              {chapter.number ? `Chapitre ${chapter.number} · ` : ''}Chapitre complet
             </p>
             <h1 className="cr-hero-title">{chapter.title}</h1>
             <p className="cr-hero-book"><em>{bookTitle}</em></p>

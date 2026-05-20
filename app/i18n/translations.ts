@@ -75,7 +75,7 @@ const fr = {
       { id: 'visceres', title: 'Viscères' },
     ],
     freeBadge: 'Accès libre',
-    freeBtnLabel: "Lire l'extrait →",
+    freeBtnLabel: "Lire le chapitre →",
     cta: "Commander l'ouvrage complet →",
     cards: [
       { num: '00', part: 'intro' as const, variant: 'free' as const, label: 'Introduction', title: 'Genèse de la méthode R.O.P.', tags: ["Parcours de l'auteur", 'Méthode Ingham', 'Ostéopathie viscérale', 'ADN R.O.P.'], body: "La voix de l'auteur : de la kinésithérapie à la réflexologie (méthode Ingham, 1978), puis à l'ostéopathie viscérale (J.-P. Barral) jusqu'à la création de la R.O.P. avec Jean-Pierre Vadala. L'ADN de la méthode en quelques pages denses et personnelles." },
@@ -148,7 +148,7 @@ const fr = {
     lbl: 'Trois chapitres offerts',
     h2: { before: 'Trois chapitres en\n', em: 'accès libre' },
     p1: "L'introduction, le chapitre sur le système nerveux central et le chapitre sur le mécanisme de stress sont mis en accès libre — pour découvrir la rigueur pédagogique et la profondeur clinique de cet ouvrage.",
-    p2: "Lecture en ligne, avec illustrations. Une seule inscription donne accès aux trois extraits, sans envoi de PDF.",
+    p2: "Lecture en ligne, avec illustrations. Une seule inscription donne accès aux trois chapitres complets, sans envoi de PDF.",
     note: 'Introduction · Chapitre 3 (à venir) · Chapitre 5',
   },
   citations: {
@@ -625,7 +625,7 @@ const de: typeof fr = {
       { id: 'visceres', title: 'Viszera' },
     ],
     freeBadge: 'Freier Zugang',
-    freeBtnLabel: 'Auszug lesen →',
+    freeBtnLabel: 'Kapitel lesen →',
     cta: 'Vollständiges Werk bestellen →',
     cards: [
       { num: '00', part: 'intro' as const, variant: 'free' as const, label: 'Einführung', title: 'Entstehung der R.O.P.-Methode', tags: ['Weg des Autors', 'Ingham-Methode', 'Viszerale Osteopathie', 'DNA der R.O.P.'], body: 'In der eigenen Stimme des Autors: von der Physiotherapie zur Reflexologie über die Ingham-Methode im Jahr 1978, dann zur viszeralen Osteopathie bei J.-P. Barral und schließlich zur Entwicklung der R.O.P. mit Jean-Pierre Vadala. Die DNA der Methode, dargestellt auf wenigen prägnanten und persönlichen Seiten.' },
@@ -900,7 +900,7 @@ const es: typeof fr = {
       { id: 'visceres', title: 'Vísceras' },
     ],
     freeBadge: 'Acceso libre',
-    freeBtnLabel: 'Leer el extracto →',
+    freeBtnLabel: 'Leer el capítulo →',
     cta: 'Pedir la obra completa →',
     cards: [
       { num: '00', part: 'intro' as const, variant: 'free' as const, label: 'Introducción', title: 'Génesis del método R.O.P.', tags: ['Recorrido del autor', 'Método Ingham', 'Osteopatía visceral', 'ADN de la R.O.P.'], body: 'En la propia voz del autor: de la fisioterapia a la reflexología a través del método Ingham en 1978, luego a la osteopatía visceral con J.-P. Barral, y finalmente al desarrollo de la R.O.P. con Jean-Pierre Vadala. El ADN del método, presentado en unas páginas concisas y personales.' },
@@ -1175,7 +1175,7 @@ const it: typeof fr = {
       { id: 'visceres', title: 'Visceri' },
     ],
     freeBadge: 'Accesso libero',
-    freeBtnLabel: "Leggi l'estratto →",
+    freeBtnLabel: "Leggi il capitolo →",
     cta: "Ordina l'opera completa →",
     cards: [
       { num: '00', part: 'intro' as const, variant: 'free' as const, label: 'Introduzione', title: 'Genesi del metodo R.O.P.', tags: ["Percorso dell'autore", 'Metodo Ingham', 'Osteopatia viscerale', 'DNA della R.O.P.'], body: "Nella voce propria dell'autore: dalla fisioterapia alla riflessologia attraverso il metodo Ingham nel 1978, poi all'osteopatia viscerale con J.-P. Barral e infine allo sviluppo della R.O.P. con Jean-Pierre Vadala. Il DNA del metodo, presentato in poche pagine concise e personali." },

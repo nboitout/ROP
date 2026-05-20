@@ -6,7 +6,7 @@ import { introductionFr } from '@/content/introduction.fr'
 
 export const metadata: Metadata = {
   title: 'Introduction · R.O.P. · Guy Boitout',
-  description: 'Extrait gratuit du troisième ouvrage de Guy Boitout : introduction au viscéral abdomino-pelvien, au système nerveux autonome et au mécanisme du stress.',
+  description: 'Chapitre complet gratuit du troisième ouvrage de Guy Boitout : introduction au viscéral abdomino-pelvien, au système nerveux autonome et au mécanisme du stress.',
   robots: { index: false, follow: false },
 }
 
