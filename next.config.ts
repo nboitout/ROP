@@ -27,7 +27,17 @@ const securityHeaders = [
 
 const nextConfig: NextConfig = {
   async headers() {
-    return [{ source: '/(.*)', headers: securityHeaders }]
+    return [
+      { source: '/(.*)', headers: securityHeaders },
+      // Allow PDFs to be embedded in iframes on the same origin
+      {
+        source: '/:path*.pdf',
+        headers: [
+          { key: 'X-Frame-Options', value: 'SAMEORIGIN' },
+          { key: 'Content-Security-Policy', value: "frame-ancestors 'self'" },
+        ],
+      },
+    ]
   },
   images: {
     formats: ['image/avif', 'image/webp'],

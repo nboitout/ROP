@@ -438,9 +438,6 @@ footer > div > p { font-size:1rem; color:rgba(245,240,232,.84); line-height:1.9;
   height:52px; background:#242220; border-bottom:1px solid rgba(255,255,255,.1); flex-shrink:0; }
 .cr-viewer-title { font-family:'Cormorant Garamond',serif; font-size:1.05rem; color:rgba(255,255,255,.85); }
 .cr-viewer-actions { display:flex; align-items:center; gap:16px; }
-.cr-viewer-download { display:flex; align-items:center; gap:6px; font-size:.78rem; font-weight:600;
-  letter-spacing:.06em; color:rgba(255,255,255,.55); text-decoration:none; transition:color .15s; }
-.cr-viewer-download:hover { color:#fff; }
 .cr-viewer-close { background:none; border:none; cursor:pointer; color:rgba(255,255,255,.55);
   font-size:1.6rem; line-height:1; padding:0; transition:color .15s; }
 .cr-viewer-close:hover { color:#fff; }
