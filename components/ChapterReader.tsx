@@ -27,7 +27,7 @@ export default function ChapterReader({ chapter, bookTitle }: Props) {
   const [slideCount, setSlideCount] = useState<number>(0)
   const [slidePage, setSlidePage] = useState(1)
   const [slideWidth, setSlideWidth] = useState(800)
-  const [slideZoom, setSlideZoom] = useState(1)
+  const [slideZoom, setSlideZoom] = useState(0.75)
   const viewerBodyRef = useRef<HTMLDivElement>(null)
   const [lightbox, setLightbox] = useState<{ src: string; alt: string; caption: string } | null>(null)
   const articleRef = useRef<HTMLElement>(null)
@@ -285,7 +285,7 @@ export default function ChapterReader({ chapter, bookTitle }: Props) {
                     disabled={slideZoom <= 0.5}
                     aria-label="Dézoomer"
                   >−</button>
-                  <button className="cr-viewer-zoom-reset" onClick={() => setSlideZoom(1)} title="Réinitialiser le zoom">
+                  <button className="cr-viewer-zoom-reset" onClick={() => setSlideZoom(0.75)} title="Réinitialiser le zoom">
                     {Math.round(slideZoom * 100)}%
                   </button>
                   <button
@@ -295,7 +295,7 @@ export default function ChapterReader({ chapter, bookTitle }: Props) {
                     aria-label="Zoomer"
                   >+</button>
                 </div>
-                <button className="cr-viewer-close" onClick={() => { setSlidesViewer(false); setSlidePage(1); setSlideZoom(1) }} aria-label="Fermer">×</button>
+                <button className="cr-viewer-close" onClick={() => { setSlidesViewer(false); setSlidePage(1); setSlideZoom(0.75) }} aria-label="Fermer">×</button>
               </div>
               <div className="cr-viewer-body" ref={onViewerBodyRef}>
                 <Document
