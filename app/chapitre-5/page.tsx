@@ -6,7 +6,7 @@ import { chapter5Fr } from '@/content/chapter5.fr'
 
 export const metadata: Metadata = {
   title: 'Chapitre 5 — Mécanisme de stress · R.O.P. · Guy Boitout',
-  description: ‘Chapitre complet gratuit du troisième ouvrage de Guy Boitout : le mécanisme de stress, le syndrome général d’adaptation et son intérêt en Réflexothérapie Occipito-Podale.’,
+  description: `Chapitre complet gratuit du troisième ouvrage de Guy Boitout : le mécanisme de stress, le syndrome général d’adaptation et son intérêt en Réflexothérapie Occipito-Podale.`,
   robots: { index: false, follow: false },
 }
 
