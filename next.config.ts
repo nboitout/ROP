@@ -3,7 +3,7 @@ import type { NextConfig } from 'next'
 
 const securityHeaders = [
   { key: 'X-Content-Type-Options', value: 'nosniff' },
-  { key: 'X-Frame-Options', value: 'DENY' },
+  { key: 'X-Frame-Options', value: 'SAMEORIGIN' },
   { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
   { key: 'Permissions-Policy', value: 'camera=(), microphone=(), geolocation=()' },
   {
@@ -20,24 +20,14 @@ const securityHeaders = [
       "font-src 'self' https://fonts.gstatic.com",
       "img-src 'self' data:",
       "connect-src 'self'",
-      "frame-ancestors 'none'",
+      "frame-ancestors 'self'",
     ].join('; '),
   },
 ]
 
 const nextConfig: NextConfig = {
   async headers() {
-    return [
-      { source: '/(.*)', headers: securityHeaders },
-      // Allow PDFs to be embedded in iframes on the same origin
-      {
-        source: '/:path*.pdf',
-        headers: [
-          { key: 'X-Frame-Options', value: 'SAMEORIGIN' },
-          { key: 'Content-Security-Policy', value: "frame-ancestors 'self'" },
-        ],
-      },
-    ]
+    return [{ source: '/(.*)', headers: securityHeaders }]
   },
   images: {
     formats: ['image/avif', 'image/webp'],
