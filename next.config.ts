@@ -26,6 +26,8 @@ const securityHeaders = [
   },
 ]
 
+import path from 'path'
+
 const nextConfig: NextConfig = {
   async headers() {
     return [{ source: '/(.*)', headers: securityHeaders }]
@@ -33,9 +35,13 @@ const nextConfig: NextConfig = {
   images: {
     formats: ['image/avif', 'image/webp'],
   },
+  turbopack: {
+    resolveAlias: {
+      canvas: './lib/empty.js',
+    },
+  },
   webpack: (config) => {
-    // pdfjs-dist tries to require 'canvas' for server-side rendering; stub it out
-    config.resolve.alias = { ...config.resolve.alias, canvas: false }
+    config.resolve.alias = { ...config.resolve.alias, canvas: path.resolve('./lib/empty.js') }
     return config
   },
 }
