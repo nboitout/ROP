@@ -187,7 +187,7 @@ export const chapter5Fr: Chapter = {
     caption: 'Fiche de révision — Chapitre 5 · Mécanisme de stress',
   },
   clinicalCase: {
-    src: '/chapter-5/cas-clinique.jpeg',
+    src: '/chapter-5/cas-clinique.png',
     alt: 'Cas clinique — Fibromyalgie · Chapitre 5',
     caption: 'Cas clinique · Fibromyalgie — Chapitre 5',
   },
