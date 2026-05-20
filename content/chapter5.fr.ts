@@ -164,7 +164,7 @@ export const chapter5Fr: Chapter = {
       title: 'ROP du Mécanisme de stress',
       blocks: [
         { type: 'sub', text: 'Zones occipitales' },
-        { type: ‘lead’, label: ‘Syndrome général d’adaptation SGA’, text: '' },
+        { type: 'lead', label: `Syndrome général d’adaptation SGA`, text: '' },
         { type: 'bullets', items: [
           'Système limbique, diencéphale, tronc cérébral, hypophyse, surrénales (axe HHS).',
           'Nerfs crâniens : Jumeau V, Vague X, Hypoglosse XI, C2 et C3.',

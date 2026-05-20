@@ -8,10 +8,7 @@ import 'react-pdf/dist/Page/TextLayer.css'
 import type { Chapter, Block } from '@/content/types'
 import BookNotifyForm from '@/components/BookNotifyForm'
 
-pdfjs.GlobalWorkerOptions.workerSrc = new URL(
-  'pdfjs-dist/build/pdf.worker.min.mjs',
-  import.meta.url,
-).toString()
+pdfjs.GlobalWorkerOptions.workerSrc = `https://unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`
 
 type Props = {
   chapter: Chapter
