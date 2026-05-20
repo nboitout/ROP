@@ -399,17 +399,26 @@ footer > div > p { font-size:1rem; color:rgba(245,240,232,.84); line-height:1.9;
 /* Slides pull-tab — fixed left side */
 .cr-slides { position:fixed; left:0; top:50%; transform:translateY(-50%); z-index:240; display:flex; align-items:stretch; }
 .cr-slides-tab { display:flex; flex-direction:column; align-items:center; justify-content:center; gap:8px;
-  background:#fbf8f1; border:1px solid rgba(160,124,58,.35); border-left:none;
-  border-radius:0 6px 6px 0; padding:14px 8px; cursor:pointer;
-  box-shadow:4px 0 18px rgba(26,26,24,.12); transition:background .18s, box-shadow .18s; }
-.cr-slides-tab:hover { background:#f5eddc; }
-.cr-slides-tab-icon { color:var(--gold); display:flex; }
-.cr-slides-tab-label { font-size:.6rem; font-weight:600; letter-spacing:.18em; text-transform:uppercase;
-  color:var(--gold); writing-mode:vertical-rl; transform:rotate(180deg); }
+  background:var(--gold); border:none; border-radius:0 8px 8px 0; padding:16px 10px; cursor:pointer;
+  box-shadow:4px 0 22px rgba(160,124,58,.45); transition:background .18s, box-shadow .18s, transform .18s;
+  position:relative; }
+.cr-slides-tab:hover { background:#b8902a; box-shadow:6px 0 28px rgba(160,124,58,.6); transform:translateX(2px); }
+.cr-slides-tab-icon { color:#fff; display:flex; }
+.cr-slides-tab-label { font-size:.6rem; font-weight:700; letter-spacing:.2em; text-transform:uppercase;
+  color:#fff; writing-mode:vertical-rl; transform:rotate(180deg); }
+/* Pulse dot to hint at interactivity */
+.cr-slides-pulse { position:absolute; top:8px; right:8px; width:7px; height:7px; border-radius:50%;
+  background:#fff; box-shadow:0 0 0 0 rgba(255,255,255,.7);
+  animation:cr-pulse 2.2s ease-in-out 2s infinite; }
+@keyframes cr-pulse {
+  0%   { box-shadow:0 0 0 0 rgba(255,255,255,.7); }
+  60%  { box-shadow:0 0 0 6px rgba(255,255,255,0); }
+  100% { box-shadow:0 0 0 0 rgba(255,255,255,0); }
+}
 .cr-slides-panel { width:0; overflow:hidden; background:linear-gradient(135deg,#2c2a26 0%,#1a1a18 100%);
-  border-radius:0 6px 6px 0; transition:width .28s cubic-bezier(.4,0,.2,1); display:flex; flex-direction:column;
+  border-radius:0 6px 6px 0; transition:width .3s cubic-bezier(.4,0,.2,1); display:flex; flex-direction:column;
   justify-content:center; padding:0; }
-.cr-slides.is-open .cr-slides-panel { width:260px; padding:28px 24px; }
+.cr-slides.is-open .cr-slides-panel { width:270px; padding:28px 24px; }
 .cr-slides-close { align-self:flex-end; background:none; border:none; cursor:pointer;
   color:rgba(255,255,255,.5); font-size:1.3rem; line-height:1; padding:0; margin-bottom:16px; transition:color .15s; }
 .cr-slides-close:hover { color:#fff; }
@@ -419,9 +428,23 @@ footer > div > p { font-size:1rem; color:rgba(245,240,232,.84); line-height:1.9;
   line-height:1.2; margin-bottom:12px; white-space:nowrap; }
 .cr-slides-desc { font-size:.82rem; line-height:1.55; color:rgba(255,255,255,.65); margin-bottom:22px; }
 .cr-slides-cta { display:inline-block; background:var(--gold); color:#fff; font-size:.8rem; font-weight:600;
-  letter-spacing:.08em; padding:9px 16px; border-radius:3px; text-decoration:none; white-space:nowrap;
+  letter-spacing:.08em; padding:9px 16px; border-radius:3px; white-space:nowrap; border:none; cursor:pointer;
   transition:opacity .15s; }
 .cr-slides-cta:hover { opacity:.88; }
+
+/* Slides inline viewer — full-screen overlay */
+.cr-viewer { position:fixed; inset:0; z-index:300; display:flex; flex-direction:column; background:#1a1a18; }
+.cr-viewer-bar { display:flex; align-items:center; justify-content:space-between; padding:0 20px;
+  height:52px; background:#242220; border-bottom:1px solid rgba(255,255,255,.1); flex-shrink:0; }
+.cr-viewer-title { font-family:'Cormorant Garamond',serif; font-size:1.05rem; color:rgba(255,255,255,.85); }
+.cr-viewer-actions { display:flex; align-items:center; gap:16px; }
+.cr-viewer-download { display:flex; align-items:center; gap:6px; font-size:.78rem; font-weight:600;
+  letter-spacing:.06em; color:rgba(255,255,255,.55); text-decoration:none; transition:color .15s; }
+.cr-viewer-download:hover { color:#fff; }
+.cr-viewer-close { background:none; border:none; cursor:pointer; color:rgba(255,255,255,.55);
+  font-size:1.6rem; line-height:1; padding:0; transition:color .15s; }
+.cr-viewer-close:hover { color:#fff; }
+.cr-viewer-frame { flex:1; width:100%; border:none; background:#2a2825; }
 
 /* Fiche de révision — floating bottom-right shortcut */
 .cr-fiche { position:fixed; right:22px; bottom:22px; z-index:240; display:flex; flex-direction:column; align-items:center; gap:6px;

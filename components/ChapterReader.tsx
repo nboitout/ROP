@@ -15,8 +15,10 @@ export default function ChapterReader({ chapter, bookTitle }: Props) {
   const [activeSection, setActiveSection] = useState<string>(chapter.sections[0]?.id ?? '')
   const [tocOpen, setTocOpen] = useState(false)
   const [slidesOpen, setSlidesOpen] = useState(false)
+  const [slidesViewer, setSlidesViewer] = useState(false)
   const [lightbox, setLightbox] = useState<{ src: string; alt: string; caption: string } | null>(null)
   const articleRef = useRef<HTMLElement>(null)
+  const peekCloseRef = useRef<ReturnType<typeof setTimeout> | null>(null)
 
   useEffect(() => {
     function onScroll() {
@@ -86,6 +88,38 @@ export default function ChapterReader({ chapter, bookTitle }: Props) {
       document.body.style.overflow = prev
     }
   }, [lightbox])
+
+  // Peek: briefly open the slides panel on first load to hint at its existence
+  useEffect(() => {
+    if (!chapter.slides) return
+    const openTimer = setTimeout(() => {
+      setSlidesOpen(true)
+      peekCloseRef.current = setTimeout(() => setSlidesOpen(false), 3200)
+    }, 1800)
+    return () => {
+      clearTimeout(openTimer)
+      if (peekCloseRef.current) clearTimeout(peekCloseRef.current)
+    }
+  }, [chapter.slides])
+
+  // Close slides viewer on Escape
+  useEffect(() => {
+    if (!slidesViewer) return
+    function onKey(e: KeyboardEvent) { if (e.key === 'Escape') setSlidesViewer(false) }
+    window.addEventListener('keydown', onKey)
+    const prev = document.body.style.overflow
+    document.body.style.overflow = 'hidden'
+    return () => {
+      window.removeEventListener('keydown', onKey)
+      document.body.style.overflow = prev
+    }
+  }, [slidesViewer])
+
+  function handleSlidesTabClick() {
+    // Cancel the peek auto-close if the user clicks manually
+    if (peekCloseRef.current) { clearTimeout(peekCloseRef.current); peekCloseRef.current = null }
+    setSlidesOpen(v => !v)
+  }
 
   function scrollTo(id: string) {
     const el = document.getElementById(`sec-${id}`)
@@ -170,36 +204,61 @@ export default function ChapterReader({ chapter, bookTitle }: Props) {
       </div>
 
       {chapter.slides && (
-        <div className={`cr-slides${slidesOpen ? ' is-open' : ''}`}>
-          <button
-            className="cr-slides-tab"
-            onClick={() => setSlidesOpen((v) => !v)}
-            aria-expanded={slidesOpen}
-            aria-label={slidesOpen ? 'Fermer les diapositives' : 'Voir les diapositives'}
-          >
-            <span className="cr-slides-tab-icon">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
-                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/>
-              </svg>
-            </span>
-            <span className="cr-slides-tab-label">{chapter.slides.label}</span>
-          </button>
-          <div className="cr-slides-panel" aria-hidden={!slidesOpen}>
-            <button className="cr-slides-close" onClick={() => setSlidesOpen(false)} aria-label="Fermer">×</button>
-            <p className="cr-slides-eyebrow">Chapitre {chapter.number}</p>
-            <p className="cr-slides-title">{chapter.slides.label}</p>
-            <p className="cr-slides-desc">{chapter.slides.description}</p>
-            <a
-              href={chapter.slides.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="cr-slides-cta"
-              onClick={() => setSlidesOpen(false)}
+        <>
+          <div className={`cr-slides${slidesOpen ? ' is-open' : ''}`}>
+            <button
+              className="cr-slides-tab"
+              onClick={handleSlidesTabClick}
+              aria-expanded={slidesOpen}
+              aria-label={slidesOpen ? 'Fermer les diapositives' : 'Voir les diapositives'}
             >
-              Ouvrir les diapositives →
-            </a>
+              <span className="cr-slides-tab-icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/>
+                </svg>
+              </span>
+              <span className="cr-slides-tab-label">{chapter.slides.label}</span>
+              <span className="cr-slides-pulse" aria-hidden />
+            </button>
+            <div className="cr-slides-panel" aria-hidden={!slidesOpen}>
+              <button className="cr-slides-close" onClick={() => setSlidesOpen(false)} aria-label="Fermer">×</button>
+              <p className="cr-slides-eyebrow">Chapitre {chapter.number}</p>
+              <p className="cr-slides-title">{chapter.slides.label}</p>
+              <p className="cr-slides-desc">{chapter.slides.description}</p>
+              <button
+                className="cr-slides-cta"
+                onClick={() => { setSlidesOpen(false); setSlidesViewer(true) }}
+              >
+                Voir les diapositives →
+              </button>
+            </div>
           </div>
-        </div>
+
+          {slidesViewer && (
+            <div className="cr-viewer" role="dialog" aria-modal="true" aria-label="Diapositives">
+              <div className="cr-viewer-bar">
+                <span className="cr-viewer-title">
+                  {chapter.slides.label}
+                  {chapter.number ? ` — Chapitre ${chapter.number}` : ''}
+                </span>
+                <div className="cr-viewer-actions">
+                  <a href={chapter.slides.url} download className="cr-viewer-download">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+                      <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/>
+                    </svg>
+                    Télécharger
+                  </a>
+                  <button className="cr-viewer-close" onClick={() => setSlidesViewer(false)} aria-label="Fermer">×</button>
+                </div>
+              </div>
+              <iframe
+                className="cr-viewer-frame"
+                src={chapter.slides.url}
+                title={chapter.slides.label}
+              />
+            </div>
+          )}
+        </>
       )}
 
       {chapter.revisionSheet && (
