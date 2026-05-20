@@ -186,6 +186,11 @@ export const chapter5Fr: Chapter = {
     alt: 'Fiche de révision — Chapitre 5, Mécanisme de stress',
     caption: 'Fiche de révision — Chapitre 5 · Mécanisme de stress',
   },
+  clinicalCase: {
+    src: '/chapter-5/cas-clinique.jpeg',
+    alt: 'Cas clinique — Fibromyalgie · Chapitre 5',
+    caption: 'Cas clinique · Fibromyalgie — Chapitre 5',
+  },
   slides: {
     url: '/chapter-5/synthese.pdf',
     label: 'Diapositives',

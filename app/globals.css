@@ -458,13 +458,23 @@ footer > div > p { font-size:1rem; color:rgba(245,240,232,.84); line-height:1.9;
 .cr-viewer-body .react-pdf__Page { box-shadow:0 8px 40px rgba(0,0,0,.5); }
 .cr-viewer-loading { color:rgba(255,255,255,.45); font-size:.9rem; padding:60px 0; }
 
-/* Fiche de révision — floating bottom-right shortcut */
-.cr-fiche { position:fixed; right:22px; bottom:22px; z-index:240; display:flex; flex-direction:column; align-items:center; gap:6px;
-  background:#fbf8f1; border:1px solid rgba(160,124,58,.35); border-radius:6px; padding:8px 8px 6px; cursor:pointer;
-  box-shadow:0 6px 22px rgba(26,26,24,.18); transition:transform .18s, box-shadow .18s; }
-.cr-fiche:hover { transform:translateY(-2px); box-shadow:0 10px 28px rgba(26,26,24,.24); }
-.cr-fiche img { width:96px; height:124px; object-fit:cover; object-position:top center; border-radius:3px; background:#fff; }
-.cr-fiche-label { font-size:.66rem; letter-spacing:.14em; text-transform:uppercase; color:var(--gold); font-weight:600; }
+/* Resources dock — floating bottom-right */
+.cr-resources { position:fixed; right:18px; bottom:18px; z-index:240;
+  background:#fbf8f1; border:1px solid rgba(160,124,58,.28); border-radius:8px;
+  padding:10px 12px 8px; box-shadow:0 6px 28px rgba(26,26,24,.18);
+  display:flex; flex-direction:column; align-items:center; gap:8px; }
+.cr-resources-label { font-size:.58rem; font-weight:700; letter-spacing:.2em; text-transform:uppercase;
+  color:var(--gold); align-self:flex-start; }
+.cr-resources-row { display:flex; gap:10px; align-items:flex-end; }
+.cr-resource-card { display:flex; flex-direction:column; align-items:center; gap:5px;
+  background:none; border:1px solid rgba(160,124,58,.22); border-radius:5px; padding:5px 5px 4px;
+  cursor:pointer; transition:transform .18s, box-shadow .18s, border-color .18s; }
+.cr-resource-card:hover { transform:translateY(-2px); box-shadow:0 6px 18px rgba(26,26,24,.18); border-color:rgba(160,124,58,.5); }
+.cr-resource-card img { width:72px; height:92px; object-fit:cover; object-position:top center; border-radius:3px; background:#f0ebe0; display:block; }
+.cr-resource-card--case img { object-position:top left; }
+.cr-resource-name { font-size:.58rem; font-weight:600; letter-spacing:.1em; text-transform:uppercase;
+  color:rgba(26,26,24,.55); max-width:72px; text-align:center; line-height:1.3; }
+.cr-resource-card:hover .cr-resource-name { color:var(--gold); }
 
 @media (max-width:1180px){
   .cr-layout { grid-template-columns:1fr minmax(0,720px) 1fr; }
@@ -487,9 +497,9 @@ footer > div > p { font-size:1rem; color:rgba(245,240,232,.84); line-height:1.9;
   .cr-fig-portrait { margin:32px auto; max-width:none; }
   .cr-end-card { padding:36px 24px; }
   .cr-toc { width:86%; }
-  .cr-fiche { right:12px; bottom:12px; padding:6px 6px 4px; }
-  .cr-fiche img { width:62px; height:80px; }
-  .cr-fiche-label { font-size:.58rem; }
+  .cr-resources { right:10px; bottom:10px; padding:7px 8px 6px; }
+  .cr-resource-card img { width:52px; height:68px; }
+  .cr-resource-name { max-width:52px; font-size:.52rem; }
   .cr-slides { display:none; }
 }
 

@@ -321,16 +321,34 @@ export default function ChapterReader({ chapter, bookTitle }: Props) {
         </>
       )}
 
-      {chapter.revisionSheet && (
-        <button
-          type="button"
-          className="cr-fiche"
-          onClick={() => setLightbox(chapter.revisionSheet!)}
-          aria-label="Ouvrir la fiche de révision"
-        >
-          <img src={chapter.revisionSheet.src} alt="" aria-hidden />
-          <span className="cr-fiche-label">Fiche de révision</span>
-        </button>
+      {(chapter.revisionSheet || chapter.clinicalCase) && (
+        <div className="cr-resources">
+          <p className="cr-resources-label">Ressources</p>
+          <div className="cr-resources-row">
+            {chapter.revisionSheet && (
+              <button
+                type="button"
+                className="cr-resource-card"
+                onClick={() => setLightbox(chapter.revisionSheet!)}
+                aria-label="Ouvrir la fiche de révision"
+              >
+                <img src={chapter.revisionSheet.src} alt="" aria-hidden />
+                <span className="cr-resource-name">Fiche de révision</span>
+              </button>
+            )}
+            {chapter.clinicalCase && (
+              <button
+                type="button"
+                className="cr-resource-card cr-resource-card--case"
+                onClick={() => setLightbox(chapter.clinicalCase!)}
+                aria-label="Ouvrir le cas clinique"
+              >
+                <img src={chapter.clinicalCase.src} alt="" aria-hidden />
+                <span className="cr-resource-name">Cas clinique</span>
+              </button>
+            )}
+          </div>
+        </div>
       )}
 
       {lightbox && (

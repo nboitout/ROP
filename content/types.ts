@@ -15,5 +15,6 @@ export type Chapter = {
   title: string         // display title shown as <h1> in the hero
   sections: Section[]
   revisionSheet?: { src: string; caption: string; alt: string }
+  clinicalCase?: { src: string; caption: string; alt: string }
   slides?: { url: string; label: string; description: string }
 }
