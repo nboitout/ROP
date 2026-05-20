@@ -245,11 +245,18 @@ export default function ChapterReader({ chapter, bookTitle }: Props) {
                   <button className="cr-viewer-close" onClick={() => setSlidesViewer(false)} aria-label="Fermer">×</button>
                 </div>
               </div>
-              <iframe
+              <object
                 className="cr-viewer-frame"
-                src={chapter.slides.url}
-                title={chapter.slides.label}
-              />
+                data={chapter.slides.url}
+                type="application/pdf"
+              >
+                <p style={{ color: 'rgba(255,255,255,.6)', textAlign: 'center', paddingTop: '40px' }}>
+                  Votre navigateur ne peut pas afficher ce PDF.{' '}
+                  <a href={chapter.slides.url} target="_blank" rel="noopener noreferrer" style={{ color: 'var(--gold)' }}>
+                    Ouvrir dans un nouvel onglet →
+                  </a>
+                </p>
+              </object>
             </div>
           )}
         </>
