@@ -438,10 +438,21 @@ footer > div > p { font-size:1rem; color:rgba(245,240,232,.84); line-height:1.9;
   height:52px; background:#242220; border-bottom:1px solid rgba(255,255,255,.1); flex-shrink:0; }
 .cr-viewer-title { font-family:'Cormorant Garamond',serif; font-size:1.05rem; color:rgba(255,255,255,.85); }
 .cr-viewer-actions { display:flex; align-items:center; gap:16px; }
+.cr-viewer-nav { display:flex; align-items:center; gap:10px; }
+.cr-viewer-nav-btn { background:none; border:1px solid rgba(255,255,255,.2); border-radius:4px;
+  color:#fff; font-size:1.3rem; line-height:1; width:32px; height:32px; cursor:pointer;
+  display:flex; align-items:center; justify-content:center; transition:background .15s, border-color .15s; }
+.cr-viewer-nav-btn:hover:not(:disabled) { background:rgba(255,255,255,.12); border-color:rgba(255,255,255,.4); }
+.cr-viewer-nav-btn:disabled { opacity:.3; cursor:default; }
+.cr-viewer-nav-count { font-size:.82rem; color:rgba(255,255,255,.6); min-width:54px; text-align:center; }
 .cr-viewer-close { background:none; border:none; cursor:pointer; color:rgba(255,255,255,.55);
   font-size:1.6rem; line-height:1; padding:0; transition:color .15s; }
 .cr-viewer-close:hover { color:#fff; }
-.cr-viewer-frame { flex:1; width:100%; border:none; background:#2a2825; }
+.cr-viewer-body { flex:1; overflow-y:auto; display:flex; flex-direction:column; align-items:center;
+  justify-content:flex-start; padding:32px 24px; background:#2a2825; }
+.cr-viewer-body .react-pdf__Document { display:flex; flex-direction:column; align-items:center; }
+.cr-viewer-body .react-pdf__Page { box-shadow:0 8px 40px rgba(0,0,0,.5); }
+.cr-viewer-loading { color:rgba(255,255,255,.45); font-size:.9rem; padding:60px 0; }
 
 /* Fiche de révision — floating bottom-right shortcut */
 .cr-fiche { position:fixed; right:22px; bottom:22px; z-index:240; display:flex; flex-direction:column; align-items:center; gap:6px;

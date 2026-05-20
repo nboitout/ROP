@@ -1,9 +1,17 @@
 'use client'
 
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef, useState, useCallback } from 'react'
 import Link from 'next/link'
+import { Document, Page, pdfjs } from 'react-pdf'
+import 'react-pdf/dist/Page/AnnotationLayer.css'
+import 'react-pdf/dist/Page/TextLayer.css'
 import type { Chapter, Block } from '@/content/types'
 import BookNotifyForm from '@/components/BookNotifyForm'
+
+pdfjs.GlobalWorkerOptions.workerSrc = new URL(
+  'pdfjs-dist/build/pdf.worker.min.mjs',
+  import.meta.url,
+).toString()
 
 type Props = {
   chapter: Chapter
@@ -16,6 +24,10 @@ export default function ChapterReader({ chapter, bookTitle }: Props) {
   const [tocOpen, setTocOpen] = useState(false)
   const [slidesOpen, setSlidesOpen] = useState(false)
   const [slidesViewer, setSlidesViewer] = useState(false)
+  const [slideCount, setSlideCount] = useState<number>(0)
+  const [slidePage, setSlidePage] = useState(1)
+  const [slideWidth, setSlideWidth] = useState(800)
+  const viewerBodyRef = useRef<HTMLDivElement>(null)
   const [lightbox, setLightbox] = useState<{ src: string; alt: string; caption: string } | null>(null)
   const articleRef = useRef<HTMLElement>(null)
   const peekCloseRef = useRef<ReturnType<typeof setTimeout> | null>(null)
@@ -114,6 +126,15 @@ export default function ChapterReader({ chapter, bookTitle }: Props) {
       document.body.style.overflow = prev
     }
   }, [slidesViewer])
+
+  // Track viewer body width so the PDF page fills it exactly
+  const onViewerBodyRef = useCallback((node: HTMLDivElement | null) => {
+    (viewerBodyRef as React.MutableRefObject<HTMLDivElement | null>).current = node
+    if (!node) return
+    setSlideWidth(node.clientWidth)
+    const ro = new ResizeObserver(() => setSlideWidth(node.clientWidth))
+    ro.observe(node)
+  }, [])
 
   function handleSlidesTabClick() {
     // Cancel the peek auto-close if the user clicks manually
@@ -241,22 +262,38 @@ export default function ChapterReader({ chapter, bookTitle }: Props) {
                   {chapter.slides.label}
                   {chapter.number ? ` — Chapitre ${chapter.number}` : ''}
                 </span>
-                <div className="cr-viewer-actions">
-                  <button className="cr-viewer-close" onClick={() => setSlidesViewer(false)} aria-label="Fermer">×</button>
+                <div className="cr-viewer-nav">
+                  <button
+                    className="cr-viewer-nav-btn"
+                    onClick={() => setSlidePage(p => Math.max(1, p - 1))}
+                    disabled={slidePage <= 1}
+                    aria-label="Diapositive précédente"
+                  >‹</button>
+                  <span className="cr-viewer-nav-count">{slidePage} / {slideCount || '…'}</span>
+                  <button
+                    className="cr-viewer-nav-btn"
+                    onClick={() => setSlidePage(p => Math.min(slideCount, p + 1))}
+                    disabled={slidePage >= slideCount}
+                    aria-label="Diapositive suivante"
+                  >›</button>
                 </div>
+                <button className="cr-viewer-close" onClick={() => { setSlidesViewer(false); setSlidePage(1) }} aria-label="Fermer">×</button>
               </div>
-              <object
-                className="cr-viewer-frame"
-                data={chapter.slides.url}
-                type="application/pdf"
-              >
-                <p style={{ color: 'rgba(255,255,255,.6)', textAlign: 'center', paddingTop: '40px' }}>
-                  Votre navigateur ne peut pas afficher ce PDF.{' '}
-                  <a href={chapter.slides.url} target="_blank" rel="noopener noreferrer" style={{ color: 'var(--gold)' }}>
-                    Ouvrir dans un nouvel onglet →
-                  </a>
-                </p>
-              </object>
+              <div className="cr-viewer-body" ref={onViewerBodyRef}>
+                <Document
+                  file={chapter.slides.url}
+                  onLoadSuccess={({ numPages }) => setSlideCount(numPages)}
+                  loading={<div className="cr-viewer-loading">Chargement…</div>}
+                  error={<div className="cr-viewer-loading">Impossible de charger les diapositives.</div>}
+                >
+                  <Page
+                    pageNumber={slidePage}
+                    width={slideWidth || 800}
+                    renderTextLayer={false}
+                    renderAnnotationLayer={false}
+                  />
+                </Document>
+              </div>
             </div>
           )}
         </>
