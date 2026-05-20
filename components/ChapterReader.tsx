@@ -115,10 +115,14 @@ export default function ChapterReader({ chapter, bookTitle }: Props) {
     }
   }, [chapter.slides])
 
-  // Close slides viewer on Escape
+  // Close slides viewer on Escape; navigate with arrow keys
   useEffect(() => {
     if (!slidesViewer) return
-    function onKey(e: KeyboardEvent) { if (e.key === 'Escape') setSlidesViewer(false) }
+    function onKey(e: KeyboardEvent) {
+      if (e.key === 'Escape') { setSlidesViewer(false); setSlidePage(1); setSlideZoom(0.75) }
+      if (e.key === 'ArrowRight') setSlidePage(p => Math.min(slideCount, p + 1))
+      if (e.key === 'ArrowLeft')  setSlidePage(p => Math.max(1, p - 1))
+    }
     window.addEventListener('keydown', onKey)
     const prev = document.body.style.overflow
     document.body.style.overflow = 'hidden'
@@ -126,7 +130,7 @@ export default function ChapterReader({ chapter, bookTitle }: Props) {
       window.removeEventListener('keydown', onKey)
       document.body.style.overflow = prev
     }
-  }, [slidesViewer])
+  }, [slidesViewer, slideCount])
 
   // Track viewer body width so the PDF page fills it exactly
   const onViewerBodyRef = useCallback((node: HTMLDivElement | null) => {
