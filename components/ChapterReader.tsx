@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useRef, useState, useCallback } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import Link from 'next/link'
 import { Document, Page, pdfjs } from 'react-pdf'
 import 'react-pdf/dist/Page/AnnotationLayer.css'
@@ -25,7 +25,7 @@ export default function ChapterReader({ chapter, bookTitle }: Props) {
   const [slidePage, setSlidePage] = useState(1)
   const [slideWidth, setSlideWidth] = useState(800)
   const [slideZoom, setSlideZoom] = useState(0.75)
-  const viewerBodyRef = useRef<HTMLDivElement>(null)
+  const viewerBodyRef = useRef<HTMLDivElement | null>(null)
   const [lightbox, setLightbox] = useState<{ src: string; alt: string; caption: string } | null>(null)
   const [lightboxZoom, setLightboxZoom] = useState(1)
 
@@ -132,14 +132,20 @@ export default function ChapterReader({ chapter, bookTitle }: Props) {
     }
   }, [slidesViewer, slideCount])
 
-  // Track viewer body width so the PDF page fills it exactly
-  const onViewerBodyRef = useCallback((node: HTMLDivElement | null) => {
-    (viewerBodyRef as React.MutableRefObject<HTMLDivElement | null>).current = node
-    if (!node) return
-    setSlideWidth(node.clientWidth)
-    const ro = new ResizeObserver(() => setSlideWidth(node.clientWidth))
-    ro.observe(node)
-  }, [])
+  // Measure viewer width once when it opens; update on window resize only
+  useEffect(() => {
+    if (!slidesViewer) return
+    function measure() {
+      if (viewerBodyRef.current) setSlideWidth(viewerBodyRef.current.clientWidth)
+    }
+    // Defer by one frame so the DOM has rendered
+    const raf = requestAnimationFrame(measure)
+    window.addEventListener('resize', measure)
+    return () => {
+      cancelAnimationFrame(raf)
+      window.removeEventListener('resize', measure)
+    }
+  }, [slidesViewer])
 
   function handleSlidesTabClick() {
     // Cancel the peek auto-close if the user clicks manually
@@ -301,7 +307,7 @@ export default function ChapterReader({ chapter, bookTitle }: Props) {
                 </div>
                 <button className="cr-viewer-close" onClick={() => { setSlidesViewer(false); setSlidePage(1); setSlideZoom(0.75) }} aria-label="Fermer">×</button>
               </div>
-              <div className="cr-viewer-body" ref={onViewerBodyRef}>
+              <div className="cr-viewer-body" ref={viewerBodyRef}>
                 <Document
                   file={chapter.slides.url}
                   onLoadSuccess={({ numPages }) => setSlideCount(numPages)}
