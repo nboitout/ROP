@@ -79,7 +79,7 @@ export default function HomePage() {
       {/* INFOGRAPHICS */}
       <section id="infographics">
         <p className="lbl ctr">Méthode · Pédagogie</p>
-        <p className="ig-subtitle">Des supports visuels pour chaque chapitre</p>
+        <p className="ig-subtitle">De nombreux supports visuels pour chaque chapitre</p>
         <div className="ig-grid">
           {INFOGRAPHICS.map(({ src, caption }) => (
             <button
