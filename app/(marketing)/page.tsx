@@ -1,7 +1,7 @@
 'use client'
 
 import Image from 'next/image'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import HeroCarousel from '@/components/HeroCarousel'
 import QuoteSlider from '@/components/QuoteSlider'
 import FreeChapterForm from '@/components/FreeChapterForm'
@@ -18,6 +18,13 @@ const INFOGRAPHICS = [
 export default function HomePage() {
   const { t } = useLanguage()
   const [lightboxSrc, setLightboxSrc] = useState<string | null>(null)
+
+  useEffect(() => {
+    if (!lightboxSrc) return
+    function onKey(e: KeyboardEvent) { if (e.key === 'Escape') setLightboxSrc(null) }
+    window.addEventListener('keydown', onKey)
+    return () => window.removeEventListener('keydown', onKey)
+  }, [lightboxSrc])
 
   return (
     <main>
