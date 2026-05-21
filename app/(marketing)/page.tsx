@@ -61,6 +61,25 @@ export default function HomePage() {
               <div className="hl-name">Guy Boitout</div>
               <div className="hl-role">{t.hero.role}</div>
             </div>
+            <div className="hl-infographics">
+              <p className="hl-ig-subtitle">De nombreux supports visuels pour chaque chapitre</p>
+              <div className="ig-grid">
+                {INFOGRAPHICS.map(({ src, caption }) => (
+                  <button
+                    key={src}
+                    className="ig-card"
+                    onClick={() => setLightboxSrc(src)}
+                    aria-label={`Agrandir l'infographie : ${caption}`}
+                  >
+                    <div className="ig-img-wrap">
+                      <Image src={src} alt={caption} fill style={{ objectFit: 'contain' }} sizes="(max-width:768px) 90vw, 20vw" />
+                      <span className="ig-zoom" aria-hidden>⌕</span>
+                    </div>
+                    <p className="ig-caption">{caption}</p>
+                  </button>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
         <div className="hr">
@@ -73,28 +92,6 @@ export default function HomePage() {
             </div>
             <HeroCarousel />
           </div>
-        </div>
-      </section>
-
-      {/* INFOGRAPHICS */}
-      <section id="infographics">
-        <p className="lbl ctr">Méthode · Pédagogie</p>
-        <p className="ig-subtitle">De nombreux supports visuels pour chaque chapitre</p>
-        <div className="ig-grid">
-          {INFOGRAPHICS.map(({ src, caption }) => (
-            <button
-              key={src}
-              className="ig-card"
-              onClick={() => setLightboxSrc(src)}
-              aria-label={`Agrandir l'infographie : ${caption}`}
-            >
-              <div className="ig-img-wrap">
-                <Image src={src} alt={caption} fill style={{ objectFit: 'contain' }} sizes="(max-width:768px) 90vw, 33vw" />
-                <span className="ig-zoom" aria-hidden>⌕</span>
-              </div>
-              <p className="ig-caption">{caption}</p>
-            </button>
-          ))}
         </div>
       </section>
 
