@@ -1,6 +1,7 @@
 'use client'
 
 import Image from 'next/image'
+import { useState } from 'react'
 import HeroCarousel from '@/components/HeroCarousel'
 import QuoteSlider from '@/components/QuoteSlider'
 import FreeChapterForm from '@/components/FreeChapterForm'
@@ -8,8 +9,15 @@ import BookNotifyForm from '@/components/BookNotifyForm'
 import LanguageToggle from '@/components/LanguageToggle'
 import { useLanguage } from '@/app/i18n/LanguageContext'
 
+const INFOGRAPHICS = [
+  { src: '/assets/infographic-fig1.png', caption: 'Chapitre 5' },
+  { src: '/assets/infographic-fig2.png', caption: 'Chapitre 1' },
+  { src: '/assets/infographic-fig3.png', caption: 'Chapitre 14' },
+]
+
 export default function HomePage() {
   const { t } = useLanguage()
+  const [lightboxSrc, setLightboxSrc] = useState<string | null>(null)
 
   return (
     <main>
@@ -65,6 +73,28 @@ export default function HomePage() {
             </div>
             <HeroCarousel />
           </div>
+        </div>
+      </section>
+
+      {/* INFOGRAPHICS */}
+      <section id="infographics">
+        <p className="lbl ctr">Méthode · Pédagogie</p>
+        <p className="ig-subtitle">Des supports visuels pour chaque chapitre</p>
+        <div className="ig-grid">
+          {INFOGRAPHICS.map(({ src, caption }) => (
+            <button
+              key={src}
+              className="ig-card"
+              onClick={() => setLightboxSrc(src)}
+              aria-label={`Agrandir l'infographie : ${caption}`}
+            >
+              <div className="ig-img-wrap">
+                <Image src={src} alt={caption} fill style={{ objectFit: 'contain' }} sizes="(max-width:768px) 90vw, 33vw" />
+                <span className="ig-zoom" aria-hidden>⌕</span>
+              </div>
+              <p className="ig-caption">{caption}</p>
+            </button>
+          ))}
         </div>
       </section>
 
@@ -416,6 +446,15 @@ export default function HomePage() {
           <span>{t.footer.copy}</span>
         </div>
       </footer>
+
+      {lightboxSrc && (
+        <div className="ig-lightbox" onClick={() => setLightboxSrc(null)} role="dialog" aria-modal="true" aria-label="Infographie agrandie">
+          <button className="ig-lb-close" onClick={() => setLightboxSrc(null)} aria-label="Fermer">×</button>
+          <div className="ig-lb-inner" onClick={(e) => e.stopPropagation()}>
+            <img src={lightboxSrc} alt="" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+          </div>
+        </div>
+      )}
     </main>
   )
 }

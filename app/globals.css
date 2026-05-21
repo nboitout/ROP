@@ -93,6 +93,22 @@ h1 em { font-style:italic; color:var(--gold-l); }
 .hero-thumb.is-active .hero-thumb-frame { border-color:var(--gold); box-shadow:0 14px 28px rgba(160,124,58,.2); }
 .hero-thumb img { width:100%; height:100%; object-fit:cover; object-position:center top; display:block; }
 
+/* INFOGRAPHICS */
+#infographics { background:var(--parch); padding:72px 80px; text-align:center; }
+.ig-subtitle { font-family:'Cormorant Garamond',serif; font-size:1.18rem; font-weight:300; font-style:italic; color:var(--i30); margin-bottom:52px; }
+.ig-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:32px; max-width:1100px; margin:0 auto; }
+.ig-card { background:none; border:none; cursor:pointer; padding:0; text-align:center; }
+.ig-img-wrap { position:relative; aspect-ratio:3/4; background:white; border:1px solid rgba(74,107,90,.12); border-radius:12px; overflow:hidden; box-shadow:0 12px 40px rgba(26,26,24,.08); transition:transform .26s, box-shadow .26s; }
+.ig-card:hover .ig-img-wrap { transform:translateY(-6px); box-shadow:0 24px 60px rgba(26,26,24,.16); }
+.ig-zoom { position:absolute; inset:0; display:flex; align-items:center; justify-content:center; font-size:2.4rem; color:white; background:rgba(26,26,24,0); opacity:0; transition:background .26s, opacity .26s; pointer-events:none; }
+.ig-card:hover .ig-zoom { background:rgba(26,26,24,.28); opacity:1; }
+.ig-caption { font-size:.68rem; letter-spacing:.2em; text-transform:uppercase; color:var(--sage); margin-top:14px; font-weight:500; }
+.ig-lightbox { position:fixed; inset:0; z-index:900; background:rgba(26,26,24,.9); display:flex; align-items:center; justify-content:center; }
+.ig-lb-close { position:absolute; top:20px; right:28px; background:none; border:none; color:rgba(245,240,232,.8); font-size:2.2rem; line-height:1; cursor:pointer; transition:color .2s; z-index:1; }
+.ig-lb-close:hover { color:var(--cream); }
+.ig-lb-inner { position:relative; width:min(88vw,840px); height:min(90vh,960px); }
+.ig-lb-inner img { display:block; }
+
 /* GENÈSE */
 #genese { background:var(--ink); display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:center; }
 .gen-text p { font-size:.94rem; line-height:1.9; color:rgba(245,240,232,.88); margin-bottom:16px; }
@@ -286,6 +302,8 @@ footer > div > p { font-size:1rem; color:rgba(245,240,232,.84); line-height:1.9;
   #hero, #genese, .arch-intro, #acces-libre, #auteur, footer, .prot-grid { grid-template-columns:1fr !important; gap:36px !important; }
   .hl, .hr { padding:60px 32px !important; }
   section { padding:68px 28px !important; }
+  .ig-grid { grid-template-columns:1fr; max-width:360px; }
+  .ig-img-wrap { aspect-ratio:3/4; }
   #protocole, #pedagogie, #stats { padding:68px 28px !important; }
   .ped-grid, .qt-row, .flow, .stats-row, .hier-row { grid-template-columns:1fr !important; }
   .ch-hd { grid-template-columns:1fr !important; gap:18px; }
