@@ -11,8 +11,8 @@ import { useLanguage } from '@/app/i18n/LanguageContext'
 
 const INFOGRAPHICS = [
   { src: '/assets/infographic-fig1.png', caption: 'Chapitre 5' },
-  { src: '/assets/infographic-fig2.gif', caption: 'Chapitre 1' },
-  { src: '/assets/infographic-fig3.png', caption: 'Chapitre 14' },
+  { src: '/assets/infographic-fig2.gif', caption: 'Chapitre 14' },
+  { src: '/assets/infographic-fig3.png', caption: 'Chapitre 1' },
 ]
 
 export default function HomePage() {
