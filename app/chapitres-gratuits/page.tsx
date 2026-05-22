@@ -72,8 +72,8 @@ export default async function ChapitresGratuitsPage() {
             </li>
           ))}
           <li className="cg-card cg-card-coming">
-            <p className="cg-card-eyebrow">Chapitre 4</p>
-            <h2 className="cg-card-title">Système nerveux autonome</h2>
+            <p className="cg-card-eyebrow">Chapitre 14</p>
+            <h2 className="cg-card-title">Intestin grêle</h2>
             <p className="cg-card-desc">Disponible prochainement.</p>
           </li>
         </ul>
