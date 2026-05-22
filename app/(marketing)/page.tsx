@@ -11,7 +11,7 @@ import { useLanguage } from '@/app/i18n/LanguageContext'
 
 const INFOGRAPHICS = [
   { src: '/assets/infographic-fig1.png', caption: 'Chapitre 5' },
-  { src: '/assets/infographic-fig2.png', caption: 'Chapitre 1' },
+  { src: '/assets/infographic-fig2.gif', caption: 'Chapitre 1' },
   { src: '/assets/infographic-fig3.png', caption: 'Chapitre 14' },
 ]
 
@@ -79,7 +79,7 @@ export default function HomePage() {
                     aria-label={`Agrandir l'infographie : ${caption}`}
                   >
                     <div className="ig-img-wrap">
-                      <Image src={src} alt={caption} fill style={{ objectFit: 'contain' }} sizes="(max-width:768px) 90vw, 20vw" />
+                      <Image src={src} alt={caption} fill style={{ objectFit: 'contain' }} sizes="(max-width:768px) 90vw, 20vw" unoptimized={src.endsWith('.gif')} />
                       <span className="ig-zoom" aria-hidden>⌕</span>
                     </div>
                     <p className="ig-caption">{caption}</p>
