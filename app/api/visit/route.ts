@@ -33,13 +33,21 @@ export async function POST(req: NextRequest) {
   const isReturning = !!(existing && /^[0-9a-f-]{36}$/i.test(existing))
   const readerId = isReturning ? existing! : randomUUID()
 
+  const event: string = typeof body.event === 'string' ? body.event : 'page_visit'
+  const durationSeconds: number | null =
+    event === 'page_leave' && typeof body.duration_seconds === 'number'
+      ? body.duration_seconds
+      : null
+
   after(() => forwardToAppsScript({
     type: 'visit',
+    event,
     timestamp: new Date().toISOString(),
     readerId,
     isReturning,
     lang: body.lang,
     page: body.page,
+    ...(durationSeconds !== null ? { duration_seconds: durationSeconds } : {}),
     userAgent: req.headers.get('user-agent') ?? '',
     referer: req.headers.get('referer') ?? '',
   }))
