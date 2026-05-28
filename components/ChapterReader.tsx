@@ -15,6 +15,15 @@ type Props = {
   bookTitle: string
 }
 
+function track(slug: string, event: string, data?: Record<string, unknown>) {
+  fetch('/api/track', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ chapter: slug, event, ...(data ? { data } : {}) }),
+    keepalive: true,
+  }).catch(() => {})
+}
+
 export default function ChapterReader({ chapter, bookTitle }: Props) {
   const [progress, setProgress] = useState(0)
   const [activeSection, setActiveSection] = useState<string>(chapter.sections[0]?.id ?? '')
@@ -31,7 +40,9 @@ export default function ChapterReader({ chapter, bookTitle }: Props) {
 
   function closeLightbox() { setLightbox(null); setLightboxZoom(1) }
   const articleRef = useRef<HTMLElement>(null)
+  const endRef = useRef<HTMLDivElement>(null)
   const peekCloseRef = useRef<ReturnType<typeof setTimeout> | null>(null)
+  const firedMilestonesRef = useRef<Set<number>>(new Set())
 
   useEffect(() => {
     function onScroll() {
@@ -40,7 +51,14 @@ export default function ChapterReader({ chapter, bookTitle }: Props) {
       const top = el.getBoundingClientRect().top
       const total = el.scrollHeight - window.innerHeight
       const scrolled = Math.min(Math.max(-top, 0), total)
-      setProgress(total > 0 ? scrolled / total : 0)
+      const pct = total > 0 ? scrolled / total : 0
+      setProgress(pct)
+      for (const m of [25, 50, 75, 100]) {
+        if (pct * 100 >= m && !firedMilestonesRef.current.has(m)) {
+          firedMilestonesRef.current.add(m)
+          track(chapter.slug, 'scroll_depth', { percent: m })
+        }
+      }
 
       // active section: nearest section whose top is above 30% viewport
       const sections = el.querySelectorAll<HTMLElement>('section[data-section-id]')
@@ -88,6 +106,22 @@ export default function ChapterReader({ chapter, bookTitle }: Props) {
       clearInterval(interval)
       document.removeEventListener('visibilitychange', onVis)
     }
+  }, [chapter.slug])
+
+  useEffect(() => {
+    const el = endRef.current
+    if (!el) return
+    const obs = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          obs.disconnect()
+          track(chapter.slug, 'chapter_end_reached')
+        }
+      },
+      { threshold: 0.5 },
+    )
+    obs.observe(el)
+    return () => obs.disconnect()
   }, [chapter.slug])
 
   useEffect(() => {
@@ -217,7 +251,7 @@ export default function ChapterReader({ chapter, bookTitle }: Props) {
             </section>
           ))}
 
-          <div className="cr-end">
+          <div className="cr-end" ref={endRef}>
             <div className="cr-end-card">
               <p className="cr-end-eyebrow">
                 {chapter.number ? `Fin du chapitre ${chapter.number}` : `Fin de l’${chapter.title.toLowerCase()}`}
@@ -259,7 +293,7 @@ export default function ChapterReader({ chapter, bookTitle }: Props) {
               <p className="cr-slides-desc">{chapter.slides.description}</p>
               <button
                 className="cr-slides-cta"
-                onClick={() => { setSlidesOpen(false); setSlidesViewer(true) }}
+                onClick={() => { setSlidesOpen(false); setSlidesViewer(true); track(chapter.slug, 'slides_viewer_open') }}
               >
                 Voir les diapositives →
               </button>
@@ -335,7 +369,7 @@ export default function ChapterReader({ chapter, bookTitle }: Props) {
               <button
                 type="button"
                 className="cr-resource-card"
-                onClick={() => setLightbox(chapter.revisionSheet!)}
+                onClick={() => { setLightbox(chapter.revisionSheet!); track(chapter.slug, 'resource_open', { resource: 'revision_sheet' }) }}
                 aria-label="Ouvrir la fiche de révision"
               >
                 <img src={chapter.revisionSheet.src} alt="" aria-hidden />
@@ -346,7 +380,7 @@ export default function ChapterReader({ chapter, bookTitle }: Props) {
               <button
                 type="button"
                 className="cr-resource-card cr-resource-card--case"
-                onClick={() => setLightbox(chapter.clinicalCase!)}
+                onClick={() => { setLightbox(chapter.clinicalCase!); track(chapter.slug, 'resource_open', { resource: 'clinical_case' }) }}
                 aria-label="Ouvrir le cas clinique"
               >
                 <img src={chapter.clinicalCase.src} alt="" aria-hidden />
