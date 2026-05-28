@@ -7,7 +7,7 @@ import { getSessionId } from '@/lib/session'
 type FieldErrors = { firstName?: string; lastName?: string; email?: string; profession?: string }
 
 export default function FreeChapterForm() {
-  const { t } = useLanguage()
+  const { t, lang } = useLanguage()
   const f = t.form
 
   const [firstName, setFirstName] = useState('')
