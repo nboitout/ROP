@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Analytics } from '@vercel/analytics/react'
 import './globals.css'
 import { LanguageProvider } from '@/app/i18n/LanguageContext'
+import VisitTracker from '@/components/VisitTracker'
 
 export const metadata: Metadata = {
   title: 'Réflexothérapie occipito-podale et viscères des cavités abdominale et pelvienne — Guy Boitout · R.O.P.',
@@ -25,7 +26,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
       </head>
       <body>
-        <LanguageProvider>{children}</LanguageProvider>
+        <LanguageProvider>
+          <VisitTracker />
+          {children}
+        </LanguageProvider>
         <Analytics />
       </body>
     </html>
