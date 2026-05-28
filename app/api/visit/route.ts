@@ -39,14 +39,22 @@ export async function POST(req: NextRequest) {
       ? body.duration_seconds
       : null
 
+  const sessionId: string = typeof body.sessionId === 'string' ? body.sessionId : ''
+  const country: string = req.headers.get('x-vercel-ip-country') ?? ''
+  const utm: Record<string, string> =
+    body.utm && typeof body.utm === 'object' && !Array.isArray(body.utm) ? body.utm : {}
+
   after(() => forwardToAppsScript({
     type: 'visit',
     event,
     timestamp: new Date().toISOString(),
     readerId,
+    sessionId,
     isReturning,
     lang: body.lang,
     page: body.page,
+    country,
+    ...(Object.keys(utm).length > 0 ? utm : {}),
     ...(durationSeconds !== null ? { duration_seconds: durationSeconds } : {}),
     userAgent: req.headers.get('user-agent') ?? '',
     referer: req.headers.get('referer') ?? '',

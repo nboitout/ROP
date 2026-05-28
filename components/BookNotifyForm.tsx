@@ -1,6 +1,8 @@
 'use client'
 
 import { useState } from 'react'
+import { useLanguage } from '@/app/i18n/LanguageContext'
+import { getSessionId } from '@/lib/session'
 
 export type BookNotifyLabels = {
   label: string
@@ -31,6 +33,7 @@ type Props = {
 
 export default function BookNotifyForm({ labels, source = 'book-notify' }: Props = {}) {
   const l = { ...DEFAULT_LABELS, ...labels }
+  const { lang } = useLanguage()
   const [email, setEmail] = useState('')
   const [error, setError] = useState('')
   const [loading, setLoading] = useState(false)
@@ -49,7 +52,7 @@ export default function BookNotifyForm({ labels, source = 'book-notify' }: Props
       const res = await fetch('/api/free-chapter', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ fullName: 'notify', email, source }),
+        body: JSON.stringify({ fullName: 'notify', email, source, lang, sessionId: getSessionId() }),
       })
       if (!res.ok) throw new Error('server')
       setSuccess(true)

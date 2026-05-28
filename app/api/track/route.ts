@@ -32,13 +32,20 @@ export async function POST(req: NextRequest) {
   const existing = req.cookies.get('reader_id')?.value
   const readerId = existing && /^[0-9a-f-]{36}$/i.test(existing) ? existing : randomUUID()
 
+  const lang: string = typeof body.lang === 'string' ? body.lang : ''
+  const sessionId: string = typeof body.sessionId === 'string' ? body.sessionId : ''
+  const country: string = req.headers.get('x-vercel-ip-country') ?? ''
+
   after(() => forwardToAppsScript({
     type: 'event',
     timestamp: new Date().toISOString(),
     readerId,
+    sessionId,
     chapter: body.chapter,
     event: body.event,
     data: body.data ?? null,
+    lang,
+    country,
     userAgent: req.headers.get('user-agent') ?? '',
     referer: req.headers.get('referer') ?? '',
   }))

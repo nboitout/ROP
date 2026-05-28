@@ -7,6 +7,8 @@ import 'react-pdf/dist/Page/AnnotationLayer.css'
 import 'react-pdf/dist/Page/TextLayer.css'
 import type { Chapter, Block } from '@/content/types'
 import BookNotifyForm from '@/components/BookNotifyForm'
+import { useLanguage } from '@/app/i18n/LanguageContext'
+import { getSessionId } from '@/lib/session'
 
 pdfjs.GlobalWorkerOptions.workerSrc = `https://unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`
 
@@ -15,16 +17,20 @@ type Props = {
   bookTitle: string
 }
 
-function track(slug: string, event: string, data?: Record<string, unknown>) {
-  fetch('/api/track', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ chapter: slug, event, ...(data ? { data } : {}) }),
-    keepalive: true,
-  }).catch(() => {})
-}
-
 export default function ChapterReader({ chapter, bookTitle }: Props) {
+  const { lang } = useLanguage()
+  const [sessionId] = useState<string>(() =>
+    typeof window !== 'undefined' ? getSessionId() : ''
+  )
+
+  function track(event: string, data?: Record<string, unknown>) {
+    fetch('/api/track', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ chapter: chapter.slug, event, lang, sessionId, ...(data ? { data } : {}) }),
+      keepalive: true,
+    }).catch(() => {})
+  }
   const [progress, setProgress] = useState(0)
   const [activeSection, setActiveSection] = useState<string>(chapter.sections[0]?.id ?? '')
   const [tocOpen, setTocOpen] = useState(false)
@@ -56,7 +62,7 @@ export default function ChapterReader({ chapter, bookTitle }: Props) {
       for (const m of [25, 50, 75, 100]) {
         if (pct * 100 >= m && !firedMilestonesRef.current.has(m)) {
           firedMilestonesRef.current.add(m)
-          track(chapter.slug, 'scroll_depth', { percent: m })
+          track('scroll_depth', { percent: m })
         }
       }
 
@@ -91,12 +97,7 @@ export default function ChapterReader({ chapter, bookTitle }: Props) {
       last = Date.now()
       if (elapsed >= 10000) {
         fired = true
-        fetch('/api/track', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ chapter: chapter.slug, event: 'read_start' }),
-          keepalive: true,
-        }).catch(() => {})
+        track('read_start')
       }
     }
     const onVis = () => { last = Date.now() }
@@ -115,7 +116,7 @@ export default function ChapterReader({ chapter, bookTitle }: Props) {
       ([entry]) => {
         if (entry.isIntersecting) {
           obs.disconnect()
-          track(chapter.slug, 'chapter_end_reached')
+          track('chapter_end_reached')
         }
       },
       { threshold: 0.5 },
@@ -293,7 +294,7 @@ export default function ChapterReader({ chapter, bookTitle }: Props) {
               <p className="cr-slides-desc">{chapter.slides.description}</p>
               <button
                 className="cr-slides-cta"
-                onClick={() => { setSlidesOpen(false); setSlidesViewer(true); track(chapter.slug, 'slides_viewer_open') }}
+                onClick={() => { setSlidesOpen(false); setSlidesViewer(true); track('slides_viewer_open') }}
               >
                 Voir les diapositives →
               </button>
@@ -369,7 +370,7 @@ export default function ChapterReader({ chapter, bookTitle }: Props) {
               <button
                 type="button"
                 className="cr-resource-card"
-                onClick={() => { setLightbox(chapter.revisionSheet!); track(chapter.slug, 'resource_open', { resource: 'revision_sheet' }) }}
+                onClick={() => { setLightbox(chapter.revisionSheet!); track('resource_open', { resource: 'revision_sheet' }) }}
                 aria-label="Ouvrir la fiche de révision"
               >
                 <img src={chapter.revisionSheet.src} alt="" aria-hidden />
@@ -380,7 +381,7 @@ export default function ChapterReader({ chapter, bookTitle }: Props) {
               <button
                 type="button"
                 className="cr-resource-card cr-resource-card--case"
-                onClick={() => { setLightbox(chapter.clinicalCase!); track(chapter.slug, 'resource_open', { resource: 'clinical_case' }) }}
+                onClick={() => { setLightbox(chapter.clinicalCase!); track('resource_open', { resource: 'clinical_case' }) }}
                 aria-label="Ouvrir le cas clinique"
               >
                 <img src={chapter.clinicalCase.src} alt="" aria-hidden />

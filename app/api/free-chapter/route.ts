@@ -52,16 +52,23 @@ export async function POST(req: NextRequest) {
   const readerId = existing && /^[0-9a-f-]{36}$/i.test(existing) ? existing : randomUUID()
 
   // Forward in the background so the user isn't blocked by Apps Script latency.
+  const lang: string = typeof body.lang === 'string' ? body.lang : ''
+  const sessionId: string = typeof body.sessionId === 'string' ? body.sessionId : ''
+  const country: string = req.headers.get('x-vercel-ip-country') ?? ''
+
   after(() => forwardToAppsScript({
     type: 'lead',
     timestamp: new Date().toISOString(),
     readerId,
+    sessionId,
     firstName,
     lastName,
     fullName,
     email: body.email,
     profession,
     source,
+    lang,
+    country,
     userAgent: req.headers.get('user-agent') ?? '',
     referer: req.headers.get('referer') ?? '',
   }))

@@ -3,6 +3,7 @@
 import { useEffect, useRef } from 'react'
 import { usePathname } from 'next/navigation'
 import { useLanguage } from '@/app/i18n/LanguageContext'
+import { getSessionId, getSessionUtm } from '@/lib/session'
 
 export default function VisitTracker() {
   const { lang } = useLanguage()
@@ -40,7 +41,7 @@ export default function VisitTracker() {
       fetch('/api/visit', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ event: 'page_leave', lang: langRef.current, page, duration_seconds: seconds }),
+        body: JSON.stringify({ event: 'page_leave', lang: langRef.current, page, duration_seconds: seconds, sessionId: getSessionId() }),
         keepalive: true,
       }).catch(() => {})
     }
@@ -84,7 +85,7 @@ export default function VisitTracker() {
     fetch('/api/visit', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ lang, page: pathname }),
+      body: JSON.stringify({ lang, page: pathname, sessionId: getSessionId(), utm: getSessionUtm() }),
       keepalive: true,
     }).catch(() => {})
   }, [lang, pathname])

@@ -8,6 +8,7 @@ import FreeChapterForm from '@/components/FreeChapterForm'
 import BookNotifyForm from '@/components/BookNotifyForm'
 import LanguageToggle from '@/components/LanguageToggle'
 import { useLanguage } from '@/app/i18n/LanguageContext'
+import { getSessionId } from '@/lib/session'
 
 const INFOGRAPHICS = [
   { src: '/assets/infographic-fig1.png', caption: 'Chapitre 5' },
@@ -16,8 +17,17 @@ const INFOGRAPHICS = [
 ]
 
 export default function HomePage() {
-  const { t } = useLanguage()
+  const { t, lang } = useLanguage()
   const [lightboxSrc, setLightboxSrc] = useState<string | null>(null)
+
+  function trackCta(cta: string) {
+    fetch('/api/track', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ chapter: 'home', event: 'cta_click', data: { cta }, lang, sessionId: getSessionId() }),
+      keepalive: true,
+    }).catch(() => {})
+  }
 
   useEffect(() => {
     if (!lightboxSrc) return
@@ -61,8 +71,8 @@ export default function HomePage() {
               ))}
             </div>
             <div className="hero-ctas">
-              <a href="/chapitres-gratuits" className="btn b-gold">{t.hero.cta1}</a>
-              <a href="#chapitres" className="btn b-ghost">{t.hero.cta2}</a>
+              <a href="/chapitres-gratuits" className="btn b-gold" onClick={() => trackCta('hero_chapters')}>{t.hero.cta1}</a>
+              <a href="#chapitres" className="btn b-ghost" onClick={() => trackCta('hero_summary')}>{t.hero.cta2}</a>
             </div>
             <div className="hl-author">
               <div className="hl-name">Guy Boitout</div>
@@ -273,7 +283,7 @@ export default function HomePage() {
           )
         })}
         <div className="ch-foot">
-          <a href="#acheter" className="btn b-gold">{t.chapters.cta}</a>
+          <a href="#acheter" className="btn b-gold" onClick={() => trackCta('chapters_buy')}>{t.chapters.cta}</a>
         </div>
       </section>
 
@@ -405,7 +415,7 @@ export default function HomePage() {
             <ul className="pc-l">
               {t.pricing.plan1.features.map((f) => <li key={f}>{f}</li>)}
             </ul>
-            <a href="#notify" className="btn b-out" style={{ width: '100%', textAlign: 'center' }}>{t.pricing.plan1.cta}</a>
+            <a href="#notify" className="btn b-out" style={{ width: '100%', textAlign: 'center' }} onClick={() => trackCta('pricing_notify_digital')}>{t.pricing.plan1.cta}</a>
           </div>
           <div className="pc star" data-badge={t.pricing.recommended}>
             <div className="pc-n">{t.pricing.plan2.name}</div>
@@ -415,7 +425,7 @@ export default function HomePage() {
             <ul className="pc-l">
               {t.pricing.plan2.features.map((f) => <li key={f}>{f}</li>)}
             </ul>
-            <a href="/chapitres-gratuits" className="btn b-gold" style={{ width: '100%', textAlign: 'center' }}>{t.pricing.plan2.cta}</a>
+            <a href="/chapitres-gratuits" className="btn b-gold" style={{ width: '100%', textAlign: 'center' }} onClick={() => trackCta('pricing_chapters_bundle')}>{t.pricing.plan2.cta}</a>
           </div>
           <div className="pc">
             <div className="pc-n">{t.pricing.plan3.name}</div>
@@ -425,7 +435,7 @@ export default function HomePage() {
             <ul className="pc-l">
               {t.pricing.plan3.features.map((f) => <li key={f}>{f}</li>)}
             </ul>
-            <a href="#notify" className="btn b-out" style={{ width: '100%', textAlign: 'center' }}>{t.pricing.plan3.cta}</a>
+            <a href="#notify" className="btn b-out" style={{ width: '100%', textAlign: 'center' }} onClick={() => trackCta('pricing_notify_print')}>{t.pricing.plan3.cta}</a>
           </div>
         </div>
 

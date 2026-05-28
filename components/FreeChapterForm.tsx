@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { useLanguage } from '@/app/i18n/LanguageContext'
+import { getSessionId } from '@/lib/session'
 
 type FieldErrors = { firstName?: string; lastName?: string; email?: string; profession?: string }
 
@@ -59,6 +60,8 @@ export default function FreeChapterForm() {
           email,
           profession: finalProfession,
           source: 'chapter-5-free',
+          lang,
+          sessionId: getSessionId(),
         }),
       })
       if (!res.ok) throw new Error('server')
