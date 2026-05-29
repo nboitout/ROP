@@ -295,32 +295,25 @@ export async function fetchAllSheets(): Promise<{
     .filter((l) => excludedEmails.has(l.email.toLowerCase()))
     .forEach((l) => { if (l.readerId) excludedReaderIds.add(l.readerId.toLowerCase()) })
 
+  // Apply exclusions first
+  const cleanLeads  = allLeads.filter((l) => !excludedReaderIds.has(l.readerId.toLowerCase()) && !excludedEmails.has(l.email.toLowerCase()))
+  const cleanEvents = allEvents.filter((e) => !excludedReaderIds.has(e.readerId.toLowerCase()))
+  const cleanVisits = allVisits.filter((v) => !excludedReaderIds.has(v.readerId.toLowerCase()))
+
   // Bot filter: only keep visits from readerIds that have at least one
-  // page_leave with dwell time — bots never fire page_leave
+  // page_leave with dwell time — bots never fire page_leave.
+  // Applied after exclusions so excluded readerIds don't inflate the human set.
   const humanReaderIds = new Set(
-    allVisits
+    cleanVisits
       .filter((v) => v.event === 'page_leave' && parseFloat(v.duration_seconds) > 0)
       .map((v) => v.readerId)
       .filter(Boolean)
   )
 
-  if (excludedEmails.size === 0 && excludedReaderIds.size === 0) {
-    return {
-      leads:  allLeads,
-      events: allEvents,
-      visits: humanReaderIds.size > 0 ? allVisits.filter((v) => humanReaderIds.has(v.readerId)) : allVisits,
-      errors,
-    }
-  }
-
-  const cleanVisits = humanReaderIds.size > 0
-    ? allVisits.filter((v) => humanReaderIds.has(v.readerId))
-    : allVisits
-
   return {
-    leads:  allLeads.filter((l) => !excludedReaderIds.has(l.readerId.toLowerCase()) && !excludedEmails.has(l.email.toLowerCase())),
-    events: allEvents.filter((e) => !excludedReaderIds.has(e.readerId.toLowerCase())),
-    visits: cleanVisits.filter((v) => !excludedReaderIds.has(v.readerId.toLowerCase())),
+    leads:  cleanLeads,
+    events: cleanEvents,
+    visits: humanReaderIds.size > 0 ? cleanVisits.filter((v) => humanReaderIds.has(v.readerId)) : cleanVisits,
     errors,
   }
 }
