@@ -20,20 +20,36 @@ interface Props {
   data: BarDataPoint[]
   color?: string
   layout?: 'vertical' | 'horizontal'
+  yAxisWidth?: number
+}
+
+function truncate(s: string, max: number) {
+  return s.length > max ? s.slice(0, max - 1) + '…' : s
+}
+
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+function TruncatedTick({ x, y, payload, maxChars }: any) {
+  return (
+    <text x={x} y={y} dy={4} textAnchor="end" fill="rgba(245,240,232,.7)" fontSize={11}>
+      {truncate(String(payload.value), maxChars)}
+    </text>
+  )
 }
 
 export default function AdminBarChart({
   data,
   color = '#4a6b5a',
   layout = 'horizontal',
+  yAxisWidth = 160,
 }: Props) {
   if (layout === 'vertical') {
+    const maxChars = Math.floor((yAxisWidth - 8) / 6.5)
     return (
       <ResponsiveContainer width="100%" height={Math.max(200, data.length * 36 + 40)}>
         <BarChart
           data={data}
           layout="vertical"
-          margin={{ top: 0, right: 16, left: 8, bottom: 0 }}
+          margin={{ top: 0, right: 16, left: 0, bottom: 0 }}
         >
           <CartesianGrid strokeDasharray="3 3" stroke="rgba(245,240,232,.08)" horizontal={false} />
           <XAxis
@@ -46,8 +62,8 @@ export default function AdminBarChart({
           <YAxis
             type="category"
             dataKey="name"
-            width={130}
-            tick={{ fill: 'rgba(245,240,232,.7)', fontSize: 11 }}
+            width={yAxisWidth}
+            tick={<TruncatedTick maxChars={maxChars} />}
             axisLine={false}
             tickLine={false}
           />

@@ -18,9 +18,9 @@ function formatDuration(secs: number) {
 }
 
 export default async function AdminOverviewPage() {
-  let leads, events, visits, errors
+  let leads, visits, errors
   try {
-    ;({ leads, events, visits, errors } = await fetchAllSheets())
+    ;({ leads, visits, errors } = await fetchAllSheets())
   } catch (err) {
     return (
       <div style={{ padding: 40, color: 'var(--cream)', fontFamily: 'DM Sans, sans-serif' }}>
@@ -36,7 +36,6 @@ export default async function AdminOverviewPage() {
   // --- Filter all data from launch date onwards ---
   const filteredLeads = leads.filter((l) => l.timestamp.slice(0, 10) >= START_DATE)
   const filteredVisits = visits.filter((v) => v.timestamp.slice(0, 10) >= START_DATE)
-  const filteredEvents = events.filter((e) => e.timestamp.slice(0, 10) >= START_DATE)
 
   // --- Unique visitors (distinct readerId in page_visit events) ---
   const pageVisits = filteredVisits.filter((v) => v.event === 'page_visit')
@@ -122,11 +121,7 @@ export default async function AdminOverviewPage() {
         </div>
       )}
 
-      <div style={{ background: '#2a2a22', borderRadius: 8, padding: '10px 16px', marginBottom: 24, fontSize: 12, color: 'rgba(245,240,232,.6)', fontFamily: 'monospace' }}>
-        DEBUG — rows read (≥{START_DATE}): Leads={filteredLeads.length} · Events={filteredEvents.length} · Visits={filteredVisits.length} · SHEETS_ID={process.env.GOOGLE_SHEETS_ID?.slice(0,12)}…
-      </div>
-
-      <div className="adm-scorecards">
+<div className="adm-scorecards">
         <Scorecard label="Unique Visitors" value={uniqueVisitors.toLocaleString()} />
         <Scorecard label="Total Leads" value={totalLeads.toLocaleString()} />
         <Scorecard label="Conversion Rate" value={formatPct(convRate)} subtitle="leads / visitors" />
