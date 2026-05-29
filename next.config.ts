@@ -32,6 +32,12 @@ const nextConfig: NextConfig = {
   images: {
     formats: ['image/avif', 'image/webp'],
   },
+  webpack: (config) => {
+    // react-pdf / pdfjs-dist references the optional `canvas` native module;
+    // it is not available in the build environment so we stub it out.
+    config.resolve.alias.canvas = false
+    return config
+  },
 }
 
 export default nextConfig
