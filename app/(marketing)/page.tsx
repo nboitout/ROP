@@ -1,28 +1,53 @@
 'use client'
 
 import Image from 'next/image'
+import { useState, useEffect } from 'react'
 import HeroCarousel from '@/components/HeroCarousel'
 import QuoteSlider from '@/components/QuoteSlider'
 import FreeChapterForm from '@/components/FreeChapterForm'
+import BookNotifyForm from '@/components/BookNotifyForm'
 import LanguageToggle from '@/components/LanguageToggle'
 import { useLanguage } from '@/app/i18n/LanguageContext'
+import { getSessionId } from '@/lib/session'
+
+const INFOGRAPHICS = [
+  { src: '/assets/infographic-fig1.png', caption: 'Chapitre 5' },
+  { src: '/assets/infographic-fig2.gif', caption: 'Chapitre 14' },
+  { src: '/assets/infographic-fig3.png', caption: 'Chapitre 1' },
+]
 
 export default function HomePage() {
-  const { t } = useLanguage()
+  const { t, lang } = useLanguage()
+  const [lightboxSrc, setLightboxSrc] = useState<string | null>(null)
+
+  function trackCta(cta: string) {
+    fetch('/api/track', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ chapter: 'home', event: 'cta_click', data: { cta }, lang, sessionId: getSessionId() }),
+      keepalive: true,
+    }).catch(() => {})
+  }
+
+  useEffect(() => {
+    if (!lightboxSrc) return
+    function onKey(e: KeyboardEvent) { if (e.key === 'Escape') setLightboxSrc(null) }
+    window.addEventListener('keydown', onKey)
+    return () => window.removeEventListener('keydown', onKey)
+  }, [lightboxSrc])
 
   return (
     <main>
       {/* HEADER */}
       <header>
-        <a className="h-logo" href="#">R.O.P. — Guy Boitout</a>
+        <a className="h-logo" href="#">Guy Boitout</a>
         <div className="h-right">
           <nav>
             <a href="#genese">{t.nav.genese}</a>
             <a href="#chapitres">{t.nav.sommaire}</a>
             <a href="#protocole">{t.nav.protocole}</a>
-            <a href="#acces-libre">{t.nav.accesLibre}</a>
             <a href="#acheter">{t.nav.commander}</a>
-            <a href="#acces-libre" className="n-cta">{t.nav.chapitreGratuit}</a>
+            <a href="/chapitres-gratuits" className="n-cta">{t.nav.chapitreGratuit}</a>
           </nav>
           <LanguageToggle />
         </div>
@@ -46,12 +71,31 @@ export default function HomePage() {
               ))}
             </div>
             <div className="hero-ctas">
-              <a href="#acces-libre" className="btn b-gold">{t.hero.cta1}</a>
-              <a href="#chapitres" className="btn b-ghost">{t.hero.cta2}</a>
+              <a href="/chapitres-gratuits" className="btn b-gold" onClick={() => trackCta('hero_chapters')}>{t.hero.cta1}</a>
+              <a href="#chapitres" className="btn b-ghost" onClick={() => trackCta('hero_summary')}>{t.hero.cta2}</a>
             </div>
             <div className="hl-author">
               <div className="hl-name">Guy Boitout</div>
               <div className="hl-role">{t.hero.role}</div>
+            </div>
+            <div className="hl-infographics">
+              <p className="hl-ig-subtitle">De nombreux supports visuels pour chaque chapitre</p>
+              <div className="ig-grid">
+                {INFOGRAPHICS.map(({ src, caption }) => (
+                  <button
+                    key={src}
+                    className="ig-card"
+                    onClick={() => setLightboxSrc(src)}
+                    aria-label={`Agrandir l'infographie : ${caption}`}
+                  >
+                    <div className="ig-img-wrap">
+                      <Image src={src} alt={caption} fill style={{ objectFit: 'contain' }} sizes="(max-width:768px) 90vw, 20vw" unoptimized={src.endsWith('.gif')} />
+                      <span className="ig-zoom" aria-hidden>⌕</span>
+                    </div>
+                    <p className="ig-caption">{caption}</p>
+                  </button>
+                ))}
+              </div>
             </div>
           </div>
         </div>
@@ -82,7 +126,7 @@ export default function HomePage() {
             <div className="ap-b" />
           </div>
           <div className="prev">
-            <h5>{t.author.prevBooks}</h5>
+            <h5>{t.author.trilogyLbl}</h5>
             <div className="prev-r">
               <a
                 className="pb"
@@ -90,8 +134,12 @@ export default function HomePage() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Image src="/Livre1.png" alt="Book 1 cover" width={200} height={267} style={{ width: '100%', height: 'auto' }} />
-                <div className="pb-cap"><strong>Livre 1</strong>{t.author.viewOnAmazon}</div>
+                <Image src="/Livre1.png" alt="Réflexothérapie occipito-podale" width={200} height={267} style={{ width: '100%', height: 'auto' }} />
+                <div className="pb-cap">
+                  <strong>Livre 1 · 2015</strong>
+                  Réflexothérapie occipito-podale
+                  <span className="pb-pub">Éd. Elsevier-Masson</span>
+                </div>
               </a>
               <a
                 className="pb"
@@ -99,8 +147,20 @@ export default function HomePage() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Image src="/Livre2.png" alt="Book 2 cover" width={200} height={267} style={{ width: '100%', height: 'auto' }} />
-                <div className="pb-cap"><strong>Livre 2</strong>{t.author.viewOnAmazon}</div>
+                <Image src="/Livre2.png" alt="Réflexothérapie occipito-podale et système neuro-méningé" width={200} height={267} style={{ width: '100%', height: 'auto' }} />
+                <div className="pb-cap">
+                  <strong>Livre 2 · 2021</strong>
+                  Réflexothérapie occipito-podale et système neuro-méningé
+                  <span className="pb-pub">Éd. Elsevier-Masson</span>
+                </div>
+              </a>
+              <a className="pb" href="#acheter">
+                <div className="pb-soon">{t.author.comingSoon}</div>
+                <div className="pb-cap">
+                  <strong>Livre 3 · 2026</strong>
+                  Réflexothérapie occipito-podale et viscères des cavités abdominale et pelvienne
+                  <span className="pb-pub">{t.author.publisherSelf}</span>
+                </div>
               </a>
             </div>
           </div>
@@ -115,7 +175,7 @@ export default function HomePage() {
           </div>
           {t.author.bio.map((p, i) => <p key={i}>{p}</p>)}
           <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap', marginTop: 14 }}>
-            <a href="https://www.reflexo-occipitopodale.com" target="_blank" rel="noopener noreferrer" className="btn b-out">{t.author.btn1}</a>
+            <a href="https://www.reflexo-occipitopodale.com/accueil" target="_blank" rel="noopener noreferrer" className="btn b-out">{t.author.btn1}</a>
             <a href="https://www.reflexo-occipitopodale.com/formations-réflexo-occipito-podale" target="_blank" rel="noopener noreferrer" className="btn b-out">{t.author.btn2}</a>
           </div>
         </div>
@@ -170,7 +230,7 @@ export default function HomePage() {
         <div className="flow">
           {t.architecture.flow.map((fc) => (
             <div key={fc.t} className="fc">
-              <div className={`fc-icon${fc.icon === '🫁' ? ' go' : ''}`}>{fc.icon}</div>
+              <div className={`fc-icon${fc.icon === '🫁' || fc.icon === '💧' ? ' go' : ''}`}>{fc.icon}</div>
               <div className="fc-t">{fc.t}</div>
               <div className="fc-s">{fc.s}</div>
               <div className="fc-chs">
@@ -192,30 +252,38 @@ export default function HomePage() {
           </div>
           <p className="ch-hd-d">{t.chapters.desc}</p>
         </div>
-        <div className="ch-grid">
-          {t.chapters.cards.map((card) => (
-            <ChapterCard
-              key={card.num}
-              num={card.num}
-              badge={
-                card.variant === 'intro'
-                  ? <span className="badge bi">{card.badgeLabel}</span>
-                  : card.variant === 'fr'
-                  ? <span className="badge bf">{card.badgeLabel}</span>
-                  : <span className="badge bp">{card.badgeLabel}</span>
-              }
-              variant={card.variant}
-              label={card.label}
-              title={card.title}
-              tags={card.tags}
-              btnClass={card.btnClass}
-              btnLabel={card.btnLabel ?? t.chapters.defaultBtn}
-              included={t.chapters.included}
-              includedSub={t.chapters.includedSub}
-            >
-              {card.body}
-            </ChapterCard>
-          ))}
+        {t.chapters.parts.map((part) => {
+          const partCards = t.chapters.cards.filter((c) => c.part === part.id)
+          if (!partCards.length) return null
+          return (
+            <div key={part.id} className="ch-part">
+              <div className="ch-part-h">{part.title}</div>
+              <div className="ch-grid">
+                {partCards.map((card) => {
+                  const isFree = card.variant === 'free'
+                  return (
+                    <ChapterCard
+                      key={card.num}
+                      num={card.num}
+                      variant={card.variant}
+                      label={card.label}
+                      title={card.title}
+                      tags={card.tags}
+                      isFree={isFree}
+                      freeBadge={t.chapters.freeBadge}
+                      freeBtnLabel={t.chapters.freeBtnLabel}
+                      freeBtnHref="/chapitres-gratuits"
+                    >
+                      {card.body}
+                    </ChapterCard>
+                  )
+                })}
+              </div>
+            </div>
+          )
+        })}
+        <div className="ch-foot">
+          <a href="#acheter" className="btn b-gold" onClick={() => trackCta('chapters_buy')}>{t.chapters.cta}</a>
         </div>
       </section>
 
@@ -337,8 +405,9 @@ export default function HomePage() {
           {t.pricing.h2.before}<em>{t.pricing.h2.em}</em>{t.pricing.h2.after}
         </h2>
         <p>{t.pricing.p}</p>
+        <p className="pricing-notice">{t.pricing.notice}</p>
         <div className="pg">
-          <div className="pc star" data-badge={t.pricing.recommended}>
+          <div className="pc">
             <div className="pc-n">{t.pricing.plan1.name}</div>
             <p className="pc-d">{t.pricing.plan1.desc}</p>
             <div className="pc-a"><span className="pc-c">€</span>{t.pricing.plan1.price}</div>
@@ -346,9 +415,9 @@ export default function HomePage() {
             <ul className="pc-l">
               {t.pricing.plan1.features.map((f) => <li key={f}>{f}</li>)}
             </ul>
-            <a href="#acheter" className="btn b-gold" style={{ width: '100%', textAlign: 'center' }}>{t.pricing.plan1.cta}</a>
+            <a href="#notify" className="btn b-out" style={{ width: '100%', textAlign: 'center' }} onClick={() => trackCta('pricing_notify_digital')}>{t.pricing.plan1.cta}</a>
           </div>
-          <div className="pc">
+          <div className="pc star" data-badge={t.pricing.recommended}>
             <div className="pc-n">{t.pricing.plan2.name}</div>
             <p className="pc-d">{t.pricing.plan2.desc}</p>
             <div className="pc-a"><span className="pc-c">€</span>{t.pricing.plan2.price}</div>
@@ -356,7 +425,27 @@ export default function HomePage() {
             <ul className="pc-l">
               {t.pricing.plan2.features.map((f) => <li key={f}>{f}</li>)}
             </ul>
-            <a href="#acheter" className="btn b-out" style={{ width: '100%', textAlign: 'center' }}>{t.pricing.plan2.cta}</a>
+            <a href="/chapitres-gratuits" className="btn b-gold" style={{ width: '100%', textAlign: 'center' }} onClick={() => trackCta('pricing_chapters_bundle')}>{t.pricing.plan2.cta}</a>
+          </div>
+          <div className="pc">
+            <div className="pc-n">{t.pricing.plan3.name}</div>
+            <p className="pc-d">{t.pricing.plan3.desc}</p>
+            <div className="pc-a"><span className="pc-c">€</span>{t.pricing.plan3.price}</div>
+            <div className="pc-s">{t.pricing.plan3.sub}</div>
+            <ul className="pc-l">
+              {t.pricing.plan3.features.map((f) => <li key={f}>{f}</li>)}
+            </ul>
+            <a href="#notify" className="btn b-out" style={{ width: '100%', textAlign: 'center' }} onClick={() => trackCta('pricing_notify_print')}>{t.pricing.plan3.cta}</a>
+          </div>
+        </div>
+
+        <div id="notify" className="cr-end" style={{ marginTop: 56, paddingTop: 0, borderTop: 'none' }}>
+          <div className="cr-end-card">
+            <p className="cr-end-eyebrow">{t.pricing.notify.eyebrow}</p>
+            <h3 className="cr-end-title">{t.pricing.notify.title}</h3>
+            <p className="cr-end-book"><em>{t.pricing.notify.book}</em></p>
+            <p className="cr-end-body">{t.pricing.notify.body}</p>
+            <BookNotifyForm labels={t.pricing.notify.form} source="book-notify-pricing" />
           </div>
         </div>
       </section>
@@ -371,32 +460,39 @@ export default function HomePage() {
           <span>{t.footer.copy}</span>
         </div>
       </footer>
+
+      {lightboxSrc && (
+        <div className="ig-lightbox" onClick={() => setLightboxSrc(null)} role="dialog" aria-modal="true" aria-label="Infographie agrandie">
+          <button className="ig-lb-close" onClick={() => setLightboxSrc(null)} aria-label="Fermer">×</button>
+          <div className="ig-lb-inner" onClick={(e) => e.stopPropagation()}>
+            <img src={lightboxSrc} alt="" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+          </div>
+        </div>
+      )}
     </main>
   )
 }
 
 /* ── Shared chapter card component ── */
 function ChapterCard({
-  num, badge, variant, label, title, tags, btnClass = 'b-gold', btnLabel = 'Voir le livre →',
-  included, includedSub, children,
+  num, variant, label, title, tags, isFree, freeBadge, freeBtnLabel, freeBtnHref, children,
 }: {
   num: string
-  badge: React.ReactNode
-  variant?: 'intro' | 'fr'
+  variant?: 'free'
   label: string
   title: string
   tags: string[]
-  btnClass?: string
-  btnLabel?: string
-  included: string
-  includedSub: string
+  isFree: boolean
+  freeBadge: string
+  freeBtnLabel: string
+  freeBtnHref: string
   children: React.ReactNode
 }) {
   return (
     <div className={`cc${variant ? ` ${variant}` : ''}`}>
       <div className="cc-top">
         <div className="cc-n">{num}</div>
-        {badge}
+        {isFree && <span className="badge bf">{freeBadge}</span>}
       </div>
       <div className="cc-body">
         <div className="cc-lbl">{label}</div>
@@ -405,10 +501,9 @@ function ChapterCard({
         <div className="cc-tags">
           {tags.map((tag) => <span key={tag} className="ct">{tag}</span>)}
         </div>
-      </div>
-      <div className="cc-ft">
-        <div className="cc-pr">{included}<small>{includedSub}</small></div>
-        <a href="#acheter" className={`btn ${btnClass}`} style={{ padding: '8px 18px', fontSize: '.67rem' }}>{btnLabel}</a>
+        {isFree && (
+          <a href={freeBtnHref} className="cc-free-link">{freeBtnLabel}</a>
+        )}
       </div>
     </div>
   )
