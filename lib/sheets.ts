@@ -184,20 +184,40 @@ function rowsToLeads(rows: string[][]): LeadRow[] {
   }))
 }
 
+const UUID_RE = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i
+
 function rowsToEvents(rows: string[][]): EventRow[] {
   if (rows.length < 2) return []
-  return rows.slice(1).map((r) => ({
-    timestamp:  r[0] ?? '',
-    readerId:   r[1] ?? '',
-    sessionId:  r[2] ?? '',
-    chapter:    r[3] ?? '',
-    event:      r[4] ?? '',
-    data:       r[5] ?? '',
-    lang:       r[6] ?? '',
-    country:    r[7] ?? '',
-    userAgent:  r[8] ?? '',
-    referer:    r[9] ?? '',
-  }))
+  return rows.slice(1).map((r) => {
+    // New format (from 2026-05-29): timestamp, readerId, sessionId, chapter, event, data, lang, country, userAgent, referer
+    // Old format: timestamp, readerId, chapter, event, data, userAgent, referer
+    const newFormat = UUID_RE.test(r[2] ?? '')
+    return newFormat
+      ? {
+          timestamp: r[0] ?? '',
+          readerId:  r[1] ?? '',
+          sessionId: r[2] ?? '',
+          chapter:   r[3] ?? '',
+          event:     r[4] ?? '',
+          data:      r[5] ?? '',
+          lang:      r[6] ?? '',
+          country:   r[7] ?? '',
+          userAgent: r[8] ?? '',
+          referer:   r[9] ?? '',
+        }
+      : {
+          timestamp: r[0] ?? '',
+          readerId:  r[1] ?? '',
+          sessionId: '',
+          chapter:   r[2] ?? '',
+          event:     r[3] ?? '',
+          data:      r[4] ?? '',
+          lang:      '',
+          country:   '',
+          userAgent: r[5] ?? '',
+          referer:   r[6] ?? '',
+        }
+  })
 }
 
 function rowsToVisits(rows: string[][]): VisitRow[] {
