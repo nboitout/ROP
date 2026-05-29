@@ -1,4 +1,3 @@
-import crypto from 'crypto'
 
 // ---- Types ----
 
@@ -62,8 +61,8 @@ const CACHE_TTL_MS = 1 * 60 * 1000 // 1 min (testing — raise to 5 min in produ
 
 // ---- JWT / OAuth ----
 
-function base64url(buf: Buffer | string): string {
-  const b = typeof buf === 'string' ? Buffer.from(buf) : buf
+function base64url(bytes: Uint8Array | string): string {
+  const b = typeof bytes === 'string' ? Buffer.from(bytes) : Buffer.from(bytes)
   return b.toString('base64').replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '')
 }
 
@@ -75,30 +74,40 @@ async function getAccessToken(): Promise<string> {
     throw new Error('Missing Google service account credentials in environment variables.')
   }
 
-  // Replace literal \n with actual newlines in the PEM key
-  const privateKey = rawKey.replace(/\\n/g, '\n')
+  // Normalise PEM — handle literal \n from env var and strip headers
+  const pem = rawKey.replace(/\\n/g, '\n')
+  const pemBody = pem
+    .replace(/-----BEGIN PRIVATE KEY-----/, '')
+    .replace(/-----END PRIVATE KEY-----/, '')
+    .replace(/\s/g, '')
+  const keyBytes = Buffer.from(pemBody, 'base64')
 
-  const now = Math.floor(Date.now() / 1000)
-  const header = base64url(JSON.stringify({ alg: 'RS256', typ: 'JWT' }))
-  const payload = base64url(
-    JSON.stringify({
-      iss: email,
-      scope: 'https://www.googleapis.com/auth/spreadsheets.readonly',
-      aud: 'https://oauth2.googleapis.com/token',
-      exp: now + 3600,
-      iat: now,
-    })
+  // Import as PKCS#8 via Web Crypto — works on Node 18 / OpenSSL 3
+  const cryptoKey = await globalThis.crypto.subtle.importKey(
+    'pkcs8',
+    keyBytes,
+    { name: 'RSASSA-PKCS1-v1_5', hash: 'SHA-256' },
+    false,
+    ['sign'],
   )
 
+  const now = Math.floor(Date.now() / 1000)
+  const header  = base64url(JSON.stringify({ alg: 'RS256', typ: 'JWT' }))
+  const payload = base64url(JSON.stringify({
+    iss:   email,
+    scope: 'https://www.googleapis.com/auth/spreadsheets.readonly',
+    aud:   'https://oauth2.googleapis.com/token',
+    exp:   now + 3600,
+    iat:   now,
+  }))
+
   const signingInput = `${header}.${payload}`
-
-  const keyObject = crypto.createPrivateKey(privateKey)
-  const sign = crypto.createSign('RSA-SHA256')
-  sign.update(signingInput)
-  const signature = sign.sign(keyObject, 'base64')
-  const sigB64url = signature.replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '')
-
-  const jwt = `${signingInput}.${sigB64url}`
+  const sigBytes = await globalThis.crypto.subtle.sign(
+    'RSASSA-PKCS1-v1_5',
+    cryptoKey,
+    Buffer.from(signingInput),
+  )
+  const jwt = `${signingInput}.${base64url(new Uint8Array(sigBytes))}`
 
   const tokenRes = await fetch('https://oauth2.googleapis.com/token', {
     method: 'POST',
