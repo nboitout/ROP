@@ -86,6 +86,11 @@ async function getAccessToken(): Promise<string> {
 
   if (!pemBase64) throw new Error('Private key is empty after stripping PEM headers.')
 
+  // A 2048-bit RSA PKCS#8 key base64-encodes to ~2176 chars. Flag if suspiciously short.
+  if (pemBase64.length < 1000) {
+    throw new Error(`Private key base64 is too short (${pemBase64.length} chars) — likely truncated in Vercel. Expected ~2176 chars.`)
+  }
+
   // Load key from raw DER bytes — bypasses OpenSSL PEM decoder (source of DECODER errors)
   const derBytes = Buffer.from(pemBase64, 'base64')
   const privateKey = createPrivateKey({ key: derBytes, format: 'der', type: 'pkcs8' })
