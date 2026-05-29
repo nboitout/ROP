@@ -58,7 +58,7 @@ interface CacheEntry {
 }
 
 const cache = new Map<string, CacheEntry>()
-const CACHE_TTL_MS = 5 * 60 * 1000
+const CACHE_TTL_MS = 1 * 60 * 1000 // 1 min (testing — raise to 5 min in production)
 
 // ---- JWT / OAuth ----
 
@@ -213,12 +213,13 @@ function rowsToVisits(rows: string[][]): VisitRow[] {
 
 // ---- Fetch all sheets ----
 
-async function fetchSheetSafe(sheetName: string): Promise<string[][]> {
+async function fetchSheetSafe(sheetName: string): Promise<{ rows: string[][], error: string | null }> {
   try {
-    return await fetchSheetData(sheetName)
+    const rows = await fetchSheetData(sheetName)
+    return { rows, error: null }
   } catch (err) {
     console.warn(`[sheets] Could not load sheet "${sheetName}":`, err)
-    return []
+    return { rows: [], error: String(err) }
   }
 }
 
@@ -226,16 +227,23 @@ export async function fetchAllSheets(): Promise<{
   leads: LeadRow[]
   events: EventRow[]
   visits: VisitRow[]
+  errors: Record<string, string>
 }> {
-  const [leadsRaw, eventsRaw, visitsRaw] = await Promise.all([
+  const [leads, events, visits] = await Promise.all([
     fetchSheetSafe('Leads'),
     fetchSheetSafe('Events'),
     fetchSheetSafe('Visits'),
   ])
 
+  const errors: Record<string, string> = {}
+  if (leads.error)  errors['Leads']  = leads.error
+  if (events.error) errors['Events'] = events.error
+  if (visits.error) errors['Visits'] = visits.error
+
   return {
-    leads:  rowsToLeads(leadsRaw),
-    events: rowsToEvents(eventsRaw),
-    visits: rowsToVisits(visitsRaw),
+    leads:  rowsToLeads(leads.rows),
+    events: rowsToEvents(events.rows),
+    visits: rowsToVisits(visits.rows),
+    errors,
   }
 }

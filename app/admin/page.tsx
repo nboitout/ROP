@@ -16,9 +16,9 @@ function formatDuration(secs: number) {
 }
 
 export default async function AdminOverviewPage() {
-  let leads, visits
+  let leads, visits, errors
   try {
-    ;({ leads, visits } = await fetchAllSheets())
+    ;({ leads, visits, errors } = await fetchAllSheets())
   } catch (err) {
     return (
       <div style={{ padding: 40, color: 'var(--cream)', fontFamily: 'DM Sans, sans-serif' }}>
@@ -28,6 +28,8 @@ export default async function AdminOverviewPage() {
       </div>
     )
   }
+
+  const errorEntries = Object.entries(errors ?? {})
 
   // --- Unique visitors (distinct readerId in page_visit events) ---
   const pageVisits = visits.filter((v) => v.event === 'page_visit')
@@ -105,6 +107,15 @@ export default async function AdminOverviewPage() {
     <main className="adm-page">
       <h1 className="adm-page-title">Overview</h1>
       <p className="adm-page-sub">Last updated: {new Date().toLocaleString('en-GB')}</p>
+
+      {errorEntries.length > 0 && (
+        <div style={{ background: '#7f1d1d', borderRadius: 8, padding: '12px 16px', marginBottom: 24 }}>
+          <p style={{ color: '#fca5a5', fontWeight: 600, marginBottom: 6 }}>⚠ Sheet loading errors</p>
+          {errorEntries.map(([sheet, msg]) => (
+            <pre key={sheet} style={{ color: '#fca5a5', fontSize: 12, margin: '4px 0' }}>{sheet}: {msg}</pre>
+          ))}
+        </div>
+      )}
 
       <div className="adm-scorecards">
         <Scorecard label="Unique Visitors" value={uniqueVisitors.toLocaleString()} />
