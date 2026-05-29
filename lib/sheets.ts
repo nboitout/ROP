@@ -92,9 +92,10 @@ async function getAccessToken(): Promise<string> {
 
   const signingInput = `${header}.${payload}`
 
+  const keyObject = crypto.createPrivateKey(privateKey)
   const sign = crypto.createSign('RSA-SHA256')
   sign.update(signingInput)
-  const signature = sign.sign(privateKey, 'base64')
+  const signature = sign.sign(keyObject, 'base64')
   const sigB64url = signature.replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '')
 
   const jwt = `${signingInput}.${sigB64url}`
