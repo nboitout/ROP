@@ -117,6 +117,10 @@ export default async function AdminOverviewPage() {
         </div>
       )}
 
+      <div style={{ background: '#2a2a22', borderRadius: 8, padding: '10px 16px', marginBottom: 24, fontSize: 12, color: 'rgba(245,240,232,.6)', fontFamily: 'monospace' }}>
+        DEBUG — rows read: Leads={leads.length} · Events={events.length} · Visits={visits.length} · SHEETS_ID={process.env.GOOGLE_SHEETS_ID?.slice(0,12)}…
+      </div>
+
       <div className="adm-scorecards">
         <Scorecard label="Unique Visitors" value={uniqueVisitors.toLocaleString()} />
         <Scorecard label="Total Leads" value={totalLeads.toLocaleString()} />
