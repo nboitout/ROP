@@ -16,9 +16,9 @@ function formatDuration(secs: number) {
 }
 
 export default async function AdminOverviewPage() {
-  let leads, visits, errors
+  let leads, events, visits, errors
   try {
-    ;({ leads, visits, errors } = await fetchAllSheets())
+    ;({ leads, events, visits, errors } = await fetchAllSheets())
   } catch (err) {
     return (
       <div style={{ padding: 40, color: 'var(--cream)', fontFamily: 'DM Sans, sans-serif' }}>
