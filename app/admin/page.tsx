@@ -12,7 +12,6 @@ function formatPct(n: number) {
 }
 
 function formatDuration(secs: number) {
-  if (secs >= 60) return `${Math.round(secs / 60)}m ${Math.round(secs % 60)}s`
   return `${Math.round(secs)}s`
 }
 

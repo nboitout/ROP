@@ -14,7 +14,6 @@ function avgDuration(rows: { duration_seconds: string }[]): number {
 
 function formatDuration(secs: number): string {
   if (secs === 0) return '—'
-  if (secs >= 60) return `${Math.round(secs / 60)}m ${Math.round(secs % 60)}s`
   return `${Math.round(secs)}s`
 }
 
