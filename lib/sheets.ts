@@ -240,21 +240,44 @@ export async function fetchAllSheets(): Promise<{
   visits: VisitRow[]
   errors: Record<string, string>
 }> {
-  const [leads, events, visits] = await Promise.all([
+  const [leadsResult, eventsResult, visitsResult] = await Promise.all([
     fetchSheetSafe('Leads'),
     fetchSheetSafe('Events'),
     fetchSheetSafe('Visits'),
   ])
 
   const errors: Record<string, string> = {}
-  if (leads.error)  errors['Leads']  = leads.error
-  if (events.error) errors['Events'] = events.error
-  if (visits.error) errors['Visits'] = visits.error
+  if (leadsResult.error)  errors['Leads']  = leadsResult.error
+  if (eventsResult.error) errors['Events'] = eventsResult.error
+  if (visitsResult.error) errors['Visits'] = visitsResult.error
+
+  const excludedEmails = new Set(
+    (process.env.EXCLUDED_EMAILS ?? '')
+      .split(',')
+      .map((s) => s.trim().toLowerCase())
+      .filter(Boolean)
+  )
+
+  const allLeads  = rowsToLeads(leadsResult.rows)
+  const allEvents = rowsToEvents(eventsResult.rows)
+  const allVisits = rowsToVisits(visitsResult.rows)
+
+  if (excludedEmails.size === 0) {
+    return { leads: allLeads, events: allEvents, visits: allVisits, errors }
+  }
+
+  // Collect all readerIds associated with excluded emails
+  const excludedReaderIds = new Set(
+    allLeads
+      .filter((l) => excludedEmails.has(l.email.toLowerCase()))
+      .map((l) => l.readerId)
+      .filter(Boolean)
+  )
 
   return {
-    leads:  rowsToLeads(leads.rows),
-    events: rowsToEvents(events.rows),
-    visits: rowsToVisits(visits.rows),
+    leads:  allLeads.filter((l) => !excludedReaderIds.has(l.readerId) && !excludedEmails.has(l.email.toLowerCase())),
+    events: allEvents.filter((e) => !excludedReaderIds.has(e.readerId)),
+    visits: allVisits.filter((v) => !excludedReaderIds.has(v.readerId)),
     errors,
   }
 }
