@@ -27,11 +27,13 @@ export default async function ReadersPage() {
     return meta ? { ...l, lang: meta.lang || l.lang, country: meta.country || l.country } : l
   })
 
-  const total = enrichedLeads.length
+  // Deduplicate by email — each reader may have submitted multiple forms (chapter-5-free + book-notify)
+  const uniqueEmails = new Set(enrichedLeads.map((l) => l.email.toLowerCase()).filter(Boolean))
+  const total = uniqueEmails.size
   const cutoff7 = daysAgo(7)
   const cutoff30 = daysAgo(30)
-  const last7 = enrichedLeads.filter((l) => l.timestamp.slice(0, 10) >= cutoff7).length
-  const last30 = enrichedLeads.filter((l) => l.timestamp.slice(0, 10) >= cutoff30).length
+  const last7 = new Set(enrichedLeads.filter((l) => l.timestamp.slice(0, 10) >= cutoff7).map((l) => l.email.toLowerCase()).filter(Boolean)).size
+  const last30 = new Set(enrichedLeads.filter((l) => l.timestamp.slice(0, 10) >= cutoff30).map((l) => l.email.toLowerCase()).filter(Boolean)).size
 
   // Bar: leads by source
   const sourceCount = new Map<string, number>()
