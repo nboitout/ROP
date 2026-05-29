@@ -31,6 +31,7 @@ export default function VisitTracker() {
     }
 
     function sendLeave(page: string) {
+      if (page.startsWith('/admin')) return
       if (lastVisible.current !== null) {
         activeMs.current += Date.now() - lastVisible.current
         lastVisible.current = null
@@ -80,8 +81,9 @@ export default function VisitTracker() {
     }
   }, [pathname])
 
-  // Fire page_visit on mount and when lang or page changes
+  // Fire page_visit on mount and when lang or page changes — skip admin pages
   useEffect(() => {
+    if (pathname.startsWith('/admin')) return
     fetch('/api/visit', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },

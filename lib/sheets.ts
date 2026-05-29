@@ -268,7 +268,7 @@ export async function fetchAllSheets(): Promise<{
 
   const allLeads  = rowsToLeads(leadsResult.rows)
   const allEvents = rowsToEvents(eventsResult.rows)
-  const allVisits = rowsToVisits(visitsResult.rows)
+  const allVisits = rowsToVisits(visitsResult.rows).filter((v) => !v.page.includes('/admin'))
 
   // Also add readerIds found via email lookup in Leads
   allLeads
