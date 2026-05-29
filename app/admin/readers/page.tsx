@@ -28,16 +28,25 @@ export default async function ReadersPage() {
   })
 
   // Deduplicate by email — each reader may have submitted multiple forms (chapter-5-free + book-notify)
-  const uniqueEmails = new Set(enrichedLeads.map((l) => l.email.toLowerCase()).filter(Boolean))
-  const total = uniqueEmails.size
+  // Prefer the chapter-5-free row (has real name + profession); fall back to whichever comes first.
+  const deduped = new Map<string, typeof enrichedLeads[0]>()
+  enrichedLeads.forEach((l) => {
+    const key = l.email.toLowerCase()
+    if (!key) return
+    const existing = deduped.get(key)
+    if (!existing || l.source === 'chapter-5-free') deduped.set(key, l)
+  })
+  const dedupedLeads = [...deduped.values()]
+
+  const total = dedupedLeads.length
   const cutoff7 = daysAgo(7)
   const cutoff30 = daysAgo(30)
-  const last7 = new Set(enrichedLeads.filter((l) => l.timestamp.slice(0, 10) >= cutoff7).map((l) => l.email.toLowerCase()).filter(Boolean)).size
-  const last30 = new Set(enrichedLeads.filter((l) => l.timestamp.slice(0, 10) >= cutoff30).map((l) => l.email.toLowerCase()).filter(Boolean)).size
+  const last7 = dedupedLeads.filter((l) => l.timestamp.slice(0, 10) >= cutoff7).length
+  const last30 = dedupedLeads.filter((l) => l.timestamp.slice(0, 10) >= cutoff30).length
 
   // Bar: leads by source
   const sourceCount = new Map<string, number>()
-  enrichedLeads.forEach((l) => {
+  dedupedLeads.forEach((l) => {
     const s = l.source || 'Unknown'
     sourceCount.set(s, (sourceCount.get(s) ?? 0) + 1)
   })
@@ -47,7 +56,7 @@ export default async function ReadersPage() {
 
   // Bar: leads by profession (top 10)
   const profCount = new Map<string, number>()
-  enrichedLeads.forEach((l) => {
+  dedupedLeads.forEach((l) => {
     const p = l.profession || 'Unknown'
     profCount.set(p, (profCount.get(p) ?? 0) + 1)
   })
@@ -58,7 +67,7 @@ export default async function ReadersPage() {
 
   // Bar: leads by language
   const langCount = new Map<string, number>()
-  enrichedLeads.forEach((l) => {
+  dedupedLeads.forEach((l) => {
     const lg = l.lang || 'Unknown'
     langCount.set(lg, (langCount.get(lg) ?? 0) + 1)
   })
@@ -68,7 +77,7 @@ export default async function ReadersPage() {
 
   // Table: by country
   const countryCount = new Map<string, number>()
-  enrichedLeads.forEach((l) => {
+  dedupedLeads.forEach((l) => {
     const c = l.country || 'Unknown'
     countryCount.set(c, (countryCount.get(c) ?? 0) + 1)
   })
@@ -77,7 +86,7 @@ export default async function ReadersPage() {
     .map(([country, count]) => ({ country, count }))
 
   // Sorted leads for data table
-  const sortedLeads = [...enrichedLeads].sort(
+  const sortedLeads = [...dedupedLeads].sort(
     (a, b) => new Date(b.timestamp).getTime() - new Date(a.timestamp).getTime()
   )
 
