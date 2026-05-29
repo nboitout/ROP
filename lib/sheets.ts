@@ -275,14 +275,32 @@ export async function fetchAllSheets(): Promise<{
     .filter((l) => excludedEmails.has(l.email.toLowerCase()))
     .forEach((l) => { if (l.readerId) excludedReaderIds.add(l.readerId.toLowerCase()) })
 
+  // Bot filter: only keep visits from readerIds that have at least one
+  // page_leave with dwell time — bots never fire page_leave
+  const humanReaderIds = new Set(
+    allVisits
+      .filter((v) => v.event === 'page_leave' && parseFloat(v.duration_seconds) > 0)
+      .map((v) => v.readerId)
+      .filter(Boolean)
+  )
+
   if (excludedEmails.size === 0 && excludedReaderIds.size === 0) {
-    return { leads: allLeads, events: allEvents, visits: allVisits, errors }
+    return {
+      leads:  allLeads,
+      events: allEvents,
+      visits: humanReaderIds.size > 0 ? allVisits.filter((v) => humanReaderIds.has(v.readerId)) : allVisits,
+      errors,
+    }
   }
+
+  const cleanVisits = humanReaderIds.size > 0
+    ? allVisits.filter((v) => humanReaderIds.has(v.readerId))
+    : allVisits
 
   return {
     leads:  allLeads.filter((l) => !excludedReaderIds.has(l.readerId.toLowerCase()) && !excludedEmails.has(l.email.toLowerCase())),
     events: allEvents.filter((e) => !excludedReaderIds.has(e.readerId.toLowerCase())),
-    visits: allVisits.filter((v) => !excludedReaderIds.has(v.readerId.toLowerCase())),
+    visits: cleanVisits.filter((v) => !excludedReaderIds.has(v.readerId.toLowerCase())),
     errors,
   }
 }
