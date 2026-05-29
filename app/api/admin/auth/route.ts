@@ -11,7 +11,7 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
     return NextResponse.json({ error: 'Server misconfiguration' }, { status: 500 })
   }
 
-  if (!body.password || body.password !== adminPassword) {
+  if (!body.password || body.password.trim() !== adminPassword.trim()) {
     return NextResponse.json({ error: 'Invalid password' }, { status: 401 })
   }
 
