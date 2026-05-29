@@ -74,12 +74,14 @@ async function getAccessToken(): Promise<string> {
     throw new Error('Missing Google service account credentials in environment variables.')
   }
 
-  // Normalise PEM — handle literal \n from env var and strip headers
-  const pem = rawKey.replace(/\\n/g, '\n')
-  const pemBody = pem
-    .replace(/-----BEGIN PRIVATE KEY-----/, '')
-    .replace(/-----END PRIVATE KEY-----/, '')
-    .replace(/\s/g, '')
+  // Normalise PEM: strip surrounding quotes, convert literal \n, extract body
+  const pem = rawKey
+    .replace(/^["']|["']$/g, '')   // remove wrapping quotes if present
+    .replace(/\\n/g, '\n')          // literal \n → real newline
+
+  const pemMatch = pem.match(/-----BEGIN PRIVATE KEY-----([\s\S]+?)-----END PRIVATE KEY-----/)
+  if (!pemMatch) throw new Error(`Could not parse private key PEM. First 60 chars: ${rawKey.slice(0, 60)}`)
+  const pemBody = pemMatch[1].replace(/\s/g, '')
   const keyBytes = Buffer.from(pemBody, 'base64')
 
   // Import as PKCS#8 via Web Crypto — works on Node 18 / OpenSSL 3
