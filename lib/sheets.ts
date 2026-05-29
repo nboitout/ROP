@@ -302,7 +302,10 @@ export async function fetchAllSheets(): Promise<{
 
   // Bot filter: only keep visits from readerIds that have at least one
   // page_leave with dwell time — bots never fire page_leave.
-  // Applied after exclusions so excluded readerIds don't inflate the human set.
+  // Applied only from 2026-05-28 onwards; earlier rows are kept as-is
+  // (manually inserted historical data lacks companion page_leave events).
+  const BOT_FILTER_START = '2026-05-28'
+
   const humanReaderIds = new Set(
     cleanVisits
       .filter((v) => v.event === 'page_leave' && parseFloat(v.duration_seconds) > 0)
@@ -310,10 +313,15 @@ export async function fetchAllSheets(): Promise<{
       .filter(Boolean)
   )
 
+  const filteredVisits = cleanVisits.filter((v) => {
+    if (v.timestamp.slice(0, 10) < BOT_FILTER_START) return true
+    return humanReaderIds.size > 0 ? humanReaderIds.has(v.readerId) : true
+  })
+
   return {
     leads:  cleanLeads,
     events: cleanEvents,
-    visits: humanReaderIds.size > 0 ? cleanVisits.filter((v) => humanReaderIds.has(v.readerId)) : cleanVisits,
+    visits: filteredVisits,
     errors,
   }
 }
