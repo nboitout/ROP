@@ -110,8 +110,8 @@ export default async function FunnelPage({ searchParams }: Props) {
       <div className="adm-page-header">
         <div>
           <p className="adm-page-eyebrow">Dashboard</p>
-          <h1 className="adm-page-title">Funnel</h1>
-          <p className="adm-page-sub">Distinct readers at each engagement step</p>
+          <h1 className="adm-page-title">Parcours</h1>
+          <p className="adm-page-sub">Distinct readers at each step of the reading journey</p>
         </div>
       </div>
 
