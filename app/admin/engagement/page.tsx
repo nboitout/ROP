@@ -87,11 +87,22 @@ export default async function EngagementPage() {
       const s = v.utm_source.trim()
       utmCount.set(s, (utmCount.get(s) ?? 0) + 1)
     })
-  const utmData: BarDataPoint[] = [...utmCount.entries()]
-    .sort((a, b) => b[1] - a[1])
-    .map(([name, value]) => ({ name, value }))
-
-  return (
+  // Return frequency distribution: buckets 0, 1, 2, 3, 3+
+  const returnBuckets: BarDataPoint[] = [
+    { name: '0 returns', value: 0 },
+    { name: '1 return',  value: 0 },
+    { name: '2 returns', value: 0 },
+    { name: '3 returns', value: 0 },
+    { name: '4+',        value: 0 },
+  ]
+  visitorDates.forEach((dates) => {
+    const returns = dates.size - 1
+    if      (returns === 0) returnBuckets[0].value++
+    else if (returns === 1) returnBuckets[1].value++
+    else if (returns === 2) returnBuckets[2].value++
+    else if (returns === 3) returnBuckets[3].value++
+    else                    returnBuckets[4].value++
+  })
     <main className="adm-page">
       <div className="adm-page-header">
         <div>
@@ -122,6 +133,11 @@ export default async function EngagementPage() {
           value={`${returnRate.toFixed(1)}%`}
           subtitle="of distinct visitors"
         />
+      </div>
+
+      <div className="adm-chart-card" style={{ marginBottom: 24 }}>
+        <p className="adm-chart-title">Return frequency — visitors by number of return visits</p>
+        <AdminBarChart data={returnBuckets} color="#4a6b5a" />
       </div>
 
       <div className="adm-charts-grid">
