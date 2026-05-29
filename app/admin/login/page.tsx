@@ -2,7 +2,6 @@
 
 import { useState, FormEvent } from 'react'
 import { useRouter } from 'next/navigation'
-import '@/app/admin/admin.css'
 
 export default function AdminLoginPage() {
   const router = useRouter()
