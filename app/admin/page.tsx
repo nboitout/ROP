@@ -48,11 +48,11 @@ export default async function AdminOverviewPage() {
   // --- Conversion rate ---
   const convRate = uniqueVisitors > 0 ? (totalLeads / uniqueVisitors) * 100 : 0
 
-  // --- New visitor % ---
-  const newVisitorCount = pageVisits.filter(
-    (v) => v.isReturning !== 'TRUE' && v.isReturning !== 'true'
+  // --- Return visitor rate ---
+  const returningCount = pageVisits.filter(
+    (v) => v.isReturning === 'TRUE' || v.isReturning === 'true'
   ).length
-  const newVisitorPct = pageVisits.length > 0 ? (newVisitorCount / pageVisits.length) * 100 : 0
+  const returnRate = pageVisits.length > 0 ? (returningCount / pageVisits.length) * 100 : 0
 
   // --- Avg chapter dwell time ---
   const chapterLeaves = filteredVisits.filter(
@@ -125,7 +125,7 @@ export default async function AdminOverviewPage() {
         <Scorecard label="Unique Visitors" value={uniqueVisitors.toLocaleString()} />
         <Scorecard label="Total Readers" value={totalLeads.toLocaleString()} />
         <Scorecard label="Conversion Rate" value={formatPct(convRate)} subtitle="readers / visitors" />
-        <Scorecard label="New Visitors" value={formatPct(newVisitorPct)} subtitle="of page visits" />
+        <Scorecard label="Return Visitor Rate" value={formatPct(returnRate)} subtitle="of page visits" />
         <Scorecard
           label="Avg Chapter Dwell"
           value={formatDuration(avgDwell)}
