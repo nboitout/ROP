@@ -32,9 +32,11 @@ const nextConfig: NextConfig = {
   images: {
     formats: ['image/avif', 'image/webp'],
   },
+  // Next.js 16 uses Turbopack by default; declare an empty turbopack config
+  // so having a webpack config alongside it doesn't abort the build.
+  turbopack: {},
+  // Kept for `next build --webpack` fallback: stubs canvas for react-pdf/pdfjs.
   webpack: (config) => {
-    // react-pdf / pdfjs-dist references the optional `canvas` native module;
-    // it is not available in the build environment so we stub it out.
     config.resolve.alias.canvas = false
     return config
   },
