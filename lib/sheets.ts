@@ -258,26 +258,31 @@ export async function fetchAllSheets(): Promise<{
       .filter(Boolean)
   )
 
+  // Direct readerId exclusion — bypasses Leads lookup, catches visits with no form submission
+  const excludedReaderIds = new Set(
+    (process.env.EXCLUDED_READER_IDS ?? '')
+      .split(',')
+      .map((s) => s.trim().toLowerCase())
+      .filter(Boolean)
+  )
+
   const allLeads  = rowsToLeads(leadsResult.rows)
   const allEvents = rowsToEvents(eventsResult.rows)
   const allVisits = rowsToVisits(visitsResult.rows)
 
-  if (excludedEmails.size === 0) {
+  // Also add readerIds found via email lookup in Leads
+  allLeads
+    .filter((l) => excludedEmails.has(l.email.toLowerCase()))
+    .forEach((l) => { if (l.readerId) excludedReaderIds.add(l.readerId.toLowerCase()) })
+
+  if (excludedEmails.size === 0 && excludedReaderIds.size === 0) {
     return { leads: allLeads, events: allEvents, visits: allVisits, errors }
   }
 
-  // Collect all readerIds associated with excluded emails
-  const excludedReaderIds = new Set(
-    allLeads
-      .filter((l) => excludedEmails.has(l.email.toLowerCase()))
-      .map((l) => l.readerId)
-      .filter(Boolean)
-  )
-
   return {
-    leads:  allLeads.filter((l) => !excludedReaderIds.has(l.readerId) && !excludedEmails.has(l.email.toLowerCase())),
-    events: allEvents.filter((e) => !excludedReaderIds.has(e.readerId)),
-    visits: allVisits.filter((v) => !excludedReaderIds.has(v.readerId)),
+    leads:  allLeads.filter((l) => !excludedReaderIds.has(l.readerId.toLowerCase()) && !excludedEmails.has(l.email.toLowerCase())),
+    events: allEvents.filter((e) => !excludedReaderIds.has(e.readerId.toLowerCase())),
+    visits: allVisits.filter((v) => !excludedReaderIds.has(v.readerId.toLowerCase())),
     errors,
   }
 }
