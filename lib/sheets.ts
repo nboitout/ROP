@@ -1,3 +1,4 @@
+import { createPrivateKey, createSign } from 'node:crypto'
 
 // ---- Types ----
 
@@ -61,8 +62,8 @@ const CACHE_TTL_MS = 1 * 60 * 1000 // 1 min (testing — raise to 5 min in produ
 
 // ---- JWT / OAuth ----
 
-function base64url(bytes: Uint8Array | string): string {
-  const b = typeof bytes === 'string' ? Buffer.from(bytes) : Buffer.from(bytes)
+function base64url(input: string | Buffer): string {
+  const b = typeof input === 'string' ? Buffer.from(input) : input
   return b.toString('base64').replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '')
 }
 
@@ -85,17 +86,9 @@ async function getAccessToken(): Promise<string> {
 
   if (!pemBase64) throw new Error('Private key is empty after stripping PEM headers.')
 
-  // Use Uint8Array.from(atob(...)) — avoids Buffer shared-pool issue with crypto.subtle
-  const keyBytes = Uint8Array.from(atob(pemBase64), (c) => c.charCodeAt(0))
-
-  // Import as PKCS#8 via Web Crypto — works on Node 18 / OpenSSL 3
-  const cryptoKey = await globalThis.crypto.subtle.importKey(
-    'pkcs8',
-    keyBytes,
-    { name: 'RSASSA-PKCS1-v1_5', hash: 'SHA-256' },
-    false,
-    ['sign'],
-  )
+  // Load key from raw DER bytes — bypasses OpenSSL PEM decoder (source of DECODER errors)
+  const derBytes = Buffer.from(pemBase64, 'base64')
+  const privateKey = createPrivateKey({ key: derBytes, format: 'der', type: 'pkcs8' })
 
   const now = Math.floor(Date.now() / 1000)
   const header  = base64url(JSON.stringify({ alg: 'RS256', typ: 'JWT' }))
@@ -108,12 +101,9 @@ async function getAccessToken(): Promise<string> {
   }))
 
   const signingInput = `${header}.${payload}`
-  const sigBytes = await globalThis.crypto.subtle.sign(
-    'RSASSA-PKCS1-v1_5',
-    cryptoKey,
-    Buffer.from(signingInput),
-  )
-  const jwt = `${signingInput}.${base64url(new Uint8Array(sigBytes))}`
+  const sign = createSign('RSA-SHA256')
+  sign.update(signingInput)
+  const jwt = `${signingInput}.${base64url(sign.sign(privateKey, 'base64'))}`
 
   const tokenRes = await fetch('https://oauth2.googleapis.com/token', {
     method: 'POST',
