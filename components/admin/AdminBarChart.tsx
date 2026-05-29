@@ -30,7 +30,7 @@ function truncate(s: string, max: number) {
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 function TruncatedTick({ x, y, payload, maxChars }: any) {
   return (
-    <text x={x} y={y} dy={4} textAnchor="end" fill="rgba(26,26,24,.55)" fontSize={11} fontFamily="DM Sans, sans-serif">
+    <text x={x} y={y} dy={4} textAnchor="end" fill="rgba(26,26,24,.65)" fontSize={11} fontFamily="DM Sans, sans-serif">
       {truncate(String(payload.value), maxChars)}
     </text>
   )
@@ -51,10 +51,10 @@ export default function AdminBarChart({
           layout="vertical"
           margin={{ top: 0, right: 16, left: 0, bottom: 0 }}
         >
-          <CartesianGrid strokeDasharray="3 3" stroke="rgba(26,26,24,.06)" horizontal={false} />
+          <CartesianGrid strokeDasharray="3 3" stroke="rgba(26,26,24,.12)" horizontal={false} />
           <XAxis
             type="number"
-            tick={{ fill: 'rgba(26,26,24,.4)', fontSize: 11, fontFamily: 'DM Sans, sans-serif' }}
+            tick={{ fill: 'rgba(26,26,24,.58)', fontSize: 11, fontFamily: 'DM Sans, sans-serif' }}
             axisLine={false}
             tickLine={false}
             allowDecimals={false}
@@ -94,15 +94,15 @@ export default function AdminBarChart({
   return (
     <ResponsiveContainer width="100%" height={220}>
       <BarChart data={data} margin={{ top: 4, right: 8, left: -10, bottom: 4 }}>
-        <CartesianGrid strokeDasharray="3 3" stroke="rgba(26,26,24,.06)" />
+        <CartesianGrid strokeDasharray="3 3" stroke="rgba(26,26,24,.12)" />
         <XAxis
           dataKey="name"
-          tick={{ fill: 'rgba(26,26,24,.4)', fontSize: 11, fontFamily: 'DM Sans, sans-serif' }}
+          tick={{ fill: 'rgba(26,26,24,.58)', fontSize: 11, fontFamily: 'DM Sans, sans-serif' }}
           axisLine={false}
           tickLine={false}
         />
         <YAxis
-          tick={{ fill: 'rgba(26,26,24,.4)', fontSize: 11, fontFamily: 'DM Sans, sans-serif' }}
+          tick={{ fill: 'rgba(26,26,24,.58)', fontSize: 11, fontFamily: 'DM Sans, sans-serif' }}
           axisLine={false}
           tickLine={false}
           allowDecimals={false}

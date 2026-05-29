@@ -17,10 +17,10 @@
   --adm-sage:   #4a6b5a;
   --adm-gold:   #a07c3a;
   --adm-gold-l: #c9a35e;
-  --adm-i50:    rgba(26,26,24,.6);
-  --adm-i30:    rgba(26,26,24,.45);
-  --adm-i08:    rgba(26,26,24,.08);
-  --adm-border: rgba(160,124,58,.16);
+  --adm-i50:    rgba(26,26,24,.65);
+  --adm-i30:    rgba(26,26,24,.52);
+  --adm-i08:    rgba(26,26,24,.12);
+  --adm-border: rgba(160,124,58,.22);
   font-family: 'DM Sans', sans-serif;
   background: var(--adm-cream);
   color: var(--adm-ink);
@@ -219,33 +219,34 @@
 .adm-scorecard {
   background: white;
   border: 1px solid var(--adm-i08);
-  border-top: 2px solid var(--adm-sage);
+  border-top: 3px solid var(--adm-sage);
   border-radius: 3px;
-  padding: 20px 22px 18px;
-  box-shadow: 0 2px 12px rgba(26,26,24,.05);
+  padding: 22px 24px 20px;
+  box-shadow: 0 2px 14px rgba(26,26,24,.08);
 }
 
 .adm-scorecard-label {
   font-size: .64rem;
-  font-weight: 500;
-  letter-spacing: .16em;
+  font-weight: 600;
+  letter-spacing: .14em;
   text-transform: uppercase;
-  color: var(--adm-i30);
-  margin-bottom: 8px;
+  color: var(--adm-i50);
+  margin-bottom: 10px;
 }
 
 .adm-scorecard-value {
   font-family: 'DM Sans', sans-serif;
   font-size: 2rem;
-  font-weight: 300;
+  font-weight: 400;
   color: var(--adm-ink);
   line-height: 1;
-  margin-bottom: 4px;
+  margin-bottom: 6px;
   letter-spacing: -.02em;
 }
 
 .adm-scorecard-sub {
-  font-size: .68rem;
+  font-size: .69rem;
+  font-weight: 500;
   color: var(--adm-i30);
 }
 
@@ -268,8 +269,8 @@
   background: white;
   border: 1px solid var(--adm-i08);
   border-radius: 3px;
-  padding: 24px;
-  box-shadow: 0 2px 12px rgba(26,26,24,.05);
+  padding: 28px;
+  box-shadow: 0 2px 14px rgba(26,26,24,.08);
 }
 
 .adm-chart-card.full {
@@ -278,11 +279,12 @@
 
 .adm-chart-title {
   font-size: .66rem;
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: .16em;
   text-transform: uppercase;
-  color: var(--adm-sage);
+  color: var(--adm-ink);
   margin-bottom: 20px;
+  opacity: .75;
 }
 
 /* ---- Table ---- */

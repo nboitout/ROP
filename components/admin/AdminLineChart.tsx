@@ -25,16 +25,16 @@ export default function AdminLineChart({ data }: Props) {
   return (
     <ResponsiveContainer width="100%" height={260}>
       <LineChart data={data} margin={{ top: 4, right: 8, left: -10, bottom: 0 }}>
-        <CartesianGrid strokeDasharray="3 3" stroke="rgba(26,26,24,.07)" />
+        <CartesianGrid strokeDasharray="3 3" stroke="rgba(26,26,24,.12)" />
         <XAxis
           dataKey="date"
-          tick={{ fill: 'rgba(26,26,24,.4)', fontSize: 11, fontFamily: 'DM Sans, sans-serif' }}
+          tick={{ fill: 'rgba(26,26,24,.58)', fontSize: 11, fontFamily: 'DM Sans, sans-serif' }}
           axisLine={false}
           tickLine={false}
           tickFormatter={(v: string) => v.slice(5)}
         />
         <YAxis
-          tick={{ fill: 'rgba(26,26,24,.4)', fontSize: 11, fontFamily: 'DM Sans, sans-serif' }}
+          tick={{ fill: 'rgba(26,26,24,.58)', fontSize: 11, fontFamily: 'DM Sans, sans-serif' }}
           axisLine={false}
           tickLine={false}
           allowDecimals={false}
@@ -51,7 +51,7 @@ export default function AdminLineChart({ data }: Props) {
           labelStyle={{ color: 'rgba(245,240,232,.55)', marginBottom: 4, fontSize: 11 }}
         />
         <Legend
-          wrapperStyle={{ fontSize: 11, color: 'rgba(26,26,24,.5)', fontFamily: 'DM Sans, sans-serif' }}
+          wrapperStyle={{ fontSize: 11, color: 'rgba(26,26,24,.62)', fontFamily: 'DM Sans, sans-serif' }}
         />
         <Line
           type="monotone"

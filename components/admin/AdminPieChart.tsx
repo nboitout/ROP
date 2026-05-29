@@ -59,7 +59,7 @@ export default function AdminPieChart({ data }: Props) {
           }}
         />
         <Legend
-          wrapperStyle={{ fontSize: 11, color: 'rgba(26,26,24,.5)', fontFamily: 'DM Sans, sans-serif' }}
+          wrapperStyle={{ fontSize: 11, color: 'rgba(26,26,24,.62)', fontFamily: 'DM Sans, sans-serif' }}
         />
       </PieChart>
     </ResponsiveContainer>
