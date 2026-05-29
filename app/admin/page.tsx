@@ -109,8 +109,13 @@ export default async function AdminOverviewPage() {
 
   return (
     <main className="adm-page">
-      <h1 className="adm-page-title">Overview</h1>
-      <p className="adm-page-sub">Last updated: {new Date().toLocaleString('en-GB')}</p>
+      <div className="adm-page-header">
+        <div>
+          <p className="adm-page-eyebrow">Dashboard</p>
+          <h1 className="adm-page-title">Overview</h1>
+          <p className="adm-page-sub">Updated {new Date().toLocaleString('en-GB')}</p>
+        </div>
+      </div>
 
       {errorEntries.length > 0 && (
         <div style={{ background: 'rgba(255,100,100,.08)', border: '1px solid rgba(255,120,120,.24)', borderLeft: '3px solid rgba(255,120,120,.6)', borderRadius: 3, padding: '12px 16px', marginBottom: 24 }}>

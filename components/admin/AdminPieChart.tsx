@@ -50,15 +50,16 @@ export default function AdminPieChart({ data }: Props) {
         </Pie>
         <Tooltip
           contentStyle={{
-            background: '#242420',
-            border: '1px solid rgba(201,163,94,.25)',
-            borderRadius: 4,
+            background: '#1a1a18',
+            border: '1px solid rgba(160,124,58,.3)',
+            borderRadius: 3,
             color: '#f5f0e8',
             fontSize: 12,
+            fontFamily: 'DM Sans, sans-serif',
           }}
         />
         <Legend
-          wrapperStyle={{ fontSize: 11, color: 'rgba(245,240,232,.6)' }}
+          wrapperStyle={{ fontSize: 11, color: 'rgba(26,26,24,.5)', fontFamily: 'DM Sans, sans-serif' }}
         />
       </PieChart>
     </ResponsiveContainer>

@@ -30,7 +30,7 @@ function truncate(s: string, max: number) {
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 function TruncatedTick({ x, y, payload, maxChars }: any) {
   return (
-    <text x={x} y={y} dy={4} textAnchor="end" fill="rgba(245,240,232,.7)" fontSize={11}>
+    <text x={x} y={y} dy={4} textAnchor="end" fill="rgba(26,26,24,.55)" fontSize={11} fontFamily="DM Sans, sans-serif">
       {truncate(String(payload.value), maxChars)}
     </text>
   )
@@ -51,10 +51,10 @@ export default function AdminBarChart({
           layout="vertical"
           margin={{ top: 0, right: 16, left: 0, bottom: 0 }}
         >
-          <CartesianGrid strokeDasharray="3 3" stroke="rgba(245,240,232,.08)" horizontal={false} />
+          <CartesianGrid strokeDasharray="3 3" stroke="rgba(26,26,24,.06)" horizontal={false} />
           <XAxis
             type="number"
-            tick={{ fill: 'rgba(245,240,232,.45)', fontSize: 11 }}
+            tick={{ fill: 'rgba(26,26,24,.4)', fontSize: 11, fontFamily: 'DM Sans, sans-serif' }}
             axisLine={false}
             tickLine={false}
             allowDecimals={false}
@@ -69,13 +69,14 @@ export default function AdminBarChart({
           />
           <Tooltip
             contentStyle={{
-              background: '#242420',
-              border: '1px solid rgba(201,163,94,.25)',
-              borderRadius: 4,
+              background: '#1a1a18',
+              border: '1px solid rgba(160,124,58,.3)',
+              borderRadius: 3,
               color: '#f5f0e8',
               fontSize: 12,
+              fontFamily: 'DM Sans, sans-serif',
             }}
-            cursor={{ fill: 'rgba(245,240,232,.04)' }}
+            cursor={{ fill: 'rgba(26,26,24,.03)' }}
           />
           <Bar dataKey="value" name="Count" radius={[0, 3, 3, 0]}>
             {data.map((_, i) => (
@@ -93,28 +94,29 @@ export default function AdminBarChart({
   return (
     <ResponsiveContainer width="100%" height={220}>
       <BarChart data={data} margin={{ top: 4, right: 8, left: -10, bottom: 4 }}>
-        <CartesianGrid strokeDasharray="3 3" stroke="rgba(245,240,232,.08)" />
+        <CartesianGrid strokeDasharray="3 3" stroke="rgba(26,26,24,.06)" />
         <XAxis
           dataKey="name"
-          tick={{ fill: 'rgba(245,240,232,.45)', fontSize: 11 }}
+          tick={{ fill: 'rgba(26,26,24,.4)', fontSize: 11, fontFamily: 'DM Sans, sans-serif' }}
           axisLine={false}
           tickLine={false}
         />
         <YAxis
-          tick={{ fill: 'rgba(245,240,232,.45)', fontSize: 11 }}
+          tick={{ fill: 'rgba(26,26,24,.4)', fontSize: 11, fontFamily: 'DM Sans, sans-serif' }}
           axisLine={false}
           tickLine={false}
           allowDecimals={false}
         />
         <Tooltip
           contentStyle={{
-            background: '#242420',
-            border: '1px solid rgba(201,163,94,.25)',
-            borderRadius: 4,
+            background: '#1a1a18',
+            border: '1px solid rgba(160,124,58,.3)',
+            borderRadius: 3,
             color: '#f5f0e8',
             fontSize: 12,
+            fontFamily: 'DM Sans, sans-serif',
           }}
-          cursor={{ fill: 'rgba(245,240,232,.04)' }}
+          cursor={{ fill: 'rgba(26,26,24,.03)' }}
         />
         <Bar dataKey="value" name="Count" radius={[3, 3, 0, 0]}>
           {data.map((_, i) => (

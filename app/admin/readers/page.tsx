@@ -67,8 +67,13 @@ export default async function ReadersPage() {
 
   return (
     <main className="adm-page">
-      <h1 className="adm-page-title">Readers</h1>
-      <p className="adm-page-sub">All registered readers</p>
+      <div className="adm-page-header">
+        <div>
+          <p className="adm-page-eyebrow">Dashboard</p>
+          <h1 className="adm-page-title">Readers</h1>
+          <p className="adm-page-sub">All registered readers</p>
+        </div>
+      </div>
 
       <div className="adm-scorecards">
         <Scorecard label="Total Readers" value={total.toLocaleString()} />

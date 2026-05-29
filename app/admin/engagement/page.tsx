@@ -88,8 +88,13 @@ export default async function EngagementPage() {
 
   return (
     <main className="adm-page">
-      <h1 className="adm-page-title">Engagement</h1>
-      <p className="adm-page-sub">Reader behaviour and content engagement metrics</p>
+      <div className="adm-page-header">
+        <div>
+          <p className="adm-page-eyebrow">Dashboard</p>
+          <h1 className="adm-page-title">Engagement</h1>
+          <p className="adm-page-sub">Reader behaviour and content engagement metrics</p>
+        </div>
+      </div>
 
       <div className="adm-scorecards">
         <Scorecard
