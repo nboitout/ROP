@@ -168,19 +168,19 @@ export async function fetchSheetData(sheetName: string): Promise<string[][]> {
 function rowsToLeads(rows: string[][]): LeadRow[] {
   if (rows.length < 2) return []
   return rows.slice(1).map((r) => ({
-    timestamp:  r[0]  ?? '',
-    readerId:   r[1]  ?? '',
-    sessionId:  r[2]  ?? '',
-    source:     r[3]  ?? '',
-    firstName:  r[4]  ?? '',
-    lastName:   r[5]  ?? '',
-    fullName:   r[6]  ?? '',
-    email:      r[7]  ?? '',
-    profession: r[8]  ?? '',
-    lang:       r[9]  ?? '',
-    country:    r[10] ?? '',
-    userAgent:  r[11] ?? '',
-    referer:    r[12] ?? '',
+    timestamp:  r[0] ?? '',
+    readerId:   r[1] ?? '',
+    sessionId:  '',
+    firstName:  r[2] ?? '',
+    lastName:   r[3] ?? '',
+    fullName:   r[4] ?? '',
+    email:      r[5] ?? '',
+    profession: r[6] ?? '',
+    source:     r[7] ?? '',
+    userAgent:  r[8] ?? '',
+    referer:    r[9] ?? '',
+    lang:       '',
+    country:    '',
   }))
 }
 
