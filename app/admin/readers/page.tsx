@@ -11,17 +11,31 @@ function daysAgo(days: number): string {
 }
 
 export default async function ReadersPage() {
-  const { leads } = await fetchAllSheets()
+  const { leads, visits } = await fetchAllSheets()
 
-  const total = leads.length
+  // lang/country are absent from the Leads sheet — enrich from the first page_visit per readerId
+  const visitorMeta = new Map<string, { lang: string; country: string }>()
+  visits
+    .filter((v) => v.event === 'page_visit' && v.readerId)
+    .forEach((v) => {
+      if (!visitorMeta.has(v.readerId)) {
+        visitorMeta.set(v.readerId, { lang: v.lang, country: v.country })
+      }
+    })
+  const enrichedLeads = leads.map((l) => {
+    const meta = visitorMeta.get(l.readerId)
+    return meta ? { ...l, lang: meta.lang || l.lang, country: meta.country || l.country } : l
+  })
+
+  const total = enrichedLeads.length
   const cutoff7 = daysAgo(7)
   const cutoff30 = daysAgo(30)
-  const last7 = leads.filter((l) => l.timestamp.slice(0, 10) >= cutoff7).length
-  const last30 = leads.filter((l) => l.timestamp.slice(0, 10) >= cutoff30).length
+  const last7 = enrichedLeads.filter((l) => l.timestamp.slice(0, 10) >= cutoff7).length
+  const last30 = enrichedLeads.filter((l) => l.timestamp.slice(0, 10) >= cutoff30).length
 
   // Bar: leads by source
   const sourceCount = new Map<string, number>()
-  leads.forEach((l) => {
+  enrichedLeads.forEach((l) => {
     const s = l.source || 'Unknown'
     sourceCount.set(s, (sourceCount.get(s) ?? 0) + 1)
   })
@@ -31,7 +45,7 @@ export default async function ReadersPage() {
 
   // Bar: leads by profession (top 10)
   const profCount = new Map<string, number>()
-  leads.forEach((l) => {
+  enrichedLeads.forEach((l) => {
     const p = l.profession || 'Unknown'
     profCount.set(p, (profCount.get(p) ?? 0) + 1)
   })
@@ -42,7 +56,7 @@ export default async function ReadersPage() {
 
   // Bar: leads by language
   const langCount = new Map<string, number>()
-  leads.forEach((l) => {
+  enrichedLeads.forEach((l) => {
     const lg = l.lang || 'Unknown'
     langCount.set(lg, (langCount.get(lg) ?? 0) + 1)
   })
@@ -52,7 +66,7 @@ export default async function ReadersPage() {
 
   // Table: by country
   const countryCount = new Map<string, number>()
-  leads.forEach((l) => {
+  enrichedLeads.forEach((l) => {
     const c = l.country || 'Unknown'
     countryCount.set(c, (countryCount.get(c) ?? 0) + 1)
   })
@@ -61,7 +75,7 @@ export default async function ReadersPage() {
     .map(([country, count]) => ({ country, count }))
 
   // Sorted leads for data table
-  const sortedLeads = [...leads].sort(
+  const sortedLeads = [...enrichedLeads].sort(
     (a, b) => new Date(b.timestamp).getTime() - new Date(a.timestamp).getTime()
   )
 
