@@ -31,12 +31,17 @@ export default async function EngagementPage() {
     return p === '/' || p === ''
   }))
 
-  // Return visitor rate
+  // Return visitor rate: % of distinct visitors seen on more than one distinct date
   const pageVisits = visits.filter((v) => v.event === 'page_visit')
-  const returningCount = pageVisits.filter(
-    (v) => v.isReturning === 'TRUE' || v.isReturning === 'true'
-  ).length
-  const returnRate = pageVisits.length > 0 ? (returningCount / pageVisits.length) * 100 : 0
+  const visitorDates = new Map<string, Set<string>>()
+  pageVisits.forEach((v) => {
+    if (!v.readerId) return
+    if (!visitorDates.has(v.readerId)) visitorDates.set(v.readerId, new Set())
+    visitorDates.get(v.readerId)!.add(v.timestamp.slice(0, 10))
+  })
+  const totalVisitors = visitorDates.size
+  const returningVisitors = [...visitorDates.values()].filter((dates) => dates.size > 1).length
+  const returnRate = totalVisitors > 0 ? (returningVisitors / totalVisitors) * 100 : 0
 
   // Bar: avg dwell time per page
   const pageMap = new Map<string, number[]>()
@@ -115,7 +120,7 @@ export default async function EngagementPage() {
         <Scorecard
           label="Return Visitor Rate"
           value={`${returnRate.toFixed(1)}%`}
-          subtitle="isReturning=true"
+          subtitle="of distinct visitors"
         />
       </div>
 

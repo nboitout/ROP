@@ -47,11 +47,16 @@ export default async function AdminOverviewPage() {
   // --- Conversion rate ---
   const convRate = uniqueVisitors > 0 ? (totalLeads / uniqueVisitors) * 100 : 0
 
-  // --- Return visitor rate ---
-  const returningCount = pageVisits.filter(
-    (v) => v.isReturning === 'TRUE' || v.isReturning === 'true'
-  ).length
-  const returnRate = pageVisits.length > 0 ? (returningCount / pageVisits.length) * 100 : 0
+  // --- Return visitor rate: % of distinct visitors seen on more than one distinct date ---
+  const visitorDates = new Map<string, Set<string>>()
+  pageVisits.forEach((v) => {
+    if (!v.readerId) return
+    if (!visitorDates.has(v.readerId)) visitorDates.set(v.readerId, new Set())
+    visitorDates.get(v.readerId)!.add(v.timestamp.slice(0, 10))
+  })
+  const totalVisitors = visitorDates.size
+  const returningVisitors = [...visitorDates.values()].filter((dates) => dates.size > 1).length
+  const returnRate = totalVisitors > 0 ? (returningVisitors / totalVisitors) * 100 : 0
 
   // --- Avg chapter dwell time ---
   const chapterLeaves = filteredVisits.filter(
@@ -128,7 +133,7 @@ export default async function AdminOverviewPage() {
         <Scorecard label="Unique Visitors" value={uniqueVisitors.toLocaleString()} />
         <Scorecard label="Total Readers" value={totalLeads.toLocaleString()} />
         <Scorecard label="Conversion Rate" value={formatPct(convRate)} subtitle="readers / visitors" />
-        <Scorecard label="Return Visitor Rate" value={formatPct(returnRate)} subtitle="of page visits" />
+        <Scorecard label="Return Visitor Rate" value={formatPct(returnRate)} subtitle="of distinct visitors" />
         <Scorecard
           label="Avg Chapter Dwell"
           value={formatDuration(avgDwell)}
