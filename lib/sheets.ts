@@ -84,7 +84,9 @@ async function getAccessToken(): Promise<string> {
     .trim()
 
   if (!pemBase64) throw new Error('Private key is empty after stripping PEM headers.')
-  const keyBytes = Buffer.from(pemBase64, 'base64')
+
+  // Use Uint8Array.from(atob(...)) — avoids Buffer shared-pool issue with crypto.subtle
+  const keyBytes = Uint8Array.from(atob(pemBase64), (c) => c.charCodeAt(0))
 
   // Import as PKCS#8 via Web Crypto — works on Node 18 / OpenSSL 3
   const cryptoKey = await globalThis.crypto.subtle.importKey(
