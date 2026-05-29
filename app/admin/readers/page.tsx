@@ -10,7 +10,7 @@ function daysAgo(days: number): string {
   return d.toISOString().slice(0, 10)
 }
 
-export default async function LeadsPage() {
+export default async function ReadersPage() {
   const { leads } = await fetchAllSheets()
 
   const total = leads.length
@@ -67,28 +67,28 @@ export default async function LeadsPage() {
 
   return (
     <main className="adm-page">
-      <h1 className="adm-page-title">Leads</h1>
-      <p className="adm-page-sub">All registered lead submissions</p>
+      <h1 className="adm-page-title">Readers</h1>
+      <p className="adm-page-sub">All registered readers</p>
 
       <div className="adm-scorecards">
-        <Scorecard label="Total Leads" value={total.toLocaleString()} />
+        <Scorecard label="Total Readers" value={total.toLocaleString()} />
         <Scorecard label="Last 7 Days" value={last7.toLocaleString()} />
         <Scorecard label="Last 30 Days" value={last30.toLocaleString()} />
       </div>
 
       <div className="adm-charts-grid">
         <div className="adm-chart-card">
-          <p className="adm-chart-title">Leads by Source</p>
+          <p className="adm-chart-title">Readers by Source</p>
           <AdminBarChart data={sourceData} color="#4a6b5a" />
         </div>
         <div className="adm-chart-card">
-          <p className="adm-chart-title">Leads by Language</p>
+          <p className="adm-chart-title">Readers by Language</p>
           <AdminBarChart data={langData} color="#c9a35e" />
         </div>
       </div>
 
       <div className="adm-chart-card" style={{ marginBottom: 32 }}>
-        <p className="adm-chart-title">Leads by Profession (top 10)</p>
+        <p className="adm-chart-title">Readers by Profession (top 10)</p>
         <AdminBarChart data={profData} color="#4a6b5a" layout="vertical" />
       </div>
 
@@ -98,7 +98,7 @@ export default async function LeadsPage() {
           <thead>
             <tr>
               <th>Country</th>
-              <th>Leads</th>
+              <th>Readers</th>
             </tr>
           </thead>
           <tbody>
@@ -117,7 +117,7 @@ export default async function LeadsPage() {
         </table>
       </div>
 
-      <p className="adm-section-title">All Leads</p>
+      <p className="adm-section-title">All Readers</p>
       <div className="adm-leads-table-wrap">
         <table className="adm-table">
           <thead>
@@ -147,7 +147,7 @@ export default async function LeadsPage() {
             ))}
             {sortedLeads.length === 0 && (
               <tr>
-                <td colSpan={7} className="muted">No leads yet</td>
+                <td colSpan={7} className="muted">No readers yet</td>
               </tr>
             )}
           </tbody>

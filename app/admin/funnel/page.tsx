@@ -94,7 +94,7 @@ export default async function FunnelPage({ searchParams }: Props) {
     { label: 'scroll_depth 50%', count: step3Ids.size },
     { label: 'scroll_depth 100%', count: step4Ids.size },
     { label: 'chapter_end_reached', count: step5Ids.size },
-    { label: 'Lead submitted (book-notify)', count: step6Ids.size },
+    { label: 'Registered (book-notify)', count: step6Ids.size },
   ]
 
   const maxCount = steps[0]?.count ?? 1

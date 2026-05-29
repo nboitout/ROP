@@ -123,8 +123,8 @@ export default async function AdminOverviewPage() {
 
 <div className="adm-scorecards">
         <Scorecard label="Unique Visitors" value={uniqueVisitors.toLocaleString()} />
-        <Scorecard label="Total Leads" value={totalLeads.toLocaleString()} />
-        <Scorecard label="Conversion Rate" value={formatPct(convRate)} subtitle="leads / visitors" />
+        <Scorecard label="Total Readers" value={totalLeads.toLocaleString()} />
+        <Scorecard label="Conversion Rate" value={formatPct(convRate)} subtitle="readers / visitors" />
         <Scorecard label="New Visitors" value={formatPct(newVisitorPct)} subtitle="of page visits" />
         <Scorecard
           label="Avg Chapter Dwell"
@@ -133,7 +133,7 @@ export default async function AdminOverviewPage() {
         />
       </div>
 
-      <p className="adm-section-title">Leads &amp; Visits — Since {START_DATE}</p>
+      <p className="adm-section-title">Readers &amp; Visits — Since {START_DATE}</p>
       <div className="adm-chart-card" style={{ marginBottom: 24 }}>
         <p className="adm-chart-title">Daily trend</p>
         <AdminLineChart data={days} />

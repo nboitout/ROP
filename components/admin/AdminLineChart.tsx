@@ -63,7 +63,7 @@ export default function AdminLineChart({ data }: Props) {
         <Line
           type="monotone"
           dataKey="leads"
-          name="Leads"
+          name="Readers"
           stroke="#c9a35e"
           strokeWidth={2}
           dot={false}
