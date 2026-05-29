@@ -6,6 +6,8 @@ import AdminPieChart, { PieDataPoint } from '@/components/admin/AdminPieChart'
 
 export const dynamic = 'force-dynamic'
 
+const START_DATE = '2026-05-25'
+
 function formatPct(n: number) {
   return `${n.toFixed(1)}%`
 }
@@ -31,13 +33,18 @@ export default async function AdminOverviewPage() {
 
   const errorEntries = Object.entries(errors ?? {})
 
+  // --- Filter all data from launch date onwards ---
+  const filteredLeads = leads.filter((l) => l.timestamp.slice(0, 10) >= START_DATE)
+  const filteredVisits = visits.filter((v) => v.timestamp.slice(0, 10) >= START_DATE)
+  const filteredEvents = events.filter((e) => e.timestamp.slice(0, 10) >= START_DATE)
+
   // --- Unique visitors (distinct readerId in page_visit events) ---
-  const pageVisits = visits.filter((v) => v.event === 'page_visit')
+  const pageVisits = filteredVisits.filter((v) => v.event === 'page_visit')
   const uniqueVisitorSet = new Set(pageVisits.map((v) => v.readerId).filter(Boolean))
   const uniqueVisitors = uniqueVisitorSet.size
 
   // --- Total leads ---
-  const totalLeads = leads.length
+  const totalLeads = filteredLeads.length
 
   // --- Conversion rate ---
   const convRate = uniqueVisitors > 0 ? (totalLeads / uniqueVisitors) * 100 : 0
@@ -49,7 +56,7 @@ export default async function AdminOverviewPage() {
   const newVisitorPct = pageVisits.length > 0 ? (newVisitorCount / pageVisits.length) * 100 : 0
 
   // --- Avg chapter dwell time ---
-  const chapterLeaves = visits.filter(
+  const chapterLeaves = filteredVisits.filter(
     (v) =>
       v.event === 'page_leave' &&
       (v.page.includes('/chapitre') || v.page.includes('/introduction'))
@@ -60,18 +67,16 @@ export default async function AdminOverviewPage() {
   }, 0)
   const avgDwell = chapterLeaves.length > 0 ? dwellTotal / chapterLeaves.length : 0
 
-  // --- Line chart: leads + visits per day (last 30 days) ---
+  // --- Line chart: leads + visits per day (from START_DATE to today) ---
   const now = new Date()
   const days: LineDataPoint[] = []
-  for (let i = 29; i >= 0; i--) {
-    const d = new Date(now)
-    d.setDate(now.getDate() - i)
-    const dayStr = d.toISOString().slice(0, 10)
-    days.push({ date: dayStr, leads: 0, visits: 0 })
+  const startD = new Date(START_DATE + 'T00:00:00Z')
+  for (let d = new Date(startD); d <= now; d.setUTCDate(d.getUTCDate() + 1)) {
+    days.push({ date: d.toISOString().slice(0, 10), leads: 0, visits: 0 })
   }
   const dayMap = new Map(days.map((d) => [d.date, d]))
 
-  leads.forEach((l) => {
+  filteredLeads.forEach((l) => {
     const day = l.timestamp.slice(0, 10)
     const entry = dayMap.get(day)
     if (entry) entry.leads++
@@ -118,7 +123,7 @@ export default async function AdminOverviewPage() {
       )}
 
       <div style={{ background: '#2a2a22', borderRadius: 8, padding: '10px 16px', marginBottom: 24, fontSize: 12, color: 'rgba(245,240,232,.6)', fontFamily: 'monospace' }}>
-        DEBUG — rows read: Leads={leads.length} · Events={events.length} · Visits={visits.length} · SHEETS_ID={process.env.GOOGLE_SHEETS_ID?.slice(0,12)}…
+        DEBUG — rows read (≥{START_DATE}): Leads={filteredLeads.length} · Events={filteredEvents.length} · Visits={filteredVisits.length} · SHEETS_ID={process.env.GOOGLE_SHEETS_ID?.slice(0,12)}…
       </div>
 
       <div className="adm-scorecards">
@@ -133,7 +138,7 @@ export default async function AdminOverviewPage() {
         />
       </div>
 
-      <p className="adm-section-title">Leads &amp; Visits — Last 30 Days</p>
+      <p className="adm-section-title">Leads &amp; Visits — Since {START_DATE}</p>
       <div className="adm-chart-card" style={{ marginBottom: 24 }}>
         <p className="adm-chart-title">Daily trend</p>
         <AdminLineChart data={days} />
