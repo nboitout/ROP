@@ -213,15 +213,24 @@ function rowsToVisits(rows: string[][]): VisitRow[] {
 
 // ---- Fetch all sheets ----
 
+async function fetchSheetSafe(sheetName: string): Promise<string[][]> {
+  try {
+    return await fetchSheetData(sheetName)
+  } catch (err) {
+    console.warn(`[sheets] Could not load sheet "${sheetName}":`, err)
+    return []
+  }
+}
+
 export async function fetchAllSheets(): Promise<{
   leads: LeadRow[]
   events: EventRow[]
   visits: VisitRow[]
 }> {
   const [leadsRaw, eventsRaw, visitsRaw] = await Promise.all([
-    fetchSheetData('Leads'),
-    fetchSheetData('Events'),
-    fetchSheetData('Visits'),
+    fetchSheetSafe('Leads'),
+    fetchSheetSafe('Events'),
+    fetchSheetSafe('Visits'),
   ])
 
   return {

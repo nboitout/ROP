@@ -16,7 +16,18 @@ function formatDuration(secs: number) {
 }
 
 export default async function AdminOverviewPage() {
-  const { leads, visits } = await fetchAllSheets()
+  let leads, visits
+  try {
+    ;({ leads, visits } = await fetchAllSheets())
+  } catch (err) {
+    return (
+      <div style={{ padding: 40, color: 'var(--cream)', fontFamily: 'DM Sans, sans-serif' }}>
+        <h2>Dashboard error</h2>
+        <pre style={{ color: '#f87171', fontSize: 13 }}>{String(err)}</pre>
+        <p style={{ opacity: 0.6, marginTop: 12 }}>Check that GOOGLE_SHEETS_ID, GOOGLE_SERVICE_ACCOUNT_EMAIL and GOOGLE_SERVICE_ACCOUNT_PRIVATE_KEY are set correctly in Vercel.</p>
+      </div>
+    )
+  }
 
   // --- Unique visitors (distinct readerId in page_visit events) ---
   const pageVisits = visits.filter((v) => v.event === 'page_visit')
