@@ -108,7 +108,7 @@ async function getAccessToken(): Promise<string> {
   const signingInput = `${header}.${payload}`
   const sign = createSign('RSA-SHA256')
   sign.update(signingInput)
-  const jwt = `${signingInput}.${base64url(sign.sign(privateKey, 'base64'))}`
+  const jwt = `${signingInput}.${base64url(sign.sign(privateKey))}`
 
   const tokenRes = await fetch('https://oauth2.googleapis.com/token', {
     method: 'POST',
