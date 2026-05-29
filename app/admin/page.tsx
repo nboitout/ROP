@@ -50,7 +50,7 @@ export default async function AdminOverviewPage() {
 
   // --- New visitor % ---
   const newVisitorCount = pageVisits.filter(
-    (v) => v.isReturning === 'false' || v.isReturning === ''
+    (v) => v.isReturning !== 'TRUE' && v.isReturning !== 'true'
   ).length
   const newVisitorPct = pageVisits.length > 0 ? (newVisitorCount / pageVisits.length) * 100 : 0
 

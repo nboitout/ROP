@@ -34,7 +34,7 @@ export default async function EngagementPage() {
   // Return visitor rate
   const pageVisits = visits.filter((v) => v.event === 'page_visit')
   const returningCount = pageVisits.filter(
-    (v) => v.isReturning === 'true'
+    (v) => v.isReturning === 'TRUE' || v.isReturning === 'true'
   ).length
   const returnRate = pageVisits.length > 0 ? (returningCount / pageVisits.length) * 100 : 0
 
