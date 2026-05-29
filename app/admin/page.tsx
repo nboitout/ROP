@@ -42,8 +42,8 @@ export default async function AdminOverviewPage() {
   const uniqueVisitorSet = new Set(pageVisits.map((v) => v.readerId).filter(Boolean))
   const uniqueVisitors = uniqueVisitorSet.size
 
-  // --- Total leads ---
-  const totalLeads = filteredLeads.length
+  // --- Total readers (distinct readerIds who registered) ---
+  const totalLeads = new Set(filteredLeads.map((l) => l.readerId).filter(Boolean)).size
 
   // --- Conversion rate ---
   const convRate = uniqueVisitors > 0 ? (totalLeads / uniqueVisitors) * 100 : 0
