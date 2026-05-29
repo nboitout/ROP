@@ -37,7 +37,7 @@ export default function AdminLoginPage() {
   return (
     <div className="adm-login-wrap">
       <div className="adm-login-card">
-        <h1 className="adm-login-title">Admin Dashboard</h1>
+        <h1 className="adm-login-title">R.O.P. — Admin</h1>
         <p className="adm-login-sub">guy-boitout.com</p>
         <form onSubmit={handleSubmit} className="adm-login-form">
           <label className="adm-login-label" htmlFor="password">

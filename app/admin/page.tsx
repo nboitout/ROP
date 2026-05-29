@@ -23,10 +23,10 @@ export default async function AdminOverviewPage() {
     ;({ leads, visits, errors } = await fetchAllSheets())
   } catch (err) {
     return (
-      <div style={{ padding: 40, color: 'var(--cream)', fontFamily: 'DM Sans, sans-serif' }}>
-        <h2>Dashboard error</h2>
-        <pre style={{ color: '#f87171', fontSize: 13 }}>{String(err)}</pre>
-        <p style={{ opacity: 0.6, marginTop: 12 }}>Check that GOOGLE_SHEETS_ID, GOOGLE_SERVICE_ACCOUNT_EMAIL and GOOGLE_SERVICE_ACCOUNT_PRIVATE_KEY are set correctly in Vercel.</p>
+      <div style={{ padding: 40, color: 'var(--adm-cream)', fontFamily: 'DM Sans, sans-serif' }}>
+        <p className="adm-section-title">Dashboard error</p>
+        <pre style={{ color: 'rgba(255,200,180,.9)', fontSize: 13, marginTop: 12 }}>{String(err)}</pre>
+        <p style={{ color: 'rgba(245,240,232,.5)', marginTop: 12, fontSize: '.82rem', lineHeight: 1.6 }}>Check that GOOGLE_SHEETS_ID, GOOGLE_SERVICE_ACCOUNT_EMAIL and GOOGLE_SERVICE_ACCOUNT_PRIVATE_KEY are set correctly in Vercel.</p>
       </div>
     )
   }
@@ -113,10 +113,10 @@ export default async function AdminOverviewPage() {
       <p className="adm-page-sub">Last updated: {new Date().toLocaleString('en-GB')}</p>
 
       {errorEntries.length > 0 && (
-        <div style={{ background: '#7f1d1d', borderRadius: 8, padding: '12px 16px', marginBottom: 24 }}>
-          <p style={{ color: '#fca5a5', fontWeight: 600, marginBottom: 6 }}>⚠ Sheet loading errors</p>
+        <div style={{ background: 'rgba(255,100,100,.08)', border: '1px solid rgba(255,120,120,.24)', borderLeft: '3px solid rgba(255,120,120,.6)', borderRadius: 3, padding: '12px 16px', marginBottom: 24 }}>
+          <p style={{ color: 'rgba(245,240,232,.9)', fontWeight: 600, marginBottom: 6, fontSize: '.8rem', letterSpacing: '.06em', textTransform: 'uppercase' }}>Sheet loading errors</p>
           {errorEntries.map(([sheet, msg]) => (
-            <pre key={sheet} style={{ color: '#fca5a5', fontSize: 12, margin: '4px 0' }}>{sheet}: {msg}</pre>
+            <pre key={sheet} style={{ color: 'rgba(255,200,180,.9)', fontSize: 12, margin: '4px 0' }}>{sheet}: {msg}</pre>
           ))}
         </div>
       )}

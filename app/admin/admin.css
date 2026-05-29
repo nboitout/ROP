@@ -71,7 +71,7 @@
   text-decoration: none;
   color: var(--adm-muted);
   padding: 6px 12px;
-  border-radius: 3px;
+  border-radius: 2px;
   transition: color .15s, background .15s;
 }
 
@@ -114,7 +114,7 @@
   border: 1px solid rgba(201,163,94,.3);
   color: var(--adm-gold-l);
   padding: 5px 14px;
-  border-radius: 3px;
+  border-radius: 2px;
   cursor: pointer;
   transition: background .15s, color .15s;
 }
@@ -154,6 +154,18 @@
   color: var(--adm-gold-l);
   margin-bottom: 16px;
   margin-top: 40px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.adm-section-title::before {
+  content: '';
+  width: 24px;
+  height: 1px;
+  background: var(--adm-gold-l);
+  opacity: .5;
+  flex-shrink: 0;
 }
 
 /* ---- Scorecards ---- */
@@ -167,7 +179,8 @@
 .adm-scorecard {
   background: var(--adm-card);
   border: 1px solid var(--adm-border);
-  border-radius: 6px;
+  border-top: 2px solid var(--adm-sage);
+  border-radius: 3px;
   padding: 20px 22px 18px;
 }
 
@@ -212,7 +225,7 @@
 .adm-chart-card {
   background: var(--adm-card);
   border: 1px solid var(--adm-border);
-  border-radius: 6px;
+  border-radius: 3px;
   padding: 24px;
 }
 
@@ -232,7 +245,7 @@
 /* ---- Table ---- */
 .adm-table-wrap {
   overflow-x: auto;
-  border-radius: 6px;
+  border-radius: 3px;
   border: 1px solid var(--adm-border);
 }
 
@@ -279,7 +292,7 @@
   overflow-x: auto;
   overflow-y: auto;
   max-height: 540px;
-  border-radius: 6px;
+  border-radius: 3px;
   border: 1px solid var(--adm-border);
 }
 
@@ -300,7 +313,7 @@
 .adm-funnel-step {
   background: var(--adm-card);
   border: 1px solid var(--adm-border);
-  border-radius: 6px;
+  border-radius: 3px;
   padding: 16px 22px;
   display: grid;
   grid-template-columns: 28px 1fr auto auto;
@@ -381,7 +394,7 @@
   border: 1px solid var(--adm-border);
   color: var(--adm-muted);
   padding: 5px 14px;
-  border-radius: 3px;
+  border-radius: 2px;
   cursor: pointer;
   text-decoration: none;
   transition: background .15s, color .15s, border-color .15s;
@@ -407,7 +420,8 @@
 .adm-login-card {
   background: #242420;
   border: 1px solid rgba(201,163,94,.18);
-  border-radius: 8px;
+  border-top: 2px solid var(--adm-gold-l);
+  border-radius: 3px;
   padding: 48px 44px;
   width: 100%;
   max-width: 380px;
@@ -447,7 +461,7 @@
   font-size: .9rem;
   background: #1a1a18;
   border: 1px solid rgba(201,163,94,.22);
-  border-radius: 4px;
+  border-radius: 2px;
   color: #f5f0e8;
   padding: 10px 14px;
   outline: none;
@@ -472,15 +486,17 @@
   background: #a07c3a;
   color: #f5f0e8;
   border: none;
-  border-radius: 4px;
+  border-radius: 2px;
   padding: 12px;
   cursor: pointer;
   margin-top: 6px;
-  transition: background .15s;
+  transition: background .15s, transform .2s, box-shadow .2s;
+  box-shadow: 0 4px 16px rgba(160,124,58,.28);
 }
 
 .adm-login-btn:hover:not(:disabled) {
   background: #c9a35e;
+  transform: translateY(-2px);
 }
 
 .adm-login-btn:disabled {
