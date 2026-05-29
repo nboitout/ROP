@@ -87,7 +87,11 @@ export default async function EngagementPage() {
       const s = v.utm_source.trim()
       utmCount.set(s, (utmCount.get(s) ?? 0) + 1)
     })
-  // Return frequency distribution: buckets 0, 1, 2, 3, 3+
+  const utmData: BarDataPoint[] = [...utmCount.entries()]
+    .sort((a, b) => b[1] - a[1])
+    .map(([name, value]) => ({ name, value }))
+
+  // Return frequency distribution: buckets 0, 1, 2, 3, 4+
   const returnBuckets: BarDataPoint[] = [
     { name: '0 returns', value: 0 },
     { name: '1 return',  value: 0 },
@@ -103,6 +107,8 @@ export default async function EngagementPage() {
     else if (returns === 3) returnBuckets[3].value++
     else                    returnBuckets[4].value++
   })
+
+  return (
     <main className="adm-page">
       <div className="adm-page-header">
         <div>
