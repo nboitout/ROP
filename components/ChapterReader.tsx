@@ -2,15 +2,13 @@
 
 import { useEffect, useRef, useState } from 'react'
 import Link from 'next/link'
-import { Document, Page, pdfjs } from 'react-pdf'
-import 'react-pdf/dist/Page/AnnotationLayer.css'
-import 'react-pdf/dist/Page/TextLayer.css'
+import dynamic from 'next/dynamic'
 import type { Chapter, Block } from '@/content/types'
+
+const PdfSlideViewer = dynamic(() => import('@/components/PdfSlideViewer'), { ssr: false })
 import BookNotifyForm from '@/components/BookNotifyForm'
 import { useLanguage } from '@/app/i18n/LanguageContext'
 import { getSessionId } from '@/lib/session'
-
-pdfjs.GlobalWorkerOptions.workerSrc = `https://unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`
 
 type Props = {
   chapter: Chapter
@@ -343,19 +341,12 @@ export default function ChapterReader({ chapter, bookTitle }: Props) {
                 <button className="cr-viewer-close" onClick={() => { setSlidesViewer(false); setSlidePage(1); setSlideZoom(0.75) }} aria-label="Fermer">×</button>
               </div>
               <div className="cr-viewer-body" ref={viewerBodyRef}>
-                <Document
+                <PdfSlideViewer
                   file={chapter.slides.url}
-                  onLoadSuccess={({ numPages }) => setSlideCount(numPages)}
-                  loading={<div className="cr-viewer-loading">Chargement…</div>}
-                  error={<div className="cr-viewer-loading">Impossible de charger les diapositives.</div>}
-                >
-                  <Page
-                    pageNumber={slidePage}
-                    width={(slideWidth || 800) * slideZoom}
-                    renderTextLayer={false}
-                    renderAnnotationLayer={false}
-                  />
-                </Document>
+                  pageNumber={slidePage}
+                  width={(slideWidth || 800) * slideZoom}
+                  onLoadSuccess={setSlideCount}
+                />
               </div>
             </div>
           )}
