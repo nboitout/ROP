@@ -1,7 +1,6 @@
 import { fetchAllSheets } from '@/lib/sheets'
 import Scorecard from '@/components/admin/Scorecard'
-import AdminLineChart, { LineDataPoint } from '@/components/admin/AdminLineChart'
-import AdminBarChart, { BarDataPoint } from '@/components/admin/AdminBarChart'
+import AdminClusteredBarChart, { ClusteredDataPoint } from '@/components/admin/AdminClusteredBarChart'
 import AdminPieChart, { PieDataPoint } from '@/components/admin/AdminPieChart'
 
 export const dynamic = 'force-dynamic'
@@ -66,36 +65,28 @@ export default async function AdminOverviewPage() {
   }, 0)
   const avgDwell = chapterLeaves.length > 0 ? dwellTotal / chapterLeaves.length : 0
 
-  // --- Line chart: leads + visits per day (from START_DATE to today) ---
-  const now = new Date()
-  const days: LineDataPoint[] = []
-  const startD = new Date(START_DATE + 'T00:00:00Z')
-  for (let d = new Date(startD); d <= now; d.setUTCDate(d.getUTCDate() + 1)) {
-    days.push({ date: d.toISOString().slice(0, 10), leads: 0, visits: 0 })
-  }
-  const dayMap = new Map(days.map((d) => [d.date, d]))
+  // --- Clustered bar: visits + readers by country (top 10 by total) ---
+  const countryVisits = new Map<string, number>()
+  const countryReaders = new Map<string, number>()
 
-  filteredLeads.forEach((l) => {
-    const day = l.timestamp.slice(0, 10)
-    const entry = dayMap.get(day)
-    if (entry) entry.leads++
-  })
-  pageVisits.forEach((v) => {
-    const day = v.timestamp.slice(0, 10)
-    const entry = dayMap.get(day)
-    if (entry) entry.visits++
-  })
-
-  // --- Bar chart: visitors by country (top 10) ---
-  const countryCount = new Map<string, number>()
   pageVisits.forEach((v) => {
     const c = v.country || 'Unknown'
-    countryCount.set(c, (countryCount.get(c) ?? 0) + 1)
+    countryVisits.set(c, (countryVisits.get(c) ?? 0) + 1)
   })
-  const countryData: BarDataPoint[] = [...countryCount.entries()]
-    .sort((a, b) => b[1] - a[1])
+  filteredLeads.forEach((l) => {
+    const c = l.country || 'Unknown'
+    countryReaders.set(c, (countryReaders.get(c) ?? 0) + 1)
+  })
+
+  const allCountries = new Set([...countryVisits.keys(), ...countryReaders.keys()])
+  const countryData: ClusteredDataPoint[] = [...allCountries]
+    .map((country) => ({
+      country,
+      visits: countryVisits.get(country) ?? 0,
+      readers: countryReaders.get(country) ?? 0,
+    }))
+    .sort((a, b) => (b.visits + b.readers) - (a.visits + a.readers))
     .slice(0, 10)
-    .map(([name, value]) => ({ name, value }))
 
   // --- Pie chart: visitors by language ---
   const langCount = new Map<string, number>()
@@ -140,15 +131,11 @@ export default async function AdminOverviewPage() {
 
       <p className="adm-section-title">Readers &amp; Visits — Since {START_DATE}</p>
       <div className="adm-chart-card" style={{ marginBottom: 24 }}>
-        <p className="adm-chart-title">Daily trend</p>
-        <AdminLineChart data={days} />
+        <p className="adm-chart-title">Visits &amp; Readers by Country (top 10)</p>
+        <AdminClusteredBarChart data={countryData} />
       </div>
 
       <div className="adm-charts-grid">
-        <div className="adm-chart-card">
-          <p className="adm-chart-title">Visitors by Country (top 10)</p>
-          <AdminBarChart data={countryData} color="#4a6b5a" />
-        </div>
         <div className="adm-chart-card">
           <p className="adm-chart-title">Visitors by Language</p>
           <AdminPieChart data={langData} />
