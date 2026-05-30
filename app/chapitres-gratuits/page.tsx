@@ -28,11 +28,18 @@ const FREE_CHAPTERS: FreeChapter[] = [
     meta: '~5 min de lecture',
   },
   {
-    href: '/chapitre-5',
-    eyebrow: 'Chapitre 5',
-    title: 'Mécanisme de stress',
-    description: 'Le syndrome général d’adaptation de Selye — alarme, recouvrement, adaptation-résistance, épuisement — et son intérêt en R.O.P., illustré par cinq planches anatomiques.',
-    meta: '~15 min · 5 illustrations',
+    href: ‘/chapitre-5’,
+    eyebrow: ‘Chapitre 5’,
+    title: ‘Mécanisme de stress’,
+    description: ‘Le syndrome général d’adaptation de Selye — alarme, recouvrement, adaptation-résistance, épuisement — et son intérêt en R.O.P., illustré par cinq planches anatomiques.’,
+    meta: ‘~15 min · 5 illustrations’,
+  },
+  {
+    href: ‘/chapitre-14’,
+    eyebrow: ‘Chapitre 14’,
+    title: ‘Intestin grêle’,
+    description: ‘Anatomie, physiologie et écosystème intestinal — de la muqueuse au microbiote — hyperperméabilité, dysbiose et zones réflexes du jéjunum et de l’iléum en R.O.P.’,
+    meta: ‘~20 min · 8 illustrations’,
   },
 ]
 
@@ -71,11 +78,6 @@ export default async function ChapitresGratuitsPage() {
               </Link>
             </li>
           ))}
-          <li className="cg-card cg-card-coming">
-            <p className="cg-card-eyebrow">Chapitre 14</p>
-            <h2 className="cg-card-title">Intestin grêle</h2>
-            <p className="cg-card-desc">Disponible prochainement.</p>
-          </li>
         </ul>
 
         <div className="cg-foot">
