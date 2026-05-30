@@ -153,7 +153,7 @@ h1 em { font-style:italic; color:var(--gold-l); }
 .ch-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(305px,1fr)); gap:20px; }
 .cc { background:white; border-radius:3px; overflow:hidden; position:relative; box-shadow:0 2px 16px rgba(26,26,24,.055); transition:transform .28s, box-shadow .28s; display:flex; flex-direction:column; }
 .cc:hover { transform:translateY(-5px); box-shadow:0 12px 34px rgba(26,26,24,.1); }
-.cc.free { border:1px solid rgba(74,107,90,.2); }
+.cc.free { border:1px solid rgba(74,107,90,.25); background:#f4f8f5; }
 .cc.free::before { content:''; position:absolute; top:0; left:0; width:3px; height:100%; background:var(--sage); }
 .cc-top { padding:22px 24px 0; display:flex; justify-content:space-between; align-items:flex-start; }
 .cc-n { font-family:'Cormorant Garamond',serif; font-size:2.8rem; font-weight:300; color:var(--i08); line-height:1; }
