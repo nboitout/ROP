@@ -1,6 +1,5 @@
 // Chapter 14 content — French
 // Source: public/Chapter-14/Chapitre 14 Intestin grêle - Parties 1a, 1b, 2, 3.docx (Guy Boitout)
-// Structured for i18n: same shape will be reused for /en/chapter-14 etc.
 
 import type { Chapter } from './types'
 
@@ -34,19 +33,20 @@ export const chapter14Fr: Chapter = {
       title: 'Situation',
       blocks: [
         { type: 'para', text: 'Le jéjunum-iléum occupe une grande partie de la cavité abdominale, plus volontiers à gauche qu’à droite, à l’intérieur du cadre colique. Le jéjunum siège préférentiellement dans le quadrant supérieur gauche de l’abdomen. L’iléum siège préférentiellement dans le quadrant inférieur droit de l’abdomen.' },
-        { type: 'figure', src: '/chapter-14/figure-14-1.png', alt: 'Les neuf régions abdominales : hypochondres, régions épigastrique et ombilicale, flancs, fosses iliaques et région pubienne', caption: 'Figure 14.1 — Topographie abdominale en neuf régions', orientation: 'portrait' },
+        { type: 'figure', src: '/chapter-14/figure-14-1.png', caption: 'Figure 14.1 — Topographie abdominale en quatre quadrants', alt: 'Les quatre quadrants abdominaux', orientation: 'portrait' },
       ],
     },
     {
       id: 'anatomie',
       title: 'Anatomie',
       blocks: [
-        { type: 'leadBullets', items: [
-          { label: 'Jéjunum-iléum', text: 'il comporte 15 à 16 anses intestinales en forme de U, disposées en deux groupes. Un groupe supérieur à gauche, le jéjunum, plus développé que l’iléum, dont les anses et le système vasculaire sont plutôt orientés horizontalement. Un groupe inférieur à droite, l’iléum, dont les anses et le système vasculaire sont plutôt orientés verticalement.' },
-          { label: 'Mésentère', text: 'c’est un méso, c’est-à-dire une réflexion à double feuillet du péritoine. Il enveloppe le jéjunum-iléum et le relie à la paroi postérieure de l’abdomen par l’intermédiaire de la racine du mésentère.' },
-          { label: 'Racine du mésentère', text: 'elle constitue la ligne d’attache du mésentère et contribue à la stabilité de l’intestin grêle par ailleurs très mobile. Elle mesure 16 à 18 cm. Elle s’étend de la jonction duodéno-jéjunale à la jonction iléo-caecale en croisant l’axe médian de l’abdomen au niveau de l’ombilic (à hauteur du disque L3-L4). La jonction duodéno-jéjunale est maintenue par le muscle de Treitz dont les fibres lisses s’attachent sur le pilier droit du diaphragme.' },
-          { label: 'Muscle de Treitz', text: 'il participe au maintien de l’angle duodéno-jéjunal par sa contraction, en attirant la racine du mésentère en haut et à gauche. En favorisant une tension longitudinale, il participe à l’évacuation du contenu duodénal dans le jéjunum. La racine du mésentère fournit la vascularisation et l’innervation à l’intestin grêle.' },
-        ]},
+        { type: 'lead', label: 'Jéjunum-iléum', text: 'il comporte 15 à 16 anses intestinales en forme de U, disposées en deux groupes. Un groupe supérieur à gauche, le jéjunum, plus développé que l’iléum, dont les anses et le système vasculaire sont plutôt orientés horizontalement. Un groupe inférieur à droite, l’iléum, dont les anses et le système vasculaire sont plutôt orientés verticalement.' },
+        { type: 'lead', label: 'Mésentère', text: 'c’est un méso, c’est-à-dire une réflexion à double feuillet du péritoine. Il enveloppe le jéjunum-iléum et le relie à la paroi postérieure de l’abdomen par l’intermédiaire de la racine du mésentère.' },
+        { type: 'figure', src: '/chapter-14/figure-14-2.png', caption: 'Figure 14.2 — Mésos', alt: 'Les mésos du péritoine', orientation: 'portrait' },
+        { type: 'lead', label: 'Racine du mésentère', text: 'elle constitue la ligne d’attache du mésentère et contribue à la stabilité de l’intestin grêle par ailleurs très mobile. Elle mesure 16 à 18 cm. Elle s’étend de la jonction duodéno-jéjunale à la jonction iléo-caecale en croisant l’axe médian de l’abdomen au niveau de l’ombilic (à hauteur du disque L3-L4). La jonction duodéno-jéjunale est maintenue par le muscle de Treitz dont les fibres lisses s’attachent sur le pilier droit du diaphragme.' },
+        { type: 'figure', src: '/chapter-14/figure-14-3.png', caption: 'Figure 14.3 — Racine du mésentère', alt: 'Racine du mésentère et son trajet abdominal', orientation: 'landscape' },
+        { type: 'lead', label: 'Muscle de Treitz', text: 'il participe au maintien de l’angle duodéno-jéjunal par sa contraction, en attirant la racine du mésentère en haut et à gauche. En favorisant une tension longitudinale, il participe à l’évacuation du contenu duodénal dans le jéjunum. La racine du mésentère fournit la vascularisation et l’innervation à l’intestin grêle.' },
+        { type: 'figure', src: '/chapter-14/figure-14-4.png', caption: 'Figure 14.4 — Muscle de Treitz', alt: 'Muscle de Treitz et angle duodéno-jéjunal', orientation: 'landscape' },
         { type: 'rop', body: [
           'La perte de tension longitudinale de la racine du mésentère est à rapprocher, sur le plan clinique, du syndrome de la pince aorto-mésentérique ou nutcracker syndrome : c’est une compression du 4ème duodénum et de la veine rénale gauche entre l’aorte et l’artère mésentérique supérieure. L’évacuation du contenu duodénal dans le jéjunum peut être retardée avec risque de reflux gastroduodénal.',
           'Le riche réseau vasculo-nerveux et lymphatique de la racine du mésentère est hautement réflexogène. La sollicitation de sa zone réflexe vise à faciliter une réponse fonctionnelle du jéjunum-iléum.',
@@ -74,10 +74,13 @@ export const chapter14Fr: Chapter = {
       blocks: [
         { type: 'para', text: 'L’intestin grêle a besoin d’une importante irrigation vasculaire et lymphatique pour assurer ses fonctions de digestion, d’absorption et immunitaire.' },
         { type: 'lead', label: 'Artère mésentérique supérieure', text: 'elle constitue l’axe artériel principal de l’intestin grêle. Elle est une branche de l’aorte abdominale. Son origine se situe 1 cm au-dessous du tronc cœliaque, en regard du disque intervertébral Th12-L1. D’abord rétro-pancréatique puis en avant de la 3ème portion du duodénum, elle chemine entre les deux feuillets du mésentère. Elle donne de nombreuses branches collatérales. Elle irrigue tout l’intestin grêle, le colon ascendant et les 2/3 proximaux du colon transverse.' },
-        { type: 'figure', src: '/chapter-14/figure-14-2.png', alt: 'Artère mésentérique supérieure et ses branches : artère colique moyenne, artères jéjunales, artère iléocolique, artères iléales et vasa recta', caption: 'Figure 14.2 — Artère mésentérique supérieure et ses branches', orientation: 'landscape' },
+        { type: 'figure', src: '/chapter-14/figure-14-5.png', caption: 'Figure 14.5 — Artère mésentérique supérieure', alt: 'Artère mésentérique supérieure et ses branches', orientation: 'portrait' },
         { type: 'para', text: 'Son pouls, perceptible au niveau de la 3ème portion du duodénum, à droite de l’ombilic, peut constituer un repère clinique vasculaire, sans préjuger à lui seul du fonctionnement de l’intestin.' },
+        { type: 'figure', src: '/chapter-14/figure-14-6.png', caption: 'Figure 14.6 — Pouls des artères de la cavité abdominale', alt: 'Pouls des artères de la cavité abdominale', orientation: 'landscape' },
         { type: 'lead', label: 'Veine mésentérique supérieure', text: 'située à droite de l’artère mésentérique supérieure, elle fait partie du système porte. Elle draine vers le foie le sang veineux chargé des nutriments absorbés dans l’intestin grêle.' },
+        { type: 'figure', src: '/chapter-14/figure-14-7.png', caption: 'Figure 14.7 — Système porte', alt: 'Système porte hépatique', orientation: 'landscape' },
         { type: 'lead', label: 'Réseau lymphatique', text: 'l’intestin grêle possède un réseau lymphatique développé. Il participe au système immunitaire. Il prend en charge les molécules de lipides et de protéines à chaîne longue et les vitamines liposolubles A, D, E, K acheminées vers le carrefour jugulo-subclavier gauche, via la citerne de Pecquet et le canal thoracique.' },
+        { type: 'figure', src: '/chapter-14/figure-14-8.png', caption: 'Figure 14.8 — Système lymphatique', alt: 'Système lymphatique abdominal', orientation: 'landscape' },
       ],
     },
     {
@@ -86,10 +89,13 @@ export const chapter14Fr: Chapter = {
       blocks: [
         { type: 'sub', text: 'Innervation du péritoine' },
         { type: 'para', text: 'Le péritoine reçoit une double innervation, somatique et autonome.' },
-        { type: 'leadBullets', items: [
-          { label: 'Péritoine pariétal', text: 'il reçoit une innervation somatique commune avec la paroi abdominale via les nerfs phréniques, les six derniers nerfs intercostaux et les nerfs du plexus lombaire. Il comporte de nombreuses terminaisons sensibles à la température, à la pression et à la douleur. Cette innervation commune avec la paroi abdominale éclaire la projection des douleurs cervicales, scapulaires, abdominales, lombaires d’origines péritonéale et viscérale transmises au système ostéo-musculo-articulaire par les fibres somatiques du feuillet pariétal.' },
-          { label: 'Péritoine viscéral', text: 'il reçoit une innervation autonome extrinsèque commune avec les viscères. Sympathique : ses racines proviennent de Th8 à Th11. Elles rejoignent les plexus pré-vertébraux cœliaque et mésentérique supérieur via les nerfs grands et petits splanchniques.' },
-        ]},
+        { type: 'lead', label: 'Péritoine pariétal', text: 'il reçoit une innervation somatique commune avec la paroi abdominale via les nerfs phréniques, les six derniers nerfs intercostaux et les nerfs du plexus lombaire. Il comporte de nombreuses terminaisons sensibles à la température, à la pression et à la douleur. Cette innervation commune avec la paroi abdominale éclaire la projection des douleurs cervicales, scapulaires, abdominales, lombaires d’origines péritonéale et viscérale transmises au système ostéo-musculo-articulaire par les fibres somatiques du feuillet pariétal.' },
+        { type: 'figure', src: '/chapter-14/figure-14-9.png', caption: 'Figure 14.9 — Nerf phrénique', alt: 'Nerf phrénique et son trajet', orientation: 'landscape' },
+        { type: 'figure', src: '/chapter-14/figure-14-10.png', caption: 'Figure 14.10 — Nerfs intercostaux', alt: 'Nerfs intercostaux', orientation: 'landscape' },
+        { type: 'figure', src: '/chapter-14/figure-14-11.png', caption: 'Figure 14.11 — Nerfs du plexus lombaire', alt: 'Nerfs du plexus lombaire', orientation: 'landscape' },
+        { type: 'lead', label: 'Péritoine viscéral', text: 'il reçoit une innervation autonome extrinsèque commune avec les viscères. Sympathique : ses racines proviennent de Th8 à Th11. Elles rejoignent les plexus pré-vertébraux cœliaque et mésentérique supérieur via les nerfs grands et petits splanchniques.' },
+        { type: 'figure', src: '/chapter-14/figure-14-12.jpg', caption: 'Figure 14.12 — Système nerveux autonome', alt: 'Système nerveux autonome', orientation: 'portrait' },
+
         { type: 'sub', text: 'Nerf vague et système nerveux sympathique' },
         { type: 'leadBullets', items: [
           { label: 'Sensibilité viscérale', text: 'le péritoine viscéral est peu sensible au toucher, aux variations thermiques et à la section chirurgicale. La sensibilité viscérale est tributaire du système sympathique, stimulé par les étirements de l’intestin et les substances chimiques.' },
@@ -97,9 +103,10 @@ export const chapter14Fr: Chapter = {
           { label: 'Nerf vague — motricité', text: 'il est globalement antagoniste du Sympathique. Il favorise le péristaltisme et les sécrétions intestinales ainsi que la perméabilité intestinale pour favoriser l’absorption.' },
           { label: 'Nerf vague — sensibilité', text: 'le nerf vague contient 70 à 80 % de fibres sensitives qui renseignent en permanence le cerveau de l’état des viscères. Il est connecté au système nerveux intrinsèque.' },
         ]},
+
         { type: 'sub', text: 'Système nerveux entérique (SNE)' },
         { type: 'para', text: 'Le système nerveux intrinsèque ou entérique (SNE) est souvent qualifié de 2ème cerveau ou cerveau abdominal. Il est constitué de plexus intramuraux situés dans la paroi même de l’intestin grêle : le plexus myoentérique d’Auerbach et le plexus sous-muqueux de Meissner.' },
-        { type: 'figure', src: '/chapter-14/figure-14-3.png', alt: 'Coupe de la paroi de l’intestin grêle montrant les couches musculaires, le mésentère, le plexus myoentérique d’Auerbach et le plexus sous-muqueux de Meissner', caption: 'Figure 14.3 — Structure pariétale et plexus entériques', orientation: 'portrait' },
+        { type: 'figure', src: '/chapter-14/figure-14-13.png', caption: 'Figure 14.13 — Plexus intra-muraux entériques', alt: 'Plexus myoentérique d’Auerbach et plexus sous-muqueux de Meissner dans la paroi intestinale', orientation: 'landscape' },
         { type: 'bullets', items: [
           'Le SNE est sensible aux signaux neuro-hormonaux et à la composition chimique du contenu intestinal.',
           'Il peut fonctionner largement de manière autonome par rapport au cerveau et à la moelle épinière tant que les conditions physiologiques le permettent.',
@@ -124,11 +131,9 @@ export const chapter14Fr: Chapter = {
         { type: 'sub', text: 'Écosystème intestinal' },
         { type: 'para', text: 'L’intestin grêle constitue un écosystème formé par la muqueuse intestinale, le système immunitaire et le microbiote intestinal.' },
         { type: 'lead', label: 'Muqueuse intestinale', text: 'elle constitue l’interface entre le milieu intérieur de l’organisme et le contenu de la lumière digestive. Elle agit comme une barrière sélective afin de permettre la digestion et l’absorption.' },
-        { type: 'leadBullets', items: [
-          { label: 'Digestion', text: 'elle correspond à la transformation des aliments en molécules simples pouvant ensuite être absorbées. Les cellules caliciformes produisent un mucus protecteur. Les cellules de Lieberkühn participent à la sécrétion intestinale légèrement alcaline ainsi qu’à des fonctions enzymatiques et antimicrobiennes. Les entérocytes ou cellules absorbantes assurent une fonction de barrière sélective grâce à leur agencement intercellulaire (desmosomes), permettant l’absorption des micronutriments tout en limitant le passage de macromolécules insuffisamment dégradées.' },
-          { label: 'Absorption', text: 'la muqueuse intestinale est recouverte de villosités en forme d’expansions digitiformes dont l’axe central renferme des cellules musculaires lisses ainsi qu’un réseau sanguin et lymphatique. Les villosités sont elles-mêmes recouvertes de microvillosités formant une bordure en brosse, ce qui multiplie fortement la surface d’échange. L’intestin grêle étalé aurait une superficie équivalente à un court de tennis.' },
-        ]},
-        { type: 'figure', src: '/chapter-14/figure-14-4.png', alt: 'Villosité intestinale avec ses entérocytes, cellules caliciformes, capillaires, tissu conjonctif et chorion — organisation histologique simplifiée', caption: 'Figure 14.4 — Villosité intestinale : organisation histologique', orientation: 'portrait' },
+        { type: 'lead', label: 'Digestion', text: 'elle correspond à la transformation des aliments en molécules simples pouvant ensuite être absorbées. Les cellules caliciformes produisent un mucus protecteur. Les cellules de Lieberkühn participent à la sécrétion intestinale légèrement alcaline ainsi qu’à des fonctions enzymatiques et antimicrobiennes. Les entérocytes ou cellules absorbantes assurent une fonction de barrière sélective grâce à leur agencement intercellulaire (desmosomes), permettant l’absorption des micronutriments tout en limitant le passage de macromolécules insuffisamment dégradées.' },
+        { type: 'lead', label: 'Absorption', text: 'la muqueuse intestinale est recouverte de villosités en forme d’expansions digitiformes dont l’axe central renferme des cellules musculaires lisses ainsi qu’un réseau sanguin et lymphatique. Les villosités sont elles-mêmes recouvertes de microvillosités formant une bordure en brosse, ce qui multiplie fortement la surface d’échange. L’intestin grêle étalé aurait une superficie équivalente à un court de tennis.' },
+        { type: 'figure', src: '/chapter-14/figure-14-14.png', caption: 'Figure 14.14 — Villosité intestinale', alt: 'Organisation histologique d’une villosité intestinale', orientation: 'portrait' },
         { type: 'leadBullets', items: [
           { label: 'Voie sanguine', text: 'les capillaires sanguins absorbent l’eau, les sels minéraux, les oses simples, les acides aminés, les acides gras à chaîne courte et les vitamines hydrosolubles. Ces nutriments sont acheminés vers le foie par le système porte.' },
           { label: 'Voie lymphatique', text: 'les capillaires lymphatiques (ou chylifères) absorbent principalement les graisses, les protéines à chaîne longue et les vitamines liposolubles A, D, E, K. Ils rejoignent successivement le réseau lymphatique, la citerne de Pecquet, le canal thoracique, avant de déboucher dans le réseau veineux du carrefour jugulo-subclavier gauche.' },
@@ -191,20 +196,39 @@ export const chapter14Fr: Chapter = {
       title: 'ROP de l’intestin grêle',
       blocks: [
         { type: 'sub', text: 'Syndrome général d’adaptation' },
+        { type: 'sub', text: '1. Nerf vague' },
         { type: 'bullets', items: [
-          'Nerf vague : territoire crânien et cervical, hiatus œsophagien, plexus cœliaque.',
+          'Territoire crânien et cervical du nerf vague.',
+          'Territoire abdominal gauche du nerf vague et plexus cœliaque (solaire).',
+          'Hiatus œsophagien (nerfs vagues droit et gauche) et cardia.',
+          'Petite courbure de l’estomac, riche en fibres vagales.',
+        ]},
+        { type: 'figure', src: '/chapter-14/figure-14-15.png', caption: 'Figure 14.15 — Territoire crânien et cervical du nerf vague (en jaune)', alt: 'Territoire crânien et cervical du nerf vague', orientation: 'landscape' },
+        { type: 'figure', src: '/chapter-14/figure-14-16.png', caption: 'Figure 14.16 — Territoire abdominal gauche du nerf vague et plexus cœliaque (solaire)', alt: 'Territoire abdominal gauche du nerf vague et plexus cœliaque', orientation: 'landscape' },
+        { type: 'figure', src: '/chapter-14/figure-14-17.png', caption: 'Figure 14.17 — Hiatus œsophagien (nerfs vagues droit et gauche) et cardia', alt: 'Hiatus œsophagien et nerfs vagues', orientation: 'landscape' },
+        { type: 'figure', src: '/chapter-14/figure-14-18.png', caption: 'Figure 14.18 — Petite courbure de l’estomac, riche en fibres vagales', alt: 'Petite courbure de l’estomac et fibres vagales', orientation: 'landscape' },
+
+        { type: 'sub', text: '2. Système sympathique' },
+        { type: 'bullets', items: [
           'Colonne vertébrale, articulations costo-transversaires (chaîne ganglionnaire latéro-vertébrale thoracique Th8-Th10).',
           'Plexus cœliaque (solaire).',
           'Plexus lombaire (lien viscéro-somatique).',
         ]},
+        { type: 'figure', src: '/chapter-14/figure-14-19.png', caption: 'Figure 14.19 — Système sympathique (origine médullaire)', alt: 'Système sympathique et chaîne ganglionnaire', orientation: 'landscape' },
+        { type: 'figure', src: '/chapter-14/figure-14-20.png', caption: 'Figure 14.20 — Chaîne ganglionnaire lombaire et piliers du diaphragme', alt: 'Chaîne ganglionnaire lombaire et piliers du diaphragme', orientation: 'landscape' },
+        { type: 'figure', src: '/chapter-14/figure-14-21.png', caption: 'Figure 14.21 — Plexus cœliaque (solaire)', alt: 'Plexus cœliaque solaire', orientation: 'landscape' },
+
         { type: 'para', text: 'N.B. Dans notre expérience clinique, les troubles fonctionnels intestinaux sont souvent observés chez la femme en lien avec des facteurs hormonaux et émotionnels.' },
 
         { type: 'sub', text: 'Syndrome locorégional' },
         { type: 'bullets', items: [
           'Diaphragme (attache du muscle de Treitz sur le pilier droit).',
           'Estomac (réflexe gastro-entérique).',
-          'Racine du mésentère : une ligne de la jonction duodéno-jéjunale à l’ombilic, à hauteur de L3-L4 (face plantaire du pied gauche), puis une ligne de la valvule iléo-caecale à l’ombilic (face plantaire du pied droit).',
+          'Racine du mésentère : une ligne de la jonction duodéno-jéjunale à l’ombilic, à hauteur de L3-L4 (face plantaire du pied gauche).',
+          'Racine du mésentère : une ligne de la valvule iléo-caecale à l’ombilic (face plantaire du pied droit).',
         ]},
+        { type: 'figure', src: '/chapter-14/figure-14-22.jpg', caption: 'Figure 14.22 — Racine du mésentère (entre la jonction duodéno-jéjunale et l’ombilic)', alt: 'Zone réflexe de la racine du mésentère côté jéjunum', orientation: 'portrait' },
+        { type: 'figure', src: '/chapter-14/figure-14-23.jpg', caption: 'Figure 14.23 — Racine du mésentère (entre la valvule iléo-caecale et l’ombilic)', alt: 'Zone réflexe de la racine du mésentère côté iléum', orientation: 'portrait' },
 
         { type: 'sub', text: 'Zones réflexes podales — Jéjunum (pied gauche)' },
         { type: 'bullets', items: [
@@ -213,8 +237,8 @@ export const chapter14Fr: Chapter = {
           'Limite latérale : jusqu’au bord latéral du pied gauche.',
           'Respecter l’orientation des anses : horizontales pour le jéjunum.',
         ]},
-        { type: 'figure', src: '/chapter-14/figure-14-5.png', alt: 'Zone réflexe du jéjunum et de la racine du mésentère sur la face plantaire du pied gauche — vue frontale ventrale avec repères anatomiques', caption: 'Figure 14.5 — Zone réflexe du jéjunum et racine du mésentère (pied gauche)', orientation: 'portrait' },
-        { type: 'figure', src: '/chapter-14/figure-14-6.png', alt: 'Application manuelle de la réflexothérapie occipito-podale au niveau du talon et de la voûte plantaire gauche', caption: 'Figure 14.6 — Application manuelle R.O.P. — Jéjunum (pied gauche)', orientation: 'portrait' },
+        { type: 'figure', src: '/chapter-14/figure-14-24.png', caption: 'Figure 14.24 — Jéjunum (limites supérieure et inférieure)', alt: 'Limites de la zone réflexe du jéjunum sur le pied gauche', orientation: 'landscape' },
+        { type: 'figure', src: '/chapter-14/figure-14-25.png', caption: 'Figure 14.25 — Jéjunum', alt: 'Zone réflexe du jéjunum sur le pied gauche', orientation: 'landscape' },
 
         { type: 'sub', text: 'Zones réflexes podales — Iléum (pied droit)' },
         { type: 'bullets', items: [
@@ -223,11 +247,12 @@ export const chapter14Fr: Chapter = {
           'Limite latérale : à l’aplomb du 4ème orteil du pied droit.',
           'Respecter l’orientation des anses : verticales pour l’iléum.',
         ]},
-        { type: 'figure', src: '/chapter-14/figure-14-7.png', alt: 'Zone réflexe de l’iléum et de la racine du mésentère sur la face plantaire du pied droit — valvule iléo-caecale, iléum, duodénum et racine du mésentère visibles', caption: 'Figure 14.7 — Zone réflexe de l’iléum et racine du mésentère (pied droit)', orientation: 'portrait' },
-        { type: 'figure', src: '/chapter-14/figure-14-8.png', alt: 'Application manuelle de la réflexothérapie occipito-podale au niveau du talon et de la voûte plantaire droite', caption: 'Figure 14.8 — Application manuelle R.O.P. — Iléum (pied droit)', orientation: 'portrait' },
+        { type: 'figure', src: '/chapter-14/figure-14-26.png', caption: 'Figure 14.26 — Iléum (limites supérieure et inférieure)', alt: 'Limites de la zone réflexe de l’iléum sur le pied droit', orientation: 'landscape' },
+        { type: 'figure', src: '/chapter-14/figure-14-27.png', caption: 'Figure 14.27 — Iléum et racine du mésentère', alt: 'Zone réflexe de l’iléum et racine du mésentère sur le pied droit', orientation: 'landscape' },
 
-        { type: 'sub', text: 'Système limbique' },
+        { type: 'sub', text: '3. Système limbique' },
         { type: 'lead', label: 'Balance cerveau limbique — intestin grêle', text: 'écoute-induction : un pouce sur l’intestin grêle, l’autre pouce sur le cerveau limbique.' },
+        { type: 'figure', src: '/chapter-14/figure-14-28.png', caption: 'Figure 14.28 — Technique balance viscéro-émotionnelle — intestin grêle', alt: 'Balance viscéro-émotionnelle intestin grêle et cerveau limbique', orientation: 'landscape' },
       ],
     },
     {
@@ -251,4 +276,9 @@ export const chapter14Fr: Chapter = {
       ],
     },
   ],
+  clinicalCase: {
+    src: '/chapter-14/figure-14-29.jpg',
+    caption: 'Cas clinique — Chapitre 14',
+    alt: 'Cas clinique intestin grêle en R.O.P.',
+  },
 }
