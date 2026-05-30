@@ -276,6 +276,11 @@ export const chapter14Fr: Chapter = {
       ],
     },
   ],
+  slides: {
+    url: '/chapter-14/synthese.pdf',
+    label: 'Diapositives',
+    description: "Synthèse visuelle du chapitre — anatomie, physiologie et zones réflexes R.O.P. de l'intestin grêle.",
+  },
   revisionSheet: {
     src: '/chapter-14/fiche-de-revision.png',
     alt: 'Fiche de révision — Chapitre 14, Intestin grêle',
