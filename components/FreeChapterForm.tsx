@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import { useLanguage } from '@/app/i18n/LanguageContext'
 
-type FieldErrors = { name?: string; email?: string }
+type FieldErrors = { name?: string; email?: string; profession?: string }
 
 export default function FreeChapterForm() {
   const { t } = useLanguage()
@@ -11,12 +11,15 @@ export default function FreeChapterForm() {
 
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
-  const [profession, setProfession] = useState('')
+  const [professionSelect, setProfessionSelect] = useState('')
+  const [professionOtherText, setProfessionOtherText] = useState('')
   const [consent, setConsent] = useState(false)
   const [fieldErrors, setFieldErrors] = useState<FieldErrors>({})
   const [serverError, setServerError] = useState('')
   const [loading, setLoading] = useState(false)
   const [success, setSuccess] = useState(false)
+
+  const profession = professionSelect === f.professionOther ? professionOtherText.trim() : professionSelect
 
   function validate(): FieldErrors {
     const errors: FieldErrors = {}
@@ -24,6 +27,8 @@ export default function FreeChapterForm() {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
     if (!email.trim()) errors.email = f.errorEmail
     else if (!emailRegex.test(email)) errors.email = f.errorEmailInvalid
+    if (!professionSelect) errors.profession = f.errorProfession
+    else if (professionSelect === f.professionOther && !professionOtherText.trim()) errors.profession = f.errorProfession
     return errors
   }
 
@@ -98,15 +103,30 @@ export default function FreeChapterForm() {
         <span className="field-error">{fieldErrors.email}</span>
       </div>
 
-      <div className="fg">
-        <label htmlFor="fj">{f.professionLbl} <span style={{ opacity: .4 }}>{f.professionOptional}</span></label>
-        <input
+      <div className={`fg${fieldErrors.profession ? ' has-error' : ''}`}>
+        <label htmlFor="fj">{f.professionLbl}</label>
+        <select
           id="fj"
-          type="text"
-          placeholder={f.professionPlaceholder}
-          value={profession}
-          onChange={(e) => setProfession(e.target.value)}
-        />
+          className="fselect"
+          value={professionSelect}
+          onChange={(e) => { setProfessionSelect(e.target.value); setProfessionOtherText('') }}
+        >
+          <option value="" disabled>{f.professionSelectPlaceholder}</option>
+          {f.professionOptions.map((opt) => (
+            <option key={opt} value={opt}>{opt}</option>
+          ))}
+          <option value={f.professionOther}>{f.professionOther}</option>
+        </select>
+        {professionSelect === f.professionOther && (
+          <input
+            type="text"
+            placeholder={f.professionOtherPlaceholder}
+            value={professionOtherText}
+            onChange={(e) => setProfessionOtherText(e.target.value)}
+            style={{ marginTop: 8 }}
+          />
+        )}
+        <span className="field-error">{fieldErrors.profession}</span>
       </div>
 
       <div className="fg" style={{ display: 'flex', gap: 10, alignItems: 'flex-start', marginTop: 4 }}>
