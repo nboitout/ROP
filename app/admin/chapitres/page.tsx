@@ -21,9 +21,8 @@ export default function AdminChapitresPage() {
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(260px, 1fr))', gap: 12 }}>
         {PAID_CHAPTERS.map((ch) => (
           <Link key={ch.href} href={ch.href} target="_blank" rel="noopener noreferrer" style={{ display: 'block', background: 'rgba(245,240,232,.04)', border: '1px solid rgba(245,240,232,.1)', borderRadius: 4, padding: '18px 20px', textDecoration: 'none', transition: 'border-color .15s' }}>
-            <p style={{ color: 'rgba(200,160,255,1)', fontSize: '.75rem', letterSpacing: '.1em', textTransform: 'uppercase', fontWeight: 700, marginBottom: 6 }}>Accès payant</p>
-            <p style={{ color: 'var(--adm-cream)', fontWeight: 600, fontSize: '.95rem', marginBottom: 4 }}>{ch.label}</p>
-            <p style={{ color: 'rgba(245,240,232,.55)', fontSize: '.82rem' }}>{ch.sub}</p>
+            <p style={{ color: 'rgba(200,160,255,1)', fontSize: '.75rem', letterSpacing: '.1em', textTransform: 'uppercase', fontWeight: 700, marginBottom: 6 }}>{ch.label}</p>
+            <p style={{ color: 'var(--adm-cream)', fontWeight: 600, fontSize: '.95rem' }}>{ch.sub}</p>
           </Link>
         ))}
       </div>
