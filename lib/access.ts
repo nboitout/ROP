@@ -4,7 +4,9 @@ import { verifyToken, type TokenPayload } from '@/lib/auth'
 
 // Cookie that grants access to the paid online book. Holds a signed
 // 'access' JWT (email + readerId), so it can't be forged by typing an email.
-export const BOOK_ACCESS_COOKIE = 'book_access'
+// Named 'paid_access' to match the existing gate in
+// app/lecture/traitement-rop/page.tsx — one cookie unlocks all paid chapters.
+export const BOOK_ACCESS_COOKIE = 'paid_access'
 
 /** Returns the buyer's token payload if they hold valid book access, else null. */
 export async function getBookAccess(): Promise<TokenPayload | null> {
