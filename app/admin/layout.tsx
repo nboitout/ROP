@@ -20,6 +20,7 @@ export default async function AdminLayout({
           </div>
         </div>
         <div className="adm-nav-right">
+          <a href="/chapitre-2" className="adm-nav-site-link" target="_blank" rel="noopener noreferrer">Chapitre 2 ↗</a>
           <a href="/" className="adm-nav-site-link">← guy-boitout.com</a>
           <LogoutButton />
         </div>
