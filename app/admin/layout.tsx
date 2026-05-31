@@ -14,13 +14,13 @@ export default async function AdminLayout({
           <span className="adm-nav-brand">R.O.P. — Admin</span>
           <div className="adm-nav-links">
             <AdminNavLink href="/admin">Overview</AdminNavLink>
+            <AdminNavLink href="/admin/chapitres">Chapitres</AdminNavLink>
             <AdminNavLink href="/admin/funnel">Parcours</AdminNavLink>
             <AdminNavLink href="/admin/readers">Readers</AdminNavLink>
             <AdminNavLink href="/admin/engagement">Engagement</AdminNavLink>
           </div>
         </div>
         <div className="adm-nav-right">
-          <a href="/chapitre-2" className="adm-nav-site-link" target="_blank" rel="noopener noreferrer">Chapitre 2 ↗</a>
           <a href="/" className="adm-nav-site-link">← guy-boitout.com</a>
           <LogoutButton />
         </div>

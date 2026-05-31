@@ -13,9 +13,10 @@ import { getSessionId } from '@/lib/session'
 type Props = {
   chapter: Chapter
   bookTitle: string
+  backHref?: string
 }
 
-export default function ChapterReader({ chapter, bookTitle }: Props) {
+export default function ChapterReader({ chapter, bookTitle, backHref = '/chapitres-gratuits' }: Props) {
   const { lang } = useLanguage()
   const [sessionId] = useState<string>(() =>
     typeof window !== 'undefined' ? getSessionId() : ''
@@ -199,7 +200,7 @@ export default function ChapterReader({ chapter, bookTitle }: Props) {
       <div className="cr-progress" aria-hidden><div className="cr-progress-bar" style={{ transform: `scaleX(${progress})` }} /></div>
 
       <div className="cr-topbar">
-        <Link href="/chapitres-gratuits" className="cr-home">← Tous les chapitres</Link>
+        <Link href={backHref} className="cr-home">← Tous les chapitres</Link>
         <div className="cr-topbar-title">
           <span className="cr-chap">{chapter.number ? `Chapitre ${chapter.number}` : chapter.title}</span>
           <span className="cr-sep">·</span>
