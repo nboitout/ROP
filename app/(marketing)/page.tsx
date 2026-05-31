@@ -6,6 +6,7 @@ import HeroCarousel from '@/components/HeroCarousel'
 import QuoteSlider from '@/components/QuoteSlider'
 import FreeChapterForm from '@/components/FreeChapterForm'
 import BookNotifyForm from '@/components/BookNotifyForm'
+import BuyButton from '@/components/BuyButton'
 import LanguageToggle from '@/components/LanguageToggle'
 import { useLanguage } from '@/app/i18n/LanguageContext'
 import { getSessionId } from '@/lib/session'
@@ -19,6 +20,11 @@ const INFOGRAPHICS = [
 export default function HomePage() {
   const { t, lang } = useLanguage()
   const [lightboxSrc, setLightboxSrc] = useState<string | null>(null)
+
+  // Flip NEXT_PUBLIC_BOOK_ON_SALE=true (with Stripe keys configured) to turn the
+  // online-book card into a real checkout. Until then the storefront keeps its
+  // current "read the free chapters / notify me" behavior, unchanged.
+  const bookOnSale = process.env.NEXT_PUBLIC_BOOK_ON_SALE === 'true'
 
   function trackCta(cta: string) {
     fetch('/api/track', {
@@ -425,7 +431,19 @@ export default function HomePage() {
             <ul className="pc-l">
               {t.pricing.plan2.features.map((f) => <li key={f}>{f}</li>)}
             </ul>
-            <a href="/chapitres-gratuits" className="btn b-gold" style={{ width: '100%', textAlign: 'center' }} onClick={() => trackCta('pricing_chapters_bundle')}>{t.pricing.plan2.cta}</a>
+            {bookOnSale ? (
+              <>
+                <BuyButton
+                  label={`${t.pricing.lbl} — €${t.pricing.plan2.price}`}
+                  className="btn b-gold"
+                  style={{ width: '100%', textAlign: 'center' }}
+                  onStart={() => trackCta('pricing_buy_online')}
+                />
+                <a href="/acces" className="pc-already" style={{ display: 'block', textAlign: 'center', marginTop: 10, fontSize: '.76rem', opacity: .8 }} onClick={() => trackCta('pricing_already_bought')}>Déjà acheté ? Accéder</a>
+              </>
+            ) : (
+              <a href="/chapitres-gratuits" className="btn b-gold" style={{ width: '100%', textAlign: 'center' }} onClick={() => trackCta('pricing_chapters_bundle')}>{t.pricing.plan2.cta}</a>
+            )}
           </div>
           <div className="pc">
             <div className="pc-n">{t.pricing.plan3.name}</div>
