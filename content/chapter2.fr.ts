@@ -228,9 +228,4 @@ export const chapter2Fr: Chapter = {
       ],
     },
   ],
-  revisionSheet: {
-    src: ‘/chapter-2/Chap2 - Fiche de revision.png’,
-    alt: ‘Fiche de révision — Chapitre 2, Traitement par la R.O.P.’,
-    caption: ‘Fiche de révision — Chapitre 2 · Traitement par la R.O.P.’,
-  },
 }
