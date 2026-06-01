@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from 'react'
 import Link from 'next/link'
 import dynamic from 'next/dynamic'
 import type { Chapter, Block } from '@/content/types'
+import type { Lang } from '@/app/i18n/translations'
 
 const PdfSlideViewer = dynamic(() => import('@/components/PdfSlideViewer'), { ssr: false })
 import BookNotifyForm from '@/components/BookNotifyForm'
@@ -14,10 +15,12 @@ type Props = {
   chapter: Chapter
   bookTitle: string
   backHref?: string
+  contentLang?: Lang
 }
 
-export default function ChapterReader({ chapter, bookTitle, backHref = '/chapitres-gratuits' }: Props) {
-  const { lang } = useLanguage()
+export default function ChapterReader({ chapter, bookTitle, backHref = '/chapitres-gratuits', contentLang = 'fr' }: Props) {
+  const { lang, t } = useLanguage()
+  const showFallbackNotice = lang !== contentLang
   const [sessionId] = useState<string>(() =>
     typeof window !== 'undefined' ? getSessionId() : ''
   )
@@ -233,6 +236,9 @@ export default function ChapterReader({ chapter, bookTitle, backHref = '/chapitr
         {tocOpen && <div className="cr-toc-overlay" onClick={() => setTocOpen(false)} />}
 
         <article ref={articleRef} className="cr-article">
+          {showFallbackNotice && (
+            <p className="cr-fallback-notice" role="status">{t.chapterFallbackNotice}</p>
+          )}
           <div className="cr-hero">
             <p className="cr-hero-eyebrow">
               {chapter.number ? `Chapitre ${chapter.number} · ` : ''}Chapitre complet
