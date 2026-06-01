@@ -349,6 +349,7 @@ footer > div > p { font-size:1rem; color:rgba(245,240,232,.84); line-height:1.9;
 .cr-toc-text { padding-top:1px; }
 
 .cr-article { grid-column:2; grid-row:1; padding:20px 16px 120px; max-width:720px; }
+.cr-fallback-notice { margin:0 0 20px; padding:10px 14px; border:1px solid rgba(160,124,58,.32); border-left:3px solid var(--gold); border-radius:2px; background:rgba(160,124,58,.07); color:rgba(26,26,24,.72); font-size:.8rem; line-height:1.45; }
 
 .cr-hero { padding:12px 0 24px; margin-bottom:8px; border-bottom:1px solid rgba(26,26,24,.1); }
 .cr-hero-eyebrow { font-size:.68rem; letter-spacing:.22em; text-transform:uppercase; color:var(--gold); font-weight:500; margin-bottom:10px; }

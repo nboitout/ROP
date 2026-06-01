@@ -1,6 +1,7 @@
 export type Lang = 'fr' | 'en' | 'de' | 'es' | 'it'
 
 const fr = {
+  chapterFallbackNotice: 'Ce chapitre n’est pas encore disponible dans votre langue — la version française est affichée.',
   nav: {
     genese: 'Genèse',
     sommaire: 'Sommaire',
@@ -288,6 +289,7 @@ const fr = {
 }
 
 const en: typeof fr = {
+  chapterFallbackNotice: 'This chapter is not yet available in your language — showing the French version.',
   nav: {
     genese: 'Genesis',
     sommaire: 'Contents',
@@ -575,6 +577,7 @@ const en: typeof fr = {
 }
 
 const de: typeof fr = {
+  chapterFallbackNotice: 'Dieses Kapitel ist noch nicht in Ihrer Sprache verfügbar — die französische Fassung wird angezeigt.',
   nav: {
     genese: 'Entstehung',
     sommaire: 'Inhalt',
@@ -862,6 +865,7 @@ const de: typeof fr = {
 }
 
 const es: typeof fr = {
+  chapterFallbackNotice: 'Este capítulo aún no está disponible en su idioma — se muestra la versión francesa.',
   nav: {
     genese: 'Génesis',
     sommaire: 'Contenido',
@@ -1149,6 +1153,7 @@ const es: typeof fr = {
 }
 
 const it: typeof fr = {
+  chapterFallbackNotice: 'Questo capitolo non è ancora disponibile nella tua lingua — viene mostrata la versione francese.',
   nav: {
     genese: 'Genesi',
     sommaire: 'Contenuti',

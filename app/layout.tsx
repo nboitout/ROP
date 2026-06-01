@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import './globals.css'
 import { LanguageProvider } from '@/app/i18n/LanguageContext'
+import { getServerLang } from '@/app/i18n/serverLang'
 
 export const metadata: Metadata = {
   title: 'Réflexothérapie occipito-podale et viscères des cavités abdominale et pelvienne — Guy Boitout · R.O.P.',
@@ -13,9 +14,10 @@ export const metadata: Metadata = {
   },
 }
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default async function RootLayout({ children }: { children: React.ReactNode }) {
+  const lang = await getServerLang()
   return (
-    <html lang="fr">
+    <html lang={lang}>
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
@@ -23,7 +25,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           rel="stylesheet"
         />
       </head>
-      <body><LanguageProvider>{children}</LanguageProvider></body>
+      <body><LanguageProvider initialLang={lang}>{children}</LanguageProvider></body>
     </html>
   )
 }

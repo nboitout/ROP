@@ -2,7 +2,8 @@ import { cookies } from 'next/headers'
 import { redirect } from 'next/navigation'
 import type { Metadata } from 'next'
 import ChapterReader from '@/components/ChapterReader'
-import { chapter5Fr } from '@/content/chapter5.fr'
+import { getChapter } from '@/content/registry'
+import { getServerLang } from '@/app/i18n/serverLang'
 
 export const metadata: Metadata = {
   title: 'Chapitre 5 — Mécanisme de stress · R.O.P. · Guy Boitout',
@@ -18,5 +19,6 @@ export default async function Chapitre5Page() {
     redirect('/?gate=free#acces-libre')
   }
 
-  return <ChapterReader chapter={chapter5Fr} bookTitle={BOOK_TITLE} />
+  const { chapter, contentLang } = getChapter('chapter-5', await getServerLang())
+  return <ChapterReader chapter={chapter} bookTitle={BOOK_TITLE} contentLang={contentLang} />
 }
