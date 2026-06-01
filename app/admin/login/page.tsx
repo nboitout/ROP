@@ -6,6 +6,7 @@ import { useRouter } from 'next/navigation'
 export default function AdminLoginPage() {
   const router = useRouter()
   const [password, setPassword] = useState('')
+  const [showPassword, setShowPassword] = useState(false)
   const [error, setError] = useState('')
   const [loading, setLoading] = useState(false)
 
@@ -43,16 +44,27 @@ export default function AdminLoginPage() {
           <label className="adm-login-label" htmlFor="password">
             Password
           </label>
-          <input
-            id="password"
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            className="adm-login-input"
-            placeholder="Enter admin password"
-            autoComplete="current-password"
-            required
-          />
+          <div className="adm-login-input-wrap">
+            <input
+              id="password"
+              type={showPassword ? 'text' : 'password'}
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              className="adm-login-input"
+              placeholder="Enter admin password"
+              autoComplete="current-password"
+              required
+            />
+            <button
+              type="button"
+              className="adm-login-toggle"
+              onClick={() => setShowPassword((v) => !v)}
+              aria-label={showPassword ? 'Hide password' : 'Show password'}
+              aria-pressed={showPassword}
+            >
+              {showPassword ? 'Hide' : 'Show'}
+            </button>
+          </div>
           {error && <p className="adm-login-error">{error}</p>}
           <button type="submit" className="adm-login-btn" disabled={loading}>
             {loading ? 'Signing in…' : 'Sign in'}

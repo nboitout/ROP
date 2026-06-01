@@ -503,6 +503,12 @@
   color: rgba(245,240,232,.6);
 }
 
+.adm-login-input-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
 .adm-login-input {
   font-family: 'DM Sans', sans-serif;
   font-size: .9rem;
@@ -511,12 +517,34 @@
   border-radius: 2px;
   color: #f5f0e8;
   padding: 10px 14px;
+  padding-right: 64px;
   outline: none;
   transition: border-color .15s;
+  width: 100%;
 }
 
 .adm-login-input:focus {
   border-color: rgba(201,163,94,.55);
+}
+
+.adm-login-toggle {
+  position: absolute;
+  right: 8px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: .7rem;
+  font-weight: 500;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  background: none;
+  border: none;
+  color: rgba(201,163,94,.75);
+  cursor: pointer;
+  padding: 4px 6px;
+  transition: color .15s;
+}
+
+.adm-login-toggle:hover {
+  color: #c9a35e;
 }
 
 .adm-login-error {
