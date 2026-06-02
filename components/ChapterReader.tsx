@@ -267,7 +267,7 @@ export default function ChapterReader({ chapter, bookTitle, backHref = '/chapitr
               <p className="cr-end-body">
                 {chapter.number ? t.reader.endCardBodyChapter : t.reader.endCardBodyIntro}
               </p>
-              <BookNotifyForm labels={t.notify.form} />
+              <BookNotifyForm labels={t.pricing.notify.form} />
             </div>
           </div>
         </article>
