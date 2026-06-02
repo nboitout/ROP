@@ -203,13 +203,13 @@ export default function ChapterReader({ chapter, bookTitle, backHref = '/chapitr
       <div className="cr-progress" aria-hidden><div className="cr-progress-bar" style={{ transform: `scaleX(${progress})` }} /></div>
 
       <div className="cr-topbar">
-        <Link href={backHref} className="cr-home">← Tous les chapitres</Link>
+        <Link href={backHref} className="cr-home">{t.reader.back}</Link>
         <div className="cr-topbar-title">
-          <span className="cr-chap">{chapter.number ? `Chapitre ${chapter.number}` : chapter.title}</span>
+          <span className="cr-chap">{chapter.number ? `${t.reader.chapterPrefix} ${chapter.number}` : chapter.title}</span>
           <span className="cr-sep">·</span>
           <span className="cr-bookname">{bookTitle}</span>
         </div>
-        <button className="cr-toc-toggle" onClick={() => setTocOpen((v) => !v)} aria-label="Sommaire">
+        <button className="cr-toc-toggle" onClick={() => setTocOpen((v) => !v)} aria-label={t.reader.toc}>
           <span /><span /><span />
         </button>
       </div>
@@ -217,7 +217,7 @@ export default function ChapterReader({ chapter, bookTitle, backHref = '/chapitr
       <div className="cr-layout">
         <aside className={`cr-toc${tocOpen ? ' is-open' : ''}`}>
           <div className="cr-toc-inner">
-            <p className="cr-toc-label">Sommaire</p>
+            <p className="cr-toc-label">{t.reader.toc}</p>
             <nav>
               {chapter.sections.map((s, i) => (
                 <button
@@ -241,7 +241,7 @@ export default function ChapterReader({ chapter, bookTitle, backHref = '/chapitr
           )}
           <div className="cr-hero">
             <p className="cr-hero-eyebrow">
-              {chapter.number ? `Chapitre ${chapter.number} · ` : ''}Chapitre complet
+              {chapter.number ? `${t.reader.chapterPrefix} ${chapter.number} · ` : ''}{t.reader.chapterComplete}
             </p>
             <h1 className="cr-hero-title">{chapter.title}</h1>
             <p className="cr-hero-book"><em>{bookTitle}</em></p>
@@ -260,14 +260,12 @@ export default function ChapterReader({ chapter, bookTitle, backHref = '/chapitr
           <div className="cr-end" ref={endRef}>
             <div className="cr-end-card">
               <p className="cr-end-eyebrow">
-                {chapter.number ? `Fin du chapitre ${chapter.number}` : `Fin de l’${chapter.title.toLowerCase()}`}
+                {chapter.number ? t.reader.endChapter(chapter.number) : t.reader.endIntro(chapter.title)}
               </p>
-              <h3 className="cr-end-title">La méthode complète se poursuit dans le livre</h3>
+              <h3 className="cr-end-title">{t.reader.endCardTitle}</h3>
               <p className="cr-end-book"><em>{bookTitle}</em></p>
               <p className="cr-end-body">
-                {chapter.number
-                  ? 'Ce chapitre est un extrait du troisième ouvrage de Guy Boitout sur la Réflexothérapie Occipito-Podale. Le livre complet est en préparation — laissez votre adresse pour être informé·e de sa parution.'
-                  : 'Cette introduction ouvre le troisième ouvrage de Guy Boitout sur la Réflexothérapie Occipito-Podale. Le livre complet est en préparation — laissez votre adresse pour être informé·e de sa parution.'}
+                {chapter.number ? t.reader.endCardBodyChapter : t.reader.endCardBodyIntro}
               </p>
               <BookNotifyForm />
             </div>
@@ -294,14 +292,14 @@ export default function ChapterReader({ chapter, bookTitle, backHref = '/chapitr
             </button>
             <div className="cr-slides-panel" aria-hidden={!slidesOpen}>
               <button className="cr-slides-close" onClick={() => setSlidesOpen(false)} aria-label="Fermer">×</button>
-              <p className="cr-slides-eyebrow">Chapitre {chapter.number}</p>
+              <p className="cr-slides-eyebrow">{t.reader.chapterPrefix} {chapter.number}</p>
               <p className="cr-slides-title">{chapter.slides.label}</p>
               <p className="cr-slides-desc">{chapter.slides.description}</p>
               <button
                 className="cr-slides-cta"
                 onClick={() => { setSlidesOpen(false); setSlidesViewer(true); track('slides_viewer_open') }}
               >
-                Voir les diapositives →
+                {t.reader.slidesOpen}
               </button>
             </div>
           </div>
@@ -311,7 +309,7 @@ export default function ChapterReader({ chapter, bookTitle, backHref = '/chapitr
               <div className="cr-viewer-bar">
                 <span className="cr-viewer-title">
                   {chapter.slides.label}
-                  {chapter.number ? ` — Chapitre ${chapter.number}` : ''}
+                  {chapter.number ? ` — ${t.reader.chapterPrefix} ${chapter.number}` : ''}
                 </span>
                 <div className="cr-viewer-nav">
                   <button
@@ -362,17 +360,17 @@ export default function ChapterReader({ chapter, bookTitle, backHref = '/chapitr
 
       {(chapter.revisionSheet || chapter.clinicalCase) && (
         <div className="cr-resources">
-          <p className="cr-resources-label">Ressources</p>
+          <p className="cr-resources-label">{t.reader.resources}</p>
           <div className="cr-resources-row">
             {chapter.revisionSheet && (
               <button
                 type="button"
                 className="cr-resource-card"
                 onClick={() => { setLightbox(chapter.revisionSheet!); track('resource_open', { resource: 'revision_sheet' }) }}
-                aria-label="Ouvrir la fiche de révision"
+                aria-label={t.reader.revisionSheet}
               >
                 <img src={chapter.revisionSheet.src} alt="" aria-hidden />
-                <span className="cr-resource-name">Fiche de révision</span>
+                <span className="cr-resource-name">{t.reader.revisionSheet}</span>
               </button>
             )}
             {chapter.clinicalCase && (
@@ -380,10 +378,10 @@ export default function ChapterReader({ chapter, bookTitle, backHref = '/chapitr
                 type="button"
                 className="cr-resource-card cr-resource-card--case"
                 onClick={() => { setLightbox(chapter.clinicalCase!); track('resource_open', { resource: 'clinical_case' }) }}
-                aria-label="Ouvrir le cas clinique"
+                aria-label={t.reader.clinicalCase}
               >
                 <img src={chapter.clinicalCase.src} alt="" aria-hidden />
-                <span className="cr-resource-name">Cas clinique</span>
+                <span className="cr-resource-name">{t.reader.clinicalCase}</span>
               </button>
             )}
           </div>
@@ -414,6 +412,7 @@ export default function ChapterReader({ chapter, bookTitle, backHref = '/chapitr
 }
 
 function BlockView({ block, onOpenImage }: { block: Block; onOpenImage: (b: { src: string; alt: string; caption: string }) => void }) {
+  const { t } = useLanguage()
   switch (block.type) {
     case 'para':
       return <p className="cr-p">{block.text}</p>
@@ -461,7 +460,7 @@ function BlockView({ block, onOpenImage }: { block: Block; onOpenImage: (b: { sr
     case 'rop':
       return (
         <aside className="cr-rop">
-          <p className="cr-rop-title">Intérêt en ROP</p>
+          <p className="cr-rop-title">{t.reader.ropTitle}</p>
           {block.body.map((p, i) => <p key={i} className="cr-rop-p">{p}</p>)}
         </aside>
       )

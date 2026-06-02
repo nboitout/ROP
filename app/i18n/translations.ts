@@ -286,6 +286,22 @@ const fr = {
     dotsLabel: 'Sélection des citations',
     dot: (i: number) => `Citation ${i + 1}`,
   },
+  reader: {
+    back: '← Tous les chapitres',
+    chapterPrefix: 'Chapitre',
+    toc: 'Sommaire',
+    chapterComplete: 'Chapitre complet',
+    endChapter: (n: string) => `Fin du chapitre ${n}`,
+    endIntro: (title: string) => `Fin de l'${title.toLowerCase()}`,
+    endCardTitle: 'La méthode complète se poursuit dans le livre',
+    endCardBodyChapter: 'Ce chapitre est un extrait du troisième ouvrage de Guy Boitout sur la Réflexothérapie Occipito-Podale. Le livre complet est en préparation — laissez votre adresse pour être informé·e de sa parution.',
+    endCardBodyIntro: 'Cette introduction ouvre le troisième ouvrage de Guy Boitout sur la Réflexothérapie Occipito-Podale. Le livre complet est en préparation — laissez votre adresse pour être informé·e de sa parution.',
+    resources: 'Ressources',
+    revisionSheet: 'Fiche de révision',
+    clinicalCase: 'Cas clinique',
+    ropTitle: 'Intérêt en R.O.P.',
+    slidesOpen: 'Voir les diapositives →',
+  },
 }
 
 const en: typeof fr = {
@@ -573,6 +589,22 @@ const en: typeof fr = {
     next: 'Next quote',
     dotsLabel: 'Quote selection',
     dot: (i: number) => `Quote ${i + 1}`,
+  },
+  reader: {
+    back: '← All chapters',
+    chapterPrefix: 'Chapter',
+    toc: 'Contents',
+    chapterComplete: 'Full chapter',
+    endChapter: (n: string) => `End of chapter ${n}`,
+    endIntro: (title: string) => `End of the ${title.toLowerCase()}`,
+    endCardTitle: 'The complete method continues in the book',
+    endCardBodyChapter: 'This chapter is an excerpt from Guy Boitout\'s third book on Occipito-Podal Reflexotherapy. The complete book is in preparation — leave your address to be notified of its release.',
+    endCardBodyIntro: 'This introduction opens Guy Boitout\'s third book on Occipito-Podal Reflexotherapy. The complete book is in preparation — leave your address to be notified of its release.',
+    resources: 'Resources',
+    revisionSheet: 'Revision sheet',
+    clinicalCase: 'Clinical case',
+    ropTitle: 'Relevance in R.O.P.',
+    slidesOpen: 'View slides →',
   },
 }
 
@@ -862,6 +894,22 @@ const de: typeof fr = {
     dotsLabel: 'Zitatauswahl',
     dot: (i: number) => `Zitat ${i + 1}`,
   },
+  reader: {
+    back: '← Alle Kapitel',
+    chapterPrefix: 'Kapitel',
+    toc: 'Inhaltsverzeichnis',
+    chapterComplete: 'Vollständiges Kapitel',
+    endChapter: (n: string) => `Ende von Kapitel ${n}`,
+    endIntro: (title: string) => `Ende der ${title}`,
+    endCardTitle: 'Die vollständige Methode setzt sich im Buch fort',
+    endCardBodyChapter: 'Dieses Kapitel ist ein Auszug aus dem dritten Werk von Guy Boitout über die Okzipito-Podale Reflextherapie. Das vollständige Buch ist in Vorbereitung — hinterlassen Sie Ihre Adresse, um über die Veröffentlichung informiert zu werden.',
+    endCardBodyIntro: 'Diese Einleitung eröffnet das dritte Werk von Guy Boitout über die Okzipito-Podale Reflextherapie. Das vollständige Buch ist in Vorbereitung — hinterlassen Sie Ihre Adresse, um über die Veröffentlichung informiert zu werden.',
+    resources: 'Ressourcen',
+    revisionSheet: 'Zusammenfassung',
+    clinicalCase: 'Klinischer Fall',
+    ropTitle: 'Bedeutung in der R.O.P.',
+    slidesOpen: 'Folien ansehen →',
+  },
 }
 
 const es: typeof fr = {
@@ -1150,6 +1198,22 @@ const es: typeof fr = {
     dotsLabel: 'Selección de citas',
     dot: (i: number) => `Cita ${i + 1}`,
   },
+  reader: {
+    back: '← Todos los capítulos',
+    chapterPrefix: 'Capítulo',
+    toc: 'Índice',
+    chapterComplete: 'Capítulo completo',
+    endChapter: (n: string) => `Fin del capítulo ${n}`,
+    endIntro: (title: string) => `Fin de la ${title.toLowerCase()}`,
+    endCardTitle: 'El método completo continúa en el libro',
+    endCardBodyChapter: 'Este capítulo es un extracto del tercer libro de Guy Boitout sobre Reflexoterapia Óccipito-Podal. El libro completo está en preparación — deje su dirección para ser informado/a de su publicación.',
+    endCardBodyIntro: 'Esta introducción abre el tercer libro de Guy Boitout sobre Reflexoterapia Óccipito-Podal. El libro completo está en preparación — deje su dirección para ser informado/a de su publicación.',
+    resources: 'Recursos',
+    revisionSheet: 'Ficha de revisión',
+    clinicalCase: 'Caso clínico',
+    ropTitle: 'Relevancia en R.O.P.',
+    slidesOpen: 'Ver diapositivas →',
+  },
 }
 
 const it: typeof fr = {
@@ -1437,6 +1501,22 @@ const it: typeof fr = {
     next: 'Citazione successiva',
     dotsLabel: 'Selezione citazioni',
     dot: (i: number) => `Citazione ${i + 1}`,
+  },
+  reader: {
+    back: '← Tutti i capitoli',
+    chapterPrefix: 'Capitolo',
+    toc: 'Indice',
+    chapterComplete: 'Capitolo completo',
+    endChapter: (n: string) => `Fine del capitolo ${n}`,
+    endIntro: (title: string) => `Fine dell'${title.toLowerCase()}`,
+    endCardTitle: 'Il metodo completo continua nel libro',
+    endCardBodyChapter: 'Questo capitolo è un estratto del terzo libro di Guy Boitout sulla Reflessoterapia Occipito-Podale. Il libro completo è in preparazione — lascia il tuo indirizzo per essere informato/a della sua pubblicazione.',
+    endCardBodyIntro: 'Questa introduzione apre il terzo libro di Guy Boitout sulla Reflessoterapia Occipito-Podale. Il libro completo è in preparazione — lascia il tuo indirizzo per essere informato/a della sua pubblicazione.',
+    resources: 'Risorse',
+    revisionSheet: 'Scheda di revisione',
+    clinicalCase: 'Caso clinico',
+    ropTitle: 'Rilevanza nella R.O.P.',
+    slidesOpen: 'Vedi le diapositive →',
   },
 }
 
