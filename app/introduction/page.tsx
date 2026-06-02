@@ -4,6 +4,7 @@ import type { Metadata } from 'next'
 import ChapterReader from '@/components/ChapterReader'
 import { getChapter } from '@/content/registry'
 import { getServerLang } from '@/app/i18n/serverLang'
+import { translations } from '@/app/i18n/translations'
 
 export const metadata: Metadata = {
   title: 'Introduction · R.O.P. · Guy Boitout',
@@ -11,14 +12,14 @@ export const metadata: Metadata = {
   robots: { index: false, follow: false },
 }
 
-const BOOK_TITLE = 'Réflexothérapie occipito-podale et viscères des cavités abdominale et pelvienne'
-
 export default async function IntroductionPage() {
   const cookieStore = await cookies()
   if (!cookieStore.get('free_chapters_access')) {
     redirect('/?gate=free#acces-libre')
   }
 
-  const { chapter, contentLang } = getChapter('introduction', await getServerLang())
-  return <ChapterReader chapter={chapter} bookTitle={BOOK_TITLE} contentLang={contentLang} />
+  const lang = await getServerLang()
+  const { chapter, contentLang } = getChapter('introduction', lang)
+  const bookTitle = translations[lang].reader.bookTitle
+  return <ChapterReader chapter={chapter} bookTitle={bookTitle} contentLang={contentLang} />
 }

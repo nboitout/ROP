@@ -301,6 +301,7 @@ const fr = {
     clinicalCase: 'Cas clinique',
     ropTitle: 'Intérêt en R.O.P.',
     slidesOpen: 'Voir les diapositives →',
+    bookTitle: 'Réflexothérapie occipito-podale et viscères des cavités abdominale et pelvienne',
   },
   adminChapitres: {
     eyebrow: 'Bibliothèque',
@@ -645,6 +646,7 @@ const en: typeof fr = {
     clinicalCase: 'Clinical case',
     ropTitle: 'Relevance in R.O.P.',
     slidesOpen: 'View slides →',
+    bookTitle: 'Occipito-Podal Reflexotherapy and the Viscera of the Abdominal and Pelvic Cavities',
   },
   adminChapitres: {
     eyebrow: 'Library',
@@ -989,6 +991,7 @@ const de: typeof fr = {
     clinicalCase: 'Klinischer Fall',
     ropTitle: 'Bedeutung in der R.O.P.',
     slidesOpen: 'Folien ansehen →',
+    bookTitle: 'Okzipito-Podale Reflextherapie und die Eingeweide der Bauch- und Beckenhöhlen',
   },
   adminChapitres: {
     eyebrow: 'Bibliothek',
@@ -1333,6 +1336,7 @@ const es: typeof fr = {
     clinicalCase: 'Caso clínico',
     ropTitle: 'Relevancia en R.O.P.',
     slidesOpen: 'Ver diapositivas →',
+    bookTitle: 'Reflexoterapia Óccipito-Podal y las Vísceras de las Cavidades Abdominal y Pélvica',
   },
   adminChapitres: {
     eyebrow: 'Biblioteca',
@@ -1677,6 +1681,7 @@ const it: typeof fr = {
     clinicalCase: 'Caso clinico',
     ropTitle: 'Rilevanza nella R.O.P.',
     slidesOpen: 'Vedi le diapositive →',
+    bookTitle: 'Reflessoterapia Occipito-Podale e i Visceri delle Cavità Addominale e Pelvica',
   },
   adminChapitres: {
     eyebrow: 'Biblioteca',
