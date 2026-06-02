@@ -1,7 +1,9 @@
 'use client'
 
-import { createContext, useContext, useState } from 'react'
+import { createContext, useContext, useEffect, useState } from 'react'
 import { translations, type Lang } from './translations'
+
+const LANGS: Lang[] = ['fr', 'en', 'de', 'es', 'it']
 
 type LanguageContextValue = {
   lang: Lang
@@ -30,6 +32,15 @@ export function LanguageProvider({
   initialLang?: Lang
 }) {
   const [lang, setLangState] = useState<Lang>(initialLang)
+
+  // Sync from cookie on mount in case the server-rendered initialLang was stale
+  useEffect(() => {
+    const match = document.cookie.match(/(?:^|; )lang=([^;]+)/)
+    if (match) {
+      const cookieLang = match[1] as Lang
+      if (LANGS.includes(cookieLang) && cookieLang !== lang) setLangState(cookieLang)
+    }
+  }, [])
 
   function setLang(l: Lang) {
     setLangState(l)
