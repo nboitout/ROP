@@ -302,6 +302,14 @@ const fr = {
     ropTitle: 'Intérêt en R.O.P.',
     slidesOpen: 'Voir les diapositives →',
   },
+  adminChapitres: {
+    eyebrow: 'Bibliothèque',
+    h1: 'Chapitres',
+    sub: 'Accès direct aux chapitres payants',
+    chapters: [
+      { label: 'Chapitre 2', sub: 'Traitement par la R.O.P.', href: '/lecture/traitement-rop' },
+    ],
+  },
   chaptersPage: {
     back: '← Accueil',
     eyebrow: 'Chapitres complets',
@@ -637,6 +645,14 @@ const en: typeof fr = {
     clinicalCase: 'Clinical case',
     ropTitle: 'Relevance in R.O.P.',
     slidesOpen: 'View slides →',
+  },
+  adminChapitres: {
+    eyebrow: 'Library',
+    h1: 'Chapters',
+    sub: 'Direct access to paid chapters',
+    chapters: [
+      { label: 'Chapter 2', sub: 'Treatment by R.O.P.', href: '/lecture/traitement-rop' },
+    ],
   },
   chaptersPage: {
     back: '← Home',
@@ -974,6 +990,14 @@ const de: typeof fr = {
     ropTitle: 'Bedeutung in der R.O.P.',
     slidesOpen: 'Folien ansehen →',
   },
+  adminChapitres: {
+    eyebrow: 'Bibliothek',
+    h1: 'Kapitel',
+    sub: 'Direktzugang zu den kostenpflichtigen Kapiteln',
+    chapters: [
+      { label: 'Kapitel 2', sub: 'Behandlung mit der R.O.P.', href: '/lecture/traitement-rop' },
+    ],
+  },
   chaptersPage: {
     back: '← Startseite',
     eyebrow: 'Vollständige Kapitel',
@@ -1310,6 +1334,14 @@ const es: typeof fr = {
     ropTitle: 'Relevancia en R.O.P.',
     slidesOpen: 'Ver diapositivas →',
   },
+  adminChapitres: {
+    eyebrow: 'Biblioteca',
+    h1: 'Capítulos',
+    sub: 'Acceso directo a los capítulos de pago',
+    chapters: [
+      { label: 'Capítulo 2', sub: 'Tratamiento con R.O.P.', href: '/lecture/traitement-rop' },
+    ],
+  },
   chaptersPage: {
     back: '← Inicio',
     eyebrow: 'Capítulos completos',
@@ -1645,6 +1677,14 @@ const it: typeof fr = {
     clinicalCase: 'Caso clinico',
     ropTitle: 'Rilevanza nella R.O.P.',
     slidesOpen: 'Vedi le diapositive →',
+  },
+  adminChapitres: {
+    eyebrow: 'Biblioteca',
+    h1: 'Capitoli',
+    sub: 'Accesso diretto ai capitoli a pagamento',
+    chapters: [
+      { label: 'Capitolo 2', sub: 'Trattamento con R.O.P.', href: '/lecture/traitement-rop' },
+    ],
   },
   chaptersPage: {
     back: '← Home',
