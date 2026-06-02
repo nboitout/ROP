@@ -1,6 +1,7 @@
 'use client'
 
 import { createContext, useContext, useEffect, useState } from 'react'
+import { useRouter } from 'next/navigation'
 import { translations, type Lang } from './translations'
 
 const LANGS: Lang[] = ['fr', 'en', 'de', 'es', 'it']
@@ -32,6 +33,7 @@ export function LanguageProvider({
   initialLang?: Lang
 }) {
   const [lang, setLangState] = useState<Lang>(initialLang)
+  const router = useRouter()
 
   // Sync from cookie on mount in case the server-rendered initialLang was stale
   useEffect(() => {
@@ -45,6 +47,10 @@ export function LanguageProvider({
   function setLang(l: Lang) {
     setLangState(l)
     persistLang(l)
+    // Flush the Next.js router cache so server components re-run with the new
+    // lang cookie on the next navigation — without this, pages like /introduction
+    // keep serving the previously cached RSC payload in the old language.
+    router.refresh()
   }
 
   return (
