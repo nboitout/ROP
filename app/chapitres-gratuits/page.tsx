@@ -2,6 +2,8 @@ import { cookies } from 'next/headers'
 import { redirect } from 'next/navigation'
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import { getServerLang } from '@/app/i18n/serverLang'
+import { translations } from '@/app/i18n/translations'
 
 export const metadata: Metadata = {
   title: 'Chapitres gratuits · R.O.P. · Guy Boitout',
@@ -9,79 +11,49 @@ export const metadata: Metadata = {
   robots: { index: false, follow: false },
 }
 
-const BOOK_TITLE = 'Réflexothérapie occipito-podale et viscères des cavités abdominale et pelvienne'
-
-type FreeChapter = {
-  href: string
-  eyebrow: string
-  title: string
-  description: string
-  meta: string
-}
-
-const FREE_CHAPTERS: FreeChapter[] = [
-  {
-    href: '/introduction',
-    eyebrow: 'Ouverture',
-    title: 'Introduction',
-    description: 'Le cadre du troisième tome : viscéral abdomino-pelvien, système nerveux autonome et mécanisme du stress. Notre parti-pris, la terminologie et le plan-type des chapitres.',
-    meta: '~5 min de lecture',
-  },
-  {
-    href: '/chapitre-5',
-    eyebrow: 'Chapitre 5',
-    title: 'Mécanisme de stress',
-    description: "Le syndrome général d’adaptation de Selye — alarme, recouvrement, adaptation-résistance, épuisement — et son intérêt en R.O.P., illustré par cinq planches anatomiques.",
-    meta: '~15 min · 5 illustrations',
-  },
-  {
-    href: '/chapitre-14',
-    eyebrow: 'Chapitre 14',
-    title: 'Intestin grêle',
-    description: "Anatomie, physiologie et écosystème intestinal — de la muqueuse au microbiote — hyperperméabilité, dysbiose et zones réflexes du jéjunum et de l’iléum en R.O.P.",
-    meta: '~20 min · 8 illustrations',
-  },
-]
-
 export default async function ChapitresGratuitsPage() {
   const cookieStore = await cookies()
   if (!cookieStore.get('free_chapters_access')) {
     redirect('/?gate=free#acces-libre')
   }
 
+  const lang = await getServerLang()
+  const t = translations[lang]
+  const p = t.chaptersPage
+
   return (
     <div className="cg-root">
       <div className="cg-topbar">
-        <Link href="/" className="cg-home">← Accueil</Link>
+        <Link href="/" className="cg-home">{p.back}</Link>
         <div className="cg-topbar-title">
-          <span className="cg-eyebrow">Chapitres complets</span>
+          <span className="cg-eyebrow">{p.eyebrow}</span>
           <span className="cg-sep">·</span>
-          <span className="cg-bookname">{BOOK_TITLE}</span>
+          <span className="cg-bookname">{t.footer.title}</span>
         </div>
       </div>
 
       <main className="cg-main">
         <div className="cg-hero">
-          <h1 className="cg-hero-title">Trois chapitres complets du troisième ouvrage</h1>
-          <p className="cg-hero-body">Choisissez votre point d&rsquo;entrée — l&rsquo;ordre du livre est suggéré, mais chaque texte se lit seul.</p>
+          <h1 className="cg-hero-title">{p.h1}</h1>
+          <p className="cg-hero-body">{p.body}</p>
         </div>
 
         <ul className="cg-grid">
-          {FREE_CHAPTERS.map((c) => (
+          {p.chapters.map((c) => (
             <li key={c.href} className="cg-card">
-              <Link href={c.href} className="cg-card-link" aria-label={`Lire : ${c.title}`}>
+              <Link href={c.href} className="cg-card-link" aria-label={p.readLabel(c.title)}>
                 <p className="cg-card-eyebrow">{c.eyebrow}</p>
                 <h2 className="cg-card-title">{c.title}</h2>
                 <p className="cg-card-desc">{c.description}</p>
                 <p className="cg-card-meta">{c.meta}</p>
-                <span className="cg-card-cta">Lire →</span>
+                <span className="cg-card-cta">{p.readCta}</span>
               </Link>
             </li>
           ))}
         </ul>
 
         <div className="cg-foot">
-          <p>Le livre complet est en préparation.</p>
+          <p>{p.footNote}</p>
         </div>
       </main>
     </div>

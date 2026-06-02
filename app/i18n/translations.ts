@@ -302,6 +302,38 @@ const fr = {
     ropTitle: 'Intérêt en R.O.P.',
     slidesOpen: 'Voir les diapositives →',
   },
+  chaptersPage: {
+    back: '← Accueil',
+    eyebrow: 'Chapitres complets',
+    h1: 'Trois chapitres complets du troisième ouvrage',
+    body: "Choisissez votre point d'entrée — l'ordre du livre est suggéré, mais chaque texte se lit seul.",
+    readLabel: (title: string) => `Lire : ${title}`,
+    readCta: 'Lire →',
+    footNote: 'Le livre complet est en préparation.',
+    chapters: [
+      {
+        href: '/introduction',
+        eyebrow: 'Ouverture',
+        title: 'Introduction',
+        description: "Le cadre du troisième tome : viscéral abdomino-pelvien, système nerveux autonome et mécanisme du stress. Notre parti-pris, la terminologie et le plan-type des chapitres.",
+        meta: '~5 min de lecture',
+      },
+      {
+        href: '/chapitre-5',
+        eyebrow: 'Chapitre 5',
+        title: 'Mécanisme de stress',
+        description: "Le syndrome général d'adaptation de Selye — alarme, recouvrement, adaptation-résistance, épuisement — et son intérêt en R.O.P., illustré par cinq planches anatomiques.",
+        meta: '~15 min · 5 illustrations',
+      },
+      {
+        href: '/chapitre-14',
+        eyebrow: 'Chapitre 14',
+        title: 'Intestin grêle',
+        description: "Anatomie, physiologie et écosystème intestinal — de la muqueuse au microbiote — hyperperméabilité, dysbiose et zones réflexes du jéjunum et de l'iléum en R.O.P.",
+        meta: '~20 min · 8 illustrations',
+      },
+    ],
+  },
 }
 
 const en: typeof fr = {
@@ -605,6 +637,38 @@ const en: typeof fr = {
     clinicalCase: 'Clinical case',
     ropTitle: 'Relevance in R.O.P.',
     slidesOpen: 'View slides →',
+  },
+  chaptersPage: {
+    back: '← Home',
+    eyebrow: 'Complete chapters',
+    h1: 'Three complete chapters from the third book',
+    body: 'Choose your entry point — the book order is suggested, but each text can be read on its own.',
+    readLabel: (title: string) => `Read: ${title}`,
+    readCta: 'Read →',
+    footNote: 'The complete book is in preparation.',
+    chapters: [
+      {
+        href: '/introduction',
+        eyebrow: 'Opening',
+        title: 'Introduction',
+        description: 'The framework for the third volume: the abdomino-pelvic visceral system, the autonomic nervous system, and stress mechanisms. Our approach, terminology, and the chapter structure.',
+        meta: '~5 min read',
+      },
+      {
+        href: '/chapitre-5',
+        eyebrow: 'Chapter 5',
+        title: 'Stress Mechanisms',
+        description: "Selye's general adaptation syndrome — alarm, recovery, adaptation-resistance, exhaustion — and its relevance in R.O.P., illustrated by five anatomical plates.",
+        meta: '~15 min · 5 illustrations',
+      },
+      {
+        href: '/chapitre-14',
+        eyebrow: 'Chapter 14',
+        title: 'Small Intestine',
+        description: 'Anatomy, physiology and the intestinal ecosystem — from the mucosa to the microbiome — hyperpermeability, dysbiosis, and jejunal and ileal reflex zones in R.O.P.',
+        meta: '~20 min · 8 illustrations',
+      },
+    ],
   },
 }
 
@@ -910,6 +974,38 @@ const de: typeof fr = {
     ropTitle: 'Bedeutung in der R.O.P.',
     slidesOpen: 'Folien ansehen →',
   },
+  chaptersPage: {
+    back: '← Startseite',
+    eyebrow: 'Vollständige Kapitel',
+    h1: 'Drei vollständige Kapitel aus dem dritten Werk',
+    body: 'Wählen Sie Ihren Einstiegspunkt — die Reihenfolge des Buches wird empfohlen, aber jeder Text ist eigenständig lesbar.',
+    readLabel: (title: string) => `Lesen: ${title}`,
+    readCta: 'Lesen →',
+    footNote: 'Das vollständige Buch ist in Vorbereitung.',
+    chapters: [
+      {
+        href: '/introduction',
+        eyebrow: 'Vorwort',
+        title: 'Einleitung',
+        description: 'Der Rahmen des dritten Bandes: das abdomino-pelvine Viszeralsystem, das autonome Nervensystem und Stressmechanismen. Unser Ansatz, die Terminologie und der Aufbau der Kapitel.',
+        meta: '~5 Min. Lektüre',
+      },
+      {
+        href: '/chapitre-5',
+        eyebrow: 'Kapitel 5',
+        title: 'Stressmechanismus',
+        description: "Selyes allgemeines Anpassungssyndrom — Alarmreaktion, Erholung, Anpassungs-Widerstand, Erschöpfung — und seine Bedeutung in der R.O.P., illustriert durch fünf anatomische Tafeln.",
+        meta: '~15 Min. · 5 Illustrationen',
+      },
+      {
+        href: '/chapitre-14',
+        eyebrow: 'Kapitel 14',
+        title: 'Dünndarm',
+        description: 'Anatomie, Physiologie und intestinales Ökosystem — von der Schleimhaut zum Mikrobiom — Hyperpermeabilität, Dysbiose und Reflexzonen des Jejunums und Ileums in der R.O.P.',
+        meta: '~20 Min. · 8 Illustrationen',
+      },
+    ],
+  },
 }
 
 const es: typeof fr = {
@@ -1214,6 +1310,38 @@ const es: typeof fr = {
     ropTitle: 'Relevancia en R.O.P.',
     slidesOpen: 'Ver diapositivas →',
   },
+  chaptersPage: {
+    back: '← Inicio',
+    eyebrow: 'Capítulos completos',
+    h1: 'Tres capítulos completos del tercer libro',
+    body: 'Elija su punto de entrada — se sugiere el orden del libro, pero cada texto puede leerse de forma independiente.',
+    readLabel: (title: string) => `Leer: ${title}`,
+    readCta: 'Leer →',
+    footNote: 'El libro completo está en preparación.',
+    chapters: [
+      {
+        href: '/introduction',
+        eyebrow: 'Apertura',
+        title: 'Introducción',
+        description: 'El marco del tercer tomo: el sistema visceral abdomino-pélvico, el sistema nervioso autónomo y el mecanismo del estrés. Nuestro enfoque, la terminología y la estructura de los capítulos.',
+        meta: '~5 min de lectura',
+      },
+      {
+        href: '/chapitre-5',
+        eyebrow: 'Capítulo 5',
+        title: 'Mecanismo de estrés',
+        description: "El síndrome general de adaptación de Selye — alarma, recuperación, adaptación-resistencia, agotamiento — y su relevancia en R.O.P., ilustrado por cinco láminas anatómicas.",
+        meta: '~15 min · 5 ilustraciones',
+      },
+      {
+        href: '/chapitre-14',
+        eyebrow: 'Capítulo 14',
+        title: 'Intestino delgado',
+        description: 'Anatomía, fisiología y ecosistema intestinal — de la mucosa al microbioma — hiperpermeabilidad, disbiosis y zonas reflejas del yeyuno e íleon en R.O.P.',
+        meta: '~20 min · 8 ilustraciones',
+      },
+    ],
+  },
 }
 
 const it: typeof fr = {
@@ -1517,6 +1645,38 @@ const it: typeof fr = {
     clinicalCase: 'Caso clinico',
     ropTitle: 'Rilevanza nella R.O.P.',
     slidesOpen: 'Vedi le diapositive →',
+  },
+  chaptersPage: {
+    back: '← Home',
+    eyebrow: 'Capitoli completi',
+    h1: 'Tre capitoli completi del terzo libro',
+    body: "Scegli il tuo punto di ingresso — l'ordine del libro è suggerito, ma ogni testo può essere letto autonomamente.",
+    readLabel: (title: string) => `Leggi: ${title}`,
+    readCta: 'Leggi →',
+    footNote: 'Il libro completo è in preparazione.',
+    chapters: [
+      {
+        href: '/introduction',
+        eyebrow: 'Apertura',
+        title: 'Introduzione',
+        description: "Il quadro del terzo volume: il sistema viscerale addominopelvico, il sistema nervoso autonomo e i meccanismi dello stress. Il nostro approccio, la terminologia e la struttura dei capitoli.",
+        meta: '~5 min di lettura',
+      },
+      {
+        href: '/chapitre-5',
+        eyebrow: 'Capitolo 5',
+        title: 'Meccanismo dello stress',
+        description: "La sindrome generale di adattamento di Selye — allarme, recupero, adattamento-resistenza, esaurimento — e il suo interesse nella R.O.P., illustrato da cinque tavole anatomiche.",
+        meta: '~15 min · 8 illustrazioni',
+      },
+      {
+        href: '/chapitre-14',
+        eyebrow: 'Capitolo 14',
+        title: 'Intestino tenue',
+        description: "Anatomia, fisiologia ed ecosistema intestinale — dalla mucosa al microbioma — iperpermeabilità, disbiosi e zone riflesse del digiuno e dell'ileo nella R.O.P.",
+        meta: '~20 min · 8 illustrazioni',
+      },
+    ],
   },
 }
 
