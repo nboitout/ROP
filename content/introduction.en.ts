@@ -11,8 +11,8 @@ export const introductionEn: Chapter = {
       id: 'avant-propos',
       title: 'Foreword',
       blocks: [
-        { type: 'para', text: 'This third volume on Réflexothérapie Occipito-Podale — ROP is a natural continuation of the two preceding volumes. After the osteo-musculo-articular system in Volume 1 and the neuro-meningeal system in Volume 2, we now enter the field of the abdomino-pelvic viscera, the autonomic nervous system, and the mechanisms of stress.' },
-        { type: 'para', text: 'The ambition remains the same: to provide a coherent mapping aligned with anatomy and physiology, conceived in three dimensions, in the form of an infant in the fetal position within the foot, and articulated with the occipital reflex zones.' },
+        { type: 'para', text: 'This third volume on Réflexothérapie Occipito-Podale — ROP is the natural continuation of the two preceding volumes. After the osteo-musculo-articular system in Volume 1 and the neuromeningeal system in Volume 2, we now turn to the field of the abdomino-pelvic viscera, the autonomic nervous system, and the mechanisms of stress.' },
+        { type: 'para', text: 'The ambition remains the same: to provide a coherent mapping, aligned with anatomy and physiology, conceived three-dimensionally, with the body represented as an infant in the fetal position within the foot, and articulated with the occipital reflex zones.' },
       ],
     },
     {
@@ -20,10 +20,10 @@ export const introductionEn: Chapter = {
       title: 'In brief: what this book offers',
       blocks: [
         { type: 'bullets', items: [
-          'A clear reading of viscero-somatic relationships: when a visceral dysfunction affects the locomotor system, and when the locomotor system affects visceral function.',
-          'Clinical landmarks and a palpatory logic to locate reflex zones, despite the limited bony landmarks on the plantar surface.',
-          'Maps adjusted according to key anatomical reference points, including the diaphragm, and interpreted in relation to the patient history as well as medical and surgical reports.',
-          'A global approach: to defuse pathological reflex loops — neurological, visceral, somatic, and emotional — stimulate the body\'s intrinsic regulatory capacities, and support vitality.',
+          'A clear interpretation of viscero-somatic relationships: how visceral dysfunction may affect the locomotor system, and how locomotor disorders may, in turn, influence visceral function.',
+          'Clinical landmarks and a palpatory rationale for locating reflex zones, despite the limited bony landmarks available on the plantar surface.',
+          'Maps adjusted according to key anatomical reference points, including the diaphragm, and interpreted in relation to the patient\'s history as well as medical and surgical reports.',
+          'A global approach designed to interrupt pathological reflex loops — neurological, visceral, somatic, and emotional — stimulate the body\'s intrinsic regulatory capacities, and support vitality.',
         ]},
       ],
     },
@@ -31,18 +31,18 @@ export const introductionEn: Chapter = {
       id: 'visceral-incontournable',
       title: 'Why the visceral system is essential',
       blocks: [
-        { type: 'para', text: 'The visceral system is responsible for the body\'s logistics: nutrition, elimination, and internal homeostasis. In this context, many osteo-musculo-articular pains may be the consequence of visceral dysfunctions — and the reverse is also true. Treating one system while ignoring the other often leads to incomplete results.' },
+        { type: 'para', text: 'The visceral system is responsible for the body\'s core logistical functions: nutrition, elimination, and internal homeostasis. In this context, many musculoskeletal pain syndromes may arise as a consequence of visceral dysfunction — and the converse is also true. Treating one system while ignoring the other often leads to incomplete results.' },
       ],
     },
     {
       id: 'parti-pris',
       title: 'Our position: anatomical rigor and clinical pragmatism',
       blocks: [
-        { type: 'para', text: 'As in any manual therapeutic approach, we sometimes observe results that cannot be fully objectified. Clinical observation does not have the methodological rigor of a laboratory protocol, but it retains its value when conducted systematically. This is why this book prioritizes: (1) anatomical coherence; (2) reproducibility of landmarks; (3) confrontation with clinical reality, including patient history, imaging, and surgical findings.' },
+        { type: 'para', text: 'As in any manual therapeutic approach, we sometimes observe results that cannot be fully objectified. Clinical observation does not have the methodological rigor of a laboratory protocol, but it retains its value when conducted systematically. This is why this book prioritizes: (1) anatomical coherence; (2) reproducibility of landmarks; (3) correlation with clinical reality, including patient history, imaging findings, and surgical observations.' },
         { type: 'para', text: 'Two points deserve particular emphasis:' },
         { type: 'leadBullets', items: [
-          { label: 'The diaphragm', text: 'the two domes are not positioned at the same height. Ignoring this asymmetry makes any mapping incoherent for the diaphragm and for the viscera attached to it.' },
-          { label: 'The peritoneum', text: 'a major interface between the viscera and the body walls, with strong reflexogenic potential, capable of transmitting tensions and dysfunctions in both directions.' },
+          { label: 'The diaphragm', text: 'the two domes are not positioned at the same height. Ignoring this asymmetry renders any mapping inaccurate, both for the diaphragm itself and for the viscera attached to it.' },
+          { label: 'The peritoneum', text: 'a major interface between the viscera and the body walls, with significant reflexogenic potential, capable of transmitting tensions and dysfunctions in both directions.' },
         ]},
       ],
     },
