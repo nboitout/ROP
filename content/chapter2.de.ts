@@ -24,7 +24,7 @@ export const chapter2De: Chapter = {
           { label: "Meissner-Körperchen", text: "Meissner-Körperchen sind in die dermalen Papillen eingebettet, also in die nach oben gerichteten Ausstülpungen der Dermis in die Epidermis. Sie reagieren auf feinen, nicht schmerzhaften Druck, der die epikritische Sensibilität anspricht. Sie finden sich bevorzugt in unbehaarter Haut, insbesondere an den Fußsohlen, den Handflächen, den Lippen und den Genitalorganen." },
           { label: "Merkel-Scheiben", text: "Merkel-Scheiben liegen an der Basis der Epidermis, unmittelbar oberhalb der Dermis. Sie reagieren auf sanften, auf die Haut ausgeübten Druck." },
         ]},
-        { type: "para", text: "Sobald der manuelle Druck die epidermal-dermale Schicht verformt — erkennbar an dem Gefühl einer „trommelartigen" Hautspannung, die dem Finger entgegenwirkt —, erzeugen Meissner-Körperchen und Merkel-Scheiben Aktionspotenziale, die über die sensiblen Bahnen des lemniskalen Systems weitergeleitet werden." },
+        { type: "para", text: "Sobald der manuelle Druck die epidermal-dermale Schicht verformt — erkennbar an dem Gefühl einer „trommelartigen“ Hautspannung, die dem Finger entgegenwirkt —, erzeugen Meissner-Körperchen und Merkel-Scheiben Aktionspotenziale, die über die sensiblen Bahnen des lemniskalen Systems weitergeleitet werden." },
         { type: "lead", label: "Das lemniskale System", text: "Das lemniskale System ist ein Bündel afferenter Fasern des Rückenmarks. Es wird in unserer Technik aufgrund seiner Eigenschaften gezielt angesprochen:" },
         { type: "bullets", items: [
           "Es leitet feine, nicht schmerzhafte Berührungsempfindungen weiter;",
@@ -39,7 +39,7 @@ export const chapter2De: Chapter = {
         { type: "leadBullets", items: [
           { label: "1. Texturdiagnostische Phase", text: "Diese Phase besteht in der Suche nach Reflexzonen, die durch eine Veränderung der Textur der okzipitalen und plantaren Haut gekennzeichnet sind: Rauigkeit, Verdichtung, Verlust der Gleitfähigkeit oder das Gefühl von Kristallen. Diese Befunde müssen die am Ende der klinischen Untersuchung gestellte Diagnose bestätigen." },
           { label: "2. Therapeutische Phase", text: "Der Druck ist fein und nicht schmerzhaft und zielt auf die epikritische Sensibilität; ein stechender Schmerz würde auf eine Überdosierung hinweisen. Das manuelle Manöver besteht darin, die epidermal-dermale Schicht zu mobilisieren, um die Mechanorezeptoren am Ursprung des lemniskalen Systems zu stimulieren, und den höheren Nervenzentren einen korrigierenden sensorischen Input zu liefern." },
-          { label: "3. Die Phase des „Geschehenlassens"", text: "Nach der Stimulation benötigt der Organismus Zeit, um neurovegetative (autonome), vaskuläre und gewebliche Anpassungen zu integrieren und zu stabilisieren. Nicht die Stimulation der Reflexzonen selbst erzeugt den therapeutischen Effekt, sondern die Antwort des Organismus — mehr Geschmeidigkeit und Gleitfähigkeit sowie eine Verringerung der Sensibilität." },
+          { label: "3. Die Phase des „Geschehenlassens“", text: "Nach der Stimulation benötigt der Organismus Zeit, um neurovegetative (autonome), vaskuläre und gewebliche Anpassungen zu integrieren und zu stabilisieren. Nicht die Stimulation der Reflexzonen selbst erzeugt den therapeutischen Effekt, sondern die Antwort des Organismus — mehr Geschmeidigkeit und Gleitfähigkeit sowie eine Verringerung der Sensibilität." },
         ]},
         { type: "para", text: "Diese Latenzzeit von wenigen Sekunden ist die Zeit, die der Organismus benötigt, um die therapeutische Reflexschleife einzuleiten, die für die Dekonstruktion der an der Dysfunktion beteiligten pathologischen Reflexschleife verantwortlich ist." },
         { type: "para", text: "Die Fähigkeit und Qualität der Antwort des Organismus hängen von seiner Vitalität und seinen adaptiv-kompensatorischen Kapazitäten ab, in Beziehung zu der Phase des allgemeinen Anpassungssyndroms, in der sich die Erkrankung entwickelt: Alarm, Anpassung, Widerstand oder Erschöpfung." },
@@ -212,7 +212,7 @@ export const chapter2De: Chapter = {
       id: "conseils",
       title: "Empfehlungen",
       blocks: [
-        { type: "para", text: "„Bevor du versuchst, jemanden zu heilen, frage ihn, ob er bereit ist, die Dinge aufzugeben, die ihn krank gemacht haben." — traditionell Hippokrates zugeschrieben" },
+        { type: "para", text: "„Bevor du versuchst, jemanden zu heilen, frage ihn, ob er bereit ist, die Dinge aufzugeben, die ihn krank gemacht haben.\" — traditionell Hippokrates zugeschrieben" },
         { type: "para", text: "Selbst die beste Behandlung kann keine signifikante und dauerhafte Verbesserung garantieren, wenn sie nicht von wesentlichen Empfehlungen begleitet wird, die die Wirkung der Behandlung verlängern." },
         { type: "para", text: "Diese Empfehlungen beruhen meist auf gesundem Menschenverstand:" },
         { type: "bullets", items: [
