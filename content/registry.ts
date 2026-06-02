@@ -1,6 +1,7 @@
 import type { Lang } from '@/app/i18n/translations'
 import type { Chapter } from './types'
 import { introductionFr } from './introduction.fr'
+import { introductionEn } from './introduction.en'
 import { chapter2Fr } from './chapter2.fr'
 import { chapter2En } from './chapter2.en'
 import { chapter2De } from './chapter2.de'
@@ -17,7 +18,7 @@ import { chapter14Fr } from './chapter14.fr'
  *   introduction: { fr: introductionFr, en: introductionEn },
  */
 const registry: Record<string, Partial<Record<Lang, Chapter>>> = {
-  introduction: { fr: introductionFr },
+  introduction: { fr: introductionFr, en: introductionEn },
   'chapter-2': { fr: chapter2Fr, en: chapter2En, de: chapter2De, es: chapter2Es, it: chapter2It },
   'chapter-5': { fr: chapter5Fr },
   'chapter-14': { fr: chapter14Fr },
