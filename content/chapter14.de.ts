@@ -203,8 +203,8 @@ export const chapter14De: Chapter = {
         ]},
         { type: 'figure', src: '/chapter-14/ge/Chapter14 Fig15 GE.png', caption: 'Abbildung 14.15 — Kranialer und zervikaler Bereich des Vagusnervs (in Gelb)', alt: 'Kranialer und zervikaler Bereich des Vagusnervs', orientation: 'landscape' },
         { type: 'figure', src: '/chapter-14/ge/Chapter14 Fig16 GE.png', caption: 'Abbildung 14.16 — Linker abdominaler Bereich des Vagusnervs und Plexus coeliacus (Solarplexus)', alt: 'Linker abdominaler Bereich des Vagusnervs und Plexus coeliacus', orientation: 'landscape' },
-        { type: 'figure', src: '/chapter-14/ge/Chapter14 Fig17 GE.png', caption: 'Abbildung 14.17 — Ösophagushiatus (rechter und linker Vagusnerv) und Kardia', alt: 'Ösophagushiatus und Vagusnerven', orientation: 'landscape' },
-        { type: 'figure', src: '/chapter-14/ge/Chapter14 Fig18 GE.png', caption: 'Abbildung 14.18 — Kleine Kurvatur des Magens, reich an Vagusfasern', alt: 'Kleine Kurvatur des Magens und Vagusfasern', orientation: 'landscape' },
+        { type: 'figure', src: '/chapter-14/ge/Chapter14 Fig17 GE.png', caption: 'Abbildung 14.17 — Ösophagushiatus (rechter und linker Vagusnerv) und Kardia', alt: 'Ösophagushiatus und Vagusnerven', orientation: 'narrow' },
+        { type: 'figure', src: '/chapter-14/ge/Chapter14 Fig18 GE.png', caption: 'Abbildung 14.18 — Kleine Kurvatur des Magens, reich an Vagusfasern', alt: 'Kleine Kurvatur des Magens und Vagusfasern', orientation: 'narrow' },
 
         { type: 'sub', text: '2. Sympathisches System' },
         { type: 'bullets', items: [
@@ -226,7 +226,7 @@ export const chapter14De: Chapter = {
           'Mesenterialwurzel: eine Linie von der Ileozökalklappe zum Nabel (Plantarfläche des rechten Fußes).',
         ]},
         { type: 'figure', src: '/chapter-14/ge/Chapter14 Fig22 GE.png', caption: 'Abbildung 14.22 — Mesenterialwurzel (zwischen der duodenojejunalen Verbindung und dem Nabel)', alt: 'Reflexzone der Mesenterialwurzel — Jejunumseite', orientation: 'portrait' },
-        { type: 'figure', src: '/chapter-14/ge/Chapter14 Fig23 GE.png', caption: 'Abbildung 14.23 — Mesenterialwurzel (zwischen der Ileozökalklappe und dem Nabel)', alt: 'Reflexzone der Mesenterialwurzel — Ileumseite', orientation: 'portrait' },
+        { type: 'figure', src: '/chapter-14/ge/Chapter14 Fig23 GE.png', caption: 'Abbildung 14.23 — Mesenterialwurzel (zwischen der Ileozökalklappe und dem Nabel)', alt: 'Reflexzone der Mesenterialwurzel — Ileumseite', orientation: 'narrow' },
 
         { type: 'sub', text: 'Podale Reflexzonen — Jejunum (linker Fuß)' },
         { type: 'bullets', items: [
@@ -235,7 +235,7 @@ export const chapter14De: Chapter = {
           'Laterale Grenze: bis zum lateralen Rand des linken Fußes.',
           'Die Ausrichtung der Schlingen beachten: horizontal für das Jejunum.',
         ]},
-        { type: 'figure', src: '/chapter-14/ge/Chapter14 Fig24 GE.png', caption: 'Abbildung 14.24 — Jejunum (obere und untere Grenze)', alt: 'Grenzen der Jejunum-Reflexzone am linken Fuß', orientation: 'landscape' },
+        { type: 'figure', src: '/chapter-14/ge/Chapter14 Fig24 GE.png', caption: 'Abbildung 14.24 — Jejunum (obere und untere Grenze)', alt: 'Grenzen der Jejunum-Reflexzone am linken Fuß', orientation: 'narrow' },
         { type: 'figure', src: '/chapter-14/ge/Chapter14 Fig25 GE.png', caption: 'Abbildung 14.25 — Jejunum', alt: 'Jejunum-Reflexzone am linken Fuß', orientation: 'landscape' },
 
         { type: 'sub', text: 'Podale Reflexzonen — Ileum (rechter Fuß)' },
@@ -245,12 +245,12 @@ export const chapter14De: Chapter = {
           'Laterale Grenze: in der Verlängerung der 4. Zehe des rechten Fußes.',
           'Die Ausrichtung der Schlingen beachten: vertikal für das Ileum.',
         ]},
-        { type: 'figure', src: '/chapter-14/ge/Chapter14 Fig26 GE.png', caption: 'Abbildung 14.26 — Ileum (obere und untere Grenze)', alt: 'Grenzen der Ileum-Reflexzone am rechten Fuß', orientation: 'landscape' },
+        { type: 'figure', src: '/chapter-14/ge/Chapter14 Fig26 GE.png', caption: 'Abbildung 14.26 — Ileum (obere und untere Grenze)', alt: 'Grenzen der Ileum-Reflexzone am rechten Fuß', orientation: 'narrow' },
         { type: 'figure', src: '/chapter-14/ge/Chapter14 Fig27 GE.png', caption: 'Abbildung 14.27 — Ileum und Mesenterialwurzel', alt: 'Ileum-Reflexzone und Mesenterialwurzel am rechten Fuß', orientation: 'landscape' },
 
         { type: 'sub', text: '3. Limbisches System' },
         { type: 'lead', label: 'Limbisches Gehirn — Dünndarm-Balance', text: 'Induktion-Zuhören: ein Daumen auf dem Dünndarm, der andere auf dem limbischen Gehirn.' },
-        { type: 'figure', src: '/chapter-14/ge/Chapter14 Fig28 GE.png', caption: 'Abbildung 14.28 — Viszero-emotionale Balance-Technik — Dünndarm', alt: 'Viszero-emotionale Balance Dünndarm und limbisches Gehirn', orientation: 'landscape' },
+        { type: 'figure', src: '/chapter-14/ge/Chapter14 Fig28 GE.png', caption: 'Abbildung 14.28 — Viszero-emotionale Balance-Technik — Dünndarm', alt: 'Viszero-emotionale Balance Dünndarm und limbisches Gehirn', orientation: 'narrow' },
       ],
     },
     {

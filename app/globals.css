@@ -371,6 +371,7 @@ footer > div > p { font-size:1rem; color:rgba(245,240,232,.84); line-height:1.9;
 
 .cr-fig { margin:40px -80px; }
 .cr-fig-portrait { margin:40px auto; max-width:624px; }
+.cr-fig-narrow { margin:40px auto; max-width:480px; }
 .cr-fig-landscape { margin:40px -80px; }
 .cr-fig-btn { display:block; width:100%; background:none; border:none; padding:0; cursor:zoom-in; position:relative; line-height:0; border-radius:4px; overflow:hidden; transition:box-shadow .25s; }
 .cr-fig-btn:hover { box-shadow:0 12px 36px rgba(26,26,24,.18); }
@@ -519,7 +520,7 @@ footer > div > p { font-size:1rem; color:rgba(245,240,232,.84); line-height:1.9;
   .cr-hero { padding:16px 0 36px; }
   .cr-section { padding:36px 0 8px; }
   .cr-fig, .cr-fig-landscape { margin:32px -14px; }
-  .cr-fig-portrait { margin:32px auto; max-width:none; }
+  .cr-fig-portrait, .cr-fig-narrow { margin:32px auto; max-width:none; }
   .cr-end-card { padding:36px 24px; }
   .cr-toc { width:86%; }
   .cr-resources { right:10px; bottom:10px; padding:7px 8px 6px; }
