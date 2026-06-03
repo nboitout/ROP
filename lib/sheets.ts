@@ -300,22 +300,18 @@ export async function fetchAllSheets(): Promise<{
   const cleanEvents = allEvents.filter((e) => !excludedReaderIds.has(e.readerId.toLowerCase()))
   const cleanVisits = allVisits.filter((v) => !excludedReaderIds.has(v.readerId.toLowerCase()))
 
-  // Bot filter: only keep visits from readerIds that have at least one
-  // page_leave with dwell time — bots never fire page_leave.
-  // Applied only from 2026-05-28 onwards; earlier rows are kept as-is
-  // (manually inserted historical data lacks companion page_leave events).
+  // Bot filter: every page_visit counts as a real visit (so single-page /
+  // homepage-only visitors are never dropped), and known crawlers are excluded
+  // by user-agent instead. Applied only from 2026-05-28 onwards; earlier rows
+  // are kept as-is (manually inserted historical data lacks user-agent strings).
   const BOT_FILTER_START = '2026-05-28'
-
-  const humanReaderIds = new Set(
-    cleanVisits
-      .filter((v) => v.event === 'page_leave' && parseFloat(v.duration_seconds) > 0)
-      .map((v) => v.readerId)
-      .filter(Boolean)
-  )
+  const BOT_UA = /bot|crawl|spider|slurp|mediapartners|bingpreview|facebookexternal|embedly|quora link preview|pinterest|vkshare|whatsapp|telegram|headless|phantomjs|python-requests|curl|wget|httpclient|go-http-client|java\/|okhttp|axios|node-fetch|libwww|scrapy/i
 
   const filteredVisits = cleanVisits.filter((v) => {
     if (v.timestamp.slice(0, 10) < BOT_FILTER_START) return true
-    return humanReaderIds.size > 0 ? humanReaderIds.has(v.readerId) : true
+    const ua = (v.userAgent ?? '').trim()
+    if (!ua) return false          // no user-agent → automated client
+    return !BOT_UA.test(ua)        // exclude known crawlers
   })
 
   return {
