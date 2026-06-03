@@ -275,7 +275,7 @@ export const chapter14En: Chapter = {
     },
   ],
   slides: {
-    url: '/chapter-14/synthese.pdf',
+    url: '/chapter-14/Chapter14  slides de synthese EN.pdf',
     label: 'Slides',
     description: 'Visual summary of the chapter — anatomy, physiology and R.O.P. reflex zones of the small intestine.',
   },

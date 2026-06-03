@@ -275,7 +275,7 @@ export const chapter14It: Chapter = {
     },
   ],
   slides: {
-    url: '/chapter-14/synthese.pdf',
+    url: '/chapter-14/Chapter14  slides de synthese IT.pdf',
     label: 'Diapositive',
     description: 'Sintesi visiva del capitolo — anatomia, fisiologia e zone riflesse R.O.P. dell\'intestino tenue.',
   },

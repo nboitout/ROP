@@ -275,7 +275,7 @@ export const chapter14De: Chapter = {
     },
   ],
   slides: {
-    url: '/chapter-14/synthese.pdf',
+    url: '/chapter-14/Chapter14  slides de synthese GE.pdf',
     label: 'Folien',
     description: 'Visuelle Zusammenfassung des Kapitels — Anatomie, Physiologie und R.O.P.-Reflexzonen des Dünndarms.',
   },

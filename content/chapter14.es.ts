@@ -275,7 +275,7 @@ export const chapter14Es: Chapter = {
     },
   ],
   slides: {
-    url: '/chapter-14/synthese.pdf',
+    url: '/chapter-14/Chapter14  slides de synthese ES.pdf',
     label: 'Diapositivas',
     description: 'Resumen visual del capítulo — anatomía, fisiología y zonas reflejas R.O.P. del intestino delgado.',
   },
