@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import './globals.css'
 import { LanguageProvider } from '@/app/i18n/LanguageContext'
 import { getServerLang } from '@/app/i18n/serverLang'
+import VisitTracker from '@/components/VisitTracker'
 
 export const metadata: Metadata = {
   title: 'Réflexothérapie occipito-podale et viscères des cavités abdominale et pelvienne — Guy Boitout · R.O.P.',
@@ -25,7 +26,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
           rel="stylesheet"
         />
       </head>
-      <body><LanguageProvider initialLang={lang}>{children}</LanguageProvider></body>
+      <body><LanguageProvider initialLang={lang}><VisitTracker />{children}</LanguageProvider></body>
     </html>
   )
 }
