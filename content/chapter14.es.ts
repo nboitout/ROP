@@ -31,7 +31,7 @@ export const chapter14Es: Chapter = {
       title: 'Localización',
       blocks: [
         { type: 'para', text: 'El yeyuno-íleon ocupa una gran parte de la cavidad abdominal, preferentemente a la izquierda que a la derecha, en el interior del marco cólico. El yeyuno se localiza preferentemente en el cuadrante superior izquierdo del abdomen. El íleon se localiza preferentemente en el cuadrante inferior derecho del abdomen.' },
-        { type: 'figure', src: '/chapter-14/figure-14-1.png', caption: 'Figura 14.1 — Topografía abdominal en cuatro cuadrantes', alt: 'Los cuatro cuadrantes abdominales', orientation: 'portrait' },
+        { type: 'figure', src: '/chapter-14/es/Chapter14 Fig1 ES.png', caption: 'Figura 14.1 — Topografía abdominal en cuatro cuadrantes', alt: 'Los cuatro cuadrantes abdominales', orientation: 'portrait' },
       ],
     },
     {
@@ -40,11 +40,11 @@ export const chapter14Es: Chapter = {
       blocks: [
         { type: 'lead', label: 'Yeyuno-íleon', text: 'comprende entre 15 y 16 asas intestinales en forma de U, distribuidas en dos grupos. Un grupo superior a la izquierda, el yeyuno, más desarrollado que el íleon, cuyas asas y sistema vascular están orientados más bien horizontalmente. Un grupo inferior a la derecha, el íleon, cuyas asas y sistema vascular están orientados más bien verticalmente.' },
         { type: 'lead', label: 'Mesenterio', text: 'es un meso, es decir, una reflexión peritoneal de doble hoja. Envuelve el yeyuno-íleon y lo une a la pared posterior del abdomen mediante la raíz del mesenterio.' },
-        { type: 'figure', src: '/chapter-14/figure-14-2.png', caption: 'Figura 14.2 — Mesos', alt: 'Los mesos del peritoneo', orientation: 'portrait' },
+        { type: 'figure', src: '/chapter-14/es/Chapter14 Fig2 ES.png', caption: 'Figura 14.2 — Mesos', alt: 'Los mesos del peritoneo', orientation: 'portrait' },
         { type: 'lead', label: 'Raíz del mesenterio', text: 'constituye la línea de inserción del mesenterio y contribuye a la estabilidad del intestino delgado, de por sí muy móvil. Mide entre 16 y 18 cm. Se extiende desde la unión duodeno-yeyunal hasta la unión ileocecal, cruzando el eje mediano del abdomen a nivel del ombligo (a la altura del disco L3-L4). La unión duodeno-yeyunal es mantenida por el músculo de Treitz, cuyas fibras lisas se insertan en el pilar derecho del diafragma.' },
-        { type: 'figure', src: '/chapter-14/figure-14-3.png', caption: 'Figura 14.3 — Raíz del mesenterio', alt: 'Raíz del mesenterio y su trayecto abdominal', orientation: 'landscape' },
+        { type: 'figure', src: '/chapter-14/es/Chapter14 Fig3 ES.png', caption: 'Figura 14.3 — Raíz del mesenterio', alt: 'Raíz del mesenterio y su trayecto abdominal', orientation: 'landscape' },
         { type: 'lead', label: 'Músculo de Treitz', text: 'participa en el mantenimiento del ángulo duodeno-yeyunal mediante su contracción, atrayendo la raíz del mesenterio hacia arriba y a la izquierda. Al favorecer la tensión longitudinal, participa en el vaciado del contenido duodenal en el yeyuno. La raíz del mesenterio proporciona la vascularización y la inervación al intestino delgado.' },
-        { type: 'figure', src: '/chapter-14/figure-14-4.png', caption: 'Figura 14.4 — Músculo de Treitz', alt: 'Músculo de Treitz y ángulo duodeno-yeyunal', orientation: 'landscape' },
+        { type: 'figure', src: '/chapter-14/es/Chapter14 Fig4 ES.png', caption: 'Figura 14.4 — Músculo de Treitz', alt: 'Músculo de Treitz y ángulo duodeno-yeyunal', orientation: 'landscape' },
         { type: 'rop', body: [
           'La pérdida de tensión longitudinal de la raíz del mesenterio se relaciona clínicamente con el síndrome del pinzamiento aortomesentérico o nutcracker syndrome: una compresión de la 4.ª porción del duodeno y de la vena renal izquierda entre la aorta y la arteria mesentérica superior. El vaciado del contenido duodenal en el yeyuno puede retrasarse, con riesgo de reflujo gastroduodenal.',
           'La rica red vasculo-nerviosa y linfática de la raíz del mesenterio es altamente reflexógena. La estimulación de su zona refleja tiene como objetivo facilitar una respuesta funcional del yeyuno-íleon.',
@@ -72,13 +72,13 @@ export const chapter14Es: Chapter = {
       blocks: [
         { type: 'para', text: 'El intestino delgado necesita un importante aporte vascular y linfático para garantizar sus funciones de digestión, absorción e inmunidad.' },
         { type: 'lead', label: 'Arteria mesentérica superior', text: 'constituye el eje arterial principal del intestino delgado. Es una rama de la aorta abdominal. Su origen se sitúa 1 cm por debajo del tronco celíaco, a la altura del disco intervertebral Th12-L1. Inicialmente retropancreática y luego por delante de la 3.ª porción del duodeno, discurre entre las dos hojas del mesenterio. Emite numerosas ramas colaterales. Irriga todo el intestino delgado, el colon ascendente y los 2/3 proximales del colon transverso.' },
-        { type: 'figure', src: '/chapter-14/figure-14-5.png', caption: 'Figura 14.5 — Arteria mesentérica superior', alt: 'Arteria mesentérica superior y sus ramas', orientation: 'portrait' },
+        { type: 'figure', src: '/chapter-14/es/Chapter14 Fig5 ES.png', caption: 'Figura 14.5 — Arteria mesentérica superior', alt: 'Arteria mesentérica superior y sus ramas', orientation: 'portrait' },
         { type: 'para', text: 'Su pulso, perceptible a nivel de la 3.ª porción del duodeno, a la derecha del ombligo, puede constituir un punto de referencia clínico vascular, sin que por sí solo permita evaluar el funcionamiento intestinal.' },
-        { type: 'figure', src: '/chapter-14/figure-14-6.png', caption: 'Figura 14.6 — Pulso de las arterias de la cavidad abdominal', alt: 'Pulso de las arterias de la cavidad abdominal', orientation: 'landscape' },
+        { type: 'figure', src: '/chapter-14/es/Chapter14 Fig6 ES.png', caption: 'Figura 14.6 — Pulso de las arterias de la cavidad abdominal', alt: 'Pulso de las arterias de la cavidad abdominal', orientation: 'landscape' },
         { type: 'lead', label: 'Vena mesentérica superior', text: 'situada a la derecha de la arteria mesentérica superior, forma parte del sistema porta. Drena hacia el hígado la sangre venosa cargada de nutrientes absorbidos en el intestino delgado.' },
-        { type: 'figure', src: '/chapter-14/figure-14-7.png', caption: 'Figura 14.7 — Sistema porta', alt: 'Sistema porta hepático', orientation: 'landscape' },
+        { type: 'figure', src: '/chapter-14/es/Chapter14 Fig7 ES.png', caption: 'Figura 14.7 — Sistema porta', alt: 'Sistema porta hepático', orientation: 'landscape' },
         { type: 'lead', label: 'Red linfática', text: 'el intestino delgado posee una red linfática desarrollada. Participa en el sistema inmunitario. Se encarga de las moléculas lipídicas, las proteínas de cadena larga y las vitaminas liposolubles A, D, E, K, que se dirigen hacia la unión yugulo-subclavia izquierda a través de la cisterna de Pecquet y el conducto torácico.' },
-        { type: 'figure', src: '/chapter-14/figure-14-8.png', caption: 'Figura 14.8 — Sistema linfático', alt: 'Sistema linfático abdominal', orientation: 'landscape' },
+        { type: 'figure', src: '/chapter-14/es/Chapter14 Fig8 ES.png', caption: 'Figura 14.8 — Sistema linfático', alt: 'Sistema linfático abdominal', orientation: 'landscape' },
       ],
     },
     {
@@ -88,11 +88,11 @@ export const chapter14Es: Chapter = {
         { type: 'sub', text: 'Inervación del peritoneo' },
         { type: 'para', text: 'El peritoneo recibe una doble inervación, somática y autónoma.' },
         { type: 'lead', label: 'Peritoneo parietal', text: 'recibe una inervación somática compartida con la pared abdominal a través de los nervios frénicos, los seis últimos nervios intercostales y los nervios del plexo lumbar. Cuenta con numerosas terminaciones sensibles a la temperatura, la presión y el dolor. Esta inervación compartida con la pared abdominal explica la proyección de los dolores cervicales, escapulares, abdominales y lumbares de origen peritoneal y visceral, transmitidos al sistema musculoesquelético por las fibras somáticas de la hoja parietal.' },
-        { type: 'figure', src: '/chapter-14/figure-14-9.png', caption: 'Figura 14.9 — Nervio frénico', alt: 'Nervio frénico y su trayecto', orientation: 'landscape' },
-        { type: 'figure', src: '/chapter-14/figure-14-10.png', caption: 'Figura 14.10 — Nervios intercostales', alt: 'Nervios intercostales', orientation: 'landscape' },
-        { type: 'figure', src: '/chapter-14/figure-14-11.png', caption: 'Figura 14.11 — Nervios del plexo lumbar', alt: 'Nervios del plexo lumbar', orientation: 'landscape' },
+        { type: 'figure', src: '/chapter-14/es/Chapter14 Fig9 ES.png', caption: 'Figura 14.9 — Nervio frénico', alt: 'Nervio frénico y su trayecto', orientation: 'landscape' },
+        { type: 'figure', src: '/chapter-14/es/Chapter14 Fig10 ES.png', caption: 'Figura 14.10 — Nervios intercostales', alt: 'Nervios intercostales', orientation: 'landscape' },
+        { type: 'figure', src: '/chapter-14/es/Chapter14 Fig11 ES.png', caption: 'Figura 14.11 — Nervios del plexo lumbar', alt: 'Nervios del plexo lumbar', orientation: 'landscape' },
         { type: 'lead', label: 'Peritoneo visceral', text: 'recibe una inervación autónoma extrínseca compartida con las vísceras. Simpático: sus raíces provienen de Th8 a Th11. Se unen a los plexos prevertébrales celíaco y mesentérico superior a través de los nervios esplácnicos mayores y menores.' },
-        { type: 'figure', src: '/chapter-14/figure-14-12.jpg', caption: 'Figura 14.12 — Sistema nervioso autónomo', alt: 'Sistema nervioso autónomo', orientation: 'portrait' },
+        { type: 'figure', src: '/chapter-14/es/Chapter14 Fig12 ES.png', caption: 'Figura 14.12 — Sistema nervioso autónomo', alt: 'Sistema nervioso autónomo', orientation: 'portrait' },
 
         { type: 'sub', text: 'Nervio vago y sistema nervioso simpático' },
         { type: 'leadBullets', items: [
@@ -104,7 +104,7 @@ export const chapter14Es: Chapter = {
 
         { type: 'sub', text: 'Sistema nervioso entérico (SNE)' },
         { type: 'para', text: 'El sistema nervioso intrínseco o entérico (SNE) es a menudo calificado como 2.º cerebro o cerebro abdominal. Está formado por plexos intramurales situados en la propia pared del intestino delgado: el plexo mioentérico de Auerbach y el plexo submucoso de Meissner.' },
-        { type: 'figure', src: '/chapter-14/figure-14-13.png', caption: 'Figura 14.13 — Plexos intramurales entéricos', alt: 'Plexo mioentérico de Auerbach y plexo submucoso de Meissner en la pared intestinal', orientation: 'landscape' },
+        { type: 'figure', src: '/chapter-14/es/Chapter14 Fig13  ES.png', caption: 'Figura 14.13 — Plexos intramurales entéricos', alt: 'Plexo mioentérico de Auerbach y plexo submucoso de Meissner en la pared intestinal', orientation: 'landscape' },
         { type: 'bullets', items: [
           'El SNE es sensible a las señales neurohormonales y a la composición química del contenido intestinal.',
           'Puede funcionar en gran medida de forma autónoma respecto al cerebro y la médula espinal, siempre que las condiciones fisiológicas lo permitan.',
@@ -131,7 +131,7 @@ export const chapter14Es: Chapter = {
         { type: 'lead', label: 'Mucosa intestinal', text: 'constituye la interfaz entre el medio interno del organismo y el contenido de la luz digestiva. Actúa como barrera selectiva para permitir la digestión y la absorción.' },
         { type: 'lead', label: 'Digestión', text: 'corresponde a la transformación de los alimentos en moléculas simples que luego pueden ser absorbidas. Las células caliciformes producen un moco protector. Las células de Lieberkühn participan en la secreción intestinal ligeramente alcalina, así como en funciones enzimáticas y antimicrobianas. Los enterocitos o células absorbentes ejercen una función de barrera selectiva gracias a su organización intercelular (desmosomas), que permite la absorción de micronutrientes al tiempo que limita el paso de macromoléculas insuficientemente degradadas.' },
         { type: 'lead', label: 'Absorción', text: 'la mucosa intestinal está recubierta de vellosidades en forma de expansiones digitiformes cuyo eje central contiene células musculares lisas y una red vascular y linfática. Las vellosidades están a su vez recubiertas de microvellosidades que forman un ribete en cepillo, lo que multiplica ampliamente la superficie de intercambio. El intestino delgado extendido tendría una superficie equivalente a una pista de tenis.' },
-        { type: 'figure', src: '/chapter-14/figure-14-14.png', caption: 'Figura 14.14 — Vellosidad intestinal', alt: 'Organización histológica de una vellosidad intestinal', orientation: 'portrait' },
+        { type: 'figure', src: '/chapter-14/es/Chapter14 Fig14 ES.png', caption: 'Figura 14.14 — Vellosidad intestinal', alt: 'Organización histológica de una vellosidad intestinal', orientation: 'portrait' },
         { type: 'leadBullets', items: [
           { label: 'Vía sanguínea', text: 'los capilares sanguíneos absorben el agua, las sales minerales, los azúcares simples, los aminoácidos, los ácidos grasos de cadena corta y las vitaminas hidrosolubles. Estos nutrientes son transportados al hígado por el sistema porta.' },
           { label: 'Vía linfática', text: 'los capilares linfáticos (o quilíferos) absorben principalmente las grasas, las proteínas de cadena larga y las vitaminas liposolubles A, D, E, K. Se unen sucesivamente a la red linfática, la cisterna de Pecquet, el conducto torácico, antes de desembocar en la red venosa de la unión yugulo-subclavia izquierda.' },
@@ -201,10 +201,10 @@ export const chapter14Es: Chapter = {
           'Hiato esofágico (nervios vagos derecho e izquierdo) y cardias.',
           'Curvatura menor del estómago, rica en fibras vagales.',
         ]},
-        { type: 'figure', src: '/chapter-14/figure-14-15.png', caption: 'Figura 14.15 — Territorio craneal y cervical del nervio vago (en amarillo)', alt: 'Territorio craneal y cervical del nervio vago', orientation: 'landscape' },
-        { type: 'figure', src: '/chapter-14/figure-14-16.png', caption: 'Figura 14.16 — Territorio abdominal izquierdo del nervio vago y plexo celíaco (solar)', alt: 'Territorio abdominal izquierdo del nervio vago y plexo celíaco', orientation: 'landscape' },
-        { type: 'figure', src: '/chapter-14/figure-14-17.png', caption: 'Figura 14.17 — Hiato esofágico (nervios vagos derecho e izquierdo) y cardias', alt: 'Hiato esofágico y nervios vagos', orientation: 'landscape' },
-        { type: 'figure', src: '/chapter-14/figure-14-18.png', caption: 'Figura 14.18 — Curvatura menor del estómago, rica en fibras vagales', alt: 'Curvatura menor del estómago y fibras vagales', orientation: 'landscape' },
+        { type: 'figure', src: '/chapter-14/es/Chapter14 Fig15 ES.png', caption: 'Figura 14.15 — Territorio craneal y cervical del nervio vago (en amarillo)', alt: 'Territorio craneal y cervical del nervio vago', orientation: 'landscape' },
+        { type: 'figure', src: '/chapter-14/es/Chapter14 Fig16 ES.png', caption: 'Figura 14.16 — Territorio abdominal izquierdo del nervio vago y plexo celíaco (solar)', alt: 'Territorio abdominal izquierdo del nervio vago y plexo celíaco', orientation: 'landscape' },
+        { type: 'figure', src: '/chapter-14/es/Chapter14 Fig17 ES.png', caption: 'Figura 14.17 — Hiato esofágico (nervios vagos derecho e izquierdo) y cardias', alt: 'Hiato esofágico y nervios vagos', orientation: 'narrow' },
+        { type: 'figure', src: '/chapter-14/es/Chapter14 Fig18 ES.png', caption: 'Figura 14.18 — Curvatura menor del estómago, rica en fibras vagales', alt: 'Curvatura menor del estómago y fibras vagales', orientation: 'narrow' },
 
         { type: 'sub', text: '2. Sistema simpático' },
         { type: 'bullets', items: [
@@ -212,9 +212,9 @@ export const chapter14Es: Chapter = {
           'Plexo celíaco (solar).',
           'Plexo lumbar (vínculo viscero-somático).',
         ]},
-        { type: 'figure', src: '/chapter-14/figure-14-19.png', caption: 'Figura 14.19 — Sistema simpático (origen medular)', alt: 'Sistema simpático y cadena ganglionar', orientation: 'landscape' },
-        { type: 'figure', src: '/chapter-14/figure-14-20.png', caption: 'Figura 14.20 — Cadena ganglionar lumbar y pilares del diafragma', alt: 'Cadena ganglionar lumbar y pilares del diafragma', orientation: 'landscape' },
-        { type: 'figure', src: '/chapter-14/figure-14-21.png', caption: 'Figura 14.21 — Plexo celíaco (solar)', alt: 'Plexo celíaco solar', orientation: 'landscape' },
+        { type: 'figure', src: '/chapter-14/es/Chapter14 Fig19 ES.png', caption: 'Figura 14.19 — Sistema simpático (origen medular)', alt: 'Sistema simpático y cadena ganglionar', orientation: 'landscape' },
+        { type: 'figure', src: '/chapter-14/es/Chapter14 Fig20 ES.png', caption: 'Figura 14.20 — Cadena ganglionar lumbar y pilares del diafragma', alt: 'Cadena ganglionar lumbar y pilares del diafragma', orientation: 'landscape' },
+        { type: 'figure', src: '/chapter-14/es/Chapter14 Fig21 ES.png', caption: 'Figura 14.21 — Plexo celíaco (solar)', alt: 'Plexo celíaco solar', orientation: 'landscape' },
 
         { type: 'para', text: 'N.B. En nuestra experiencia clínica, los trastornos funcionales intestinales se observan con frecuencia en la mujer en relación con factores hormonales y emocionales.' },
 
@@ -225,8 +225,8 @@ export const chapter14Es: Chapter = {
           'Raíz del mesenterio: una línea desde la unión duodeno-yeyunal hasta el ombligo, a la altura de L3-L4 (cara plantar del pie izquierdo).',
           'Raíz del mesenterio: una línea desde la válvula ileocecal hasta el ombligo (cara plantar del pie derecho).',
         ]},
-        { type: 'figure', src: '/chapter-14/figure-14-22.jpg', caption: 'Figura 14.22 — Raíz del mesenterio (entre la unión duodeno-yeyunal y el ombligo)', alt: 'Zona refleja de la raíz del mesenterio — lado yeyuno', orientation: 'portrait' },
-        { type: 'figure', src: '/chapter-14/figure-14-23.jpg', caption: 'Figura 14.23 — Raíz del mesenterio (entre la válvula ileocecal y el ombligo)', alt: 'Zona refleja de la raíz del mesenterio — lado íleon', orientation: 'portrait' },
+        { type: 'figure', src: '/chapter-14/es/Chapter14 Fig22 ES.png', caption: 'Figura 14.22 — Raíz del mesenterio (entre la unión duodeno-yeyunal y el ombligo)', alt: 'Zona refleja de la raíz del mesenterio — lado yeyuno', orientation: 'portrait' },
+        { type: 'figure', src: '/chapter-14/figure-14-23.jpg', caption: 'Figura 14.23 — Raíz del mesenterio (entre la válvula ileocecal y el ombligo)', alt: 'Zona refleja de la raíz del mesenterio — lado íleon', orientation: 'narrow' },
 
         { type: 'sub', text: 'Zonas reflejas podales — Yeyuno (pie izquierdo)' },
         { type: 'bullets', items: [
@@ -235,7 +235,7 @@ export const chapter14Es: Chapter = {
           'Límite lateral: hasta el borde lateral del pie izquierdo.',
           'Respetar la orientación de las asas: horizontales para el yeyuno.',
         ]},
-        { type: 'figure', src: '/chapter-14/figure-14-24.png', caption: 'Figura 14.24 — Yeyuno (límites superior e inferior)', alt: 'Límites de la zona refleja del yeyuno en el pie izquierdo', orientation: 'landscape' },
+        { type: 'figure', src: '/chapter-14/figure-14-24.png', caption: 'Figura 14.24 — Yeyuno (límites superior e inferior)', alt: 'Límites de la zona refleja del yeyuno en el pie izquierdo', orientation: 'narrow' },
         { type: 'figure', src: '/chapter-14/figure-14-25.png', caption: 'Figura 14.25 — Yeyuno', alt: 'Zona refleja del yeyuno en el pie izquierdo', orientation: 'landscape' },
 
         { type: 'sub', text: 'Zonas reflejas podales — Íleon (pie derecho)' },
@@ -245,12 +245,12 @@ export const chapter14Es: Chapter = {
           'Límite lateral: a la vertical del 4.° dedo del pie derecho.',
           'Respetar la orientación de las asas: verticales para el íleon.',
         ]},
-        { type: 'figure', src: '/chapter-14/figure-14-26.png', caption: 'Figura 14.26 — Íleon (límites superior e inferior)', alt: 'Límites de la zona refleja del íleon en el pie derecho', orientation: 'landscape' },
+        { type: 'figure', src: '/chapter-14/figure-14-26.png', caption: 'Figura 14.26 — Íleon (límites superior e inferior)', alt: 'Límites de la zona refleja del íleon en el pie derecho', orientation: 'narrow' },
         { type: 'figure', src: '/chapter-14/figure-14-27.png', caption: 'Figura 14.27 — Íleon y raíz del mesenterio', alt: 'Zona refleja del íleon y raíz del mesenterio en el pie derecho', orientation: 'landscape' },
 
         { type: 'sub', text: '3. Sistema límbico' },
         { type: 'lead', label: 'Balance cerebro límbico — intestino delgado', text: 'escucha-inducción: un pulgar sobre el intestino delgado, el otro sobre el cerebro límbico.' },
-        { type: 'figure', src: '/chapter-14/figure-14-28.png', caption: 'Figura 14.28 — Técnica de balance viscero-emocional — intestino delgado', alt: 'Balance viscero-emocional intestino delgado y cerebro límbico', orientation: 'landscape' },
+        { type: 'figure', src: '/chapter-14/figure-14-28.png', caption: 'Figura 14.28 — Técnica de balance viscero-emocional — intestino delgado', alt: 'Balance viscero-emocional intestino delgado y cerebro límbico', orientation: 'narrow' },
       ],
     },
     {

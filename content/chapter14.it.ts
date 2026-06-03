@@ -31,7 +31,7 @@ export const chapter14It: Chapter = {
       title: 'Situazione',
       blocks: [
         { type: 'para', text: 'Il digiuno-ileo occupa gran parte della cavità addominale, preferibilmente a sinistra rispetto a destra, all\'interno della cornice colica. Il digiuno è localizzato preferibilmente nel quadrante superiore sinistro dell\'addome. L\'ileo è localizzato preferibilmente nel quadrante inferiore destro dell\'addome.' },
-        { type: 'figure', src: '/chapter-14/figure-14-1.png', caption: 'Figura 14.1 — Topografia addominale in quattro quadranti', alt: 'I quattro quadranti addominali', orientation: 'portrait' },
+        { type: 'figure', src: '/chapter-14/it/Chapter14 Fig1 IT.png', caption: 'Figura 14.1 — Topografia addominale in quattro quadranti', alt: 'I quattro quadranti addominali', orientation: 'portrait' },
       ],
     },
     {
@@ -40,11 +40,11 @@ export const chapter14It: Chapter = {
       blocks: [
         { type: 'lead', label: 'Digiuno-ileo', text: 'comprende 15-16 anse intestinali a forma di U, disposte in due gruppi. Un gruppo superiore a sinistra, il digiuno, più sviluppato dell\'ileo, le cui anse e sistema vascolare sono orientati prevalentemente in senso orizzontale. Un gruppo inferiore a destra, l\'ileo, le cui anse e sistema vascolare sono orientati prevalentemente in senso verticale.' },
         { type: 'lead', label: 'Mesentere', text: 'è un meso, ovvero una riflessione a doppio foglietto del peritoneo. Avvolge il digiuno-ileo e lo collega alla parete posteriore dell\'addome tramite la radice del mesentere.' },
-        { type: 'figure', src: '/chapter-14/figure-14-2.png', caption: 'Figura 14.2 — Mesos', alt: 'I mesos del peritoneo', orientation: 'portrait' },
+        { type: 'figure', src: '/chapter-14/it/Chapter14 Fig2 IT.png', caption: 'Figura 14.2 — Mesos', alt: 'I mesos del peritoneo', orientation: 'portrait' },
         { type: 'lead', label: 'Radice del mesentere', text: 'costituisce la linea di attacco del mesentere e contribuisce alla stabilità dell\'intestino tenue, altrimenti molto mobile. Misura 16-18 cm. Si estende dalla giunzione duodigiuno-digiunale alla valvola ileocecale, attraversando l\'asse mediano dell\'addome a livello dell\'ombelico (a livello del disco L3-L4). La giunzione duodigiuno-digiunale è mantenuta dal muscolo di Treitz, le cui fibre lisce si attaccano al pilastro destro del diaframma.' },
-        { type: 'figure', src: '/chapter-14/figure-14-3.png', caption: 'Figura 14.3 — Radice del mesentere', alt: 'Radice del mesentere e il suo decorso addominale', orientation: 'landscape' },
+        { type: 'figure', src: '/chapter-14/it/Chapter14 Fig3 IT.png', caption: 'Figura 14.3 — Radice del mesentere', alt: 'Radice del mesentere e il suo decorso addominale', orientation: 'landscape' },
         { type: 'lead', label: 'Muscolo di Treitz', text: 'partecipa al mantenimento dell\'angolo duodigiuno-digiunale mediante la sua contrazione, portando la radice del mesentere verso l\'alto e a sinistra. Favorendo una tensione longitudinale, partecipa allo svuotamento del contenuto duodenale nel digiuno. La radice del mesentere fornisce la vascolarizzazione e l\'innervazione all\'intestino tenue.' },
-        { type: 'figure', src: '/chapter-14/figure-14-4.png', caption: 'Figura 14.4 — Muscolo di Treitz', alt: 'Muscolo di Treitz e angolo duodigiuno-digiunale', orientation: 'landscape' },
+        { type: 'figure', src: '/chapter-14/it/Chapter14 Fig4 IT.png', caption: 'Figura 14.4 — Muscolo di Treitz', alt: 'Muscolo di Treitz e angolo duodigiuno-digiunale', orientation: 'landscape' },
         { type: 'rop', body: [
           'La perdita di tensione longitudinale della radice del mesentere va correlata, sul piano clinico, alla sindrome della pinza aortomesenterica o nutcracker syndrome: una compressione della 4ª porzione del duodeno e della vena renale sinistra tra l\'aorta e l\'arteria mesenterica superiore. Lo svuotamento del contenuto duodenale nel digiuno può essere ritardato, con rischio di reflusso gastroduodenale.',
           'La ricca rete vascolare, nervosa e linfatica della radice del mesentere è altamente riflessogena. La stimolazione della sua zona riflessiva mira a facilitare una risposta funzionale del digiuno-ileo.',
@@ -72,13 +72,13 @@ export const chapter14It: Chapter = {
       blocks: [
         { type: 'para', text: 'L\'intestino tenue necessita di un\'ampia irrorazione vascolare e linfatica per svolgere le sue funzioni di digestione, assorbimento e immunità.' },
         { type: 'lead', label: 'Arteria mesenterica superiore', text: 'costituisce l\'asse arterioso principale dell\'intestino tenue. È un ramo dell\'aorta addominale. La sua origine si trova 1 cm al di sotto del tripode celiaco, in corrispondenza del disco intervertebrale Th12-L1. Inizialmente retropancreatica, poi anteriore alla 3ª porzione del duodeno, decorre tra i due foglietti del mesentere. Fornisce numerosi rami collaterali. Irrora tutto l\'intestino tenue, il colon ascendente e i 2/3 prossimali del colon trasverso.' },
-        { type: 'figure', src: '/chapter-14/figure-14-5.png', caption: 'Figura 14.5 — Arteria mesenterica superiore', alt: 'Arteria mesenterica superiore e i suoi rami', orientation: 'portrait' },
+        { type: 'figure', src: '/chapter-14/it/Chapter14 Fig5 IT.png', caption: 'Figura 14.5 — Arteria mesenterica superiore', alt: 'Arteria mesenterica superiore e i suoi rami', orientation: 'portrait' },
         { type: 'para', text: 'Il suo polso, percepibile a livello della 3ª porzione del duodeno, a destra dell\'ombelico, può costituire un riferimento clinico vascolare, senza tuttavia consentire da solo conclusioni sul funzionamento intestinale.' },
-        { type: 'figure', src: '/chapter-14/figure-14-6.png', caption: 'Figura 14.6 — Polso delle arterie della cavità addominale', alt: 'Polso delle arterie della cavità addominale', orientation: 'landscape' },
+        { type: 'figure', src: '/chapter-14/it/Chapter14 Fig6 IT.png', caption: 'Figura 14.6 — Polso delle arterie della cavità addominale', alt: 'Polso delle arterie della cavità addominale', orientation: 'landscape' },
         { type: 'lead', label: 'Vena mesenterica superiore', text: 'situata a destra dell\'arteria mesenterica superiore, fa parte del sistema portale. Draina verso il fegato il sangue venoso carico dei nutrienti assorbiti nell\'intestino tenue.' },
-        { type: 'figure', src: '/chapter-14/figure-14-7.png', caption: 'Figura 14.7 — Sistema portale', alt: 'Sistema portale epatico', orientation: 'landscape' },
+        { type: 'figure', src: '/chapter-14/it/Chapter14 Fig7 IT.png', caption: 'Figura 14.7 — Sistema portale', alt: 'Sistema portale epatico', orientation: 'landscape' },
         { type: 'lead', label: 'Rete linfatica', text: 'l\'intestino tenue possiede una rete linfatica sviluppata. Partecipa al sistema immunitario. Trasporta le molecole lipidiche e proteiche a catena lunga e le vitamine liposolubili A, D, E, K, convogliate verso il carrefour giugulo-succlavio sinistro tramite la cisterna del Pecquet e il dotto toracico.' },
-        { type: 'figure', src: '/chapter-14/figure-14-8.png', caption: 'Figura 14.8 — Sistema linfatico', alt: 'Sistema linfatico addominale', orientation: 'landscape' },
+        { type: 'figure', src: '/chapter-14/it/Chapter14 Fig8 IT.png', caption: 'Figura 14.8 — Sistema linfatico', alt: 'Sistema linfatico addominale', orientation: 'landscape' },
       ],
     },
     {
@@ -88,11 +88,11 @@ export const chapter14It: Chapter = {
         { type: 'sub', text: 'Innervazione del peritoneo' },
         { type: 'para', text: 'Il peritoneo riceve una doppia innervazione, somatica e autonoma.' },
         { type: 'lead', label: 'Peritoneo parietale', text: 'riceve un\'innervazione somatica condivisa con la parete addominale tramite i nervi frenici, gli ultimi sei nervi intercostali e i nervi del plesso lombare. Possiede numerose terminazioni sensibili alla temperatura, alla pressione e al dolore. Questa innervazione condivisa con la parete addominale spiega la proiezione di dolori cervicali, scapolari, addominali e lombari di origine peritoneale e viscerale, trasmessi all\'apparato osteoartromuscolare dalle fibre somatiche del foglietto parietale.' },
-        { type: 'figure', src: '/chapter-14/figure-14-9.png', caption: 'Figura 14.9 — Nervo frenico', alt: 'Nervo frenico e il suo decorso', orientation: 'landscape' },
-        { type: 'figure', src: '/chapter-14/figure-14-10.png', caption: 'Figura 14.10 — Nervi intercostali', alt: 'Nervi intercostali', orientation: 'landscape' },
-        { type: 'figure', src: '/chapter-14/figure-14-11.png', caption: 'Figura 14.11 — Nervi del plesso lombare', alt: 'Nervi del plesso lombare', orientation: 'landscape' },
+        { type: 'figure', src: '/chapter-14/it/Chapter14 Fig9 IT.png', caption: 'Figura 14.9 — Nervo frenico', alt: 'Nervo frenico e il suo decorso', orientation: 'landscape' },
+        { type: 'figure', src: '/chapter-14/it/Chapter14 Fig10 IT.png', caption: 'Figura 14.10 — Nervi intercostali', alt: 'Nervi intercostali', orientation: 'landscape' },
+        { type: 'figure', src: '/chapter-14/it/Chapter14 Fig11 IT.png', caption: 'Figura 14.11 — Nervi del plesso lombare', alt: 'Nervi del plesso lombare', orientation: 'landscape' },
         { type: 'lead', label: 'Peritoneo viscerale', text: 'riceve un\'innervazione autonoma estrinseca condivisa con i visceri. Simpatico: le sue radici provengono da Th8 a Th11. Raggiungono i plessi prevertebali celiaco e mesenterico superiore tramite i nervi splancnici maggiore e minore.' },
-        { type: 'figure', src: '/chapter-14/figure-14-12.jpg', caption: 'Figura 14.12 — Sistema nervoso autonomo', alt: 'Sistema nervoso autonomo', orientation: 'portrait' },
+        { type: 'figure', src: '/chapter-14/it/Chapter14 Fig12 IT.png', caption: 'Figura 14.12 — Sistema nervoso autonomo', alt: 'Sistema nervoso autonomo', orientation: 'portrait' },
 
         { type: 'sub', text: 'Nervo vago e sistema nervoso simpatico' },
         { type: 'leadBullets', items: [
@@ -104,7 +104,7 @@ export const chapter14It: Chapter = {
 
         { type: 'sub', text: 'Sistema nervoso enterico (SNE)' },
         { type: 'para', text: 'Il sistema nervoso intrinseco o enterico (SNE) è spesso definito come il secondo cervello o cervello addominale. È costituito da plessi intramurali situati nella stessa parete dell\'intestino tenue: il plesso mioenterico di Auerbach e il plesso sottomucoso di Meissner.' },
-        { type: 'figure', src: '/chapter-14/figure-14-13.png', caption: 'Figura 14.13 — Plessi enterici intramurali', alt: 'Plesso di Auerbach e plesso di Meissner nella parete intestinale', orientation: 'landscape' },
+        { type: 'figure', src: '/chapter-14/it/Chapter14 Fig13 IT.png', caption: 'Figura 14.13 — Plessi enterici intramurali', alt: 'Plesso di Auerbach e plesso di Meissner nella parete intestinale', orientation: 'landscape' },
         { type: 'bullets', items: [
           'Il SNE è sensibile ai segnali neuro-ormonali e alla composizione chimica del contenuto intestinale.',
           'Può funzionare in modo largamente autonomo rispetto al cervello e al midollo spinale finché le condizioni fisiologiche lo consentono.',
@@ -131,7 +131,7 @@ export const chapter14It: Chapter = {
         { type: 'lead', label: 'Mucosa intestinale', text: 'costituisce l\'interfaccia tra il mezzo interno dell\'organismo e il contenuto del lume digestivo. Agisce come una barriera selettiva per consentire la digestione e l\'assorbimento.' },
         { type: 'lead', label: 'Digestione', text: 'corrisponde alla trasformazione degli alimenti in molecole semplici che possono poi essere assorbite. Le cellule caliciformi producono un muco protettivo. Le cellule di Lieberkühn partecipano alla secrezione intestinale leggermente alcalina e a funzioni enzimatiche e antimicrobiche. Gli enterociti o cellule assorbenti svolgono una funzione di barriera selettiva grazie alla loro disposizione intercellulare (desmosomi), consentendo l\'assorbimento dei micronutrienti pur limitando il passaggio di macromolecole insufficientemente degradate.' },
         { type: 'lead', label: 'Assorbimento', text: 'la mucosa intestinale è ricoperta di villi a forma di espansioni digitiformi il cui asse centrale contiene cellule muscolari lisce e una rete sanguigna e linfatica. I villi sono a loro volta ricoperti di microvilli che formano un orletto a spazzola, il che moltiplica notevolmente la superficie di scambio. L\'intestino tenue disteso avrebbe una superficie equivalente a un campo da tennis.' },
-        { type: 'figure', src: '/chapter-14/figure-14-14.png', caption: 'Figura 14.14 — Villo intestinale', alt: 'Organizzazione istologica di un villo intestinale', orientation: 'portrait' },
+        { type: 'figure', src: '/chapter-14/it/Chapter14 Fig14 IT.png', caption: 'Figura 14.14 — Villo intestinale', alt: 'Organizzazione istologica di un villo intestinale', orientation: 'portrait' },
         { type: 'leadBullets', items: [
           { label: 'Via ematica', text: 'i capillari sanguigni assorbono acqua, sali minerali, osi semplici, aminoacidi, acidi grassi a catena corta e vitamine idrosolubili. Questi nutrienti vengono trasportati al fegato tramite il sistema portale.' },
           { label: 'Via linfatica', text: 'i capillari linfatici (o chiliferi) assorbono principalmente grassi, proteine a catena lunga e vitamine liposolubili A, D, E, K. Si uniscono successivamente alla rete linfatica, alla cisterna del Pecquet, al dotto toracico, prima di sfociare nella rete venosa del carrefour giugulo-succlavio sinistro.' },
@@ -201,10 +201,10 @@ export const chapter14It: Chapter = {
           'Hiatus esofageo (nervi vaghi destro e sinistro) e cardias.',
           'Piccola curvatura dello stomaco, ricca di fibre vagali.',
         ]},
-        { type: 'figure', src: '/chapter-14/figure-14-15.png', caption: 'Figura 14.15 — Territorio cranico e cervicale del nervo vago (in giallo)', alt: 'Territorio cranico e cervicale del nervo vago', orientation: 'landscape' },
-        { type: 'figure', src: '/chapter-14/figure-14-16.png', caption: 'Figura 14.16 — Territorio addominale sinistro del nervo vago e plesso celiaco (solare)', alt: 'Territorio addominale sinistro del nervo vago e plesso celiaco', orientation: 'landscape' },
-        { type: 'figure', src: '/chapter-14/figure-14-17.png', caption: 'Figura 14.17 — Hiatus esofageo (nervi vaghi destro e sinistro) e cardias', alt: 'Hiatus esofageo e nervi vaghi', orientation: 'landscape' },
-        { type: 'figure', src: '/chapter-14/figure-14-18.png', caption: 'Figura 14.18 — Piccola curvatura dello stomaco, ricca di fibre vagali', alt: 'Piccola curvatura dello stomaco e fibre vagali', orientation: 'landscape' },
+        { type: 'figure', src: '/chapter-14/it/Chapter14 Fig15 IT.png', caption: 'Figura 14.15 — Territorio cranico e cervicale del nervo vago (in giallo)', alt: 'Territorio cranico e cervicale del nervo vago', orientation: 'landscape' },
+        { type: 'figure', src: '/chapter-14/it/Chapter14 Fig16 IT.png', caption: 'Figura 14.16 — Territorio addominale sinistro del nervo vago e plesso celiaco (solare)', alt: 'Territorio addominale sinistro del nervo vago e plesso celiaco', orientation: 'landscape' },
+        { type: 'figure', src: '/chapter-14/it/Chapter14 Fig17 IT.png', caption: 'Figura 14.17 — Hiatus esofageo (nervi vaghi destro e sinistro) e cardias', alt: 'Hiatus esofageo e nervi vaghi', orientation: 'narrow' },
+        { type: 'figure', src: '/chapter-14/it/Chapter14 Fig18 IT.png', caption: 'Figura 14.18 — Piccola curvatura dello stomaco, ricca di fibre vagali', alt: 'Piccola curvatura dello stomaco e fibre vagali', orientation: 'narrow' },
 
         { type: 'sub', text: '2. Sistema simpatico' },
         { type: 'bullets', items: [
@@ -212,9 +212,9 @@ export const chapter14It: Chapter = {
           'Plesso celiaco (solare).',
           'Plesso lombare (collegamento viscero-somatico).',
         ]},
-        { type: 'figure', src: '/chapter-14/figure-14-19.png', caption: 'Figura 14.19 — Sistema simpatico (origine midollare)', alt: 'Sistema simpatico e catena gangliare', orientation: 'landscape' },
-        { type: 'figure', src: '/chapter-14/figure-14-20.png', caption: 'Figura 14.20 — Catena gangliare lombare e pilastri del diaframma', alt: 'Catena gangliare lombare e pilastri del diaframma', orientation: 'landscape' },
-        { type: 'figure', src: '/chapter-14/figure-14-21.png', caption: 'Figura 14.21 — Plesso celiaco (solare)', alt: 'Plesso celiaco solare', orientation: 'landscape' },
+        { type: 'figure', src: '/chapter-14/it/Chapter14 Fig19 IT.png', caption: 'Figura 14.19 — Sistema simpatico (origine midollare)', alt: 'Sistema simpatico e catena gangliare', orientation: 'landscape' },
+        { type: 'figure', src: '/chapter-14/it/Chapter14 Fig20 IT.png', caption: 'Figura 14.20 — Catena gangliare lombare e pilastri del diaframma', alt: 'Catena gangliare lombare e pilastri del diaframma', orientation: 'landscape' },
+        { type: 'figure', src: '/chapter-14/it/Chapter14 Fig21 IT.png', caption: 'Figura 14.21 — Plesso celiaco (solare)', alt: 'Plesso celiaco solare', orientation: 'landscape' },
 
         { type: 'para', text: 'N.B. Nella nostra esperienza clinica, i disturbi funzionali intestinali sono spesso osservati nelle donne in relazione a fattori ormonali ed emotivi.' },
 
@@ -225,8 +225,8 @@ export const chapter14It: Chapter = {
           'Radice del mesentere: una linea dalla giunzione digiuno-digiunale all\'ombelico, a livello L3-L4 (faccia plantare del piede sinistro).',
           'Radice del mesentere: una linea dalla valvola ileocecale all\'ombelico (faccia plantare del piede destro).',
         ]},
-        { type: 'figure', src: '/chapter-14/figure-14-22.jpg', caption: 'Figura 14.22 — Radice del mesentere (tra la giunzione digiuno-digiunale e l\'ombelico)', alt: 'Zona riflessiva della radice del mesentere — lato digiuno', orientation: 'portrait' },
-        { type: 'figure', src: '/chapter-14/figure-14-23.jpg', caption: 'Figura 14.23 — Radice del mesentere (tra la valvola ileocecale e l\'ombelico)', alt: 'Zona riflessiva della radice del mesentere — lato ileo', orientation: 'portrait' },
+        { type: 'figure', src: '/chapter-14/it/Chapter14 Fig22 IT.png', caption: 'Figura 14.22 — Radice del mesentere (tra la giunzione digiuno-digiunale e l\'ombelico)', alt: 'Zona riflessiva della radice del mesentere — lato digiuno', orientation: 'portrait' },
+        { type: 'figure', src: '/chapter-14/it/Chapter14 Fig23 IT.png', caption: 'Figura 14.23 — Radice del mesentere (tra la valvola ileocecale e l\'ombelico)', alt: 'Zona riflessiva della radice del mesentere — lato ileo', orientation: 'narrow' },
 
         { type: 'sub', text: 'Zone riflesse podali — Digiuno (piede sinistro)' },
         { type: 'bullets', items: [
@@ -235,8 +235,8 @@ export const chapter14It: Chapter = {
           'Limite laterale: fino al bordo laterale del piede sinistro.',
           'Rispettare l\'orientamento delle anse: orizzontali per il digiuno.',
         ]},
-        { type: 'figure', src: '/chapter-14/figure-14-24.png', caption: 'Figura 14.24 — Digiuno (limiti superiore e inferiore)', alt: 'Limiti della zona riflessiva del digiuno sul piede sinistro', orientation: 'landscape' },
-        { type: 'figure', src: '/chapter-14/figure-14-25.png', caption: 'Figura 14.25 — Digiuno', alt: 'Zona riflessiva del digiuno sul piede sinistro', orientation: 'landscape' },
+        { type: 'figure', src: '/chapter-14/it/Chapter14 Fig24 IT.png', caption: 'Figura 14.24 — Digiuno (limiti superiore e inferiore)', alt: 'Limiti della zona riflessiva del digiuno sul piede sinistro', orientation: 'narrow' },
+        { type: 'figure', src: '/chapter-14/it/Chapter14 Fig25 IT.png', caption: 'Figura 14.25 — Digiuno', alt: 'Zona riflessiva del digiuno sul piede sinistro', orientation: 'landscape' },
 
         { type: 'sub', text: 'Zone riflesse podali — Ileo (piede destro)' },
         { type: 'bullets', items: [
@@ -245,12 +245,12 @@ export const chapter14It: Chapter = {
           'Limite laterale: a piombo del 4° dito del piede destro.',
           'Rispettare l\'orientamento delle anse: verticali per l\'ileo.',
         ]},
-        { type: 'figure', src: '/chapter-14/figure-14-26.png', caption: 'Figura 14.26 — Ileo (limiti superiore e inferiore)', alt: 'Limiti della zona riflessiva dell\'ileo sul piede destro', orientation: 'landscape' },
-        { type: 'figure', src: '/chapter-14/figure-14-27.png', caption: 'Figura 14.27 — Ileo e radice del mesentere', alt: 'Zona riflessiva dell\'ileo e radice del mesentere sul piede destro', orientation: 'landscape' },
+        { type: 'figure', src: '/chapter-14/it/Chapter14 Fig26 IT.png', caption: 'Figura 14.26 — Ileo (limiti superiore e inferiore)', alt: 'Limiti della zona riflessiva dell\'ileo sul piede destro', orientation: 'narrow' },
+        { type: 'figure', src: '/chapter-14/it/Chapter14 Fig27 IT.png', caption: 'Figura 14.27 — Ileo e radice del mesentere', alt: 'Zona riflessiva dell\'ileo e radice del mesentere sul piede destro', orientation: 'landscape' },
 
         { type: 'sub', text: '3. Sistema limbico' },
         { type: 'lead', label: 'Bilancio cervello limbico — intestino tenue', text: 'ascolto-induzione: un pollice sull\'intestino tenue, l\'altro pollice sul cervello limbico.' },
-        { type: 'figure', src: '/chapter-14/figure-14-28.png', caption: 'Figura 14.28 — Tecnica di bilancio viscero-emotivo — intestino tenue', alt: 'Bilancio viscero-emotivo intestino tenue e cervello limbico', orientation: 'landscape' },
+        { type: 'figure', src: '/chapter-14/it/Chapter14 Fig28 IT.png', caption: 'Figura 14.28 — Tecnica di bilancio viscero-emotivo — intestino tenue', alt: 'Bilancio viscero-emotivo intestino tenue e cervello limbico', orientation: 'narrow' },
       ],
     },
     {
