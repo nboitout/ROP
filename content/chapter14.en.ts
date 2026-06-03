@@ -31,7 +31,7 @@ export const chapter14En: Chapter = {
       title: 'Location',
       blocks: [
         { type: 'para', text: 'The jejuno-ileum occupies a large part of the abdominal cavity, more often on the left than on the right, within the colonic frame. The jejunum is primarily located in the upper left quadrant of the abdomen. The ileum is mainly located in the lower right quadrant.' },
-        { type: 'figure', src: '/chapter-14/figure-14-1.png', caption: 'Figure 14.1 — Abdominal topography in four quadrants', alt: 'The four abdominal quadrants', orientation: 'portrait' },
+        { type: 'figure', src: '/chapter-14/en/figure-14-1.png', caption: 'Figure 14.1 — Abdominal topography in four quadrants', alt: 'The four abdominal quadrants', orientation: 'portrait' },
       ],
     },
     {
@@ -40,11 +40,11 @@ export const chapter14En: Chapter = {
       blocks: [
         { type: 'lead', label: 'Jejuno-ileum', text: 'it comprises 15 to 16 U-shaped intestinal loops, arranged in two groups. An upper left group, corresponding to the jejunum, which is more developed than the ileum. Its loops and vascular network are generally oriented horizontally. A lower right group, corresponding to the ileum, whose loops and vascular network are generally oriented vertically.' },
         { type: 'lead', label: 'Mesentery', text: 'it is a meso, that is, a double-layered peritoneal fold. It envelops the jejuno-ileum and attaches it to the posterior abdominal wall through the root of the mesentery.' },
-        { type: 'figure', src: '/chapter-14/figure-14-2.png', caption: 'Figure 14.2 — Mesos', alt: 'The peritoneal mesos', orientation: 'portrait' },
+        { type: 'figure', src: '/chapter-14/en/figure-14-2.png', caption: 'Figure 14.2 — Mesos', alt: 'The peritoneal mesos', orientation: 'portrait' },
         { type: 'lead', label: 'Root of the mesentery', text: 'the root of the mesentery forms the attachment line of the mesentery and contributes to the stability of the small intestine, which is otherwise highly mobile. It measures 16 to 18 cm and extends from the duodenojejunal junction to the ileocaecal junction, crossing the abdominal midline at the level of the umbilicus, opposite the L3-L4 disc. The duodenojejunal junction is supported by the suspensory muscle of the duodenum, or muscle of Treitz, whose smooth muscle fibres attach to the right crus of the diaphragm.' },
-        { type: 'figure', src: '/chapter-14/figure-14-3.png', caption: 'Figure 14.3 — Root of the mesentery', alt: 'Root of the mesentery and its abdominal course', orientation: 'landscape' },
+        { type: 'figure', src: '/chapter-14/en/figure-14-3.png', caption: 'Figure 14.3 — Root of the mesentery', alt: 'Root of the mesentery and its abdominal course', orientation: 'landscape' },
         { type: 'lead', label: 'Suspensory muscle of the duodenum (muscle of Treitz)', text: 'it helps maintain the duodenojejunal angle by contracting and drawing the root of the mesentery upward and to the left. By creating longitudinal tension, it contributes to duodenal emptying into the jejunum. The root of the mesentery also carries the vascular and nervous supply of the small intestine.' },
-        { type: 'figure', src: '/chapter-14/figure-14-4.png', caption: 'Figure 14.4 — Suspensory muscle of the duodenum (muscle of Treitz)', alt: 'Muscle of Treitz and the duodenojejunal angle', orientation: 'landscape' },
+        { type: 'figure', src: '/chapter-14/en/figure-14-4.png', caption: 'Figure 14.4 — Suspensory muscle of the duodenum (muscle of Treitz)', alt: 'Muscle of Treitz and the duodenojejunal angle', orientation: 'landscape' },
         { type: 'rop', body: [
           'Clinically, loss of longitudinal tension in the root of the mesentery should be considered in relation to superior mesenteric artery syndrome, or nutcracker syndrome: compression of the fourth part of the duodenum and of the left renal vein between the aorta and the superior mesenteric artery. Duodenal emptying into the jejunum may be delayed, increasing the risk of gastroduodenal reflux.',
           'The rich vascular, nervous and lymphatic network of the mesenteric root is highly reflexogenic. Stimulation of its reflex zone aims to facilitate a functional response of the jejuno-ileum.',
@@ -72,13 +72,13 @@ export const chapter14En: Chapter = {
       blocks: [
         { type: 'para', text: 'The small intestine requires a substantial vascular and lymphatic supply to perform its digestive, absorptive and immune functions.' },
         { type: 'lead', label: 'Superior mesenteric artery', text: 'it is the main arterial axis of the small intestine. It arises from the abdominal aorta, 1 cm below the coeliac trunk, opposite the Th12-L1 intervertebral disc. It first passes behind the pancreas and then anterior to the third part of the duodenum before running between the two layers of the mesentery. It gives off numerous collateral branches and supplies the entire small intestine, the ascending colon and the proximal two-thirds of the transverse colon.' },
-        { type: 'figure', src: '/chapter-14/figure-14-5.png', caption: 'Figure 14.5 — Superior mesenteric artery', alt: 'Superior mesenteric artery and its branches', orientation: 'portrait' },
+        { type: 'figure', src: '/chapter-14/en/figure-14-5.png', caption: 'Figure 14.5 — Superior mesenteric artery', alt: 'Superior mesenteric artery and its branches', orientation: 'portrait' },
         { type: 'para', text: 'Its pulse, which is palpable at the level of the third part of the duodenum, to the right of the umbilicus, may serve as a vascular clinical landmark, although it does not by itself indicate intestinal function.' },
-        { type: 'figure', src: '/chapter-14/figure-14-6.png', caption: 'Figure 14.6 — Pulses of the arteries of the abdominal cavity', alt: 'Pulses of the arteries of the abdominal cavity', orientation: 'landscape' },
+        { type: 'figure', src: '/chapter-14/en/figure-14-6.png', caption: 'Figure 14.6 — Pulses of the arteries of the abdominal cavity', alt: 'Pulses of the arteries of the abdominal cavity', orientation: 'landscape' },
         { type: 'lead', label: 'Superior mesenteric vein', text: 'located to the right of the superior mesenteric artery, it belongs to the portal system. It drains nutrient-rich venous blood from the small intestine toward the liver.' },
-        { type: 'figure', src: '/chapter-14/figure-14-7.png', caption: 'Figure 14.7 — Portal system', alt: 'Hepatic portal system', orientation: 'landscape' },
+        { type: 'figure', src: '/chapter-14/en/figure-14-7.png', caption: 'Figure 14.7 — Portal system', alt: 'Hepatic portal system', orientation: 'landscape' },
         { type: 'lead', label: 'Lymphatic network', text: 'the small intestine has a well-developed lymphatic network, which participates in immune function. It transports long-chain lipid and protein molecules, as well as the fat-soluble vitamins A, D, E and K, toward the left jugulo-subclavian junction via the cisterna chyli and the thoracic duct.' },
-        { type: 'figure', src: '/chapter-14/figure-14-8.png', caption: 'Figure 14.8 — Lymphatic system', alt: 'Abdominal lymphatic system', orientation: 'landscape' },
+        { type: 'figure', src: '/chapter-14/en/figure-14-8.png', caption: 'Figure 14.8 — Lymphatic system', alt: 'Abdominal lymphatic system', orientation: 'landscape' },
       ],
     },
     {
@@ -88,11 +88,11 @@ export const chapter14En: Chapter = {
         { type: 'sub', text: 'Innervation of the peritoneum' },
         { type: 'para', text: 'The peritoneum has dual innervation, both somatic and autonomic.' },
         { type: 'lead', label: 'Parietal peritoneum', text: 'it receives somatic innervation shared with the abdominal wall via the phrenic nerves, the lower six intercostal nerves and the nerves of the lumbar plexus. It contains numerous nerve endings sensitive to temperature, pressure and pain. This shared innervation with the abdominal wall helps explain the referral of cervical, scapular, abdominal and lumbar pain of peritoneal or visceral origin to the osteo-musculo-articular system through the somatic fibres of the parietal layer.' },
-        { type: 'figure', src: '/chapter-14/figure-14-9.png', caption: 'Figure 14.9 — Phrenic nerve', alt: 'Phrenic nerve and its course', orientation: 'landscape' },
-        { type: 'figure', src: '/chapter-14/figure-14-10.png', caption: 'Figure 14.10 — Intercostal nerves', alt: 'Intercostal nerves', orientation: 'landscape' },
-        { type: 'figure', src: '/chapter-14/figure-14-11.png', caption: 'Figure 14.11 — Nerves of the lumbar plexus', alt: 'Nerves of the lumbar plexus', orientation: 'landscape' },
+        { type: 'figure', src: '/chapter-14/en/figure-14-9.png', caption: 'Figure 14.9 — Phrenic nerve', alt: 'Phrenic nerve and its course', orientation: 'landscape' },
+        { type: 'figure', src: '/chapter-14/en/figure-14-10.png', caption: 'Figure 14.10 — Intercostal nerves', alt: 'Intercostal nerves', orientation: 'landscape' },
+        { type: 'figure', src: '/chapter-14/en/figure-14-11.png', caption: 'Figure 14.11 — Nerves of the lumbar plexus', alt: 'Nerves of the lumbar plexus', orientation: 'landscape' },
         { type: 'lead', label: 'Visceral peritoneum', text: 'it receives extrinsic autonomic innervation shared with the viscera. Sympathetic: roots arise from Th8 to Th11 and reach the prevertebral coeliac and superior mesenteric plexuses via the greater and lesser splanchnic nerves.' },
-        { type: 'figure', src: '/chapter-14/figure-14-12.jpg', caption: 'Figure 14.12 — Autonomic nervous system', alt: 'Autonomic nervous system', orientation: 'portrait' },
+        { type: 'figure', src: '/chapter-14/en/figure-14-12.png', caption: 'Figure 14.12 — Autonomic nervous system', alt: 'Autonomic nervous system', orientation: 'portrait' },
 
         { type: 'sub', text: 'Vagus nerve and sympathetic nervous system' },
         { type: 'leadBullets', items: [
@@ -104,7 +104,7 @@ export const chapter14En: Chapter = {
 
         { type: 'sub', text: 'Enteric nervous system (ENS)' },
         { type: 'para', text: 'The intrinsic or enteric nervous system (ENS) is often referred to as the second brain or abdominal brain. It consists of intramural plexuses located within the wall of the small intestine itself: Auerbach\'s myenteric plexus and Meissner\'s submucosal plexus.' },
-        { type: 'figure', src: '/chapter-14/figure-14-13.png', caption: 'Figure 14.13 — Enteric intramural plexuses', alt: 'Auerbach\'s myenteric plexus and Meissner\'s submucosal plexus in the intestinal wall', orientation: 'landscape' },
+        { type: 'figure', src: '/chapter-14/en/figure-14-13.png', caption: 'Figure 14.13 — Enteric intramural plexuses', alt: 'Auerbach\'s myenteric plexus and Meissner\'s submucosal plexus in the intestinal wall', orientation: 'landscape' },
         { type: 'bullets', items: [
           'The ENS is sensitive to neurohormonal signals and to the chemical composition of the intestinal contents.',
           'It can operate largely independently of the brain and spinal cord, provided physiological conditions allow.',
@@ -131,7 +131,7 @@ export const chapter14En: Chapter = {
         { type: 'lead', label: 'Intestinal mucosa', text: 'it forms the interface between the body\'s internal milieu and the contents of the digestive lumen. It acts as a selective barrier between the external environment (the digestive lumen) and the internal milieu, allowing digestion and absorption to occur.' },
         { type: 'lead', label: 'Digestion', text: 'digestion transforms food into simple molecules that can then be absorbed. Goblet cells produce protective mucus that lines the mucosa. Lieberkühn cells contribute to the slightly alkaline intestinal secretion and to enzymatic and antimicrobial functions. Enterocytes, or absorptive cells, perform a selective barrier function through their intercellular arrangement (desmosomes), allowing micronutrient absorption while limiting the passage of insufficiently degraded macromolecules.' },
         { type: 'lead', label: 'Absorption', text: 'the intestinal mucosa is covered with villi, finger-like projections whose central axis contains smooth muscle cells as well as blood and lymphatic vessels. The villi are themselves covered with microvilli, which form a brush border and greatly increase the exchange surface. If spread out, the small intestine would have a surface area equivalent to a tennis court.' },
-        { type: 'figure', src: '/chapter-14/figure-14-14.png', caption: 'Figure 14.14 — Intestinal villus', alt: 'Histological organisation of an intestinal villus', orientation: 'portrait' },
+        { type: 'figure', src: '/chapter-14/en/figure-14-14.png', caption: 'Figure 14.14 — Intestinal villus', alt: 'Histological organisation of an intestinal villus', orientation: 'portrait' },
         { type: 'leadBullets', items: [
           { label: 'Blood pathway', text: 'blood capillaries absorb water, mineral salts, simple sugars, amino acids, short-chain fatty acids and water-soluble vitamins. These nutrients are then transported to the liver through the portal system.' },
           { label: 'Lymphatic pathway', text: 'lymphatic capillaries, or lacteals, mainly absorb fats, long-chain proteins and the fat-soluble vitamins A, D, E and K. They drain successively into the lymphatic network, the cisterna chyli and the thoracic duct before emptying into the venous network at the left jugulo-subclavian junction.' },
@@ -201,10 +201,10 @@ export const chapter14En: Chapter = {
           'Oesophageal hiatus (right and left vagus nerves) and cardia.',
           'Lesser curvature of the stomach, rich in vagal fibres.',
         ]},
-        { type: 'figure', src: '/chapter-14/figure-14-15.png', caption: 'Figure 14.15 — Cranial and cervical territory of the vagus nerve (in yellow)', alt: 'Cranial and cervical territory of the vagus nerve', orientation: 'landscape' },
-        { type: 'figure', src: '/chapter-14/figure-14-16.png', caption: 'Figure 14.16 — Left abdominal territory of the vagus nerve and coeliac (solar) plexus', alt: 'Left abdominal territory of the vagus nerve and coeliac plexus', orientation: 'landscape' },
-        { type: 'figure', src: '/chapter-14/figure-14-17.png', caption: 'Figure 14.17 — Oesophageal hiatus (right and left vagus nerves) and cardia', alt: 'Oesophageal hiatus and vagus nerves', orientation: 'landscape' },
-        { type: 'figure', src: '/chapter-14/figure-14-18.png', caption: 'Figure 14.18 — Lesser curvature of the stomach, rich in vagal fibres', alt: 'Lesser curvature of the stomach and vagal fibres', orientation: 'landscape' },
+        { type: 'figure', src: '/chapter-14/en/figure-14-15.png', caption: 'Figure 14.15 — Cranial and cervical territory of the vagus nerve (in yellow)', alt: 'Cranial and cervical territory of the vagus nerve', orientation: 'landscape' },
+        { type: 'figure', src: '/chapter-14/en/figure-14-16.png', caption: 'Figure 14.16 — Left abdominal territory of the vagus nerve and coeliac (solar) plexus', alt: 'Left abdominal territory of the vagus nerve and coeliac plexus', orientation: 'landscape' },
+        { type: 'figure', src: '/chapter-14/en/figure-14-17.png', caption: 'Figure 14.17 — Oesophageal hiatus (right and left vagus nerves) and cardia', alt: 'Oesophageal hiatus and vagus nerves', orientation: 'landscape' },
+        { type: 'figure', src: '/chapter-14/en/figure-14-18.png', caption: 'Figure 14.18 — Lesser curvature of the stomach, rich in vagal fibres', alt: 'Lesser curvature of the stomach and vagal fibres', orientation: 'landscape' },
 
         { type: 'sub', text: '2. Sympathetic system' },
         { type: 'bullets', items: [
@@ -212,9 +212,9 @@ export const chapter14En: Chapter = {
           'Coeliac (solar) plexus.',
           'Lumbar plexus (viscerosomatic link).',
         ]},
-        { type: 'figure', src: '/chapter-14/figure-14-19.png', caption: 'Figure 14.19 — Sympathetic system (spinal origin)', alt: 'Sympathetic system and ganglionic chain', orientation: 'landscape' },
-        { type: 'figure', src: '/chapter-14/figure-14-20.png', caption: 'Figure 14.20 — Lumbar ganglionic chain and crura of the diaphragm', alt: 'Lumbar ganglionic chain and crura of the diaphragm', orientation: 'landscape' },
-        { type: 'figure', src: '/chapter-14/figure-14-21.png', caption: 'Figure 14.21 — Coeliac (solar) plexus', alt: 'Coeliac solar plexus', orientation: 'landscape' },
+        { type: 'figure', src: '/chapter-14/en/figure-14-19.png', caption: 'Figure 14.19 — Sympathetic system (spinal origin)', alt: 'Sympathetic system and ganglionic chain', orientation: 'landscape' },
+        { type: 'figure', src: '/chapter-14/en/figure-14-20.png', caption: 'Figure 14.20 — Lumbar ganglionic chain and crura of the diaphragm', alt: 'Lumbar ganglionic chain and crura of the diaphragm', orientation: 'landscape' },
+        { type: 'figure', src: '/chapter-14/en/figure-14-21.png', caption: 'Figure 14.21 — Coeliac (solar) plexus', alt: 'Coeliac solar plexus', orientation: 'landscape' },
 
         { type: 'para', text: 'N.B. In our clinical experience, functional intestinal disorders are often observed in women in association with hormonal and emotional factors.' },
 
@@ -225,8 +225,8 @@ export const chapter14En: Chapter = {
           'Root of the mesentery: a line from the duodenojejunal junction to the umbilicus, at the level of L3-L4 (plantar surface of the left foot).',
           'Root of the mesentery: a line from the ileocaecal valve to the umbilicus (plantar surface of the right foot).',
         ]},
-        { type: 'figure', src: '/chapter-14/figure-14-22.jpg', caption: 'Figure 14.22 — Root of the mesentery (between the duodenojejunal junction and the umbilicus)', alt: 'Reflex zone of the root of the mesentery — jejunum side', orientation: 'portrait' },
-        { type: 'figure', src: '/chapter-14/figure-14-23.jpg', caption: 'Figure 14.23 — Root of the mesentery (between the ileocaecal valve and the umbilicus)', alt: 'Reflex zone of the root of the mesentery — ileum side', orientation: 'portrait' },
+        { type: 'figure', src: '/chapter-14/en/figure-14-22.png', caption: 'Figure 14.22 — Root of the mesentery (between the duodenojejunal junction and the umbilicus)', alt: 'Reflex zone of the root of the mesentery — jejunum side', orientation: 'portrait' },
+        { type: 'figure', src: '/chapter-14/en/figure-14-23.png', caption: 'Figure 14.23 — Root of the mesentery (between the ileocaecal valve and the umbilicus)', alt: 'Reflex zone of the root of the mesentery — ileum side', orientation: 'portrait' },
 
         { type: 'sub', text: 'Podal reflex zones — Jejunum (left foot)' },
         { type: 'bullets', items: [
@@ -235,8 +235,8 @@ export const chapter14En: Chapter = {
           'Lateral limit: extending to the lateral border of the left foot.',
           'Respect the orientation of the loops: horizontal for the jejunum.',
         ]},
-        { type: 'figure', src: '/chapter-14/figure-14-24.png', caption: 'Figure 14.24 — Jejunum (upper and lower limits)', alt: 'Limits of the jejunum reflex zone on the left foot', orientation: 'landscape' },
-        { type: 'figure', src: '/chapter-14/figure-14-25.png', caption: 'Figure 14.25 — Jejunum', alt: 'Jejunum reflex zone on the left foot', orientation: 'landscape' },
+        { type: 'figure', src: '/chapter-14/en/figure-14-24.png', caption: 'Figure 14.24 — Jejunum (upper and lower limits)', alt: 'Limits of the jejunum reflex zone on the left foot', orientation: 'landscape' },
+        { type: 'figure', src: '/chapter-14/en/figure-14-25.png', caption: 'Figure 14.25 — Jejunum', alt: 'Jejunum reflex zone on the left foot', orientation: 'landscape' },
 
         { type: 'sub', text: 'Podal reflex zones — Ileum (right foot)' },
         { type: 'bullets', items: [
@@ -245,12 +245,12 @@ export const chapter14En: Chapter = {
           'Lateral limit: aligned with the fourth toe of the right foot.',
           'Respect the orientation of the loops: vertical for the ileum.',
         ]},
-        { type: 'figure', src: '/chapter-14/figure-14-26.png', caption: 'Figure 14.26 — Ileum (upper and lower limits)', alt: 'Limits of the ileum reflex zone on the right foot', orientation: 'landscape' },
-        { type: 'figure', src: '/chapter-14/figure-14-27.png', caption: 'Figure 14.27 — Ileum and root of the mesentery', alt: 'Ileum reflex zone and root of the mesentery on the right foot', orientation: 'landscape' },
+        { type: 'figure', src: '/chapter-14/en/figure-14-26.png', caption: 'Figure 14.26 — Ileum (upper and lower limits)', alt: 'Limits of the ileum reflex zone on the right foot', orientation: 'landscape' },
+        { type: 'figure', src: '/chapter-14/en/figure-14-27.png', caption: 'Figure 14.27 — Ileum and root of the mesentery', alt: 'Ileum reflex zone and root of the mesentery on the right foot', orientation: 'landscape' },
 
         { type: 'sub', text: '3. Limbic system' },
         { type: 'lead', label: 'Limbic brain — small intestine balance', text: 'listening-induction: one thumb on the small intestine, the other thumb on the limbic brain.' },
-        { type: 'figure', src: '/chapter-14/figure-14-28.png', caption: 'Figure 14.28 — Viscero-emotional balance technique — small intestine', alt: 'Viscero-emotional balance — small intestine and limbic brain', orientation: 'landscape' },
+        { type: 'figure', src: '/chapter-14/en/figure-14-28.png', caption: 'Figure 14.28 — Viscero-emotional balance technique — small intestine', alt: 'Viscero-emotional balance — small intestine and limbic brain', orientation: 'landscape' },
       ],
     },
     {
