@@ -31,7 +31,7 @@ export const chapter14De: Chapter = {
       title: 'Lage',
       blocks: [
         { type: 'para', text: 'Das Jejunum-Ileum nimmt einen großen Teil der Bauchhöhle ein, bevorzugt links als rechts, innerhalb des Kolonrahmens. Das Jejunum befindet sich vorzugsweise im linken oberen Quadranten des Abdomens. Das Ileum befindet sich vorzugsweise im rechten unteren Quadranten des Abdomens.' },
-        { type: 'figure', src: '/chapter-14/figure-14-1.png', caption: 'Abbildung 14.1 — Abdominale Topographie in vier Quadranten', alt: 'Die vier Bauchquadranten', orientation: 'portrait' },
+        { type: 'figure', src: '/chapter-14/ge/Chapter14 Fig1 GE.png', caption: 'Abbildung 14.1 — Abdominale Topographie in vier Quadranten', alt: 'Die vier Bauchquadranten', orientation: 'portrait' },
       ],
     },
     {
@@ -40,11 +40,11 @@ export const chapter14De: Chapter = {
       blocks: [
         { type: 'lead', label: 'Jejunum-Ileum', text: 'es besteht aus 15 bis 16 U-förmigen Darmschlingen, die in zwei Gruppen angeordnet sind. Eine obere Gruppe links, das Jejunum, das stärker entwickelt ist als das Ileum und dessen Schlingen und Gefäßsystem eher horizontal ausgerichtet sind. Eine untere Gruppe rechts, das Ileum, dessen Schlingen und Gefäßsystem eher vertikal ausgerichtet sind.' },
         { type: 'lead', label: 'Mesenterium', text: 'es ist ein Meso, d. h. eine doppelblättrige Peritonealreflexion. Es umhüllt das Jejunum-Ileum und verbindet es über die Mesenterialwurzel mit der hinteren Bauchwand.' },
-        { type: 'figure', src: '/chapter-14/figure-14-2.png', caption: 'Abbildung 14.2 — Mesos', alt: 'Die peritonealen Mesos', orientation: 'portrait' },
+        { type: 'figure', src: '/chapter-14/ge/Chapter14 Fig2 GE.png', caption: 'Abbildung 14.2 — Mesos', alt: 'Die peritonealen Mesos', orientation: 'portrait' },
         { type: 'lead', label: 'Mesenterialwurzel', text: 'sie bildet die Anheftungslinie des Mesenteriums und trägt zur Stabilität des ansonsten sehr beweglichen Dünndarms bei. Sie misst 16 bis 18 cm. Sie erstreckt sich von der duodenojejunalen Verbindung bis zur Ileozökalklappe und kreuzt dabei die Medianachse des Abdomens auf Höhe des Nabels (auf Höhe der Bandscheibe L3-L4). Die duodenojejunale Verbindung wird durch den Treitz-Muskel gehalten, dessen glatte Fasern am rechten Zwerchfellpfeiler ansetzen.' },
-        { type: 'figure', src: '/chapter-14/figure-14-3.png', caption: 'Abbildung 14.3 — Mesenterialwurzel', alt: 'Mesenterialwurzel und ihr abdominaler Verlauf', orientation: 'landscape' },
+        { type: 'figure', src: '/chapter-14/ge/Chapter14 Fig3 GE.png', caption: 'Abbildung 14.3 — Mesenterialwurzel', alt: 'Mesenterialwurzel und ihr abdominaler Verlauf', orientation: 'landscape' },
         { type: 'lead', label: 'Treitz-Muskel', text: 'er trägt durch seine Kontraktion zur Aufrechterhaltung des duodenojejunalen Winkels bei, indem er die Mesenterialwurzel nach oben und links zieht. Durch die Förderung der Längsspannung beteiligt er sich an der Entleerung des Duodenalinhalts in das Jejunum. Die Mesenterialwurzel versorgt den Dünndarm mit Gefäßen und Nerven.' },
-        { type: 'figure', src: '/chapter-14/figure-14-4.png', caption: 'Abbildung 14.4 — Treitz-Muskel', alt: 'Treitz-Muskel und duodenojejunaler Winkel', orientation: 'landscape' },
+        { type: 'figure', src: '/chapter-14/ge/Chapter14 Fig4 GE.png', caption: 'Abbildung 14.4 — Treitz-Muskel', alt: 'Treitz-Muskel und duodenojejunaler Winkel', orientation: 'landscape' },
         { type: 'rop', body: [
           'Der Verlust der Längsspannung der Mesenterialwurzel ist klinisch mit dem Aortomesenterial-Klemmsyndrom oder Nussknacker-Syndrom in Verbindung zu bringen: einer Kompression des 4. Duodenalteils und der linken Nierenvene zwischen der Aorta und der Arteria mesenterica superior. Die Entleerung des Duodenalinhalts in das Jejunum kann sich verzögern, mit dem Risiko eines gastroduodenalen Reflux.',
           'Das reiche vaskuläre, nervöse und lymphatische Netzwerk der Mesenterialwurzel ist hochgradig reflexogen. Die Stimulation seiner Reflexzone zielt darauf ab, eine funktionelle Reaktion des Jejunum-Ileum zu erleichtern.',
@@ -72,13 +72,13 @@ export const chapter14De: Chapter = {
       blocks: [
         { type: 'para', text: 'Der Dünndarm benötigt eine umfangreiche vaskuläre und lymphatische Versorgung, um seine Funktionen der Verdauung, Resorption und Immunabwehr zu erfüllen.' },
         { type: 'lead', label: 'Arteria mesenterica superior', text: 'sie bildet die arterielle Hauptachse des Dünndarms. Sie ist ein Ast der Bauchaorta. Ihr Ursprung liegt 1 cm unterhalb des Truncus coeliacus, auf Höhe der Bandscheibe Th12-L1. Zunächst retropankreatisch und dann vor dem 3. Teil des Duodenums verläuft sie zwischen den beiden Blättern des Mesenteriums. Sie gibt zahlreiche Kollateraläste ab. Sie versorgt den gesamten Dünndarm, das Colon ascendens und die proximalen zwei Drittel des Colon transversum.' },
-        { type: 'figure', src: '/chapter-14/figure-14-5.png', caption: 'Abbildung 14.5 — Arteria mesenterica superior', alt: 'Arteria mesenterica superior und ihre Äste', orientation: 'portrait' },
+        { type: 'figure', src: '/chapter-14/ge/Chapter14 Fig5 GE.png', caption: 'Abbildung 14.5 — Arteria mesenterica superior', alt: 'Arteria mesenterica superior und ihre Äste', orientation: 'portrait' },
         { type: 'para', text: 'Ihr Puls, der auf Höhe des 3. Teils des Duodenums, rechts vom Nabel, spürbar ist, kann einen klinisch-vaskulären Orientierungspunkt darstellen, ohne allein Rückschlüsse auf die Darmfunktion zu erlauben.' },
-        { type: 'figure', src: '/chapter-14/figure-14-6.png', caption: 'Abbildung 14.6 — Puls der Arterien der Bauchhöhle', alt: 'Puls der Arterien der Bauchhöhle', orientation: 'landscape' },
+        { type: 'figure', src: '/chapter-14/ge/Chapter14 Fig6 GE.png', caption: 'Abbildung 14.6 — Puls der Arterien der Bauchhöhle', alt: 'Puls der Arterien der Bauchhöhle', orientation: 'landscape' },
         { type: 'lead', label: 'Vena mesenterica superior', text: 'sie liegt rechts der Arteria mesenterica superior und gehört zum Pfortadersystem. Sie drainiert das venöse Blut, das mit den im Dünndarm absorbierten Nährstoffen beladen ist, zur Leber.' },
-        { type: 'figure', src: '/chapter-14/figure-14-7.png', caption: 'Abbildung 14.7 — Pfortadersystem', alt: 'Hepatisches Pfortadersystem', orientation: 'landscape' },
+        { type: 'figure', src: '/chapter-14/ge/Chapter14 Fig7 GE.png', caption: 'Abbildung 14.7 — Pfortadersystem', alt: 'Hepatisches Pfortadersystem', orientation: 'landscape' },
         { type: 'lead', label: 'Lymphatisches Netzwerk', text: 'der Dünndarm besitzt ein ausgeprägtes lymphatisches Netzwerk. Es beteiligt sich am Immunsystem. Es übernimmt Lipidmoleküle und langkettige Proteine sowie die fettlöslichen Vitamine A, D, E, K, die über die Cisterna chyli und den Ductus thoracicus zur linken Vena jugulo-subclavia geleitet werden.' },
-        { type: 'figure', src: '/chapter-14/figure-14-8.png', caption: 'Abbildung 14.8 — Lymphatisches System', alt: 'Abdominales lymphatisches System', orientation: 'landscape' },
+        { type: 'figure', src: '/chapter-14/ge/Chapter14 Fig8 GE.png', caption: 'Abbildung 14.8 — Lymphatisches System', alt: 'Abdominales lymphatisches System', orientation: 'landscape' },
       ],
     },
     {
@@ -88,11 +88,11 @@ export const chapter14De: Chapter = {
         { type: 'sub', text: 'Innervation des Peritoneums' },
         { type: 'para', text: 'Das Peritoneum erhält eine doppelte Innervation, somatisch und autonom.' },
         { type: 'lead', label: 'Parietales Peritoneum', text: 'es erhält eine somatische Innervation, die es mit der Bauchwand über die Nn. phrenici, die letzten sechs Interkostalnerven und die Nerven des Plexus lumbalis teilt. Es besitzt zahlreiche Endigungen, die auf Temperatur, Druck und Schmerz reagieren. Diese gemeinsame Innervation mit der Bauchwand erklärt die Projektion von Schmerzen im Bereich des Halses, der Schulterblätter, des Abdomens und der Lendenwirbelsäule peritonealen und viszeralen Ursprungs, die über die somatischen Fasern des parietalen Blattes auf den Bewegungsapparat übertragen werden.' },
-        { type: 'figure', src: '/chapter-14/figure-14-9.png', caption: 'Abbildung 14.9 — Nervus phrenicus', alt: 'Nervus phrenicus und sein Verlauf', orientation: 'landscape' },
-        { type: 'figure', src: '/chapter-14/figure-14-10.png', caption: 'Abbildung 14.10 — Interkostalnerven', alt: 'Interkostalnerven', orientation: 'landscape' },
-        { type: 'figure', src: '/chapter-14/figure-14-11.png', caption: 'Abbildung 14.11 — Nerven des Plexus lumbalis', alt: 'Nerven des Plexus lumbalis', orientation: 'landscape' },
+        { type: 'figure', src: '/chapter-14/ge/Chapter14 Fig9 GE.png', caption: 'Abbildung 14.9 — Nervus phrenicus', alt: 'Nervus phrenicus und sein Verlauf', orientation: 'landscape' },
+        { type: 'figure', src: '/chapter-14/ge/Chapter14 Fig10 GE.png', caption: 'Abbildung 14.10 — Interkostalnerven', alt: 'Interkostalnerven', orientation: 'landscape' },
+        { type: 'figure', src: '/chapter-14/ge/Chapter14 Fig11 GE.png', caption: 'Abbildung 14.11 — Nerven des Plexus lumbalis', alt: 'Nerven des Plexus lumbalis', orientation: 'landscape' },
         { type: 'lead', label: 'Viszerales Peritoneum', text: 'es erhält eine extrinsisch-autonome Innervation, die es mit den Eingeweiden teilt. Sympathikus: seine Wurzeln entstammen Th8 bis Th11. Sie gelangen über die Nn. splanchnici majores und minores zu den prävertebralen Plexus coeliacus und mesentericus superior.' },
-        { type: 'figure', src: '/chapter-14/figure-14-12.jpg', caption: 'Abbildung 14.12 — Vegetatives Nervensystem', alt: 'Vegetatives Nervensystem', orientation: 'portrait' },
+        { type: 'figure', src: '/chapter-14/ge/Chapter14 Fig12 GE.png', caption: 'Abbildung 14.12 — Vegetatives Nervensystem', alt: 'Vegetatives Nervensystem', orientation: 'portrait' },
 
         { type: 'sub', text: 'Vagusnerv und Sympathikus' },
         { type: 'leadBullets', items: [
@@ -104,7 +104,7 @@ export const chapter14De: Chapter = {
 
         { type: 'sub', text: 'Enterisches Nervensystem (ENS)' },
         { type: 'para', text: 'Das intrinsische oder enterische Nervensystem (ENS) wird oft als zweites Gehirn oder Bauchgehirn bezeichnet. Es besteht aus intramuralen Plexus in der Wand des Dünndarms selbst: dem myenterischen Plexus von Auerbach und dem submukösem Plexus von Meissner.' },
-        { type: 'figure', src: '/chapter-14/figure-14-13.png', caption: 'Abbildung 14.13 — Enterische intramurale Plexus', alt: 'Auerbach-Plexus und Meissner-Plexus in der Darmwand', orientation: 'landscape' },
+        { type: 'figure', src: '/chapter-14/ge/Chapter14 Fig13 GE.png', caption: 'Abbildung 14.13 — Enterische intramurale Plexus', alt: 'Auerbach-Plexus und Meissner-Plexus in der Darmwand', orientation: 'landscape' },
         { type: 'bullets', items: [
           'Das ENS ist empfindlich gegenüber neurohormonalen Signalen und der chemischen Zusammensetzung des Darminhalts.',
           'Es kann weitgehend autonom gegenüber Gehirn und Rückenmark funktionieren, solange die physiologischen Bedingungen dies zulassen.',
@@ -131,7 +131,7 @@ export const chapter14De: Chapter = {
         { type: 'lead', label: 'Darmschleimhaut', text: 'sie bildet die Schnittstelle zwischen dem Körperinnern und dem Inhalt des Verdauungslumens. Sie fungiert als selektive Barriere, um Verdauung und Resorption zu ermöglichen.' },
         { type: 'lead', label: 'Verdauung', text: 'sie entspricht der Umwandlung von Nahrung in einfache Moleküle, die dann resorbiert werden können. Becherzellen produzieren einen Schutzschleim. Lieberkühn-Zellen beteiligen sich an der leicht alkalischen Darmsekretion sowie an enzymatischen und antimikrobiellen Funktionen. Enterozyten oder Absorptionszellen erfüllen eine selektive Barrierefunktion durch ihre interzelluläre Anordnung (Desmosomen), die die Aufnahme von Mikronährstoffen ermöglicht und gleichzeitig den Durchtritt unzureichend abgebauter Makromoleküle begrenzt.' },
         { type: 'lead', label: 'Resorption', text: 'die Darmschleimhaut ist mit fingerförmigen Zottenfortsätzen überzogen, deren zentraler Achse glatte Muskelzellen sowie ein Blut- und Lymphnetzwerk enthält. Die Zotten sind ihrerseits von Mikrovilli bedeckt, die einen Bürstensaum bilden, wodurch die Austauschfläche stark vergrößert wird. Der ausgebreitete Dünndarm hätte eine Oberfläche, die einem Tennisplatz entspricht.' },
-        { type: 'figure', src: '/chapter-14/figure-14-14.png', caption: 'Abbildung 14.14 — Darmzotte', alt: 'Histologische Organisation einer Darmzotte', orientation: 'portrait' },
+        { type: 'figure', src: '/chapter-14/ge/Chapter14 Fig14 GE.png', caption: 'Abbildung 14.14 — Darmzotte', alt: 'Histologische Organisation einer Darmzotte', orientation: 'portrait' },
         { type: 'leadBullets', items: [
           { label: 'Blutweg', text: 'die Blutkapillaren absorbieren Wasser, Mineralsalze, einfache Zucker, Aminosäuren, kurzkettige Fettsäuren und wasserlösliche Vitamine. Diese Nährstoffe werden über das Pfortadersystem zur Leber transportiert.' },
           { label: 'Lymphweg', text: 'die Lymphkapillaren (oder Chylusgefäße) absorbieren hauptsächlich Fette, langkettige Proteine und fettlösliche Vitamine A, D, E, K. Sie vereinigen sich sukzessive im Lymphnetz, der Cisterna chyli und dem Ductus thoracicus, bevor sie in das Venennetz der linken Vena jugulo-subclavia einmünden.' },
@@ -201,10 +201,10 @@ export const chapter14De: Chapter = {
           'Ösophagushiatus (rechter und linker Vagusnerv) und Kardia.',
           'Kleine Kurvatur des Magens, reich an Vagusfasern.',
         ]},
-        { type: 'figure', src: '/chapter-14/figure-14-15.png', caption: 'Abbildung 14.15 — Kranialer und zervikaler Bereich des Vagusnervs (in Gelb)', alt: 'Kranialer und zervikaler Bereich des Vagusnervs', orientation: 'landscape' },
-        { type: 'figure', src: '/chapter-14/figure-14-16.png', caption: 'Abbildung 14.16 — Linker abdominaler Bereich des Vagusnervs und Plexus coeliacus (Solarplexus)', alt: 'Linker abdominaler Bereich des Vagusnervs und Plexus coeliacus', orientation: 'landscape' },
-        { type: 'figure', src: '/chapter-14/figure-14-17.png', caption: 'Abbildung 14.17 — Ösophagushiatus (rechter und linker Vagusnerv) und Kardia', alt: 'Ösophagushiatus und Vagusnerven', orientation: 'landscape' },
-        { type: 'figure', src: '/chapter-14/figure-14-18.png', caption: 'Abbildung 14.18 — Kleine Kurvatur des Magens, reich an Vagusfasern', alt: 'Kleine Kurvatur des Magens und Vagusfasern', orientation: 'landscape' },
+        { type: 'figure', src: '/chapter-14/ge/Chapter14 Fig15 GE.png', caption: 'Abbildung 14.15 — Kranialer und zervikaler Bereich des Vagusnervs (in Gelb)', alt: 'Kranialer und zervikaler Bereich des Vagusnervs', orientation: 'landscape' },
+        { type: 'figure', src: '/chapter-14/ge/Chapter14 Fig16 GE.png', caption: 'Abbildung 14.16 — Linker abdominaler Bereich des Vagusnervs und Plexus coeliacus (Solarplexus)', alt: 'Linker abdominaler Bereich des Vagusnervs und Plexus coeliacus', orientation: 'landscape' },
+        { type: 'figure', src: '/chapter-14/ge/Chapter14 Fig17 GE.png', caption: 'Abbildung 14.17 — Ösophagushiatus (rechter und linker Vagusnerv) und Kardia', alt: 'Ösophagushiatus und Vagusnerven', orientation: 'landscape' },
+        { type: 'figure', src: '/chapter-14/ge/Chapter14 Fig18 GE.png', caption: 'Abbildung 14.18 — Kleine Kurvatur des Magens, reich an Vagusfasern', alt: 'Kleine Kurvatur des Magens und Vagusfasern', orientation: 'landscape' },
 
         { type: 'sub', text: '2. Sympathisches System' },
         { type: 'bullets', items: [
@@ -212,9 +212,9 @@ export const chapter14De: Chapter = {
           'Plexus coeliacus (Solarplexus).',
           'Plexus lumbalis (viszero-somatische Verbindung).',
         ]},
-        { type: 'figure', src: '/chapter-14/figure-14-19.png', caption: 'Abbildung 14.19 — Sympathisches System (spinaler Ursprung)', alt: 'Sympathisches System und Ganglionkette', orientation: 'landscape' },
-        { type: 'figure', src: '/chapter-14/figure-14-20.png', caption: 'Abbildung 14.20 — Lumbale Ganglionkette und Zwerchfellpfeiler', alt: 'Lumbale Ganglionkette und Zwerchfellpfeiler', orientation: 'landscape' },
-        { type: 'figure', src: '/chapter-14/figure-14-21.png', caption: 'Abbildung 14.21 — Plexus coeliacus (Solarplexus)', alt: 'Solarplexus coeliacus', orientation: 'landscape' },
+        { type: 'figure', src: '/chapter-14/ge/Chapter14 Fig19 GE.png', caption: 'Abbildung 14.19 — Sympathisches System (spinaler Ursprung)', alt: 'Sympathisches System und Ganglionkette', orientation: 'landscape' },
+        { type: 'figure', src: '/chapter-14/ge/Chapter14 Fig20 GE.png', caption: 'Abbildung 14.20 — Lumbale Ganglionkette und Zwerchfellpfeiler', alt: 'Lumbale Ganglionkette und Zwerchfellpfeiler', orientation: 'landscape' },
+        { type: 'figure', src: '/chapter-14/ge/Chapter14 Fig21 GE.png', caption: 'Abbildung 14.21 — Plexus coeliacus (Solarplexus)', alt: 'Solarplexus coeliacus', orientation: 'landscape' },
 
         { type: 'para', text: 'N.B. In unserer klinischen Erfahrung werden funktionelle Darmstörungen häufig bei Frauen in Zusammenhang mit hormonellen und emotionalen Faktoren beobachtet.' },
 
@@ -225,8 +225,8 @@ export const chapter14De: Chapter = {
           'Mesenterialwurzel: eine Linie von der duodenojejunalen Verbindung zum Nabel, auf Höhe L3-L4 (Plantarfläche des linken Fußes).',
           'Mesenterialwurzel: eine Linie von der Ileozökalklappe zum Nabel (Plantarfläche des rechten Fußes).',
         ]},
-        { type: 'figure', src: '/chapter-14/figure-14-22.jpg', caption: 'Abbildung 14.22 — Mesenterialwurzel (zwischen der duodenojejunalen Verbindung und dem Nabel)', alt: 'Reflexzone der Mesenterialwurzel — Jejunumseite', orientation: 'portrait' },
-        { type: 'figure', src: '/chapter-14/figure-14-23.jpg', caption: 'Abbildung 14.23 — Mesenterialwurzel (zwischen der Ileozökalklappe und dem Nabel)', alt: 'Reflexzone der Mesenterialwurzel — Ileumseite', orientation: 'portrait' },
+        { type: 'figure', src: '/chapter-14/ge/Chapter14 Fig22 GE.png', caption: 'Abbildung 14.22 — Mesenterialwurzel (zwischen der duodenojejunalen Verbindung und dem Nabel)', alt: 'Reflexzone der Mesenterialwurzel — Jejunumseite', orientation: 'portrait' },
+        { type: 'figure', src: '/chapter-14/ge/Chapter14 Fig23 GE.png', caption: 'Abbildung 14.23 — Mesenterialwurzel (zwischen der Ileozökalklappe und dem Nabel)', alt: 'Reflexzone der Mesenterialwurzel — Ileumseite', orientation: 'portrait' },
 
         { type: 'sub', text: 'Podale Reflexzonen — Jejunum (linker Fuß)' },
         { type: 'bullets', items: [
@@ -235,8 +235,8 @@ export const chapter14De: Chapter = {
           'Laterale Grenze: bis zum lateralen Rand des linken Fußes.',
           'Die Ausrichtung der Schlingen beachten: horizontal für das Jejunum.',
         ]},
-        { type: 'figure', src: '/chapter-14/figure-14-24.png', caption: 'Abbildung 14.24 — Jejunum (obere und untere Grenze)', alt: 'Grenzen der Jejunum-Reflexzone am linken Fuß', orientation: 'landscape' },
-        { type: 'figure', src: '/chapter-14/figure-14-25.png', caption: 'Abbildung 14.25 — Jejunum', alt: 'Jejunum-Reflexzone am linken Fuß', orientation: 'landscape' },
+        { type: 'figure', src: '/chapter-14/ge/Chapter14 Fig24 GE.png', caption: 'Abbildung 14.24 — Jejunum (obere und untere Grenze)', alt: 'Grenzen der Jejunum-Reflexzone am linken Fuß', orientation: 'landscape' },
+        { type: 'figure', src: '/chapter-14/ge/Chapter14 Fig25 GE.png', caption: 'Abbildung 14.25 — Jejunum', alt: 'Jejunum-Reflexzone am linken Fuß', orientation: 'landscape' },
 
         { type: 'sub', text: 'Podale Reflexzonen — Ileum (rechter Fuß)' },
         { type: 'bullets', items: [
@@ -245,12 +245,12 @@ export const chapter14De: Chapter = {
           'Laterale Grenze: in der Verlängerung der 4. Zehe des rechten Fußes.',
           'Die Ausrichtung der Schlingen beachten: vertikal für das Ileum.',
         ]},
-        { type: 'figure', src: '/chapter-14/figure-14-26.png', caption: 'Abbildung 14.26 — Ileum (obere und untere Grenze)', alt: 'Grenzen der Ileum-Reflexzone am rechten Fuß', orientation: 'landscape' },
-        { type: 'figure', src: '/chapter-14/figure-14-27.png', caption: 'Abbildung 14.27 — Ileum und Mesenterialwurzel', alt: 'Ileum-Reflexzone und Mesenterialwurzel am rechten Fuß', orientation: 'landscape' },
+        { type: 'figure', src: '/chapter-14/ge/Chapter14 Fig26 GE.png', caption: 'Abbildung 14.26 — Ileum (obere und untere Grenze)', alt: 'Grenzen der Ileum-Reflexzone am rechten Fuß', orientation: 'landscape' },
+        { type: 'figure', src: '/chapter-14/ge/Chapter14 Fig27 GE.png', caption: 'Abbildung 14.27 — Ileum und Mesenterialwurzel', alt: 'Ileum-Reflexzone und Mesenterialwurzel am rechten Fuß', orientation: 'landscape' },
 
         { type: 'sub', text: '3. Limbisches System' },
         { type: 'lead', label: 'Limbisches Gehirn — Dünndarm-Balance', text: 'Induktion-Zuhören: ein Daumen auf dem Dünndarm, der andere auf dem limbischen Gehirn.' },
-        { type: 'figure', src: '/chapter-14/figure-14-28.png', caption: 'Abbildung 14.28 — Viszero-emotionale Balance-Technik — Dünndarm', alt: 'Viszero-emotionale Balance Dünndarm und limbisches Gehirn', orientation: 'landscape' },
+        { type: 'figure', src: '/chapter-14/ge/Chapter14 Fig28 GE.png', caption: 'Abbildung 14.28 — Viszero-emotionale Balance-Technik — Dünndarm', alt: 'Viszero-emotionale Balance Dünndarm und limbisches Gehirn', orientation: 'landscape' },
       ],
     },
     {
