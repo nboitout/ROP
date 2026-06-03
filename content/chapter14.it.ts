@@ -203,8 +203,8 @@ export const chapter14It: Chapter = {
         ]},
         { type: 'figure', src: '/chapter-14/it/Chapter14 Fig15 IT.png', caption: 'Figura 14.15 — Territorio cranico e cervicale del nervo vago (in giallo)', alt: 'Territorio cranico e cervicale del nervo vago', orientation: 'landscape' },
         { type: 'figure', src: '/chapter-14/it/Chapter14 Fig16 IT.png', caption: 'Figura 14.16 — Territorio addominale sinistro del nervo vago e plesso celiaco (solare)', alt: 'Territorio addominale sinistro del nervo vago e plesso celiaco', orientation: 'landscape' },
-        { type: 'figure', src: '/chapter-14/it/Chapter14 Fig17 IT.png', caption: 'Figura 14.17 — Hiatus esofageo (nervi vaghi destro e sinistro) e cardias', alt: 'Hiatus esofageo e nervi vaghi', orientation: 'narrow' },
-        { type: 'figure', src: '/chapter-14/it/Chapter14 Fig18 IT.png', caption: 'Figura 14.18 — Piccola curvatura dello stomaco, ricca di fibre vagali', alt: 'Piccola curvatura dello stomaco e fibre vagali', orientation: 'narrow' },
+        { type: 'figure', src: '/chapter-14/it/Chapter14 Fig17 IT.png', caption: 'Figura 14.17 — Hiatus esofageo (nervi vaghi destro e sinistro) e cardias', alt: 'Hiatus esofageo e nervi vaghi', orientation: 'medium' },
+        { type: 'figure', src: '/chapter-14/it/Chapter14 Fig18 IT.png', caption: 'Figura 14.18 — Piccola curvatura dello stomaco, ricca di fibre vagali', alt: 'Piccola curvatura dello stomaco e fibre vagali', orientation: 'medium' },
 
         { type: 'sub', text: '2. Sistema simpatico' },
         { type: 'bullets', items: [
@@ -235,7 +235,7 @@ export const chapter14It: Chapter = {
           'Limite laterale: fino al bordo laterale del piede sinistro.',
           'Rispettare l\'orientamento delle anse: orizzontali per il digiuno.',
         ]},
-        { type: 'figure', src: '/chapter-14/it/Chapter14 Fig24 IT.png', caption: 'Figura 14.24 — Digiuno (limiti superiore e inferiore)', alt: 'Limiti della zona riflessiva del digiuno sul piede sinistro', orientation: 'narrow' },
+        { type: 'figure', src: '/chapter-14/it/Chapter14 Fig24 IT.png', caption: 'Figura 14.24 — Digiuno (limiti superiore e inferiore)', alt: 'Limiti della zona riflessiva del digiuno sul piede sinistro', orientation: 'portrait' },
         { type: 'figure', src: '/chapter-14/it/Chapter14 Fig25 IT.png', caption: 'Figura 14.25 — Digiuno', alt: 'Zona riflessiva del digiuno sul piede sinistro', orientation: 'landscape' },
 
         { type: 'sub', text: 'Zone riflesse podali — Ileo (piede destro)' },
@@ -245,12 +245,12 @@ export const chapter14It: Chapter = {
           'Limite laterale: a piombo del 4° dito del piede destro.',
           'Rispettare l\'orientamento delle anse: verticali per l\'ileo.',
         ]},
-        { type: 'figure', src: '/chapter-14/it/Chapter14 Fig26 IT.png', caption: 'Figura 14.26 — Ileo (limiti superiore e inferiore)', alt: 'Limiti della zona riflessiva dell\'ileo sul piede destro', orientation: 'narrow' },
+        { type: 'figure', src: '/chapter-14/it/Chapter14 Fig26 IT.png', caption: 'Figura 14.26 — Ileo (limiti superiore e inferiore)', alt: 'Limiti della zona riflessiva dell\'ileo sul piede destro', orientation: 'portrait' },
         { type: 'figure', src: '/chapter-14/it/Chapter14 Fig27 IT.png', caption: 'Figura 14.27 — Ileo e radice del mesentere', alt: 'Zona riflessiva dell\'ileo e radice del mesentere sul piede destro', orientation: 'landscape' },
 
         { type: 'sub', text: '3. Sistema limbico' },
         { type: 'lead', label: 'Bilancio cervello limbico — intestino tenue', text: 'ascolto-induzione: un pollice sull\'intestino tenue, l\'altro pollice sul cervello limbico.' },
-        { type: 'figure', src: '/chapter-14/it/Chapter14 Fig28 IT.png', caption: 'Figura 14.28 — Tecnica di bilancio viscero-emotivo — intestino tenue', alt: 'Bilancio viscero-emotivo intestino tenue e cervello limbico', orientation: 'narrow' },
+        { type: 'figure', src: '/chapter-14/it/Chapter14 Fig28 IT.png', caption: 'Figura 14.28 — Tecnica di bilancio viscero-emotivo — intestino tenue', alt: 'Bilancio viscero-emotivo intestino tenue e cervello limbico', orientation: 'portrait' },
       ],
     },
     {

@@ -203,8 +203,8 @@ export const chapter14Es: Chapter = {
         ]},
         { type: 'figure', src: '/chapter-14/es/Chapter14 Fig15 ES.png', caption: 'Figura 14.15 — Territorio craneal y cervical del nervio vago (en amarillo)', alt: 'Territorio craneal y cervical del nervio vago', orientation: 'landscape' },
         { type: 'figure', src: '/chapter-14/es/Chapter14 Fig16 ES.png', caption: 'Figura 14.16 — Territorio abdominal izquierdo del nervio vago y plexo celíaco (solar)', alt: 'Territorio abdominal izquierdo del nervio vago y plexo celíaco', orientation: 'landscape' },
-        { type: 'figure', src: '/chapter-14/es/Chapter14 Fig17 ES.png', caption: 'Figura 14.17 — Hiato esofágico (nervios vagos derecho e izquierdo) y cardias', alt: 'Hiato esofágico y nervios vagos', orientation: 'narrow' },
-        { type: 'figure', src: '/chapter-14/es/Chapter14 Fig18 ES.png', caption: 'Figura 14.18 — Curvatura menor del estómago, rica en fibras vagales', alt: 'Curvatura menor del estómago y fibras vagales', orientation: 'narrow' },
+        { type: 'figure', src: '/chapter-14/es/Chapter14 Fig17 ES.png', caption: 'Figura 14.17 — Hiato esofágico (nervios vagos derecho e izquierdo) y cardias', alt: 'Hiato esofágico y nervios vagos', orientation: 'medium' },
+        { type: 'figure', src: '/chapter-14/es/Chapter14 Fig18 ES.png', caption: 'Figura 14.18 — Curvatura menor del estómago, rica en fibras vagales', alt: 'Curvatura menor del estómago y fibras vagales', orientation: 'medium' },
 
         { type: 'sub', text: '2. Sistema simpático' },
         { type: 'bullets', items: [
@@ -235,7 +235,7 @@ export const chapter14Es: Chapter = {
           'Límite lateral: hasta el borde lateral del pie izquierdo.',
           'Respetar la orientación de las asas: horizontales para el yeyuno.',
         ]},
-        { type: 'figure', src: '/chapter-14/figure-14-24.png', caption: 'Figura 14.24 — Yeyuno (límites superior e inferior)', alt: 'Límites de la zona refleja del yeyuno en el pie izquierdo', orientation: 'narrow' },
+        { type: 'figure', src: '/chapter-14/figure-14-24.png', caption: 'Figura 14.24 — Yeyuno (límites superior e inferior)', alt: 'Límites de la zona refleja del yeyuno en el pie izquierdo', orientation: 'portrait' },
         { type: 'figure', src: '/chapter-14/figure-14-25.png', caption: 'Figura 14.25 — Yeyuno', alt: 'Zona refleja del yeyuno en el pie izquierdo', orientation: 'landscape' },
 
         { type: 'sub', text: 'Zonas reflejas podales — Íleon (pie derecho)' },
@@ -245,12 +245,12 @@ export const chapter14Es: Chapter = {
           'Límite lateral: a la vertical del 4.° dedo del pie derecho.',
           'Respetar la orientación de las asas: verticales para el íleon.',
         ]},
-        { type: 'figure', src: '/chapter-14/figure-14-26.png', caption: 'Figura 14.26 — Íleon (límites superior e inferior)', alt: 'Límites de la zona refleja del íleon en el pie derecho', orientation: 'narrow' },
+        { type: 'figure', src: '/chapter-14/figure-14-26.png', caption: 'Figura 14.26 — Íleon (límites superior e inferior)', alt: 'Límites de la zona refleja del íleon en el pie derecho', orientation: 'portrait' },
         { type: 'figure', src: '/chapter-14/figure-14-27.png', caption: 'Figura 14.27 — Íleon y raíz del mesenterio', alt: 'Zona refleja del íleon y raíz del mesenterio en el pie derecho', orientation: 'landscape' },
 
         { type: 'sub', text: '3. Sistema límbico' },
         { type: 'lead', label: 'Balance cerebro límbico — intestino delgado', text: 'escucha-inducción: un pulgar sobre el intestino delgado, el otro sobre el cerebro límbico.' },
-        { type: 'figure', src: '/chapter-14/figure-14-28.png', caption: 'Figura 14.28 — Técnica de balance viscero-emocional — intestino delgado', alt: 'Balance viscero-emocional intestino delgado y cerebro límbico', orientation: 'narrow' },
+        { type: 'figure', src: '/chapter-14/figure-14-28.png', caption: 'Figura 14.28 — Técnica de balance viscero-emocional — intestino delgado', alt: 'Balance viscero-emocional intestino delgado y cerebro límbico', orientation: 'portrait' },
       ],
     },
     {
