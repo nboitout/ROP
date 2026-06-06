@@ -193,7 +193,7 @@ export const chapter5En: Chapter = {
     caption: "Clinical case · Fibromyalgia — Chapter 5",
   },
   slides: {
-    url: "/chapter-5/synthese.pdf",
+    url: "/chapter-5/Chapter5 Slides EN.pdf",
     label: "Slides",
     description: "Visual summary of the chapter — stress mechanism, GAS, and ROP interventions.",
   },
