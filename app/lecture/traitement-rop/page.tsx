@@ -12,7 +12,11 @@ export const metadata: Metadata = {
   robots: { index: false, follow: false },
 }
 
-export default async function TraitementRopPage() {
+export default async function TraitementRopPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ lang?: string }>
+}) {
   const cookieStore = await cookies()
   const hasAdminSession = !!cookieStore.get('admin_session')
   const hasPaidAccess = !!cookieStore.get('paid_access')
@@ -21,7 +25,8 @@ export default async function TraitementRopPage() {
     redirect('/#acheter')
   }
 
-  const lang = await getServerLang()
+  const { lang: langParam } = await searchParams
+  const lang = await getServerLang(langParam)
   const { chapter, contentLang } = getChapter('chapter-2', lang)
   const bookTitle = translations[lang].reader.bookTitle
   return <ChapterReader chapter={chapter} bookTitle={bookTitle} contentLang={contentLang} backHref="/admin/chapitres" />

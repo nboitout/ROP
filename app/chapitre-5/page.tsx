@@ -13,12 +13,17 @@ export const metadata: Metadata = {
 
 const BOOK_TITLE = 'Réflexothérapie occipito-podale et viscères des cavités abdominale et pelvienne'
 
-export default async function Chapitre5Page() {
+export default async function Chapitre5Page({
+  searchParams,
+}: {
+  searchParams: Promise<{ lang?: string }>
+}) {
   const cookieStore = await cookies()
   if (!cookieStore.get('free_chapters_access')) {
     redirect('/?gate=free#acces-libre')
   }
 
-  const { chapter, contentLang } = getChapter('chapter-5', await getServerLang())
+  const { lang: langParam } = await searchParams
+  const { chapter, contentLang } = getChapter('chapter-5', await getServerLang(langParam))
   return <ChapterReader chapter={chapter} bookTitle={BOOK_TITLE} contentLang={contentLang} />
 }

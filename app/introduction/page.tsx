@@ -12,13 +12,18 @@ export const metadata: Metadata = {
   robots: { index: false, follow: false },
 }
 
-export default async function IntroductionPage() {
+export default async function IntroductionPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ lang?: string }>
+}) {
   const cookieStore = await cookies()
   if (!cookieStore.get('free_chapters_access')) {
     redirect('/?gate=free#acces-libre')
   }
 
-  const lang = await getServerLang()
+  const { lang: langParam } = await searchParams
+  const lang = await getServerLang(langParam)
   const { chapter, contentLang } = getChapter('introduction', lang)
   const bookTitle = translations[lang].reader.bookTitle
   return <ChapterReader chapter={chapter} bookTitle={bookTitle} contentLang={contentLang} />

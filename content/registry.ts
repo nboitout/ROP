@@ -46,3 +46,13 @@ export function getChapter(
   if (localized) return { chapter: localized, contentLang: lang }
   return { chapter: byLang.fr as Chapter, contentLang: 'fr' }
 }
+
+/**
+ * Lists the languages for which a chapter has its own translated content
+ * (i.e. not a French fallback). Returns an empty array for unknown keys.
+ * Used by the admin preparation board to show per-language status.
+ */
+export function getChapterLangs(key: string): Lang[] {
+  const byLang = registry[key]
+  return byLang ? (Object.keys(byLang) as Lang[]) : []
+}

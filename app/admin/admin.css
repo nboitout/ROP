@@ -454,6 +454,72 @@
   border-color: rgba(74,107,90,.3);
 }
 
+/* ---- Chapter preparation board ---- */
+.adm-board-num {
+  color: var(--adm-i30);
+  font-variant-numeric: tabular-nums;
+}
+
+.adm-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: .72rem;
+  font-weight: 500;
+  letter-spacing: .03em;
+  padding: 3px 11px;
+  border-radius: 2px;
+  text-decoration: none;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  transition: background .15s, border-color .15s;
+}
+
+.adm-chip.live {
+  background: rgba(74,107,90,.1);
+  color: var(--adm-sage);
+  border-color: rgba(74,107,90,.25);
+}
+.adm-chip.live:hover {
+  background: rgba(74,107,90,.2);
+  border-color: rgba(74,107,90,.45);
+}
+
+.adm-chip.fallback {
+  background: rgba(160,124,58,.1);
+  color: var(--adm-gold);
+  border-color: rgba(160,124,58,.25);
+}
+.adm-chip.fallback:hover {
+  background: rgba(160,124,58,.2);
+  border-color: rgba(160,124,58,.45);
+}
+
+.adm-chip.none {
+  color: var(--adm-i30);
+  padding-left: 3px;
+}
+
+.adm-row-badge {
+  display: inline-block;
+  font-size: .58rem;
+  font-weight: 600;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  padding: 1px 6px;
+  border-radius: 2px;
+  margin-left: 8px;
+  vertical-align: middle;
+}
+.adm-row-badge.free {
+  background: rgba(74,107,90,.12);
+  color: var(--adm-sage);
+}
+.adm-row-badge.paid {
+  background: rgba(160,124,58,.12);
+  color: var(--adm-gold);
+}
+
 /* ---- Login (kept dark — intentional contrast with dashboard) ---- */
 .adm-login-wrap {
   min-height: 100vh;
