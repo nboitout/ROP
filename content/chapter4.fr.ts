@@ -169,6 +169,94 @@ export const chapter4Fr: Chapter = {
           'Indications : tachycardie, dysrythmie cardiaque, hypertension, syndrome vagal.',
           'Syndrome vagal : c’est une vagotonie par hyperstimulation vagale. Les symptômes sont : drop-attack, vertige, hypotension, petite absence, évanouissement. (Cf. Chapitre 6 Théorie polyvagale, Malaise vagal)',
         ]},
+
+        // ——— Part 2 : trajet thoraco-diaphragmatico-abdominal du nerf vague ———
+        { type: 'rop', body: [
+          'Après un repas trop copieux, la congestion jugulo-carotidienne comprime le nerf vague et l’irrite dans la gaine carotidienne.',
+          'Geste immédiat : desserrer le col de la chemise et pincer simultanément la face latérale de la phalange distale des 5ᵉ doigts (effet cardio-accélérateur). En cas de malaise, syncope, douleur thoracique, dyspnée ou symptôme inhabituel : interrompre le geste et orienter vers une évaluation médicale urgente.',
+        ]},
+        { type: 'lead', label: 'Zones réflexes podales', text: 'territoires crânien et cervical du nerf vague. (figure 4.11)' },
+        { type: 'figure', src: '/chapter-4/figure-4-11.png', alt: 'Territoires crânien et cervical du nerf vague X (zone réflexe podale)', caption: 'Figure 4.11 — Territoires crânien et cervical du nerf vague X', orientation: 'landscape' },
+        { type: 'leadBullets', items: [
+          { label: 'Nerf laryngé supérieur', text: 'jonction diaphyse-tête plantaire latérale de la phalange proximale du gros orteil.' },
+          { label: 'Sinus et glomus carotidiens (bifurcation carotidienne)', text: 'à hauteur de la vertèbre C4, face latérale de la diaphyse de la phalange proximale du gros orteil. (figure 4.12)' },
+          { label: 'Plexus pré-viscéraux', text: 'pharynx, larynx, œsophage.' },
+        ]},
+        { type: 'figure', src: '/chapter-4/figure-4-12.png', alt: 'Palpation des zones réflexes podales du nerf vague — territoires crânien et cervical', caption: 'Figure 4.12 — Zones réflexes podales du nerf vague (territoires crânien et cervical)', orientation: 'landscape' },
+
+        { type: 'sub', text: 'Étage thoracique' },
+        { type: 'para', text: 'Les deux nerfs vagues pénètrent dans le thorax par son orifice supérieur, en dedans du dôme pleural et en arrière des articulations sterno-claviculaires. Ils deviennent satellites de l’œsophage dans le médiastin. Ils sont destinés au cœur, aux poumons et à l’œsophage :' },
+        { type: 'leadBullets', items: [
+          { label: 'Nerf vague droit', text: 'il fait une anse autour de l’artère subclavière droite, entourée par les fibres sympathiques. Il devient le nerf laryngé récurrent droit, qui remonte dans le cou pour innerver le larynx (nerf de la voix). (figure 4.9)' },
+          { label: 'Nerf vague gauche', text: 'il fait une anse autour de la crosse de l’aorte et devient le nerf laryngé récurrent gauche, qui remonte aussi dans le cou pour innerver le larynx (nerf de la voix).' },
+        ]},
+        { type: 'lead', label: 'Plexus pré-viscéraux thoraciques', text: 'ce sont les plexus cardiaques, broncho-pulmonaires et œsophagiens.' },
+        { type: 'lead', label: 'Plexus cardiaque', text: 'dans le médiastin supérieur, les deux nerfs vagues et le récurrent gauche s’anastomosent avec les fibres sympathiques des trois nerfs cardiaques issus des trois ganglions cervicaux, et celles issues des ganglions thoraciques latéro-vertébraux de Th3 à Th5. Ils forment le plexus cardiaque. On distingue : (figure 4.13)' },
+        { type: 'bullets', items: [
+          'le plexus cardiaque supérieur ou superficiel de Wrisberg, autour de la crosse de l’aorte, à hauteur de l’angle sternal ;',
+          'le plexus cardiaque inférieur, confondu avec le plexus broncho-pulmonaire ;',
+          'les nerfs de Cyon : issus du nerf vague, situés dans l’endocarde, ils ralentissent la fréquence cardiaque en diminuant la vitesse de conduction électrique de l’innervation intrinsèque du cœur (tissu nodal : nœuds sinusal et atrio-ventriculaire).',
+        ]},
+        { type: 'figure', src: '/chapter-4/figure-4-13.png', alt: 'Plexus cardiaques — innervation autonome du cœur', caption: 'Figure 4.13 — Plexus cardiaques', orientation: 'portrait' },
+        { type: 'leadBullets', items: [
+          { label: 'Innervation parasympathique', text: 'les fibres parasympathiques sont davantage destinées aux atriums (anciennement oreillettes) et au tissu nodal, et pratiquement pas aux ventricules. Elles ralentissent le rythme cardiaque (bradycardie), diminuent la tension artérielle et la force de contraction du myocarde. Au total, le Parasympathique baisse le débit cardiaque ; une hyper-vagotonie crée le syndrome vagal.' },
+          { label: 'Innervation sympathique', text: 'les fibres sympathiques innervent toutes les régions du cœur, particulièrement les ventricules. Le Sympathique a un effet opposé au Parasympathique. Son action se manifeste dans l’activité physique, le stress, les émotions, les hémorragies. Le café, l’alcool et le tabac augmentent le rythme cardiaque (tachycardie).' },
+        ]},
+        { type: 'lead', label: 'Plexus broncho-pulmonaire', text: 'il est situé au niveau de la bifurcation de l’artère pulmonaire et à la face postérieure des bronches souches, près du hile des poumons. (figure 4.13)' },
+        { type: 'leadBullets', items: [
+          { label: 'Innervation parasympathique', text: 'le corps cellulaire est situé dans le noyau dorsal du nerf vague et de sa branche, le nerf laryngé récurrent.' },
+          { label: 'Innervation sympathique', text: 'elle vient principalement du ganglion cervical inférieur (GCI) et des ganglions latéro-vertébraux thoraciques de Th1 à Th5 ou Th6.' },
+        ]},
+        { type: 'para', text: 'Les fibres parasympathiques sont broncho-constrictives et augmentent les sécrétions bronchiques. Les fibres sympathiques sont antagonistes.' },
+        { type: 'lead', label: 'Plexus œsophagien', text: 'il est formé de branches collatérales du nerf vague (péristaltisme) et de fibres sympathiques thoraciques supérieures (antagonistes).' },
+        { type: 'lead', label: 'Zones réflexes podales', text: '(figures 4.14 et 4.15)' },
+        { type: 'leadBullets', items: [
+          { label: 'Atriums droit et gauche et plexus cardiaque', text: 'face plantaire de la tête du 1er métatarse sur les deux pieds.' },
+          { label: 'Ventricules', text: 'face plantaire du pied gauche : zone entre la zone réflexe du diaphragme et la tête des deux premiers métatarses.' },
+          { label: 'Plexus cardiaque superficiel', text: 'à hauteur de la 3ᵉ articulation chondro-sternale gauche : jonction malléole tibiale-tête du talus.' },
+        ]},
+        { type: 'figure', src: '/chapter-4/figure-4-14.png', alt: 'Territoires cervical, thoracique et diaphragmatique gauches du nerf vague X', caption: 'Figure 4.14 — Territoires cervical, thoracique et diaphragmatique gauches du nerf vague X', orientation: 'landscape' },
+        { type: 'figure', src: '/chapter-4/figure-4-15.png', alt: 'Territoires cervical et thoracique droits du nerf vague X', caption: 'Figure 4.15 — Territoires cervical et thoracique droits du nerf vague X', orientation: 'landscape' },
+
+        { type: 'sub', text: 'Étage diaphragmatique' },
+        { type: 'para', text: 'Les deux nerfs vagues accompagnent l’œsophage dans le hiatus œsophagien du diaphragme. (figures 4.16 et 4.33)' },
+        { type: 'lead', label: 'Hiatus œsophagien', text: 'il est situé à gauche de la vertèbre Th10, entre les deux folioles droite et gauche du centre phrénique. C’est un orifice formé de fibres musculaires issues du pilier médian droit du diaphragme et de l’œsophage. Sa structure musculaire contractile peut subir des tensions, comprimer l’œsophage et irriter les deux nerfs vagues, occasionnant un reflux gastrique. Le nerf vague gauche est en avant de l’œsophage, le droit en arrière.' },
+        { type: 'figure', src: '/chapter-4/figure-4-16.png', alt: 'Hiatus œsophagien du diaphragme', caption: 'Figure 4.16 — Hiatus œsophagien', orientation: 'portrait' },
+        { type: 'lead', label: 'Zones réflexes podales', text: '' },
+        { type: 'figure', src: '/chapter-4/figure-4-17.png', alt: 'Territoire abdominal gauche du nerf vague X (zone réflexe podale)', caption: 'Figure 4.17 — Territoire abdominal gauche du nerf vague X', orientation: 'landscape' },
+        { type: 'leadBullets', items: [
+          { label: 'Hiatus œsophagien', text: 'face plantaire du pied gauche, latéral au centre phrénique et à l’aplomb d’une ligne partant entre le 1er et le 2ᵉ orteil et coupant la coupole diaphragmatique gauche. (figures 4.17 et 4.18)' },
+        ]},
+        { type: 'para', text: 'N.B. : tenir compte de la différence de hauteur des deux coupoles diaphragmatiques, la gauche étant plus basse que la droite. (Cf. Chapitre Diaphragme)' },
+        { type: 'figure', src: '/chapter-4/figure-4-18.png', alt: 'Territoire diaphragmatique du nerf vague X (zone réflexe podale)', caption: 'Figure 4.18 — Territoire diaphragmatique du nerf vague X (zone réflexe podale)', orientation: 'portrait' },
+
+        { type: 'sub', text: 'Étage abdominal' },
+        { type: 'leadBullets', items: [
+          { label: 'Nerf vague gauche (devenu antérieur)', text: 'il glisse sur le bord antérieur du cardia et innerve la petite courbure de l’estomac (figure 4.19), le pylore, le duodénum et les voies biliaires. Il se termine dans le plexus cœliaque (anciennement solaire).' },
+          { label: 'Nerf vague droit (devenu postérieur)', text: 'il est en arrière de l’œsophage abdominal et de l’estomac, qu’il innerve. Il se termine dans le ganglion semi-lunaire du plexus cœliaque.' },
+        ]},
+        { type: 'figure', src: '/chapter-4/figure-4-19.png', alt: 'Petite courbure de l’estomac — innervation vagale', caption: 'Figure 4.19 — Petite courbure de l’estomac', orientation: 'portrait' },
+        { type: 'leadBullets', items: [
+          { label: 'Plexus pré-vertébraux (préaortiques)', text: 'ce sont les plexus des viscères abdominaux. Ils s’étalent le long de l’aorte abdominale et sont la convergence des fibres parasympathiques et sympathiques qui apportent la double innervation autonome aux viscères de l’abdomen. (figure 4.16)' },
+          { label: 'Zone de Cannon-Böhm', text: 'elle est située à la jonction des 2/3 droits et du 1/3 gauche du colon transverse. Elle représente la frontière entre le territoire contrôlé par le nerf vague et le parasympathique pelvien. (figure 4.20) (Cf. Chapitre 15 Colon)' },
+        ]},
+        { type: 'figure', src: '/chapter-4/figure-4-20.png', alt: 'Zone de Cannon-Böhm — frontière vago-pelvienne du colon transverse', caption: 'Figure 4.20 — Zone de Cannon-Böhm', orientation: 'portrait' },
+
+        { type: 'sub', text: 'Fonction viscéro-motrice du nerf vague' },
+        { type: 'leadBullets', items: [
+          { label: 'Estomac', text: 'les nerfs vagues stimulent la sécrétion des glandes gastriques. Ils sont moteurs pour la musculature lisse de l’estomac et ouvrent les sphincters du cardia (remplissage gastrique) et du pylore (vidange gastrique).' },
+          { label: 'Intestin', text: 'les nerfs vagues agissent sur le péristaltisme et la sécrétion des glandes du duodénum, de l’intestin grêle, du colon droit et des 2/3 droits du colon transverse, des voies biliaires et du pancréas.' },
+          { label: 'Vésicule biliaire', text: 'les nerfs vagues stimulent la sécrétion de bile.' },
+        ]},
+        { type: 'lead', label: 'Zones réflexes podales', text: 'face plantaire du pied gauche. (figures 4.17 et 4.18)' },
+        { type: 'leadBullets', items: [
+          { label: 'Cardia', text: 'immédiatement au-dessous du hiatus œsophagien.' },
+          { label: 'Petite courbure de l’estomac', text: 'une ligne entre le cardia et le pylore. (figure 4.19)' },
+          { label: 'Zone de Cannon-Böhm', text: 'jonction 2/3 droit-1/3 gauche du colon transverse. (figure 4.21)' },
+        ]},
+        { type: 'figure', src: '/chapter-4/figure-4-21.png', alt: 'Zone de Cannon-Böhm (zone réflexe podale)', caption: 'Figure 4.21 — Zone de Cannon-Böhm (zone réflexe podale)', orientation: 'portrait' },
+        { type: 'lead', label: 'Plexus pré-vertébraux', text: '(figures 4.17 et 4.22)' },
+        { type: 'figure', src: '/chapter-4/figure-4-22.png', alt: 'Territoire abdominal droit du nerf vague X', caption: 'Figure 4.22 — Territoire abdominal droit du nerf vague X', orientation: 'landscape' },
       ],
     },
   ],
