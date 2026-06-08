@@ -106,7 +106,7 @@ export const chapter4Fr: Chapter = {
         ]},
 
         { type: 'lead', label: 'Zones réflexes podales', text: 'face plantaire des orteils (base du crâne). (figure 4.3)' },
-        { type: 'figure', src: '/chapter-4/figure-4-3.png', alt: 'Zones réflexes podales — base du crâne, face plantaire des orteils', caption: 'Figure 4.3 — Zones réflexes podales : base du crâne', orientation: 'landscape' },
+        { type: 'figure', src: '/chapter-4/figure-4-3.png', alt: 'Territoire céphalique du Parasympathique et plexus péri-viscéraux des organes de la tête', caption: 'Figure 4.3 — Territoire céphalique du Parasympathique et plexus péri-viscéraux des organes de la tête (jaune)', orientation: 'landscape' },
         { type: 'leadBullets', items: [
           { label: 'Tronc cérébral', text: 'bord médial de la phalange distale du gros orteil. (figure 4.4)' },
           { label: 'Nerfs III, VII et IX (foramens de la base du crâne)', text: 'phalanges des quatre derniers orteils. (Cf. Réflexothérapie occipito-podale et système neuro-méningé, chapitre 8)' },
