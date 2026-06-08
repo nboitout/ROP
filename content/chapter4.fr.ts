@@ -118,7 +118,7 @@ export const chapter4Fr: Chapter = {
           { label: 'Ganglions submaxillaire et sublingual (plancher buccal)', text: 'partie rétro-capitale de la phalange distale des orteils.' },
           { label: 'Ganglion otique', text: 'partie médiale de la diaphyse de la phalange moyenne du 3ᵉ orteil.' },
         ]},
-        { type: 'figure', src: '/chapter-4/figure-4-4.png', alt: 'Zone réflexe podale du tronc cérébral', caption: 'Figure 4.4 — Tronc cérébral (zone réflexe podale)', orientation: 'portrait' },
+        { type: 'figure', src: '/chapter-4/figure-4-4.png', alt: 'Tronc cérébral — palpation entre les deux pouces', caption: 'Figure 4.4 — Tronc cérébral (entre les deux pouces)', orientation: 'portrait' },
 
         { type: 'sub', text: 'Territoire cervico-thoraco-abdominal' },
         { type: 'lead', label: 'Nerf vague X', text: 'il apporte l’innervation parasympathique aux organes cervico-thoraco-abdominaux.' },
