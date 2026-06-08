@@ -401,6 +401,153 @@ export const chapter4Fr: Chapter = {
         { type: 'figure', src: '/chapter-4/figure-4-32.png', alt: 'Ganglion cervical inférieur (zone réflexe podale)', caption: 'Figure 4.32 — Ganglion cervical inférieur (zone réflexe podale)', orientation: 'portrait' },
         { type: 'lead', label: 'Chaîne ganglionnaire lombale', text: 'elle prolonge caudalement la chaîne ganglionnaire thoracique (figure 4.33). Elle compte quatre ganglions.' },
         { type: 'figure', src: '/chapter-4/figure-4-33.png', alt: 'Chaîne ganglionnaire lombale', caption: 'Figure 4.33 — Chaîne ganglionnaire lombale', orientation: 'landscape' },
+
+        // ——— Part 4 : chaîne lombale (suite), sacro-coccygienne, nerfs splanchniques ———
+        { type: 'para', text: 'Elle passe entre les piliers du diaphragme et en avant du psoas, sur la face antéro-latérale des corps vertébraux lombaires. Elle donne les nerfs splanchniques (figure 4.23) pour les plexus pré-vertébraux (plexus cœliaque et hypogastrique supérieur).' },
+        { type: 'rop', body: [
+          'Toute tension du diaphragme et du muscle psoas affecte les ganglions sympathiques lombaires et les viscères abdomino-pelviens.',
+        ]},
+        { type: 'lead', label: 'Zones réflexes podales', text: '' },
+        { type: 'leadBullets', items: [
+          { label: 'Piliers du diaphragme', text: '(figures 4.31 et 4.34)' },
+          { label: 'Innervation du psoas', text: 'racines lombales de L1 à L4, plexus lombal, nerf fémoral (Cf. ROP et système neuro-méningé, pages 28-29 et 34).' },
+        ]},
+        { type: 'figure', src: '/chapter-4/figure-4-34.png', alt: 'Piliers du diaphragme (zone réflexe podale)', caption: 'Figure 4.34 — Piliers du diaphragme (zone réflexe podale)', orientation: 'landscape' },
+        { type: 'lead', label: 'Chaîne ganglionnaire sacrale et coccygienne', text: 'elle prolonge caudalement la chaîne ganglionnaire lombale (figure 4.35). Elle compte quatre ganglions sacraux, qui longent la berge médiale des trous sacraux antérieurs, et un ganglion impair à la réunion des deux chaînes ganglionnaires, à la face antérieure du coccyx. Elle apporte l’innervation sympathique aux organes uro-génitaux, au sigmoïde, au rectum et à l’anus.' },
+        { type: 'figure', src: '/chapter-4/figure-4-35.png', alt: 'Chaîne ganglionnaire sacrale et coccygienne', caption: 'Figure 4.35 — Chaîne ganglionnaire sacrale et coccygienne', orientation: 'landscape' },
+        { type: 'rop', body: [
+          'Tout traumatisme du coccyx (chute, suites d’accouchement) affecte le ganglion impair, avec répercussion sur l’ensemble de la chaîne ganglionnaire latéro-vertébrale. Cela affecte aussi la dure-mère, qui s’attache sur la 2ᵉ vertèbre sacrale et sur le coccyx par le ligament duro-coccygien.',
+        ]},
+        { type: 'lead', label: 'Zones réflexes podales', text: '(figure 4.31)' },
+        { type: 'leadBullets', items: [
+          { label: 'Chaîne ganglionnaire sacrale', text: 'face antérieure du sacrum, sur le bord antérieur de la tubérosité postéro-médiale du calcanéum.' },
+          { label: 'Ganglion impair', text: 'face antérieure du coccyx, à la pointe de la tubérosité postéro-médiale du calcanéum.' },
+          { label: 'Articulation sacro-coccygienne', text: 'une fossette en arrière du coccyx.' },
+        ]},
+        { type: 'lead', label: 'Nerfs splanchniques', text: 'issus des ganglions thoraciques de Th5 à Th12, ils convergent avec le nerf vague vers les plexus pré-vertébraux (figure 4.23). On décrit un nerf grand splanchnique (ganglions Th6 à Th9), un nerf petit splanchnique (ganglions Th10 à Th12) et un nerf splanchnique inférieur (ganglions L1 et L2).' },
+      ],
+    },
+    {
+      id: 'sympathique-sensitif',
+      title: 'Sympathique somato-viscéro-sensitif',
+      blocks: [
+        { type: 'lead', label: 'Nociception', text: 'transport d’un message potentiellement nocif ou douloureux. Les nerfs sympathiques transportent la nociception.' },
+        { type: 'lead', label: 'Origine', text: 'les nerfs sympathiques sensitifs ont leur corps cellulaire dans le ganglion spinal de la racine dorsale du nerf spinal (figures 4.23 et 4.25). Ils proviennent du contingent somatique et du contingent viscéral.' },
+        { type: 'lead', label: 'Trajet', text: '' },
+        { type: 'leadBullets', items: [
+          { label: 'Contingent somatique', text: 'les nerfs sympathiques sensitifs, originaires du contingent somatique, des vaisseaux et de la peau, rejoignent la chaîne ganglionnaire latéro-vertébrale et les rameaux communicants gris reliant la chaîne au nerf spinal.' },
+          { label: 'Contingent viscéral', text: 'les neurones sensitifs, originaires des viscères, rejoignent la chaîne ganglionnaire latéro-vertébrale.' },
+        ]},
+        { type: 'lead', label: 'Terminaison', text: 'les fibres sympathiques des deux contingents se terminent dans la corne dorsale médullaire. Dans la moelle spinale, les neurones sensitifs des deux contingents — somatique et viscéral — se mélangent.' },
+        { type: 'lead', label: 'Contingent vasculaire', text: 'les neurones sensitifs nociceptifs ne parviennent pas tous à la corne latérale médullaire. La troisième voie sympathique, péri-artérielle et péri-aortique, gagne la moelle spinale à distance de l’étage d’origine (Pr Guy Lazorthes). Elle pourrait expliquer la persistance de réponses réflexes viscérales chez les paraplégiques.' },
+        { type: 'rop', body: [
+          '« Les interrelations médullaires entre les voies de la sensibilité viscérale et les voies de la sensibilité somatique sont à l’origine des douleurs rapportées et de contractures réflexes » (Pr Guy Lazorthes). Ainsi, une douleur viscérale ne se projette pas toujours en regard du viscère atteint : elle se projette sur un territoire cutané, appelé dermatome (figure 1.11), correspondant au segment médullaire auquel aboutissent les voies sensitives du viscère.',
+          'On doit au Dr Jarricot la description des dermalgies réflexes, si utile dans le diagnostic des troubles fonctionnels viscéraux.',
+        ]},
+        { type: 'lead', label: 'Zones réflexes podales', text: 'les zones réflexes des nerfs sympathiques viscéro-sensitifs sont les mêmes que celles du sympathique viscéro-moteur.' },
+      ],
+    },
+    {
+      id: 'chaine-plexique-prevertebrale',
+      title: 'Chaîne plexique pré-vertébrale (ou pré-aortique)',
+      blocks: [
+        { type: 'lead', label: 'Anatomie', text: 'elle est constituée de plexus interposés entre les chaînes ganglionnaires latéro-vertébrales et les viscères, en avant de l’aorte abdominale et des piliers du diaphragme. Elle s’étend du foramen aortique du diaphragme (vertèbre Th12) jusqu’à la bifurcation aortique (vertèbre L4).' },
+        { type: 'lead', label: 'Constitution', text: 'elle est constituée de cinq plexus splanchniques où se rejoignent les nerfs vagues et les nerfs splanchniques sympathiques : (figure 4.16)' },
+        { type: 'leadBullets', items: [
+          { label: 'Plexus cœliaque (anciennement solaire)', text: 'situé sous l’orifice aortique du diaphragme, en avant de l’aorte abdominale et des piliers du diaphragme. Constitué de deux ganglions semi-lunaires droit et gauche, il reçoit les filets du nerf grand splanchnique (6ᵉ à 9ᵉ ganglions latéro-vertébraux). Il est destiné aux viscères supérieurs de l’abdomen.' },
+          { label: 'Plexus mésentérique supérieur', text: 'situé à la naissance de l’artère mésentérique supérieure, il reçoit des filets des nerfs grand et petit splanchniques (8ᵉ à 11ᵉ ganglions thoraciques), destinés à l’intestin grêle.' },
+          { label: 'Plexus aortorénal', text: 'situé en avant de l’artère rénale, il reçoit le nerf petit splanchnique (10ᵉ à 12ᵉ ganglions thoraciques et 1er ganglion lombaire). Il est destiné au rein, au testicule ou à l’ovaire.' },
+          { label: 'Plexus mésentérique inférieur', text: 'situé à la naissance de l’artère mésentérique inférieure, il reçoit le nerf splanchnique inférieur (12ᵉ ganglion thoracique).' },
+          { label: 'Plexus hypogastrique supérieur', text: 'situé à hauteur de la bifurcation aortique (vertèbre L4), il reçoit les fibres du plexus mésentérique inférieur et du 3ᵉ ganglion sympathique lombal. Il apporte l’innervation sympathique au plexus hypogastrique inférieur, plexus pré-viscéral des organes pelviens.' },
+        ]},
+        { type: 'lead', label: 'Fonction', text: '' },
+        { type: 'leadBullets', items: [
+          { label: 'Nerf vague', text: 'il a un double rôle : il augmente la motricité (péristaltisme), la motilité et les sécrétions, et relâche aussi les parois.' },
+          { label: 'Sympathique', text: 'il a des effets opposés au nerf vague. Vasoconstricteur, il contribue à diminuer le débit sanguin et à augmenter la pression artérielle par augmentation de la résistance à l’écoulement. Il peut arrêter la digestion pour dériver le sang vers les muscles lors d’efforts ou d’activités physiques. Dans les états de stress, le Parasympathique est inhibé et le Sympathique activé.' },
+        ]},
+        { type: 'rop', body: [
+          'Les nerfs splanchniques proviennent directement de la corne latérale de la moelle épinière, sans faire synapse dans leur traversée des ganglions latéro-vertébraux. Notre action réflexe, au niveau médullaire et au niveau de la chaîne plexique pré-vertébrale, est donc puissante pour équilibrer l’innervation neuro-végétative des viscères de la cavité abdominale. Là aussi, il est vain de chercher une action franche et isolée sur le Parasympathique ou le Sympathique, tant leurs fibres sont liées et enchevêtrées.',
+        ]},
+        { type: 'lead', label: 'Zones réflexes podales', text: '' },
+        { type: 'leadBullets', items: [
+          { label: 'Chaîne plexique pré-vertébrale', text: 'face plantaire des deux pieds dans l’axe médian (à l’aplomb du 3ᵉ orteil), depuis la zone réflexe du diaphragme jusqu’au bord antérieur du talon. (figures 4.17 et 4.22)' },
+        ]},
+      ],
+    },
+    {
+      id: 'plexus-pelvien',
+      title: 'Plexus pré-viscéral pelvien',
+      blocks: [
+        { type: 'lead', label: 'Anatomie', text: 'le plexus hypogastrique inférieur est situé dans la cavité pelvienne, contenu dans la lame sacro-recto-génito-pubienne. Il reçoit la double innervation autonome destinée aux organes uro-génitaux, au rectum et à l’anus. (figures 4.23 et 4.35)' },
+        { type: 'leadBullets', items: [
+          { label: 'Innervation sympathique', text: 'elle provient du nerf hypogastrique, issu du plexus hypogastrique supérieur.' },
+          { label: 'Innervation parasympathique', text: 'elle provient des 2ᵉ, 3ᵉ et 4ᵉ racines sacrales, qui forment le nerf splanchnique pelvien (ou érecteur d’Eckardt).' },
+        ]},
+        { type: 'lead', label: 'Fonction', text: '' },
+        { type: 'lead', label: 'Parasympathique', text: '' },
+        { type: 'bullets', items: [
+          'défécation par contraction du rectum et relâchement du sphincter lisse de l’anus ;',
+          'miction par contraction du muscle détrusor de la vessie et relâchement de son sphincter interne ;',
+          'érection par dilatation des organes érectiles.',
+        ]},
+        { type: 'lead', label: 'Sympathique', text: 'ses effets sont opposés :' },
+        { type: 'bullets', items: [
+          'continence anale et contraction du sphincter lisse de l’anus ;',
+          'continence de la vessie et contraction du sphincter lisse ;',
+          'éjaculation par contraction des canaux déférents, des vésicules séminales, de la prostate et des muscles du périnée.',
+        ]},
+        { type: 'lead', label: 'Zones réflexes podales', text: '' },
+        { type: 'leadBullets', items: [
+          { label: 'Plexus hypogastrique inférieur (fibres antérieures)', text: 'face plantaire, partie médiale du bord antérieur du talon, à la jonction de la zone réflexe de la trompe de Fallope et du dôme utérin. (figures 4.37 et 4.38)' },
+        ]},
+        { type: 'figure', src: '/chapter-4/figure-4-37.png', alt: 'Plexus hypogastrique inférieur (fibres antérieures)', caption: 'Figure 4.37 — Plexus hypogastrique inférieur (fibres antérieures)', orientation: 'landscape' },
+        { type: 'figure', src: '/chapter-4/figure-4-38.png', alt: 'Plexus hypogastrique inférieur — fibres antérieures (zone réflexe podale)', caption: 'Figure 4.38 — Plexus hypogastrique inférieur (fibres antérieures, zone réflexe podale)', orientation: 'portrait' },
+        { type: 'leadBullets', items: [
+          { label: 'Plexus hypogastrique inférieur (fibres moyennes)', text: 'face médiale du talon, zone réflexe de la région cervico-isthmique de l’utérus (ou de la prostate). (figures 4.39 et 4.40)' },
+          { label: 'Plexus hypogastrique inférieur (fibres postérieures)', text: 'face médiale du talon, partie moyenne du bord antérieur de la tubérosité postéro-médiale du calcanéum. (figure 4.39)' },
+        ]},
+        { type: 'figure', src: '/chapter-4/figure-4-39.png', alt: 'Plexus hypogastrique inférieur — parties moyenne et postérieure', caption: 'Figure 4.39 — Plexus hypogastrique inférieur (parties moyenne et postérieure)', orientation: 'landscape' },
+        { type: 'figure', src: '/chapter-4/figure-4-40.png', alt: 'Plexus hypogastrique inférieur (zones réflexes podales)', caption: 'Figure 4.40 — Plexus hypogastrique inférieur (zones réflexes podales)', orientation: 'landscape' },
+      ],
+    },
+    {
+      id: 'sne',
+      title: 'Système nerveux entérique (SNE)',
+      blocks: [
+        { type: 'para', text: 'Pour accomplir ses diverses fonctions — digestion, absorption, assimilation, neutralisation des substances toxiques, immunité — l’intestin grêle et le colon sont dotés de leur propre système nerveux, le SNE. Il est connecté à l’innervation extrinsèque par le nerf vague et, par lui, en relation avec le système nerveux central.' },
+        { type: 'lead', label: 'Constitution', text: 'il est constitué de plexus : le plexus d’Auerbach et le plexus de Meissner. (figure 4.41)' },
+        { type: 'figure', src: '/chapter-4/figure-4-41.png', alt: 'Coupe d’un segment intestinal — plexus myentérique et sous-muqueux', caption: 'Figure 4.41 — Système nerveux intrinsèque', orientation: 'landscape' },
+        { type: 'leadBullets', items: [
+          { label: 'Plexus d’Auerbach (myentérique)', text: 'situé entre les différentes couches musculaires de l’intestin, il régule la motricité intestinale.' },
+          { label: 'Plexus de Meissner (sous-muqueux)', text: 'situé entre les muscles et la muqueuse intestinale, il contrôle les sécrétions intestinales.' },
+          { label: 'Cellules de Cajal', text: 'situées entre les couches musculaires longitudinale et circulaire de la paroi intestinale, elles jouent un rôle de pacemaker pour coordonner les ondes péristaltiques.' },
+        ]},
+        { type: 'lead', label: 'Fonction', text: '' },
+        { type: 'para', text: 'Le SNE est fait pour fonctionner de la façon la plus autonome possible, indépendamment des ordres du cerveau et de la moelle spinale. Ceux-ci délèguent et n’interviennent pas tant que les conditions physiologiques restent normales ; ils « reprennent la main » seulement en fonction des besoins, ou dans des conditions anormales de stress ou d’états émotionnels.' },
+        { type: 'bullets', items: [
+          'l’intestin produit des neurotransmetteurs communs avec le cerveau : sérotonine, acétylcholine, noradrénaline, GABA ;',
+          'l’intestin produit 80 % des cellules immunitaires.',
+        ]},
+        { type: 'para', text: 'Le SNE mérite bien son qualificatif de deuxième cerveau. Cette indépendance relative aurait permis de libérer l’encéphale de tâches qui l’accapareraient et l’empêcheraient d’exercer d’autres fonctions plus nobles : « Ce serait un des paramètres qui aurait permis le développement de l’intelligence » (Eric Marlien).' },
+        { type: 'lead', label: 'Zones réflexes podales', text: 'ce sont celles de l’intestin.' },
+      ],
+    },
+    {
+      id: 'glandes-surrenales',
+      title: 'Glandes surrénales',
+      blocks: [
+        { type: 'lead', label: 'Constitution', text: '' },
+        { type: 'leadBullets', items: [
+          { label: 'Médullo-surrénale', text: 'elle a la même origine embryologique que les ganglions du plexus aorto-rénal (10ᵉ et 11ᵉ ganglions thoraciques). (figure 4.42)' },
+        ]},
+        { type: 'figure', src: '/chapter-4/figure-4-42.png', alt: 'Glandes surrénales — rapports rétro-péritonéaux', caption: 'Figure 4.42 — Glandes surrénales', orientation: 'landscape' },
+        { type: 'para', text: 'Cette prédominance de l’innervation sympathique est liée au rôle des glandes surrénales dans les états de stress ou émotionnels. La médullo-surrénale produit l’adrénaline lors de la phase d’urgence du syndrome général d’adaptation. (Cf. Chapitre 5 Mécanisme de stress)' },
+        { type: 'lead', label: 'Fonction', text: '' },
+        { type: 'leadBullets', items: [
+          { label: 'Adrénaline', text: 'elle provoque une accélération du rythme cardiaque (tachycardie) et une vasoconstriction.' },
+          { label: 'Corticosurrénale', text: 'elle stimule la sécrétion d’aldostérone, qui accroît la sécrétion de rénine, laquelle augmente la volémie (volume total de sang circulant dans l’organisme).' },
+        ]},
+        { type: 'lead', label: 'Zones réflexes', text: '(Cf. Chapitre 16)' },
       ],
     },
   ],
