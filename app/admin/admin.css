@@ -519,6 +519,10 @@
   background: rgba(160,124,58,.12);
   color: var(--adm-gold);
 }
+.adm-row-badge.draft {
+  background: rgba(120,90,160,.14);
+  color: #7a5aa0;
+}
 
 /* ---- Login (kept dark — intentional contrast with dashboard) ---- */
 .adm-login-wrap {

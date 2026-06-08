@@ -11,9 +11,10 @@ export const metadata: Metadata = { title: 'Chapitres · Admin R.O.P.' }
  * registry key used to look up translated content. Only chapters with a page
  * appear here; the rest render as "not started" rows on the board.
  */
-const ROUTES: Record<string, { href: string; key: string; gated?: boolean }> = {
+const ROUTES: Record<string, { href: string; key: string; gated?: boolean; draft?: boolean }> = {
   '00': { href: '/introduction', key: 'introduction' },
   '02': { href: '/lecture/traitement-rop', key: 'chapter-2', gated: true },
+  '04': { href: '/chapitre-4', key: 'chapter-4', draft: true },
   '05': { href: '/chapitre-5', key: 'chapter-5' },
   '14': { href: '/chapitre-14', key: 'chapter-14' },
 }
@@ -36,6 +37,7 @@ export default async function AdminChapitresPage() {
       href: route?.href ?? null,
       free: 'variant' in card && card.variant === 'free',
       gated: !!route?.gated,
+      draft: !!route?.draft,
       fr,
       en,
     }

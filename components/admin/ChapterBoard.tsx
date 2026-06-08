@@ -12,6 +12,7 @@ export type BoardRow = {
   href: string | null
   free: boolean
   gated: boolean
+  draft: boolean
   fr: LangStatus
   en: LangStatus
 }
@@ -81,6 +82,7 @@ export default function ChapterBoard({ parts, rows }: { parts: Part[]; rows: Boa
                   {r.title}
                   {r.free && <span className="adm-row-badge free">Accès libre</span>}
                   {r.gated && <span className="adm-row-badge paid">Payant</span>}
+                  {r.draft && <span className="adm-row-badge draft">Brouillon</span>}
                 </td>
                 <td className="muted">{r.partTitle}</td>
                 <td><LangCell href={r.href ? `${r.href}?lang=fr` : null} status={r.fr} /></td>
