@@ -24,6 +24,12 @@ async function forwardToAppsScript(payload: Record<string, unknown>) {
 }
 
 export async function POST(req: NextRequest) {
+  // Don't record traffic from logged-in admins (owner / reviewers like Guy) —
+  // their browsing shouldn't pollute the engagement stats.
+  if (req.cookies.get('admin_session')) {
+    return NextResponse.json({ ok: true, skipped: 'admin' })
+  }
+
   const body = await req.json().catch(() => null)
   if (!body || typeof body.chapter !== 'string' || typeof body.event !== 'string') {
     return NextResponse.json({ error: 'Bad payload' }, { status: 400 })
