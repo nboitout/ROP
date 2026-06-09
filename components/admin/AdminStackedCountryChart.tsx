@@ -21,9 +21,12 @@ interface Props {
   countries: string[]
 }
 
+// High-contrast categorical palette — distinct hue AND lightness between
+// neighbours for readability (chosen for low-vision / older viewers).
+// Last colour is a neutral grey reserved for the 'Other' bucket.
 const PALETTE = [
-  '#4a6b5a', '#c9a35e', '#7a9b8a', '#a07c3a', '#5a8b6a',
-  '#d4956a', '#3a5b4a', '#b08c4e', '#8aab9a', '#e0c080', '#aaaaaa',
+  '#e6194b', '#3cb44b', '#4363d8', '#f58231', '#911eb4',
+  '#469990', '#f032e6', '#9a6324', '#800000', '#808000', '#9a9a9a',
 ]
 
 export default function AdminStackedCountryChart({ data, countries }: Props) {
