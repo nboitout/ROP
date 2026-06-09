@@ -2,6 +2,7 @@ import { fetchAllSheets } from '@/lib/sheets'
 import Scorecard from '@/components/admin/Scorecard'
 import AdminStackedCountryChart, { StackedTimePoint } from '@/components/admin/AdminStackedCountryChart'
 import AdminPieChart, { PieDataPoint } from '@/components/admin/AdminPieChart'
+import DaySelect from '@/components/admin/DaySelect'
 
 export const dynamic = 'force-dynamic'
 
@@ -27,7 +28,12 @@ function countryLabel(code: string): string {
   }
 }
 
-export default async function AdminOverviewPage() {
+export default async function AdminOverviewPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ day?: string }>
+}) {
+  const { day } = await searchParams
   let leads, visits, errors
   try {
     ;({ leads, visits, errors } = await fetchAllSheets())
@@ -135,32 +141,36 @@ export default async function AdminOverviewPage() {
     .map(([country, count]) => ({ country, count }))
   const allTimeVisitsTotal = countryRows.reduce((sum, r) => sum + r.count, 0)
 
-  // --- Intraday: current UTC day, visits per hour, stacked by country ---
+  // --- Intraday: visits per hour for a selected UTC day, stacked by country ---
   const todayUTC = new Date().toISOString().slice(0, 10)
-  const todayVisits = pageVisits.filter((v) => v.timestamp.slice(0, 10) === todayUTC)
-  const todayCountryTotals = new Map<string, number>()
-  todayVisits.forEach((v) => {
+  const selectedDay = day && /^\d{4}-\d{2}-\d{2}$/.test(day) ? day : todayUTC
+  // Days offered in the picker: today + every day that has visit data, newest first
+  const dayOptions = [...new Set([todayUTC, ...pageVisits.map((v) => v.timestamp.slice(0, 10))])]
+    .sort((a, b) => (a < b ? 1 : -1))
+  const dayVisits = pageVisits.filter((v) => v.timestamp.slice(0, 10) === selectedDay)
+  const dayCountryTotals = new Map<string, number>()
+  dayVisits.forEach((v) => {
     const c = countryLabel(v.country || 'Unknown')
-    todayCountryTotals.set(c, (todayCountryTotals.get(c) ?? 0) + 1)
+    dayCountryTotals.set(c, (dayCountryTotals.get(c) ?? 0) + 1)
   })
-  const todayTopCountries = [...todayCountryTotals.entries()]
+  const dayTopCountries = [...dayCountryTotals.entries()]
     .sort((a, b) => b[1] - a[1])
     .slice(0, 10)
     .map(([c]) => c)
-  const todayTopSet = new Set(todayTopCountries)
-  const intradayCountries = [...todayTopCountries, 'Other']
+  const dayTopSet = new Set(dayTopCountries)
+  const intradayCountries = [...dayTopCountries, 'Other']
   const intradayData: StackedTimePoint[] = []
   for (let h = 0; h < 24; h++) {
     const entry: StackedTimePoint = { date: `${String(h).padStart(2, '0')}:00` }
     intradayCountries.forEach((c) => { entry[c] = 0 })
     intradayData.push(entry)
   }
-  todayVisits.forEach((v) => {
+  dayVisits.forEach((v) => {
     const hour = parseInt(v.timestamp.slice(11, 13), 10)
     const entry = intradayData[hour]
     if (!entry) return
     const c = countryLabel(v.country || 'Unknown')
-    const key = todayTopSet.has(c) ? c : 'Other'
+    const key = dayTopSet.has(c) ? c : 'Other'
     entry[key] = (entry[key] as number) + 1
   })
 
@@ -202,9 +212,12 @@ export default async function AdminOverviewPage() {
       </div>
 
       <div className="adm-chart-card" style={{ marginBottom: 24 }}>
-        <p className="adm-chart-title">
-          Today by hour ({todayUTC}, UTC) — {todayVisits.length.toLocaleString()} visits
-        </p>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: 12, marginBottom: 20 }}>
+          <p className="adm-chart-title" style={{ marginBottom: 0 }}>
+            By hour ({selectedDay}{selectedDay === todayUTC ? ', today' : ''}, UTC) — {dayVisits.length.toLocaleString()} visits
+          </p>
+          <DaySelect days={dayOptions} selected={selectedDay} today={todayUTC} />
+        </div>
         <AdminStackedCountryChart
           data={intradayData}
           countries={intradayCountries}
