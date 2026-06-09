@@ -1,5 +1,11 @@
 import { createPrivateKey, createSign } from 'node:crypto'
 
+// Visitors always hidden from the admin dashboard (site owner's own devices),
+// in addition to anything set via EXCLUDED_READER_IDS in the environment.
+const ALWAYS_EXCLUDED_READER_IDS = [
+  '84f09d82-c2d9-491f-8d9d-8d98ae785327', // owner — mobile
+]
+
 // ---- Types ----
 
 export interface LeadRow {
@@ -280,8 +286,10 @@ export async function fetchAllSheets(): Promise<{
 
   // Direct readerId exclusion — bypasses Leads lookup, catches visits with no form submission
   const excludedReaderIds = new Set(
-    (process.env.EXCLUDED_READER_IDS ?? '')
-      .split(',')
+    [
+      ...ALWAYS_EXCLUDED_READER_IDS,
+      ...(process.env.EXCLUDED_READER_IDS ?? '').split(','),
+    ]
       .map((s) => s.trim().toLowerCase())
       .filter(Boolean)
   )
