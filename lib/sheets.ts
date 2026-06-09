@@ -3,7 +3,9 @@ import { createPrivateKey, createSign } from 'node:crypto'
 // Visitors always hidden from the admin dashboard (site owner's own devices),
 // in addition to anything set via EXCLUDED_READER_IDS in the environment.
 const ALWAYS_EXCLUDED_READER_IDS = [
-  '84f09d82-c2d9-491f-8d9d-8d98ae785327', // owner — mobile
+  '84f09d82-c2d9-491f-8d9d-8d98ae785327', // owner — mobile (iPhone)
+  'e0ca4a07-38ca-44bf-bfd9-510d6a2a9f73', // owner — desktop (Nicolas Boitout; geolocates to RO)
+  '0a0b76ef-9fdf-4b3e-9cbe-337c8d46f750', // owner — desktop (early sessions)
 ]
 
 // ---- Types ----
