@@ -175,7 +175,33 @@ export async function fetchSheetData(sheetName: string): Promise<string[][]> {
 
 // ---- Map rows to typed objects ----
 
+// Current "Leads" tab — written by the Apps Script with this 13-column layout:
+// timestamp, readerId, sessionId, source, firstName, lastName, fullName,
+// email, profession, lang, country, userAgent, referer
 function rowsToLeads(rows: string[][]): LeadRow[] {
+  if (rows.length < 2) return []
+  return rows.slice(1).map((r) => ({
+    timestamp:  r[0]  ?? '',
+    readerId:   r[1]  ?? '',
+    sessionId:  r[2]  ?? '',
+    source:     r[3]  ?? '',
+    firstName:  r[4]  ?? '',
+    lastName:   r[5]  ?? '',
+    fullName:   r[6]  ?? '',
+    email:      r[7]  ?? '',
+    profession: r[8]  ?? '',
+    lang:       r[9]  ?? '',
+    country:    r[10] ?? '',
+    userAgent:  r[11] ?? '',
+    referer:    r[12] ?? '',
+  }))
+}
+
+// Legacy "OldLeads" tab — the original 10-column layout, kept so historical
+// leads collected before the schema change are still counted:
+// timestamp, readerId, firstName, lastName, fullName, email, profession,
+// source, userAgent, referer
+function rowsToLeadsLegacy(rows: string[][]): LeadRow[] {
   if (rows.length < 2) return []
   return rows.slice(1).map((r) => ({
     timestamp:  r[0] ?? '',
@@ -270,14 +296,16 @@ export async function fetchAllSheets(): Promise<{
   visits: VisitRow[]
   errors: Record<string, string>
 }> {
-  const [leadsResult, eventsResult, visitsResult] = await Promise.all([
+  const [leadsResult, oldLeadsResult, eventsResult, visitsResult] = await Promise.all([
     fetchSheetSafe('Leads'),
+    fetchSheetSafe('OldLeads'),
     fetchSheetSafe('Events'),
     fetchSheetSafe('Visits'),
   ])
 
   const errors: Record<string, string> = {}
   if (leadsResult.error)  errors['Leads']  = leadsResult.error
+  // OldLeads is historical; a missing tab is not an error worth surfacing.
   if (eventsResult.error) errors['Events'] = eventsResult.error
   if (visitsResult.error) errors['Visits'] = visitsResult.error
 
@@ -298,7 +326,7 @@ export async function fetchAllSheets(): Promise<{
       .filter(Boolean)
   )
 
-  const allLeads  = rowsToLeads(leadsResult.rows)
+  const allLeads  = [...rowsToLeads(leadsResult.rows), ...rowsToLeadsLegacy(oldLeadsResult.rows)]
   const allEvents = rowsToEvents(eventsResult.rows)
   const allVisits = rowsToVisits(visitsResult.rows).filter((v) => !v.page.includes('/admin'))
 

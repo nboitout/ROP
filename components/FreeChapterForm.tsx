@@ -1,12 +1,15 @@
 'use client'
 
 import { useState } from 'react'
+import { useRouter } from 'next/navigation'
 import { useLanguage } from '@/app/i18n/LanguageContext'
+import { getSessionId } from '@/lib/session'
 
 type FieldErrors = { name?: string; email?: string; profession?: string }
 
 export default function FreeChapterForm() {
-  const { t } = useLanguage()
+  const { t, lang } = useLanguage()
+  const router = useRouter()
   const f = t.form
 
   const [name, setName] = useState('')
@@ -48,10 +51,14 @@ export default function FreeChapterForm() {
       const res = await fetch('/api/free-chapter', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ fullName: name, email, profession, source: 'chapter-5-free' }),
+        body: JSON.stringify({ fullName: name, email, profession, source: 'chapter-5-free', lang, sessionId: getSessionId() }),
       })
       if (!res.ok) throw new Error('server')
       setSuccess(true)
+      // The API has now set the free_chapters_access cookie — send the reader
+      // into the unlocked chapters, fulfilling the "Nous ouvrons vos chapitres…"
+      // message rather than leaving them on a dead-end success screen.
+      setTimeout(() => router.push('/chapitres-gratuits'), 1200)
     } catch {
       setServerError(f.errorServer)
     } finally {
