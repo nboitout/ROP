@@ -317,7 +317,7 @@ export async function fetchAllSheets(): Promise<{
   // by user-agent instead. Applied only from 2026-05-28 onwards; earlier rows
   // are kept as-is (manually inserted historical data lacks user-agent strings).
   const BOT_FILTER_START = '2026-05-28'
-  const BOT_UA = /bot|crawl|spider|slurp|mediapartners|bingpreview|facebookexternal|embedly|quora link preview|pinterest|vkshare|whatsapp|telegram|headless|phantomjs|python-requests|curl|wget|httpclient|go-http-client|java\/|okhttp|axios|node-fetch|libwww|scrapy/i
+  const BOT_UA = /bot|crawl|spider|slurp|mediapartners|bingpreview|google-read-aloud|read-aloud|google web preview|apis-google|feedfetcher|facebookexternal|embedly|quora link preview|pinterest|vkshare|whatsapp|telegram|headless|phantomjs|python-requests|curl|wget|httpclient|go-http-client|java\/|okhttp|axios|node-fetch|libwww|scrapy/i
   const DESKTOP_LINUX = /X11; Linux x86_64/
 
   // reader_ids that ever recorded dwell (a page_leave) — real visitors measure
