@@ -7,6 +7,7 @@ const ALWAYS_EXCLUDED_READER_IDS = [
   'e0ca4a07-38ca-44bf-bfd9-510d6a2a9f73', // owner — desktop (Nicolas Boitout; geolocates to RO)
   '0a0b76ef-9fdf-4b3e-9cbe-337c8d46f750', // owner — desktop (early sessions)
   'b025efe8-ceb8-4cd1-9473-f2e476b151c5', // Guy — laptop (reviewer; had admin session)
+  '12e8c12c-2c84-45fc-92fb-df432042b5d3', // Guy — mobile
 ]
 
 // ---- Types ----
