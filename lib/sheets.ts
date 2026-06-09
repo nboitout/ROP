@@ -337,6 +337,11 @@ export async function fetchAllSheets(): Promise<{
     // Desktop-Linux client that never recorded any dwell → datacenter/bot
     if (DESKTOP_LINUX.test(ua) && !readersWithDwell.has(v.readerId)) return false
     if (STALE_CHROME_114.test(ua)) return false   // stale headless-Chrome scraper cluster
+    // The genuine audience is French. Reviewing every surviving US visit since
+    // late May, each one that never recorded any dwell (no page_leave) was a
+    // single-hit homepage bounce with bot characteristics; the only real US
+    // reader did record dwell. So: US client with no dwell → datacenter/bot.
+    if (v.country === 'US' && !readersWithDwell.has(v.readerId)) return false
     return true
   })
 
