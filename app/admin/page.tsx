@@ -15,6 +15,18 @@ function formatDuration(secs: number) {
   return `${Math.round(secs)}s`
 }
 
+// Turn an ISO 3166 country code (FR, MT, …) into a full name (France, Malta).
+// Falls back to the raw value for non-codes like 'Unknown' / 'Other'.
+const regionNames = new Intl.DisplayNames(['en'], { type: 'region' })
+function countryLabel(code: string): string {
+  if (!/^[A-Za-z]{2}$/.test(code)) return code
+  try {
+    return regionNames.of(code.toUpperCase()) ?? code
+  } catch {
+    return code
+  }
+}
+
 export default async function AdminOverviewPage() {
   let leads, visits, errors
   try {
@@ -72,7 +84,7 @@ export default async function AdminOverviewPage() {
   // --- Stacked bar: visits per day, stacked by country (top 10 + Other) ---
   const countryTotals = new Map<string, number>()
   pageVisits.forEach((v) => {
-    const c = v.country || 'Unknown'
+    const c = countryLabel(v.country || 'Unknown')
     countryTotals.set(c, (countryTotals.get(c) ?? 0) + 1)
   })
   const topCountries = [...countryTotals.entries()]
@@ -94,7 +106,7 @@ export default async function AdminOverviewPage() {
   pageVisits.forEach((v) => {
     const entry = dateMap.get(v.timestamp.slice(0, 10))
     if (!entry) return
-    const c = v.country || 'Unknown'
+    const c = countryLabel(v.country || 'Unknown')
     const key = topCountrySet.has(c) ? c : 'Other'
     entry[key] = (entry[key] as number) + 1
   })
