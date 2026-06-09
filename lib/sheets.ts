@@ -319,6 +319,9 @@ export async function fetchAllSheets(): Promise<{
   const BOT_FILTER_START = '2026-05-28'
   const BOT_UA = /bot|crawl|spider|slurp|mediapartners|bingpreview|google-read-aloud|read-aloud|google web preview|apis-google|feedfetcher|facebookexternal|embedly|quora link preview|pinterest|vkshare|whatsapp|telegram|headless|phantomjs|python-requests|curl|wget|httpclient|go-http-client|java\/|okhttp|axios|node-fetch|libwww|scrapy/i
   const DESKTOP_LINUX = /X11; Linux x86_64/
+  // A scraper cluster hit from multiple countries with this exact 2-year-old
+  // headless build; Chrome 114 appears nowhere else in real traffic.
+  const STALE_CHROME_114 = /Mac OS X 10_15_7\) AppleWebKit\/537\.36 \(KHTML, like Gecko\) Chrome\/114\./
 
   // reader_ids that ever recorded dwell (a page_leave) — real visitors measure
   // time on page; datacenter clients fetch once and never fire page_leave.
@@ -333,6 +336,7 @@ export async function fetchAllSheets(): Promise<{
     if (BOT_UA.test(ua)) return false   // exclude known crawlers
     // Desktop-Linux client that never recorded any dwell → datacenter/bot
     if (DESKTOP_LINUX.test(ua) && !readersWithDwell.has(v.readerId)) return false
+    if (STALE_CHROME_114.test(ua)) return false   // stale headless-Chrome scraper cluster
     return true
   })
 
