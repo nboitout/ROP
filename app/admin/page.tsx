@@ -87,18 +87,33 @@ export default async function AdminOverviewPage({
   }, 0)
   const avgDwell = chapterLeaves.length > 0 ? dwellTotal / chapterLeaves.length : 0
 
-  // --- Stacked bar: visits per day, stacked by country (top 10 + Other) ---
-  const countryTotals = new Map<string, number>()
+  // --- Stacked bar: unique visitors per day, stacked by country (top 10 + Other) ---
+  // Count distinct reader_ids per bucket (not raw page_visit events), so reloads
+  // and returns within a bucket don't inflate the numbers.
+  const countryVisitors = new Map<string, Set<string>>()
   pageVisits.forEach((v) => {
     const c = countryLabel(v.country || 'Unknown')
-    countryTotals.set(c, (countryTotals.get(c) ?? 0) + 1)
+    if (!countryVisitors.has(c)) countryVisitors.set(c, new Set())
+    if (v.readerId) countryVisitors.get(c)!.add(v.readerId)
   })
-  const topCountries = [...countryTotals.entries()]
-    .sort((a, b) => b[1] - a[1])
+  const topCountries = [...countryVisitors.entries()]
+    .sort((a, b) => b[1].size - a[1].size)
     .slice(0, 10)
     .map(([c]) => c)
   const topCountrySet = new Set(topCountries)
   const stackedCountries = [...topCountries, 'Other']
+
+  // distinct reader_ids per (date, country bucket)
+  const perDate = new Map<string, Map<string, Set<string>>>()
+  pageVisits.forEach((v) => {
+    const date = v.timestamp.slice(0, 10)
+    const c = countryLabel(v.country || 'Unknown')
+    const key = topCountrySet.has(c) ? c : 'Other'
+    if (!perDate.has(date)) perDate.set(date, new Map())
+    const m = perDate.get(date)!
+    if (!m.has(key)) m.set(key, new Set())
+    if (v.readerId) m.get(key)!.add(v.readerId)
+  })
 
   const now = new Date()
   const startD = new Date(START_DATE + 'T00:00:00Z')
@@ -109,13 +124,11 @@ export default async function AdminOverviewPage({
     stackedData.push(entry)
   }
   const dateMap = new Map(stackedData.map((d) => [d.date as string, d]))
-  pageVisits.forEach((v) => {
-    const entry = dateMap.get(v.timestamp.slice(0, 10))
-    if (!entry) return
-    const c = countryLabel(v.country || 'Unknown')
-    const key = topCountrySet.has(c) ? c : 'Other'
-    entry[key] = (entry[key] as number) + 1
-  })
+  for (const [date, m] of perDate) {
+    const entry = dateMap.get(date)
+    if (!entry) continue
+    for (const [key, set] of m) entry[key] = set.size
+  }
 
   // --- Pie chart: visitors by language ---
   const langCount = new Map<string, number>()
@@ -127,18 +140,20 @@ export default async function AdminOverviewPage({
     .sort((a, b) => b[1] - a[1])
     .map(([name, value]) => ({ name, value }))
 
-  // --- All-time visits by country (every date; exclusions + bot filter already
-  // applied in fetchAllSheets, so this omits the owner's own visits and bots) ---
-  const allTimeCountry = new Map<string, number>()
+  // --- All-time unique visitors by country (every date; exclusions + bot filter
+  // already applied in fetchAllSheets, so this omits the owner's own visits and
+  // bots). Distinct reader_ids per country, not raw page_visit events. ---
+  const allTimeCountry = new Map<string, Set<string>>()
   visits
     .filter((v) => v.event === 'page_visit')
     .forEach((v) => {
       const c = countryLabel(v.country || 'Unknown')
-      allTimeCountry.set(c, (allTimeCountry.get(c) ?? 0) + 1)
+      if (!allTimeCountry.has(c)) allTimeCountry.set(c, new Set())
+      if (v.readerId) allTimeCountry.get(c)!.add(v.readerId)
     })
   const countryRows = [...allTimeCountry.entries()]
-    .sort((a, b) => b[1] - a[1])
-    .map(([country, count]) => ({ country, count }))
+    .map(([country, set]) => ({ country, count: set.size }))
+    .sort((a, b) => b.count - a.count)
   const allTimeVisitsTotal = countryRows.reduce((sum, r) => sum + r.count, 0)
 
   // --- Intraday: visits per hour for a selected UTC day, stacked by country ---
@@ -148,31 +163,37 @@ export default async function AdminOverviewPage({
   const dayOptions = [...new Set([todayUTC, ...pageVisits.map((v) => v.timestamp.slice(0, 10))])]
     .sort((a, b) => (a < b ? 1 : -1))
   const dayVisits = pageVisits.filter((v) => v.timestamp.slice(0, 10) === selectedDay)
-  const dayCountryTotals = new Map<string, number>()
+  const dayVisitorCount = new Set(dayVisits.map((v) => v.readerId).filter(Boolean)).size
+  // rank that day's countries by distinct visitors
+  const dayCountryVisitors = new Map<string, Set<string>>()
   dayVisits.forEach((v) => {
     const c = countryLabel(v.country || 'Unknown')
-    dayCountryTotals.set(c, (dayCountryTotals.get(c) ?? 0) + 1)
+    if (!dayCountryVisitors.has(c)) dayCountryVisitors.set(c, new Set())
+    if (v.readerId) dayCountryVisitors.get(c)!.add(v.readerId)
   })
-  const dayTopCountries = [...dayCountryTotals.entries()]
-    .sort((a, b) => b[1] - a[1])
+  const dayTopCountries = [...dayCountryVisitors.entries()]
+    .sort((a, b) => b[1].size - a[1].size)
     .slice(0, 10)
     .map(([c]) => c)
   const dayTopSet = new Set(dayTopCountries)
   const intradayCountries = [...dayTopCountries, 'Other']
+  // distinct reader_ids per (hour, country bucket)
+  const hourSets: Map<string, Set<string>>[] = Array.from({ length: 24 }, () => new Map())
+  dayVisits.forEach((v) => {
+    const hour = parseInt(v.timestamp.slice(11, 13), 10)
+    if (isNaN(hour) || hour < 0 || hour > 23) return
+    const c = countryLabel(v.country || 'Unknown')
+    const key = dayTopSet.has(c) ? c : 'Other'
+    const m = hourSets[hour]
+    if (!m.has(key)) m.set(key, new Set())
+    if (v.readerId) m.get(key)!.add(v.readerId)
+  })
   const intradayData: StackedTimePoint[] = []
   for (let h = 0; h < 24; h++) {
     const entry: StackedTimePoint = { date: `${String(h).padStart(2, '0')}:00` }
-    intradayCountries.forEach((c) => { entry[c] = 0 })
+    intradayCountries.forEach((c) => { entry[c] = hourSets[h].get(c)?.size ?? 0 })
     intradayData.push(entry)
   }
-  dayVisits.forEach((v) => {
-    const hour = parseInt(v.timestamp.slice(11, 13), 10)
-    const entry = intradayData[hour]
-    if (!entry) return
-    const c = countryLabel(v.country || 'Unknown')
-    const key = dayTopSet.has(c) ? c : 'Other'
-    entry[key] = (entry[key] as number) + 1
-  })
 
   return (
     <main className="adm-page">
@@ -205,16 +226,16 @@ export default async function AdminOverviewPage({
         />
       </div>
 
-      <p className="adm-section-title">Readers &amp; Visits — Since {START_DATE}</p>
+      <p className="adm-section-title">Readers &amp; Visitors — Since {START_DATE}</p>
       <div className="adm-chart-card" style={{ marginBottom: 24 }}>
-        <p className="adm-chart-title">Daily visits by country (top 10)</p>
+        <p className="adm-chart-title">Daily unique visitors by country (top 10)</p>
         <AdminStackedCountryChart data={stackedData} countries={stackedCountries} />
       </div>
 
       <div className="adm-chart-card" style={{ marginBottom: 24 }}>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: 12, marginBottom: 20 }}>
           <p className="adm-chart-title" style={{ marginBottom: 0 }}>
-            By hour ({selectedDay}{selectedDay === todayUTC ? ', today' : ''}, UTC) — {dayVisits.length.toLocaleString()} visits
+            By hour ({selectedDay}{selectedDay === todayUTC ? ', today' : ''}, UTC) — {dayVisitorCount.toLocaleString()} visitors
           </p>
           <DaySelect days={dayOptions} selected={selectedDay} today={todayUTC} />
         </div>
@@ -228,16 +249,16 @@ export default async function AdminOverviewPage({
 
       <div className="adm-charts-grid">
         <div className="adm-chart-card">
-          <p className="adm-chart-title">All-time visits by country</p>
+          <p className="adm-chart-title">All-time unique visitors by country</p>
           <p className="adm-page-sub" style={{ marginTop: -12, marginBottom: 16 }}>
-            All dates · {allTimeVisitsTotal.toLocaleString()} visits · excludes owner &amp; bots
+            All dates · {allTimeVisitsTotal.toLocaleString()} visitors · excludes owner &amp; bots
           </p>
           <div className="adm-table-wrap">
             <table className="adm-table">
               <thead>
                 <tr>
                   <th>Country</th>
-                  <th>Visits</th>
+                  <th>Visitors</th>
                   <th>Share</th>
                 </tr>
               </thead>
