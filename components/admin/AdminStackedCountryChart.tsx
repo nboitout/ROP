@@ -19,6 +19,10 @@ export interface StackedTimePoint {
 interface Props {
   data: StackedTimePoint[]
   countries: string[]
+  /** X-axis tick formatter. Default strips the year from a YYYY-MM-DD date. */
+  tickFormatter?: (v: string) => string
+  /** X-axis tick interval (recharts). Default shows first & last only. */
+  interval?: number | 'preserveStartEnd'
 }
 
 // High-contrast categorical palette — distinct hue AND lightness between
@@ -29,7 +33,12 @@ const PALETTE = [
   '#469990', '#f032e6', '#9a6324', '#800000', '#808000', '#9a9a9a',
 ]
 
-export default function AdminStackedCountryChart({ data, countries }: Props) {
+export default function AdminStackedCountryChart({
+  data,
+  countries,
+  tickFormatter = (v: string) => v.slice(5),
+  interval = 'preserveStartEnd',
+}: Props) {
   return (
     <ResponsiveContainer width="100%" height={300}>
       <BarChart data={data} margin={{ top: 4, right: 8, left: -10, bottom: 0 }} barCategoryGap="18%">
@@ -39,8 +48,8 @@ export default function AdminStackedCountryChart({ data, countries }: Props) {
           tick={{ fill: 'rgba(26,26,24,.58)', fontSize: 11, fontFamily: 'DM Sans, sans-serif' }}
           axisLine={false}
           tickLine={false}
-          tickFormatter={(v: string) => v.slice(5)}
-          interval="preserveStartEnd"
+          tickFormatter={tickFormatter}
+          interval={interval}
         />
         <YAxis
           tick={{ fill: 'rgba(26,26,24,.58)', fontSize: 11, fontFamily: 'DM Sans, sans-serif' }}

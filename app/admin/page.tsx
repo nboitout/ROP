@@ -135,6 +135,35 @@ export default async function AdminOverviewPage() {
     .map(([country, count]) => ({ country, count }))
   const allTimeVisitsTotal = countryRows.reduce((sum, r) => sum + r.count, 0)
 
+  // --- Intraday: current UTC day, visits per hour, stacked by country ---
+  const todayUTC = new Date().toISOString().slice(0, 10)
+  const todayVisits = pageVisits.filter((v) => v.timestamp.slice(0, 10) === todayUTC)
+  const todayCountryTotals = new Map<string, number>()
+  todayVisits.forEach((v) => {
+    const c = countryLabel(v.country || 'Unknown')
+    todayCountryTotals.set(c, (todayCountryTotals.get(c) ?? 0) + 1)
+  })
+  const todayTopCountries = [...todayCountryTotals.entries()]
+    .sort((a, b) => b[1] - a[1])
+    .slice(0, 10)
+    .map(([c]) => c)
+  const todayTopSet = new Set(todayTopCountries)
+  const intradayCountries = [...todayTopCountries, 'Other']
+  const intradayData: StackedTimePoint[] = []
+  for (let h = 0; h < 24; h++) {
+    const entry: StackedTimePoint = { date: `${String(h).padStart(2, '0')}:00` }
+    intradayCountries.forEach((c) => { entry[c] = 0 })
+    intradayData.push(entry)
+  }
+  todayVisits.forEach((v) => {
+    const hour = parseInt(v.timestamp.slice(11, 13), 10)
+    const entry = intradayData[hour]
+    if (!entry) return
+    const c = countryLabel(v.country || 'Unknown')
+    const key = todayTopSet.has(c) ? c : 'Other'
+    entry[key] = (entry[key] as number) + 1
+  })
+
   return (
     <main className="adm-page">
       <div className="adm-page-header">
@@ -170,6 +199,18 @@ export default async function AdminOverviewPage() {
       <div className="adm-chart-card" style={{ marginBottom: 24 }}>
         <p className="adm-chart-title">Daily visits by country (top 10)</p>
         <AdminStackedCountryChart data={stackedData} countries={stackedCountries} />
+      </div>
+
+      <div className="adm-chart-card" style={{ marginBottom: 24 }}>
+        <p className="adm-chart-title">
+          Today by hour ({todayUTC}, UTC) — {todayVisits.length.toLocaleString()} visits
+        </p>
+        <AdminStackedCountryChart
+          data={intradayData}
+          countries={intradayCountries}
+          tickFormatter={(v) => v}
+          interval={2}
+        />
       </div>
 
       <div className="adm-charts-grid">
