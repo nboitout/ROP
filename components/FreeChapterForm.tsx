@@ -5,14 +5,15 @@ import { useRouter } from 'next/navigation'
 import { useLanguage } from '@/app/i18n/LanguageContext'
 import { getSessionId } from '@/lib/session'
 
-type FieldErrors = { name?: string; email?: string; profession?: string }
+type FieldErrors = { firstName?: string; lastName?: string; email?: string; profession?: string }
 
 export default function FreeChapterForm() {
   const { t, lang } = useLanguage()
   const router = useRouter()
   const f = t.form
 
-  const [name, setName] = useState('')
+  const [firstName, setFirstName] = useState('')
+  const [lastName, setLastName] = useState('')
   const [email, setEmail] = useState('')
   const [professionSelect, setProfessionSelect] = useState('')
   const [professionOtherText, setProfessionOtherText] = useState('')
@@ -26,7 +27,8 @@ export default function FreeChapterForm() {
 
   function validate(): FieldErrors {
     const errors: FieldErrors = {}
-    if (!name.trim()) errors.name = f.errorName
+    if (!firstName.trim()) errors.firstName = f.errorName
+    if (!lastName.trim()) errors.lastName = f.errorName
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
     if (!email.trim()) errors.email = f.errorEmail
     else if (!emailRegex.test(email)) errors.email = f.errorEmailInvalid
@@ -51,7 +53,7 @@ export default function FreeChapterForm() {
       const res = await fetch('/api/free-chapter', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ fullName: name, email, profession, source: 'chapter-5-free', lang, sessionId: getSessionId() }),
+        body: JSON.stringify({ firstName: firstName.trim(), lastName: lastName.trim(), fullName: `${firstName.trim()} ${lastName.trim()}`.trim(), email, profession, source: 'chapter-5-free', lang, sessionId: getSessionId() }),
       })
       if (!res.ok) throw new Error('server')
       setSuccess(true)
@@ -84,17 +86,32 @@ export default function FreeChapterForm() {
 
       {serverError && <div className="ferror-banner on">{serverError}</div>}
 
-      <div className={`fg${fieldErrors.name ? ' has-error' : ''}`}>
-        <label htmlFor="fn">{f.nameLbl}</label>
-        <input
-          id="fn"
-          type="text"
-          placeholder={f.namePlaceholder}
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-          autoComplete="name"
-        />
-        <span className="field-error">{fieldErrors.name}</span>
+      <div style={{ display: 'flex', gap: 10 }}>
+        <div className={`fg${fieldErrors.firstName ? ' has-error' : ''}`} style={{ flex: 1 }}>
+          <label htmlFor="ffn">{f.firstNameLbl}</label>
+          <input
+            id="ffn"
+            type="text"
+            placeholder={f.firstNamePlaceholder}
+            value={firstName}
+            onChange={(e) => setFirstName(e.target.value)}
+            autoComplete="given-name"
+          />
+          <span className="field-error">{fieldErrors.firstName}</span>
+        </div>
+
+        <div className={`fg${fieldErrors.lastName ? ' has-error' : ''}`} style={{ flex: 1 }}>
+          <label htmlFor="fln">{f.lastNameLbl}</label>
+          <input
+            id="fln"
+            type="text"
+            placeholder={f.lastNamePlaceholder}
+            value={lastName}
+            onChange={(e) => setLastName(e.target.value)}
+            autoComplete="family-name"
+          />
+          <span className="field-error">{fieldErrors.lastName}</span>
+        </div>
       </div>
 
       <div className={`fg${fieldErrors.email ? ' has-error' : ''}`}>
