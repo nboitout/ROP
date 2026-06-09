@@ -318,12 +318,22 @@ export async function fetchAllSheets(): Promise<{
   // are kept as-is (manually inserted historical data lacks user-agent strings).
   const BOT_FILTER_START = '2026-05-28'
   const BOT_UA = /bot|crawl|spider|slurp|mediapartners|bingpreview|facebookexternal|embedly|quora link preview|pinterest|vkshare|whatsapp|telegram|headless|phantomjs|python-requests|curl|wget|httpclient|go-http-client|java\/|okhttp|axios|node-fetch|libwww|scrapy/i
+  const DESKTOP_LINUX = /X11; Linux x86_64/
+
+  // reader_ids that ever recorded dwell (a page_leave) — real visitors measure
+  // time on page; datacenter clients fetch once and never fire page_leave.
+  const readersWithDwell = new Set(
+    cleanVisits.filter((v) => v.event === 'page_leave').map((v) => v.readerId).filter(Boolean)
+  )
 
   const filteredVisits = cleanVisits.filter((v) => {
     if (v.timestamp.slice(0, 10) < BOT_FILTER_START) return true
     const ua = (v.userAgent ?? '').trim()
     if (!ua) return false          // no user-agent → automated client
-    return !BOT_UA.test(ua)        // exclude known crawlers
+    if (BOT_UA.test(ua)) return false   // exclude known crawlers
+    // Desktop-Linux client that never recorded any dwell → datacenter/bot
+    if (DESKTOP_LINUX.test(ua) && !readersWithDwell.has(v.readerId)) return false
+    return true
   })
 
   return {
