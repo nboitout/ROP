@@ -2,6 +2,7 @@ import { fetchAllSheets } from '@/lib/sheets'
 import Scorecard from '@/components/admin/Scorecard'
 import AdminStackedCountryChart, { StackedTimePoint } from '@/components/admin/AdminStackedCountryChart'
 import AdminPieChart, { PieDataPoint } from '@/components/admin/AdminPieChart'
+import AdminBarChart, { BarDataPoint } from '@/components/admin/AdminBarChart'
 
 export const dynamic = 'force-dynamic'
 
@@ -121,6 +122,20 @@ export default async function AdminOverviewPage() {
     .sort((a, b) => b[1] - a[1])
     .map(([name, value]) => ({ name, value }))
 
+  // --- All-time visits by country (every date; exclusions + bot filter already
+  // applied in fetchAllSheets, so this omits the owner's own visits and bots) ---
+  const allTimeCountry = new Map<string, number>()
+  visits
+    .filter((v) => v.event === 'page_visit')
+    .forEach((v) => {
+      const c = countryLabel(v.country || 'Unknown')
+      allTimeCountry.set(c, (allTimeCountry.get(c) ?? 0) + 1)
+    })
+  const countryBarData: BarDataPoint[] = [...allTimeCountry.entries()]
+    .sort((a, b) => b[1] - a[1])
+    .map(([name, value]) => ({ name, value }))
+  const allTimeVisitsTotal = countryBarData.reduce((sum, d) => sum + d.value, 0)
+
   return (
     <main className="adm-page">
       <div className="adm-page-header">
@@ -156,6 +171,14 @@ export default async function AdminOverviewPage() {
       <div className="adm-chart-card" style={{ marginBottom: 24 }}>
         <p className="adm-chart-title">Daily visits by country (top 10)</p>
         <AdminStackedCountryChart data={stackedData} countries={stackedCountries} />
+      </div>
+
+      <p className="adm-section-title">All-time visits by country</p>
+      <div className="adm-chart-card" style={{ marginBottom: 24 }}>
+        <p className="adm-chart-title">
+          Total page visits per country — all dates ({allTimeVisitsTotal.toLocaleString()} visits, excludes owner &amp; bots)
+        </p>
+        <AdminBarChart data={countryBarData} layout="vertical" color="#4363d8" />
       </div>
 
       <div className="adm-charts-grid">
