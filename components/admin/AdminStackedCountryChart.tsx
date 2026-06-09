@@ -19,8 +19,8 @@ export interface StackedTimePoint {
 interface Props {
   data: StackedTimePoint[]
   countries: string[]
-  /** X-axis tick formatter. Default strips the year from a YYYY-MM-DD date. */
-  tickFormatter?: (v: string) => string
+  /** X-axis label mode: 'date' strips the year from YYYY-MM-DD; 'raw' shows the value as-is. */
+  labelMode?: 'date' | 'raw'
   /** X-axis tick interval (recharts). Default shows first & last only. */
   interval?: number | 'preserveStartEnd'
 }
@@ -36,9 +36,10 @@ const PALETTE = [
 export default function AdminStackedCountryChart({
   data,
   countries,
-  tickFormatter = (v: string) => v.slice(5),
+  labelMode = 'date',
   interval = 'preserveStartEnd',
 }: Props) {
+  const tickFormatter = labelMode === 'raw' ? (v: string) => v : (v: string) => v.slice(5)
   return (
     <ResponsiveContainer width="100%" height={300}>
       <BarChart data={data} margin={{ top: 4, right: 8, left: -10, bottom: 0 }} barCategoryGap="18%">

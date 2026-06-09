@@ -221,7 +221,7 @@ export default async function AdminOverviewPage({
         <AdminStackedCountryChart
           data={intradayData}
           countries={intradayCountries}
-          tickFormatter={(v) => v}
+          labelMode="raw"
           interval={2}
         />
       </div>
