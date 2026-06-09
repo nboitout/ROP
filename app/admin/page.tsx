@@ -172,46 +172,47 @@ export default async function AdminOverviewPage() {
         <AdminStackedCountryChart data={stackedData} countries={stackedCountries} />
       </div>
 
-      <p className="adm-section-title">All-time visits by country</p>
-      <p className="adm-page-sub" style={{ marginBottom: 12 }}>
-        All dates · {allTimeVisitsTotal.toLocaleString()} visits · excludes owner &amp; bots
-      </p>
-      <div className="adm-table-wrap" style={{ marginBottom: 24 }}>
-        <table className="adm-table">
-          <thead>
-            <tr>
-              <th>Country</th>
-              <th>Visits</th>
-              <th>Share</th>
-            </tr>
-          </thead>
-          <tbody>
-            {countryRows.map((row) => (
-              <tr key={row.country}>
-                <td>{row.country}</td>
-                <td>{row.count.toLocaleString()}</td>
-                <td className="muted">
-                  {allTimeVisitsTotal > 0 ? formatPct((row.count / allTimeVisitsTotal) * 100) : '—'}
-                </td>
-              </tr>
-            ))}
-            {countryRows.length > 0 && (
-              <tr>
-                <td style={{ fontWeight: 600, borderTop: '1px solid var(--adm-i08)' }}>Total</td>
-                <td style={{ fontWeight: 600, borderTop: '1px solid var(--adm-i08)' }}>{allTimeVisitsTotal.toLocaleString()}</td>
-                <td className="muted" style={{ borderTop: '1px solid var(--adm-i08)' }}>100%</td>
-              </tr>
-            )}
-            {countryRows.length === 0 && (
-              <tr>
-                <td colSpan={3} className="muted">No data</td>
-              </tr>
-            )}
-          </tbody>
-        </table>
-      </div>
-
       <div className="adm-charts-grid">
+        <div className="adm-chart-card">
+          <p className="adm-chart-title">All-time visits by country</p>
+          <p className="adm-page-sub" style={{ marginTop: -12, marginBottom: 16 }}>
+            All dates · {allTimeVisitsTotal.toLocaleString()} visits · excludes owner &amp; bots
+          </p>
+          <div className="adm-table-wrap">
+            <table className="adm-table">
+              <thead>
+                <tr>
+                  <th>Country</th>
+                  <th>Visits</th>
+                  <th>Share</th>
+                </tr>
+              </thead>
+              <tbody>
+                {countryRows.map((row) => (
+                  <tr key={row.country}>
+                    <td>{row.country}</td>
+                    <td>{row.count.toLocaleString()}</td>
+                    <td className="muted">
+                      {allTimeVisitsTotal > 0 ? formatPct((row.count / allTimeVisitsTotal) * 100) : '—'}
+                    </td>
+                  </tr>
+                ))}
+                {countryRows.length > 0 && (
+                  <tr>
+                    <td style={{ fontWeight: 600, borderTop: '1px solid var(--adm-i08)' }}>Total</td>
+                    <td style={{ fontWeight: 600, borderTop: '1px solid var(--adm-i08)' }}>{allTimeVisitsTotal.toLocaleString()}</td>
+                    <td className="muted" style={{ borderTop: '1px solid var(--adm-i08)' }}>100%</td>
+                  </tr>
+                )}
+                {countryRows.length === 0 && (
+                  <tr>
+                    <td colSpan={3} className="muted">No data</td>
+                  </tr>
+                )}
+              </tbody>
+            </table>
+          </div>
+        </div>
         <div className="adm-chart-card">
           <p className="adm-chart-title">Visitors by Language</p>
           <AdminPieChart data={langData} />
