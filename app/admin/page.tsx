@@ -2,7 +2,6 @@ import { fetchAllSheets } from '@/lib/sheets'
 import Scorecard from '@/components/admin/Scorecard'
 import AdminStackedCountryChart, { StackedTimePoint } from '@/components/admin/AdminStackedCountryChart'
 import AdminPieChart, { PieDataPoint } from '@/components/admin/AdminPieChart'
-import AdminBarChart, { BarDataPoint } from '@/components/admin/AdminBarChart'
 
 export const dynamic = 'force-dynamic'
 
@@ -131,10 +130,10 @@ export default async function AdminOverviewPage() {
       const c = countryLabel(v.country || 'Unknown')
       allTimeCountry.set(c, (allTimeCountry.get(c) ?? 0) + 1)
     })
-  const countryBarData: BarDataPoint[] = [...allTimeCountry.entries()]
+  const countryRows = [...allTimeCountry.entries()]
     .sort((a, b) => b[1] - a[1])
-    .map(([name, value]) => ({ name, value }))
-  const allTimeVisitsTotal = countryBarData.reduce((sum, d) => sum + d.value, 0)
+    .map(([country, count]) => ({ country, count }))
+  const allTimeVisitsTotal = countryRows.reduce((sum, r) => sum + r.count, 0)
 
   return (
     <main className="adm-page">
@@ -174,11 +173,42 @@ export default async function AdminOverviewPage() {
       </div>
 
       <p className="adm-section-title">All-time visits by country</p>
-      <div className="adm-chart-card" style={{ marginBottom: 24 }}>
-        <p className="adm-chart-title">
-          Total page visits per country — all dates ({allTimeVisitsTotal.toLocaleString()} visits, excludes owner &amp; bots)
-        </p>
-        <AdminBarChart data={countryBarData} layout="vertical" color="#4363d8" />
+      <p className="adm-page-sub" style={{ marginBottom: 12 }}>
+        All dates · {allTimeVisitsTotal.toLocaleString()} visits · excludes owner &amp; bots
+      </p>
+      <div className="adm-table-wrap" style={{ marginBottom: 24 }}>
+        <table className="adm-table">
+          <thead>
+            <tr>
+              <th>Country</th>
+              <th>Visits</th>
+              <th>Share</th>
+            </tr>
+          </thead>
+          <tbody>
+            {countryRows.map((row) => (
+              <tr key={row.country}>
+                <td>{row.country}</td>
+                <td>{row.count.toLocaleString()}</td>
+                <td className="muted">
+                  {allTimeVisitsTotal > 0 ? formatPct((row.count / allTimeVisitsTotal) * 100) : '—'}
+                </td>
+              </tr>
+            ))}
+            {countryRows.length > 0 && (
+              <tr>
+                <td style={{ fontWeight: 600, borderTop: '1px solid var(--adm-i08)' }}>Total</td>
+                <td style={{ fontWeight: 600, borderTop: '1px solid var(--adm-i08)' }}>{allTimeVisitsTotal.toLocaleString()}</td>
+                <td className="muted" style={{ borderTop: '1px solid var(--adm-i08)' }}>100%</td>
+              </tr>
+            )}
+            {countryRows.length === 0 && (
+              <tr>
+                <td colSpan={3} className="muted">No data</td>
+              </tr>
+            )}
+          </tbody>
+        </table>
       </div>
 
       <div className="adm-charts-grid">
