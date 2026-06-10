@@ -19,6 +19,15 @@ export default async function AdminLayout({
             <AdminNavLink href="/admin/engagement">Engagement</AdminNavLink>
             <AdminNavLink href="/admin/readers">Readers</AdminNavLink>
             <AdminNavLink href="/admin/parcours">Parcours</AdminNavLink>
+            <span className="adm-nav-sep" aria-hidden="true" />
+            <a
+              href="/prototype-pied"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="adm-nav-link"
+            >
+              Prototype 3D ↗
+            </a>
           </div>
         </div>
         <div className="adm-nav-right">
