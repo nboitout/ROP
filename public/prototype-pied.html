@@ -110,7 +110,22 @@
 <script src="/vendor/three.min.js"></script>
 <script>
 (function(){
-  if(!window.THREE){document.body.innerHTML='<p style="color:#fff;font-family:sans-serif;padding:40px">Three.js n\'a pas pu se charger.</p>';return;}
+  // Surface any failure as a red banner instead of a silent blank stage.
+  function banner(msg){
+    var b=document.createElement('div');
+    b.setAttribute('role','alert');
+    b.style.cssText='position:fixed;top:0;left:0;right:0;z-index:9999;background:#7a1f1a;color:#fff;'+
+      'font-family:system-ui,sans-serif;font-size:13px;line-height:1.5;padding:12px 16px;'+
+      'box-shadow:0 2px 10px rgba(0,0,0,.4);white-space:pre-wrap;';
+    b.textContent=msg;
+    document.body.appendChild(b);
+    if(window.console)console.error(msg);
+  }
+  if(!window.THREE){
+    banner("Three.js n'a pas pu se charger — fichier /vendor/three.min.js introuvable ou bloqué (CSP/réseau).");
+    return;
+  }
+  try{
   const RM=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const renderer=new THREE.WebGLRenderer({antialias:true,alpha:true});
   renderer.setPixelRatio(Math.min(window.devicePixelRatio,2));
@@ -269,7 +284,12 @@
   const zoomprompt=document.getElementById('zoomprompt');let hintFaded=false;
   function fadeHint(){if(hintFaded)return;hintFaded=true;}
 
-  function resize(){const w=innerWidth,h=innerHeight;renderer.setSize(w,h);camera.aspect=w/h;camera.updateProjectionMatrix();
+  function resize(){
+    // Size guard: if the viewport reports 0 (collapsed/hidden container), fall
+    // back to sane defaults so the canvas never renders into nothing.
+    const w=innerWidth||document.documentElement.clientWidth||800;
+    const h=innerHeight||document.documentElement.clientHeight||600;
+    renderer.setSize(w,h);camera.aspect=w/h;camera.updateProjectionMatrix();
     leaderSvg.setAttribute('viewBox','0 0 '+w+' '+h);leaderSvg.setAttribute('width',w);leaderSvg.setAttribute('height',h);}
   addEventListener('resize',resize);resize();
 
@@ -318,6 +338,9 @@
     camera.lookAt(camLook);
     renderer.render(scene,camera);updateLabels();}
   tick();
+  }catch(e){
+    banner('Init: '+(e&&e.message?e.message:e)+(e&&e.stack?'\n'+e.stack.split('\n')[1]:''));
+  }
 })();
 </script>
 </body>
