@@ -102,7 +102,7 @@ export default async function ReadersPage() {
   // A "return" = any visit after the first, counted by distinct session.
   const visitStats = new Map<
     string,
-    { first: number; last: number; sessions: Set<string>; count: number }
+    { first: number; last: number; sessions: Set<string>; count: number; lastUA: string }
   >()
   visits
     .filter((v) => v.event === 'page_visit' && v.readerId)
@@ -116,14 +116,30 @@ export default async function ReadersPage() {
           last: t,
           sessions: new Set(v.sessionId ? [v.sessionId] : []),
           count: 1,
+          lastUA: v.userAgent || '',
         })
       } else {
         if (t < s.first) s.first = t
-        if (t > s.last) s.last = t
+        // Keep the user agent from the most recent visit (the last session).
+        if (t >= s.last) {
+          s.last = t
+          if (v.userAgent) s.lastUA = v.userAgent
+        }
         if (v.sessionId) s.sessions.add(v.sessionId)
         s.count += 1
       }
     })
+
+  // Coarse device class from a user-agent string. We can't reliably tell a
+  // laptop from a desktop, so both report as "Desktop".
+  const deviceType = (ua: string) => {
+    if (!ua) return '—'
+    if (/iPad|Tablet|PlayBook|Silk|Kindle|Nexus 7|Nexus 10|(?:Android(?!.*Mobile))/i.test(ua))
+      return 'Tablet'
+    if (/Mobi|iPhone|iPod|Android|Windows Phone|BlackBerry|IEMobile|Opera Mini/i.test(ua))
+      return 'Mobile'
+    return 'Desktop'
+  }
 
   const fmtTs = (ms: number) =>
     new Date(ms).toISOString().slice(0, 16).replace('T', ' ')
@@ -206,6 +222,7 @@ export default async function ReadersPage() {
               <th>First Visit</th>
               <th>Last Visit</th>
               <th>Returns</th>
+              <th>Device</th>
             </tr>
           </thead>
           <tbody>
@@ -233,12 +250,13 @@ export default async function ReadersPage() {
                     {stats ? fmtTs(stats.last) : '—'}
                   </td>
                   <td>{stats ? returns : '—'}</td>
+                  <td>{stats ? deviceType(stats.lastUA) : '—'}</td>
                 </tr>
               )
             })}
             {sortedLeads.length === 0 && (
               <tr>
-                <td colSpan={10} className="muted">No readers yet</td>
+                <td colSpan={11} className="muted">No readers yet</td>
               </tr>
             )}
           </tbody>
