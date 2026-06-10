@@ -59,6 +59,9 @@ const CTA_BUCKET: Record<string, string> = {
   hero_summary: 'See chapters list',
   chapters_buy: 'Order the full book',
   pricing_notify: 'Notify me on release',
+  // Outbound links in the "about Guy" section → the R.O.P. Institute site.
+  author_institut: 'Institut R.O.P. — site',
+  author_formations: 'Institut R.O.P. — formations',
 }
 
 export default async function EngagementPage() {
@@ -246,6 +249,8 @@ export default async function EngagementPage() {
             <strong>Notify me on release</strong>, and <strong>See chapters list</strong>. Counts clicks,
             not people. Pre-launch the editions aren’t purchasable yet, so the print/online plan buttons
             fall under “Notify me on release” — a separate buy action will be added once the book is on sale.
+            The two outbound links in the “about Guy” section are also tracked here as
+            <strong>Institut R.O.P. — site</strong> and <strong>Institut R.O.P. — formations</strong>.
           </p>
           <AdminBarChart data={ctaData} color="#c9a35e" layout="vertical" />
         </div>
