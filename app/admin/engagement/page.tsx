@@ -125,6 +125,31 @@ export default async function EngagementPage() {
     .sort((a, b) => b[1] - a[1])
     .map(([name, value]) => ({ name, value }))
 
+  // --- Homepage Intent Rate ---
+  // Qualified visitors = stayed >10s on the homepage OR clicked any button
+  // (a click signals intent regardless of dwell). Of those, the share who
+  // clicked Read (free chapters) or Buy. Pure bounces (<10s and no click at
+  // all) are excluded from the denominator.
+  const READ_BUY = new Set(['hero_chapters', 'pricing_chapters_bundle', 'chapters_buy'])
+  const dwell10 = new Set<string>()
+  pageLeaves.forEach((v) => {
+    if (!v.readerId || pageLabel(v.page) !== 'Homepage') return
+    const n = parseFloat(v.duration_seconds)
+    if (!isNaN(n) && n > 10) dwell10.add(v.readerId)
+  })
+  const anyClick = new Set<string>()
+  const readBuyClick = new Set<string>()
+  events.filter((e) => e.event === 'cta_click').forEach((e) => {
+    if (!e.readerId) return
+    let cta = e.data
+    try { cta = (JSON.parse(e.data) as Record<string, string>).cta ?? e.data } catch { /* plain string */ }
+    anyClick.add(e.readerId)
+    if (READ_BUY.has(cta)) readBuyClick.add(e.readerId)
+  })
+  const qualifiedVisitors = new Set<string>([...dwell10, ...anyClick])
+  // readBuyClick ⊆ anyClick ⊆ qualifiedVisitors, so its size is the numerator.
+  const intentRate = qualifiedVisitors.size > 0 ? (readBuyClick.size / qualifiedVisitors.size) * 100 : 0
+
   // Bar: UTM sources
   const utmCount = new Map<string, number>()
   visits
@@ -184,6 +209,11 @@ export default async function EngagementPage() {
           label="Return Visitor Rate"
           value={`${returnRate.toFixed(1)}%`}
           subtitle="of distinct visitors"
+        />
+        <Scorecard
+          label="Homepage Intent Rate"
+          value={`${intentRate.toFixed(1)}%`}
+          subtitle=">10s or clicked → read/buy"
         />
       </div>
 
