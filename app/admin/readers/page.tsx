@@ -4,6 +4,16 @@ import AdminBarChart, { BarDataPoint } from '@/components/admin/AdminBarChart'
 
 export const dynamic = 'force-dynamic'
 
+// Every supported site language, in a fixed display order, so the
+// "Readers by Language" chart always shows all of them — even at zero.
+const ALL_LANGS: { code: string; label: string }[] = [
+  { code: 'fr', label: 'Français' },
+  { code: 'en', label: 'English' },
+  { code: 'de', label: 'Deutsch' },
+  { code: 'es', label: 'Español' },
+  { code: 'it', label: 'Italiano' },
+]
+
 function daysAgo(days: number): string {
   const d = new Date()
   d.setDate(d.getDate() - days)
@@ -44,16 +54,6 @@ export default async function ReadersPage() {
   const last7 = dedupedLeads.filter((l) => l.timestamp.slice(0, 10) >= cutoff7).length
   const last30 = dedupedLeads.filter((l) => l.timestamp.slice(0, 10) >= cutoff30).length
 
-  // Bar: leads by source
-  const sourceCount = new Map<string, number>()
-  dedupedLeads.forEach((l) => {
-    const s = l.source || 'Unknown'
-    sourceCount.set(s, (sourceCount.get(s) ?? 0) + 1)
-  })
-  const sourceData: BarDataPoint[] = [...sourceCount.entries()]
-    .sort((a, b) => b[1] - a[1])
-    .map(([name, value]) => ({ name, value }))
-
   // Bar: leads by profession (top 10)
   const profCount = new Map<string, number>()
   dedupedLeads.forEach((l) => {
@@ -65,15 +65,22 @@ export default async function ReadersPage() {
     .slice(0, 10)
     .map(([name, value]) => ({ name, value }))
 
-  // Bar: leads by language
+  // Bar: leads by language — always show every supported language (even at 0),
+  // in a fixed order, so the chart is stable over time. Any unexpected value
+  // (e.g. a missing lang recorded as "Unknown") is appended only if present.
   const langCount = new Map<string, number>()
   dedupedLeads.forEach((l) => {
     const lg = l.lang || 'Unknown'
     langCount.set(lg, (langCount.get(lg) ?? 0) + 1)
   })
-  const langData: BarDataPoint[] = [...langCount.entries()]
+  const langData: BarDataPoint[] = ALL_LANGS.map(({ code, label }) => ({
+    name: label,
+    value: langCount.get(code) ?? 0,
+  }))
+  ;[...langCount.entries()]
+    .filter(([code]) => !ALL_LANGS.some((l) => l.code === code))
     .sort((a, b) => b[1] - a[1])
-    .map(([name, value]) => ({ name, value }))
+    .forEach(([code, value]) => langData.push({ name: code, value }))
 
   // Table: by country
   const countryCount = new Map<string, number>()
@@ -106,15 +113,9 @@ export default async function ReadersPage() {
         <Scorecard label="Last 30 Days" value={last30.toLocaleString()} />
       </div>
 
-      <div className="adm-charts-grid">
-        <div className="adm-chart-card">
-          <p className="adm-chart-title">Readers by Source</p>
-          <AdminBarChart data={sourceData} color="#4a6b5a" />
-        </div>
-        <div className="adm-chart-card">
-          <p className="adm-chart-title">Readers by Language</p>
-          <AdminBarChart data={langData} color="#c9a35e" />
-        </div>
+      <div className="adm-chart-card" style={{ marginBottom: 24 }}>
+        <p className="adm-chart-title">Readers by Language</p>
+        <AdminBarChart data={langData} color="#c9a35e" />
       </div>
 
       <div className="adm-chart-card" style={{ marginBottom: 32 }}>
