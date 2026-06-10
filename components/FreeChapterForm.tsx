@@ -33,7 +33,6 @@ export default function FreeChapterForm() {
     if (!email.trim()) errors.email = f.errorEmail
     else if (!emailRegex.test(email)) errors.email = f.errorEmailInvalid
     if (!professionSelect) errors.profession = f.errorProfession
-    else if (professionSelect === f.professionOther && !professionOtherText.trim()) errors.profession = f.errorProfession
     return errors
   }
 
