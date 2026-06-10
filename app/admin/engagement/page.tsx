@@ -174,16 +174,33 @@ export default async function EngagementPage() {
 
       <div className="adm-chart-card" style={{ marginBottom: 24 }}>
         <p className="adm-chart-title">Return frequency — visitors by number of return visits</p>
+        <p className="adm-page-sub" style={{ marginTop: -10, marginBottom: 18, maxWidth: 720, lineHeight: 1.6 }}>
+          Groups visitors by how many <strong>separate days</strong> they came back. “0 returns” = seen on
+          one day only; “2 returns” = seen on 3 different dates. Same-day reloads don’t count. Identity is the
+          browser’s anonymous <code>reader_id</code> cookie, so clearing cookies or switching device shows up
+          as a new visitor.
+        </p>
         <AdminBarChart data={returnBuckets} color="#4a6b5a" />
       </div>
 
       <div className="adm-charts-grid">
         <div className="adm-chart-card">
           <p className="adm-chart-title">Avg Dwell Time per Page (seconds)</p>
+          <p className="adm-page-sub" style={{ marginTop: -10, marginBottom: 18, lineHeight: 1.6 }}>
+            Average <strong>active</strong> seconds spent on each page before leaving (time with the tab
+            hidden isn’t counted). The homepage and the sign-up gate are reported separately. Note: current
+            Chapitre 5 figures are seed/demo data — real reading times build up now that the gate works.
+          </p>
           <AdminBarChart data={dwellData} color="#4a6b5a" layout="vertical" />
         </div>
         <div className="adm-chart-card">
           <p className="adm-chart-title">CTA Clicks by Type</p>
+          <p className="adm-page-sub" style={{ marginTop: -10, marginBottom: 18, lineHeight: 1.6 }}>
+            Counts clicks on each call-to-action button on the homepage, by its internal name —
+            e.g. <code>hero_chapters</code> (the main “read the free chapters” button),
+            <code>chapters_buy</code> (“order the full book”), and the <code>pricing_*</code> buttons on the
+            three pricing plans. Shows which buttons visitors actually engage with.
+          </p>
           <AdminBarChart data={ctaData} color="#c9a35e" layout="vertical" />
         </div>
       </div>
