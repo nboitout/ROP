@@ -43,10 +43,6 @@ const ZERO: Metrics = {
   slidesOpened: 0, slidesAvgTime: 0, resourcesOpened: 0, resourcesAvgTime: 0,
 }
 
-function pct(a: number, b: number) {
-  if (b <= 0) return '—'
-  return `${(((b - a) / b) * 100).toFixed(1)}% drop`
-}
 function stripPath(p: string) {
   return p.replace(/^https?:\/\/[^/]+/, '') || '/'
 }
@@ -135,16 +131,8 @@ export default async function ParcoursPage({ searchParams }: Props) {
 
   const fmtCount = (n: number) => (isAvg ? n.toFixed(1) : Math.round(n).toString())
   const fmtTime = (s: number) => (s > 0 ? `${Math.round(s)}s` : '—')
-
-  const steps = [
-    { label: 'Visited chapter page', count: m.visited },
-    { label: 'Started reading (10s+)', count: m.started },
-    { label: 'Reached 50%', count: m.mid },
-    { label: 'Finished chapter', count: m.finished },
-  ]
-  // Scale bars to the largest step, not step 1 — historical/seed data can have
-  // later steps exceed "visited" (e.g. read_start events without a page_visit).
-  const maxCount = Math.max(...steps.map((s) => s.count), 1)
+  // Share of visitors who reached a step (visited is the 100% base).
+  const rate = (n: number) => (m.visited > 0 ? `${Math.round((n / m.visited) * 100)}% of visitors` : '—')
 
   const options = [
     { value: 'all', label: 'Average per chapter' },
@@ -170,27 +158,15 @@ export default async function ParcoursPage({ searchParams }: Props) {
         <ChapterSelect options={options} selected={selected} />
       </div>
 
-      <div className="adm-funnel">
-        {steps.map((step, i) => {
-          const prev = i === 0 ? step.count : steps[i - 1].count
-          const barWidth = maxCount > 0 ? Math.round((step.count / maxCount) * 100) : 0
-          return (
-            <div key={i} className="adm-funnel-step" style={{ flexWrap: 'wrap' }}>
-              <div className="adm-funnel-num">{i + 1}</div>
-              <div className="adm-funnel-label">{step.label}</div>
-              <div className="adm-funnel-count">{fmtCount(step.count)}</div>
-              <div className={`adm-funnel-drop${i === 0 ? ' first' : ''}`}>
-                {i === 0 ? '—' : pct(step.count, prev)}
-              </div>
-              <div className="adm-funnel-bar-wrap">
-                <div className="adm-funnel-bar" style={{ width: `${barWidth}%` }} />
-              </div>
-            </div>
-          )
-        })}
+      <p className="adm-section-title">Reading funnel</p>
+      <div className="adm-scorecards">
+        <Scorecard label="Visited chapter page" value={fmtCount(m.visited)} subtitle="landed on the page" />
+        <Scorecard label="Started reading (10s+)" value={fmtCount(m.started)} subtitle={rate(m.started)} />
+        <Scorecard label="Reached 50%" value={fmtCount(m.mid)} subtitle={rate(m.mid)} />
+        <Scorecard label="Finished chapter" value={fmtCount(m.finished)} subtitle={rate(m.finished)} />
       </div>
 
-      <p className="adm-section-title">Engagement details</p>
+      <p className="adm-section-title">Engagement</p>
       <div className="adm-scorecards">
         <Scorecard label="Avg Time on Page" value={fmtTime(m.avgTimeOnPage)} subtitle="active seconds before leaving" />
         <Scorecard label="Opened Slides" value={fmtCount(m.slidesOpened)} subtitle={`avg ${fmtTime(m.slidesAvgTime)} in viewer`} />
