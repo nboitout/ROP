@@ -8,6 +8,14 @@ const ALWAYS_EXCLUDED_READER_IDS = [
   '0a0b76ef-9fdf-4b3e-9cbe-337c8d46f750', // owner — desktop (early sessions)
   'b025efe8-ceb8-4cd1-9473-f2e476b151c5', // Guy — laptop (reviewer; had admin session)
   '12e8c12c-2c84-45fc-92fb-df432042b5d3', // Guy — mobile
+  // Owner QA — incognito sessions testing the free-chapter gate on 2026-06-09
+  // (Romania, Chrome 148, 13:50–14:17 UTC). Each private window minted a new id.
+  '70153b36-0037-45eb-a110-811297ba5a7a',
+  'cdc4d6bc-252a-4402-bc07-349fd63ca3e1',
+  '419d54e6-3a69-4a6d-8981-750c9c2bd448',
+  '9ccbcb83-5f0f-47e7-8a33-13ae826a28f0',
+  '4fd915c9-cab3-49d1-989d-911a2f5214af',
+  '8aa28bec-8f8f-42d6-a068-7348ad0ffa50',
 ]
 
 // ---- Types ----
