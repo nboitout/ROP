@@ -226,38 +226,6 @@ export default async function AdminOverviewPage({
         />
       </div>
 
-      <p className="adm-section-title">Prototypes</p>
-      <a
-        href="/prototype-pied"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="adm-chart-card"
-        style={{
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'space-between',
-          gap: 16,
-          marginBottom: 24,
-          textDecoration: 'none',
-          color: 'inherit',
-        }}
-      >
-        <div>
-          <p className="adm-chart-title" style={{ marginBottom: 6 }}>
-            Atlas réflexe 3D · zoom sémantique — foot prototype
-          </p>
-          <p className="adm-page-sub" style={{ margin: 0 }}>
-            Interactive 3D foot map with system layers; zoom into the toes to reveal cranial detail. Public link — shareable with Guy.
-          </p>
-        </div>
-        <span
-          aria-hidden="true"
-          style={{ fontSize: '1.4rem', opacity: 0.6, whiteSpace: 'nowrap' }}
-        >
-          Open ↗
-        </span>
-      </a>
-
       <p className="adm-section-title">Readers &amp; Visitors — Since {START_DATE}</p>
       <div className="adm-chart-card" style={{ marginBottom: 24 }}>
         <p className="adm-chart-title">Daily unique visitors by country (top 10)</p>
