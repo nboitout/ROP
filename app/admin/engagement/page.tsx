@@ -17,6 +17,38 @@ function formatDuration(secs: number): string {
   return `${Math.round(secs)}s`
 }
 
+// Friendly, admin-readable label for a tracked page path. The homepage and the
+// sign-up gate (/?gate=free) are reported separately. New chapters at
+// /chapitre-N are handled automatically; slug-based chapter routes get an
+// explicit entry below.
+const SLUG_LABELS: Record<string, string> = {
+  '/': 'Homepage',
+  '/?gate=free': 'Gate (inscription)',
+  '/introduction': 'Introduction',
+  '/chapitres-gratuits': 'Chapitres gratuits',
+  '/lecture/traitement-rop': 'Chapitre 2',
+}
+
+function pageLabel(rawPath: string): string {
+  const p = rawPath.replace(/^https?:\/\/[^/]+/, '') || '/'
+  if (SLUG_LABELS[p]) return SLUG_LABELS[p]
+  const m = p.match(/^\/chapitre-(\d+)/)
+  if (m) return `Chapitre ${m[1]}`
+  return p
+}
+
+// Reading order so the chart stays legible once every chapter exists:
+// Homepage, Gate, free-chapters, Introduction, then chapters in sequence.
+function pageOrder(label: string): number {
+  if (label === 'Homepage') return 0
+  if (label === 'Gate (inscription)') return 1
+  if (label === 'Chapitres gratuits') return 2
+  if (label === 'Introduction') return 3
+  const m = label.match(/^Chapitre (\d+)/)
+  if (m) return 100 + parseInt(m[1], 10)
+  return 999
+}
+
 export default async function EngagementPage() {
   const { events, visits } = await fetchAllSheets()
 
@@ -42,23 +74,23 @@ export default async function EngagementPage() {
   const returningVisitors = [...visitorDates.values()].filter((dates) => dates.size > 1).length
   const returnRate = totalVisitors > 0 ? (returningVisitors / totalVisitors) * 100 : 0
 
-  // Bar: avg dwell time per page
+  // Bar: avg dwell time per page (grouped by friendly label; gate vs homepage
+  // are reported separately, chapters in reading order)
   const pageMap = new Map<string, number[]>()
   pageLeaves.forEach((v) => {
     const n = parseFloat(v.duration_seconds)
     if (isNaN(n) || n <= 0) return
-    const rawPage = v.page.replace(/^https?:\/\/[^/]+/, '') || '/'
-    const page = rawPage || '/'
-    const arr = pageMap.get(page)
+    const label = pageLabel(v.page)
+    const arr = pageMap.get(label)
     if (arr) arr.push(n)
-    else pageMap.set(page, [n])
+    else pageMap.set(label, [n])
   })
   const dwellData: BarDataPoint[] = [...pageMap.entries()]
     .map(([name, arr]) => ({
       name,
       value: Math.round(arr.reduce((a, b) => a + b, 0) / arr.length),
     }))
-    .sort((a, b) => b.value - a.value)
+    .sort((a, b) => pageOrder(a.name) - pageOrder(b.name))
 
   // Bar: CTA clicks — group by cta field in data JSON
   const ctaCount = new Map<string, number>()

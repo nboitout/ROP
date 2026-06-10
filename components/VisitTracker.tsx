@@ -5,13 +5,24 @@ import { usePathname } from 'next/navigation'
 import { useLanguage } from '@/app/i18n/LanguageContext'
 import { getSessionId, getSessionUtm } from '@/lib/session'
 
+// The email gate renders on the homepage at /?gate=free, but usePathname()
+// drops the query string so it would be indistinguishable from a plain
+// homepage visit. Record the gate as its own page so dwell on the sign-up
+// wall is reported separately from genuine homepage browsing.
+function pageId(pathname: string): string {
+  if (pathname === '/' && typeof window !== 'undefined') {
+    if (new URLSearchParams(window.location.search).get('gate') === 'free') return '/?gate=free'
+  }
+  return pathname
+}
+
 export default function VisitTracker() {
   const { lang } = useLanguage()
   const pathname = usePathname()
 
   // Mutable refs — never trigger re-renders
   const langRef = useRef(lang)
-  const prevPathname = useRef(pathname)
+  const prevPage = useRef(pageId(pathname))
   const activeMs = useRef(0)
   const lastVisible = useRef<number | null>(null)
 
@@ -47,7 +58,7 @@ export default function VisitTracker() {
       }).catch(() => {})
     }
 
-    function onPageHide() { sendLeave(prevPathname.current) }
+    function onPageHide() { sendLeave(prevPage.current) }
 
     document.addEventListener('visibilitychange', onVisibility)
     window.addEventListener('pagehide', onPageHide)
@@ -59,9 +70,10 @@ export default function VisitTracker() {
 
   // On SPA navigation: flush dwell time for the page being left, reset timer
   useEffect(() => {
-    const prev = prevPathname.current
-    if (prev === pathname) return
-    prevPathname.current = pathname
+    const current = pageId(pathname)
+    const prev = prevPage.current
+    if (prev === current) return
+    prevPage.current = current
 
     if (lastVisible.current !== null) {
       activeMs.current += Date.now() - lastVisible.current
@@ -87,7 +99,7 @@ export default function VisitTracker() {
     fetch('/api/visit', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ lang, page: pathname, sessionId: getSessionId(), utm: getSessionUtm() }),
+      body: JSON.stringify({ lang, page: pageId(pathname), sessionId: getSessionId(), utm: getSessionUtm() }),
       keepalive: true,
     }).catch(() => {})
   }, [lang, pathname])
