@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+<title>R.O.P. — Cartographie réflexe en 3D (prototype)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --slate-0:#1c222a; --slate-1:#262f39; --slate-2:#323d49;
+    --bone:#ece5d6; --paper:#f3efe6; --muted:#9aa6b2;
+    --ochre:#d9a441; --teal:#5b9aa0; --line:#46535f;
+    --serif:'Cormorant Garamond', Georgia, serif;
+    --sans:'Jost', system-ui, -apple-system, sans-serif;
+  }
+  *{box-sizing:border-box;}
+  html,body{height:100%;margin:0;}
+  body{
+    font-family:var(--sans); color:var(--paper); overflow:hidden;
+    background:
+      radial-gradient(120% 90% at 70% 18%, #313c48 0%, var(--slate-0) 60%, #161b21 100%);
+  }
+  #stage{position:fixed; inset:0;}
+  canvas{display:block; touch-action:none;}
+  .overlay{position:fixed; inset:0; pointer-events:none;}
+  svg.leaders{position:fixed; inset:0; pointer-events:none;}
+
+  /* annotation chips */
+  .chip{
+    position:fixed; left:0; top:0; transform:translate(-50%,-50%);
+    pointer-events:none; will-change:transform,opacity;
+    background:rgba(20,25,31,.78); backdrop-filter:blur(3px);
+    border:1px solid var(--line); border-radius:0;
+    padding:5px 9px 6px; min-width:54px; text-align:left;
+    box-shadow:0 6px 18px rgba(0,0,0,.35);
+  }
+  .chip .seg{font-size:7.5px; letter-spacing:.22em; text-transform:uppercase; color:var(--muted);}
+  .chip .name{font-family:var(--serif); font-size:18px; line-height:1.02; font-weight:600; color:var(--paper); margin-top:1px;}
+  .chip .dot-key{display:inline-block; width:7px; height:7px; border-radius:50%; margin-right:5px; vertical-align:1px;}
+
+  .marker-dot{position:fixed; width:11px; height:11px; border-radius:50%;
+    transform:translate(-50%,-50%); border:2px solid rgba(255,255,255,.85);
+    box-shadow:0 0 0 2px rgba(0,0,0,.35); pointer-events:none;}
+
+  /* title card */
+  .titlecard{
+    position:fixed; top:22px; left:22px; max-width:330px; pointer-events:none;
+  }
+  .eyebrow{font-size:10px; letter-spacing:.34em; text-transform:uppercase; color:var(--ochre);}
+  .titlecard h1{font-family:var(--serif); font-weight:500; font-size:30px; line-height:1.05; margin:7px 0 0;}
+  .titlecard h1 em{font-style:italic; color:var(--bone);}
+  .titlecard p{font-size:12.5px; line-height:1.55; color:var(--muted); margin:11px 0 0; max-width:300px;}
+
+  /* footnote */
+  .foot-note{position:fixed; left:22px; bottom:20px; max-width:300px;
+    font-size:10.5px; line-height:1.5; color:#74808c; pointer-events:none;}
+  .foot-note b{color:#97a3ae; font-weight:500;}
+
+  /* controls */
+  .controls{
+    position:fixed; bottom:20px; left:50%; transform:translateX(-50%);
+    display:flex; gap:7px; align-items:stretch; pointer-events:auto;
+    background:rgba(18,23,29,.72); backdrop-filter:blur(6px);
+    border:1px solid var(--line); padding:7px; border-radius:0;
+  }
+  .controls .group{display:flex; gap:6px;}
+  .divider{width:1px; background:var(--line); margin:2px 2px;}
+  button.ctl{
+    font-family:var(--sans); font-size:11px; letter-spacing:.04em;
+    color:var(--paper); background:transparent; border:1px solid transparent;
+    padding:8px 11px; cursor:pointer; border-radius:0; transition:all .15s ease;
+    white-space:nowrap;
+  }
+  button.ctl:hover{background:rgba(255,255,255,.06); border-color:var(--line);}
+  button.ctl:focus-visible{outline:2px solid var(--ochre); outline-offset:1px;}
+  button.ctl.on{background:var(--ochre); color:#22170a; border-color:var(--ochre);}
+  .hint{position:fixed; bottom:64px; left:50%; transform:translateX(-50%);
+    font-size:10px; letter-spacing:.18em; text-transform:uppercase; color:#5d6873;
+    pointer-events:none; transition:opacity .4s ease;}
+  @media (max-width:560px){
+    .titlecard{max-width:240px;} .titlecard h1{font-size:23px;}
+    .titlecard p{display:none;} .foot-note{display:none;}
+    button.ctl{padding:8px 8px; font-size:10px;}
+  }
+</style>
+</head>
+<body>
+  <div id="stage"></div>
+  <svg class="leaders" id="leaders"><!-- leader lines injected --></svg>
+  <div class="overlay" id="labels"><!-- chips + dots injected --></div>
+
+  <div class="titlecard">
+    <div class="eyebrow">R.O.P. · Réflexo-Occipito-Podale</div>
+    <h1>Le pied, <em>carte vivante</em> du rachis</h1>
+    <p>Les zones réflexes sont ancrées dans l'espace 3D, pas dessinées sur l'image.
+       Faites tourner le modèle&nbsp;: chaque repère reste fidèle à l'anatomie. Une seule
+       maquette remplace vos vues frontale et sagittale.</p>
+  </div>
+
+  <div class="hint" id="hint">Glissez pour faire pivoter · molette pour zoomer</div>
+
+  <div class="controls">
+    <div class="group">
+      <button class="ctl" data-view="mediale">Médiale</button>
+      <button class="ctl" data-view="talon">Talon</button>
+      <button class="ctl" data-view="plantaire">Plantaire</button>
+      <button class="ctl" data-view="dorsale">Dorsale</button>
+    </div>
+    <div class="divider"></div>
+    <div class="group">
+      <button class="ctl on" id="t-labels">Repères</button>
+      <button class="ctl on" id="t-spine">Rachis</button>
+      <button class="ctl" id="t-spin">Rotation auto</button>
+    </div>
+  </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+(function(){
+  if(!window.THREE){ document.body.innerHTML='<p style="color:#fff;font-family:sans-serif;padding:40px">Three.js n\'a pas pu se charger (réseau).</p>'; return; }
+
+  const RM = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const stage = document.getElementById('stage');
+
+  // ---------- renderer / scene / camera ----------
+  const renderer = new THREE.WebGLRenderer({antialias:true, alpha:true});
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio,2));
+  stage.appendChild(renderer.domElement);
+
+  const scene = new THREE.Scene();
+  const camera = new THREE.PerspectiveCamera(38, 1, 0.1, 100);
+  let camDist = 7.4;
+
+  // ---------- lights ----------
+  scene.add(new THREE.HemisphereLight(0xdfe6ee, 0x20262e, 0.85));
+  const key = new THREE.DirectionalLight(0xfff2d8, 1.05); key.position.set(4,7,6); scene.add(key);
+  const fill = new THREE.DirectionalLight(0x9fb6c9, 0.5); fill.position.set(-6,2,-4); scene.add(fill);
+  const rim = new THREE.DirectionalLight(0xffffff, 0.35); rim.position.set(-2,4,-7); scene.add(rim);
+
+  // ---------- foot group ----------
+  const foot = new THREE.Group();
+  scene.add(foot);
+
+  const CENTER = new THREE.Vector3(-0.1, 0.5, 0); // recenter so it spins in place
+
+  // smooth (smoothstep) lookup over [pos,val] pairs
+  function sample(arr, t){
+    if(t<=arr[0][0]) return arr[0][1];
+    const n=arr.length;
+    if(t>=arr[n-1][0]) return arr[n-1][1];
+    for(let i=0;i<n-1;i++){
+      const a=arr[i], b=arr[i+1];
+      if(t>=a[0] && t<=b[0]){ let k=(t-a[0])/(b[0]-a[0]); k=k*k*(3-2*k); return a[1]+(b[1]-a[1])*k; }
+    }
+    return arr[n-1][1];
+  }
+  const WID=[[0,0.52],[0.15,0.58],[0.35,0.50],[0.55,0.56],[0.72,0.74],[0.85,0.62],[1,0.32]];
+  const HGT=[[0,0.80],[0.12,1.02],[0.30,0.98],[0.55,0.78],[0.72,0.62],[0.88,0.50],[1,0.40]];
+
+  // ---------- lofted foot mesh ----------
+  (function buildFoot(){
+    const NL=64, S=36;
+    const pos=[];
+    for(let i=0;i<=NL;i++){
+      const t=i/NL;
+      const x=-2.1 + 4.0*t;
+      const W=sample(WID,t), H=sample(HGT,t);
+      const arch=0.30*Math.exp(-Math.pow((t-0.46)/0.17,2)); // underside lift, midfoot
+      for(let j=0;j<S;j++){
+        const th=(j/S)*Math.PI*2;
+        const c=Math.cos(th), s=Math.sin(th);
+        let z = W*c;
+        let y;
+        if(s>=0){ y = H*0.5 + (H*0.5)*s; }            // rounded top
+        else    { y = H*0.5 + (H*0.5)*s*0.55; z*=1.12; } // flatter, wider sole
+        // medial longitudinal arch: lift the underside, biased to medial (+z)
+        if(s<0){
+          const medial=Math.max(0,0.5+0.5*c);
+          y += arch * (-s) * (0.45+0.9*medial);
+        }
+        pos.push(x-CENTER.x, y-CENTER.y, z-CENTER.z);
+      }
+    }
+    const idx=[];
+    for(let i=0;i<NL;i++){
+      for(let j=0;j<S;j++){
+        const a=i*S+j, b=i*S+((j+1)%S), c=(i+1)*S+j, d=(i+1)*S+((j+1)%S);
+        idx.push(a,c,d, a,d,b);
+      }
+    }
+    // caps
+    const heelC=pos.length/3;
+    pos.push((-2.1)-CENTER.x, sample(HGT,0)*0.5-CENTER.y, -CENTER.z);
+    const toeC=pos.length/3;
+    pos.push((1.9)-CENTER.x, sample(HGT,1)*0.5-CENTER.y, -CENTER.z);
+    for(let j=0;j<S;j++){
+      idx.push(heelC, (j+1)%S, j);                 // heel fan
+      idx.push(toeC, NL*S + j, NL*S + ((j+1)%S));  // toe fan
+    }
+    const geo=new THREE.BufferGeometry();
+    geo.setAttribute('position', new THREE.Float32BufferAttribute(pos,3));
+    geo.setIndex(idx);
+    geo.computeVertexNormals();
+    const mat=new THREE.MeshStandardMaterial({color:0xece5d6, roughness:0.92, metalness:0.0, side:THREE.DoubleSide, flatShading:false});
+    foot.add(new THREE.Mesh(geo, mat));
+  })();
+
+  // ---------- toes ----------
+  (function buildToes(){
+    const toes=[
+      {x:1.95,z:0.40,y:0.40,r:0.21},
+      {x:1.96,z:0.20,y:0.40,r:0.185},
+      {x:1.93,z:0.01,y:0.39,r:0.165},
+      {x:1.85,z:-0.17,y:0.37,r:0.145},
+      {x:1.74,z:-0.33,y:0.35,r:0.125},
+    ];
+    const mat=new THREE.MeshStandardMaterial({color:0xeae2d1, roughness:0.92, metalness:0.0});
+    toes.forEach(tt=>{
+      const m=new THREE.Mesh(new THREE.SphereGeometry(tt.r,20,16), mat);
+      m.scale.set(1.25,0.92,1);
+      m.position.set(tt.x-CENTER.x, tt.y-CENTER.y, tt.z-CENTER.z);
+      foot.add(m);
+    });
+  })();
+
+  // ---------- spine path (surface-attached region) ----------
+  const spinePts=[
+    [-1.95,0.55,0.30],[-1.4,0.78,0.36],[-0.7,0.92,0.40],
+    [0.0,0.92,0.42],[0.7,0.82,0.44],[1.3,0.66,0.48],[1.95,0.50,0.52]
+  ].map(p=>new THREE.Vector3(p[0]-CENTER.x, p[1]-CENTER.y, p[2]-CENTER.z));
+  const curve=new THREE.CatmullRomCurve3(spinePts, false, 'catmullrom', 0.5);
+  const tubeMat=new THREE.MeshStandardMaterial({color:0xd9a441, emissive:0x6e4a12, emissiveIntensity:0.55, roughness:0.55, metalness:0.1});
+  const spineTube=new THREE.Mesh(new THREE.TubeGeometry(curve,90,0.055,10,false), tubeMat);
+  foot.add(spineTube);
+
+  // ---------- annotations (vertebral segments) ----------
+  const SEGMENTS=[
+    {seg:'Tête',           name:'Occiput',          u:0.99, color:'#c96f4a', off:[ 26,-30]},
+    {seg:'C1 – C7',        name:'Cervicales',       u:0.88, color:'#d99a3f', off:[ 30,  2]},
+    {seg:'T1 – T6',        name:'Dorsales hautes',  u:0.66, color:'#bfa24a', off:[ 30,-38]},
+    {seg:'T7 – T12',       name:'Dorsales basses',  u:0.48, color:'#8aa258', off:[ 28, 26]},
+    {seg:'L1 – L5',        name:'Lombaires',        u:0.30, color:'#5b9aa0', off:[-150,-26]},
+    {seg:'S1 – S5',        name:'Sacrum',           u:0.13, color:'#6f7fb0', off:[-138, 12]},
+    {seg:'',               name:'Coccyx',           u:0.02, color:'#8a6fb0', off:[-126, 46]},
+  ];
+  const labelLayer=document.getElementById('labels');
+  const leaderSvg=document.getElementById('leaders');
+  const tmp=new THREE.Vector3();
+
+  SEGMENTS.forEach(s=>{
+    const p=curve.getPointAt(s.u);
+    // marker sphere
+    const m=new THREE.Mesh(new THREE.SphereGeometry(0.075,16,12),
+      new THREE.MeshStandardMaterial({color:new THREE.Color(s.color), emissive:new THREE.Color(s.color), emissiveIntensity:0.35, roughness:0.4}));
+    m.position.copy(p);
+    foot.add(m);
+    s.mesh=m;
+    // outward normal (radial from the foot's long axis, in YZ)
+    s.normal=new THREE.Vector3(0, p.y, p.z).normalize();
+    if(s.normal.lengthSq()<1e-4) s.normal.set(0,1,0);
+
+    // chip
+    const chip=document.createElement('div'); chip.className='chip';
+    chip.innerHTML='<div class="seg"><span class="dot-key" style="background:'+s.color+'"></span>'+(s.seg||'&nbsp;')+'</div><div class="name">'+s.name+'</div>';
+    labelLayer.appendChild(chip); s.chip=chip;
+    // dot
+    const dot=document.createElement('div'); dot.className='marker-dot';
+    dot.style.background=s.color; labelLayer.appendChild(dot); s.dot=dot;
+    // leader line
+    const ln=document.createElementNS('http://www.w3.org/2000/svg','line');
+    ln.setAttribute('stroke', s.color); ln.setAttribute('stroke-width','1'); ln.setAttribute('opacity','0.6');
+    leaderSvg.appendChild(ln); s.line=ln;
+  });
+
+  // ---------- one painted area zone (lumbar patch) ----------
+  (function lumbarPatch(){
+    const seg=SEGMENTS.find(x=>x.name==='Lombaires');
+    const p=curve.getPointAt(seg.u);
+    const n=new THREE.Vector3(0,p.y,p.z).normalize();
+    const patch=new THREE.Mesh(new THREE.CircleGeometry(0.34,28),
+      new THREE.MeshBasicMaterial({color:0x5b9aa0, transparent:true, opacity:0.30, side:THREE.DoubleSide, depthWrite:false}));
+    patch.position.copy(p).addScaledVector(n,0.05);
+    patch.lookAt(p.clone().addScaledVector(n,1));
+    patch.scale.set(1.05,0.62,1);
+    foot.add(patch); patch.renderOrder=2;
+    window.__patch=patch;
+  })();
+
+  // ---------- interaction state ----------
+  const targetRot={x:-0.34, y:-0.52};
+  const curRot={x:-0.34, y:-0.52};
+  let autoSpin=!RM, dragging=false, lastX=0,lastY=0, interacted=false;
+  let showLabels=true, showSpine=true;
+
+  const dom=renderer.domElement;
+  dom.addEventListener('pointerdown',e=>{dragging=true; lastX=e.clientX; lastY=e.clientY; interacted=true; fadeHint();});
+  window.addEventListener('pointerup',()=>dragging=false);
+  window.addEventListener('pointermove',e=>{
+    if(!dragging) return;
+    targetRot.y += (e.clientX-lastX)*0.0095;
+    targetRot.x += (e.clientY-lastY)*0.0095;
+    targetRot.x = Math.max(-1.35, Math.min(1.35, targetRot.x));
+    lastX=e.clientX; lastY=e.clientY;
+  });
+  dom.addEventListener('wheel',e=>{e.preventDefault(); camDist=Math.max(4.4,Math.min(11,camDist+e.deltaY*0.006)); interacted=true; fadeHint();},{passive:false});
+
+  const hintEl=document.getElementById('hint');
+  let hintFaded=false;
+  function fadeHint(){ if(hintFaded) return; hintFaded=true; hintEl.style.opacity='0'; }
+  if(RM) fadeHint();
+
+  // preset views
+  const VIEWS={
+    mediale:  {x:-0.10, y:0.0},
+    talon:    {x:-0.18, y:Math.PI/2},
+    plantaire:{x:-Math.PI/2+0.05, y:0.0},
+    dorsale:  {x:Math.PI/2-0.05, y:0.0},
+  };
+  document.querySelectorAll('[data-view]').forEach(b=>{
+    b.addEventListener('click',()=>{
+      const v=VIEWS[b.dataset.view];
+      targetRot.x=v.x; targetRot.y=v.y; autoSpin=false; setSpin(false); interacted=true; fadeHint();
+    });
+  });
+
+  // toggles
+  const tL=document.getElementById('t-labels'), tS=document.getElementById('t-spine'), tSpin=document.getElementById('t-spin');
+  tL.addEventListener('click',()=>{ showLabels=!showLabels; tL.classList.toggle('on',showLabels); });
+  tS.addEventListener('click',()=>{ showSpine=!showSpine; tS.classList.toggle('on',showSpine);
+    spineTube.visible=showSpine; if(window.__patch) window.__patch.visible=showSpine;
+    SEGMENTS.forEach(s=>s.mesh.visible=showSpine); });
+  function setSpin(on){ autoSpin=on; tSpin.classList.toggle('on',on); }
+  tSpin.addEventListener('click',()=>setSpin(!autoSpin));
+  setSpin(autoSpin);
+
+  // ---------- resize ----------
+  function resize(){
+    const w=window.innerWidth, h=window.innerHeight;
+    renderer.setSize(w,h); camera.aspect=w/h; camera.updateProjectionMatrix();
+    leaderSvg.setAttribute('viewBox','0 0 '+w+' '+h);
+    leaderSvg.setAttribute('width',w); leaderSvg.setAttribute('height',h);
+  }
+  window.addEventListener('resize',resize); resize();
+
+  // ---------- label projection ----------
+  const camDir=new THREE.Vector3(), worldN=new THREE.Vector3();
+  function updateLabels(){
+    const w=window.innerWidth, h=window.innerHeight;
+    SEGMENTS.forEach(s=>{
+      if(!showLabels || !showSpine){ s.chip.style.display='none'; s.dot.style.display='none'; s.line.style.display='none'; return; }
+      s.mesh.getWorldPosition(tmp);
+      const proj=tmp.clone().project(camera);
+      const px=(proj.x*0.5+0.5)*w, py=(-proj.y*0.5+0.5)*h;
+      // facing test
+      worldN.copy(s.normal).applyQuaternion(foot.quaternion);
+      camDir.copy(camera.position).sub(tmp).normalize();
+      const facing=worldN.dot(camDir);
+      const vis = facing>0.02 && proj.z<1;
+      const op = vis ? Math.min(1, 0.35+facing) : 0.0;
+
+      s.dot.style.display=''; s.chip.style.display=''; s.line.style.display='';
+      s.dot.style.transform='translate(-50%,-50%) translate('+px+'px,'+py+'px)';
+      s.dot.style.opacity=vis?1:0.12;
+      const cx=px+s.off[0], cy=py+s.off[1];
+      s.chip.style.transform='translate(-50%,-50%) translate('+cx+'px,'+cy+'px)';
+      s.chip.style.opacity=op;
+      s.line.setAttribute('x1',px); s.line.setAttribute('y1',py);
+      s.line.setAttribute('x2',cx); s.line.setAttribute('y2',cy);
+      s.line.style.opacity=vis?0.55:0.0;
+    });
+  }
+
+  // ---------- loop ----------
+  function tick(){
+    requestAnimationFrame(tick);
+    if(autoSpin && !dragging) targetRot.y += 0.0042;
+    curRot.x += (targetRot.x-curRot.x)*0.12;
+    curRot.y += (targetRot.y-curRot.y)*0.12;
+    foot.rotation.set(curRot.x, curRot.y, 0);
+    camera.position.set(0, 1.15, camDist);
+    camera.lookAt(0,0,0);
+    renderer.render(scene,camera);
+    updateLabels();
+  }
+  tick();
+})();
+</script>
+</body>
+</html>
