@@ -104,6 +104,9 @@ export default async function EngagementPage() {
       } catch {
         // data is plain string
       }
+      // The digital- and print-plan "notify me" buttons are the same action
+      // (same label, same #notify form); roll legacy split names into one.
+      if (ctaName === 'pricing_notify_digital' || ctaName === 'pricing_notify_print') ctaName = 'pricing_notify'
       ctaCount.set(ctaName, (ctaCount.get(ctaName) ?? 0) + 1)
     })
   const ctaData: BarDataPoint[] = [...ctaCount.entries()]

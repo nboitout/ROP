@@ -415,7 +415,7 @@ export default function HomePage() {
             <ul className="pc-l">
               {t.pricing.plan1.features.map((f) => <li key={f}>{f}</li>)}
             </ul>
-            <a href="#notify" className="btn b-out" style={{ width: '100%', textAlign: 'center' }} onClick={() => trackCta('pricing_notify_digital')}>{t.pricing.plan1.cta}</a>
+            <a href="#notify" className="btn b-out" style={{ width: '100%', textAlign: 'center' }} onClick={() => trackCta('pricing_notify')}>{t.pricing.plan1.cta}</a>
           </div>
           <div className="pc star" data-badge={t.pricing.recommended}>
             <div className="pc-n">{t.pricing.plan2.name}</div>
@@ -435,7 +435,7 @@ export default function HomePage() {
             <ul className="pc-l">
               {t.pricing.plan3.features.map((f) => <li key={f}>{f}</li>)}
             </ul>
-            <a href="#notify" className="btn b-out" style={{ width: '100%', textAlign: 'center' }} onClick={() => trackCta('pricing_notify_print')}>{t.pricing.plan3.cta}</a>
+            <a href="#notify" className="btn b-out" style={{ width: '100%', textAlign: 'center' }} onClick={() => trackCta('pricing_notify')}>{t.pricing.plan3.cta}</a>
           </div>
         </div>
 
