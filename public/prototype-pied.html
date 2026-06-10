@@ -3,386 +3,394 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
-<title>R.O.P. — Cartographie réflexe en 3D (prototype)</title>
+<title>R.O.P. — Atlas réflexe du rachis en 3D</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
   :root{
-    --slate-0:#1c222a; --slate-1:#262f39; --slate-2:#323d49;
-    --bone:#ece5d6; --paper:#f3efe6; --muted:#9aa6b2;
-    --ochre:#d9a441; --teal:#5b9aa0; --line:#46535f;
+    --slate-0:#1c222a; --paper:#f3efe6; --muted:#9aa6b2; --line:#46535f;
+    --ochre:#d9a441;
     --serif:'Cormorant Garamond', Georgia, serif;
     --sans:'Jost', system-ui, -apple-system, sans-serif;
   }
   *{box-sizing:border-box;}
   html,body{height:100%;margin:0;}
-  body{
-    font-family:var(--sans); color:var(--paper); overflow:hidden;
-    background:
-      radial-gradient(120% 90% at 70% 18%, #313c48 0%, var(--slate-0) 60%, #161b21 100%);
-  }
+  body{font-family:var(--sans); color:var(--paper); overflow:hidden;
+    background:radial-gradient(120% 90% at 68% 16%, #313c48 0%, var(--slate-0) 60%, #161b21 100%);}
   #stage{position:fixed; inset:0;}
   canvas{display:block; touch-action:none;}
   .overlay{position:fixed; inset:0; pointer-events:none;}
   svg.leaders{position:fixed; inset:0; pointer-events:none;}
 
-  /* annotation chips */
-  .chip{
-    position:fixed; left:0; top:0; transform:translate(-50%,-50%);
-    pointer-events:none; will-change:transform,opacity;
-    background:rgba(20,25,31,.78); backdrop-filter:blur(3px);
-    border:1px solid var(--line); border-radius:0;
-    padding:5px 9px 6px; min-width:54px; text-align:left;
-    box-shadow:0 6px 18px rgba(0,0,0,.35);
-  }
-  .chip .seg{font-size:7.5px; letter-spacing:.22em; text-transform:uppercase; color:var(--muted);}
-  .chip .name{font-family:var(--serif); font-size:18px; line-height:1.02; font-weight:600; color:var(--paper); margin-top:1px;}
-  .chip .dot-key{display:inline-block; width:7px; height:7px; border-radius:50%; margin-right:5px; vertical-align:1px;}
+  .chip{position:fixed; left:0; top:0; transform:translate(-50%,-50%);
+    pointer-events:none; will-change:transform,opacity; border:1px solid rgba(0,0,0,.25);
+    box-shadow:0 4px 12px rgba(0,0,0,.35); white-space:nowrap;}
+  .chip.vert{font-size:10px; font-weight:600; letter-spacing:.02em; padding:2px 5px; color:#fff;}
+  .chip.vert.dark{color:#241b06;}
+  .chip.named{background:rgba(20,25,31,.82); backdrop-filter:blur(3px);
+    border:1px solid var(--line); padding:4px 8px 5px;}
+  .chip.named .kk{display:inline-block; width:7px; height:7px; border-radius:50%; margin-right:6px; vertical-align:1px;}
+  .chip.named .nm{font-family:var(--serif); font-size:14px; font-weight:600; line-height:1; color:var(--paper);}
+  .marker-dot{position:fixed; width:9px; height:9px; border-radius:50%;
+    transform:translate(-50%,-50%); border:1.5px solid rgba(255,255,255,.8);
+    box-shadow:0 0 0 1.5px rgba(0,0,0,.35); pointer-events:none;}
 
-  .marker-dot{position:fixed; width:11px; height:11px; border-radius:50%;
-    transform:translate(-50%,-50%); border:2px solid rgba(255,255,255,.85);
-    box-shadow:0 0 0 2px rgba(0,0,0,.35); pointer-events:none;}
+  .tooltip{position:fixed; pointer-events:none; transform:translate(12px,12px);
+    background:rgba(14,18,23,.95); border:1px solid var(--line); padding:8px 11px 9px;
+    max-width:230px; opacity:0; transition:opacity .12s ease; z-index:10;}
+  .tooltip .t-seg{font-size:8px; letter-spacing:.22em; text-transform:uppercase; color:var(--ochre);}
+  .tooltip .t-nm{font-family:var(--serif); font-size:17px; font-weight:600; margin-top:2px;}
+  .tooltip .t-ds{font-size:11px; line-height:1.45; color:var(--muted); margin-top:4px;}
 
-  /* title card */
-  .titlecard{
-    position:fixed; top:22px; left:22px; max-width:330px; pointer-events:none;
-  }
+  .titlecard{position:fixed; top:20px; left:22px; max-width:300px; pointer-events:none;}
   .eyebrow{font-size:10px; letter-spacing:.34em; text-transform:uppercase; color:var(--ochre);}
-  .titlecard h1{font-family:var(--serif); font-weight:500; font-size:30px; line-height:1.05; margin:7px 0 0;}
-  .titlecard h1 em{font-style:italic; color:var(--bone);}
-  .titlecard p{font-size:12.5px; line-height:1.55; color:var(--muted); margin:11px 0 0; max-width:300px;}
+  .titlecard h1{font-family:var(--serif); font-weight:500; font-size:27px; line-height:1.05; margin:6px 0 0;}
+  .titlecard h1 em{font-style:italic;}
+  .titlecard p{font-size:12px; line-height:1.5; color:var(--muted); margin:9px 0 0;}
 
-  /* footnote */
-  .foot-note{position:fixed; left:22px; bottom:20px; max-width:300px;
-    font-size:10.5px; line-height:1.5; color:#74808c; pointer-events:none;}
-  .foot-note b{color:#97a3ae; font-weight:500;}
+  /* systems legend / toggles */
+  .systems{position:fixed; top:20px; right:20px; width:228px; pointer-events:auto;
+    background:rgba(18,23,29,.72); backdrop-filter:blur(6px); border:1px solid var(--line); padding:12px;}
+  .systems h2{font-size:9px; letter-spacing:.26em; text-transform:uppercase; color:var(--muted); margin:0 0 9px;}
+  .sysbtn{display:flex; align-items:center; gap:9px; width:100%; text-align:left;
+    font-family:var(--sans); font-size:12px; color:var(--paper); background:transparent;
+    border:1px solid transparent; padding:7px 8px; cursor:pointer; transition:all .14s ease;}
+  .sysbtn:hover{background:rgba(255,255,255,.05);}
+  .sysbtn:focus-visible{outline:2px solid var(--ochre); outline-offset:1px;}
+  .sysbtn .sw{width:11px; height:11px; border-radius:2px; flex:0 0 auto; opacity:.35; transition:opacity .14s;}
+  .sysbtn.on .sw{opacity:1;}
+  .sysbtn.on{background:rgba(255,255,255,.07);}
+  .sysbtn .ct{margin-left:auto; font-size:10px; color:var(--muted);}
+  .sysrow{display:flex; gap:7px; margin-top:10px;}
+  .minibtn{flex:1; font-family:var(--sans); font-size:10.5px; color:var(--paper);
+    background:transparent; border:1px solid var(--line); padding:6px; cursor:pointer; transition:all .14s;}
+  .minibtn:hover{background:rgba(255,255,255,.06);}
 
-  /* controls */
-  .controls{
-    position:fixed; bottom:20px; left:50%; transform:translateX(-50%);
-    display:flex; gap:7px; align-items:stretch; pointer-events:auto;
-    background:rgba(18,23,29,.72); backdrop-filter:blur(6px);
-    border:1px solid var(--line); padding:7px; border-radius:0;
-  }
-  .controls .group{display:flex; gap:6px;}
-  .divider{width:1px; background:var(--line); margin:2px 2px;}
-  button.ctl{
-    font-family:var(--sans); font-size:11px; letter-spacing:.04em;
-    color:var(--paper); background:transparent; border:1px solid transparent;
-    padding:8px 11px; cursor:pointer; border-radius:0; transition:all .15s ease;
-    white-space:nowrap;
-  }
+  .controls{position:fixed; bottom:20px; left:50%; transform:translateX(-50%);
+    display:flex; gap:6px; pointer-events:auto;
+    background:rgba(18,23,29,.72); backdrop-filter:blur(6px); border:1px solid var(--line); padding:7px;}
+  .divider{width:1px; background:var(--line); margin:2px;}
+  button.ctl{font-family:var(--sans); font-size:11px; color:var(--paper); background:transparent;
+    border:1px solid transparent; padding:8px 11px; cursor:pointer; transition:all .15s ease; white-space:nowrap;}
   button.ctl:hover{background:rgba(255,255,255,.06); border-color:var(--line);}
   button.ctl:focus-visible{outline:2px solid var(--ochre); outline-offset:1px;}
   button.ctl.on{background:var(--ochre); color:#22170a; border-color:var(--ochre);}
-  .hint{position:fixed; bottom:64px; left:50%; transform:translateX(-50%);
-    font-size:10px; letter-spacing:.18em; text-transform:uppercase; color:#5d6873;
+
+  .foot-note{position:fixed; left:22px; bottom:18px; max-width:300px;
+    font-size:10px; line-height:1.5; color:#6f7a85; pointer-events:none;}
+  .foot-note b{color:#94a0ab; font-weight:500;}
+  .hint{position:fixed; bottom:62px; left:50%; transform:translateX(-50%);
+    font-size:10px; letter-spacing:.16em; text-transform:uppercase; color:#5d6873;
     pointer-events:none; transition:opacity .4s ease;}
-  @media (max-width:560px){
-    .titlecard{max-width:240px;} .titlecard h1{font-size:23px;}
-    .titlecard p{display:none;} .foot-note{display:none;}
-    button.ctl{padding:8px 8px; font-size:10px;}
+  @media (max-width:680px){
+    .titlecard p{display:none;} .titlecard h1{font-size:21px;}
+    .systems{width:176px; top:auto; bottom:74px; right:12px;}
+    .foot-note{display:none;}
+    button.ctl{padding:7px 7px; font-size:10px;}
   }
 </style>
 </head>
 <body>
   <div id="stage"></div>
-  <svg class="leaders" id="leaders"><!-- leader lines injected --></svg>
-  <div class="overlay" id="labels"><!-- chips + dots injected --></div>
+  <svg class="leaders" id="leaders"></svg>
+  <div class="overlay" id="labels"></div>
+  <div class="tooltip" id="tip"><div class="t-seg"></div><div class="t-nm"></div><div class="t-ds"></div></div>
 
   <div class="titlecard">
     <div class="eyebrow">R.O.P. · Réflexo-Occipito-Podale</div>
-    <h1>Le pied, <em>carte vivante</em> du rachis</h1>
-    <p>Les zones réflexes sont ancrées dans l'espace 3D, pas dessinées sur l'image.
-       Faites tourner le modèle&nbsp;: chaque repère reste fidèle à l'anatomie. Une seule
-       maquette remplace vos vues frontale et sagittale.</p>
+    <h1>Atlas réflexe du <em>rachis</em></h1>
+    <p>Toutes les zones des deux planches, ancrées en 3D sur un seul pied. Activez les
+       systèmes, faites pivoter, survolez un repère.</p>
   </div>
 
-  <div class="hint" id="hint">Glissez pour faire pivoter · molette pour zoomer</div>
+  <div class="hint" id="hint">Glissez pour pivoter · molette pour zoomer · survolez un repère</div>
+
+  <div class="systems" id="systems">
+    <h2>Systèmes</h2>
+    <!-- system buttons injected -->
+    <div class="sysrow">
+      <button class="minibtn" id="all-on">Tout afficher</button>
+      <button class="minibtn" id="all-off">Masquer</button>
+    </div>
+  </div>
 
   <div class="controls">
-    <div class="group">
+    <div style="display:flex; gap:6px;">
       <button class="ctl" data-view="mediale">Médiale</button>
+      <button class="ctl" data-view="post34">3/4 post.</button>
       <button class="ctl" data-view="talon">Talon</button>
       <button class="ctl" data-view="plantaire">Plantaire</button>
       <button class="ctl" data-view="dorsale">Dorsale</button>
     </div>
     <div class="divider"></div>
-    <div class="group">
-      <button class="ctl on" id="t-labels">Repères</button>
-      <button class="ctl on" id="t-spine">Rachis</button>
-      <button class="ctl" id="t-spin">Rotation auto</button>
-    </div>
+    <button class="ctl on" id="t-labels">Étiquettes</button>
+    <button class="ctl" id="t-spin">Rotation auto</button>
   </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <script>
 (function(){
-  if(!window.THREE){ document.body.innerHTML='<p style="color:#fff;font-family:sans-serif;padding:40px">Three.js n\'a pas pu se charger (réseau).</p>'; return; }
+  if(!window.THREE){ document.body.innerHTML='<p style="color:#fff;font-family:sans-serif;padding:40px">Three.js n\'a pas pu se charger.</p>'; return; }
+  const RM=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const stage=document.getElementById('stage');
 
-  const RM = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const stage = document.getElementById('stage');
-
-  // ---------- renderer / scene / camera ----------
-  const renderer = new THREE.WebGLRenderer({antialias:true, alpha:true});
+  const renderer=new THREE.WebGLRenderer({antialias:true, alpha:true});
   renderer.setPixelRatio(Math.min(window.devicePixelRatio,2));
   stage.appendChild(renderer.domElement);
+  const scene=new THREE.Scene();
+  const camera=new THREE.PerspectiveCamera(38,1,0.1,100);
+  let camDist=7.6;
 
-  const scene = new THREE.Scene();
-  const camera = new THREE.PerspectiveCamera(38, 1, 0.1, 100);
-  let camDist = 7.4;
+  scene.add(new THREE.HemisphereLight(0xdfe6ee,0x20262e,0.85));
+  const key=new THREE.DirectionalLight(0xfff2d8,1.05); key.position.set(4,7,6); scene.add(key);
+  const fill=new THREE.DirectionalLight(0x9fb6c9,0.5); fill.position.set(-6,2,-4); scene.add(fill);
+  const rim=new THREE.DirectionalLight(0xffffff,0.32); rim.position.set(-2,4,-7); scene.add(rim);
 
-  // ---------- lights ----------
-  scene.add(new THREE.HemisphereLight(0xdfe6ee, 0x20262e, 0.85));
-  const key = new THREE.DirectionalLight(0xfff2d8, 1.05); key.position.set(4,7,6); scene.add(key);
-  const fill = new THREE.DirectionalLight(0x9fb6c9, 0.5); fill.position.set(-6,2,-4); scene.add(fill);
-  const rim = new THREE.DirectionalLight(0xffffff, 0.35); rim.position.set(-2,4,-7); scene.add(rim);
+  const foot=new THREE.Group(); scene.add(foot);
+  const CENTER=new THREE.Vector3(-0.1,0.5,0);
+  const C=(x,y,z)=>new THREE.Vector3(x-CENTER.x,y-CENTER.y,z-CENTER.z);
 
-  // ---------- foot group ----------
-  const foot = new THREE.Group();
-  scene.add(foot);
-
-  const CENTER = new THREE.Vector3(-0.1, 0.5, 0); // recenter so it spins in place
-
-  // smooth (smoothstep) lookup over [pos,val] pairs
-  function sample(arr, t){
-    if(t<=arr[0][0]) return arr[0][1];
-    const n=arr.length;
-    if(t>=arr[n-1][0]) return arr[n-1][1];
-    for(let i=0;i<n-1;i++){
-      const a=arr[i], b=arr[i+1];
-      if(t>=a[0] && t<=b[0]){ let k=(t-a[0])/(b[0]-a[0]); k=k*k*(3-2*k); return a[1]+(b[1]-a[1])*k; }
-    }
-    return arr[n-1][1];
-  }
+  function sample(arr,t){ if(t<=arr[0][0])return arr[0][1]; const n=arr.length;
+    if(t>=arr[n-1][0])return arr[n-1][1];
+    for(let i=0;i<n-1;i++){const a=arr[i],b=arr[i+1];
+      if(t>=a[0]&&t<=b[0]){let k=(t-a[0])/(b[0]-a[0]);k=k*k*(3-2*k);return a[1]+(b[1]-a[1])*k;}}
+    return arr[n-1][1]; }
   const WID=[[0,0.52],[0.15,0.58],[0.35,0.50],[0.55,0.56],[0.72,0.74],[0.85,0.62],[1,0.32]];
   const HGT=[[0,0.80],[0.12,1.02],[0.30,0.98],[0.55,0.78],[0.72,0.62],[0.88,0.50],[1,0.40]];
 
-  // ---------- lofted foot mesh ----------
+  // ---- foot mesh (stand-in for the scanned skeleton) ----
   (function buildFoot(){
-    const NL=64, S=36;
-    const pos=[];
-    for(let i=0;i<=NL;i++){
-      const t=i/NL;
-      const x=-2.1 + 4.0*t;
-      const W=sample(WID,t), H=sample(HGT,t);
-      const arch=0.30*Math.exp(-Math.pow((t-0.46)/0.17,2)); // underside lift, midfoot
-      for(let j=0;j<S;j++){
-        const th=(j/S)*Math.PI*2;
-        const c=Math.cos(th), s=Math.sin(th);
-        let z = W*c;
-        let y;
-        if(s>=0){ y = H*0.5 + (H*0.5)*s; }            // rounded top
-        else    { y = H*0.5 + (H*0.5)*s*0.55; z*=1.12; } // flatter, wider sole
-        // medial longitudinal arch: lift the underside, biased to medial (+z)
-        if(s<0){
-          const medial=Math.max(0,0.5+0.5*c);
-          y += arch * (-s) * (0.45+0.9*medial);
-        }
-        pos.push(x-CENTER.x, y-CENTER.y, z-CENTER.z);
-      }
-    }
+    const NL=64,S=36,pos=[];
+    for(let i=0;i<=NL;i++){const t=i/NL,x=-2.1+4.0*t,W=sample(WID,t),H=sample(HGT,t),
+      arch=0.30*Math.exp(-Math.pow((t-0.46)/0.17,2));
+      for(let j=0;j<S;j++){const th=(j/S)*Math.PI*2,c=Math.cos(th),s=Math.sin(th);
+        let z=W*c,y;
+        if(s>=0){y=H*0.5+(H*0.5)*s;} else {y=H*0.5+(H*0.5)*s*0.55; z*=1.12;}
+        if(s<0){const med=Math.max(0,0.5+0.5*c); y+=arch*(-s)*(0.45+0.9*med);}
+        pos.push(x-CENTER.x,y-CENTER.y,z-CENTER.z);}}
     const idx=[];
-    for(let i=0;i<NL;i++){
-      for(let j=0;j<S;j++){
-        const a=i*S+j, b=i*S+((j+1)%S), c=(i+1)*S+j, d=(i+1)*S+((j+1)%S);
-        idx.push(a,c,d, a,d,b);
-      }
-    }
-    // caps
-    const heelC=pos.length/3;
-    pos.push((-2.1)-CENTER.x, sample(HGT,0)*0.5-CENTER.y, -CENTER.z);
-    const toeC=pos.length/3;
-    pos.push((1.9)-CENTER.x, sample(HGT,1)*0.5-CENTER.y, -CENTER.z);
-    for(let j=0;j<S;j++){
-      idx.push(heelC, (j+1)%S, j);                 // heel fan
-      idx.push(toeC, NL*S + j, NL*S + ((j+1)%S));  // toe fan
-    }
-    const geo=new THREE.BufferGeometry();
-    geo.setAttribute('position', new THREE.Float32BufferAttribute(pos,3));
-    geo.setIndex(idx);
-    geo.computeVertexNormals();
-    const mat=new THREE.MeshStandardMaterial({color:0xece5d6, roughness:0.92, metalness:0.0, side:THREE.DoubleSide, flatShading:false});
-    foot.add(new THREE.Mesh(geo, mat));
+    for(let i=0;i<NL;i++)for(let j=0;j<S;j++){const a=i*S+j,b=i*S+((j+1)%S),c=(i+1)*S+j,d=(i+1)*S+((j+1)%S);idx.push(a,c,d,a,d,b);}
+    const heelC=pos.length/3; pos.push(-2.1-CENTER.x,sample(HGT,0)*0.5-CENTER.y,-CENTER.z);
+    const toeC=pos.length/3; pos.push(1.9-CENTER.x,sample(HGT,1)*0.5-CENTER.y,-CENTER.z);
+    for(let j=0;j<S;j++){idx.push(heelC,(j+1)%S,j); idx.push(toeC,NL*S+j,NL*S+((j+1)%S));}
+    const g=new THREE.BufferGeometry();
+    g.setAttribute('position',new THREE.Float32BufferAttribute(pos,3)); g.setIndex(idx); g.computeVertexNormals();
+    foot.add(new THREE.Mesh(g,new THREE.MeshStandardMaterial({color:0xece5d6,roughness:0.92,metalness:0,side:THREE.DoubleSide})));
   })();
-
-  // ---------- toes ----------
   (function buildToes(){
-    const toes=[
-      {x:1.95,z:0.40,y:0.40,r:0.21},
-      {x:1.96,z:0.20,y:0.40,r:0.185},
-      {x:1.93,z:0.01,y:0.39,r:0.165},
-      {x:1.85,z:-0.17,y:0.37,r:0.145},
-      {x:1.74,z:-0.33,y:0.35,r:0.125},
-    ];
-    const mat=new THREE.MeshStandardMaterial({color:0xeae2d1, roughness:0.92, metalness:0.0});
-    toes.forEach(tt=>{
-      const m=new THREE.Mesh(new THREE.SphereGeometry(tt.r,20,16), mat);
-      m.scale.set(1.25,0.92,1);
-      m.position.set(tt.x-CENTER.x, tt.y-CENTER.y, tt.z-CENTER.z);
-      foot.add(m);
-    });
+    const toes=[{x:1.95,z:0.40,y:0.40,r:0.21},{x:1.96,z:0.20,y:0.40,r:0.185},{x:1.93,z:0.01,y:0.39,r:0.165},{x:1.85,z:-0.17,y:0.37,r:0.145},{x:1.74,z:-0.33,y:0.35,r:0.125}];
+    const mat=new THREE.MeshStandardMaterial({color:0xeae2d1,roughness:0.92,metalness:0});
+    toes.forEach(t=>{const m=new THREE.Mesh(new THREE.SphereGeometry(t.r,20,16),mat);m.scale.set(1.25,0.92,1);m.position.set(t.x-CENTER.x,t.y-CENTER.y,t.z-CENTER.z);foot.add(m);});
   })();
 
-  // ---------- spine path (surface-attached region) ----------
-  const spinePts=[
-    [-1.95,0.55,0.30],[-1.4,0.78,0.36],[-0.7,0.92,0.40],
-    [0.0,0.92,0.42],[0.7,0.82,0.44],[1.3,0.66,0.48],[1.95,0.50,0.52]
-  ].map(p=>new THREE.Vector3(p[0]-CENTER.x, p[1]-CENTER.y, p[2]-CENTER.z));
-  const curve=new THREE.CatmullRomCurve3(spinePts, false, 'catmullrom', 0.5);
-  const tubeMat=new THREE.MeshStandardMaterial({color:0xd9a441, emissive:0x6e4a12, emissiveIntensity:0.55, roughness:0.55, metalness:0.1});
-  const spineTube=new THREE.Mesh(new THREE.TubeGeometry(curve,90,0.055,10,false), tubeMat);
-  foot.add(spineTube);
+  // ---- medial spine axis (faint base) ----
+  const spinePts=[[-1.95,0.55,0.30],[-1.4,0.78,0.36],[-0.7,0.92,0.40],[0.0,0.92,0.42],[0.7,0.82,0.44],[1.3,0.66,0.48],[1.95,0.50,0.52]].map(p=>C(p[0],p[1],p[2]));
+  const spine=new THREE.CatmullRomCurve3(spinePts,false,'catmullrom',0.5);
+  foot.add(new THREE.Mesh(new THREE.TubeGeometry(spine,90,0.022,8,false),
+    new THREE.MeshStandardMaterial({color:0xb9ad92,roughness:0.8,transparent:true,opacity:0.5})));
 
-  // ---------- annotations (vertebral segments) ----------
-  const SEGMENTS=[
-    {seg:'Tête',           name:'Occiput',          u:0.99, color:'#c96f4a', off:[ 26,-30]},
-    {seg:'C1 – C7',        name:'Cervicales',       u:0.88, color:'#d99a3f', off:[ 30,  2]},
-    {seg:'T1 – T6',        name:'Dorsales hautes',  u:0.66, color:'#bfa24a', off:[ 30,-38]},
-    {seg:'T7 – T12',       name:'Dorsales basses',  u:0.48, color:'#8aa258', off:[ 28, 26]},
-    {seg:'L1 – L5',        name:'Lombaires',        u:0.30, color:'#5b9aa0', off:[-150,-26]},
-    {seg:'S1 – S5',        name:'Sacrum',           u:0.13, color:'#6f7fb0', off:[-138, 12]},
-    {seg:'',               name:'Coccyx',           u:0.02, color:'#8a6fb0', off:[-126, 46]},
+  // ---- systems ----
+  const SYS={
+    rachis:{name:'Rachis',color:'#cf3b33',on:true},
+    auto:{name:'Nerf autonome',color:'#b5462b',on:false},
+    thorax:{name:'Thorax & côtes',color:'#8a5fb0',on:false},
+    artic:{name:'Articulations',color:'#c0392b',on:false},
+    organes:{name:'Organes pelviens',color:'#3b78c2',on:false},
+  };
+
+  // vertebra table: [region, label, u, dark]
+  const REG={cerv:'#3b78c2',thor:'#cf3b33',lomb:'#e3b81e',sacr:'#2f8f8f',cocc:'#2e8b57',fora:'#7b4ea3'};
+  const VERTS=[
+    ['fora','Foramen magnum',0.995,false,'Crâne','Passage du tronc cérébral — sommet du rachis.'],
+    ['cerv','C1',0.95,false,'Cervicales',''],['cerv','C2',0.92,false,'Cervicales',''],
+    ['cerv','C4',0.88,false,'Cervicales',''],['cerv','C7',0.83,false,'Cervicales',''],
+    ['thor','T1',0.78,false,'Dorsales',''],['thor','T4',0.70,false,'Dorsales',''],
+    ['thor','T6',0.63,false,'Dorsales',''],['thor','T9',0.54,false,'Dorsales',''],
+    ['thor','T11',0.47,false,'Dorsales',''],['thor','T12',0.43,false,'Dorsales',''],
+    ['lomb','L1',0.38,true,'Lombaires',''],['lomb','L3',0.30,true,'Lombaires',''],
+    ['lomb','L4',0.26,true,'Lombaires',''],['lomb','L5',0.22,true,'Lombaires',''],
+    ['sacr','S1',0.16,false,'Sacrum',''],['sacr','S2',0.13,false,'Sacrum',''],['sacr','S3',0.10,false,'Sacrum',''],
+    ['cocc','Coccyx',0.04,false,'Coccyx',''],
   ];
+
+  const ZONES=[];
+  VERTS.forEach(v=>ZONES.push({group:'rachis',type:'vertebra',label:v[1],u:v[2],color:REG[v[0]],dark:v[3],seg:v[4],desc:v[5],kind:'vert'}));
+
+  // named structures
+  ZONES.push(
+    // autonome
+    {group:'auto',type:'path',label:'Sympathique',full:'Origine médullaire sympathique',seg:'Chaîne ganglionnaire',desc:'Chaîne latéro-vertébrale thoracolombaire (T1–L2).',color:'#b5462b',beads:11,
+      pts:[[1.0,0.55,0.42],[0.6,0.62,0.40],[0.1,0.66,0.36],[-0.4,0.62,0.34],[-0.8,0.55,0.34]]},
+    {group:'auto',type:'path',label:'Parasympathique',full:'Parasympathique sacré',seg:'Origine médullaire',desc:'Centres parasympathiques sacrés (S2–S4).',color:'#d9b400',dark:true,beads:5,
+      pts:[[-1.2,0.50,0.34],[-1.45,0.45,0.32],[-1.65,0.42,0.30]]},
+    {group:'auto',type:'path',label:'Queue de cheval',full:'Queue de cheval',seg:'Cauda equina',desc:'Racines lombo-sacrées sous la fin de la moelle.',color:'#c2c8d0',dark:true,beads:0,
+      pts:[[-0.55,0.74,0.38],[-0.9,0.66,0.36],[-1.3,0.58,0.34],[-1.6,0.54,0.32]]},
+    {group:'auto',type:'point',label:'Ganglion impair',full:'Ganglion impair',seg:'Sympathique terminal',desc:'Jonction sacro-coccygienne, ganglion terminal.',color:'#e07b1f',pos:[-1.95,0.42,0.10]},
+    {group:'auto',type:'point',label:'Nerf de Hyrtl',full:'Nerf intercostalbrachial de Hyrtl',seg:'Thorax',desc:'Branche du 2e nerf intercostal vers la face interne du bras.',color:'#c9a417',dark:true,pos:[1.0,0.96,-0.12]},
+    // thorax & cotes
+    {group:'thorax',type:'point',label:'1ère côte',full:'1ère côte',seg:'Thorax',desc:'Côte la plus haute du thorax postérieur.',color:'#9a8f7a',pos:[1.35,0.92,-0.02]},
+    {group:'thorax',type:'area',label:'Thorax post.',full:'Thorax postérieur',seg:'Cage thoracique',desc:'Projection dorsale de la cage thoracique (métatarses).',color:'#b9a05a',pos:[0.7,1.0,-0.05],normal:[0,0.6,-0.8],size:[0.6,0.42]},
+    {group:'thorax',type:'path',label:'Bord inf. thorax',full:'Bord inférieur du thorax postérieur',seg:'Cage thoracique',desc:'Limite basse du thorax, niveau T12.',color:'#d9882e',beads:0,
+      pts:[[0.30,0.96,0.28],[0.30,0.95,-0.06],[0.30,0.90,-0.42]]},
+    {group:'thorax',type:'path',label:'Costo-transversaires',full:'Articulations costo-transversaires',seg:'Chaîne latéro-vertébrale',desc:'Jonctions côte–vertèbre, niveau thoracique.',color:'#8a5fb0',beads:7,
+      pts:[[1.0,0.70,0.30],[0.6,0.80,0.28],[0.1,0.86,0.26],[-0.3,0.80,0.26]]},
+    // articulations
+    {group:'artic',type:'path',label:'Artic. postérieures',full:'Articulations postérieures des vertèbres',seg:'Facettes',desc:'Articulations zygapophysaires, tout le rachis.',color:'#c0392b',beads:9,
+      pts:[[1.4,0.62,0.52],[0.9,0.78,0.50],[0.3,0.90,0.48],[-0.3,0.90,0.46],[-0.8,0.80,0.44],[-1.2,0.66,0.42]]},
+    {group:'artic',type:'point',label:'Articulaire L5',full:'Articulaire postérieure de L5',seg:'Charnière lombo-sacrée',desc:'Facette de L5, charnière lombo-sacrée.',color:'#e3b81e',dark:true,pos:[-0.55,0.82,0.46]},
+    {group:'artic',type:'area',label:'Sacro-iliaque',full:'Sacro-iliaque',seg:'Bassin',desc:'Articulation entre sacrum et ilium.',color:'#5f6fb0',pos:[-1.35,0.62,-0.22],normal:[-0.3,0.2,-0.9],size:[0.3,0.26]},
+    {group:'artic',type:'point',label:'Masse commune',full:'Masse commune (tendon d’Achille)',seg:'Insertion',desc:'Insertion calcanéenne — référence du tendon d’Achille.',color:'#a8443c',pos:[-2.0,0.88,0.0]},
+    // organes
+    {group:'organes',type:'point',label:'Rectum',full:'Rectum',seg:'Pelvis',desc:'Projection rectale, région sacro-coccygienne.',color:'#3b78c2',pos:[-1.55,0.32,0.26]},
+    {group:'organes',type:'point',label:'Anus',full:'Anus',seg:'Pelvis',desc:'Région la plus caudale, sous le coccyx.',color:'#cf3b33',pos:[-1.9,0.28,0.12]},
+  );
+
+  // ---- build geometry + labels per zone ----
   const labelLayer=document.getElementById('labels');
   const leaderSvg=document.getElementById('leaders');
   const tmp=new THREE.Vector3();
 
-  SEGMENTS.forEach(s=>{
-    const p=curve.getPointAt(s.u);
-    // marker sphere
-    const m=new THREE.Mesh(new THREE.SphereGeometry(0.075,16,12),
-      new THREE.MeshStandardMaterial({color:new THREE.Color(s.color), emissive:new THREE.Color(s.color), emissiveIntensity:0.35, roughness:0.4}));
-    m.position.copy(p);
-    foot.add(m);
-    s.mesh=m;
-    // outward normal (radial from the foot's long axis, in YZ)
-    s.normal=new THREE.Vector3(0, p.y, p.z).normalize();
-    if(s.normal.lengthSq()<1e-4) s.normal.set(0,1,0);
+  function radialNormal(p){const n=new THREE.Vector3(0,p.y,p.z); if(n.lengthSq()<1e-4)n.set(0,1,0); return n.normalize();}
 
-    // chip
-    const chip=document.createElement('div'); chip.className='chip';
-    chip.innerHTML='<div class="seg"><span class="dot-key" style="background:'+s.color+'"></span>'+(s.seg||'&nbsp;')+'</div><div class="name">'+s.name+'</div>';
-    labelLayer.appendChild(chip); s.chip=chip;
+  ZONES.forEach((z,i)=>{
+    z._meshes=[]; let anchor, normal;
+    if(z.type==='vertebra'){
+      anchor=spine.getPointAt(z.u); normal=radialNormal(anchor);
+      const m=new THREE.Mesh(new THREE.SphereGeometry(0.06,14,10),
+        new THREE.MeshStandardMaterial({color:new THREE.Color(z.color),emissive:new THREE.Color(z.color),emissiveIntensity:0.3,roughness:0.45}));
+      m.position.copy(anchor); foot.add(m); z._meshes.push(m); z._mk=m;
+    } else if(z.type==='point'){
+      anchor=C(z.pos[0],z.pos[1],z.pos[2]); normal=radialNormal(anchor);
+      const m=new THREE.Mesh(new THREE.SphereGeometry(0.075,16,12),
+        new THREE.MeshStandardMaterial({color:new THREE.Color(z.color),emissive:new THREE.Color(z.color),emissiveIntensity:0.35,roughness:0.4}));
+      m.position.copy(anchor); foot.add(m); z._meshes.push(m); z._mk=m;
+    } else if(z.type==='path'){
+      const cpts=z.pts.map(p=>C(p[0],p[1],p[2]));
+      const crv=new THREE.CatmullRomCurve3(cpts,false,'catmullrom',0.5);
+      const tube=new THREE.Mesh(new THREE.TubeGeometry(crv,60,0.045,8,false),
+        new THREE.MeshStandardMaterial({color:new THREE.Color(z.color),emissive:new THREE.Color(z.color),emissiveIntensity:0.4,roughness:0.5}));
+      foot.add(tube); z._meshes.push(tube);
+      if(z.beads){for(let b=0;b<z.beads;b++){const bp=crv.getPointAt(b/(z.beads-1||1));
+        const bm=new THREE.Mesh(new THREE.SphereGeometry(0.05,10,8),
+          new THREE.MeshStandardMaterial({color:new THREE.Color(z.color),emissive:new THREE.Color(z.color),emissiveIntensity:0.45,roughness:0.4}));
+        bm.position.copy(bp); foot.add(bm); z._meshes.push(bm);}}
+      anchor=crv.getPointAt(0.5); normal=radialNormal(anchor); z._mk=z._meshes[0];
+    } else if(z.type==='area'){
+      anchor=C(z.pos[0],z.pos[1],z.pos[2]);
+      normal=new THREE.Vector3(z.normal[0],z.normal[1],z.normal[2]).normalize();
+      const disc=new THREE.Mesh(new THREE.CircleGeometry(0.34,28),
+        new THREE.MeshBasicMaterial({color:new THREE.Color(z.color),transparent:true,opacity:0.32,side:THREE.DoubleSide,depthWrite:false}));
+      disc.position.copy(anchor).addScaledVector(normal,0.05);
+      disc.lookAt(anchor.clone().addScaledVector(normal,1));
+      disc.scale.set(z.size[0]/0.34,z.size[1]/0.34,1); disc.renderOrder=2;
+      foot.add(disc); z._meshes.push(disc); z._mk=disc;
+    }
+    z._anchor=anchor; z._normal=normal;
+
+    // label chip
+    const chip=document.createElement('div');
+    if(z.kind==='vert'){ chip.className='chip vert'+(z.dark?' dark':''); chip.style.background=z.color; chip.textContent=z.label; chip.style.borderColor='rgba(0,0,0,.3)'; }
+    else { chip.className='chip named'; chip.innerHTML='<span class="kk" style="background:'+z.color+'"></span><span class="nm">'+z.label+'</span>'; }
+    labelLayer.appendChild(chip); z._chip=chip;
     // dot
-    const dot=document.createElement('div'); dot.className='marker-dot';
-    dot.style.background=s.color; labelLayer.appendChild(dot); s.dot=dot;
-    // leader line
-    const ln=document.createElementNS('http://www.w3.org/2000/svg','line');
-    ln.setAttribute('stroke', s.color); ln.setAttribute('stroke-width','1'); ln.setAttribute('opacity','0.6');
-    leaderSvg.appendChild(ln); s.line=ln;
+    const dot=document.createElement('div'); dot.className='marker-dot'; dot.style.background=z.color; labelLayer.appendChild(dot); z._dot=dot;
+    // leader (named only)
+    if(z.kind!=='vert'){const ln=document.createElementNS('http://www.w3.org/2000/svg','line');
+      ln.setAttribute('stroke',z.color); ln.setAttribute('stroke-width','1'); leaderSvg.appendChild(ln); z._line=ln;}
+    // 2D label offset
+    if(z.kind==='vert'){ z._off=[ (i%2?16:-16), (i%2? -2: 2) ]; }
+    else { z._off=[ (z._anchor.x<0? -120:118), (i%2? -16: 22) ]; }
   });
 
-  // ---------- one painted area zone (lumbar patch) ----------
-  (function lumbarPatch(){
-    const seg=SEGMENTS.find(x=>x.name==='Lombaires');
-    const p=curve.getPointAt(seg.u);
-    const n=new THREE.Vector3(0,p.y,p.z).normalize();
-    const patch=new THREE.Mesh(new THREE.CircleGeometry(0.34,28),
-      new THREE.MeshBasicMaterial({color:0x5b9aa0, transparent:true, opacity:0.30, side:THREE.DoubleSide, depthWrite:false}));
-    patch.position.copy(p).addScaledVector(n,0.05);
-    patch.lookAt(p.clone().addScaledVector(n,1));
-    patch.scale.set(1.05,0.62,1);
-    foot.add(patch); patch.renderOrder=2;
-    window.__patch=patch;
-  })();
-
-  // ---------- interaction state ----------
-  const targetRot={x:-0.34, y:-0.52};
-  const curRot={x:-0.34, y:-0.52};
-  let autoSpin=!RM, dragging=false, lastX=0,lastY=0, interacted=false;
-  let showLabels=true, showSpine=true;
-
-  const dom=renderer.domElement;
-  dom.addEventListener('pointerdown',e=>{dragging=true; lastX=e.clientX; lastY=e.clientY; interacted=true; fadeHint();});
-  window.addEventListener('pointerup',()=>dragging=false);
-  window.addEventListener('pointermove',e=>{
-    if(!dragging) return;
-    targetRot.y += (e.clientX-lastX)*0.0095;
-    targetRot.x += (e.clientY-lastY)*0.0095;
-    targetRot.x = Math.max(-1.35, Math.min(1.35, targetRot.x));
-    lastX=e.clientX; lastY=e.clientY;
+  // ---- systems UI ----
+  const sysWrap=document.getElementById('systems');
+  const allOnBtn=document.getElementById('all-on'), allOffBtn=document.getElementById('all-off');
+  const sysBtns={};
+  Object.keys(SYS).forEach(k=>{
+    const count=ZONES.filter(z=>z.group===k).length;
+    const b=document.createElement('button'); b.className='sysbtn'+(SYS[k].on?' on':'');
+    b.innerHTML='<span class="sw" style="background:'+SYS[k].color+'"></span><span>'+SYS[k].name+'</span><span class="ct">'+count+'</span>';
+    b.addEventListener('click',()=>{SYS[k].on=!SYS[k].on; b.classList.toggle('on',SYS[k].on); applyVis();});
+    sysWrap.insertBefore(b, sysWrap.querySelector('.sysrow')); sysBtns[k]=b;
   });
-  dom.addEventListener('wheel',e=>{e.preventDefault(); camDist=Math.max(4.4,Math.min(11,camDist+e.deltaY*0.006)); interacted=true; fadeHint();},{passive:false});
+  allOnBtn.addEventListener('click',()=>{Object.keys(SYS).forEach(k=>{SYS[k].on=true;sysBtns[k].classList.add('on');});applyVis();});
+  allOffBtn.addEventListener('click',()=>{Object.keys(SYS).forEach(k=>{SYS[k].on=false;sysBtns[k].classList.remove('on');});applyVis();});
+  function applyVis(){ ZONES.forEach(z=>{const on=SYS[z.group].on; z._meshes.forEach(m=>m.visible=on);}); }
+  applyVis();
 
-  const hintEl=document.getElementById('hint');
-  let hintFaded=false;
-  function fadeHint(){ if(hintFaded) return; hintFaded=true; hintEl.style.opacity='0'; }
-  if(RM) fadeHint();
-
-  // preset views
-  const VIEWS={
-    mediale:  {x:-0.10, y:0.0},
-    talon:    {x:-0.18, y:Math.PI/2},
-    plantaire:{x:-Math.PI/2+0.05, y:0.0},
-    dorsale:  {x:Math.PI/2-0.05, y:0.0},
-  };
-  document.querySelectorAll('[data-view]').forEach(b=>{
-    b.addEventListener('click',()=>{
-      const v=VIEWS[b.dataset.view];
-      targetRot.x=v.x; targetRot.y=v.y; autoSpin=false; setSpin(false); interacted=true; fadeHint();
-    });
-  });
-
-  // toggles
-  const tL=document.getElementById('t-labels'), tS=document.getElementById('t-spine'), tSpin=document.getElementById('t-spin');
-  tL.addEventListener('click',()=>{ showLabels=!showLabels; tL.classList.toggle('on',showLabels); });
-  tS.addEventListener('click',()=>{ showSpine=!showSpine; tS.classList.toggle('on',showSpine);
-    spineTube.visible=showSpine; if(window.__patch) window.__patch.visible=showSpine;
-    SEGMENTS.forEach(s=>s.mesh.visible=showSpine); });
-  function setSpin(on){ autoSpin=on; tSpin.classList.toggle('on',on); }
+  // ---- labels toggle / spin / views ----
+  let showLabels=true, autoSpin=!RM;
+  const tLabels=document.getElementById('t-labels'), tSpin=document.getElementById('t-spin');
+  tLabels.addEventListener('click',()=>{showLabels=!showLabels; tLabels.classList.toggle('on',showLabels);});
+  function setSpin(on){autoSpin=on; tSpin.classList.toggle('on',on);} setSpin(autoSpin);
   tSpin.addEventListener('click',()=>setSpin(!autoSpin));
-  setSpin(autoSpin);
 
-  // ---------- resize ----------
-  function resize(){
-    const w=window.innerWidth, h=window.innerHeight;
-    renderer.setSize(w,h); camera.aspect=w/h; camera.updateProjectionMatrix();
-    leaderSvg.setAttribute('viewBox','0 0 '+w+' '+h);
-    leaderSvg.setAttribute('width',w); leaderSvg.setAttribute('height',h);
-  }
-  window.addEventListener('resize',resize); resize();
+  const VIEWS={mediale:{x:-0.06,y:0.0},post34:{x:-0.22,y:-0.62},talon:{x:-0.16,y:Math.PI/2},
+    plantaire:{x:-Math.PI/2+0.05,y:0.0},dorsale:{x:Math.PI/2-0.05,y:0.0}};
+  const targetRot={x:-0.20,y:-0.5}, curRot={x:-0.20,y:-0.5};
+  document.querySelectorAll('[data-view]').forEach(b=>b.addEventListener('click',()=>{
+    const v=VIEWS[b.dataset.view]; targetRot.x=v.x; targetRot.y=v.y; setSpin(false); fadeHint();}));
 
-  // ---------- label projection ----------
+  // ---- interaction ----
+  let dragging=false,lastX=0,lastY=0;
+  const dom=renderer.domElement;
+  dom.addEventListener('pointerdown',e=>{dragging=true;lastX=e.clientX;lastY=e.clientY;fadeHint();});
+  window.addEventListener('pointerup',()=>dragging=false);
+  window.addEventListener('pointermove',e=>{ mouse.x=e.clientX; mouse.y=e.clientY;
+    if(!dragging)return; targetRot.y+=(e.clientX-lastX)*0.0095; targetRot.x+=(e.clientY-lastY)*0.0095;
+    targetRot.x=Math.max(-1.35,Math.min(1.35,targetRot.x)); lastX=e.clientX; lastY=e.clientY;});
+  dom.addEventListener('wheel',e=>{e.preventDefault(); camDist=Math.max(4.6,Math.min(11.5,camDist+e.deltaY*0.006)); fadeHint();},{passive:false});
+  const hintEl=document.getElementById('hint'); let hintFaded=false;
+  function fadeHint(){if(hintFaded)return; hintFaded=true; hintEl.style.opacity='0';} if(RM)fadeHint();
+
+  // ---- resize ----
+  function resize(){const w=innerWidth,h=innerHeight; renderer.setSize(w,h); camera.aspect=w/h; camera.updateProjectionMatrix();
+    leaderSvg.setAttribute('viewBox','0 0 '+w+' '+h); leaderSvg.setAttribute('width',w); leaderSvg.setAttribute('height',h);}
+  addEventListener('resize',resize); resize();
+
+  // ---- hover tooltip (screen-space proximity) ----
+  const mouse={x:-1,y:-1}; const tip=document.getElementById('tip');
+  const tipSeg=tip.querySelector('.t-seg'), tipNm=tip.querySelector('.t-nm'), tipDs=tip.querySelector('.t-ds');
+  let hovered=null;
+
+  // ---- label projection / occlusion ----
   const camDir=new THREE.Vector3(), worldN=new THREE.Vector3();
   function updateLabels(){
-    const w=window.innerWidth, h=window.innerHeight;
-    SEGMENTS.forEach(s=>{
-      if(!showLabels || !showSpine){ s.chip.style.display='none'; s.dot.style.display='none'; s.line.style.display='none'; return; }
-      s.mesh.getWorldPosition(tmp);
+    const w=innerWidth,h=innerHeight; let best=null, bestD=24*24;
+    ZONES.forEach(z=>{
+      const on=SYS[z.group].on && showLabels;
+      if(!on){ z._chip.style.display='none'; z._dot.style.display='none'; if(z._line)z._line.style.display='none'; return; }
+      z._anchor && tmp.copy(z._anchor); foot.localToWorld(tmp.copy(z._anchor));
       const proj=tmp.clone().project(camera);
       const px=(proj.x*0.5+0.5)*w, py=(-proj.y*0.5+0.5)*h;
-      // facing test
-      worldN.copy(s.normal).applyQuaternion(foot.quaternion);
+      worldN.copy(z._normal).applyQuaternion(foot.quaternion);
       camDir.copy(camera.position).sub(tmp).normalize();
-      const facing=worldN.dot(camDir);
-      const vis = facing>0.02 && proj.z<1;
-      const op = vis ? Math.min(1, 0.35+facing) : 0.0;
-
-      s.dot.style.display=''; s.chip.style.display=''; s.line.style.display='';
-      s.dot.style.transform='translate(-50%,-50%) translate('+px+'px,'+py+'px)';
-      s.dot.style.opacity=vis?1:0.12;
-      const cx=px+s.off[0], cy=py+s.off[1];
-      s.chip.style.transform='translate(-50%,-50%) translate('+cx+'px,'+cy+'px)';
-      s.chip.style.opacity=op;
-      s.line.setAttribute('x1',px); s.line.setAttribute('y1',py);
-      s.line.setAttribute('x2',cx); s.line.setAttribute('y2',cy);
-      s.line.style.opacity=vis?0.55:0.0;
+      const facing=worldN.dot(camDir); const vis=facing>0.0 && proj.z<1;
+      const op=vis?Math.min(1,0.4+facing):0.0;
+      z._dot.style.display=''; z._chip.style.display='';
+      z._dot.style.transform='translate(-50%,-50%) translate('+px+'px,'+py+'px)';
+      z._dot.style.opacity=vis?1:0.12;
+      const cx=px+z._off[0], cy=py+z._off[1];
+      z._chip.style.transform='translate(-50%,-50%) translate('+cx+'px,'+cy+'px)';
+      z._chip.style.opacity=op;
+      if(z._line){z._line.style.display=''; z._line.setAttribute('x1',px);z._line.setAttribute('y1',py);z._line.setAttribute('x2',cx);z._line.setAttribute('y2',cy); z._line.style.opacity=vis?0.5:0;}
+      z._px=px; z._py=py; z._vis=vis;
+      if(vis){const dx=mouse.x-px,dy=mouse.y-py,d=dx*dx+dy*dy; if(d<bestD){bestD=d;best=z;}}
     });
+    // tooltip
+    if(best){ if(hovered!==best){hovered=best; tipSeg.textContent=best.seg||''; tipNm.textContent=best.full||best.label; tipDs.textContent=best.desc||'';
+        if(best._mk)best._mk.scale.setScalar(1.6);} 
+      tip.style.left=mouse.x+'px'; tip.style.top=mouse.y+'px'; tip.style.opacity='1';
+    } else if(hovered){ if(hovered._mk)hovered._mk.scale.setScalar(1.0); hovered=null; tip.style.opacity='0'; }
   }
 
-  // ---------- loop ----------
-  function tick(){
-    requestAnimationFrame(tick);
-    if(autoSpin && !dragging) targetRot.y += 0.0042;
-    curRot.x += (targetRot.x-curRot.x)*0.12;
-    curRot.y += (targetRot.y-curRot.y)*0.12;
-    foot.rotation.set(curRot.x, curRot.y, 0);
-    camera.position.set(0, 1.15, camDist);
-    camera.lookAt(0,0,0);
-    renderer.render(scene,camera);
-    updateLabels();
+  function tick(){requestAnimationFrame(tick);
+    if(autoSpin&&!dragging)targetRot.y+=0.0040;
+    curRot.x+=(targetRot.x-curRot.x)*0.12; curRot.y+=(targetRot.y-curRot.y)*0.12;
+    foot.rotation.set(curRot.x,curRot.y,0);
+    camera.position.set(0,1.15,camDist); camera.lookAt(0,0,0);
+    renderer.render(scene,camera); updateLabels();
   }
   tick();
 })();
