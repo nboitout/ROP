@@ -15,8 +15,7 @@ const securityHeaders = [
     key: 'Content-Security-Policy',
     value: [
       "default-src 'self'",
-      // cdnjs hosts the Three.js build used by the /prototype-pied 3D foot map
-      "script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com",
+      "script-src 'self' 'unsafe-inline'",
       "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
       "font-src 'self' https://fonts.gstatic.com",
       "img-src 'self' data:",
