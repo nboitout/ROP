@@ -190,6 +190,13 @@ export default async function EngagementPage() {
 
       <div className="adm-chart-card" style={{ marginBottom: 32 }}>
         <p className="adm-chart-title">UTM Sources</p>
+        <p className="adm-page-sub" style={{ marginTop: -10, marginBottom: 18, maxWidth: 640, lineHeight: 1.6 }}>
+          This chart only counts visitors who arrive through a link <strong>tagged</strong> with UTM
+          parameters (e.g. <code>?utm_source=facebook&amp;utm_medium=social</code>). An ordinary,
+          untagged link — even an organic Facebook or Instagram post — will <strong>not</strong> appear
+          here; it’s recorded as direct/referral instead. To measure a channel, add UTM tags to the link
+          you share there. The chart stays empty until tagged campaigns are used.
+        </p>
         <AdminBarChart data={utmData} color="#4a6b5a" />
       </div>
     </main>
