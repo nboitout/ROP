@@ -174,12 +174,12 @@ export default async function ReadersPage() {
 
       <div className="adm-chart-card" style={{ marginBottom: 24 }}>
         <p className="adm-chart-title">Readers by Language</p>
-        <AdminBarChart data={langData} color="#c9a35e" />
+        <AdminBarChart data={langData} color="#c9a35e" showValues />
       </div>
 
       <div className="adm-chart-card" style={{ marginBottom: 32 }}>
         <p className="adm-chart-title">Readers by Profession (top 10)</p>
-        <AdminBarChart data={profData} color="#4a6b5a" layout="vertical" />
+        <AdminBarChart data={profData} color="#4a6b5a" layout="vertical" showValues />
       </div>
 
       <p className="adm-section-title">By Country</p>
