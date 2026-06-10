@@ -49,14 +49,15 @@ function pageOrder(label: string): number {
   return 999
 }
 
-// Human-readable captions for the CTA buttons. The "— hero" / "— pricing"
-// suffix keeps the two "read free chapters" buttons distinct by where they
-// sit on the page (a real distinction), while the notify buttons are one CTA.
-const CTA_LABELS: Record<string, string> = {
-  hero_chapters: 'Read free chapters — hero',
-  hero_summary: 'See chapters list — hero',
+// Group CTA clicks into the meaningful visitor actions. Pre-launch there is
+// no purchase step, so the print/online plan "notify me" buttons fold into
+// "Notify me on release"; both free-chapter buttons (hero + pricing plan)
+// fold into "Read the 3 chapters".
+const CTA_BUCKET: Record<string, string> = {
+  hero_chapters: 'Read the 3 chapters',
+  pricing_chapters_bundle: 'Read the 3 chapters',
+  hero_summary: 'See chapters list',
   chapters_buy: 'Order the full book',
-  pricing_chapters_bundle: 'Read free chapters — pricing',
   pricing_notify: 'Notify me on release',
 }
 
@@ -115,14 +116,14 @@ export default async function EngagementPage() {
       } catch {
         // data is plain string
       }
-      // The digital- and print-plan "notify me" buttons are the same action
-      // (same label, same #notify form); roll legacy split names into one.
+      // Legacy split notify names → one notify CTA, then into its action bucket.
       if (ctaName === 'pricing_notify_digital' || ctaName === 'pricing_notify_print') ctaName = 'pricing_notify'
-      ctaCount.set(ctaName, (ctaCount.get(ctaName) ?? 0) + 1)
+      const bucket = CTA_BUCKET[ctaName] ?? ctaName
+      ctaCount.set(bucket, (ctaCount.get(bucket) ?? 0) + 1)
     })
   const ctaData: BarDataPoint[] = [...ctaCount.entries()]
     .sort((a, b) => b[1] - a[1])
-    .map(([name, value]) => ({ name: CTA_LABELS[name] ?? name, value }))
+    .map(([name, value]) => ({ name, value }))
 
   // Bar: UTM sources
   const utmCount = new Map<string, number>()
@@ -210,10 +211,11 @@ export default async function EngagementPage() {
         <div className="adm-chart-card">
           <p className="adm-chart-title">CTA Clicks by Type</p>
           <p className="adm-page-sub" style={{ marginTop: -10, marginBottom: 18, lineHeight: 1.6 }}>
-            Counts clicks on each call-to-action button on the homepage, by its internal name —
-            e.g. <code>hero_chapters</code> (the main “read the free chapters” button),
-            <code>chapters_buy</code> (“order the full book”), and the <code>pricing_*</code> buttons on the
-            three pricing plans. Shows which buttons visitors actually engage with.
+            Homepage button clicks grouped by the visitor’s action: <strong>Read the 3 chapters</strong>
+            (both the hero and pricing-plan buttons), <strong>Order the full book</strong>,
+            <strong>Notify me on release</strong>, and <strong>See chapters list</strong>. Counts clicks,
+            not people. Pre-launch the editions aren’t purchasable yet, so the print/online plan buttons
+            fall under “Notify me on release” — a separate buy action will be added once the book is on sale.
           </p>
           <AdminBarChart data={ctaData} color="#c9a35e" layout="vertical" />
         </div>
