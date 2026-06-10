@@ -49,6 +49,17 @@ function pageOrder(label: string): number {
   return 999
 }
 
+// Human-readable captions for the CTA buttons. The "— hero" / "— pricing"
+// suffix keeps the two "read free chapters" buttons distinct by where they
+// sit on the page (a real distinction), while the notify buttons are one CTA.
+const CTA_LABELS: Record<string, string> = {
+  hero_chapters: 'Read free chapters — hero',
+  hero_summary: 'See chapters list — hero',
+  chapters_buy: 'Order the full book',
+  pricing_chapters_bundle: 'Read free chapters — pricing',
+  pricing_notify: 'Notify me on release',
+}
+
 export default async function EngagementPage() {
   const { events, visits } = await fetchAllSheets()
 
@@ -111,7 +122,7 @@ export default async function EngagementPage() {
     })
   const ctaData: BarDataPoint[] = [...ctaCount.entries()]
     .sort((a, b) => b[1] - a[1])
-    .map(([name, value]) => ({ name, value }))
+    .map(([name, value]) => ({ name: CTA_LABELS[name] ?? name, value }))
 
   // Bar: UTM sources
   const utmCount = new Map<string, number>()
