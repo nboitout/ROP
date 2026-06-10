@@ -272,6 +272,10 @@ h1 em { font-style:italic; color:var(--gold-l); }
 #acheter { background:var(--parch); text-align:center; }
 #acheter > p { font-size:.92rem; color:var(--i50); max-width:510px; margin:0 auto 56px; line-height:1.7; }
 .pricing-notice { max-width:720px; margin:0 auto 28px; padding:12px 20px; background:rgba(184,148,82,.10); border:1px solid rgba(184,148,82,.32); border-radius:3px; font-size:.84rem; color:var(--ink); text-align:center; line-height:1.5; }
+.pricing-readfirst { max-width:580px; margin:0 auto 44px; padding:26px 32px; background:rgba(184,148,82,.08); border:1.5px solid rgba(184,148,82,.38); border-radius:4px; text-align:center; }
+.pricing-readfirst-eyebrow { font-size:.68rem; letter-spacing:.22em; text-transform:uppercase; color:var(--gold); font-weight:600; margin-bottom:10px; }
+.pricing-readfirst-title { font-family:'Cormorant Garamond',serif; font-size:1.38rem; font-weight:400; color:var(--ink); margin-bottom:6px; line-height:1.3; }
+.pricing-readfirst-sub { font-size:.74rem; color:var(--i30); margin-bottom:18px; letter-spacing:.04em; }
 .pg { display:grid; grid-template-columns:repeat(auto-fit,minmax(275px,1fr)); gap:20px; max-width:960px; margin:0 auto; }
 .pc { background:white; border-radius:3px; padding:38px; text-align:left; box-shadow:0 2px 16px rgba(26,26,24,.055); transition:transform .28s, box-shadow .28s; position:relative; overflow:hidden; }
 .pc:hover { transform:translateY(-4px); box-shadow:0 10px 34px rgba(26,26,24,.1); }

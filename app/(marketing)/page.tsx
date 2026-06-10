@@ -405,7 +405,12 @@ export default function HomePage() {
           {t.pricing.h2.before}<em>{t.pricing.h2.em}</em>{t.pricing.h2.after}
         </h2>
         <p>{t.pricing.p}</p>
-        <p className="pricing-notice">{t.pricing.notice}</p>
+        <div className="pricing-readfirst">
+          <p className="pricing-readfirst-eyebrow">{t.pricing.readFirst.eyebrow}</p>
+          <p className="pricing-readfirst-title">{t.pricing.readFirst.title}</p>
+          <p className="pricing-readfirst-sub">{t.pricing.readFirst.sub}</p>
+          <a href="/chapitres-gratuits" className="btn b-gold" style={{ display: 'inline-block' }} onClick={() => trackCta('pricing_readfirst')}>{t.pricing.readFirst.cta}</a>
+        </div>
         <div className="pg">
           <div className="pc">
             <div className="pc-n">{t.pricing.plan1.name}</div>
@@ -425,7 +430,7 @@ export default function HomePage() {
             <ul className="pc-l">
               {t.pricing.plan2.features.map((f) => <li key={f}>{f}</li>)}
             </ul>
-            <a href="/chapitres-gratuits" className="btn b-gold" style={{ width: '100%', textAlign: 'center' }} onClick={() => trackCta('pricing_chapters_bundle')}>{t.pricing.plan2.cta}</a>
+            <a href="#notify" className="btn b-out" style={{ width: '100%', textAlign: 'center' }} onClick={() => trackCta('pricing_notify')}>{t.pricing.plan2.cta}</a>
           </div>
           <div className="pc">
             <div className="pc-n">{t.pricing.plan3.name}</div>

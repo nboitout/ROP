@@ -162,6 +162,12 @@ const fr = {
     h2: { before: 'Livre imprimé, Livre en ligne ', em: 'ou', after: ' formule complète' },
     p: "Trois formules d'accès à l'ouvrage : livre imprimé seul, livre en ligne enrichi (illustrations supplémentaires, fiches de révision, visuels interactifs, quiz), ou les deux réunis.",
     notice: "3 chapitres déjà disponibles en lecture libre — l'ouvrage complet et la version imprimée seront publiés prochainement.",
+    readFirst: {
+      eyebrow: 'Avant de commander',
+      title: 'Lisez d\'abord les 3 chapitres gratuits',
+      sub: 'Aucune carte bancaire · Accès immédiat',
+      cta: 'Commencer à lire gratuitement →',
+    },
     plan1: {
       name: 'Livre imprimé',
       desc: "Édition papier de l'ouvrage complet, expédiée à domicile.",
@@ -176,7 +182,7 @@ const fr = {
       price: '70',
       sub: 'accès en ligne immédiat',
       features: ['Illustrations supplémentaires', 'Fiches de révision', 'Visuels interactifs', "Quiz d'auto-évaluation", 'Lecture immédiate · Accès permanent'],
-      cta: 'Lire les 3 chapitres disponibles',
+      cta: 'Être informé de la parution',
     },
     plan3: {
       name: 'Livre en ligne + Livre imprimé',
@@ -507,6 +513,12 @@ const en: typeof fr = {
     h2: { before: 'Print Edition, Online Book ', em: 'or', after: ' the complete package' },
     p: 'Three formats are available: print edition only, enriched online book (extra illustrations, review sheets, interactive visuals, self-assessment quizzes), or both combined.',
     notice: '3 chapters are already free to read online — the full book and print edition will be published shortly.',
+    readFirst: {
+      eyebrow: 'Before you order',
+      title: 'Start with the 3 free chapters',
+      sub: 'No credit card · Immediate access',
+      cta: 'Start reading for free →',
+    },
     plan1: {
       name: 'Print Edition',
       desc: 'Printed copy of the complete book, shipped to your address.',
@@ -521,7 +533,7 @@ const en: typeof fr = {
       price: '70',
       sub: 'immediate online access',
       features: ['Extra Illustrations', 'Review Sheets', 'Interactive Visuals', 'Self-Assessment Quizzes', 'Immediate Access · Permanent'],
-      cta: 'Read the 3 available chapters',
+      cta: 'Notify me on release',
     },
     plan3: {
       name: 'Online Book + Print Edition',
@@ -852,6 +864,12 @@ const de: typeof fr = {
     h2: { before: 'Druckausgabe, Online-Buch ', em: 'oder', after: ' das Komplettpaket' },
     p: 'Drei Formate verfügbar: reine Druckausgabe, erweitertes Online-Buch (zusätzliche Illustrationen, Lernzettel, interaktive Grafiken, Quiz zur Selbstüberprüfung) oder beides kombiniert.',
     notice: '3 Kapitel sind bereits kostenlos online lesbar — das vollständige Buch und die Druckausgabe erscheinen in Kürze.',
+    readFirst: {
+      eyebrow: 'Bevor Sie bestellen',
+      title: 'Lesen Sie zunächst die 3 kostenlosen Kapitel',
+      sub: 'Keine Kreditkarte · Sofortiger Zugang',
+      cta: 'Kostenlos lesen →',
+    },
     plan1: {
       name: 'Druckausgabe',
       desc: 'Gedrucktes Exemplar des vollständigen Buches, an Ihre Adresse versandt.',
@@ -866,7 +884,7 @@ const de: typeof fr = {
       price: '70',
       sub: 'sofortiger Online-Zugang',
       features: ['Zusätzliche Illustrationen', 'Lernzettel', 'Interaktive Grafiken', 'Selbstüberprüfungs-Quiz', 'Sofortzugang · Dauerhaft'],
-      cta: 'Die 3 verfügbaren Kapitel lesen',
+      cta: 'Bei Erscheinen benachrichtigen',
     },
     plan3: {
       name: 'Online-Buch + Druckausgabe',
@@ -1197,6 +1215,12 @@ const es: typeof fr = {
     h2: { before: 'Edición impresa, Libro online ', em: 'o', after: ' el paquete completo' },
     p: 'Tres formatos disponibles: edición impresa sola, libro online enriquecido (ilustraciones adicionales, fichas de revisión, visuales interactivos, cuestionarios de autoevaluación) o ambos combinados.',
     notice: '3 capítulos ya están disponibles para lectura gratuita — el libro completo y la edición impresa se publicarán próximamente.',
+    readFirst: {
+      eyebrow: 'Antes de comprar',
+      title: 'Empieza con los 3 capítulos gratuitos',
+      sub: 'Sin tarjeta de crédito · Acceso inmediato',
+      cta: 'Empezar a leer gratis →',
+    },
     plan1: {
       name: 'Edición impresa',
       desc: 'Ejemplar impreso del libro completo, enviado a tu domicilio.',
@@ -1211,7 +1235,7 @@ const es: typeof fr = {
       price: '70',
       sub: 'acceso online inmediato',
       features: ['Ilustraciones adicionales', 'Fichas de revisión', 'Visuales interactivos', 'Cuestionarios de autoevaluación', 'Acceso inmediato · Permanente'],
-      cta: 'Leer los 3 capítulos disponibles',
+      cta: 'Avisarme cuando salga',
     },
     plan3: {
       name: 'Libro online + Edición impresa',
@@ -1542,6 +1566,12 @@ const it: typeof fr = {
     h2: { before: 'Edizione cartacea, Libro online ', em: 'o', after: ' il pacchetto completo' },
     p: 'Tre formati disponibili: solo edizione cartacea, libro online arricchito (illustrazioni aggiuntive, schede di ripasso, visuali interattive, quiz di autovalutazione) o entrambi combinati.',
     notice: '3 capitoli sono già disponibili in lettura gratuita — il libro completo e l\'edizione cartacea saranno pubblicati a breve.',
+    readFirst: {
+      eyebrow: 'Prima di ordinare',
+      title: 'Inizia con i 3 capitoli gratuiti',
+      sub: 'Nessuna carta di credito · Accesso immediato',
+      cta: 'Inizia a leggere gratis →',
+    },
     plan1: {
       name: 'Edizione cartacea',
       desc: 'Copia cartacea del libro completo, spedita al tuo indirizzo.',
@@ -1556,7 +1586,7 @@ const it: typeof fr = {
       price: '70',
       sub: 'accesso online immediato',
       features: ['Illustrazioni aggiuntive', 'Schede di ripasso', 'Visuali interattive', 'Quiz di autovalutazione', 'Accesso immediato · Permanente'],
-      cta: 'Leggi i 3 capitoli disponibili',
+      cta: 'Avvisami alla pubblicazione',
     },
     plan3: {
       name: 'Libro online + Edizione cartacea',
