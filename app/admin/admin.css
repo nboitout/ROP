@@ -63,6 +63,15 @@
 .adm-nav-links {
   display: flex;
   gap: 4px;
+  align-items: center;
+}
+
+/* Visual divider separating Chapitres (content) from the analytics tabs */
+.adm-nav-sep {
+  width: 1px;
+  align-self: stretch;
+  background: var(--adm-border);
+  margin: 8px 14px;
 }
 
 .adm-nav-link {

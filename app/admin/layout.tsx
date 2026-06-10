@@ -13,11 +13,12 @@ export default async function AdminLayout({
         <div className="adm-nav-left">
           <span className="adm-nav-brand">R.O.P. — Admin</span>
           <div className="adm-nav-links">
-            <AdminNavLink href="/admin">Overview</AdminNavLink>
             <AdminNavLink href="/admin/chapitres">Chapitres</AdminNavLink>
-            <AdminNavLink href="/admin/funnel">Parcours</AdminNavLink>
-            <AdminNavLink href="/admin/readers">Readers</AdminNavLink>
+            <span className="adm-nav-sep" aria-hidden="true" />
+            <AdminNavLink href="/admin">Overview</AdminNavLink>
             <AdminNavLink href="/admin/engagement">Engagement</AdminNavLink>
+            <AdminNavLink href="/admin/readers">Readers</AdminNavLink>
+            <AdminNavLink href="/admin/funnel">Parcours</AdminNavLink>
           </div>
         </div>
         <div className="adm-nav-right">
