@@ -97,6 +97,49 @@ export default async function ReadersPage() {
     (a, b) => new Date(b.timestamp).getTime() - new Date(a.timestamp).getTime()
   )
 
+  // Per-reader visit stats (keyed by readerId) from page_visit events:
+  // first time seen, last time seen, and how many times they came back.
+  // A "return" = any visit after the first, counted by distinct session.
+  const visitStats = new Map<
+    string,
+    { first: number; last: number; sessions: Set<string>; count: number }
+  >()
+  visits
+    .filter((v) => v.event === 'page_visit' && v.readerId)
+    .forEach((v) => {
+      const t = new Date(v.timestamp).getTime()
+      if (isNaN(t)) return
+      const s = visitStats.get(v.readerId)
+      if (!s) {
+        visitStats.set(v.readerId, {
+          first: t,
+          last: t,
+          sessions: new Set(v.sessionId ? [v.sessionId] : []),
+          count: 1,
+        })
+      } else {
+        if (t < s.first) s.first = t
+        if (t > s.last) s.last = t
+        if (v.sessionId) s.sessions.add(v.sessionId)
+        s.count += 1
+      }
+    })
+
+  const fmtTs = (ms: number) =>
+    new Date(ms).toISOString().slice(0, 16).replace('T', ' ')
+
+  // First/last name, reconstructed from fullName when the split columns are empty.
+  const splitName = (l: typeof sortedLeads[0]) => {
+    let first = (l.firstName || '').trim()
+    let last = (l.lastName || '').trim()
+    if (!first && !last && l.fullName) {
+      const parts = l.fullName.trim().split(/\s+/)
+      first = parts[0] || ''
+      last = parts.slice(1).join(' ')
+    }
+    return { first, last }
+  }
+
   return (
     <main className="adm-page">
       <div className="adm-page-header">
@@ -153,32 +196,49 @@ export default async function ReadersPage() {
         <table className="adm-table">
           <thead>
             <tr>
-              <th>Timestamp</th>
-              <th>Name</th>
+              <th>Registered</th>
+              <th>First Name</th>
+              <th>Family Name</th>
               <th>Email</th>
               <th>Profession</th>
-              <th>Source</th>
               <th>Lang</th>
               <th>Country</th>
+              <th>First Visit</th>
+              <th>Last Visit</th>
+              <th>Returns</th>
             </tr>
           </thead>
           <tbody>
-            {sortedLeads.map((lead, i) => (
-              <tr key={i}>
-                <td className="muted" style={{ whiteSpace: 'nowrap' }}>
-                  {lead.timestamp.slice(0, 16).replace('T', ' ')}
-                </td>
-                <td>{lead.fullName || `${lead.firstName} ${lead.lastName}`.trim() || '—'}</td>
-                <td>{lead.email}</td>
-                <td>{lead.profession || '—'}</td>
-                <td>{lead.source || '—'}</td>
-                <td>{lead.lang || '—'}</td>
-                <td>{lead.country || '—'}</td>
-              </tr>
-            ))}
+            {sortedLeads.map((lead, i) => {
+              const { first, last } = splitName(lead)
+              const stats = visitStats.get(lead.readerId)
+              const returns = stats
+                ? Math.max((stats.sessions.size || stats.count) - 1, 0)
+                : 0
+              return (
+                <tr key={i}>
+                  <td className="muted" style={{ whiteSpace: 'nowrap' }}>
+                    {lead.timestamp.slice(0, 16).replace('T', ' ')}
+                  </td>
+                  <td>{first || '—'}</td>
+                  <td>{last || '—'}</td>
+                  <td>{lead.email}</td>
+                  <td>{lead.profession || '—'}</td>
+                  <td>{lead.lang || '—'}</td>
+                  <td>{lead.country || '—'}</td>
+                  <td className="muted" style={{ whiteSpace: 'nowrap' }}>
+                    {stats ? fmtTs(stats.first) : '—'}
+                  </td>
+                  <td className="muted" style={{ whiteSpace: 'nowrap' }}>
+                    {stats ? fmtTs(stats.last) : '—'}
+                  </td>
+                  <td>{stats ? returns : '—'}</td>
+                </tr>
+              )
+            })}
             {sortedLeads.length === 0 && (
               <tr>
-                <td colSpan={7} className="muted">No readers yet</td>
+                <td colSpan={10} className="muted">No readers yet</td>
               </tr>
             )}
           </tbody>
