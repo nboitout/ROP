@@ -136,7 +136,7 @@
   scene.add(new THREE.HemisphereLight(0xdfe6ee,0x20262e,0.85));
   const key=new THREE.DirectionalLight(0xfff2d8,1.05);key.position.set(4,7,6);scene.add(key);
   const fill=new THREE.DirectionalLight(0x9fb6c9,0.5);fill.position.set(-6,2,-4);scene.add(fill);
-  scene.add(Object.assign(new THREE.DirectionalLight(0xffffff,0.32),{position:new THREE.Vector3(-2,4,-7)}));
+  const rim=new THREE.DirectionalLight(0xffffff,0.32);rim.position.set(-2,4,-7);scene.add(rim);
 
   const foot=new THREE.Group();scene.add(foot);
   const CENTER=new THREE.Vector3(-0.1,0.5,0);
