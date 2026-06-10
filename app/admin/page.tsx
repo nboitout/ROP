@@ -228,7 +228,7 @@ export default async function AdminOverviewPage({
 
       <p className="adm-section-title">Prototypes</p>
       <a
-        href="/foot-3d.html"
+        href="/prototype-pied"
         target="_blank"
         rel="noopener noreferrer"
         className="adm-chart-card"

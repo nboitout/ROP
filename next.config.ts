@@ -15,7 +15,8 @@ const securityHeaders = [
     key: 'Content-Security-Policy',
     value: [
       "default-src 'self'",
-      "script-src 'self' 'unsafe-inline'",
+      // cdnjs hosts the Three.js build used by the /prototype-pied 3D foot map
+      "script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com",
       "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
       "font-src 'self' https://fonts.gstatic.com",
       "img-src 'self' data:",
@@ -28,6 +29,10 @@ const securityHeaders = [
 const nextConfig: NextConfig = {
   async headers() {
     return [{ source: '/(.*)', headers: securityHeaders }]
+  },
+  // Clean, shareable URL for the static 3D foot-map prototype.
+  async rewrites() {
+    return [{ source: '/prototype-pied', destination: '/prototype-pied.html' }]
   },
   images: {
     formats: ['image/avif', 'image/webp'],
