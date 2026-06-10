@@ -107,8 +107,12 @@ export default async function EngagementPage() {
     }))
     .sort((a, b) => pageOrder(a.name) - pageOrder(b.name))
 
-  // Bar: CTA clicks — group by cta field in data JSON
-  const ctaCount = new Map<string, number>()
+  // Bar: CTA clicks — group by cta field in data JSON. Seed the two outbound
+  // "about Guy" links at zero so they're always visible, even before any click.
+  const ctaCount = new Map<string, number>([
+    ['Institut R.O.P. — site', 0],
+    ['Institut R.O.P. — formations', 0],
+  ])
   events
     .filter((e) => e.event === 'cta_click')
     .forEach((e) => {
