@@ -45,8 +45,48 @@ export default function ChapterReader({ chapter, bookTitle, backHref = '/chapitr
   const viewerBodyRef = useRef<HTMLDivElement | null>(null)
   const [lightbox, setLightbox] = useState<{ src: string; alt: string; caption: string } | null>(null)
   const [lightboxZoom, setLightboxZoom] = useState(1)
+  const slidesOpenedAt = useRef<number | null>(null)
+  const resourceOpenedAt = useRef<number | null>(null)
+  const resourceNameRef = useRef<string | null>(null)
 
-  function closeLightbox() { setLightbox(null); setLightboxZoom(1) }
+  // Resources (revision sheet / clinical case): track both the open and how
+  // long the lightbox stayed open, so the admin can see engagement with them.
+  function openResource(name: string, img: { src: string; alt: string; caption: string }) {
+    resourceOpenedAt.current = Date.now()
+    resourceNameRef.current = name
+    setLightbox(img)
+    track('resource_open', { resource: name })
+  }
+
+  function closeLightbox() {
+    if (resourceNameRef.current && resourceOpenedAt.current) {
+      const seconds = Math.round((Date.now() - resourceOpenedAt.current) / 1000)
+      track('resource_close', { resource: resourceNameRef.current, duration_seconds: seconds })
+    }
+    resourceNameRef.current = null
+    resourceOpenedAt.current = null
+    setLightbox(null)
+    setLightboxZoom(1)
+  }
+
+  // Slides viewer: track the open and the time spent before closing.
+  function openSlidesViewer() {
+    slidesOpenedAt.current = Date.now()
+    setSlidesOpen(false)
+    setSlidesViewer(true)
+    track('slides_viewer_open')
+  }
+
+  function closeSlidesViewer() {
+    if (slidesOpenedAt.current) {
+      const seconds = Math.round((Date.now() - slidesOpenedAt.current) / 1000)
+      track('slides_viewer_close', { duration_seconds: seconds })
+      slidesOpenedAt.current = null
+    }
+    setSlidesViewer(false)
+    setSlidePage(1)
+    setSlideZoom(0.75)
+  }
   const articleRef = useRef<HTMLElement>(null)
   const endRef = useRef<HTMLDivElement>(null)
   const peekCloseRef = useRef<ReturnType<typeof setTimeout> | null>(null)
@@ -156,7 +196,7 @@ export default function ChapterReader({ chapter, bookTitle, backHref = '/chapitr
   useEffect(() => {
     if (!slidesViewer) return
     function onKey(e: KeyboardEvent) {
-      if (e.key === 'Escape') { setSlidesViewer(false); setSlidePage(1); setSlideZoom(0.75) }
+      if (e.key === 'Escape') { closeSlidesViewer() }
       if (e.key === 'ArrowRight') setSlidePage(p => Math.min(slideCount, p + 1))
       if (e.key === 'ArrowLeft')  setSlidePage(p => Math.max(1, p - 1))
     }
@@ -297,7 +337,7 @@ export default function ChapterReader({ chapter, bookTitle, backHref = '/chapitr
               <p className="cr-slides-desc">{chapter.slides.description}</p>
               <button
                 className="cr-slides-cta"
-                onClick={() => { setSlidesOpen(false); setSlidesViewer(true); track('slides_viewer_open') }}
+                onClick={openSlidesViewer}
               >
                 {t.reader.slidesOpen}
               </button>
@@ -343,7 +383,7 @@ export default function ChapterReader({ chapter, bookTitle, backHref = '/chapitr
                     aria-label="Zoomer"
                   >+</button>
                 </div>
-                <button className="cr-viewer-close" onClick={() => { setSlidesViewer(false); setSlidePage(1); setSlideZoom(0.75) }} aria-label="Fermer">×</button>
+                <button className="cr-viewer-close" onClick={closeSlidesViewer} aria-label="Fermer">×</button>
               </div>
               <div className="cr-viewer-body" ref={viewerBodyRef}>
                 <PdfSlideViewer
@@ -366,7 +406,7 @@ export default function ChapterReader({ chapter, bookTitle, backHref = '/chapitr
               <button
                 type="button"
                 className="cr-resource-card"
-                onClick={() => { setLightbox(chapter.revisionSheet!); track('resource_open', { resource: 'revision_sheet' }) }}
+                onClick={() => openResource('revision_sheet', chapter.revisionSheet!)}
                 aria-label={t.reader.revisionSheet}
               >
                 <img src={chapter.revisionSheet.src} alt="" aria-hidden />
@@ -377,7 +417,7 @@ export default function ChapterReader({ chapter, bookTitle, backHref = '/chapitr
               <button
                 type="button"
                 className="cr-resource-card cr-resource-card--case"
-                onClick={() => { setLightbox(chapter.clinicalCase!); track('resource_open', { resource: 'clinical_case' }) }}
+                onClick={() => openResource('clinical_case', chapter.clinicalCase!)}
                 aria-label={t.reader.clinicalCase}
               >
                 <img src={chapter.clinicalCase.src} alt="" aria-hidden />

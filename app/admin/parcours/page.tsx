@@ -1,0 +1,210 @@
+import { fetchAllSheets } from '@/lib/sheets'
+import Scorecard from '@/components/admin/Scorecard'
+import ChapterSelect from '@/components/admin/ChapterSelect'
+
+export const dynamic = 'force-dynamic'
+
+// Built chapters: maps the manifest number to its event slug (the `chapter`
+// field tracked by ChapterReader) and its page URL. Chapters not listed here
+// have no page yet — they still appear in the selector but show no data.
+const ROUTES: Record<string, { slug: string; href: string }> = {
+  '00': { slug: 'introduction', href: '/introduction' },
+  '02': { slug: 'chapter-2', href: '/lecture/traitement-rop' },
+  '04': { slug: 'chapter-4', href: '/chapitre-4' },
+  '05': { slug: 'chapter-5', href: '/chapitre-5' },
+  '14': { slug: 'chapter-14', href: '/chapitre-14' },
+}
+
+// Full book: Introduction (00) + Chapitres 1–21.
+const CHAPTERS = Array.from({ length: 22 }, (_, i) => {
+  const num = String(i).padStart(2, '0')
+  return {
+    num,
+    label: num === '00' ? 'Introduction' : `Chapitre ${i}`,
+    slug: ROUTES[num]?.slug ?? null,
+    href: ROUTES[num]?.href ?? null,
+  }
+})
+
+interface Metrics {
+  visited: number
+  started: number
+  mid: number
+  finished: number
+  avgTimeOnPage: number
+  slidesOpened: number
+  slidesAvgTime: number
+  resourcesOpened: number
+  resourcesAvgTime: number
+}
+
+const ZERO: Metrics = {
+  visited: 0, started: 0, mid: 0, finished: 0, avgTimeOnPage: 0,
+  slidesOpened: 0, slidesAvgTime: 0, resourcesOpened: 0, resourcesAvgTime: 0,
+}
+
+function pct(a: number, b: number) {
+  if (b <= 0) return '—'
+  return `${(((b - a) / b) * 100).toFixed(1)}% drop`
+}
+function stripPath(p: string) {
+  return p.replace(/^https?:\/\/[^/]+/, '') || '/'
+}
+function parseDur(data: string): number | null {
+  try {
+    const n = Number((JSON.parse(data) as { duration_seconds?: unknown }).duration_seconds)
+    return isNaN(n) ? null : n
+  } catch {
+    return null
+  }
+}
+function avg(arr: number[]) {
+  return arr.length ? arr.reduce((a, b) => a + b, 0) / arr.length : 0
+}
+
+interface Props {
+  searchParams: Promise<{ chapter?: string }>
+}
+
+export default async function ParcoursPage({ searchParams }: Props) {
+  const params = await searchParams
+  const selected = params.chapter ?? 'all'
+  const { events, visits } = await fetchAllSheets()
+
+  function computeChapter(slug: string, href: string): Metrics {
+    const visited = new Set<string>()
+    const started = new Set<string>()
+    const mid = new Set<string>()
+    const finished = new Set<string>()
+    const slidesOpen = new Set<string>()
+    const resOpen = new Set<string>()
+    const pageTimes: number[] = []
+
+    visits.forEach((v) => {
+      if (stripPath(v.page) !== href) return
+      if (v.event === 'page_visit' && v.readerId) visited.add(v.readerId)
+      if (v.event === 'page_leave') {
+        const n = parseFloat(v.duration_seconds)
+        if (!isNaN(n) && n > 0) pageTimes.push(n)
+      }
+    })
+
+    const slideTimes: number[] = []
+    const resTimes: number[] = []
+    events.forEach((e) => {
+      if (e.chapter !== slug) return
+      if (e.readerId && e.event === 'read_start') started.add(e.readerId)
+      if (e.readerId && e.event === 'scroll_depth' && e.data.includes('50')) mid.add(e.readerId)
+      if (e.readerId && (e.event === 'chapter_end_reached' || (e.event === 'scroll_depth' && e.data.includes('100')))) finished.add(e.readerId)
+      if (e.readerId && e.event === 'slides_viewer_open') slidesOpen.add(e.readerId)
+      if (e.readerId && e.event === 'resource_open') resOpen.add(e.readerId)
+      if (e.event === 'slides_viewer_close') { const n = parseDur(e.data); if (n != null) slideTimes.push(n) }
+      if (e.event === 'resource_close') { const n = parseDur(e.data); if (n != null) resTimes.push(n) }
+    })
+
+    return {
+      visited: visited.size,
+      started: started.size,
+      mid: mid.size,
+      finished: finished.size,
+      avgTimeOnPage: avg(pageTimes),
+      slidesOpened: slidesOpen.size,
+      slidesAvgTime: avg(slideTimes),
+      resourcesOpened: resOpen.size,
+      resourcesAvgTime: avg(resTimes),
+    }
+  }
+
+  const isAvg = selected === 'all'
+  let m: Metrics
+  if (isAvg) {
+    // Average per chapter, across built chapters that have at least one visitor.
+    const built = CHAPTERS.filter((c) => c.slug && c.href).map((c) => computeChapter(c.slug!, c.href!))
+    const base = built.filter((x) => x.visited > 0)
+    const f = (key: keyof Metrics) => (base.length ? base.reduce((a, b) => a + b[key], 0) / base.length : 0)
+    m = {
+      visited: f('visited'), started: f('started'), mid: f('mid'), finished: f('finished'),
+      avgTimeOnPage: f('avgTimeOnPage'),
+      slidesOpened: f('slidesOpened'), slidesAvgTime: f('slidesAvgTime'),
+      resourcesOpened: f('resourcesOpened'), resourcesAvgTime: f('resourcesAvgTime'),
+    }
+  } else {
+    const ch = CHAPTERS.find((c) => c.num === selected)
+    m = ch?.slug && ch?.href ? computeChapter(ch.slug, ch.href) : ZERO
+  }
+
+  const fmtCount = (n: number) => (isAvg ? n.toFixed(1) : Math.round(n).toString())
+  const fmtTime = (s: number) => (s > 0 ? `${Math.round(s)}s` : '—')
+
+  const steps = [
+    { label: 'Visited chapter page', count: m.visited },
+    { label: 'Started reading (10s+)', count: m.started },
+    { label: 'Reached 50%', count: m.mid },
+    { label: 'Finished chapter', count: m.finished },
+  ]
+  // Scale bars to the largest step, not step 1 — historical/seed data can have
+  // later steps exceed "visited" (e.g. read_start events without a page_visit).
+  const maxCount = Math.max(...steps.map((s) => s.count), 1)
+
+  const options = [
+    { value: 'all', label: 'Average per chapter' },
+    ...CHAPTERS.map((c) => ({ value: c.num, label: c.slug ? c.label : `${c.label} (à venir)` })),
+  ]
+
+  return (
+    <main className="adm-page">
+      <div className="adm-page-header">
+        <div>
+          <p className="adm-page-eyebrow">Dashboard</p>
+          <h1 className="adm-page-title">Parcours</h1>
+          <p className="adm-page-sub">
+            {isAvg
+              ? 'Average reading journey per chapter (across chapters with data)'
+              : 'Reading journey for this chapter'}
+          </p>
+        </div>
+      </div>
+
+      <div className="adm-filter-row">
+        <span className="adm-filter-label">Chapter:</span>
+        <ChapterSelect options={options} selected={selected} />
+      </div>
+
+      <div className="adm-funnel">
+        {steps.map((step, i) => {
+          const prev = i === 0 ? step.count : steps[i - 1].count
+          const barWidth = maxCount > 0 ? Math.round((step.count / maxCount) * 100) : 0
+          return (
+            <div key={i} className="adm-funnel-step" style={{ flexWrap: 'wrap' }}>
+              <div className="adm-funnel-num">{i + 1}</div>
+              <div className="adm-funnel-label">{step.label}</div>
+              <div className="adm-funnel-count">{fmtCount(step.count)}</div>
+              <div className={`adm-funnel-drop${i === 0 ? ' first' : ''}`}>
+                {i === 0 ? '—' : pct(step.count, prev)}
+              </div>
+              <div className="adm-funnel-bar-wrap">
+                <div className="adm-funnel-bar" style={{ width: `${barWidth}%` }} />
+              </div>
+            </div>
+          )
+        })}
+      </div>
+
+      <p className="adm-section-title">Engagement details</p>
+      <div className="adm-scorecards">
+        <Scorecard label="Avg Time on Page" value={fmtTime(m.avgTimeOnPage)} subtitle="active seconds before leaving" />
+        <Scorecard label="Opened Slides" value={fmtCount(m.slidesOpened)} subtitle={`avg ${fmtTime(m.slidesAvgTime)} in viewer`} />
+        <Scorecard label="Opened Resources" value={fmtCount(m.resourcesOpened)} subtitle={`avg ${fmtTime(m.resourcesAvgTime)} open`} />
+      </div>
+
+      <p className="adm-page-sub" style={{ marginTop: 16, maxWidth: 760, lineHeight: 1.6 }}>
+        <strong>Visited</strong> = landed on the chapter page. <strong>Started reading</strong> = stayed
+        10s+ (active tab). <strong>Finished</strong> = scrolled to 100% or hit the end marker.
+        <strong> Avg time on page</strong> is active dwell. <strong>Opened slides / resources</strong> count
+        distinct readers who opened them; their average time is measured only from new visits (the
+        close-duration tracking was just added), so it shows “—” until fresh data accrues. “Average per
+        chapter” averages each value across the built chapters that have at least one visitor.
+      </p>
+    </main>
+  )
+}
