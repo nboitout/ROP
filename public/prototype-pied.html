@@ -3,92 +3,71 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
-<title>R.O.P. — Atlas réflexe du rachis en 3D</title>
+<title>R.O.P. — Atlas réflexe 3D · zoom sémantique</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
-  :root{
-    --slate-0:#1c222a; --paper:#f3efe6; --muted:#9aa6b2; --line:#46535f;
-    --ochre:#d9a441;
-    --serif:'Cormorant Garamond', Georgia, serif;
-    --sans:'Jost', system-ui, -apple-system, sans-serif;
-  }
-  *{box-sizing:border-box;}
-  html,body{height:100%;margin:0;}
-  body{font-family:var(--sans); color:var(--paper); overflow:hidden;
-    background:radial-gradient(120% 90% at 68% 16%, #313c48 0%, var(--slate-0) 60%, #161b21 100%);}
-  #stage{position:fixed; inset:0;}
-  canvas{display:block; touch-action:none;}
-  .overlay{position:fixed; inset:0; pointer-events:none;}
-  svg.leaders{position:fixed; inset:0; pointer-events:none;}
-
-  .chip{position:fixed; left:0; top:0; transform:translate(-50%,-50%);
-    pointer-events:none; will-change:transform,opacity; border:1px solid rgba(0,0,0,.25);
-    box-shadow:0 4px 12px rgba(0,0,0,.35); white-space:nowrap;}
-  .chip.vert{font-size:10px; font-weight:600; letter-spacing:.02em; padding:2px 5px; color:#fff;}
+  :root{--slate-0:#1c222a;--paper:#f3efe6;--muted:#9aa6b2;--line:#46535f;--ochre:#d9a441;
+    --serif:'Cormorant Garamond',Georgia,serif;--sans:'Jost',system-ui,-apple-system,sans-serif;}
+  *{box-sizing:border-box;} html,body{height:100%;margin:0;}
+  body{font-family:var(--sans);color:var(--paper);overflow:hidden;
+    background:radial-gradient(120% 90% at 68% 16%,#313c48 0%,var(--slate-0) 60%,#161b21 100%);}
+  #stage{position:fixed;inset:0;} canvas{display:block;touch-action:none;}
+  .overlay{position:fixed;inset:0;pointer-events:none;} svg.leaders{position:fixed;inset:0;pointer-events:none;}
+  .chip{position:fixed;left:0;top:0;transform:translate(-50%,-50%);pointer-events:none;
+    will-change:transform,opacity;border:1px solid rgba(0,0,0,.25);box-shadow:0 4px 12px rgba(0,0,0,.35);white-space:nowrap;}
+  .chip.vert{font-size:10px;font-weight:600;padding:2px 5px;color:#fff;}
   .chip.vert.dark{color:#241b06;}
-  .chip.named{background:rgba(20,25,31,.82); backdrop-filter:blur(3px);
-    border:1px solid var(--line); padding:4px 8px 5px;}
-  .chip.named .kk{display:inline-block; width:7px; height:7px; border-radius:50%; margin-right:6px; vertical-align:1px;}
-  .chip.named .nm{font-family:var(--serif); font-size:14px; font-weight:600; line-height:1; color:var(--paper);}
-  .marker-dot{position:fixed; width:9px; height:9px; border-radius:50%;
-    transform:translate(-50%,-50%); border:1.5px solid rgba(255,255,255,.8);
-    box-shadow:0 0 0 1.5px rgba(0,0,0,.35); pointer-events:none;}
-
-  .tooltip{position:fixed; pointer-events:none; transform:translate(12px,12px);
-    background:rgba(14,18,23,.95); border:1px solid var(--line); padding:8px 11px 9px;
-    max-width:230px; opacity:0; transition:opacity .12s ease; z-index:10;}
-  .tooltip .t-seg{font-size:8px; letter-spacing:.22em; text-transform:uppercase; color:var(--ochre);}
-  .tooltip .t-nm{font-family:var(--serif); font-size:17px; font-weight:600; margin-top:2px;}
-  .tooltip .t-ds{font-size:11px; line-height:1.45; color:var(--muted); margin-top:4px;}
-
-  .titlecard{position:fixed; top:20px; left:22px; max-width:300px; pointer-events:none;}
-  .eyebrow{font-size:10px; letter-spacing:.34em; text-transform:uppercase; color:var(--ochre);}
-  .titlecard h1{font-family:var(--serif); font-weight:500; font-size:27px; line-height:1.05; margin:6px 0 0;}
+  .chip.named{background:rgba(20,25,31,.82);backdrop-filter:blur(3px);border:1px solid var(--line);padding:4px 8px 5px;}
+  .chip.named .kk{display:inline-block;width:7px;height:7px;border-radius:50%;margin-right:6px;vertical-align:1px;}
+  .chip.named .nm{font-family:var(--serif);font-size:13.5px;font-weight:600;line-height:1;color:var(--paper);}
+  .marker-dot{position:fixed;width:9px;height:9px;border-radius:50%;transform:translate(-50%,-50%);
+    border:1.5px solid rgba(255,255,255,.8);box-shadow:0 0 0 1.5px rgba(0,0,0,.35);pointer-events:none;}
+  .tooltip{position:fixed;pointer-events:none;transform:translate(12px,12px);background:rgba(14,18,23,.95);
+    border:1px solid var(--line);padding:8px 11px 9px;max-width:230px;opacity:0;transition:opacity .12s ease;z-index:10;}
+  .tooltip .t-seg{font-size:8px;letter-spacing:.22em;text-transform:uppercase;color:var(--ochre);}
+  .tooltip .t-nm{font-family:var(--serif);font-size:17px;font-weight:600;margin-top:2px;}
+  .tooltip .t-ds{font-size:11px;line-height:1.45;color:var(--muted);margin-top:4px;}
+  .titlecard{position:fixed;top:20px;left:22px;max-width:300px;pointer-events:none;}
+  .eyebrow{font-size:10px;letter-spacing:.34em;text-transform:uppercase;color:var(--ochre);}
+  .titlecard h1{font-family:var(--serif);font-weight:500;font-size:26px;line-height:1.05;margin:6px 0 0;}
   .titlecard h1 em{font-style:italic;}
-  .titlecard p{font-size:12px; line-height:1.5; color:var(--muted); margin:9px 0 0;}
-
-  /* systems legend / toggles */
-  .systems{position:fixed; top:20px; right:20px; width:228px; pointer-events:auto;
-    background:rgba(18,23,29,.72); backdrop-filter:blur(6px); border:1px solid var(--line); padding:12px;}
-  .systems h2{font-size:9px; letter-spacing:.26em; text-transform:uppercase; color:var(--muted); margin:0 0 9px;}
-  .sysbtn{display:flex; align-items:center; gap:9px; width:100%; text-align:left;
-    font-family:var(--sans); font-size:12px; color:var(--paper); background:transparent;
-    border:1px solid transparent; padding:7px 8px; cursor:pointer; transition:all .14s ease;}
-  .sysbtn:hover{background:rgba(255,255,255,.05);}
-  .sysbtn:focus-visible{outline:2px solid var(--ochre); outline-offset:1px;}
-  .sysbtn .sw{width:11px; height:11px; border-radius:2px; flex:0 0 auto; opacity:.35; transition:opacity .14s;}
-  .sysbtn.on .sw{opacity:1;}
-  .sysbtn.on{background:rgba(255,255,255,.07);}
-  .sysbtn .ct{margin-left:auto; font-size:10px; color:var(--muted);}
-  .sysrow{display:flex; gap:7px; margin-top:10px;}
-  .minibtn{flex:1; font-family:var(--sans); font-size:10.5px; color:var(--paper);
-    background:transparent; border:1px solid var(--line); padding:6px; cursor:pointer; transition:all .14s;}
+  .titlecard p{font-size:12px;line-height:1.5;color:var(--muted);margin:9px 0 0;}
+  .systems{position:fixed;top:20px;right:20px;width:230px;pointer-events:auto;
+    background:rgba(18,23,29,.72);backdrop-filter:blur(6px);border:1px solid var(--line);padding:12px;}
+  .systems h2{font-size:9px;letter-spacing:.26em;text-transform:uppercase;color:var(--muted);margin:0 0 9px;}
+  .sysbtn{display:flex;align-items:center;gap:9px;width:100%;text-align:left;font-family:var(--sans);
+    font-size:12px;color:var(--paper);background:transparent;border:1px solid transparent;padding:7px 8px;cursor:pointer;transition:all .14s;}
+  .sysbtn:hover{background:rgba(255,255,255,.05);} .sysbtn:focus-visible{outline:2px solid var(--ochre);outline-offset:1px;}
+  .sysbtn .sw{width:11px;height:11px;border-radius:2px;flex:0 0 auto;opacity:.35;transition:opacity .14s;}
+  .sysbtn.on .sw{opacity:1;} .sysbtn.on{background:rgba(255,255,255,.07);}
+  .sysbtn .ct{margin-left:auto;font-size:10px;color:var(--muted);}
+  .sysbtn.detail .nmwrap small{display:block;font-size:8.5px;letter-spacing:.04em;color:var(--ochre);margin-top:1px;}
+  .sysrow{display:flex;gap:7px;margin-top:10px;}
+  .minibtn{flex:1;font-family:var(--sans);font-size:10.5px;color:var(--paper);background:transparent;
+    border:1px solid var(--line);padding:6px;cursor:pointer;transition:all .14s;}
   .minibtn:hover{background:rgba(255,255,255,.06);}
-
-  .controls{position:fixed; bottom:20px; left:50%; transform:translateX(-50%);
-    display:flex; gap:6px; pointer-events:auto;
-    background:rgba(18,23,29,.72); backdrop-filter:blur(6px); border:1px solid var(--line); padding:7px;}
-  .divider{width:1px; background:var(--line); margin:2px;}
-  button.ctl{font-family:var(--sans); font-size:11px; color:var(--paper); background:transparent;
-    border:1px solid transparent; padding:8px 11px; cursor:pointer; transition:all .15s ease; white-space:nowrap;}
-  button.ctl:hover{background:rgba(255,255,255,.06); border-color:var(--line);}
-  button.ctl:focus-visible{outline:2px solid var(--ochre); outline-offset:1px;}
-  button.ctl.on{background:var(--ochre); color:#22170a; border-color:var(--ochre);}
-
-  .foot-note{position:fixed; left:22px; bottom:18px; max-width:300px;
-    font-size:10px; line-height:1.5; color:#6f7a85; pointer-events:none;}
-  .foot-note b{color:#94a0ab; font-weight:500;}
-  .hint{position:fixed; bottom:62px; left:50%; transform:translateX(-50%);
-    font-size:10px; letter-spacing:.16em; text-transform:uppercase; color:#5d6873;
-    pointer-events:none; transition:opacity .4s ease;}
-  @media (max-width:680px){
-    .titlecard p{display:none;} .titlecard h1{font-size:21px;}
-    .systems{width:176px; top:auto; bottom:74px; right:12px;}
-    .foot-note{display:none;}
-    button.ctl{padding:7px 7px; font-size:10px;}
-  }
+  .controls{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);display:flex;gap:6px;pointer-events:auto;
+    background:rgba(18,23,29,.72);backdrop-filter:blur(6px);border:1px solid var(--line);padding:7px;}
+  .divider{width:1px;background:var(--line);margin:2px;}
+  button.ctl{font-family:var(--sans);font-size:11px;color:var(--paper);background:transparent;border:1px solid transparent;
+    padding:8px 11px;cursor:pointer;transition:all .15s;white-space:nowrap;}
+  button.ctl:hover{background:rgba(255,255,255,.06);border-color:var(--line);}
+  button.ctl:focus-visible{outline:2px solid var(--ochre);outline-offset:1px;}
+  button.ctl.on{background:var(--ochre);color:#22170a;border-color:var(--ochre);}
+  button.ctl.accent{border-color:var(--ochre);color:var(--ochre);}
+  .foot-note{position:fixed;left:22px;bottom:18px;max-width:300px;font-size:10px;line-height:1.5;color:#6f7a85;pointer-events:none;}
+  .foot-note b{color:#94a0ab;font-weight:500;}
+  .zoomprompt{position:fixed;bottom:64px;left:50%;transform:translateX(-50%);font-size:10.5px;letter-spacing:.06em;
+    color:var(--ochre);pointer-events:none;opacity:0;transition:opacity .3s;background:rgba(18,23,29,.6);
+    border:1px solid var(--line);padding:5px 10px;}
+  .zoomscale{position:fixed;right:20px;bottom:20px;pointer-events:none;display:flex;align-items:center;gap:7px;
+    font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);}
+  .zoomscale .bar{width:64px;height:3px;background:var(--line);position:relative;}
+  .zoomscale .bar i{position:absolute;top:0;left:0;height:3px;background:var(--ochre);transition:width .12s;}
+  @media (max-width:700px){.titlecard p{display:none;}.titlecard h1{font-size:20px;}
+    .systems{width:178px;top:auto;bottom:74px;right:12px;}.foot-note{display:none;}button.ctl{padding:7px 6px;font-size:10px;}}
 </style>
 </head>
 <body>
@@ -100,298 +79,244 @@
   <div class="titlecard">
     <div class="eyebrow">R.O.P. · Réflexo-Occipito-Podale</div>
     <h1>Atlas réflexe du <em>rachis</em></h1>
-    <p>Toutes les zones des deux planches, ancrées en 3D sur un seul pied. Activez les
-       systèmes, faites pivoter, survolez un repère.</p>
+    <p>Zoom sémantique : le rachis à l'échelle du pied, la base exocrânienne et le
+       nerf vague en zoomant sur les orteils.</p>
   </div>
 
-  <div class="hint" id="hint">Glissez pour pivoter · molette pour zoomer · survolez un repère</div>
+  <div class="zoomprompt" id="zoomprompt">Zoomez sur les orteils pour révéler les détails crâniens →</div>
 
   <div class="systems" id="systems">
     <h2>Systèmes</h2>
-    <!-- system buttons injected -->
     <div class="sysrow">
-      <button class="minibtn" id="all-on">Tout afficher</button>
+      <button class="minibtn" id="all-on">Tout</button>
       <button class="minibtn" id="all-off">Masquer</button>
     </div>
   </div>
 
   <div class="controls">
-    <div style="display:flex; gap:6px;">
+    <div style="display:flex;gap:6px;">
+      <button class="ctl accent" data-view="orteils">⌕ Orteils</button>
+      <button class="ctl" data-view="ensemble">Ensemble</button>
       <button class="ctl" data-view="mediale">Médiale</button>
-      <button class="ctl" data-view="post34">3/4 post.</button>
-      <button class="ctl" data-view="talon">Talon</button>
       <button class="ctl" data-view="plantaire">Plantaire</button>
-      <button class="ctl" data-view="dorsale">Dorsale</button>
     </div>
     <div class="divider"></div>
     <button class="ctl on" id="t-labels">Étiquettes</button>
     <button class="ctl" id="t-spin">Rotation auto</button>
   </div>
 
+  <div class="zoomscale"><span>Pied</span><div class="bar"><i id="zoombar"></i></div><span>Orteils</span></div>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <script>
 (function(){
-  if(!window.THREE){ document.body.innerHTML='<p style="color:#fff;font-family:sans-serif;padding:40px">Three.js n\'a pas pu se charger.</p>'; return; }
+  if(!window.THREE){document.body.innerHTML='<p style="color:#fff;font-family:sans-serif;padding:40px">Three.js n\'a pas pu se charger.</p>';return;}
   const RM=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const stage=document.getElementById('stage');
-
-  const renderer=new THREE.WebGLRenderer({antialias:true, alpha:true});
+  const renderer=new THREE.WebGLRenderer({antialias:true,alpha:true});
   renderer.setPixelRatio(Math.min(window.devicePixelRatio,2));
-  stage.appendChild(renderer.domElement);
+  document.getElementById('stage').appendChild(renderer.domElement);
   const scene=new THREE.Scene();
   const camera=new THREE.PerspectiveCamera(38,1,0.1,100);
-  let camDist=7.6;
 
   scene.add(new THREE.HemisphereLight(0xdfe6ee,0x20262e,0.85));
-  const key=new THREE.DirectionalLight(0xfff2d8,1.05); key.position.set(4,7,6); scene.add(key);
-  const fill=new THREE.DirectionalLight(0x9fb6c9,0.5); fill.position.set(-6,2,-4); scene.add(fill);
-  const rim=new THREE.DirectionalLight(0xffffff,0.32); rim.position.set(-2,4,-7); scene.add(rim);
+  const key=new THREE.DirectionalLight(0xfff2d8,1.05);key.position.set(4,7,6);scene.add(key);
+  const fill=new THREE.DirectionalLight(0x9fb6c9,0.5);fill.position.set(-6,2,-4);scene.add(fill);
+  scene.add(Object.assign(new THREE.DirectionalLight(0xffffff,0.32),{position:new THREE.Vector3(-2,4,-7)}));
 
-  const foot=new THREE.Group(); scene.add(foot);
+  const foot=new THREE.Group();scene.add(foot);
   const CENTER=new THREE.Vector3(-0.1,0.5,0);
   const C=(x,y,z)=>new THREE.Vector3(x-CENTER.x,y-CENTER.y,z-CENTER.z);
-
-  function sample(arr,t){ if(t<=arr[0][0])return arr[0][1]; const n=arr.length;
-    if(t>=arr[n-1][0])return arr[n-1][1];
-    for(let i=0;i<n-1;i++){const a=arr[i],b=arr[i+1];
-      if(t>=a[0]&&t<=b[0]){let k=(t-a[0])/(b[0]-a[0]);k=k*k*(3-2*k);return a[1]+(b[1]-a[1])*k;}}
-    return arr[n-1][1]; }
+  function sample(arr,t){if(t<=arr[0][0])return arr[0][1];const n=arr.length;if(t>=arr[n-1][0])return arr[n-1][1];
+    for(let i=0;i<n-1;i++){const a=arr[i],b=arr[i+1];if(t>=a[0]&&t<=b[0]){let k=(t-a[0])/(b[0]-a[0]);k=k*k*(3-2*k);return a[1]+(b[1]-a[1])*k;}}return arr[n-1][1];}
   const WID=[[0,0.52],[0.15,0.58],[0.35,0.50],[0.55,0.56],[0.72,0.74],[0.85,0.62],[1,0.32]];
   const HGT=[[0,0.80],[0.12,1.02],[0.30,0.98],[0.55,0.78],[0.72,0.62],[0.88,0.50],[1,0.40]];
 
-  // ---- foot mesh (stand-in for the scanned skeleton) ----
-  (function buildFoot(){
-    const NL=64,S=36,pos=[];
-    for(let i=0;i<=NL;i++){const t=i/NL,x=-2.1+4.0*t,W=sample(WID,t),H=sample(HGT,t),
-      arch=0.30*Math.exp(-Math.pow((t-0.46)/0.17,2));
-      for(let j=0;j<S;j++){const th=(j/S)*Math.PI*2,c=Math.cos(th),s=Math.sin(th);
-        let z=W*c,y;
-        if(s>=0){y=H*0.5+(H*0.5)*s;} else {y=H*0.5+(H*0.5)*s*0.55; z*=1.12;}
-        if(s<0){const med=Math.max(0,0.5+0.5*c); y+=arch*(-s)*(0.45+0.9*med);}
+  (function buildFoot(){const NL=64,S=36,pos=[];
+    for(let i=0;i<=NL;i++){const t=i/NL,x=-2.1+4.0*t,W=sample(WID,t),H=sample(HGT,t),arch=0.30*Math.exp(-Math.pow((t-0.46)/0.17,2));
+      for(let j=0;j<S;j++){const th=(j/S)*Math.PI*2,c=Math.cos(th),s=Math.sin(th);let z=W*c,y;
+        if(s>=0){y=H*0.5+(H*0.5)*s;}else{y=H*0.5+(H*0.5)*s*0.55;z*=1.12;}
+        if(s<0){const med=Math.max(0,0.5+0.5*c);y+=arch*(-s)*(0.45+0.9*med);}
         pos.push(x-CENTER.x,y-CENTER.y,z-CENTER.z);}}
-    const idx=[];
-    for(let i=0;i<NL;i++)for(let j=0;j<S;j++){const a=i*S+j,b=i*S+((j+1)%S),c=(i+1)*S+j,d=(i+1)*S+((j+1)%S);idx.push(a,c,d,a,d,b);}
-    const heelC=pos.length/3; pos.push(-2.1-CENTER.x,sample(HGT,0)*0.5-CENTER.y,-CENTER.z);
-    const toeC=pos.length/3; pos.push(1.9-CENTER.x,sample(HGT,1)*0.5-CENTER.y,-CENTER.z);
-    for(let j=0;j<S;j++){idx.push(heelC,(j+1)%S,j); idx.push(toeC,NL*S+j,NL*S+((j+1)%S));}
-    const g=new THREE.BufferGeometry();
-    g.setAttribute('position',new THREE.Float32BufferAttribute(pos,3)); g.setIndex(idx); g.computeVertexNormals();
-    foot.add(new THREE.Mesh(g,new THREE.MeshStandardMaterial({color:0xece5d6,roughness:0.92,metalness:0,side:THREE.DoubleSide})));
-  })();
-  (function buildToes(){
-    const toes=[{x:1.95,z:0.40,y:0.40,r:0.21},{x:1.96,z:0.20,y:0.40,r:0.185},{x:1.93,z:0.01,y:0.39,r:0.165},{x:1.85,z:-0.17,y:0.37,r:0.145},{x:1.74,z:-0.33,y:0.35,r:0.125}];
+    const idx=[];for(let i=0;i<NL;i++)for(let j=0;j<S;j++){const a=i*S+j,b=i*S+((j+1)%S),c=(i+1)*S+j,d=(i+1)*S+((j+1)%S);idx.push(a,c,d,a,d,b);}
+    const heelC=pos.length/3;pos.push(-2.1-CENTER.x,sample(HGT,0)*0.5-CENTER.y,-CENTER.z);
+    const toeC=pos.length/3;pos.push(1.9-CENTER.x,sample(HGT,1)*0.5-CENTER.y,-CENTER.z);
+    for(let j=0;j<S;j++){idx.push(heelC,(j+1)%S,j);idx.push(toeC,NL*S+j,NL*S+((j+1)%S));}
+    const g=new THREE.BufferGeometry();g.setAttribute('position',new THREE.Float32BufferAttribute(pos,3));g.setIndex(idx);g.computeVertexNormals();
+    foot.add(new THREE.Mesh(g,new THREE.MeshStandardMaterial({color:0xece5d6,roughness:0.92,metalness:0,side:THREE.DoubleSide})));})();
+  (function buildToes(){const toes=[{x:1.95,z:0.40,y:0.40,r:0.21},{x:1.96,z:0.20,y:0.40,r:0.185},{x:1.93,z:0.01,y:0.39,r:0.165},{x:1.85,z:-0.17,y:0.37,r:0.145},{x:1.74,z:-0.33,y:0.35,r:0.125}];
     const mat=new THREE.MeshStandardMaterial({color:0xeae2d1,roughness:0.92,metalness:0});
-    toes.forEach(t=>{const m=new THREE.Mesh(new THREE.SphereGeometry(t.r,20,16),mat);m.scale.set(1.25,0.92,1);m.position.set(t.x-CENTER.x,t.y-CENTER.y,t.z-CENTER.z);foot.add(m);});
-  })();
+    toes.forEach(t=>{const m=new THREE.Mesh(new THREE.SphereGeometry(t.r,20,16),mat);m.scale.set(1.25,0.92,1);m.position.set(t.x-CENTER.x,t.y-CENTER.y,t.z-CENTER.z);foot.add(m);});})();
 
-  // ---- medial spine axis (faint base) ----
   const spinePts=[[-1.95,0.55,0.30],[-1.4,0.78,0.36],[-0.7,0.92,0.40],[0.0,0.92,0.42],[0.7,0.82,0.44],[1.3,0.66,0.48],[1.95,0.50,0.52]].map(p=>C(p[0],p[1],p[2]));
   const spine=new THREE.CatmullRomCurve3(spinePts,false,'catmullrom',0.5);
-  foot.add(new THREE.Mesh(new THREE.TubeGeometry(spine,90,0.022,8,false),
-    new THREE.MeshStandardMaterial({color:0xb9ad92,roughness:0.8,transparent:true,opacity:0.5})));
+  foot.add(new THREE.Mesh(new THREE.TubeGeometry(spine,90,0.022,8,false),new THREE.MeshStandardMaterial({color:0xb9ad92,roughness:0.8,transparent:true,opacity:0.5})));
 
-  // ---- systems ----
   const SYS={
     rachis:{name:'Rachis',color:'#cf3b33',on:true},
     auto:{name:'Nerf autonome',color:'#b5462b',on:false},
     thorax:{name:'Thorax & côtes',color:'#8a5fb0',on:false},
     artic:{name:'Articulations',color:'#c0392b',on:false},
     organes:{name:'Organes pelviens',color:'#3b78c2',on:false},
+    crane:{name:'Base exocrânienne',sub:'détail · orteils',color:'#2e9e5b',on:false,detail:true},
   };
-
-  // vertebra table: [region, label, u, dark]
   const REG={cerv:'#3b78c2',thor:'#cf3b33',lomb:'#e3b81e',sacr:'#2f8f8f',cocc:'#2e8b57',fora:'#7b4ea3'};
   const VERTS=[
     ['fora','Foramen magnum',0.995,false,'Crâne','Passage du tronc cérébral — sommet du rachis.'],
-    ['cerv','C1',0.95,false,'Cervicales',''],['cerv','C2',0.92,false,'Cervicales',''],
-    ['cerv','C4',0.88,false,'Cervicales',''],['cerv','C7',0.83,false,'Cervicales',''],
-    ['thor','T1',0.78,false,'Dorsales',''],['thor','T4',0.70,false,'Dorsales',''],
-    ['thor','T6',0.63,false,'Dorsales',''],['thor','T9',0.54,false,'Dorsales',''],
-    ['thor','T11',0.47,false,'Dorsales',''],['thor','T12',0.43,false,'Dorsales',''],
-    ['lomb','L1',0.38,true,'Lombaires',''],['lomb','L3',0.30,true,'Lombaires',''],
-    ['lomb','L4',0.26,true,'Lombaires',''],['lomb','L5',0.22,true,'Lombaires',''],
-    ['sacr','S1',0.16,false,'Sacrum',''],['sacr','S2',0.13,false,'Sacrum',''],['sacr','S3',0.10,false,'Sacrum',''],
-    ['cocc','Coccyx',0.04,false,'Coccyx',''],
+    ['cerv','C1',0.95,false,'Cervicales',''],['cerv','C2',0.92,false,'Cervicales',''],['cerv','C4',0.88,false,'Cervicales',''],['cerv','C7',0.83,false,'Cervicales',''],
+    ['thor','T1',0.78,false,'Dorsales',''],['thor','T4',0.70,false,'Dorsales',''],['thor','T6',0.63,false,'Dorsales',''],['thor','T9',0.54,false,'Dorsales',''],['thor','T11',0.47,false,'Dorsales',''],['thor','T12',0.43,false,'Dorsales',''],
+    ['lomb','L1',0.38,true,'Lombaires',''],['lomb','L3',0.30,true,'Lombaires',''],['lomb','L4',0.26,true,'Lombaires',''],['lomb','L5',0.22,true,'Lombaires',''],
+    ['sacr','S1',0.16,false,'Sacrum',''],['sacr','S2',0.13,false,'Sacrum',''],['sacr','S3',0.10,false,'Sacrum',''],['cocc','Coccyx',0.04,false,'Coccyx',''],
   ];
-
   const ZONES=[];
   VERTS.forEach(v=>ZONES.push({group:'rachis',type:'vertebra',label:v[1],u:v[2],color:REG[v[0]],dark:v[3],seg:v[4],desc:v[5],kind:'vert'}));
-
-  // named structures
   ZONES.push(
-    // autonome
-    {group:'auto',type:'path',label:'Sympathique',full:'Origine médullaire sympathique',seg:'Chaîne ganglionnaire',desc:'Chaîne latéro-vertébrale thoracolombaire (T1–L2).',color:'#b5462b',beads:11,
-      pts:[[1.0,0.55,0.42],[0.6,0.62,0.40],[0.1,0.66,0.36],[-0.4,0.62,0.34],[-0.8,0.55,0.34]]},
-    {group:'auto',type:'path',label:'Parasympathique',full:'Parasympathique sacré',seg:'Origine médullaire',desc:'Centres parasympathiques sacrés (S2–S4).',color:'#d9b400',dark:true,beads:5,
-      pts:[[-1.2,0.50,0.34],[-1.45,0.45,0.32],[-1.65,0.42,0.30]]},
-    {group:'auto',type:'path',label:'Queue de cheval',full:'Queue de cheval',seg:'Cauda equina',desc:'Racines lombo-sacrées sous la fin de la moelle.',color:'#c2c8d0',dark:true,beads:0,
-      pts:[[-0.55,0.74,0.38],[-0.9,0.66,0.36],[-1.3,0.58,0.34],[-1.6,0.54,0.32]]},
+    {group:'auto',type:'path',label:'Sympathique',full:'Origine médullaire sympathique',seg:'Chaîne ganglionnaire',desc:'Chaîne latéro-vertébrale thoracolombaire (T1–L2).',color:'#b5462b',beads:11,pts:[[1.0,0.55,0.42],[0.6,0.62,0.40],[0.1,0.66,0.36],[-0.4,0.62,0.34],[-0.8,0.55,0.34]]},
+    {group:'auto',type:'path',label:'Parasympathique',full:'Parasympathique sacré',seg:'Origine médullaire',desc:'Centres parasympathiques sacrés (S2–S4).',color:'#d9b400',dark:true,beads:5,pts:[[-1.2,0.50,0.34],[-1.45,0.45,0.32],[-1.65,0.42,0.30]]},
+    {group:'auto',type:'path',label:'Queue de cheval',full:'Queue de cheval',seg:'Cauda equina',desc:'Racines lombo-sacrées sous la fin de la moelle.',color:'#c2c8d0',dark:true,beads:0,pts:[[-0.55,0.74,0.38],[-0.9,0.66,0.36],[-1.3,0.58,0.34],[-1.6,0.54,0.32]]},
     {group:'auto',type:'point',label:'Ganglion impair',full:'Ganglion impair',seg:'Sympathique terminal',desc:'Jonction sacro-coccygienne, ganglion terminal.',color:'#e07b1f',pos:[-1.95,0.42,0.10]},
     {group:'auto',type:'point',label:'Nerf de Hyrtl',full:'Nerf intercostalbrachial de Hyrtl',seg:'Thorax',desc:'Branche du 2e nerf intercostal vers la face interne du bras.',color:'#c9a417',dark:true,pos:[1.0,0.96,-0.12]},
-    // thorax & cotes
     {group:'thorax',type:'point',label:'1ère côte',full:'1ère côte',seg:'Thorax',desc:'Côte la plus haute du thorax postérieur.',color:'#9a8f7a',pos:[1.35,0.92,-0.02]},
     {group:'thorax',type:'area',label:'Thorax post.',full:'Thorax postérieur',seg:'Cage thoracique',desc:'Projection dorsale de la cage thoracique (métatarses).',color:'#b9a05a',pos:[0.7,1.0,-0.05],normal:[0,0.6,-0.8],size:[0.6,0.42]},
-    {group:'thorax',type:'path',label:'Bord inf. thorax',full:'Bord inférieur du thorax postérieur',seg:'Cage thoracique',desc:'Limite basse du thorax, niveau T12.',color:'#d9882e',beads:0,
-      pts:[[0.30,0.96,0.28],[0.30,0.95,-0.06],[0.30,0.90,-0.42]]},
-    {group:'thorax',type:'path',label:'Costo-transversaires',full:'Articulations costo-transversaires',seg:'Chaîne latéro-vertébrale',desc:'Jonctions côte–vertèbre, niveau thoracique.',color:'#8a5fb0',beads:7,
-      pts:[[1.0,0.70,0.30],[0.6,0.80,0.28],[0.1,0.86,0.26],[-0.3,0.80,0.26]]},
-    // articulations
-    {group:'artic',type:'path',label:'Artic. postérieures',full:'Articulations postérieures des vertèbres',seg:'Facettes',desc:'Articulations zygapophysaires, tout le rachis.',color:'#c0392b',beads:9,
-      pts:[[1.4,0.62,0.52],[0.9,0.78,0.50],[0.3,0.90,0.48],[-0.3,0.90,0.46],[-0.8,0.80,0.44],[-1.2,0.66,0.42]]},
+    {group:'thorax',type:'path',label:'Bord inf. thorax',full:'Bord inférieur du thorax postérieur',seg:'Cage thoracique',desc:'Limite basse du thorax, niveau T12.',color:'#d9882e',beads:0,pts:[[0.30,0.96,0.28],[0.30,0.95,-0.06],[0.30,0.90,-0.42]]},
+    {group:'thorax',type:'path',label:'Costo-transversaires',full:'Articulations costo-transversaires',seg:'Chaîne latéro-vertébrale',desc:'Jonctions côte–vertèbre, niveau thoracique.',color:'#8a5fb0',beads:7,pts:[[1.0,0.70,0.30],[0.6,0.80,0.28],[0.1,0.86,0.26],[-0.3,0.80,0.26]]},
+    {group:'artic',type:'path',label:'Artic. postérieures',full:'Articulations postérieures des vertèbres',seg:'Facettes',desc:'Articulations zygapophysaires, tout le rachis.',color:'#c0392b',beads:9,pts:[[1.4,0.62,0.52],[0.9,0.78,0.50],[0.3,0.90,0.48],[-0.3,0.90,0.46],[-0.8,0.80,0.44],[-1.2,0.66,0.42]]},
     {group:'artic',type:'point',label:'Articulaire L5',full:'Articulaire postérieure de L5',seg:'Charnière lombo-sacrée',desc:'Facette de L5, charnière lombo-sacrée.',color:'#e3b81e',dark:true,pos:[-0.55,0.82,0.46]},
     {group:'artic',type:'area',label:'Sacro-iliaque',full:'Sacro-iliaque',seg:'Bassin',desc:'Articulation entre sacrum et ilium.',color:'#5f6fb0',pos:[-1.35,0.62,-0.22],normal:[-0.3,0.2,-0.9],size:[0.3,0.26]},
     {group:'artic',type:'point',label:'Masse commune',full:'Masse commune (tendon d’Achille)',seg:'Insertion',desc:'Insertion calcanéenne — référence du tendon d’Achille.',color:'#a8443c',pos:[-2.0,0.88,0.0]},
-    // organes
     {group:'organes',type:'point',label:'Rectum',full:'Rectum',seg:'Pelvis',desc:'Projection rectale, région sacro-coccygienne.',color:'#3b78c2',pos:[-1.55,0.32,0.26]},
     {group:'organes',type:'point',label:'Anus',full:'Anus',seg:'Pelvis',desc:'Région la plus caudale, sous le coccyx.',color:'#cf3b33',pos:[-1.9,0.28,0.12]},
+    // ---- DETAIL: base exocrânienne, face plantaire des orteils ----
+    {group:'crane',lod:'detail',type:'point',label:'Tronc cérébral',seg:'Base exocrânienne',desc:'Projection du tronc cérébral, face plantaire des orteils.',color:'#2e9e5b',pos:[1.92,0.30,0.16],off:[58,-56]},
+    {group:'crane',lod:'detail',type:'point',label:'Rameau méningé X',full:'Rameau méningé du X (méat acoustique externe)',seg:'Nerf vague X',desc:'Branche méningée du nerf vague, méat acoustique externe.',color:'#e0c020',dark:true,pos:[1.78,0.27,0.31],off:[112,-28]},
+    {group:'crane',lod:'detail',type:'point',label:'Noyaux du X',full:'Noyaux du nerf vague X (moelle allongée)',seg:'Nerf vague X',desc:'Noyaux du vague dans la moelle allongée.',color:'#cf3b33',pos:[1.72,0.25,0.18],off:[118,0]},
+    {group:'crane',lod:'detail',type:'point',label:'Sinus carotidien',full:'Sinus et glomus carotidien',seg:'Baro/chémorécepteurs',desc:'Sinus et glomus carotidien.',color:'#e0c020',dark:true,pos:[1.46,0.21,0.17],off:[116,26]},
+    {group:'crane',lod:'detail',type:'point',label:'Pharynx, larynx',seg:'Voies aéro-digestives',desc:'Zones pharyngée et laryngée.',color:'#e0c020',dark:true,pos:[1.58,0.23,0.10],off:[112,52]},
+    {group:'crane',lod:'detail',type:'point',label:'Laryngé sup. X',full:'Nerf laryngé supérieur du X',seg:'Nerf vague X',desc:'Branche laryngée supérieure du vague.',color:'#e0c020',dark:true,pos:[1.52,0.21,0.04],off:[112,76]},
+    {group:'crane',lod:'detail',type:'point',label:'Foramen jugulaire',full:'Foramen jugulaire (nerf vague X)',seg:'Nerf vague X',desc:'Émergence crânienne du nerf vague.',color:'#7b4ea3',pos:[1.45,0.24,-0.04],off:[-132,42]},
+    {group:'crane',lod:'detail',type:'path',label:'Œsophage',seg:'Voies aéro-digestives',desc:'Trajet œsophagien.',color:'#2f7fc2',beads:0,pts:[[1.34,0.19,0.20],[1.5,0.20,0.21],[1.66,0.21,0.22]],off:[70,90]},
   );
 
-  // ---- build geometry + labels per zone ----
-  const labelLayer=document.getElementById('labels');
-  const leaderSvg=document.getElementById('leaders');
-  const tmp=new THREE.Vector3();
+  const labelLayer=document.getElementById('labels'), leaderSvg=document.getElementById('leaders'), tmp=new THREE.Vector3();
+  function radialNormal(p){const n=new THREE.Vector3(0,p.y,p.z);if(n.lengthSq()<1e-4)n.set(0,1,0);return n.normalize();}
 
-  function radialNormal(p){const n=new THREE.Vector3(0,p.y,p.z); if(n.lengthSq()<1e-4)n.set(0,1,0); return n.normalize();}
+  ZONES.forEach((z,i)=>{z._meshes=[];let anchor,normal;
+    const detail=z.lod==='detail';
+    const ptR=detail?0.045:(z.type==='point'?0.075:0.06);
+    if(z.type==='vertebra'){anchor=spine.getPointAt(z.u);normal=radialNormal(anchor);
+      const m=new THREE.Mesh(new THREE.SphereGeometry(0.06,14,10),new THREE.MeshStandardMaterial({color:new THREE.Color(z.color),emissive:new THREE.Color(z.color),emissiveIntensity:0.3,roughness:0.45}));
+      m.position.copy(anchor);foot.add(m);z._meshes.push(m);z._mk=m;}
+    else if(z.type==='point'){anchor=C(z.pos[0],z.pos[1],z.pos[2]);normal=radialNormal(anchor);
+      const m=new THREE.Mesh(new THREE.SphereGeometry(ptR,16,12),new THREE.MeshStandardMaterial({color:new THREE.Color(z.color),emissive:new THREE.Color(z.color),emissiveIntensity:0.38,roughness:0.4}));
+      m.position.copy(anchor);foot.add(m);z._meshes.push(m);z._mk=m;}
+    else if(z.type==='path'){const cpts=z.pts.map(p=>C(p[0],p[1],p[2]));const crv=new THREE.CatmullRomCurve3(cpts,false,'catmullrom',0.5);
+      const tube=new THREE.Mesh(new THREE.TubeGeometry(crv,60,detail?0.03:0.045,8,false),new THREE.MeshStandardMaterial({color:new THREE.Color(z.color),emissive:new THREE.Color(z.color),emissiveIntensity:0.4,roughness:0.5}));
+      foot.add(tube);z._meshes.push(tube);
+      if(z.beads){for(let b=0;b<z.beads;b++){const bp=crv.getPointAt(b/(z.beads-1||1));const bm=new THREE.Mesh(new THREE.SphereGeometry(0.05,10,8),new THREE.MeshStandardMaterial({color:new THREE.Color(z.color),emissive:new THREE.Color(z.color),emissiveIntensity:0.45,roughness:0.4}));bm.position.copy(bp);foot.add(bm);z._meshes.push(bm);}}
+      anchor=crv.getPointAt(0.5);normal=radialNormal(anchor);z._mk=z._meshes[0];}
+    else if(z.type==='area'){anchor=C(z.pos[0],z.pos[1],z.pos[2]);normal=new THREE.Vector3(z.normal[0],z.normal[1],z.normal[2]).normalize();
+      const disc=new THREE.Mesh(new THREE.CircleGeometry(0.34,28),new THREE.MeshBasicMaterial({color:new THREE.Color(z.color),transparent:true,opacity:0.32,side:THREE.DoubleSide,depthWrite:false}));
+      disc.position.copy(anchor).addScaledVector(normal,0.05);disc.lookAt(anchor.clone().addScaledVector(normal,1));disc.scale.set(z.size[0]/0.34,z.size[1]/0.34,1);disc.renderOrder=2;
+      foot.add(disc);z._meshes.push(disc);z._mk=disc;}
+    z._anchor=anchor;z._normal=normal;
 
-  ZONES.forEach((z,i)=>{
-    z._meshes=[]; let anchor, normal;
-    if(z.type==='vertebra'){
-      anchor=spine.getPointAt(z.u); normal=radialNormal(anchor);
-      const m=new THREE.Mesh(new THREE.SphereGeometry(0.06,14,10),
-        new THREE.MeshStandardMaterial({color:new THREE.Color(z.color),emissive:new THREE.Color(z.color),emissiveIntensity:0.3,roughness:0.45}));
-      m.position.copy(anchor); foot.add(m); z._meshes.push(m); z._mk=m;
-    } else if(z.type==='point'){
-      anchor=C(z.pos[0],z.pos[1],z.pos[2]); normal=radialNormal(anchor);
-      const m=new THREE.Mesh(new THREE.SphereGeometry(0.075,16,12),
-        new THREE.MeshStandardMaterial({color:new THREE.Color(z.color),emissive:new THREE.Color(z.color),emissiveIntensity:0.35,roughness:0.4}));
-      m.position.copy(anchor); foot.add(m); z._meshes.push(m); z._mk=m;
-    } else if(z.type==='path'){
-      const cpts=z.pts.map(p=>C(p[0],p[1],p[2]));
-      const crv=new THREE.CatmullRomCurve3(cpts,false,'catmullrom',0.5);
-      const tube=new THREE.Mesh(new THREE.TubeGeometry(crv,60,0.045,8,false),
-        new THREE.MeshStandardMaterial({color:new THREE.Color(z.color),emissive:new THREE.Color(z.color),emissiveIntensity:0.4,roughness:0.5}));
-      foot.add(tube); z._meshes.push(tube);
-      if(z.beads){for(let b=0;b<z.beads;b++){const bp=crv.getPointAt(b/(z.beads-1||1));
-        const bm=new THREE.Mesh(new THREE.SphereGeometry(0.05,10,8),
-          new THREE.MeshStandardMaterial({color:new THREE.Color(z.color),emissive:new THREE.Color(z.color),emissiveIntensity:0.45,roughness:0.4}));
-        bm.position.copy(bp); foot.add(bm); z._meshes.push(bm);}}
-      anchor=crv.getPointAt(0.5); normal=radialNormal(anchor); z._mk=z._meshes[0];
-    } else if(z.type==='area'){
-      anchor=C(z.pos[0],z.pos[1],z.pos[2]);
-      normal=new THREE.Vector3(z.normal[0],z.normal[1],z.normal[2]).normalize();
-      const disc=new THREE.Mesh(new THREE.CircleGeometry(0.34,28),
-        new THREE.MeshBasicMaterial({color:new THREE.Color(z.color),transparent:true,opacity:0.32,side:THREE.DoubleSide,depthWrite:false}));
-      disc.position.copy(anchor).addScaledVector(normal,0.05);
-      disc.lookAt(anchor.clone().addScaledVector(normal,1));
-      disc.scale.set(z.size[0]/0.34,z.size[1]/0.34,1); disc.renderOrder=2;
-      foot.add(disc); z._meshes.push(disc); z._mk=disc;
-    }
-    z._anchor=anchor; z._normal=normal;
-
-    // label chip
     const chip=document.createElement('div');
-    if(z.kind==='vert'){ chip.className='chip vert'+(z.dark?' dark':''); chip.style.background=z.color; chip.textContent=z.label; chip.style.borderColor='rgba(0,0,0,.3)'; }
-    else { chip.className='chip named'; chip.innerHTML='<span class="kk" style="background:'+z.color+'"></span><span class="nm">'+z.label+'</span>'; }
-    labelLayer.appendChild(chip); z._chip=chip;
-    // dot
-    const dot=document.createElement('div'); dot.className='marker-dot'; dot.style.background=z.color; labelLayer.appendChild(dot); z._dot=dot;
-    // leader (named only)
-    if(z.kind!=='vert'){const ln=document.createElementNS('http://www.w3.org/2000/svg','line');
-      ln.setAttribute('stroke',z.color); ln.setAttribute('stroke-width','1'); leaderSvg.appendChild(ln); z._line=ln;}
-    // 2D label offset
-    if(z.kind==='vert'){ z._off=[ (i%2?16:-16), (i%2? -2: 2) ]; }
-    else { z._off=[ (z._anchor.x<0? -120:118), (i%2? -16: 22) ]; }
+    if(z.kind==='vert'){chip.className='chip vert'+(z.dark?' dark':'');chip.style.background=z.color;chip.textContent=z.label;}
+    else{chip.className='chip named';chip.innerHTML='<span class="kk" style="background:'+z.color+'"></span><span class="nm">'+z.label+'</span>';}
+    labelLayer.appendChild(chip);z._chip=chip;
+    const dot=document.createElement('div');dot.className='marker-dot';dot.style.background=z.color;labelLayer.appendChild(dot);z._dot=dot;
+    if(z.kind!=='vert'){const ln=document.createElementNS('http://www.w3.org/2000/svg','line');ln.setAttribute('stroke',z.color);ln.setAttribute('stroke-width','1');leaderSvg.appendChild(ln);z._line=ln;}
+    if(z.off)z._off=z.off; else if(z.kind==='vert')z._off=[(i%2?16:-16),(i%2?-2:2)]; else z._off=[(z._anchor.x<0?-120:118),(i%2?-16:22)];
   });
 
-  // ---- systems UI ----
-  const sysWrap=document.getElementById('systems');
-  const allOnBtn=document.getElementById('all-on'), allOffBtn=document.getElementById('all-off');
+  // systems UI
+  const sysWrap=document.getElementById('systems'), sysRow=sysWrap.querySelector('.sysrow');
   const sysBtns={};
-  Object.keys(SYS).forEach(k=>{
-    const count=ZONES.filter(z=>z.group===k).length;
-    const b=document.createElement('button'); b.className='sysbtn'+(SYS[k].on?' on':'');
-    b.innerHTML='<span class="sw" style="background:'+SYS[k].color+'"></span><span>'+SYS[k].name+'</span><span class="ct">'+count+'</span>';
-    b.addEventListener('click',()=>{SYS[k].on=!SYS[k].on; b.classList.toggle('on',SYS[k].on); applyVis();});
-    sysWrap.insertBefore(b, sysWrap.querySelector('.sysrow')); sysBtns[k]=b;
-  });
-  allOnBtn.addEventListener('click',()=>{Object.keys(SYS).forEach(k=>{SYS[k].on=true;sysBtns[k].classList.add('on');});applyVis();});
-  allOffBtn.addEventListener('click',()=>{Object.keys(SYS).forEach(k=>{SYS[k].on=false;sysBtns[k].classList.remove('on');});applyVis();});
-  function applyVis(){ ZONES.forEach(z=>{const on=SYS[z.group].on; z._meshes.forEach(m=>m.visible=on);}); }
+  Object.keys(SYS).forEach(k=>{const count=ZONES.filter(z=>z.group===k).length;
+    const b=document.createElement('button');b.className='sysbtn'+(SYS[k].on?' on':'')+(SYS[k].detail?' detail':'');
+    const sub=SYS[k].sub?'<small>'+SYS[k].sub+'</small>':'';
+    b.innerHTML='<span class="sw" style="background:'+SYS[k].color+'"></span><span class="nmwrap">'+SYS[k].name+sub+'</span><span class="ct">'+count+'</span>';
+    b.addEventListener('click',()=>{SYS[k].on=!SYS[k].on;b.classList.toggle('on',SYS[k].on);applyVis();});
+    sysWrap.insertBefore(b,sysRow);sysBtns[k]=b;});
+  document.getElementById('all-on').addEventListener('click',()=>{Object.keys(SYS).forEach(k=>{SYS[k].on=true;sysBtns[k].classList.add('on');});applyVis();});
+  document.getElementById('all-off').addEventListener('click',()=>{Object.keys(SYS).forEach(k=>{SYS[k].on=false;sysBtns[k].classList.remove('on');});applyVis();});
+  function applyVis(){ZONES.forEach(z=>{const on=SYS[z.group].on;z._meshes.forEach(m=>m.visible=on);});}
   applyVis();
 
-  // ---- labels toggle / spin / views ----
-  let showLabels=true, autoSpin=!RM;
-  const tLabels=document.getElementById('t-labels'), tSpin=document.getElementById('t-spin');
-  tLabels.addEventListener('click',()=>{showLabels=!showLabels; tLabels.classList.toggle('on',showLabels);});
-  function setSpin(on){autoSpin=on; tSpin.classList.toggle('on',on);} setSpin(autoSpin);
+  // labels / spin / views / zoom
+  let showLabels=true,autoSpin=!RM;
+  const tLabels=document.getElementById('t-labels'),tSpin=document.getElementById('t-spin');
+  tLabels.addEventListener('click',()=>{showLabels=!showLabels;tLabels.classList.toggle('on',showLabels);});
+  function setSpin(on){autoSpin=on;tSpin.classList.toggle('on',on);}setSpin(autoSpin);
   tSpin.addEventListener('click',()=>setSpin(!autoSpin));
 
-  const VIEWS={mediale:{x:-0.06,y:0.0},post34:{x:-0.22,y:-0.62},talon:{x:-0.16,y:Math.PI/2},
-    plantaire:{x:-Math.PI/2+0.05,y:0.0},dorsale:{x:Math.PI/2-0.05,y:0.0}};
-  const targetRot={x:-0.20,y:-0.5}, curRot={x:-0.20,y:-0.5};
+  const targetRot={x:-0.20,y:-0.5},curRot={x:-0.20,y:-0.5};
+  let camDist=7.8, camDistTarget=7.8, focusMode='center';
+  const camLook=new THREE.Vector3(0,0,0), focusTarget=new THREE.Vector3(0,0,0);
+  const TOE_LOCAL=C(1.68,0.26,0.10);
+  const VIEWS={mediale:{x:-0.06,y:0.0,d:7.0,f:'center'},plantaire:{x:-Math.PI/2+0.05,y:0.0,d:7.0,f:'center'},
+    ensemble:{x:-0.20,y:-0.5,d:7.8,f:'center'},
+    orteils:{x:-1.18,y:0.06,d:4.4,f:'toes',crane:true}};
   document.querySelectorAll('[data-view]').forEach(b=>b.addEventListener('click',()=>{
-    const v=VIEWS[b.dataset.view]; targetRot.x=v.x; targetRot.y=v.y; setSpin(false); fadeHint();}));
+    const v=VIEWS[b.dataset.view];targetRot.x=v.x;targetRot.y=v.y;camDistTarget=v.d;focusMode=v.f;setSpin(false);fadeHint();
+    if(v.crane){SYS.crane.on=true;sysBtns.crane.classList.add('on');applyVis();}}));
 
-  // ---- interaction ----
-  let dragging=false,lastX=0,lastY=0;
-  const dom=renderer.domElement;
+  let dragging=false,lastX=0,lastY=0;const dom=renderer.domElement;
   dom.addEventListener('pointerdown',e=>{dragging=true;lastX=e.clientX;lastY=e.clientY;fadeHint();});
   window.addEventListener('pointerup',()=>dragging=false);
-  window.addEventListener('pointermove',e=>{ mouse.x=e.clientX; mouse.y=e.clientY;
-    if(!dragging)return; targetRot.y+=(e.clientX-lastX)*0.0095; targetRot.x+=(e.clientY-lastY)*0.0095;
-    targetRot.x=Math.max(-1.35,Math.min(1.35,targetRot.x)); lastX=e.clientX; lastY=e.clientY;});
-  dom.addEventListener('wheel',e=>{e.preventDefault(); camDist=Math.max(4.6,Math.min(11.5,camDist+e.deltaY*0.006)); fadeHint();},{passive:false});
-  const hintEl=document.getElementById('hint'); let hintFaded=false;
-  function fadeHint(){if(hintFaded)return; hintFaded=true; hintEl.style.opacity='0';} if(RM)fadeHint();
+  window.addEventListener('pointermove',e=>{mouse.x=e.clientX;mouse.y=e.clientY;if(!dragging)return;
+    targetRot.y+=(e.clientX-lastX)*0.0095;targetRot.x+=(e.clientY-lastY)*0.0095;targetRot.x=Math.max(-1.45,Math.min(1.45,targetRot.x));lastX=e.clientX;lastY=e.clientY;});
+  dom.addEventListener('wheel',e=>{e.preventDefault();camDistTarget=Math.max(3.4,Math.min(12,camDistTarget+e.deltaY*0.006));fadeHint();},{passive:false});
+  const zoomprompt=document.getElementById('zoomprompt');let hintFaded=false;
+  function fadeHint(){if(hintFaded)return;hintFaded=true;}
 
-  // ---- resize ----
-  function resize(){const w=innerWidth,h=innerHeight; renderer.setSize(w,h); camera.aspect=w/h; camera.updateProjectionMatrix();
-    leaderSvg.setAttribute('viewBox','0 0 '+w+' '+h); leaderSvg.setAttribute('width',w); leaderSvg.setAttribute('height',h);}
-  addEventListener('resize',resize); resize();
+  function resize(){const w=innerWidth,h=innerHeight;renderer.setSize(w,h);camera.aspect=w/h;camera.updateProjectionMatrix();
+    leaderSvg.setAttribute('viewBox','0 0 '+w+' '+h);leaderSvg.setAttribute('width',w);leaderSvg.setAttribute('height',h);}
+  addEventListener('resize',resize);resize();
 
-  // ---- hover tooltip (screen-space proximity) ----
-  const mouse={x:-1,y:-1}; const tip=document.getElementById('tip');
-  const tipSeg=tip.querySelector('.t-seg'), tipNm=tip.querySelector('.t-nm'), tipDs=tip.querySelector('.t-ds');
+  const mouse={x:-1,y:-1},tip=document.getElementById('tip');
+  const tipSeg=tip.querySelector('.t-seg'),tipNm=tip.querySelector('.t-nm'),tipDs=tip.querySelector('.t-ds');
   let hovered=null;
+  const DETAIL_DIST=5.6, zoombar=document.getElementById('zoombar');
+  const camDir=new THREE.Vector3(),worldN=new THREE.Vector3();
 
-  // ---- label projection / occlusion ----
-  const camDir=new THREE.Vector3(), worldN=new THREE.Vector3();
-  function updateLabels(){
-    const w=innerWidth,h=innerHeight; let best=null, bestD=24*24;
-    ZONES.forEach(z=>{
-      const on=SYS[z.group].on && showLabels;
-      if(!on){ z._chip.style.display='none'; z._dot.style.display='none'; if(z._line)z._line.style.display='none'; return; }
-      z._anchor && tmp.copy(z._anchor); foot.localToWorld(tmp.copy(z._anchor));
-      const proj=tmp.clone().project(camera);
-      const px=(proj.x*0.5+0.5)*w, py=(-proj.y*0.5+0.5)*h;
-      worldN.copy(z._normal).applyQuaternion(foot.quaternion);
-      camDir.copy(camera.position).sub(tmp).normalize();
-      const facing=worldN.dot(camDir); const vis=facing>0.0 && proj.z<1;
-      const op=vis?Math.min(1,0.4+facing):0.0;
-      z._dot.style.display=''; z._chip.style.display='';
-      z._dot.style.transform='translate(-50%,-50%) translate('+px+'px,'+py+'px)';
-      z._dot.style.opacity=vis?1:0.12;
-      const cx=px+z._off[0], cy=py+z._off[1];
-      z._chip.style.transform='translate(-50%,-50%) translate('+cx+'px,'+cy+'px)';
-      z._chip.style.opacity=op;
-      if(z._line){z._line.style.display=''; z._line.setAttribute('x1',px);z._line.setAttribute('y1',py);z._line.setAttribute('x2',cx);z._line.setAttribute('y2',cy); z._line.style.opacity=vis?0.5:0;}
-      z._px=px; z._py=py; z._vis=vis;
-      if(vis){const dx=mouse.x-px,dy=mouse.y-py,d=dx*dx+dy*dy; if(d<bestD){bestD=d;best=z;}}
+  function updateLabels(){const w=innerWidth,h=innerHeight;const zoomedIn=camDist<DETAIL_DIST;let best=null,bestD=26*26;
+    ZONES.forEach(z=>{const detail=z.lod==='detail';
+      let labelOn=SYS[z.group].on&&showLabels;
+      if(zoomedIn&&!detail)labelOn=false;   // overview labels recede when zoomed in
+      if(!zoomedIn&&detail)labelOn=false;    // detail labels appear only zoomed in
+      foot.localToWorld(tmp.copy(z._anchor));
+      const proj=tmp.clone().project(camera);const px=(proj.x*0.5+0.5)*w,py=(-proj.y*0.5+0.5)*h;
+      worldN.copy(z._normal).applyQuaternion(foot.quaternion);camDir.copy(camera.position).sub(tmp).normalize();
+      const facing=worldN.dot(camDir);const vis=facing>0.0&&proj.z<1;
+      // dot: shown when system on (hints detail exists even when zoomed out)
+      const dotOn=SYS[z.group].on;
+      z._dot.style.display=dotOn?'':'none';
+      if(dotOn){z._dot.style.transform='translate(-50%,-50%) translate('+px+'px,'+py+'px)';z._dot.style.opacity=vis?(detail&&!zoomedIn?0.45:1):0.1;}
+      if(!labelOn){z._chip.style.display='none';if(z._line)z._line.style.display='none';}
+      else{z._chip.style.display='';const op=vis?Math.min(1,0.4+facing):0.0;
+        const cx=px+z._off[0],cy=py+z._off[1];
+        z._chip.style.transform='translate(-50%,-50%) translate('+cx+'px,'+cy+'px)';z._chip.style.opacity=op;
+        if(z._line){z._line.style.display='';z._line.setAttribute('x1',px);z._line.setAttribute('y1',py);z._line.setAttribute('x2',cx);z._line.setAttribute('y2',cy);z._line.style.opacity=vis?0.5:0;}}
+      if(vis&&dotOn&&((zoomedIn&&detail)||(!zoomedIn))){const dx=mouse.x-px,dy=mouse.y-py,d=dx*dx+dy*dy;if(d<bestD){bestD=d;best=z;}}
     });
-    // tooltip
-    if(best){ if(hovered!==best){hovered=best; tipSeg.textContent=best.seg||''; tipNm.textContent=best.full||best.label; tipDs.textContent=best.desc||'';
-        if(best._mk)best._mk.scale.setScalar(1.6);} 
-      tip.style.left=mouse.x+'px'; tip.style.top=mouse.y+'px'; tip.style.opacity='1';
-    } else if(hovered){ if(hovered._mk)hovered._mk.scale.setScalar(1.0); hovered=null; tip.style.opacity='0'; }
+    if(best){if(hovered!==best){hovered&&hovered._mk&&hovered._mk.scale.setScalar(1.0);hovered=best;tipSeg.textContent=best.seg||'';tipNm.textContent=best.full||best.label;tipDs.textContent=best.desc||'';if(best._mk)best._mk.scale.setScalar(1.6);}
+      tip.style.left=mouse.x+'px';tip.style.top=mouse.y+'px';tip.style.opacity='1';}
+    else if(hovered){hovered._mk&&hovered._mk.scale.setScalar(1.0);hovered=null;tip.style.opacity='0';}
+    // zoom UI
+    const frac=Math.max(0,Math.min(1,(12-camDist)/(12-3.4)));zoombar.style.width=(frac*100)+'%';
+    zoomprompt.style.opacity=(SYS.crane.on&&!zoomedIn)?'1':'0';
   }
 
   function tick(){requestAnimationFrame(tick);
     if(autoSpin&&!dragging)targetRot.y+=0.0040;
-    curRot.x+=(targetRot.x-curRot.x)*0.12; curRot.y+=(targetRot.y-curRot.y)*0.12;
+    curRot.x+=(targetRot.x-curRot.x)*0.12;curRot.y+=(targetRot.y-curRot.y)*0.12;
     foot.rotation.set(curRot.x,curRot.y,0);
-    camera.position.set(0,1.15,camDist); camera.lookAt(0,0,0);
-    renderer.render(scene,camera); updateLabels();
-  }
+    camDist+=(camDistTarget-camDist)*0.12;
+    if(focusMode==='toes'){foot.localToWorld(focusTarget.copy(TOE_LOCAL));}else{focusTarget.set(0,0,0);}
+    camLook.lerp(focusTarget,0.12);
+    camera.position.set(camLook.x,camLook.y+1.05,camLook.z+camDist);
+    camera.lookAt(camLook);
+    renderer.render(scene,camera);updateLabels();}
   tick();
 })();
 </script>

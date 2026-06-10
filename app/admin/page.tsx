@@ -244,10 +244,10 @@ export default async function AdminOverviewPage({
       >
         <div>
           <p className="adm-chart-title" style={{ marginBottom: 6 }}>
-            Atlas réflexe du rachis en 3D — foot prototype
+            Atlas réflexe 3D · zoom sémantique — foot prototype
           </p>
           <p className="adm-page-sub" style={{ margin: 0 }}>
-            Interactive 3D foot map with reflex zones &amp; system layers. Public link — shareable with Guy.
+            Interactive 3D foot map with system layers; zoom into the toes to reveal cranial detail. Public link — shareable with Guy.
           </p>
         </div>
         <span
