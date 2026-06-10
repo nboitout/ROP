@@ -9,6 +9,7 @@ import {
   CartesianGrid,
   Tooltip,
   Cell,
+  LabelList,
 } from 'recharts'
 
 export interface BarDataPoint {
@@ -21,6 +22,9 @@ interface Props {
   color?: string
   layout?: 'vertical' | 'horizontal'
   yAxisWidth?: number
+  // Show the value as an always-visible label on each bar (incl. zero/thin bars
+  // that are hard or impossible to hover for a tooltip).
+  showValues?: boolean
 }
 
 function truncate(s: string, max: number) {
@@ -41,7 +45,14 @@ export default function AdminBarChart({
   color = '#4a6b5a',
   layout = 'horizontal',
   yAxisWidth = 160,
+  showValues = false,
 }: Props) {
+  const valueLabelStyle = {
+    fill: 'rgba(26,26,24,.78)',
+    fontSize: 11,
+    fontFamily: 'DM Sans, sans-serif',
+    fontWeight: 600,
+  }
   if (layout === 'vertical') {
     const maxChars = Math.floor((yAxisWidth - 8) / 6.5)
     return (
@@ -79,6 +90,9 @@ export default function AdminBarChart({
             cursor={{ fill: 'rgba(26,26,24,.03)' }}
           />
           <Bar dataKey="value" name="Count" radius={[0, 3, 3, 0]}>
+            {showValues && (
+              <LabelList dataKey="value" position="right" style={valueLabelStyle} />
+            )}
             {data.map((_, i) => (
               <Cell
                 key={i}
@@ -119,6 +133,9 @@ export default function AdminBarChart({
           cursor={{ fill: 'rgba(26,26,24,.03)' }}
         />
         <Bar dataKey="value" name="Count" radius={[3, 3, 0, 0]}>
+          {showValues && (
+            <LabelList dataKey="value" position="top" style={valueLabelStyle} />
+          )}
           {data.map((_, i) => (
             <Cell
               key={i}

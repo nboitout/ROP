@@ -232,7 +232,7 @@ export default async function EngagementPage() {
           browser’s anonymous <code>reader_id</code> cookie, so clearing cookies or switching device shows up
           as a new visitor.
         </p>
-        <AdminBarChart data={returnBuckets} color="#4a6b5a" />
+        <AdminBarChart data={returnBuckets} color="#4a6b5a" showValues />
       </div>
 
       <div className="adm-charts-grid">
@@ -243,7 +243,7 @@ export default async function EngagementPage() {
             hidden isn’t counted). The homepage and the sign-up gate are reported separately. Note: current
             Chapitre 5 figures are seed/demo data — real reading times build up now that the gate works.
           </p>
-          <AdminBarChart data={dwellData} color="#4a6b5a" layout="vertical" />
+          <AdminBarChart data={dwellData} color="#4a6b5a" layout="vertical" showValues />
         </div>
         <div className="adm-chart-card">
           <p className="adm-chart-title">CTA Clicks by Type</p>
@@ -256,7 +256,7 @@ export default async function EngagementPage() {
             The two outbound links in the “about Guy” section are also tracked here as
             <strong>Institut R.O.P. — site</strong> and <strong>Institut R.O.P. — formations</strong>.
           </p>
-          <AdminBarChart data={ctaData} color="#c9a35e" layout="vertical" />
+          <AdminBarChart data={ctaData} color="#c9a35e" layout="vertical" showValues />
         </div>
       </div>
 
@@ -269,7 +269,7 @@ export default async function EngagementPage() {
           here; it’s recorded as direct/referral instead. To measure a channel, add UTM tags to the link
           you share there. The chart stays empty until tagged campaigns are used.
         </p>
-        <AdminBarChart data={utmData} color="#4a6b5a" />
+        <AdminBarChart data={utmData} color="#4a6b5a" showValues />
       </div>
     </main>
   )
