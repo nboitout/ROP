@@ -25,14 +25,16 @@ export default async function Chapitre5Page({
   }
 
   const { lang: langParam } = await searchParams
-  const { chapter, contentLang } = getChapter('chapter-5', await getServerLang(langParam))
+  const lang = await getServerLang(langParam)
+  const { chapter, contentLang } = getChapter('chapter-5', lang)
   return (
     <ChapterReader
       chapter={chapter}
       bookTitle={BOOK_TITLE}
       contentLang={contentLang}
-      // Sync/classic switch only for the admin-gated prototype audience.
-      syncToggleHref={isAdmin ? '/lecture/chapitre-5' : undefined}
+      // Synchronized version exists only in French; show the switch to anyone
+      // reading the French chapter so they can return from the sync view.
+      syncToggleHref={lang === 'fr' ? '/lecture/chapitre-5' : undefined}
     />
   )
 }
