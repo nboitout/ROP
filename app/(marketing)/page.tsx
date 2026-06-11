@@ -269,6 +269,7 @@ export default function HomePage() {
                       label={card.label}
                       title={card.title}
                       tags={card.tags}
+                      meta={'meta' in card ? (card as { meta?: string }).meta : undefined}
                       isFree={isFree}
                       freeBadge={t.chapters.freeBadge}
                       freeBtnLabel={t.chapters.freeBtnLabel}
@@ -480,13 +481,14 @@ export default function HomePage() {
 
 /* ── Shared chapter card component ── */
 function ChapterCard({
-  num, variant, label, title, tags, isFree, freeBadge, freeBtnLabel, freeBtnHref, children,
+  num, variant, label, title, tags, meta, isFree, freeBadge, freeBtnLabel, freeBtnHref, children,
 }: {
   num: string
   variant?: 'free'
   label: string
   title: string
   tags: string[]
+  meta?: string
   isFree: boolean
   freeBadge: string
   freeBtnLabel: string
@@ -506,6 +508,7 @@ function ChapterCard({
         <div className="cc-tags">
           {tags.map((tag) => <span key={tag} className="ct">{tag}</span>)}
         </div>
+        {meta && <p className="cc-meta">{meta}</p>}
         {isFree && (
           <a href={freeBtnHref} className="cc-free-link">{freeBtnLabel}</a>
         )}
