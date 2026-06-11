@@ -648,6 +648,8 @@ a.ss-switch-opt:hover { color:var(--gold); }
   text-transform:uppercase; color:var(--gold); transition:color .15s; }
 .ss-marker:hover { color:var(--sage); }
 .ss-marker-dot { width:7px; height:7px; border-radius:50%; background:var(--gold); flex-shrink:0; }
+/* marker rendered above a section heading rather than inside a block */
+.ss-anchor-heading { margin:4px 0 2px; }
 
 /* inline figures stay within the narrower text column */
 .ss-article .cr-fig,

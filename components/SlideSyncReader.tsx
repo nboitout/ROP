@@ -195,8 +195,23 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
             <p className="cr-hero-author">Guy Boitout</p>
           </div>
 
-          {chapter.sections.map((section) => (
+          {chapter.sections.map((section) => {
+            const headingSlide = anchorBySlide.get(`${section.id}:-1`)
+            return (
             <section key={section.id} id={`sec-${section.id}`} className="cr-section">
+              {headingSlide && (
+                <div data-slide-anchor={headingSlide} className="ss-anchor ss-anchor-heading">
+                  <button
+                    type="button"
+                    className="ss-marker"
+                    onClick={() => openSlideLightbox(headingSlide)}
+                    title="Agrandir la diapositive"
+                  >
+                    <span className="ss-marker-dot" aria-hidden />
+                    Diapositive {headingSlide} · {slides[headingSlide - 1]?.title}
+                  </button>
+                </div>
+              )}
               <h2 className="cr-h2">{section.title}</h2>
               {section.blocks.map((b, i) => {
                 const slide = anchorBySlide.get(`${section.id}:${i}`)
@@ -219,7 +234,8 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
                 )
               })}
             </section>
-          ))}
+            )
+          })}
 
           <div className="ss-end">
             <p className="ss-end-note">
