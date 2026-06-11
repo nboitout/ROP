@@ -334,6 +334,13 @@ const fr = {
         meta: '~4 min de lecture',
       },
       {
+        href: '/chapitre-1',
+        eyebrow: 'Chapitre 1',
+        title: 'Généralités',
+        description: "Mobilité viscérale, articulations viscérales, fixations, relations viscéro-somatiques et viscéro-émotionnelles — les fondements de la physiologie viscérale en R.O.P.",
+        meta: '~25 min de lecture',
+      },
+      {
         href: '/chapitre-5',
         eyebrow: 'Chapitre 5',
         title: 'Mécanisme de stress',
@@ -683,6 +690,13 @@ const en: typeof fr = {
         title: 'Introduction',
         description: 'The framework for the third volume: the abdomino-pelvic visceral system, the autonomic nervous system, and stress mechanisms. Our approach, terminology, and the chapter structure.',
         meta: '~4 min read',
+      },
+      {
+        href: '/chapitre-1',
+        eyebrow: 'Chapter 1',
+        title: 'Fundamentals',
+        description: 'Visceral mobility, visceral joints, fixations, viscero-somatic and viscero-emotional relationships — the foundations of visceral physiology in R.O.P.',
+        meta: '~25 min read',
       },
       {
         href: '/chapitre-5',
@@ -1036,6 +1050,13 @@ const de: typeof fr = {
         meta: '~4 Min. Lektüre',
       },
       {
+        href: '/chapitre-1',
+        eyebrow: 'Kapitel 1',
+        title: 'Grundlagen',
+        description: 'Viszerale Mobilität, viszerale Gelenke, Fixierungen, viszero-somatische und viszero-emotionale Beziehungen — die Grundlagen der viszeralen Physiologie in der R.O.P.',
+        meta: '~25 Min. Lektüre',
+      },
+      {
         href: '/chapitre-5',
         eyebrow: 'Kapitel 5',
         title: 'Stressmechanismus',
@@ -1387,6 +1408,13 @@ const es: typeof fr = {
         meta: '~4 min de lectura',
       },
       {
+        href: '/chapitre-1',
+        eyebrow: 'Capítulo 1',
+        title: 'Generalidades',
+        description: 'Movilidad visceral, articulaciones viscerales, fijaciones, relaciones víscero-somáticas y víscero-emocionales — los fundamentos de la fisiología visceral en R.O.P.',
+        meta: '~25 min de lectura',
+      },
+      {
         href: '/chapitre-5',
         eyebrow: 'Capítulo 5',
         title: 'Mecanismo de estrés',
@@ -1736,6 +1764,13 @@ const it: typeof fr = {
         title: 'Introduzione',
         description: "Il quadro del terzo volume: il sistema viscerale addominopelvico, il sistema nervoso autonomo e i meccanismi dello stress. Il nostro approccio, la terminologia e la struttura dei capitoli.",
         meta: '~4 min di lettura',
+      },
+      {
+        href: '/chapitre-1',
+        eyebrow: 'Capitolo 1',
+        title: 'Generalità',
+        description: "Mobilità viscerale, articolazioni viscerali, fissazioni, relazioni viscero-somatiche e viscero-emozionali — i fondamenti della fisiologia viscerale nella R.O.P.",
+        meta: '~25 min di lettura',
       },
       {
         href: '/chapitre-5',

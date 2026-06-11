@@ -5,6 +5,7 @@ import { introductionEn } from './introduction.en'
 import { introductionDe } from './introduction.de'
 import { introductionEs } from './introduction.es'
 import { introductionIt } from './introduction.it'
+import { chapter1Fr } from './chapter1.fr'
 import { chapter2Fr } from './chapter2.fr'
 import { chapter2En } from './chapter2.en'
 import { chapter2De } from './chapter2.de'
@@ -29,6 +30,7 @@ import { chapter14It } from './chapter14.it'
  */
 const registry: Record<string, Partial<Record<Lang, Chapter>>> = {
   introduction: { fr: introductionFr, en: introductionEn, de: introductionDe, es: introductionEs, it: introductionIt },
+  'chapter-1': { fr: chapter1Fr },
   'chapter-2': { fr: chapter2Fr, en: chapter2En, de: chapter2De, es: chapter2Es, it: chapter2It },
   'chapter-4': { fr: chapter4Fr, en: chapter4En },
   'chapter-5': { fr: chapter5Fr, en: chapter5En },
