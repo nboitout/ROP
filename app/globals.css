@@ -12,7 +12,10 @@
 }
 *,*::before,*::after { box-sizing:border-box; margin:0; padding:0; }
 html { scroll-behavior:smooth; }
-body { font-family:'DM Sans',sans-serif; background:var(--cream); color:var(--ink); overflow-x:hidden; }
+/* overflow-x:clip (not hidden) contains horizontal overflow without turning
+   <body> into a scroll container — which would break position:sticky panels
+   such as the synchronized reader's pinned slide column. */
+body { font-family:'DM Sans',sans-serif; background:var(--cream); color:var(--ink); overflow-x:clip; }
 
 /* HEADER */
 header {
@@ -593,8 +596,12 @@ footer > div > p { font-size:1rem; color:rgba(245,240,232,.84); line-height:1.9;
 .ss-badge { flex-shrink:0; font-size:.64rem; font-weight:600; letter-spacing:.16em; text-transform:uppercase;
   color:var(--gold); border:1px solid rgba(160,124,58,.4); border-radius:999px; padding:5px 12px; white-space:nowrap; }
 
+/* align-items:stretch (the grid default) lets the slide column grow to the
+   full article height, giving the sticky stage room to stay pinned the whole
+   way down. align-items:start would shrink it to content height and the slide
+   would unstick almost immediately. */
 .ss-layout { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,660px); gap:0;
-  padding-top:62px; max-width:1480px; margin:0 auto; align-items:start; }
+  padding-top:62px; max-width:1480px; margin:0 auto; align-items:stretch; }
 
 .ss-stagecol { grid-column:1; padding:28px 12px 64px 32px; }
 .ss-stage { position:sticky; top:86px; }
