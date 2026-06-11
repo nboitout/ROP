@@ -15,9 +15,9 @@ const BOOK_TITLE = 'Réflexothérapie occipito-podale et viscères des cavités 
 
 export default async function Chapitre5SyncPage() {
   const cookieStore = await cookies()
-  const hasAccess = !!cookieStore.get('free_chapters_access') || !!cookieStore.get('admin_session')
-  if (!hasAccess) {
-    redirect('/?gate=free#acces-libre')
+  // Admin-only prototype: visible to Guy and the site owner (shared admin session).
+  if (!cookieStore.get('admin_session')) {
+    redirect('/admin/login')
   }
 
   // The synthesis deck is French; the prototype pins the French text to it.
