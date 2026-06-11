@@ -355,6 +355,13 @@ const fr = {
         meta: '~15 min de lecture',
       },
       {
+        href: '/chapitre-7',
+        eyebrow: 'Chapitre 7',
+        title: 'Cavités abdominale et péritonéale',
+        description: "Architecture de la cavité abdominale : péritoine, mésos, omentums, espaces intra-, rétro- et sous-péritonéaux, vascularisation et innervation — zones réflexes podales et relations péritonéo-somatiques.",
+        meta: '~20 min de lecture',
+      },
+      {
         href: '/chapitre-5',
         eyebrow: 'Chapitre 5',
         title: 'Mécanisme de stress',
@@ -723,8 +730,15 @@ const en: typeof fr = {
         href: '/chapitre-6',
         eyebrow: 'Chapter 6',
         title: 'Polyvagal Theory',
-        description: 'Dr Stephen Porges’ theory: three ANS systems, the two branches of the vagus nerve, neuroception and social engagement — and the therapeutic hierarchy in R.O.P.',
+        description: "Dr Stephen Porges’ theory: three ANS systems, the two branches of the vagus nerve, neuroception and social engagement — and the therapeutic hierarchy in R.O.P.",
         meta: '~15 min read',
+      },
+      {
+        href: '/chapitre-7',
+        eyebrow: 'Chapter 7',
+        title: 'Abdominal and Peritoneal Cavities',
+        description: 'Architecture of the abdominal cavity: peritoneum, mesenteries, omenta, intra-, retro- and subperitoneal spaces, vascularisation and innervation — podal reflex zones and peritoneal-somatic relationships.',
+        meta: '~20 min read',
       },
       {
         href: '/chapitre-5',
@@ -1099,6 +1113,13 @@ const de: typeof fr = {
         meta: '~15 Min. Lektüre',
       },
       {
+        href: '/chapitre-7',
+        eyebrow: 'Kapitel 7',
+        title: 'Bauch- und Peritonealhöhlen',
+        description: 'Architektur der Bauchhöhle: Peritoneum, Mesenterien, Omentum, intra-, retro- und subperitoneale Räume, Vaskularisierung und Innervation — podale Reflexzonen und peritoneal-somatische Beziehungen.',
+        meta: '~20 Min. Lektüre',
+      },
+      {
         href: '/chapitre-5',
         eyebrow: 'Kapitel 5',
         title: 'Stressmechanismus',
@@ -1471,6 +1492,13 @@ const es: typeof fr = {
         meta: '~15 min de lectura',
       },
       {
+        href: '/chapitre-7',
+        eyebrow: 'Capítulo 7',
+        title: 'Cavidades abdominal y peritoneal',
+        description: 'Arquitectura de la cavidad abdominal: peritoneo, mesenterios, epiplones, espacios intra-, retro- y subperitoneales, vascularización e inervación — zonas reflejas podales y relaciones peritoneal-somáticas.',
+        meta: '~20 min de lectura',
+      },
+      {
         href: '/chapitre-5',
         eyebrow: 'Capítulo 5',
         title: 'Mecanismo de estrés',
@@ -1841,6 +1869,13 @@ const it: typeof fr = {
         title: 'Teoria polivagale',
         description: "La teoria del Dr. Stephen Porges: tre sistemi del SNA, i due rami del nervo vago, la neurocepzione e l'impegno sociale — e la gerarchia terapeutica nella R.O.P.",
         meta: '~15 min di lettura',
+      },
+      {
+        href: '/chapitre-7',
+        eyebrow: 'Capitolo 7',
+        title: 'Cavità addominale e peritoneale',
+        description: "Architettura della cavità addominale: peritoneo, mesi, omenti, spazi intra-, retro- e sottoperitoneali, vascolarizzazione e innervazione — zone riflesse podali e relazioni peritoneo-somatiche.",
+        meta: '~20 min di lettura',
       },
       {
         href: '/chapitre-5',
