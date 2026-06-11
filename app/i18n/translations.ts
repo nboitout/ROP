@@ -341,6 +341,13 @@ const fr = {
         meta: '~25 min de lecture',
       },
       {
+        href: '/chapitre-3',
+        eyebrow: 'Chapitre 3',
+        title: 'Système nerveux central',
+        description: "Cerveau reptilien, limbique et cortex — anatomie fonctionnelle du SNC, rôle de l'hypothalamus, de l'amygdale et du système limbique, zones réflexes podales associées.",
+        meta: '~30 min de lecture',
+      },
+      {
         href: '/chapitre-5',
         eyebrow: 'Chapitre 5',
         title: 'Mécanisme de stress',
@@ -697,6 +704,13 @@ const en: typeof fr = {
         title: 'Fundamentals',
         description: 'Visceral mobility, visceral joints, fixations, viscero-somatic and viscero-emotional relationships — the foundations of visceral physiology in R.O.P.',
         meta: '~25 min read',
+      },
+      {
+        href: '/chapitre-3',
+        eyebrow: 'Chapter 3',
+        title: 'Central Nervous System',
+        description: 'Reptilian brain, limbic system and cortex — functional anatomy of the CNS, role of the hypothalamus, amygdala and limbic system, with associated podal reflex zones.',
+        meta: '~30 min read',
       },
       {
         href: '/chapitre-5',
@@ -1057,6 +1071,13 @@ const de: typeof fr = {
         meta: '~25 Min. Lektüre',
       },
       {
+        href: '/chapitre-3',
+        eyebrow: 'Kapitel 3',
+        title: 'Zentrales Nervensystem',
+        description: 'Reptiliengehirn, limbisches System und Kortex — funktionelle Anatomie des ZNS, Rolle des Hypothalamus, der Amygdala und des limbischen Systems, mit zugehörigen podalen Reflexzonen.',
+        meta: '~30 Min. Lektüre',
+      },
+      {
         href: '/chapitre-5',
         eyebrow: 'Kapitel 5',
         title: 'Stressmechanismus',
@@ -1415,6 +1436,13 @@ const es: typeof fr = {
         meta: '~25 min de lectura',
       },
       {
+        href: '/chapitre-3',
+        eyebrow: 'Capítulo 3',
+        title: 'Sistema nervioso central',
+        description: 'Cerebro reptiliano, sistema límbico y córtex — anatomía funcional del SNC, papel del hipotálamo, la amígdala y el sistema límbico, con las zonas reflejas podales asociadas.',
+        meta: '~30 min de lectura',
+      },
+      {
         href: '/chapitre-5',
         eyebrow: 'Capítulo 5',
         title: 'Mecanismo de estrés',
@@ -1771,6 +1799,13 @@ const it: typeof fr = {
         title: 'Generalità',
         description: "Mobilità viscerale, articolazioni viscerali, fissazioni, relazioni viscero-somatiche e viscero-emozionali — i fondamenti della fisiologia viscerale nella R.O.P.",
         meta: '~25 min di lettura',
+      },
+      {
+        href: '/chapitre-3',
+        eyebrow: 'Capitolo 3',
+        title: 'Sistema nervoso centrale',
+        description: "Cervello rettiliano, sistema limbico e corteccia — anatomia funzionale del SNC, ruolo dell'ipotalamo, dell'amigdala e del sistema limbico, con le zone riflesse podali associate.",
+        meta: '~30 min di lettura',
       },
       {
         href: '/chapitre-5',
