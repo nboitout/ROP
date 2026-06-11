@@ -13,7 +13,9 @@ export const metadata: Metadata = { title: 'Chapitres · Admin R.O.P.' }
  */
 const ROUTES: Record<string, { href: string; key: string; gated?: boolean; draft?: boolean }> = {
   '00': { href: '/introduction', key: 'introduction' },
+  '01': { href: '/chapitre-1', key: 'chapter-1' },
   '02': { href: '/lecture/traitement-rop', key: 'chapter-2', gated: true },
+  '03': { href: '/chapitre-3', key: 'chapter-3' },
   '04': { href: '/chapitre-4', key: 'chapter-4', draft: true },
   '05': { href: '/chapitre-5', key: 'chapter-5' },
   '14': { href: '/chapitre-14', key: 'chapter-14' },
