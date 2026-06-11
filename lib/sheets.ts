@@ -348,37 +348,31 @@ export async function fetchAllSheets(): Promise<{
   const cleanEvents = allEvents.filter((e) => !excludedReaderIds.has(e.readerId.toLowerCase()))
   const cleanVisits = allVisits.filter((v) => !excludedReaderIds.has(v.readerId.toLowerCase()))
 
-  // Bot filter: every page_visit counts as a real visit (so single-page /
-  // homepage-only visitors are never dropped), and known crawlers are excluded
-  // by user-agent instead. Applied only from 2026-05-28 onwards; earlier rows
-  // are kept as-is (manually inserted historical data lacks user-agent strings).
+  // --- Traffic-quality filter --------------------------------------------
+  // One rule instead of the old stack of country / desktop-Linux / stale-Chrome
+  // / no-UA heuristics: a real visitor stays a few seconds, a bot or an instant
+  // bounce does not. We keep a reader's visits only if they accumulated at least
+  // MIN_DWELL_SECONDS of active time on the site (summed from page_leave events,
+  // which crawlers and sub-4s bounces never produce). Self-declared crawlers are
+  // still dropped by user-agent as a cheap explicit guard. Rows before
+  // BOT_FILTER_START are manually-seeded historical data and are kept as-is.
   const BOT_FILTER_START = '2026-05-28'
+  const MIN_DWELL_SECONDS = 4
   const BOT_UA = /bot|crawl|spider|slurp|mediapartners|bingpreview|google-read-aloud|read-aloud|google web preview|apis-google|feedfetcher|facebookexternal|embedly|quora link preview|pinterest|vkshare|whatsapp|telegram|headless|phantomjs|python-requests|curl|wget|httpclient|go-http-client|java\/|okhttp|axios|node-fetch|libwww|scrapy/i
-  const DESKTOP_LINUX = /X11; Linux x86_64/
-  // A scraper cluster hit from multiple countries with this exact 2-year-old
-  // headless build; Chrome 114 appears nowhere else in real traffic.
-  const STALE_CHROME_114 = /Mac OS X 10_15_7\) AppleWebKit\/537\.36 \(KHTML, like Gecko\) Chrome\/114\./
 
-  // reader_ids that ever recorded dwell (a page_leave) — real visitors measure
-  // time on page; datacenter clients fetch once and never fire page_leave.
-  const readersWithDwell = new Set(
-    cleanVisits.filter((v) => v.event === 'page_leave').map((v) => v.readerId).filter(Boolean)
-  )
+  // Total active seconds per reader, summed across their page_leave events.
+  const dwellByReader = new Map<string, number>()
+  cleanVisits
+    .filter((v) => v.event === 'page_leave')
+    .forEach((v) => {
+      const n = parseFloat(v.duration_seconds)
+      if (!isNaN(n) && n > 0) dwellByReader.set(v.readerId, (dwellByReader.get(v.readerId) ?? 0) + n)
+    })
 
   const filteredVisits = cleanVisits.filter((v) => {
-    if (v.timestamp.slice(0, 10) < BOT_FILTER_START) return true
-    const ua = (v.userAgent ?? '').trim()
-    if (!ua) return false          // no user-agent → automated client
-    if (BOT_UA.test(ua)) return false   // exclude known crawlers
-    // Desktop-Linux client that never recorded any dwell → datacenter/bot
-    if (DESKTOP_LINUX.test(ua) && !readersWithDwell.has(v.readerId)) return false
-    if (STALE_CHROME_114.test(ua)) return false   // stale headless-Chrome scraper cluster
-    // The genuine audience is French. Reviewing every surviving US visit since
-    // late May, each one that never recorded any dwell (no page_leave) was a
-    // single-hit homepage bounce with bot characteristics; the only real US
-    // reader did record dwell. So: US client with no dwell → datacenter/bot.
-    if (v.country === 'US' && !readersWithDwell.has(v.readerId)) return false
-    return true
+    if (v.timestamp.slice(0, 10) < BOT_FILTER_START) return true     // historical seed data
+    if (BOT_UA.test(v.userAgent ?? '')) return false                 // self-declared crawler
+    return (dwellByReader.get(v.readerId) ?? 0) >= MIN_DWELL_SECONDS  // stayed long enough to be real
   })
 
   return {

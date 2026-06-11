@@ -26,22 +26,20 @@ function deviceType(ua: string): string {
 const BOT_UA = /bot|crawl|spider|slurp|mediapartners|bingpreview|google-read-aloud|read-aloud|google web preview|apis-google|feedfetcher|facebookexternal|embedly|quora link preview|pinterest|vkshare|whatsapp|telegram|headless|phantomjs|python-requests|curl|wget|httpclient|go-http-client|java\/|okhttp|axios|node-fetch|libwww|scrapy/i
 const DESKTOP_LINUX = /X11; Linux x86_64/
 
-// Bot-likelihood signals for a single visitor. `hasDwell` = this reader ever
-// recorded a page_leave (real visitors measure time on page; datacenter
-// clients fetch once and never fire it).
-function botSignals(ua: string, hasDwell: boolean): { verdict: string; flags: string[] } {
+// Bot-likelihood signals for a single visitor. The primary rule mirrors the
+// server-side filter: a real visitor accumulates a few seconds of active time;
+// crawlers and instant bounces don't. `dwellSeconds` = this reader's total
+// active time (summed page_leave durations).
+const MIN_DWELL_SECONDS = 4
+function botSignals(ua: string, dwellSeconds: number): { verdict: string; flags: string[] } {
   const flags: string[] = []
   if (!ua) flags.push('no user-agent')
   if (BOT_UA.test(ua)) flags.push('crawler UA')
-  if (!hasDwell) flags.push('no dwell recorded')
-  if (DESKTOP_LINUX.test(ua) && !hasDwell) flags.push('desktop-Linux, no dwell')
-  if (/Chrome\/(\d+)/.test(ua)) {
-    const v = parseInt(RegExp.$1, 10)
-    if (v && v < 120) flags.push(`old Chrome ${v}`)
-  }
+  if (dwellSeconds < MIN_DWELL_SECONDS) flags.push(`under ${MIN_DWELL_SECONDS}s dwell`)
+  if (DESKTOP_LINUX.test(ua) && dwellSeconds === 0) flags.push('desktop-Linux, no dwell')
   let verdict = 'Likely human'
-  if (flags.some((f) => f === 'crawler UA' || f === 'no user-agent' || f === 'desktop-Linux, no dwell')) verdict = 'Likely bot'
-  else if (flags.length > 0) verdict = 'Suspicious'
+  if (flags.some((f) => f === 'crawler UA' || f === 'no user-agent')) verdict = 'Likely bot'
+  else if (dwellSeconds < MIN_DWELL_SECONDS) verdict = 'Likely bot'
   return { verdict, flags }
 }
 
@@ -99,9 +97,9 @@ export default async function VisitsPage({
           <p className="adm-page-eyebrow">Dashboard</p>
           <h1 className="adm-page-title">Visits inspector</h1>
           <p className="adm-page-sub">
-            Raw <code>page_visit</code> rows (newest first, max 250) with bot signals. Owner &amp; known
-            bots are already filtered out upstream; this surfaces what survived so borderline visits can
-            be judged by hand.
+            Raw <code>page_visit</code> rows (newest first, max 250) for the traffic that passed the
+            quality filter — owner, self-declared crawlers, and anyone who stayed under 4 seconds of
+            active time are already removed upstream, so this is effectively your real audience.
           </p>
         </div>
       </div>
@@ -152,7 +150,7 @@ export default async function VisitsPage({
             {rows.map((v, i) => {
               const d = dwell.get(v.readerId)
               const hasDwell = !!d && d.count > 0
-              const { verdict, flags } = botSignals(v.userAgent, hasDwell)
+              const { verdict, flags } = botSignals(v.userAgent, d?.total ?? 0)
               const page = v.page.replace(/^https?:\/\/[^/]+/, '') || '/'
               const ref = (v.referer || '').replace(/^https?:\/\//, '').replace(/\/$/, '')
               const verdictColor =
