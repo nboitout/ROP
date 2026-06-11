@@ -26,6 +26,8 @@ export const chapter5Slides: SyncSlide[] = [
   { src: '/chapter-5/slides/slide-11.jpg', title: '« Nous sommes malades parce que nous perdons la santé »' },
   // Slide 12 reuses figure 5.13 (moved out of the inline text into the deck).
   { src: '/chapter-5/figure-5-13.png', title: 'Territoires crânien et cervical du nerf Vague X' },
+  // Slide 13 reuses figure 5.16 (moved out of the inline text into the deck).
+  { src: '/chapter-5/figure-5-16.png', title: 'Territoire abdominal gauche du nerf Vague X' },
 ]
 
 // blockIndex -1 anchors a slide to the section heading itself: the marker is
@@ -43,4 +45,6 @@ export const chapter5SlideAnchors: SyncAnchor[] = [
   { sectionId: 'sga',         blockIndex: 35, slide: 10 },
   { sectionId: 'rop-stress',  blockIndex: -1, slide: 11 },
   { sectionId: 'rop-stress',  blockIndex: 2,  slide: 12 },
+  // Just after the figure 5.15 caption (figure 5.17 is the next block).
+  { sectionId: 'rop-stress',  blockIndex: 7,  slide: 13 },
 ]
