@@ -157,6 +157,32 @@ export default async function EngagementPage() {
   // readBuyClick ⊆ anyClick ⊆ qualifiedVisitors, so its size is the numerator.
   const intentRate = qualifiedVisitors.size > 0 ? (readBuyClick.size / qualifiedVisitors.size) * 100 : 0
 
+  // Language switches: deliberate FR↔EN↔… toggles, grouped as "from → to".
+  // (A high count of e.g. fr → en means the audience is landing on the wrong
+  // default language and correcting it by hand.)
+  const switchCount = new Map<string, number>()
+  let totalSwitches = 0
+  events
+    .filter((e) => e.event === 'language_switch')
+    .forEach((e) => {
+      let from = ''
+      let to = ''
+      try {
+        const d = JSON.parse(e.data) as Record<string, string>
+        from = d.from
+        to = d.to
+      } catch {
+        /* ignore malformed */
+      }
+      if (!from || !to) return
+      totalSwitches += 1
+      const key = `${from} → ${to}`
+      switchCount.set(key, (switchCount.get(key) ?? 0) + 1)
+    })
+  const switchData: BarDataPoint[] = [...switchCount.entries()]
+    .sort((a, b) => b[1] - a[1])
+    .map(([name, value]) => ({ name, value }))
+
   // Bar: UTM sources
   const utmCount = new Map<string, number>()
   visits
@@ -222,6 +248,11 @@ export default async function EngagementPage() {
           value={`${intentRate.toFixed(1)}%`}
           subtitle=">10s or clicked → read/buy"
         />
+        <Scorecard
+          label="Language Switches"
+          value={totalSwitches.toLocaleString()}
+          subtitle="deliberate from → to toggles"
+        />
       </div>
 
       <div className="adm-chart-card" style={{ marginBottom: 24 }}>
@@ -270,6 +301,17 @@ export default async function EngagementPage() {
           you share there. The chart stays empty until tagged campaigns are used.
         </p>
         <AdminBarChart data={utmData} color="#4a6b5a" showValues />
+      </div>
+
+      <div className="adm-chart-card" style={{ marginBottom: 32 }}>
+        <p className="adm-chart-title">Language Switches (from → to)</p>
+        <p className="adm-page-sub" style={{ marginTop: -10, marginBottom: 18, maxWidth: 680, lineHeight: 1.6 }}>
+          Counts <strong>deliberate</strong> language toggles via the FR/EN/DE/ES/IT selector, as
+          <code>from → to</code>. The site opens in French by default, so a lot of e.g. <code>fr → en</code>
+          would signal that part of the audience lands on the wrong language and corrects it — a cue to
+          auto-detect the browser locale. Counts switches, not people. Empty until visitors start toggling.
+        </p>
+        <AdminBarChart data={switchData} color="#c9a35e" layout="vertical" showValues />
       </div>
     </main>
   )

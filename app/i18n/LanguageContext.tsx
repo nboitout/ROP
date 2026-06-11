@@ -3,6 +3,7 @@
 import { createContext, useContext, useEffect, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { translations, type Lang } from './translations'
+import { getSessionId } from '@/lib/session'
 
 const LANGS: Lang[] = ['fr', 'en', 'de', 'es', 'it']
 
@@ -45,6 +46,23 @@ export function LanguageProvider({
   }, [])
 
   function setLang(l: Lang) {
+    // Record the deliberate language change (from → to). Only fires on a real
+    // toggle by the visitor — the cookie-sync above uses setLangState directly,
+    // so it never counts as a switch.
+    if (l !== lang) {
+      fetch('/api/track', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          chapter: 'site',
+          event: 'language_switch',
+          data: { from: lang, to: l },
+          lang: l,
+          sessionId: getSessionId(),
+        }),
+        keepalive: true,
+      }).catch(() => {})
+    }
     setLangState(l)
     persistLang(l)
     // Flush the Next.js router cache so server components re-run with the new
