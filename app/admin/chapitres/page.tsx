@@ -76,12 +76,12 @@ export default async function AdminChapitresPage() {
         </div>
         <div>
           <a
-            href="/lecture/chapitre-5"
+            href="/lecture/chapitre-14"
             target="_blank"
             rel="noopener noreferrer"
             className="adm-cta"
           >
-            ✦ Prototype lecture synchronisée — Ch. 5 ↗
+            ✦ Prototype lecture synchronisée — Ch. 14 ↗
           </a>
           <span className="adm-cta-note">
             Texte + diapositives de synthèse affichés ensemble. Visible uniquement depuis l’admin.

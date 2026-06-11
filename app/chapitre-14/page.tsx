@@ -18,7 +18,8 @@ export default async function Chapitre14Page({
   searchParams: Promise<{ lang?: string }>
 }) {
   const cookieStore = await cookies()
-  if (!cookieStore.get('free_chapters_access')) {
+  const isAdmin = !!cookieStore.get('admin_session')
+  if (!cookieStore.get('free_chapters_access') && !isAdmin) {
     redirect('/?gate=free#acces-libre')
   }
 
@@ -26,5 +27,13 @@ export default async function Chapitre14Page({
   const lang = await getServerLang(langParam)
   const { chapter, contentLang } = getChapter('chapter-14', lang)
   const bookTitle = translations[lang].reader.bookTitle
-  return <ChapterReader chapter={chapter} bookTitle={bookTitle} contentLang={contentLang} />
+  return (
+    <ChapterReader
+      chapter={chapter}
+      bookTitle={bookTitle}
+      contentLang={contentLang}
+      // Sync/classic switch only for the admin-gated prototype audience.
+      syncToggleHref={isAdmin ? '/lecture/chapitre-14' : undefined}
+    />
+  )
 }
