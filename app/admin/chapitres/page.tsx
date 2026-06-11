@@ -35,6 +35,9 @@ export default async function AdminChapitresPage() {
     const langs = route ? getChapterLangs(route.key) : []
     const fr: LangStatus = route ? (langs.includes('fr') ? 'live' : 'none') : 'none'
     const en: LangStatus = route ? (langs.includes('en') ? 'live' : 'fallback') : 'none'
+    const de: LangStatus = route ? (langs.includes('de') ? 'live' : 'fallback') : 'none'
+    const es: LangStatus = route ? (langs.includes('es') ? 'live' : 'fallback') : 'none'
+    const it: LangStatus = route ? (langs.includes('it') ? 'live' : 'fallback') : 'none'
     return {
       num: card.num,
       title: card.title,
@@ -46,23 +49,29 @@ export default async function AdminChapitresPage() {
       draft: !!route?.draft,
       fr,
       en,
+      de,
+      es,
+      it,
     }
   })
 
   const total = rows.length
+  const builtTotal = rows.filter((r) => r.href).length
   const frLive = rows.filter((r) => r.fr === 'live').length
   const enLive = rows.filter((r) => r.en === 'live').length
-  const builtTotal = rows.filter((r) => r.href).length
+  const deLive = rows.filter((r) => r.de === 'live').length
+  const esLive = rows.filter((r) => r.es === 'live').length
+  const itLive = rows.filter((r) => r.it === 'live').length
 
   return (
     <main className="adm-page">
       <div className="adm-page-header">
         <div>
           <p className="adm-page-eyebrow">Préparation</p>
-          <h1 className="adm-page-title">Chapitres — FR / EN</h1>
+          <h1 className="adm-page-title">Chapitres — FR / EN / DE / ES / IT</h1>
           <p className="adm-page-sub">
             Chaque lien ouvre le chapitre dans la langue choisie, sans changer la langue du site.
-            Idéal pour relire FR et EN en parallèle (un onglet par langue).
+            Idéal pour relire les versions en parallèle (un onglet par langue).
           </p>
         </div>
       </div>
@@ -74,14 +83,29 @@ export default async function AdminChapitresPage() {
           <p className="adm-scorecard-sub">pages en ligne</p>
         </div>
         <div className="adm-scorecard">
-          <p className="adm-scorecard-label">Français prêts</p>
+          <p className="adm-scorecard-label">FR</p>
           <p className="adm-scorecard-value">{frLive}<span style={{ fontSize: '1rem', color: 'var(--adm-i30)' }}> / {total}</span></p>
-          <p className="adm-scorecard-sub">contenu FR traduit</p>
+          <p className="adm-scorecard-sub">chapitres traduits</p>
         </div>
         <div className="adm-scorecard">
-          <p className="adm-scorecard-label">Anglais prêts</p>
+          <p className="adm-scorecard-label">EN</p>
           <p className="adm-scorecard-value">{enLive}<span style={{ fontSize: '1rem', color: 'var(--adm-i30)' }}> / {total}</span></p>
-          <p className="adm-scorecard-sub">contenu EN traduit</p>
+          <p className="adm-scorecard-sub">chapitres traduits</p>
+        </div>
+        <div className="adm-scorecard">
+          <p className="adm-scorecard-label">DE</p>
+          <p className="adm-scorecard-value">{deLive}<span style={{ fontSize: '1rem', color: 'var(--adm-i30)' }}> / {total}</span></p>
+          <p className="adm-scorecard-sub">chapitres traduits</p>
+        </div>
+        <div className="adm-scorecard">
+          <p className="adm-scorecard-label">ES</p>
+          <p className="adm-scorecard-value">{esLive}<span style={{ fontSize: '1rem', color: 'var(--adm-i30)' }}> / {total}</span></p>
+          <p className="adm-scorecard-sub">chapitres traduits</p>
+        </div>
+        <div className="adm-scorecard">
+          <p className="adm-scorecard-label">IT</p>
+          <p className="adm-scorecard-value">{itLive}<span style={{ fontSize: '1rem', color: 'var(--adm-i30)' }}> / {total}</span></p>
+          <p className="adm-scorecard-sub">chapitres traduits</p>
         </div>
       </div>
 

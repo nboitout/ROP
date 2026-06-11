@@ -15,6 +15,9 @@ export type BoardRow = {
   draft: boolean
   fr: LangStatus
   en: LangStatus
+  de: LangStatus
+  es: LangStatus
+  it: LangStatus
 }
 
 type Part = { id: string; title: string }
@@ -70,8 +73,11 @@ export default function ChapterBoard({ parts, rows }: { parts: Part[]; rows: Boa
               <th style={{ width: 44 }}>#</th>
               <th>Chapitre</th>
               <th>Partie</th>
-              <th style={{ width: 130 }}>FR</th>
-              <th style={{ width: 130 }}>EN</th>
+              <th style={{ width: 110 }}>FR</th>
+              <th style={{ width: 110 }}>EN</th>
+              <th style={{ width: 110 }}>DE</th>
+              <th style={{ width: 110 }}>ES</th>
+              <th style={{ width: 110 }}>IT</th>
             </tr>
           </thead>
           <tbody>
@@ -87,6 +93,9 @@ export default function ChapterBoard({ parts, rows }: { parts: Part[]; rows: Boa
                 <td className="muted">{r.partTitle}</td>
                 <td><LangCell href={r.href ? `${r.href}?lang=fr` : null} status={r.fr} /></td>
                 <td><LangCell href={r.href ? `${r.href}?lang=en` : null} status={r.en} /></td>
+                <td><LangCell href={r.href ? `${r.href}?lang=de` : null} status={r.de} /></td>
+                <td><LangCell href={r.href ? `${r.href}?lang=es` : null} status={r.es} /></td>
+                <td><LangCell href={r.href ? `${r.href}?lang=it` : null} status={r.it} /></td>
               </tr>
             ))}
           </tbody>
