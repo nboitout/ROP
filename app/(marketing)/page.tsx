@@ -371,6 +371,15 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* CITATIONS */}
+      <section id="citations">
+        <div className="lbl c ctr">{t.citations.lbl}</div>
+        <h2 className="on-dk" style={{ textAlign: 'center' }}>
+          {t.citations.h2.before}<em>{t.citations.h2.em}</em>
+        </h2>
+        <QuoteSlider />
+      </section>
+
       {/* FREE CHAPTER FORM */}
       <section id="acces-libre">
         <div className="fl">
@@ -387,15 +396,6 @@ export default function HomePage() {
         <div className="fcard">
           <FreeChapterForm />
         </div>
-      </section>
-
-      {/* CITATIONS */}
-      <section id="citations">
-        <div className="lbl c ctr">{t.citations.lbl}</div>
-        <h2 className="on-dk" style={{ textAlign: 'center' }}>
-          {t.citations.h2.before}<em>{t.citations.h2.em}</em>
-        </h2>
-        <QuoteSlider />
       </section>
 
       {/* PRICING */}
