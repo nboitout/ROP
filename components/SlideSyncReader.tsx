@@ -200,10 +200,11 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
               <h2 className="cr-h2">{section.title}</h2>
               {section.blocks.map((b, i) => {
                 const slide = anchorBySlide.get(`${section.id}:${i}`)
+                const posId = `p-${section.id}-${i}`
                 const view = <BlockView block={b} onOpenImage={setLightbox} />
-                if (!slide) return <div key={i}>{view}</div>
+                if (!slide) return <div key={i} id={posId} data-pos-anchor="">{view}</div>
                 return (
-                  <div key={i} data-slide-anchor={slide} className="ss-anchor">
+                  <div key={i} id={posId} data-pos-anchor="" data-slide-anchor={slide} className="ss-anchor">
                     <button
                       type="button"
                       className="ss-marker"

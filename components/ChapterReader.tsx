@@ -299,7 +299,7 @@ export default function ChapterReader({ chapter, bookTitle, backHref = '/chapitr
             <section key={section.id} id={`sec-${section.id}`} data-section-id={section.id} className="cr-section">
               <h2 className="cr-h2">{section.title}</h2>
               {section.blocks.map((b, i) => (
-                <BlockView key={i} block={b} onOpenImage={setLightbox} />
+                <BlockView key={i} block={b} onOpenImage={setLightbox} anchorId={`p-${section.id}-${i}`} />
               ))}
             </section>
           ))}
@@ -458,29 +458,34 @@ export default function ChapterReader({ chapter, bookTitle, backHref = '/chapitr
   )
 }
 
-function BlockView({ block, onOpenImage }: { block: Block; onOpenImage: (b: { src: string; alt: string; caption: string }) => void }) {
+function BlockView({ block, onOpenImage, anchorId }: { block: Block; onOpenImage: (b: { src: string; alt: string; caption: string }) => void; anchorId?: string }) {
   const { t } = useLanguage()
+  // Shared position anchor (same id in the synchronized reader) so the
+  // sync/classic switch can reopen the other version at the same passage.
+  // Set directly on each block's root element — a wrapper div would break
+  // margin collapsing and shift the public page's spacing.
+  const anchor = anchorId ? { id: anchorId, 'data-pos-anchor': '' } : {}
   switch (block.type) {
     case 'para':
-      return <p className="cr-p">{block.text}</p>
+      return <p {...anchor} className="cr-p">{block.text}</p>
     case 'lead':
       return (
-        <p className="cr-p cr-lead">
+        <p {...anchor} className="cr-p cr-lead">
           <strong className="cr-lead-label">{block.label}{block.text ? ' —' : ''}</strong>
           {block.text ? ' ' + block.text : ''}
         </p>
       )
     case 'sub':
-      return <h3 className="cr-h3">{block.text}</h3>
+      return <h3 {...anchor} className="cr-h3">{block.text}</h3>
     case 'bullets':
       return (
-        <ul className="cr-ul">
+        <ul {...anchor} className="cr-ul">
           {block.items.map((it, i) => <li key={i}>{it}</li>)}
         </ul>
       )
     case 'leadBullets':
       return (
-        <ul className="cr-ul cr-ul-lead">
+        <ul {...anchor} className="cr-ul cr-ul-lead">
           {block.items.map((it, i) => (
             <li key={i}>
               <strong className="cr-lead-label">{it.label}{it.text ? ' —' : ''}</strong>
@@ -491,7 +496,7 @@ function BlockView({ block, onOpenImage }: { block: Block; onOpenImage: (b: { sr
       )
     case 'figure':
       return (
-        <figure className={`cr-fig cr-fig-${block.orientation}`}>
+        <figure {...anchor} className={`cr-fig cr-fig-${block.orientation}`}>
           <button
             type="button"
             className="cr-fig-btn"
@@ -506,7 +511,7 @@ function BlockView({ block, onOpenImage }: { block: Block; onOpenImage: (b: { sr
       )
     case 'rop':
       return (
-        <aside className="cr-rop">
+        <aside {...anchor} className="cr-rop">
           <p className="cr-rop-title">{t.reader.ropTitle}</p>
           {block.body.map((p, i) => <p key={i} className="cr-rop-p">{p}</p>)}
         </aside>

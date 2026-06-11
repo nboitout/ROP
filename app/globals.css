@@ -602,6 +602,10 @@ footer > div > p { font-size:1rem; color:rgba(245,240,232,.84); line-height:1.9;
 a.ss-switch-opt:hover { color:var(--gold); }
 .ss-switch-opt.is-active { background:var(--gold); color:#fff; }
 
+/* Position handoff between the two reading modes: blocks land just below
+   the fixed top bar when reached via the switch's hash. */
+[data-pos-anchor] { scroll-margin-top:96px; }
+
 /* align-items:stretch (the grid default) lets the slide column grow to the
    full article height, giving the sticky stage room to stay pinned the whole
    way down. align-items:start would shrink it to content height and the slide
@@ -669,6 +673,7 @@ a.ss-switch-opt:hover { color:var(--gold); }
   .ss-stage-title { font-size:.92rem; }
   .ss-dots { display:none; }
   .ss-article { padding:24px 20px 100px; max-width:none; margin:0 auto; }
-  .ss-anchor { scroll-margin-top:calc(62px + 56vw); }
+  .ss-anchor,
+  .ss-article [data-pos-anchor] { scroll-margin-top:calc(62px + 56vw); }
   .ss-switch-opt { padding:3px 8px; font-size:.56rem; letter-spacing:.1em; }
 }
