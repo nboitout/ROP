@@ -42,5 +42,5 @@ export const chapter5SlideAnchors: SyncAnchor[] = [
   { sectionId: 'sga',         blockIndex: 20, slide: 9 },
   { sectionId: 'sga',         blockIndex: 35, slide: 10 },
   { sectionId: 'rop-stress',  blockIndex: -1, slide: 11 },
-  { sectionId: 'rop-stress',  blockIndex: 3,  slide: 12 },
+  { sectionId: 'rop-stress',  blockIndex: 2,  slide: 12 },
 ]
