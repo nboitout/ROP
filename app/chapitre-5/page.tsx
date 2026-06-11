@@ -19,11 +19,20 @@ export default async function Chapitre5Page({
   searchParams: Promise<{ lang?: string }>
 }) {
   const cookieStore = await cookies()
-  if (!cookieStore.get('free_chapters_access')) {
+  const isAdmin = !!cookieStore.get('admin_session')
+  if (!cookieStore.get('free_chapters_access') && !isAdmin) {
     redirect('/?gate=free#acces-libre')
   }
 
   const { lang: langParam } = await searchParams
   const { chapter, contentLang } = getChapter('chapter-5', await getServerLang(langParam))
-  return <ChapterReader chapter={chapter} bookTitle={BOOK_TITLE} contentLang={contentLang} />
+  return (
+    <ChapterReader
+      chapter={chapter}
+      bookTitle={BOOK_TITLE}
+      contentLang={contentLang}
+      // Sync/classic switch only for the admin-gated prototype audience.
+      syncToggleHref={isAdmin ? '/lecture/chapitre-5' : undefined}
+    />
+  )
 }

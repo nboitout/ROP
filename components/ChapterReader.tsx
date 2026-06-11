@@ -8,6 +8,7 @@ import type { Lang } from '@/app/i18n/translations'
 
 const PdfSlideViewer = dynamic(() => import('@/components/PdfSlideViewer'), { ssr: false })
 import BookNotifyForm from '@/components/BookNotifyForm'
+import ReaderModeToggle from '@/components/ReaderModeToggle'
 import { useLanguage } from '@/app/i18n/LanguageContext'
 import { getSessionId } from '@/lib/session'
 
@@ -16,9 +17,12 @@ type Props = {
   bookTitle: string
   backHref?: string
   contentLang?: Lang
+  // When set, shows the sync/classic mode switch in the top bar, linking to
+  // the synchronized reading version of this chapter (admin-only prototype).
+  syncToggleHref?: string
 }
 
-export default function ChapterReader({ chapter, bookTitle, backHref = '/chapitres-gratuits', contentLang = 'fr' }: Props) {
+export default function ChapterReader({ chapter, bookTitle, backHref = '/chapitres-gratuits', contentLang = 'fr', syncToggleHref }: Props) {
   const { lang, t } = useLanguage()
   const showFallbackNotice = lang !== contentLang
   const [sessionId] = useState<string>(() =>
@@ -249,6 +253,9 @@ export default function ChapterReader({ chapter, bookTitle, backHref = '/chapitr
           <span className="cr-sep">·</span>
           <span className="cr-bookname">{bookTitle}</span>
         </div>
+        {syncToggleHref && (
+          <ReaderModeToggle mode="classic" otherHref={syncToggleHref} />
+        )}
         <button className="cr-toc-toggle" onClick={() => setTocOpen((v) => !v)} aria-label={t.reader.toc}>
           <span /><span /><span />
         </button>

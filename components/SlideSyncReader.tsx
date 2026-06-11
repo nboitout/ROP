@@ -11,6 +11,7 @@ import type { Chapter, Block } from '@/content/types'
 import type { SyncSlide, SyncAnchor } from '@/content/chapter5.slidesync'
 import { useLanguage } from '@/app/i18n/LanguageContext'
 import { getSessionId } from '@/lib/session'
+import ReaderModeToggle from '@/components/ReaderModeToggle'
 
 type Props = {
   chapter: Chapter
@@ -129,7 +130,7 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
           <span className="cr-sep">·</span>
           <span className="cr-bookname">{bookTitle}</span>
         </div>
-        <span className="ss-badge">Lecture synchronisée</span>
+        <ReaderModeToggle mode="sync" otherHref={backHref} />
       </div>
 
       <div className="ss-layout">
@@ -222,9 +223,9 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
           <div className="ss-end">
             <p className="ss-end-note">
               Fin du chapitre — prototype de lecture synchronisée : les diapositives de synthèse
-              accompagnent le texte tout au long de la lecture.
+              accompagnent le texte tout au long de la lecture. Le sélecteur en haut de page
+              permet de basculer vers la version classique.
             </p>
-            <Link href={backHref} className="ss-end-link">Revenir à la version classique du chapitre</Link>
           </div>
         </article>
       </div>
