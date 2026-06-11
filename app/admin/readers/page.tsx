@@ -1,8 +1,13 @@
 import { fetchAllSheets } from '@/lib/sheets'
 import Scorecard from '@/components/admin/Scorecard'
 import AdminBarChart, { BarDataPoint } from '@/components/admin/AdminBarChart'
+import { translations } from '@/app/i18n/translations'
 
 export const dynamic = 'force-dynamic'
+
+// Canonical profession list from the sign-up form — shown in full on the
+// "Readers by Profession" chart so every option stays visible even at zero.
+const ALL_PROFESSIONS: readonly string[] = translations.fr.form.professionOptions
 
 // Every supported site language, in a fixed display order, so the
 // "Readers by Language" chart always shows all of them — even at zero.
@@ -54,16 +59,32 @@ export default async function ReadersPage() {
   const last7 = dedupedLeads.filter((l) => l.timestamp.slice(0, 10) >= cutoff7).length
   const last30 = dedupedLeads.filter((l) => l.timestamp.slice(0, 10) >= cutoff30).length
 
-  // Bar: leads by profession (top 10)
-  const profCount = new Map<string, number>()
+  // Bar: leads by profession — always show every profession from the sign-up
+  // form (even at zero), plus any free-text "Autre" entries, and an explicit
+  // "Non renseigné" bucket for leads who left it blank (it's optional).
+  const profCount = new Map<string, number>(ALL_PROFESSIONS.map((p) => [p, 0]))
+  const extraProf = new Map<string, number>()
+  let professionBlank = 0
   dedupedLeads.forEach((l) => {
-    const p = l.profession || 'Unknown'
-    profCount.set(p, (profCount.get(p) ?? 0) + 1)
+    const p = (l.profession || '').trim()
+    if (!p) {
+      professionBlank += 1
+    } else if (profCount.has(p)) {
+      profCount.set(p, profCount.get(p)! + 1)
+    } else {
+      extraProf.set(p, (extraProf.get(p) ?? 0) + 1)
+    }
   })
-  const profData: BarDataPoint[] = [...profCount.entries()]
-    .sort((a, b) => b[1] - a[1])
-    .slice(0, 10)
-    .map(([name, value]) => ({ name, value }))
+  const profData: BarDataPoint[] = [
+    // Listed professions first (most-frequent on top, zeros at the bottom),
+    ...ALL_PROFESSIONS.map((name) => ({ name, value: profCount.get(name) ?? 0 })).sort(
+      (a, b) => b.value - a.value
+    ),
+    // then any "Autre — préciser" free-text professions,
+    ...[...extraProf.entries()].sort((a, b) => b[1] - a[1]).map(([name, value]) => ({ name, value })),
+    // and the optional-blank bucket last.
+    { name: 'Non renseigné', value: professionBlank },
+  ]
 
   // Bar: leads by language — always show every supported language (even at 0),
   // in a fixed order, so the chart is stable over time. Any unexpected value
@@ -178,7 +199,7 @@ export default async function ReadersPage() {
       </div>
 
       <div className="adm-chart-card" style={{ marginBottom: 32 }}>
-        <p className="adm-chart-title">Readers by Profession (top 10)</p>
+        <p className="adm-chart-title">Readers by Profession</p>
         <AdminBarChart data={profData} color="#4a6b5a" layout="vertical" showValues />
       </div>
 
