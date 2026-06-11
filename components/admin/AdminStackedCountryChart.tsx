@@ -23,6 +23,9 @@ interface Props {
   labelMode?: 'date' | 'raw'
   /** X-axis tick interval (recharts). Default shows first & last only. */
   interval?: number | 'preserveStartEnd'
+  /** Optional fixed colour per country, so the same country keeps one colour
+   *  across charts. Falls back to the index palette when a country is missing. */
+  colorMap?: Record<string, string>
 }
 
 // High-contrast categorical palette — distinct hue AND lightness between
@@ -38,6 +41,7 @@ export default function AdminStackedCountryChart({
   countries,
   labelMode = 'date',
   interval = 'preserveStartEnd',
+  colorMap,
 }: Props) {
   const tickFormatter = labelMode === 'raw' ? (v: string) => v : (v: string) => v.slice(5)
   return (
@@ -78,7 +82,7 @@ export default function AdminStackedCountryChart({
             key={country}
             dataKey={country}
             stackId="a"
-            fill={PALETTE[i % PALETTE.length]}
+            fill={colorMap?.[country] ?? PALETTE[i % PALETTE.length]}
             isAnimationActive={false}
           />
         ))}

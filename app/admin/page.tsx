@@ -195,6 +195,19 @@ export default async function AdminOverviewPage({
     intradayData.push(entry)
   }
 
+  // Shared country → colour map so a country keeps the same colour across both
+  // the daily and the intraday stacked charts. France is pinned to red; Other
+  // to neutral grey; the rest get distinct palette hues in a stable (alphabetical)
+  // order so colours don't shuffle as the data changes.
+  const COUNTRY_PALETTE = ['#3cb44b', '#4363d8', '#f58231', '#911eb4', '#469990', '#f032e6', '#9a6324', '#800000', '#808000']
+  const countryColors: Record<string, string> = { France: '#e6194b', Other: '#9a9a9a' }
+  ;[...new Set([...stackedCountries, ...intradayCountries])]
+    .filter((c) => c !== 'France' && c !== 'Other')
+    .sort()
+    .forEach((c, i) => {
+      countryColors[c] = COUNTRY_PALETTE[i % COUNTRY_PALETTE.length]
+    })
+
   return (
     <main className="adm-page">
       <div className="adm-page-header">
@@ -229,7 +242,7 @@ export default async function AdminOverviewPage({
       <p className="adm-section-title">Readers &amp; Visitors — Since {START_DATE}</p>
       <div className="adm-chart-card" style={{ marginBottom: 24 }}>
         <p className="adm-chart-title">Daily unique visitors by country (top 10)</p>
-        <AdminStackedCountryChart data={stackedData} countries={stackedCountries} />
+        <AdminStackedCountryChart data={stackedData} countries={stackedCountries} colorMap={countryColors} />
       </div>
 
       <div className="adm-chart-card" style={{ marginBottom: 24 }}>
@@ -244,6 +257,7 @@ export default async function AdminOverviewPage({
           countries={intradayCountries}
           labelMode="raw"
           interval={2}
+          colorMap={countryColors}
         />
       </div>
 
