@@ -13,7 +13,7 @@ export default function DaySelect({ days, selected, today }: Props) {
   return (
     <select
       value={selected}
-      onChange={(e) => router.push(`/admin?day=${e.target.value}`)}
+      onChange={(e) => router.push(`/admin?day=${e.target.value}`, { scroll: false })}
       style={{
         background: 'white',
         border: '1px solid var(--adm-i08)',
