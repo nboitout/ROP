@@ -31,7 +31,7 @@ export default async function ChapitresGratuitsPage() {
 
   const chapters = p.chapters.map((c) => {
     const slug = HREF_TO_SLUG[c.href]
-    const meta = slug ? chapterMeta(getChapter(slug, lang).chapter) : c.meta
+    const meta = slug ? chapterMeta(getChapter(slug, lang).chapter, lang) : c.meta
     return { ...c, meta }
   })
 

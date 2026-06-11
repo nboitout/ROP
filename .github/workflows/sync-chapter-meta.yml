@@ -1,0 +1,34 @@
+name: Sync chapter meta
+
+on:
+  schedule:
+    - cron: '0 3 * * *'   # 03:00 UTC every day
+  workflow_dispatch:        # allow manual trigger from GitHub UI
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'   # required for --experimental-strip-types
+
+      - name: Compute chapter stats and write snapshot
+        run: node --experimental-strip-types scripts/sync-chapter-meta.ts
+
+      - name: Commit if snapshot changed
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add lib/chapterMetaSnapshot.ts
+          if git diff --cached --quiet; then
+            echo "No changes — snapshot is already up to date."
+          else
+            git commit -m "chore: update chapter meta snapshot [skip ci]"
+            git push
+          fi

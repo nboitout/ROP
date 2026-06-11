@@ -1,4 +1,13 @@
 import type { Block, Chapter } from '@/content/types'
+import type { Lang } from '@/app/i18n/translations'
+
+const META_LABELS: Record<Lang, { perMin: (m: number) => string; perFig: (f: number) => string }> = {
+  fr: { perMin: (m) => `~${m} min de lecture`,       perFig: (f) => `~${f} illustration${f > 1 ? 's' : ''}` },
+  en: { perMin: (m) => `~${m} min read`,             perFig: (f) => `~${f} illustration${f > 1 ? 's' : ''}` },
+  de: { perMin: (m) => `~${m} Min. Lektüre`,         perFig: (f) => `~${f} Illustration${f > 1 ? 'en' : ''}` },
+  es: { perMin: (m) => `~${m} min de lectura`,       perFig: (f) => `~${f} ilustración${f > 1 ? 'es' : ''}` },
+  it: { perMin: (m) => `~${m} min di lettura`,       perFig: (f) => `~${f} illustrazion${f > 1 ? 'i' : 'e'}` },
+}
 
 const WORDS_PER_MINUTE = 150
 
@@ -39,8 +48,17 @@ export function chapterStats(chapter: Chapter): { readingMinutes: number; figure
   }
 }
 
-export function chapterMeta(chapter: Chapter): string {
+export function chapterMeta(chapter: Chapter, lang: Lang = 'fr'): string {
   const { readingMinutes, figureCount } = chapterStats(chapter)
-  const time = `~${readingMinutes} min`
-  return figureCount > 0 ? `${time} · ${figureCount} illustration${figureCount > 1 ? 's' : ''}` : time
+  const { perMin, perFig } = META_LABELS[lang]
+  return figureCount > 0 ? `${perMin(readingMinutes)} · ${perFig(figureCount)}` : perMin(readingMinutes)
+}
+
+export function snapshotMeta(
+  snapshot: { readingMinutes: number; figureCount: number },
+  lang: Lang = 'fr',
+): string {
+  const { readingMinutes, figureCount } = snapshot
+  const { perMin, perFig } = META_LABELS[lang]
+  return figureCount > 0 ? `${perMin(readingMinutes)} · ${perFig(figureCount)}` : perMin(readingMinutes)
 }

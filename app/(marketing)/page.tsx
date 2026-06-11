@@ -9,6 +9,14 @@ import BookNotifyForm from '@/components/BookNotifyForm'
 import LanguageToggle from '@/components/LanguageToggle'
 import { useLanguage } from '@/app/i18n/LanguageContext'
 import { getSessionId } from '@/lib/session'
+import { chapterMetaSnapshot } from '@/lib/chapterMetaSnapshot'
+import { snapshotMeta } from '@/lib/chapterStats'
+
+const CARD_SLUG: Record<string, string> = {
+  '00': 'introduction',
+  '05': 'chapter-5',
+  '14': 'chapter-14',
+}
 
 const INFOGRAPHICS = [
   { src: '/assets/infographic-fig1.png', caption: 'Chapitre 5' },
@@ -269,7 +277,9 @@ export default function HomePage() {
                       label={card.label}
                       title={card.title}
                       tags={card.tags}
-                      meta={'meta' in card ? (card as { meta?: string }).meta : undefined}
+                      meta={isFree && CARD_SLUG[card.num] && chapterMetaSnapshot[CARD_SLUG[card.num]]
+                        ? snapshotMeta(chapterMetaSnapshot[CARD_SLUG[card.num]], lang)
+                        : ('meta' in card ? (card as { meta?: string }).meta : undefined)}
                       isFree={isFree}
                       freeBadge={t.chapters.freeBadge}
                       freeBtnLabel={t.chapters.freeBtnLabel}
