@@ -8,7 +8,7 @@ import { translations } from '@/app/i18n/translations'
 
 export const metadata: Metadata = {
   title: 'Chapitre 6 — Théorie polyvagale · R.O.P. · Guy Boitout',
-  description: 'La théorie polyvagale du Dr Stephen Porges : les trois systèmes du SNA, les deux branches du nerf vague, l'engagement social et la neuroception — et leurs implications en R.O.P.',
+  description: 'La théorie polyvagale du Dr Stephen Porges : les trois systèmes du SNA, les deux branches du nerf vague, l’engagement social et la neuroception — et leurs implications en R.O.P.',
   robots: { index: false, follow: false },
 }
 

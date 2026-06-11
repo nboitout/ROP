@@ -723,7 +723,7 @@ const en: typeof fr = {
         href: '/chapitre-6',
         eyebrow: 'Chapter 6',
         title: 'Polyvagal Theory',
-        description: 'Dr Stephen Porges' theory: three ANS systems, the two branches of the vagus nerve, neuroception and social engagement — and the therapeutic hierarchy in R.O.P.',
+        description: 'Dr Stephen Porges’ theory: three ANS systems, the two branches of the vagus nerve, neuroception and social engagement — and the therapeutic hierarchy in R.O.P.',
         meta: '~15 min read',
       },
       {
