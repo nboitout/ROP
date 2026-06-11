@@ -348,6 +348,13 @@ const fr = {
         meta: '~30 min de lecture',
       },
       {
+        href: '/chapitre-6',
+        eyebrow: 'Chapitre 6',
+        title: 'Théorie polyvagale',
+        description: "La théorie du Dr Stephen Porges : trois systèmes du SNA, les deux branches du nerf vague, neuroception et engagement social — et la hiérarchisation thérapeutique en R.O.P.",
+        meta: '~15 min de lecture',
+      },
+      {
         href: '/chapitre-5',
         eyebrow: 'Chapitre 5',
         title: 'Mécanisme de stress',
@@ -711,6 +718,13 @@ const en: typeof fr = {
         title: 'Central Nervous System',
         description: 'Reptilian brain, limbic system and cortex — functional anatomy of the CNS, role of the hypothalamus, amygdala and limbic system, with associated podal reflex zones.',
         meta: '~30 min read',
+      },
+      {
+        href: '/chapitre-6',
+        eyebrow: 'Chapter 6',
+        title: 'Polyvagal Theory',
+        description: 'Dr Stephen Porges' theory: three ANS systems, the two branches of the vagus nerve, neuroception and social engagement — and the therapeutic hierarchy in R.O.P.',
+        meta: '~15 min read',
       },
       {
         href: '/chapitre-5',
@@ -1078,6 +1092,13 @@ const de: typeof fr = {
         meta: '~30 Min. Lektüre',
       },
       {
+        href: '/chapitre-6',
+        eyebrow: 'Kapitel 6',
+        title: 'Polyvagal-Theorie',
+        description: 'Die Theorie von Dr. Stephen Porges: drei ANS-Systeme, die zwei Äste des Vagusnervs, Neuroception und soziales Engagement — sowie die therapeutische Hierarchie in der R.O.P.',
+        meta: '~15 Min. Lektüre',
+      },
+      {
         href: '/chapitre-5',
         eyebrow: 'Kapitel 5',
         title: 'Stressmechanismus',
@@ -1443,6 +1464,13 @@ const es: typeof fr = {
         meta: '~30 min de lectura',
       },
       {
+        href: '/chapitre-6',
+        eyebrow: 'Capítulo 6',
+        title: 'Teoría polivagal',
+        description: 'La teoría del Dr. Stephen Porges: tres sistemas del SNA, las dos ramas del nervio vago, la neurocepción y el compromiso social — y la jerarquía terapéutica en R.O.P.',
+        meta: '~15 min de lectura',
+      },
+      {
         href: '/chapitre-5',
         eyebrow: 'Capítulo 5',
         title: 'Mecanismo de estrés',
@@ -1806,6 +1834,13 @@ const it: typeof fr = {
         title: 'Sistema nervoso centrale',
         description: "Cervello rettiliano, sistema limbico e corteccia — anatomia funzionale del SNC, ruolo dell'ipotalamo, dell'amigdala e del sistema limbico, con le zone riflesse podali associate.",
         meta: '~30 min di lettura',
+      },
+      {
+        href: '/chapitre-6',
+        eyebrow: 'Capitolo 6',
+        title: 'Teoria polivagale',
+        description: "La teoria del Dr. Stephen Porges: tre sistemi del SNA, i due rami del nervo vago, la neurocepzione e l'impegno sociale — e la gerarchia terapeutica nella R.O.P.",
+        meta: '~15 min di lettura',
       },
       {
         href: '/chapitre-5',
