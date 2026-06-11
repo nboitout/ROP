@@ -60,10 +60,10 @@ export default async function ReadersPage() {
   const last30 = dedupedLeads.filter((l) => l.timestamp.slice(0, 10) >= cutoff30).length
 
   // Bar: leads by profession — always show every profession from the sign-up
-  // form (even at zero), plus any free-text "Autre" entries, and an explicit
-  // "Non renseigné" bucket for leads who left it blank (it's optional).
+  // form (even at zero). Any free-text "Autre — préciser" entry is aggregated
+  // into a single "Autre" bucket, and blanks (it's optional) into "Non renseigné".
   const profCount = new Map<string, number>(ALL_PROFESSIONS.map((p) => [p, 0]))
-  const extraProf = new Map<string, number>()
+  let professionOther = 0
   let professionBlank = 0
   dedupedLeads.forEach((l) => {
     const p = (l.profession || '').trim()
@@ -72,7 +72,7 @@ export default async function ReadersPage() {
     } else if (profCount.has(p)) {
       profCount.set(p, profCount.get(p)! + 1)
     } else {
-      extraProf.set(p, (extraProf.get(p) ?? 0) + 1)
+      professionOther += 1
     }
   })
   const profData: BarDataPoint[] = [
@@ -80,9 +80,8 @@ export default async function ReadersPage() {
     ...ALL_PROFESSIONS.map((name) => ({ name, value: profCount.get(name) ?? 0 })).sort(
       (a, b) => b.value - a.value
     ),
-    // then any "Autre — préciser" free-text professions,
-    ...[...extraProf.entries()].sort((a, b) => b[1] - a[1]).map(([name, value]) => ({ name, value })),
-    // and the optional-blank bucket last.
+    // then the aggregated "Autre" bucket and the optional-blank bucket last.
+    { name: 'Autre', value: professionOther },
     { name: 'Non renseigné', value: professionBlank },
   ]
 
@@ -189,8 +188,8 @@ export default async function ReadersPage() {
 
       <div className="adm-scorecards">
         <Scorecard label="Total Readers" value={total.toLocaleString()} />
-        <Scorecard label="Last 7 Days" value={last7.toLocaleString()} />
-        <Scorecard label="Last 30 Days" value={last30.toLocaleString()} />
+        <Scorecard label="New Readers over the last 7 Days" value={last7.toLocaleString()} />
+        <Scorecard label="New Readers over the last 30 Days" value={last30.toLocaleString()} />
       </div>
 
       <div className="adm-chart-card" style={{ marginBottom: 24 }}>
