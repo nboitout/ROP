@@ -4,6 +4,14 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { getServerLang } from '@/app/i18n/serverLang'
 import { translations } from '@/app/i18n/translations'
+import { getChapter } from '@/content/registry'
+import { chapterMeta } from '@/lib/chapterStats'
+
+const HREF_TO_SLUG: Record<string, string> = {
+  '/introduction': 'introduction',
+  '/chapitre-5': 'chapter-5',
+  '/chapitre-14': 'chapter-14',
+}
 
 export const metadata: Metadata = {
   title: 'Chapitres gratuits · R.O.P. · Guy Boitout',
@@ -20,6 +28,12 @@ export default async function ChapitresGratuitsPage() {
   const lang = await getServerLang()
   const t = translations[lang]
   const p = t.chaptersPage
+
+  const chapters = p.chapters.map((c) => {
+    const slug = HREF_TO_SLUG[c.href]
+    const meta = slug ? chapterMeta(getChapter(slug, lang).chapter) : c.meta
+    return { ...c, meta }
+  })
 
   return (
     <div className="cg-root">
@@ -39,7 +53,7 @@ export default async function ChapitresGratuitsPage() {
         </div>
 
         <ul className="cg-grid">
-          {p.chapters.map((c) => (
+          {chapters.map((c) => (
             <li key={c.href} className="cg-card">
               <Link href={c.href} className="cg-card-link" aria-label={p.readLabel(c.title)}>
                 <p className="cg-card-eyebrow">{c.eyebrow}</p>
