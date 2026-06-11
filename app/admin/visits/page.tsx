@@ -65,6 +65,18 @@ export default async function VisitsPage({
 
   let pageVisits = visits.filter((v) => v.event === 'page_visit')
 
+  // Earliest day each reader was ever seen. We use this for a *genuine*
+  // cross-day return, because the raw isReturning flag only means "a reader_id
+  // cookie already existed" — which is true from the 2nd pageview onward, even
+  // within the first session, so it over-reports returns.
+  const firstSeen = new Map<string, string>()
+  pageVisits.forEach((v) => {
+    if (!v.readerId) return
+    const day = v.timestamp.slice(0, 10)
+    const cur = firstSeen.get(v.readerId)
+    if (!cur || day < cur) firstSeen.set(v.readerId, day)
+  })
+
   // Optional country filter (?country=KR or ?country=South Korea).
   const filter = (country ?? '').trim().toLowerCase()
   if (filter) {
@@ -153,6 +165,9 @@ export default async function VisitsPage({
               const { verdict, flags } = botSignals(v.userAgent, d?.total ?? 0)
               const page = v.page.replace(/^https?:\/\/[^/]+/, '') || '/'
               const ref = (v.referer || '').replace(/^https?:\/\//, '').replace(/\/$/, '')
+              // Genuine return = this reader was seen on an earlier day than this visit.
+              const day = v.timestamp.slice(0, 10)
+              const isReturn = (firstSeen.get(v.readerId) ?? day) < day
               const verdictColor =
                 verdict === 'Likely bot' ? 'rgba(200,80,60,.95)' : verdict === 'Suspicious' ? 'rgba(190,140,40,.95)' : 'rgba(74,107,90,.95)'
               return (
@@ -163,7 +178,7 @@ export default async function VisitsPage({
                   <td className="muted" style={{ whiteSpace: 'nowrap' }}>
                     {hasDwell ? `${Math.round(d!.total)}s` : '—'}
                   </td>
-                  <td>{v.isReturning === 'true' || v.isReturning === 'TRUE' ? 'yes' : '—'}</td>
+                  <td>{isReturn ? 'yes' : '—'}</td>
                   <td className="muted" style={{ maxWidth: 160, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{page}</td>
                   <td className="muted" style={{ maxWidth: 140, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{ref || '—'}</td>
                   <td className="muted">{v.utm_source || '—'}</td>
