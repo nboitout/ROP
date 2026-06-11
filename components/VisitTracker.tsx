@@ -34,10 +34,16 @@ export default function VisitTracker() {
 
     function onVisibility() {
       if (document.visibilityState === 'visible') {
+        // Returning to the page: start a fresh measurement. (No new page_visit —
+        // they didn't reload, so this continues the same view.)
         lastVisible.current = Date.now()
-      } else if (lastVisible.current !== null) {
-        activeMs.current += Date.now() - lastVisible.current
-        lastVisible.current = null
+      } else {
+        // Going to the background. This is the LAST reliable moment to report
+        // dwell on mobile, where `pagehide` frequently never fires (the OS
+        // suspends/kills the tab on app-switch and the keepalive beacon is
+        // dropped). Flush the accumulated active time now; sendLeave resets the
+        // timer, so if they come back we measure the new chunk afresh.
+        sendLeave(prevPage.current)
       }
     }
 
