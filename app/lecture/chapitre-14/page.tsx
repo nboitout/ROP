@@ -29,7 +29,8 @@ export default async function Chapitre14SyncPage() {
       bookTitle={BOOK_TITLE}
       slides={chapter14Slides}
       anchors={chapter14SlideAnchors}
-      backHref="/chapitre-14"
+      backHref="/chapitres-gratuits"
+      classicHref="/chapitre-14"
     />
   )
 }

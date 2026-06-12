@@ -29,7 +29,8 @@ export default async function Chapitre5SyncPage() {
       bookTitle={BOOK_TITLE}
       slides={chapter5Slides}
       anchors={chapter5SlideAnchors}
-      backHref="/chapitre-5"
+      backHref="/chapitres-gratuits"
+      classicHref="/chapitre-5"
     />
   )
 }

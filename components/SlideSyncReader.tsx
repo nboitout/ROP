@@ -18,10 +18,13 @@ type Props = {
   bookTitle: string
   slides: SyncSlide[]
   anchors: SyncAnchor[]
+  // "Tous les chapitres" link target (the free-chapters list).
   backHref?: string
+  // Classic version of this chapter — the mode switch's other side.
+  classicHref: string
 }
 
-export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, backHref = '/chapitre-5' }: Props) {
+export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, backHref = '/chapitres-gratuits', classicHref }: Props) {
   const { lang, t } = useLanguage()
   const [sessionId] = useState<string>(() =>
     typeof window !== 'undefined' ? getSessionId() : ''
@@ -130,7 +133,7 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
           <span className="cr-sep">·</span>
           <span className="cr-bookname">{bookTitle}</span>
         </div>
-        <ReaderModeToggle mode="sync" otherHref={backHref} />
+        <ReaderModeToggle mode="sync" otherHref={classicHref} />
       </div>
 
       <div className="ss-layout">
