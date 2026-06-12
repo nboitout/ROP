@@ -127,7 +127,8 @@ export const chapter14SlideAnchors: SyncAnchor[] = [
   { sectionId: 'presentation',   blockIndex: 0,  slide: 1 },
   // Slide 2 points to "Le jéjunum-iléum se distingue du duodénum par…".
   { sectionId: 'presentation',   blockIndex: 3,  slide: 2 },
-  { sectionId: 'anatomie',       blockIndex: 3,  slide: 3 },
+  // Slide 3 points just before "Mésentère — c'est un méso…".
+  { sectionId: 'anatomie',       blockIndex: 1,  slide: 3 },
   { sectionId: 'vascularisation', blockIndex: 1, slide: 4 },
   { sectionId: 'innervation',    blockIndex: 2,  slide: 5 },
   { sectionId: 'innervation',    blockIndex: 11, slide: 6 },
