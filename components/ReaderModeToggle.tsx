@@ -38,6 +38,14 @@ function currentPositionHash(): string {
   return id ? `#${id}` : ''
 }
 
+// Preserve a pinned ?lang= across the mode switch, then the reading-position
+// hash, so the other version opens in the same language and at the same passage.
+function destination(base: string): string {
+  const lp = new URLSearchParams(window.location.search).get('lang')
+  const query = lp ? `${base.includes('?') ? '&' : '?'}lang=${lp}` : ''
+  return base + query + currentPositionHash()
+}
+
 export default function ReaderModeToggle({ mode, otherHref }: Props) {
   const { lang } = useLanguage()
   const l = LABELS[lang] ?? LABELS.fr
@@ -59,7 +67,7 @@ export default function ReaderModeToggle({ mode, otherHref }: Props) {
         className="ss-switch-opt"
         onClick={(e) => {
           e.preventDefault()
-          window.location.assign(otherHref + currentPositionHash())
+          window.location.assign(destination(otherHref))
         }}
       >
         {label}

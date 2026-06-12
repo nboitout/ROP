@@ -36,8 +36,16 @@ export function LanguageProvider({
   const [lang, setLangState] = useState<Lang>(initialLang)
   const router = useRouter()
 
-  // Sync from cookie on mount in case the server-rendered initialLang was stale
+  // On mount, resolve the tab's language: a ?lang= URL param (used by preview /
+  // per-language links) pins this tab and takes precedence over the persisted
+  // cookie; otherwise fall back to the cookie in case the server-rendered
+  // initialLang was stale.
   useEffect(() => {
+    const urlLang = new URLSearchParams(window.location.search).get('lang')
+    if (urlLang && LANGS.includes(urlLang as Lang)) {
+      if (urlLang !== lang) setLangState(urlLang as Lang)
+      return
+    }
     const match = document.cookie.match(/(?:^|; )lang=([^;]+)/)
     if (match) {
       const cookieLang = match[1] as Lang
