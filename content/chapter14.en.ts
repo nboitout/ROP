@@ -212,9 +212,9 @@ export const chapter14En: Chapter = {
           'Coeliac (solar) plexus.',
           'Lumbar plexus (viscerosomatic link).',
         ]},
-        { type: 'figure', src: '/chapter-14/en/figure-14-19.png', caption: 'Figure 14.19 — Sympathetic system (spinal origin)', alt: 'Sympathetic system and ganglionic chain', orientation: 'landscape' },
+        { type: 'figure', src: '/chapter-14/en/Chapter14 Fig19 EN.png', caption: 'Figure 14.19 — Sympathetic system (spinal origin)', alt: 'Sympathetic system and ganglionic chain', orientation: 'landscape' },
         { type: 'figure', src: '/chapter-14/en/figure-14-20.png', caption: 'Figure 14.20 — Lumbar ganglionic chain and crura of the diaphragm', alt: 'Lumbar ganglionic chain and crura of the diaphragm', orientation: 'landscape' },
-        { type: 'figure', src: '/chapter-14/en/figure-14-21.png', caption: 'Figure 14.21 — Coeliac (solar) plexus', alt: 'Coeliac solar plexus', orientation: 'landscape' },
+        { type: 'figure', src: '/chapter-14/en/Chapter14 Fig21 EN.png', caption: 'Figure 14.21 — Coeliac (solar) plexus', alt: 'Coeliac solar plexus', orientation: 'landscape' },
 
         { type: 'para', text: 'N.B. In our clinical experience, functional intestinal disorders are often observed in women in association with hormonal and emotional factors.' },
 
