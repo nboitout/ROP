@@ -66,18 +66,20 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
     [chapter.sections]
   )
 
-  // First slide anchored within a section (its heading anchor if any, else its
-  // earliest block anchor) — used to sync the deck when jumping to a section.
-  const firstSlideOfSection = useMemo(() => {
-    const best = new Map<string, { idx: number; slide: number }>()
-    for (const a of anchors) {
-      const cur = best.get(a.sectionId)
-      if (!cur || a.blockIndex < cur.idx) best.set(a.sectionId, { idx: a.blockIndex, slide: a.slide })
-    }
-    const out = new Map<string, number>()
-    best.forEach((v, k) => out.set(k, v.slide))
-    return out
-  }, [anchors])
+  // Slide the jump lands on: the first reflex-zone slide of the ROP section —
+  // its earliest *content-block* anchor (blockIndex >= 0), skipping the
+  // heading anchor (e.g. the closing-quote slide that sits above the title).
+  // Falls back to the section's earliest anchor of any kind.
+  const ropJumpSlide = useMemo(() => {
+    if (!ropSection) return null
+    const inSection = anchors.filter((a) => a.sectionId === ropSection.id)
+    if (inSection.length === 0) return null
+    const blocks = inSection.filter((a) => a.blockIndex >= 0)
+    const pick = (blocks.length ? blocks : inSection).reduce((lo, a) =>
+      a.blockIndex < lo.blockIndex ? a : lo
+    )
+    return pick.slide
+  }, [anchors, ropSection])
 
   useEffect(() => {
     track('sync_reader_open')
@@ -213,13 +215,12 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
     animateTo(() => articleRef.current?.querySelector<HTMLElement>(`[data-slide-anchor="${slide}"]`) ?? null)
   }
 
-  function goToSection(sectionId: string) {
-    track('sync_jump_section', { section: sectionId })
-    // Sync the deck explicitly: once the page settles it's static, so the
-    // scroll handler won't fire again to pick the matching slide.
-    const slide = firstSlideOfSection.get(sectionId)
-    if (slide) setActive(slide)
-    animateTo(() => document.getElementById(`sec-${sectionId}`))
+  // Jump to the reflex-zone (ROP) section by landing on its first reflex-zone
+  // slide's pointer in the text, with the deck synced to that slide.
+  function goToReflexZones() {
+    if (!ropJumpSlide) return
+    track('sync_jump_section', { section: ropSection?.id, slide: ropJumpSlide })
+    goToSlide(ropJumpSlide)
   }
 
   function openSlideLightbox(n: number) {
@@ -293,11 +294,11 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
                 />
               ))}
             </div>
-            {ropSection && (
+            {ropSection && ropJumpSlide && (
               <button
                 type="button"
                 className="ss-jump"
-                onClick={() => goToSection(ropSection.id)}
+                onClick={goToReflexZones}
                 title={`Aller directement à : ${ropSection.title}`}
               >
                 <span className="ss-jump-icon" aria-hidden>⌖</span>
