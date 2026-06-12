@@ -19,12 +19,12 @@ type Props = {
 }
 
 // The synchronized reader exists in French, English, German, Spanish and Italian.
-const LABELS: Record<string, { group: string; sync: string; classic: string }> = {
-  fr: { group: 'Mode de lecture', sync: 'Synchronisée', classic: 'Classique' },
-  en: { group: 'Reading mode', sync: 'Synchronized', classic: 'Classic' },
-  de: { group: 'Lesemodus', sync: 'Synchronisiert', classic: 'Klassisch' },
-  es: { group: 'Modo de lectura', sync: 'Sincronizada', classic: 'Clásica' },
-  it: { group: 'Modalità di lettura', sync: 'Sincronizzata', classic: 'Classica' },
+const LABELS: Record<string, { group: string; label: string; sync: string; classic: string }> = {
+  fr: { group: 'Mode de lecture', label: 'Lecture', sync: 'Synchronisée', classic: 'Classique' },
+  en: { group: 'Reading mode', label: 'Reading', sync: 'Synchronized', classic: 'Classic' },
+  de: { group: 'Lesemodus', label: 'Lesen', sync: 'Synchronisiert', classic: 'Klassisch' },
+  es: { group: 'Modo de lectura', label: 'Lectura', sync: 'Sincronizada', classic: 'Clásica' },
+  it: { group: 'Modalità di lettura', label: 'Lettura', sync: 'Sincronizzata', classic: 'Classica' },
 }
 
 function currentPositionHash(): string {
@@ -75,9 +75,12 @@ export default function ReaderModeToggle({ mode, otherHref }: Props) {
     )
 
   return (
-    <div className="ss-switch" role="group" aria-label={l.group}>
-      {opt('sync', l.sync)}
-      {opt('classic', l.classic)}
+    <div className="ss-switch-wrap">
+      <span className="ss-switch-label" aria-hidden>{l.label}</span>
+      <div className="ss-switch" role="group" aria-label={l.group}>
+        {opt('sync', l.sync)}
+        {opt('classic', l.classic)}
+      </div>
     </div>
   )
 }

@@ -594,6 +594,9 @@ footer > div > p { font-size:1rem; color:rgba(245,240,232,.84); line-height:1.9;
 
 /* ========== SLIDE-SYNC READER (prototype /lecture/chapitre-5) ========== */
 /* Mode switch (Synchronisée / Classique) in the reader top bar */
+.ss-switch-wrap { flex-shrink:0; display:inline-flex; align-items:center; gap:9px; }
+.ss-switch-label { font-size:.6rem; font-weight:600; letter-spacing:.14em; text-transform:uppercase;
+  color:var(--sage); white-space:nowrap; }
 .ss-switch { flex-shrink:0; display:inline-flex; gap:2px; padding:3px;
   border:1px solid rgba(160,124,58,.4); border-radius:999px; background:rgba(160,124,58,.06); }
 .ss-switch-opt { font-size:.6rem; font-weight:600; letter-spacing:.14em; text-transform:uppercase;
@@ -693,4 +696,5 @@ a.ss-switch-opt:hover { color:var(--gold); }
   .ss-anchor,
   .ss-article [data-pos-anchor] { scroll-margin-top:calc(62px + 56vw); }
   .ss-switch-opt { padding:3px 8px; font-size:.56rem; letter-spacing:.1em; }
+  .ss-switch-label { display:none; }
 }
