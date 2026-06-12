@@ -2,6 +2,6 @@
 // Recomputed daily from the chapter content files via GitHub Actions.
 export const chapterMetaSnapshot: Record<string, { readingMinutes: number; figureCount: number }> = {
   'introduction': { readingMinutes: 4, figureCount: 0 },
-  'chapter-5': { readingMinutes: 20, figureCount: 5 },
+  'chapter-5': { readingMinutes: 20, figureCount: 7 },
   'chapter-14': { readingMinutes: 20, figureCount: 28 },
 }
