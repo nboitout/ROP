@@ -40,8 +40,6 @@ const SS_UI = {
     caption: (n: number, title: string) => `Diapositive ${n} — ${title}`,
     jumpLabel: 'Accès direct — zones réflexes',
     jumpTitle: (s: string) => `Aller directement à : ${s}`,
-    endNote:
-      'Fin du chapitre — prototype de lecture synchronisée : les diapositives de synthèse accompagnent le texte tout au long de la lecture. Le sélecteur en haut de page permet de basculer vers la version classique.',
     enlargeFigure: (caption: string) => `Agrandir : ${caption}`,
   },
   en: {
@@ -56,8 +54,6 @@ const SS_UI = {
     caption: (n: number, title: string) => `Slide ${n} — ${title}`,
     jumpLabel: 'Direct access — reflex zones',
     jumpTitle: (s: string) => `Go directly to: ${s}`,
-    endNote:
-      'End of chapter — synchronized reading prototype: the synthesis slides accompany the text throughout. The selector at the top of the page switches to the classic version.',
     enlargeFigure: (caption: string) => `Enlarge: ${caption}`,
   },
 }
@@ -399,10 +395,6 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
             </section>
             )
           })}
-
-          <div className="ss-end">
-            <p className="ss-end-note">{ui.endNote}</p>
-          </div>
         </article>
       </div>
 

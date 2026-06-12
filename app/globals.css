@@ -670,9 +670,6 @@ a.ss-switch-opt:hover { color:var(--gold); }
 .ss-article .cr-fig-landscape { margin:36px 0; }
 .ss-article .cr-fig-portrait { margin:36px auto; max-width:480px; }
 
-.ss-end { margin-top:72px; padding-top:36px; border-top:1px solid rgba(26,26,24,.1); text-align:center; }
-.ss-end-note { font-size:.95rem; line-height:1.6; color:rgba(26,26,24,.62); max-width:460px; margin:0 auto 18px; }
-
 @media (max-width:1180px){
   .ss-layout { grid-template-columns:minmax(0,1fr) minmax(0,560px); }
   .ss-article { padding:20px 28px 120px; }
