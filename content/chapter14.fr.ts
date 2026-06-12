@@ -214,9 +214,9 @@ export const chapter14Fr: Chapter = {
           'Plexus cœliaque (solaire).',
           'Plexus lombaire (lien viscéro-somatique).',
         ]},
-        { type: 'figure', src: '/chapter-14/figure-14-19.png', caption: 'Figure 14.19 — Système sympathique (origine médullaire)', alt: 'Système sympathique et chaîne ganglionnaire', orientation: 'landscape' },
+        { type: 'figure', src: '/chapter-14/Chapter14 Fig19 FR.png', caption: 'Figure 14.19 — Système sympathique (origine médullaire)', alt: 'Système sympathique et chaîne ganglionnaire', orientation: 'landscape' },
         { type: 'figure', src: '/chapter-14/figure-14-20.png', caption: 'Figure 14.20 — Chaîne ganglionnaire lombaire et piliers du diaphragme', alt: 'Chaîne ganglionnaire lombaire et piliers du diaphragme', orientation: 'landscape' },
-        { type: 'figure', src: '/chapter-14/figure-14-21.png', caption: 'Figure 14.21 — Plexus cœliaque (solaire)', alt: 'Plexus cœliaque solaire', orientation: 'landscape' },
+        { type: 'figure', src: '/chapter-14/Chapter14 Fig21 FR.png', caption: 'Figure 14.21 — Plexus cœliaque (solaire)', alt: 'Plexus cœliaque solaire', orientation: 'landscape' },
 
         { type: 'para', text: 'N.B. Dans notre expérience clinique, les troubles fonctionnels intestinaux sont souvent observés chez la femme en lien avec des facteurs hormonaux et émotionnels.' },
 
