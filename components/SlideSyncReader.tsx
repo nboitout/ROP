@@ -331,7 +331,7 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
             <p className="ss-stage-eyebrow">{ui.eyebrow}</p>
             <button
               type="button"
-              className="ss-frame"
+              className={`ss-frame${slides[active - 1]?.orientation === 'portrait' ? ' ss-frame--portrait' : ''}`}
               onClick={() => openSlideLightbox(active)}
               aria-label={ui.enlarge(active, slides[active - 1]?.title ?? '')}
             >

@@ -625,6 +625,8 @@ a.ss-switch-opt:hover { color:var(--gold); }
   border-radius:6px; overflow:hidden; background:#f4efe3; cursor:zoom-in;
   box-shadow:0 10px 34px rgba(26,26,24,.12); transition:box-shadow .25s; }
 .ss-frame:hover { box-shadow:0 16px 44px rgba(26,26,24,.2); }
+/* portrait slide (e.g. clinical case) — narrower, taller frame, centered */
+.ss-frame--portrait { aspect-ratio:3/4; max-width:330px; margin-left:auto; margin-right:auto; }
 .ss-slide { position:absolute; inset:0; width:100%; height:100%; object-fit:contain; background:#fdfbf5;
   opacity:0; transition:opacity .5s ease; }
 .ss-slide.is-active { opacity:1; }
@@ -685,6 +687,7 @@ a.ss-switch-opt:hover { color:var(--gold); }
   .ss-stage { position:static; }
   .ss-stage-eyebrow { display:none; }
   .ss-frame { max-width:520px; margin:0 auto; border-radius:4px; box-shadow:0 6px 20px rgba(26,26,24,.12); }
+  .ss-frame--portrait { max-width:210px; }
   .ss-stage-bar { max-width:520px; margin:8px auto 0; gap:10px; }
   .ss-stage-title { font-size:.92rem; }
   .ss-dots { display:none; }

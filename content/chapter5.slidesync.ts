@@ -7,7 +7,7 @@
 // the text it illustrates. Slide images are pre-rendered pages of
 // public/chapter-5/synthese.pdf.
 
-export type SyncSlide = { src: string; title: string }
+export type SyncSlide = { src: string; title: string; orientation?: 'portrait' }
 
 // blockIndex refers to the position in chapter5Fr sections[].blocks[].
 export type SyncAnchor = { sectionId: string; blockIndex: number; slide: number }
