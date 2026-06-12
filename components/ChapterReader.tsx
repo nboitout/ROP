@@ -9,6 +9,7 @@ import type { Lang } from '@/app/i18n/translations'
 const PdfSlideViewer = dynamic(() => import('@/components/PdfSlideViewer'), { ssr: false })
 import BookNotifyForm from '@/components/BookNotifyForm'
 import ReaderModeToggle from '@/components/ReaderModeToggle'
+import { currentTopAnchorId, saveReadingPosition, loadReadingPosition, restoreToAnchor } from '@/lib/readingPosition'
 import { useLanguage } from '@/app/i18n/LanguageContext'
 import { getSessionId } from '@/lib/session'
 
@@ -95,6 +96,16 @@ export default function ChapterReader({ chapter, bookTitle, backHref = '/chapitr
   const endRef = useRef<HTMLDivElement>(null)
   const peekCloseRef = useRef<ReturnType<typeof setTimeout> | null>(null)
   const firedMilestonesRef = useRef<Set<number>>(new Set())
+  const lastPosSave = useRef(0)
+
+  // Restore the reading position on return (when not arriving via the toggle's
+  // position hash, which ReaderModeToggle handles).
+  useEffect(() => {
+    if (window.location.hash) return
+    const id = loadReadingPosition(chapter.slug)
+    if (id) restoreToAnchor(id)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [chapter.slug])
 
   useEffect(() => {
     function onScroll() {
@@ -110,6 +121,15 @@ export default function ChapterReader({ chapter, bookTitle, backHref = '/chapitr
           firedMilestonesRef.current.add(m)
           track('scroll_depth', { percent: m })
         }
+      }
+
+      // Remember reading position (throttled) so "Tous les chapitres" + return
+      // resumes where the reader was.
+      const now = Date.now()
+      if (now - lastPosSave.current > 250) {
+        lastPosSave.current = now
+        const anchorId = currentTopAnchorId()
+        if (anchorId) saveReadingPosition(chapter.slug, anchorId)
       }
 
       // active section: nearest section whose top is above 30% viewport

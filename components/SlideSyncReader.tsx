@@ -12,6 +12,7 @@ import type { SyncSlide, SyncAnchor } from '@/content/chapter5.slidesync'
 import { useLanguage } from '@/app/i18n/LanguageContext'
 import { getSessionId } from '@/lib/session'
 import ReaderModeToggle from '@/components/ReaderModeToggle'
+import { currentTopAnchorId, saveReadingPosition, loadReadingPosition, restoreToAnchor } from '@/lib/readingPosition'
 
 type Props = {
   chapter: Chapter
@@ -40,6 +41,8 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
   // Handle for the in-flight slide-navigation animation, so it can be
   // cancelled (manual scroll, a newer click, or unmount).
   const navAnim = useRef<{ raf: number; cleanup: () => void } | null>(null)
+  // Throttle for persisting the reading position.
+  const lastPosSave = useRef(0)
 
   function track(event: string, data?: Record<string, unknown>) {
     fetch('/api/track', {
@@ -61,6 +64,15 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [chapter.slug])
 
+  // Restore reading position on return (unless arriving via the toggle's
+  // position hash, which ReaderModeToggle handles).
+  useEffect(() => {
+    if (window.location.hash) return
+    const id = loadReadingPosition(chapter.slug)
+    if (id) restoreToAnchor(id)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [chapter.slug])
+
   useEffect(() => {
     function onScroll() {
       const el = articleRef.current
@@ -69,6 +81,15 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
       const total = el.scrollHeight - window.innerHeight
       const scrolled = Math.min(Math.max(-top, 0), total)
       setProgress(total > 0 ? scrolled / total : 0)
+
+      // Remember reading position (throttled), even while slide-sync is
+      // suppressed, so leaving and returning resumes where the reader was.
+      const now = Date.now()
+      if (now - lastPosSave.current > 250) {
+        lastPosSave.current = now
+        const anchorId = currentTopAnchorId()
+        if (anchorId) saveReadingPosition(chapter.slug, anchorId)
+      }
 
       if (Date.now() < suppressSyncUntil.current) return
       // Active slide = last anchor whose top has crossed 45% of the viewport.
