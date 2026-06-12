@@ -187,4 +187,9 @@ export const chapter5It: Chapter = {
       ],
     },
   ],
+  slides: {
+    url: "/chapter-5/Chapter5 Slides IT.pdf",
+    label: "Diapositive",
+    description: "Sintesi visiva del capitolo — meccanismo dello stress, SGA e interventi R.O.P.",
+  },
 }

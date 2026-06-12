@@ -187,4 +187,9 @@ export const chapter5De: Chapter = {
       ],
     },
   ],
+  slides: {
+    url: "/chapter-5/Chapter5 Slides GE.pdf",
+    label: "Folien",
+    description: "Visuelle Zusammenfassung des Kapitels — Stressmechanismus, AAS und ROP-Interventionen.",
+  },
 }

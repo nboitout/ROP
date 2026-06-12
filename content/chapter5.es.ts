@@ -187,4 +187,9 @@ export const chapter5Es: Chapter = {
       ],
     },
   ],
+  slides: {
+    url: "/chapter-5/Chapter5 Slides ES.pdf",
+    label: "Diapositivas",
+    description: "Resumen visual del capítulo — mecanismo del estrés, SGA e intervenciones R.O.P.",
+  },
 }
