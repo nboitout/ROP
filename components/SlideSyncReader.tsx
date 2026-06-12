@@ -25,9 +25,15 @@ type Props = {
   classicHref: string
 }
 
-// The synchronized reader is shown only in French and English (the only
-// languages with a synthesis deck), so its chrome is localized here.
-const SS_UI = {
+// The synchronized reader is shown in the languages with a synthesis deck, so
+// its chrome is localized here.
+const SS_UI: Record<string, {
+  eyebrow: string; slides: string; prev: string; next: string
+  enlarge: (n: number, t: string) => string; goTo: (n: number, t: string) => string
+  enlargeShort: string; marker: (n: number, t: string) => string
+  caption: (n: number, t: string) => string; jumpLabel: string
+  jumpTitle: (s: string) => string; enlargeFigure: (c: string) => string
+}> = {
   fr: {
     eyebrow: 'Synthèse visuelle — suit votre lecture',
     slides: 'Diapositives',
@@ -56,11 +62,53 @@ const SS_UI = {
     jumpTitle: (s: string) => `Go directly to: ${s}`,
     enlargeFigure: (caption: string) => `Enlarge: ${caption}`,
   },
+  de: {
+    eyebrow: 'Visuelle Synthese — folgt Ihrer Lektüre',
+    slides: 'Folien',
+    prev: 'Vorherige Folie',
+    next: 'Nächste Folie',
+    enlarge: (n: number, title: string) => `Folie ${n} vergrößern: ${title}`,
+    goTo: (n: number, title: string) => `Zu Folie ${n} springen: ${title}`,
+    enlargeShort: 'Folie vergrößern',
+    marker: (n: number, title: string) => `Folie ${n} · ${title}`,
+    caption: (n: number, title: string) => `Folie ${n} — ${title}`,
+    jumpLabel: 'Direktzugang — Reflexzonen',
+    jumpTitle: (s: string) => `Direkt springen zu: ${s}`,
+    enlargeFigure: (caption: string) => `Vergrößern: ${caption}`,
+  },
+  es: {
+    eyebrow: 'Síntesis visual — sigue su lectura',
+    slides: 'Diapositivas',
+    prev: 'Diapositiva anterior',
+    next: 'Diapositiva siguiente',
+    enlarge: (n: number, title: string) => `Ampliar la diapositiva ${n}: ${title}`,
+    goTo: (n: number, title: string) => `Ir a la diapositiva ${n}: ${title}`,
+    enlargeShort: 'Ampliar la diapositiva',
+    marker: (n: number, title: string) => `Diapositiva ${n} · ${title}`,
+    caption: (n: number, title: string) => `Diapositiva ${n} — ${title}`,
+    jumpLabel: 'Acceso directo — zonas reflejas',
+    jumpTitle: (s: string) => `Ir directamente a: ${s}`,
+    enlargeFigure: (caption: string) => `Ampliar: ${caption}`,
+  },
+  it: {
+    eyebrow: 'Sintesi visiva — segue la lettura',
+    slides: 'Diapositive',
+    prev: 'Diapositiva precedente',
+    next: 'Diapositiva successiva',
+    enlarge: (n: number, title: string) => `Ingrandisci la diapositiva ${n}: ${title}`,
+    goTo: (n: number, title: string) => `Vai alla diapositiva ${n}: ${title}`,
+    enlargeShort: 'Ingrandisci la diapositiva',
+    marker: (n: number, title: string) => `Diapositiva ${n} · ${title}`,
+    caption: (n: number, title: string) => `Diapositiva ${n} — ${title}`,
+    jumpLabel: 'Accesso diretto — zone riflesse',
+    jumpTitle: (s: string) => `Vai direttamente a: ${s}`,
+    enlargeFigure: (caption: string) => `Ingrandisci: ${caption}`,
+  },
 }
 
 export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, backHref = '/chapitres-gratuits', classicHref }: Props) {
   const { lang, t } = useLanguage()
-  const ui = lang === 'en' ? SS_UI.en : SS_UI.fr
+  const ui = SS_UI[lang] ?? SS_UI.fr
   const [sessionId] = useState<string>(() =>
     typeof window !== 'undefined' ? getSessionId() : ''
   )

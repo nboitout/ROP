@@ -18,10 +18,13 @@ type Props = {
   otherHref: string
 }
 
-// The synchronized reader exists only in French and English.
-const LABELS = {
+// The synchronized reader exists in French, English, German, Spanish and Italian.
+const LABELS: Record<string, { group: string; sync: string; classic: string }> = {
   fr: { group: 'Mode de lecture', sync: 'Synchronisée', classic: 'Classique' },
   en: { group: 'Reading mode', sync: 'Synchronized', classic: 'Classic' },
+  de: { group: 'Lesemodus', sync: 'Synchronisiert', classic: 'Klassisch' },
+  es: { group: 'Modo de lectura', sync: 'Sincronizada', classic: 'Clásica' },
+  it: { group: 'Modalità di lettura', sync: 'Sincronizzata', classic: 'Classica' },
 }
 
 function currentPositionHash(): string {
@@ -37,7 +40,7 @@ function currentPositionHash(): string {
 
 export default function ReaderModeToggle({ mode, otherHref }: Props) {
   const { lang } = useLanguage()
-  const l = lang === 'en' ? LABELS.en : LABELS.fr
+  const l = LABELS[lang] ?? LABELS.fr
 
   // Restore position on arrival: html{scroll-behavior:smooth} makes native
   // hash positioning animate from the top on load, so jump instantly instead.

@@ -32,9 +32,8 @@ export default async function Chapitre5Page({
       chapter={chapter}
       bookTitle={BOOK_TITLE}
       contentLang={contentLang}
-      // Synchronized version exists in French and English; show the switch to
-      // readers in those languages so they can return from the sync view.
-      syncToggleHref={lang === 'fr' || lang === 'en' ? '/lecture/chapitre-5' : undefined}
+      // Synchronized version exists in all five languages for chapter 5.
+      syncToggleHref="/lecture/chapitre-5"
     />
   )
 }
