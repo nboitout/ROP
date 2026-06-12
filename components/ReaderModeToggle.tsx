@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect } from 'react'
+import { useLanguage } from '@/app/i18n/LanguageContext'
 
 // Segmented switch between the two reading experiences of a chapter:
 // "Synchronisée" (text + pinned synthesis slides) and "Classique".
@@ -17,6 +18,12 @@ type Props = {
   otherHref: string
 }
 
+// The synchronized reader exists only in French and English.
+const LABELS = {
+  fr: { group: 'Mode de lecture', sync: 'Synchronisée', classic: 'Classique' },
+  en: { group: 'Reading mode', sync: 'Synchronized', classic: 'Classic' },
+}
+
 function currentPositionHash(): string {
   // Last block whose top has passed the reading line (just under the top
   // bar) = the passage currently being read.
@@ -29,6 +36,9 @@ function currentPositionHash(): string {
 }
 
 export default function ReaderModeToggle({ mode, otherHref }: Props) {
+  const { lang } = useLanguage()
+  const l = lang === 'en' ? LABELS.en : LABELS.fr
+
   // Restore position on arrival: html{scroll-behavior:smooth} makes native
   // hash positioning animate from the top on load, so jump instantly instead.
   useEffect(() => {
@@ -54,9 +64,10 @@ export default function ReaderModeToggle({ mode, otherHref }: Props) {
     )
 
   return (
-    <div className="ss-switch" role="group" aria-label="Mode de lecture">
-      {opt('sync', 'Synchronisée')}
-      {opt('classic', 'Classique')}
+    <div className="ss-switch" role="group" aria-label={l.group}>
+      {opt('sync', l.sync)}
+      {opt('classic', l.classic)}
     </div>
   )
 }
+

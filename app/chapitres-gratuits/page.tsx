@@ -13,14 +13,15 @@ const HREF_TO_SLUG: Record<string, string> = {
   '/chapitre-14': 'chapter-14',
 }
 
-// Chapters that have a French synthesis deck: free readers start in the
-// synchronized reading experience (text + slides) by default. The deck is
-// French, so this only applies when the site is read in French; other
-// languages keep the classic reader.
+// Chapters that have a synthesis deck: free readers start in the synchronized
+// reading experience (text + slides) by default. The deck exists in French and
+// English, so this applies for those two languages; other languages keep the
+// classic reader.
 const SYNC_HREF: Record<string, string> = {
   '/chapitre-5': '/lecture/chapitre-5',
   '/chapitre-14': '/lecture/chapitre-14',
 }
+const SYNC_LANGS = new Set(['fr', 'en'])
 
 export const metadata: Metadata = {
   title: 'Chapitres gratuits · R.O.P. · Guy Boitout',
@@ -41,8 +42,8 @@ export default async function ChapitresGratuitsPage() {
   const chapters = p.chapters.map((c) => {
     const slug = HREF_TO_SLUG[c.href]
     const meta = slug ? chapterMeta(getChapter(slug, lang).chapter, lang) : c.meta
-    // Default French readers into the synchronized experience where it exists.
-    const href = lang === 'fr' && SYNC_HREF[c.href] ? SYNC_HREF[c.href] : c.href
+    // Default readers into the synchronized experience where a deck exists.
+    const href = SYNC_LANGS.has(lang) && SYNC_HREF[c.href] ? SYNC_HREF[c.href] : c.href
     return { ...c, href, meta }
   })
 

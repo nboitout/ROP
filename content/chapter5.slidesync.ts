@@ -30,6 +30,24 @@ export const chapter5Slides: SyncSlide[] = [
   { src: '/chapter-5/figure-5-16.png', title: 'Territoire abdominal gauche du nerf Vague X' },
 ]
 
+// English deck — same slides, translated. The text↔slide anchors are shared
+// (chapter5SlideAnchors): the EN content mirrors the FR block structure.
+export const chapter5SlidesEn: SyncSlide[] = [
+  { src: '/chapter-5/slides/en/slide-01.jpg', title: 'Vital balance: homeostasis and allostasis' },
+  { src: '/chapter-5/slides/en/slide-02.jpg', title: 'The stress mechanism: stability in change' },
+  { src: '/chapter-5/slides/en/slide-03.jpg', title: 'Duality of stress: distress vs. eustress' },
+  { src: '/chapter-5/slides/en/slide-04.jpg', title: 'The trilogy of stressors and the cumulative effect' },
+  { src: '/chapter-5/slides/en/slide-05.jpg', title: 'The general adaptation syndrome (GAS)' },
+  { src: '/chapter-5/slides/en/slide-06.jpg', title: 'Alarm phase: physiological response matrix' },
+  { src: '/chapter-5/slides/en/slide-07.jpg', title: 'The tipping point: limbic brain and hypothalamus' },
+  { src: '/chapter-5/slides/en/slide-08.jpg', title: 'Phase 2: recovery and vulnerability' },
+  { src: '/chapter-5/slides/en/slide-09.jpg', title: 'Phase 3: adaptation-resistance' },
+  { src: '/chapter-5/slides/en/slide-10.jpg', title: 'Exhaustion: from dysfunction to chronicity' },
+  { src: '/chapter-5/slides/en/slide-11.jpg', title: '“We are ill because we lose our health, not the other way around.”' },
+  { src: '/chapter-5/figure-5-13.en.png', title: 'Cranial and cervical territories of the Vagus nerve X' },
+  { src: '/chapter-5/figure-5-16.en.png', title: 'Left abdominal territory of the Vagus nerve X' },
+]
+
 // blockIndex -1 anchors a slide to the section heading itself: the marker is
 // rendered just above the <h2> instead of inside a content block.
 export const chapter5SlideAnchors: SyncAnchor[] = [

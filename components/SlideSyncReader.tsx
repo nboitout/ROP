@@ -25,8 +25,46 @@ type Props = {
   classicHref: string
 }
 
+// The synchronized reader is shown only in French and English (the only
+// languages with a synthesis deck), so its chrome is localized here.
+const SS_UI = {
+  fr: {
+    eyebrow: 'Synthèse visuelle — suit votre lecture',
+    slides: 'Diapositives',
+    prev: 'Diapositive précédente',
+    next: 'Diapositive suivante',
+    enlarge: (n: number, title: string) => `Agrandir la diapositive ${n} : ${title}`,
+    goTo: (n: number, title: string) => `Aller à la diapositive ${n} : ${title}`,
+    enlargeShort: 'Agrandir la diapositive',
+    marker: (n: number, title: string) => `Diapositive ${n} · ${title}`,
+    caption: (n: number, title: string) => `Diapositive ${n} — ${title}`,
+    jumpLabel: 'Accès direct — zones réflexes',
+    jumpTitle: (s: string) => `Aller directement à : ${s}`,
+    endNote:
+      'Fin du chapitre — prototype de lecture synchronisée : les diapositives de synthèse accompagnent le texte tout au long de la lecture. Le sélecteur en haut de page permet de basculer vers la version classique.',
+    enlargeFigure: (caption: string) => `Agrandir : ${caption}`,
+  },
+  en: {
+    eyebrow: 'Visual synthesis — follows your reading',
+    slides: 'Slides',
+    prev: 'Previous slide',
+    next: 'Next slide',
+    enlarge: (n: number, title: string) => `Enlarge slide ${n}: ${title}`,
+    goTo: (n: number, title: string) => `Go to slide ${n}: ${title}`,
+    enlargeShort: 'Enlarge slide',
+    marker: (n: number, title: string) => `Slide ${n} · ${title}`,
+    caption: (n: number, title: string) => `Slide ${n} — ${title}`,
+    jumpLabel: 'Direct access — reflex zones',
+    jumpTitle: (s: string) => `Go directly to: ${s}`,
+    endNote:
+      'End of chapter — synchronized reading prototype: the synthesis slides accompany the text throughout. The selector at the top of the page switches to the classic version.',
+    enlargeFigure: (caption: string) => `Enlarge: ${caption}`,
+  },
+}
+
 export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, backHref = '/chapitres-gratuits', classicHref }: Props) {
   const { lang, t } = useLanguage()
+  const ui = lang === 'en' ? SS_UI.en : SS_UI.fr
   const [sessionId] = useState<string>(() =>
     typeof window !== 'undefined' ? getSessionId() : ''
   )
@@ -226,7 +264,7 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
   function openSlideLightbox(n: number) {
     const s = slides[n - 1]
     if (!s) return
-    setLightbox({ src: s.src, alt: s.title, caption: `Diapositive ${n} — ${s.title}` })
+    setLightbox({ src: s.src, alt: s.title, caption: ui.caption(n, s.title) })
   }
 
   return (
@@ -246,12 +284,12 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
       <div className="ss-layout">
         <div className="ss-stagecol">
           <div className="ss-stage">
-            <p className="ss-stage-eyebrow">Synthèse visuelle — suit votre lecture</p>
+            <p className="ss-stage-eyebrow">{ui.eyebrow}</p>
             <button
               type="button"
               className="ss-frame"
               onClick={() => openSlideLightbox(active)}
-              aria-label={`Agrandir la diapositive ${active} : ${slides[active - 1]?.title ?? ''}`}
+              aria-label={ui.enlarge(active, slides[active - 1]?.title ?? '')}
             >
               {slides.map((s, i) => (
                 <img
@@ -270,7 +308,7 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
                 className="cr-viewer-nav-btn"
                 onClick={() => goToSlide(active - 1)}
                 disabled={active <= 1}
-                aria-label="Diapositive précédente"
+                aria-label={ui.prev}
               >‹</button>
               <div className="ss-stage-meta">
                 <span className="ss-stage-count">{active} / {slides.length}</span>
@@ -280,17 +318,17 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
                 className="cr-viewer-nav-btn"
                 onClick={() => goToSlide(active + 1)}
                 disabled={active >= slides.length}
-                aria-label="Diapositive suivante"
+                aria-label={ui.next}
               >›</button>
             </div>
-            <div className="ss-dots" role="tablist" aria-label="Diapositives">
+            <div className="ss-dots" role="tablist" aria-label={ui.slides}>
               {slides.map((s, i) => (
                 <button
                   key={s.src}
                   className={`ss-dot${i + 1 === active ? ' is-active' : ''}`}
                   onClick={() => goToSlide(i + 1)}
                   title={`${i + 1}. ${s.title}`}
-                  aria-label={`Aller à la diapositive ${i + 1} : ${s.title}`}
+                  aria-label={ui.goTo(i + 1, s.title)}
                 />
               ))}
             </div>
@@ -299,11 +337,11 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
                 type="button"
                 className="ss-jump"
                 onClick={goToReflexZones}
-                title={`Aller directement à : ${ropSection.title}`}
+                title={ui.jumpTitle(ropSection.title)}
               >
                 <span className="ss-jump-icon" aria-hidden>⌖</span>
                 <span className="ss-jump-text">
-                  <span className="ss-jump-label">Accès direct — zones réflexes</span>
+                  <span className="ss-jump-label">{ui.jumpLabel}</span>
                   <span className="ss-jump-section">{ropSection.title}</span>
                 </span>
                 <span className="ss-jump-arrow" aria-hidden>↓</span>
@@ -330,10 +368,10 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
                     type="button"
                     className="ss-marker"
                     onClick={() => openSlideLightbox(headingSlide)}
-                    title="Agrandir la diapositive"
+                    title={ui.enlargeShort}
                   >
                     <span className="ss-marker-dot" aria-hidden />
-                    Diapositive {headingSlide} · {slides[headingSlide - 1]?.title}
+                    {ui.marker(headingSlide, slides[headingSlide - 1]?.title ?? '')}
                   </button>
                 </div>
               )}
@@ -341,7 +379,7 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
               {section.blocks.map((b, i) => {
                 const slide = anchorBySlide.get(`${section.id}:${i}`)
                 const posId = `p-${section.id}-${i}`
-                const view = <BlockView block={b} onOpenImage={setLightbox} />
+                const view = <BlockView block={b} onOpenImage={setLightbox} ui={ui} />
                 if (!slide) return <div key={i} id={posId} data-pos-anchor="">{view}</div>
                 return (
                   <div key={i} id={posId} data-pos-anchor="" data-slide-anchor={slide} className="ss-anchor">
@@ -349,10 +387,10 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
                       type="button"
                       className="ss-marker"
                       onClick={() => openSlideLightbox(slide)}
-                      title="Agrandir la diapositive"
+                      title={ui.enlargeShort}
                     >
                       <span className="ss-marker-dot" aria-hidden />
-                      Diapositive {slide} · {slides[slide - 1]?.title}
+                      {ui.marker(slide, slides[slide - 1]?.title ?? '')}
                     </button>
                     {view}
                   </div>
@@ -363,11 +401,7 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
           })}
 
           <div className="ss-end">
-            <p className="ss-end-note">
-              Fin du chapitre — prototype de lecture synchronisée : les diapositives de synthèse
-              accompagnent le texte tout au long de la lecture. Le sélecteur en haut de page
-              permet de basculer vers la version classique.
-            </p>
+            <p className="ss-end-note">{ui.endNote}</p>
           </div>
         </article>
       </div>
@@ -395,7 +429,7 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
   )
 }
 
-function BlockView({ block, onOpenImage }: { block: Block; onOpenImage: (b: { src: string; alt: string; caption: string }) => void }) {
+function BlockView({ block, onOpenImage, ui }: { block: Block; onOpenImage: (b: { src: string; alt: string; caption: string }) => void; ui: typeof SS_UI.fr }) {
   const { t } = useLanguage()
   switch (block.type) {
     case 'para':
@@ -433,7 +467,7 @@ function BlockView({ block, onOpenImage }: { block: Block; onOpenImage: (b: { sr
             type="button"
             className="cr-fig-btn"
             onClick={() => onOpenImage({ src: block.src, alt: block.alt, caption: block.caption })}
-            aria-label={`Agrandir : ${block.caption}`}
+            aria-label={ui.enlargeFigure(block.caption)}
           >
             <img src={block.src} alt={block.alt} loading="lazy" />
             <span className="cr-fig-zoom" aria-hidden>⌕</span>

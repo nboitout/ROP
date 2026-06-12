@@ -35,6 +35,28 @@ export const chapter14Slides: SyncSlide[] = [
   { src: '/chapter-14/slides/slide-17.jpg', title: 'Synthèse d’intervention ROP : protocole intestin grêle' },
 ]
 
+// English deck — same slides, translated. The text↔slide anchors are shared
+// (chapter14SlideAnchors): the EN content mirrors the FR block structure.
+export const chapter14SlidesEn: SyncSlide[] = [
+  { src: '/chapter-14/slides/en/slide-01.jpg', title: 'The small intestine: anatomy, ecosystem and ROP approach' },
+  { src: '/chapter-14/slides/en/slide-02.jpg', title: 'Topography and intra-abdominal arrangement' },
+  { src: '/chapter-14/slides/en/slide-03.jpg', title: 'Mechanical anchoring: mesentery and Treitz muscle' },
+  { src: '/chapter-14/slides/en/slide-04.jpg', title: 'The axis of irrigation and drainage: superior mesenteric trunk' },
+  { src: '/chapter-14/slides/en/slide-05.jpg', title: 'The double neurological reality of the peritoneum' },
+  { src: '/chapter-14/slides/en/slide-06.jpg', title: 'The second brain: autonomy of the enteric nervous system' },
+  { src: '/chapter-14/slides/en/slide-07.jpg', title: 'The second brain: enteric nervous system' },
+  { src: '/chapter-14/slides/en/slide-08.jpg', title: 'The intestinal ecosystem: the tripod of digestive health' },
+  { src: '/chapter-14/slides/en/slide-09.jpg', title: 'The dual pathway of micronutrient absorption' },
+  { src: '/chapter-14/slides/en/slide-10.jpg', title: 'The spiral: dysbiosis and hyperpermeability' },
+  { src: '/chapter-14/slides/en/slide-11.jpg', title: 'Pathology I: intestinal hyperpermeability (leaky gut)' },
+  { src: '/chapter-14/slides/en/slide-12.jpg', title: 'Pathology II: dysbiosis and its manifestations' },
+  { src: '/chapter-14/slides/en/slide-13.jpg', title: 'Warning signs and diagnosis of exclusion' },
+  { src: '/chapter-14/slides/en/slide-14.jpg', title: 'Viscero-emotional profile: the intestine person' },
+  { src: '/chapter-14/slides/en/slide-15.jpg', title: 'ROP strategy 1: regulation of the nervous system and somatic links' },
+  { src: '/chapter-14/slides/en/slide-16.jpg', title: 'ROP support for functional disorders' },
+  { src: '/chapter-14/slides/en/slide-17.jpg', title: 'ROP intervention summary: small intestine protocol' },
+]
+
 export const chapter14SlideAnchors: SyncAnchor[] = [
   { sectionId: 'presentation',   blockIndex: 0,  slide: 1 },
   { sectionId: 'situation',      blockIndex: 0,  slide: 2 },
