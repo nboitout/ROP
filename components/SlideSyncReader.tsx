@@ -66,6 +66,19 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
     [chapter.sections]
   )
 
+  // First slide anchored within a section (its heading anchor if any, else its
+  // earliest block anchor) — used to sync the deck when jumping to a section.
+  const firstSlideOfSection = useMemo(() => {
+    const best = new Map<string, { idx: number; slide: number }>()
+    for (const a of anchors) {
+      const cur = best.get(a.sectionId)
+      if (!cur || a.blockIndex < cur.idx) best.set(a.sectionId, { idx: a.blockIndex, slide: a.slide })
+    }
+    const out = new Map<string, number>()
+    best.forEach((v, k) => out.set(k, v.slide))
+    return out
+  }, [anchors])
+
   useEffect(() => {
     track('sync_reader_open')
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -202,6 +215,10 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
 
   function goToSection(sectionId: string) {
     track('sync_jump_section', { section: sectionId })
+    // Sync the deck explicitly: once the page settles it's static, so the
+    // scroll handler won't fire again to pick the matching slide.
+    const slide = firstSlideOfSection.get(sectionId)
+    if (slide) setActive(slide)
     animateTo(() => document.getElementById(`sec-${sectionId}`))
   }
 
