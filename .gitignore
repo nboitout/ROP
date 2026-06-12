@@ -24,3 +24,8 @@ public/pdf.worker.min.mjs
 # OS
 .DS_Store
 Thumbs.db
+
+# Windows / OneDrive / Office artefacts (never commit these)
+desktop.ini
+~$*
+*.tmp
