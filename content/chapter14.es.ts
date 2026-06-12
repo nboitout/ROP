@@ -31,7 +31,6 @@ export const chapter14Es: Chapter = {
       title: 'Localización',
       blocks: [
         { type: 'para', text: 'El yeyuno-íleon ocupa una gran parte de la cavidad abdominal, preferentemente a la izquierda que a la derecha, en el interior del marco cólico. El yeyuno se localiza preferentemente en el cuadrante superior izquierdo del abdomen. El íleon se localiza preferentemente en el cuadrante inferior derecho del abdomen.' },
-        { type: 'figure', src: '/chapter-14/es/Chapter14 Fig1 ES.png', caption: 'Figura 14.1 — Topografía abdominal en cuatro cuadrantes', alt: 'Los cuatro cuadrantes abdominales', orientation: 'portrait' },
       ],
     },
     {

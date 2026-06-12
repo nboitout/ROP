@@ -33,7 +33,6 @@ export const chapter14Fr: Chapter = {
       title: 'Situation',
       blocks: [
         { type: 'para', text: 'Le jéjunum-iléum occupe une grande partie de la cavité abdominale, plus volontiers à gauche qu’à droite, à l’intérieur du cadre colique. Le jéjunum siège préférentiellement dans le quadrant supérieur gauche de l’abdomen. L’iléum siège préférentiellement dans le quadrant inférieur droit de l’abdomen.' },
-        { type: 'figure', src: '/chapter-14/figure-14-1.png', caption: 'Figure 14.1 — Topographie abdominale en quatre quadrants', alt: 'Les quatre quadrants abdominaux', orientation: 'portrait' },
       ],
     },
     {

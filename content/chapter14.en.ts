@@ -31,7 +31,6 @@ export const chapter14En: Chapter = {
       title: 'Location',
       blocks: [
         { type: 'para', text: 'The jejuno-ileum occupies a large part of the abdominal cavity, more often on the left than on the right, within the colonic frame. The jejunum is primarily located in the upper left quadrant of the abdomen. The ileum is mainly located in the lower right quadrant.' },
-        { type: 'figure', src: '/chapter-14/en/figure-14-1.png', caption: 'Figure 14.1 — Abdominal topography in four quadrants', alt: 'The four abdominal quadrants', orientation: 'portrait' },
       ],
     },
     {

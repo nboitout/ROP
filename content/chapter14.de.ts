@@ -31,7 +31,6 @@ export const chapter14De: Chapter = {
       title: 'Lage',
       blocks: [
         { type: 'para', text: 'Das Jejunum-Ileum nimmt einen großen Teil der Bauchhöhle ein, bevorzugt links als rechts, innerhalb des Kolonrahmens. Das Jejunum befindet sich vorzugsweise im linken oberen Quadranten des Abdomens. Das Ileum befindet sich vorzugsweise im rechten unteren Quadranten des Abdomens.' },
-        { type: 'figure', src: '/chapter-14/ge/Chapter14 Fig1 GE.png', caption: 'Abbildung 14.1 — Abdominale Topographie in vier Quadranten', alt: 'Die vier Bauchquadranten', orientation: 'portrait' },
       ],
     },
     {

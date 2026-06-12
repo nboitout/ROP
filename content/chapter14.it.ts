@@ -31,7 +31,6 @@ export const chapter14It: Chapter = {
       title: 'Situazione',
       blocks: [
         { type: 'para', text: 'Il digiuno-ileo occupa gran parte della cavità addominale, preferibilmente a sinistra rispetto a destra, all\'interno della cornice colica. Il digiuno è localizzato preferibilmente nel quadrante superiore sinistro dell\'addome. L\'ileo è localizzato preferibilmente nel quadrante inferiore destro dell\'addome.' },
-        { type: 'figure', src: '/chapter-14/it/Chapter14 Fig1 IT.png', caption: 'Figura 14.1 — Topografia addominale in quattro quadranti', alt: 'I quattro quadranti addominali', orientation: 'portrait' },
       ],
     },
     {
