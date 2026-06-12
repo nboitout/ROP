@@ -34,9 +34,12 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
   const [lightbox, setLightbox] = useState<{ src: string; alt: string; caption: string } | null>(null)
   const [lightboxZoom, setLightboxZoom] = useState(1)
   const articleRef = useRef<HTMLElement>(null)
-  // While a slide-driven smooth scroll is in flight, the scroll handler must
-  // not fight the manually selected slide.
+  // While a slide-driven scroll is in flight, the scroll handler must not
+  // fight the manually selected slide.
   const suppressSyncUntil = useRef(0)
+  // Handle for the in-flight slide-navigation animation, so it can be
+  // cancelled (manual scroll, a newer click, or unmount).
+  const navAnim = useRef<{ raf: number; cleanup: () => void } | null>(null)
 
   function track(event: string, data?: Record<string, unknown>) {
     fetch('/api/track', {
@@ -84,7 +87,9 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
     return () => {
       window.removeEventListener('scroll', onScroll)
       window.removeEventListener('resize', onScroll)
+      cancelNav()
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   useEffect(() => {
@@ -104,16 +109,64 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
     setLightboxZoom(1)
   }
 
+  function cancelNav() {
+    if (navAnim.current) {
+      cancelAnimationFrame(navAnim.current.raf)
+      navAnim.current.cleanup()
+      navAnim.current = null
+    }
+  }
+
+  // Animate the page to a slide's anchor. The target position is re-read every
+  // frame from the live element, so lazy-loaded figures growing mid-scroll
+  // can't strand the animation short of the destination. Sync stays suppressed
+  // until arrival (however long a far jump takes); a manual scroll cancels it.
   function goToSlide(n: number) {
     const slide = Math.min(slides.length, Math.max(1, n))
     setActive(slide)
-    suppressSyncUntil.current = Date.now() + 1100
-    const el = articleRef.current?.querySelector<HTMLElement>(`[data-slide-anchor="${slide}"]`)
-    if (el) {
-      const y = el.getBoundingClientRect().top + window.scrollY - 96
-      window.scrollTo({ top: y, behavior: 'smooth' })
-    }
     track('sync_slide_nav', { slide })
+
+    cancelNav()
+    const MARGIN = 96
+    suppressSyncUntil.current = Infinity
+
+    // The site sets html{scroll-behavior:smooth}; force instant positioning so
+    // our per-frame easing isn't fought by the browser's own animation.
+    const root = document.documentElement
+    const prevBehavior = root.style.scrollBehavior
+    root.style.scrollBehavior = 'auto'
+
+    // A wheel/touch/key gesture means the reader took over: stop animating.
+    const onUserScroll = () => cancelNav()
+    window.addEventListener('wheel', onUserScroll, { passive: true })
+    window.addEventListener('touchmove', onUserScroll, { passive: true })
+    window.addEventListener('keydown', onUserScroll)
+    const cleanup = () => {
+      window.removeEventListener('wheel', onUserScroll)
+      window.removeEventListener('touchmove', onUserScroll)
+      window.removeEventListener('keydown', onUserScroll)
+      root.style.scrollBehavior = prevBehavior
+      // Brief tail so momentum settles before the scroll handler resumes.
+      suppressSyncUntil.current = Date.now() + 200
+    }
+
+    const start = performance.now()
+    let settled = 0
+    const step = (now: number) => {
+      const el = articleRef.current?.querySelector<HTMLElement>(`[data-slide-anchor="${slide}"]`)
+      if (!el) { cleanup(); navAnim.current = null; return }
+      const desired = el.getBoundingClientRect().top + window.scrollY - MARGIN
+      const dist = desired - window.scrollY
+      settled = Math.abs(dist) < 2 ? settled + 1 : 0
+      // Ease toward the live target; recomputed each frame.
+      window.scrollTo(0, window.scrollY + dist * 0.2)
+      if (settled >= 3 || now - start > 5000) {
+        window.scrollTo(0, desired)
+        cleanup(); navAnim.current = null; return
+      }
+      navAnim.current = { raf: requestAnimationFrame(step), cleanup }
+    }
+    navAnim.current = { raf: requestAnimationFrame(step), cleanup }
   }
 
   function openSlideLightbox(n: number) {
