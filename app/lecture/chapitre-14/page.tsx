@@ -5,7 +5,16 @@ import SlideSyncReader from '@/components/SlideSyncReader'
 import { getChapter } from '@/content/registry'
 import { getServerLang } from '@/app/i18n/serverLang'
 import { translations } from '@/app/i18n/translations'
-import { chapter14Slides, chapter14SlidesEn, chapter14SlideAnchors } from '@/content/chapter14.slidesync'
+import type { Lang } from '@/app/i18n/translations'
+import {
+  chapter14Slides, chapter14SlidesEn, chapter14SlidesDe, chapter14SlidesEs, chapter14SlidesIt,
+  chapter14SlideAnchors,
+} from '@/content/chapter14.slidesync'
+
+// Synthesis deck per language (all five available for chapter 14).
+const DECKS: Record<Lang, typeof chapter14Slides> = {
+  fr: chapter14Slides, en: chapter14SlidesEn, de: chapter14SlidesDe, es: chapter14SlidesEs, it: chapter14SlidesIt,
+}
 
 export const metadata: Metadata = {
   title: 'Chapitre 14 — Lecture synchronisée · R.O.P. · Guy Boitout',
@@ -25,18 +34,16 @@ export default async function Chapitre14SyncPage({
     redirect('/?gate=free#acces-libre')
   }
 
-  // The synthesis deck exists in French and English; pick the reader's
-  // language, falling back to French for any other.
+  // The synthesis deck exists in all five languages for chapter 14; serve the
+  // reader's language.
   const { lang: langParam } = await searchParams
   const lang = await getServerLang(langParam)
-  const deckLang = lang === 'en' ? 'en' : 'fr'
-  const { chapter } = getChapter('chapter-14', deckLang)
-  const slides = deckLang === 'en' ? chapter14SlidesEn : chapter14Slides
+  const { chapter } = getChapter('chapter-14', lang)
   return (
     <SlideSyncReader
       chapter={chapter}
-      bookTitle={translations[deckLang].reader.bookTitle}
-      slides={slides}
+      bookTitle={translations[lang].reader.bookTitle}
+      slides={DECKS[lang]}
       anchors={chapter14SlideAnchors}
       backHref="/chapitres-gratuits"
       classicHref="/chapitre-14"

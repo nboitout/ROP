@@ -57,6 +57,72 @@ export const chapter14SlidesEn: SyncSlide[] = [
   { src: '/chapter-14/slides/en/slide-17.jpg', title: 'ROP intervention summary: small intestine protocol' },
 ]
 
+// German deck — same slides, translated. Anchors are shared.
+// (Deck note: slide 10's inner labels are still in English in the source PDF.)
+export const chapter14SlidesDe: SyncSlide[] = [
+  { src: '/chapter-14/slides/de/slide-01.jpg', title: 'Der Dünndarm: Anatomie, Ökosystem und ROP-Ansatz' },
+  { src: '/chapter-14/slides/de/slide-02.jpg', title: 'Topographie und intraabdominale Anordnung' },
+  { src: '/chapter-14/slides/de/slide-03.jpg', title: 'Die mechanische Verankerung: Mesenterium und Treitz-Muskel' },
+  { src: '/chapter-14/slides/de/slide-04.jpg', title: 'Die Achse der Versorgung und des Abflusses: oberer Mesenterialstamm' },
+  { src: '/chapter-14/slides/de/slide-05.jpg', title: 'Die doppelte neurologische Realität des Peritoneums' },
+  { src: '/chapter-14/slides/de/slide-06.jpg', title: 'Das zweite Gehirn: Autonomie des enterischen Nervensystems (ENS)' },
+  { src: '/chapter-14/slides/de/slide-07.jpg', title: 'Das „zweite Gehirn“: enterisches Nervensystem' },
+  { src: '/chapter-14/slides/de/slide-08.jpg', title: 'Das intestinale Ökosystem: das Dreibein der Verdauungsgesundheit' },
+  { src: '/chapter-14/slides/de/slide-09.jpg', title: 'Der doppelte Weg der Mikronährstoffabsorption' },
+  { src: '/chapter-14/slides/de/slide-10.jpg', title: 'Die Spirale: Dysbiose und Hyperpermeabilität' },
+  { src: '/chapter-14/slides/de/slide-11.jpg', title: 'Pathologie I: erhöhte intestinale Permeabilität (Leaky Gut)' },
+  { src: '/chapter-14/slides/de/slide-12.jpg', title: 'Pathologie II: die Dysbiose und ihre Manifestationen' },
+  { src: '/chapter-14/slides/de/slide-13.jpg', title: 'Warnzeichen und Ausschlussdiagnostik' },
+  { src: '/chapter-14/slides/de/slide-14.jpg', title: 'Viszero-emotionales Profil: die Person mit ROP' },
+  { src: '/chapter-14/slides/de/slide-15.jpg', title: 'Strategie ROP 1: Regulierung des Nervensystems und somatischer Verbindungen' },
+  { src: '/chapter-14/slides/de/slide-16.jpg', title: 'ROP-Begleitung bei funktionellen Darmbeschwerden' },
+  { src: '/chapter-14/slides/de/slide-17.jpg', title: 'Synthese der ROP-Intervention: Darm-Protokoll' },
+]
+
+// Spanish deck — same slides, translated. Anchors are shared.
+export const chapter14SlidesEs: SyncSlide[] = [
+  { src: '/chapter-14/slides/es/slide-01.jpg', title: 'El intestino delgado: anatomía, ecosistema y enfoque ROP' },
+  { src: '/chapter-14/slides/es/slide-02.jpg', title: 'Topografía y disposición intraabdominal' },
+  { src: '/chapter-14/slides/es/slide-03.jpg', title: 'El anclaje mecánico: mesenterio y músculo de Treitz' },
+  { src: '/chapter-14/slides/es/slide-04.jpg', title: 'El eje de la irrigación y el drenaje: tronco mesentérico superior' },
+  { src: '/chapter-14/slides/es/slide-05.jpg', title: 'La doble realidad neurológica del peritoneo' },
+  { src: '/chapter-14/slides/es/slide-06.jpg', title: 'El segundo cerebro: autonomía del sistema nervioso entérico (SNE)' },
+  { src: '/chapter-14/slides/es/slide-07.jpg', title: 'El segundo cerebro: sistema nervioso entérico' },
+  { src: '/chapter-14/slides/es/slide-08.jpg', title: 'El ecosistema intestinal: el trípode de la salud digestiva' },
+  { src: '/chapter-14/slides/es/slide-09.jpg', title: 'La doble vía de absorción de micronutrientes' },
+  { src: '/chapter-14/slides/es/slide-10.jpg', title: 'La espiral: disbiosis e hiperpermeabilidad' },
+  { src: '/chapter-14/slides/es/slide-11.jpg', title: 'Patología I: hiperpermeabilidad intestinal (leaky gut)' },
+  { src: '/chapter-14/slides/es/slide-12.jpg', title: 'Patología II: la disbiosis y sus manifestaciones' },
+  { src: '/chapter-14/slides/es/slide-13.jpg', title: 'Signos de alerta y diagnóstico de exclusión' },
+  { src: '/chapter-14/slides/es/slide-14.jpg', title: 'Perfil viscero-emocional: la persona intestino' },
+  { src: '/chapter-14/slides/es/slide-15.jpg', title: 'Estrategia ROP 1: regulación del sistema nervioso y vínculos somáticos' },
+  { src: '/chapter-14/slides/es/slide-16.jpg', title: 'Acompañamiento ROP de las patologías funcionales' },
+  { src: '/chapter-14/slides/es/slide-17.jpg', title: 'Síntesis de intervención ROP: protocolo intestino delgado' },
+]
+
+// Italian deck — same slides, translated. Anchors are shared.
+// (Deck note: the source PDF says "intestino crasso" (large intestine) where it
+// should read "intestino tenue" (small intestine) — titles mirror the deck.)
+export const chapter14SlidesIt: SyncSlide[] = [
+  { src: '/chapter-14/slides/it/slide-01.jpg', title: 'L’intestino crasso: anatomia, ecosistema e approccio ROP' },
+  { src: '/chapter-14/slides/it/slide-02.jpg', title: 'Topografia e disposizione intra-addominale' },
+  { src: '/chapter-14/slides/it/slide-03.jpg', title: 'L’ancoraggio meccanico: mesentere e muscolo di Treitz' },
+  { src: '/chapter-14/slides/it/slide-04.jpg', title: 'L’asse dell’irrigazione e del drenaggio: tronco mesenterico superiore' },
+  { src: '/chapter-14/slides/it/slide-05.jpg', title: 'La doppia realtà neurologica del peritoneo' },
+  { src: '/chapter-14/slides/it/slide-06.jpg', title: 'Il secondo cervello: autonomia del sistema nervoso enterico (SNE)' },
+  { src: '/chapter-14/slides/it/slide-07.jpg', title: 'Il secondo cervello: sistema nervoso enterico' },
+  { src: '/chapter-14/slides/it/slide-08.jpg', title: 'L’ecosistema intestinale: il treppiede della salute digestiva' },
+  { src: '/chapter-14/slides/it/slide-09.jpg', title: 'La doppia via di assorbimento dei micronutrienti' },
+  { src: '/chapter-14/slides/it/slide-10.jpg', title: 'La spirale: disbiosi e iperpermeabilità' },
+  { src: '/chapter-14/slides/it/slide-11.jpg', title: 'Patologia I: iperpermeabilità intestinale (leaky gut)' },
+  { src: '/chapter-14/slides/it/slide-12.jpg', title: 'Patologia II: la disbiosi e le sue manifestazioni' },
+  { src: '/chapter-14/slides/it/slide-13.jpg', title: 'Segnali d’allarme e diagnosi di esclusione' },
+  { src: '/chapter-14/slides/it/slide-14.jpg', title: 'Profilo viscerale-emotivo: la persona con ROP' },
+  { src: '/chapter-14/slides/it/slide-15.jpg', title: 'Strategia ROP 1: regolazione del sistema nervoso e collegamenti somatici' },
+  { src: '/chapter-14/slides/it/slide-16.jpg', title: 'Accompagnamento ROP delle patologie funzionali' },
+  { src: '/chapter-14/slides/it/slide-17.jpg', title: 'Sintesi dell’intervento ROP: protocollo intestino crasso' },
+]
+
 export const chapter14SlideAnchors: SyncAnchor[] = [
   { sectionId: 'presentation',   blockIndex: 0,  slide: 1 },
   { sectionId: 'situation',      blockIndex: 0,  slide: 2 },

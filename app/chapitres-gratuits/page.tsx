@@ -18,7 +18,7 @@ const HREF_TO_SLUG: Record<string, string> = {
 // deck exists. Other languages keep the classic reader.
 const SYNC: Record<string, { href: string; langs: Set<string> }> = {
   '/chapitre-5': { href: '/lecture/chapitre-5', langs: new Set(['fr', 'en', 'de', 'es', 'it']) },
-  '/chapitre-14': { href: '/lecture/chapitre-14', langs: new Set(['fr', 'en']) },
+  '/chapitre-14': { href: '/lecture/chapitre-14', langs: new Set(['fr', 'en', 'de', 'es', 'it']) },
 }
 
 export const metadata: Metadata = {
