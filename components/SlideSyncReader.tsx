@@ -59,6 +59,13 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
     return m
   }, [anchors])
 
+  // The chapter's ROP section (reflex-zone maps in the feet) — readers spend a
+  // lot of time here, so the pinned stage offers a one-tap jump to it.
+  const ropSection = useMemo(
+    () => chapter.sections.find((s) => s.id === 'rop' || s.id.startsWith('rop-')),
+    [chapter.sections]
+  )
+
   useEffect(() => {
     track('sync_reader_open')
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -138,15 +145,11 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
     }
   }
 
-  // Animate the page to a slide's anchor. The target position is re-read every
-  // frame from the live element, so lazy-loaded figures growing mid-scroll
-  // can't strand the animation short of the destination. Sync stays suppressed
-  // until arrival (however long a far jump takes); a manual scroll cancels it.
-  function goToSlide(n: number) {
-    const slide = Math.min(slides.length, Math.max(1, n))
-    setActive(slide)
-    track('sync_slide_nav', { slide })
-
+  // Animate the page to a target element. The position is re-read every frame
+  // from the live element, so lazy-loaded figures growing mid-scroll can't
+  // strand the animation short of the destination. Sync stays suppressed until
+  // arrival (however long a far jump takes); a manual scroll cancels it.
+  function animateTo(getEl: () => HTMLElement | null) {
     cancelNav()
     const MARGIN = 96
     suppressSyncUntil.current = Infinity
@@ -174,7 +177,7 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
     const start = performance.now()
     let settled = 0
     const step = (now: number) => {
-      const el = articleRef.current?.querySelector<HTMLElement>(`[data-slide-anchor="${slide}"]`)
+      const el = getEl()
       if (!el) { cleanup(); navAnim.current = null; return }
       const desired = el.getBoundingClientRect().top + window.scrollY - MARGIN
       const dist = desired - window.scrollY
@@ -188,6 +191,18 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
       navAnim.current = { raf: requestAnimationFrame(step), cleanup }
     }
     navAnim.current = { raf: requestAnimationFrame(step), cleanup }
+  }
+
+  function goToSlide(n: number) {
+    const slide = Math.min(slides.length, Math.max(1, n))
+    setActive(slide)
+    track('sync_slide_nav', { slide })
+    animateTo(() => articleRef.current?.querySelector<HTMLElement>(`[data-slide-anchor="${slide}"]`) ?? null)
+  }
+
+  function goToSection(sectionId: string) {
+    track('sync_jump_section', { section: sectionId })
+    animateTo(() => document.getElementById(`sec-${sectionId}`))
   }
 
   function openSlideLightbox(n: number) {
@@ -261,6 +276,21 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
                 />
               ))}
             </div>
+            {ropSection && (
+              <button
+                type="button"
+                className="ss-jump"
+                onClick={() => goToSection(ropSection.id)}
+                title={`Aller directement à : ${ropSection.title}`}
+              >
+                <span className="ss-jump-icon" aria-hidden>⌖</span>
+                <span className="ss-jump-text">
+                  <span className="ss-jump-label">Accès direct — zones réflexes</span>
+                  <span className="ss-jump-section">{ropSection.title}</span>
+                </span>
+                <span className="ss-jump-arrow" aria-hidden>↓</span>
+              </button>
+            )}
           </div>
         </div>
 
