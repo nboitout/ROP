@@ -91,7 +91,6 @@ export const chapter14En: Chapter = {
         { type: 'figure', src: '/chapter-14/en/figure-14-10.png', caption: 'Figure 14.10 — Intercostal nerves', alt: 'Intercostal nerves', orientation: 'landscape' },
         { type: 'figure', src: '/chapter-14/en/figure-14-11.png', caption: 'Figure 14.11 — Nerves of the lumbar plexus', alt: 'Nerves of the lumbar plexus', orientation: 'landscape' },
         { type: 'lead', label: 'Visceral peritoneum', text: 'it receives extrinsic autonomic innervation shared with the viscera. Sympathetic: roots arise from Th8 to Th11 and reach the prevertebral coeliac and superior mesenteric plexuses via the greater and lesser splanchnic nerves.' },
-        { type: 'figure', src: '/chapter-14/en/figure-14-12.png', caption: 'Figure 14.12 — Autonomic nervous system', alt: 'Autonomic nervous system', orientation: 'portrait' },
 
         { type: 'sub', text: 'Vagus nerve and sympathetic nervous system' },
         { type: 'leadBullets', items: [

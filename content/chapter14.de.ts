@@ -91,7 +91,6 @@ export const chapter14De: Chapter = {
         { type: 'figure', src: '/chapter-14/ge/Chapter14 Fig10 GE.png', caption: 'Abbildung 14.10 — Interkostalnerven', alt: 'Interkostalnerven', orientation: 'landscape' },
         { type: 'figure', src: '/chapter-14/ge/Chapter14 Fig11 GE.png', caption: 'Abbildung 14.11 — Nerven des Plexus lumbalis', alt: 'Nerven des Plexus lumbalis', orientation: 'landscape' },
         { type: 'lead', label: 'Viszerales Peritoneum', text: 'es erhält eine extrinsisch-autonome Innervation, die es mit den Eingeweiden teilt. Sympathikus: seine Wurzeln entstammen Th8 bis Th11. Sie gelangen über die Nn. splanchnici majores und minores zu den prävertebralen Plexus coeliacus und mesentericus superior.' },
-        { type: 'figure', src: '/chapter-14/ge/Chapter14 Fig12 GE.png', caption: 'Abbildung 14.12 — Vegetatives Nervensystem', alt: 'Vegetatives Nervensystem', orientation: 'portrait' },
 
         { type: 'sub', text: 'Vagusnerv und Sympathikus' },
         { type: 'leadBullets', items: [

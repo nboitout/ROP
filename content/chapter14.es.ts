@@ -91,7 +91,6 @@ export const chapter14Es: Chapter = {
         { type: 'figure', src: '/chapter-14/es/Chapter14 Fig10 ES.png', caption: 'Figura 14.10 — Nervios intercostales', alt: 'Nervios intercostales', orientation: 'landscape' },
         { type: 'figure', src: '/chapter-14/es/Chapter14 Fig11 ES.png', caption: 'Figura 14.11 — Nervios del plexo lumbar', alt: 'Nervios del plexo lumbar', orientation: 'landscape' },
         { type: 'lead', label: 'Peritoneo visceral', text: 'recibe una inervación autónoma extrínseca compartida con las vísceras. Simpático: sus raíces provienen de Th8 a Th11. Se unen a los plexos prevertébrales celíaco y mesentérico superior a través de los nervios esplácnicos mayores y menores.' },
-        { type: 'figure', src: '/chapter-14/es/Chapter14 Fig12 ES.png', caption: 'Figura 14.12 — Sistema nervioso autónomo', alt: 'Sistema nervioso autónomo', orientation: 'portrait' },
 
         { type: 'sub', text: 'Nervio vago y sistema nervioso simpático' },
         { type: 'leadBullets', items: [

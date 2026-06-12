@@ -93,7 +93,6 @@ export const chapter14Fr: Chapter = {
         { type: 'figure', src: '/chapter-14/figure-14-10.png', caption: 'Figure 14.10 — Nerfs intercostaux', alt: 'Nerfs intercostaux', orientation: 'landscape' },
         { type: 'figure', src: '/chapter-14/figure-14-11.png', caption: 'Figure 14.11 — Nerfs du plexus lombaire', alt: 'Nerfs du plexus lombaire', orientation: 'landscape' },
         { type: 'lead', label: 'Péritoine viscéral', text: 'il reçoit une innervation autonome extrinsèque commune avec les viscères. Sympathique : ses racines proviennent de Th8 à Th11. Elles rejoignent les plexus pré-vertébraux cœliaque et mésentérique supérieur via les nerfs grands et petits splanchniques.' },
-        { type: 'figure', src: '/chapter-14/figure-14-12.jpg', caption: 'Figure 14.12 — Système nerveux autonome', alt: 'Système nerveux autonome', orientation: 'portrait' },
 
         { type: 'sub', text: 'Nerf vague et système nerveux sympathique' },
         { type: 'leadBullets', items: [
