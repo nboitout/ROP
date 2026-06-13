@@ -199,7 +199,6 @@ export const chapter14It: Chapter = {
           'Hiatus esofageo (nervi vaghi destro e sinistro) e cardias.',
           'Piccola curvatura dello stomaco, ricca di fibre vagali.',
         ]},
-        { type: 'figure', src: '/chapter-14/it/figure-14-15 IT.png', caption: 'Figura 14.15 — Territorio cranico e cervicale del nervo vago (in giallo)', alt: 'Territorio cranico e cervicale del nervo vago', orientation: 'landscape' },
         { type: 'figure', src: '/chapter-14/it/Chapter14 Fig16 IT.png', caption: 'Figura 14.16 — Territorio addominale sinistro del nervo vago e plesso celiaco (solare)', alt: 'Territorio addominale sinistro del nervo vago e plesso celiaco', orientation: 'landscape' },
         { type: 'figure', src: '/chapter-14/it/Chapter14 Fig17 IT.png', caption: 'Figura 14.17 — Hiatus esofageo (nervi vaghi destro e sinistro) e cardias', alt: 'Hiatus esofageo e nervi vaghi', orientation: 'medium' },
         { type: 'figure', src: '/chapter-14/it/Chapter14 Fig18 IT.png', caption: 'Figura 14.18 — Piccola curvatura dello stomaco, ricca di fibre vagali', alt: 'Piccola curvatura dello stomaco e fibre vagali', orientation: 'medium' },

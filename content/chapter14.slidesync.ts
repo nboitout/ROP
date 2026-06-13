@@ -32,6 +32,7 @@ export const chapter14Slides: SyncSlide[] = [
   { src: '/chapter-14/slides/slide-14.jpg', title: 'Profil viscéro-émotionnel : la personne intestin' },
   { src: '/chapter-14/slides/slide-17.jpg', title: 'Synthèse d’intervention ROP : protocole intestin grêle' },
   { src: '/chapter-14/slides/Chapter14 FigCrohn FR.png', title: 'Cas clinique — maladie de Crohn et spondylarthrite' },
+  { src: '/chapter-14/figure-14-15.png', title: 'Territoire crânien et cervical du nerf vague' },
 ]
 
 // English deck — same slides, translated. The text↔slide anchors are shared
@@ -53,6 +54,7 @@ export const chapter14SlidesEn: SyncSlide[] = [
   { src: '/chapter-14/slides/en/slide-14.jpg', title: 'Viscero-emotional profile: the intestine person' },
   { src: '/chapter-14/slides/en/slide-17.jpg', title: 'ROP intervention summary: small intestine protocol' },
   { src: '/chapter-14/slides/en/Chapter14 FigCrohn EN.png', title: 'Clinical case — Crohn’s disease and spondyloarthritis' },
+  { src: '/chapter-14/en/figure-14-15 EN.png', title: 'Cranial and cervical territory of the vagus nerve' },
 ]
 
 // German deck — same slides, translated. Anchors are shared.
@@ -74,6 +76,7 @@ export const chapter14SlidesDe: SyncSlide[] = [
   { src: '/chapter-14/slides/de/slide-14.jpg', title: 'Viszero-emotionales Profil: die Person mit ROP' },
   { src: '/chapter-14/slides/de/slide-17.jpg', title: 'Synthese der ROP-Intervention: Darm-Protokoll' },
   { src: '/chapter-14/slides/de/Chapter14 FigCrohn GE.png', title: 'Klinischer Fall — Morbus Crohn und Spondyloarthritis' },
+  { src: '/chapter-14/ge/figure-14-15 GE.png', title: 'Kranialer und zervikaler Bereich des Vagusnervs' },
 ]
 
 // Spanish deck — same slides, translated. Anchors are shared.
@@ -94,6 +97,7 @@ export const chapter14SlidesEs: SyncSlide[] = [
   { src: '/chapter-14/slides/es/slide-14.jpg', title: 'Perfil viscero-emocional: la persona intestino' },
   { src: '/chapter-14/slides/es/slide-17.jpg', title: 'Síntesis de intervención ROP: protocolo intestino delgado' },
   { src: '/chapter-14/slides/es/Chapter14 FigCrohn ES.png', title: 'Caso clínico — enfermedad de Crohn y espondiloartritis' },
+  { src: '/chapter-14/es/figure-14-15 ES.png', title: 'Territorio craneal y cervical del nervio vago' },
 ]
 
 // Italian deck — same slides, translated. Anchors are shared.
@@ -116,6 +120,7 @@ export const chapter14SlidesIt: SyncSlide[] = [
   { src: '/chapter-14/slides/it/slide-14.jpg', title: 'Profilo viscerale-emotivo: la persona con ROP' },
   { src: '/chapter-14/slides/it/slide-17.jpg', title: 'Sintesi dell’intervento ROP: protocollo intestino crasso' },
   { src: '/chapter-14/slides/it/Chapter14 FigCrohn IT.png', title: 'Caso clinico — malattia di Crohn e spondiloartrite' },
+  { src: '/chapter-14/it/figure-14-15 IT.png', title: 'Territorio cranico e cervicale del nervo vago' },
 ]
 
 export const chapter14SlideAnchors: SyncAnchor[] = [
@@ -134,8 +139,10 @@ export const chapter14SlideAnchors: SyncAnchor[] = [
   { sectionId: 'pathologies',    blockIndex: 1,  slide: 11 },
   { sectionId: 'pathologies',    blockIndex: 7,  slide: 12 },
   { sectionId: 'pathologies',    blockIndex: 11, slide: 13 },
-  { sectionId: 'rop',            blockIndex: 13, slide: 15 },
+  { sectionId: 'rop',            blockIndex: 12, slide: 15 },
   { sectionId: 'relations',      blockIndex: 2,  slide: 14 },
   // Crohn clinical-case slide, right after the "Maladie de Crohn" heading.
   { sectionId: 'pathologies',    blockIndex: 14, slide: 16 },
+  // Vagus-nerve territory slide, right after the "Syndrome général d'adaptation" heading.
+  { sectionId: 'rop',            blockIndex: 1,  slide: 17 },
 ]

@@ -199,7 +199,6 @@ export const chapter14Es: Chapter = {
           'Hiato esofágico (nervios vagos derecho e izquierdo) y cardias.',
           'Curvatura menor del estómago, rica en fibras vagales.',
         ]},
-        { type: 'figure', src: '/chapter-14/es/figure-14-15 ES.png', caption: 'Figura 14.15 — Territorio craneal y cervical del nervio vago (en amarillo)', alt: 'Territorio craneal y cervical del nervio vago', orientation: 'landscape' },
         { type: 'figure', src: '/chapter-14/es/Chapter14 Fig16 ES.png', caption: 'Figura 14.16 — Territorio abdominal izquierdo del nervio vago y plexo celíaco (solar)', alt: 'Territorio abdominal izquierdo del nervio vago y plexo celíaco', orientation: 'landscape' },
         { type: 'figure', src: '/chapter-14/es/Chapter14 Fig17 ES.png', caption: 'Figura 14.17 — Hiato esofágico (nervios vagos derecho e izquierdo) y cardias', alt: 'Hiato esofágico y nervios vagos', orientation: 'medium' },
         { type: 'figure', src: '/chapter-14/es/Chapter14 Fig18 ES.png', caption: 'Figura 14.18 — Curvatura menor del estómago, rica en fibras vagales', alt: 'Curvatura menor del estómago y fibras vagales', orientation: 'medium' },
