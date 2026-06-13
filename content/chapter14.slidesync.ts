@@ -34,6 +34,7 @@ export const chapter14Slides: SyncSlide[] = [
   { src: '/chapter-14/slides/Chapter14 FigCrohn FR.png', title: 'Cas clinique — maladie de Crohn et spondylarthrite' },
   { src: '/chapter-14/figure-14-15.png', title: 'Territoire crânien et cervical du nerf vague' },
   { src: '/chapter-14/figure-14-16.png', title: 'Territoire abdominal gauche du nerf vague et plexus cœliaque (solaire)' },
+  { src: '/chapter-14/Chapter14 Fig19 FR.png', title: 'Système sympathique (origine médullaire)' },
 ]
 
 // English deck — same slides, translated. The text↔slide anchors are shared
@@ -57,6 +58,7 @@ export const chapter14SlidesEn: SyncSlide[] = [
   { src: '/chapter-14/slides/en/Chapter14 FigCrohn EN.png', title: 'Clinical case — Crohn’s disease and spondyloarthritis' },
   { src: '/chapter-14/en/figure-14-15 EN.png', title: 'Cranial and cervical territory of the vagus nerve' },
   { src: '/chapter-14/en/figure-14-16.png', title: 'Left abdominal territory of the vagus nerve and coeliac (solar) plexus' },
+  { src: '/chapter-14/en/Chapter14 Fig19 EN.png', title: 'Sympathetic system (spinal origin)' },
 ]
 
 // German deck — same slides, translated. Anchors are shared.
@@ -80,6 +82,7 @@ export const chapter14SlidesDe: SyncSlide[] = [
   { src: '/chapter-14/slides/de/Chapter14 FigCrohn GE.png', title: 'Klinischer Fall — Morbus Crohn und Spondyloarthritis' },
   { src: '/chapter-14/ge/figure-14-15 GE.png', title: 'Kranialer und zervikaler Bereich des Vagusnervs' },
   { src: '/chapter-14/ge/Chapter14 Fig16 GE.png', title: 'Linker abdominaler Bereich des Vagusnervs und Plexus coeliacus (Solarplexus)' },
+  { src: '/chapter-14/ge/Chapter14 Fig19 GE.png', title: 'Sympathisches System (spinaler Ursprung)' },
 ]
 
 // Spanish deck — same slides, translated. Anchors are shared.
@@ -102,6 +105,7 @@ export const chapter14SlidesEs: SyncSlide[] = [
   { src: '/chapter-14/slides/es/Chapter14 FigCrohn ES.png', title: 'Caso clínico — enfermedad de Crohn y espondiloartritis' },
   { src: '/chapter-14/es/figure-14-15 ES.png', title: 'Territorio craneal y cervical del nervio vago' },
   { src: '/chapter-14/es/Chapter14 Fig16 ES.png', title: 'Territorio abdominal izquierdo del nervio vago y plexo celíaco (solar)' },
+  { src: '/chapter-14/es/Chapter14 Fig19 ES.png', title: 'Sistema simpático (origen medular)' },
 ]
 
 // Italian deck — same slides, translated. Anchors are shared.
@@ -126,6 +130,7 @@ export const chapter14SlidesIt: SyncSlide[] = [
   { src: '/chapter-14/slides/it/Chapter14 FigCrohn IT.png', title: 'Caso clinico — malattia di Crohn e spondiloartrite' },
   { src: '/chapter-14/it/figure-14-15 IT.png', title: 'Territorio cranico e cervicale del nervo vago' },
   { src: '/chapter-14/it/Chapter14 Fig16 IT.png', title: 'Territorio addominale sinistro del nervo vago e plesso celiaco (solare)' },
+  { src: '/chapter-14/it/Chapter14 Fig19 IT.png', title: 'Sistema simpatico (origine midollare)' },
 ]
 
 export const chapter14SlideAnchors: SyncAnchor[] = [
@@ -144,7 +149,7 @@ export const chapter14SlideAnchors: SyncAnchor[] = [
   { sectionId: 'pathologies',    blockIndex: 1,  slide: 11 },
   { sectionId: 'pathologies',    blockIndex: 7,  slide: 12 },
   { sectionId: 'pathologies',    blockIndex: 11, slide: 13 },
-  { sectionId: 'rop',            blockIndex: 11, slide: 15 },
+  { sectionId: 'rop',            blockIndex: 10, slide: 15 },
   { sectionId: 'relations',      blockIndex: 2,  slide: 14 },
   // Crohn clinical-case slide, right after the "Maladie de Crohn" heading.
   { sectionId: 'pathologies',    blockIndex: 14, slide: 16 },
@@ -153,4 +158,7 @@ export const chapter14SlideAnchors: SyncAnchor[] = [
   // Left-abdominal vagus territory slide, right below figure 14.17 (rendered
   // above figure 14.18, which is block 4 after figure 14.16 moved to the deck).
   { sectionId: 'rop',            blockIndex: 4,  slide: 18 },
+  // Sympathetic-system slide, right below figure 14.20 (rendered above figure
+  // 14.21, which is block 8 after figure 14.19 moved to the deck).
+  { sectionId: 'rop',            blockIndex: 8,  slide: 19 },
 ]

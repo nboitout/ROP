@@ -208,7 +208,6 @@ export const chapter14De: Chapter = {
           'Plexus coeliacus (Solarplexus).',
           'Plexus lumbalis (viszero-somatische Verbindung).',
         ]},
-        { type: 'figure', src: '/chapter-14/ge/Chapter14 Fig19 GE.png', caption: 'Abbildung 14.19 — Sympathisches System (spinaler Ursprung)', alt: 'Sympathisches System und Ganglionkette', orientation: 'landscape' },
         { type: 'figure', src: '/chapter-14/ge/Chapter14 Fig20 GE.png', caption: 'Abbildung 14.20 — Lumbale Ganglionkette und Zwerchfellpfeiler', alt: 'Lumbale Ganglionkette und Zwerchfellpfeiler', orientation: 'landscape' },
         { type: 'figure', src: '/chapter-14/ge/Chapter14 Fig21 GE.png', caption: 'Abbildung 14.21 — Plexus coeliacus (Solarplexus)', alt: 'Solarplexus coeliacus', orientation: 'landscape' },
 

@@ -208,7 +208,6 @@ export const chapter14It: Chapter = {
           'Plesso celiaco (solare).',
           'Plesso lombare (collegamento viscero-somatico).',
         ]},
-        { type: 'figure', src: '/chapter-14/it/Chapter14 Fig19 IT.png', caption: 'Figura 14.19 — Sistema simpatico (origine midollare)', alt: 'Sistema simpatico e catena gangliare', orientation: 'landscape' },
         { type: 'figure', src: '/chapter-14/it/Chapter14 Fig20 IT.png', caption: 'Figura 14.20 — Catena gangliare lombare e pilastri del diaframma', alt: 'Catena gangliare lombare e pilastri del diaframma', orientation: 'landscape' },
         { type: 'figure', src: '/chapter-14/it/Chapter14 Fig21 IT.png', caption: 'Figura 14.21 — Plesso celiaco (solare)', alt: 'Plesso celiaco solare', orientation: 'landscape' },
 

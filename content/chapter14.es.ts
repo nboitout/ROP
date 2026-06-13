@@ -208,7 +208,6 @@ export const chapter14Es: Chapter = {
           'Plexo celíaco (solar).',
           'Plexo lumbar (vínculo viscero-somático).',
         ]},
-        { type: 'figure', src: '/chapter-14/es/Chapter14 Fig19 ES.png', caption: 'Figura 14.19 — Sistema simpático (origen medular)', alt: 'Sistema simpático y cadena ganglionar', orientation: 'landscape' },
         { type: 'figure', src: '/chapter-14/es/Chapter14 Fig20 ES.png', caption: 'Figura 14.20 — Cadena ganglionar lumbar y pilares del diafragma', alt: 'Cadena ganglionar lumbar y pilares del diafragma', orientation: 'landscape' },
         { type: 'figure', src: '/chapter-14/es/Chapter14 Fig21 ES.png', caption: 'Figura 14.21 — Plexo celíaco (solar)', alt: 'Plexo celíaco solar', orientation: 'landscape' },
 
