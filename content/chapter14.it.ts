@@ -231,7 +231,6 @@ export const chapter14It: Chapter = {
           'Rispettare l\'orientamento delle anse: orizzontali per il digiuno.',
         ]},
         { type: 'figure', src: '/chapter-14/it/Chapter14 Fig24 IT.png', caption: 'Figura 14.24 — Digiuno (limiti superiore e inferiore)', alt: 'Limiti della zona riflessiva del digiuno sul piede sinistro', orientation: 'portrait' },
-        { type: 'figure', src: '/chapter-14/it/Chapter14 Fig25 IT.png', caption: 'Figura 14.25 — Digiuno', alt: 'Zona riflessiva del digiuno sul piede sinistro', orientation: 'landscape' },
 
         { type: 'sub', text: 'Zone riflesse podali — Ileo (piede destro)' },
         { type: 'bullets', items: [

@@ -231,7 +231,6 @@ export const chapter14De: Chapter = {
           'Die Ausrichtung der Schlingen beachten: horizontal für das Jejunum.',
         ]},
         { type: 'figure', src: '/chapter-14/ge/Chapter14 Fig24 GE.png', caption: 'Abbildung 14.24 — Jejunum (obere und untere Grenze)', alt: 'Grenzen der Jejunum-Reflexzone am linken Fuß', orientation: 'narrow' },
-        { type: 'figure', src: '/chapter-14/ge/Chapter14 Fig25 GE.png', caption: 'Abbildung 14.25 — Jejunum', alt: 'Jejunum-Reflexzone am linken Fuß', orientation: 'landscape' },
 
         { type: 'sub', text: 'Podale Reflexzonen — Ileum (rechter Fuß)' },
         { type: 'bullets', items: [

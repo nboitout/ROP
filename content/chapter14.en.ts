@@ -231,7 +231,6 @@ export const chapter14En: Chapter = {
           'Respect the orientation of the loops: horizontal for the jejunum.',
         ]},
         { type: 'figure', src: '/chapter-14/en/figure-14-24.png', caption: 'Figure 14.24 — Jejunum (upper and lower limits)', alt: 'Limits of the jejunum reflex zone on the left foot', orientation: 'landscape' },
-        { type: 'figure', src: '/chapter-14/en/figure-14-25.png', caption: 'Figure 14.25 — Jejunum', alt: 'Jejunum reflex zone on the left foot', orientation: 'landscape' },
 
         { type: 'sub', text: 'Podal reflex zones — Ileum (right foot)' },
         { type: 'bullets', items: [

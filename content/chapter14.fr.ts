@@ -233,7 +233,6 @@ export const chapter14Fr: Chapter = {
           'Respecter l’orientation des anses : horizontales pour le jéjunum.',
         ]},
         { type: 'figure', src: '/chapter-14/figure-14-24.png', caption: 'Figure 14.24 — Jéjunum (limites supérieure et inférieure)', alt: 'Limites de la zone réflexe du jéjunum sur le pied gauche', orientation: 'landscape' },
-        { type: 'figure', src: '/chapter-14/figure-14-25.png', caption: 'Figure 14.25 — Jéjunum', alt: 'Zone réflexe du jéjunum sur le pied gauche', orientation: 'landscape' },
 
         { type: 'sub', text: 'Zones réflexes podales — Iléum (pied droit)' },
         { type: 'bullets', items: [

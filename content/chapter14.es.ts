@@ -231,7 +231,6 @@ export const chapter14Es: Chapter = {
           'Respetar la orientación de las asas: horizontales para el yeyuno.',
         ]},
         { type: 'figure', src: '/chapter-14/figure-14-24.png', caption: 'Figura 14.24 — Yeyuno (límites superior e inferior)', alt: 'Límites de la zona refleja del yeyuno en el pie izquierdo', orientation: 'portrait' },
-        { type: 'figure', src: '/chapter-14/figure-14-25.png', caption: 'Figura 14.25 — Yeyuno', alt: 'Zona refleja del yeyuno en el pie izquierdo', orientation: 'landscape' },
 
         { type: 'sub', text: 'Zonas reflejas podales — Íleon (pie derecho)' },
         { type: 'bullets', items: [
