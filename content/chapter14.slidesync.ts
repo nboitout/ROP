@@ -18,7 +18,7 @@ export type SyncAnchor = { sectionId: string; blockIndex: number; slide: number 
 export const chapter14Slides: SyncSlide[] = [
   { src: '/chapter-14/slides/slide-01.jpg', title: 'L’intestin grêle : anatomie, écosystème et approche ROP' },
   { src: '/chapter-14/slides/slide-02.jpg', title: 'Topographie et disposition intra-abdominale' },
-  { src: '/chapter-14/slides/slide-03.jpg', title: 'L’ancrage mécanique : mésentère et muscle de Treitz' },
+  { src: '/chapter-14/figure-14-2.png', title: 'Mésos', orientation: 'portrait' },
   { src: '/chapter-14/slides/slide-04.jpg', title: 'L’axe de l’irrigation et du drainage : tronc mésentérique supérieur' },
   { src: '/chapter-14/slides/slide-05.jpg', title: 'La double réalité neurologique du péritoine' },
   { src: '/chapter-14/slides/slide-06.jpg', title: 'Le deuxième cerveau : autonomie du système nerveux entérique' },
@@ -44,7 +44,7 @@ export const chapter14Slides: SyncSlide[] = [
 export const chapter14SlidesEn: SyncSlide[] = [
   { src: '/chapter-14/slides/en/slide-01.jpg', title: 'The small intestine: anatomy, ecosystem and ROP approach' },
   { src: '/chapter-14/slides/en/slide-02.jpg', title: 'Topography and intra-abdominal arrangement' },
-  { src: '/chapter-14/slides/en/slide-03.jpg', title: 'Mechanical anchoring: mesentery and Treitz muscle' },
+  { src: '/chapter-14/en/figure-14-2.png', title: 'Mesos', orientation: 'portrait' },
   { src: '/chapter-14/slides/en/slide-04.jpg', title: 'The axis of irrigation and drainage: superior mesenteric trunk' },
   { src: '/chapter-14/slides/en/slide-05.jpg', title: 'The double neurological reality of the peritoneum' },
   { src: '/chapter-14/slides/en/slide-06.jpg', title: 'The second brain: autonomy of the enteric nervous system' },
@@ -70,7 +70,7 @@ export const chapter14SlidesEn: SyncSlide[] = [
 export const chapter14SlidesDe: SyncSlide[] = [
   { src: '/chapter-14/slides/de/slide-01.jpg', title: 'Der Dünndarm: Anatomie, Ökosystem und ROP-Ansatz' },
   { src: '/chapter-14/slides/de/slide-02.jpg', title: 'Topographie und intraabdominale Anordnung' },
-  { src: '/chapter-14/slides/de/slide-03.jpg', title: 'Die mechanische Verankerung: Mesenterium und Treitz-Muskel' },
+  { src: '/chapter-14/ge/Chapter14 Fig2 GE.png', title: 'Mesos', orientation: 'portrait' },
   { src: '/chapter-14/slides/de/slide-04.jpg', title: 'Die Achse der Versorgung und des Abflusses: oberer Mesenterialstamm' },
   { src: '/chapter-14/slides/de/slide-05.jpg', title: 'Die doppelte neurologische Realität des Peritoneums' },
   { src: '/chapter-14/slides/de/slide-06.jpg', title: 'Das zweite Gehirn: Autonomie des enterischen Nervensystems (ENS)' },
@@ -95,7 +95,7 @@ export const chapter14SlidesDe: SyncSlide[] = [
 export const chapter14SlidesEs: SyncSlide[] = [
   { src: '/chapter-14/slides/es/slide-01.jpg', title: 'El intestino delgado: anatomía, ecosistema y enfoque ROP' },
   { src: '/chapter-14/slides/es/slide-02.jpg', title: 'Topografía y disposición intraabdominal' },
-  { src: '/chapter-14/slides/es/slide-03.jpg', title: 'El anclaje mecánico: mesenterio y músculo de Treitz' },
+  { src: '/chapter-14/es/Chapter14 Fig2 ES.png', title: 'Mesos', orientation: 'portrait' },
   { src: '/chapter-14/slides/es/slide-04.jpg', title: 'El eje de la irrigación y el drenaje: tronco mesentérico superior' },
   { src: '/chapter-14/slides/es/slide-05.jpg', title: 'La doble realidad neurológica del peritoneo' },
   { src: '/chapter-14/slides/es/slide-06.jpg', title: 'El segundo cerebro: autonomía del sistema nervioso entérico (SNE)' },
@@ -122,7 +122,7 @@ export const chapter14SlidesEs: SyncSlide[] = [
 export const chapter14SlidesIt: SyncSlide[] = [
   { src: '/chapter-14/slides/it/slide-01.jpg', title: 'L’intestino crasso: anatomia, ecosistema e approccio ROP' },
   { src: '/chapter-14/slides/it/slide-02.jpg', title: 'Topografia e disposizione intra-addominale' },
-  { src: '/chapter-14/slides/it/slide-03.jpg', title: 'L’ancoraggio meccanico: mesentere e muscolo di Treitz' },
+  { src: '/chapter-14/it/Chapter14 Fig2 IT.png', title: 'Mesos', orientation: 'portrait' },
   { src: '/chapter-14/slides/it/slide-04.jpg', title: 'L’asse dell’irrigazione e del drenaggio: tronco mesenterico superiore' },
   { src: '/chapter-14/slides/it/slide-05.jpg', title: 'La doppia realtà neurologica del peritoneo' },
   { src: '/chapter-14/slides/it/slide-06.jpg', title: 'Il secondo cervello: autonomia del sistema nervoso enterico (SNE)' },
