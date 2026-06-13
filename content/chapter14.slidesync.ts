@@ -30,7 +30,6 @@ export const chapter14Slides: SyncSlide[] = [
   { src: '/chapter-14/slides/slide-12.jpg', title: 'Pathologie II : la dysbiose et ses manifestations' },
   { src: '/chapter-14/slides/slide-13.jpg', title: 'Signes d’alerte et diagnostic d’exclusion' },
   { src: '/chapter-14/slides/slide-14.jpg', title: 'Profil viscéro-émotionnel : la personne intestin' },
-  { src: '/chapter-14/slides/slide-16.jpg', title: 'Accompagnement ROP des pathologies fonctionnelles' },
   { src: '/chapter-14/slides/slide-17.jpg', title: 'Synthèse d’intervention ROP : protocole intestin grêle' },
   { src: '/chapter-14/figure-14-29.jpg', title: 'Cas clinique — maladie de Crohn et spondylarthrite', orientation: 'portrait' },
 ]
@@ -52,7 +51,6 @@ export const chapter14SlidesEn: SyncSlide[] = [
   { src: '/chapter-14/slides/en/slide-12.jpg', title: 'Pathology II: dysbiosis and its manifestations' },
   { src: '/chapter-14/slides/en/slide-13.jpg', title: 'Warning signs and diagnosis of exclusion' },
   { src: '/chapter-14/slides/en/slide-14.jpg', title: 'Viscero-emotional profile: the intestine person' },
-  { src: '/chapter-14/slides/en/slide-16.jpg', title: 'ROP support for functional disorders' },
   { src: '/chapter-14/slides/en/slide-17.jpg', title: 'ROP intervention summary: small intestine protocol' },
   { src: '/chapter-14/Chapter14 Cas Clinique EN.png', title: 'Clinical case — Crohn’s disease and spondyloarthritis', orientation: 'portrait' },
 ]
@@ -74,7 +72,6 @@ export const chapter14SlidesDe: SyncSlide[] = [
   { src: '/chapter-14/slides/de/slide-12.jpg', title: 'Pathologie II: die Dysbiose und ihre Manifestationen' },
   { src: '/chapter-14/slides/de/slide-13.jpg', title: 'Warnzeichen und Ausschlussdiagnostik' },
   { src: '/chapter-14/slides/de/slide-14.jpg', title: 'Viszero-emotionales Profil: die Person mit ROP' },
-  { src: '/chapter-14/slides/de/slide-16.jpg', title: 'ROP-Begleitung bei funktionellen Darmbeschwerden' },
   { src: '/chapter-14/slides/de/slide-17.jpg', title: 'Synthese der ROP-Intervention: Darm-Protokoll' },
   { src: '/chapter-14/Chapter14 Cas Clinique GE.png', title: 'Klinischer Fall — Morbus Crohn und Spondyloarthritis', orientation: 'portrait' },
 ]
@@ -95,7 +92,6 @@ export const chapter14SlidesEs: SyncSlide[] = [
   { src: '/chapter-14/slides/es/slide-12.jpg', title: 'Patología II: la disbiosis y sus manifestaciones' },
   { src: '/chapter-14/slides/es/slide-13.jpg', title: 'Signos de alerta y diagnóstico de exclusión' },
   { src: '/chapter-14/slides/es/slide-14.jpg', title: 'Perfil viscero-emocional: la persona intestino' },
-  { src: '/chapter-14/slides/es/slide-16.jpg', title: 'Acompañamiento ROP de las patologías funcionales' },
   { src: '/chapter-14/slides/es/slide-17.jpg', title: 'Síntesis de intervención ROP: protocolo intestino delgado' },
   { src: '/chapter-14/Chapter14 Cas Clinique ES.png', title: 'Caso clínico — enfermedad de Crohn y espondiloartritis', orientation: 'portrait' },
 ]
@@ -118,7 +114,6 @@ export const chapter14SlidesIt: SyncSlide[] = [
   { src: '/chapter-14/slides/it/slide-12.jpg', title: 'Patologia II: la disbiosi e le sue manifestazioni' },
   { src: '/chapter-14/slides/it/slide-13.jpg', title: 'Segnali d’allarme e diagnosi di esclusione' },
   { src: '/chapter-14/slides/it/slide-14.jpg', title: 'Profilo viscerale-emotivo: la persona con ROP' },
-  { src: '/chapter-14/slides/it/slide-16.jpg', title: 'Accompagnamento ROP delle patologie funzionali' },
   { src: '/chapter-14/slides/it/slide-17.jpg', title: 'Sintesi dell’intervento ROP: protocollo intestino crasso' },
   { src: '/chapter-14/Chapter14 Cas Clinique IT.png', title: 'Caso clinico — malattia di Crohn e spondiloartrite', orientation: 'portrait' },
 ]
@@ -139,9 +134,8 @@ export const chapter14SlideAnchors: SyncAnchor[] = [
   { sectionId: 'pathologies',    blockIndex: 1,  slide: 11 },
   { sectionId: 'pathologies',    blockIndex: 7,  slide: 12 },
   { sectionId: 'pathologies',    blockIndex: 11, slide: 13 },
-  { sectionId: 'pathologies',    blockIndex: 12, slide: 15 },
-  { sectionId: 'rop',            blockIndex: 13, slide: 16 },
+  { sectionId: 'rop',            blockIndex: 13, slide: 15 },
   { sectionId: 'relations',      blockIndex: 2,  slide: 14 },
   // Clinical case (portrait), right after the "Maladie de Crohn" paragraph.
-  { sectionId: 'pathologies',    blockIndex: 15, slide: 17 },
+  { sectionId: 'pathologies',    blockIndex: 15, slide: 16 },
 ]
