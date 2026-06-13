@@ -31,7 +31,7 @@ export const chapter14Slides: SyncSlide[] = [
   { src: '/chapter-14/slides/slide-13.jpg', title: 'Signes d’alerte et diagnostic d’exclusion' },
   { src: '/chapter-14/slides/slide-14.jpg', title: 'Profil viscéro-émotionnel : la personne intestin' },
   { src: '/chapter-14/slides/slide-17.jpg', title: 'Synthèse d’intervention ROP : protocole intestin grêle' },
-  { src: '/chapter-14/figure-14-29.jpg', title: 'Cas clinique — maladie de Crohn et spondylarthrite', orientation: 'portrait' },
+  { src: '/chapter-14/slides/Chapter14 FigCrohn FR.png', title: 'Cas clinique — maladie de Crohn et spondylarthrite' },
 ]
 
 // English deck — same slides, translated. The text↔slide anchors are shared
@@ -52,7 +52,7 @@ export const chapter14SlidesEn: SyncSlide[] = [
   { src: '/chapter-14/slides/en/slide-13.jpg', title: 'Warning signs and diagnosis of exclusion' },
   { src: '/chapter-14/slides/en/slide-14.jpg', title: 'Viscero-emotional profile: the intestine person' },
   { src: '/chapter-14/slides/en/slide-17.jpg', title: 'ROP intervention summary: small intestine protocol' },
-  { src: '/chapter-14/Chapter14 Cas Clinique EN.png', title: 'Clinical case — Crohn’s disease and spondyloarthritis', orientation: 'portrait' },
+  { src: '/chapter-14/slides/en/Chapter14 FigCrohn EN.png', title: 'Clinical case — Crohn’s disease and spondyloarthritis' },
 ]
 
 // German deck — same slides, translated. Anchors are shared.
@@ -73,7 +73,7 @@ export const chapter14SlidesDe: SyncSlide[] = [
   { src: '/chapter-14/slides/de/slide-13.jpg', title: 'Warnzeichen und Ausschlussdiagnostik' },
   { src: '/chapter-14/slides/de/slide-14.jpg', title: 'Viszero-emotionales Profil: die Person mit ROP' },
   { src: '/chapter-14/slides/de/slide-17.jpg', title: 'Synthese der ROP-Intervention: Darm-Protokoll' },
-  { src: '/chapter-14/Chapter14 Cas Clinique GE.png', title: 'Klinischer Fall — Morbus Crohn und Spondyloarthritis', orientation: 'portrait' },
+  { src: '/chapter-14/slides/de/Chapter14 FigCrohn GE.png', title: 'Klinischer Fall — Morbus Crohn und Spondyloarthritis' },
 ]
 
 // Spanish deck — same slides, translated. Anchors are shared.
@@ -93,7 +93,7 @@ export const chapter14SlidesEs: SyncSlide[] = [
   { src: '/chapter-14/slides/es/slide-13.jpg', title: 'Signos de alerta y diagnóstico de exclusión' },
   { src: '/chapter-14/slides/es/slide-14.jpg', title: 'Perfil viscero-emocional: la persona intestino' },
   { src: '/chapter-14/slides/es/slide-17.jpg', title: 'Síntesis de intervención ROP: protocolo intestino delgado' },
-  { src: '/chapter-14/Chapter14 Cas Clinique ES.png', title: 'Caso clínico — enfermedad de Crohn y espondiloartritis', orientation: 'portrait' },
+  { src: '/chapter-14/slides/es/Chapter14 FigCrohn ES.png', title: 'Caso clínico — enfermedad de Crohn y espondiloartritis' },
 ]
 
 // Italian deck — same slides, translated. Anchors are shared.
@@ -115,7 +115,7 @@ export const chapter14SlidesIt: SyncSlide[] = [
   { src: '/chapter-14/slides/it/slide-13.jpg', title: 'Segnali d’allarme e diagnosi di esclusione' },
   { src: '/chapter-14/slides/it/slide-14.jpg', title: 'Profilo viscerale-emotivo: la persona con ROP' },
   { src: '/chapter-14/slides/it/slide-17.jpg', title: 'Sintesi dell’intervento ROP: protocollo intestino crasso' },
-  { src: '/chapter-14/Chapter14 Cas Clinique IT.png', title: 'Caso clinico — malattia di Crohn e spondiloartrite', orientation: 'portrait' },
+  { src: '/chapter-14/slides/it/Chapter14 FigCrohn IT.png', title: 'Caso clinico — malattia di Crohn e spondiloartrite' },
 ]
 
 export const chapter14SlideAnchors: SyncAnchor[] = [
@@ -136,6 +136,6 @@ export const chapter14SlideAnchors: SyncAnchor[] = [
   { sectionId: 'pathologies',    blockIndex: 11, slide: 13 },
   { sectionId: 'rop',            blockIndex: 13, slide: 15 },
   { sectionId: 'relations',      blockIndex: 2,  slide: 14 },
-  // Clinical case (portrait), right after the "Maladie de Crohn" paragraph.
-  { sectionId: 'pathologies',    blockIndex: 15, slide: 16 },
+  // Crohn clinical-case slide, right after the "Maladie de Crohn" heading.
+  { sectionId: 'pathologies',    blockIndex: 14, slide: 16 },
 ]
