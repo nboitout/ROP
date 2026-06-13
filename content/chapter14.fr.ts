@@ -201,7 +201,6 @@ export const chapter14Fr: Chapter = {
           'Hiatus œsophagien (nerfs vagues droit et gauche) et cardia.',
           'Petite courbure de l’estomac, riche en fibres vagales.',
         ]},
-        { type: 'figure', src: '/chapter-14/figure-14-16.png', caption: 'Figure 14.16 — Territoire abdominal gauche du nerf vague et plexus cœliaque (solaire)', alt: 'Territoire abdominal gauche du nerf vague et plexus cœliaque', orientation: 'landscape' },
         { type: 'figure', src: '/chapter-14/figure-14-17.png', caption: 'Figure 14.17 — Hiatus œsophagien (nerfs vagues droit et gauche) et cardia', alt: 'Hiatus œsophagien et nerfs vagues', orientation: 'landscape' },
         { type: 'figure', src: '/chapter-14/figure-14-18.png', caption: 'Figure 14.18 — Petite courbure de l’estomac, riche en fibres vagales', alt: 'Petite courbure de l’estomac et fibres vagales', orientation: 'landscape' },
 
