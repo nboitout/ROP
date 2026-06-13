@@ -443,36 +443,6 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
             </section>
             )
           })}
-
-          {(chapter.revisionSheet || chapter.clinicalCase) && (
-            <div className="cr-resources">
-              <p className="cr-resources-label">{t.reader.resources}</p>
-              <div className="cr-resources-row">
-                {chapter.revisionSheet && (
-                  <button
-                    type="button"
-                    className="cr-resource-card"
-                    onClick={() => setLightbox({ src: chapter.revisionSheet!.src, alt: chapter.revisionSheet!.alt, caption: chapter.revisionSheet!.caption })}
-                    aria-label={t.reader.revisionSheet}
-                  >
-                    <img src={chapter.revisionSheet.src} alt="" aria-hidden />
-                    <span className="cr-resource-name">{t.reader.revisionSheet}</span>
-                  </button>
-                )}
-                {chapter.clinicalCase && (
-                  <button
-                    type="button"
-                    className="cr-resource-card cr-resource-card--case"
-                    onClick={() => setLightbox({ src: chapter.clinicalCase!.src, alt: chapter.clinicalCase!.alt, caption: chapter.clinicalCase!.caption })}
-                    aria-label={t.reader.clinicalCase}
-                  >
-                    <img src={chapter.clinicalCase.src} alt="" aria-hidden />
-                    <span className="cr-resource-name">{t.reader.clinicalCase}</span>
-                  </button>
-                )}
-              </div>
-            </div>
-          )}
         </article>
       </div>
 

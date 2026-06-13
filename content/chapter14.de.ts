@@ -199,7 +199,7 @@ export const chapter14De: Chapter = {
           'Ösophagushiatus (rechter und linker Vagusnerv) und Kardia.',
           'Kleine Kurvatur des Magens, reich an Vagusfasern.',
         ]},
-        { type: 'figure', src: '/chapter-14/ge/Chapter14 Fig15 GE.png', caption: 'Abbildung 14.15 — Kranialer und zervikaler Bereich des Vagusnervs (in Gelb)', alt: 'Kranialer und zervikaler Bereich des Vagusnervs', orientation: 'landscape' },
+        { type: 'figure', src: '/chapter-14/ge/figure-14-15 GE.png', caption: 'Abbildung 14.15 — Kranialer und zervikaler Bereich des Vagusnervs (in Gelb)', alt: 'Kranialer und zervikaler Bereich des Vagusnervs', orientation: 'landscape' },
         { type: 'figure', src: '/chapter-14/ge/Chapter14 Fig16 GE.png', caption: 'Abbildung 14.16 — Linker abdominaler Bereich des Vagusnervs und Plexus coeliacus (Solarplexus)', alt: 'Linker abdominaler Bereich des Vagusnervs und Plexus coeliacus', orientation: 'landscape' },
         { type: 'figure', src: '/chapter-14/ge/Chapter14 Fig17 GE.png', caption: 'Abbildung 14.17 — Ösophagushiatus (rechter und linker Vagusnerv) und Kardia', alt: 'Ösophagushiatus und Vagusnerven', orientation: 'narrow' },
         { type: 'figure', src: '/chapter-14/ge/Chapter14 Fig18 GE.png', caption: 'Abbildung 14.18 — Kleine Kurvatur des Magens, reich an Vagusfasern', alt: 'Kleine Kurvatur des Magens und Vagusfasern', orientation: 'narrow' },

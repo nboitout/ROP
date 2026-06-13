@@ -199,7 +199,7 @@ export const chapter14En: Chapter = {
           'Oesophageal hiatus (right and left vagus nerves) and cardia.',
           'Lesser curvature of the stomach, rich in vagal fibres.',
         ]},
-        { type: 'figure', src: '/chapter-14/en/figure-14-15.png', caption: 'Figure 14.15 — Cranial and cervical territory of the vagus nerve (in yellow)', alt: 'Cranial and cervical territory of the vagus nerve', orientation: 'landscape' },
+        { type: 'figure', src: '/chapter-14/en/figure-14-15 EN.png', caption: 'Figure 14.15 — Cranial and cervical territory of the vagus nerve (in yellow)', alt: 'Cranial and cervical territory of the vagus nerve', orientation: 'landscape' },
         { type: 'figure', src: '/chapter-14/en/figure-14-16.png', caption: 'Figure 14.16 — Left abdominal territory of the vagus nerve and coeliac (solar) plexus', alt: 'Left abdominal territory of the vagus nerve and coeliac plexus', orientation: 'landscape' },
         { type: 'figure', src: '/chapter-14/en/figure-14-17.png', caption: 'Figure 14.17 — Oesophageal hiatus (right and left vagus nerves) and cardia', alt: 'Oesophageal hiatus and vagus nerves', orientation: 'landscape' },
         { type: 'figure', src: '/chapter-14/en/figure-14-18.png', caption: 'Figure 14.18 — Lesser curvature of the stomach, rich in vagal fibres', alt: 'Lesser curvature of the stomach and vagal fibres', orientation: 'landscape' },
