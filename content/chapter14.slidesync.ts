@@ -15,22 +15,28 @@ export type SyncSlide = { src: string; title: string; orientation?: 'portrait' }
 // rendered just above the <h2> instead of inside a content block).
 export type SyncAnchor = { sectionId: string; blockIndex: number; slide: number }
 
+// French deck — re-rendered from the trimmed/reorganised synthese.pdf (16 pages,
+// slides 1–16), followed by the supplementary anatomical figure-slides (17–22).
+// Because the FR PDF was reorganised independently of EN/DE/ES/IT, the French
+// deck uses its own anchor table (chapter14SlideAnchorsFr); the other four
+// languages still share chapter14SlideAnchors until their PDFs are updated too.
 export const chapter14Slides: SyncSlide[] = [
   { src: '/chapter-14/slides/slide-01.jpg', title: 'L’intestin grêle : anatomie, écosystème et approche ROP' },
-  { src: '/chapter-14/slides/slide-02.jpg', title: 'Topographie et disposition intra-abdominale' },
-  { src: '/chapter-14/slides/slide-03.jpg', title: 'L’ancrage mécanique : mésentère et muscle de Treitz' },
+  { src: '/chapter-14/slides/slide-02.jpg', title: 'Topographie : l’intestin grêle au sein du cadre colique' },
+  { src: '/chapter-14/slides/slide-03.jpg', title: 'La racine du mésentère : l’ancrage mécanique' },
   { src: '/chapter-14/slides/slide-04.jpg', title: 'L’axe de l’irrigation et du drainage : tronc mésentérique supérieur' },
   { src: '/chapter-14/slides/slide-05.jpg', title: 'La double réalité neurologique du péritoine' },
-  { src: '/chapter-14/slides/slide-06.jpg', title: 'Le deuxième cerveau : autonomie du système nerveux entérique' },
+  { src: '/chapter-14/slides/slide-06.jpg', title: 'Le deuxième cerveau : autonomie du système nerveux entérique (SNE)' },
   { src: '/chapter-14/slides/slide-07.jpg', title: 'Le deuxième cerveau : système nerveux entérique' },
-  { src: '/chapter-14/slides/slide-08.jpg', title: 'L’écosystème intestinal : le trépied de la santé digestive' },
+  { src: '/chapter-14/slides/slide-08.jpg', title: 'L’écosystème intestinal : symbiose et immunité' },
   { src: '/chapter-14/slides/slide-09.jpg', title: 'La double voie d’absorption micronutritionnelle' },
   { src: '/chapter-14/slides/slide-10.jpg', title: 'La spirale : dysbiose et hyperperméabilité' },
-  { src: '/chapter-14/slides/slide-11.jpg', title: 'Pathologie I : l’hyperperméabilité intestinale (leaky gut)' },
-  { src: '/chapter-14/slides/slide-12.jpg', title: 'Pathologie II : la dysbiose et ses manifestations' },
+  { src: '/chapter-14/slides/slide-11.jpg', title: 'Déséquilibre : hyperperméabilité et dysbiose' },
+  { src: '/chapter-14/slides/slide-12.jpg', title: 'Les conséquences systémiques du terrain inflammatoire' },
   { src: '/chapter-14/slides/slide-13.jpg', title: 'Signes d’alerte et diagnostic d’exclusion' },
-  { src: '/chapter-14/slides/slide-14.png', title: 'Profil viscéro-émotionnel : la personne intestin' },
-  { src: '/chapter-14/slides/slide-17.jpg', title: 'Synthèse d’intervention ROP : protocole intestin grêle' },
+  { src: '/chapter-14/slides/slide-14.jpg', title: 'Protocole ROP : ordre de traitement' },
+  { src: '/chapter-14/slides/slide-15.jpg', title: 'Synthèse d’intervention ROP : protocole intestin grêle' },
+  { src: '/chapter-14/slides/slide-16.jpg', title: 'Profil viscéro-émotionnel : la « personne intestin »' },
   { src: '/chapter-14/slides/Chapter14 FigCrohn FR.png', title: 'Cas clinique — maladie de Crohn et spondylarthrite' },
   { src: '/chapter-14/figure-14-15.png', title: 'Territoire crânien et cervical du nerf vague' },
   { src: '/chapter-14/figure-14-16.png', title: 'Territoire abdominal gauche du nerf vague et plexus cœliaque (solaire)' },
@@ -176,4 +182,39 @@ export const chapter14SlideAnchors: SyncAnchor[] = [
   // Ileum reflex-zone slide, right below the "Iléum (pied droit)" heading
   // (rendered above the bullets, which are block 18).
   { sectionId: 'rop',            blockIndex: 18, slide: 21 },
+]
+
+// French anchor table — for the re-rendered 16-page deck (FR only). Slides 1–16
+// are the synthesis-PDF pages in their new order; slides 17–22 are the
+// supplementary figure-slides. The other languages keep chapter14SlideAnchors
+// above until their synthesis PDFs are reorganised to match.
+export const chapter14SlideAnchorsFr: SyncAnchor[] = [
+  { sectionId: 'presentation',   blockIndex: 0,  slide: 1 },
+  { sectionId: 'presentation',   blockIndex: 3,  slide: 2 },
+  { sectionId: 'anatomie',       blockIndex: 1,  slide: 3 },
+  { sectionId: 'vascularisation', blockIndex: 1, slide: 4 },
+  { sectionId: 'innervation',    blockIndex: 2,  slide: 5 },
+  { sectionId: 'innervation',    blockIndex: 10, slide: 6 },
+  { sectionId: 'innervation',    blockIndex: 12, slide: 7 },
+  { sectionId: 'physiologie',    blockIndex: 5,  slide: 8 },
+  { sectionId: 'physiologie',    blockIndex: 10, slide: 9 },
+  { sectionId: 'pathologies',    blockIndex: 0,  slide: 10 },
+  { sectionId: 'pathologies',    blockIndex: 1,  slide: 11 },
+  { sectionId: 'pathologies',    blockIndex: 7,  slide: 12 },
+  { sectionId: 'pathologies',    blockIndex: 11, slide: 13 },
+  // Protocole ROP (ordre de traitement) — overview, at the ROP section heading.
+  { sectionId: 'rop',            blockIndex: -1, slide: 14 },
+  // Synthèse d'intervention ROP — at the "Syndrome locorégional" sub-heading.
+  { sectionId: 'rop',            blockIndex: 10, slide: 15 },
+  // Profil viscéro-émotionnel — at "Relations viscéro-émotionnelles".
+  { sectionId: 'relations',      blockIndex: 2,  slide: 16 },
+  // Crohn clinical-case slide, right after the "Maladie de Crohn" heading.
+  { sectionId: 'pathologies',    blockIndex: 14, slide: 17 },
+  // Figure-slides (cranial vagus, left-abdominal vagus, sympathetic system,
+  // jejunum and ileum reflex zones) anchored in the ROP section.
+  { sectionId: 'rop',            blockIndex: 1,  slide: 18 },
+  { sectionId: 'rop',            blockIndex: 4,  slide: 19 },
+  { sectionId: 'rop',            blockIndex: 7,  slide: 20 },
+  { sectionId: 'rop',            blockIndex: 16, slide: 21 },
+  { sectionId: 'rop',            blockIndex: 18, slide: 22 },
 ]
