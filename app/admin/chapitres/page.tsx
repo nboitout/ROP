@@ -74,19 +74,6 @@ export default async function AdminChapitresPage() {
             Idéal pour relire les versions en parallèle (un onglet par langue).
           </p>
         </div>
-        <div>
-          <a
-            href="/lecture/chapitre-14"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="adm-cta"
-          >
-            ✦ Prototype lecture synchronisée — Ch. 14 ↗
-          </a>
-          <span className="adm-cta-note">
-            Texte + diapositives de synthèse affichés ensemble. Visible uniquement depuis l’admin.
-          </span>
-        </div>
       </div>
 
       <div className="adm-scorecards">
