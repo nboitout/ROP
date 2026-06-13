@@ -5,14 +5,16 @@ import ChapterSelect from '@/components/admin/ChapterSelect'
 export const dynamic = 'force-dynamic'
 
 // Built chapters: maps the manifest number to its event slug (the `chapter`
-// field tracked by ChapterReader) and its page URL. Chapters not listed here
-// have no page yet — they still appear in the selector but show no data.
-const ROUTES: Record<string, { slug: string; href: string }> = {
-  '00': { slug: 'introduction', href: '/introduction' },
-  '02': { slug: 'chapter-2', href: '/lecture/traitement-rop' },
-  '04': { slug: 'chapter-4', href: '/chapitre-4' },
-  '05': { slug: 'chapter-5', href: '/chapitre-5' },
-  '14': { slug: 'chapter-14', href: '/chapitre-14' },
+// field tracked by the readers) and its page URLs. `href` is the page the
+// funnel is attributed to. `classicHref` / `syncHref` are the two reading-mode
+// routes (Classic = ChapterReader, Synchronized = SlideSyncReader) whose dwell
+// we split for the per-mode time metric. Chapters not listed have no page yet.
+const ROUTES: Record<string, { slug: string; href: string; classicHref?: string; syncHref?: string }> = {
+  '00': { slug: 'introduction', href: '/introduction', classicHref: '/introduction' },
+  '02': { slug: 'chapter-2', href: '/lecture/traitement-rop', syncHref: '/lecture/traitement-rop' },
+  '04': { slug: 'chapter-4', href: '/chapitre-4', classicHref: '/chapitre-4' },
+  '05': { slug: 'chapter-5', href: '/chapitre-5', classicHref: '/chapitre-5', syncHref: '/lecture/chapitre-5' },
+  '14': { slug: 'chapter-14', href: '/chapitre-14', classicHref: '/chapitre-14', syncHref: '/lecture/chapitre-14' },
 }
 
 // Full book: Introduction (00) + Chapitres 1–21.
@@ -23,6 +25,8 @@ const CHAPTERS = Array.from({ length: 22 }, (_, i) => {
     label: num === '00' ? 'Introduction' : `Chapitre ${i}`,
     slug: ROUTES[num]?.slug ?? null,
     href: ROUTES[num]?.href ?? null,
+    classicHref: ROUTES[num]?.classicHref ?? null,
+    syncHref: ROUTES[num]?.syncHref ?? null,
   }
 })
 
@@ -36,11 +40,16 @@ interface Metrics {
   slidesAvgTime: number
   resourcesOpened: number
   resourcesAvgTime: number
+  syncSeconds: number
+  syncVisits: number
+  classicSeconds: number
+  classicVisits: number
 }
 
 const ZERO: Metrics = {
   visited: 0, started: 0, mid: 0, finished: 0, avgTimeOnPage: 0,
   slidesOpened: 0, slidesAvgTime: 0, resourcesOpened: 0, resourcesAvgTime: 0,
+  syncSeconds: 0, syncVisits: 0, classicSeconds: 0, classicVisits: 0,
 }
 
 function stripPath(p: string) {
@@ -57,6 +66,9 @@ function parseDur(data: string): number | null {
 function avg(arr: number[]) {
   return arr.length ? arr.reduce((a, b) => a + b, 0) / arr.length : 0
 }
+function sum(arr: number[]) {
+  return arr.reduce((a, b) => a + b, 0)
+}
 
 interface Props {
   searchParams: Promise<{ chapter?: string }>
@@ -67,7 +79,12 @@ export default async function ParcoursPage({ searchParams }: Props) {
   const selected = params.chapter ?? 'all'
   const { events, visits } = await fetchAllSheets()
 
-  function computeChapter(slug: string, href: string): Metrics {
+  function computeChapter(
+    slug: string,
+    href: string,
+    classicHref: string | null,
+    syncHref: string | null,
+  ): Metrics {
     const visited = new Set<string>()
     const started = new Set<string>()
     const mid = new Set<string>()
@@ -75,13 +92,25 @@ export default async function ParcoursPage({ searchParams }: Props) {
     const slidesOpen = new Set<string>()
     const resOpen = new Set<string>()
     const pageTimes: number[] = []
+    // Active dwell split by reading mode (each mode is its own route).
+    const classicTimes: number[] = []
+    const syncTimes: number[] = []
 
     visits.forEach((v) => {
-      if (stripPath(v.page) !== href) return
-      if (v.event === 'page_visit' && v.readerId) visited.add(v.readerId)
+      const p = stripPath(v.page)
+      if (p === href) {
+        if (v.event === 'page_visit' && v.readerId) visited.add(v.readerId)
+        if (v.event === 'page_leave') {
+          const n = parseFloat(v.duration_seconds)
+          if (!isNaN(n) && n > 0) pageTimes.push(n)
+        }
+      }
       if (v.event === 'page_leave') {
         const n = parseFloat(v.duration_seconds)
-        if (!isNaN(n) && n > 0) pageTimes.push(n)
+        if (!isNaN(n) && n > 0) {
+          if (classicHref && p === classicHref) classicTimes.push(n)
+          else if (syncHref && p === syncHref) syncTimes.push(n)
+        }
       }
     })
 
@@ -108,6 +137,10 @@ export default async function ParcoursPage({ searchParams }: Props) {
       slidesAvgTime: avg(slideTimes),
       resourcesOpened: resOpen.size,
       resourcesAvgTime: avg(resTimes),
+      syncSeconds: sum(syncTimes),
+      syncVisits: syncTimes.length,
+      classicSeconds: sum(classicTimes),
+      classicVisits: classicTimes.length,
     }
   }
 
@@ -115,7 +148,7 @@ export default async function ParcoursPage({ searchParams }: Props) {
   let m: Metrics
   if (isAvg) {
     // Average per chapter, across built chapters that have at least one visitor.
-    const built = CHAPTERS.filter((c) => c.slug && c.href).map((c) => computeChapter(c.slug!, c.href!))
+    const built = CHAPTERS.filter((c) => c.slug && c.href).map((c) => computeChapter(c.slug!, c.href!, c.classicHref, c.syncHref))
     const base = built.filter((x) => x.visited > 0)
     const f = (key: keyof Metrics) => (base.length ? base.reduce((a, b) => a + b[key], 0) / base.length : 0)
     m = {
@@ -123,14 +156,19 @@ export default async function ParcoursPage({ searchParams }: Props) {
       avgTimeOnPage: f('avgTimeOnPage'),
       slidesOpened: f('slidesOpened'), slidesAvgTime: f('slidesAvgTime'),
       resourcesOpened: f('resourcesOpened'), resourcesAvgTime: f('resourcesAvgTime'),
+      syncSeconds: f('syncSeconds'), syncVisits: f('syncVisits'),
+      classicSeconds: f('classicSeconds'), classicVisits: f('classicVisits'),
     }
   } else {
     const ch = CHAPTERS.find((c) => c.num === selected)
-    m = ch?.slug && ch?.href ? computeChapter(ch.slug, ch.href) : ZERO
+    m = ch?.slug && ch?.href ? computeChapter(ch.slug, ch.href, ch.classicHref, ch.syncHref) : ZERO
   }
 
   const fmtCount = (n: number) => (isAvg ? n.toFixed(1) : Math.round(n).toString())
   const fmtTime = (s: number) => (s > 0 ? `${Math.round(s)}s` : '—')
+  // Longer total spans read better as m s.
+  const fmtSpan = (s: number) =>
+    s <= 0 ? '—' : s < 60 ? `${Math.round(s)}s` : `${Math.floor(s / 60)}m ${String(Math.round(s % 60)).padStart(2, '0')}s`
   // Share of visitors who reached a step (visited is the 100% base).
   const rate = (n: number) => (m.visited > 0 ? `${Math.round((n / m.visited) * 100)}% of visitors` : '—')
 
@@ -173,6 +211,20 @@ export default async function ParcoursPage({ searchParams }: Props) {
         <Scorecard label="Opened Resources" value={fmtCount(m.resourcesOpened)} subtitle={`avg ${fmtTime(m.resourcesAvgTime)} open`} />
       </div>
 
+      <p className="adm-section-title">Reading mode — time spent</p>
+      <div className="adm-scorecards">
+        <Scorecard
+          label="Synchronized (default)"
+          value={fmtSpan(m.syncSeconds)}
+          subtitle={m.syncVisits > 0 ? `${fmtCount(m.syncVisits)} visits · avg ${fmtTime(m.syncSeconds / m.syncVisits)}` : 'no data'}
+        />
+        <Scorecard
+          label="Classic"
+          value={fmtSpan(m.classicSeconds)}
+          subtitle={m.classicVisits > 0 ? `${fmtCount(m.classicVisits)} visits · avg ${fmtTime(m.classicSeconds / m.classicVisits)}` : 'no data'}
+        />
+      </div>
+
       <p className="adm-page-sub" style={{ marginTop: 16, maxWidth: 760, lineHeight: 1.6 }}>
         <strong>Visited</strong> = landed on the chapter page. <strong>Started reading</strong> = stayed
         10s+ (active tab). <strong>Finished</strong> = scrolled to 100% or hit the end marker.
@@ -180,6 +232,12 @@ export default async function ParcoursPage({ searchParams }: Props) {
         distinct readers who opened them; their average time is measured only from new visits (the
         close-duration tracking was just added), so it shows “—” until fresh data accrues. “Average per
         chapter” averages each value across the built chapters that have at least one visitor.
+      </p>
+      <p className="adm-page-sub" style={{ marginTop: 8, maxWidth: 760, lineHeight: 1.6 }}>
+        <strong>Reading mode — time spent</strong> splits active dwell between the two routes:
+        <strong> Synchronized</strong> (text + pinned slides, the default for chapters with a deck,
+        at <code>/lecture/…</code>) and <strong>Classic</strong> (plain reader, at <code>/chapitre-N</code>).
+        The headline is total active seconds; the subtitle shows the visit count and average per visit.
       </p>
     </main>
   )
