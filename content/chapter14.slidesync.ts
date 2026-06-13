@@ -158,7 +158,7 @@ export const chapter14SlideAnchors: SyncAnchor[] = [
   // Left-abdominal vagus territory slide, right below figure 14.17 (rendered
   // above figure 14.18, which is block 4 after figure 14.16 moved to the deck).
   { sectionId: 'rop',            blockIndex: 4,  slide: 18 },
-  // Sympathetic-system slide, right below figure 14.20 (rendered above figure
-  // 14.21, which is block 8 after figure 14.19 moved to the deck).
-  { sectionId: 'rop',            blockIndex: 8,  slide: 19 },
+  // Sympathetic-system slide, right above figure 14.20 (block 7 after figure
+  // 14.19 moved to the deck).
+  { sectionId: 'rop',            blockIndex: 7,  slide: 19 },
 ]
