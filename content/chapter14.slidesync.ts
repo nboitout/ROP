@@ -36,6 +36,7 @@ export const chapter14Slides: SyncSlide[] = [
   { src: '/chapter-14/figure-14-16.png', title: 'Territoire abdominal gauche du nerf vague et plexus cœliaque (solaire)' },
   { src: '/chapter-14/Chapter14 Fig19 FR.png', title: 'Système sympathique (origine médullaire)' },
   { src: '/chapter-14/figure-14-25.png', title: 'Jéjunum (zone réflexe podale)' },
+  { src: '/chapter-14/figure-14-27.png', title: 'Iléum et racine du mésentère (zone réflexe podale)' },
 ]
 
 // English deck — same slides, translated. The text↔slide anchors are shared
@@ -61,6 +62,7 @@ export const chapter14SlidesEn: SyncSlide[] = [
   { src: '/chapter-14/en/figure-14-16.png', title: 'Left abdominal territory of the vagus nerve and coeliac (solar) plexus' },
   { src: '/chapter-14/en/Chapter14 Fig19 EN.png', title: 'Sympathetic system (spinal origin)' },
   { src: '/chapter-14/en/figure-14-25.png', title: 'Jejunum (foot reflex zone)' },
+  { src: '/chapter-14/en/figure-14-27.png', title: 'Ileum and root of the mesentery (foot reflex zone)' },
 ]
 
 // German deck — same slides, translated. Anchors are shared.
@@ -86,6 +88,7 @@ export const chapter14SlidesDe: SyncSlide[] = [
   { src: '/chapter-14/ge/Chapter14 Fig16 GE.png', title: 'Linker abdominaler Bereich des Vagusnervs und Plexus coeliacus (Solarplexus)' },
   { src: '/chapter-14/ge/Chapter14 Fig19 GE.png', title: 'Sympathisches System (spinaler Ursprung)' },
   { src: '/chapter-14/ge/Chapter14 Fig25 GE.png', title: 'Jejunum (podale Reflexzone)' },
+  { src: '/chapter-14/ge/Chapter14 Fig27 GE.png', title: 'Ileum und Mesenterialwurzel (podale Reflexzone)' },
 ]
 
 // Spanish deck — same slides, translated. Anchors are shared.
@@ -110,6 +113,7 @@ export const chapter14SlidesEs: SyncSlide[] = [
   { src: '/chapter-14/es/Chapter14 Fig16 ES.png', title: 'Territorio abdominal izquierdo del nervio vago y plexo celíaco (solar)' },
   { src: '/chapter-14/es/Chapter14 Fig19 ES.png', title: 'Sistema simpático (origen medular)' },
   { src: '/chapter-14/figure-14-25.png', title: 'Yeyuno (zona refleja podal)' },
+  { src: '/chapter-14/figure-14-27.png', title: 'Íleon y raíz del mesenterio (zona refleja podal)' },
 ]
 
 // Italian deck — same slides, translated. Anchors are shared.
@@ -136,6 +140,7 @@ export const chapter14SlidesIt: SyncSlide[] = [
   { src: '/chapter-14/it/Chapter14 Fig16 IT.png', title: 'Territorio addominale sinistro del nervo vago e plesso celiaco (solare)' },
   { src: '/chapter-14/it/Chapter14 Fig19 IT.png', title: 'Sistema simpatico (origine midollare)' },
   { src: '/chapter-14/it/Chapter14 Fig25 IT.png', title: 'Digiuno (zona riflessa podalica)' },
+  { src: '/chapter-14/it/Chapter14 Fig27 IT.png', title: 'Ileo e radice del mesentere (zona riflessa podalica)' },
 ]
 
 export const chapter14SlideAnchors: SyncAnchor[] = [
@@ -168,4 +173,7 @@ export const chapter14SlideAnchors: SyncAnchor[] = [
   { sectionId: 'rop',            blockIndex: 7,  slide: 19 },
   // Jejunum reflex-zone slide, right above figure 14.24 (block 16).
   { sectionId: 'rop',            blockIndex: 16, slide: 20 },
+  // Ileum reflex-zone slide, right below the "Iléum (pied droit)" heading
+  // (rendered above the bullets, which are block 18).
+  { sectionId: 'rop',            blockIndex: 18, slide: 21 },
 ]

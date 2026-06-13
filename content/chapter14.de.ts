@@ -240,7 +240,6 @@ export const chapter14De: Chapter = {
           'Die Ausrichtung der Schlingen beachten: vertikal für das Ileum.',
         ]},
         { type: 'figure', src: '/chapter-14/ge/Chapter14 Fig26 GE.png', caption: 'Abbildung 14.26 — Ileum (obere und untere Grenze)', alt: 'Grenzen der Ileum-Reflexzone am rechten Fuß', orientation: 'narrow' },
-        { type: 'figure', src: '/chapter-14/ge/Chapter14 Fig27 GE.png', caption: 'Abbildung 14.27 — Ileum und Mesenterialwurzel', alt: 'Ileum-Reflexzone und Mesenterialwurzel am rechten Fuß', orientation: 'landscape' },
 
         { type: 'sub', text: '3. Limbisches System' },
         { type: 'lead', label: 'Limbisches Gehirn — Dünndarm-Balance', text: 'Induktion-Zuhören: ein Daumen auf dem Dünndarm, der andere auf dem limbischen Gehirn.' },

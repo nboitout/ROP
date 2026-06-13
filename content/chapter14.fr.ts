@@ -242,7 +242,6 @@ export const chapter14Fr: Chapter = {
           'Respecter l’orientation des anses : verticales pour l’iléum.',
         ]},
         { type: 'figure', src: '/chapter-14/figure-14-26.png', caption: 'Figure 14.26 — Iléum (limites supérieure et inférieure)', alt: 'Limites de la zone réflexe de l’iléum sur le pied droit', orientation: 'landscape' },
-        { type: 'figure', src: '/chapter-14/figure-14-27.png', caption: 'Figure 14.27 — Iléum et racine du mésentère', alt: 'Zone réflexe de l’iléum et racine du mésentère sur le pied droit', orientation: 'landscape' },
 
         { type: 'sub', text: '3. Système limbique' },
         { type: 'lead', label: 'Balance cerveau limbique — intestin grêle', text: 'écoute-induction : un pouce sur l’intestin grêle, l’autre pouce sur le cerveau limbique.' },

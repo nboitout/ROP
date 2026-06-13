@@ -240,7 +240,6 @@ export const chapter14En: Chapter = {
           'Respect the orientation of the loops: vertical for the ileum.',
         ]},
         { type: 'figure', src: '/chapter-14/en/figure-14-26.png', caption: 'Figure 14.26 — Ileum (upper and lower limits)', alt: 'Limits of the ileum reflex zone on the right foot', orientation: 'landscape' },
-        { type: 'figure', src: '/chapter-14/en/figure-14-27.png', caption: 'Figure 14.27 — Ileum and root of the mesentery', alt: 'Ileum reflex zone and root of the mesentery on the right foot', orientation: 'landscape' },
 
         { type: 'sub', text: '3. Limbic system' },
         { type: 'lead', label: 'Limbic brain — small intestine balance', text: 'listening-induction: one thumb on the small intestine, the other thumb on the limbic brain.' },

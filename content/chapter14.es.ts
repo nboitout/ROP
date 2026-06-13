@@ -240,7 +240,6 @@ export const chapter14Es: Chapter = {
           'Respetar la orientación de las asas: verticales para el íleon.',
         ]},
         { type: 'figure', src: '/chapter-14/figure-14-26.png', caption: 'Figura 14.26 — Íleon (límites superior e inferior)', alt: 'Límites de la zona refleja del íleon en el pie derecho', orientation: 'portrait' },
-        { type: 'figure', src: '/chapter-14/figure-14-27.png', caption: 'Figura 14.27 — Íleon y raíz del mesenterio', alt: 'Zona refleja del íleon y raíz del mesenterio en el pie derecho', orientation: 'landscape' },
 
         { type: 'sub', text: '3. Sistema límbico' },
         { type: 'lead', label: 'Balance cerebro límbico — intestino delgado', text: 'escucha-inducción: un pulgar sobre el intestino delgado, el otro sobre el cerebro límbico.' },

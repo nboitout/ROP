@@ -240,7 +240,6 @@ export const chapter14It: Chapter = {
           'Rispettare l\'orientamento delle anse: verticali per l\'ileo.',
         ]},
         { type: 'figure', src: '/chapter-14/it/Chapter14 Fig26 IT.png', caption: 'Figura 14.26 — Ileo (limiti superiore e inferiore)', alt: 'Limiti della zona riflessiva dell\'ileo sul piede destro', orientation: 'portrait' },
-        { type: 'figure', src: '/chapter-14/it/Chapter14 Fig27 IT.png', caption: 'Figura 14.27 — Ileo e radice del mesentere', alt: 'Zona riflessiva dell\'ileo e radice del mesentere sul piede destro', orientation: 'landscape' },
 
         { type: 'sub', text: '3. Sistema limbico' },
         { type: 'lead', label: 'Bilancio cervello limbico — intestino tenue', text: 'ascolto-induzione: un pollice sull\'intestino tenue, l\'altro pollice sul cervello limbico.' },
