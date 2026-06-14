@@ -1,4 +1,5 @@
 import { fetchAllSheets } from '@/lib/sheets'
+import { fmtParis, parisDate, fmtDuration } from '@/lib/adminFormat'
 
 export const dynamic = 'force-dynamic'
 
@@ -72,7 +73,7 @@ export default async function VisitsPage({
   const firstSeen = new Map<string, string>()
   pageVisits.forEach((v) => {
     if (!v.readerId) return
-    const day = v.timestamp.slice(0, 10)
+    const day = parisDate(v.timestamp)
     const cur = firstSeen.get(v.readerId)
     if (!cur || day < cur) firstSeen.set(v.readerId, day)
   })
@@ -100,7 +101,7 @@ export default async function VisitsPage({
     })
   const countryChips = [...byCountry.entries()].sort((a, b) => b[1] - a[1]).slice(0, 12)
 
-  const fmtTs = (t: string) => (t ? t.slice(0, 16).replace('T', ' ') : '—')
+  const fmtTs = (t: string) => fmtParis(t)
 
   return (
     <main className="adm-page">
@@ -146,7 +147,7 @@ export default async function VisitsPage({
         <table className="adm-table">
           <thead>
             <tr>
-              <th>Time (UTC)</th>
+              <th>Time (Paris)</th>
               <th>Country</th>
               <th>Device</th>
               <th>Dwell</th>
@@ -166,7 +167,7 @@ export default async function VisitsPage({
               const page = v.page.replace(/^https?:\/\/[^/]+/, '') || '/'
               const ref = (v.referer || '').replace(/^https?:\/\//, '').replace(/\/$/, '')
               // Genuine return = this reader was seen on an earlier day than this visit.
-              const day = v.timestamp.slice(0, 10)
+              const day = parisDate(v.timestamp)
               const isReturn = (firstSeen.get(v.readerId) ?? day) < day
               const verdictColor =
                 verdict === 'Likely bot' ? 'rgba(200,80,60,.95)' : verdict === 'Suspicious' ? 'rgba(190,140,40,.95)' : 'rgba(74,107,90,.95)'
@@ -176,7 +177,7 @@ export default async function VisitsPage({
                   <td style={{ whiteSpace: 'nowrap' }}>{countryLabel(v.country)}</td>
                   <td>{deviceType(v.userAgent)}</td>
                   <td className="muted" style={{ whiteSpace: 'nowrap' }}>
-                    {hasDwell ? `${Math.round(d!.total)}s` : '—'}
+                    {hasDwell ? fmtDuration(d!.total) : '—'}
                   </td>
                   <td>{isReturn ? 'yes' : '—'}</td>
                   <td className="muted" style={{ maxWidth: 160, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{page}</td>

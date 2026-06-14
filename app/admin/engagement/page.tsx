@@ -1,6 +1,7 @@
 import { fetchAllSheets } from '@/lib/sheets'
 import Scorecard from '@/components/admin/Scorecard'
 import AdminBarChart, { BarDataPoint } from '@/components/admin/AdminBarChart'
+import { fmtDuration } from '@/lib/adminFormat'
 
 export const dynamic = 'force-dynamic'
 
@@ -13,8 +14,7 @@ function avgDuration(rows: { duration_seconds: string }[]): number {
 }
 
 function formatDuration(secs: number): string {
-  if (secs === 0) return '—'
-  return `${Math.round(secs)}s`
+  return fmtDuration(secs)
 }
 
 // Friendly, admin-readable label for a tracked page path. The homepage and the

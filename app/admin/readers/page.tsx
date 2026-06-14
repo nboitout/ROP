@@ -2,6 +2,7 @@ import { fetchAllSheets } from '@/lib/sheets'
 import Scorecard from '@/components/admin/Scorecard'
 import AdminBarChart, { BarDataPoint } from '@/components/admin/AdminBarChart'
 import { translations } from '@/app/i18n/translations'
+import { fmtParis } from '@/lib/adminFormat'
 
 export const dynamic = 'force-dynamic'
 
@@ -161,8 +162,7 @@ export default async function ReadersPage() {
     return 'Desktop'
   }
 
-  const fmtTs = (ms: number) =>
-    new Date(ms).toISOString().slice(0, 16).replace('T', ' ')
+  const fmtTs = (ms: number) => fmtParis(ms)
 
   // First/last name, reconstructed from fullName when the split columns are empty.
   const splitName = (l: typeof sortedLeads[0]) => {
@@ -255,7 +255,7 @@ export default async function ReadersPage() {
               return (
                 <tr key={i}>
                   <td className="muted" style={{ whiteSpace: 'nowrap' }}>
-                    {lead.timestamp.slice(0, 16).replace('T', ' ')}
+                    {fmtParis(lead.timestamp)}
                   </td>
                   <td>{first || '—'}</td>
                   <td>{last || '—'}</td>

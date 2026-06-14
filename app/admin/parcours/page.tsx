@@ -1,6 +1,7 @@
 import { fetchAllSheets } from '@/lib/sheets'
 import Scorecard from '@/components/admin/Scorecard'
 import ChapterSelect from '@/components/admin/ChapterSelect'
+import { fmtDuration } from '@/lib/adminFormat'
 
 export const dynamic = 'force-dynamic'
 
@@ -165,10 +166,9 @@ export default async function ParcoursPage({ searchParams }: Props) {
   }
 
   const fmtCount = (n: number) => (isAvg ? n.toFixed(1) : Math.round(n).toString())
-  const fmtTime = (s: number) => (s > 0 ? `${Math.round(s)}s` : '—')
-  // Longer total spans read better as m s.
-  const fmtSpan = (s: number) =>
-    s <= 0 ? '—' : s < 60 ? `${Math.round(s)}s` : `${Math.floor(s / 60)}m ${String(Math.round(s % 60)).padStart(2, '0')}s`
+  // Seconds, switching to minutes past 2 min (shared helper).
+  const fmtTime = fmtDuration
+  const fmtSpan = fmtDuration
   // Share of visitors who reached a step (visited is the 100% base).
   const rate = (n: number) => (m.visited > 0 ? `${Math.round((n / m.visited) * 100)}% of visitors` : '—')
 

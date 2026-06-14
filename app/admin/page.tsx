@@ -3,6 +3,7 @@ import Scorecard from '@/components/admin/Scorecard'
 import AdminStackedCountryChart, { StackedTimePoint } from '@/components/admin/AdminStackedCountryChart'
 import AdminPieChart, { PieDataPoint } from '@/components/admin/AdminPieChart'
 import DaySelect from '@/components/admin/DaySelect'
+import { fmtParis, parisDate, parisHour, fmtDuration } from '@/lib/adminFormat'
 
 export const dynamic = 'force-dynamic'
 
@@ -13,7 +14,7 @@ function formatPct(n: number) {
 }
 
 function formatDuration(secs: number) {
-  return `${Math.round(secs)}s`
+  return fmtDuration(secs)
 }
 
 // Turn an ISO 3166 country code (FR, MT, …) into a full name (France, Malta).
@@ -49,9 +50,9 @@ export default async function AdminOverviewPage({
 
   const errorEntries = Object.entries(errors ?? {})
 
-  // --- Filter all data from launch date onwards ---
-  const filteredLeads = leads.filter((l) => l.timestamp.slice(0, 10) >= START_DATE)
-  const filteredVisits = visits.filter((v) => v.timestamp.slice(0, 10) >= START_DATE)
+  // --- Filter all data from launch date onwards (Paris calendar dates) ---
+  const filteredLeads = leads.filter((l) => parisDate(l.timestamp) >= START_DATE)
+  const filteredVisits = visits.filter((v) => parisDate(v.timestamp) >= START_DATE)
 
   // --- Unique visitors (distinct readerId in page_visit events) ---
   const pageVisits = filteredVisits.filter((v) => v.event === 'page_visit')
@@ -106,7 +107,7 @@ export default async function AdminOverviewPage({
   // distinct reader_ids per (date, country bucket)
   const perDate = new Map<string, Map<string, Set<string>>>()
   pageVisits.forEach((v) => {
-    const date = v.timestamp.slice(0, 10)
+    const date = parisDate(v.timestamp)
     const c = countryLabel(v.country || 'Unknown')
     const key = topCountrySet.has(c) ? c : 'Other'
     if (!perDate.has(date)) perDate.set(date, new Map())
@@ -115,10 +116,11 @@ export default async function AdminOverviewPage({
     if (v.readerId) m.get(key)!.add(v.readerId)
   })
 
-  const now = new Date()
-  const startD = new Date(START_DATE + 'T00:00:00Z')
+  // Axis: one entry per Paris calendar date from launch to today.
+  const todayParis = parisDate(new Date())
+  const startD = new Date(START_DATE + 'T12:00:00Z')
   const stackedData: StackedTimePoint[] = []
-  for (let d = new Date(startD); d <= now; d.setUTCDate(d.getUTCDate() + 1)) {
+  for (let d = new Date(startD); d.toISOString().slice(0, 10) <= todayParis; d.setUTCDate(d.getUTCDate() + 1)) {
     const entry: StackedTimePoint = { date: d.toISOString().slice(0, 10) }
     stackedCountries.forEach((c) => { entry[c] = 0 })
     stackedData.push(entry)
@@ -156,13 +158,13 @@ export default async function AdminOverviewPage({
     .sort((a, b) => b.count - a.count)
   const allTimeVisitsTotal = countryRows.reduce((sum, r) => sum + r.count, 0)
 
-  // --- Intraday: visits per hour for a selected UTC day, stacked by country ---
-  const todayUTC = new Date().toISOString().slice(0, 10)
-  const selectedDay = day && /^\d{4}-\d{2}-\d{2}$/.test(day) ? day : todayUTC
+  // --- Intraday: visits per hour for a selected day (Paris time), by country ---
+  const todayParisDay = parisDate(new Date())
+  const selectedDay = day && /^\d{4}-\d{2}-\d{2}$/.test(day) ? day : todayParisDay
   // Days offered in the picker: today + every day that has visit data, newest first
-  const dayOptions = [...new Set([todayUTC, ...pageVisits.map((v) => v.timestamp.slice(0, 10))])]
+  const dayOptions = [...new Set([todayParisDay, ...pageVisits.map((v) => parisDate(v.timestamp))])]
     .sort((a, b) => (a < b ? 1 : -1))
-  const dayVisits = pageVisits.filter((v) => v.timestamp.slice(0, 10) === selectedDay)
+  const dayVisits = pageVisits.filter((v) => parisDate(v.timestamp) === selectedDay)
   const dayVisitorCount = new Set(dayVisits.map((v) => v.readerId).filter(Boolean)).size
   // rank that day's countries by distinct visitors
   const dayCountryVisitors = new Map<string, Set<string>>()
@@ -177,10 +179,10 @@ export default async function AdminOverviewPage({
     .map(([c]) => c)
   const dayTopSet = new Set(dayTopCountries)
   const intradayCountries = [...dayTopCountries, 'Other']
-  // distinct reader_ids per (hour, country bucket)
+  // distinct reader_ids per (hour, country bucket) — hour in Paris time
   const hourSets: Map<string, Set<string>>[] = Array.from({ length: 24 }, () => new Map())
   dayVisits.forEach((v) => {
-    const hour = parseInt(v.timestamp.slice(11, 13), 10)
+    const hour = parisHour(v.timestamp)
     if (isNaN(hour) || hour < 0 || hour > 23) return
     const c = countryLabel(v.country || 'Unknown')
     const key = dayTopSet.has(c) ? c : 'Other'
@@ -214,7 +216,7 @@ export default async function AdminOverviewPage({
         <div>
           <p className="adm-page-eyebrow">Dashboard</p>
           <h1 className="adm-page-title">Overview</h1>
-          <p className="adm-page-sub">Updated {new Date().toLocaleString('en-GB')}</p>
+          <p className="adm-page-sub">Updated {fmtParis(new Date(), { withSeconds: true })} (Paris)</p>
         </div>
       </div>
 
@@ -248,9 +250,9 @@ export default async function AdminOverviewPage({
       <div className="adm-chart-card" style={{ marginBottom: 24 }}>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: 12, marginBottom: 20 }}>
           <p className="adm-chart-title" style={{ marginBottom: 0 }}>
-            By hour ({selectedDay}{selectedDay === todayUTC ? ', today' : ''}, UTC) — {dayVisitorCount.toLocaleString()} visitors
+            By hour ({selectedDay}{selectedDay === todayParisDay ? ', today' : ''}, Paris time) — {dayVisitorCount.toLocaleString()} visitors
           </p>
-          <DaySelect days={dayOptions} selected={selectedDay} today={todayUTC} />
+          <DaySelect days={dayOptions} selected={selectedDay} today={todayParisDay} />
         </div>
         <AdminStackedCountryChart
           data={intradayData}
