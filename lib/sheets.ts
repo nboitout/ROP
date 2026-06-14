@@ -18,6 +18,14 @@ const ALWAYS_EXCLUDED_READER_IDS = [
   '8aa28bec-8f8f-42d6-a068-7348ad0ffa50',
 ]
 
+// Emails always hidden from the dashboard, in addition to anything in the
+// EXCLUDED_EMAILS env var. Excluding by email catches every device the person
+// signs up with — current and future — so we don't have to keep chasing new
+// reader_ids each time the author/reviewer re-registers.
+const ALWAYS_EXCLUDED_EMAILS = [
+  'guyboitout.osteo@free.fr', // Guy Boitout (author / reviewer)
+]
+
 // ---- Types ----
 
 export interface LeadRow {
@@ -318,8 +326,10 @@ export async function fetchAllSheets(): Promise<{
   if (visitsResult.error) errors['Visits'] = visitsResult.error
 
   const excludedEmails = new Set(
-    (process.env.EXCLUDED_EMAILS ?? '')
-      .split(',')
+    [
+      ...ALWAYS_EXCLUDED_EMAILS,
+      ...(process.env.EXCLUDED_EMAILS ?? '').split(','),
+    ]
       .map((s) => s.trim().toLowerCase())
       .filter(Boolean)
   )
