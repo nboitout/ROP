@@ -61,14 +61,15 @@ export const chapter14SlidesEn: SyncSlide[] = [
   { src: '/chapter-14/slides/en/slide-11.jpg', title: 'Pathology I: intestinal hyperpermeability (leaky gut)' },
   { src: '/chapter-14/slides/en/slide-12.jpg', title: 'Pathology II: dysbiosis and its manifestations' },
   { src: '/chapter-14/slides/en/slide-13.jpg', title: 'Warning signs and diagnosis of exclusion' },
-  { src: '/chapter-14/slides/en/slide-14.png', title: 'Viscero-emotional profile: the intestine person' },
-  { src: '/chapter-14/slides/en/slide-17.jpg', title: 'ROP intervention summary: small intestine protocol' },
   { src: '/chapter-14/slides/en/Chapter14 FigCrohn EN.png', title: 'Clinical case — Crohn’s disease and spondyloarthritis' },
+  { src: '/chapter-14/slides/en/slide-14.jpg', title: 'ROP treatment protocol: order of management' },
   { src: '/chapter-14/en/figure-14-15 EN.png', title: 'Cranial and cervical territory of the vagus nerve' },
   { src: '/chapter-14/en/figure-14-16.png', title: 'Left abdominal territory of the vagus nerve and coeliac (solar) plexus' },
   { src: '/chapter-14/en/Chapter14 Fig19 EN.png', title: 'Sympathetic system (spinal origin)' },
   { src: '/chapter-14/en/figure-14-25.png', title: 'Jejunum (foot reflex zone)' },
   { src: '/chapter-14/en/figure-14-27.png', title: 'Ileum and root of the mesentery (foot reflex zone)' },
+  { src: '/chapter-14/slides/en/slide-15.jpg', title: 'ROP intervention summary: small intestine protocol' },
+  { src: '/chapter-14/slides/en/slide-16.jpg', title: 'Viscero-emotional profile: the intestine person' },
 ]
 
 // German deck — same slides, translated. Anchors are shared.
@@ -87,14 +88,15 @@ export const chapter14SlidesDe: SyncSlide[] = [
   { src: '/chapter-14/slides/de/slide-11.jpg', title: 'Pathologie I: erhöhte intestinale Permeabilität (Leaky Gut)' },
   { src: '/chapter-14/slides/de/slide-12.jpg', title: 'Pathologie II: die Dysbiose und ihre Manifestationen' },
   { src: '/chapter-14/slides/de/slide-13.jpg', title: 'Warnzeichen und Ausschlussdiagnostik' },
-  { src: '/chapter-14/slides/de/slide-14.png', title: 'Viszero-emotionales Profil: die Person mit ROP' },
-  { src: '/chapter-14/slides/de/slide-17.jpg', title: 'Synthese der ROP-Intervention: Darm-Protokoll' },
   { src: '/chapter-14/slides/de/Chapter14 FigCrohn GE.png', title: 'Klinischer Fall — Morbus Crohn und Spondyloarthritis' },
+  { src: '/chapter-14/slides/de/slide-14.jpg', title: 'ROP-Behandlungsprotokoll: Reihenfolge der Behandlung' },
   { src: '/chapter-14/ge/figure-14-15 GE.png', title: 'Kranialer und zervikaler Bereich des Vagusnervs' },
   { src: '/chapter-14/ge/Chapter14 Fig16 GE.png', title: 'Linker abdominaler Bereich des Vagusnervs und Plexus coeliacus (Solarplexus)' },
   { src: '/chapter-14/ge/Chapter14 Fig19 GE.png', title: 'Sympathisches System (spinaler Ursprung)' },
   { src: '/chapter-14/ge/Chapter14 Fig25 GE.png', title: 'Jejunum (podale Reflexzone)' },
   { src: '/chapter-14/ge/Chapter14 Fig27 GE.png', title: 'Ileum und Mesenterialwurzel (podale Reflexzone)' },
+  { src: '/chapter-14/slides/de/slide-15.jpg', title: 'Synthese der ROP-Intervention: Dünndarm-Protokoll' },
+  { src: '/chapter-14/slides/de/slide-16.jpg', title: 'Viszero-emotionales Profil: die Person mit ROP' },
 ]
 
 // Spanish deck — same slides, translated. Anchors are shared.
@@ -112,14 +114,15 @@ export const chapter14SlidesEs: SyncSlide[] = [
   { src: '/chapter-14/slides/es/slide-11.jpg', title: 'Patología I: hiperpermeabilidad intestinal (leaky gut)' },
   { src: '/chapter-14/slides/es/slide-12.jpg', title: 'Patología II: la disbiosis y sus manifestaciones' },
   { src: '/chapter-14/slides/es/slide-13.jpg', title: 'Signos de alerta y diagnóstico de exclusión' },
-  { src: '/chapter-14/slides/es/slide-14.png', title: 'Perfil viscero-emocional: la persona intestino' },
-  { src: '/chapter-14/slides/es/slide-17.jpg', title: 'Síntesis de intervención ROP: protocolo intestino delgado' },
   { src: '/chapter-14/slides/es/Chapter14 FigCrohn ES.png', title: 'Caso clínico — enfermedad de Crohn y espondiloartritis' },
+  { src: '/chapter-14/slides/es/slide-14.jpg', title: 'Protocolo de tratamiento ROP: orden de tratamiento' },
   { src: '/chapter-14/es/figure-14-15 ES.png', title: 'Territorio craneal y cervical del nervio vago' },
   { src: '/chapter-14/es/Chapter14 Fig16 ES.png', title: 'Territorio abdominal izquierdo del nervio vago y plexo celíaco (solar)' },
   { src: '/chapter-14/es/Chapter14 Fig19 ES.png', title: 'Sistema simpático (origen medular)' },
   { src: '/chapter-14/figure-14-25.png', title: 'Yeyuno (zona refleja podal)' },
   { src: '/chapter-14/figure-14-27.png', title: 'Íleon y raíz del mesenterio (zona refleja podal)' },
+  { src: '/chapter-14/slides/es/slide-15.jpg', title: 'Síntesis de intervención ROP: protocolo intestino delgado' },
+  { src: '/chapter-14/slides/es/slide-16.jpg', title: 'Perfil viscero-emocional: la persona intestino' },
 ]
 
 // Italian deck — same slides, translated. Anchors are shared.
@@ -139,14 +142,15 @@ export const chapter14SlidesIt: SyncSlide[] = [
   { src: '/chapter-14/slides/it/slide-11.jpg', title: 'Patologia I: iperpermeabilità intestinale (leaky gut)' },
   { src: '/chapter-14/slides/it/slide-12.jpg', title: 'Patologia II: la disbiosi e le sue manifestazioni' },
   { src: '/chapter-14/slides/it/slide-13.jpg', title: 'Segnali d’allarme e diagnosi di esclusione' },
-  { src: '/chapter-14/slides/it/slide-14.png', title: 'Profilo viscerale-emotivo: la persona con ROP' },
-  { src: '/chapter-14/slides/it/slide-17.jpg', title: 'Sintesi dell’intervento ROP: protocollo intestino crasso' },
   { src: '/chapter-14/slides/it/Chapter14 FigCrohn IT.png', title: 'Caso clinico — malattia di Crohn e spondiloartrite' },
+  { src: '/chapter-14/slides/it/slide-14.jpg', title: 'Protocollo di trattamento ROP: ordine di trattamento' },
   { src: '/chapter-14/it/figure-14-15 IT.png', title: 'Territorio cranico e cervicale del nervo vago' },
   { src: '/chapter-14/it/Chapter14 Fig16 IT.png', title: 'Territorio addominale sinistro del nervo vago e plesso celiaco (solare)' },
   { src: '/chapter-14/it/Chapter14 Fig19 IT.png', title: 'Sistema simpatico (origine midollare)' },
   { src: '/chapter-14/it/Chapter14 Fig25 IT.png', title: 'Digiuno (zona riflessa podalica)' },
   { src: '/chapter-14/it/Chapter14 Fig27 IT.png', title: 'Ileo e radice del mesentere (zona riflessa podalica)' },
+  { src: '/chapter-14/slides/it/slide-15.jpg', title: 'Sintesi dell’intervento ROP: protocollo intestino tenue' },
+  { src: '/chapter-14/slides/it/slide-16.jpg', title: 'Profilo viscerale-emotivo: la persona con ROP' },
 ]
 
 export const chapter14SlideAnchors: SyncAnchor[] = [
@@ -165,23 +169,27 @@ export const chapter14SlideAnchors: SyncAnchor[] = [
   { sectionId: 'pathologies',    blockIndex: 1,  slide: 11 },
   { sectionId: 'pathologies',    blockIndex: 7,  slide: 12 },
   { sectionId: 'pathologies',    blockIndex: 11, slide: 13 },
-  { sectionId: 'rop',            blockIndex: 10, slide: 15 },
-  { sectionId: 'relations',      blockIndex: 2,  slide: 14 },
   // Crohn clinical-case slide, right after the "Maladie de Crohn" heading.
-  { sectionId: 'pathologies',    blockIndex: 14, slide: 16 },
+  { sectionId: 'pathologies',    blockIndex: 14, slide: 14 },
+  // Protocole ROP (ordre de traitement) — overview, at the ROP section heading.
+  { sectionId: 'rop',            blockIndex: -1, slide: 15 },
   // Cranial/cervical vagus-nerve territory slide, right after the "1. Nerf vague" heading.
-  { sectionId: 'rop',            blockIndex: 1,  slide: 17 },
+  { sectionId: 'rop',            blockIndex: 1,  slide: 16 },
   // Left-abdominal vagus territory slide, right below figure 14.17 (rendered
   // above figure 14.18, which is block 4 after figure 14.16 moved to the deck).
-  { sectionId: 'rop',            blockIndex: 4,  slide: 18 },
+  { sectionId: 'rop',            blockIndex: 4,  slide: 17 },
   // Sympathetic-system slide, right above figure 14.20 (block 7 after figure
   // 14.19 moved to the deck).
-  { sectionId: 'rop',            blockIndex: 7,  slide: 19 },
+  { sectionId: 'rop',            blockIndex: 7,  slide: 18 },
   // Jejunum reflex-zone slide, right above figure 14.24 (block 16).
-  { sectionId: 'rop',            blockIndex: 16, slide: 20 },
+  { sectionId: 'rop',            blockIndex: 16, slide: 19 },
   // Ileum reflex-zone slide, right below the "Iléum (pied droit)" heading
   // (rendered above the bullets, which are block 18).
-  { sectionId: 'rop',            blockIndex: 18, slide: 21 },
+  { sectionId: 'rop',            blockIndex: 18, slide: 20 },
+  // ROP intervention synthesis — after the reflex-zone slides, at the limbic step.
+  { sectionId: 'rop',            blockIndex: 20, slide: 21 },
+  // Viscero-emotional profile — final slide encountered in the text.
+  { sectionId: 'relations',      blockIndex: 2,  slide: 22 },
 ]
 
 // French anchor table — for the re-rendered 16-page deck (FR only). The Crohn
