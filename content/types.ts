@@ -4,7 +4,7 @@ export type Block =
   | { type: 'sub'; text: string }
   | { type: 'bullets'; items: string[] }
   | { type: 'leadBullets'; items: { label: string; text: string }[] }
-  | { type: 'figure'; src: string; caption: string; alt: string; orientation: 'landscape' | 'portrait' | 'medium' | 'narrow' }
+  | { type: 'figure'; src: string; caption: string; alt: string; orientation: 'landscape' | 'portrait' | 'medium' | 'narrow'; syncHide?: true }
   | { type: 'rop'; body: string[] }
 
 export type Section = { id: string; title: string; blocks: Block[] }

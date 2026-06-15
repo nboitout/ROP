@@ -501,6 +501,7 @@ function BlockView({ block, onOpenImage, ui }: { block: Block; onOpenImage: (b: 
         </ul>
       )
     case 'figure':
+      if (block.syncHide) return null
       return (
         <figure className={`cr-fig cr-fig-${block.orientation} ss-fig`}>
           <button
