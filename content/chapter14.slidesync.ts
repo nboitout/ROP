@@ -23,7 +23,7 @@ export type SyncAnchor = { sectionId: string; blockIndex: number; slide: number 
 export const chapter14Slides: SyncSlide[] = [
   { src: '/chapter-14/slides/slide-01.jpg', title: 'L’intestin grêle : anatomie, écosystème et approche ROP' },
   { src: '/chapter-14/slides/slide-02.jpg', title: 'Topographie : l’intestin grêle au sein du cadre colique' },
-  { src: '/chapter-14/slides/slide-03.jpg', title: 'Mésos' },
+  { src: '/chapter-14/slides/slide-03.jpg', title: 'Le mésentère et sa mécanique de suspension' },
   { src: '/chapter-14/slides/slide-04.jpg', title: 'L’axe de l’irrigation et du drainage : tronc mésentérique supérieur' },
   { src: '/chapter-14/slides/slide-05.jpg', title: 'La double réalité neurologique du péritoine' },
   { src: '/chapter-14/slides/slide-06.jpg', title: 'Le deuxième cerveau : autonomie du système nerveux entérique (SNE)' },
