@@ -34,15 +34,15 @@ export const chapter14Slides: SyncSlide[] = [
   { src: '/chapter-14/slides/slide-11.jpg', title: 'Déséquilibre : hyperperméabilité et dysbiose' },
   { src: '/chapter-14/slides/slide-12.jpg', title: 'Les conséquences systémiques du terrain inflammatoire' },
   { src: '/chapter-14/slides/slide-13.jpg', title: 'Signes d’alerte et diagnostic d’exclusion' },
-  { src: '/chapter-14/slides/slide-14.jpg', title: 'Protocole ROP : ordre de traitement' },
-  { src: '/chapter-14/slides/slide-15.jpg', title: 'Synthèse d’intervention ROP : protocole intestin grêle' },
-  { src: '/chapter-14/slides/slide-16.jpg', title: 'Profil viscéro-émotionnel : la « personne intestin »' },
   { src: '/chapter-14/slides/Chapter14 FigCrohn FR.png', title: 'Cas clinique — maladie de Crohn et spondylarthrite' },
+  { src: '/chapter-14/slides/slide-14.jpg', title: 'Protocole ROP : ordre de traitement' },
   { src: '/chapter-14/figure-14-15.png', title: 'Territoire crânien et cervical du nerf vague' },
   { src: '/chapter-14/figure-14-16.png', title: 'Territoire abdominal gauche du nerf vague et plexus cœliaque (solaire)' },
   { src: '/chapter-14/Chapter14 Fig19 FR.png', title: 'Système sympathique (origine médullaire)' },
   { src: '/chapter-14/figure-14-25.png', title: 'Jéjunum (zone réflexe podale)' },
   { src: '/chapter-14/figure-14-27.png', title: 'Iléum et racine du mésentère (zone réflexe podale)' },
+  { src: '/chapter-14/slides/slide-15.jpg', title: 'Synthèse d’intervention ROP : protocole intestin grêle' },
+  { src: '/chapter-14/slides/slide-16.jpg', title: 'Profil viscéro-émotionnel : la « personne intestin »' },
 ]
 
 // English deck — same slides, translated. The text↔slide anchors are shared
@@ -184,10 +184,9 @@ export const chapter14SlideAnchors: SyncAnchor[] = [
   { sectionId: 'rop',            blockIndex: 18, slide: 21 },
 ]
 
-// French anchor table — for the re-rendered 16-page deck (FR only). Slides 1–16
-// are the synthesis-PDF pages in their new order; slides 17–22 are the
-// supplementary figure-slides. The other languages keep chapter14SlideAnchors
-// above until their synthesis PDFs are reorganised to match.
+// French anchor table — for the re-rendered 16-page deck (FR only). The Crohn
+// case is shown before the ROP sequence; the emotional-profile slide is last
+// because it is the final slide encountered in the text.
 export const chapter14SlideAnchorsFr: SyncAnchor[] = [
   { sectionId: 'presentation',   blockIndex: 0,  slide: 1 },
   { sectionId: 'presentation',   blockIndex: 3,  slide: 2 },
@@ -202,19 +201,19 @@ export const chapter14SlideAnchorsFr: SyncAnchor[] = [
   { sectionId: 'pathologies',    blockIndex: 1,  slide: 11 },
   { sectionId: 'pathologies',    blockIndex: 7,  slide: 12 },
   { sectionId: 'pathologies',    blockIndex: 11, slide: 13 },
-  // Protocole ROP (ordre de traitement) — overview, at the ROP section heading.
-  { sectionId: 'rop',            blockIndex: -1, slide: 14 },
-  // Synthèse d'intervention ROP — at the "Syndrome locorégional" sub-heading.
-  { sectionId: 'rop',            blockIndex: 10, slide: 15 },
-  // Profil viscéro-émotionnel — at "Relations viscéro-émotionnelles".
-  { sectionId: 'relations',      blockIndex: 2,  slide: 16 },
   // Crohn clinical-case slide, right after the "Maladie de Crohn" heading.
-  { sectionId: 'pathologies',    blockIndex: 14, slide: 17 },
+  { sectionId: 'pathologies',    blockIndex: 14, slide: 14 },
+  // Protocole ROP (ordre de traitement) — overview, at the ROP section heading.
+  { sectionId: 'rop',            blockIndex: -1, slide: 15 },
   // Figure-slides (cranial vagus, left-abdominal vagus, sympathetic system,
   // jejunum and ileum reflex zones) anchored in the ROP section.
-  { sectionId: 'rop',            blockIndex: 1,  slide: 18 },
-  { sectionId: 'rop',            blockIndex: 4,  slide: 19 },
-  { sectionId: 'rop',            blockIndex: 7,  slide: 20 },
-  { sectionId: 'rop',            blockIndex: 16, slide: 21 },
-  { sectionId: 'rop',            blockIndex: 18, slide: 22 },
+  { sectionId: 'rop',            blockIndex: 1,  slide: 16 },
+  { sectionId: 'rop',            blockIndex: 4,  slide: 17 },
+  { sectionId: 'rop',            blockIndex: 7,  slide: 18 },
+  { sectionId: 'rop',            blockIndex: 16, slide: 19 },
+  { sectionId: 'rop',            blockIndex: 18, slide: 20 },
+  // Synthèse d'intervention ROP — after the reflex-zone slides, at the limbic step.
+  { sectionId: 'rop',            blockIndex: 20, slide: 21 },
+  // Profil viscéro-émotionnel — at "Relations viscéro-émotionnelles".
+  { sectionId: 'relations',      blockIndex: 2,  slide: 22 },
 ]
