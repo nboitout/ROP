@@ -155,8 +155,8 @@ export const chapter14SlidesIt: SyncSlide[] = [
 
 export const chapter14SlideAnchors: SyncAnchor[] = [
   { sectionId: 'presentation',   blockIndex: 0,  slide: 1 },
-  // Slide 2 sits right below the "Situation" heading (first block of the section).
-  { sectionId: 'situation',      blockIndex: 0,  slide: 2 },
+  // Slide 2 sits just above the "Ils s'étendent du pylore…" paragraph (presentation block 2).
+  { sectionId: 'presentation',   blockIndex: 2,  slide: 2 },
   // Slide 3 points just before "Mésentère — c'est un méso…" (block 2 now that
   // figure 14.2 leads the Anatomie section).
   { sectionId: 'anatomie',       blockIndex: 2,  slide: 3 },
@@ -200,8 +200,8 @@ export const chapter14SlideAnchors: SyncAnchor[] = [
 // because it is the final slide encountered in the text.
 export const chapter14SlideAnchorsFr: SyncAnchor[] = [
   { sectionId: 'presentation',   blockIndex: 0,  slide: 1 },
-  // Slide 2 sits right below the "Situation" heading (first block of the section).
-  { sectionId: 'situation',      blockIndex: 0,  slide: 2 },
+  // Slide 2 sits just above the "Ils s'étendent du pylore…" paragraph (presentation block 2).
+  { sectionId: 'presentation',   blockIndex: 2,  slide: 2 },
   // Slides 3 & 4 follow their leads, now at block 2 since figures 14.2 / 14.5
   // were moved to the top of the Anatomie / Vascularisation sections.
   { sectionId: 'anatomie',       blockIndex: 2,  slide: 3 },
