@@ -5,7 +5,7 @@
 // Navigating the slides (arrows / dots) scrolls the text to the matching
 // passage, so the two media stay in step in both directions.
 
-import { useEffect, useMemo, useRef, useState } from 'react'
+import { Fragment, useEffect, useMemo, useRef, useState } from 'react'
 import Link from 'next/link'
 import type { Chapter, Block } from '@/content/types'
 import type { SyncSlide, SyncAnchor } from '@/content/chapter5.slidesync'
@@ -105,6 +105,10 @@ const SS_UI: Record<string, {
     enlargeFigure: (caption: string) => `Ingrandisci: ${caption}`,
   },
 }
+
+// Section ids that get a "page break" — a tall blank gap the reader scrolls
+// through before the section heading, à la Word page break.
+const PAGE_BREAK_BEFORE = new Set<string>(['anatomie'])
 
 export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, backHref = '/chapitres-gratuits', classicHref }: Props) {
   const { lang, t } = useLanguage()
@@ -408,7 +412,9 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
           {chapter.sections.map((section) => {
             const headingSlide = anchorBySlide.get(`${section.id}:-1`)
             return (
-            <section key={section.id} id={`sec-${section.id}`} className="cr-section">
+            <Fragment key={section.id}>
+            {PAGE_BREAK_BEFORE.has(section.id) && <div className="ss-pagebreak" aria-hidden />}
+            <section id={`sec-${section.id}`} className="cr-section">
               {headingSlide && (
                 <div data-slide-anchor={headingSlide} className="ss-anchor ss-anchor-heading">
                   <button
@@ -444,6 +450,7 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
                 )
               })}
             </section>
+            </Fragment>
             )
           })}
         </article>
