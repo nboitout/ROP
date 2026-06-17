@@ -69,7 +69,7 @@ export const chapter14It: Chapter = {
       id: 'vascularisation',
       title: 'Vascolarizzazione',
       blocks: [
-        { type: 'figure', src: '/chapter-14/it/Chapter14 Fig5 IT.png', caption: 'Figura 14.5 — Arteria mesenterica superiore', alt: 'Arteria mesenterica superiore e i suoi rami', orientation: 'portrait' },
+        { type: 'figure', src: '/chapter-14/it/Chapter14 Fig5 IT.png', caption: 'Figura 14.5 — Arteria mesenterica superiore', alt: 'Arteria mesenterica superiore e i suoi rami', orientation: 'portrait', syncHide: true },
         { type: 'para', text: 'L\'intestino tenue necessita di un\'ampia irrorazione vascolare e linfatica per svolgere le sue funzioni di digestione, assorbimento e immunità.' },
         { type: 'lead', label: 'Arteria mesenterica superiore', text: 'costituisce l\'asse arterioso principale dell\'intestino tenue. È un ramo dell\'aorta addominale. La sua origine si trova 1 cm al di sotto del tripode celiaco, in corrispondenza del disco intervertebrale Th12-L1. Inizialmente retropancreatica, poi anteriore alla 3ª porzione del duodeno, decorre tra i due foglietti del mesentere. Fornisce numerosi rami collaterali. Irrora tutto l\'intestino tenue, il colon ascendente e i 2/3 prossimali del colon trasverso.' },
         { type: 'para', text: 'Il suo polso, percepibile a livello della 3ª porzione del duodeno, a destra dell\'ombelico, può costituire un riferimento clinico vascolare, senza tuttavia consentire da solo conclusioni sul funzionamento intestinale.' },

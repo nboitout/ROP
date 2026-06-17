@@ -69,7 +69,7 @@ export const chapter14Es: Chapter = {
       id: 'vascularisation',
       title: 'Vascularización',
       blocks: [
-        { type: 'figure', src: '/chapter-14/es/Chapter14 Fig5 ES.png', caption: 'Figura 14.5 — Arteria mesentérica superior', alt: 'Arteria mesentérica superior y sus ramas', orientation: 'portrait' },
+        { type: 'figure', src: '/chapter-14/es/Chapter14 Fig5 ES.png', caption: 'Figura 14.5 — Arteria mesentérica superior', alt: 'Arteria mesentérica superior y sus ramas', orientation: 'portrait', syncHide: true },
         { type: 'para', text: 'El intestino delgado necesita un importante aporte vascular y linfático para garantizar sus funciones de digestión, absorción e inmunidad.' },
         { type: 'lead', label: 'Arteria mesentérica superior', text: 'constituye el eje arterial principal del intestino delgado. Es una rama de la aorta abdominal. Su origen se sitúa 1 cm por debajo del tronco celíaco, a la altura del disco intervertebral Th12-L1. Inicialmente retropancreática y luego por delante de la 3.ª porción del duodeno, discurre entre las dos hojas del mesenterio. Emite numerosas ramas colaterales. Irriga todo el intestino delgado, el colon ascendente y los 2/3 proximales del colon transverso.' },
         { type: 'para', text: 'Su pulso, perceptible a nivel de la 3.ª porción del duodeno, a la derecha del ombligo, puede constituir un punto de referencia clínico vascular, sin que por sí solo permita evaluar el funcionamiento intestinal.' },

@@ -69,7 +69,7 @@ export const chapter14En: Chapter = {
       id: 'vascularisation',
       title: 'Vascularisation',
       blocks: [
-        { type: 'figure', src: '/chapter-14/en/figure-14-5.png', caption: 'Figure 14.5 — Superior mesenteric artery', alt: 'Superior mesenteric artery and its branches', orientation: 'portrait' },
+        { type: 'figure', src: '/chapter-14/en/figure-14-5.png', caption: 'Figure 14.5 — Superior mesenteric artery', alt: 'Superior mesenteric artery and its branches', orientation: 'portrait', syncHide: true },
         { type: 'para', text: 'The small intestine requires a substantial vascular and lymphatic supply to perform its digestive, absorptive and immune functions.' },
         { type: 'lead', label: 'Superior mesenteric artery', text: 'it is the main arterial axis of the small intestine. It arises from the abdominal aorta, 1 cm below the coeliac trunk, opposite the Th12-L1 intervertebral disc. It first passes behind the pancreas and then anterior to the third part of the duodenum before running between the two layers of the mesentery. It gives off numerous collateral branches and supplies the entire small intestine, the ascending colon and the proximal two-thirds of the transverse colon.' },
         { type: 'para', text: 'Its pulse, which is palpable at the level of the third part of the duodenum, to the right of the umbilicus, may serve as a vascular clinical landmark, although it does not by itself indicate intestinal function.' },

@@ -69,7 +69,7 @@ export const chapter14De: Chapter = {
       id: 'vascularisation',
       title: 'Vaskularisierung',
       blocks: [
-        { type: 'figure', src: '/chapter-14/ge/Chapter14 Fig5 GE.png', caption: 'Abbildung 14.5 — Arteria mesenterica superior', alt: 'Arteria mesenterica superior und ihre Äste', orientation: 'portrait' },
+        { type: 'figure', src: '/chapter-14/ge/Chapter14 Fig5 GE.png', caption: 'Abbildung 14.5 — Arteria mesenterica superior', alt: 'Arteria mesenterica superior und ihre Äste', orientation: 'portrait', syncHide: true },
         { type: 'para', text: 'Der Dünndarm benötigt eine umfangreiche vaskuläre und lymphatische Versorgung, um seine Funktionen der Verdauung, Resorption und Immunabwehr zu erfüllen.' },
         { type: 'lead', label: 'Arteria mesenterica superior', text: 'sie bildet die arterielle Hauptachse des Dünndarms. Sie ist ein Ast der Bauchaorta. Ihr Ursprung liegt 1 cm unterhalb des Truncus coeliacus, auf Höhe der Bandscheibe Th12-L1. Zunächst retropankreatisch und dann vor dem 3. Teil des Duodenums verläuft sie zwischen den beiden Blättern des Mesenteriums. Sie gibt zahlreiche Kollateraläste ab. Sie versorgt den gesamten Dünndarm, das Colon ascendens und die proximalen zwei Drittel des Colon transversum.' },
         { type: 'para', text: 'Ihr Puls, der auf Höhe des 3. Teils des Duodenums, rechts vom Nabel, spürbar ist, kann einen klinisch-vaskulären Orientierungspunkt darstellen, ohne allein Rückschlüsse auf die Darmfunktion zu erlauben.' },

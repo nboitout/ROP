@@ -71,7 +71,7 @@ export const chapter14Fr: Chapter = {
       id: 'vascularisation',
       title: 'Vascularisation',
       blocks: [
-        { type: 'figure', src: '/chapter-14/figure-14-5.png', caption: 'Figure 14.5 — Artère mésentérique supérieure', alt: 'Artère mésentérique supérieure et ses branches', orientation: 'portrait' },
+        { type: 'figure', src: '/chapter-14/figure-14-5.png', caption: 'Figure 14.5 — Artère mésentérique supérieure', alt: 'Artère mésentérique supérieure et ses branches', orientation: 'portrait', syncHide: true },
         { type: 'para', text: 'L’intestin grêle a besoin d’une importante irrigation vasculaire et lymphatique pour assurer ses fonctions de digestion, d’absorption et immunitaire.' },
         { type: 'lead', label: 'Artère mésentérique supérieure', text: 'elle constitue l’axe artériel principal de l’intestin grêle. Elle est une branche de l’aorte abdominale. Son origine se situe 1 cm au-dessous du tronc cœliaque, en regard du disque intervertébral Th12-L1. D’abord rétro-pancréatique puis en avant de la 3ème portion du duodénum, elle chemine entre les deux feuillets du mésentère. Elle donne de nombreuses branches collatérales. Elle irrigue tout l’intestin grêle, le colon ascendant et les 2/3 proximaux du colon transverse.' },
         { type: 'para', text: 'Son pouls, perceptible au niveau de la 3ème portion du duodénum, à droite de l’ombilic, peut constituer un repère clinique vasculaire, sans préjuger à lui seul du fonctionnement de l’intestin.' },

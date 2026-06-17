@@ -328,7 +328,19 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
       <div className="ss-layout">
         <div className="ss-stagecol">
           <div className="ss-stage">
-            <p className="ss-stage-eyebrow">{ui.eyebrow}</p>
+            <div className="ss-stage-row">
+              <div className="ss-dots" role="tablist" aria-label={ui.slides}>
+                {slides.map((s, i) => (
+                  <button
+                    key={s.src}
+                    className={`ss-dot${i + 1 === active ? ' is-active' : ''}`}
+                    onClick={() => goToSlide(i + 1)}
+                    title={`${i + 1}. ${s.title}`}
+                    aria-label={ui.goTo(i + 1, s.title)}
+                  />
+                ))}
+              </div>
+              <div className="ss-stage-main">
             <button
               type="button"
               className={`ss-frame${slides[active - 1]?.orientation === 'portrait' ? ' ss-frame--portrait' : ''}`}
@@ -365,16 +377,7 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
                 aria-label={ui.next}
               >›</button>
             </div>
-            <div className="ss-dots" role="tablist" aria-label={ui.slides}>
-              {slides.map((s, i) => (
-                <button
-                  key={s.src}
-                  className={`ss-dot${i + 1 === active ? ' is-active' : ''}`}
-                  onClick={() => goToSlide(i + 1)}
-                  title={`${i + 1}. ${s.title}`}
-                  aria-label={ui.goTo(i + 1, s.title)}
-                />
-              ))}
+              </div>
             </div>
             {ropSection && ropJumpSlide && (
               <button
