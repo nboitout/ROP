@@ -25,6 +25,7 @@ export const chapter14Slides: SyncSlide[] = [
   { src: '/chapter-14/slides/slide-02.jpg', title: 'Topographie : l’intestin grêle au sein du cadre colique' },
   { src: '/chapter-14/figure-14-2.png', title: 'Mésos', orientation: 'portrait' },
   { src: '/chapter-14/figure-14-3.png', title: 'Racine du mésentère', orientation: 'portrait' },
+  { src: '/chapter-14/figure-14-4.png', title: 'Muscle de Treitz' },
   { src: '/chapter-14/figure-14-5.png', title: 'L’axe de l’irrigation et du drainage : tronc mésentérique supérieur', orientation: 'portrait' },
   { src: '/chapter-14/slides/slide-05.jpg', title: 'La double réalité neurologique du péritoine' },
   { src: '/chapter-14/slides/slide-06.jpg', title: 'Le deuxième cerveau : autonomie du système nerveux entérique (SNE)' },
@@ -53,6 +54,7 @@ export const chapter14SlidesEn: SyncSlide[] = [
   { src: '/chapter-14/slides/en/slide-02.jpg', title: 'Topography and intra-abdominal arrangement' },
   { src: '/chapter-14/en/figure-14-2.png', title: 'Mesos', orientation: 'portrait' },
   { src: '/chapter-14/en/figure-14-3.png', title: 'Root of the mesentery', orientation: 'portrait' },
+  { src: '/chapter-14/en/figure-14-4.png', title: 'Suspensory muscle of the duodenum (muscle of Treitz)' },
   { src: '/chapter-14/en/figure-14-5.png', title: 'The axis of irrigation and drainage: superior mesenteric trunk', orientation: 'portrait' },
   { src: '/chapter-14/slides/en/slide-05.jpg', title: 'The double neurological reality of the peritoneum' },
   { src: '/chapter-14/slides/en/slide-06.jpg', title: 'The second brain: autonomy of the enteric nervous system' },
@@ -81,6 +83,7 @@ export const chapter14SlidesDe: SyncSlide[] = [
   { src: '/chapter-14/slides/de/slide-02.jpg', title: 'Topographie und intraabdominale Anordnung' },
   { src: '/chapter-14/ge/Chapter14 Fig2 GE.png', title: 'Mesos', orientation: 'portrait' },
   { src: '/chapter-14/ge/Chapter14 Fig3 GE.png', title: 'Mesenterialwurzel', orientation: 'portrait' },
+  { src: '/chapter-14/ge/Chapter14 Fig4 GE.png', title: 'Treitz-Muskel' },
   { src: '/chapter-14/ge/Chapter14 Fig5 GE.png', title: 'Die Achse der Versorgung und des Abflusses: oberer Mesenterialstamm', orientation: 'portrait' },
   { src: '/chapter-14/slides/de/slide-05.jpg', title: 'Die doppelte neurologische Realität des Peritoneums' },
   { src: '/chapter-14/slides/de/slide-06.jpg', title: 'Das zweite Gehirn: Autonomie des enterischen Nervensystems (ENS)' },
@@ -108,6 +111,7 @@ export const chapter14SlidesEs: SyncSlide[] = [
   { src: '/chapter-14/slides/es/slide-02.jpg', title: 'Topografía y disposición intraabdominal' },
   { src: '/chapter-14/es/Chapter14 Fig2 ES.png', title: 'Mesos', orientation: 'portrait' },
   { src: '/chapter-14/es/Chapter14 Fig3 ES.png', title: 'Raíz del mesenterio', orientation: 'portrait' },
+  { src: '/chapter-14/es/Chapter14 Fig4 ES.png', title: 'Músculo de Treitz' },
   { src: '/chapter-14/es/Chapter14 Fig5 ES.png', title: 'El eje de la irrigación y el drenaje: tronco mesentérico superior', orientation: 'portrait' },
   { src: '/chapter-14/slides/es/slide-05.jpg', title: 'La doble realidad neurológica del peritoneo' },
   { src: '/chapter-14/slides/es/slide-06.jpg', title: 'El segundo cerebro: autonomía del sistema nervioso entérico (SNE)' },
@@ -137,6 +141,7 @@ export const chapter14SlidesIt: SyncSlide[] = [
   { src: '/chapter-14/slides/it/slide-02.jpg', title: 'Topografia e disposizione intra-addominale' },
   { src: '/chapter-14/it/Chapter14 Fig2 IT.png', title: 'Mesos', orientation: 'portrait' },
   { src: '/chapter-14/it/Chapter14 Fig3 IT.png', title: 'Radice del mesentere', orientation: 'portrait' },
+  { src: '/chapter-14/it/Chapter14 Fig4 IT.png', title: 'Muscolo di Treitz' },
   { src: '/chapter-14/it/Chapter14 Fig5 IT.png', title: 'L’asse dell’irrigazione e del drenaggio: tronco mesenterico superiore', orientation: 'portrait' },
   { src: '/chapter-14/slides/it/slide-05.jpg', title: 'La doppia realtà neurologica del peritoneo' },
   { src: '/chapter-14/slides/it/slide-06.jpg', title: 'Il secondo cervello: autonomia del sistema nervoso enterico (SNE)' },
@@ -167,39 +172,41 @@ export const chapter14SlideAnchors: SyncAnchor[] = [
   // Slide 4 is Figure 14.3 and appears before the mesentery-root paragraph,
   // separated by a half-page Word-style break.
   { sectionId: 'anatomie',       blockIndex: 3,  slide: 4, gapBefore: 'half' },
-  // Slide 5 points to the "Artère mésentérique supérieure" lead (block 2 now
+  // Slide 5 is Figure 14.4 and appears before the Treitz-muscle paragraph.
+  { sectionId: 'anatomie',       blockIndex: 5,  slide: 5, gapBefore: 'half' },
+  // Slide 6 points to the "Artère mésentérique supérieure" lead (block 2 now
   // that figure 14.5 leads the Vascularisation section).
-  { sectionId: 'vascularisation', blockIndex: 2, slide: 5 },
-  { sectionId: 'innervation',    blockIndex: 2,  slide: 6 },
-  { sectionId: 'innervation',    blockIndex: 10, slide: 7 },
-  { sectionId: 'innervation',    blockIndex: 12, slide: 8 },
-  { sectionId: 'physiologie',    blockIndex: 5,  slide: 9 },
-  { sectionId: 'physiologie',    blockIndex: 10, slide: 10 },
-  { sectionId: 'pathologies',    blockIndex: 0,  slide: 11 },
-  { sectionId: 'pathologies',    blockIndex: 1,  slide: 12 },
-  { sectionId: 'pathologies',    blockIndex: 7,  slide: 13 },
-  { sectionId: 'pathologies',    blockIndex: 11, slide: 14 },
+  { sectionId: 'vascularisation', blockIndex: 2, slide: 6 },
+  { sectionId: 'innervation',    blockIndex: 2,  slide: 7 },
+  { sectionId: 'innervation',    blockIndex: 10, slide: 8 },
+  { sectionId: 'innervation',    blockIndex: 12, slide: 9 },
+  { sectionId: 'physiologie',    blockIndex: 5,  slide: 10 },
+  { sectionId: 'physiologie',    blockIndex: 10, slide: 11 },
+  { sectionId: 'pathologies',    blockIndex: 0,  slide: 12 },
+  { sectionId: 'pathologies',    blockIndex: 1,  slide: 13 },
+  { sectionId: 'pathologies',    blockIndex: 7,  slide: 14 },
+  { sectionId: 'pathologies',    blockIndex: 11, slide: 15 },
   // Crohn clinical-case slide, right after the "Maladie de Crohn" heading.
-  { sectionId: 'pathologies',    blockIndex: 14, slide: 15 },
+  { sectionId: 'pathologies',    blockIndex: 14, slide: 16 },
   // Protocole ROP (ordre de traitement) — overview, at the ROP section heading.
-  { sectionId: 'rop',            blockIndex: -1, slide: 16 },
+  { sectionId: 'rop',            blockIndex: -1, slide: 17 },
   // Cranial/cervical vagus-nerve territory slide, right after the "1. Nerf vague" heading.
-  { sectionId: 'rop',            blockIndex: 1,  slide: 17 },
+  { sectionId: 'rop',            blockIndex: 1,  slide: 18 },
   // Left-abdominal vagus territory slide, right below figure 14.17 (rendered
   // above figure 14.18, which is block 4 after figure 14.16 moved to the deck).
-  { sectionId: 'rop',            blockIndex: 4,  slide: 18 },
+  { sectionId: 'rop',            blockIndex: 4,  slide: 19 },
   // Sympathetic-system slide, right above figure 14.20 (block 7 after figure
   // 14.19 moved to the deck).
-  { sectionId: 'rop',            blockIndex: 7,  slide: 19 },
+  { sectionId: 'rop',            blockIndex: 7,  slide: 20 },
   // Jejunum reflex-zone slide, right above figure 14.24 (block 16).
-  { sectionId: 'rop',            blockIndex: 16, slide: 20 },
+  { sectionId: 'rop',            blockIndex: 16, slide: 21 },
   // Ileum reflex-zone slide, right below the "Iléum (pied droit)" heading
   // (rendered above the bullets, which are block 18).
-  { sectionId: 'rop',            blockIndex: 18, slide: 21 },
+  { sectionId: 'rop',            blockIndex: 18, slide: 22 },
   // ROP intervention synthesis — after the reflex-zone slides, at the limbic step.
-  { sectionId: 'rop',            blockIndex: 20, slide: 22 },
+  { sectionId: 'rop',            blockIndex: 20, slide: 23 },
   // Viscero-emotional profile — final slide encountered in the text.
-  { sectionId: 'relations',      blockIndex: 2,  slide: 23 },
+  { sectionId: 'relations',      blockIndex: 2,  slide: 24 },
 ]
 
 // French anchor table — for the re-rendered 16-page deck (FR only). The Crohn
@@ -213,29 +220,31 @@ export const chapter14SlideAnchorsFr: SyncAnchor[] = [
   { sectionId: 'anatomie',       blockIndex: 0,  slide: 3 },
   // Slide 4 is Figure 14.3 and appears before the racine du mésentère paragraph.
   { sectionId: 'anatomie',       blockIndex: 3,  slide: 4, gapBefore: 'half' },
-  { sectionId: 'vascularisation', blockIndex: 2, slide: 5 },
-  { sectionId: 'innervation',    blockIndex: 2,  slide: 6 },
-  { sectionId: 'innervation',    blockIndex: 10, slide: 7 },
-  { sectionId: 'innervation',    blockIndex: 12, slide: 8 },
-  { sectionId: 'physiologie',    blockIndex: 5,  slide: 9 },
-  { sectionId: 'physiologie',    blockIndex: 10, slide: 10 },
-  { sectionId: 'pathologies',    blockIndex: 0,  slide: 11 },
-  { sectionId: 'pathologies',    blockIndex: 1,  slide: 12 },
-  { sectionId: 'pathologies',    blockIndex: 7,  slide: 13 },
-  { sectionId: 'pathologies',    blockIndex: 11, slide: 14 },
+  // Slide 5 is Figure 14.4 and appears before the Muscle de Treitz paragraph.
+  { sectionId: 'anatomie',       blockIndex: 5,  slide: 5, gapBefore: 'half' },
+  { sectionId: 'vascularisation', blockIndex: 2, slide: 6 },
+  { sectionId: 'innervation',    blockIndex: 2,  slide: 7 },
+  { sectionId: 'innervation',    blockIndex: 10, slide: 8 },
+  { sectionId: 'innervation',    blockIndex: 12, slide: 9 },
+  { sectionId: 'physiologie',    blockIndex: 5,  slide: 10 },
+  { sectionId: 'physiologie',    blockIndex: 10, slide: 11 },
+  { sectionId: 'pathologies',    blockIndex: 0,  slide: 12 },
+  { sectionId: 'pathologies',    blockIndex: 1,  slide: 13 },
+  { sectionId: 'pathologies',    blockIndex: 7,  slide: 14 },
+  { sectionId: 'pathologies',    blockIndex: 11, slide: 15 },
   // Crohn clinical-case slide, right after the "Maladie de Crohn" heading.
-  { sectionId: 'pathologies',    blockIndex: 14, slide: 15 },
+  { sectionId: 'pathologies',    blockIndex: 14, slide: 16 },
   // Protocole ROP (ordre de traitement) — overview, at the ROP section heading.
-  { sectionId: 'rop',            blockIndex: -1, slide: 16 },
+  { sectionId: 'rop',            blockIndex: -1, slide: 17 },
   // Figure-slides (cranial vagus, left-abdominal vagus, sympathetic system,
   // jejunum and ileum reflex zones) anchored in the ROP section.
-  { sectionId: 'rop',            blockIndex: 1,  slide: 17 },
-  { sectionId: 'rop',            blockIndex: 4,  slide: 18 },
-  { sectionId: 'rop',            blockIndex: 7,  slide: 19 },
-  { sectionId: 'rop',            blockIndex: 16, slide: 20 },
-  { sectionId: 'rop',            blockIndex: 18, slide: 21 },
+  { sectionId: 'rop',            blockIndex: 1,  slide: 18 },
+  { sectionId: 'rop',            blockIndex: 4,  slide: 19 },
+  { sectionId: 'rop',            blockIndex: 7,  slide: 20 },
+  { sectionId: 'rop',            blockIndex: 16, slide: 21 },
+  { sectionId: 'rop',            blockIndex: 18, slide: 22 },
   // Synthèse d'intervention ROP — after the reflex-zone slides, at the limbic step.
-  { sectionId: 'rop',            blockIndex: 20, slide: 22 },
+  { sectionId: 'rop',            blockIndex: 20, slide: 23 },
   // Profil viscéro-émotionnel — at "Relations viscéro-émotionnelles".
-  { sectionId: 'relations',      blockIndex: 2,  slide: 23 },
+  { sectionId: 'relations',      blockIndex: 2,  slide: 24 },
 ]
