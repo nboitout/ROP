@@ -109,6 +109,7 @@ const SS_UI: Record<string, {
 // Section ids that get a "page break" — a tall blank gap the reader scrolls
 // through before the section heading, à la Word page break.
 const PAGE_BREAK_BEFORE = new Set<string>(['anatomie'])
+const HALF_BREAK_BEFORE_BLOCK = new Set<string>(['anatomie:6'])
 
 export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, backHref = '/chapitres-gratuits', classicHref }: Props) {
   const { lang, t } = useLanguage()
@@ -431,18 +432,30 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
               )}
               <h2 className="cr-h2">{section.title}</h2>
               {section.blocks.map((b, i) => {
+                const hasHalfBreak = HALF_BREAK_BEFORE_BLOCK.has(`${section.id}:${i}`)
                 const anchor = anchorBySlide.get(`${section.id}:${i}`)
                 const slide = anchor?.slide
                 const posId = `p-${section.id}-${i}`
                 const view = <BlockView block={b} onOpenImage={setLightbox} ui={ui} />
-                if (!slide) return <div key={i} id={posId} data-pos-anchor="">{view}</div>
+                if (!slide) {
+                  return (
+                    <div
+                      key={i}
+                      id={posId}
+                      data-pos-anchor=""
+                      className={hasHalfBreak ? 'ss-anchor-halfbreak' : undefined}
+                    >
+                      {view}
+                    </div>
+                  )
+                }
                 return (
                   <div
                     key={i}
                     id={posId}
                     data-pos-anchor=""
                     data-slide-anchor={slide}
-                    className={`ss-anchor${anchor?.gapBefore === 'half' ? ' ss-anchor-halfbreak' : ''}`}
+                    className={`ss-anchor${anchor?.gapBefore === 'half' || hasHalfBreak ? ' ss-anchor-halfbreak' : ''}`}
                   >
                     <button
                       type="button"
