@@ -630,7 +630,7 @@ a.ss-switch-opt:hover { color:var(--gold); }
   margin-left:auto; margin-right:auto; }
 /* portrait slide active: hide the reflex-zone shortcut and use the freed height */
 .ss-stage--portrait .ss-jump { display:none; }
-.ss-stage--portrait .ss-frame--portrait { height:min(76vh,700px); }
+.ss-stage--portrait .ss-frame--portrait { height:min(82vh,760px); }
 .ss-slide { position:absolute; inset:0; width:100%; height:100%; object-fit:contain; background:#fdfbf5;
   opacity:0; transition:opacity .5s ease; }
 .ss-slide.is-active { opacity:1; }
