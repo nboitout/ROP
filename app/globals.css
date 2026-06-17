@@ -628,6 +628,9 @@ a.ss-switch-opt:hover { color:var(--gold); }
 /* portrait slide — tall frame sized to the viewport height so it shows large */
 .ss-frame--portrait { aspect-ratio:3/4; width:auto; height:min(74vh,660px); max-width:100%;
   margin-left:auto; margin-right:auto; }
+/* portrait slide active: hide the reflex-zone shortcut and use the freed height */
+.ss-stage--portrait .ss-jump { display:none; }
+.ss-stage--portrait .ss-frame--portrait { height:min(82vh,740px); }
 .ss-slide { position:absolute; inset:0; width:100%; height:100%; object-fit:contain; background:#fdfbf5;
   opacity:0; transition:opacity .5s ease; }
 .ss-slide.is-active { opacity:1; }
@@ -693,6 +696,9 @@ a.ss-switch-opt:hover { color:var(--gold); }
   .ss-stage-eyebrow { display:none; }
   .ss-frame { max-width:520px; margin:0 auto; border-radius:4px; box-shadow:0 6px 20px rgba(26,26,24,.12); }
   .ss-frame--portrait { height:auto; width:auto; max-width:240px; }
+  /* on mobile keep the reflex-zone shortcut and the width-capped portrait */
+  .ss-stage--portrait .ss-jump { display:flex; }
+  .ss-stage--portrait .ss-frame--portrait { height:auto; }
   .ss-stage-bar { max-width:520px; margin:8px auto 0; gap:10px; }
   .ss-stage-title { font-size:.92rem; }
   .ss-dots { display:none; }

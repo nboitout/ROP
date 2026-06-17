@@ -327,7 +327,7 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
 
       <div className="ss-layout">
         <div className="ss-stagecol">
-          <div className="ss-stage">
+          <div className={`ss-stage${slides[active - 1]?.orientation === 'portrait' ? ' ss-stage--portrait' : ''}`}>
             <div className="ss-stage-row">
               <div className="ss-dots" role="tablist" aria-label={ui.slides}>
                 {slides.map((s, i) => (
