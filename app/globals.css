@@ -617,7 +617,8 @@ a.ss-switch-opt:hover { color:var(--gold); }
   padding-top:62px; max-width:1480px; margin:0 auto; align-items:stretch; }
 
 .ss-stagecol { grid-column:1; padding:28px 12px 64px 32px; }
-.ss-stage { position:sticky; top:64px; }
+.ss-stage { position:sticky; top:clamp(84px, 12vh, 116px); }
+.ss-stage--portrait { top:64px; }
 .ss-stage-eyebrow { font-size:.66rem; font-weight:600; letter-spacing:.22em; text-transform:uppercase;
   color:var(--sage); margin-bottom:12px; }
 
