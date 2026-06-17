@@ -243,7 +243,7 @@ export const chapter14SlideAnchorsFr: SyncAnchor[] = [
   { sectionId: 'rop',            blockIndex: 7,  slide: 20 },
   // Plexus cœliaque slide; the marker appears just before the new plexique photo.
   { sectionId: 'rop',            blockIndex: 8,  slide: 21, gapBefore: 'half' },
-  { sectionId: 'rop',            blockIndex: 16, slide: 22 },
+  { sectionId: 'rop',            blockIndex: 12, slide: 22 },
   { sectionId: 'rop',            blockIndex: 18, slide: 23 },
   // Synthèse d'intervention ROP — after the reflex-zone slides, at the limbic step.
   { sectionId: 'rop',            blockIndex: 20, slide: 24 },
