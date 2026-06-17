@@ -41,6 +41,7 @@ export const chapter14Slides: SyncSlide[] = [
   { src: '/chapter-14/figure-14-15.png', title: 'Territoire crânien et cervical du nerf vague' },
   { src: '/chapter-14/figure-14-16.png', title: 'Territoire abdominal gauche du nerf vague et plexus cœliaque (solaire)' },
   { src: '/chapter-14/Chapter14 Fig19 FR.png', title: 'Système sympathique (origine médullaire)' },
+  { src: '/chapter-14/Chapter14 Fig21 FR.png', title: 'Plexus cœliaque (solaire)' },
   { src: '/chapter-14/figure-14-25.png', title: 'Jéjunum (zone réflexe podale)' },
   { src: '/chapter-14/figure-14-27.png', title: 'Iléum et racine du mésentère (zone réflexe podale)' },
   { src: '/chapter-14/slides/slide-15.jpg', title: 'Synthèse d’intervention ROP : protocole intestin grêle' },
@@ -236,14 +237,16 @@ export const chapter14SlideAnchorsFr: SyncAnchor[] = [
   // Protocole ROP (ordre de traitement) — overview, at the ROP section heading.
   { sectionId: 'rop',            blockIndex: -1, slide: 17 },
   // Figure-slides (cranial vagus, left-abdominal vagus, sympathetic system,
-  // jejunum and ileum reflex zones) anchored in the ROP section.
+  // celiac plexus, jejunum and ileum reflex zones) anchored in the ROP section.
   { sectionId: 'rop',            blockIndex: 1,  slide: 18 },
   { sectionId: 'rop',            blockIndex: 4,  slide: 19 },
   { sectionId: 'rop',            blockIndex: 7,  slide: 20 },
-  { sectionId: 'rop',            blockIndex: 16, slide: 21 },
-  { sectionId: 'rop',            blockIndex: 18, slide: 22 },
+  // Plexus cœliaque slide; the marker appears just before the new plexique photo.
+  { sectionId: 'rop',            blockIndex: 8,  slide: 21, gapBefore: 'half' },
+  { sectionId: 'rop',            blockIndex: 16, slide: 22 },
+  { sectionId: 'rop',            blockIndex: 18, slide: 23 },
   // Synthèse d'intervention ROP — after the reflex-zone slides, at the limbic step.
-  { sectionId: 'rop',            blockIndex: 20, slide: 23 },
+  { sectionId: 'rop',            blockIndex: 20, slide: 24 },
   // Profil viscéro-émotionnel — at "Relations viscéro-émotionnelles".
-  { sectionId: 'relations',      blockIndex: 2,  slide: 24 },
+  { sectionId: 'relations',      blockIndex: 2,  slide: 25 },
 ]
