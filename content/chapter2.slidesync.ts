@@ -46,7 +46,7 @@ export const chapter2SlideAnchors: SyncAnchor[] = [
   { sectionId: 'hierarchisation', blockIndex: 5, slide: 12 },
   { sectionId: 'exemple-clinique', blockIndex: -1, slide: 13 },
   { sectionId: 'exemple-clinique', blockIndex: 6, slide: 14 },
-  { sectionId: 'exemple-clinique', blockIndex: 10, slide: 15 },
+  { sectionId: 'exemple-clinique', blockIndex: 10, slide: 15, gapBefore: 'half' },
   { sectionId: 'indications', blockIndex: -1, slide: 16 },
   { sectionId: 'contre-indications', blockIndex: -1, slide: 17 },
   { sectionId: 'conseils', blockIndex: -1, slide: 18 },
