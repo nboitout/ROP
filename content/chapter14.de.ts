@@ -75,8 +75,6 @@ export const chapter14De: Chapter = {
         { type: 'para', text: 'Das Peritoneum erhält eine doppelte Innervation, somatisch und autonom.' },
         { type: 'lead', label: 'Parietales Peritoneum', text: 'es erhält eine somatische Innervation, die es mit der Bauchwand über die Nn. phrenici, die letzten sechs Interkostalnerven und die Nerven des Plexus lumbalis teilt. Es besitzt zahlreiche Endigungen, die auf Temperatur, Druck und Schmerz reagieren. Diese gemeinsame Innervation mit der Bauchwand erklärt die Projektion von Schmerzen im Bereich des Halses, der Schulterblätter, des Abdomens und der Lendenwirbelsäule peritonealen und viszeralen Ursprungs, die über die somatischen Fasern des parietalen Blattes auf den Bewegungsapparat übertragen werden.' },
         { type: 'figure', src: '/chapter-14/ge/Chapter14 Fig9 GE.png', caption: 'Abbildung 14.9 — Nervus phrenicus', alt: 'Nervus phrenicus und sein Verlauf', orientation: 'landscape' },
-        { type: 'figure', src: '/chapter-14/ge/Chapter14 Fig10 GE.png', caption: 'Abbildung 14.10 — Interkostalnerven', alt: 'Interkostalnerven', orientation: 'landscape' },
-        { type: 'figure', src: '/chapter-14/ge/Chapter14 Fig11 GE.png', caption: 'Abbildung 14.11 — Nerven des Plexus lumbalis', alt: 'Nerven des Plexus lumbalis', orientation: 'landscape' },
         { type: 'lead', label: 'Viszerales Peritoneum', text: 'es erhält eine extrinsisch-autonome Innervation, die es mit den Eingeweiden teilt. Sympathikus: seine Wurzeln entstammen Th8 bis Th11. Sie gelangen über die Nn. splanchnici majores und minores zu den prävertebralen Plexus coeliacus und mesentericus superior.' },
 
         { type: 'sub', text: 'Vagusnerv und Sympathikus' },

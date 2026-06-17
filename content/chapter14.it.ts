@@ -75,8 +75,6 @@ export const chapter14It: Chapter = {
         { type: 'para', text: 'Il peritoneo riceve una doppia innervazione, somatica e autonoma.' },
         { type: 'lead', label: 'Peritoneo parietale', text: 'riceve un\'innervazione somatica condivisa con la parete addominale tramite i nervi frenici, gli ultimi sei nervi intercostali e i nervi del plesso lombare. Possiede numerose terminazioni sensibili alla temperatura, alla pressione e al dolore. Questa innervazione condivisa con la parete addominale spiega la proiezione di dolori cervicali, scapolari, addominali e lombari di origine peritoneale e viscerale, trasmessi all\'apparato osteoartromuscolare dalle fibre somatiche del foglietto parietale.' },
         { type: 'figure', src: '/chapter-14/it/Chapter14 Fig9 IT.png', caption: 'Figura 14.9 — Nervo frenico', alt: 'Nervo frenico e il suo decorso', orientation: 'landscape' },
-        { type: 'figure', src: '/chapter-14/it/Chapter14 Fig10 IT.png', caption: 'Figura 14.10 — Nervi intercostali', alt: 'Nervi intercostali', orientation: 'landscape' },
-        { type: 'figure', src: '/chapter-14/it/Chapter14 Fig11 IT.png', caption: 'Figura 14.11 — Nervi del plesso lombare', alt: 'Nervi del plesso lombare', orientation: 'landscape' },
         { type: 'lead', label: 'Peritoneo viscerale', text: 'riceve un\'innervazione autonoma estrinseca condivisa con i visceri. Simpatico: le sue radici provengono da Th8 a Th11. Raggiungono i plessi prevertebali celiaco e mesenterico superiore tramite i nervi splancnici maggiore e minore.' },
 
         { type: 'sub', text: 'Nervo vago e sistema nervoso simpatico' },

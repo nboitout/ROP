@@ -75,8 +75,6 @@ export const chapter14Es: Chapter = {
         { type: 'para', text: 'El peritoneo recibe una doble inervación, somática y autónoma.' },
         { type: 'lead', label: 'Peritoneo parietal', text: 'recibe una inervación somática compartida con la pared abdominal a través de los nervios frénicos, los seis últimos nervios intercostales y los nervios del plexo lumbar. Cuenta con numerosas terminaciones sensibles a la temperatura, la presión y el dolor. Esta inervación compartida con la pared abdominal explica la proyección de los dolores cervicales, escapulares, abdominales y lumbares de origen peritoneal y visceral, transmitidos al sistema musculoesquelético por las fibras somáticas de la hoja parietal.' },
         { type: 'figure', src: '/chapter-14/es/Chapter14 Fig9 ES.png', caption: 'Figura 14.9 — Nervio frénico', alt: 'Nervio frénico y su trayecto', orientation: 'landscape' },
-        { type: 'figure', src: '/chapter-14/es/Chapter14 Fig10 ES.png', caption: 'Figura 14.10 — Nervios intercostales', alt: 'Nervios intercostales', orientation: 'landscape' },
-        { type: 'figure', src: '/chapter-14/es/Chapter14 Fig11 ES.png', caption: 'Figura 14.11 — Nervios del plexo lumbar', alt: 'Nervios del plexo lumbar', orientation: 'landscape' },
         { type: 'lead', label: 'Peritoneo visceral', text: 'recibe una inervación autónoma extrínseca compartida con las vísceras. Simpático: sus raíces provienen de Th8 a Th11. Se unen a los plexos prevertébrales celíaco y mesentérico superior a través de los nervios esplácnicos mayores y menores.' },
 
         { type: 'sub', text: 'Nervio vago y sistema nervioso simpático' },

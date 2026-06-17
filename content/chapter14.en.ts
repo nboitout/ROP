@@ -75,8 +75,6 @@ export const chapter14En: Chapter = {
         { type: 'para', text: 'The peritoneum has dual innervation, both somatic and autonomic.' },
         { type: 'lead', label: 'Parietal peritoneum', text: 'it receives somatic innervation shared with the abdominal wall via the phrenic nerves, the lower six intercostal nerves and the nerves of the lumbar plexus. It contains numerous nerve endings sensitive to temperature, pressure and pain. This shared innervation with the abdominal wall helps explain the referral of cervical, scapular, abdominal and lumbar pain of peritoneal or visceral origin to the osteo-musculo-articular system through the somatic fibres of the parietal layer.' },
         { type: 'figure', src: '/chapter-14/en/figure-14-9.png', caption: 'Figure 14.9 — Phrenic nerve', alt: 'Phrenic nerve and its course', orientation: 'landscape' },
-        { type: 'figure', src: '/chapter-14/en/figure-14-10.png', caption: 'Figure 14.10 — Intercostal nerves', alt: 'Intercostal nerves', orientation: 'landscape' },
-        { type: 'figure', src: '/chapter-14/en/figure-14-11.png', caption: 'Figure 14.11 — Nerves of the lumbar plexus', alt: 'Nerves of the lumbar plexus', orientation: 'landscape' },
         { type: 'lead', label: 'Visceral peritoneum', text: 'it receives extrinsic autonomic innervation shared with the viscera. Sympathetic: roots arise from Th8 to Th11 and reach the prevertebral coeliac and superior mesenteric plexuses via the greater and lesser splanchnic nerves.' },
 
         { type: 'sub', text: 'Vagus nerve and sympathetic nervous system' },
