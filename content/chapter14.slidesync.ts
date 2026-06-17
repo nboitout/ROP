@@ -23,7 +23,7 @@ export type SyncAnchor = { sectionId: string; blockIndex: number; slide: number 
 export const chapter14Slides: SyncSlide[] = [
   { src: '/chapter-14/slides/slide-01.jpg', title: 'L’intestin grêle : anatomie, écosystème et approche ROP' },
   { src: '/chapter-14/slides/slide-02.jpg', title: 'Topographie : l’intestin grêle au sein du cadre colique' },
-  { src: '/chapter-14/slides/slide-03.jpg', title: 'Le mésentère et sa mécanique de suspension' },
+  { src: '/chapter-14/figure-14-2.png', title: 'Figure 14.2 — Mésos', orientation: 'portrait' },
   { src: '/chapter-14/figure-14-5.png', title: 'L’axe de l’irrigation et du drainage : tronc mésentérique supérieur', orientation: 'portrait' },
   { src: '/chapter-14/slides/slide-05.jpg', title: 'La double réalité neurologique du péritoine' },
   { src: '/chapter-14/slides/slide-06.jpg', title: 'Le deuxième cerveau : autonomie du système nerveux entérique (SNE)' },
@@ -50,7 +50,7 @@ export const chapter14Slides: SyncSlide[] = [
 export const chapter14SlidesEn: SyncSlide[] = [
   { src: '/chapter-14/slides/en/slide-01.jpg', title: 'The small intestine: anatomy, ecosystem and ROP approach' },
   { src: '/chapter-14/slides/en/slide-02.jpg', title: 'Topography and intra-abdominal arrangement' },
-  { src: '/chapter-14/slides/en/slide-03.png', title: 'Mechanical anchoring: mesentery and Treitz muscle' },
+  { src: '/chapter-14/en/figure-14-2.png', title: 'Figure 14.2 — Mesos', orientation: 'portrait' },
   { src: '/chapter-14/en/figure-14-5.png', title: 'The axis of irrigation and drainage: superior mesenteric trunk', orientation: 'portrait' },
   { src: '/chapter-14/slides/en/slide-05.jpg', title: 'The double neurological reality of the peritoneum' },
   { src: '/chapter-14/slides/en/slide-06.jpg', title: 'The second brain: autonomy of the enteric nervous system' },
@@ -77,7 +77,7 @@ export const chapter14SlidesEn: SyncSlide[] = [
 export const chapter14SlidesDe: SyncSlide[] = [
   { src: '/chapter-14/slides/de/slide-01.jpg', title: 'Der Dünndarm: Anatomie, Ökosystem und ROP-Ansatz' },
   { src: '/chapter-14/slides/de/slide-02.jpg', title: 'Topographie und intraabdominale Anordnung' },
-  { src: '/chapter-14/slides/de/slide-03.png', title: 'Die mechanische Verankerung: Mesenterium und Treitz-Muskel' },
+  { src: '/chapter-14/ge/Chapter14 Fig2 GE.png', title: 'Abbildung 14.2 — Mesos', orientation: 'portrait' },
   { src: '/chapter-14/ge/Chapter14 Fig5 GE.png', title: 'Die Achse der Versorgung und des Abflusses: oberer Mesenterialstamm', orientation: 'portrait' },
   { src: '/chapter-14/slides/de/slide-05.jpg', title: 'Die doppelte neurologische Realität des Peritoneums' },
   { src: '/chapter-14/slides/de/slide-06.jpg', title: 'Das zweite Gehirn: Autonomie des enterischen Nervensystems (ENS)' },
@@ -103,7 +103,7 @@ export const chapter14SlidesDe: SyncSlide[] = [
 export const chapter14SlidesEs: SyncSlide[] = [
   { src: '/chapter-14/slides/es/slide-01.jpg', title: 'El intestino delgado: anatomía, ecosistema y enfoque ROP' },
   { src: '/chapter-14/slides/es/slide-02.jpg', title: 'Topografía y disposición intraabdominal' },
-  { src: '/chapter-14/slides/es/slide-03.png', title: 'El anclaje mecánico: mesenterio y músculo de Treitz' },
+  { src: '/chapter-14/es/Chapter14 Fig2 ES.png', title: 'Figura 14.2 — Mesos', orientation: 'portrait' },
   { src: '/chapter-14/es/Chapter14 Fig5 ES.png', title: 'El eje de la irrigación y el drenaje: tronco mesentérico superior', orientation: 'portrait' },
   { src: '/chapter-14/slides/es/slide-05.jpg', title: 'La doble realidad neurológica del peritoneo' },
   { src: '/chapter-14/slides/es/slide-06.jpg', title: 'El segundo cerebro: autonomía del sistema nervioso entérico (SNE)' },
@@ -131,7 +131,7 @@ export const chapter14SlidesEs: SyncSlide[] = [
 export const chapter14SlidesIt: SyncSlide[] = [
   { src: '/chapter-14/slides/it/slide-01.jpg', title: 'L’intestino crasso: anatomia, ecosistema e approccio ROP' },
   { src: '/chapter-14/slides/it/slide-02.jpg', title: 'Topografia e disposizione intra-addominale' },
-  { src: '/chapter-14/slides/it/slide-03.png', title: 'L’ancoraggio meccanico: mesentere e muscolo di Treitz' },
+  { src: '/chapter-14/it/Chapter14 Fig2 IT.png', title: 'Figura 14.2 — Mesos', orientation: 'portrait' },
   { src: '/chapter-14/it/Chapter14 Fig5 IT.png', title: 'L’asse dell’irrigazione e del drenaggio: tronco mesenterico superiore', orientation: 'portrait' },
   { src: '/chapter-14/slides/it/slide-05.jpg', title: 'La doppia realtà neurologica del peritoneo' },
   { src: '/chapter-14/slides/it/slide-06.jpg', title: 'Il secondo cervello: autonomia del sistema nervoso enterico (SNE)' },
@@ -157,9 +157,8 @@ export const chapter14SlideAnchors: SyncAnchor[] = [
   { sectionId: 'presentation',   blockIndex: 0,  slide: 1 },
   // Slide 2 sits just above the "Ils s'étendent du pylore…" paragraph (presentation block 2).
   { sectionId: 'presentation',   blockIndex: 2,  slide: 2 },
-  // Slide 3 points just before "Mésentère — c'est un méso…" (block 2 now that
-  // figure 14.2 leads the Anatomie section).
-  { sectionId: 'anatomie',       blockIndex: 2,  slide: 3 },
+  // Slide 3 is Figure 14.2 and appears immediately after the Anatomy heading.
+  { sectionId: 'anatomie',       blockIndex: 0,  slide: 3 },
   // Slide 4 points to the "Artère mésentérique supérieure" lead (block 2 now
   // that figure 14.5 leads the Vascularisation section).
   { sectionId: 'vascularisation', blockIndex: 2, slide: 4 },
@@ -202,9 +201,8 @@ export const chapter14SlideAnchorsFr: SyncAnchor[] = [
   { sectionId: 'presentation',   blockIndex: 0,  slide: 1 },
   // Slide 2 sits just above the "Ils s'étendent du pylore…" paragraph (presentation block 2).
   { sectionId: 'presentation',   blockIndex: 2,  slide: 2 },
-  // Slides 3 & 4 follow their leads, now at block 2 since figures 14.2 / 14.5
-  // were moved to the top of the Anatomie / Vascularisation sections.
-  { sectionId: 'anatomie',       blockIndex: 2,  slide: 3 },
+  // Slide 3 is Figure 14.2 and appears immediately after the Anatomie heading.
+  { sectionId: 'anatomie',       blockIndex: 0,  slide: 3 },
   { sectionId: 'vascularisation', blockIndex: 2, slide: 4 },
   { sectionId: 'innervation',    blockIndex: 2,  slide: 5 },
   { sectionId: 'innervation',    blockIndex: 10, slide: 6 },
