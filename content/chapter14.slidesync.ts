@@ -171,8 +171,8 @@ export const chapter14SlideAnchors: SyncAnchor[] = [
   { sectionId: 'anatomie',       blockIndex: 0,  slide: 3 },
   // Slide 4 is Figure 14.3 and appears before the duodenojejunal-junction sentence.
   { sectionId: 'anatomie',       blockIndex: 4,  slide: 4 },
-  // Slide 5 is Figure 14.4 and appears before the ROP interest block.
-  { sectionId: 'anatomie',       blockIndex: 8,  slide: 5, gapBefore: 'half' },
+  // Slide 5 is Figure 14.4 and appears before the longitudinal-tension sentence.
+  { sectionId: 'anatomie',       blockIndex: 7,  slide: 5 },
   // Slide 6 points to the "Artère mésentérique supérieure" lead (block 2 now
   // that figure 14.5 leads the Vascularisation section).
   { sectionId: 'vascularisation', blockIndex: 2, slide: 6 },
@@ -219,8 +219,8 @@ export const chapter14SlideAnchorsFr: SyncAnchor[] = [
   { sectionId: 'anatomie',       blockIndex: 0,  slide: 3 },
   // Slide 4 is Figure 14.3 and appears before the jonction duodéno-jéjunale sentence.
   { sectionId: 'anatomie',       blockIndex: 4,  slide: 4 },
-  // Slide 5 is Figure 14.4 and appears before the ROP interest block.
-  { sectionId: 'anatomie',       blockIndex: 8,  slide: 5, gapBefore: 'half' },
+  // Slide 5 is Figure 14.4 and appears before the longitudinal-tension sentence.
+  { sectionId: 'anatomie',       blockIndex: 7,  slide: 5 },
   { sectionId: 'vascularisation', blockIndex: 2, slide: 6 },
   { sectionId: 'innervation',    blockIndex: 2,  slide: 7 },
   { sectionId: 'innervation',    blockIndex: 10, slide: 8 },
