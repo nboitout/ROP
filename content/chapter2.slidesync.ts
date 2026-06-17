@@ -35,7 +35,7 @@ export const chapter2SlideAnchors: SyncAnchor[] = [
   { sectionId: 'technique', blockIndex: -1, slide: 1 },
   { sectionId: 'technique', blockIndex: 0, slide: 2 },
   { sectionId: 'technique', blockIndex: 2, slide: 3 },
-  { sectionId: 'technique', blockIndex: 5, slide: 4 },
+  { sectionId: 'technique', blockIndex: 5, slide: 4, gapBefore: 'half' },
   { sectionId: 'technique', blockIndex: 6, slide: 5 },
   { sectionId: 'technique', blockIndex: 11, slide: 6 },
   { sectionId: 'modalites', blockIndex: 0, slide: 7 },
