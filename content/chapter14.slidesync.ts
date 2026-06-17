@@ -155,8 +155,8 @@ export const chapter14SlidesIt: SyncSlide[] = [
 
 export const chapter14SlideAnchors: SyncAnchor[] = [
   { sectionId: 'presentation',   blockIndex: 0,  slide: 1 },
-  // Slide 2 points to "Le jéjunum-iléum se distingue du duodénum par…".
-  { sectionId: 'presentation',   blockIndex: 3,  slide: 2 },
+  // Slide 2 sits right below the "Situation" heading (first block of the section).
+  { sectionId: 'situation',      blockIndex: 0,  slide: 2 },
   // Slide 3 points just before "Mésentère — c'est un méso…".
   { sectionId: 'anatomie',       blockIndex: 1,  slide: 3 },
   { sectionId: 'vascularisation', blockIndex: 1, slide: 4 },
@@ -197,7 +197,8 @@ export const chapter14SlideAnchors: SyncAnchor[] = [
 // because it is the final slide encountered in the text.
 export const chapter14SlideAnchorsFr: SyncAnchor[] = [
   { sectionId: 'presentation',   blockIndex: 0,  slide: 1 },
-  { sectionId: 'presentation',   blockIndex: 3,  slide: 2 },
+  // Slide 2 sits right below the "Situation" heading (first block of the section).
+  { sectionId: 'situation',      blockIndex: 0,  slide: 2 },
   { sectionId: 'anatomie',       blockIndex: 1,  slide: 3 },
   { sectionId: 'vascularisation', blockIndex: 1, slide: 4 },
   { sectionId: 'innervation',    blockIndex: 2,  slide: 5 },
