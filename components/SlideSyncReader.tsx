@@ -140,8 +140,8 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
   }
 
   const anchorBySlide = useMemo(() => {
-    const m = new Map<string, number>()
-    for (const a of anchors) m.set(`${a.sectionId}:${a.blockIndex}`, a.slide)
+    const m = new Map<string, SyncAnchor>()
+    for (const a of anchors) m.set(`${a.sectionId}:${a.blockIndex}`, a)
     return m
   }, [anchors])
 
@@ -410,7 +410,8 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
           </div>
 
           {chapter.sections.map((section) => {
-            const headingSlide = anchorBySlide.get(`${section.id}:-1`)
+            const headingAnchor = anchorBySlide.get(`${section.id}:-1`)
+            const headingSlide = headingAnchor?.slide
             return (
             <Fragment key={section.id}>
             {PAGE_BREAK_BEFORE.has(section.id) && <div className="ss-pagebreak" aria-hidden />}
@@ -430,12 +431,19 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
               )}
               <h2 className="cr-h2">{section.title}</h2>
               {section.blocks.map((b, i) => {
-                const slide = anchorBySlide.get(`${section.id}:${i}`)
+                const anchor = anchorBySlide.get(`${section.id}:${i}`)
+                const slide = anchor?.slide
                 const posId = `p-${section.id}-${i}`
                 const view = <BlockView block={b} onOpenImage={setLightbox} ui={ui} />
                 if (!slide) return <div key={i} id={posId} data-pos-anchor="">{view}</div>
                 return (
-                  <div key={i} id={posId} data-pos-anchor="" data-slide-anchor={slide} className="ss-anchor">
+                  <div
+                    key={i}
+                    id={posId}
+                    data-pos-anchor=""
+                    data-slide-anchor={slide}
+                    className={`ss-anchor${anchor?.gapBefore === 'half' ? ' ss-anchor-halfbreak' : ''}`}
+                  >
                     <button
                       type="button"
                       className="ss-marker"

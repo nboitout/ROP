@@ -673,6 +673,7 @@ a.ss-switch-opt:hover { color:var(--gold); }
 .ss-pagebreak { height:72vh; min-height:320px; }
 
 .ss-anchor { scroll-margin-top:96px; }
+.ss-anchor-halfbreak { padding-top:36vh; }
 .ss-marker { display:inline-flex; align-items:center; gap:8px; background:none; border:none; padding:0; margin:6px 0 10px;
   cursor:zoom-in; font-family:'DM Sans',sans-serif; font-size:.68rem; font-weight:600; letter-spacing:.16em;
   text-transform:uppercase; color:var(--gold); transition:color .15s; }

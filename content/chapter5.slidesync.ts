@@ -10,7 +10,7 @@
 export type SyncSlide = { src: string; title: string; orientation?: 'portrait' }
 
 // blockIndex refers to the position in chapter5Fr sections[].blocks[].
-export type SyncAnchor = { sectionId: string; blockIndex: number; slide: number }
+export type SyncAnchor = { sectionId: string; blockIndex: number; slide: number; gapBefore?: 'half' }
 
 export const chapter5Slides: SyncSlide[] = [
   { src: '/chapter-5/slides/slide-01.jpg', title: 'L’équilibre vital : homéostasie et allostasie' },
