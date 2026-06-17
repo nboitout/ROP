@@ -37,7 +37,7 @@ export const chapter14De: Chapter = {
       id: 'anatomie',
       title: 'Anatomie',
       blocks: [
-        { type: 'figure', src: '/chapter-14/ge/Chapter14 Fig2 GE.png', caption: 'Abbildung 14.2 — Mesos', alt: 'Die peritonealen Mesos', orientation: 'portrait' },
+        { type: 'figure', src: '/chapter-14/ge/Chapter14 Fig2 GE.png', caption: 'Abbildung 14.2 — Mesos', alt: 'Die peritonealen Mesos', orientation: 'portrait', syncHide: true },
         { type: 'lead', label: 'Jejunum-Ileum', text: 'es besteht aus 15 bis 16 U-förmigen Darmschlingen, die in zwei Gruppen angeordnet sind. Eine obere Gruppe links, das Jejunum, das stärker entwickelt ist als das Ileum und dessen Schlingen und Gefäßsystem eher horizontal ausgerichtet sind. Eine untere Gruppe rechts, das Ileum, dessen Schlingen und Gefäßsystem eher vertikal ausgerichtet sind.' },
         { type: 'lead', label: 'Mesenterium', text: 'es ist ein Meso, d. h. eine doppelblättrige Peritonealreflexion. Es umhüllt das Jejunum-Ileum und verbindet es über die Mesenterialwurzel mit der hinteren Bauchwand.' },
         { type: 'lead', label: 'Mesenterialwurzel', text: 'sie bildet die Anheftungslinie des Mesenteriums und trägt zur Stabilität des ansonsten sehr beweglichen Dünndarms bei. Sie misst 16 bis 18 cm. Sie erstreckt sich von der duodenojejunalen Verbindung bis zur Ileozökalklappe und kreuzt dabei die Medianachse des Abdomens auf Höhe des Nabels (auf Höhe der Bandscheibe L3-L4). Die duodenojejunale Verbindung wird durch den Treitz-Muskel gehalten, dessen glatte Fasern am rechten Zwerchfellpfeiler ansetzen.' },

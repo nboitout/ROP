@@ -37,7 +37,7 @@ export const chapter14It: Chapter = {
       id: 'anatomie',
       title: 'Anatomia',
       blocks: [
-        { type: 'figure', src: '/chapter-14/it/Chapter14 Fig2 IT.png', caption: 'Figura 14.2 — Mesos', alt: 'I mesos del peritoneo', orientation: 'portrait' },
+        { type: 'figure', src: '/chapter-14/it/Chapter14 Fig2 IT.png', caption: 'Figura 14.2 — Mesos', alt: 'I mesos del peritoneo', orientation: 'portrait', syncHide: true },
         { type: 'lead', label: 'Digiuno-ileo', text: 'comprende 15-16 anse intestinali a forma di U, disposte in due gruppi. Un gruppo superiore a sinistra, il digiuno, più sviluppato dell\'ileo, le cui anse e sistema vascolare sono orientati prevalentemente in senso orizzontale. Un gruppo inferiore a destra, l\'ileo, le cui anse e sistema vascolare sono orientati prevalentemente in senso verticale.' },
         { type: 'lead', label: 'Mesentere', text: 'è un meso, ovvero una riflessione a doppio foglietto del peritoneo. Avvolge il digiuno-ileo e lo collega alla parete posteriore dell\'addome tramite la radice del mesentere.' },
         { type: 'lead', label: 'Radice del mesentere', text: 'costituisce la linea di attacco del mesentere e contribuisce alla stabilità dell\'intestino tenue, altrimenti molto mobile. Misura 16-18 cm. Si estende dalla giunzione duodigiuno-digiunale alla valvola ileocecale, attraversando l\'asse mediano dell\'addome a livello dell\'ombelico (a livello del disco L3-L4). La giunzione duodigiuno-digiunale è mantenuta dal muscolo di Treitz, le cui fibre lisce si attaccano al pilastro destro del diaframma.' },

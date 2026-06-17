@@ -37,7 +37,7 @@ export const chapter14En: Chapter = {
       id: 'anatomie',
       title: 'Anatomy',
       blocks: [
-        { type: 'figure', src: '/chapter-14/en/figure-14-2.png', caption: 'Figure 14.2 — Mesos', alt: 'The peritoneal mesos', orientation: 'portrait' },
+        { type: 'figure', src: '/chapter-14/en/figure-14-2.png', caption: 'Figure 14.2 — Mesos', alt: 'The peritoneal mesos', orientation: 'portrait', syncHide: true },
         { type: 'lead', label: 'Jejuno-ileum', text: 'it comprises 15 to 16 U-shaped intestinal loops, arranged in two groups. An upper left group, corresponding to the jejunum, which is more developed than the ileum. Its loops and vascular network are generally oriented horizontally. A lower right group, corresponding to the ileum, whose loops and vascular network are generally oriented vertically.' },
         { type: 'lead', label: 'Mesentery', text: 'it is a meso, that is, a double-layered peritoneal fold. It envelops the jejuno-ileum and attaches it to the posterior abdominal wall through the root of the mesentery.' },
         { type: 'lead', label: 'Root of the mesentery', text: 'the root of the mesentery forms the attachment line of the mesentery and contributes to the stability of the small intestine, which is otherwise highly mobile. It measures 16 to 18 cm and extends from the duodenojejunal junction to the ileocaecal junction, crossing the abdominal midline at the level of the umbilicus, opposite the L3-L4 disc. The duodenojejunal junction is supported by the suspensory muscle of the duodenum, or muscle of Treitz, whose smooth muscle fibres attach to the right crus of the diaphragm.' },
