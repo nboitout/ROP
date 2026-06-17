@@ -37,9 +37,9 @@ export const chapter14Es: Chapter = {
       id: 'anatomie',
       title: 'Anatomía',
       blocks: [
+        { type: 'figure', src: '/chapter-14/es/Chapter14 Fig2 ES.png', caption: 'Figura 14.2 — Mesos', alt: 'Los mesos del peritoneo', orientation: 'portrait' },
         { type: 'lead', label: 'Yeyuno-íleon', text: 'comprende entre 15 y 16 asas intestinales en forma de U, distribuidas en dos grupos. Un grupo superior a la izquierda, el yeyuno, más desarrollado que el íleon, cuyas asas y sistema vascular están orientados más bien horizontalmente. Un grupo inferior a la derecha, el íleon, cuyas asas y sistema vascular están orientados más bien verticalmente.' },
         { type: 'lead', label: 'Mesenterio', text: 'es un meso, es decir, una reflexión peritoneal de doble hoja. Envuelve el yeyuno-íleon y lo une a la pared posterior del abdomen mediante la raíz del mesenterio.' },
-        { type: 'figure', src: '/chapter-14/es/Chapter14 Fig2 ES.png', caption: 'Figura 14.2 — Mesos', alt: 'Los mesos del peritoneo', orientation: 'portrait' },
         { type: 'lead', label: 'Raíz del mesenterio', text: 'constituye la línea de inserción del mesenterio y contribuye a la estabilidad del intestino delgado, de por sí muy móvil. Mide entre 16 y 18 cm. Se extiende desde la unión duodeno-yeyunal hasta la unión ileocecal, cruzando el eje mediano del abdomen a nivel del ombligo (a la altura del disco L3-L4). La unión duodeno-yeyunal es mantenida por el músculo de Treitz, cuyas fibras lisas se insertan en el pilar derecho del diafragma.' },
         { type: 'figure', src: '/chapter-14/es/Chapter14 Fig3 ES.png', caption: 'Figura 14.3 — Raíz del mesenterio', alt: 'Raíz del mesenterio y su trayecto abdominal', orientation: 'landscape', syncHide: true },
         { type: 'lead', label: 'Músculo de Treitz', text: 'participa en el mantenimiento del ángulo duodeno-yeyunal mediante su contracción, atrayendo la raíz del mesenterio hacia arriba y a la izquierda. Al favorecer la tensión longitudinal, participa en el vaciado del contenido duodenal en el yeyuno. La raíz del mesenterio proporciona la vascularización y la inervación al intestino delgado.' },
@@ -69,9 +69,9 @@ export const chapter14Es: Chapter = {
       id: 'vascularisation',
       title: 'Vascularización',
       blocks: [
+        { type: 'figure', src: '/chapter-14/es/Chapter14 Fig5 ES.png', caption: 'Figura 14.5 — Arteria mesentérica superior', alt: 'Arteria mesentérica superior y sus ramas', orientation: 'portrait' },
         { type: 'para', text: 'El intestino delgado necesita un importante aporte vascular y linfático para garantizar sus funciones de digestión, absorción e inmunidad.' },
         { type: 'lead', label: 'Arteria mesentérica superior', text: 'constituye el eje arterial principal del intestino delgado. Es una rama de la aorta abdominal. Su origen se sitúa 1 cm por debajo del tronco celíaco, a la altura del disco intervertebral Th12-L1. Inicialmente retropancreática y luego por delante de la 3.ª porción del duodeno, discurre entre las dos hojas del mesenterio. Emite numerosas ramas colaterales. Irriga todo el intestino delgado, el colon ascendente y los 2/3 proximales del colon transverso.' },
-        { type: 'figure', src: '/chapter-14/es/Chapter14 Fig5 ES.png', caption: 'Figura 14.5 — Arteria mesentérica superior', alt: 'Arteria mesentérica superior y sus ramas', orientation: 'portrait' },
         { type: 'para', text: 'Su pulso, perceptible a nivel de la 3.ª porción del duodeno, a la derecha del ombligo, puede constituir un punto de referencia clínico vascular, sin que por sí solo permita evaluar el funcionamiento intestinal.' },
         { type: 'figure', src: '/chapter-14/es/Chapter14 Fig6 ES.png', caption: 'Figura 14.6 — Pulso de las arterias de la cavidad abdominal', alt: 'Pulso de las arterias de la cavidad abdominal', orientation: 'landscape' },
         { type: 'lead', label: 'Vena mesentérica superior', text: 'situada a la derecha de la arteria mesentérica superior, forma parte del sistema porta. Drena hacia el hígado la sangre venosa cargada de nutrientes absorbidos en el intestino delgado.' },

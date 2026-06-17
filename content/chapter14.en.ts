@@ -37,9 +37,9 @@ export const chapter14En: Chapter = {
       id: 'anatomie',
       title: 'Anatomy',
       blocks: [
+        { type: 'figure', src: '/chapter-14/en/figure-14-2.png', caption: 'Figure 14.2 — Mesos', alt: 'The peritoneal mesos', orientation: 'portrait' },
         { type: 'lead', label: 'Jejuno-ileum', text: 'it comprises 15 to 16 U-shaped intestinal loops, arranged in two groups. An upper left group, corresponding to the jejunum, which is more developed than the ileum. Its loops and vascular network are generally oriented horizontally. A lower right group, corresponding to the ileum, whose loops and vascular network are generally oriented vertically.' },
         { type: 'lead', label: 'Mesentery', text: 'it is a meso, that is, a double-layered peritoneal fold. It envelops the jejuno-ileum and attaches it to the posterior abdominal wall through the root of the mesentery.' },
-        { type: 'figure', src: '/chapter-14/en/figure-14-2.png', caption: 'Figure 14.2 — Mesos', alt: 'The peritoneal mesos', orientation: 'portrait' },
         { type: 'lead', label: 'Root of the mesentery', text: 'the root of the mesentery forms the attachment line of the mesentery and contributes to the stability of the small intestine, which is otherwise highly mobile. It measures 16 to 18 cm and extends from the duodenojejunal junction to the ileocaecal junction, crossing the abdominal midline at the level of the umbilicus, opposite the L3-L4 disc. The duodenojejunal junction is supported by the suspensory muscle of the duodenum, or muscle of Treitz, whose smooth muscle fibres attach to the right crus of the diaphragm.' },
         { type: 'figure', src: '/chapter-14/en/figure-14-3.png', caption: 'Figure 14.3 — Root of the mesentery', alt: 'Root of the mesentery and its abdominal course', orientation: 'landscape', syncHide: true },
         { type: 'lead', label: 'Suspensory muscle of the duodenum (muscle of Treitz)', text: 'it helps maintain the duodenojejunal angle by contracting and drawing the root of the mesentery upward and to the left. By creating longitudinal tension, it contributes to duodenal emptying into the jejunum. The root of the mesentery also carries the vascular and nervous supply of the small intestine.' },
@@ -69,9 +69,9 @@ export const chapter14En: Chapter = {
       id: 'vascularisation',
       title: 'Vascularisation',
       blocks: [
+        { type: 'figure', src: '/chapter-14/en/figure-14-5.png', caption: 'Figure 14.5 — Superior mesenteric artery', alt: 'Superior mesenteric artery and its branches', orientation: 'portrait' },
         { type: 'para', text: 'The small intestine requires a substantial vascular and lymphatic supply to perform its digestive, absorptive and immune functions.' },
         { type: 'lead', label: 'Superior mesenteric artery', text: 'it is the main arterial axis of the small intestine. It arises from the abdominal aorta, 1 cm below the coeliac trunk, opposite the Th12-L1 intervertebral disc. It first passes behind the pancreas and then anterior to the third part of the duodenum before running between the two layers of the mesentery. It gives off numerous collateral branches and supplies the entire small intestine, the ascending colon and the proximal two-thirds of the transverse colon.' },
-        { type: 'figure', src: '/chapter-14/en/figure-14-5.png', caption: 'Figure 14.5 — Superior mesenteric artery', alt: 'Superior mesenteric artery and its branches', orientation: 'portrait' },
         { type: 'para', text: 'Its pulse, which is palpable at the level of the third part of the duodenum, to the right of the umbilicus, may serve as a vascular clinical landmark, although it does not by itself indicate intestinal function.' },
         { type: 'figure', src: '/chapter-14/en/figure-14-6.png', caption: 'Figure 14.6 — Pulses of the arteries of the abdominal cavity', alt: 'Pulses of the arteries of the abdominal cavity', orientation: 'landscape' },
         { type: 'lead', label: 'Superior mesenteric vein', text: 'located to the right of the superior mesenteric artery, it belongs to the portal system. It drains nutrient-rich venous blood from the small intestine toward the liver.' },

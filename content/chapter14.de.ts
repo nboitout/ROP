@@ -37,9 +37,9 @@ export const chapter14De: Chapter = {
       id: 'anatomie',
       title: 'Anatomie',
       blocks: [
+        { type: 'figure', src: '/chapter-14/ge/Chapter14 Fig2 GE.png', caption: 'Abbildung 14.2 — Mesos', alt: 'Die peritonealen Mesos', orientation: 'portrait' },
         { type: 'lead', label: 'Jejunum-Ileum', text: 'es besteht aus 15 bis 16 U-förmigen Darmschlingen, die in zwei Gruppen angeordnet sind. Eine obere Gruppe links, das Jejunum, das stärker entwickelt ist als das Ileum und dessen Schlingen und Gefäßsystem eher horizontal ausgerichtet sind. Eine untere Gruppe rechts, das Ileum, dessen Schlingen und Gefäßsystem eher vertikal ausgerichtet sind.' },
         { type: 'lead', label: 'Mesenterium', text: 'es ist ein Meso, d. h. eine doppelblättrige Peritonealreflexion. Es umhüllt das Jejunum-Ileum und verbindet es über die Mesenterialwurzel mit der hinteren Bauchwand.' },
-        { type: 'figure', src: '/chapter-14/ge/Chapter14 Fig2 GE.png', caption: 'Abbildung 14.2 — Mesos', alt: 'Die peritonealen Mesos', orientation: 'portrait' },
         { type: 'lead', label: 'Mesenterialwurzel', text: 'sie bildet die Anheftungslinie des Mesenteriums und trägt zur Stabilität des ansonsten sehr beweglichen Dünndarms bei. Sie misst 16 bis 18 cm. Sie erstreckt sich von der duodenojejunalen Verbindung bis zur Ileozökalklappe und kreuzt dabei die Medianachse des Abdomens auf Höhe des Nabels (auf Höhe der Bandscheibe L3-L4). Die duodenojejunale Verbindung wird durch den Treitz-Muskel gehalten, dessen glatte Fasern am rechten Zwerchfellpfeiler ansetzen.' },
         { type: 'figure', src: '/chapter-14/ge/Chapter14 Fig3 GE.png', caption: 'Abbildung 14.3 — Mesenterialwurzel', alt: 'Mesenterialwurzel und ihr abdominaler Verlauf', orientation: 'landscape', syncHide: true },
         { type: 'lead', label: 'Treitz-Muskel', text: 'er trägt durch seine Kontraktion zur Aufrechterhaltung des duodenojejunalen Winkels bei, indem er die Mesenterialwurzel nach oben und links zieht. Durch die Förderung der Längsspannung beteiligt er sich an der Entleerung des Duodenalinhalts in das Jejunum. Die Mesenterialwurzel versorgt den Dünndarm mit Gefäßen und Nerven.' },
@@ -69,9 +69,9 @@ export const chapter14De: Chapter = {
       id: 'vascularisation',
       title: 'Vaskularisierung',
       blocks: [
+        { type: 'figure', src: '/chapter-14/ge/Chapter14 Fig5 GE.png', caption: 'Abbildung 14.5 — Arteria mesenterica superior', alt: 'Arteria mesenterica superior und ihre Äste', orientation: 'portrait' },
         { type: 'para', text: 'Der Dünndarm benötigt eine umfangreiche vaskuläre und lymphatische Versorgung, um seine Funktionen der Verdauung, Resorption und Immunabwehr zu erfüllen.' },
         { type: 'lead', label: 'Arteria mesenterica superior', text: 'sie bildet die arterielle Hauptachse des Dünndarms. Sie ist ein Ast der Bauchaorta. Ihr Ursprung liegt 1 cm unterhalb des Truncus coeliacus, auf Höhe der Bandscheibe Th12-L1. Zunächst retropankreatisch und dann vor dem 3. Teil des Duodenums verläuft sie zwischen den beiden Blättern des Mesenteriums. Sie gibt zahlreiche Kollateraläste ab. Sie versorgt den gesamten Dünndarm, das Colon ascendens und die proximalen zwei Drittel des Colon transversum.' },
-        { type: 'figure', src: '/chapter-14/ge/Chapter14 Fig5 GE.png', caption: 'Abbildung 14.5 — Arteria mesenterica superior', alt: 'Arteria mesenterica superior und ihre Äste', orientation: 'portrait' },
         { type: 'para', text: 'Ihr Puls, der auf Höhe des 3. Teils des Duodenums, rechts vom Nabel, spürbar ist, kann einen klinisch-vaskulären Orientierungspunkt darstellen, ohne allein Rückschlüsse auf die Darmfunktion zu erlauben.' },
         { type: 'figure', src: '/chapter-14/ge/Chapter14 Fig6 GE.png', caption: 'Abbildung 14.6 — Puls der Arterien der Bauchhöhle', alt: 'Puls der Arterien der Bauchhöhle', orientation: 'landscape' },
         { type: 'lead', label: 'Vena mesenterica superior', text: 'sie liegt rechts der Arteria mesenterica superior und gehört zum Pfortadersystem. Sie drainiert das venöse Blut, das mit den im Dünndarm absorbierten Nährstoffen beladen ist, zur Leber.' },

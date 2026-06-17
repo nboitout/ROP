@@ -37,9 +37,9 @@ export const chapter14It: Chapter = {
       id: 'anatomie',
       title: 'Anatomia',
       blocks: [
+        { type: 'figure', src: '/chapter-14/it/Chapter14 Fig2 IT.png', caption: 'Figura 14.2 — Mesos', alt: 'I mesos del peritoneo', orientation: 'portrait' },
         { type: 'lead', label: 'Digiuno-ileo', text: 'comprende 15-16 anse intestinali a forma di U, disposte in due gruppi. Un gruppo superiore a sinistra, il digiuno, più sviluppato dell\'ileo, le cui anse e sistema vascolare sono orientati prevalentemente in senso orizzontale. Un gruppo inferiore a destra, l\'ileo, le cui anse e sistema vascolare sono orientati prevalentemente in senso verticale.' },
         { type: 'lead', label: 'Mesentere', text: 'è un meso, ovvero una riflessione a doppio foglietto del peritoneo. Avvolge il digiuno-ileo e lo collega alla parete posteriore dell\'addome tramite la radice del mesentere.' },
-        { type: 'figure', src: '/chapter-14/it/Chapter14 Fig2 IT.png', caption: 'Figura 14.2 — Mesos', alt: 'I mesos del peritoneo', orientation: 'portrait' },
         { type: 'lead', label: 'Radice del mesentere', text: 'costituisce la linea di attacco del mesentere e contribuisce alla stabilità dell\'intestino tenue, altrimenti molto mobile. Misura 16-18 cm. Si estende dalla giunzione duodigiuno-digiunale alla valvola ileocecale, attraversando l\'asse mediano dell\'addome a livello dell\'ombelico (a livello del disco L3-L4). La giunzione duodigiuno-digiunale è mantenuta dal muscolo di Treitz, le cui fibre lisce si attaccano al pilastro destro del diaframma.' },
         { type: 'figure', src: '/chapter-14/it/Chapter14 Fig3 IT.png', caption: 'Figura 14.3 — Radice del mesentere', alt: 'Radice del mesentere e il suo decorso addominale', orientation: 'landscape', syncHide: true },
         { type: 'lead', label: 'Muscolo di Treitz', text: 'partecipa al mantenimento dell\'angolo duodigiuno-digiunale mediante la sua contrazione, portando la radice del mesentere verso l\'alto e a sinistra. Favorendo una tensione longitudinale, partecipa allo svuotamento del contenuto duodenale nel digiuno. La radice del mesentere fornisce la vascolarizzazione e l\'innervazione all\'intestino tenue.' },
@@ -69,9 +69,9 @@ export const chapter14It: Chapter = {
       id: 'vascularisation',
       title: 'Vascolarizzazione',
       blocks: [
+        { type: 'figure', src: '/chapter-14/it/Chapter14 Fig5 IT.png', caption: 'Figura 14.5 — Arteria mesenterica superiore', alt: 'Arteria mesenterica superiore e i suoi rami', orientation: 'portrait' },
         { type: 'para', text: 'L\'intestino tenue necessita di un\'ampia irrorazione vascolare e linfatica per svolgere le sue funzioni di digestione, assorbimento e immunità.' },
         { type: 'lead', label: 'Arteria mesenterica superiore', text: 'costituisce l\'asse arterioso principale dell\'intestino tenue. È un ramo dell\'aorta addominale. La sua origine si trova 1 cm al di sotto del tripode celiaco, in corrispondenza del disco intervertebrale Th12-L1. Inizialmente retropancreatica, poi anteriore alla 3ª porzione del duodeno, decorre tra i due foglietti del mesentere. Fornisce numerosi rami collaterali. Irrora tutto l\'intestino tenue, il colon ascendente e i 2/3 prossimali del colon trasverso.' },
-        { type: 'figure', src: '/chapter-14/it/Chapter14 Fig5 IT.png', caption: 'Figura 14.5 — Arteria mesenterica superiore', alt: 'Arteria mesenterica superiore e i suoi rami', orientation: 'portrait' },
         { type: 'para', text: 'Il suo polso, percepibile a livello della 3ª porzione del duodeno, a destra dell\'ombelico, può costituire un riferimento clinico vascolare, senza tuttavia consentire da solo conclusioni sul funzionamento intestinale.' },
         { type: 'figure', src: '/chapter-14/it/Chapter14 Fig6 IT.png', caption: 'Figura 14.6 — Polso delle arterie della cavità addominale', alt: 'Polso delle arterie della cavità addominale', orientation: 'landscape' },
         { type: 'lead', label: 'Vena mesenterica superiore', text: 'situata a destra dell\'arteria mesenterica superiore, fa parte del sistema portale. Draina verso il fegato il sangue venoso carico dei nutrienti assorbiti nell\'intestino tenue.' },

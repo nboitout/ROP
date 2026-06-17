@@ -157,9 +157,12 @@ export const chapter14SlideAnchors: SyncAnchor[] = [
   { sectionId: 'presentation',   blockIndex: 0,  slide: 1 },
   // Slide 2 sits right below the "Situation" heading (first block of the section).
   { sectionId: 'situation',      blockIndex: 0,  slide: 2 },
-  // Slide 3 points just before "Mésentère — c'est un méso…".
-  { sectionId: 'anatomie',       blockIndex: 1,  slide: 3 },
-  { sectionId: 'vascularisation', blockIndex: 1, slide: 4 },
+  // Slide 3 points just before "Mésentère — c'est un méso…" (block 2 now that
+  // figure 14.2 leads the Anatomie section).
+  { sectionId: 'anatomie',       blockIndex: 2,  slide: 3 },
+  // Slide 4 points to the "Artère mésentérique supérieure" lead (block 2 now
+  // that figure 14.5 leads the Vascularisation section).
+  { sectionId: 'vascularisation', blockIndex: 2, slide: 4 },
   { sectionId: 'innervation',    blockIndex: 2,  slide: 5 },
   { sectionId: 'innervation',    blockIndex: 10, slide: 6 },
   { sectionId: 'innervation',    blockIndex: 12, slide: 7 },
@@ -199,8 +202,10 @@ export const chapter14SlideAnchorsFr: SyncAnchor[] = [
   { sectionId: 'presentation',   blockIndex: 0,  slide: 1 },
   // Slide 2 sits right below the "Situation" heading (first block of the section).
   { sectionId: 'situation',      blockIndex: 0,  slide: 2 },
-  { sectionId: 'anatomie',       blockIndex: 1,  slide: 3 },
-  { sectionId: 'vascularisation', blockIndex: 1, slide: 4 },
+  // Slides 3 & 4 follow their leads, now at block 2 since figures 14.2 / 14.5
+  // were moved to the top of the Anatomie / Vascularisation sections.
+  { sectionId: 'anatomie',       blockIndex: 2,  slide: 3 },
+  { sectionId: 'vascularisation', blockIndex: 2, slide: 4 },
   { sectionId: 'innervation',    blockIndex: 2,  slide: 5 },
   { sectionId: 'innervation',    blockIndex: 10, slide: 6 },
   { sectionId: 'innervation',    blockIndex: 12, slide: 7 },
