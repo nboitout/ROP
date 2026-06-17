@@ -27,6 +27,7 @@ export const chapter14Slides: SyncSlide[] = [
   { src: '/chapter-14/figure-14-3.png', title: 'Racine du mésentère' },
   { src: '/chapter-14/figure-14-4.png', title: 'Muscle de Treitz' },
   { src: '/chapter-14/figure-14-5.png', title: 'L’axe de l’irrigation et du drainage : tronc mésentérique supérieur', orientation: 'portrait' },
+  { src: '/chapter-14/figure-14-9.png', title: 'Nerf phrénique' },
   { src: '/chapter-14/slides/slide-05.jpg', title: 'La double réalité neurologique du péritoine' },
   { src: '/chapter-14/slides/slide-06.jpg', title: 'Le deuxième cerveau : autonomie du système nerveux entérique (SNE)' },
   { src: '/chapter-14/slides/slide-07.jpg', title: 'Le deuxième cerveau : système nerveux entérique' },
@@ -223,30 +224,33 @@ export const chapter14SlideAnchorsFr: SyncAnchor[] = [
   // Slide 5 is Figure 14.4 and appears before the longitudinal-tension sentence.
   { sectionId: 'anatomie',       blockIndex: 7,  slide: 5 },
   { sectionId: 'vascularisation', blockIndex: 2, slide: 6 },
+  // Figure 14.9 replaces the former slide 7 marker at the parietal-peritoneum passage.
   { sectionId: 'innervation',    blockIndex: 2,  slide: 7 },
-  { sectionId: 'innervation',    blockIndex: 10, slide: 8 },
-  { sectionId: 'innervation',    blockIndex: 12, slide: 9 },
-  { sectionId: 'physiologie',    blockIndex: 5,  slide: 10 },
-  { sectionId: 'physiologie',    blockIndex: 10, slide: 11 },
-  { sectionId: 'pathologies',    blockIndex: 0,  slide: 12 },
-  { sectionId: 'pathologies',    blockIndex: 1,  slide: 13 },
-  { sectionId: 'pathologies',    blockIndex: 7,  slide: 14 },
-  { sectionId: 'pathologies',    blockIndex: 11, slide: 15 },
+  // Former slide 7 now appears after the visceral-peritoneum paragraph.
+  { sectionId: 'innervation',    blockIndex: 4,  slide: 8 },
+  { sectionId: 'innervation',    blockIndex: 7,  slide: 9 },
+  { sectionId: 'innervation',    blockIndex: 9,  slide: 10 },
+  { sectionId: 'physiologie',    blockIndex: 5,  slide: 11 },
+  { sectionId: 'physiologie',    blockIndex: 10, slide: 12 },
+  { sectionId: 'pathologies',    blockIndex: 0,  slide: 13 },
+  { sectionId: 'pathologies',    blockIndex: 1,  slide: 14 },
+  { sectionId: 'pathologies',    blockIndex: 7,  slide: 15 },
+  { sectionId: 'pathologies',    blockIndex: 11, slide: 16 },
   // Crohn clinical-case slide, right after the "Maladie de Crohn" heading.
-  { sectionId: 'pathologies',    blockIndex: 14, slide: 16 },
+  { sectionId: 'pathologies',    blockIndex: 14, slide: 17 },
   // Protocole ROP (ordre de traitement) — overview, at the ROP section heading.
-  { sectionId: 'rop',            blockIndex: -1, slide: 17 },
+  { sectionId: 'rop',            blockIndex: -1, slide: 18 },
   // Figure-slides (cranial vagus, left-abdominal vagus, sympathetic system,
   // celiac plexus, jejunum and ileum reflex zones) anchored in the ROP section.
-  { sectionId: 'rop',            blockIndex: 1,  slide: 18 },
-  { sectionId: 'rop',            blockIndex: 4,  slide: 19 },
-  { sectionId: 'rop',            blockIndex: 7,  slide: 20 },
+  { sectionId: 'rop',            blockIndex: 1,  slide: 19 },
+  { sectionId: 'rop',            blockIndex: 4,  slide: 20 },
+  { sectionId: 'rop',            blockIndex: 7,  slide: 21 },
   // Plexus cœliaque slide; the marker appears just before the new plexique photo.
-  { sectionId: 'rop',            blockIndex: 8,  slide: 21, gapBefore: 'half' },
-  { sectionId: 'rop',            blockIndex: 12, slide: 22 },
-  { sectionId: 'rop',            blockIndex: 18, slide: 23 },
+  { sectionId: 'rop',            blockIndex: 8,  slide: 22, gapBefore: 'half' },
+  { sectionId: 'rop',            blockIndex: 12, slide: 23 },
+  { sectionId: 'rop',            blockIndex: 18, slide: 24 },
   // Synthèse d'intervention ROP — after the reflex-zone slides, at the limbic step.
-  { sectionId: 'rop',            blockIndex: 20, slide: 24 },
+  { sectionId: 'rop',            blockIndex: 20, slide: 25 },
   // Profil viscéro-émotionnel — at "Relations viscéro-émotionnelles".
-  { sectionId: 'relations',      blockIndex: 2,  slide: 25 },
+  { sectionId: 'relations',      blockIndex: 2,  slide: 26 },
 ]

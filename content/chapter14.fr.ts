@@ -76,7 +76,6 @@ export const chapter14Fr: Chapter = {
         { type: 'sub', text: 'Innervation du péritoine' },
         { type: 'para', text: 'Le péritoine reçoit une double innervation, somatique et autonome.' },
         { type: 'lead', label: 'Péritoine pariétal', text: 'il reçoit une innervation somatique commune avec la paroi abdominale via les nerfs phréniques, les six derniers nerfs intercostaux et les nerfs du plexus lombaire. Il comporte de nombreuses terminaisons sensibles à la température, à la pression et à la douleur. Cette innervation commune avec la paroi abdominale éclaire la projection des douleurs cervicales, scapulaires, abdominales, lombaires d’origines péritonéale et viscérale transmises au système ostéo-musculo-articulaire par les fibres somatiques du feuillet pariétal.' },
-        { type: 'figure', src: '/chapter-14/figure-14-9.png', caption: 'Figure 14.9 — Nerf phrénique', alt: 'Nerf phrénique et son trajet', orientation: 'landscape' },
         { type: 'lead', label: 'Péritoine viscéral', text: 'il reçoit une innervation autonome extrinsèque commune avec les viscères. Sympathique : ses racines proviennent de Th8 à Th11. Elles rejoignent les plexus pré-vertébraux cœliaque et mésentérique supérieur via les nerfs grands et petits splanchniques.' },
 
         { type: 'sub', text: 'Nerf vague et système nerveux sympathique' },
