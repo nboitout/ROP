@@ -33,6 +33,7 @@ export const chapter14Fr: Chapter = {
       title: 'Situation',
       blocks: [
         { type: 'para', text: 'Le jéjunum-iléum occupe une grande partie de la cavité abdominale, plus volontiers à gauche qu’à droite, à l’intérieur du cadre colique. Le jéjunum siège préférentiellement dans le quadrant supérieur gauche de l’abdomen. L’iléum siège préférentiellement dans le quadrant inférieur droit de l’abdomen.' },
+        { type: 'figure', src: '/chapter-14/figure-14-1.png', caption: 'Figure 14.1 — Régions abdominales', alt: 'Repères topographiques de l’abdomen', orientation: 'portrait' },
       ],
     },
     {
@@ -102,6 +103,7 @@ export const chapter14Fr: Chapter = {
           { label: 'Nerf vague — sensibilité', text: 'le nerf vague contient 70 à 80 % de fibres sensitives qui renseignent en permanence le cerveau de l’état des viscères. Il est connecté au système nerveux intrinsèque.' },
         ]},
 
+        { type: 'figure', src: '/chapter-14/figure-14-12.jpg', caption: 'Figure 14.12 — Système nerveux autonome', alt: 'Comparaison fonctionnelle des voies parasympathiques et sympathiques', orientation: 'portrait' },
         { type: 'sub', text: 'Système nerveux entérique (SNE)' },
         { type: 'para', text: 'Le système nerveux intrinsèque ou entérique (SNE) est souvent qualifié de 2ème cerveau ou cerveau abdominal. Il est constitué de plexus intramuraux situés dans la paroi même de l’intestin grêle : le plexus myoentérique d’Auerbach et le plexus sous-muqueux de Meissner.' },
         { type: 'figure', src: '/chapter-14/figure-14-13.png', caption: 'Figure 14.13 — Plexus intra-muraux entériques', alt: 'Plexus myoentérique d’Auerbach et plexus sous-muqueux de Meissner dans la paroi intestinale', orientation: 'landscape' },
