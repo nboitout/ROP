@@ -1,11 +1,10 @@
 import { cookies } from 'next/headers'
 import { redirect } from 'next/navigation'
 import type { Metadata } from 'next'
-import SlideSyncReader from '@/components/SlideSyncReader'
+import ChapterReader from '@/components/ChapterReader'
 import { getChapter } from '@/content/registry'
 import { getServerLang } from '@/app/i18n/serverLang'
 import { translations } from '@/app/i18n/translations'
-import { chapter2Slides, chapter2SlideAnchors } from '@/content/chapter2.slidesync'
 
 export const metadata: Metadata = {
   title: 'Chapitre 2 — Traitement par la R.O.P. · Guy Boitout',
@@ -13,7 +12,7 @@ export const metadata: Metadata = {
   robots: { index: false, follow: false },
 }
 
-export default async function TraitementRopPage({
+export default async function Chapitre2Page({
   searchParams,
 }: {
   searchParams: Promise<{ lang?: string }>
@@ -28,16 +27,15 @@ export default async function TraitementRopPage({
 
   const { lang: langParam } = await searchParams
   const lang = await getServerLang(langParam)
-  const { chapter } = getChapter('chapter-2', 'fr')
+  const { chapter, contentLang } = getChapter('chapter-2', lang)
   const bookTitle = translations[lang].reader.bookTitle
   return (
-    <SlideSyncReader
+    <ChapterReader
       chapter={chapter}
       bookTitle={bookTitle}
-      slides={chapter2Slides}
-      anchors={chapter2SlideAnchors}
+      contentLang={contentLang}
       backHref="/admin/chapitres"
-      classicHref="/chapitre-2"
+      syncToggleHref="/lecture/traitement-rop"
     />
   )
 }

@@ -80,10 +80,14 @@ export const chapter2Fr: Chapter = {
           "· Parasympathique pelvien (viscères du territoire pelvien et partie distale du côlon)",
           "· Colonne vertébrale, articulations costo-transversaires, innervation sympathique (chaîne ganglionnaire latéro-vertébrale thoracique)",
           "· Plexus pré-vertébral",
+        ]},
+        { type: "rop", body: [
           "2. Syndrome locorégional — traiter les boucles mécaniques et neuro-végétatives liées à la région symptomatique :",
           "· Plexus et nerfs du système nerveux somatique (relations viscéro-somatiques)",
           "· Système viscéral",
           "· Cavité abdominale ou pelvienne selon le système viscéral",
+        ]},
+        { type: "rop", body: [
           "3. Système limbique — intégrer la dimension stress / émotion / mémoire corporelle, susceptible d’entretenir des boucles végétatives et tissulaires :",
           "· Amygdale, hippocampe, insula",
           "· Balance cerveau limbique–viscère en dysfonction : écoute-induction, un pouce sur le viscère en dysfonction dominante, l’autre pouce sur le cerveau limbique",

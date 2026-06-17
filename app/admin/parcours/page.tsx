@@ -12,7 +12,7 @@ export const dynamic = 'force-dynamic'
 // we split for the per-mode time metric. Chapters not listed have no page yet.
 const ROUTES: Record<string, { slug: string; href: string; classicHref?: string; syncHref?: string }> = {
   '00': { slug: 'introduction', href: '/introduction', classicHref: '/introduction' },
-  '02': { slug: 'chapter-2', href: '/lecture/traitement-rop', syncHref: '/lecture/traitement-rop' },
+  '02': { slug: 'chapter-2', href: '/lecture/traitement-rop', classicHref: '/chapitre-2', syncHref: '/lecture/traitement-rop' },
   '04': { slug: 'chapter-4', href: '/chapitre-4', classicHref: '/chapitre-4' },
   '05': { slug: 'chapter-5', href: '/chapitre-5', classicHref: '/chapitre-5', syncHref: '/lecture/chapitre-5' },
   '14': { slug: 'chapter-14', href: '/chapitre-14', classicHref: '/chapitre-14', syncHref: '/lecture/chapitre-14' },
