@@ -127,6 +127,7 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
   const [active, setActive] = useState(1)
   const [lightbox, setLightbox] = useState<{ src: string; alt: string; caption: string; orientation?: 'portrait' | 'landscape' } | null>(null)
   const [lightboxZoom, setLightboxZoom] = useState(1)
+  const [isPhonePortrait, setIsPhonePortrait] = useState(false)
   const articleRef = useRef<HTMLElement>(null)
   // While a slide-driven scroll is in flight, the scroll handler must not
   // fight the manually selected slide.
@@ -240,6 +241,22 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
     }
   }, [lightbox])
 
+  useEffect(() => {
+    const query = window.matchMedia('(max-width: 760px) and (orientation: portrait)')
+    const update = () => setIsPhonePortrait(query.matches)
+    update()
+    query.addEventListener('change', update)
+    window.addEventListener('resize', update)
+    window.addEventListener('orientationchange', update)
+    window.visualViewport?.addEventListener('resize', update)
+    return () => {
+      query.removeEventListener('change', update)
+      window.removeEventListener('resize', update)
+      window.removeEventListener('orientationchange', update)
+      window.visualViewport?.removeEventListener('resize', update)
+    }
+  }, [])
+
   function closeLightbox() {
     setLightbox(null)
     setLightboxZoom(1)
@@ -326,6 +343,8 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
       orientation: s.orientation === 'portrait' ? 'portrait' : 'landscape',
     })
   }
+
+  const rotateLandscapeLightbox = lightbox?.orientation === 'landscape' && isPhonePortrait
 
   return (
     <div className="cr-root">
@@ -490,7 +509,7 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
 
       {lightbox && (
         <div
-          className={`cr-lightbox${lightbox.orientation ? ` cr-lightbox--${lightbox.orientation}` : ''}`}
+          className={`cr-lightbox${lightbox.orientation ? ` cr-lightbox--${lightbox.orientation}` : ''}${rotateLandscapeLightbox ? ' cr-lightbox--auto-rotated' : ''}`}
           onClick={closeLightbox}
           role="dialog"
           aria-modal="true"
@@ -509,7 +528,14 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
               {lightbox.orientation === 'landscape' && (
                 <p className="cr-lightbox-rotate-hint">{ui.rotateHint}</p>
               )}
-              <img src={lightbox.src} alt={lightbox.alt} style={{ transform: `scale(${lightboxZoom})`, transformOrigin: 'top center' }} />
+              <img
+                src={lightbox.src}
+                alt={lightbox.alt}
+                style={{
+                  transform: `${rotateLandscapeLightbox ? 'rotate(90deg) ' : ''}scale(${lightboxZoom})`,
+                  transformOrigin: rotateLandscapeLightbox ? 'center center' : 'top center',
+                }}
+              />
               <figcaption>{lightbox.caption}</figcaption>
             </figure>
           </div>

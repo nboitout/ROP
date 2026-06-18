@@ -440,6 +440,10 @@ footer > div > p { font-size:1rem; color:rgba(245,240,232,.84); line-height:1.9;
   .cr-lightbox--portrait .cr-lightbox-fig img { max-width:92vw; max-height:calc(100dvh - 96px); width:auto; height:auto; }
   .cr-lightbox--landscape .cr-lightbox-rotate-hint { display:block; }
   .cr-lightbox--landscape .cr-lightbox-fig img { max-width:96vw; max-height:calc(100dvh - 132px); width:auto; height:auto; }
+  .cr-lightbox--auto-rotated .cr-lightbox-scroll { justify-content:center; align-items:center; overflow:hidden; padding:8px 6px; }
+  .cr-lightbox--auto-rotated .cr-lightbox-fig { width:calc(100vw - 12px); height:calc(100dvh - 64px); justify-content:center; }
+  .cr-lightbox--auto-rotated .cr-lightbox-rotate-hint { display:none; }
+  .cr-lightbox--auto-rotated .cr-lightbox-fig img { max-width:calc(100dvh - 84px); max-height:calc(100vw - 18px); }
 }
 
 @media (max-width:940px) and (orientation:landscape){
