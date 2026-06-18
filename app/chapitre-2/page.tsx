@@ -19,10 +19,9 @@ export default async function Chapitre2Page({
 }) {
   const cookieStore = await cookies()
   const hasAdminSession = !!cookieStore.get('admin_session')
-  const hasPaidAccess = !!cookieStore.get('paid_access')
 
-  if (!hasAdminSession && !hasPaidAccess) {
-    redirect('/#acheter')
+  if (!hasAdminSession && !cookieStore.get('free_chapters_access')) {
+    redirect('/?gate=free#acces-libre')
   }
 
   const { lang: langParam } = await searchParams
@@ -34,7 +33,7 @@ export default async function Chapitre2Page({
       chapter={chapter}
       bookTitle={bookTitle}
       contentLang={contentLang}
-      backHref="/admin/chapitres"
+      backHref="/chapitres-gratuits"
       syncToggleHref="/lecture/traitement-rop"
     />
   )

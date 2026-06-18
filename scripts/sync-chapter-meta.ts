@@ -9,6 +9,7 @@ import { resolve, dirname } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { chapterStats } from '../lib/chapterStats.ts'
 import { introductionFr } from '../content/introduction.fr.ts'
+import { chapter2Fr } from '../content/chapter2.fr.ts'
 import { chapter5Fr } from '../content/chapter5.fr.ts'
 import { chapter14Fr } from '../content/chapter14.fr.ts'
 
@@ -16,6 +17,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url))
 
 const chapters = [
   { slug: 'introduction',  content: introductionFr },
+  { slug: 'chapter-2',     content: chapter2Fr },
   { slug: 'chapter-5',     content: chapter5Fr },
   { slug: 'chapter-14',    content: chapter14Fr },
 ]

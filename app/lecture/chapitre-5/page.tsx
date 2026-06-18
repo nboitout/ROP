@@ -28,10 +28,11 @@ export default async function Chapitre5SyncPage({
   searchParams: Promise<{ lang?: string }>
 }) {
   const cookieStore = await cookies()
-  // Open to free-chapter readers (synchronized is now the default entry from
-  // /chapitres-gratuits) and to admins.
-  if (!cookieStore.get('free_chapters_access') && !cookieStore.get('admin_session')) {
-    redirect('/?gate=free#acces-libre')
+  const hasAdminSession = !!cookieStore.get('admin_session')
+  const hasPaidAccess = !!cookieStore.get('paid_access')
+
+  if (!hasAdminSession && !hasPaidAccess) {
+    redirect('/#acheter')
   }
 
   // The synthesis deck exists in all five languages for chapter 5; serve the
@@ -45,7 +46,7 @@ export default async function Chapitre5SyncPage({
       bookTitle={translations[lang].reader.bookTitle}
       slides={DECKS[lang]}
       anchors={chapter5SlideAnchors}
-      backHref="/chapitres-gratuits"
+      backHref="/"
       classicHref="/chapitre-5"
     />
   )

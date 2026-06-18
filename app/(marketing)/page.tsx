@@ -14,7 +14,7 @@ import { snapshotMeta } from '@/lib/chapterStats'
 
 const CARD_SLUG: Record<string, string> = {
   '00': 'introduction',
-  '05': 'chapter-5',
+  '02': 'chapter-2',
   '14': 'chapter-14',
 }
 

@@ -43,14 +43,15 @@ export default async function ReadersPage() {
     return meta ? { ...l, lang: meta.lang || l.lang, country: meta.country || l.country } : l
   })
 
-  // Deduplicate by email — each reader may have submitted multiple forms (chapter-5-free + book-notify)
-  // Prefer the chapter-5-free row (has real name + profession); fall back to whichever comes first.
+  // Deduplicate by email — each reader may have submitted multiple forms
+  // (free-chapters + book-notify). Prefer the free-chapters row (has real
+  // name + profession); fall back to whichever comes first.
   const deduped = new Map<string, typeof enrichedLeads[0]>()
   enrichedLeads.forEach((l) => {
     const key = l.email.toLowerCase()
     if (!key) return
     const existing = deduped.get(key)
-    if (!existing || l.source === 'chapter-5-free') deduped.set(key, l)
+    if (!existing || l.source === 'free-chapters' || l.source === 'chapter-5-free') deduped.set(key, l)
   })
   const dedupedLeads = [...deduped.values()]
 

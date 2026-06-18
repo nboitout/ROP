@@ -9,7 +9,7 @@ import { chapterMeta } from '@/lib/chapterStats'
 
 const HREF_TO_SLUG: Record<string, string> = {
   '/introduction': 'introduction',
-  '/chapitre-5': 'chapter-5',
+  '/chapitre-2': 'chapter-2',
   '/chapitre-14': 'chapter-14',
 }
 
@@ -17,7 +17,7 @@ const HREF_TO_SLUG: Record<string, string> = {
 // reading experience (text + slides) by default, in the languages for which a
 // deck exists. Other languages keep the classic reader.
 const SYNC: Record<string, { href: string; langs: Set<string> }> = {
-  '/chapitre-5': { href: '/lecture/chapitre-5', langs: new Set(['fr', 'en', 'de', 'es', 'it']) },
+  '/chapitre-2': { href: '/lecture/traitement-rop', langs: new Set(['fr', 'en', 'de', 'es', 'it']) },
   '/chapitre-14': { href: '/lecture/chapitre-14', langs: new Set(['fr', 'en', 'de', 'es', 'it']) },
 }
 

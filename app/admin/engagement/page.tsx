@@ -70,7 +70,10 @@ export default async function EngagementPage() {
   const pageLeaves = visits.filter((v) => v.event === 'page_leave')
 
   // Avg time per specific page
-  const avgChapter5 = avgDuration(pageLeaves.filter((v) => v.page.includes('/chapitre-5')))
+  const avgChapter2 = avgDuration(pageLeaves.filter((v) => {
+    const p = v.page.replace(/^https?:\/\/[^/]+/, '')
+    return p.includes('/chapitre-2') || p.includes('/lecture/traitement-rop')
+  }))
   const avgIntro = avgDuration(pageLeaves.filter((v) => v.page.includes('/introduction')))
   const avgHome = avgDuration(pageLeaves.filter((v) => {
     const p = v.page.replace(/^https?:\/\/[^/]+/, '')
@@ -224,8 +227,8 @@ export default async function EngagementPage() {
 
       <div className="adm-scorecards">
         <Scorecard
-          label="Avg Time — Chapitre 5"
-          value={formatDuration(avgChapter5)}
+          label="Avg Time — Chapitre 2"
+          value={formatDuration(avgChapter2)}
           subtitle="page_leave events"
         />
         <Scorecard
@@ -271,8 +274,8 @@ export default async function EngagementPage() {
           <p className="adm-chart-title">Avg Dwell Time per Page (seconds)</p>
           <p className="adm-page-sub" style={{ marginTop: -10, marginBottom: 18, lineHeight: 1.6 }}>
             Average <strong>active</strong> seconds spent on each page before leaving (time with the tab
-            hidden isn’t counted). The homepage and the sign-up gate are reported separately. Note: current
-            Chapitre 5 figures are seed/demo data — real reading times build up now that the gate works.
+            hidden isn’t counted). The homepage and the sign-up gate are reported separately. Chapitre 2
+            now combines classic and synchronized reading routes in the headline scorecard above.
           </p>
           <AdminBarChart data={dwellData} color="#4a6b5a" layout="vertical" showValues />
         </div>

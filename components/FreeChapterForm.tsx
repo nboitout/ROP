@@ -52,7 +52,7 @@ export default function FreeChapterForm() {
       const res = await fetch('/api/free-chapter', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ firstName: firstName.trim(), lastName: lastName.trim(), fullName: `${firstName.trim()} ${lastName.trim()}`.trim(), email, profession, source: 'chapter-5-free', lang, sessionId: getSessionId() }),
+        body: JSON.stringify({ firstName: firstName.trim(), lastName: lastName.trim(), fullName: `${firstName.trim()} ${lastName.trim()}`.trim(), email, profession, source: 'free-chapters', lang, sessionId: getSessionId() }),
       })
       if (!res.ok) throw new Error('server')
       setSuccess(true)

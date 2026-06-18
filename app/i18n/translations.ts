@@ -68,7 +68,7 @@ const fr = {
   chapters: {
     lbl: 'Sommaire complet',
     h2: { before: 'Le ', em: 'sommaire', after: ' complet' },
-    desc: "22 chapitres au total. Trois sont en accès libre — Introduction, Chapitre 14 et Chapitre 5 — pour découvrir la rigueur pédagogique de l'ouvrage. L'intégralité est disponible en Livre en ligne ou Livre en ligne + Livre imprimé.",
+    desc: "22 chapitres au total. Trois sont en accès libre — Introduction, Chapitre 2 et Chapitre 14 — pour découvrir la rigueur pédagogique de l'ouvrage. L'intégralité est disponible en Livre en ligne ou Livre en ligne + Livre imprimé.",
     parts: [
       { id: 'intro', title: 'Introduction & Fondamentaux' },
       { id: 'sn', title: 'Systèmes nerveux' },
@@ -81,10 +81,10 @@ const fr = {
     cards: [
       { num: '00', part: 'intro' as const, variant: 'free' as const, label: 'Introduction', title: 'Genèse de la méthode R.O.P.', tags: ["Parcours de l'auteur", 'Méthode Ingham', 'Ostéopathie viscérale', 'ADN R.O.P.'], body: "La voix de l'auteur : de la kinésithérapie à la réflexologie (méthode Ingham, 1978), puis à l'ostéopathie viscérale (J.-P. Barral) jusqu'à la création de la R.O.P. avec Jean-Pierre Vadala. L'ADN de la méthode en quelques pages denses et personnelles.", meta: '~5 min de lecture' },
       { num: '01', part: 'intro' as const, label: 'Chapitre 1', title: 'Généralités — Mobilité viscérale', tags: ['Mobilité viscérale', 'Turgor', 'Séreuses', 'Biorythmes', 'Diaphragme', 'MRP'], body: "Le cadre mécanique et neurophysiologique du praticien : mobilité vs motilité, quatre moteurs viscéraux (somatique, autonome, motilité intrinsèque, biorythmes), turgor, pressions intra-cavitaires et glissement des séreuses." },
-      { num: '02', part: 'intro' as const, label: 'Chapitre 2', title: 'Traitement par la R.O.P.', tags: ['Technique manuelle', 'Dosage textural', '3 temps de séance', 'Mécanorécepteurs', 'Hiérarchisation'], body: "Le protocole clinique complet : technique gestuelle (pulpe du pouce), dosage textural (peau de tambour), les 3 temps d'une séance, et la hiérarchisation du traitement — Syndrome général → Loco-régional → Limbique. Bases neurophysiologiques." },
+      { num: '02', part: 'intro' as const, variant: 'free' as const, label: 'Chapitre 2', title: 'Traitement par la R.O.P.', tags: ['Technique manuelle', 'Dosage textural', '3 temps de séance', 'Mécanorécepteurs', 'Hiérarchisation'], body: "Le protocole clinique complet : technique gestuelle (pulpe du pouce), dosage textural (peau de tambour), les 3 temps d'une séance, et la hiérarchisation du traitement — Syndrome général → Loco-régional → Limbique. Bases neurophysiologiques." },
       { num: '03', part: 'sn' as const, label: 'Chapitre 3', title: 'Système nerveux central', tags: ['Cerveau reptilien', 'Tronc cérébral', 'Système limbique', 'Neurotransmetteurs', 'Zones réflexes'], body: "Des trois cerveaux de MacLean à la formation réticulaire : tronc cérébral, cervelet, système limbique et cortex, ganglions de la base et neurotransmetteurs. Zones réflexes podales et occipitales pour chaque structure cérébrale." },
       { num: '04', part: 'sn' as const, label: 'Chapitre 4', title: 'Système nerveux autonome', tags: ['Parasympathique', 'Sympathique', 'Nerf vague', 'SNE', 'Homéostasie'], body: "Parasympathique et Sympathique : fonctions, homéostasie, relation SNA-sommeil, système nerveux entérique. Le nerf vague — 70 à 80 % de fibres sensitives afférentes — et son rôle anti-inflammatoire. Cadre clinique des déséquilibres neurovégétatifs en R.O.P." },
-      { num: '05', part: 'stress' as const, variant: 'free' as const, label: 'Chapitre 5', title: 'Mécanisme de stress', tags: ['Homéostasie', 'Allostasie', 'Cortisol', 'Distress / Eustress', 'Axe HPA'], body: "De l'homéostasie de Walter Cannon au syndrome général d'adaptation de Hans Selye : distress, eustress, stresseurs physiques, biochimiques et émotionnels. Rôle central du SNA et du système limbique — et interventions R.O.P.", meta: '~20 min · 5 illustrations' },
+      { num: '05', part: 'stress' as const, label: 'Chapitre 5', title: 'Mécanisme de stress', tags: ['Homéostasie', 'Allostasie', 'Cortisol', 'Distress / Eustress', 'Axe HPA'], body: "De l'homéostasie de Walter Cannon au syndrome général d'adaptation de Hans Selye : distress, eustress, stresseurs physiques, biochimiques et émotionnels. Rôle central du SNA et du système limbique — et interventions R.O.P.", meta: '~20 min · 5 illustrations' },
       { num: '06', part: 'stress' as const, label: 'Chapitre 6', title: 'Théorie polyvagale', tags: ['Vagal ancien/nouveau', 'Engagement social', 'Malaise vagal', 'Phylogénèse'], body: "Le Dr Stephen Porges : trois niveaux phylogénétiques du SNA — immobilisation (vagal ancien), mobilisation (sympathique), engagement social (vagal nouveau). Implications cliniques pour la régulation du nerf vague en R.O.P." },
       { num: '07', part: 'visceres' as const, label: 'Chapitre 7', title: 'Cavités abdominale et péritonéale', tags: ['Péritoine', 'Mésos', 'Fascias', 'Espaces abdominaux', 'Pressions cavitaires'], body: "Architecture complète de la cavité abdominale : péritoine, espaces intra-, rétro- et sous-péritonéaux, fascias et mésos. Influence des variations de pression thoracique sur les viscères. Lecture clinique R.O.P. des contraintes mécaniques fasciales." },
       { num: '08', part: 'visceres' as const, label: 'Chapitre 8', title: 'Diaphragme', tags: ['Motricité respiratoire', 'Hiatus œsophagien', 'Retour veineux', 'Cohésion viscérale', 'Fascias'], body: "Le diaphragme comme moteur respiratoire (~16/min, dizaines de milliers de cycles/24h), viscéral et veino-lymphatique. Attaches diaphragmatiques, hiatus œsophagien, gradient de pression et retour veineux. Applications R.O.P." },
@@ -148,9 +148,9 @@ const fr = {
   freeChapter: {
     lbl: 'Trois chapitres offerts',
     h2: { before: 'Trois chapitres en\n', em: 'accès libre' },
-    p1: "L'introduction, le chapitre sur l'intestin grêle et le chapitre sur le mécanisme de stress sont mis en accès libre — pour découvrir la rigueur pédagogique et la profondeur clinique de cet ouvrage.",
+    p1: "L'introduction, le chapitre sur le protocole de traitement R.O.P. et le chapitre sur l'intestin grêle sont mis en accès libre — pour découvrir la rigueur pédagogique et la profondeur clinique de cet ouvrage.",
     p2: "Lecture en ligne, avec illustrations. Une seule inscription donne accès aux trois chapitres complets, sans envoi de PDF.",
-    note: 'Introduction · Chapitre 14 · Chapitre 5',
+    note: 'Introduction · Chapitre 2 · Chapitre 14',
   },
   citations: {
     lbl: "Extraits de l'ouvrage",
@@ -217,7 +217,7 @@ const fr = {
   },
   form: {
     title: 'Accès aux chapitres gratuits',
-    subtitle: 'Introduction · Chapitre 14 · Chapitre 5 — lecture en ligne immédiate',
+    subtitle: 'Introduction · Chapitre 2 · Chapitre 14 — lecture en ligne immédiate',
     nameLbl: 'Prénom & Nom',
     namePlaceholder: 'ex. Marie Dupont',
     firstNameLbl: 'Prénom',
@@ -314,7 +314,7 @@ const fr = {
     h1: 'Chapitres',
     sub: 'Accès direct aux chapitres payants',
     chapters: [
-      { label: 'Chapitre 2', sub: 'Traitement par la R.O.P.', href: '/lecture/traitement-rop' },
+      { label: 'Chapitre 5', sub: 'Mécanisme de stress', href: '/lecture/chapitre-5' },
     ],
   },
   chaptersPage: {
@@ -334,11 +334,11 @@ const fr = {
         meta: '~4 min de lecture',
       },
       {
-        href: '/chapitre-5',
-        eyebrow: 'Chapitre 5',
-        title: 'Mécanisme de stress',
-        description: "Le syndrome général d'adaptation de Selye — alarme, recouvrement, adaptation-résistance, épuisement — et son intérêt en R.O.P., illustré par cinq planches anatomiques.",
-        meta: '~20 min · 5 illustrations',
+        href: '/chapitre-2',
+        eyebrow: 'Chapitre 2',
+        title: 'Traitement par la R.O.P.',
+        description: "Le protocole clinique complet : geste thérapeutique, dosage textural, temps de séance, mécanorécepteurs et hiérarchisation du traitement R.O.P.",
+        meta: '~20 min de lecture',
       },
       {
         href: '/chapitre-14',
@@ -419,7 +419,7 @@ const en: typeof fr = {
   chapters: {
     lbl: 'Complete Table of Contents',
     h2: { before: 'The complete ', em: 'table of contents', after: '' },
-    desc: 'Twenty-two chapters in total. Three are freely available — Introduction, Chapter 14 and Chapter 5 — to discover the pedagogical rigor of the book. The complete work is available as Online Book or Online Book + Printed Book.',
+    desc: 'Twenty-two chapters in total. Three are freely available — Introduction, Chapter 2 and Chapter 14 — to discover the pedagogical rigor of the book. The complete work is available as Online Book or Online Book + Printed Book.',
     parts: [
       { id: 'intro', title: 'Introduction & Fundamentals' },
       { id: 'sn', title: 'Nervous Systems' },
@@ -432,10 +432,10 @@ const en: typeof fr = {
     cards: [
       { num: '00', part: 'intro' as const, variant: 'free' as const, label: 'Introduction', title: 'Genesis of the R.O.P. Method', meta: '~5 min read', tags: ["Author's Journey", 'Ingham Method', 'Visceral Osteopathy', 'DNA of R.O.P.'], body: "In the author's own voice: from physiotherapy to reflexology through the Ingham method in 1978, then to visceral osteopathy with J.-P. Barral, and finally to the development of R.O.P. with Jean-Pierre Vadala. The DNA of the method, presented in a few concise and personal pages." },
       { num: '01', part: 'intro' as const, label: 'Chapter 1', title: 'General Principles — Visceral Mobility', tags: ['Visceral mobility', 'Turgor', 'Serous Membranes', 'Biorhythms', 'Diaphragm', 'Primary Respiratory Mechanism'], body: "A mechanical and neurophysiological framework for practitioners: mobility versus motility; the four visceral motors — somatic, autonomic, intrinsic motility, and biorhythms; turgor; intracavitary pressure; and serous membrane gliding." },
-      { num: '02', part: 'intro' as const, label: 'Chapter 2', title: 'The R.O.P. Treatment Protocol', tags: ['Manual Technique', 'Textural Dosing', 'Three Session Phases', 'Mechanoreceptors', 'Hierarchisation'], body: "The complete clinical protocol: manual technique using the thumb pad, textural dosing through the drumskin effect, the three phases of a session, and a hierarchical treatment sequence — general syndrome → locoregional → limbic — grounded in neurophysiology." },
+      { num: '02', part: 'intro' as const, variant: 'free' as const, label: 'Chapter 2', title: 'The R.O.P. Treatment Protocol', tags: ['Manual Technique', 'Textural Dosing', 'Three Session Phases', 'Mechanoreceptors', 'Hierarchisation'], body: "The complete clinical protocol: manual technique using the thumb pad, textural dosing through the drumskin effect, the three phases of a session, and a hierarchical treatment sequence — general syndrome → locoregional → limbic — grounded in neurophysiology." },
       { num: '03', part: 'sn' as const, label: 'Chapter 3', title: 'Central nervous system', tags: ['Reptilian Brain', 'Brainstem', 'Limbic System', 'Neurotransmitters', 'Reflex Zones'], body: "From MacLean's triune brain model to the reticular formation: brainstem, cerebellum, limbic system, cortex, basal ganglia, and neurotransmitters. Podal and occipital reflex zones corresponding to each cerebral structure." },
       { num: '04', part: 'sn' as const, label: 'Chapter 4', title: 'Autonomic Nervous System', tags: ['Parasympathetic', 'Sympathetic', 'Vagus nerve', 'Enteric Nervous System', 'Homeostasis'], body: "Parasympathetic and sympathetic systems: functions, homeostasis, the ANS–sleep relationship, and the enteric nervous system. The vagus nerve — with 70 to 80% afferent sensory fibers — and its anti-inflammatory role. A clinical framework for autonomic imbalances in R.O.P." },
-      { num: '05', part: 'stress' as const, variant: 'free' as const, label: 'Chapter 5', title: 'Stress Mechanisms', meta: '~20 min · 5 illustrations', tags: ['Homeostasis', 'Allostasis', 'Cortisol', 'Distress and Eustress', 'HPA Axis'], body: "From Walter Cannon's concept of homeostasis to Hans Selye's general adaptation syndrome: distress, eustress, and physical, biochemical, and emotional stressors. The central role of the ANS and the limbic system — and the place of R.O.P. interventions." },
+      { num: '05', part: 'stress' as const, label: 'Chapter 5', title: 'Stress Mechanisms', meta: '~20 min · 5 illustrations', tags: ['Homeostasis', 'Allostasis', 'Cortisol', 'Distress and Eustress', 'HPA Axis'], body: "From Walter Cannon's concept of homeostasis to Hans Selye's general adaptation syndrome: distress, eustress, and physical, biochemical, and emotional stressors. The central role of the ANS and the limbic system — and the place of R.O.P. interventions." },
       { num: '06', part: 'stress' as const, label: 'Chapter 6', title: 'Polyvagal Theory', tags: ['Old and New Vagal Pathways', 'Social Engagement', 'Vasovagal syncope', 'Phylogeny'], body: "Dr. Stephen Porges: three phylogenetic levels of the ANS — immobilization, or old vagal; mobilization, or sympathetic; and social engagement, or new vagal. Clinical implications for vagal regulation in R.O.P." },
       { num: '07', part: 'visceres' as const, label: 'Chapter 7', title: 'Abdominal and Peritoneal Cavities', tags: ['Peritoneum', 'Mesenteries', 'Fasciae', 'Abdominal Spaces', 'Cavity Pressures'], body: "Complete architecture of the abdominal cavity: the peritoneum; intra-, retro-, and subperitoneal spaces; fasciae; and mesenteries. The influence of thoracic pressure changes on the viscera. An R.O.P. clinical interpretation of fascial and mechanical constraints." },
       { num: '08', part: 'visceres' as const, label: 'Chapter 8', title: 'Diaphragm', tags: ['Respiratory Motor', 'Esophageal Hiatus', 'Venous return', 'Visceral Cohesion', 'Fasciae'], body: "The diaphragm as a respiratory motor — approximately 16 breaths per minute and tens of thousands of cycles per 24 hours — with visceral and venolymphatic functions. Diaphragmatic attachments, the esophageal hiatus, pressure gradients, and venous return. Clinical applications in R.O.P." },
@@ -499,9 +499,9 @@ const en: typeof fr = {
   freeChapter: {
     lbl: 'Three free chapters',
     h2: { before: 'Three chapters\n', em: 'free to read' },
-    p1: 'The introduction, the chapter on the small intestine and the chapter on the stress mechanism are freely available — to discover the pedagogical rigour and clinical depth of this work.',
+    p1: 'The introduction, the chapter on the R.O.P. treatment protocol and the chapter on the small intestine are freely available — to discover the pedagogical rigour and clinical depth of this work.',
     p2: 'Read online, with illustrations. A single registration gives access to all three complete chapters, with no PDF sent.',
-    note: 'Introduction · Chapter 14 · Chapter 5',
+    note: 'Introduction · Chapter 2 · Chapter 14',
   },
   citations: {
     lbl: 'Excerpts from the Book',
@@ -567,8 +567,8 @@ const en: typeof fr = {
     address: '',
   },
   form: {
-    title: 'Access the free chapter',
-    subtitle: 'Stress mechanism — PDF · Immediate access after registration',
+    title: 'Access the free chapters',
+    subtitle: 'Introduction · Chapter 2 · Chapter 14 — immediate online access',
     nameLbl: 'First & Last Name',
     namePlaceholder: 'e.g. John Smith',
     firstNameLbl: 'First name',
@@ -607,9 +607,9 @@ const en: typeof fr = {
     ],
     professionOther: 'Other — please specify',
     professionOtherPlaceholder: 'Your profession',
-    consentText: 'I accept the privacy policy, consent to receiving this chapter by email, and to anonymous reading analytics.',
+    consentText: 'I accept the privacy policy and anonymous reading analytics.',
     privacyLink: 'privacy policy',
-    submit: 'Receive the chapter →',
+    submit: 'Access the chapters →',
     submitting: 'Sending…',
     note: 'Your data will never be shared with third parties. Unsubscribe at any time.',
     errorName: 'Please enter your first and last name.',
@@ -619,8 +619,8 @@ const en: typeof fr = {
     errorConsent: 'Please accept the privacy policy.',
     errorServer: 'An error occurred. Please try again.',
     successTitle: 'Thank you!',
-    successMsg: 'The download link has been sent to your email address.',
-    successSpam: 'Also check your spam folder.',
+    successMsg: 'We are opening your chapters…',
+    successSpam: '',
   },
   quotes: [
     {
@@ -665,7 +665,7 @@ const en: typeof fr = {
     h1: 'Chapters',
     sub: 'Direct access to paid chapters',
     chapters: [
-      { label: 'Chapter 2', sub: 'Treatment by R.O.P.', href: '/lecture/traitement-rop' },
+      { label: 'Chapter 5', sub: 'Stress Mechanisms', href: '/lecture/chapitre-5' },
     ],
   },
   chaptersPage: {
@@ -685,11 +685,11 @@ const en: typeof fr = {
         meta: '~4 min read',
       },
       {
-        href: '/chapitre-5',
-        eyebrow: 'Chapter 5',
-        title: 'Stress Mechanisms',
-        description: "Selye’s general adaptation syndrome — alarm, recovery, adaptation-resistance, exhaustion — and its relevance in R.O.P., illustrated by five anatomical plates.",
-        meta: '~20 min · 5 illustrations',
+        href: '/chapitre-2',
+        eyebrow: 'Chapter 2',
+        title: 'Treatment by R.O.P.',
+        description: 'The complete clinical protocol: therapeutic gesture, textural dosing, session timing, mechanoreceptors, and R.O.P. treatment hierarchy.',
+        meta: '~20 min read',
       },
       {
         href: '/chapitre-14',
@@ -770,7 +770,7 @@ const de: typeof fr = {
   chapters: {
     lbl: 'Vollständiges Inhaltsverzeichnis',
     h2: { before: 'Das vollständige ', em: 'Inhaltsverzeichnis', after: '' },
-    desc: 'Insgesamt 22 Kapitel. Drei sind frei zugänglich — Einführung, Kapitel 14 und Kapitel 5 —, um die pädagogische Genauigkeit des Werks kennenzulernen. Das vollständige Werk ist als Online-Buch oder Online-Buch + Druckausgabe erhältlich.',
+    desc: 'Insgesamt 22 Kapitel. Drei sind frei zugänglich — Einführung, Kapitel 2 und Kapitel 14 —, um die pädagogische Genauigkeit des Werks kennenzulernen. Das vollständige Werk ist als Online-Buch oder Online-Buch + Druckausgabe erhältlich.',
     parts: [
       { id: 'intro', title: 'Einführung & Grundlagen' },
       { id: 'sn', title: 'Nervensysteme' },
@@ -783,10 +783,10 @@ const de: typeof fr = {
     cards: [
       { num: '00', part: 'intro' as const, variant: 'free' as const, label: 'Einführung', title: 'Entstehung der R.O.P.-Methode', meta: '~5 Min. Lektüre', tags: ['Weg des Autors', 'Ingham-Methode', 'Viszerale Osteopathie', 'DNA der R.O.P.'], body: 'In der eigenen Stimme des Autors: von der Physiotherapie zur Reflexologie über die Ingham-Methode im Jahr 1978, dann zur viszeralen Osteopathie bei J.-P. Barral und schließlich zur Entwicklung der R.O.P. mit Jean-Pierre Vadala. Die DNA der Methode, dargestellt auf wenigen prägnanten und persönlichen Seiten.' },
       { num: '01', part: 'intro' as const, label: 'Kapitel 1', title: 'Allgemeine Prinzipien — Viszerale Mobilität', tags: ['Viszerale Mobilität', 'Turgor', 'Seröse Membranen', 'Biorhythmen', 'Zwerchfell', 'Primärer Respirationsmechanismus'], body: 'Ein mechanischer und neurophysiologischer Rahmen für Praktiker: Mobilität versus Motilität; die vier viszeralen Motoren — somatisch, autonom, intrinsische Motilität und Biorhythmen; Turgor; intrakavitäre Druckverhältnisse; und das Gleiten seröser Membranen.' },
-      { num: '02', part: 'intro' as const, label: 'Kapitel 2', title: 'Das R.O.P.-Behandlungsprotokoll', tags: ['Manuelle Technik', 'Texturale Dosierung', 'Drei Sitzungsphasen', 'Mechanorezeptoren', 'Hierarchische Behandlung'], body: 'Das vollständige klinische Protokoll: manuelle Technik mit der Daumenkuppe, texturale Dosierung über den Trommelfelleffekt, die drei Phasen einer Sitzung und eine hierarchische Behandlungssequenz — allgemeines Syndrom → lokoregional → limbisch — neurophysiologisch fundiert.' },
+      { num: '02', part: 'intro' as const, variant: 'free' as const, label: 'Kapitel 2', title: 'Das R.O.P.-Behandlungsprotokoll', tags: ['Manuelle Technik', 'Texturale Dosierung', 'Drei Sitzungsphasen', 'Mechanorezeptoren', 'Hierarchische Behandlung'], body: 'Das vollständige klinische Protokoll: manuelle Technik mit der Daumenkuppe, texturale Dosierung über den Trommelfelleffekt, die drei Phasen einer Sitzung und eine hierarchische Behandlungssequenz — allgemeines Syndrom → lokoregional → limbisch — neurophysiologisch fundiert.' },
       { num: '03', part: 'sn' as const, label: 'Kapitel 3', title: 'Zentrales Nervensystem', tags: ['Reptiliengehirn', 'Hirnstamm', 'Limbisches System', 'Neurotransmitter', 'Reflexzonen'], body: 'Von MacLeans Modell des dreieinigen Gehirns bis zur Formatio reticularis: Hirnstamm, Kleinhirn, limbisches System, Kortex, Basalganglien und Neurotransmitter. Podale und okzipitale Reflexzonen, die jeder zerebralen Struktur entsprechen.' },
       { num: '04', part: 'sn' as const, label: 'Kapitel 4', title: 'Autonomes Nervensystem', tags: ['Parasympathikus', 'Sympathikus', 'Vagusnerv', 'Enterisches Nervensystem', 'Homöostase'], body: 'Parasympathisches und sympathisches System: Funktionen, Homöostase, ANS-Schlaf-Beziehung und enterisches Nervensystem. Der Vagusnerv — mit 70 bis 80 % afferenten sensorischen Fasern — und seine entzündungshemmende Rolle. Ein klinischer Rahmen für autonome Dysbalancen in der R.O.P.' },
-      { num: '05', part: 'stress' as const, variant: 'free' as const, label: 'Kapitel 5', title: 'Stressmechanismen', meta: '~20 Min. · 5 Illustrationen', tags: ['Homöostase', 'Allostase', 'Cortisol', 'Distress und Eustress', 'HPA-Achse'], body: 'Von Walter Cannons Konzept der Homöostase bis zu Hans Selyes allgemeinem Adaptationssyndrom: Distress, Eustress sowie physische, biochemische und emotionale Stressoren. Die zentrale Rolle des ANS und des limbischen Systems — und der Platz der R.O.P.-Interventionen.' },
+      { num: '05', part: 'stress' as const, label: 'Kapitel 5', title: 'Stressmechanismen', meta: '~20 Min. · 5 Illustrationen', tags: ['Homöostase', 'Allostase', 'Cortisol', 'Distress und Eustress', 'HPA-Achse'], body: 'Von Walter Cannons Konzept der Homöostase bis zu Hans Selyes allgemeinem Adaptationssyndrom: Distress, Eustress sowie physische, biochemische und emotionale Stressoren. Die zentrale Rolle des ANS und des limbischen Systems — und der Platz der R.O.P.-Interventionen.' },
       { num: '06', part: 'stress' as const, label: 'Kapitel 6', title: 'Polyvagaltheorie', tags: ['Alter und neuer vagaler Zustand', 'Soziales Engagement', 'Vasovagale Synkope', 'Phylogenie'], body: 'Dr. Stephen Porges: drei phylogenetische Ebenen des ANS — Immobilisation (alter vagaler Zustand); Mobilisation (sympathischer Zustand); und soziales Engagement (neuer vagaler Zustand). Klinische Implikationen für die vagale Regulation in der R.O.P.' },
       { num: '07', part: 'visceres' as const, label: 'Kapitel 7', title: 'Bauch- und Peritonealhöhlen', tags: ['Peritoneum', 'Mesenterien', 'Faszien', 'Abdominalräume', 'Höhlendruck'], body: 'Vollständige Architektur der Bauchhöhle: Peritoneum; intra-, retro- und subperitoneale Räume; Faszien; und Mesenterien. Einfluss thorakaler Druckveränderungen auf die Viszera. Eine klinische R.O.P.-Interpretation faszialer und mechanischer Einschränkungen.' },
       { num: '08', part: 'visceres' as const, label: 'Kapitel 8', title: 'Zwerchfell', tags: ['Respiratorischer Motor', 'Hiatus oesophageus', 'Venöser Rückfluss', 'Viszerale Kohäsion', 'Faszien'], body: 'Das Zwerchfell als respiratorischer Motor — etwa 16 Atemzüge pro Minute und zehntausende Zyklen pro 24 Stunden — mit viszeralen und venolymphatischen Funktionen. Zwerchfellansätze, Hiatus oesophageus, Druckgradienten und venöser Rückfluss. Klinische Anwendungen in der R.O.P.' },
@@ -850,9 +850,9 @@ const de: typeof fr = {
   freeChapter: {
     lbl: 'Drei kostenlose Kapitel',
     h2: { before: 'Drei Kapitel\n', em: 'kostenlos lesen' },
-    p1: 'Die Einführung, das Kapitel über den Dünndarm und das Kapitel über den Stressmechanismus sind frei zugänglich — um die pädagogische Strenge und klinische Tiefe dieses Werks zu entdecken.',
+    p1: 'Die Einführung, das Kapitel über das R.O.P.-Behandlungsprotokoll und das Kapitel über den Dünndarm sind frei zugänglich — um die pädagogische Strenge und klinische Tiefe dieses Werks zu entdecken.',
     p2: 'Online lesen, mit Illustrationen. Eine einzige Anmeldung gibt Zugang zu allen drei vollständigen Kapiteln, ohne PDF-Versand.',
-    note: 'Einführung · Kapitel 14 · Kapitel 5',
+    note: 'Einführung · Kapitel 2 · Kapitel 14',
   },
   citations: {
     lbl: 'Auszüge aus dem Buch',
@@ -918,8 +918,8 @@ const de: typeof fr = {
     address: '',
   },
   form: {
-    title: 'Kostenloses Kapitel erhalten',
-    subtitle: 'Stressmechanismus — PDF · Sofortiger Zugang nach Registrierung',
+    title: 'Kostenlose Kapitel öffnen',
+    subtitle: 'Einführung · Kapitel 2 · Kapitel 14 — sofortiger Online-Zugang',
     nameLbl: 'Vor- und Nachname',
     namePlaceholder: 'z.B. Max Mustermann',
     firstNameLbl: 'Vorname',
@@ -958,9 +958,9 @@ const de: typeof fr = {
     ],
     professionOther: 'Sonstige — bitte angeben',
     professionOtherPlaceholder: 'Ihr Beruf',
-    consentText: 'Ich akzeptiere die Datenschutzrichtlinie, stimme zu, dieses Kapitel per E-Mail zu erhalten und einer anonymen Leseauswertung.',
+    consentText: 'Ich akzeptiere die Datenschutzrichtlinie und die anonyme Leseauswertung.',
     privacyLink: 'Datenschutzrichtlinie',
-    submit: 'Kapitel erhalten →',
+    submit: 'Kapitel öffnen →',
     submitting: 'Wird gesendet…',
     note: 'Ihre Daten werden niemals an Dritte weitergegeben. Abmeldung jederzeit möglich.',
     errorName: 'Bitte geben Sie Ihren Vor- und Nachnamen ein.',
@@ -970,8 +970,8 @@ const de: typeof fr = {
     errorConsent: 'Bitte akzeptieren Sie die Datenschutzrichtlinie.',
     errorServer: 'Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut.',
     successTitle: 'Vielen Dank!',
-    successMsg: 'Der Download-Link wurde an Ihre E-Mail-Adresse gesendet.',
-    successSpam: 'Überprüfen Sie auch Ihren Spam-Ordner.',
+    successMsg: 'Ihre Kapitel werden geöffnet…',
+    successSpam: '',
   },
   quotes: [
     {
@@ -1016,7 +1016,7 @@ const de: typeof fr = {
     h1: 'Kapitel',
     sub: 'Direktzugang zu den kostenpflichtigen Kapiteln',
     chapters: [
-      { label: 'Kapitel 2', sub: 'Behandlung mit der R.O.P.', href: '/lecture/traitement-rop' },
+      { label: 'Kapitel 5', sub: 'Stressmechanismen', href: '/lecture/chapitre-5' },
     ],
   },
   chaptersPage: {
@@ -1036,11 +1036,11 @@ const de: typeof fr = {
         meta: '~4 Min. Lektüre',
       },
       {
-        href: '/chapitre-5',
-        eyebrow: 'Kapitel 5',
-        title: 'Stressmechanismus',
-        description: "Selyes allgemeines Anpassungssyndrom — Alarmreaktion, Erholung, Anpassungs-Widerstand, Erschöpfung — und seine Bedeutung in der R.O.P., illustriert durch fünf anatomische Tafeln.",
-        meta: '~20 Min. · 5 Illustrationen',
+        href: '/chapitre-2',
+        eyebrow: 'Kapitel 2',
+        title: 'Behandlung mit der R.O.P.',
+        description: 'Das vollständige klinische Protokoll: therapeutische Geste, texturale Dosierung, Sitzungsrhythmus, Mechanorezeptoren und R.O.P.-Behandlungshierarchie.',
+        meta: '~20 Min. Lektüre',
       },
       {
         href: '/chapitre-14',
@@ -1121,7 +1121,7 @@ const es: typeof fr = {
   chapters: {
     lbl: 'Índice completo',
     h2: { before: 'El ', em: 'índice', after: ' completo' },
-    desc: '22 capítulos en total. Tres son de acceso libre — Introducción, Capítulo 14 y Capítulo 5 — para descubrir el rigor pedagógico de la obra. El contenido completo está disponible como Libro online o Libro online + Edición impresa.',
+    desc: '22 capítulos en total. Tres son de acceso libre — Introducción, Capítulo 2 y Capítulo 14 — para descubrir el rigor pedagógico de la obra. El contenido completo está disponible como Libro online o Libro online + Edición impresa.',
     parts: [
       { id: 'intro', title: 'Introducción y fundamentos' },
       { id: 'sn', title: 'Sistemas nerviosos' },
@@ -1134,10 +1134,10 @@ const es: typeof fr = {
     cards: [
       { num: '00', part: 'intro' as const, variant: 'free' as const, label: 'Introducción', title: 'Génesis del método R.O.P.', meta: '~5 min de lectura', tags: ['Recorrido del autor', 'Método Ingham', 'Osteopatía visceral', 'ADN de la R.O.P.'], body: 'En la propia voz del autor: de la fisioterapia a la reflexología a través del método Ingham en 1978, luego a la osteopatía visceral con J.-P. Barral, y finalmente al desarrollo de la R.O.P. con Jean-Pierre Vadala. El ADN del método, presentado en unas páginas concisas y personales.' },
       { num: '01', part: 'intro' as const, label: 'Capítulo 1', title: 'Principios generales — Movilidad visceral', tags: ['Movilidad visceral', 'Turgencia', 'Membranas serosas', 'Biorritmos', 'Diafragma', 'Mecanismo respiratorio primario'], body: 'Un marco mecánico y neurofisiológico para profesionales: movilidad frente a motilidad; los cuatro motores viscerales — somático, autónomo, motilidad intrínseca y biorritmos; turgencia; presión intracavitaria; y deslizamiento de las membranas serosas.' },
-      { num: '02', part: 'intro' as const, label: 'Capítulo 2', title: 'El protocolo de tratamiento R.O.P.', tags: ['Técnica manual', 'Dosificación textural', 'Tres fases de sesión', 'Mecanorreceptores', 'Tratamiento jerárquico'], body: 'El protocolo clínico completo: técnica manual con la yema del pulgar, dosificación textural mediante el efecto de piel de tambor, las tres fases de una sesión y una secuencia de tratamiento jerárquica — síndrome general → locorregional → límbico — con fundamentos neurofisiológicos.' },
+      { num: '02', part: 'intro' as const, variant: 'free' as const, label: 'Capítulo 2', title: 'El protocolo de tratamiento R.O.P.', tags: ['Técnica manual', 'Dosificación textural', 'Tres fases de sesión', 'Mecanorreceptores', 'Tratamiento jerárquico'], body: 'El protocolo clínico completo: técnica manual con la yema del pulgar, dosificación textural mediante el efecto de piel de tambor, las tres fases de una sesión y una secuencia de tratamiento jerárquica — síndrome general → locorregional → límbico — con fundamentos neurofisiológicos.' },
       { num: '03', part: 'sn' as const, label: 'Capítulo 3', title: 'Sistema nervioso central', tags: ['Cerebro reptiliano', 'Tronco encefálico', 'Sistema límbico', 'Neurotransmisores', 'Zonas reflejas'], body: 'Desde el modelo del cerebro triuno de MacLean hasta la formación reticular: tronco encefálico, cerebelo, sistema límbico, corteza, ganglios basales y neurotransmisores. Zonas reflejas podales y occipitales correspondientes a cada estructura cerebral.' },
       { num: '04', part: 'sn' as const, label: 'Capítulo 4', title: 'Sistema nervioso autónomo', tags: ['Parasimpático', 'Simpático', 'Nervio vago', 'Sistema nervioso entérico', 'Homeostasis'], body: 'Sistemas parasimpático y simpático: funciones, homeostasis, relación SNA–sueño y sistema nervioso entérico. El nervio vago — con un 70 a 80 % de fibras sensoriales aferentes — y su papel antiinflamatorio. Un marco clínico para los desequilibrios autónomos en R.O.P.' },
-      { num: '05', part: 'stress' as const, variant: 'free' as const, label: 'Capítulo 5', title: 'Mecanismos del estrés', meta: '~20 min · 5 ilustraciones', tags: ['Homeostasis', 'Alostasis', 'Cortisol', 'Distrés y eustrés', 'Eje HPA'], body: 'Del concepto de homeostasis de Walter Cannon al síndrome general de adaptación de Hans Selye: distrés, eustrés y estresores físicos, bioquímicos y emocionales. El papel central del SNA y del sistema límbico — y el lugar de las intervenciones R.O.P.' },
+      { num: '05', part: 'stress' as const, label: 'Capítulo 5', title: 'Mecanismos del estrés', meta: '~20 min · 5 ilustraciones', tags: ['Homeostasis', 'Alostasis', 'Cortisol', 'Distrés y eustrés', 'Eje HPA'], body: 'Del concepto de homeostasis de Walter Cannon al síndrome general de adaptación de Hans Selye: distrés, eustrés y estresores físicos, bioquímicos y emocionales. El papel central del SNA y del sistema límbico — y el lugar de las intervenciones R.O.P.' },
       { num: '06', part: 'stress' as const, label: 'Capítulo 6', title: 'Teoría polivagal', tags: ['Vagal antiguo y nuevo', 'Compromiso social', 'Síncope vasovagal', 'Filogenia'], body: 'Dr. Stephen Porges: tres niveles filogenéticos del SNA — inmovilización (estado vagal antiguo); movilización (estado simpático); y compromiso social (estado vagal nuevo). Implicaciones clínicas para la regulación vagal en R.O.P.' },
       { num: '07', part: 'visceres' as const, label: 'Capítulo 7', title: 'Cavidades abdominal y peritoneal', tags: ['Peritoneo', 'Mesenterios', 'Fascias', 'Espacios abdominales', 'Presiones cavitarias'], body: 'Arquitectura completa de la cavidad abdominal: peritoneo; espacios intra-, retro- y subperitoneales; fascias; y mesenterios. Influencia de los cambios de presión torácica sobre las vísceras. Una interpretación clínica R.O.P. de las restricciones fasciales y mecánicas.' },
       { num: '08', part: 'visceres' as const, label: 'Capítulo 8', title: 'Diafragma', tags: ['Motor respiratorio', 'Hiato esofágico', 'Retorno venoso', 'Cohesión visceral', 'Fascias'], body: 'El diafragma como motor respiratorio — aproximadamente 16 respiraciones por minuto y decenas de miles de ciclos en 24 horas — con funciones viscerales y venolinfáticas. Inserciones diafragmáticas, hiato esofágico, gradientes de presión y retorno venoso. Aplicaciones clínicas en R.O.P.' },
@@ -1201,9 +1201,9 @@ const es: typeof fr = {
   freeChapter: {
     lbl: 'Tres capítulos gratuitos',
     h2: { before: 'Tres capítulos\n', em: 'de acceso libre' },
-    p1: 'La introducción, el capítulo sobre el intestino delgado y el capítulo sobre el mecanismo del estrés están disponibles gratuitamente — para descubrir el rigor pedagógico y la profundidad clínica de esta obra.',
+    p1: 'La introducción, el capítulo sobre el protocolo de tratamiento R.O.P. y el capítulo sobre el intestino delgado están disponibles gratuitamente — para descubrir el rigor pedagógico y la profundidad clínica de esta obra.',
     p2: 'Lectura en línea, con ilustraciones. Un único registro da acceso a los tres capítulos completos, sin envío de PDF.',
-    note: 'Introducción · Capítulo 14 · Capítulo 5',
+    note: 'Introducción · Capítulo 2 · Capítulo 14',
   },
   citations: {
     lbl: 'Extractos del libro',
@@ -1269,8 +1269,8 @@ const es: typeof fr = {
     address: '',
   },
   form: {
-    title: 'Acceder al capítulo gratuito',
-    subtitle: 'Mecanismo del estrés — PDF · Acceso inmediato tras el registro',
+    title: 'Acceder a los capítulos gratuitos',
+    subtitle: 'Introducción · Capítulo 2 · Capítulo 14 — acceso online inmediato',
     nameLbl: 'Nombre y apellidos',
     namePlaceholder: 'p. ej. María García',
     firstNameLbl: 'Nombre',
@@ -1309,9 +1309,9 @@ const es: typeof fr = {
     ],
     professionOther: 'Otra — especificar',
     professionOtherPlaceholder: 'Su profesión',
-    consentText: 'Acepto la política de privacidad, consiento recibir este capítulo por correo electrónico y el seguimiento anónimo de mi lectura.',
+    consentText: 'Acepto la política de privacidad y el seguimiento anónimo de mi lectura.',
     privacyLink: 'política de privacidad',
-    submit: 'Recibir el capítulo →',
+    submit: 'Acceder a los capítulos →',
     submitting: 'Enviando…',
     note: 'Sus datos nunca serán compartidos con terceros. Cancelación posible en cualquier momento.',
     errorName: 'Por favor, introduzca su nombre y apellidos.',
@@ -1321,8 +1321,8 @@ const es: typeof fr = {
     errorConsent: 'Por favor, acepte la política de privacidad.',
     errorServer: 'Se ha producido un error. Por favor, inténtelo de nuevo.',
     successTitle: '¡Gracias!',
-    successMsg: 'El enlace de descarga ha sido enviado a su dirección de correo electrónico.',
-    successSpam: 'Revise también su carpeta de correo no deseado.',
+    successMsg: 'Estamos abriendo sus capítulos…',
+    successSpam: '',
   },
   quotes: [
     {
@@ -1367,7 +1367,7 @@ const es: typeof fr = {
     h1: 'Capítulos',
     sub: 'Acceso directo a los capítulos de pago',
     chapters: [
-      { label: 'Capítulo 2', sub: 'Tratamiento con R.O.P.', href: '/lecture/traitement-rop' },
+      { label: 'Capítulo 5', sub: 'Mecanismos del estrés', href: '/lecture/chapitre-5' },
     ],
   },
   chaptersPage: {
@@ -1387,11 +1387,11 @@ const es: typeof fr = {
         meta: '~4 min de lectura',
       },
       {
-        href: '/chapitre-5',
-        eyebrow: 'Capítulo 5',
-        title: 'Mecanismo de estrés',
-        description: "El síndrome general de adaptación de Selye — alarma, recuperación, adaptación-resistencia, agotamiento — y su relevancia en R.O.P., ilustrado por cinco láminas anatómicas.",
-        meta: '~20 min · 5 ilustraciones',
+        href: '/chapitre-2',
+        eyebrow: 'Capítulo 2',
+        title: 'Tratamiento con R.O.P.',
+        description: 'El protocolo clínico completo: gesto terapéutico, dosificación textural, ritmo de sesión, mecanorreceptores y jerarquía del tratamiento R.O.P.',
+        meta: '~20 min de lectura',
       },
       {
         href: '/chapitre-14',
@@ -1472,7 +1472,7 @@ const it: typeof fr = {
   chapters: {
     lbl: 'Indice completo',
     h2: { before: "L'", em: 'indice', after: ' completo' },
-    desc: "22 capitoli in totale. Tre sono ad accesso libero — Introduzione, Capitolo 14 e Capitolo 5 — per scoprire il rigore pedagogico dell'opera. Il contenuto completo è disponibile come Libro online o Libro online + Edizione cartacea.",
+    desc: "22 capitoli in totale. Tre sono ad accesso libero — Introduzione, Capitolo 2 e Capitolo 14 — per scoprire il rigore pedagogico dell'opera. Il contenuto completo è disponibile come Libro online o Libro online + Edizione cartacea.",
     parts: [
       { id: 'intro', title: 'Introduzione e fondamenti' },
       { id: 'sn', title: 'Sistemi nervosi' },
@@ -1485,10 +1485,10 @@ const it: typeof fr = {
     cards: [
       { num: '00', part: 'intro' as const, variant: 'free' as const, label: 'Introduzione', title: 'Genesi del metodo R.O.P.', meta: '~5 min di lettura', tags: ["Percorso dell'autore", 'Metodo Ingham', 'Osteopatia viscerale', 'DNA della R.O.P.'], body: "Nella voce propria dell'autore: dalla fisioterapia alla riflessologia attraverso il metodo Ingham nel 1978, poi all'osteopatia viscerale con J.-P. Barral e infine allo sviluppo della R.O.P. con Jean-Pierre Vadala. Il DNA del metodo, presentato in poche pagine concise e personali." },
       { num: '01', part: 'intro' as const, label: 'Capitolo 1', title: 'Principi generali — Mobilità viscerale', tags: ['Mobilità viscerale', 'Turgore', 'Membrane sierose', 'Bioritmi', 'Diaframma', 'Meccanismo respiratorio primario'], body: 'Un quadro meccanico e neurofisiologico per i professionisti: mobilità versus motilità; i quattro motori viscerali — somatico, autonomo, motilità intrinseca e bioritmi; turgore; pressione intracavitaria; e scorrimento delle membrane sierose.' },
-      { num: '02', part: 'intro' as const, label: 'Capitolo 2', title: 'Il protocollo di trattamento R.O.P.', tags: ['Tecnica manuale', 'Dosaggio testurale', 'Tre fasi della seduta', 'Meccanorecettori', 'Trattamento gerarchico'], body: 'Il protocollo clinico completo: tecnica manuale con il polpastrello del pollice, dosaggio testurale attraverso l\'effetto pelle di tamburo, le tre fasi di una seduta e una sequenza terapeutica gerarchica — sindrome generale → locoregionale → limbica — fondata sulla neurofisiologia.' },
+      { num: '02', part: 'intro' as const, variant: 'free' as const, label: 'Capitolo 2', title: 'Il protocollo di trattamento R.O.P.', tags: ['Tecnica manuale', 'Dosaggio testurale', 'Tre fasi della seduta', 'Meccanorecettori', 'Trattamento gerarchico'], body: 'Il protocollo clinico completo: tecnica manuale con il polpastrello del pollice, dosaggio testurale attraverso l\'effetto pelle di tamburo, le tre fasi di una seduta e una sequenza terapeutica gerarchica — sindrome generale → locoregionale → limbica — fondata sulla neurofisiologia.' },
       { num: '03', part: 'sn' as const, label: 'Capitolo 3', title: 'Sistema nervoso centrale', tags: ['Cervello rettiliano', 'Tronco encefalico', 'Sistema limbico', 'Neurotrasmettitori', 'Zone riflesse'], body: 'Dal modello del cervello trino di MacLean alla formazione reticolare: tronco encefalico, cervelletto, sistema limbico, corteccia, gangli della base e neurotrasmettitori. Zone riflesse podali e occipitali corrispondenti a ciascuna struttura cerebrale.' },
       { num: '04', part: 'sn' as const, label: 'Capitolo 4', title: 'Sistema nervoso autonomo', tags: ['Parasimpatico', 'Simpatico', 'Nervo vago', 'Sistema nervoso enterico', 'Omeostasi'], body: 'Sistemi parasimpatico e simpatico: funzioni, omeostasi, relazione SNA–sonno e sistema nervoso enterico. Il nervo vago — con il 70–80% di fibre sensoriali afferenti — e il suo ruolo antinfiammatorio. Un quadro clinico per gli squilibri autonomici nella R.O.P.' },
-      { num: '05', part: 'stress' as const, variant: 'free' as const, label: 'Capitolo 5', title: 'Meccanismi dello stress', meta: '~20 min · 5 illustrazioni', tags: ['Omeostasi', 'Allostasi', 'Cortisolo', 'Distress ed eustress', 'Asse HPA'], body: 'Dal concetto di omeostasi di Walter Cannon alla sindrome generale di adattamento di Hans Selye: distress, eustress e stressori fisici, biochimici ed emotivi. Il ruolo centrale del SNA e del sistema limbico — e il posto degli interventi R.O.P.' },
+      { num: '05', part: 'stress' as const, label: 'Capitolo 5', title: 'Meccanismi dello stress', meta: '~20 min · 5 illustrazioni', tags: ['Omeostasi', 'Allostasi', 'Cortisolo', 'Distress ed eustress', 'Asse HPA'], body: 'Dal concetto di omeostasi di Walter Cannon alla sindrome generale di adattamento di Hans Selye: distress, eustress e stressori fisici, biochimici ed emotivi. Il ruolo centrale del SNA e del sistema limbico — e il posto degli interventi R.O.P.' },
       { num: '06', part: 'stress' as const, label: 'Capitolo 6', title: 'Teoria polivagale', tags: ['Vagale antico e nuovo', 'Coinvolgimento sociale', 'Sincope vasovagale', 'Filogenesi'], body: 'Dr. Stephen Porges: tre livelli filogenetici del SNA — immobilizzazione (stato vagale antico); mobilizzazione (stato simpatico); e coinvolgimento sociale (stato vagale nuovo). Implicazioni cliniche per la regolazione vagale nella R.O.P.' },
       { num: '07', part: 'visceres' as const, label: 'Capitolo 7', title: 'Cavità addominale e peritoneale', tags: ['Peritoneo', 'Mesenteri', 'Fasce', 'Spazi addominali', 'Pressioni cavitarie'], body: "Architettura completa della cavità addominale: peritoneo; spazi intra-, retro- e sottoperitoneali; fasce; e mesenteri. Influenza delle variazioni di pressione toracica sulle viscere. Un'interpretazione clinica R.O.P. delle restrizioni fasciali e meccaniche." },
       { num: '08', part: 'visceres' as const, label: 'Capitolo 8', title: 'Diaframma', tags: ['Motore respiratorio', 'Iato esofageo', 'Ritorno venoso', 'Coesione viscerale', 'Fasce'], body: 'Il diaframma come motore respiratorio — circa 16 respiri al minuto e decine di migliaia di cicli nelle 24 ore — con funzioni viscerali e venolinfatiche. Inserzioni diaframmatiche, iato esofageo, gradienti di pressione e ritorno venoso. Applicazioni cliniche nella R.O.P.' },
@@ -1552,9 +1552,9 @@ const it: typeof fr = {
   freeChapter: {
     lbl: 'Tre capitoli gratuiti',
     h2: { before: 'Tre capitoli\n', em: 'in accesso libero' },
-    p1: "L'introduzione, il capitolo sull'intestino tenue e il capitolo sui meccanismi dello stress sono disponibili gratuitamente — per scoprire il rigore pedagogico e la profondità clinica di quest'opera.",
+    p1: "L'introduzione, il capitolo sul protocollo di trattamento R.O.P. e il capitolo sull'intestino tenue sono disponibili gratuitamente — per scoprire il rigore pedagogico e la profondità clinica di quest'opera.",
     p2: 'Lettura online, con illustrazioni. Una sola registrazione dà accesso ai tre capitoli completi, senza invio di PDF.',
-    note: 'Introduzione · Capitolo 14 · Capitolo 5',
+    note: 'Introduzione · Capitolo 2 · Capitolo 14',
   },
   citations: {
     lbl: 'Estratti dal libro',
@@ -1620,8 +1620,8 @@ const it: typeof fr = {
     address: '',
   },
   form: {
-    title: 'Accedi al capitolo gratuito',
-    subtitle: 'Meccanismi dello stress — PDF · Accesso immediato dopo la registrazione',
+    title: 'Accedi ai capitoli gratuiti',
+    subtitle: 'Introduzione · Capitolo 2 · Capitolo 14 — accesso online immediato',
     nameLbl: 'Nome e cognome',
     namePlaceholder: 'es. Mario Rossi',
     firstNameLbl: 'Nome',
@@ -1660,9 +1660,9 @@ const it: typeof fr = {
     ],
     professionOther: 'Altro — specificare',
     professionOtherPlaceholder: 'La tua professione',
-    consentText: 'Accetto la politica sulla privacy, acconsento a ricevere questo capitolo via e-mail e al monitoraggio anonimo della mia lettura.',
+    consentText: 'Accetto la politica sulla privacy e il monitoraggio anonimo della mia lettura.',
     privacyLink: 'politica sulla privacy',
-    submit: 'Ricevi il capitolo →',
+    submit: 'Accedi ai capitoli →',
     submitting: 'Invio in corso…',
     note: 'I tuoi dati non verranno mai condivisi con terzi. Cancellazione possibile in qualsiasi momento.',
     errorName: 'Per favore, inserisci il tuo nome e cognome.',
@@ -1672,8 +1672,8 @@ const it: typeof fr = {
     errorConsent: 'Per favore, accetta la politica sulla privacy.',
     errorServer: 'Si è verificato un errore. Per favore, riprova.',
     successTitle: 'Grazie!',
-    successMsg: 'Il link per il download è stato inviato al tuo indirizzo e-mail.',
-    successSpam: 'Controlla anche la cartella spam.',
+    successMsg: 'Stiamo aprendo i tuoi capitoli…',
+    successSpam: '',
   },
   quotes: [
     {
@@ -1718,7 +1718,7 @@ const it: typeof fr = {
     h1: 'Capitoli',
     sub: 'Accesso diretto ai capitoli a pagamento',
     chapters: [
-      { label: 'Capitolo 2', sub: 'Trattamento con R.O.P.', href: '/lecture/traitement-rop' },
+      { label: 'Capitolo 5', sub: 'Meccanismi dello stress', href: '/lecture/chapitre-5' },
     ],
   },
   chaptersPage: {
@@ -1738,11 +1738,11 @@ const it: typeof fr = {
         meta: '~4 min di lettura',
       },
       {
-        href: '/chapitre-5',
-        eyebrow: 'Capitolo 5',
-        title: 'Meccanismo dello stress',
-        description: "La sindrome generale di adattamento di Selye — allarme, recupero, adattamento-resistenza, esaurimento — e il suo interesse nella R.O.P., illustrato da cinque tavole anatomiche.",
-        meta: '~20 min · 5 illustrazioni',
+        href: '/chapitre-2',
+        eyebrow: 'Capitolo 2',
+        title: 'Trattamento con R.O.P.',
+        description: 'Il protocollo clinico completo: gesto terapeutico, dosaggio testurale, ritmo della seduta, meccanorecettori e gerarchia del trattamento R.O.P.',
+        meta: '~20 min di lettura',
       },
       {
         href: '/chapitre-14',
