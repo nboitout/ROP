@@ -234,6 +234,11 @@ export const chapter2It: Chapter = {
       ],
     },
   ],
+  slides: {
+    url: '/chapter-2/Chapter2 - Slides de synthese IT.pdf',
+    label: 'Diapositive',
+    description: 'Sintesi visiva del capitolo — tecnica, modalità, gerarchia del trattamento e indicazioni della R.O.P.',
+  },
   revisionSheet: {
     src: '/chapter-2/Chap2 - Fiche de revision.png',
     alt: 'Scheda di revisione — Capitolo 2, Trattamento mediante R.O.P.',

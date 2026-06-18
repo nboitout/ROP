@@ -233,6 +233,11 @@ export const chapter2En: Chapter = {
       ],
     },
   ],
+  slides: {
+    url: '/chapter-2/Chapter2 - Slides de synthese EN.pdf',
+    label: 'Slides',
+    description: 'Visual summary of the chapter — technique, modalities, treatment hierarchy, and indications for R.O.P.',
+  },
   revisionSheet: {
     src: '/chapter-2/Chap2 - Fiche de revision.png',
     alt: 'Revision sheet — Chapter 2, Treatment by R.O.P.',

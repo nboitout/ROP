@@ -233,6 +233,11 @@ export const chapter2Es: Chapter = {
       ],
     },
   ],
+  slides: {
+    url: '/chapter-2/Chapter2 - Slides de synthese ES.pdf',
+    label: 'Diapositivas',
+    description: 'Síntesis visual del capítulo — técnica, modalidades, jerarquía del tratamiento e indicaciones de la R.O.P.',
+  },
   revisionSheet: {
     src: '/chapter-2/Chap2 - Fiche de revision.png',
     alt: 'Ficha de revisión — Capítulo 2, Tratamiento con R.O.P.',

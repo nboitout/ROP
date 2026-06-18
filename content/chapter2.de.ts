@@ -233,6 +233,11 @@ export const chapter2De: Chapter = {
       ],
     },
   ],
+  slides: {
+    url: '/chapter-2/Chapter2 - Slides de synthese GE.pdf',
+    label: 'Folien',
+    description: 'Visuelle Zusammenfassung des Kapitels — Technik, Modalitäten, Behandlungshierarchie und Indikationen der R.O.P.',
+  },
   revisionSheet: {
     src: '/chapter-2/Chap2 - Fiche de revision.png',
     alt: 'Lernblatt — Kapitel 2, Behandlung durch R.O.P.',

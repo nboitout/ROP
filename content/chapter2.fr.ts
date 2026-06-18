@@ -232,6 +232,11 @@ export const chapter2Fr: Chapter = {
       ],
     },
   ],
+  slides: {
+    url: '/chapter-2/Chapter2 - Slides de synthese.pdf',
+    label: 'Diapositives',
+    description: 'Synthèse visuelle du chapitre — technique, modalités, hiérarchisation et indications du traitement par la R.O.P.',
+  },
   revisionSheet: {
     src: '/chapter-2/Chap2 - Fiche de revision.png',
     alt: 'Fiche de révision — Chapitre 2, Traitement par la R.O.P.',
