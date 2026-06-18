@@ -234,7 +234,7 @@ export const chapter2En: Chapter = {
     },
   ],
   slides: {
-    url: '/chapter-2/Chapter2 - Slides de synthese EN.pdf',
+    url: '/chapter-2/Chapter2 - Slides de synthese EN.pdf?v=c5f6540',
     label: 'Slides',
     description: 'Visual summary of the chapter — technique, modalities, treatment hierarchy, and indications for R.O.P.',
   },

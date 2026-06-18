@@ -235,7 +235,7 @@ export const chapter2It: Chapter = {
     },
   ],
   slides: {
-    url: '/chapter-2/Chapter2 - Slides de synthese IT.pdf',
+    url: '/chapter-2/Chapter2 - Slides de synthese IT.pdf?v=c5f6540',
     label: 'Diapositive',
     description: 'Sintesi visiva del capitolo — tecnica, modalità, gerarchia del trattamento e indicazioni della R.O.P.',
   },
