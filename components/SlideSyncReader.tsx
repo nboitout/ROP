@@ -180,6 +180,19 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [chapter.slug])
 
+  useEffect(() => {
+    const prioritySlides = new Set<number>([0, 1, active - 2, active - 1, active])
+    slides.forEach((slide, index) => {
+      if (slide.orientation === 'portrait') prioritySlides.add(index)
+    })
+    prioritySlides.forEach((index) => {
+      const slide = slides[index]
+      if (!slide || typeof window === 'undefined') return
+      const img = new Image()
+      img.src = slide.src
+    })
+  }, [active, slides])
+
   // Restore reading position on return (unless arriving via the toggle's
   // position hash, which ReaderModeToggle handles).
   useEffect(() => {
@@ -388,7 +401,7 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
                   src={s.src}
                   alt={s.title}
                   className={`ss-slide${i + 1 === active ? ' is-active' : ''}`}
-                  loading={i < 2 ? 'eager' : 'lazy'}
+                  loading={i < 2 || s.orientation === 'portrait' || i + 1 === active ? 'eager' : 'lazy'}
                   aria-hidden={i + 1 !== active}
                 />
               ))}
