@@ -33,6 +33,7 @@ const SS_UI: Record<string, {
   enlargeShort: string; marker: (n: number, t: string) => string
   caption: (n: number, t: string) => string; jumpLabel: string
   jumpTitle: (s: string) => string; enlargeFigure: (c: string) => string
+  rotateHint: string
 }> = {
   fr: {
     eyebrow: 'Synthèse visuelle — suit votre lecture',
@@ -47,6 +48,7 @@ const SS_UI: Record<string, {
     jumpLabel: 'Accès direct — zones réflexes',
     jumpTitle: (s: string) => `Aller directement à : ${s}`,
     enlargeFigure: (caption: string) => `Agrandir : ${caption}`,
+    rotateHint: 'Tournez votre téléphone pour afficher cette diapositive en plein format.',
   },
   en: {
     eyebrow: 'Visual synthesis — follows your reading',
@@ -61,6 +63,7 @@ const SS_UI: Record<string, {
     jumpLabel: 'Direct access — reflex zones',
     jumpTitle: (s: string) => `Go directly to: ${s}`,
     enlargeFigure: (caption: string) => `Enlarge: ${caption}`,
+    rotateHint: 'Rotate your phone to view this slide at full size.',
   },
   de: {
     eyebrow: 'Visuelle Synthese — folgt Ihrer Lektüre',
@@ -75,6 +78,7 @@ const SS_UI: Record<string, {
     jumpLabel: 'Direktzugang — Reflexzonen',
     jumpTitle: (s: string) => `Direkt springen zu: ${s}`,
     enlargeFigure: (caption: string) => `Vergrößern: ${caption}`,
+    rotateHint: 'Drehen Sie Ihr Telefon, um diese Folie in voller Größe anzuzeigen.',
   },
   es: {
     eyebrow: 'Síntesis visual — sigue su lectura',
@@ -89,6 +93,7 @@ const SS_UI: Record<string, {
     jumpLabel: 'Acceso directo — zonas reflejas',
     jumpTitle: (s: string) => `Ir directamente a: ${s}`,
     enlargeFigure: (caption: string) => `Ampliar: ${caption}`,
+    rotateHint: 'Gire el teléfono para ver esta diapositiva a tamaño completo.',
   },
   it: {
     eyebrow: 'Sintesi visiva — segue la lettura',
@@ -103,6 +108,7 @@ const SS_UI: Record<string, {
     jumpLabel: 'Accesso diretto — zone riflesse',
     jumpTitle: (s: string) => `Vai direttamente a: ${s}`,
     enlargeFigure: (caption: string) => `Ingrandisci: ${caption}`,
+    rotateHint: 'Ruota il telefono per visualizzare questa diapositiva a pieno formato.',
   },
 }
 
@@ -119,7 +125,7 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
   )
   const [progress, setProgress] = useState(0)
   const [active, setActive] = useState(1)
-  const [lightbox, setLightbox] = useState<{ src: string; alt: string; caption: string } | null>(null)
+  const [lightbox, setLightbox] = useState<{ src: string; alt: string; caption: string; orientation?: 'portrait' | 'landscape' } | null>(null)
   const [lightboxZoom, setLightboxZoom] = useState(1)
   const articleRef = useRef<HTMLElement>(null)
   // While a slide-driven scroll is in flight, the scroll handler must not
@@ -313,7 +319,12 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
   function openSlideLightbox(n: number) {
     const s = slides[n - 1]
     if (!s) return
-    setLightbox({ src: s.src, alt: s.title, caption: ui.caption(n, s.title) })
+    setLightbox({
+      src: s.src,
+      alt: s.title,
+      caption: ui.caption(n, s.title),
+      orientation: s.orientation === 'portrait' ? 'portrait' : 'landscape',
+    })
   }
 
   return (
@@ -478,7 +489,12 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
       </div>
 
       {lightbox && (
-        <div className="cr-lightbox" onClick={closeLightbox} role="dialog" aria-modal="true">
+        <div
+          className={`cr-lightbox${lightbox.orientation ? ` cr-lightbox--${lightbox.orientation}` : ''}`}
+          onClick={closeLightbox}
+          role="dialog"
+          aria-modal="true"
+        >
           <div className="cr-lightbox-bar" onClick={(e) => e.stopPropagation()}>
             <span className="cr-lightbox-caption">{lightbox.caption}</span>
             <div className="cr-lightbox-controls">
@@ -490,6 +506,9 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
           </div>
           <div className="cr-lightbox-scroll" onClick={(e) => e.stopPropagation()}>
             <figure className="cr-lightbox-fig">
+              {lightbox.orientation === 'landscape' && (
+                <p className="cr-lightbox-rotate-hint">{ui.rotateHint}</p>
+              )}
               <img src={lightbox.src} alt={lightbox.alt} style={{ transform: `scale(${lightboxZoom})`, transformOrigin: 'top center' }} />
               <figcaption>{lightbox.caption}</figcaption>
             </figure>
