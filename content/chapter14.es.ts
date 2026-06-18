@@ -31,6 +31,7 @@ export const chapter14Es: Chapter = {
       title: 'Localización',
       blocks: [
         { type: 'para', text: 'El yeyuno-íleon ocupa una gran parte de la cavidad abdominal, preferentemente a la izquierda que a la derecha, en el interior del marco cólico. El yeyuno se localiza preferentemente en el cuadrante superior izquierdo del abdomen. El íleon se localiza preferentemente en el cuadrante inferior derecho del abdomen.' },
+        { type: 'figure', src: '/chapter-14/es/Chapter14 Fig1 ES.png', caption: 'Figura 14.1 — Regiones abdominales', alt: 'Referencias topográficas del abdomen', orientation: 'portrait' },
       ],
     },
     {
@@ -85,6 +86,7 @@ export const chapter14Es: Chapter = {
           { label: 'Nervio vago — sensibilidad', text: 'el nervio vago contiene entre el 70 y el 80 % de fibras sensitivas que informan permanentemente al cerebro sobre el estado de las vísceras. Está conectado al sistema nervioso intrínseco.' },
         ]},
 
+        { type: 'figure', src: '/chapter-14/es/Chapter14 Fig12 ES.png', caption: 'Figura 14.12 — Sistema nervioso autónomo', alt: 'Comparación funcional de las vías parasimpáticas y simpáticas', orientation: 'portrait' },
         { type: 'sub', text: 'Sistema nervioso entérico (SNE)' },
         { type: 'para', text: 'El sistema nervioso intrínseco o entérico (SNE) es a menudo calificado como 2.º cerebro o cerebro abdominal. Está formado por plexos intramurales situados en la propia pared del intestino delgado: el plexo mioentérico de Auerbach y el plexo submucoso de Meissner.' },
         { type: 'figure', src: '/chapter-14/es/Chapter14 Fig13  ES.png', caption: 'Figura 14.13 — Plexos intramurales entéricos', alt: 'Plexo mioentérico de Auerbach y plexo submucoso de Meissner en la pared intestinal', orientation: 'landscape' },

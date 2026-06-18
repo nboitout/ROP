@@ -31,6 +31,7 @@ export const chapter14En: Chapter = {
       title: 'Location',
       blocks: [
         { type: 'para', text: 'The jejuno-ileum occupies a large part of the abdominal cavity, more often on the left than on the right, within the colonic frame. The jejunum is primarily located in the upper left quadrant of the abdomen. The ileum is mainly located in the lower right quadrant.' },
+        { type: 'figure', src: '/chapter-14/en/figure-14-1.png', caption: 'Figure 14.1 — Abdominal regions', alt: 'Topographic landmarks of the abdomen', orientation: 'portrait' },
       ],
     },
     {
@@ -85,6 +86,7 @@ export const chapter14En: Chapter = {
           { label: 'Vagus nerve — sensitivity', text: 'the vagus nerve contains 70 to 80% sensory fibres, which continuously inform the brain about the state of the viscera. It is connected to the intrinsic nervous system.' },
         ]},
 
+        { type: 'figure', src: '/chapter-14/en/figure-14-12.png', caption: 'Figure 14.12 — Autonomic nervous system', alt: 'Functional comparison of the parasympathetic and sympathetic pathways', orientation: 'portrait' },
         { type: 'sub', text: 'Enteric nervous system (ENS)' },
         { type: 'para', text: 'The intrinsic or enteric nervous system (ENS) is often referred to as the second brain or abdominal brain. It consists of intramural plexuses located within the wall of the small intestine itself: Auerbach\'s myenteric plexus and Meissner\'s submucosal plexus.' },
         { type: 'figure', src: '/chapter-14/en/figure-14-13.png', caption: 'Figure 14.13 — Enteric intramural plexuses', alt: 'Auerbach\'s myenteric plexus and Meissner\'s submucosal plexus in the intestinal wall', orientation: 'landscape' },

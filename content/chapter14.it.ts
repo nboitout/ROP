@@ -31,6 +31,7 @@ export const chapter14It: Chapter = {
       title: 'Situazione',
       blocks: [
         { type: 'para', text: 'Il digiuno-ileo occupa gran parte della cavità addominale, preferibilmente a sinistra rispetto a destra, all\'interno della cornice colica. Il digiuno è localizzato preferibilmente nel quadrante superiore sinistro dell\'addome. L\'ileo è localizzato preferibilmente nel quadrante inferiore destro dell\'addome.' },
+        { type: 'figure', src: '/chapter-14/it/Chapter14 Fig1 IT.png', caption: 'Figura 14.1 — Regioni addominali', alt: 'Riferimenti topografici dell’addome', orientation: 'portrait' },
       ],
     },
     {
@@ -85,6 +86,7 @@ export const chapter14It: Chapter = {
           { label: 'Nervo vago — sensibilità', text: 'il nervo vago contiene il 70-80% di fibre sensitive che informano costantemente il cervello sullo stato dei visceri. È connesso al sistema nervoso intrinseco.' },
         ]},
 
+        { type: 'figure', src: '/chapter-14/it/Chapter14 Fig12 IT.png', caption: 'Figura 14.12 — Sistema nervoso autonomo', alt: 'Confronto funzionale delle vie parasimpatiche e simpatiche', orientation: 'portrait' },
         { type: 'sub', text: 'Sistema nervoso enterico (SNE)' },
         { type: 'para', text: 'Il sistema nervoso intrinseco o enterico (SNE) è spesso definito come il secondo cervello o cervello addominale. È costituito da plessi intramurali situati nella stessa parete dell\'intestino tenue: il plesso mioenterico di Auerbach e il plesso sottomucoso di Meissner.' },
         { type: 'figure', src: '/chapter-14/it/Chapter14 Fig13 IT.png', caption: 'Figura 14.13 — Plessi enterici intramurali', alt: 'Plesso di Auerbach e plesso di Meissner nella parete intestinale', orientation: 'landscape' },

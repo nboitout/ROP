@@ -31,6 +31,7 @@ export const chapter14De: Chapter = {
       title: 'Lage',
       blocks: [
         { type: 'para', text: 'Das Jejunum-Ileum nimmt einen großen Teil der Bauchhöhle ein, bevorzugt links als rechts, innerhalb des Kolonrahmens. Das Jejunum befindet sich vorzugsweise im linken oberen Quadranten des Abdomens. Das Ileum befindet sich vorzugsweise im rechten unteren Quadranten des Abdomens.' },
+        { type: 'figure', src: '/chapter-14/ge/Chapter14 Fig1 GE.png', caption: 'Abbildung 14.1 — Bauchregionen', alt: 'Topografische Orientierungspunkte des Abdomens', orientation: 'portrait' },
       ],
     },
     {
@@ -85,6 +86,7 @@ export const chapter14De: Chapter = {
           { label: 'Vagusnerv — Sensibilität', text: 'der Vagusnerv enthält 70 bis 80 % sensible Fasern, die das Gehirn permanent über den Zustand der Eingeweide informieren. Er ist mit dem intrinsischen Nervensystem verbunden.' },
         ]},
 
+        { type: 'figure', src: '/chapter-14/ge/Chapter14 Fig12 GE.png', caption: 'Abbildung 14.12 — Autonomes Nervensystem', alt: 'Funktioneller Vergleich der parasympathischen und sympathischen Bahnen', orientation: 'portrait' },
         { type: 'sub', text: 'Enterisches Nervensystem (ENS)' },
         { type: 'para', text: 'Das intrinsische oder enterische Nervensystem (ENS) wird oft als zweites Gehirn oder Bauchgehirn bezeichnet. Es besteht aus intramuralen Plexus in der Wand des Dünndarms selbst: dem myenterischen Plexus von Auerbach und dem submukösem Plexus von Meissner.' },
         { type: 'figure', src: '/chapter-14/ge/Chapter14 Fig13 GE.png', caption: 'Abbildung 14.13 — Enterische intramurale Plexus', alt: 'Auerbach-Plexus und Meissner-Plexus in der Darmwand', orientation: 'landscape' },
