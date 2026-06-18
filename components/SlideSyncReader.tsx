@@ -120,6 +120,13 @@ const HALF_BREAK_BEFORE_BLOCK = new Set<string>(['anatomie:6'])
 export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, backHref = '/chapitres-gratuits', classicHref }: Props) {
   const { lang, t } = useLanguage()
   const ui = SS_UI[lang] ?? SS_UI.fr
+  const closeToReadingLabel = {
+    fr: 'Retour a la lecture',
+    en: 'Back to reading',
+    de: 'Zuruck zur Lekture',
+    es: 'Volver a la lectura',
+    it: 'Torna alla lettura',
+  }[lang] ?? 'Back to reading'
   const [sessionId] = useState<string>(() =>
     typeof window !== 'undefined' ? getSessionId() : ''
   )
@@ -552,6 +559,9 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
               <figcaption>{lightbox.caption}</figcaption>
             </figure>
           </div>
+          <button type="button" className="cr-lightbox-return" onClick={closeLightbox}>
+            {closeToReadingLabel}
+          </button>
         </div>
       )}
     </div>

@@ -431,12 +431,13 @@ footer > div > p { font-size:1rem; color:rgba(245,240,232,.84); line-height:1.9;
 .cr-lightbox-rotate-hint { display:none; margin:0 0 12px; padding:8px 12px; border:1px solid rgba(245,240,232,.18);
   border-radius:999px; color:rgba(245,240,232,.78); background:rgba(245,240,232,.08);
   font-size:.72rem; line-height:1.35; text-align:center; }
+.cr-lightbox-return { display:none; }
 
 @media (max-width:760px){
   .cr-lightbox-bar { min-height:48px; height:auto; padding:8px 12px; gap:10px; }
   .cr-lightbox-caption { font-size:.88rem; line-height:1.2; min-width:0; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
   .cr-lightbox-controls { gap:6px; }
-  .cr-lightbox-scroll { padding:14px 10px 18px; align-items:center; }
+  .cr-lightbox-scroll { padding:14px 10px 76px; align-items:center; }
   .cr-lightbox--portrait .cr-lightbox-fig img { max-width:92vw; max-height:calc(100dvh - 96px); width:auto; height:auto; }
   .cr-lightbox--landscape .cr-lightbox-rotate-hint { display:block; }
   .cr-lightbox--landscape .cr-lightbox-fig img { max-width:96vw; max-height:calc(100dvh - 132px); width:auto; height:auto; }
@@ -444,6 +445,11 @@ footer > div > p { font-size:1rem; color:rgba(245,240,232,.84); line-height:1.9;
   .cr-lightbox--auto-rotated .cr-lightbox-fig { width:calc(100vw - 12px); height:calc(100dvh - 64px); justify-content:center; }
   .cr-lightbox--auto-rotated .cr-lightbox-rotate-hint { display:none; }
   .cr-lightbox--auto-rotated .cr-lightbox-fig img { max-width:calc(100dvh - 84px); max-height:calc(100vw - 18px); }
+  .cr-lightbox-return { position:fixed; left:50%; bottom:max(14px, env(safe-area-inset-bottom)); z-index:2;
+    display:flex; align-items:center; justify-content:center; transform:translateX(-50%);
+    min-width:min(82vw,340px); min-height:46px; padding:12px 22px; border:1px solid rgba(245,240,232,.26);
+    border-radius:999px; background:rgba(245,240,232,.95); color:var(--ink); font-size:.82rem; font-weight:700;
+    letter-spacing:.12em; text-transform:uppercase; box-shadow:0 12px 34px rgba(0,0,0,.28); cursor:pointer; }
 }
 
 @media (max-width:940px) and (orientation:landscape){
