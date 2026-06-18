@@ -725,10 +725,10 @@ a.ss-switch-opt:hover { color:var(--gold); }
   .ss-stage { position:static; }
   .ss-stage-eyebrow { display:none; }
   .ss-frame { max-width:520px; margin:0 auto; border-radius:4px; box-shadow:0 6px 20px rgba(26,26,24,.12); }
-  .ss-frame--portrait { height:auto; width:auto; max-width:240px; }
+  .ss-frame--portrait { aspect-ratio:3/4; width:min(260px,70vw); height:auto; max-width:100%; }
   /* on mobile keep the reflex-zone shortcut and the width-capped portrait */
   .ss-stage--portrait .ss-jump { display:flex; }
-  .ss-stage--portrait .ss-frame--portrait { height:auto; }
+  .ss-stage--portrait .ss-frame--portrait { width:min(260px,70vw); height:auto; }
   .ss-stage-bar { max-width:520px; margin:8px auto 0; gap:10px; }
   .ss-stage-title { font-size:.92rem; }
   .ss-dots { display:none; }
