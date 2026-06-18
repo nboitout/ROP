@@ -81,10 +81,14 @@ export const chapter2It: Chapter = {
           "· Sistema parasimpatico pelvico — visceri pelvici e parte distale del colon",
           "· Colonna vertebrale, articolazioni costo-trasversarie, innervazione simpatica — catena gangliare paravertebrale toracica",
           "· Plesso prevertebrale",
+        ]},
+        { type: "rop", body: [
           "3. Sindrome locoregionale — Affrontare gli anelli meccanici e neurovegetativi collegati alla regione sintomatica:",
           "· Plessi e nervi del sistema nervoso somatico — relazioni viscerosomatiche",
           "· Sistema viscerale",
           "· Cavità addominale o pelvica, a seconda del sistema viscerale coinvolto",
+        ]},
+        { type: "rop", body: [
           "4. Sistema limbico — Integrare le dimensioni dello stress, dell'emozione e della memoria corporea che possono mantenere gli anelli neurovegetativi e tissutali:",
           "· Amigdala, ippocampo, insula",
           "· Equilibrio cervello limbico-viscere disfunzionale: ascolto-induzione, con un pollice posto sul viscere disfunzionale dominante e l'altro pollice sull'area del cervello limbico",

@@ -81,10 +81,14 @@ export const chapter2En: Chapter = {
           "· Pelvic parasympathetic system — pelvic viscera and distal part of the colon",
           "· Spinal column, costotransverse joints, sympathetic innervation (thoracic paravertebral ganglionic chain)",
           "· Prevertebral plexus",
+        ]},
+        { type: "rop", body: [
           "3. Locoregional syndrome — address the mechanical and neurovegetative loops related to the symptomatic region:",
           "· Plexuses and nerves of the somatic nervous system (viscerosomatic relationships)",
           "· Visceral system",
           "· Abdominal or pelvic cavity, depending on the visceral system involved",
+        ]},
+        { type: "rop", body: [
           "4. Limbic system — integrate the stress, emotional and body-memory dimensions that may maintain neurovegetative and tissue loops:",
           "· Amygdala, hippocampus, insula",
           "· Limbic brain–dysfunctional viscus balance: listening–induction, with one thumb placed on the dominant dysfunctional viscus and the other thumb on the limbic brain area",

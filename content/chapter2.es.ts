@@ -81,10 +81,14 @@ export const chapter2Es: Chapter = {
           "· Sistema parasimpático pélvico — vísceras pélvicas y parte distal del colon",
           "· Columna vertebral, articulaciones costotransversas, inervación simpática (cadena ganglionar paravertebral torácica)",
           "· Plexo prevertebral",
+        ]},
+        { type: "rop", body: [
           "3. Síndrome locorregional — abordar los bucles mecánicos y neurovegetativos relacionados con la región sintomática:",
           "· Plexos y nervios del sistema nervioso somático (relaciones viscerosomáticas)",
           "· Sistema visceral",
           "· Cavidad abdominal o pélvica, según el sistema visceral implicado",
+        ]},
+        { type: "rop", body: [
           "4. Sistema límbico — integrar las dimensiones del estrés, de la emoción y de la memoria corporal que pueden mantener los bucles neurovegetativos y tisulares:",
           "· Amígdala, hipocampo, ínsula",
           "· Equilibrio cerebro límbico–víscera disfuncional: escucha-inducción, con un pulgar colocado sobre la víscera disfuncional dominante y el otro pulgar sobre la zona del cerebro límbico",

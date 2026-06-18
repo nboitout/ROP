@@ -81,10 +81,14 @@ export const chapter2De: Chapter = {
           "· Pelvines parasympathisches System — Beckenviszera und distaler Teil des Kolons",
           "· Wirbelsäule, kostotransversale Gelenke, sympathische Innervation (thorakale paravertebrale Ganglienkette)",
           "· Prävertebraler Plexus",
+        ]},
+        { type: "rop", body: [
           "3. Lokoregionales Syndrom — mechanische und neurovegetative Schleifen behandeln, die mit der symptomatischen Region verbunden sind:",
           "· Plexus und Nerven des somatischen Nervensystems (viszerosomatische Beziehungen)",
           "· Viszerales System",
           "· Abdominal- oder Beckenhöhle, je nach betroffenem viszeralem System",
+        ]},
+        { type: "rop", body: [
           "4. Limbisches System — Dimensionen von Stress, Emotion und Körpergedächtnis integrieren, die neurovegetative und gewebliche Schleifen aufrechterhalten können:",
           "· Amygdala, Hippocampus, Insula",
           "· Gleichgewicht zwischen limbischem Gehirn und dysfunktionalem Viszerum: Listening-Induktion, ein Daumen auf dem dominanten dysfunktionalen Viszerum, der andere auf dem Bereich des limbischen Gehirns",
