@@ -2,15 +2,15 @@ import { fetchAllSheets } from '@/lib/sheets'
 import Scorecard from '@/components/admin/Scorecard'
 import AdminBarChart, { BarDataPoint } from '@/components/admin/AdminBarChart'
 import { fmtDuration } from '@/lib/adminFormat'
+import { perVisitSeconds, type LeaveLike } from '@/lib/dwell'
 
 export const dynamic = 'force-dynamic'
 
-function avgDuration(rows: { duration_seconds: string }[]): number {
-  const valid = rows
-    .map((r) => parseFloat(r.duration_seconds))
-    .filter((n) => !isNaN(n) && n > 0)
-  if (valid.length === 0) return 0
-  return valid.reduce((a, b) => a + b, 0) / valid.length
+// Average dwell per *visit* (fragments from the mobile flush summed back first).
+function avgDuration(rows: LeaveLike[]): number {
+  const visits = perVisitSeconds(rows)
+  if (visits.length === 0) return 0
+  return visits.reduce((a, b) => a + b, 0) / visits.length
 }
 
 function formatDuration(secs: number): string {
@@ -94,14 +94,24 @@ export default async function EngagementPage() {
 
   // Bar: avg dwell time per page (grouped by friendly label; gate vs homepage
   // are reported separately, chapters in reading order)
-  const pageMap = new Map<string, number[]>()
+  // Collapse mobile-flush fragments into one dwell per visit (reader|session|page),
+  // then group those per-visit sums by page label so the average isn't deflated.
+  const visitByKey = new Map<string, { label: string; secs: number }>()
+  let dwellAnon = 0
   pageLeaves.forEach((v) => {
     const n = parseFloat(v.duration_seconds)
     if (isNaN(n) || n <= 0) return
     const label = pageLabel(v.page)
+    const key = v.sessionId ? `${v.readerId}|${v.sessionId}|${v.page}` : `__a${dwellAnon++}`
+    const cur = visitByKey.get(key)
+    if (cur) cur.secs += n
+    else visitByKey.set(key, { label, secs: n })
+  })
+  const pageMap = new Map<string, number[]>()
+  visitByKey.forEach(({ label, secs }) => {
     const arr = pageMap.get(label)
-    if (arr) arr.push(n)
-    else pageMap.set(label, [n])
+    if (arr) arr.push(secs)
+    else pageMap.set(label, [secs])
   })
   const dwellData: BarDataPoint[] = [...pageMap.entries()]
     .map(([name, arr]) => ({

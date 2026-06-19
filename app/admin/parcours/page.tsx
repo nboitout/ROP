@@ -2,6 +2,7 @@ import { fetchAllSheets } from '@/lib/sheets'
 import Scorecard from '@/components/admin/Scorecard'
 import ChapterSelect from '@/components/admin/ChapterSelect'
 import { fmtDuration } from '@/lib/adminFormat'
+import { perVisitSeconds, type LeaveLike } from '@/lib/dwell'
 
 export const dynamic = 'force-dynamic'
 
@@ -92,28 +93,27 @@ export default async function ParcoursPage({ searchParams }: Props) {
     const finished = new Set<string>()
     const slidesOpen = new Set<string>()
     const resOpen = new Set<string>()
-    const pageTimes: number[] = []
-    // Active dwell split by reading mode (each mode is its own route).
-    const classicTimes: number[] = []
-    const syncTimes: number[] = []
+    // page_leave rows per route — collapsed into per-visit dwell below so the
+    // mobile visibilitychange flush (several leaves per visit) isn't counted as
+    // many short visits.
+    const hrefLeaves: LeaveLike[] = []
+    const classicLeaves: LeaveLike[] = []
+    const syncLeaves: LeaveLike[] = []
 
     visits.forEach((v) => {
       const p = stripPath(v.page)
       if (p === href) {
         if (v.event === 'page_visit' && v.readerId) visited.add(v.readerId)
-        if (v.event === 'page_leave') {
-          const n = parseFloat(v.duration_seconds)
-          if (!isNaN(n) && n > 0) pageTimes.push(n)
-        }
+        if (v.event === 'page_leave') hrefLeaves.push(v)
       }
       if (v.event === 'page_leave') {
-        const n = parseFloat(v.duration_seconds)
-        if (!isNaN(n) && n > 0) {
-          if (classicHref && p === classicHref) classicTimes.push(n)
-          else if (syncHref && p === syncHref) syncTimes.push(n)
-        }
+        if (classicHref && p === classicHref) classicLeaves.push(v)
+        else if (syncHref && p === syncHref) syncLeaves.push(v)
       }
     })
+    const pageSecs = perVisitSeconds(hrefLeaves)
+    const classicSecs = perVisitSeconds(classicLeaves)
+    const syncSecs = perVisitSeconds(syncLeaves)
 
     const slideTimes: number[] = []
     const resTimes: number[] = []
@@ -133,15 +133,15 @@ export default async function ParcoursPage({ searchParams }: Props) {
       started: started.size,
       mid: mid.size,
       finished: finished.size,
-      avgTimeOnPage: avg(pageTimes),
+      avgTimeOnPage: avg(pageSecs),
       slidesOpened: slidesOpen.size,
       slidesAvgTime: avg(slideTimes),
       resourcesOpened: resOpen.size,
       resourcesAvgTime: avg(resTimes),
-      syncSeconds: sum(syncTimes),
-      syncVisits: syncTimes.length,
-      classicSeconds: sum(classicTimes),
-      classicVisits: classicTimes.length,
+      syncSeconds: sum(syncSecs),
+      syncVisits: syncSecs.length,
+      classicSeconds: sum(classicSecs),
+      classicVisits: classicSecs.length,
     }
   }
 

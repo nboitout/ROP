@@ -148,9 +148,10 @@ export default async function VisitsPage({
           <thead>
             <tr>
               <th>Time (Paris)</th>
+              <th>Reader</th>
               <th>Country</th>
               <th>Device</th>
-              <th>Dwell</th>
+              <th>Dwell (total)</th>
               <th>Ret.</th>
               <th>Page</th>
               <th>Referer</th>
@@ -174,6 +175,7 @@ export default async function VisitsPage({
               return (
                 <tr key={i}>
                   <td className="muted" style={{ whiteSpace: 'nowrap' }}>{fmtTs(v.timestamp)}</td>
+                  <td className="muted" style={{ fontFamily: 'monospace', fontSize: '.72rem' }}>{(v.readerId || '').slice(0, 8) || '—'}</td>
                   <td style={{ whiteSpace: 'nowrap' }}>{countryLabel(v.country)}</td>
                   <td>{deviceType(v.userAgent)}</td>
                   <td className="muted" style={{ whiteSpace: 'nowrap' }}>
@@ -199,7 +201,7 @@ export default async function VisitsPage({
             })}
             {rows.length === 0 && (
               <tr>
-                <td colSpan={10} className="muted">No matching visits</td>
+                <td colSpan={11} className="muted">No matching visits</td>
               </tr>
             )}
           </tbody>
