@@ -29,9 +29,10 @@ export const chapter3Slides: SyncSlide[] = [
   { src: '/chapter-3/slides/slide-16.png', title: 'Reperes ROP du tronc cerebral, de la base endocrinienne et des noyaux limbiques' },
   { src: '/chapter-3/slides/slide-17.png', title: 'Reperes ROP du cerveau limbique' },
   { src: '/chapter-3/slides/slide-18.png', title: 'Reperes ROP du diencephale et de l hypophyse' },
+  { src: '/chapter-3/slides/Chapter3 Slide Sinus et glomus carotidien FR.png', title: 'Sinus et glomus carotidien' },
+  { src: '/chapter-3/slides/slide-21.png', title: 'Base exocranienne et nerf vague X dans le foramen jugulaire' },
   { src: '/chapter-3/slides/slide-19.png', title: 'Les trois piliers d action indirecte sur le cortex et la cognition' },
   { src: '/chapter-3/slides/slide-20.png', title: 'Action indirecte : le MRP et la dura-mere' },
-  { src: '/chapter-3/slides/slide-21.png', title: 'Base exocranienne et nerf vague X dans le foramen jugulaire' },
 ]
 
 export const chapter3SlideAnchors: SyncAnchor[] = [
@@ -55,7 +56,8 @@ export const chapter3SlideAnchors: SyncAnchor[] = [
   { sectionId: 'section-4-zones-reflexes', blockIndex: 3, slide: 16 },
   { sectionId: 'section-4-zones-reflexes', blockIndex: 5, slide: 17 },
   { sectionId: 'section-4-zones-reflexes', blockIndex: 8, slide: 18 },
-  { sectionId: 'section-4-zones-reflexes', blockIndex: 14, slide: 19 },
-  { sectionId: 'section-4-zones-reflexes', blockIndex: 18, slide: 20, gapBefore: 'half' },
-  { sectionId: 'section-4-zones-reflexes', blockIndex: 13, slide: 21 },
+  { sectionId: 'section-4-zones-reflexes', blockIndex: 12, slide: 19 },
+  { sectionId: 'section-4-zones-reflexes', blockIndex: 13, slide: 20 },
+  { sectionId: 'section-4-zones-reflexes', blockIndex: 14, slide: 21 },
+  { sectionId: 'section-4-zones-reflexes', blockIndex: 18, slide: 22, gapBefore: 'half' },
 ]
