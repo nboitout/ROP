@@ -117,6 +117,13 @@ const SS_UI: Record<string, {
 const PAGE_BREAK_BEFORE = new Set<string>(['anatomie'])
 const HALF_BREAK_BEFORE_BLOCK = new Set<string>(['anatomie:6'])
 
+function normalizeSectionLabel(value: string) {
+  return value
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase()
+}
+
 export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, backHref = '/chapitres-gratuits', classicHref }: Props) {
   const { lang, t } = useLanguage()
   const ui = SS_UI[lang] ?? SS_UI.fr
@@ -163,7 +170,13 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
   // The chapter's ROP section (reflex-zone maps in the feet) — readers spend a
   // lot of time here, so the pinned stage offers a one-tap jump to it.
   const ropSection = useMemo(
-    () => chapter.sections.find((s) => s.id === 'rop' || s.id.startsWith('rop-')),
+    () => chapter.sections.find((section) => {
+      const sectionId = normalizeSectionLabel(section.id)
+      if (sectionId === 'rop' || sectionId.startsWith('rop-')) return true
+      if (sectionId.includes('zone') && sectionId.includes('reflex')) return true
+      const title = normalizeSectionLabel(section.title)
+      return title.includes('zone') && title.includes('reflex')
+    }),
     [chapter.sections]
   )
 

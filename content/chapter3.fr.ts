@@ -177,7 +177,6 @@ export const chapter3Fr: Chapter = {
           'Chaîne ganglionnaire cervicale : innervation de l’artère vertébrale et de la carotide.',
           'Artère carotide interne dans le sinus caverneux : face plantaire médiale de la diaphyse de la deuxième phalange du deuxième orteil.',
         ]},
-        { type: 'figure', src: '/chapter-3/figures/figure-08.png', caption: 'Sinus et glomus carotidien Index Gauche', alt: 'Photo du repérage podal du sinus et du glomus carotidien pour l’action indirecte sur le cortex', orientation: 'landscape' },
         { type: 'bullets', items: [
           'Circulation du liquide cérébro-spinal : système veineux, foramens jugulaires, membranes intracrâniennes et spinales, aspiration veineuse et cérébro-spinale liée à l’inspiration, technique de compression du quatrième ventricule, synchronisation synchondrose sphéno-basilaire (SSB) - deuxième vertèbre sacrée S2.',
         ]},
