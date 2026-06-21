@@ -32,7 +32,6 @@ export const chapter3Slides: SyncSlide[] = [
   { src: '/chapter-3/slides/slide-19.png', title: 'Les trois piliers d action indirecte sur le cortex et la cognition' },
   { src: '/chapter-3/slides/slide-20.png', title: 'Action indirecte : le MRP et la dura-mere' },
   { src: '/chapter-3/slides/slide-21.png', title: 'Base exocranienne et nerf vague X dans le foramen jugulaire' },
-  { src: '/chapter-3/slides/slide-22.png', title: 'Reperes ROP du diencephale, de l hypophyse et de la dure-mere cranienne' },
 ]
 
 export const chapter3SlideAnchors: SyncAnchor[] = [
@@ -58,6 +57,5 @@ export const chapter3SlideAnchors: SyncAnchor[] = [
   { sectionId: 'section-4-zones-reflexes', blockIndex: 8, slide: 18 },
   { sectionId: 'section-4-zones-reflexes', blockIndex: 14, slide: 19 },
   { sectionId: 'section-4-zones-reflexes', blockIndex: 18, slide: 20, gapBefore: 'half' },
-  { sectionId: 'section-4-zones-reflexes', blockIndex: 21, slide: 21 },
-  { sectionId: 'section-4-zones-reflexes', blockIndex: 23, slide: 22 },
+  { sectionId: 'section-4-zones-reflexes', blockIndex: 13, slide: 21 },
 ]
