@@ -7,8 +7,8 @@ import { getServerLang } from '@/app/i18n/serverLang'
 import { translations } from '@/app/i18n/translations'
 
 export const metadata: Metadata = {
-  title: 'Chapitre 3 — Système nerveux central · R.O.P. · Guy Boitout',
-  description: 'Cerveau reptilien, système limbique, diencéphale, cortex — anatomie et physiologie du système nerveux central dans la perspective de la Réflexothérapie Occipito-Podale.',
+  title: 'Chapitre 3 â€” SystÃ¨me nerveux central Â· R.O.P. Â· Guy Boitout',
+  description: 'Cerveau reptilien, systÃ¨me limbique, diencÃ©phale, cortex â€” anatomie et physiologie du systÃ¨me nerveux central dans la perspective de la RÃ©flexothÃ©rapie Occipito-Podale.',
   robots: { index: false, follow: false },
 }
 
@@ -26,5 +26,12 @@ export default async function Chapitre3Page({
   const lang = await getServerLang(langParam)
   const { chapter, contentLang } = getChapter('chapter-3', lang)
   const bookTitle = translations[lang].reader.bookTitle
-  return <ChapterReader chapter={chapter} bookTitle={bookTitle} contentLang={contentLang} />
+  return (
+    <ChapterReader
+      chapter={chapter}
+      bookTitle={bookTitle}
+      contentLang={contentLang}
+      syncToggleHref="/lecture/chapitre-3"
+    />
+  )
 }
