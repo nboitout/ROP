@@ -22,7 +22,7 @@ export const chapter2Slides: SyncSlide[] = [
   { src: '/chapter-2/slides/slide-10.png', title: 'Cibles anatomiques I : syndrome général d’adaptation' },
   { src: '/chapter-2/slides/slide-11.png', title: 'Cible II : syndrome locorégional' },
   { src: '/chapter-2/slides/slide-12.png', title: 'Cible III : système limbique' },
-  { src: '/chapter-2/slides/slide-13.png', title: 'Application clinique : lombo-sciatalgie post-partum' },
+  { src: '/chapter-2/slides/slide-13.png?v=20260622', title: 'Application clinique : lombo-sciatalgie post-partum' },
   { src: '/chapter-2/slides/slide-15.png', title: 'Plan de traitement ROP — application au cas de Mme X' },
   { src: '/chapter-2/slides/slide-14.png', title: 'Le plan de traitement ROP ciblé pour Madame X' },
   { src: '/chapter-2/slides/slide-16.png', title: 'Indications thérapeutiques : le domaine des troubles fonctionnels' },
