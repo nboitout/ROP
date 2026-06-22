@@ -15,7 +15,7 @@ import { useLanguage } from '@/app/i18n/LanguageContext'
 type Props = {
   mode: 'sync' | 'classic'
   // href of the *other* version, the one the switch navigates to
-  otherHref: string
+  otherHref?: string
 }
 
 // The synchronized reader exists in French, English, German, Spanish and Italian.
@@ -49,6 +49,8 @@ function destination(base: string): string {
 export default function ReaderModeToggle({ mode, otherHref }: Props) {
   const { lang } = useLanguage()
   const l = LABELS[lang] ?? LABELS.fr
+
+  if (!otherHref) return null
 
   // Restore position on arrival: html{scroll-behavior:smooth} makes native
   // hash positioning animate from the top on load, so jump instantly instead.

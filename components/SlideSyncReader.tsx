@@ -22,7 +22,7 @@ type Props = {
   // "Tous les chapitres" link target (the free-chapters list).
   backHref?: string
   // Classic version of this chapter — the mode switch's other side.
-  classicHref: string
+  classicHref?: string
 }
 
 // The synchronized reader is shown in the languages with a synthesis deck, so
