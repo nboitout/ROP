@@ -8,11 +8,13 @@
 import { Fragment, useEffect, useMemo, useRef, useState } from 'react'
 import Link from 'next/link'
 import type { Chapter, Block } from '@/content/types'
-import type { SyncSlide, SyncAnchor } from '@/content/chapter5.slidesync'
 import { useLanguage } from '@/app/i18n/LanguageContext'
 import { getSessionId } from '@/lib/session'
 import ReaderModeToggle from '@/components/ReaderModeToggle'
 import { currentTopAnchorId, saveReadingPosition, loadReadingPosition, restoreToAnchor } from '@/lib/readingPosition'
+
+type SyncSlide = { src: string; title: string; orientation?: 'portrait' }
+type SyncAnchor = { sectionId: string; blockIndex: number; slide: number | number[]; gapBefore?: 'half' }
 
 type Props = {
   chapter: Chapter
@@ -124,6 +126,11 @@ function normalizeSectionLabel(value: string) {
     .toLowerCase()
 }
 
+function asSlideList(slide: number | number[] | undefined) {
+  if (typeof slide === 'number') return [slide]
+  return slide ?? []
+}
+
 export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, backHref = '/chapitres-gratuits', classicHref }: Props) {
   const { lang, t } = useLanguage()
   const ui = SS_UI[lang] ?? SS_UI.fr
@@ -192,7 +199,7 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
     const pick = (blocks.length ? blocks : inSection).reduce((lo, a) =>
       a.blockIndex < lo.blockIndex ? a : lo
     )
-    return pick.slide
+    return asSlideList(pick.slide)[0] ?? null
   }, [anchors, ropSection])
 
   useEffect(() => {
@@ -475,32 +482,36 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
 
           {chapter.sections.map((section) => {
             const headingAnchor = anchorBySlide.get(`${section.id}:-1`)
-            const headingSlide = headingAnchor?.slide
+            const headingSlides = asSlideList(headingAnchor?.slide)
             return (
             <Fragment key={section.id}>
             {PAGE_BREAK_BEFORE.has(section.id) && <div className="ss-pagebreak" aria-hidden />}
             <section id={`sec-${section.id}`} className="cr-section">
-              {headingSlide && (
-                <div data-slide-anchor={headingSlide} className="ss-anchor ss-anchor-heading">
-                  <button
-                    type="button"
-                    className="ss-marker"
-                    onClick={() => openSlideLightbox(headingSlide)}
-                    title={ui.enlargeShort}
-                  >
-                    <span className="ss-marker-dot" aria-hidden />
-                    {ui.marker(headingSlide, slides[headingSlide - 1]?.title ?? '')}
-                  </button>
+              {headingSlides.length > 0 && (
+                <div className="ss-anchor ss-anchor-heading">
+                  {headingSlides.map((slide) => (
+                    <div key={slide} data-slide-anchor={slide}>
+                      <button
+                        type="button"
+                        className="ss-marker"
+                        onClick={() => openSlideLightbox(slide)}
+                        title={ui.enlargeShort}
+                      >
+                        <span className="ss-marker-dot" aria-hidden />
+                        {ui.marker(slide, slides[slide - 1]?.title ?? '')}
+                      </button>
+                    </div>
+                  ))}
                 </div>
               )}
               <h2 className="cr-h2">{section.title}</h2>
               {section.blocks.map((b, i) => {
                 const hasHalfBreak = HALF_BREAK_BEFORE_BLOCK.has(`${section.id}:${i}`)
                 const anchor = anchorBySlide.get(`${section.id}:${i}`)
-                const slide = anchor?.slide
+                const slideList = asSlideList(anchor?.slide)
                 const posId = `p-${section.id}-${i}`
                 const view = <BlockView block={b} onOpenImage={setLightbox} ui={ui} />
-                if (!slide) {
+                if (slideList.length === 0) {
                   return (
                     <div
                       key={i}
@@ -517,18 +528,21 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
                     key={i}
                     id={posId}
                     data-pos-anchor=""
-                    data-slide-anchor={slide}
                     className={`ss-anchor${anchor?.gapBefore === 'half' || hasHalfBreak ? ' ss-anchor-halfbreak' : ''}`}
                   >
-                    <button
-                      type="button"
-                      className="ss-marker"
-                      onClick={() => openSlideLightbox(slide)}
-                      title={ui.enlargeShort}
-                    >
-                      <span className="ss-marker-dot" aria-hidden />
-                      {ui.marker(slide, slides[slide - 1]?.title ?? '')}
-                    </button>
+                    {slideList.map((slide) => (
+                      <div key={slide} data-slide-anchor={slide}>
+                        <button
+                          type="button"
+                          className="ss-marker"
+                          onClick={() => openSlideLightbox(slide)}
+                          title={ui.enlargeShort}
+                        >
+                          <span className="ss-marker-dot" aria-hidden />
+                          {ui.marker(slide, slides[slide - 1]?.title ?? '')}
+                        </button>
+                      </div>
+                    ))}
                     {view}
                   </div>
                 )

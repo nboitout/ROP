@@ -6,7 +6,7 @@
 // as supplied in the PDF.
 
 export type SyncSlide = { src: string; title: string; orientation?: 'portrait' }
-export type SyncAnchor = { sectionId: string; blockIndex: number; slide: number; gapBefore?: 'half' }
+export type SyncAnchor = { sectionId: string; blockIndex: number; slide: number | number[]; gapBefore?: 'half' }
 
 export const chapter8Slides: SyncSlide[] = [
   { src: '/chapter-8/slides/slide-01.png', title: 'Chapitre 8 : Diaphragme' },
@@ -28,6 +28,14 @@ export const chapter8Slides: SyncSlide[] = [
   { src: '/chapter-8/slides/slide-17.png', title: 'Synthese : matrice topographique podale ROP' },
   { src: '/chapter-8/slides/slide-18.png', title: 'Nerf phrenique et zones reflexes podales' },
   { src: '/chapter-8/slides/slide-19.png', title: 'Synthese : de la fixation a la therapeutique ROP' },
+  { src: '/chapter-8/slides/slide-20.png', title: 'Cartographie podale : coupole diaphragmatique gauche et hiatus oesophagien', orientation: 'portrait' },
+  { src: '/chapter-8/slides/slide-21.png', title: 'Cartographie podale : coupole diaphragmatique droite', orientation: 'portrait' },
+  { src: '/chapter-8/slides/slide-22.png', title: 'Cartographie podale : hiatus oesophagien', orientation: 'portrait' },
+  { src: '/chapter-8/slides/slide-23.png', title: 'Cartographie podale : hiatus de Marfran et de Larrey', orientation: 'portrait' },
+  { src: '/chapter-8/slides/slide-24.png', title: 'Cartographie podale : jonction azygo-cave', orientation: 'portrait' },
+  { src: '/chapter-8/slides/slide-25.png', title: 'Cartographie podale : nerf phrenique', orientation: 'portrait' },
+  { src: '/chapter-8/slides/slide-26.png', title: 'Cartographie podale : articulations costo-vertebrales', orientation: 'portrait' },
+  { src: '/chapter-8/slides/slide-27.png', title: 'Cartographie podale : nerf intercostal brachial de Hyrtl', orientation: 'portrait' },
 ]
 
 export const chapter8SlideAnchors: SyncAnchor[] = [
@@ -50,4 +58,12 @@ export const chapter8SlideAnchors: SyncAnchor[] = [
   { sectionId: 'anatomie', blockIndex: 56, slide: 17 },
   { sectionId: 'innervation', blockIndex: 21, slide: 18 },
   { sectionId: 'reflux-hernie-hiatale', blockIndex: 13, slide: 19 },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 1, slide: [20, 21] },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 3, slide: 22 },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 5, slide: 23 },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 7, slide: 24 },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 9, slide: 25 },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 10, slide: 25 },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 12, slide: 26 },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 14, slide: 27 },
 ]
