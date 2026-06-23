@@ -1,0 +1,53 @@
+// Chapter 8 - slide <-> text synchronisation map for the combined reading
+// experience (/lecture/chapitre-8).
+//
+// Slide images are the pre-rendered pages of the chapter 8 synthesis deck,
+// stored under public/chapter-8/slides/. The deck order is preserved exactly
+// as supplied in the PDF.
+
+export type SyncSlide = { src: string; title: string; orientation?: 'portrait' }
+export type SyncAnchor = { sectionId: string; blockIndex: number; slide: number; gapBefore?: 'half' }
+
+export const chapter8Slides: SyncSlide[] = [
+  { src: '/chapter-8/slides/slide-01.png', title: 'Chapitre 8 : Diaphragme' },
+  { src: '/chapter-8/slides/slide-02.png', title: 'Les 8 dimensions fonctionnelles du diaphragme' },
+  { src: '/chapter-8/slides/slide-03.png', title: 'Coupoles et centre phrenique' },
+  { src: '/chapter-8/slides/slide-04.png', title: 'Topographie asymetrique en ROP' },
+  { src: '/chapter-8/slides/slide-05.png', title: 'Trois hiatus principaux' },
+  { src: '/chapter-8/slides/slide-06.png', title: 'Anatomie du diaphragme et des passages' },
+  { src: '/chapter-8/slides/slide-07.png', title: 'Vascularisation du diaphragme' },
+  { src: '/chapter-8/slides/slide-08.png', title: 'Les hiatus accessoires et leurs vulnerabilites' },
+  { src: '/chapter-8/slides/slide-09.png', title: 'Le cablage electrique : les nerfs phreniques' },
+  { src: '/chapter-8/slides/slide-10.png', title: 'Le carrefour azygo-cave et l axe du stress' },
+  { src: '/chapter-8/slides/slide-11.png', title: 'L equilibre barometrique et le soutien visceral' },
+  { src: '/chapter-8/slides/slide-12.png', title: 'Le mecanisme anti-reflux : le noeud de cravate' },
+  { src: '/chapter-8/slides/slide-13.png', title: 'Biomecanique de la JOCT' },
+  { src: '/chapter-8/slides/slide-14.png', title: 'Pathologie mecanique : les hernies hiatales' },
+  { src: '/chapter-8/slides/slide-15.png', title: 'Le reflux gastro-oesophagien et le symptome de tensions globales' },
+  { src: '/chapter-8/slides/slide-16.png', title: 'Focus pediatrique : RGO du nouveau-ne' },
+  { src: '/chapter-8/slides/slide-17.png', title: 'Synthese : matrice topographique podale ROP' },
+  { src: '/chapter-8/slides/slide-18.png', title: 'Nerf phrenique et zones reflexes podales' },
+  { src: '/chapter-8/slides/slide-19.png', title: 'Synthese : de la fixation a la therapeutique ROP' },
+]
+
+export const chapter8SlideAnchors: SyncAnchor[] = [
+  { sectionId: 'presentation', blockIndex: 0, slide: 1 },
+  { sectionId: 'presentation', blockIndex: 1, slide: 2 },
+  { sectionId: 'anatomie', blockIndex: 2, slide: 3 },
+  { sectionId: 'anatomie', blockIndex: 18, slide: 4 },
+  { sectionId: 'anatomie', blockIndex: 20, slide: 5 },
+  { sectionId: 'anatomie', blockIndex: 23, slide: 6 },
+  { sectionId: 'vascularisation', blockIndex: 0, slide: 7 },
+  { sectionId: 'anatomie', blockIndex: 40, slide: 8 },
+  { sectionId: 'innervation', blockIndex: 1, slide: 9 },
+  { sectionId: 'vascularisation', blockIndex: 4, slide: 10 },
+  { sectionId: 'presentation', blockIndex: 2, slide: 11, gapBefore: 'half' },
+  { sectionId: 'jonction-oesophago-cardio', blockIndex: 1, slide: 12 },
+  { sectionId: 'jonction-oesophago-cardio', blockIndex: 2, slide: 13 },
+  { sectionId: 'reflux-hernie-hiatale', blockIndex: 4, slide: 14 },
+  { sectionId: 'reflux-hernie-hiatale', blockIndex: 0, slide: 15 },
+  { sectionId: 'reflux-hernie-hiatale', blockIndex: 15, slide: 16 },
+  { sectionId: 'anatomie', blockIndex: 56, slide: 17 },
+  { sectionId: 'innervation', blockIndex: 21, slide: 18 },
+  { sectionId: 'reflux-hernie-hiatale', blockIndex: 13, slide: 19 },
+]

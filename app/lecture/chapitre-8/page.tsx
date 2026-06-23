@@ -1,18 +1,19 @@
 import { cookies } from 'next/headers'
 import { redirect } from 'next/navigation'
 import type { Metadata } from 'next'
-import ChapterReader from '@/components/ChapterReader'
+import SlideSyncReader from '@/components/SlideSyncReader'
 import { getChapter } from '@/content/registry'
 import { getServerLang } from '@/app/i18n/serverLang'
 import { translations } from '@/app/i18n/translations'
+import { chapter8Slides, chapter8SlideAnchors } from '@/content/chapter8.slidesync'
 
 export const metadata: Metadata = {
-  title: 'Chapitre 8 — Diaphragme · R.O.P. · Guy Boitout',
-  description: 'Anatomie et physiologie du diaphragme : centre phrénique, coupoles, piliers, orifices, vascularisation, innervation et leurs zones réflexes podales en R.O.P.',
+  title: 'Chapitre 8 — Lecture synchronisée · R.O.P. · Guy Boitout',
+  description: 'Lecture combinée : le texte du chapitre 8 (diaphragme) et les diapositives de synthèse affichés ensemble, synchronisés au fil de la lecture.',
   robots: { index: false, follow: false },
 }
 
-export default async function Chapitre8Page({
+export default async function Chapitre8SyncPage({
   searchParams,
 }: {
   searchParams: Promise<{ lang?: string }>
@@ -24,14 +25,16 @@ export default async function Chapitre8Page({
 
   const { lang: langParam } = await searchParams
   const lang = await getServerLang(langParam)
-  const { chapter, contentLang } = getChapter('chapter-8', lang)
-  const bookTitle = translations[lang].reader.bookTitle
+  const { chapter } = getChapter('chapter-8', 'fr')
+
   return (
-    <ChapterReader
+    <SlideSyncReader
       chapter={chapter}
-      bookTitle={bookTitle}
-      contentLang={contentLang}
-      syncToggleHref="/lecture/chapitre-8"
+      bookTitle={translations[lang].reader.bookTitle}
+      slides={chapter8Slides}
+      anchors={chapter8SlideAnchors}
+      backHref="/chapitres-gratuits"
+      classicHref="/chapitre-8"
     />
   )
 }
