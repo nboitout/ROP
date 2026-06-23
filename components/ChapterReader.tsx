@@ -26,6 +26,7 @@ type Props = {
 export default function ChapterReader({ chapter, bookTitle, backHref = '/chapitres-gratuits', contentLang = 'fr', syncToggleHref }: Props) {
   const { lang, t } = useLanguage()
   const showFallbackNotice = lang !== contentLang
+  const showEndCard = new Set(['introduction', 'chapter-3', 'chapter-14']).has(chapter.slug)
   const [sessionId] = useState<string>(() =>
     typeof window !== 'undefined' ? getSessionId() : ''
   )
@@ -324,19 +325,23 @@ export default function ChapterReader({ chapter, bookTitle, backHref = '/chapitr
             </section>
           ))}
 
-          <div className="cr-end" ref={endRef}>
-            <div className="cr-end-card">
-              <p className="cr-end-eyebrow">
-                {chapter.number ? t.reader.endChapter(chapter.number) : t.reader.endIntro(chapter.title)}
-              </p>
-              <h3 className="cr-end-title">{t.reader.endCardTitle}</h3>
-              <p className="cr-end-book"><em>{bookTitle}</em></p>
-              <p className="cr-end-body">
-                {chapter.number ? t.reader.endCardBodyChapter : t.reader.endCardBodyIntro}
-              </p>
-              <BookNotifyForm labels={t.pricing.notify.form} />
+          {showEndCard ? (
+            <div className="cr-end" ref={endRef}>
+              <div className="cr-end-card">
+                <p className="cr-end-eyebrow">
+                  {chapter.number ? t.reader.endChapter(chapter.number) : t.reader.endIntro(chapter.title)}
+                </p>
+                <h3 className="cr-end-title">{t.reader.endCardTitle}</h3>
+                <p className="cr-end-book"><em>{bookTitle}</em></p>
+                <p className="cr-end-body">
+                  {chapter.number ? t.reader.endCardBodyChapter : t.reader.endCardBodyIntro}
+                </p>
+                <BookNotifyForm labels={t.pricing.notify.form} />
+              </div>
             </div>
-          </div>
+          ) : (
+            <div ref={endRef} />
+          )}
         </article>
       </div>
 
