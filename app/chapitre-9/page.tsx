@@ -26,5 +26,5 @@ export default async function Chapitre9Page({
   const lang = await getServerLang(langParam)
   const { chapter, contentLang } = getChapter('chapter-9', lang)
   const bookTitle = translations[lang].reader.bookTitle
-  return <ChapterReader chapter={chapter} bookTitle={bookTitle} contentLang={contentLang} syncToggleHref="/lecture/chapitre-9" />
+  return <ChapterReader chapter={chapter} bookTitle={bookTitle} contentLang={contentLang} />
 }
