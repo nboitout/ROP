@@ -1,18 +1,19 @@
 import { cookies } from 'next/headers'
 import { redirect } from 'next/navigation'
 import type { Metadata } from 'next'
-import ChapterReader from '@/components/ChapterReader'
+import SlideSyncReader from '@/components/SlideSyncReader'
 import { getChapter } from '@/content/registry'
 import { getServerLang } from '@/app/i18n/serverLang'
 import { translations } from '@/app/i18n/translations'
+import { chapter1Slides, chapter1SlideAnchors } from '@/content/chapter1.slidesync'
 
 export const metadata: Metadata = {
-  title: 'Chapitre 1 — Généralités · R.O.P. · Guy Boitout',
-  description: 'Mobilité viscérale, articulations viscérales, fixations, relations viscéro-somatiques et viscéro-émotionnelles — les fondements de la Réflexothérapie Occipito-Podale.',
+  title: 'Chapitre 1 - Lecture synchronisee · R.O.P. · Guy Boitout',
+  description: 'Lecture combinee : le texte du chapitre 1 et les diapositives de synthese affiches ensemble, synchronises au fil de la lecture.',
   robots: { index: false, follow: false },
 }
 
-export default async function Chapitre1Page({
+export default async function Chapitre1SyncPage({
   searchParams,
 }: {
   searchParams: Promise<{ lang?: string }>
@@ -24,14 +25,16 @@ export default async function Chapitre1Page({
 
   const { lang: langParam } = await searchParams
   const lang = await getServerLang(langParam)
-  const { chapter, contentLang } = getChapter('chapter-1', lang)
-  const bookTitle = translations[lang].reader.bookTitle
+  const { chapter } = getChapter('chapter-1', 'fr')
+
   return (
-    <ChapterReader
+    <SlideSyncReader
       chapter={chapter}
-      bookTitle={bookTitle}
-      contentLang={contentLang}
-      syncToggleHref="/lecture/chapitre-1"
+      bookTitle={translations[lang].reader.bookTitle}
+      slides={chapter1Slides}
+      anchors={chapter1SlideAnchors}
+      backHref="/chapitres-gratuits"
+      classicHref="/chapitre-1"
     />
   )
 }
