@@ -16,7 +16,6 @@ export const chapter1Fr: Chapter = {
         { type: 'para', text: 'La fonction viscérale dépend de la biochimie et de l’innervation, mais aussi de la capacité des organes à se déformer, à se mobiliser et à glisser les uns par rapport aux autres.' },
         { type: 'para', text: 'Lorsque cette liberté diminue (traumatisme, infection, chirurgie, stress), les tissus solidaires (fascias, structures neuro-vasculaires, appareil musculo-squelettique) s’adaptent et compensent.' },
         { type: 'para', text: 'Dans certains cas, ces compensations peuvent contribuer à des symptômes à distance, selon une logique de chaînes mécaniques et neurovégétatives utilisée en clinique.' },
-        { type: 'lead', label: 'Important', text: 'certaines notions qui suivent relèvent (a) de la physiologie établie, et (b) du modèle clinique utilisé en ROP.' },
       ],
     },
     {
