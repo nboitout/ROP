@@ -32,5 +32,5 @@ export const chapter1SlideAnchors: SyncAnchor[] = [
   { sectionId: 'articulations-viscerales', blockIndex: 10, slide: 11 },
   { sectionId: 'articulations-viscerales', blockIndex: 15, slide: 12 },
   { sectionId: 'securite', blockIndex: 0, slide: 13 },
-  { sectionId: 'approche-clinique', blockIndex: 0, slide: 14 },
+  { sectionId: 'approche-clinique', blockIndex: 5, slide: 14 },
 ]
