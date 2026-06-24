@@ -1,10 +1,7 @@
 import { cookies } from 'next/headers'
 import { redirect } from 'next/navigation'
 import type { Metadata } from 'next'
-import ChapterReader from '@/components/ChapterReader'
-import { getChapter } from '@/content/registry'
 import { getServerLang } from '@/app/i18n/serverLang'
-import { translations } from '@/app/i18n/translations'
 
 export const metadata: Metadata = {
   title: 'Chapitre 14 — Intestin grêle · R.O.P. · Guy Boitout',
@@ -25,15 +22,5 @@ export default async function Chapitre14Page({
 
   const { lang: langParam } = await searchParams
   const lang = await getServerLang(langParam)
-  const { chapter, contentLang } = getChapter('chapter-14', lang)
-  const bookTitle = translations[lang].reader.bookTitle
-  return (
-    <ChapterReader
-      chapter={chapter}
-      bookTitle={bookTitle}
-      contentLang={contentLang}
-      // Synchronized version exists in all five languages for chapter 14.
-      syncToggleHref="/lecture/chapitre-14"
-    />
-  )
+  redirect(`/lecture/chapitre-14${lang ? `?lang=${lang}` : ''}`)
 }
