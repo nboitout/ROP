@@ -715,9 +715,11 @@ a.ss-switch-opt:hover { color:var(--gold); }
 .ss-anchor-heading { margin:4px 0 2px; }
 
 /* inline figures stay within the narrower text column */
-.ss-article .cr-fig,
-.ss-article .cr-fig-landscape { margin:36px 0; }
-.ss-article .cr-fig-portrait { margin:36px auto; max-width:480px; }
+.ss-article .cr-fig { margin:36px auto; }
+.ss-article .cr-fig-landscape { margin:36px auto; max-width:640px; }
+.ss-article .cr-fig-portrait { margin:36px auto; max-width:380px; }
+.ss-article .cr-fig-medium { margin:36px auto; max-width:460px; }
+.ss-article .cr-fig-narrow { margin:36px auto; max-width:320px; }
 
 @media (max-width:1180px){
   .ss-layout { grid-template-columns:minmax(0,1fr) minmax(0,560px); }
