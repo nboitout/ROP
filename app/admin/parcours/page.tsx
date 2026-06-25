@@ -16,7 +16,7 @@ const ROUTES: Record<string, { slug: string; href: string; classicHref?: string;
   '02': { slug: 'chapter-2', href: '/lecture/traitement-rop', classicHref: '/chapitre-2', syncHref: '/lecture/traitement-rop' },
   '04': { slug: 'chapter-4', href: '/chapitre-4', classicHref: '/chapitre-4' },
   '05': { slug: 'chapter-5', href: '/lecture/chapitre-5', classicHref: '/chapitre-5', syncHref: '/lecture/chapitre-5' },
-  '14': { slug: 'chapter-14', href: '/chapitre-14', classicHref: '/chapitre-14', syncHref: '/lecture/chapitre-14' },
+  '14': { slug: 'chapter-14', href: '/lecture/chapitre-14', syncHref: '/lecture/chapitre-14' },
 }
 
 // Full book: Introduction (00) + Chapitres 1–21.

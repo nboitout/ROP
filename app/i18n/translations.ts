@@ -341,7 +341,7 @@ const fr = {
         meta: '~20 min de lecture',
       },
       {
-        href: '/chapitre-14',
+        href: '/lecture/chapitre-14',
         eyebrow: 'Chapitre 14',
         title: 'Intestin grêle',
         description: "Anatomie, physiologie et écosystème intestinal — de la muqueuse au microbiote — hyperperméabilité, dysbiose et zones réflexes du jéjunum et de l'iléum en R.O.P.",
@@ -692,7 +692,7 @@ const en: typeof fr = {
         meta: '~20 min read',
       },
       {
-        href: '/chapitre-14',
+        href: '/lecture/chapitre-14',
         eyebrow: 'Chapter 14',
         title: 'Small Intestine',
         description: 'Anatomy, physiology and the intestinal ecosystem — from the mucosa to the microbiome — hyperpermeability, dysbiosis, and jejunal and ileal reflex zones in R.O.P.',
@@ -1043,7 +1043,7 @@ const de: typeof fr = {
         meta: '~20 Min. Lektüre',
       },
       {
-        href: '/chapitre-14',
+        href: '/lecture/chapitre-14',
         eyebrow: 'Kapitel 14',
         title: 'Dünndarm',
         description: 'Anatomie, Physiologie und intestinales Ökosystem — von der Schleimhaut zum Mikrobiom — Hyperpermeabilität, Dysbiose und Reflexzonen des Jejunums und Ileums in der R.O.P.',
@@ -1394,7 +1394,7 @@ const es: typeof fr = {
         meta: '~20 min de lectura',
       },
       {
-        href: '/chapitre-14',
+        href: '/lecture/chapitre-14',
         eyebrow: 'Capítulo 14',
         title: 'Intestino delgado',
         description: 'Anatomía, fisiología y ecosistema intestinal — de la mucosa al microbioma — hiperpermeabilidad, disbiosis y zonas reflejas del yeyuno e íleon en R.O.P.',
@@ -1745,7 +1745,7 @@ const it: typeof fr = {
         meta: '~20 min di lettura',
       },
       {
-        href: '/chapitre-14',
+        href: '/lecture/chapitre-14',
         eyebrow: 'Capitolo 14',
         title: 'Intestino tenue',
         description: "Anatomia, fisiologia ed ecosistema intestinale — dalla mucosa al microbioma — iperpermeabilità, disbiosi e zone riflesse del digiuno e dell'ileo nella R.O.P.",

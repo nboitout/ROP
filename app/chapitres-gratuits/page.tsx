@@ -11,6 +11,7 @@ const HREF_TO_SLUG: Record<string, string> = {
   '/introduction': 'introduction',
   '/chapitre-2': 'chapter-2',
   '/chapitre-14': 'chapter-14',
+  '/lecture/chapitre-14': 'chapter-14',
 }
 
 // Chapters that have a synthesis deck: free readers start in the synchronized

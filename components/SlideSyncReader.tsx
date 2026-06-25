@@ -396,7 +396,9 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
           <span className="cr-sep">·</span>
           <span className="cr-bookname">{bookTitle}</span>
         </div>
-        <ReaderModeToggle mode="sync" otherHref={classicHref} />
+        {classicHref && (
+          <ReaderModeToggle mode="sync" otherHref={classicHref} />
+        )}
       </div>
 
       <div className="ss-layout">
