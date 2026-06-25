@@ -26,8 +26,8 @@ export const chapter14Slides: SyncSlide[] = [
   { src: '/chapter-14/slides/fr-rework/slide-03.png', title: 'Le mésentère et sa mécanique de suspension' },
   { src: '/chapter-14/slides/fr-rework/slide-04.png', title: 'Suspension et mécanique intestinale' },
   { src: '/chapter-14/slides/fr-rework/slide-05.png', title: 'L’axe vasculaire et le système porte' },
-  { src: '/chapter-14/slides/fr-rework/slide-06.png', title: 'Le réseau lymphatique et immunitaire' },
-  { src: '/chapter-14/slides/fr-rework/slide-07.png', title: 'L’axe de l’irrigation et du drainage : tronc mésentérique supérieur' },
+  { src: '/chapter-14/slides/fr-rework/slide-06.png', title: 'L’axe de l’irrigation et du drainage : tronc mésentérique supérieur' },
+  { src: '/chapter-14/slides/fr-rework/slide-07.png', title: 'Le réseau lymphatique et immunitaire' },
   { src: '/chapter-14/slides/fr-rework/slide-08.png', title: 'La double réalité neurologique du péritoine' },
   { src: '/chapter-14/slides/fr-rework/slide-09.png', title: 'Le deuxième cerveau : autonomie du système nerveux entérique (SNE)' },
   { src: '/chapter-14/slides/fr-rework/slide-10.png', title: 'Le deuxième cerveau : système nerveux entérique' },
@@ -219,10 +219,9 @@ export const chapter14SlideAnchorsFr: SyncAnchor[] = [
   { sectionId: 'anatomie',       blockIndex: 2,  slide: 3 },
   { sectionId: 'anatomie',       blockIndex: 3,  slide: 4 },
   { sectionId: 'vascularisation', blockIndex: 2,  slide: 5 },
-  // Markers 6 and 7 swapped so each lead points to its own slide, with a
-  // half-page break after the "Veine mésentérique supérieure" paragraph (block 4).
-  { sectionId: 'vascularisation', blockIndex: 4,  slide: 7 },
-  { sectionId: 'vascularisation', blockIndex: 5,  slide: 6, gapBefore: 'half' },
+  { sectionId: 'vascularisation', blockIndex: 4,  slide: 6 },
+  // Half-page break after the "Veine mésentérique supérieure" paragraph (block 4).
+  { sectionId: 'vascularisation', blockIndex: 5,  slide: 7, gapBefore: 'half' },
   { sectionId: 'innervation',    blockIndex: 2,  slide: 8 },
   { sectionId: 'innervation',    blockIndex: 6,  slide: 9 },
   { sectionId: 'innervation',    blockIndex: 8,  slide: 10 },
