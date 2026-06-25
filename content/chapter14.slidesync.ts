@@ -219,8 +219,10 @@ export const chapter14SlideAnchorsFr: SyncAnchor[] = [
   { sectionId: 'anatomie',       blockIndex: 2,  slide: 3 },
   { sectionId: 'anatomie',       blockIndex: 3,  slide: 4 },
   { sectionId: 'vascularisation', blockIndex: 2,  slide: 5 },
-  { sectionId: 'vascularisation', blockIndex: 4,  slide: 6 },
-  { sectionId: 'vascularisation', blockIndex: 5,  slide: 7 },
+  // Markers 6 and 7 swapped so each lead points to its own slide, with a
+  // half-page break after the "Veine mésentérique supérieure" paragraph (block 4).
+  { sectionId: 'vascularisation', blockIndex: 4,  slide: 7 },
+  { sectionId: 'vascularisation', blockIndex: 5,  slide: 6, gapBefore: 'half' },
   { sectionId: 'innervation',    blockIndex: 2,  slide: 8 },
   { sectionId: 'innervation',    blockIndex: 6,  slide: 9 },
   { sectionId: 'innervation',    blockIndex: 8,  slide: 10 },
