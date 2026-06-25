@@ -1,10 +1,7 @@
 import { cookies } from 'next/headers'
 import { redirect } from 'next/navigation'
 import type { Metadata } from 'next'
-import ChapterReader from '@/components/ChapterReader'
-import { getChapter } from '@/content/registry'
 import { getServerLang } from '@/app/i18n/serverLang'
-import { translations } from '@/app/i18n/translations'
 
 export const metadata: Metadata = {
   title: 'Chapitre 7 — Cavités abdominale et péritonéale · R.O.P. · Guy Boitout',
@@ -24,14 +21,5 @@ export default async function Chapitre7Page({
 
   const { lang: langParam } = await searchParams
   const lang = await getServerLang(langParam)
-  const { chapter, contentLang } = getChapter('chapter-7', lang)
-  const bookTitle = translations[lang].reader.bookTitle
-  return (
-    <ChapterReader
-      chapter={chapter}
-      bookTitle={bookTitle}
-      contentLang={contentLang}
-      syncToggleHref="/lecture/chapitre-7"
-    />
-  )
+  redirect(`/lecture/chapitre-7${lang ? `?lang=${lang}` : ''}`)
 }
