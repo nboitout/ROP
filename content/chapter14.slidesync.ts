@@ -229,9 +229,9 @@ export const chapter14SlideAnchorsFr: SyncAnchor[] = [
   // Former slide 7 now appears after the visceral-peritoneum paragraph.
   { sectionId: 'innervation',    blockIndex: 4,  slide: 8 },
   { sectionId: 'innervation',    blockIndex: 7,  slide: 9 },
-  { sectionId: 'innervation',    blockIndex: 9,  slide: 10 },
+  { sectionId: 'innervation',    blockIndex: 8,  slide: 10 },
   { sectionId: 'physiologie',    blockIndex: 5,  slide: 11 },
-  { sectionId: 'physiologie',    blockIndex: 10, slide: 12 },
+  { sectionId: 'physiologie',    blockIndex: 9,  slide: 12 },
   { sectionId: 'pathologies',    blockIndex: 0,  slide: 13 },
   { sectionId: 'pathologies',    blockIndex: 1,  slide: 14 },
   { sectionId: 'pathologies',    blockIndex: 7,  slide: 15 },

@@ -62,11 +62,8 @@ export const chapter14Fr: Chapter = {
         { type: 'para', text: 'L’intestin grêle a besoin d’une importante irrigation vasculaire et lymphatique pour assurer ses fonctions de digestion, d’absorption et immunitaire.' },
         { type: 'lead', label: 'Artère mésentérique supérieure', text: 'elle constitue l’axe artériel principal de l’intestin grêle. Elle est une branche de l’aorte abdominale. Son origine se situe 1 cm au-dessous du tronc cœliaque, en regard du disque intervertébral Th12-L1. D’abord rétro-pancréatique puis en avant de la 3ème portion du duodénum, elle chemine entre les deux feuillets du mésentère. Elle donne de nombreuses branches collatérales. Elle irrigue tout l’intestin grêle, le colon ascendant et les 2/3 proximaux du colon transverse.' },
         { type: 'para', text: 'Son pouls, perceptible au niveau de la 3ème portion du duodénum, à droite de l’ombilic, peut constituer un repère clinique vasculaire, sans préjuger à lui seul du fonctionnement de l’intestin.' },
-        { type: 'figure', src: '/chapter-14/figure-14-6.png', caption: 'Figure 14.6 — Pouls des artères de la cavité abdominale', alt: 'Pouls des artères de la cavité abdominale', orientation: 'landscape' },
         { type: 'lead', label: 'Veine mésentérique supérieure', text: 'située à droite de l’artère mésentérique supérieure, elle fait partie du système porte. Elle draine vers le foie le sang veineux chargé des nutriments absorbés dans l’intestin grêle.' },
-        { type: 'figure', src: '/chapter-14/figure-14-7.png', caption: 'Figure 14.7 — Système porte', alt: 'Système porte hépatique', orientation: 'landscape' },
         { type: 'lead', label: 'Réseau lymphatique', text: 'l’intestin grêle possède un réseau lymphatique développé. Il participe au système immunitaire. Il prend en charge les molécules de lipides et de protéines à chaîne longue et les vitamines liposolubles A, D, E, K acheminées vers le carrefour jugulo-subclavier gauche, via la citerne de Pecquet et le canal thoracique.' },
-        { type: 'figure', src: '/chapter-14/figure-14-8.png', caption: 'Figure 14.8 — Système lymphatique', alt: 'Système lymphatique abdominal', orientation: 'landscape' },
       ],
     },
     {
@@ -88,7 +85,6 @@ export const chapter14Fr: Chapter = {
 
         { type: 'sub', text: 'Système nerveux entérique (SNE)' },
         { type: 'para', text: 'Le système nerveux intrinsèque ou entérique (SNE) est souvent qualifié de 2ème cerveau ou cerveau abdominal. Il est constitué de plexus intramuraux situés dans la paroi même de l’intestin grêle : le plexus myoentérique d’Auerbach et le plexus sous-muqueux de Meissner.' },
-        { type: 'figure', src: '/chapter-14/figure-14-13.png', caption: 'Figure 14.13 — Plexus intra-muraux entériques', alt: 'Plexus myoentérique d’Auerbach et plexus sous-muqueux de Meissner dans la paroi intestinale', orientation: 'landscape' },
         { type: 'bullets', items: [
           'Le SNE est sensible aux signaux neuro-hormonaux et à la composition chimique du contenu intestinal.',
           'Il peut fonctionner largement de manière autonome par rapport au cerveau et à la moelle épinière tant que les conditions physiologiques le permettent.',
@@ -115,7 +111,6 @@ export const chapter14Fr: Chapter = {
         { type: 'lead', label: 'Muqueuse intestinale', text: 'elle constitue l’interface entre le milieu intérieur de l’organisme et le contenu de la lumière digestive. Elle agit comme une barrière sélective afin de permettre la digestion et l’absorption.' },
         { type: 'lead', label: 'Digestion', text: 'elle correspond à la transformation des aliments en molécules simples pouvant ensuite être absorbées. Les cellules caliciformes produisent un mucus protecteur. Les cellules de Lieberkühn participent à la sécrétion intestinale légèrement alcaline ainsi qu’à des fonctions enzymatiques et antimicrobiennes. Les entérocytes ou cellules absorbantes assurent une fonction de barrière sélective grâce à leur agencement intercellulaire (desmosomes), permettant l’absorption des micronutriments tout en limitant le passage de macromolécules insuffisamment dégradées.' },
         { type: 'lead', label: 'Absorption', text: 'la muqueuse intestinale est recouverte de villosités en forme d’expansions digitiformes dont l’axe central renferme des cellules musculaires lisses ainsi qu’un réseau sanguin et lymphatique. Les villosités sont elles-mêmes recouvertes de microvillosités formant une bordure en brosse, ce qui multiplie fortement la surface d’échange. L’intestin grêle étalé aurait une superficie équivalente à un court de tennis.' },
-        { type: 'figure', src: '/chapter-14/figure-14-14.png', caption: 'Figure 14.14 — Villosité intestinale', alt: 'Organisation histologique d’une villosité intestinale', orientation: 'portrait' },
         { type: 'leadBullets', items: [
           { label: 'Voie sanguine', text: 'les capillaires sanguins absorbent l’eau, les sels minéraux, les oses simples, les acides aminés, les acides gras à chaîne courte et les vitamines hydrosolubles. Ces nutriments sont acheminés vers le foie par le système porte.' },
           { label: 'Voie lymphatique', text: 'les capillaires lymphatiques (ou chylifères) absorbent principalement les graisses, les protéines à chaîne longue et les vitamines liposolubles A, D, E, K. Ils rejoignent successivement le réseau lymphatique, la citerne de Pecquet, le canal thoracique, avant de déboucher dans le réseau veineux du carrefour jugulo-subclavier gauche.' },
