@@ -96,6 +96,25 @@
   background: rgba(74,107,90,.1);
 }
 
+/* Sales plan — visually set apart from the analytics links with a gold pill. */
+.adm-nav-link.sales {
+  color: var(--adm-gold);
+  background: rgba(160,124,58,.1);
+  border: 1px solid var(--adm-border);
+}
+
+.adm-nav-link.sales:hover {
+  color: #fff;
+  background: var(--adm-gold);
+  border-color: var(--adm-gold);
+}
+
+.adm-nav-link.sales.active {
+  color: #fff;
+  background: var(--adm-gold);
+  border-color: var(--adm-gold);
+}
+
 .adm-nav-right {
   display: flex;
   align-items: center;

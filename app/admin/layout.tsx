@@ -21,8 +21,7 @@ export default async function AdminLayout({
             <AdminNavLink href="/admin/visits">Visits</AdminNavLink>
             <AdminNavLink href="/admin/parcours">Parcours</AdminNavLink>
             <span className="adm-nav-sep" aria-hidden="true" />
-            <AdminNavLink href="/admin/sales-plan">Sales plan</AdminNavLink>
-            <AdminNavLink href="/admin/sales-simulation">Sales sim</AdminNavLink>
+            <AdminNavLink href="/admin/sales-plan" className="sales">Sales plan</AdminNavLink>
             <span className="adm-nav-sep" aria-hidden="true" />
             <a
               href="/prototype-pied"

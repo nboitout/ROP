@@ -1,5 +1,6 @@
 'use client'
 
+import Link from 'next/link'
 import {
   ResponsiveContainer,
   BarChart,
@@ -77,7 +78,28 @@ export default function SalesPlanPage() {
       <div className="adm-page-header">
         <div>
           <p className="adm-page-eyebrow">Sales forecast</p>
-          <h1 className="adm-page-title">Sales plan — simple view</h1>
+          <div style={{ display: 'flex', alignItems: 'baseline', gap: 16, flexWrap: 'wrap' }}>
+            <h1 className="adm-page-title" style={{ margin: 0 }}>Sales plan — simple view</h1>
+            <Link
+              href="/admin/sales-simulation"
+              style={{
+                fontFamily: 'DM Sans, sans-serif',
+                fontSize: '.74rem',
+                fontWeight: 600,
+                letterSpacing: '.06em',
+                textTransform: 'uppercase',
+                textDecoration: 'none',
+                color: 'var(--adm-gold)',
+                border: '1px solid var(--adm-border)',
+                background: 'rgba(160,124,58,.1)',
+                borderRadius: 999,
+                padding: '5px 14px',
+                whiteSpace: 'nowrap',
+              }}
+            >
+              Open interactive simulation →
+            </Link>
+          </div>
           <p className="adm-page-sub">
             A simple picture of our first six months — from July to December 2026 — and where it could
             lead.

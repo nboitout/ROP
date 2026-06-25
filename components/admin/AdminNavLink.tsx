@@ -6,9 +6,10 @@ import { usePathname } from 'next/navigation'
 interface Props {
   href: string
   children: React.ReactNode
+  className?: string
 }
 
-export default function AdminNavLink({ href, children }: Props) {
+export default function AdminNavLink({ href, children, className }: Props) {
   const pathname = usePathname()
   const isActive =
     href === '/admin'
@@ -16,7 +17,7 @@ export default function AdminNavLink({ href, children }: Props) {
       : pathname.startsWith(href)
 
   return (
-    <Link href={href} className={`adm-nav-link${isActive ? ' active' : ''}`}>
+    <Link href={href} className={`adm-nav-link${className ? ' ' + className : ''}${isActive ? ' active' : ''}`}>
       {children}
     </Link>
   )
