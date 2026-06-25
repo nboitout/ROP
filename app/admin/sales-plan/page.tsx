@@ -9,7 +9,6 @@ import {
   CartesianGrid,
   Tooltip,
   Cell,
-  LabelList,
 } from 'recharts'
 
 // Simple, presentation-style sales forecast — the "story" version of our first
@@ -19,6 +18,10 @@ import {
 const AMBER = '#E08A1E'
 const BLUE = '#2f7fcf'
 const GREEN = '#1F7A5A'
+// The original design is a serif, editorial "story" page — matching its
+// typography is what makes the chart read as polished.
+const SERIF = 'Georgia, "Times New Roman", serif'
+const INK = '#54524c'
 
 const labels = ['July', 'August', 'September', 'October', 'November', 'December']
 const cumulative = [40, 100, 194, 322, 484, 680]
@@ -82,12 +85,12 @@ export default function SalesPlanPage() {
         </div>
       </div>
 
-      <div className="adm-chart-card" style={{ marginBottom: 24 }}>
-        <p style={{ fontSize: 17, lineHeight: 1.7, margin: '0 0 14px' }}>
+      <div className="adm-chart-card" style={{ marginBottom: 24, fontFamily: SERIF, color: INK }}>
+        <p style={{ fontSize: 18, lineHeight: 1.7, margin: '0 0 14px' }}>
           We are selling Guy&apos;s method as an <strong>online book</strong>: practitioners pay once and
           can read it, follow the recommendations, and use the maps on any computer or phone.
         </p>
-        <p style={{ fontSize: 17, lineHeight: 1.7, margin: 0 }}>
+        <p style={{ fontSize: 18, lineHeight: 1.7, margin: 0 }}>
           Because the method is built on real knowledge of anatomy, the first people we sell to are{' '}
           <strong>fellow professionals</strong> — osteopaths, physiotherapists, chiropractors, nurses
           and reflexologists. They are the ones equipped to understand and apply it.
@@ -110,74 +113,77 @@ export default function SalesPlanPage() {
       </div>
 
       <p className="adm-section-title">The first six months, month by month</p>
-      <div className="adm-chart-card" style={{ marginBottom: 24 }}>
+      <div className="adm-chart-card" style={{ marginBottom: 24, fontFamily: SERIF }}>
         <div
           style={{
             display: 'flex',
-            gap: 24,
+            gap: 28,
             justifyContent: 'center',
-            fontSize: 13,
-            color: 'var(--adm-i50)',
-            marginBottom: 12,
+            fontSize: 17,
+            color: INK,
+            marginBottom: 10,
             flexWrap: 'wrap',
           }}
         >
-          <span style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-            <span style={{ width: 14, height: 14, borderRadius: 4, background: AMBER }} />
+          <span style={{ display: 'flex', alignItems: 'center', gap: 9 }}>
+            <span style={{ width: 16, height: 16, borderRadius: 4, background: AMBER }} />
             Getting started (Jul–Aug)
           </span>
-          <span style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-            <span style={{ width: 14, height: 14, borderRadius: 4, background: BLUE }} />
+          <span style={{ display: 'flex', alignItems: 'center', gap: 9 }}>
+            <span style={{ width: 16, height: 16, borderRadius: 4, background: BLUE }} />
             Picking up speed (Sep–Dec)
           </span>
         </div>
-        <ResponsiveContainer width="100%" height={360}>
-          <BarChart data={chartData} margin={{ top: 16, right: 8, left: -4, bottom: 4 }}>
-            <CartesianGrid strokeDasharray="3 3" stroke="rgba(26,26,24,.12)" vertical={false} />
+        <ResponsiveContainer width="100%" height={400}>
+          <BarChart data={chartData} margin={{ top: 16, right: 12, left: 8, bottom: 8 }} barCategoryGap="22%">
+            <CartesianGrid strokeDasharray="3 3" stroke="rgba(26,26,24,.10)" vertical={false} />
             <XAxis
               dataKey="name"
-              tick={{ fill: 'rgba(26,26,24,.58)', fontSize: 12, fontFamily: 'DM Sans, sans-serif' }}
+              tick={{ fill: INK, fontSize: 16, fontFamily: SERIF }}
               axisLine={false}
               tickLine={false}
+              tickMargin={10}
             />
             <YAxis
-              tick={{ fill: 'rgba(26,26,24,.58)', fontSize: 11, fontFamily: 'DM Sans, sans-serif' }}
+              tick={{ fill: INK, fontSize: 15, fontFamily: SERIF }}
               axisLine={false}
               tickLine={false}
               allowDecimals={false}
+              width={68}
+              label={{
+                value: 'Total copies sold',
+                angle: -90,
+                position: 'insideLeft',
+                style: { fill: INK, fontSize: 15, fontFamily: SERIF, textAnchor: 'middle' },
+              }}
             />
             <Tooltip
               contentStyle={{
-                background: '#1a1a18',
-                border: '1px solid rgba(160,124,58,.3)',
-                borderRadius: 3,
-                color: '#f5f0e8',
-                fontSize: 12,
-                fontFamily: 'DM Sans, sans-serif',
+                background: '#22211e',
+                border: 'none',
+                borderRadius: 8,
+                color: '#faf9f5',
+                fontSize: 15,
+                fontFamily: SERIF,
               }}
-              cursor={{ fill: 'rgba(26,26,24,.03)' }}
+              cursor={{ fill: 'rgba(26,26,24,.04)' }}
               formatter={(v: number) => [`${v.toLocaleString()} copies in total`, 'Total']}
             />
-            <Bar dataKey="value" radius={[6, 6, 0, 0]}>
-              <LabelList
-                dataKey="value"
-                position="top"
-                style={{ fill: 'rgba(26,26,24,.78)', fontSize: 12, fontFamily: 'DM Sans, sans-serif', fontWeight: 600 }}
-              />
+            <Bar dataKey="value" radius={[6, 6, 0, 0]} maxBarSize={88}>
               {chartData.map((d, i) => (
                 <Cell key={i} fill={d.fill} />
               ))}
             </Bar>
           </BarChart>
         </ResponsiveContainer>
-        <p style={{ fontSize: 14, color: 'var(--adm-i50)', textAlign: 'center', marginTop: 6 }}>
+        <p style={{ fontSize: 17, color: INK, textAlign: 'center', marginTop: 10, lineHeight: 1.6 }}>
           Each bar shows the <strong>total</strong> number of copies sold so far. The climb gets steeper as
           more colleagues hear about it.
         </p>
       </div>
 
       <p className="adm-section-title">How it works, in three simple steps</p>
-      <div className="adm-chart-card" style={{ marginBottom: 24 }}>
+      <div className="adm-chart-card" style={{ marginBottom: 24, fontFamily: SERIF }}>
         <Step n={1} color={AMBER} title="Get started — sales begin in mid-July">
           We introduce the method by hand, one professional at a time. Reaching 100 buyers by the end of
           August is the goal we set ourselves to focus our efforts — a target to aim for, not a prediction.
@@ -194,8 +200,8 @@ export default function SalesPlanPage() {
       </div>
 
       <p className="adm-section-title">Why we are doing this exercise</p>
-      <div className="adm-chart-card" style={{ marginBottom: 24 }}>
-        <p style={{ fontSize: 16, lineHeight: 1.7, margin: 0 }}>
+      <div className="adm-chart-card" style={{ marginBottom: 24, fontFamily: SERIF, color: INK }}>
+        <p style={{ fontSize: 17, lineHeight: 1.7, margin: 0 }}>
           These first six months are a test. If we can reliably sell to professionals and watch sales speed
           up, it tells us whether the ROP Institute should become a proper business rather than remain a
           non-profit association. The number that matters is not just how much we earn, but whether the

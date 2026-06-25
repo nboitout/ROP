@@ -174,48 +174,51 @@ export default function SalesSimulationPage() {
           </span>
         </div>
 
-        <ResponsiveContainer width="100%" height={340}>
-          <ComposedChart data={chartData} margin={{ top: 8, right: 8, left: -4, bottom: 4 }}>
-            <CartesianGrid strokeDasharray="3 3" stroke="rgba(26,26,24,.12)" vertical={false} />
+        <ResponsiveContainer width="100%" height={380}>
+          <ComposedChart data={chartData} margin={{ top: 12, right: 12, left: 8, bottom: 8 }} barCategoryGap="26%">
+            <CartesianGrid strokeDasharray="3 3" stroke="rgba(26,26,24,.10)" vertical={false} />
             <XAxis
               dataKey="name"
-              tick={{ fill: 'rgba(26,26,24,.58)', fontSize: 12, fontFamily: 'DM Sans, sans-serif' }}
+              tick={{ fill: 'rgba(26,26,24,.62)', fontSize: 13, fontFamily: 'DM Sans, sans-serif' }}
               axisLine={false}
               tickLine={false}
+              tickMargin={10}
             />
             <YAxis
               yAxisId="left"
-              tick={{ fill: 'rgba(26,26,24,.58)', fontSize: 11, fontFamily: 'DM Sans, sans-serif' }}
+              tick={{ fill: 'rgba(26,26,24,.62)', fontSize: 12, fontFamily: 'DM Sans, sans-serif' }}
               axisLine={false}
               tickLine={false}
               allowDecimals={false}
-              label={{ value: 'New copies / mo', angle: -90, position: 'insideLeft', style: { fill: 'rgba(26,26,24,.5)', fontSize: 11 } }}
+              width={64}
+              label={{ value: 'New copies / mo', angle: -90, position: 'insideLeft', style: { fill: 'rgba(26,26,24,.5)', fontSize: 12, textAnchor: 'middle' } }}
             />
             <YAxis
               yAxisId="right"
               orientation="right"
-              tick={{ fill: 'rgba(26,26,24,.58)', fontSize: 11, fontFamily: 'DM Sans, sans-serif' }}
+              tick={{ fill: 'rgba(26,26,24,.62)', fontSize: 12, fontFamily: 'DM Sans, sans-serif' }}
               axisLine={false}
               tickLine={false}
               allowDecimals={false}
+              width={48}
             />
             <Tooltip
               contentStyle={{
                 background: '#1a1a18',
-                border: '1px solid rgba(160,124,58,.3)',
-                borderRadius: 3,
+                border: 'none',
+                borderRadius: 8,
                 color: '#f5f0e8',
-                fontSize: 12,
+                fontSize: 13,
                 fontFamily: 'DM Sans, sans-serif',
               }}
-              cursor={{ fill: 'rgba(26,26,24,.03)' }}
+              cursor={{ fill: 'rgba(26,26,24,.04)' }}
               formatter={(v: number, name: string) => [
                 `${Math.round(v).toLocaleString()}${name === 'Cumulative' ? ' copies' : ''}`,
                 name,
               ]}
             />
-            <Legend wrapperStyle={{ fontSize: 11, color: 'rgba(26,26,24,.62)', fontFamily: 'DM Sans, sans-serif' }} />
-            <Bar yAxisId="left" dataKey="monthly" name="New copies" radius={[3, 3, 0, 0]}>
+            <Legend wrapperStyle={{ fontSize: 12, color: 'rgba(26,26,24,.62)', fontFamily: 'DM Sans, sans-serif', paddingTop: 8 }} />
+            <Bar yAxisId="left" dataKey="monthly" name="New copies" radius={[4, 4, 0, 0]} maxBarSize={64}>
               {chartData.map((d, i) => (
                 <Cell key={i} fill={d.fill} />
               ))}
