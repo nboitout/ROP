@@ -20,7 +20,7 @@ export const chapter4Fr: Chapter = {
           type: 'xref',
           label: 'Voir la reference dans le chapitre 1',
           text: 'Mobilite viscerale',
-          href: '/lecture/chapitre-1?xrefBack=%2Fchapitre-4%23sec-presentation&xrefBackLabel=Retour%20au%20chapitre%204#p-mobilite-viscerale-0',
+          href: '/lecture/chapitre-1?xrefBack=%2Fchapitre-4%23p-presentation-2&xrefBackLabel=Retour%20au%20chapitre%204#p-mobilite-viscerale-0',
         },
         { type: 'figure', src: '/chapter-4/figure-4-1.jpeg', alt: 'Schéma du Parasympathique et du Sympathique', caption: 'Figure 4.1 — Parasympathique et Sympathique', orientation: 'portrait' },
         { type: 'para', text: 'Ces deux composantes du SNA sont chargées d’ajuster le fonctionnement des viscères et des glandes aux besoins de l’organisme, tout en préservant, conjointement avec les systèmes hormonal et immunitaire, l’équilibre du milieu intérieur ou homéostasie.' },
@@ -29,7 +29,7 @@ export const chapter4Fr: Chapter = {
           type: 'xref',
           label: 'Voir la reference dans le chapitre 3',
           text: 'Systeme nerveux central',
-          href: '/lecture/chapitre-3?xrefBack=%2Fchapitre-4%23sec-presentation&xrefBackLabel=Retour%20au%20chapitre%204#p-section-1-presentation-generale-0',
+          href: '/lecture/chapitre-3?xrefBack=%2Fchapitre-4%23p-presentation-6&xrefBackLabel=Retour%20au%20chapitre%204#p-section-1-presentation-generale-0',
         },
         { type: 'para', text: 'La phylogénèse étudie l’évolution des espèces animales depuis les animaux les plus primitifs jusqu’à l’homme.' },
         { type: 'para', text: 'L’ontogénèse, c’est l’étude phylogénétique chez l’être humain depuis la fécondation jusqu’à l’âge adulte.' },
@@ -43,7 +43,7 @@ export const chapter4Fr: Chapter = {
           type: 'xref',
           label: 'Voir la reference dans le chapitre 5',
           text: 'Mecanisme de stress',
-          href: '/lecture/chapitre-5?xrefBack=%2Fchapitre-4%23sec-presentation&xrefBackLabel=Retour%20au%20chapitre%204#p-presentation-0',
+          href: '/lecture/chapitre-5?xrefBack=%2Fchapitre-4%23p-presentation-11&xrefBackLabel=Retour%20au%20chapitre%204#p-presentation-0',
         },
 
         { type: 'sub', text: 'Différences fonctionnelles' },
@@ -61,7 +61,7 @@ export const chapter4Fr: Chapter = {
           type: 'xref',
           label: 'Voir la reference dans le chapitre 5',
           text: 'Mecanisme de stress',
-          href: '/lecture/chapitre-5?xrefBack=%2Fchapitre-4%23sec-presentation&xrefBackLabel=Retour%20au%20chapitre%204#p-sga-0',
+          href: '/lecture/chapitre-5?xrefBack=%2Fchapitre-4%23p-presentation-14&xrefBackLabel=Retour%20au%20chapitre%204#p-sga-0',
         },
 
         { type: 'sub', text: 'Relation Parasympathique-Sympathique' },
@@ -74,7 +74,7 @@ export const chapter4Fr: Chapter = {
           type: 'xref',
           label: 'Voir la reference dans le chapitre 5',
           text: 'Mecanisme de stress',
-          href: '/lecture/chapitre-5?xrefBack=%2Fchapitre-4%23sec-presentation&xrefBackLabel=Retour%20au%20chapitre%204#p-presentation-0',
+          href: '/lecture/chapitre-5?xrefBack=%2Fchapitre-4%23p-presentation-19&xrefBackLabel=Retour%20au%20chapitre%204#p-presentation-0',
         },
         { type: 'leadBullets', items: [
           { label: 'Relation SNA-système hormonal', text: 'le SNA est très connecté au système hormonal par l’hypothalamus et l’hypophyse, qui sont des neuroglandes combinant à la fois fonctions neurologique et hormonale.' },
@@ -100,7 +100,7 @@ export const chapter4Fr: Chapter = {
           type: 'xref',
           label: 'Voir la reference dans le chapitre 3',
           text: 'Systeme nerveux central',
-          href: '/lecture/chapitre-3?xrefBack=%2Fchapitre-4%23sec-presentation&xrefBackLabel=Retour%20au%20chapitre%204#p-section-3-organisation-anatomique-0',
+          href: '/lecture/chapitre-3?xrefBack=%2Fchapitre-4%23p-presentation-30&xrefBackLabel=Retour%20au%20chapitre%204#p-section-3-organisation-anatomique-0',
         },
         { type: 'para', text: 'Il est donc inutile de chercher à rééquilibrer le SNA si le corps et l’esprit sont en manque de sommeil.' },
       ],
@@ -175,7 +175,7 @@ export const chapter4Fr: Chapter = {
           type: 'xref',
           label: 'Voir la reference dans le chapitre 6',
           text: 'Theorie polyvagale',
-          href: '/lecture/chapitre-6?xrefBack=%2Fchapitre-4%23sec-parasympathique-visceromoteur&xrefBackLabel=Retour%20au%20chapitre%204#p-presentation-generale-0',
+          href: '/lecture/chapitre-6?xrefBack=%2Fchapitre-4%23p-parasympathique-visceromoteur-15&xrefBackLabel=Retour%20au%20chapitre%204#p-presentation-generale-0',
         },
         { type: 'rop', body: [
           'L’hyperactivité vagale des neurones issus du noyau dorsal est responsable d’ulcères gastroduodénaux, de colites, de crises d’asthme, d’apnée et de bradycardie.',
@@ -215,7 +215,7 @@ export const chapter4Fr: Chapter = {
           type: 'xref',
           label: 'Voir la reference dans le chapitre 6',
           text: 'Theorie polyvagale : malaise vagal',
-          href: '/lecture/chapitre-6?xrefBack=%2Fchapitre-4%23sec-parasympathique-visceromoteur&xrefBackLabel=Retour%20au%20chapitre%204#p-theorie-polyvagale-6',
+          href: '/lecture/chapitre-6?xrefBack=%2Fchapitre-4%23p-parasympathique-visceromoteur-31&xrefBackLabel=Retour%20au%20chapitre%204#p-theorie-polyvagale-6',
         },
 
         // ——— Part 2 : trajet thoraco-diaphragmatico-abdominal du nerf vague ———
@@ -280,7 +280,7 @@ export const chapter4Fr: Chapter = {
           type: 'xref',
           label: 'Voir la reference dans le chapitre 8',
           text: 'Diaphragme',
-          href: '/lecture/chapitre-8?xrefBack=%2Fchapitre-4%23sec-parasympathique-visceromoteur&xrefBackLabel=Retour%20au%20chapitre%204#p-presentation-0',
+          href: '/lecture/chapitre-8?xrefBack=%2Fchapitre-4%23p-parasympathique-visceromoteur-61&xrefBackLabel=Retour%20au%20chapitre%204#p-presentation-0',
         },
         { type: 'figure', src: '/chapter-4/figure-4-18.png', alt: 'Territoire diaphragmatique du nerf vague X (zone réflexe podale)', caption: 'Figure 4.18 — Territoire diaphragmatique du nerf vague X (zone réflexe podale)', orientation: 'portrait' },
 
@@ -600,7 +600,7 @@ export const chapter4Fr: Chapter = {
           type: 'xref',
           label: 'Voir la reference dans le chapitre 5',
           text: 'Mecanisme de stress',
-          href: '/lecture/chapitre-5?xrefBack=%2Fchapitre-4%23sec-glandes-surrenales&xrefBackLabel=Retour%20au%20chapitre%204#p-sga-0',
+          href: '/lecture/chapitre-5?xrefBack=%2Fchapitre-4%23p-glandes-surrenales-4&xrefBackLabel=Retour%20au%20chapitre%204#p-sga-0',
         },
         { type: 'lead', label: 'Fonction', text: '' },
         { type: 'leadBullets', items: [
