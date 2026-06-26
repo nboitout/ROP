@@ -27,6 +27,9 @@ const SLUG_LABELS: Record<string, string> = {
   '/introduction': 'Introduction',
   '/chapitres-gratuits': 'Chapitres gratuits',
   '/lecture/traitement-rop': 'Chapitre 2',
+  // Merge the classic reader and the synchronized reader into one Chapter 5
+  // bucket so the chart matches the top-line scorecard.
+  '/lecture/chapitre-5': 'Chapitre 5',
 }
 
 function pageLabel(rawPath: string): string {
