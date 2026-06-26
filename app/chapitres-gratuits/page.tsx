@@ -10,6 +10,7 @@ import { chapterMeta } from '@/lib/chapterStats'
 const HREF_TO_SLUG: Record<string, string> = {
   '/introduction': 'introduction',
   '/chapitre-2': 'chapter-2',
+  '/lecture/traitement-rop': 'chapter-2',
   '/chapitre-14': 'chapter-14',
   '/lecture/chapitre-14': 'chapter-14',
 }

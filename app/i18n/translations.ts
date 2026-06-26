@@ -334,7 +334,7 @@ const fr = {
         meta: '~4 min de lecture',
       },
       {
-        href: '/chapitre-2',
+        href: '/lecture/traitement-rop',
         eyebrow: 'Chapitre 2',
         title: 'Traitement par la R.O.P.',
         description: "Le protocole clinique complet : geste thérapeutique, dosage textural, temps de séance, mécanorécepteurs et hiérarchisation du traitement R.O.P.",
@@ -685,7 +685,7 @@ const en: typeof fr = {
         meta: '~4 min read',
       },
       {
-        href: '/chapitre-2',
+        href: '/lecture/traitement-rop',
         eyebrow: 'Chapter 2',
         title: 'Treatment by R.O.P.',
         description: 'The complete clinical protocol: therapeutic gesture, textural dosing, session timing, mechanoreceptors, and R.O.P. treatment hierarchy.',
@@ -1036,7 +1036,7 @@ const de: typeof fr = {
         meta: '~4 Min. Lektüre',
       },
       {
-        href: '/chapitre-2',
+        href: '/lecture/traitement-rop',
         eyebrow: 'Kapitel 2',
         title: 'Behandlung mit der R.O.P.',
         description: 'Das vollständige klinische Protokoll: therapeutische Geste, texturale Dosierung, Sitzungsrhythmus, Mechanorezeptoren und R.O.P.-Behandlungshierarchie.',
@@ -1387,7 +1387,7 @@ const es: typeof fr = {
         meta: '~4 min de lectura',
       },
       {
-        href: '/chapitre-2',
+        href: '/lecture/traitement-rop',
         eyebrow: 'Capítulo 2',
         title: 'Tratamiento con R.O.P.',
         description: 'El protocolo clínico completo: gesto terapéutico, dosificación textural, ritmo de sesión, mecanorreceptores y jerarquía del tratamiento R.O.P.',
@@ -1738,7 +1738,7 @@ const it: typeof fr = {
         meta: '~4 min di lettura',
       },
       {
-        href: '/chapitre-2',
+        href: '/lecture/traitement-rop',
         eyebrow: 'Capitolo 2',
         title: 'Trattamento con R.O.P.',
         description: 'Il protocollo clinico completo: gesto terapeutico, dosaggio testurale, ritmo della seduta, meccanorecettori e gerarchia del trattamento R.O.P.',
