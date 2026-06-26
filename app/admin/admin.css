@@ -337,6 +337,20 @@
   grid-column: 1 / -1;
 }
 
+.adm-chart-card.compact-plot {
+  display: flex;
+  flex-direction: column;
+}
+
+.adm-chart-plot-wrap {
+  width: min(100%, 980px);
+  margin: 0 auto;
+}
+
+.adm-chart-plot-wrap.narrow {
+  width: min(100%, 900px);
+}
+
 .adm-chart-title {
   font-size: .66rem;
   font-weight: 600;
@@ -715,6 +729,12 @@
   .adm-charts-grid-3 {
     grid-template-columns: 1fr;
   }
+
+  .adm-chart-plot-wrap,
+  .adm-chart-plot-wrap.narrow {
+    width: 100%;
+  }
+
   .adm-page {
     padding: 24px 16px 48px;
   }

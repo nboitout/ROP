@@ -135,7 +135,7 @@ export default function SalesPlanPage() {
       </div>
 
       <p className="adm-section-title">The first six months, month by month</p>
-      <div className="adm-chart-card" style={{ marginBottom: 24, fontFamily: SERIF }}>
+      <div className="adm-chart-card compact-plot" style={{ marginBottom: 24, fontFamily: SERIF }}>
         <div
           style={{
             display: 'flex',
@@ -156,48 +156,50 @@ export default function SalesPlanPage() {
             Picking up speed (Sep–Dec)
           </span>
         </div>
-        <ResponsiveContainer width="100%" height={400}>
-          <BarChart data={chartData} margin={{ top: 16, right: 12, left: 8, bottom: 8 }} barCategoryGap="22%">
-            <CartesianGrid strokeDasharray="3 3" stroke="rgba(26,26,24,.10)" vertical={false} />
-            <XAxis
-              dataKey="name"
-              tick={{ fill: INK, fontSize: 16, fontFamily: SERIF }}
-              axisLine={false}
-              tickLine={false}
-              tickMargin={10}
-            />
-            <YAxis
-              tick={{ fill: INK, fontSize: 15, fontFamily: SERIF }}
-              axisLine={false}
-              tickLine={false}
-              allowDecimals={false}
-              width={68}
-              label={{
-                value: 'Total copies sold',
-                angle: -90,
-                position: 'insideLeft',
-                style: { fill: INK, fontSize: 15, fontFamily: SERIF, textAnchor: 'middle' },
-              }}
-            />
-            <Tooltip
-              contentStyle={{
-                background: '#22211e',
-                border: 'none',
-                borderRadius: 8,
-                color: '#faf9f5',
-                fontSize: 15,
-                fontFamily: SERIF,
-              }}
-              cursor={{ fill: 'rgba(26,26,24,.04)' }}
-              formatter={(v: number) => [`${v.toLocaleString()} copies in total`, 'Total']}
-            />
-            <Bar dataKey="value" radius={[6, 6, 0, 0]} maxBarSize={88}>
-              {chartData.map((d, i) => (
-                <Cell key={i} fill={d.fill} />
-              ))}
-            </Bar>
-          </BarChart>
-        </ResponsiveContainer>
+        <div className="adm-chart-plot-wrap">
+          <ResponsiveContainer width="100%" height={320}>
+            <BarChart data={chartData} margin={{ top: 16, right: 12, left: 8, bottom: 8 }} barCategoryGap="22%">
+              <CartesianGrid strokeDasharray="3 3" stroke="rgba(26,26,24,.10)" vertical={false} />
+              <XAxis
+                dataKey="name"
+                tick={{ fill: INK, fontSize: 16, fontFamily: SERIF }}
+                axisLine={false}
+                tickLine={false}
+                tickMargin={10}
+              />
+              <YAxis
+                tick={{ fill: INK, fontSize: 15, fontFamily: SERIF }}
+                axisLine={false}
+                tickLine={false}
+                allowDecimals={false}
+                width={68}
+                label={{
+                  value: 'Total copies sold',
+                  angle: -90,
+                  position: 'insideLeft',
+                  style: { fill: INK, fontSize: 15, fontFamily: SERIF, textAnchor: 'middle' },
+                }}
+              />
+              <Tooltip
+                contentStyle={{
+                  background: '#22211e',
+                  border: 'none',
+                  borderRadius: 8,
+                  color: '#faf9f5',
+                  fontSize: 15,
+                  fontFamily: SERIF,
+                }}
+                cursor={{ fill: 'rgba(26,26,24,.04)' }}
+                formatter={(v: number) => [`${v.toLocaleString()} copies in total`, 'Total']}
+              />
+              <Bar dataKey="value" radius={[6, 6, 0, 0]} maxBarSize={88}>
+                {chartData.map((d, i) => (
+                  <Cell key={i} fill={d.fill} />
+                ))}
+              </Bar>
+            </BarChart>
+          </ResponsiveContainer>
+        </div>
         <p style={{ fontSize: 17, color: INK, textAlign: 'center', marginTop: 10, lineHeight: 1.6 }}>
           Each bar shows the <strong>total</strong> number of copies sold so far. The climb gets steeper as
           more colleagues hear about it.

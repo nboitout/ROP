@@ -121,7 +121,7 @@ export default function SalesSimulationPage() {
         <Scorecard label="Share of pro pool" value={pool} />
       </div>
 
-      <div className="adm-chart-card" style={{ marginBottom: 24 }}>
+      <div className="adm-chart-card compact-plot" style={{ marginBottom: 24 }}>
         <Slider
           label="Price per copy"
           min={50}
@@ -174,67 +174,69 @@ export default function SalesSimulationPage() {
           </span>
         </div>
 
-        <ResponsiveContainer width="100%" height={380}>
-          <ComposedChart data={chartData} margin={{ top: 12, right: 12, left: 8, bottom: 8 }} barCategoryGap="26%">
-            <CartesianGrid strokeDasharray="3 3" stroke="rgba(26,26,24,.10)" vertical={false} />
-            <XAxis
-              dataKey="name"
-              tick={{ fill: 'rgba(26,26,24,.62)', fontSize: 13, fontFamily: 'DM Sans, sans-serif' }}
-              axisLine={false}
-              tickLine={false}
-              tickMargin={10}
-            />
-            <YAxis
-              yAxisId="left"
-              tick={{ fill: 'rgba(26,26,24,.62)', fontSize: 12, fontFamily: 'DM Sans, sans-serif' }}
-              axisLine={false}
-              tickLine={false}
-              allowDecimals={false}
-              width={64}
-              label={{ value: 'New copies / mo', angle: -90, position: 'insideLeft', style: { fill: 'rgba(26,26,24,.5)', fontSize: 12, textAnchor: 'middle' } }}
-            />
-            <YAxis
-              yAxisId="right"
-              orientation="right"
-              tick={{ fill: 'rgba(26,26,24,.62)', fontSize: 12, fontFamily: 'DM Sans, sans-serif' }}
-              axisLine={false}
-              tickLine={false}
-              allowDecimals={false}
-              width={48}
-            />
-            <Tooltip
-              contentStyle={{
-                background: '#1a1a18',
-                border: 'none',
-                borderRadius: 8,
-                color: '#f5f0e8',
-                fontSize: 13,
-                fontFamily: 'DM Sans, sans-serif',
-              }}
-              cursor={{ fill: 'rgba(26,26,24,.04)' }}
-              formatter={(v: number, name: string) => [
-                `${Math.round(v).toLocaleString()}${name === 'Cumulative' ? ' copies' : ''}`,
-                name,
-              ]}
-            />
-            <Legend wrapperStyle={{ fontSize: 12, color: 'rgba(26,26,24,.62)', fontFamily: 'DM Sans, sans-serif', paddingTop: 8 }} />
-            <Bar yAxisId="left" dataKey="monthly" name="New copies" radius={[4, 4, 0, 0]} maxBarSize={64}>
-              {chartData.map((d, i) => (
-                <Cell key={i} fill={d.fill} />
-              ))}
-            </Bar>
-            <Line
-              yAxisId="right"
-              type="monotone"
-              dataKey="cumulative"
-              name="Cumulative"
-              stroke={TEAL}
-              strokeWidth={2}
-              dot={{ r: 3, fill: TEAL }}
-              activeDot={{ r: 5 }}
-            />
-          </ComposedChart>
-        </ResponsiveContainer>
+        <div className="adm-chart-plot-wrap">
+          <ResponsiveContainer width="100%" height={330}>
+            <ComposedChart data={chartData} margin={{ top: 12, right: 12, left: 8, bottom: 8 }} barCategoryGap="26%">
+              <CartesianGrid strokeDasharray="3 3" stroke="rgba(26,26,24,.10)" vertical={false} />
+              <XAxis
+                dataKey="name"
+                tick={{ fill: 'rgba(26,26,24,.62)', fontSize: 13, fontFamily: 'DM Sans, sans-serif' }}
+                axisLine={false}
+                tickLine={false}
+                tickMargin={10}
+              />
+              <YAxis
+                yAxisId="left"
+                tick={{ fill: 'rgba(26,26,24,.62)', fontSize: 12, fontFamily: 'DM Sans, sans-serif' }}
+                axisLine={false}
+                tickLine={false}
+                allowDecimals={false}
+                width={64}
+                label={{ value: 'New copies / mo', angle: -90, position: 'insideLeft', style: { fill: 'rgba(26,26,24,.5)', fontSize: 12, textAnchor: 'middle' } }}
+              />
+              <YAxis
+                yAxisId="right"
+                orientation="right"
+                tick={{ fill: 'rgba(26,26,24,.62)', fontSize: 12, fontFamily: 'DM Sans, sans-serif' }}
+                axisLine={false}
+                tickLine={false}
+                allowDecimals={false}
+                width={48}
+              />
+              <Tooltip
+                contentStyle={{
+                  background: '#1a1a18',
+                  border: 'none',
+                  borderRadius: 8,
+                  color: '#f5f0e8',
+                  fontSize: 13,
+                  fontFamily: 'DM Sans, sans-serif',
+                }}
+                cursor={{ fill: 'rgba(26,26,24,.04)' }}
+                formatter={(v: number, name: string) => [
+                  `${Math.round(v).toLocaleString()}${name === 'Cumulative' ? ' copies' : ''}`,
+                  name,
+                ]}
+              />
+              <Legend wrapperStyle={{ fontSize: 12, color: 'rgba(26,26,24,.62)', fontFamily: 'DM Sans, sans-serif', paddingTop: 8 }} />
+              <Bar yAxisId="left" dataKey="monthly" name="New copies" radius={[4, 4, 0, 0]} maxBarSize={64}>
+                {chartData.map((d, i) => (
+                  <Cell key={i} fill={d.fill} />
+                ))}
+              </Bar>
+              <Line
+                yAxisId="right"
+                type="monotone"
+                dataKey="cumulative"
+                name="Cumulative"
+                stroke={TEAL}
+                strokeWidth={2}
+                dot={{ r: 3, fill: TEAL }}
+                activeDot={{ r: 5 }}
+              />
+            </ComposedChart>
+          </ResponsiveContainer>
+        </div>
         <p style={{ fontSize: 12, color: 'var(--adm-i30)', marginTop: 14 }}>
           Pro pool ≈ 765k manual-therapy practitioners in Europe. Wellness/yoga mass market excluded —
           unlocks later with the dedicated AI-assistant app.

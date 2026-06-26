@@ -271,7 +271,7 @@ export default async function EngagementPage() {
         />
       </div>
 
-      <div className="adm-chart-card" style={{ marginBottom: 24 }}>
+      <div className="adm-chart-card compact-plot" style={{ marginBottom: 24 }}>
         <p className="adm-chart-title">Return frequency — visitors by number of return visits</p>
         <p className="adm-page-sub" style={{ marginTop: -10, marginBottom: 18, maxWidth: 720, lineHeight: 1.6 }}>
           Groups visitors by how many <strong>separate days</strong> they came back. “0 returns” = seen on
@@ -279,7 +279,9 @@ export default async function EngagementPage() {
           browser’s anonymous <code>reader_id</code> cookie, so clearing cookies or switching device shows up
           as a new visitor.
         </p>
-        <AdminBarChart data={returnBuckets} color="#4a6b5a" showValues />
+        <div className="adm-chart-plot-wrap narrow">
+          <AdminBarChart data={returnBuckets} color="#4a6b5a" showValues />
+        </div>
       </div>
 
       <div className="adm-charts-grid">
