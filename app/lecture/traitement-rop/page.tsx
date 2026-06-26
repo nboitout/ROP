@@ -47,15 +47,14 @@ export default async function TraitementRopPage({
 
   const { lang: langParam } = await searchParams
   const lang = await getServerLang(langParam)
-  const deckLang: Lang = 'fr'
-  const { chapter } = getChapter('chapter-2', deckLang)
+  const { chapter } = getChapter('chapter-2', lang)
   const bookTitle = translations[lang].reader.bookTitle
   return (
     <SlideSyncReader
       chapter={chapter}
       bookTitle={bookTitle}
-      slides={DECKS[deckLang]}
-      anchors={ANCHORS[deckLang]}
+      slides={DECKS[lang]}
+      anchors={ANCHORS[lang]}
       backHref="/chapitres-gratuits"
     />
   )
