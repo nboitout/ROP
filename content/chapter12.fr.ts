@@ -184,13 +184,23 @@ export const chapter12Fr: Chapter = {
         { type: 'sub', text: 'Glandes surrenales' },
         { type: 'para', text: 'Sous l\'action de l\'axe hypothalamo-hypophyso-surrenalien, l\'adrenaline secretee par la medullo-surrenale contribue a l\'elevation de la glycemie en situation de stress.' },
         { type: 'para', text: 'Le cortisol secrete par la cortico-surrenale participe egalement au maintien de la disponibilite du glucose en periode de stress et d\'activite.' },
-        { type: 'para', text: '(Cf. chapitre 5 Mecanisme de stress, page...)' },
+        {
+          type: 'xref',
+          label: 'Voir la reference dans le chapitre 5',
+          text: 'Mecanisme de stress',
+          href: '/lecture/chapitre-5?xrefBack=%2Flecture%2Fchapitre-12%23p-interet-en-rop-2-23&xrefBackLabel=Retour%20au%20chapitre%2012#p-presentation-0',
+        },
         { type: 'sub', text: 'Intestin et microbiote' },
         { type: 'para', text: 'Les bacteries qui peuplent l\'intestin vivent normalement dans une relation de symbiose avec l\'hote.' },
         { type: 'para', text: 'Le stress, l\'inflammation et une alteration de la barriere intestinale peuvent s\'accompagner d\'une dysbiose, c\'est-a-dire d\'une modification de la composition du microbiote au detriment de certains equilibres fonctionnels.' },
         { type: 'para', text: 'Certaines dysbioses sont associees a l\'insulino-resistance et au diabete de type 2.' },
         { type: 'para', text: 'Dans ce contexte, la glycemie peut s\'elever et le pancreas etre davantage sollicite pour maintenir un taux glycemique compatible avec l\'homeostasie.' },
-        { type: 'para', text: '(Cf. Chapitre 14 Intestin grele, Dysbioses, page...)' },
+        {
+          type: 'xref',
+          label: 'Voir la reference dans le chapitre 14',
+          text: 'Intestin grele : dysbioses',
+          href: '/lecture/chapitre-14?xrefBack=%2Flecture%2Fchapitre-12%23p-interet-en-rop-2-29&xrefBackLabel=Retour%20au%20chapitre%2012#p-pathologies-7',
+        },
         { type: 'sub', text: 'Hormones gastro-intestinales' },
         { type: 'para', text: 'En cas de glycemie post-prandiale, des hormones intestinales comme le GLP-1 participent au ralentissement de la vidange gastrique, a l\'inhibition du glucagon et a la stimulation de la secretion d\'insuline.' },
         { type: 'para', text: 'La place exacte du GLP-2 dans cette description doit etre interpretee avec prudence.' },
@@ -336,7 +346,6 @@ export const chapter12Fr: Chapter = {
         { type: 'para', text: 'La ROP peut viser ici un accompagnement fonctionnel de la digestion.' },
         { type: 'bullets', items: [
           'Hyperinsulinemie et hypoinsulinemie.',
-          '(Cf. Chapitre 5 Mecanisme de stress, pages ...)',
           'Digestions difficiles, avec mobilisation energetique importante, sueurs froides et fringales anormales une heure apres le repas.',
           'Faciliter le transit des secretions pancreatiques au niveau de l\'ampoule de Vater et du sphincter d\'Oddi.',
           'Stimuler la secretion exocrine (tete du pancreas) et endocrine (corps et queue du pancreas).',
@@ -347,6 +356,12 @@ export const chapter12Fr: Chapter = {
           'Apporter un certain confort en agissant sur les organes avec lesquels le pancreas partage une vascularisation et une innervation communes : estomac, foie, vesicule biliaire, duodenum et rate.',
           'N.B. la ROP ne peut eviter la prise d\'insuline chez un patient diabetique.',
         ]},
+        {
+          type: 'xref',
+          label: 'Voir la reference dans le chapitre 5',
+          text: 'Mecanisme de stress',
+          href: '/lecture/chapitre-5?xrefBack=%2Flecture%2Fchapitre-12%23p-indications-1&xrefBackLabel=Retour%20au%20chapitre%2012#p-presentation-0',
+        },
       ],
     },
     {
@@ -355,7 +370,6 @@ export const chapter12Fr: Chapter = {
       blocks: [
         { type: 'sub', text: 'Syndrome general d\'adaptation' },
         { type: 'bullets', items: [
-          '(Chapitre 2, page...)',
           'Nerfs vagues X.',
           '(figures 4.11 et 4.17)',
           'Colonne vertebrale, articulations costo-transversaires, chaine ganglionnaire latero-vertebrale thoracique (Th8-Th10 gauches).',
@@ -363,8 +377,19 @@ export const chapter12Fr: Chapter = {
           'Plexus prevertebral.',
           '(figures 12.4 et 12.6)',
         ]},
+        {
+          type: 'xref',
+          label: 'Voir la reference dans le chapitre 2',
+          text: 'Zones reflexes occipitales et podales',
+          href: '/lecture/traitement-rop?xrefBack=%2Flecture%2Fchapitre-12%23p-zones-reflexes-podales-1&xrefBackLabel=Retour%20au%20chapitre%2012#p-hierarchisation-2',
+        },
         { type: 'sub', text: 'Syndrome loco-regional' },
-        { type: 'para', text: '(Chapitre 2, page...)' },
+        {
+          type: 'xref',
+          label: 'Voir la reference dans le chapitre 2',
+          text: 'Zones reflexes occipitales et podales',
+          href: '/lecture/traitement-rop?xrefBack=%2Flecture%2Fchapitre-12%23p-zones-reflexes-podales-4&xrefBackLabel=Retour%20au%20chapitre%2012#p-hierarchisation-2',
+        },
         { type: 'sub', text: 'Pancreas' },
         { type: 'bullets', items: [
           'Tete du pancreas : face plantaire du pied droit, dans le cadre duodenal (figure 12.5), avec reperage de la grande caroncule et du sphincter d\'Oddi a la jonction des 2/3 superieurs et du 1/3 inferieur du 2eme duodenum, et de la petite caroncule au 1/3 superieur.',

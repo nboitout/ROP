@@ -16,17 +16,35 @@ export const chapter4Fr: Chapter = {
       blocks: [
         { type: 'sub', text: 'Deux systèmes : Parasympathique et Sympathique' },
         { type: 'para', text: 'Dans le chapitre 1 Généralités, nous avons vu l’importance de la mobilité des viscères. Cette mobilité dépend, en grande partie, du bon fonctionnement des deux composantes du système nerveux autonome (SNA) : le Parasympathique et le Sympathique. (figure 4.1)' },
+        {
+          type: 'xref',
+          label: 'Voir la reference dans le chapitre 1',
+          text: 'Mobilite viscerale',
+          href: '/lecture/chapitre-1?xrefBack=%2Fchapitre-4%23sec-presentation&xrefBackLabel=Retour%20au%20chapitre%204#p-mobilite-viscerale-0',
+        },
         { type: 'figure', src: '/chapter-4/figure-4-1.jpeg', alt: 'Schéma du Parasympathique et du Sympathique', caption: 'Figure 4.1 — Parasympathique et Sympathique', orientation: 'portrait' },
         { type: 'para', text: 'Ces deux composantes du SNA sont chargées d’ajuster le fonctionnement des viscères et des glandes aux besoins de l’organisme, tout en préservant, conjointement avec les systèmes hormonal et immunitaire, l’équilibre du milieu intérieur ou homéostasie.' },
-        { type: 'para', text: 'Le SNA est la partie du système nerveux la plus ancienne dans l’ordre phylogénétique et ontogénique. (Cf. Chapitre 3 Système nerveux central)' },
+        { type: 'para', text: 'Le SNA est la partie du système nerveux la plus ancienne dans l’ordre phylogénétique et ontogénique.' },
+        {
+          type: 'xref',
+          label: 'Voir la reference dans le chapitre 3',
+          text: 'Systeme nerveux central',
+          href: '/lecture/chapitre-3?xrefBack=%2Fchapitre-4%23sec-presentation&xrefBackLabel=Retour%20au%20chapitre%204#p-section-1-presentation-generale-0',
+        },
         { type: 'para', text: 'La phylogénèse étudie l’évolution des espèces animales depuis les animaux les plus primitifs jusqu’à l’homme.' },
         { type: 'para', text: 'L’ontogénèse, c’est l’étude phylogénétique chez l’être humain depuis la fécondation jusqu’à l’âge adulte.' },
 
         { type: 'sub', text: 'Physiologie générale du SNA' },
         { type: 'leadBullets', items: [
           { label: 'Fonction générale', text: 'le SNA gouverne et harmonise les activités digestives, respiratoires, cardio-vasculaires, urinaires et glandulaires. Il préserve la trophicité des tissus et procède à leur renouvellement cellulaire.' },
-          { label: 'Homéostasie', text: 'le maître-mot du rôle du SNA est l’adaptation en réponse à une situation de stress, de conflit ou d’émotions, en vue de préserver l’homéostasie (pH sanguin, glycémie, constantes biologiques, température, etc.). (Cf. Chapitre 5 Mécanisme de stress)' },
+          { label: 'Homéostasie', text: 'le maître-mot du rôle du SNA est l’adaptation en réponse à une situation de stress, de conflit ou d’émotions, en vue de préserver l’homéostasie (pH sanguin, glycémie, constantes biologiques, température, etc.).' },
         ]},
+        {
+          type: 'xref',
+          label: 'Voir la reference dans le chapitre 5',
+          text: 'Mecanisme de stress',
+          href: '/lecture/chapitre-5?xrefBack=%2Fchapitre-4%23sec-presentation&xrefBackLabel=Retour%20au%20chapitre%204#p-presentation-0',
+        },
 
         { type: 'sub', text: 'Différences fonctionnelles' },
         { type: 'leadBullets', items: [
@@ -37,15 +55,27 @@ export const chapter4Fr: Chapter = {
           { label: 'Système vasculaire', text: 'il est presque exclusivement contrôlé par le Sympathique. Il a une action majoritairement vasoconstrictrice mais il provoque toutefois une vasodilatation des artères des muscles du système somatique, des coronaires myocardiques et des artères pulmonaires lors des activités physiques importantes et sportives.' },
           { label: 'Cerveau', text: 'il a son propre système de régulation de la circulation sanguine car il ne peut supporter des variations brusques. Son système de régulation repose sur le sinus et le glomus carotidiens, situés à la bifurcation carotidienne, à hauteur de la vertèbre C4, commandés conjointement par le ganglion sympathique cervical supérieur et les nerfs glossopharyngien IX et vague X.' },
           { label: 'Corps érectiles sexuels', text: 'l’apport sanguin pour l’érection des organes érectiles (pénis et clitoris) est gouverné par le Parasympathique. (Cf. Chapitre 21 Système érectile masculin et féminin)' },
-          { label: 'Action anti-inflammatoire', text: 'les fibres sensitives du nerf vague, principal nerf parasympathique, informent l’hypothalamus de l’état des fonctions internes. Selon l’état de stress, l’hypothalamus met en route l’axe hormonal hypothalamo-hypophyso-surrénalien (Cf. Chapitre 5 Mécanisme de stress) en faisant libérer les corticoïdes anti-inflammatoires.' },
+          { label: 'Action anti-inflammatoire', text: 'les fibres sensitives du nerf vague, principal nerf parasympathique, informent l’hypothalamus de l’état des fonctions internes. Selon l’état de stress, l’hypothalamus met en route l’axe hormonal hypothalamo-hypophyso-surrénalien en faisant libérer les corticoïdes anti-inflammatoires.' },
         ]},
+        {
+          type: 'xref',
+          label: 'Voir la reference dans le chapitre 5',
+          text: 'Mecanisme de stress',
+          href: '/lecture/chapitre-5?xrefBack=%2Fchapitre-4%23sec-presentation&xrefBackLabel=Retour%20au%20chapitre%204#p-sga-0',
+        },
 
         { type: 'sub', text: 'Relation Parasympathique-Sympathique' },
         { type: 'para', text: 'Bien qu’ils aient des fonctions différentes, les anastomoses et connexions entre ces deux systèmes sont nombreuses au niveau des plexus, pour que la complémentarité entre les deux systèmes puisse équilibrer et harmoniser les fonctions viscéro-glandulaires.' },
         { type: 'para', text: 'Il est parfois difficile de différencier les symptômes venant de l’un ou de l’autre, tant ces deux systèmes sont enchevêtrés et interdépendants.' },
         { type: 'rop', body: [
-          'Le SNA est une des clés de notre action. Fidèles à notre principe « priorité au nerf », c’est d’abord en portant notre action sur le SNA que nous restituons les fonctions viscéro-glandulaires. Les déséquilibres du SNA sont, le plus souvent, en amont des dysfonctions viscéro-glandulaires. Celles-ci ne sont que les conséquences d’un état de stress où le SNA n’a pas pu mettre en route les mécanismes d’adaptation-compensation nécessaires au retour à l’équilibre. (Cf. Chapitre 5 Mécanisme de stress)',
+          'Le SNA est une des clés de notre action. Fidèles à notre principe « priorité au nerf », c’est d’abord en portant notre action sur le SNA que nous restituons les fonctions viscéro-glandulaires. Les déséquilibres du SNA sont, le plus souvent, en amont des dysfonctions viscéro-glandulaires. Celles-ci ne sont que les conséquences d’un état de stress où le SNA n’a pas pu mettre en route les mécanismes d’adaptation-compensation nécessaires au retour à l’équilibre.',
         ]},
+        {
+          type: 'xref',
+          label: 'Voir la reference dans le chapitre 5',
+          text: 'Mecanisme de stress',
+          href: '/lecture/chapitre-5?xrefBack=%2Fchapitre-4%23sec-presentation&xrefBackLabel=Retour%20au%20chapitre%204#p-presentation-0',
+        },
         { type: 'leadBullets', items: [
           { label: 'Relation SNA-système hormonal', text: 'le SNA est très connecté au système hormonal par l’hypothalamus et l’hypophyse, qui sont des neuroglandes combinant à la fois fonctions neurologique et hormonale.' },
           { label: 'Neuromédiateurs', text: 'le neuromédiateur du Parasympathique est l’acétylcholine. Les neuromédiateurs du Sympathique sont l’acétylcholine pour les neurones pré-ganglionnaires et la noradrénaline pour les neurones post-ganglionnaires.' },
@@ -65,7 +95,13 @@ export const chapter4Fr: Chapter = {
         { type: 'sub', text: 'Relation SNA-sommeil' },
         { type: 'para', text: 'Les cogitations, les stress de toutes natures ont tendance à perturber le sommeil, à en diminuer la durée mais, surtout, la qualité.' },
         { type: 'para', text: 'Un bon sommeil est important pour le fonctionnement neuroendocrinien et pour conserver un bon équilibre du SNA. Un manque de sommeil prédispose à la dépression, au vieillissement prématuré, au diabète, à l’obésité et aux maladies cardio-vasculaires.' },
-        { type: 'para', text: 'Des cellules de la névroglie (Cf. Chapitre 3 Système nerveux central), les astrocytes, éliminent les synapses entre les neurones lorsqu’elles sont privées de sommeil.' },
+        { type: 'para', text: 'Des cellules de la névroglie, les astrocytes, éliminent les synapses entre les neurones lorsqu’elles sont privées de sommeil.' },
+        {
+          type: 'xref',
+          label: 'Voir la reference dans le chapitre 3',
+          text: 'Systeme nerveux central',
+          href: '/lecture/chapitre-3?xrefBack=%2Fchapitre-4%23sec-presentation&xrefBackLabel=Retour%20au%20chapitre%204#p-section-3-organisation-anatomique-0',
+        },
         { type: 'para', text: 'Il est donc inutile de chercher à rééquilibrer le SNA si le corps et l’esprit sont en manque de sommeil.' },
       ],
     },
@@ -132,9 +168,15 @@ export const chapter4Fr: Chapter = {
         { type: 'bullets', items: [
           'le larynx et le pharynx ;',
           'l’œsophage, dont ils activent la progression du bol alimentaire vers l’estomac ;',
-          'le cœur : les atriums (anciennement oreillettes), situés à la base du cœur, ont une prédominance vagale. Le noyau ambigu exerce un contrôle sur l’activité cardiaque, non seulement sur le rythme (bradycardie) mais surtout sur la variabilité du rythme cardiaque (VRC), pour adapter le cœur aux mécanismes de stress (Cf. Chapitre 6 Théorie polyvagale) ;',
+          'le cœur : les atriums (anciennement oreillettes), situés à la base du cœur, ont une prédominance vagale. Le noyau ambigu exerce un contrôle sur l’activité cardiaque, non seulement sur le rythme (bradycardie) mais surtout sur la variabilité du rythme cardiaque (VRC), pour adapter le cœur aux mécanismes de stress ;',
           'les poumons, dont ils sont broncho-constricteurs et augmentent la sécrétion mucosale.',
         ]},
+        {
+          type: 'xref',
+          label: 'Voir la reference dans le chapitre 6',
+          text: 'Theorie polyvagale',
+          href: '/lecture/chapitre-6?xrefBack=%2Fchapitre-4%23sec-parasympathique-visceromoteur&xrefBackLabel=Retour%20au%20chapitre%204#p-presentation-generale-0',
+        },
         { type: 'rop', body: [
           'L’hyperactivité vagale des neurones issus du noyau dorsal est responsable d’ulcères gastroduodénaux, de colites, de crises d’asthme, d’apnée et de bradycardie.',
         ]},
@@ -167,8 +209,14 @@ export const chapter4Fr: Chapter = {
         { type: 'rop', body: [
           'Contre-indications : plaques d’athérome.',
           'Indications : tachycardie, dysrythmie cardiaque, hypertension, syndrome vagal.',
-          'Syndrome vagal : c’est une vagotonie par hyperstimulation vagale. Les symptômes sont : drop-attack, vertige, hypotension, petite absence, évanouissement. (Cf. Chapitre 6 Théorie polyvagale, Malaise vagal)',
+          'Syndrome vagal : c’est une vagotonie par hyperstimulation vagale. Les symptômes sont : drop-attack, vertige, hypotension, petite absence, évanouissement.',
         ]},
+        {
+          type: 'xref',
+          label: 'Voir la reference dans le chapitre 6',
+          text: 'Theorie polyvagale : malaise vagal',
+          href: '/lecture/chapitre-6?xrefBack=%2Fchapitre-4%23sec-parasympathique-visceromoteur&xrefBackLabel=Retour%20au%20chapitre%204#p-theorie-polyvagale-6',
+        },
 
         // ——— Part 2 : trajet thoraco-diaphragmatico-abdominal du nerf vague ———
         { type: 'rop', body: [
@@ -227,7 +275,13 @@ export const chapter4Fr: Chapter = {
         { type: 'leadBullets', items: [
           { label: 'Hiatus œsophagien', text: 'face plantaire du pied gauche, latéral au centre phrénique et à l’aplomb d’une ligne partant entre le 1er et le 2ᵉ orteil et coupant la coupole diaphragmatique gauche. (figures 4.17 et 4.18)' },
         ]},
-        { type: 'para', text: 'N.B. : tenir compte de la différence de hauteur des deux coupoles diaphragmatiques, la gauche étant plus basse que la droite. (Cf. Chapitre Diaphragme)' },
+        { type: 'para', text: 'N.B. : tenir compte de la différence de hauteur des deux coupoles diaphragmatiques, la gauche étant plus basse que la droite.' },
+        {
+          type: 'xref',
+          label: 'Voir la reference dans le chapitre 8',
+          text: 'Diaphragme',
+          href: '/lecture/chapitre-8?xrefBack=%2Fchapitre-4%23sec-parasympathique-visceromoteur&xrefBackLabel=Retour%20au%20chapitre%204#p-presentation-0',
+        },
         { type: 'figure', src: '/chapter-4/figure-4-18.png', alt: 'Territoire diaphragmatique du nerf vague X (zone réflexe podale)', caption: 'Figure 4.18 — Territoire diaphragmatique du nerf vague X (zone réflexe podale)', orientation: 'portrait' },
 
         { type: 'sub', text: 'Étage abdominal' },
@@ -541,7 +595,13 @@ export const chapter4Fr: Chapter = {
           { label: 'Médullo-surrénale', text: 'elle a la même origine embryologique que les ganglions du plexus aorto-rénal (10ᵉ et 11ᵉ ganglions thoraciques). (figure 4.42)' },
         ]},
         { type: 'figure', src: '/chapter-4/figure-4-42.png', alt: 'Glandes surrénales — rapports rétro-péritonéaux', caption: 'Figure 4.42 — Glandes surrénales', orientation: 'landscape' },
-        { type: 'para', text: 'Cette prédominance de l’innervation sympathique est liée au rôle des glandes surrénales dans les états de stress ou émotionnels. La médullo-surrénale produit l’adrénaline lors de la phase d’urgence du syndrome général d’adaptation. (Cf. Chapitre 5 Mécanisme de stress)' },
+        { type: 'para', text: 'Cette prédominance de l’innervation sympathique est liée au rôle des glandes surrénales dans les états de stress ou émotionnels. La médullo-surrénale produit l’adrénaline lors de la phase d’urgence du syndrome général d’adaptation.' },
+        {
+          type: 'xref',
+          label: 'Voir la reference dans le chapitre 5',
+          text: 'Mecanisme de stress',
+          href: '/lecture/chapitre-5?xrefBack=%2Fchapitre-4%23sec-glandes-surrenales&xrefBackLabel=Retour%20au%20chapitre%204#p-sga-0',
+        },
         { type: 'lead', label: 'Fonction', text: '' },
         { type: 'leadBullets', items: [
           { label: 'Adrénaline', text: 'elle provoque une accélération du rythme cardiaque (tachycardie) et une vasoconstriction.' },

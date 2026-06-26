@@ -34,8 +34,10 @@ export const chapter11Fr: Chapter = {
           text: "Chez le vivant, les contraintes mécaniques liées au diaphragme et à la pression abdominale modifient sa charge apparente et ses conditions de soutien."
         },
         {
-          type: "para",
-          text: "(Cf. chapitre 1 Généralités, page....)"
+          type: "xref",
+          label: "Voir la reference dans le chapitre 1",
+          text: "Effet turgor et pressions intracavitaires",
+          href: "/lecture/chapitre-1?xrefBack=%2Flecture%2Fchapitre-11%23p-presentation-6&xrefBackLabel=Retour%20au%20chapitre%2011#p-articulations-viscerales-3"
         },
         {
           type: "para",
@@ -233,8 +235,10 @@ export const chapter11Fr: Chapter = {
           text: "Effet Turgor et pressions intracavitaires"
         },
         {
-          type: "para",
-          text: "(Cf. chapitre 1 Généralités, page....)"
+          type: "xref",
+          label: "Voir la reference dans le chapitre 1",
+          text: "Effet turgor et pressions intracavitaires",
+          href: "/lecture/chapitre-1?xrefBack=%2Flecture%2Fchapitre-11%23p-interet-en-rop-2-8&xrefBackLabel=Retour%20au%20chapitre%2011#p-articulations-viscerales-3"
         },
         {
           type: "sub",
@@ -1327,8 +1331,10 @@ export const chapter11Fr: Chapter = {
           text: "Syndrome général d’adaptation"
         },
         {
-          type: "para",
-          text: "Cf. Chapitre 2, page...."
+          type: "xref",
+          label: "Voir la reference dans le chapitre 2",
+          text: "Zones reflexes occipitales et podales",
+          href: "/lecture/traitement-rop?xrefBack=%2Flecture%2Fchapitre-11%23p-zones-reflexes-podales-du-foie-et-des-voies-biliaires-1&xrefBackLabel=Retour%20au%20chapitre%2011#p-hierarchisation-2"
         },
         {
           type: "para",
@@ -1348,8 +1354,10 @@ export const chapter11Fr: Chapter = {
           text: "2. Syndrome loco-régional"
         },
         {
-          type: "para",
-          text: "Cf. Chapitre 2, page...."
+          type: "xref",
+          label: "Voir la reference dans le chapitre 2",
+          text: "Zones reflexes occipitales et podales",
+          href: "/lecture/traitement-rop?xrefBack=%2Flecture%2Fchapitre-11%23p-zones-reflexes-podales-du-foie-et-des-voies-biliaires-6&xrefBackLabel=Retour%20au%20chapitre%2011#p-hierarchisation-2"
         },
         {
           type: "sub",
@@ -1408,8 +1416,10 @@ export const chapter11Fr: Chapter = {
       title: "Système limbique",
       blocks: [
         {
-          type: "para",
-          text: "Cf. Chapitre 2, page...."
+          type: "xref",
+          label: "Voir la reference dans le chapitre 2",
+          text: "Zones reflexes occipitales et podales",
+          href: "/lecture/traitement-rop?xrefBack=%2Flecture%2Fchapitre-11%23p-systeme-limbique-0&xrefBackLabel=Retour%20au%20chapitre%2011#p-hierarchisation-2"
         },
         {
           type: "lead",
