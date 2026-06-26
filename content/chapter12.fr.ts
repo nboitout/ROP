@@ -71,7 +71,12 @@ export const chapter12Fr: Chapter = {
         { type: 'sub', text: 'Tete du pancreas' },
         { type: 'para', text: 'Elle est tres adherente au duodenum.' },
         { type: 'sub', text: 'Effet turgor et pressions intracavitaires' },
-        { type: 'para', text: '(Cf. chapitre 1 Generalites, page...)' },
+        {
+          type: 'xref',
+          label: 'Voir la reference dans le chapitre 1',
+          text: 'Sereuses : glissement et pressions',
+          href: '/lecture/chapitre-1?xrefBack=%2Flecture%2Fchapitre-12%23p-moyens-de-fixite-8&xrefBackLabel=Retour%20au%20chapitre%2012#p-articulations-viscerales-3',
+        },
       ],
     },
     {

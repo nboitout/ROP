@@ -25,6 +25,8 @@ function wordsInBlock(block: Block): number {
       return block.items.reduce((n, { label, text }) => n + count(label) + count(text), 0)
     case 'rop':
       return block.body.reduce((n, s) => n + count(s), 0)
+    case 'xref':
+      return count(block.label) + count(block.text ?? '')
     case 'figure':
       return 0
   }

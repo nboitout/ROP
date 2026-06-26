@@ -24,6 +24,19 @@ type Props = {
   backHref?: string
 }
 
+type XrefReturn = { href: string; label: string } | null
+
+function getSafeXrefReturn(): XrefReturn {
+  if (typeof window === 'undefined') return null
+  const params = new URLSearchParams(window.location.search)
+  const href = params.get('xrefBack')
+  if (!href || !href.startsWith('/') || href.startsWith('//')) return null
+  return {
+    href,
+    label: params.get('xrefBackLabel') || 'Retour a la reference',
+  }
+}
+
 // The synchronized reader is shown in the languages with a synthesis deck, so
 // its chrome is localized here.
 const SS_UI: Record<string, {
@@ -145,6 +158,7 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
   const [lightbox, setLightbox] = useState<{ src: string; alt: string; caption: string; orientation?: 'portrait' | 'landscape' } | null>(null)
   const [lightboxZoom, setLightboxZoom] = useState(1)
   const [isPhonePortrait, setIsPhonePortrait] = useState(false)
+  const [xrefReturn, setXrefReturn] = useState<XrefReturn>(null)
   const articleRef = useRef<HTMLElement>(null)
   // While a slide-driven scroll is in flight, the scroll handler must not
   // fight the manually selected slide.
@@ -202,6 +216,10 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
     track('sync_reader_open')
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [chapter.slug])
+
+  useEffect(() => {
+    setXrefReturn(getSafeXrefReturn())
+  }, [])
 
   useEffect(() => {
     const prioritySlides = new Set<number>([0, 1, active - 2, active - 1, active])
@@ -398,6 +416,13 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
           <span className="cr-bookname">{bookTitle}</span>
         </div>
       </div>
+
+      {xrefReturn && (
+        <Link href={xrefReturn.href} className="cr-xref-return">
+          <span aria-hidden>←</span>
+          {xrefReturn.label}
+        </Link>
+      )}
 
       <div className="ss-layout">
         <div className="ss-stagecol">
@@ -644,6 +669,16 @@ function BlockView({ block, onOpenImage, ui }: { block: Block; onOpenImage: (b: 
           </button>
           <figcaption>{block.caption}</figcaption>
         </figure>
+      )
+    case 'xref':
+      return (
+        <p className="cr-xref">
+          <Link href={block.href} className="cr-xref-link">
+            <span className="cr-xref-kicker">{block.label}</span>
+            {block.text && <span className="cr-xref-title">{block.text}</span>}
+            <span className="cr-xref-arrow" aria-hidden>→</span>
+          </Link>
+        </p>
       )
     case 'rop':
       return (

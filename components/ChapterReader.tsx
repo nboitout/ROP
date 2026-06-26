@@ -19,6 +19,19 @@ type Props = {
   contentLang?: Lang
 }
 
+type XrefReturn = { href: string; label: string } | null
+
+function getSafeXrefReturn(): XrefReturn {
+  if (typeof window === 'undefined') return null
+  const params = new URLSearchParams(window.location.search)
+  const href = params.get('xrefBack')
+  if (!href || !href.startsWith('/') || href.startsWith('//')) return null
+  return {
+    href,
+    label: params.get('xrefBackLabel') || 'Retour a la reference',
+  }
+}
+
 export default function ChapterReader({ chapter, bookTitle, backHref = '/chapitres-gratuits', contentLang = 'fr' }: Props) {
   const { lang, t } = useLanguage()
   const showFallbackNotice = lang !== contentLang
@@ -44,6 +57,7 @@ export default function ChapterReader({ chapter, bookTitle, backHref = '/chapitr
   const [slidePage, setSlidePage] = useState(1)
   const [slideWidth, setSlideWidth] = useState(800)
   const [slideZoom, setSlideZoom] = useState(0.75)
+  const [xrefReturn, setXrefReturn] = useState<XrefReturn>(null)
   const viewerBodyRef = useRef<HTMLDivElement | null>(null)
   const [lightbox, setLightbox] = useState<{ src: string; alt: string; caption: string } | null>(null)
   const [lightboxZoom, setLightboxZoom] = useState(1)
@@ -102,6 +116,10 @@ export default function ChapterReader({ chapter, bookTitle, backHref = '/chapitr
     if (id) restoreToAnchor(id)
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [chapter.slug])
+
+  useEffect(() => {
+    setXrefReturn(getSafeXrefReturn())
+  }, [])
 
   useEffect(() => {
     function onScroll() {
@@ -273,6 +291,13 @@ export default function ChapterReader({ chapter, bookTitle, backHref = '/chapitr
           <span /><span /><span />
         </button>
       </div>
+
+      {xrefReturn && (
+        <Link href={xrefReturn.href} className="cr-xref-return">
+          <span aria-hidden>←</span>
+          {xrefReturn.label}
+        </Link>
+      )}
 
       <div className="cr-layout">
         <aside className={`cr-toc${tocOpen ? ' is-open' : ''}`}>
@@ -525,6 +550,16 @@ function BlockView({ block, onOpenImage, anchorId }: { block: Block; onOpenImage
           </button>
           <figcaption>{block.caption}</figcaption>
         </figure>
+      )
+    case 'xref':
+      return (
+        <p {...anchor} className="cr-xref">
+          <Link href={block.href} className="cr-xref-link">
+            <span className="cr-xref-kicker">{block.label}</span>
+            {block.text && <span className="cr-xref-title">{block.text}</span>}
+            <span className="cr-xref-arrow" aria-hidden>→</span>
+          </Link>
+        </p>
       )
     case 'rop':
       return (
