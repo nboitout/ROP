@@ -10,7 +10,6 @@ import Link from 'next/link'
 import type { Chapter, Block } from '@/content/types'
 import { useLanguage } from '@/app/i18n/LanguageContext'
 import { getSessionId } from '@/lib/session'
-import ReaderModeToggle from '@/components/ReaderModeToggle'
 import { currentTopAnchorId, saveReadingPosition, loadReadingPosition, restoreToAnchor } from '@/lib/readingPosition'
 
 type SyncSlide = { src: string; title: string; orientation?: 'portrait' }
@@ -23,8 +22,6 @@ type Props = {
   anchors: SyncAnchor[]
   // "Tous les chapitres" link target (the free-chapters list).
   backHref?: string
-  // Classic version of this chapter — the mode switch's other side.
-  classicHref?: string
 }
 
 // The synchronized reader is shown in the languages with a synthesis deck, so
@@ -130,7 +127,7 @@ function asSlideList(slide: number | number[] | undefined) {
   return slide ?? []
 }
 
-export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, backHref = '/chapitres-gratuits', classicHref }: Props) {
+export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, backHref = '/chapitres-gratuits' }: Props) {
   const { lang, t } = useLanguage()
   const ui = SS_UI[lang] ?? SS_UI.fr
   const closeToReadingLabel = {
@@ -219,8 +216,7 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
     })
   }, [active, slides])
 
-  // Restore reading position on return (unless arriving via the toggle's
-  // position hash, which ReaderModeToggle handles).
+  // Restore reading position on return.
   useEffect(() => {
     if (window.location.hash) return
     const id = loadReadingPosition(chapter.slug)
@@ -396,9 +392,6 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
           <span className="cr-sep">·</span>
           <span className="cr-bookname">{bookTitle}</span>
         </div>
-        {classicHref && (
-          <ReaderModeToggle mode="sync" otherHref={classicHref} />
-        )}
       </div>
 
       <div className="ss-layout">

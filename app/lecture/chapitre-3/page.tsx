@@ -29,12 +29,6 @@ export default async function Chapitre3SyncPage({
   const { lang: langParam } = await searchParams
   const lang = await getServerLang(langParam)
 
-  // Until the synthesis deck is populated, fall back to the classic reader so
-  // this route never renders an empty stage.
-  if (chapter3Slides.length === 0) {
-    redirect('/chapitre-3')
-  }
-
   const { chapter } = getChapter('chapter-3', lang)
   return (
     <SlideSyncReader

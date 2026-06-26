@@ -15,7 +15,7 @@ const ROUTES: Record<string, { href: string; key: string; gated?: boolean; draft
   '00': { href: '/introduction', key: 'introduction' },
   '01': { href: '/chapitre-1', key: 'chapter-1' },
   '02': { href: '/lecture/traitement-rop', key: 'chapter-2' },
-  '03': { href: '/chapitre-3', key: 'chapter-3' },
+  '03': { href: '/lecture/chapitre-3', key: 'chapter-3' },
   '04': { href: '/chapitre-4', key: 'chapter-4', draft: true },
   '06': { href: '/chapitre-6', key: 'chapter-6' },
   '07': { href: '/chapitre-7', key: 'chapter-7' },

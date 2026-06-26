@@ -47,7 +47,6 @@ export default async function Chapitre5SyncPage({
       slides={DECKS[lang]}
       anchors={chapter5SlideAnchors}
       backHref="/"
-      classicHref="/chapitre-5"
     />
   )
 }

@@ -8,7 +8,6 @@ import type { Lang } from '@/app/i18n/translations'
 
 const PdfSlideViewer = dynamic(() => import('@/components/PdfSlideViewer'), { ssr: false })
 import BookNotifyForm from '@/components/BookNotifyForm'
-import ReaderModeToggle from '@/components/ReaderModeToggle'
 import { currentTopAnchorId, saveReadingPosition, loadReadingPosition, restoreToAnchor } from '@/lib/readingPosition'
 import { useLanguage } from '@/app/i18n/LanguageContext'
 import { getSessionId } from '@/lib/session'
@@ -18,12 +17,9 @@ type Props = {
   bookTitle: string
   backHref?: string
   contentLang?: Lang
-  // When set, shows the sync/classic mode switch in the top bar, linking to
-  // the synchronized reading version of this chapter (admin-only prototype).
-  syncToggleHref?: string
 }
 
-export default function ChapterReader({ chapter, bookTitle, backHref = '/chapitres-gratuits', contentLang = 'fr', syncToggleHref }: Props) {
+export default function ChapterReader({ chapter, bookTitle, backHref = '/chapitres-gratuits', contentLang = 'fr' }: Props) {
   const { lang, t } = useLanguage()
   const showFallbackNotice = lang !== contentLang
   const showEndCard = new Set(['introduction', 'chapter-3', 'chapter-14']).has(chapter.slug)
@@ -99,8 +95,7 @@ export default function ChapterReader({ chapter, bookTitle, backHref = '/chapitr
   const firedMilestonesRef = useRef<Set<number>>(new Set())
   const lastPosSave = useRef(0)
 
-  // Restore the reading position on return (when not arriving via the toggle's
-  // position hash, which ReaderModeToggle handles).
+  // Restore the reading position on return.
   useEffect(() => {
     if (window.location.hash) return
     const id = loadReadingPosition(chapter.slug)
@@ -274,9 +269,6 @@ export default function ChapterReader({ chapter, bookTitle, backHref = '/chapitr
           <span className="cr-sep">·</span>
           <span className="cr-bookname">{bookTitle}</span>
         </div>
-        {syncToggleHref && (
-          <ReaderModeToggle mode="classic" otherHref={syncToggleHref} />
-        )}
         <button className="cr-toc-toggle" onClick={() => setTocOpen((v) => !v)} aria-label={t.reader.toc}>
           <span /><span /><span />
         </button>
