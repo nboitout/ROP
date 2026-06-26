@@ -17,6 +17,7 @@ const ROUTES: Record<string, { slug: string; href: string; classicHref?: string;
   '04': { slug: 'chapter-4', href: '/chapitre-4', classicHref: '/chapitre-4' },
   '05': { slug: 'chapter-5', href: '/lecture/chapitre-5', syncHref: '/lecture/chapitre-5' },
   '11': { slug: 'chapter-11', href: '/lecture/chapitre-11', syncHref: '/lecture/chapitre-11' },
+  '12': { slug: 'chapter-12', href: '/lecture/chapitre-12', syncHref: '/lecture/chapitre-12' },
   '14': { slug: 'chapter-14', href: '/lecture/chapitre-14', syncHref: '/lecture/chapitre-14' },
 }
 
