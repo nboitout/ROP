@@ -205,9 +205,6 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
 
   useEffect(() => {
     const prioritySlides = new Set<number>([0, 1, active - 2, active - 1, active])
-    slides.forEach((slide, index) => {
-      if (slide.orientation === 'portrait') prioritySlides.add(index)
-    })
     prioritySlides.forEach((index) => {
       const slide = slides[index]
       if (!slide || typeof window === 'undefined') return
@@ -380,6 +377,14 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
   }
 
   const rotateLandscapeLightbox = lightbox?.orientation === 'landscape' && isPhonePortrait
+  const activeSlide = slides[active - 1]
+  const activeSlideIsPortrait = activeSlide?.orientation === 'portrait'
+  const renderedSlideIndexes = useMemo(() => {
+    const indexes = new Set([active - 2, active - 1, active])
+    return Array.from(indexes)
+      .filter((index) => index >= 0 && index < slides.length)
+      .sort((a, b) => a - b)
+  }, [active, slides.length])
 
   return (
     <div className="cr-root">
@@ -396,7 +401,7 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
 
       <div className="ss-layout">
         <div className="ss-stagecol">
-          <div className="ss-stage">
+          <div className={`ss-stage${activeSlideIsPortrait ? ' ss-stage--portrait' : ''}`}>
             <div className="ss-stage-row">
               <div className="ss-dots" role="tablist" aria-label={ui.slides}>
                 {slides.map((s, i) => (
@@ -412,20 +417,25 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
               <div className="ss-stage-main">
             <button
               type="button"
-              className="ss-frame"
+              className={`ss-frame${activeSlideIsPortrait ? ' ss-frame--portrait' : ''}`}
               onClick={() => openSlideLightbox(active)}
-              aria-label={ui.enlarge(active, slides[active - 1]?.title ?? '')}
+              aria-label={ui.enlarge(active, activeSlide?.title ?? '')}
             >
-              {slides.map((s, i) => (
-                <img
-                  key={s.src}
-                  src={s.src}
-                  alt={s.title}
-                  className={`ss-slide${i + 1 === active ? ' is-active' : ''}`}
-                  loading={i < 2 || s.orientation === 'portrait' || i + 1 === active ? 'eager' : 'lazy'}
-                  aria-hidden={i + 1 !== active}
-                />
-              ))}
+              {renderedSlideIndexes.map((i) => {
+                const s = slides[i]
+                return (
+                  <img
+                    key={s.src}
+                    src={s.src}
+                    alt={s.title}
+                    className={`ss-slide${i + 1 === active ? ' is-active' : ''}`}
+                    loading={i + 1 === active ? 'eager' : 'lazy'}
+                    fetchPriority={i + 1 === active ? 'high' : 'auto'}
+                    decoding="async"
+                    aria-hidden={i + 1 !== active}
+                  />
+                )
+              })}
               <span className="cr-fig-zoom ss-frame-zoom" aria-hidden>⌕</span>
             </button>
             <div className="ss-stage-bar">
