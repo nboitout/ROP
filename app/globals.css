@@ -362,7 +362,7 @@ footer > div > p { font-size:1rem; color:rgba(245,240,232,.84); line-height:1.9;
 .cr-toc-num { font-family:'Cormorant Garamond',serif; font-size:1.05rem; font-style:italic; color:var(--gold); flex-shrink:0; width:20px; text-align:right; }
 .cr-toc-text { padding-top:1px; }
 
-.cr-article { grid-column:2; grid-row:1; padding:20px 16px 120px; max-width:720px; }
+.cr-article { grid-column:2; grid-row:1; padding:20px 16px 120px; max-width:720px; --cr-article-pad-x:16px; }
 .cr-fallback-notice { margin:0 0 20px; padding:10px 14px; border:1px solid rgba(160,124,58,.32); border-left:3px solid var(--gold); border-radius:2px; background:rgba(160,124,58,.07); color:rgba(26,26,24,.72); font-size:.8rem; line-height:1.45; }
 
 .cr-hero { padding:12px 0 24px; margin-bottom:8px; border-bottom:1px solid rgba(26,26,24,.1); }
@@ -396,6 +396,12 @@ footer > div > p { font-size:1rem; color:rgba(245,240,232,.84); line-height:1.9;
 .cr-fig-medium { margin:40px auto; max-width:460px; }
 .cr-fig-narrow { margin:40px auto; max-width:320px; }
 .cr-fig-landscape { margin:40px -80px; }
+.cr-article #sec-zones-reflexes-podales .cr-fig-landscape {
+  width:calc(100% + (var(--cr-article-pad-x) * 2));
+  max-width:none;
+  margin-left:calc(var(--cr-article-pad-x) * -1);
+  margin-right:calc(var(--cr-article-pad-x) * -1);
+}
 .cr-fig-btn { display:block; width:100%; background:none; border:none; padding:0; cursor:zoom-in; position:relative; line-height:0; border-radius:4px; overflow:hidden; transition:box-shadow .25s; }
 .cr-fig-btn:hover { box-shadow:0 12px 36px rgba(26,26,24,.18); }
 .cr-fig-btn img { width:100%; height:auto; display:block; background:#fff; }
@@ -572,7 +578,7 @@ footer > div > p { font-size:1rem; color:rgba(245,240,232,.84); line-height:1.9;
     overflow:hidden; text-overflow:ellipsis; padding:8px 12px; font-size:.68rem; }
   .cr-topbar-title .cr-bookname { display:none; }
   .cr-topbar-title .cr-sep { display:none; }
-  .cr-article { padding:32px 22px 100px; }
+  .cr-article { padding:32px 22px 100px; --cr-article-pad-x:22px; }
   .cr-hero { padding:16px 0 36px; }
   .cr-section { padding:36px 0 8px; }
   .cr-fig, .cr-fig-landscape { margin:32px -14px; }
