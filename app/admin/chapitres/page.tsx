@@ -27,6 +27,7 @@ const ROUTES: Record<string, { href: string; key: string; gated?: boolean; draft
   '13': { href: '/lecture/chapitre-13', key: 'chapter-13' },
   '05': { href: '/lecture/chapitre-5', key: 'chapter-5', gated: true },
   '14': { href: '/lecture/chapitre-14', key: 'chapter-14' },
+  '15': { href: '/lecture/chapitre-15', key: 'chapter-15' },
 }
 
 export default async function AdminChapitresPage() {
