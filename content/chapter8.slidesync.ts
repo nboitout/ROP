@@ -78,10 +78,6 @@ export const chapter8Slides: SyncSlide[] = [
     title: "Synthese : matrice topographique podale ROP"
   },
   {
-    src: "/chapter-8/slides/slide-19.png",
-    title: "Synthese : de la fixation a la therapeutique ROP"
-  },
-  {
     src: "/chapter-8/slides/slide-20.png",
     title: "Cartographie podale : coupole diaphragmatique gauche et hiatus oesophagien"
   },
@@ -204,52 +200,47 @@ export const chapter8SlideAnchors: SyncAnchor[] = [
   },
   {
     sectionId: "zones-reflexes-podales",
-    blockIndex: 36,
+    blockIndex: 6,
     slide: 18
   },
   {
     sectionId: "zones-reflexes-podales",
-    blockIndex: 6,
+    blockIndex: 7,
     slide: 19
   },
   {
     sectionId: "zones-reflexes-podales",
-    blockIndex: 7,
+    blockIndex: 14,
     slide: 20
   },
   {
     sectionId: "zones-reflexes-podales",
-    blockIndex: 14,
+    blockIndex: 19,
     slide: 21
   },
   {
     sectionId: "zones-reflexes-podales",
-    blockIndex: 19,
+    blockIndex: 23,
     slide: 22
   },
   {
     sectionId: "zones-reflexes-podales",
-    blockIndex: 23,
+    blockIndex: 25,
     slide: 23
   },
   {
     sectionId: "zones-reflexes-podales",
-    blockIndex: 25,
-    slide: 24
-  },
-  {
-    sectionId: "zones-reflexes-podales",
     blockIndex: 28,
-    slide: 24
+    slide: 23
   },
   {
     sectionId: "zones-reflexes-podales",
     blockIndex: 32,
-    slide: 25
+    slide: 24
   },
   {
     sectionId: "zones-reflexes-podales",
     blockIndex: 34,
-    slide: 26
+    slide: 25
   }
 ]

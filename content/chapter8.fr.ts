@@ -1079,62 +1079,6 @@ export const chapter8Fr: Chapter = {
           caption: "Nerf intercostal brachial de Hyrtl",
           alt: "Photo du repérage podal du nerf intercostal brachial de Hyrtl",
           orientation: "landscape"
-        },
-        {
-          type: "sub",
-          text: "Syndrome loco-régional"
-        },
-        {
-          type: "sub",
-          text: "ROP du RGO et de la hernie hiatale"
-        },
-        {
-          type: "para",
-          text: "Colonne cervico-thoraco-abdominale, articulations costo-vertébrales."
-        },
-        {
-          type: "para",
-          text: "Diaphragme, nerf phrénique, six derniers nerfs intercostaux."
-        },
-        {
-          type: "para",
-          text: "Nerf vague."
-        },
-        {
-          type: "para",
-          text: "Hiatus œsophagien."
-        },
-        {
-          type: "para",
-          text: "Estomac."
-        },
-        {
-          type: "para",
-          text: "Lobe gauche du foie."
-        },
-        {
-          type: "sub",
-          text: "ROP du RGO du nouveau-né"
-        },
-        {
-          type: "para",
-          text: "MRP."
-        },
-        {
-          type: "para",
-          text: "Parties condylaires de l’occiput."
-        },
-        {
-          type: "para",
-          text: "Foramen magnum."
-        },
-        {
-          type: "para",
-          text: "Foramen jugulaire."
-        },
-        {
-          type: "para",
-          text: "Hiatus œsophagien."
         }
       ]
     }
