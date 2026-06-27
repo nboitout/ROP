@@ -15,7 +15,7 @@ export default async function Chapitre9Page({
   searchParams: Promise<{ lang?: string }>
 }) {
   const cookieStore = await cookies()
-  if (!cookieStore.get('free_chapters_access')) {
+  if (!cookieStore.get('free_chapters_access') && !cookieStore.get('admin_session')) {
     redirect('/?gate=free#acces-libre')
   }
 
