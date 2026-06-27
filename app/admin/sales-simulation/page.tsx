@@ -25,6 +25,11 @@ const AMBER = '#EF9F27'
 const BLUE = '#378ADD'
 const TEAL = '#0F6E56'
 const POOL = 765000
+const DEFAULT_PRICE = 79
+const PRICE_MIN = 50
+const PRICE_MAX = 99
+const DEFAULT_PHASE_1_TARGET = 100
+const DEFAULT_PHASE_2_ACCEL = 40
 
 const labels = ['Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
 
@@ -83,9 +88,9 @@ function Slider({
 }
 
 export default function SalesSimulationPage() {
-  const [price, setPrice] = useState(79)
-  const [t1, setT1] = useState(100)
-  const [accel, setAccel] = useState(40)
+  const [price, setPrice] = useState(DEFAULT_PRICE)
+  const [t1, setT1] = useState(DEFAULT_PHASE_1_TARGET)
+  const [accel, setAccel] = useState(DEFAULT_PHASE_2_ACCEL)
 
   const m = useMemo(() => model(t1, accel, price), [t1, accel, price])
 
@@ -100,6 +105,7 @@ export default function SalesSimulationPage() {
   const dec = Math.round(m.cumA[6]).toLocaleString()
   const rev = eur(m.cumRev[6])
   const pool = ((m.cumA[6] / POOL) * 100).toFixed(2) + '%'
+  const currentOutcome = `${dec} copies · ${rev}`
 
   return (
     <main className="adm-page">
@@ -108,7 +114,7 @@ export default function SalesSimulationPage() {
           <p className="adm-page-eyebrow">Sales forecast</p>
           <h1 className="adm-page-title">Sales simulation — elaborate view</h1>
           <p className="adm-page-sub">
-            One-time sale to manual-therapy professionals · Phase 1 seeds 100 copies by end Aug 2026 ·
+            One-time sale to manual-therapy professionals · Phase 1 seeds {t1} copies by end Aug 2026 ·
             Phase 2 quadratic traction to Dec 2026
           </p>
         </div>
@@ -124,8 +130,8 @@ export default function SalesSimulationPage() {
       <div className="adm-chart-card compact-plot" style={{ marginBottom: 24 }}>
         <Slider
           label="Price per copy"
-          min={50}
-          max={99}
+          min={PRICE_MIN}
+          max={PRICE_MAX}
           step={1}
           value={price}
           display={'€' + price}
@@ -246,7 +252,7 @@ export default function SalesSimulationPage() {
       <div className="adm-chart-card" style={{ marginBottom: 24 }}>
         <p className="adm-chart-title">Model logic</p>
         <p style={{ fontSize: 14, color: 'var(--adm-i50)', lineHeight: 1.7, margin: '0 0 14px' }}>
-          Phase 1 (Jun–Aug) is hand-seeding the professional niche to a target of 100 copies, distributed
+          Phase 1 (Jun–Aug) is hand-seeding the professional niche to a target of {t1} copies, distributed
           20% / 35% / 45% across the three months. Phase 2 (Sep–Dec) applies a calibrated quadratic
           acceleration: each month adds a linearly growing number of new sales (Aug run-rate + k ×
           acceleration), so cumulative copies trace a parabola — the &quot;traction&quot; shape.
@@ -255,19 +261,21 @@ export default function SalesSimulationPage() {
           <tbody>
             <tr>
               <td>Phase-1 target</td>
-              <td className="muted">100 copies by Aug 31, 2026</td>
+              <td className="muted">{t1} copies by Aug 31, 2026</td>
             </tr>
             <tr>
               <td>Price</td>
-              <td className="muted">€79 (range €50–99)</td>
+              <td className="muted">
+                €{price} (range €{PRICE_MIN}–{PRICE_MAX})
+              </td>
             </tr>
             <tr>
               <td>Phase-2 acceleration</td>
-              <td className="muted">+40 new sales / month (tunable)</td>
+              <td className="muted">+{accel} new sales / month</td>
             </tr>
             <tr>
-              <td>Default Dec 31 outcome</td>
-              <td className="muted">~680 copies · ~€53.7k</td>
+              <td>Current Dec 31 outcome</td>
+              <td className="muted">{currentOutcome}</td>
             </tr>
           </tbody>
         </table>
