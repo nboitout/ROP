@@ -25,9 +25,10 @@ const AMBER = '#EF9F27'
 const BLUE = '#378ADD'
 const TEAL = '#0F6E56'
 const POOL = 765000
-const DEFAULT_PRICE = 79
+// Matches the recommended "Livre en ligne" price on the public website.
+const DEFAULT_PRICE = 70
 const PRICE_MIN = 50
-const PRICE_MAX = 99
+const PRICE_MAX = 100
 const DEFAULT_PHASE_1_TARGET = 100
 const DEFAULT_PHASE_2_ACCEL = 40
 
@@ -35,6 +36,10 @@ const labels = ['Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
 
 function eur(n: number) {
   return '€' + Math.round(n).toLocaleString()
+}
+
+function eurK(n: number) {
+  return '€' + Math.round(n / 1000).toLocaleString() + 'k'
 }
 
 function model(T1: number, g: number, price: number) {
@@ -97,7 +102,7 @@ export default function SalesSimulationPage() {
   const chartData = labels.map((name, i) => ({
     name,
     monthly: Math.round(m.monthly[i]),
-    cumulative: Math.round(m.cumA[i]),
+    revenue: Math.round(m.cumRev[i]),
     fill: i < 3 ? AMBER : BLUE,
   }))
 
@@ -176,7 +181,7 @@ export default function SalesSimulationPage() {
           </span>
           <span style={{ display: 'flex', alignItems: 'center', gap: 5 }}>
             <span style={{ width: 14, height: 3, background: TEAL }} />
-            Cumulative copies
+            Cumulative revenue
           </span>
         </div>
 
@@ -207,7 +212,9 @@ export default function SalesSimulationPage() {
                 axisLine={false}
                 tickLine={false}
                 allowDecimals={false}
-                width={48}
+                width={64}
+                tickFormatter={(v) => eurK(Number(v))}
+                label={{ value: 'Revenue', angle: 90, position: 'insideRight', style: { fill: 'rgba(26,26,24,.5)', fontSize: 12, textAnchor: 'middle' } }}
               />
               <Tooltip
                 contentStyle={{
@@ -220,7 +227,7 @@ export default function SalesSimulationPage() {
                 }}
                 cursor={{ fill: 'rgba(26,26,24,.04)' }}
                 formatter={(v: number, name: string) => [
-                  `${Math.round(v).toLocaleString()}${name === 'Cumulative' ? ' copies' : ''}`,
+                  name === 'Cumulative revenue' ? eur(v) : `${Math.round(v).toLocaleString()} copies`,
                   name,
                 ]}
               />
@@ -233,8 +240,8 @@ export default function SalesSimulationPage() {
               <Line
                 yAxisId="right"
                 type="monotone"
-                dataKey="cumulative"
-                name="Cumulative"
+                dataKey="revenue"
+                name="Cumulative revenue"
                 stroke={TEAL}
                 strokeWidth={2}
                 dot={{ r: 3, fill: TEAL }}
