@@ -199,57 +199,57 @@ export const chapter8SlideAnchors: SyncAnchor[] = [
   },
   {
     sectionId: "zones-reflexes-podales",
-    blockIndex: 3,
+    blockIndex: 4,
     slide: 17
   },
   {
     sectionId: "zones-reflexes-podales",
-    blockIndex: 28,
+    blockIndex: 36,
     slide: 18
   },
   {
     sectionId: "zones-reflexes-podales",
-    blockIndex: 5,
+    blockIndex: 6,
     slide: 19
   },
   {
     sectionId: "zones-reflexes-podales",
-    blockIndex: 6,
+    blockIndex: 7,
     slide: 20
   },
   {
     sectionId: "zones-reflexes-podales",
-    blockIndex: 13,
+    blockIndex: 14,
     slide: 21
   },
   {
     sectionId: "zones-reflexes-podales",
-    blockIndex: 17,
+    blockIndex: 19,
     slide: 22
   },
   {
     sectionId: "zones-reflexes-podales",
-    blockIndex: 20,
+    blockIndex: 23,
     slide: 23
   },
   {
     sectionId: "zones-reflexes-podales",
-    blockIndex: 21,
+    blockIndex: 25,
     slide: 24
   },
   {
     sectionId: "zones-reflexes-podales",
-    blockIndex: 23,
+    blockIndex: 28,
     slide: 24
   },
   {
     sectionId: "zones-reflexes-podales",
-    blockIndex: 26,
+    blockIndex: 32,
     slide: 25
   },
   {
     sectionId: "zones-reflexes-podales",
-    blockIndex: 27,
+    blockIndex: 34,
     slide: 26
   }
 ]
