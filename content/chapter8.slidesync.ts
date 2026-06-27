@@ -82,35 +82,35 @@ export const chapter8Slides: SyncSlide[] = [
     title: "Synthese : de la fixation a la therapeutique ROP"
   },
   {
-    src: "/chapter-8/slides/slide-20.PNG",
+    src: "/chapter-8/slides/slide-20.png",
     title: "Cartographie podale : coupole diaphragmatique gauche et hiatus oesophagien"
   },
   {
-    src: "/chapter-8/slides/slide-21.PNG",
+    src: "/chapter-8/slides/slide-21.png",
     title: "Cartographie podale : coupole diaphragmatique droite"
   },
   {
-    src: "/chapter-8/slides/slide-22.PNG",
+    src: "/chapter-8/slides/slide-22.png",
     title: "Cartographie podale : hiatus oesophagien"
   },
   {
-    src: "/chapter-8/slides/slide-23.PNG",
+    src: "/chapter-8/slides/slide-23.png",
     title: "Cartographie podale : hiatus de Marfran et de Larrey"
   },
   {
-    src: "/chapter-8/slides/slide-24.PNG",
+    src: "/chapter-8/slides/slide-24.png",
     title: "Cartographie podale : jonction azygo-cave"
   },
   {
-    src: "/chapter-8/slides/slide-25.PNG",
+    src: "/chapter-8/slides/slide-25.png",
     title: "Cartographie podale : nerf phrenique"
   },
   {
-    src: "/chapter-8/slides/slide-26.PNG",
+    src: "/chapter-8/slides/slide-26.png",
     title: "Cartographie podale : articulations costo-vertebrales"
   },
   {
-    src: "/chapter-8/slides/slide-27.PNG",
+    src: "/chapter-8/slides/slide-27.png",
     title: "Cartographie podale : nerf intercostal brachial de Hyrtl"
   }
 ]
