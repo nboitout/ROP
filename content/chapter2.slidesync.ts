@@ -25,8 +25,8 @@ export const chapter2Slides: SyncSlide[] = [
   { src: '/chapter-2/slides/slide-13.png?v=20260622', title: 'Application clinique : lombo-sciatalgie post-partum' },
   { src: '/chapter-2/slides/slide-15.png', title: 'Plan de traitement ROP — application au cas de Mme X' },
   { src: '/chapter-2/slides/slide-14.png', title: 'Le plan de traitement ROP ciblé pour Madame X' },
-  { src: '/chapter-2/slides/slide-16.png', title: 'Indications thérapeutiques : le domaine des troubles fonctionnels' },
   { src: '/chapter-2/slides/slide-17.png', title: 'Gouvernance clinique : sécurité et limites' },
+  { src: '/chapter-2/slides/slide-16.png', title: 'Indications thérapeutiques : le domaine des troubles fonctionnels' },
   { src: '/chapter-2/slides/slide-18.png', title: 'L’accompagnement global du patient' },
 ]
 
@@ -46,8 +46,8 @@ export const chapter2SlidesEn: SyncSlide[] = [
   { src: '/chapter-2/slides/en/slide-13.png?v=6254c01', title: 'Clinical application: postpartum lumbosciatica' },
   { src: '/chapter-2/slides/en/slide-15.png', title: 'ROP treatment plan — case application: Mrs X' },
   { src: '/chapter-2/slides/en/slide-14.png', title: 'Targeted ROP treatment plan for patient X' },
-  { src: '/chapter-2/slides/en/slide-16.png', title: 'Therapeutic indications: reversible functional disorders' },
   { src: '/chapter-2/slides/en/slide-17.png', title: 'Clinical governance: safety and limits' },
+  { src: '/chapter-2/slides/en/slide-16.png', title: 'Therapeutic indications: reversible functional disorders' },
   { src: '/chapter-2/slides/en/slide-18.png', title: 'Global patient support' },
 ]
 
@@ -67,8 +67,8 @@ export const chapter2SlidesDe: SyncSlide[] = [
   { src: '/chapter-2/slides/de/slide-13.png?v=6254c01', title: 'Klinische Anwendung: postpartale Lumbosciatalgie' },
   { src: '/chapter-2/slides/de/slide-15.png', title: 'ROP-Behandlungsplan — Anwendung auf den Fall Frau X' },
   { src: '/chapter-2/slides/de/slide-14.png', title: 'Gezielter ROP-Behandlungsplan für Patientin X' },
-  { src: '/chapter-2/slides/de/slide-16.png', title: 'Therapeutische Indikationen: reversible funktionelle Störungen' },
   { src: '/chapter-2/slides/de/slide-17.png', title: 'Klinische Steuerung: Sicherheit und Grenzen' },
+  { src: '/chapter-2/slides/de/slide-16.png', title: 'Therapeutische Indikationen: reversible funktionelle Störungen' },
   { src: '/chapter-2/slides/de/slide-18.png', title: 'Ganzheitliche Begleitung des Patienten' },
 ]
 
@@ -88,8 +88,8 @@ export const chapter2SlidesEs: SyncSlide[] = [
   { src: '/chapter-2/slides/es/slide-13.png?v=6254c01', title: 'Aplicación clínica: lumbociatalgia posparto' },
   { src: '/chapter-2/slides/es/slide-15.png', title: 'Plan de tratamiento ROP — aplicación al caso de la Sra. X' },
   { src: '/chapter-2/slides/es/slide-14.png', title: 'Plan de tratamiento ROP dirigido para la paciente X' },
-  { src: '/chapter-2/slides/es/slide-16.png', title: 'Indicaciones terapéuticas: trastornos funcionales reversibles' },
   { src: '/chapter-2/slides/es/slide-17.png', title: 'Gobernanza clínica: seguridad y límites' },
+  { src: '/chapter-2/slides/es/slide-16.png', title: 'Indicaciones terapéuticas: trastornos funcionales reversibles' },
   { src: '/chapter-2/slides/es/slide-18.png', title: 'Acompañamiento global del paciente' },
 ]
 
@@ -109,8 +109,8 @@ export const chapter2SlidesIt: SyncSlide[] = [
   { src: '/chapter-2/slides/it/slide-13.png?v=6254c01', title: 'Applicazione clinica: lombosciatalgia post-partum' },
   { src: '/chapter-2/slides/it/slide-15.png', title: 'Piano di trattamento ROP — applicazione al caso della Sig.ra X' },
   { src: '/chapter-2/slides/it/slide-14.png', title: 'Piano di trattamento ROP mirato per la paziente X' },
-  { src: '/chapter-2/slides/it/slide-16.png', title: 'Indicazioni terapeutiche: disturbi funzionali reversibili' },
   { src: '/chapter-2/slides/it/slide-17.png', title: 'Governance clinica: sicurezza e limiti' },
+  { src: '/chapter-2/slides/it/slide-16.png', title: 'Indicazioni terapeutiche: disturbi funzionali reversibili' },
   { src: '/chapter-2/slides/it/slide-18.png', title: 'Accompagnamento globale del paziente' },
 ]
 
@@ -130,8 +130,8 @@ export const chapter2SlideAnchorsFr: SyncAnchor[] = [
   { sectionId: 'exemple-clinique', blockIndex: -1, slide: 13 },
   { sectionId: 'exemple-clinique', blockIndex: 6, slide: 14 },
   { sectionId: 'exemple-clinique', blockIndex: 10, slide: 15, gapBefore: 'half' },
-  { sectionId: 'indications', blockIndex: -1, slide: 16 },
-  { sectionId: 'contre-indications', blockIndex: -1, slide: 17 },
+  { sectionId: 'contre-indications', blockIndex: -1, slide: 16 },
+  { sectionId: 'indications', blockIndex: -1, slide: 17 },
   { sectionId: 'conseils', blockIndex: -1, slide: 18 },
 ]
 
@@ -151,7 +151,7 @@ export const chapter2SlideAnchors: SyncAnchor[] = [
   { sectionId: 'exemple-clinique', blockIndex: -1, slide: 13 },
   { sectionId: 'exemple-clinique', blockIndex: 6, slide: 14 },
   { sectionId: 'exemple-clinique', blockIndex: 10, slide: 15, gapBefore: 'half' },
-  { sectionId: 'indications', blockIndex: -1, slide: 16 },
-  { sectionId: 'contre-indications', blockIndex: -1, slide: 17 },
+  { sectionId: 'contre-indications', blockIndex: -1, slide: 16 },
+  { sectionId: 'indications', blockIndex: -1, slide: 17 },
   { sectionId: 'conseils', blockIndex: -1, slide: 18 },
 ]
