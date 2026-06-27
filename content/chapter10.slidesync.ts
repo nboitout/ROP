@@ -5,7 +5,7 @@
 // stored under public/chapter-10/slides/.
 
 export type SyncSlide = { src: string; title: string; orientation?: 'portrait' }
-export type SyncAnchor = { sectionId: string; blockIndex: number; slide: number; gapBefore?: 'half' }
+export type SyncAnchor = { sectionId: string; blockIndex: number; slide: number | number[]; gapBefore?: 'half' }
 
 export const chapter10Slides: SyncSlide[] = [
   { src: '/chapter-10/slides/slide-01.png', title: 'Chapitre 10 : Duodenum' },
@@ -28,7 +28,7 @@ export const chapter10SlideAnchors: SyncAnchor[] = [
   { sectionId: 'presentation', blockIndex: 0, slide: 1 },
   { sectionId: 'situation', blockIndex: 0, slide: 2 },
   { sectionId: 'anatomie-figure-10-1', blockIndex: 0, slide: 3 },
-  { sectionId: 'anatomie-figure-10-1', blockIndex: 9, slide: 4 },
+  { sectionId: 'anatomie-figure-10-1', blockIndex: 16, slide: [3, 4] },
   { sectionId: 'anatomie-figure-10-1', blockIndex: 23, slide: 5 },
   { sectionId: 'rapports', blockIndex: 8, slide: 6 },
   { sectionId: 'vascularisation', blockIndex: 0, slide: 7 },
