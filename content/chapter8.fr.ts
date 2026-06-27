@@ -914,7 +914,7 @@ export const chapter8Fr: Chapter = {
           src: "/chapter-8/figures/figure-8-01.png",
           caption: "Obliquité du centre phrénique",
           alt: "Photo du repérage podal de l’obliquité du centre phrénique",
-          orientation: "portrait"
+          orientation: "landscape"
         },
         {
           type: "para",
@@ -977,7 +977,7 @@ export const chapter8Fr: Chapter = {
           src: "/chapter-8/figures/figure-8-02.png",
           caption: "Hiatus œsophagien et cardia",
           alt: "Photo du repérage podal du hiatus œsophagien et du cardia",
-          orientation: "portrait"
+          orientation: "landscape"
         },
         {
           type: "lead",
