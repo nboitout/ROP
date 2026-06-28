@@ -34,6 +34,7 @@ import { chapter14Es } from './chapter14.es'
 import { chapter14It } from './chapter14.it'
 import { chapter15Fr } from './chapter15.fr'
 import { chapter16Fr } from './chapter16.fr'
+import { chapter17Fr } from './chapter17.fr'
 
 /**
  * Per-chapter, per-language content. French is the canonical fallback.
@@ -60,6 +61,7 @@ const registry: Record<string, Partial<Record<Lang, Chapter>>> = {
   'chapter-14': { fr: chapter14Fr, en: chapter14En, de: chapter14De, es: chapter14Es, it: chapter14It },
   'chapter-15': { fr: chapter15Fr },
   'chapter-16': { fr: chapter16Fr },
+  'chapter-17': { fr: chapter17Fr },
 }
 
 /**
