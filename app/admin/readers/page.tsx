@@ -13,11 +13,11 @@ const ALL_PROFESSIONS: readonly string[] = translations.fr.form.professionOption
 // Every supported site language, in a fixed display order, so the
 // "Readers by Language" chart always shows all of them — even at zero.
 const ALL_LANGS: { code: string; label: string }[] = [
-  { code: 'fr', label: 'Français' },
+  { code: 'fr', label: 'French' },
   { code: 'en', label: 'English' },
-  { code: 'de', label: 'Deutsch' },
-  { code: 'es', label: 'Español' },
-  { code: 'it', label: 'Italiano' },
+  { code: 'de', label: 'German' },
+  { code: 'es', label: 'Spanish' },
+  { code: 'it', label: 'Italian' },
 ]
 
 function daysAgo(days: number): string {
@@ -83,8 +83,8 @@ export default async function ReadersPage() {
       (a, b) => b.value - a.value
     ),
     // then the aggregated "Autre" bucket and the optional-blank bucket last.
-    { name: 'Autre', value: professionOther },
-    { name: 'Non renseigné', value: professionBlank },
+    { name: 'Other', value: professionOther },
+    { name: 'Not provided', value: professionBlank },
   ]
 
   // Bar: leads by language — always show every supported language (even at 0),

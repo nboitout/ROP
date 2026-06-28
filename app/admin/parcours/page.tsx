@@ -25,12 +25,12 @@ const ROUTES: Record<string, { slug: string; href: string; classicHref?: string;
   '16': { slug: 'chapter-16', href: '/lecture/chapitre-16', classicHref: '/lecture/chapitre-16' },
 }
 
-// Full book: Introduction (00) + Chapitres 1–21.
+// Full book: Introduction (00) + Chapters 1–21.
 const CHAPTERS = Array.from({ length: 22 }, (_, i) => {
   const num = String(i).padStart(2, '0')
   return {
     num,
-    label: num === '00' ? 'Introduction' : `Chapitre ${i}`,
+    label: num === '00' ? 'Introduction' : `Chapter ${i}`,
     slug: ROUTES[num]?.slug ?? null,
     href: ROUTES[num]?.href ?? null,
     classicHref: ROUTES[num]?.classicHref ?? null,
@@ -180,7 +180,7 @@ export default async function ParcoursPage({ searchParams }: Props) {
 
   const options = [
     { value: 'all', label: 'Average per chapter' },
-    ...CHAPTERS.map((c) => ({ value: c.num, label: c.slug ? c.label : `${c.label} (à venir)` })),
+    ...CHAPTERS.map((c) => ({ value: c.num, label: c.slug ? c.label : `${c.label} (coming soon)` })),
   ]
 
   return (
@@ -188,7 +188,7 @@ export default async function ParcoursPage({ searchParams }: Props) {
       <div className="adm-page-header">
         <div>
           <p className="adm-page-eyebrow">Dashboard</p>
-          <h1 className="adm-page-title">Parcours</h1>
+          <h1 className="adm-page-title">Journey</h1>
           <p className="adm-page-sub">
             {isAvg
               ? 'Average reading journey per chapter (across chapters with data)'

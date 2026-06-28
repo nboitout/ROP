@@ -23,20 +23,18 @@ export type BoardRow = {
 type Part = { id: string; title: string }
 
 const STATUS_LABEL: Record<LangStatus, string> = {
-  live: 'Ouvrir',
-  fallback: 'À traduire',
-  none: '—',
+  live: 'Open',
+  fallback: 'Needs translation',
+  none: '-',
 }
 
 function LangCell({ href, status }: { href: string | null; status: LangStatus }) {
-  // `live` and `fallback` both open the chapter (fallback shows the FR text with
-  // the reader's own fallback banner); `none` has no route yet.
   if (status === 'none' || !href) {
     return <span className="adm-chip none">{STATUS_LABEL.none}</span>
   }
   return (
     <a className={`adm-chip ${status}`} href={href} target="_blank" rel="noopener noreferrer">
-      {STATUS_LABEL[status]} ↗
+      {STATUS_LABEL[status]} ->
     </a>
   )
 }
@@ -48,12 +46,12 @@ export default function ChapterBoard({ parts, rows }: { parts: Part[]; rows: Boa
   return (
     <>
       <div className="adm-filter-row">
-        <span className="adm-filter-label">Partie</span>
+        <span className="adm-filter-label">Part</span>
         <button
           className={`adm-filter-btn${active === 'all' ? ' active' : ''}`}
           onClick={() => setActive('all')}
         >
-          Toutes
+          All
         </button>
         {parts.map((p) => (
           <button
@@ -71,13 +69,13 @@ export default function ChapterBoard({ parts, rows }: { parts: Part[]; rows: Boa
           <thead>
             <tr>
               <th style={{ width: 44 }}>#</th>
-              <th>Chapitre</th>
-              <th>Partie</th>
-              <th style={{ width: 110 }}>FR</th>
-              <th style={{ width: 110 }}>EN</th>
-              <th style={{ width: 110 }}>DE</th>
-              <th style={{ width: 110 }}>ES</th>
-              <th style={{ width: 110 }}>IT</th>
+              <th>Chapter</th>
+              <th>Part</th>
+              <th style={{ width: 130 }}>FR</th>
+              <th style={{ width: 130 }}>EN</th>
+              <th style={{ width: 130 }}>DE</th>
+              <th style={{ width: 130 }}>ES</th>
+              <th style={{ width: 130 }}>IT</th>
             </tr>
           </thead>
           <tbody>
@@ -86,9 +84,9 @@ export default function ChapterBoard({ parts, rows }: { parts: Part[]; rows: Boa
                 <td className="adm-board-num">{r.num}</td>
                 <td>
                   {r.title}
-                  {r.free && <span className="adm-row-badge free">Accès libre</span>}
-                  {r.gated && <span className="adm-row-badge paid">Payant</span>}
-                  {r.draft && <span className="adm-row-badge draft">Brouillon</span>}
+                  {r.free && <span className="adm-row-badge free">Free access</span>}
+                  {r.gated && <span className="adm-row-badge paid">Paid</span>}
+                  {r.draft && <span className="adm-row-badge draft">Draft</span>}
                 </td>
                 <td className="muted">{r.partTitle}</td>
                 <td><LangCell href={r.href ? `${r.href}?lang=fr` : null} status={r.fr} /></td>

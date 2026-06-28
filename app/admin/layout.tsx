@@ -11,17 +11,17 @@ export default async function AdminLayout({
     <div className="adm-root">
       <nav className="adm-nav">
         <div className="adm-nav-left">
-          <span className="adm-nav-brand">R.O.P. — Admin</span>
+          <span className="adm-nav-brand">R.O.P. - Admin</span>
           <div className="adm-nav-links">
-            <AdminNavLink href="/admin/chapitres">Chapitres</AdminNavLink>
+            <AdminNavLink href="/admin/chapitres">Chapters</AdminNavLink>
             <span className="adm-nav-sep" aria-hidden="true" />
             <AdminNavLink href="/admin">Overview</AdminNavLink>
             <AdminNavLink href="/admin/engagement">Engagement</AdminNavLink>
             <AdminNavLink href="/admin/readers">Readers</AdminNavLink>
             <AdminNavLink href="/admin/visits">Visits</AdminNavLink>
-            <AdminNavLink href="/admin/parcours">Parcours</AdminNavLink>
+            <AdminNavLink href="/admin/parcours">Journey</AdminNavLink>
             <span className="adm-nav-sep" aria-hidden="true" />
-            <AdminNavLink href="/admin/sales-plan" className="sales">Sales plan</AdminNavLink>
+            <AdminNavLink href="/admin/sales-plan" className="sales">Sales Plan</AdminNavLink>
             <span className="adm-nav-sep" aria-hidden="true" />
             <a
               href="/prototype-pied"
@@ -29,12 +29,12 @@ export default async function AdminLayout({
               rel="noopener noreferrer"
               className="adm-nav-link"
             >
-              Prototype 3D ↗
+              3D Prototype ->
             </a>
           </div>
         </div>
         <div className="adm-nav-right">
-          <a href="/" className="adm-nav-site-link">← guy-boitout.com</a>
+          <a href="/" className="adm-nav-site-link">&lt;- guy-boitout.com</a>
           <LogoutButton />
         </div>
       </nav>

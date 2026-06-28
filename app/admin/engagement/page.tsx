@@ -23,20 +23,20 @@ function formatDuration(secs: number): string {
 // explicit entry below.
 const SLUG_LABELS: Record<string, string> = {
   '/': 'Homepage',
-  '/?gate=free': 'Gate (inscription)',
+  '/?gate=free': 'Gate (sign-up)',
   '/introduction': 'Introduction',
-  '/chapitres-gratuits': 'Chapitres gratuits',
-  '/lecture/traitement-rop': 'Chapitre 2',
+  '/chapitres-gratuits': 'Free chapters',
+  '/lecture/traitement-rop': 'Chapter 2',
   // Merge the classic reader and the synchronized reader into one Chapter 5
   // bucket so the chart matches the top-line scorecard.
-  '/lecture/chapitre-5': 'Chapitre 5',
+  '/lecture/chapitre-5': 'Chapter 5',
 }
 
 function pageLabel(rawPath: string): string {
   const p = rawPath.replace(/^https?:\/\/[^/]+/, '') || '/'
   if (SLUG_LABELS[p]) return SLUG_LABELS[p]
   const m = p.match(/^\/chapitre-(\d+)/)
-  if (m) return `Chapitre ${m[1]}`
+  if (m) return `Chapter ${m[1]}`
   return p
 }
 
@@ -44,10 +44,10 @@ function pageLabel(rawPath: string): string {
 // Homepage, Gate, free-chapters, Introduction, then chapters in sequence.
 function pageOrder(label: string): number {
   if (label === 'Homepage') return 0
-  if (label === 'Gate (inscription)') return 1
-  if (label === 'Chapitres gratuits') return 2
+  if (label === 'Gate (sign-up)') return 1
+  if (label === 'Free chapters') return 2
   if (label === 'Introduction') return 3
-  const m = label.match(/^Chapitre (\d+)/)
+  const m = label.match(/^Chapter (\d+)/)
   if (m) return 100 + parseInt(m[1], 10)
   return 999
 }
@@ -64,7 +64,7 @@ const CTA_BUCKET: Record<string, string> = {
   pricing_notify: 'Notify me on release',
   // Outbound links in the "about Guy" section → the R.O.P. Institute site.
   author_institut: 'Institut R.O.P. — site',
-  author_formations: 'Institut R.O.P. — formations',
+  author_formations: 'Institut R.O.P. — training',
 }
 
 export default async function EngagementPage() {
@@ -127,7 +127,7 @@ export default async function EngagementPage() {
   // "about Guy" links at zero so they're always visible, even before any click.
   const ctaCount = new Map<string, number>([
     ['Institut R.O.P. — site', 0],
-    ['Institut R.O.P. — formations', 0],
+    ['Institut R.O.P. — training', 0],
   ])
   events
     .filter((e) => e.event === 'cta_click')
@@ -240,7 +240,7 @@ export default async function EngagementPage() {
 
       <div className="adm-scorecards">
         <Scorecard
-          label="Avg Time — Chapitre 2"
+          label="Avg Time — Chapter 2"
           value={formatDuration(avgChapter2)}
           subtitle="page_leave events"
         />
@@ -289,7 +289,7 @@ export default async function EngagementPage() {
           <p className="adm-chart-title">Avg Dwell Time per Page (seconds)</p>
           <p className="adm-page-sub" style={{ marginTop: -10, marginBottom: 18, lineHeight: 1.6 }}>
             Average <strong>active</strong> seconds spent on each page before leaving (time with the tab
-            hidden isn’t counted). The homepage and the sign-up gate are reported separately. Chapitre 2
+            hidden isn’t counted). The homepage and the sign-up gate are reported separately. Chapter 2
             now combines classic and synchronized reading routes in the headline scorecard above.
           </p>
           <AdminBarChart data={dwellData} color="#4a6b5a" layout="vertical" showValues />
@@ -303,7 +303,7 @@ export default async function EngagementPage() {
             not people. Pre-launch the editions aren’t purchasable yet, so the print/online plan buttons
             fall under “Notify me on release” — a separate buy action will be added once the book is on sale.
             The two outbound links in the “about Guy” section are also tracked here as
-            <strong>Institut R.O.P. — site</strong> and <strong>Institut R.O.P. — formations</strong>.
+            <strong>Institut R.O.P. — site</strong> and <strong>Institut R.O.P. — training</strong>.
           </p>
           <AdminBarChart data={ctaData} color="#c9a35e" layout="vertical" showValues />
         </div>
