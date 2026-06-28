@@ -24,6 +24,7 @@ const ROUTES: Record<string, { slug: string; href: string; classicHref?: string;
   '15': { slug: 'chapter-15', href: '/lecture/chapitre-15', classicHref: '/lecture/chapitre-15' },
   '16': { slug: 'chapter-16', href: '/lecture/chapitre-16', classicHref: '/lecture/chapitre-16' },
   '17': { slug: 'chapter-17', href: '/lecture/chapitre-17', classicHref: '/lecture/chapitre-17' },
+  '18': { slug: 'chapter-18', href: '/lecture/chapitre-18', classicHref: '/lecture/chapitre-18' },
 }
 
 // Full book: Introduction (00) + Chapters 1–21.
