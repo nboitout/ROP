@@ -63,8 +63,12 @@ export const chapter20Fr: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "ils sont situés à l'extérieur de la cavité pelvienne, dans le scrotum (ou bourse) sous le périnée, afin d'être à une température inférieure à celle de l'abdomen (2 °C en moins).",
-            "Intérêt en ROP",
+            "ils sont situés à l'extérieur de la cavité pelvienne, dans le scrotum (ou bourse) sous le périnée, afin d'être à une température inférieure à celle de l'abdomen (2 °C en moins)."
+          ]
+        },
+        {
+          "type": "rop",
+          "body": [
             "La même zone réflexe des ovaires et des testicules s’explique par leur migration embryologique commune jusqu’à la cavité pelvienne."
           ]
         },
@@ -172,8 +176,12 @@ export const chapter20Fr: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "son insertion proximale (figure 20.8) est sur le ligament inguinal et le pubis. Il accompagne le cordon spermatique dans le canal inguinal. Son insertion distale est sur la tunique fibreuse des bourses. Il est innervé par les nerfs génitofémoral et ilioinguinal. C’est le muscle élévateur des bourses, ce qui favorise la migration du sperme dans le canal déférent en augmentant la pression interne du testicule et de l’épididyme.",
-            "Intérêt en ROP",
+            "son insertion proximale (figure 20.8) est sur le ligament inguinal et le pubis. Il accompagne le cordon spermatique dans le canal inguinal. Son insertion distale est sur la tunique fibreuse des bourses. Il est innervé par les nerfs génitofémoral et ilioinguinal. C’est le muscle élévateur des bourses, ce qui favorise la migration du sperme dans le canal déférent en augmentant la pression interne du testicule et de l’épididyme."
+          ]
+        },
+        {
+          "type": "rop",
+          "body": [
             "Notre action réflexe conjointe sur le ligament inguinal et les orifices profond et superficiel du canal inguinal, contribue à équilibrer les pressions intra-canalaires sur le cordon spermatique et son contenu vasculaire, nerveux et le canal déférent."
           ]
         },
@@ -395,8 +403,12 @@ export const chapter20Fr: Chapter = {
           "items": [
             "l’artère spermatique naît de l’aorte abdominale, près de l’artère rénale (figure 16.10);",
             "Veineuse: la vascularisation veineuse du testicule présente des particularités proches de celle de l’ovaire (figure 16.10). La veine spermatique droite rejoint la veine cave inférieure, tandis que la veine spermatique gauche rejoint la veine rénale gauche. Une stase veineuse gauche peut favoriser une varicocèle et retentir sur le spermogramme. On parle classiquement d’oligozoospermie lorsque la concentration de spermatozoïdes est inférieure aux valeurs de référence, autour de 15 millions/mL selon les référentiels utilisés; des valeurs très basses correspondent à des formes plus sévères. L’hypospermie correspond à un volume d’éjaculat inférieur aux valeurs attendues.",
-            "Le système veineux maintient la prostate en place et amortit les microtraumatismes dont la prostate peut être victime. Le retour veineux est sous le double contrôle du système porte (figure 11.7). Comme pour les hémorroïdes, toute congestion du système porte, et donc du foie, entraîne une congestion de la prostate.",
-            "Intérêt en ROP",
+            "Le système veineux maintient la prostate en place et amortit les microtraumatismes dont la prostate peut être victime. Le retour veineux est sous le double contrôle du système porte (figure 11.7). Comme pour les hémorroïdes, toute congestion du système porte, et donc du foie, entraîne une congestion de la prostate."
+          ]
+        },
+        {
+          "type": "rop",
+          "body": [
             "Le foie, le rein gauche et l’intestin grêle font partie des zones réflexes à aborder quand on traite le système uro-génital et les problèmes veineux des membres inférieurs.",
             "La fixation du rein gauche ou le clampage de la veine rénale par la racine du mésentère ou par la pince aorto-mésentérique à la suite de ptose de l’intestin grêle (figure 16.10), freine le retour veineux dans la cavité pelvienne, occasionnant des varicocèles gauches et des varices prédominant dans le membre inférieur gauche. Prostate et vésicules séminales:"
           ]
@@ -778,8 +790,12 @@ export const chapter20Fr: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "hémorroïdes, hernies inguinales.",
-            "Intérêt en ROP",
+            "hémorroïdes, hernies inguinales."
+          ]
+        },
+        {
+          "type": "rop",
+          "body": [
             "L’hypertrophie de la prostate rend les faces latérales de la loge prostatique plus rigides. Elle met en tension les lames sacro-recto-génito-pubiennes et les plexus hypogastriques inférieurs. Elle perturbe la mobilité des sacro-iliaques et explique les lombo-sciatalgies ou périnéalgies d’origine congestive ou irritative et non de type mécanique, signes avant-coureurs bien avant les troubles mictionnels."
           ]
         },

@@ -84,12 +84,10 @@ export const chapter16Fr: Chapter = {
           ]
         },
         {
-          "type": "sub",
-          "text": "Intérêt en ROP"
-        },
-        {
-          "type": "para",
-          "text": "Dans la lecture clinique ROP, les deux loges rénales sont abordées ensemble, car leurs fascias, leurs rapports postérieurs et leurs liens diaphragmatico-lombaires participent à une même dynamique régionale. Il faut donc souvent solliciter les zones réflexes des deux reins. Ils sont également en relation avec le côlon par la lame de Toldt."
+          "type": "rop",
+          "body": [
+            "Dans la lecture clinique ROP, les deux loges rénales sont abordées ensemble, car leurs fascias, leurs rapports postérieurs et leurs liens diaphragmatico-lombaires participent à une même dynamique régionale. Il faut donc souvent solliciter les zones réflexes des deux reins. Ils sont également en relation avec le côlon par la lame de Toldt."
+          ]
         },
         {
           "type": "sub",
@@ -177,20 +175,12 @@ export const chapter16Fr: Chapter = {
           "text": "Triangle de Jean-Louis Petit et quadrilatère de Grynfelt: ce sont deux régions de la fosse lombaire qui constituent des points faibles de la paroi abdominale postérieure (figure 16.7). Elles permettent d’aborder le rein sans grande interposition de tissus mous où il n’existe pas de faisceaux des muscles obliques interne et externe. Nous sommes en contact directement avec le muscle transverse de l’abdomen et, indirectement, avec le nerf subcostal et les nerfs du plexus lombaire."
         },
         {
-          "type": "sub",
-          "text": "Intérêt en ROP"
-        },
-        {
-          "type": "para",
-          "text": "Un traumatisme par choc direct, une chute sur le dos ou sur le ventre, un accident avec décélération importante, une fracture des dernières côtes ou une douleur profonde du flanc doivent inciter à la prudence. Les reins, par leur densité et leur position rétro-péritonéale proche de la colonne vertébrale, peuvent être concernés par ces mécanismes traumatiques."
-        },
-        {
-          "type": "para",
-          "text": "Il est important de demander au patient si les urines sont rouges, brunes ou colorées comme du thé foncé, ce qui peut évoquer une hématurie. La présence de sang dans les urines, d’une douleur du flanc, d’un malaise, d’une fièvre, d’une altération de l’état général ou d’un traumatisme important impose une évaluation médicale."
-        },
-        {
-          "type": "para",
-          "text": "Dans le cadre ROP, après exclusion médicale, un traumatisme ancien de la fosse lombaire peut être lu comme une fixation postérieure de la loge rénale, avec perte de mobilité locale et irritation possible des tissus de voisinage. Le travail réflexe vise alors à accompagner la mobilité de la région rénale, sans jamais se substituer au diagnostic médical."
+          "type": "rop",
+          "body": [
+            "Un traumatisme par choc direct, une chute sur le dos ou sur le ventre, un accident avec décélération importante, une fracture des dernières côtes ou une douleur profonde du flanc doivent inciter à la prudence. Les reins, par leur densité et leur position rétro-péritonéale proche de la colonne vertébrale, peuvent être concernés par ces mécanismes traumatiques.",
+            "Il est important de demander au patient si les urines sont rouges, brunes ou colorées comme du thé foncé, ce qui peut évoquer une hématurie. La présence de sang dans les urines, d’une douleur du flanc, d’un malaise, d’une fièvre, d’une altération de l’état général ou d’un traumatisme important impose une évaluation médicale.",
+            "Dans le cadre ROP, après exclusion médicale, un traumatisme ancien de la fosse lombaire peut être lu comme une fixation postérieure de la loge rénale, avec perte de mobilité locale et irritation possible des tissus de voisinage. Le travail réflexe vise alors à accompagner la mobilité de la région rénale, sans jamais se substituer au diagnostic médical."
+          ]
         },
         {
           "type": "sub",
@@ -263,12 +253,10 @@ export const chapter16Fr: Chapter = {
           ]
         },
         {
-          "type": "sub",
-          "text": "Intérêt en ROP"
-        },
-        {
-          "type": "sub",
-          "text": "Différence entre les deux reins"
+          "type": "rop",
+          "body": [
+            "Différence entre les deux reins"
+          ]
         },
         {
           "type": "bullets",
@@ -466,12 +454,10 @@ export const chapter16Fr: Chapter = {
           ]
         },
         {
-          "type": "sub",
-          "text": "Intérêt en ROP"
-        },
-        {
-          "type": "para",
-          "text": "La finalité de notre action réflexe n’est pas de « remonter » le rein ptosé mais de le libérer des contraintes mécaniques ostéo-musculo-articulaires ou viscérales qui s’exercent sur lui."
+          "type": "rop",
+          "body": [
+            "La finalité de notre action réflexe n’est pas de « remonter » le rein ptosé mais de le libérer des contraintes mécaniques ostéo-musculo-articulaires ou viscérales qui s’exercent sur lui."
+          ]
         },
         {
           "type": "sub",
@@ -486,12 +472,8 @@ export const chapter16Fr: Chapter = {
           "text": "Les spasmes musculaires des muscles para-vertébraux, du psoas et du carré des lombes sont responsables de lumbago, survenant lors d’un effort anodin. Le patient pense que le « faux mouvement » est la cause de son blocage. C’est juste que le problème rénal sous-jacent était sur le point de décompenser. Les fixations rénales traumatiques affectent plus les hommes."
         },
         {
-          "type": "sub",
-          "text": "Intérêt en ROP"
-        },
-        {
-          "type": "bullets",
-          "items": [
+          "type": "rop",
+          "body": [
             "La zone réflexe plantaire du rein droit trouve tout son intérêt dans les fixations antérieures. Il faut associer au rein droit, le caecum et l’ovaire droit après des appendicectomies.",
             "La zone réflexe dorsale trouve tout son intérêt dans les fixations postérieures. Il faut associer le rein gauche, la rate et la sphère uro-génitale."
           ]

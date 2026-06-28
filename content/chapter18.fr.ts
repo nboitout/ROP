@@ -181,12 +181,10 @@ export const chapter18Fr: Chapter = {
           ]
         },
         {
-          "type": "sub",
-          "text": "Intérêt en ROP"
-        },
-        {
-          "type": "para",
-          "text": "Il y a un continuum anatomique entre le diaphragme, le foie, la cavité pelvienne, la vessie et les hanches. Le bon fonctionnement de la vessie repose sur ses liens avec le péritoine, la symphyse pubienne, les ligaments pubovésicaux et pubo-urétraux, la fosse obturatrice sur laquelle elle est posée, les muscles de la hanche."
+          "type": "rop",
+          "body": [
+            "Il y a un continuum anatomique entre le diaphragme, le foie, la cavité pelvienne, la vessie et les hanches. Le bon fonctionnement de la vessie repose sur ses liens avec le péritoine, la symphyse pubienne, les ligaments pubovésicaux et pubo-urétraux, la fosse obturatrice sur laquelle elle est posée, les muscles de la hanche."
+          ]
         }
       ]
     },
@@ -415,12 +413,10 @@ export const chapter18Fr: Chapter = {
           "text": "Par l’éducation, le cortex cérébral contrôle l’activité vésicale. Si le système limbique, siège des émotions et de la peur, prend le pas sur le cortex (Cf. Chapitre 5 Mécanisme de stress, page…) il modifie le contrôle neuro-musculaire de la vessie d’où envies impérieuses, pollakiurie, énurésie."
         },
         {
-          "type": "sub",
-          "text": "Intérêt en ROP"
-        },
-        {
-          "type": "para",
-          "text": "Le traitement réflexe vise à restaurer l’équilibre neuro-végétatif et crânio-sacré s’exerçant sur la vessie. Dans l’énurésie, les zones réflexes à solliciter sont l’hypothalamus, le cerveau limbique, le tronc cérébral, la symphyse sphéno-basilaire et les vertèbres Th7, L1 et L2, sacrum, coccyx."
+          "type": "rop",
+          "body": [
+            "Le traitement réflexe vise à restaurer l’équilibre neuro-végétatif et crânio-sacré s’exerçant sur la vessie. Dans l’énurésie, les zones réflexes à solliciter sont l’hypothalamus, le cerveau limbique, le tronc cérébral, la symphyse sphéno-basilaire et les vertèbres Th7, L1 et L2, sacrum, coccyx."
+          ]
         },
         {
           "type": "sub",
@@ -443,12 +439,8 @@ export const chapter18Fr: Chapter = {
           ]
         },
         {
-          "type": "sub",
-          "text": "Intérêt en ROP"
-        },
-        {
-          "type": "bullets",
-          "items": [
+          "type": "rop",
+          "body": [
             "le renforcement trop précoce des muscles abdominaux chez la femme dans le post-partum, aggrave cette incontinence. Il faut d’abord rééquilibrer la tension des fascias s’exerçant sur les berges urétrales afin de réintroduire le sphincter urétral à l’intérieur de l’enceinte manométrique. Le renforcement des muscles abdominaux pourra ensuite être entrepris en privilégiant une rééducation hypopressive basée sur le rôle expirateur du muscle transverse de l’abdomen. (Cf. Gymnastique périnéale hypopressive, page…)"
           ]
         }
@@ -485,13 +477,14 @@ export const chapter18Fr: Chapter = {
           ]
         },
         {
-          "type": "sub",
-          "text": "Intérêt en ROP"
+          "type": "rop",
+          "body": [
+            "Notre action sur l’IUE vise à rééquilibrer les tensions des fascias entourant l’urètre en agissant sur le plexus pudendal, les attaches du périnée sur le coccyx, la symphyse pubienne, les branches ischio-pubiennes et le noyau fibreux central du périnée. Le système hormonal participe à cet équilibre des fascias. (Cf. Chapitre 19 Cycle menstruel, page…)"
+          ]
         },
         {
           "type": "bullets",
           "items": [
-            "Notre action sur l’IUE vise à rééquilibrer les tensions des fascias entourant l’urètre en agissant sur le plexus pudendal, les attaches du périnée sur le coccyx, la symphyse pubienne, les branches ischio-pubiennes et le noyau fibreux central du périnée. Le système hormonal participe à cet équilibre des fascias. (Cf. Chapitre 19 Cycle menstruel, page…)",
             "Fuite non précédée d’un besoin: instabilité vésicale sur lésions structurelles responsables de ténesmes (besoin permanent et douloureux de miction), par chirurgie ou infections récidivantes;",
             "Lésions neurologiques (vessies neurologiques): incontinence non précédée d’un besoin par lésions neurologiques: paraplégie, spina-bifida, sclérose en plaques, diabète."
           ]

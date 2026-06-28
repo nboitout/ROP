@@ -7,7 +7,7 @@
 
 import { Fragment, useEffect, useMemo, useRef, useState } from 'react'
 import Link from 'next/link'
-import type { Chapter, Block } from '@/content/types'
+import type { Chapter, Block, Section } from '@/content/types'
 import { useLanguage } from '@/app/i18n/LanguageContext'
 import { getSessionId } from '@/lib/session'
 import { currentTopAnchorId, saveReadingPosition, loadReadingPosition, restoreToAnchor } from '@/lib/readingPosition'
@@ -25,6 +25,12 @@ type Props = {
 }
 
 type XrefReturn = { href: string; label: string } | null
+
+function isRopInterestSection(section: Section) {
+  return /^int[ée]r[êe]t en r\.?o\.?p\.?$/i.test(section.title.trim()) &&
+    section.blocks.length === 1 &&
+    section.blocks[0].type === 'rop'
+}
 
 function getSafeXrefReturn(): XrefReturn {
   if (typeof window === 'undefined') return null
@@ -158,7 +164,9 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
   const [lightbox, setLightbox] = useState<{ src: string; alt: string; caption: string; orientation?: 'portrait' | 'landscape' } | null>(null)
   const [lightboxZoom, setLightboxZoom] = useState(1)
   const [isPhonePortrait, setIsPhonePortrait] = useState(false)
-  const [xrefReturn, setXrefReturn] = useState<XrefReturn>(null)
+  const [xrefReturn] = useState<XrefReturn>(() =>
+    typeof window !== 'undefined' ? getSafeXrefReturn() : null
+  )
   const articleRef = useRef<HTMLElement>(null)
   // While a slide-driven scroll is in flight, the scroll handler must not
   // fight the manually selected slide.
@@ -218,10 +226,6 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
   }, [chapter.slug])
 
   useEffect(() => {
-    setXrefReturn(getSafeXrefReturn())
-  }, [])
-
-  useEffect(() => {
     const prioritySlides = new Set<number>([0, 1, active - 2, active - 1, active])
     prioritySlides.forEach((index) => {
       const slide = slides[index]
@@ -236,7 +240,6 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
     if (window.location.hash) return
     const id = loadReadingPosition(chapter.slug)
     if (id) restoreToAnchor(id)
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [chapter.slug])
 
   useEffect(() => {
@@ -533,7 +536,7 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
                   ))}
                 </div>
               )}
-              <h2 className="cr-h2">{section.title}</h2>
+              {!isRopInterestSection(section) && <h2 className="cr-h2">{section.title}</h2>}
               {section.blocks.map((b, i) => {
                 const anchor = anchorBySlide.get(`${section.id}:${i}`)
                 const slideList = asSlideList(anchor?.slide)

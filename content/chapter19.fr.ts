@@ -152,12 +152,8 @@ export const chapter19Fr: Chapter = {
           ]
         },
         {
-          "type": "sub",
-          "text": "Intérêt en ROP"
-        },
-        {
-          "type": "bullets",
-          "items": [
+          "type": "rop",
+          "body": [
             "La région cervico-isthmique est la partie la plus importante de l’utérus sur le plan statique et dynamique. Elle est riche en mécanorécepteurs, sensibles aux étirements. Priorité est donnée à sa zone réflexe.",
             "Les ligaments sont eux-mêmes doués d’une certaine capacité de contractilité grâce à des fibres musculaires au sein des fibres élastiques. Ils assurent donc une fixation « intelligente » des organes pelviens."
           ]
@@ -300,12 +296,10 @@ export const chapter19Fr: Chapter = {
           ]
         },
         {
-          "type": "sub",
-          "text": "Intérêt en ROP"
-        },
-        {
-          "type": "para",
-          "text": "Une malposition utérine qui subit 2400 mouvements diaphragmatiques journaliers selon un axe faussé, ne peut que créer une congestion locale."
+          "type": "rop",
+          "body": [
+            "Une malposition utérine qui subit 2400 mouvements diaphragmatiques journaliers selon un axe faussé, ne peut que créer une congestion locale."
+          ]
         },
         {
           "type": "sub",
@@ -408,12 +402,8 @@ export const chapter19Fr: Chapter = {
           ]
         },
         {
-          "type": "sub",
-          "text": "Intérêt en ROP"
-        },
-        {
-          "type": "bullets",
-          "items": [
+          "type": "rop",
+          "body": [
             "Il est important de suivre les parturientes pour préparer la cavité pelvienne et l’utérus à l’accouchement. La ROP pendant la grossesse doit être pratiquée avec prudence, par un praticien formé, en tenant compte du terme, du contexte obstétrical et des contre-indications médicales éventuelles. En cas de grossesse à risque, de saignement, de douleur inhabituelle ou de menace d’accouchement prématuré, l’avis médical prime."
           ]
         }

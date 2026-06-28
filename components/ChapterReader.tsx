@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from 'react'
 import Link from 'next/link'
 import dynamic from 'next/dynamic'
-import type { Chapter, Block } from '@/content/types'
+import type { Chapter, Block, Section } from '@/content/types'
 import type { Lang } from '@/app/i18n/translations'
 
 const PdfSlideViewer = dynamic(() => import('@/components/PdfSlideViewer'), { ssr: false })
@@ -20,6 +20,12 @@ type Props = {
 }
 
 type XrefReturn = { href: string; label: string } | null
+
+function isRopInterestSection(section: Section) {
+  return /^int[ée]r[êe]t en r\.?o\.?p\.?$/i.test(section.title.trim()) &&
+    section.blocks.length === 1 &&
+    section.blocks[0].type === 'rop'
+}
 
 function getSafeXrefReturn(): XrefReturn {
   if (typeof window === 'undefined') return null
@@ -57,7 +63,9 @@ export default function ChapterReader({ chapter, bookTitle, backHref = '/chapitr
   const [slidePage, setSlidePage] = useState(1)
   const [slideWidth, setSlideWidth] = useState(800)
   const [slideZoom, setSlideZoom] = useState(0.75)
-  const [xrefReturn, setXrefReturn] = useState<XrefReturn>(null)
+  const [xrefReturn] = useState<XrefReturn>(() =>
+    typeof window !== 'undefined' ? getSafeXrefReturn() : null
+  )
   const viewerBodyRef = useRef<HTMLDivElement | null>(null)
   const [lightbox, setLightbox] = useState<{ src: string; alt: string; caption: string } | null>(null)
   const [lightboxZoom, setLightboxZoom] = useState(1)
@@ -114,12 +122,7 @@ export default function ChapterReader({ chapter, bookTitle, backHref = '/chapitr
     if (window.location.hash) return
     const id = loadReadingPosition(chapter.slug)
     if (id) restoreToAnchor(id)
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [chapter.slug])
-
-  useEffect(() => {
-    setXrefReturn(getSafeXrefReturn())
-  }, [])
 
   useEffect(() => {
     function onScroll() {
@@ -335,7 +338,7 @@ export default function ChapterReader({ chapter, bookTitle, backHref = '/chapitr
 
           {chapter.sections.map((section) => (
             <section key={section.id} id={`sec-${section.id}`} data-section-id={section.id} className="cr-section">
-              <h2 className="cr-h2">{section.title}</h2>
+              {!isRopInterestSection(section) && <h2 className="cr-h2">{section.title}</h2>}
               {section.blocks.map((b, i) => (
                 <BlockView key={i} block={b} onOpenImage={setLightbox} anchorId={`p-${section.id}-${i}`} />
               ))}

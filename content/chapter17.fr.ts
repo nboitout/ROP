@@ -98,27 +98,29 @@ export const chapter17Fr: Chapter = {
           "text": "il fait communiquer le périnée et la région glutéale (anciennement fessière). Il est traversé par le muscle obturateur interne (figure 17.9) accompagné par les muscles jumeaux supérieur et inférieur et par le nerf pudendal qui innerve le périnée."
         },
         {
-          "type": "sub",
-          "text": "Intérêt en ROP"
+          "type": "rop",
+          "body": [
+            "Les douleurs sciatiques ne se résument pas à un conflit disco-radiculaire L4-L5 ou L5-S1. De nombreuses sciatalgies, dites tronculaires (car sur le trajet du tronc nerveux) ont une origine viscérale ou pelvienne engendrant des tensions des muscles piriforme, obturateurs, jumeaux supérieur et inférieur et carré fémoral perturbant le nerf sciatique dans la gouttière ischio-trochantérienne.",
+            "Le traitement de ces muscles est indispensable dans toutes les sciatalgies, dysfonctions du bassin, des hanches et des organes intra-pelviens."
+          ]
         },
         {
           "type": "bullets",
           "items": [
-            "Les douleurs sciatiques ne se résument pas à un conflit disco-radiculaire L4-L5 ou L5-S1. De nombreuses sciatalgies, dites tronculaires (car sur le trajet du tronc nerveux) ont une origine viscérale ou pelvienne engendrant des tensions des muscles piriforme, obturateurs, jumeaux supérieur et inférieur et carré fémoral perturbant le nerf sciatique dans la gouttière ischio-trochantérienne.",
-            "Le traitement de ces muscles est indispensable dans toutes les sciatalgies, dysfonctions du bassin, des hanches et des organes intra-pelviens.",
             "Foramen obturé: formé par la jonction des branches ilio et ischio-pubiennes, il est obstrué par la membrane obturatrice (figure 17.11).",
             "Membrane obturatrice: elle est recouverte du côté endo-pelvien par le muscle obturateur interne et, du côté exopelvien, par le muscle obturateur externe, deux muscles pelvi-trochantérieurs rotateurs externes de la hanche. Elle est renforcée par la bandelette sub-pubienne qui s’insère sur la capsule articulaire de la hanche.. La vessie repose sur les deux membranes obturatrices.",
             "Relation vessie-hanche: la membrane obturatrice, dépressive comme un tympan, constitue un mécanisme de délestage et de transfert des pressions des organes intra-pelviens lors de la marche: l’alternance des tractions et relâchements des tensions ligamentaires et de la bandelette sub-pubienne lors des mouvements de la hanche permet d’évacuer une partie des forces compressives s’exerçant sur les organes intra-pelviens, soit vers les membres inférieurs, soit vers la symphyse pubienne et les sacro-iliaques. Il se produit, en même temps, une sorte « d’aspiration » endo-pelvienne des vaisseaux sanguins traversant la membrane obturatrice. Ce pompage favorise les échanges circulatoires intra-pelviens."
           ]
         },
         {
-          "type": "sub",
-          "text": "Intérêt en ROP"
+          "type": "rop",
+          "body": [
+            "Ces liens vessie-bassin-hanche expliquent la nécessité de traiter la hanche dans une incontinence urinaire d’effort, ainsi que de traiter la vessie dans le traitement d’une coxarthrose."
+          ]
         },
         {
           "type": "bullets",
           "items": [
-            "Ces liens vessie-bassin-hanche expliquent la nécessité de traiter la hanche dans une incontinence urinaire d’effort, ainsi que de traiter la vessie dans le traitement d’une coxarthrose.",
             "Canal obturateur: situé dans la partie sub-pubienne du foramen obturé, il est traversé par le nerf obturateur (figure 17.11) qui innerve les muscles obturateur externe et adducteurs de la hanche. Son irritation crée une douleur à la face médiale du genou (Cf. Réflexothérapie occipito-podale et système neuro-méningé, pages 31 à 33).",
             "Ligaments sacroépineux et sacrotubéral: ils délimitent les foramens entre la cavité pelvienne et les régions glutéale et périnéale. (figure 17.11)",
             "Ligament sacrotubéral: tendu de l’ischion au sacrum et au coccyx;",
@@ -142,12 +144,8 @@ export const chapter17Fr: Chapter = {
           ]
         },
         {
-          "type": "sub",
-          "text": "Intérêt en ROP"
-        },
-        {
-          "type": "bullets",
-          "items": [
+          "type": "rop",
+          "body": [
             "Toute fixation du coccyx modifie la tension de la dure-mère et perturbe le mouvement respiratoire primaire crânio-sacré;",
             "Les ligaments sacrotubéral, sacroépineux et le muscle coccygien sont les témoins de désordres homolatéraux du cadre pelvien et des organes intra-pelviens."
           ]
@@ -206,13 +204,14 @@ export const chapter17Fr: Chapter = {
           ]
         },
         {
-          "type": "sub",
-          "text": "Intérêt en ROP"
+          "type": "rop",
+          "body": [
+            "Tout frein au retour veineux dans le système porte hépatique est cause de dilatation des plexus veineux pelviens responsable d’hémorroïdes et déstabilisation des organes pelviens."
+          ]
         },
         {
           "type": "bullets",
           "items": [
-            "Tout frein au retour veineux dans le système porte hépatique est cause de dilatation des plexus veineux pelviens responsable d’hémorroïdes et déstabilisation des organes pelviens.",
             "Veines sacrales médiales: elles rejoignent la les deux veines iliaques communes pour former la veine cave inférieure.",
             "Veines gonadiques: elles ont des destinées différentes. La veine gonadique droite rejoint la veine cave inférieure alors que la veine gonadique gauche rejoint la veine rénale gauche. (figure 16.10)"
           ]
@@ -243,13 +242,14 @@ export const chapter17Fr: Chapter = {
           ]
         },
         {
-          "type": "sub",
-          "text": "Intérêt en ROP"
+          "type": "rop",
+          "body": [
+            "Le nerf pudendal peut être irrité au contact des muscles coccygien et obturateur interne et des ligaments sacrotubéral et sacroépineux. Il peut aussi être irrité dans le canal d’Alcock. Il est important de libérer le nerf pudendal sur tout son trajet. Se reporter à notre ouvrage Réflexothérapie occipito-podale et système neuro-méningé, Elsevier Masson page 44."
+          ]
         },
         {
           "type": "bullets",
           "items": [
-            "Le nerf pudendal peut être irrité au contact des muscles coccygien et obturateur interne et des ligaments sacrotubéral et sacroépineux. Il peut aussi être irrité dans le canal d’Alcock. Il est important de libérer le nerf pudendal sur tout son trajet. Se reporter à notre ouvrage Réflexothérapie occipito-podale et système neuro-méningé, Elsevier Masson page 44.",
             "Plexus coccygien S4-S5: il traverse et innerve le muscle coccygien, le rectum et l’anus. Sa branche terminale, le nerf coccygien traverse et innerve l’articulation sacrococcygienne. Sa branche sensitive innerve la peau autour du noyau fibreux central du périnée.",
             "Clinique: fracture du coccyx"
           ]
