@@ -40,6 +40,7 @@ export const chapter16Fr: Chapter = {
         {
           "type": "bullets",
           "items": [
+            "(figure 16.2)",
             "Rein droit: il est légèrement plus bas que le rein gauche, à cause de la présence du foie. Il est entre la 11ème et la 12ème côte et L4;",
             "Rein gauche: il est entre la 11ème côte et L3."
           ]
@@ -58,7 +59,7 @@ export const chapter16Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "Les reins sont coiffés par les glandes surrénales et contenus dans la loge rénale constituée de graisse et de fascia"
+          "text": "Les reins sont surmontés par les glandes surrénales et contenus dans la loge rénale constituée de graisse et de fascia"
         }
       ]
     },
@@ -88,7 +89,7 @@ export const chapter16Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "Les deux reins sont solidaires par le fascia rénal. Toute fixation d’un rein, par traumatisme ou infection, affecte aussi la mobilité de l’autre rein. C’est pourquoi il faut toujours solliciter les zones réflexes des deux reins. Ils sont également solidaires du colon par la lame de Toldt."
+          "text": "Dans la lecture clinique ROP, les deux loges rénales sont abordées ensemble, car leurs fascias, leurs rapports postérieurs et leurs liens diaphragmatico-lombaires participent à une même dynamique régionale. Il faut donc souvent solliciter les zones réflexes des deux reins. Ils sont également en relation avec le côlon par la lame de Toldt."
         },
         {
           "type": "sub",
@@ -96,7 +97,7 @@ export const chapter16Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "A l’intérieur de la loge rénale, le rein est plongé dans la graisse périrénale semi-liquide contenue dans une membrane fine, la capsule rénale. A l’extérieur de la capsule, entre la capsule et la loge rénal, il y a une deuxième couche de graisse: la graisse pararénale."
+          "text": "A l’intérieur de la loge rénale, le rein est plongé dans la graisse périrénale semi-liquide contenue dans une membrane fine, la capsule rénale. A l’extérieur de la capsule, entre la capsule et la loge rénale, il y a une deuxième couche de graisse: la graisse pararénale."
         },
         {
           "type": "bullets",
@@ -125,6 +126,7 @@ export const chapter16Fr: Chapter = {
         {
           "type": "bullets",
           "items": [
+            "selon une coupe sagittale médiale du rein, on distingue deux structures du parenchyme: (figure 16.4)",
             "le cortex: à la périphérie;",
             "la médullaire: au centre."
           ]
@@ -141,7 +143,7 @@ export const chapter16Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "Le néphron constitue l’unité fonctionnelle du rein. (figure16.5) Il a pour but de maintenir constants le volume et la composition du milieu intérieur (homéostasie). Il comporte deux parties:"
+          "text": "Le néphron constitue l’unité fonctionnelle du rein. (figure 16.5) Il a pour but de maintenir constants le volume et la composition du milieu intérieur (homéostasie). Il comporte deux parties:"
         },
         {
           "type": "bullets",
@@ -161,12 +163,18 @@ export const chapter16Fr: Chapter = {
           "text": "Dorsalement"
         },
         {
-          "type": "para",
-          "text": "Dans la couche graisseuse pararénale, cheminent le 12ème nerf intercostal (ou subcostal) et les nerfs du plexus lombal: nerfs iliohypogastrique, ilioinguinal et cutané fémoral. (figure 16.6)"
+          "type": "bullets",
+          "items": [
+            "les deux reins sont en rapport, céphaliquement, avec le diaphragme et les hiatus pleuro-costo-diaphragmatiques, caudalement, avec le psoas et le carré des lombes, et plus latéralement, avec le muscle transverse de l’abdomen. (figure 16.3)"
+          ]
         },
         {
           "type": "para",
-          "text": "Triangle de Jean-Louis Petit et quadrilatère de Grynfelt: ce sont deux régions de la fosse lombaire qui constituent des points faibles de la paroi abdominale postérieure (figure 16.7). Elles permettent d’aborder le rein sans grands interposition de tissu mou où il n’existe pas de faisceaux des muscles obliques interne et externe. Nous sommes en contact directement avec le muscle transverse de l’abdomen et, indirectement, avec le nerf sub-costal et les nerfs du plexus lombal."
+          "text": "Dans la couche graisseuse pararénale, cheminent le 12ème nerf intercostal (ou subcostal) et les nerfs du plexus lombaire: nerfs iliohypogastrique, ilioinguinal et cutané fémoral. (figure 16.6)"
+        },
+        {
+          "type": "para",
+          "text": "Triangle de Jean-Louis Petit et quadrilatère de Grynfelt: ce sont deux régions de la fosse lombaire qui constituent des points faibles de la paroi abdominale postérieure (figure 16.7). Elles permettent d’aborder le rein sans grande interposition de tissus mous où il n’existe pas de faisceaux des muscles obliques interne et externe. Nous sommes en contact directement avec le muscle transverse de l’abdomen et, indirectement, avec le nerf subcostal et les nerfs du plexus lombaire."
         },
         {
           "type": "sub",
@@ -174,15 +182,15 @@ export const chapter16Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "Un traumatisme par choc direct, une chute sur le dos ou sur le ventre qui provoquent la sensation de « souffle coupé », doivent nous inciter à la prudence: les reins, proches de la colonne vertébrale, peuvent se fissurer."
+          "text": "Un traumatisme par choc direct, une chute sur le dos ou sur le ventre, un accident avec décélération importante, une fracture des dernières côtes ou une douleur profonde du flanc doivent inciter à la prudence. Les reins, par leur densité et leur position rétro-péritonéale proche de la colonne vertébrale, peuvent être concernés par ces mécanismes traumatiques."
         },
         {
           "type": "para",
-          "text": "« Il est impératif de demander au patient si ses urines sont colorées comme du thé foncé, signe d’hématurie » (Jean-Pierre Barral). Un bilan médical est nécessaire."
+          "text": "Il est important de demander au patient si les urines sont rouges, brunes ou colorées comme du thé foncé, ce qui peut évoquer une hématurie. La présence de sang dans les urines, d’une douleur du flanc, d’un malaise, d’une fièvre, d’une altération de l’état général ou d’un traumatisme important impose une évaluation médicale."
         },
         {
           "type": "para",
-          "text": "Après un traumatisme, la graisse rénale se fibrose, entrainant une diminution de la mobilité du rein et la compression des nerfs du plexus lombal. Les conséquences sont des irradiations douloureuses sur les trajets de ces nerfs: la région lombale, la crête iliaque, la région trochantérienne, le pli de l’aine et la partie proximale de la cuisse."
+          "text": "Dans le cadre ROP, après exclusion médicale, un traumatisme ancien de la fosse lombaire peut être lu comme une fixation postérieure de la loge rénale, avec perte de mobilité locale et irritation possible des tissus de voisinage. Le travail réflexe vise alors à accompagner la mobilité de la région rénale, sans jamais se substituer au diagnostic médical."
         },
         {
           "type": "sub",
@@ -202,6 +210,7 @@ export const chapter16Fr: Chapter = {
         {
           "type": "bullets",
           "items": [
+            "le 2ème duodénum par le fascia de Treitz, l’angle hépatique du colon;",
             "Caudalement: l’iléum;",
             "Latéralement: le colon ascendant dont il est séparé par le fascia de Toldt.",
             "Rein gauche: il est en relation avec:"
@@ -214,6 +223,7 @@ export const chapter16Fr: Chapter = {
         {
           "type": "bullets",
           "items": [
+            "le ligament triangulaire gauche du foie, la rate et l’estomac dont il est séparé par la bourse omentale rétro-gastrique, l’angle splénique du colon, le pancréas;",
             "Caudalement: le jéjunum et le système veineux gonadique gauche;",
             "Médialement: l’angle duodéno-jéjunal."
           ]
@@ -234,7 +244,7 @@ export const chapter16Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "Chaque rein est vascularisé par une seule artère: l’artère rénale (figure 16.9) nait de l’aorte juste au-dessous de l’artère mésentérique supérieure. Elle se divise en cinq artères segmentaires terminales pour vasculariser le parenchyme rénal. Elles ne sont pas anastomosées entre elles: chaque région vascularisée est indépendante, permettant une résection partielle chirurgicale."
+          "text": "Chaque rein est vascularisé par une seule artère: l’artère rénale (figure 16.9) naît de l’aorte juste au-dessous de l’artère mésentérique supérieure. Elle se divise en cinq artères segmentaires terminales pour vasculariser le parenchyme rénal. Elles ne sont pas anastomosées entre elles: chaque région vascularisée est indépendante, permettant une résection partielle chirurgicale."
         },
         {
           "type": "sub",
@@ -242,14 +252,14 @@ export const chapter16Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "Située en avant de l’artère rénale, elle est différente selon la droite et la gauche. (figure16.10)"
+          "text": "Située en avant de l’artère rénale, elle est différente selon la droite et la gauche. (figure 16.10)"
         },
         {
           "type": "bullets",
           "items": [
             "Veine rénale droite: elle se jette directement dans la veine cave inférieure;",
-            "Veine rénale gauche: elle est plus longue que la droite, Elle reçoit la veine gonadique spermatique ou ovarienne et la veine lombale gauche qui draine le sang veineux des vertèbres lombaires, si important pour l’hydratation des disques intervertébraux.",
-            "Le syndrome de la pince aorto-mésentérique ou nutcracker syndrome (Cf. Chapitre 10 Duodénum, page…) est une compression de la veine rénale gauche entre l’aorte, l’artère mésentérique supérieure et le 3ème duodénum. Sa compression perturbe l’hydratation des disques lombaires et augmente la congestion des foramens inter-vertébraux, responsables de lombalgies sans raison mécanique bien définie. Les varicocèles gauches et les varices prédominant dans le membre inférieur gauche doivent nous faire rechercher une fixation rénale gauche et une ptose de l’intestin grêle."
+            "Veine rénale gauche: elle est plus longue que la droite, Elle reçoit la veine gonadique spermatique ou ovarienne et la veine lombaire gauche qui draine le sang veineux des vertèbres lombaires, si important pour l’hydratation des disques intervertébraux.",
+            "Le syndrome de la pince aorto-mésentérique, ou nutcracker syndrome (Cf. Chapitre 10 Duodénum, page…), correspond à une compression de la veine rénale gauche entre l’aorte, l’artère mésentérique supérieure et le 3ème duodénum. Dans la lecture clinique ROP, cette compression veineuse gauche peut être mise en relation avec certains tableaux de congestion pelvienne, lombaire ou génitale gauche, sans que cela remplace l’évaluation médicale d’un véritable syndrome de la pince aorto-mésentérique. Les varicocèles gauches et les varices prédominant dans le membre inférieur gauche doivent nous faire rechercher une fixation rénale gauche et une ptose de l’intestin grêle."
           ]
         },
         {
@@ -263,8 +273,8 @@ export const chapter16Fr: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Rein droit: on pourrait l’appeler le «rein digestif» par sa proximité avec le foie et le colon ascendant. Sa tendance à migrer vers le bas accentue les problèmes digestifs par les spasmes créés par sa descente, pouvant être tentés d’être attribués à une appendicite.",
-            "Rein gauche: on pourrait l’appeler le «rein génital». Sa fixation affecte peu le système digestif en dehors d’un spasme de l’angle duodéno-jéjunal, ressenti comme une gastralgie. Par sa relation veineuse avec la sphère uro-génitale, le syndrome de la pince aorto-mésentérique et la fixation du rein gauche peuvent créer des problèmes veineux du testicule gauche (varicocèle) ou de la grande lèvre gauche. Des problèmes sexuels peuvent être attribués à la fixation du rein gauche: pesanteur pelvienne en période prémenstruelle chez la femme, et diminution de la virilité et de la libido, chez l’homme. Une lombo-sciatalgie gauche, même après traumatisme, doit nous conduire à vérifier le rein gauche. La femme enceinte souffre de lombalgie gravidique liée à la compression de la pince aorto-mésentérique par le développement du bébé."
+            "Rein droit: on pourrait l’appeler le « rein digestif » par sa proximité avec le foie et le colon ascendant. Sa tendance à migrer vers le bas accentue les problèmes digestifs par les spasmes créés par sa descente, pouvant être tentés d’être attribués à une appendicite.",
+            "Rein gauche: on pourrait l’appeler le « rein génital ». Sa fixation affecte peu le système digestif en dehors d’un spasme de l’angle duodéno-jéjunal, ressenti comme une gastralgie. Par sa relation veineuse avec la sphère uro-génitale, le syndrome de la pince aorto-mésentérique et la fixation du rein gauche peuvent créer des problèmes veineux du testicule gauche (varicocèle) ou de la grande lèvre gauche. Des problèmes sexuels peuvent être attribués à la fixation du rein gauche: pesanteur pelvienne en période prémenstruelle chez la femme, et diminution de la virilité et de la libido, chez l’homme. Une lombo-sciatalgie gauche, même après traumatisme, doit nous conduire à vérifier le rein gauche. La femme enceinte souffre de lombairegie gravidique liée à la compression de la pince aorto-mésentérique par le développement du bébé."
           ]
         }
       ]
@@ -275,11 +285,15 @@ export const chapter16Fr: Chapter = {
       "blocks": [
         {
           "type": "para",
-          "text": "Les reins ont une innervation autonome essentiellement par le système sympathique dont l’origine médullaire se situe aux étages de Th12 à L1 et S2 à S4. Les nerfs splanchniques rejoignent les plexus prévertébraux cœliaque, aorto-rénal, mésentérique supérieur et hypogastrique. (figure 4.26)"
+          "text": "Les reins reçoivent une innervation autonome principalement sympathique. Les fibres sympathiques proviennent des étages thoraco-lombaires, rejoignent les nerfs splanchniques, puis les plexus prévertébraux, notamment les plexus cœliaque, aortico-rénal et rénal."
         },
         {
           "type": "para",
-          "text": "Le Sympathique induit une vasoconstriction, ce qui augmente la résistance à l’écoulement sanguin. C’est un facteur important d’hypertension artérielle."
+          "text": "Cette innervation accompagne les vaisseaux rénaux jusque dans le hile et le parenchyme. Elle agit surtout sur le calibre vasculaire, la résistance à l’écoulement sanguin, la sécrétion de rénine par l’appareil juxta-glomérulaire et la réabsorption tubulaire du sodium et de l’eau."
+        },
+        {
+          "type": "para",
+          "text": "Dans la lecture clinique ROP, cette dominante sympathique explique l’intérêt de relier le rein à la régulation tensionnelle, aux plexus prévertébraux, à la charnière thoraco-lombaire et aux tensions profondes de la fosse lombaire. Une hyperstimulation sympathique prolongée peut participer à une vasoconstriction rénale et contribuer au terrain hypertensif."
         }
       ]
     },
@@ -312,14 +326,14 @@ export const chapter16Fr: Chapter = {
             "Réabsorption tubaire: l’élimination de l’urine définitive (ou diurèse) n’étant que de 1 à 1,5L par jour, la grande majorité de l’urine primitive est, dans un second temps, réabsorbée par le tubule rénal. Cette réabsorption permet à l’organisme de retirer du filtrat glomérulaire les substances qui lui sont nécessaires qui retournent ensuite dans le sang: eau, sodium, potassium, calcium, chlorure et phosphate, afin de maintenir l’osmolarité sanguine.",
             "L’osmolarité sanguine correspond à la concentration d’ions afin d’assurer à l’organisme un bon niveau d’eau (le corps humain contient environ 70% d’eau). Cette réabsorption est sous la dépendance de l’aldostérone produite par le cortex de la glande surrénale. L’aldostérone permet d’ajuster l’élimination de sodium aux besoins de l’organisme. Elle participe donc à la régulation de la volémie.",
             "La volémie est le volume total de sang circulant dans l’organisme. En ajustant la volémie, le rein joue un rôle majeur sur la régulation de la pression artérielle.",
-            "Régulation de la pression artérielle: le rein est hypertenseur par:",
-            "La réabsorption du sodium et de l’eau qui lui est liée;",
-            "La sécrétion de la rénine par l’appareil juxta-glomérulaire sensible à l’osmolarité du plasma sanguin et à la volémie;",
-            "Quand la pression artérielle baisse, la rénine, fabriquée par le rein à partir de l’angiotensine produite par le foie, active le système rénine-angiotensine-aldostérone pour augmenter la volémie et activer les centres sympathiques vaso-constricteurs qui augmentent la pression artérielle.",
-            "Inversement, quand la pression artérielle augmente, des barorécepteurs dans le sinus carotidien (situé à la bifurcation carotidienne, à hauteur de la vertèbre C4), activent le nerf de Hering, branche du nerf glosso-pharyngien IX pour baisser la pression artérielle. Des barorécepteurs dans la crosse de l’aort, activent le nerf de Cyon, branche du nerf vague X pour baisser également la pression artérielle.",
-            "La post-hypophyse, sous la commande de l’hypothalamus, sécrète l’ADH ou hormone antidiurétique, ce qui entraine une réabsorption de l’eau, une vasoconstriction et une augmentation de la volémie et donc une remontée de la pression artérielle.",
-            "L’insuffisance post-hypophysaire est responsable du diabète insipide (sans rapport avec le diabète pancréatique). Il entraine une augmentation importante de la diurèse, réalisant une véritable fuite liquidienne par les reins de 10 à 15L par jour.",
-            "Régulation de la glycémie: le glucose est totalement réabsorbé à l’état normal. En cas de diabète sucré, le glucose apparait dans l’urine lorsque la réabsorption tubaire maximale est dépassée (ou glycosurie). La glycosurie est proportionnelle à la glycémie.",
+            "Régulation de la pression artérielle: le rein participe à la régulation de la pression artérielle par plusieurs mécanismes complémentaires.",
+            "Il agit d’abord par la réabsorption du sodium et de l’eau, qui influence directement la volémie, c’est-à-dire le volume total de sang circulant. Lorsque la volémie augmente, la pression artérielle tend à augmenter; lorsqu’elle diminue, la pression artérielle tend à baisser.",
+            "Le rein intervient aussi par la sécrétion de rénine au niveau de l’appareil juxta-glomérulaire. Lorsque la pression de perfusion rénale diminue, ou lorsque l’apport en sodium au niveau du tubule distal baisse, la rénine est libérée.",
+            "La rénine agit sur l’angiotensinogène, produit par le foie, pour former l’angiotensine I. Celle-ci est ensuite transformée en angiotensine II par l’enzyme de conversion de l’angiotensine.",
+            "L’angiotensine II provoque une vasoconstriction et stimule la sécrétion d’aldostérone par la corticosurrénale. L’aldostérone favorise la réabsorption du sodium et, avec lui, de l’eau. L’ensemble de ce système, appelé système rénine-angiotensine-aldostérone, permet de soutenir la pression artérielle lorsque l’organisme perçoit une baisse de perfusion ou de volume circulant.",
+            "Inversement, lorsque la pression artérielle augmente, les barorécepteurs du sinus carotidien et de la crosse de l’aorte participent à une réponse réflexe destinée à moduler le tonus vasculaire et l’activité cardiaque.",
+            "La post-hypophyse, sous la commande de l’hypothalamus, sécrète l’ADH, ou hormone antidiurétique. Celle-ci favorise la réabsorption de l’eau au niveau du rein. En cas de déficit d’ADH ou de réponse insuffisante du rein à cette hormone, une polyurie importante peut apparaître, comme dans le diabète insipide.",
+            "Régulation de la glycémie: le glucose est totalement réabsorbé à l’état normal. En cas de diabète sucré, le glucose apparaît dans l’urine lorsque la réabsorption tubaire maximale est dépassée (ou glycosurie). La glycosurie est proportionnelle à la glycémie.",
             "Régulation de l’équilibre acido-basique: le pH sanguin se situe autour de 7.4. Pour tamponner l’acidité, les reins excrètent dans l’urine des ions hydrogènes H+ et retiennent les ions bicarbonates HCO3. Conjointement, la respiration est activée pour que les poumons éliminent le dioxyde de carbone. En cas d’acidose persistante, l’acide est stocké dans les tissus conjonctifs de l’organisme. L’excès d’acidité augmente les réactions inflammatoires, la déminéralisation osseuse et les réactions exagérées face au stress."
           ]
         },
@@ -330,7 +344,7 @@ export const chapter16Fr: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "le sucre en premier lieu, surtout absorbé à jeûn;",
+            "le sucre en premier lieu, surtout absorbé à jeun;",
             "les alcools;",
             "les graisses animales;",
             "les viandes rouges, les abats;",
@@ -350,7 +364,7 @@ export const chapter16Fr: Chapter = {
             "chou;",
             "amande, noisette;",
             "citron, en petite quantité.",
-            "fonction endocrine: le cortex rénal fabrique l’érytropoïétine (EPO) qui augmente le taux de globules rouges dans le sang. Il active la vitamine D qui contribue à la régulation du calcium sanguin."
+            "Fonction endocrine: le rein produit l’érythropoïétine, principalement au niveau de cellules interstitielles spécialisées du cortex et de la médullaire externe. Cette hormone augmente la production de globules rouges. Le rein active également la vitamine D, qui contribue à la régulation du calcium sanguin."
           ]
         }
       ]
@@ -361,7 +375,7 @@ export const chapter16Fr: Chapter = {
       "blocks": [
         {
           "type": "para",
-          "text": "Comme pour tous les autres organes, les troubles fonctionnels des reins sont souvent les mêmes que ceux d’une insuffisance rénale à son début. Une dorsalgie ou une lombalgie n’est pas toujours mécanique, même si elle apparait après un effort. Un problème rénal sous-jacent est souvent sur le point de décompenser."
+          "text": "Comme pour tous les autres organes, les troubles fonctionnels des reins sont souvent les mêmes que ceux d’une insuffisance rénale à son début. Une dorsalgie ou une lombairegie n’est pas toujours mécanique, même si elle apparaît après un effort. Un problème rénal sous-jacent est souvent sur le point de décompenser."
         },
         {
           "type": "para",
@@ -396,7 +410,8 @@ export const chapter16Fr: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "lombalgies au « chant du coq à 4 ou 5 heures du matin);",
+            "pathologies fonctionnelles",
+            "lombairegies au « chant du coq à 4 ou 5 heures du matin);",
             "soif du matin;",
             "fatigue dite essentielle profonde du matin;",
             "yeux congestionnés avec « poche » sous les yeux;",
@@ -409,7 +424,7 @@ export const chapter16Fr: Chapter = {
             "baisse de la libido;",
             "douleurs articulaires par excès d’acide urique;",
             "infection urinaire à « urine claire » (ou apyrétique);",
-            "lombalgie gravidique; (Cf. Chapitre 19 Organes génitaux féminins, page…)",
+            "lombairegie gravidique; (Cf. Chapitre 19 Organes génitaux féminins, page…)",
             "hypertrophie bénigne de la prostate; (Cf. Chapitre 20 Organes génitaux masculins, page…)",
             "dépression nerveuse post-traumatique",
             "Ptoses rénales: Les reins n’ont pas à proprement parler d’attaches: leurs moyens de fixité dépendent de leur environnement. (page …)",
@@ -430,7 +445,7 @@ export const chapter16Fr: Chapter = {
             "1er degré: rein « intercostal », l’irritation du 12ème nerf intercostal irradie vers le grand trochanter.",
             "Symptômes: la personne se tient le flanc, respiration à fond difficile, supporte mal toux et éternuement",
             "2ème degré: rein « abdomino-génital » ou « cutané fémoral »",
-            "Symptômes: l’irritation des nerfs iliohypogastrique, ilioinguinal et cutané fémoral du plexus lombal irradie dans la région abdominale inférieure, les bourses ou les grandes lèvres, la face externe de la cuisse. Le rein est en rotation externe. La traction sur le pédicule vasculaire crée une hypertension artérielle.",
+            "Symptômes: l’irritation des nerfs iliohypogastrique, ilioinguinal et cutané fémoral du plexus lombaire irradie dans la région abdominale inférieure, les bourses ou les grandes lèvres, la face externe de la cuisse. Le rein est en rotation externe. La traction sur le pédicule vasculaire crée une hypertension artérielle.",
             "3ème degré: « rein fémoral » ou « pelvien »: le rein est luxé par perte de contact avec le foie et le diaphragme. Il est en rotation médiale, bloqué contre le psoas.",
             "Symptômes: gonalgie, sans notion de traumatisme par irritation du nerf fémoral, spasme du psoas, infections urinaires, lithiases: l’uretère se coude, la dynamique de l’urine baisse, ce qui favorise les lithiases et les infections urinaires, irritation colique ou utérine. Une infection urinaire sans cause doit faire penser à une ptose rénale.",
             "Lombalgies gravidiques: elles sont exceptionnellement ostéo-articulaires chez la parturiente."
@@ -445,7 +460,7 @@ export const chapter16Fr: Chapter = {
           "items": [
             "Compressions utéro-vasculaires;",
             "Tension péri-caecale, sigmoïdienne ou obturatrice;",
-            "Séquelles d’appendicectomie, entrainant une contrainte sur le rein droit, la fosse lombaire droite, la veine cave inférieure et les nerfs du plexus lombal par la tête du bébé. Il est conseillé à la parturiente de se coucher sur le côté gauche;",
+            "Séquelles d’appendicectomie, entraînant une contrainte sur le rein droit, la fosse lombaire droite, la veine cave inférieure et les nerfs du plexus lombaire par la tête du bébé. Il est conseillé à la parturiente de se coucher sur le côté gauche;",
             "Contrainte vasculaire de l’artère iliaque commune droite sur la veine iliaque commune gauche (syndrome de May-Thurner ou Cockett);",
             "contrainte sur le rein gauche."
           ]
@@ -460,11 +475,11 @@ export const chapter16Fr: Chapter = {
         },
         {
           "type": "sub",
-          "text": "Fixations postérieures: le rein gauche est plus sujet aux fixations postérieures: une chute sur le dos, un choc direct de la fosse lombaire, un traumatisme costal, une fracture vertébrale de Th12, L1 ou L2, produisent un traumatisme du rein contre les processus transverses des vertèbres lombales. La face postérieure du parenchyme rénal se fissure, la graisse para-rénale se fibrose après le traumatisme."
+          "text": "Fixations postérieures: le rein gauche est plus sujet aux fixations postérieures: une chute sur le dos, un choc direct de la fosse lombaire, un traumatisme costal, une fracture vertébrale de Th12, L1 ou L2, produisent un traumatisme du rein contre les processus transverses des vertèbres lombaires. La face postérieure du parenchyme rénal se fissure, la graisse para-rénale se fibrose après le traumatisme."
         },
         {
           "type": "para",
-          "text": "Le rein perd sa mobilité et les nerfs du plexus lombal sont comprimés, provoquant des douleurs lombales, de la crête iliaque, de la région trochantérienne et de la partie proximale de la cuisse. Les dispositifs intra-utérins et les difficultés d’érection chez l’homme affectent souvent la motilité du rein gauche."
+          "text": "Le rein perd sa mobilité et les nerfs du plexus lombaire sont comprimés, provoquant des douleurs lombaires, de la crête iliaque, de la région trochantérienne et de la partie proximale de la cuisse. Les dispositifs intra-utérins et les difficultés d’érection chez l’homme affectent souvent la motilité du rein gauche."
         },
         {
           "type": "para",
@@ -490,8 +505,8 @@ export const chapter16Fr: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Vertèbres Th 11-Th12 et les deux dernières côtes;",
-            "L1à L3;",
+            "Vertèbres Th11-Th12 et les deux dernières côtes;",
+            "L1 à L3;",
             "Hanche et genou;",
             "Irritation de l’arche médiale du pied par irritation du nerf saphène, branche terminale du nerf fémoral, souvent en relation avec un problème rénal."
           ]
@@ -509,8 +524,8 @@ export const chapter16Fr: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Rein droit ou «rein digestif»: il sert de trop-plein émotionnel au foie. Il est l’organe de la colère intense refoulée, remontant à la petite enfance, en totale fusion avec la mère ou, au contraire, en totale opposition, empêchant l’enfant de développer sa propre identité. Le rein droit est l’expression de celui qui veut dominer mais qui a peur de dominer.",
-            "Rein gauche ou «rein génital»: il est l’organe du «moi génétique», de la génitalité qui nous relie a à ceux qui nous ont donné la vie, à nos racines, au potentiel sexuel à transmettre la vie qu’on a reçue. Cela ne signifie pas l’impuissance ou la frigidité mais la peur de donner la vie.",
+            "Rein droit ou « rein digestif »: il sert de trop-plein émotionnel au foie. Il est l’organe de la colère intense refoulée, remontant à la petite enfance, en totale fusion avec la mère ou, au contraire, en totale opposition, empêchant l’enfant de développer sa propre identité. Le rein droit est l’expression de celui qui veut dominer mais qui a peur de dominer.",
+            "Rein gauche ou « rein génital »: il est l’organe du « moi génétique », de la génitalité qui nous relie à ceux qui nous ont donné la vie, à nos racines, au potentiel sexuel à transmettre la vie qu’on a reçue. Cela ne signifie pas l’impuissance ou la frigidité mais la peur de donner la vie.",
             "Le rein gauche est l’organe de la peur profonde, essentielle, au fond de soi, peur de la violence, de l’abandon, d’être tué, différente de la peur superficielle. Le rein gauche est lié à un refoulement important et à une inhibition du développement personnel. C’est aussi l’organe qui exprime la puissance profonde de l’être, d’où parfois la violence exprimée par une pulsion et au besoin de domination sur les autres."
           ]
         }
@@ -550,7 +565,7 @@ export const chapter16Fr: Chapter = {
             "Nerf vague X; (figures 4.11 et 4.17)",
             "Colonne vertébrale, articulations costo-transversaires (chaîne ganglionnaire latéro-vertébrale thoracique (Th7-Th11-L1, coccyx); (figures 4.23 et 4.29 et 4.32)",
             "Plexus prévertébral; (figures 16.12 et 16.13)",
-            "Surrénales: (figures 16.12 et 16.13 et Ter figure 16.13",
+            "Surrénales: (figures 16.12, 16.13 et Ter figure 16.13)",
             "Plexus lombaire L1 à L4 et ses branches. (Cf. Réflexothérapie occipito-podale et système neuro-méningé, Elsevier Masson, pages 28 à 25)"
           ]
         },
@@ -569,6 +584,7 @@ export const chapter16Fr: Chapter = {
         {
           "type": "bullets",
           "items": [
+            "(figures 16.12, 16.13 et 16.14)",
             "Pôle inférieur: il est à hauteur de la vertèbre L3 ou L4, à l’aplomb des 1er et 2ème orteils, au-dessus du bord antérieur du talon;",
             "Pôle supérieur: il est à hauteur de la vertèbre Th12;",
             "Glande surrénale: elle est au sommet du pôle supérieur du rein; (figure 16.15)",
@@ -579,6 +595,12 @@ export const chapter16Fr: Chapter = {
         {
           "type": "sub",
           "text": "Face dorsale"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "le triangle de Jean-Louis Petit et le quadrilatère de Grynfelt sont en regard de l’os cuboïde. (figure 16.17)"
+          ]
         },
         {
           "type": "sub",

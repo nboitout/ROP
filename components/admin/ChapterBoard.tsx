@@ -34,7 +34,7 @@ function LangCell({ href, status }: { href: string | null; status: LangStatus })
   }
   return (
     <a className={`adm-chip ${status}`} href={href} target="_blank" rel="noopener noreferrer">
-      {STATUS_LABEL[status]} ->
+      {STATUS_LABEL[status]} -&gt;
     </a>
   )
 }

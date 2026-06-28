@@ -1,4 +1,5 @@
 import './admin.css'
+import Link from 'next/link'
 import AdminNavLink from '@/components/admin/AdminNavLink'
 import LogoutButton from '@/components/admin/LogoutButton'
 
@@ -29,12 +30,12 @@ export default async function AdminLayout({
               rel="noopener noreferrer"
               className="adm-nav-link"
             >
-              3D Prototype ->
+              3D Prototype -&gt;
             </a>
           </div>
         </div>
         <div className="adm-nav-right">
-          <a href="/" className="adm-nav-site-link">&lt;- guy-boitout.com</a>
+          <Link href="/" className="adm-nav-site-link">&lt;- guy-boitout.com</Link>
           <LogoutButton />
         </div>
       </nav>
