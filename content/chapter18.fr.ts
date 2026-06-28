@@ -315,6 +315,12 @@ export const chapter18Fr: Chapter = {
           "items": [
             "l’hypothalamus et tronc cérébral contrôlent les systèmes sympathique et parasympathique. La formation réticulaire du tronc cérébral exerce son rôle de filtrage des influx périphériques (émotion, peur) provenant du cerveau limbique. (Cf. Chapitre 17, Innervation autonome de la cavité pelvienne, page …)"
           ]
+        },
+        {
+          "type": "xref",
+          "label": "Voir la reference dans le chapitre 17",
+          "text": ", Innervation autonome de la cavité pelvienne",
+          "href": "/lecture/chapitre-17?xrefBack=%2Flecture%2Fchapitre-18%23p-innervation-11&xrefBackLabel=Retour%20au%20chapitre%2018#sec-innervation"
         }
       ]
     },
@@ -413,6 +419,12 @@ export const chapter18Fr: Chapter = {
           "text": "Par l’éducation, le cortex cérébral contrôle l’activité vésicale. Si le système limbique, siège des émotions et de la peur, prend le pas sur le cortex (Cf. Chapitre 5 Mécanisme de stress, page…) il modifie le contrôle neuro-musculaire de la vessie d’où envies impérieuses, pollakiurie, énurésie."
         },
         {
+          "type": "xref",
+          "label": "Voir la reference dans le chapitre 5",
+          "text": "Mécanisme de stress",
+          "href": "/lecture/chapitre-5?xrefBack=%2Flecture%2Fchapitre-18%23p-physiologie-16&xrefBackLabel=Retour%20au%20chapitre%2018#p-presentation-0"
+        },
+        {
           "type": "rop",
           "body": [
             "Le traitement réflexe vise à restaurer l’équilibre neuro-végétatif et crânio-sacré s’exerçant sur la vessie. Dans l’énurésie, les zones réflexes à solliciter sont l’hypothalamus, le cerveau limbique, le tronc cérébral, la symphyse sphéno-basilaire et les vertèbres Th7, L1 et L2, sacrum, coccyx."
@@ -427,6 +439,12 @@ export const chapter18Fr: Chapter = {
           "items": [
             "l’aspiration thoracique, l’aimantation diaphragmatique, l’orientation du pelvis non hermétiquement clos et le dôme utérin exercent un délestage-absorption des pressions sur les organes pelviens (Cf. Chapitre 17 Cavité pelvienne, page…)"
           ]
+        },
+        {
+          "type": "xref",
+          "label": "Voir la reference dans le chapitre 17",
+          "text": "Cavité pelvienne",
+          "href": "/lecture/chapitre-17?xrefBack=%2Flecture%2Fchapitre-18%23p-physiologie-19&xrefBackLabel=Retour%20au%20chapitre%2018#sec-presentation"
         },
         {
           "type": "sub",
@@ -481,6 +499,12 @@ export const chapter18Fr: Chapter = {
           "body": [
             "Notre action sur l’IUE vise à rééquilibrer les tensions des fascias entourant l’urètre en agissant sur le plexus pudendal, les attaches du périnée sur le coccyx, la symphyse pubienne, les branches ischio-pubiennes et le noyau fibreux central du périnée. Le système hormonal participe à cet équilibre des fascias. (Cf. Chapitre 19 Cycle menstruel, page…)"
           ]
+        },
+        {
+          "type": "xref",
+          "label": "Voir la reference dans le chapitre 19",
+          "text": "Cycle menstruel",
+          "href": "/lecture/chapitre-19?xrefBack=%2Flecture%2Fchapitre-18%23p-pathologies-courantes-4&xrefBackLabel=Retour%20au%20chapitre%2018#sec-uterus-physiologie"
         },
         {
           "type": "bullets",

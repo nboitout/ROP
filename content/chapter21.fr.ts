@@ -105,6 +105,18 @@ export const chapter21Fr: Chapter = {
             "Causes organiques : diabète, hyperlipidémie, hypertension artérielle, insuffisance coronarienne, AVC, obésité.",
             "Causes psycho-émotionnelles : Cf. Relations viscéro-émotionnelles)."
           ]
+        },
+        {
+          "type": "xref",
+          "label": "Voir la reference dans le chapitre 5",
+          "text": "Mécanisme de stress",
+          "href": "/lecture/chapitre-5?xrefBack=%2Flecture%2Fchapitre-21%23p-pathologies-courantes-0&xrefBackLabel=Retour%20au%20chapitre%2021#p-presentation-0"
+        },
+        {
+          "type": "xref",
+          "label": "Voir la reference dans le chapitre 16",
+          "text": "Reins, vascularisation veineuse, rein gauche",
+          "href": "/lecture/chapitre-16?xrefBack=%2Flecture%2Fchapitre-21%23p-pathologies-courantes-0&xrefBackLabel=Retour%20au%20chapitre%2021#sec-vascularisation"
         }
       ]
     },

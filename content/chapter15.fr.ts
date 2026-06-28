@@ -142,6 +142,12 @@ export const chapter15Fr: Chapter = {
           ]
         },
         {
+          "type": "xref",
+          "label": "Voir la reference dans le chapitre 1",
+          "text": "Généralités Articulations viscérales",
+          "href": "/lecture/chapitre-1?xrefBack=%2Flecture%2Fchapitre-15%23p-anatomie-14&xrefBackLabel=Retour%20au%20chapitre%2015#p-articulations-viscerales-3"
+        },
+        {
           "type": "rop",
           "body": [
             "le riche réseau neuro-vasculaire du mésocôlon transverse est hautement réflexogène, d’où l’intérêt de solliciter sa zone réflexe pour faciliter le côlon."
@@ -203,6 +209,12 @@ export const chapter15Fr: Chapter = {
             "Sphincter interne: il est formé des muscles lisses du rectum contrôlés par le Parasympathique pelvien et le Sympathique de Th12 à L1. (Cf. Chapitre 17 Cavité pelvienne, Innervation, page….)",
             "Sphincter externe: c’est un anneau formé de muscles striés, commandés par le nerf pudendal du système nerveux somatique (Cf. Chapitre17 Cavité pelvienne, Innervation, page….). Il contrôle la continence anale, renforcé par le muscle releveur de l’anus."
           ]
+        },
+        {
+          "type": "xref",
+          "label": "Voir la reference dans le chapitre 17",
+          "text": "Cavité pelvienne, Innervation",
+          "href": "/lecture/chapitre-17?xrefBack=%2Flecture%2Fchapitre-15%23p-anatomie-22&xrefBackLabel=Retour%20au%20chapitre%2015#sec-innervation"
         }
       ]
     },
@@ -282,10 +294,22 @@ export const chapter15Fr: Chapter = {
           ]
         },
         {
+          "type": "xref",
+          "label": "Voir la reference dans le chapitre 14",
+          "text": "Intestin grêle Vascularisation de l’intestin grêle",
+          "href": "/lecture/chapitre-14?xrefBack=%2Flecture%2Fchapitre-15%23p-vascularisation-2&xrefBackLabel=Retour%20au%20chapitre%2015#sec-vascularisation"
+        },
+        {
           "type": "rop",
           "body": [
             "Pour toute lombo-sciatalgie gauche, il est important de vérifier les zones réflexes de la région recto-sigmoïdienne, le foie, le rein gauche et la veine rénale gauche où aboutit la veine lombale gauche qui draine le sang veineux lombal. (Cf. Chapitre 16 Rein, page….)"
           ]
+        },
+        {
+          "type": "xref",
+          "label": "Voir la reference dans le chapitre 16",
+          "text": "Rein",
+          "href": "/lecture/chapitre-16?xrefBack=%2Flecture%2Fchapitre-15%23p-vascularisation-3&xrefBackLabel=Retour%20au%20chapitre%2015#sec-presentation"
         }
       ]
     },
@@ -328,6 +352,12 @@ export const chapter15Fr: Chapter = {
           "items": [
             "Innervation intrinsèque: c’est le système nerveux entérique. (Cf. Chapitre 4 Système nerveux autonome, page…)"
           ]
+        },
+        {
+          "type": "xref",
+          "label": "Voir la reference dans le chapitre 4",
+          "text": "Système nerveux autonome",
+          "href": "/chapitre-4?xrefBack=%2Flecture%2Fchapitre-15%23p-innervation-4&xrefBackLabel=Retour%20au%20chapitre%2015#sec-presentation"
         },
         {
           "type": "sub",

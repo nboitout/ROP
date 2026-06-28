@@ -172,6 +172,12 @@ export const chapter17Fr: Chapter = {
             "Etanchéité par sa perpétuelle hypertonie (éducation à la propreté);",
             "Ouverture épisodique des orifices urinaire, anal et vaginal, par relâchement volontaire, pour permettre les excrétions fécales et urinaires et les relations sexuelles."
           ]
+        },
+        {
+          "type": "xref",
+          "label": "Voir la reference dans le chapitre 21",
+          "text": "Système érectile masculin et féminin",
+          "href": "/lecture/chapitre-21?xrefBack=%2Flecture%2Fchapitre-17%23p-anatomie-14&xrefBackLabel=Retour%20au%20chapitre%2017#sec-presentation"
         }
       ]
     },
@@ -300,6 +306,18 @@ export const chapter17Fr: Chapter = {
           ]
         },
         {
+          "type": "xref",
+          "label": "Voir la reference dans le chapitre 3",
+          "text": "SNC, Cerveau, limbique ou émotionnel",
+          "href": "/lecture/chapitre-3?xrefBack=%2Flecture%2Fchapitre-17%23p-innervation-10&xrefBackLabel=Retour%20au%20chapitre%2017#sec-section-2-cadre-terminologique"
+        },
+        {
+          "type": "xref",
+          "label": "Voir la reference dans le chapitre 3",
+          "text": "SNC, Cortex préfrontal et orbito-nasal",
+          "href": "/lecture/chapitre-3?xrefBack=%2Flecture%2Fchapitre-17%23p-innervation-10&xrefBackLabel=Retour%20au%20chapitre%2017#sec-section-3-organisation-anatomique"
+        },
+        {
           "type": "sub",
           "text": "Physiologie"
         },
@@ -316,6 +334,12 @@ export const chapter17Fr: Chapter = {
           "items": [
             "(Cf. Chapitre 1 Généralités, effet turgor et pressions intra-cavitaires, page…)"
           ]
+        },
+        {
+          "type": "xref",
+          "label": "Voir la reference dans le chapitre 1",
+          "text": "Généralités, effet turgor et pressions intra-cavitaires",
+          "href": "/lecture/chapitre-1?xrefBack=%2Flecture%2Fchapitre-17%23p-innervation-14&xrefBackLabel=Retour%20au%20chapitre%2017#p-articulations-viscerales-3"
         },
         {
           "type": "para",
@@ -372,6 +396,12 @@ export const chapter17Fr: Chapter = {
             "au cours de l’accouchement, elles surviennent chez la multipare ou la primipare quand l’enfant est « arraché » à la ventouse ou aux forceps, sans tenir compte des contractions utérines de la mère et sur une large épisiotomie. (Cf. Chapitre 18 Vessie, Incontinence urinaire d’effort, page…)",
             "Les autres causes de ptoses sont la vieillesse, les dépressions, les ptoses viscérales hautes (intestin grêle), les antéversions utérines, les constipations basses, les fixations de la symphyse pubienne et du coccyx."
           ]
+        },
+        {
+          "type": "xref",
+          "label": "Voir la reference dans le chapitre 18",
+          "text": "Vessie, Incontinence urinaire d’effort",
+          "href": "/lecture/chapitre-18?xrefBack=%2Flecture%2Fchapitre-17%23p-pathologies-courantes-2&xrefBackLabel=Retour%20au%20chapitre%2017#sec-pathologies-courantes"
         },
         {
           "type": "sub",

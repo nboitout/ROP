@@ -458,6 +458,12 @@ export const chapter19Fr: Chapter = {
             "Hystérectomie: par l’absence de l’utérus, les forces gravitaires abdominales s’exercent directement sur la vessie dont le sphincter externe tend à sortir de son enceinte manométrique et entraîner une IUE. (Cf. Chapitre 18, IUE, page…)",
             "ROP des suites d’hystérectomies: zones réflexes de l’intestin, de la vessie, du rectum, les plexus lombaire et sacré, le cadre pelvien (sacrum, coccyx, fosses obturatrices, piriformes)."
           ]
+        },
+        {
+          "type": "xref",
+          "label": "Voir la reference dans le chapitre 18",
+          "text": ", IUE",
+          "href": "/lecture/chapitre-18?xrefBack=%2Flecture%2Fchapitre-19%23p-uterus-pathologies-courantes-5&xrefBackLabel=Retour%20au%20chapitre%2019#sec-pathologies-courantes"
         }
       ]
     },
@@ -651,6 +657,12 @@ export const chapter19Fr: Chapter = {
           "items": [
             "il existe une particularité anatomique sur le plan veineux: la veine ovarique droite se jette dans la veine cave. Par contre, la veine ovarique gauche se jette dans la veine rénale gauche (Cf. Chapitre 16 Rein, Veine rénale, page…). Par fixation rénale gauche ou ptôse de l’intestin grêle, la racine du mésentère peut clamper la veine rénale gauche. Il s’en suit une congestion ovarienne et du petit bassin. La présence de varices prédominant dans le membre inférieur gauche doit nous fait rechercher une fixation rénale gauche et une ptôse de l’intestin grêle."
           ]
+        },
+        {
+          "type": "xref",
+          "label": "Voir la reference dans le chapitre 16",
+          "text": "Rein, Veine rénale",
+          "href": "/lecture/chapitre-16?xrefBack=%2Flecture%2Fchapitre-19%23p-ovaires-trompes-rapports-13&xrefBackLabel=Retour%20au%20chapitre%2019#sec-vascularisation"
         }
       ]
     },

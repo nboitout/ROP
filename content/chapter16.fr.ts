@@ -118,6 +118,12 @@ export const chapter16Fr: Chapter = {
           ]
         },
         {
+          "type": "xref",
+          "label": "Voir la reference dans le chapitre 1",
+          "text": "Généralités",
+          "href": "/lecture/chapitre-1?xrefBack=%2Flecture%2Fchapitre-16%23p-anatomie-8&xrefBackLabel=Retour%20au%20chapitre%2016#p-articulations-viscerales-3"
+        },
+        {
           "type": "sub",
           "text": "Structure interne des reins"
         },
@@ -251,6 +257,12 @@ export const chapter16Fr: Chapter = {
             "Veine rénale gauche: elle est plus longue que la droite, Elle reçoit la veine gonadique spermatique ou ovarienne et la veine lombaire gauche qui draine le sang veineux des vertèbres lombaires, si important pour l’hydratation des disques intervertébraux.",
             "Le syndrome de la pince aorto-mésentérique, ou nutcracker syndrome (Cf. Chapitre 10 Duodénum, page…), correspond à une compression de la veine rénale gauche entre l’aorte, l’artère mésentérique supérieure et le 3ème duodénum. Dans la lecture clinique ROP, cette compression veineuse gauche peut être mise en relation avec certains tableaux de congestion pelvienne, lombaire ou génitale gauche, sans que cela remplace l’évaluation médicale d’un véritable syndrome de la pince aorto-mésentérique. Les varicocèles gauches et les varices prédominant dans le membre inférieur gauche doivent nous faire rechercher une fixation rénale gauche et une ptose de l’intestin grêle."
           ]
+        },
+        {
+          "type": "xref",
+          "label": "Voir la reference dans le chapitre 10",
+          "text": "Duodénum",
+          "href": "/lecture/chapitre-10?xrefBack=%2Flecture%2Fchapitre-16%23p-vascularisation-5&xrefBackLabel=Retour%20au%20chapitre%2016#sec-presentation"
         },
         {
           "type": "rop",
@@ -438,6 +450,18 @@ export const chapter16Fr: Chapter = {
             "Symptômes: gonalgie, sans notion de traumatisme par irritation du nerf fémoral, spasme du psoas, infections urinaires, lithiases: l’uretère se coude, la dynamique de l’urine baisse, ce qui favorise les lithiases et les infections urinaires, irritation colique ou utérine. Une infection urinaire sans cause doit faire penser à une ptose rénale.",
             "Lombalgies gravidiques: elles sont exceptionnellement ostéo-articulaires chez la parturiente."
           ]
+        },
+        {
+          "type": "xref",
+          "label": "Voir la reference dans le chapitre 19",
+          "text": "Organes génitaux féminins",
+          "href": "/lecture/chapitre-19?xrefBack=%2Flecture%2Fchapitre-16%23p-pathologies-courantes-5&xrefBackLabel=Retour%20au%20chapitre%2016#sec-ovaires-trompes-presentation"
+        },
+        {
+          "type": "xref",
+          "label": "Voir la reference dans le chapitre 20",
+          "text": "Organes génitaux masculins",
+          "href": "/lecture/chapitre-20?xrefBack=%2Flecture%2Fchapitre-16%23p-pathologies-courantes-5&xrefBackLabel=Retour%20au%20chapitre%2016#sec-presentation"
         },
         {
           "type": "sub",

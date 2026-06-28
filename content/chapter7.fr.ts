@@ -530,6 +530,12 @@ export const chapter7Fr: Chapter = {
           "text": "(Cf. chapitre 15 Colon, Vascularisation, page...) elle nait le plus souvent a hauteur de L3."
         },
         {
+          "type": "xref",
+          "label": "Voir la reference dans le chapitre 15",
+          "text": "Colon, Vascularisation",
+          "href": "/lecture/chapitre-15?xrefBack=%2Flecture%2Fchapitre-7%23p-vascularisation-34&xrefBackLabel=Retour%20au%20chapitre%207#sec-vascularisation"
+        },
+        {
           "type": "para",
           "text": "Son pouls est difficile a percevoir."
         },
