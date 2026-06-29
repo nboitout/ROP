@@ -20,7 +20,7 @@ const CARD_SLUG: Record<string, string> = {
 
 const INFOGRAPHICS = [
   { src: '/assets/infographic-fig1.png', caption: 'Chapitre 5' },
-  { src: '/assets/infographic-fig2.gif', caption: 'Chapitre 14' },
+  { src: '/assets/HomePage -- Illustration SNA sur le pied FR.png', caption: 'Chapitre 4' },
   { src: '/assets/infographic-fig3.png', caption: 'Chapitre 1' },
 ]
 
