@@ -7,6 +7,7 @@
 
 import { Fragment, useEffect, useMemo, useRef, useState } from 'react'
 import Link from 'next/link'
+import { useSearchParams } from 'next/navigation'
 import type { Chapter, Block, Section } from '@/content/types'
 import { useLanguage } from '@/app/i18n/LanguageContext'
 import { getSessionId } from '@/lib/session'
@@ -32,9 +33,8 @@ function isRopInterestSection(section: Section) {
     section.blocks[0].type === 'rop'
 }
 
-function getSafeXrefReturn(): XrefReturn {
-  if (typeof window === 'undefined') return null
-  const params = new URLSearchParams(window.location.search)
+function getSafeXrefReturn(params: { get(name: string): string | null } | null): XrefReturn {
+  if (!params) return null
   const href = params.get('xrefBack')
   if (!href || !href.startsWith('/') || href.startsWith('//')) return null
   return {
@@ -148,6 +148,7 @@ function asSlideList(slide: number | number[] | undefined) {
 
 export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, backHref = '/chapitres-gratuits' }: Props) {
   const { lang, t } = useLanguage()
+  const searchParams = useSearchParams()
   const ui = SS_UI[lang] ?? SS_UI.fr
   const closeToReadingLabel = {
     fr: 'Retour a la lecture',
@@ -164,9 +165,7 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
   const [lightbox, setLightbox] = useState<{ src: string; alt: string; caption: string; orientation?: 'portrait' | 'landscape' } | null>(null)
   const [lightboxZoom, setLightboxZoom] = useState(1)
   const [isPhonePortrait, setIsPhonePortrait] = useState(false)
-  const [xrefReturn] = useState<XrefReturn>(() =>
-    typeof window !== 'undefined' ? getSafeXrefReturn() : null
-  )
+  const xrefReturn = getSafeXrefReturn(searchParams)
   const articleRef = useRef<HTMLElement>(null)
   // While a slide-driven scroll is in flight, the scroll handler must not
   // fight the manually selected slide.

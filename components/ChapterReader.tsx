@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from 'react'
 import Link from 'next/link'
+import { useSearchParams } from 'next/navigation'
 import dynamic from 'next/dynamic'
 import type { Chapter, Block, Section } from '@/content/types'
 import type { Lang } from '@/app/i18n/translations'
@@ -27,9 +28,8 @@ function isRopInterestSection(section: Section) {
     section.blocks[0].type === 'rop'
 }
 
-function getSafeXrefReturn(): XrefReturn {
-  if (typeof window === 'undefined') return null
-  const params = new URLSearchParams(window.location.search)
+function getSafeXrefReturn(params: { get(name: string): string | null } | null): XrefReturn {
+  if (!params) return null
   const href = params.get('xrefBack')
   if (!href || !href.startsWith('/') || href.startsWith('//')) return null
   return {
@@ -40,6 +40,7 @@ function getSafeXrefReturn(): XrefReturn {
 
 export default function ChapterReader({ chapter, bookTitle, backHref = '/chapitres-gratuits', contentLang = 'fr' }: Props) {
   const { lang, t } = useLanguage()
+  const searchParams = useSearchParams()
   const showFallbackNotice = lang !== contentLang
   const showEndCard = new Set(['introduction', 'chapter-3', 'chapter-14']).has(chapter.slug)
   const [sessionId] = useState<string>(() =>
@@ -63,9 +64,7 @@ export default function ChapterReader({ chapter, bookTitle, backHref = '/chapitr
   const [slidePage, setSlidePage] = useState(1)
   const [slideWidth, setSlideWidth] = useState(800)
   const [slideZoom, setSlideZoom] = useState(0.75)
-  const [xrefReturn] = useState<XrefReturn>(() =>
-    typeof window !== 'undefined' ? getSafeXrefReturn() : null
-  )
+  const xrefReturn = getSafeXrefReturn(searchParams)
   const viewerBodyRef = useRef<HTMLDivElement | null>(null)
   const [lightbox, setLightbox] = useState<{ src: string; alt: string; caption: string } | null>(null)
   const [lightboxZoom, setLightboxZoom] = useState(1)
