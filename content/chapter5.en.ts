@@ -48,7 +48,6 @@ export const chapter5En: Chapter = {
         { type: "lead", label: "Negative stress", text: "This is called distress and can manifest as sadness, failure, doubt, insecurity, fear, anger and so on. It is accompanied by a neuroendocrine response involving cortisol, which can influence the three major systems involved in homeostasis: the nervous, endocrine and immune systems." },
         { type: "para", text: "All systems can subsequently be affected, depending on genetic predispositions and lifestyle: digestive disorders, asthma, musculoskeletal disorders, infections, cardiovascular disease, anxiety, depression, autoimmune disease, neurodegenerative disease, cancer and so on." },
         { type: "lead", label: "Positive stress", text: "This is called eustress and can manifest as love, joy, enthusiasm, freedom, confidence, security and so on. It is accompanied by the activation of other neuromediators, including adrenaline, which can support a favourable short-term adaptive response." },
-        { type: "figure", src: "/chapter-5/figure-5-1.jpeg", alt: "Diagram of the three major stressors: physical, emotional, and biochemical", caption: "Figure 5.1 — The three major stressors", orientation: "landscape" },
         { type: "lead", label: "Types of stressors", text: "Some are easily identifiable, particularly physical and emotional stressors. Biochemical stressors, by contrast, very often act silently and are therefore not taken into account." },
         { type: "leadBullets", items: [
           { label: "Physical stressors", text: "Accidents, whiplash-type injuries, excessive physical or sporting activity leading to exhaustion or, conversely, insufficient activity, birth conditions, a frantic pace of life, lack of sleep, sensory aggressions — noise, odour, light — intense or chronic pain, nausea-related aversion to food, air pollution, extreme climates and so on." },
@@ -63,7 +62,6 @@ export const chapter5En: Chapter = {
           "The stress response lies upstream of disease. Depending on the individual’s vulnerabilities — linked to heredity, medical history and lifestyle — disease may develop through failure of adaptive mechanisms. From this perspective, illness arises from a loss of health, rather than the reverse.",
           "ROP fully integrates this view of health and disease: a symptom must be placed back within its broader context, namely the general adaptation syndrome.",
         ]},
-        { type: "figure", src: "/chapter-5/figure-5-2.jpeg", alt: "Diagram of the cumulative effect of physical, emotional, and biochemical stressors", caption: "Figure 5.2 — Cumulative effect of stressors", orientation: "portrait" },
       ],
     },
     {
@@ -71,7 +69,6 @@ export const chapter5En: Chapter = {
       title: "General Adaptation Syndrome (GAS)",
       blocks: [
         { type: "para", text: "This model, proposed by Hans Selye, explains the impact of stress on the body and the way the body attempts to respond. It evolves through four phases: alarm, recovery, adaptation-resistance and exhaustion." },
-        { type: "figure", src: "/chapter-5/figure-5-3.jpeg", alt: "Curve of the four phases of the General Adaptation Syndrome", caption: "Figure 5.3 — The four phases of the stress syndrome", orientation: "portrait" },
 
         { type: "sub", text: "Alarm phase" },
         { type: "para", text: "Key words: immediate reaction to stressors, urgency, mobilisation of energy resources, activation of the sympathetic nervous system." },

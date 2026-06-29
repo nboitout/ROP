@@ -48,7 +48,6 @@ export const chapter5De: Chapter = {
         { type: "lead", label: "Negativer Stress", text: "Er wird als Distress bezeichnet und kann sich unter anderem durch Traurigkeit, Scheitern, Zweifel, Unsicherheit, Angst oder Wut äußern. Er geht mit einer neuroendokrinen Antwort unter Beteiligung von Cortisol einher, die die drei großen an der Homöostase beteiligten Systeme beeinflussen kann: Nervensystem, Hormonsystem und Immunsystem." },
         { type: "para", text: "Je nach genetischer Prädisposition und Lebensweise können anschließend sämtliche Systeme betroffen sein: Verdauungsstörungen, Asthma, Erkrankungen des Bewegungsapparats, Infektionen, kardiovaskuläre Erkrankungen, Angststörungen, Depression, Autoimmunerkrankungen, neurodegenerative Erkrankungen, Krebs usw." },
         { type: "lead", label: "Positiver Stress", text: "Er wird als Eustress bezeichnet und kann sich durch Liebe, Freude, Begeisterung, Freiheit, Vertrauen und Sicherheit äußern. Er geht mit der Aktivierung anderer Neuromediatoren, darunter Adrenalin, einher und kann kurzfristig eine günstige Anpassungsreaktion unterstützen." },
-        { type: "figure", src: "/chapter-5/figure-5-1.jpeg", alt: "Schema der drei großen Stressoren: körperlich, emotional und biochemisch", caption: "Abbildung 5.1 — Die drei großen Stressoren", orientation: "landscape" },
         { type: "lead", label: "Arten von Stressoren", text: "Einige sind leicht zu erkennen, insbesondere körperliche und emotionale Stressoren. Biochemische Stressoren wirken dagegen sehr häufig unterschwellig und werden daher oft nicht berücksichtigt." },
         { type: "leadBullets", items: [
           { label: "Körperliche Stressoren", text: "Unfälle, Schleudertraumata („Whiplash“), übermäßige körperliche oder sportliche Aktivität bis zur Erschöpfung oder umgekehrt Bewegungsmangel, Geburtsbedingungen, hektischer Lebensrhythmus, Schlafmangel, sensorische Belastungen – Lärm, Geruch, Licht, starke oder chronische Schmerzen, ekelbedingte Nahrungsaversion –, Luftverschmutzung, extreme Klimabedingungen usw." },
@@ -63,7 +62,6 @@ export const chapter5De: Chapter = {
           "Die Stressreaktion liegt der Krankheit vorgelagert. Je nach individuellen Schwachstellen, die mit Vererbung, medizinischer Vorgeschichte und Lebensweise zusammenhängen, können Erkrankungen durch ein Versagen der Anpassungsmechanismen entstehen. Aus dieser Perspektive entsteht Krankheit aus einem Verlust von Gesundheit – und nicht umgekehrt.",
           "Die ROP integriert diese Sicht von Gesundheit und Krankheit vollständig: Ein Symptom muss in seinen Kontext eingeordnet werden, nämlich in das allgemeine Adaptationssyndrom.",
         ]},
-        { type: "figure", src: "/chapter-5/figure-5-2.jpeg", alt: "Schema des kumulierenden Effekts körperlicher, emotionaler und biochemischer Stressoren", caption: "Abbildung 5.2 — Kumulierender Effekt der Stressoren", orientation: "portrait" },
       ],
     },
     {
@@ -71,7 +69,6 @@ export const chapter5De: Chapter = {
       title: "Allgemeines Adaptationssyndrom",
       blocks: [
         { type: "para", text: "Dieses von Hans Selye vorgeschlagene Modell erklärt die Auswirkungen von Stress auf den Körper und die Art und Weise, wie dieser versucht, darauf zu reagieren. Es entwickelt sich in vier Phasen: Alarm, Erholung, Adaptation–Widerstand und Erschöpfung." },
-        { type: "figure", src: "/chapter-5/figure-5-3.jpeg", alt: "Kurve der vier Phasen des allgemeinen Adaptationssyndroms", caption: "Abbildung 5.3 — Die vier Phasen des Stresssyndroms", orientation: "portrait" },
 
         { type: "sub", text: "Alarmphase" },
         { type: "para", text: "Schlüsselbegriffe: unmittelbare Reaktion auf Stressoren, Dringlichkeit, Mobilisierung energetischer Ressourcen, Aktivierung des Sympathikus." },

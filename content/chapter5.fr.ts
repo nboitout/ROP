@@ -44,7 +44,6 @@ export const chapter5Fr: Chapter = {
         { type: 'lead', label: 'Stress négatif', text: 'il est appelé distress et se manifeste par : tristesse, échec, doute, insécurité, peur, colère, etc. Il s’accompagne d’une réponse neuroendocrinienne impliquant le cortisol susceptible d’influencer les trois grands systèmes participant à l’homéostasie : nerveux, hormonal et immunitaire.' },
         { type: 'para', text: 'Tous les systèmes peuvent ensuite être concernés selon les prédispositions individuelles génétiques et le mode de vie : troubles digestifs, asthme, affections de l’appareil locomoteur, infections, maladies cardio-vasculaires, anxiété, dépression, maladies auto-immunes, maladies neuro-dégénératives, cancer, etc.' },
         { type: 'lead', label: 'Stress positif', text: 'il est appelé eustress et se manifeste par : amour, joie, enthousiasme, liberté, confiance, sécurité, etc. Il s’accompagne d’une activation de neuromédiateurs autres, dont l’adrénaline, pouvant soutenir une réponse adaptative favorable à court terme.' },
-        { type: 'figure', src: '/chapter-5/figure-5-1.jpeg', alt: 'Schéma des trois grands stresseurs : physiques, émotionnels et biochimiques', caption: 'Figure 5.1 — Les trois grands stresseurs', orientation: 'landscape' },
         { type: 'lead', label: 'Types de stresseurs', text: 'certains sont facilement identifiables, notamment les stresseurs physiques et émotionnels. En revanche, les stresseurs biochimiques agissent très souvent à bas bruit et ne sont donc pas pris en compte.' },
         { type: 'leadBullets', items: [
           { label: 'Stresseurs physiques', text: 'accidents, whiplashs (type coup du lapin), excès d’activité physique ou sportive jusqu’à l’épuisement ou à l’inverse insuffisante, conditions de naissance, rythme de vie effréné, manque de sommeil, agressions sensorielles — bruit, odeur, lumière, douleur intense ou chronique, dégoût nauséeux des aliments — pollution de l’air, climats extrêmes, etc.' },
@@ -59,7 +58,6 @@ export const chapter5Fr: Chapter = {
           'Le mécanisme de stress est en amont de la maladie. Selon les propres fragilités de l’individu, liées à son hérédité, à ses antécédents pathologiques et à son mode de vie, il peut développer des maladies par échec des mécanismes d’adaptation. Dans cette perspective, nous sommes malades parce que nous perdons la santé et non l’inverse.',
           'La ROP intègre complètement cette vision de la santé et de la maladie : un symptôme doit être replacé dans son contexte — le syndrome général d’adaptation.',
         ]},
-        { type: 'figure', src: '/chapter-5/figure-5-2.jpeg', alt: 'Schéma de l’effet cumulatif des stresseurs physiques, émotionnels et biochimiques', caption: 'Figure 5.2 — Effet cumulatif des stresseurs', orientation: 'portrait' },
       ],
     },
     {
@@ -67,7 +65,6 @@ export const chapter5Fr: Chapter = {
       title: 'Syndrome général d’adaptation (SGA)',
       blocks: [
         { type: 'para', text: 'Ce modèle proposé par Hans Selye explique l’impact du stress sur l’organisme et la manière dont celui-ci tente d’y répondre. Il évolue selon quatre phases : alarme, recouvrement, adaptation-résistance, épuisement.' },
-        { type: 'figure', src: '/chapter-5/figure-5-3.jpeg', alt: 'Courbe des quatre phases du syndrome général d’adaptation', caption: 'Figure 5.3 — Les quatre phases du syndrome de stress', orientation: 'portrait' },
 
         { type: 'sub', text: 'Phase d’alarme' },
         { type: 'para', text: 'Mots-clés : réaction immédiate aux stresseurs, urgence, mobilisation des ressources énergétiques, activation du Sympathique.' },

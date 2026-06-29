@@ -48,7 +48,6 @@ export const chapter5It: Chapter = {
         { type: "lead", label: "Stress negativo", text: "È definito distress e può manifestarsi con tristezza, senso di fallimento, dubbio, insicurezza, paura, collera, ecc. Si accompagna a una risposta neuroendocrina che coinvolge il cortisolo e può influenzare i tre grandi sistemi coinvolti nell’omeostasi: nervoso, endocrino e immunitario." },
         { type: "para", text: "Tutti i sistemi possono successivamente essere interessati, in funzione delle predisposizioni genetiche individuali e dello stile di vita: disturbi digestivi, asma, disturbi dell’apparato muscolo-scheletrico, infezioni, malattie cardiovascolari, ansia, depressione, malattie autoimmuni, malattie neurodegenerative, tumori, ecc." },
         { type: "lead", label: "Stress positivo", text: "È definito eustress e può manifestarsi con amore, gioia, entusiasmo, libertà, fiducia, sicurezza, ecc. Si accompagna all’attivazione di altri neuromediatori, tra cui l’adrenalina, che possono sostenere una risposta adattativa favorevole a breve termine." },
-        { type: "figure", src: "/chapter-5/figure-5-1.jpeg", alt: "Schema dei tre grandi tipi di stressori: fisici, emozionali e biochimici", caption: "Figura 5.1 — I tre grandi tipi di stressori", orientation: "landscape" },
         { type: "lead", label: "Tipi di stressori", text: "Alcuni sono facilmente identificabili, in particolare quelli fisici ed emozionali. Gli stressori biochimici, invece, agiscono molto spesso in modo silente e per questo non vengono presi in considerazione." },
         { type: "leadBullets", items: [
           { label: "Stressori fisici", text: "Incidenti, colpi di frusta cervicali, eccesso di attività fisica o sportiva fino all’esaurimento o, al contrario, inattività, condizioni della nascita, ritmo di vita frenetico, mancanza di sonno, sovraccarichi sensoriali — rumore, odori, luce, dolore intenso o cronico, disgusto con nausea verso gli alimenti —, inquinamento atmosferico, climi estremi, ecc." },
@@ -63,7 +62,6 @@ export const chapter5It: Chapter = {
           "Il meccanismo dello stress si colloca a monte della malattia. In funzione delle vulnerabilità proprie dell’individuo — legate all’ereditarietà, agli antecedenti patologici e allo stile di vita — possono svilupparsi malattie per fallimento dei meccanismi di adattamento. In questa prospettiva, ci si ammala perché si perde salute, e non il contrario.",
           "La ROP integra pienamente questa visione della salute e della malattia: un sintomo deve essere ricollocato nel proprio contesto, cioè nella sindrome generale di adattamento.",
         ]},
-        { type: "figure", src: "/chapter-5/figure-5-2.jpeg", alt: "Schema dell’effetto cumulativo degli stressori fisici, emozionali e biochimici", caption: "Figura 5.2 — Effetto cumulativo degli stressori", orientation: "portrait" },
       ],
     },
     {
@@ -71,7 +69,6 @@ export const chapter5It: Chapter = {
       title: "Sindrome generale di adattamento (SGA)",
       blocks: [
         { type: "para", text: "Questo modello, proposto da Hans Selye, spiega l’impatto dello stress sull’organismo e il modo in cui quest’ultimo tenta di rispondervi. Si sviluppa in quattro fasi: allarme, recupero, adattamento-resistenza ed esaurimento." },
-        { type: "figure", src: "/chapter-5/figure-5-3.jpeg", alt: "Curva delle quattro fasi della sindrome generale di adattamento", caption: "Figura 5.3 — Le quattro fasi della sindrome da stress", orientation: "portrait" },
 
         { type: "sub", text: "Fase di allarme" },
         { type: "para", text: "Parole chiave: reazione immediata agli stressori, urgenza, mobilizzazione delle risorse energetiche, attivazione del simpatico." },

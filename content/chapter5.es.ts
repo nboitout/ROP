@@ -48,7 +48,6 @@ export const chapter5Es: Chapter = {
         { type: "lead", label: "Estrés negativo", text: "Se denomina distrés y puede manifestarse como tristeza, sensación de fracaso, duda, inseguridad, miedo, ira, etc. Se acompaña de una respuesta neuroendocrina en la que participa el cortisol, que puede influir en los tres grandes sistemas implicados en la homeostasis: el sistema nervioso, el sistema endocrino y el sistema inmunitario." },
         { type: "para", text: "Todos los sistemas pueden verse posteriormente afectados, según las predisposiciones genéticas individuales y el estilo de vida: trastornos digestivos, asma, afecciones del aparato locomotor, infecciones, enfermedades cardiovasculares, ansiedad, depresión, enfermedades autoinmunes, enfermedades neurodegenerativas, cáncer, etc." },
         { type: "lead", label: "Estrés positivo", text: "Se denomina eustrés y puede manifestarse como amor, alegría, entusiasmo, libertad, confianza, seguridad, etc. Se acompaña de la activación de otros neuromediadores, entre ellos la adrenalina, que pueden sostener una respuesta adaptativa favorable a corto plazo." },
-        { type: "figure", src: "/chapter-5/figure-5-1.jpeg", alt: "Esquema de los tres grandes tipos de estresores: físicos, emocionales y bioquímicos", caption: "Figura 5.1 — Los tres grandes tipos de estresores", orientation: "landscape" },
         { type: "lead", label: "Tipos de estresores", text: "Algunos son fácilmente identificables, en particular los estresores físicos y emocionales. En cambio, los estresores bioquímicos actúan con frecuencia de forma silenciosa y, por tanto, no siempre se tienen en cuenta." },
         { type: "leadBullets", items: [
           { label: "Estresores físicos", text: "Accidentes, latigazos cervicales, exceso de actividad física o deportiva hasta el agotamiento o, por el contrario, la inactividad, condiciones del nacimiento, ritmo de vida frenético, falta de sueño, agresiones sensoriales —ruido, olor, luz, dolor intenso o crónico, repugnancia alimentaria asociada a náuseas—, contaminación atmosférica, climas extremos, etc." },
@@ -63,7 +62,6 @@ export const chapter5Es: Chapter = {
           "La respuesta de estrés se sitúa aguas arriba de la enfermedad. Según las vulnerabilidades propias de cada individuo —relacionadas con la herencia, los antecedentes médicos y el estilo de vida—, la enfermedad puede desarrollarse por un fracaso de los mecanismos de adaptación. Desde esta perspectiva, la enfermedad surge de una pérdida de salud, y no a la inversa.",
           "La ROP integra plenamente esta visión de la salud y de la enfermedad: un síntoma debe reubicarse en su contexto, es decir, en el síndrome general de adaptación.",
         ]},
-        { type: "figure", src: "/chapter-5/figure-5-2.jpeg", alt: "Esquema del efecto acumulativo de los estresores físicos, emocionales y bioquímicos", caption: "Figura 5.2 — Efecto acumulativo de los estresores", orientation: "portrait" },
       ],
     },
     {
@@ -71,7 +69,6 @@ export const chapter5Es: Chapter = {
       title: "Síndrome general de adaptación (SGA)",
       blocks: [
         { type: "para", text: "Este modelo, propuesto por Hans Selye, explica el impacto del estrés sobre el cuerpo y la manera en que este intenta responder. Evoluciona en cuatro fases: alarma, recuperación, adaptación-resistencia y agotamiento." },
-        { type: "figure", src: "/chapter-5/figure-5-3.jpeg", alt: "Curva de las cuatro fases del síndrome general de adaptación", caption: "Figura 5.3 — Las cuatro fases del síndrome de estrés", orientation: "portrait" },
 
         { type: "sub", text: "Fase de alarma" },
         { type: "para", text: "Palabras clave: reacción inmediata ante los estresores, urgencia, movilización de recursos energéticos, activación del sistema simpático." },
