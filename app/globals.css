@@ -72,7 +72,7 @@ h1 em { font-style:italic; color:var(--gold-l); }
 .hl-sub { position:relative; z-index:1; font-family:'Cormorant Garamond',serif; font-size:1.04rem; font-weight:300; font-style:italic; line-height:1.7; color:rgba(245,240,232,.88); margin-bottom:20px; white-space:nowrap; }
 .hl-tags { position:relative; z-index:1; display:flex; flex-wrap:wrap; gap:7px; margin-bottom:44px; }
 .hl-tag { font-size:.64rem; padding:4px 11px; border:1px solid rgba(201,163,94,.38); border-radius:20px; color:rgba(245,240,232,.84); letter-spacing:.05em; }
-.hl-copy { max-width:720px; padding-top:2px; }
+.hl-copy { max-width:840px; padding-top:2px; }
 .hl-author { position:relative; z-index:1; border-top:1px solid rgba(245,240,232,.13); padding-top:24px; }
 .hl-name { font-family:'Cormorant Garamond',serif; font-size:1.22rem; font-weight:400; color:var(--cream); margin-bottom:3px; }
 .hl-role { font-size:.71rem; letter-spacing:.1em; text-transform:uppercase; color:rgba(245,240,232,.8); }
@@ -97,9 +97,9 @@ h1 em { font-style:italic; color:var(--gold-l); }
 .hero-thumb img { width:100%; height:100%; object-fit:cover; object-position:center top; display:block; }
 
 /* INFOGRAPHICS — embedded in hero left panel */
-.hl-infographics { position:relative; z-index:1; margin-top:32px; padding-top:28px; border-top:1px solid rgba(245,240,232,.13); }
+.hl-infographics { position:relative; z-index:1; width:calc(100% + 100px); margin-top:32px; margin-left:-40px; padding-top:28px; border-top:1px solid rgba(245,240,232,.13); }
 .hl-ig-subtitle { font-family:'Cormorant Garamond',serif; font-size:.88rem; font-weight:300; font-style:italic; color:rgba(245,240,232,.6); margin-bottom:16px; }
-.ig-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; align-items:start; }
+.ig-grid { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1.45fr) minmax(0,1fr); gap:16px; align-items:start; }
 .ig-card { background:none; border:none; cursor:pointer; padding:0; text-align:center; }
 .ig-img-wrap { position:relative; aspect-ratio:3/4; background:white; border:1px solid rgba(245,240,232,.15); border-radius:8px; overflow:hidden; box-shadow:0 8px 24px rgba(26,26,24,.22); transition:transform .26s, box-shadow .26s; }
 .ig-card.is-landscape .ig-img-wrap { aspect-ratio:16/9; }
@@ -114,6 +114,7 @@ h1 em { font-style:italic; color:var(--gold-l); }
 .ig-lb-inner img { display:block; }
 
 @media (max-width:520px){
+  .hl-infographics { width:100%; margin-left:0; }
   .ig-grid { grid-template-columns:1fr; }
 }
 
