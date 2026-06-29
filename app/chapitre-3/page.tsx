@@ -4,8 +4,8 @@ import type { Metadata } from 'next'
 import { getServerLang } from '@/app/i18n/serverLang'
 
 export const metadata: Metadata = {
-  title: 'Chapitre 3 â€” SystÃ¨me nerveux central Â· R.O.P. Â· Guy Boitout',
-  description: 'Cerveau reptilien, systÃ¨me limbique, diencÃ©phale, cortex â€” anatomie et physiologie du systÃ¨me nerveux central dans la perspective de la RÃ©flexothÃ©rapie Occipito-Podale.',
+  title: 'Chapitre 3 — Système nerveux central · R.O.P. · Guy Boitout',
+  description: 'Cerveau reptilien, système limbique, diencéphale, cortex — anatomie et physiologie du système nerveux central dans la perspective de la Réflexothérapie Occipito-Podale.',
   robots: { index: false, follow: false },
 }
 
