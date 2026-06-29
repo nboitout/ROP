@@ -96,3 +96,7 @@ export function getChapterLangs(key: string): Lang[] {
   const byLang = registry[key]
   return byLang ? (Object.keys(byLang) as Lang[]) : []
 }
+
+export function getChapterTranslations(key: string): Partial<Record<Lang, Chapter>> {
+  return registry[key] ?? {}
+}

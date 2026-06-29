@@ -598,6 +598,129 @@
   color: #7a5aa0;
 }
 
+/* ---- Chapter quality metrics ---- */
+.adm-quality-section {
+  margin-top: 52px;
+}
+
+.adm-quality-intro {
+  max-width: 760px;
+  margin-top: -8px;
+  margin-bottom: 24px;
+  line-height: 1.6;
+}
+
+.adm-quality-scorecards {
+  margin-bottom: 28px;
+}
+
+.adm-quality-table-wrap {
+  background: #fff;
+}
+
+.adm-quality-table {
+  min-width: 1180px;
+}
+
+.adm-quality-table td {
+  vertical-align: top;
+  line-height: 1.4;
+}
+
+.adm-quality-table strong {
+  display: block;
+  font-size: .78rem;
+  font-weight: 650;
+  color: var(--adm-ink);
+}
+
+.adm-quality-title-link {
+  color: var(--adm-ink);
+  font-weight: 650;
+  text-decoration: none;
+}
+
+.adm-quality-title-link:hover {
+  color: var(--adm-sage);
+}
+
+.adm-quality-cell-sub {
+  display: block;
+  color: var(--adm-i30);
+  font-size: .68rem;
+  line-height: 1.45;
+  margin-top: 3px;
+}
+
+.adm-quality-lang-row,
+.adm-quality-flags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.adm-quality-lang {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 30px;
+  height: 20px;
+  border-radius: 2px;
+  border: 1px solid transparent;
+  font-size: .58rem;
+  font-weight: 650;
+  letter-spacing: .08em;
+}
+
+.adm-quality-lang.live {
+  background: rgba(74,107,90,.1);
+  border-color: rgba(74,107,90,.24);
+  color: var(--adm-sage);
+}
+
+.adm-quality-lang.missing {
+  background: rgba(26,26,24,.04);
+  border-color: var(--adm-i08);
+  color: var(--adm-i30);
+}
+
+.adm-quality-flag,
+.adm-quality-ok {
+  display: inline-flex;
+  align-items: center;
+  min-height: 22px;
+  border-radius: 2px;
+  padding: 3px 8px;
+  font-size: .62rem;
+  font-weight: 650;
+  letter-spacing: .03em;
+  white-space: nowrap;
+}
+
+.adm-quality-flag.critical {
+  background: rgba(185,64,64,.1);
+  border: 1px solid rgba(185,64,64,.22);
+  color: #9d3434;
+}
+
+.adm-quality-flag.warning {
+  background: rgba(160,124,58,.12);
+  border: 1px solid rgba(160,124,58,.26);
+  color: var(--adm-gold);
+}
+
+.adm-quality-flag.info {
+  background: rgba(74,107,90,.08);
+  border: 1px solid rgba(74,107,90,.18);
+  color: var(--adm-sage);
+}
+
+.adm-quality-ok {
+  background: rgba(74,107,90,.1);
+  border: 1px solid rgba(74,107,90,.22);
+  color: var(--adm-sage);
+}
+
 /* ---- Login (kept dark — intentional contrast with dashboard) ---- */
 .adm-login-wrap {
   min-height: 100vh;

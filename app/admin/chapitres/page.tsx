@@ -1,9 +1,17 @@
 import type { Metadata } from 'next'
-import { translations } from '@/app/i18n/translations'
-import { getChapterLangs } from '@/content/registry'
+import { translations, type Lang } from '@/app/i18n/translations'
+import { getChapterLangs, getChapterTranslations } from '@/content/registry'
 import ChapterBoard, { type BoardRow, type LangStatus } from '@/components/admin/ChapterBoard'
+import {
+  chapterQualityIssues,
+  chapterQualityMetrics,
+  type ChapterQualityIssue,
+  type ChapterQualityMetrics,
+} from '@/lib/chapterStats'
 
 export const metadata: Metadata = { title: 'Chapters · Admin R.O.P.' }
+
+const LANGS: Lang[] = ['fr', 'en', 'de', 'es', 'it']
 
 const ROUTES: Record<string, { href: string; key: string; gated?: boolean; draft?: boolean }> = {
   '00': { href: '/introduction', key: 'introduction' },
@@ -28,6 +36,73 @@ const ROUTES: Record<string, { href: string; key: string; gated?: boolean; draft
   '19': { href: '/lecture/chapitre-19', key: 'chapter-19' },
   '20': { href: '/lecture/chapitre-20', key: 'chapter-20' },
   '21': { href: '/lecture/chapitre-21', key: 'chapter-21' },
+}
+
+type QualityRow = {
+  num: string
+  title: string
+  partTitle: string
+  href: string | null
+  metrics: ChapterQualityMetrics | null
+  liveLangs: Lang[]
+  missingLangs: Lang[]
+  issues: ChapterQualityIssue[]
+}
+
+function formatNumber(n: number): string {
+  return n.toLocaleString('en-US')
+}
+
+function formatDensity(n: number): string {
+  return n.toFixed(1)
+}
+
+function resourceLabel(metrics: ChapterQualityMetrics): string {
+  const resources = [
+    metrics.slidesCount ? 'slides' : '',
+    metrics.revisionSheetCount ? 'revision' : '',
+    metrics.clinicalCaseCount ? 'case' : '',
+  ].filter(Boolean)
+  return resources.length > 0 ? resources.join(' / ') : 'no bonus resource'
+}
+
+function translationIssues(
+  metricsByLang: Map<Lang, ChapterQualityMetrics>,
+  liveLangs: Lang[],
+  missingLangs: Lang[],
+): ChapterQualityIssue[] {
+  const issues: ChapterQualityIssue[] = []
+  const fr = metricsByLang.get('fr')
+
+  if (missingLangs.length > 0) {
+    issues.push({ label: `${missingLangs.length} translations missing`, tone: 'info' })
+  }
+  if (!fr) {
+    issues.push({ label: 'Missing French source', tone: 'critical' })
+    return issues
+  }
+
+  for (const lang of liveLangs) {
+    if (lang === 'fr') continue
+    const metrics = metricsByLang.get(lang)
+    if (!metrics) continue
+
+    const wordRatio = fr.wordCount > 0 ? metrics.wordCount / fr.wordCount : 1
+    if (wordRatio < 0.72) {
+      issues.push({ label: `${lang.toUpperCase()} much shorter`, tone: 'warning' })
+    } else if (wordRatio > 1.35) {
+      issues.push({ label: `${lang.toUpperCase()} much longer`, tone: 'warning' })
+    }
+
+    if (metrics.figureCount !== fr.figureCount) {
+      issues.push({ label: `${lang.toUpperCase()} figure mismatch`, tone: 'warning' })
+    }
+    if (metrics.figureMissingAltCount > 0 || metrics.figureMissingCaptionCount > 0) {
+      issues.push({ label: `${lang.toUpperCase()} figure metadata`, tone: 'critical' })
+    }
+  }
+
+  return issues
 }
 
 export default async function AdminChapitresPage() {
@@ -66,6 +141,58 @@ export default async function AdminChapitresPage() {
   const deLive = rows.filter((r) => r.de === 'live').length
   const esLive = rows.filter((r) => r.es === 'live').length
   const itLive = rows.filter((r) => r.it === 'live').length
+
+  const qualityRows: QualityRow[] = t.cards.map((card) => {
+    const route = ROUTES[card.num]
+    if (!route) {
+      return {
+        num: card.num,
+        title: card.title,
+        partTitle: partTitle.get(card.part) ?? card.part,
+        href: null,
+        metrics: null,
+        liveLangs: [],
+        missingLangs: LANGS,
+        issues: [{ label: 'Not built', tone: 'critical' }],
+      }
+    }
+
+    const translations = getChapterTranslations(route.key)
+    const liveLangs = LANGS.filter((lang) => translations[lang])
+    const missingLangs = LANGS.filter((lang) => !translations[lang])
+    const metricsByLang = new Map<Lang, ChapterQualityMetrics>()
+
+    for (const lang of liveLangs) {
+      const chapter = translations[lang]
+      if (chapter) metricsByLang.set(lang, chapterQualityMetrics(chapter))
+    }
+
+    const frMetrics = metricsByLang.get('fr') ?? null
+    const issues: ChapterQualityIssue[] = frMetrics
+      ? chapterQualityIssues(frMetrics, translationIssues(metricsByLang, liveLangs, missingLangs))
+      : [{ label: 'No content file', tone: 'critical' }]
+
+    return {
+      num: card.num,
+      title: card.title,
+      partTitle: partTitle.get(card.part) ?? card.part,
+      href: route.href,
+      metrics: frMetrics,
+      liveLangs,
+      missingLangs,
+      issues,
+    }
+  })
+
+  const analyzedRows = qualityRows.filter((r): r is QualityRow & { metrics: ChapterQualityMetrics } => !!r.metrics)
+  const attentionRows = qualityRows.filter((r) => r.issues.some((issue) => issue.tone !== 'info'))
+  const avgReadMinutes = analyzedRows.length > 0
+    ? Math.round(analyzedRows.reduce((sum, row) => sum + row.metrics.readingMinutes, 0) / analyzedRows.length)
+    : 0
+  const avgVisualDensity = analyzedRows.length > 0
+    ? analyzedRows.reduce((sum, row) => sum + row.metrics.figuresPer1000Words, 0) / analyzedRows.length
+    : 0
+  const fullyTranslatedRows = qualityRows.filter((r) => r.liveLangs.length === LANGS.length).length
 
   return (
     <main className="adm-page">
@@ -114,6 +241,144 @@ export default async function AdminChapitresPage() {
       </div>
 
       <ChapterBoard parts={t.parts} rows={rows} />
+
+      <section className="adm-quality-section">
+        <p className="adm-section-title">Chapter quality signals</p>
+        <p className="adm-page-sub adm-quality-intro">
+          Static checks from the chapter content files: reading load, visual support, structure, translation parity, and review flags.
+        </p>
+
+        <div className="adm-scorecards adm-quality-scorecards">
+          <div className="adm-scorecard">
+            <p className="adm-scorecard-label">Analyzed</p>
+            <p className="adm-scorecard-value">{analyzedRows.length}<span style={{ fontSize: '1rem', color: 'var(--adm-i30)' }}> / {total}</span></p>
+            <p className="adm-scorecard-sub">chapters with content</p>
+          </div>
+          <div className="adm-scorecard">
+            <p className="adm-scorecard-label">Avg read load</p>
+            <p className="adm-scorecard-value">{avgReadMinutes}<span style={{ fontSize: '1rem', color: 'var(--adm-i30)' }}> min</span></p>
+            <p className="adm-scorecard-sub">canonical FR content</p>
+          </div>
+          <div className="adm-scorecard">
+            <p className="adm-scorecard-label">Visual density</p>
+            <p className="adm-scorecard-value">{formatDensity(avgVisualDensity)}</p>
+            <p className="adm-scorecard-sub">figures per 1k words</p>
+          </div>
+          <div className="adm-scorecard">
+            <p className="adm-scorecard-label">5-language set</p>
+            <p className="adm-scorecard-value">{fullyTranslatedRows}<span style={{ fontSize: '1rem', color: 'var(--adm-i30)' }}> / {total}</span></p>
+            <p className="adm-scorecard-sub">FR EN DE ES IT live</p>
+          </div>
+          <div className="adm-scorecard">
+            <p className="adm-scorecard-label">Needs attention</p>
+            <p className="adm-scorecard-value">{attentionRows.length}</p>
+            <p className="adm-scorecard-sub">non-info flags</p>
+          </div>
+        </div>
+
+        <div className="adm-table-wrap adm-quality-table-wrap">
+          <table className="adm-table adm-quality-table">
+            <thead>
+              <tr>
+                <th style={{ width: 44 }}>#</th>
+                <th>Chapter</th>
+                <th>Reading load</th>
+                <th>Visual support</th>
+                <th>Structure</th>
+                <th>Translations</th>
+                <th>Quality flags</th>
+              </tr>
+            </thead>
+            <tbody>
+              {qualityRows.map((row) => (
+                <tr key={row.num}>
+                  <td className="adm-board-num">{row.num}</td>
+                  <td>
+                    {row.href ? (
+                      <a className="adm-quality-title-link" href={row.href} target="_blank" rel="noopener noreferrer">
+                        {row.title}
+                      </a>
+                    ) : (
+                      <span>{row.title}</span>
+                    )}
+                    <span className="adm-quality-cell-sub">{row.partTitle}</span>
+                  </td>
+                  <td>
+                    {row.metrics ? (
+                      <>
+                        <strong>{formatNumber(row.metrics.wordCount)} words</strong>
+                        <span className="adm-quality-cell-sub">
+                          {row.metrics.readingMinutes} min / {row.metrics.sectionCount} sections / avg {formatNumber(row.metrics.avgWordsPerSection)} words
+                        </span>
+                      </>
+                    ) : (
+                      <span className="adm-quality-cell-sub">No chapter content</span>
+                    )}
+                  </td>
+                  <td>
+                    {row.metrics ? (
+                      <>
+                        <strong>{row.metrics.figureCount} figures</strong>
+                        <span className="adm-quality-cell-sub">
+                          {formatDensity(row.metrics.figuresPer1000Words)} / 1k words / {resourceLabel(row.metrics)}
+                        </span>
+                        <span className="adm-quality-cell-sub">
+                          {row.metrics.ropBlockCount} ROP blocks / {row.metrics.xrefCount} references
+                        </span>
+                      </>
+                    ) : (
+                      <span className="adm-quality-cell-sub">No visual data</span>
+                    )}
+                  </td>
+                  <td>
+                    {row.metrics ? (
+                      <>
+                        <strong>{row.metrics.avgSentenceWords} words/sentence</strong>
+                        <span className="adm-quality-cell-sub">
+                          {row.metrics.paragraphCount} paragraphs / avg {row.metrics.avgWordsPerParagraph} words
+                        </span>
+                        <span className="adm-quality-cell-sub">
+                          {row.metrics.longParagraphCount} long paragraphs / {row.metrics.longSentenceCount} long sentences
+                        </span>
+                      </>
+                    ) : (
+                      <span className="adm-quality-cell-sub">No structure data</span>
+                    )}
+                  </td>
+                  <td>
+                    <div className="adm-quality-lang-row">
+                      {LANGS.map((lang) => (
+                        <span
+                          key={lang}
+                          className={`adm-quality-lang ${row.liveLangs.includes(lang) ? 'live' : 'missing'}`}
+                        >
+                          {lang.toUpperCase()}
+                        </span>
+                      ))}
+                    </div>
+                    <span className="adm-quality-cell-sub">
+                      {row.liveLangs.length}/5 live{row.missingLangs.length > 0 ? ` / missing ${row.missingLangs.map((lang) => lang.toUpperCase()).join(', ')}` : ''}
+                    </span>
+                  </td>
+                  <td>
+                    <div className="adm-quality-flags">
+                      {row.issues.length > 0 ? (
+                        row.issues.map((issue, index) => (
+                          <span key={`${issue.label}-${index}`} className={`adm-quality-flag ${issue.tone}`}>
+                            {issue.label}
+                          </span>
+                        ))
+                      ) : (
+                        <span className="adm-quality-ok">Balanced</span>
+                      )}
+                    </div>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </section>
     </main>
   )
 }
