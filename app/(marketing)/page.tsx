@@ -20,7 +20,7 @@ const CARD_SLUG: Record<string, string> = {
 
 const INFOGRAPHICS = [
   { src: '/assets/infographic-fig1.png', caption: 'Chapitre 5' },
-  { src: '/assets/HomePage -- Illustration SNA sur le pied FR.png', caption: 'Chapitre 4' },
+  { src: '/assets/HomePage -- Illustration SNA sur le pied FR.png', caption: 'Chapitre 4', orientation: 'landscape' },
   { src: '/assets/infographic-fig3.png', caption: 'Chapitre 1' },
 ]
 
@@ -89,10 +89,10 @@ export default function HomePage() {
             <div className="hl-infographics">
               <p className="hl-ig-subtitle">De nombreux supports visuels pour chaque chapitre</p>
               <div className="ig-grid">
-                {INFOGRAPHICS.map(({ src, caption }) => (
+                {INFOGRAPHICS.map(({ src, caption, orientation }) => (
                   <button
                     key={src}
-                    className="ig-card"
+                    className={`ig-card${orientation === 'landscape' ? ' is-landscape' : ''}`}
                     onClick={() => setLightboxSrc(src)}
                     aria-label={`Agrandir l'infographie : ${caption}`}
                   >
