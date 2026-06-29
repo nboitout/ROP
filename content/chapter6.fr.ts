@@ -9,7 +9,7 @@ export const chapter6Fr: Chapter = {
       id: 'presentation-generale',
       title: 'Présentation générale',
       blocks: [
-        { type: 'para', text: 'Selon la conception classique du syndrome général d’adaptation (SGA), les êtres humains répondent à une situation de stress en activant en premier le système sympathique. Le Dr Stephen Porges a dépassé cette conception classique en proposant la théorie polyvagale qui donne la prééminence au système parasympathique pour mettre en œuvre une stratégie d’adaptation dans les situations de stress engendrant des situations de peur et d’anxiété.' },
+        { type: 'para', text: 'Selon la conception classique du syndrome général d’adaptation (SGA), les êtrès humains répondent à une situation de stress en activant en premier le système sympathique. Le Dr Stephen Porges a dépassé cette conception classique en proposant la théorie polyvagale qui donne la prééminence au système parasympathique pour mettre en œuvre une stratégie d’adaptation dans les situations de stress engendrant des situations de peur et d’anxiété.' },
         { type: 'para', text: 'La théorie polyvagale reste une théorie qui mérite d’être vérifiée mais elle est néanmoins intéressante car elle apporte un éclairage supplémentaire sur la compréhension du mécanisme de stress et de comportement.' },
         { type: 'para', text: 'La théorie polyvagale explore le rôle du système nerveux autonome (SNA) dans les comportements sociaux et émotionnels. 80 % des messages transmis au cerveau sur l’état des organes lui proviennent par le nerf vague. Ce qui se passe dans le corps influence fortement notre état mental et émotionnel. C’est pourquoi notre rôle en ROP est de favoriser la régulation du nerf vague.' },
       ],
@@ -18,7 +18,7 @@ export const chapter6Fr: Chapter = {
       id: 'theorie-polyvagale',
       title: 'Théorie polyvagale (TPV)',
       blocks: [
-        { type: 'para', text: 'Les découvertes récentes effectuées par le Dr Stephen Porges sont que, chez les mammifères, particulièrement chez les êtres humains, le SNA ne comporterait pas deux mais trois systèmes correspondant à l’évolution phylogénétique de la théorie des trois cerveaux décrite par le neurologue Paul D. Maclean :' },
+        { type: 'para', text: 'Les découvertes récentes effectuées par le Dr Stephen Porges sont que, chez les mammifères, particulièrement chez les êtrès humains, le SNA ne comporterait pas deux mais trois systèmes correspondant à l’évolution phylogénétique de la théorie des trois cerveaux décrite par le neurologue Paul D. Maclean :' },
         { type: 'bullets', items: [
           'le système sympathique',
           'deux branches parasympathiques : le nerf vague ancien et le nerf vague nouveau.',
@@ -27,7 +27,7 @@ export const chapter6Fr: Chapter = {
         { type: 'sub', text: 'Évolution phylogénétique' },
         { type: 'lead', label: 'Première phase', text: 'la branche ancienne du nerf vague est apparue avec les espèces animales n’ayant qu’un cerveau reptilien. Elle s’est développée en même temps que le tronc cérébral et le cervelet. Le mode de réponse à une menace est de se figer et de s’évanouir avec bradycardie, importante diminution du flux sanguin cérébral et de l’activité métabolique, quand échapper aux prédateurs par la fuite ou le combat n’est pas possible.' },
         { type: 'lead', label: 'Deuxième phase', text: 'le Sympathique s’est développé avec la période où les espèces animales ont dû se déplacer pour trouver leur nourriture et fuir ou combattre quand l’environnement était hostile. Il s’est développé en même temps que le système limbique et le diencéphale.' },
-        { type: 'lead', label: 'Troisième phase', text: 'plus tardivement, la branche nouvelle du nerf vague est apparue avec les mammifères et, particulièrement, chez les êtres humains. Elle s’est développée en même temps que le cerveau cognitif. Pour faire face au stress, les animaux ont commencé à vivre en troupeaux où une organisation sociale s’est mise en place pour leur survie. Plus haut dans la hiérarchie, les êtres humains ont développé l’attachement affectif, l’engagement social, la relation à autrui pour vivre en sécurité et en équilibre émotionnel.' },
+        { type: 'lead', label: 'Troisième phase', text: 'plus tardivement, la branche nouvelle du nerf vague est apparue avec les mammifères et, particulièrement, chez les êtrès humains. Elle s’est développée en même temps que le cerveau cognitif. Pour faire face au stress, les animaux ont commencé à vivre en troupeaux où une organisation sociale s’est mise en place pour leur survie. Plus haut dans la hiérarchie, les êtrès humains ont développé l’attachement affectif, l’engagement social, la relation à autrui pour vivre en sécurité et en équilibre émotionnel.' },
 
         { type: 'sub', text: 'Malaise vagal' },
         { type: 'para', text: 'Cette distinction du nerf vague en deux branches a permis de résoudre l’apparente contradiction entre, d’une part, les bienfaits du Parasympathique pour combattre les effets du stress liés à une hyperactivité du Sympathique et, d’autre part, les méfaits du Parasympathique quand le nerf vague ancien est suractivé, comme c’est le cas dans le malaise vagal. Celui-ci se caractérise par des nausées et vomissements, colites, fatigue, syncope pouvant aller jusqu’à l’arrêt cardiaque.' },

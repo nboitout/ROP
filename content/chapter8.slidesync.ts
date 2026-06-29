@@ -19,7 +19,7 @@ export const chapter8Slides: SyncSlide[] = [
   },
   {
     src: "/chapter-8/slides/slide-03.png",
-    title: "Coupoles et centre phrenique"
+    title: "Coupoles et centre phrénique"
   },
   {
     src: "/chapter-8/slides/slide-04.png",
@@ -67,7 +67,7 @@ export const chapter8Slides: SyncSlide[] = [
   },
   {
     src: "/chapter-8/slides/slide-15.png",
-    title: "Le reflux gastro-oesophagien et le symptome de tensions globales"
+    title: "Le reflux gastro-œsophagien et le symptôme de tensions globales"
   },
   {
     src: "/chapter-8/slides/slide-16.png",
@@ -75,11 +75,11 @@ export const chapter8Slides: SyncSlide[] = [
   },
   {
     src: "/chapter-8/slides/slide-17.png",
-    title: "Synthese : matrice topographique podale ROP"
+    title: "Synthèse : matrice topographique podale ROP"
   },
   {
     src: "/chapter-8/slides/slide-20.png",
-    title: "Cartographie podale : coupole diaphragmatique gauche et hiatus oesophagien"
+    title: "Cartographie podale : coupole diaphragmatique gauche et hiatus œsophagien"
   },
   {
     src: "/chapter-8/slides/slide-21.png",
@@ -87,7 +87,7 @@ export const chapter8Slides: SyncSlide[] = [
   },
   {
     src: "/chapter-8/slides/slide-22.png",
-    title: "Cartographie podale : hiatus oesophagien"
+    title: "Cartographie podale : hiatus œsophagien"
   },
   {
     src: "/chapter-8/slides/slide-23.png",
@@ -99,11 +99,11 @@ export const chapter8Slides: SyncSlide[] = [
   },
   {
     src: "/chapter-8/slides/slide-25.png",
-    title: "Cartographie podale : nerf phrenique"
+    title: "Cartographie podale : nerf phrénique"
   },
   {
     src: "/chapter-8/slides/slide-26.png",
-    title: "Cartographie podale : articulations costo-vertebrales"
+    title: "Cartographie podale : articulations costo-vertébrales"
   },
   {
     src: "/chapter-8/slides/slide-27.png",

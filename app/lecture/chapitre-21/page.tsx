@@ -8,7 +8,7 @@ import { translations } from '@/app/i18n/translations'
 
 export const metadata: Metadata = {
   title: 'Chapitre 21 - Systeme erectile masculin et feminin - R.O.P. - Guy Boitout',
-  description: 'Lecture du chapitre 21 : organes erectiles, innervation, physiologie, pathologies courantes et zones reflexes podales en R.O.P.',
+  description: 'Lecture du chapitre 21 : organes érectiles, innervation, physiologie, pathologies courantes et zones réflexes podales en R.O.P.',
   robots: { index: false, follow: false },
 }
 

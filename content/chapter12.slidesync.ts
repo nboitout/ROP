@@ -8,8 +8,8 @@ export type SyncSlide = { src: string; title: string; orientation?: 'portrait' }
 export type SyncAnchor = { sectionId: string; blockIndex: number; slide: number; gapBefore?: 'half' }
 
 export const chapter12Slides: SyncSlide[] = [
-  { src: '/chapter-12/slides/slide-01.png', title: 'Le Pancreas' },
-  { src: '/chapter-12/slides/slide-02.png', title: 'La dualite fonctionnelle du pancreas' },
+  { src: '/chapter-12/slides/slide-01.png', title: 'Le Pancréas' },
+  { src: '/chapter-12/slides/slide-02.png', title: 'La dualite fonctionnelle du pancréas' },
   { src: '/chapter-12/slides/slide-03.png', title: 'Un organe profond et vulnerable' },
   { src: '/chapter-12/slides/slide-04.png', title: 'Morphologie anatomique' },
   { src: '/chapter-12/slides/slide-05.png', title: 'Le reseau canalaire exocrine' },
@@ -20,7 +20,7 @@ export const chapter12Slides: SyncSlide[] = [
   { src: '/chapter-12/slides/slide-10.png', title: 'Manifestations cliniques et diagnostics d exclusion' },
   { src: '/chapter-12/slides/slide-11.png', title: 'Pathologies glycemiques : le spectre du diabete' },
   { src: '/chapter-12/slides/slide-12.png', title: 'Pathologies severes : pancreatites et tumeurs' },
-  { src: '/chapter-12/slides/slide-13.png', title: 'Synthese viscero-emotionnelle' },
+  { src: '/chapter-12/slides/slide-13.png', title: 'Synthèse viscéro-émotionnelle' },
 ]
 
 export const chapter12SlideAnchors: SyncAnchor[] = [

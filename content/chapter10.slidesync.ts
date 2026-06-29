@@ -20,7 +20,7 @@ export const chapter10Slides: SyncSlide[] = [
   { src: '/chapter-10/slides/slide-10.png', title: 'Regulation et hydrolyse' },
   { src: '/chapter-10/slides/slide-11.png', title: 'Grille de lecture pathologique' },
   { src: '/chapter-10/slides/slide-12.png', title: 'Conflit mecanique de D4' },
-  { src: '/chapter-10/slides/slide-14.png', title: 'Synthese ROP : axe viscero-somatique et limbique' },
+  { src: '/chapter-10/slides/slide-14.png', title: 'Synthèse ROP : axe viscéro-somatique et limbique' },
   { src: '/chapter-10/slides/slide-13.png', title: 'Objectifs therapeutiques en ROP' },
 ]
 

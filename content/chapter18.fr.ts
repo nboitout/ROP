@@ -134,7 +134,7 @@ export const chapter18Fr: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "elle est très hormono-dépendante: en fonction du cycle menstruel et des stress émotionnels, les incontinences apparaissent par déséquilibres neuro-végétatifs et hormonaux qui retentissent sur la dynamique de la vessie."
+            "elle est très hormono-dépendante: en fonction du cycle menstruel et des stress émotionnels, les incontinences apparaissent par déséquilibres neuro-végétatifs et hormonaux qui réténtissent sur la dynamique de la vessie."
           ]
         },
         {
@@ -152,7 +152,7 @@ export const chapter18Fr: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Il épouse le sommet de la vessie en formant le cul-de sac vésico-utérin chez la femme ou vésico-rectal chez l’homme (figure 17.7). Les ptoses viscérales de l’intestin grêle, la chirurgie abdominale, les infections, les spasmes viscéraux, retentissent sur le péritoine. Le glissement normal entre le péritoine et la vessie est freiné par les tensions du péritoine."
+            "Il épouse le sommet de la vessie en formant le cul-de sac vésico-utérin chez la femme ou vésico-rectal chez l’homme (figure 17.7). Les ptoses viscérales de l’intestin grêle, la chirurgie abdominale, les infections, les spasmes viscéraux, réténtissent sur le péritoine. Le glissement normal entre le péritoine et la vessie est freiné par les tensions du péritoine."
           ]
         },
         {
@@ -176,14 +176,14 @@ export const chapter18Fr: Chapter = {
           "type": "bullets",
           "items": [
             "lames sacro-recto-cervico-pubiennes (SRGCP) (figure 17.5)",
-            "Plexus veineux de Santorini: il est situé dans l’espace prévésical (entre le pubis et la vessie). La tonicité des veines maintient le col vésical en bonne place. Il est en relation avec les systèmes hémorroïdal et porto-cave (figure 11.7). Tout trouble fonctionnel du système porte se répercute sur le plexus veineux de Santorini. Le relâchement du système musculo-ligamentaire vésical déstabilise le plexus veineux de Santorini favorisant une incontinence urinaire.",
+            "Plexus veineux de Santorini: il est situé dans l’espace prévésical (entre le pubis et la vessie). La tonicité des veines maintient le col vésical en bonne place. Il est en relation avec les systèmes hémorroïdal et porto-cave (figure 11.7). Tout trouble fonctionnel du système porte se réperçute sur le plexus veineux de Santorini. Le relâchement du système musculo-ligamentaire vésical déstabilise le plexus veineux de Santorini favorisant une incontinence urinaire.",
             "Plancher pelvien du périnée (figure 17.9)"
           ]
         },
         {
           "type": "rop",
           "body": [
-            "Il y a un continuum anatomique entre le diaphragme, le foie, la cavité pelvienne, la vessie et les hanches. Le bon fonctionnement de la vessie repose sur ses liens avec le péritoine, la symphyse pubienne, les ligaments pubovésicaux et pubo-urétraux, la fosse obturatrice sur laquelle elle est posée, les muscles de la hanche."
+            "Il y à un continuum anatomique entre le diaphragme, le foie, la cavité pelvienne, la vessie et les hanches. Le bon fonctionnement de la vessie repose sur ses liens avec le péritoine, la symphyse pubienne, les ligaments pubovésicaux et pubo-urétraux, la fosse obturatrice sur laquelle elle est posée, les muscles de la hanche."
           ]
         }
       ]
@@ -220,7 +220,7 @@ export const chapter18Fr: Chapter = {
             "Céphaliquement: le péritoine",
             "Dorsalement: l’aponévrose prostato-péritonéale de Denonvilliers;",
             "Caudalement: la prostate;",
-            "Latéralement: les muscles obturateurs internes et releveur de l’anus."
+            "Latéralement: les muscles obturateurs internes et relèveur de l’anus."
           ]
         }
       ]
@@ -318,7 +318,7 @@ export const chapter18Fr: Chapter = {
         },
         {
           "type": "xref",
-          "label": "Voir la reference dans le chapitre 17",
+          "label": "Voir la référence dans le chapitre 17",
           "text": ", Innervation autonome de la cavité pelvienne",
           "href": "/lecture/chapitre-17?xrefBack=%2Flecture%2Fchapitre-18%23p-innervation-11&xrefBackLabel=Retour%20au%20chapitre%2018#sec-innervation"
         }
@@ -369,7 +369,7 @@ export const chapter18Fr: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "le système musculaire occlusif – muscles pubo-vésical, pubo-coccygien, élévateur de l’anus, transverse profond - a un rôle faible dans la continence au repos mais réel lors des efforts physiques, la toux, les éternuements."
+            "le système musculaire occlusif – muscles pubo-vésical, pubo-coccygien, élévateur de l’anus, transverse profond - à un rôle faible dans la continence au repos mais réel lors des efforts physiques, la toux, les éternuements."
           ]
         },
         {
@@ -379,7 +379,7 @@ export const chapter18Fr: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "lorsque le volume urinaire augmente, l’étirement de la paroi vésicale sollicite les tensorécepteurs et volorécepteurs. Les informations afférentes sont intégrées par les centres médullaires, sous contrôle cortical. Tant que la miction est différée, le détrusor reste relâché et les sphincters maintiennent la continence. Lorsque la décision d’uriner est prise et que le contexte le permet, la commande parasympathique favorise la contraction du détrusor et le relâchement du sphincter lisse."
+            "lorsque le volume urinaire augmente, l’étirement de la paroi vésicale sollicité les tensorécepteurs et volorécepteurs. Les informations afférentes sont intégrées par les centres médullaires, sous contrôle cortical. Tant que la miction est différée, le détrusor reste relâché et les sphincters maintiennent la continence. Lorsque la décision d’uriner est prise et que le contexte le permet, la commande parasympathique favorise la contraction du détrusor et le relâchement du sphincter lisse."
           ]
         },
         {
@@ -420,7 +420,7 @@ export const chapter18Fr: Chapter = {
         },
         {
           "type": "xref",
-          "label": "Voir la reference dans le chapitre 5",
+          "label": "Voir la référence dans le chapitre 5",
           "text": "Mécanisme de stress",
           "href": "/lecture/chapitre-5?xrefBack=%2Flecture%2Fchapitre-18%23p-physiologie-16&xrefBackLabel=Retour%20au%20chapitre%2018#p-presentation-0"
         },
@@ -442,7 +442,7 @@ export const chapter18Fr: Chapter = {
         },
         {
           "type": "xref",
-          "label": "Voir la reference dans le chapitre 17",
+          "label": "Voir la référence dans le chapitre 17",
           "text": "Cavité pelvienne",
           "href": "/lecture/chapitre-17?xrefBack=%2Flecture%2Fchapitre-18%23p-physiologie-19&xrefBackLabel=Retour%20au%20chapitre%2018#sec-presentation"
         },
@@ -502,7 +502,7 @@ export const chapter18Fr: Chapter = {
         },
         {
           "type": "xref",
-          "label": "Voir la reference dans le chapitre 19",
+          "label": "Voir la référence dans le chapitre 19",
           "text": "Cycle menstruel",
           "href": "/lecture/chapitre-19?xrefBack=%2Flecture%2Fchapitre-18%23p-pathologies-courantes-4&xrefBackLabel=Retour%20au%20chapitre%2018#sec-uterus-physiologie"
         },

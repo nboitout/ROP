@@ -186,8 +186,8 @@ export const chapter14En: Chapter = {
           'Oesophageal hiatus (right and left vagus nerves) and cardia.',
           'Lesser curvature of the stomach, rich in vagal fibres.',
         ]},
-        { type: 'figure', src: '/chapter-14/en/figure-14-17.png', caption: 'Figure 14.17 — Oesophageal hiatus (right and left vagus nerves) and cardia', alt: 'Oesophageal hiatus and vagus nerves', orientation: 'landscape' },
-        { type: 'figure', src: '/chapter-14/en/figure-14-18.png', caption: 'Figure 14.18 — Lesser curvature of the stomach, rich in vagal fibres', alt: 'Lesser curvature of the stomach and vagal fibres', orientation: 'landscape' },
+        { type: 'figure', src: '/chapter-14/en/figure-14-17.png', caption: 'Oesophageal hiatus (right and left vagus nerves) and cardia', alt: 'Oesophageal hiatus and vagus nerves', orientation: 'landscape' },
+        { type: 'figure', src: '/chapter-14/en/figure-14-18.png', caption: 'Lesser curvature of the stomach, rich in vagal fibres', alt: 'Lesser curvature of the stomach and vagal fibres', orientation: 'landscape' },
 
         { type: 'sub', text: '2. Sympathetic system' },
         { type: 'bullets', items: [
@@ -195,8 +195,8 @@ export const chapter14En: Chapter = {
           'Coeliac (solar) plexus.',
           'Lumbar plexus (viscerosomatic link).',
         ]},
-        { type: 'figure', src: '/chapter-14/en/figure-14-20.png', caption: 'Figure 14.20 — Lumbar ganglionic chain and crura of the diaphragm', alt: 'Lumbar ganglionic chain and crura of the diaphragm', orientation: 'landscape' },
-        { type: 'figure', src: '/chapter-14/en/Chapter14 Fig21 EN.png', caption: 'Figure 14.21 — Coeliac (solar) plexus', alt: 'Coeliac solar plexus', orientation: 'landscape' },
+        { type: 'figure', src: '/chapter-14/en/figure-14-20.png', caption: 'Lumbar ganglionic chain and crura of the diaphragm', alt: 'Lumbar ganglionic chain and crura of the diaphragm', orientation: 'landscape' },
+        { type: 'figure', src: '/chapter-14/en/Chapter14 Fig21 EN.png', caption: 'Coeliac (solar) plexus', alt: 'Coeliac solar plexus', orientation: 'landscape' },
 
         { type: 'para', text: 'N.B. In our clinical experience, functional intestinal disorders are often observed in women in association with hormonal and emotional factors.' },
 
@@ -207,8 +207,8 @@ export const chapter14En: Chapter = {
           'Root of the mesentery: a line from the duodenojejunal junction to the umbilicus, at the level of L3-L4 (plantar surface of the left foot).',
           'Root of the mesentery: a line from the ileocaecal valve to the umbilicus (plantar surface of the right foot).',
         ]},
-        { type: 'figure', src: '/chapter-14/en/figure-14-22.png', caption: 'Figure 14.22 — Root of the mesentery (between the duodenojejunal junction and the umbilicus)', alt: 'Reflex zone of the root of the mesentery — jejunum side', orientation: 'portrait' },
-        { type: 'figure', src: '/chapter-14/en/figure-14-23.png', caption: 'Figure 14.23 — Root of the mesentery (between the ileocaecal valve and the umbilicus)', alt: 'Reflex zone of the root of the mesentery — ileum side', orientation: 'portrait' },
+        { type: 'figure', src: '/chapter-14/en/figure-14-22.png', caption: 'Root of the mesentery (between the duodenojejunal junction and the umbilicus)', alt: 'Reflex zone of the root of the mesentery — jejunum side', orientation: 'portrait' },
+        { type: 'figure', src: '/chapter-14/en/figure-14-23.png', caption: 'Root of the mesentery (between the ileocaecal valve and the umbilicus)', alt: 'Reflex zone of the root of the mesentery — ileum side', orientation: 'portrait' },
 
         { type: 'sub', text: 'Podal reflex zones — Jejunum (left foot)' },
         { type: 'bullets', items: [
@@ -217,7 +217,7 @@ export const chapter14En: Chapter = {
           'Lateral limit: extending to the lateral border of the left foot.',
           'Respect the orientation of the loops: horizontal for the jejunum.',
         ]},
-        { type: 'figure', src: '/chapter-14/en/figure-14-24.png', caption: 'Figure 14.24 — Jejunum (upper and lower limits)', alt: 'Limits of the jejunum reflex zone on the left foot', orientation: 'landscape' },
+        { type: 'figure', src: '/chapter-14/en/figure-14-24.png', caption: 'Jejunum (upper and lower limits)', alt: 'Limits of the jejunum reflex zone on the left foot', orientation: 'landscape' },
 
         { type: 'sub', text: 'Podal reflex zones — Ileum (right foot)' },
         { type: 'bullets', items: [
@@ -226,11 +226,11 @@ export const chapter14En: Chapter = {
           'Lateral limit: aligned with the fourth toe of the right foot.',
           'Respect the orientation of the loops: vertical for the ileum.',
         ]},
-        { type: 'figure', src: '/chapter-14/en/figure-14-26.png', caption: 'Figure 14.26 — Ileum (upper and lower limits)', alt: 'Limits of the ileum reflex zone on the right foot', orientation: 'landscape' },
+        { type: 'figure', src: '/chapter-14/en/figure-14-26.png', caption: 'Ileum (upper and lower limits)', alt: 'Limits of the ileum reflex zone on the right foot', orientation: 'landscape' },
 
         { type: 'sub', text: '3. Limbic system' },
         { type: 'lead', label: 'Limbic brain — small intestine balance', text: 'listening-induction: one thumb on the small intestine, the other thumb on the limbic brain.' },
-        { type: 'figure', src: '/chapter-14/en/figure-14-28.png', caption: 'Figure 14.28 — Viscero-emotional balance technique — small intestine', alt: 'Viscero-emotional balance — small intestine and limbic brain', orientation: 'landscape' },
+        { type: 'figure', src: '/chapter-14/en/figure-14-28.png', caption: 'Viscero-emotional balance technique — small intestine', alt: 'Viscero-emotional balance — small intestine and limbic brain', orientation: 'landscape' },
       ],
     },
     {

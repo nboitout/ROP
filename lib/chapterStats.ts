@@ -13,6 +13,11 @@ const WORDS_PER_MINUTE = 150
 const LONG_SENTENCE_WORDS = 35
 const LONG_PARAGRAPH_WORDS = 120
 
+export type ChapterQualityVisualOptions = {
+  slideCount?: number
+  podalZoneSlideCount?: number
+}
+
 export type ChapterQualityMetrics = {
   wordCount: number
   readingMinutes: number
@@ -25,6 +30,8 @@ export type ChapterQualityMetrics = {
   figureCount: number
   figuresPer1000Words: number
   slidesCount: number
+  podalZoneSlideCount: number
+  podalZonePhotoCount: number
   revisionSheetCount: number
   clinicalCaseCount: number
   supplementalResourceCount: number
@@ -57,6 +64,21 @@ function splitSentences(s: string): string[] {
   )
     .map((sentence) => sentence.trim())
     .filter(Boolean)
+}
+
+function normalizeForSearch(value: string): string {
+  return value
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/\u00df/g, 'ss')
+    .toLowerCase()
+}
+
+function isPodalReflexText(value: string): boolean {
+  const normalized = normalizeForSearch(value)
+  const hasReflex = /reflex|reflej|rifless/.test(normalized)
+  const hasPodal = /podal|plantar|plantaire|foot|feet|pied|fuss/.test(normalized)
+  return hasReflex && hasPodal
 }
 
 function wordsInBlock(block: Block): number {
@@ -117,11 +139,15 @@ export function chapterStats(chapter: Chapter): { readingMinutes: number; figure
   }
 }
 
-export function chapterQualityMetrics(chapter: Chapter): ChapterQualityMetrics {
+export function chapterQualityMetrics(
+  chapter: Chapter,
+  visualOptions: ChapterQualityVisualOptions = {},
+): ChapterQualityMetrics {
   let wordCount = 0
   let paragraphCount = 0
   let bulletCount = 0
   let figureCount = 0
+  let podalZonePhotoCount = 0
   let xrefCount = 0
   let ropBlockCount = 0
   let sentenceCount = 0
@@ -134,14 +160,23 @@ export function chapterQualityMetrics(chapter: Chapter): ChapterQualityMetrics {
 
   for (const section of chapter.sections) {
     let sectionWords = countWords(section.title)
+    const sectionIsPodalZone = isPodalReflexText(`${section.id} ${section.title}`)
+    let insidePodalZone = sectionIsPodalZone
+
     for (const block of section.blocks) {
       sectionWords += wordsInBlock(block)
 
       if (block.type === 'figure') {
         figureCount++
+        if (sectionIsPodalZone || insidePodalZone || isPodalReflexText(`${block.caption} ${block.alt}`)) {
+          podalZonePhotoCount++
+        }
         if (!block.alt.trim()) figureMissingAltCount++
         if (!block.caption.trim()) figureMissingCaptionCount++
         continue
+      }
+      if (block.type === 'sub') {
+        insidePodalZone = sectionIsPodalZone || isPodalReflexText(block.text)
       }
       if (block.type === 'bullets') bulletCount += block.items.length
       if (block.type === 'leadBullets') bulletCount += block.items.length
@@ -170,7 +205,8 @@ export function chapterQualityMetrics(chapter: Chapter): ChapterQualityMetrics {
 
   const readingMinutes = Math.ceil(wordCount / WORDS_PER_MINUTE)
   const sectionCount = chapter.sections.length
-  const slidesCount = chapter.slides ? 1 : 0
+  const slidesCount = visualOptions.slideCount ?? (chapter.slides ? 1 : 0)
+  const podalZoneSlideCount = visualOptions.podalZoneSlideCount ?? 0
   const revisionSheetCount = chapter.revisionSheet ? 1 : 0
   const clinicalCaseCount = chapter.clinicalCase ? 1 : 0
 
@@ -186,9 +222,11 @@ export function chapterQualityMetrics(chapter: Chapter): ChapterQualityMetrics {
     figureCount,
     figuresPer1000Words: wordCount > 0 ? figureCount / (wordCount / 1000) : 0,
     slidesCount,
+    podalZoneSlideCount,
+    podalZonePhotoCount,
     revisionSheetCount,
     clinicalCaseCount,
-    supplementalResourceCount: slidesCount + revisionSheetCount + clinicalCaseCount,
+    supplementalResourceCount: (slidesCount > 0 ? 1 : 0) + revisionSheetCount + clinicalCaseCount,
     xrefCount,
     ropBlockCount,
     avgSentenceWords: sentenceCount > 0 ? Math.round(sentenceWords / sentenceCount) : 0,

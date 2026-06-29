@@ -28,7 +28,7 @@ export const chapter3Slides: SyncSlide[] = [
   { src: '/chapter-3/slides/slide-15.png', title: 'Le systeme glymphatique : detoxification cerebrale' },
   { src: '/chapter-3/slides/slide-16.png', title: 'Le neocortex necessite une approche purement indirecte' },
   { src: '/chapter-3/slides/slide-17.png', title: 'Cartographie ROP : les zones occipitales' },
-  { src: '/chapter-3/slides/slide-18.png', title: 'Zones reflexes podales' },
+  { src: '/chapter-3/slides/slide-18.png', title: 'Zones réflexes podales' },
   { src: '/chapter-3/slides/slide-19.png', title: 'Reperes ROP du tronc cerebral, de la base endocrinienne et des noyaux limbiques' },
   { src: '/chapter-3/slides/slide-20.png', title: 'Reperes ROP du cerveau limbique' },
   { src: '/chapter-3/slides/slide-21.png', title: 'Reperes ROP du diencephale et de l hypophyse' },

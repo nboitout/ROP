@@ -45,7 +45,7 @@ export const chapter17Fr: Chapter = {
             "chez la femme: le péritoine épouse le contour de la vessie et de l’utérus: le cul-de-sac vésico-utérin, et entre l’utérus et le rectum: le cul-de-sac recto-utérin de Douglas). (figure 17.7)",
             "Chez l’homme: le cul-de-sac recto-vésical de Douglas s’interpose entre la vessie et le rectum.",
             "Le cul-de-sac de Douglas est la partie la plus déclive de l’abdomen.",
-            "Bien que sous-péritonéaux et dépourvus de séreuse, les organes pelviens peuvent bouger les uns par rapport aux autres grâce à l’interposition du péritoine. Une atteinte péritonéale (infection, chirurgie, traumatisme, congestion) se répercute sur la statique et la dynamique des organes pelviens.",
+            "Bien que sous-péritonéaux et dépourvus de séreuse, les organes pelviens peuvent bouger les uns par rapport aux autres grâce à l’interposition du péritoine. Une atteinte péritonéale (infection, chirurgie, traumatisme, congestion) se réperçute sur la statique et la dynamique des organes pelviens.",
             "Unité vertébro-coxo-pelvienne: la sphère uro-génitale ne peut se concevoir sans son cadre ostéo-musculo-articulaire auquel elle est intimement liée. Tout blocage articulaire perturbe la mobilité des organes pelviens et, inversement, toute fixation viscérale, qu’elle soit d’origine traumatique, infectieuse, chirurgicale ou congestive, sera la cause de fixations articulaires.",
             "L’unité fonctionnelle vertébro-coxo-pelvienne compte 7 articulations: (figure 17.1)",
             "2 sacro-iliaques;",
@@ -139,8 +139,8 @@ export const chapter17Fr: Chapter = {
             "Fixation du coccyx avec les conséquences sur le périnée et ses sphincters;",
             "Fixation de l’articulation sacro-iliaque;",
             "Fixation de la charnière L4-L5-S1: le ligament sacrotubéral se prolonge vers L5-L4 et les ligaments ilio-lombaires. Sa rétraction empêche l’écartement des ischions qui doit normalement avoir lieu en position assise. C’est une source de douleurs lombo-pelviennes aggravées en position assise.",
-            "Modification de la tension du périnée qui retentit sur l’occlusion des sphincters uro-génitaux et anaux responsables d’incontinence urinaire ou anale;",
-            "Irritation du ganglion impair, situé à la réunion inférieure des deux chaînes latéro-vertébrales sympathiques, en avant du coccyx créant à son tour des irritations du système sympathique avec des répercussions sur le système artériel pelvien et sur les centres supérieurs neuro-végétatifs expliquant, en partie, le syndrome dépressif du post-partum."
+            "Modification de la tension du périnée qui réténtit sur l’occlusion des sphincters uro-génitaux et anaux responsables d’incontinence urinaire ou anale;",
+            "Irritation du ganglion impair, situé à la réunion inférieure des deux chaînes latéro-vertébrales sympathiques, en avant du coccyx créant à son tour des irritations du système sympathique avec des réperçussions sur le système artériel pelvien et sur les centres supérieurs neuro-végétatifs expliquant, en partie, le syndrome dépressif du post-partum."
           ]
         },
         {
@@ -175,7 +175,7 @@ export const chapter17Fr: Chapter = {
         },
         {
           "type": "xref",
-          "label": "Voir la reference dans le chapitre 21",
+          "label": "Voir la référence dans le chapitre 21",
           "text": "Système érectile masculin et féminin",
           "href": "/lecture/chapitre-21?xrefBack=%2Flecture%2Fchapitre-17%23p-anatomie-14&xrefBackLabel=Retour%20au%20chapitre%2017#sec-presentation"
         }
@@ -241,7 +241,7 @@ export const chapter17Fr: Chapter = {
             "Gouttière ischio-trochantérienne: les nerfs grand et petit sciatique quittent le grand foramen ischiatique et traversent la région glutéale dans la gouttière ischio-trochantérienne (figure 17.13) en passant entre les muscles superficiels (muscles glutéaux) et les muscles profonds (muscles obturateur interne, jumeaux et carré fémoral).",
             "Plexus pudendal S2 à S4: il est anastomosé au plexus sacré céphaliquement et au plexus coccygien caudalement:",
             "Ses branches collatérales viscérales (ou nerf érecteur d’Eckardt) parasympathiques sont destinées aux organes pelviens;",
-            "Ses branches collatérales musculaires somatiques innervent les muscles profonds du périnée: releveur de l’anus, transverse profond et coccygien;",
+            "Ses branches collatérales musculaires somatiques innervent les muscles profonds du périnée: relèveur de l’anus, transverse profond et coccygien;",
             "Nerf pudendal (figure 17.10): il quitte le grand foramen ischiatique sous le muscle piriforme, pénètre sous le plancher périnéal par le petit foramen ischiatique en contournant l’épine ischiatique et passe entre les ligaments sacroépineux et sacrotubéral. Il longe la branche ischiopubienne dans le canal d’Alcock (dédoublement de l’aponévrose du muscle obturateur interne). Il donne deux branches:",
             "Branche motrice: elle innerve les muscles profonds et superficiels du périnée.",
             "Branche sensitive: elle innerve la peau du triangle anal, le noyau fibreux central du périnée, le scrotum chez l’homme, et la région labiale chez la femme. Sa branche terminale, le nerf dorsal du pénis ou du clitoris passe juste au-dessous de la symphyse pubienne et innerve le pénis et son gland ou le clitoris."
@@ -307,13 +307,13 @@ export const chapter17Fr: Chapter = {
         },
         {
           "type": "xref",
-          "label": "Voir la reference dans le chapitre 3",
+          "label": "Voir la référence dans le chapitre 3",
           "text": "SNC, Cerveau, limbique ou émotionnel",
           "href": "/lecture/chapitre-3?xrefBack=%2Flecture%2Fchapitre-17%23p-innervation-10&xrefBackLabel=Retour%20au%20chapitre%2017#sec-section-2-cadre-terminologique"
         },
         {
           "type": "xref",
-          "label": "Voir la reference dans le chapitre 3",
+          "label": "Voir la référence dans le chapitre 3",
           "text": "SNC, Cortex préfrontal et orbito-nasal",
           "href": "/lecture/chapitre-3?xrefBack=%2Flecture%2Fchapitre-17%23p-innervation-10&xrefBackLabel=Retour%20au%20chapitre%2017#sec-section-3-organisation-anatomique"
         },
@@ -337,7 +337,7 @@ export const chapter17Fr: Chapter = {
         },
         {
           "type": "xref",
-          "label": "Voir la reference dans le chapitre 1",
+          "label": "Voir la référence dans le chapitre 1",
           "text": "Généralités, effet turgor et pressions intra-cavitaires",
           "href": "/lecture/chapitre-1?xrefBack=%2Flecture%2Fchapitre-17%23p-innervation-14&xrefBackLabel=Retour%20au%20chapitre%2017#p-articulations-viscerales-3"
         },
@@ -357,7 +357,7 @@ export const chapter17Fr: Chapter = {
             "Orientation de la cavité pelvienne: grâce à l’orientation caudale et ventrale de la cavité pelvienne, les forces gravitaires se répartissent sur le pourtour osseux du détroit inférieur (figure 17.8)",
             "Forme de dôme des viscères pelviens: le corps de l’utérus situé au centre de la cavité pelvienne, renforce encore cette répartition des forces gravitaires sur le pourtour du détroit inférieur, soulageant encore d’autant la pression sur les organes pelviens.",
             "Contractilité et l’élasticité des muscles du périnée: les muscles du périnée renvoient vers le haut et horizontalement vers le pourtour du détroit inférieur les forces gravitaires résiduelles.",
-            "Equilibre des trois diaphragmes: le périnée, ou diaphragme pelvien, s’adapte en permanence aux variations de pressions liées aux mouvements du diaphragme thoracique, qui, lui-même, équilibre les modifications de tensions du diaphragme crânien (faux du cerveau et tente du cervelet) dues à l’alternance des flexions et extensions du mouvement respiratoire primaire crânio-sacré.",
+            "équilibre des trois diaphragmes: le périnée, ou diaphragme pelvien, s’adapte en permanence aux variations de pressions liées aux mouvements du diaphragme thoracique, qui, lui-même, équilibre les modifications de tensions du diaphragme crânien (faux du cerveau et tente du cervelet) dues à l’alternance des flexions et extensions du mouvement respiratoire primaire crânio-sacré.",
             "Quand toutes ces conditions sont réunies, les organes pelviens subissent peu de contraintes gravitaires et exercent leurs rôles respectifs avec bonheur.",
             "Ces pressions sont considérablement augmentées lors des efforts de toux, d’éternuement, de défécation, d’accouchement et de certaines activités sportives."
           ]
@@ -399,7 +399,7 @@ export const chapter17Fr: Chapter = {
         },
         {
           "type": "xref",
-          "label": "Voir la reference dans le chapitre 18",
+          "label": "Voir la référence dans le chapitre 18",
           "text": "Vessie, Incontinence urinaire d’effort",
           "href": "/lecture/chapitre-18?xrefBack=%2Flecture%2Fchapitre-17%23p-pathologies-courantes-2&xrefBackLabel=Retour%20au%20chapitre%2017#sec-pathologies-courantes"
         },

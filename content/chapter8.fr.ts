@@ -329,7 +329,7 @@ export const chapter8Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "Toute adhérence avec le péritoine, la plèvre ou le péricarde peut perturber le jeu diaphragmatique, avec un retentissement respiratoire, circulatoire ou viscéral variable."
+          "text": "Toute adhérence avec le péritoine, la plèvre ou le péricarde peut perturber le jeu diaphragmatique, avec un réténtissement respiratoire, circulatoire ou viscéral variable."
         },
         {
           "type": "para",
@@ -341,7 +341,7 @@ export const chapter8Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "Un abaissement du pH sanguin peut également s’observer en cas de retentissement ventilatoire significatif."
+          "text": "Un abaissement du pH sanguin peut également s’observer en cas de réténtissement ventilatoire significatif."
         },
         {
           "type": "para",
@@ -436,7 +436,7 @@ export const chapter8Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "La veine azygos et la veine hémi-azygos traversent le diaphragme près des piliers médians et latéraux du diaphragme; puis la veine hémi-azygos passe du côté droit pour se jeter dans la veine azygos, à hauteur de la vertèbre Th9."
+          "text": "La veine azygos et la veine hémi-azygos traversent le diaphragme près des piliers médians et latéraux du diaphragme; puis la veine hémi-azygos passe du côté droit pour se jétér dans la veine azygos, à hauteur de la vertèbre Th9."
         },
         {
           "type": "para",
@@ -456,7 +456,7 @@ export const chapter8Fr: Chapter = {
         },
         {
           "type": "xref",
-          "label": "Voir la reference dans le chapitre 11",
+          "label": "Voir la référence dans le chapitre 11",
           "text": "Foie",
           "href": "/lecture/chapitre-11?xrefBack=%2Flecture%2Fchapitre-8%23p-vascularisation-13&xrefBackLabel=Retour%20au%20chapitre%208#sec-vascularisation"
         }
@@ -569,7 +569,7 @@ export const chapter8Fr: Chapter = {
         },
         {
           "type": "xref",
-          "label": "Voir la reference dans le chapitre 1",
+          "label": "Voir la référence dans le chapitre 1",
           "text": "Généralités",
           "href": "/lecture/chapitre-1?xrefBack=%2Flecture%2Fchapitre-8%23p-physiologie-0&xrefBackLabel=Retour%20au%20chapitre%208#p-articulations-viscerales-3"
         },
@@ -604,7 +604,7 @@ export const chapter8Fr: Chapter = {
         },
         {
           "type": "xref",
-          "label": "Voir la reference dans le chapitre 1",
+          "label": "Voir la référence dans le chapitre 1",
           "text": "Généralités",
           "href": "/lecture/chapitre-1?xrefBack=%2Flecture%2Fchapitre-8%23p-physiologie-7&xrefBackLabel=Retour%20au%20chapitre%208#p-articulations-viscerales-3"
         },
@@ -614,7 +614,7 @@ export const chapter8Fr: Chapter = {
         },
         {
           "type": "xref",
-          "label": "Voir la reference dans le chapitre 18",
+          "label": "Voir la référence dans le chapitre 18",
           "text": "Vessie",
           "href": "/lecture/chapitre-18?xrefBack=%2Flecture%2Fchapitre-8%23p-physiologie-8&xrefBackLabel=Retour%20au%20chapitre%208#sec-presentation"
         },
@@ -734,7 +734,7 @@ export const chapter8Fr: Chapter = {
         },
         {
           "type": "xref",
-          "label": "Voir la reference dans le chapitre 9",
+          "label": "Voir la référence dans le chapitre 9",
           "text": "Estomac",
           "href": "/lecture/chapitre-9?xrefBack=%2Flecture%2Fchapitre-8%23p-pathologies-courantes-diagnostic-d-exclusion-indications-troubles-fonctionnels-6&xrefBackLabel=Retour%20au%20chapitre%208#sec-presentation"
         },
@@ -766,7 +766,7 @@ export const chapter8Fr: Chapter = {
         },
         {
           "type": "xref",
-          "label": "Voir la reference dans le chapitre 9",
+          "label": "Voir la référence dans le chapitre 9",
           "text": "Estomac",
           "href": "/lecture/chapitre-9?xrefBack=%2Flecture%2Fchapitre-8%23p-pathologies-courantes-diagnostic-d-exclusion-indications-troubles-fonctionnels-12&xrefBackLabel=Retour%20au%20chapitre%208#sec-presentation"
         },
@@ -868,7 +868,7 @@ export const chapter8Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "Ce lien peut contribuer à expliquer certains retentissements du territoire innervé par le nerf phrénique droit sur la ceinture scapulaire et l’épaule droite, notamment dans des tableaux de PSH ou de cervico-brachialgie droite."
+          "text": "Ce lien peut contribuer à expliquer certains réténtissements du territoire innervé par le nerf phrénique droit sur la ceinture scapulaire et l’épaule droite, notamment dans des tableaux de PSH ou de cervico-brachialgie droite."
         },
         {
           "type": "sub",
@@ -888,7 +888,7 @@ export const chapter8Fr: Chapter = {
         },
         {
           "type": "sub",
-          "text": "Charnière thoraco-lombaire et retentissements associés"
+          "text": "Charnière thoraco-lombaire et réténtissements associés"
         },
         {
           "type": "para",
@@ -896,7 +896,7 @@ export const chapter8Fr: Chapter = {
         },
         {
           "type": "xref",
-          "label": "Voir la reference dans le chapitre 16",
+          "label": "Voir la référence dans le chapitre 16",
           "text": "Reins",
           "href": "/lecture/chapitre-16?xrefBack=%2Flecture%2Fchapitre-8%23p-relations-viscero-somatiques-10&xrefBackLabel=Retour%20au%20chapitre%208#sec-presentation"
         }
@@ -931,7 +931,7 @@ export const chapter8Fr: Chapter = {
       "blocks": [
         {
           "type": "para",
-          "text": "La marche a le double avantage d’activer à la fois le retour veineux et la mobilité diaphragmatique."
+          "text": "La marche au double avantage d’activer à la fois le retour veineux et la mobilité diaphragmatique."
         },
         {
           "type": "para",
@@ -1128,6 +1128,6 @@ export const chapter8Fr: Chapter = {
   "slides": {
     "url": "/chapter-8/Chapter8 Slides de synthese FR.pdf",
     "label": "Diapositives",
-    "description": "Synth?se visuelle du chapitre 8."
+    "description": "Synthèse visuelle du chapitre 8."
   }
 }

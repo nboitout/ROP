@@ -1,8 +1,7 @@
 import type { Metadata } from 'next'
-import { existsSync, readFileSync } from 'node:fs'
-import path from 'node:path'
 import { translations, type Lang } from '@/app/i18n/translations'
 import { getChapterLangs, getChapterTranslations } from '@/content/registry'
+import { getChapterSlideVisuals } from '@/content/slidesyncRegistry'
 import ChapterBoard, { type BoardRow, type LangStatus } from '@/components/admin/ChapterBoard'
 import {
   chapterQualityIssues,
@@ -46,7 +45,6 @@ type QualityRow = {
   partTitle: string
   href: string | null
   metrics: ChapterQualityMetrics | null
-  slidePageCount: number | null
   liveLangs: Lang[]
   missingLangs: Lang[]
   issues: ChapterQualityIssue[]
@@ -60,22 +58,9 @@ function formatDensity(n: number): string {
   return n.toFixed(1)
 }
 
-function pdfPageCountFromPublicUrl(url: string | undefined): number | null {
-  if (!url) return null
-
-  const [pathname] = url.split('?')
-  if (!pathname?.toLowerCase().endsWith('.pdf')) return null
-
-  const publicPath = path.join(process.cwd(), 'public', ...pathname.split('/').filter(Boolean))
-  if (!existsSync(publicPath)) return null
-
-  const pdf = readFileSync(publicPath, 'latin1')
-  return pdf.match(/\/Type\s*\/Page\b/g)?.length ?? null
-}
-
-function resourceLabel(metrics: ChapterQualityMetrics, slidePageCount: number | null): string {
+function resourceLabel(metrics: ChapterQualityMetrics): string {
   const resources = [
-    metrics.slidesCount ? `${slidePageCount ?? ''} slides`.trim() : '',
+    metrics.slidesCount ? `${metrics.slidesCount} slides` : '',
     metrics.revisionSheetCount ? 'revision' : '',
     metrics.clinicalCaseCount ? 'case' : '',
   ].filter(Boolean)
@@ -173,7 +158,6 @@ export default async function AdminChapitresPage() {
         partTitle: partTitle.get(card.part) ?? card.part,
         href: null,
         metrics: null,
-        slidePageCount: null,
         liveLangs: [],
         missingLangs: LANGS,
         issues: [{ label: 'Not built', tone: 'critical' }],
@@ -184,15 +168,19 @@ export default async function AdminChapitresPage() {
     const liveLangs = LANGS.filter((lang) => translations[lang])
     const missingLangs = LANGS.filter((lang) => !translations[lang])
     const metricsByLang = new Map<Lang, ChapterQualityMetrics>()
+    const slideVisuals = getChapterSlideVisuals(route.key)
 
     for (const lang of liveLangs) {
       const chapter = translations[lang]
-      if (chapter) metricsByLang.set(lang, chapterQualityMetrics(chapter))
+      if (chapter) {
+        metricsByLang.set(
+          lang,
+          chapterQualityMetrics(chapter, lang === 'fr' ? slideVisuals : undefined),
+        )
+      }
     }
 
     const frMetrics = metricsByLang.get('fr') ?? null
-    const frChapter = translations.fr
-    const slidePageCount = frChapter?.slides ? pdfPageCountFromPublicUrl(frChapter.slides.url) : null
     const issues: ChapterQualityIssue[] = frMetrics
       ? chapterQualityIssues(frMetrics, translationIssues(metricsByLang, liveLangs, missingLangs))
       : [{ label: 'No content file', tone: 'critical' }]
@@ -203,7 +191,6 @@ export default async function AdminChapitresPage() {
       partTitle: partTitle.get(card.part) ?? card.part,
       href: route.href,
       metrics: frMetrics,
-      slidePageCount,
       liveLangs,
       missingLangs,
       issues,
@@ -346,10 +333,13 @@ export default async function AdminChapitresPage() {
                       <>
                         <strong>{row.metrics.figureCount} figures</strong>
                         <span className="adm-quality-cell-sub">
-                          {formatDensity(row.metrics.figuresPer1000Words)} / 1k words / {resourceLabel(row.metrics, row.slidePageCount)}
+                          {row.metrics.slidesCount} slides / {row.metrics.podalZoneSlideCount} podal-zone slides
                         </span>
                         <span className="adm-quality-cell-sub">
-                          {row.metrics.ropBlockCount} ROP blocks / {row.metrics.xrefCount} references
+                          {row.metrics.podalZonePhotoCount} podal-zone photos / {formatDensity(row.metrics.figuresPer1000Words)} figures per 1k
+                        </span>
+                        <span className="adm-quality-cell-sub">
+                          {resourceLabel(row.metrics)} / {row.metrics.ropBlockCount} ROP blocks / {row.metrics.xrefCount} references
                         </span>
                       </>
                     ) : (

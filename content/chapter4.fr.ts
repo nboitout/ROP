@@ -18,8 +18,8 @@ export const chapter4Fr: Chapter = {
         { type: 'para', text: 'Dans le chapitre 1 Généralités, nous avons vu l’importance de la mobilité des viscères. Cette mobilité dépend, en grande partie, du bon fonctionnement des deux composantes du système nerveux autonome (SNA) : le Parasympathique et le Sympathique. (figure 4.1)' },
         {
           type: 'xref',
-          label: 'Voir la reference dans le chapitre 1',
-          text: 'Mobilite viscerale',
+          label: 'Voir la référence dans le chapitre 1',
+          text: 'Mobilité viscérale',
           href: '/lecture/chapitre-1?xrefBack=%2Fchapitre-4%23p-presentation-2&xrefBackLabel=Retour%20au%20chapitre%204#p-mobilite-viscerale-0',
         },
         { type: 'figure', src: '/chapter-4/figure-4-1.jpeg', alt: 'Schéma du Parasympathique et du Sympathique', caption: 'Figure 4.1 — Parasympathique et Sympathique', orientation: 'portrait' },
@@ -27,8 +27,8 @@ export const chapter4Fr: Chapter = {
         { type: 'para', text: 'Le SNA est la partie du système nerveux la plus ancienne dans l’ordre phylogénétique et ontogénique.' },
         {
           type: 'xref',
-          label: 'Voir la reference dans le chapitre 3',
-          text: 'Systeme nerveux central',
+          label: 'Voir la référence dans le chapitre 3',
+          text: 'Système nerveux central',
           href: '/lecture/chapitre-3?xrefBack=%2Fchapitre-4%23p-presentation-6&xrefBackLabel=Retour%20au%20chapitre%204#p-section-1-presentation-generale-0',
         },
         { type: 'para', text: 'La phylogénèse étudie l’évolution des espèces animales depuis les animaux les plus primitifs jusqu’à l’homme.' },
@@ -41,8 +41,8 @@ export const chapter4Fr: Chapter = {
         ]},
         {
           type: 'xref',
-          label: 'Voir la reference dans le chapitre 5',
-          text: 'Mecanisme de stress',
+          label: 'Voir la référence dans le chapitre 5',
+          text: 'Mécanisme de stress',
           href: '/lecture/chapitre-5?xrefBack=%2Fchapitre-4%23p-presentation-11&xrefBackLabel=Retour%20au%20chapitre%204#p-presentation-0',
         },
 
@@ -52,21 +52,21 @@ export const chapter4Fr: Chapter = {
           { label: 'Sympathique', text: 'il est dit ergotrophique : il prépare l’individu à l’action. Il réagit surtout aux situations nouvelles et urgentes, aux dangers, aux situations de stress, d’émotions négatives et de douleurs. Il prédomine le jour et dans les états de veille. Il est dit catabolique. C’est le système pour combattre ou fuir, le fameux « fight or flight » des anglo-saxons.' },
           { label: 'Viscères', text: 'ils reçoivent une double innervation parasympathique et sympathique.' },
           { label: 'Parois du tronc, membres et téguments', text: 'ils ne sont modulés que par le Sympathique.' },
-          { label: 'Système vasculaire', text: 'il est presque exclusivement contrôlé par le Sympathique. Il a une action majoritairement vasoconstrictrice mais il provoque toutefois une vasodilatation des artères des muscles du système somatique, des coronaires myocardiques et des artères pulmonaires lors des activités physiques importantes et sportives.' },
-          { label: 'Cerveau', text: 'il a son propre système de régulation de la circulation sanguine car il ne peut supporter des variations brusques. Son système de régulation repose sur le sinus et le glomus carotidiens, situés à la bifurcation carotidienne, à hauteur de la vertèbre C4, commandés conjointement par le ganglion sympathique cervical supérieur et les nerfs glossopharyngien IX et vague X.' },
+          { label: 'Système vasculaire', text: 'il est presque exclusivement contrôlé par le Sympathique. Il à une action majoritairement vasoconstrictrice mais il provoque toutefois une vasodilatation des artères des muscles du système somatique, des coronaires myocardiques et des artères pulmonaires lors des activités physiques importantes et sportives.' },
+          { label: 'Cerveau', text: 'il à son propre système de régulation de la circulation sanguine car il ne peut supporter des variations brusques. Son système de régulation repose sur le sinus et le glomus carotidiens, situés à la bifurcation carotidienne, à hauteur de la vertèbre C4, commandés conjointement par le ganglion sympathique cervical supérieur et les nerfs glossopharyngien IX et vague X.' },
           { label: 'Corps érectiles sexuels', text: 'l’apport sanguin pour l’érection des organes érectiles (pénis et clitoris) est gouverné par le Parasympathique. (Cf. Chapitre 21 Système érectile masculin et féminin)' },
           { label: 'Action anti-inflammatoire', text: 'les fibres sensitives du nerf vague, principal nerf parasympathique, informent l’hypothalamus de l’état des fonctions internes. Selon l’état de stress, l’hypothalamus met en route l’axe hormonal hypothalamo-hypophyso-surrénalien en faisant libérer les corticoïdes anti-inflammatoires.' },
         ]},
         {
           type: 'xref',
-          label: 'Voir la reference dans le chapitre 21',
+          label: 'Voir la référence dans le chapitre 21',
           text: 'Système érectile masculin et féminin',
           href: '/lecture/chapitre-21?xrefBack=%2Fchapitre-4%23p-presentation-13&xrefBackLabel=Retour%20au%20chapitre%204#sec-presentation',
         },
         {
           type: 'xref',
-          label: 'Voir la reference dans le chapitre 5',
-          text: 'Mecanisme de stress',
+          label: 'Voir la référence dans le chapitre 5',
+          text: 'Mécanisme de stress',
           href: '/lecture/chapitre-5?xrefBack=%2Fchapitre-4%23p-presentation-14&xrefBackLabel=Retour%20au%20chapitre%204#p-sga-0',
         },
 
@@ -78,8 +78,8 @@ export const chapter4Fr: Chapter = {
         ]},
         {
           type: 'xref',
-          label: 'Voir la reference dans le chapitre 5',
-          text: 'Mecanisme de stress',
+          label: 'Voir la référence dans le chapitre 5',
+          text: 'Mécanisme de stress',
           href: '/lecture/chapitre-5?xrefBack=%2Fchapitre-4%23p-presentation-19&xrefBackLabel=Retour%20au%20chapitre%204#p-presentation-0',
         },
         { type: 'leadBullets', items: [
@@ -104,8 +104,8 @@ export const chapter4Fr: Chapter = {
         { type: 'para', text: 'Des cellules de la névroglie, les astrocytes, éliminent les synapses entre les neurones lorsqu’elles sont privées de sommeil.' },
         {
           type: 'xref',
-          label: 'Voir la reference dans le chapitre 3',
-          text: 'Systeme nerveux central',
+          label: 'Voir la référence dans le chapitre 3',
+          text: 'Système nerveux central',
           href: '/lecture/chapitre-3?xrefBack=%2Fchapitre-4%23p-presentation-30&xrefBackLabel=Retour%20au%20chapitre%204#p-section-3-organisation-anatomique-0',
         },
         { type: 'para', text: 'Il est donc inutile de chercher à rééquilibrer le SNA si le corps et l’esprit sont en manque de sommeil.' },
@@ -124,7 +124,7 @@ export const chapter4Fr: Chapter = {
         ]},
         {
           type: 'xref',
-          label: 'Voir la reference dans le chapitre 9',
+          label: 'Voir la référence dans le chapitre 9',
           text: 'Système nerveux entérique',
           href: '/lecture/chapitre-9?xrefBack=%2Fchapitre-4%23p-organisation-2&xrefBackLabel=Retour%20au%20chapitre%204#sec-presentation',
         },
@@ -185,7 +185,7 @@ export const chapter4Fr: Chapter = {
         ]},
         {
           type: 'xref',
-          label: 'Voir la reference dans le chapitre 6',
+          label: 'Voir la référence dans le chapitre 6',
           text: 'Theorie polyvagale',
           href: '/lecture/chapitre-6?xrefBack=%2Fchapitre-4%23p-parasympathique-visceromoteur-15&xrefBackLabel=Retour%20au%20chapitre%204#p-presentation-generale-0',
         },
@@ -225,7 +225,7 @@ export const chapter4Fr: Chapter = {
         ]},
         {
           type: 'xref',
-          label: 'Voir la reference dans le chapitre 6',
+          label: 'Voir la référence dans le chapitre 6',
           text: 'Theorie polyvagale : malaise vagal',
           href: '/lecture/chapitre-6?xrefBack=%2Fchapitre-4%23p-parasympathique-visceromoteur-31&xrefBackLabel=Retour%20au%20chapitre%204#p-theorie-polyvagale-6',
         },
@@ -260,7 +260,7 @@ export const chapter4Fr: Chapter = {
         { type: 'figure', src: '/chapter-4/figure-4-13.png', alt: 'Plexus cardiaques — innervation autonome du cœur', caption: 'Figure 4.13 — Plexus cardiaques', orientation: 'portrait' },
         { type: 'leadBullets', items: [
           { label: 'Innervation parasympathique', text: 'les fibres parasympathiques sont davantage destinées aux atriums (anciennement oreillettes) et au tissu nodal, et pratiquement pas aux ventricules. Elles ralentissent le rythme cardiaque (bradycardie), diminuent la tension artérielle et la force de contraction du myocarde. Au total, le Parasympathique baisse le débit cardiaque ; une hyper-vagotonie crée le syndrome vagal.' },
-          { label: 'Innervation sympathique', text: 'les fibres sympathiques innervent toutes les régions du cœur, particulièrement les ventricules. Le Sympathique a un effet opposé au Parasympathique. Son action se manifeste dans l’activité physique, le stress, les émotions, les hémorragies. Le café, l’alcool et le tabac augmentent le rythme cardiaque (tachycardie).' },
+          { label: 'Innervation sympathique', text: 'les fibres sympathiques innervent toutes les régions du cœur, particulièrement les ventricules. Le Sympathique à un effet opposé au Parasympathique. Son action se manifeste dans l’activité physique, le stress, les émotions, les hémorragies. Le café, l’alcool et le tabac augmentent le rythme cardiaque (tachycardie).' },
         ]},
         { type: 'lead', label: 'Plexus broncho-pulmonaire', text: 'il est situé au niveau de la bifurcation de l’artère pulmonaire et à la face postérieure des bronches souches, près du hile des poumons. (figure 4.13)' },
         { type: 'leadBullets', items: [
@@ -290,7 +290,7 @@ export const chapter4Fr: Chapter = {
         { type: 'para', text: 'N.B. : tenir compte de la différence de hauteur des deux coupoles diaphragmatiques, la gauche étant plus basse que la droite.' },
         {
           type: 'xref',
-          label: 'Voir la reference dans le chapitre 8',
+          label: 'Voir la référence dans le chapitre 8',
           text: 'Diaphragme',
           href: '/lecture/chapitre-8?xrefBack=%2Fchapitre-4%23p-parasympathique-visceromoteur-61&xrefBackLabel=Retour%20au%20chapitre%204#p-presentation-0',
         },
@@ -304,27 +304,27 @@ export const chapter4Fr: Chapter = {
         { type: 'figure', src: '/chapter-4/figure-4-19.png', alt: 'Petite courbure de l’estomac — innervation vagale', caption: 'Figure 4.19 — Petite courbure de l’estomac', orientation: 'portrait' },
         { type: 'leadBullets', items: [
           { label: 'Plexus pré-vertébraux (préaortiques)', text: 'ce sont les plexus des viscères abdominaux. Ils s’étalent le long de l’aorte abdominale et sont la convergence des fibres parasympathiques et sympathiques qui apportent la double innervation autonome aux viscères de l’abdomen. (figure 4.16)' },
-          { label: 'Zone de Cannon-Böhm', text: 'elle est située à la jonction des 2/3 droits et du 1/3 gauche du colon transverse. Elle représente la frontière entre le territoire contrôlé par le nerf vague et le parasympathique pelvien. (figure 4.20) (Cf. Chapitre 15 Colon)' },
+          { label: 'Zone de Cannon-Böhm', text: 'elle est située à la jonction des 2/3 droits et du 1/3 gauche du côlon transverse. Elle représente la frontière entre le territoire contrôlé par le nerf vague et le parasympathique pelvien. (figure 4.20) (Cf. Chapitre 15 Côlon)' },
         ]},
         {
           type: 'xref',
-          label: 'Voir la reference dans le chapitre 15',
-          text: 'Colon',
+          label: 'Voir la référence dans le chapitre 15',
+          text: 'Côlon',
           href: '/lecture/chapitre-15?xrefBack=%2Fchapitre-4%23p-parasympathique-visceromoteur-66&xrefBackLabel=Retour%20au%20chapitre%204#sec-presentation',
         },
-        { type: 'figure', src: '/chapter-4/figure-4-20.png', alt: 'Zone de Cannon-Böhm — frontière vago-pelvienne du colon transverse', caption: 'Figure 4.20 — Zone de Cannon-Böhm', orientation: 'portrait' },
+        { type: 'figure', src: '/chapter-4/figure-4-20.png', alt: 'Zone de Cannon-Böhm — frontière vago-pelvienne du côlon transverse', caption: 'Figure 4.20 — Zone de Cannon-Böhm', orientation: 'portrait' },
 
         { type: 'sub', text: 'Fonction viscéro-motrice du nerf vague' },
         { type: 'leadBullets', items: [
           { label: 'Estomac', text: 'les nerfs vagues stimulent la sécrétion des glandes gastriques. Ils sont moteurs pour la musculature lisse de l’estomac et ouvrent les sphincters du cardia (remplissage gastrique) et du pylore (vidange gastrique).' },
-          { label: 'Intestin', text: 'les nerfs vagues agissent sur le péristaltisme et la sécrétion des glandes du duodénum, de l’intestin grêle, du colon droit et des 2/3 droits du colon transverse, des voies biliaires et du pancréas.' },
+          { label: 'Intestin', text: 'les nerfs vagues agissent sur le péristaltisme et la sécrétion des glandes du duodénum, de l’intestin grêle, du côlon droit et des 2/3 droits du côlon transverse, des voies biliaires et du pancréas.' },
           { label: 'Vésicule biliaire', text: 'les nerfs vagues stimulent la sécrétion de bile.' },
         ]},
         { type: 'lead', label: 'Zones réflexes podales', text: 'face plantaire du pied gauche. (figures 4.17 et 4.18)' },
         { type: 'leadBullets', items: [
           { label: 'Cardia', text: 'immédiatement au-dessous du hiatus œsophagien.' },
           { label: 'Petite courbure de l’estomac', text: 'une ligne entre le cardia et le pylore. (figure 4.19)' },
-          { label: 'Zone de Cannon-Böhm', text: 'jonction 2/3 droit-1/3 gauche du colon transverse. (figure 4.21)' },
+          { label: 'Zone de Cannon-Böhm', text: 'jonction 2/3 droit-1/3 gauche du côlon transverse. (figure 4.21)' },
         ]},
         { type: 'figure', src: '/chapter-4/figure-4-21.png', alt: 'Zone de Cannon-Böhm (zone réflexe podale)', caption: 'Figure 4.21 — Zone de Cannon-Böhm (zone réflexe podale)', orientation: 'portrait' },
         { type: 'lead', label: 'Plexus pré-vertébraux', text: '(figures 4.17 et 4.22)' },
@@ -332,7 +332,7 @@ export const chapter4Fr: Chapter = {
 
         // ——— Part 3a : Parasympathique pelvien ———
         { type: 'sub', text: 'Parasympathique pelvien (ou sacral)' },
-        { type: 'para', text: 'Il est destiné aux organes pelviens, au tiers distal du colon transverse et au colon gauche. (figure 4.23)' },
+        { type: 'para', text: 'Il est destiné aux organes pelviens, au tiers distal du côlon transverse et au côlon gauche. (figure 4.23)' },
         { type: 'leadBullets', items: [
           { label: 'Origine', text: 'moelle sacrale S2-S3-S4, à hauteur du bord inférieur de la vertèbre L1.' },
           { label: 'Trajet', text: 'les racines sacrales S2-S3-S4 accompagnent la queue de cheval dans le canal vertébral lombal et sacral. Elles débouchent dans la cavité pelvienne par les trous sacraux antérieurs S2-S3-S4 et forment le nerf érecteur d’Eckardt (ou nerf splanchnique pelvien), destiné aux organes pelviens. (figure 4.2)' },
@@ -395,7 +395,7 @@ export const chapter4Fr: Chapter = {
           'les myélomères C8 à Th2 ou Th3 apportent l’innervation sympathique à la sphère crânio-cervicale et la dilatation de la pupille par le centre cilio-spinal de Budge ;',
           'les myélomères Th3 à Th5 apportent l’innervation sympathique cardio-pulmonaire et carotidienne ;',
           'les myélomères Th5 ou Th6 à Th11 ou Th12 apportent l’innervation sympathique aux viscères abdominaux ;',
-          'les myélomères Th12 à L2 apportent l’innervation sympathique aux viscères uro-génitaux, au colon descendant et au rectum.',
+          'les myélomères Th12 à L2 apportent l’innervation sympathique aux viscères uro-génitaux, au côlon descendant et au rectum.',
         ]},
         { type: 'figure', src: '/chapter-4/figure-4-26.png', alt: 'Relations métamères-vertèbres', caption: 'Figure 4.26 — Relations métamères-vertèbres', orientation: 'landscape' },
         { type: 'lead', label: 'Zones réflexes podales', text: '' },
@@ -406,7 +406,7 @@ export const chapter4Fr: Chapter = {
         { type: 'para', text: 'Elle compte environ 30 ganglions : 3 cervicaux, environ 10 thoraciques, 4 lombaires, 3 ou 4 sacrés et le ganglion coccygien.' },
         { type: 'para', text: 'Elle se réunit à son homologue controlatérale à ses deux extrémités : le premier ganglion (ou ganglion de Ribes) sous la base du crâne, et le dernier ganglion (ou ganglion impair) en avant du coccyx.' },
         { type: 'leadBullets', items: [
-          { label: 'Chaîne ganglionnaire thoracique', text: 'elle compte une dizaine de ganglions situés en avant des articulations costo-vertébrales des vertèbres Th1 à Th12 (figures 4.23 et 4.25). Une fixation costo-vertébrale a quasiment toujours une répercussion sur le ganglion en regard de l’articulation, et sur les viscères qu’il innerve.' },
+          { label: 'Chaîne ganglionnaire thoracique', text: 'elle compte une dizaine de ganglions situés en avant des articulations costo-vertébrales des vertèbres Th1 à Th12 (figures 4.23 et 4.25). Une fixation costo-vertébrale a quasiment toujours une réperçussion sur le ganglion en regard de l’articulation, et sur les viscères qu’il innerve.' },
           { label: 'Rameaux communicants', text: 'dès la sortie des foramens intervertébraux, les neurones pré-ganglionnaires (ou rameaux communicants blancs, car myélinisés) (figure 4.25) rejoignent le nerf spinal, puis le quittent rapidement pour gagner un ganglion de la chaîne latéro-vertébrale. Les neurones pré-ganglionnaires se répartissent ensuite en deux groupes :' },
         ]},
         { type: 'bullets', items: [
@@ -418,7 +418,7 @@ export const chapter4Fr: Chapter = {
         { type: 'figure', src: '/chapter-4/figure-4-27.png', alt: 'Rameaux méningés récurrents', caption: 'Figure 4.27 — Rameaux méningés récurrents', orientation: 'landscape' },
         { type: 'rop', body: [
           'Le système digestif est directement innervé par la corne latérale médullaire thoracique de Th5 ou Th6 à Th11 ou Th12, puisqu’il ne fait pas synapse au niveau du ganglion de la chaîne latéro-vertébrale.',
-          'À chaque étage vertébral, la méninge spinale est innervée par un rameau méningé récurrent. Toute irritation du nerf spinal à sa sortie du foramen intervertébral entraîne une irritation de la méninge, d’où une répercussion sur la dynamique crânio-sacrée.',
+          'À chaque étage vertébral, la méninge spinale est innervée par un rameau méningé récurrent. Toute irritation du nerf spinal à sa sortie du foramen intervertébral entraîne une irritation de la méninge, d’où une réperçussion sur la dynamique crânio-sacrée.',
         ]},
         { type: 'lead', label: 'Zones réflexes podales', text: '' },
         { type: 'figure', src: '/chapter-4/figure-4-28.png', alt: 'Articulations postérieures des vertèbres et articulations costo-vertébrales', caption: 'Figure 4.28 — Articulations postérieures des vertèbres et articulations costo-vertébrales', orientation: 'portrait' },
@@ -437,7 +437,7 @@ export const chapter4Fr: Chapter = {
           'le nerf cardiaque inférieur ;',
           'des rameaux communicants gris (RCG) pour le plexus brachial de C5 à T1.',
         ]},
-        { type: 'para', text: 'Le GCI a des anastomoses avec les nerfs vague X, phrénique et laryngé récurrent.' },
+        { type: 'para', text: 'Le GCI à des anastomoses avec les nerfs vague X, phrénique et laryngé récurrent.' },
         { type: 'rop', body: [
           'Le GCI est situé à un carrefour hautement stratégique, entre la colonne cervicale, le thorax et le membre supérieur.',
           'Pathologies — Traumatismes : les « coups du lapin », les traumatismes cervicaux, de la ceinture scapulaire et du membre supérieur peuvent affecter le GCI.',
@@ -488,7 +488,7 @@ export const chapter4Fr: Chapter = {
         { type: 'lead', label: 'Chaîne ganglionnaire sacrale et coccygienne', text: 'elle prolonge caudalement la chaîne ganglionnaire lombale (figure 4.35). Elle compte quatre ganglions sacraux, qui longent la berge médiale des trous sacraux antérieurs, et un ganglion impair à la réunion des deux chaînes ganglionnaires, à la face antérieure du coccyx. Elle apporte l’innervation sympathique aux organes uro-génitaux, au sigmoïde, au rectum et à l’anus.' },
         { type: 'figure', src: '/chapter-4/figure-4-35.png', alt: 'Chaîne ganglionnaire sacrale et coccygienne', caption: 'Figure 4.35 — Chaîne ganglionnaire sacrale et coccygienne', orientation: 'landscape' },
         { type: 'rop', body: [
-          'Tout traumatisme du coccyx (chute, suites d’accouchement) affecte le ganglion impair, avec répercussion sur l’ensemble de la chaîne ganglionnaire latéro-vertébrale. Cela affecte aussi la dure-mère, qui s’attache sur la 2ᵉ vertèbre sacrale et sur le coccyx par le ligament duro-coccygien.',
+          'Tout traumatisme du coccyx (chute, suites d’accouchement) affecte le ganglion impair, avec réperçussion sur l’ensemble de la chaîne ganglionnaire latéro-vertébrale. Cela affecte aussi la dure-mère, qui s’attache sur la 2ᵉ vertèbre sacrale et sur le coccyx par le ligament duro-coccygien.',
         ]},
         { type: 'lead', label: 'Zones réflexes podales', text: '(figure 4.31)' },
         { type: 'leadBullets', items: [
@@ -534,8 +534,8 @@ export const chapter4Fr: Chapter = {
         ]},
         { type: 'lead', label: 'Fonction', text: '' },
         { type: 'leadBullets', items: [
-          { label: 'Nerf vague', text: 'il a un double rôle : il augmente la motricité (péristaltisme), la motilité et les sécrétions, et relâche aussi les parois.' },
-          { label: 'Sympathique', text: 'il a des effets opposés au nerf vague. Vasoconstricteur, il contribue à diminuer le débit sanguin et à augmenter la pression artérielle par augmentation de la résistance à l’écoulement. Il peut arrêter la digestion pour dériver le sang vers les muscles lors d’efforts ou d’activités physiques. Dans les états de stress, le Parasympathique est inhibé et le Sympathique activé.' },
+          { label: 'Nerf vague', text: 'il à un double rôle : il augmente la motricité (péristaltisme), la motilité et les sécrétions, et relâche aussi les parois.' },
+          { label: 'Sympathique', text: 'il à des effets opposés au nerf vague. Vasoconstricteur, il contribue à diminuer le débit sanguin et à augmenter la pression artérielle par augmentation de la résistance à l’écoulement. Il peut arrêter la digestion pour dériver le sang vers les muscles lors d’efforts ou d’activités physiques. Dans les états de stress, le Parasympathique est inhibé et le Sympathique activé.' },
         ]},
         { type: 'rop', body: [
           'Les nerfs splanchniques proviennent directement de la corne latérale de la moelle épinière, sans faire synapse dans leur traversée des ganglions latéro-vertébraux. Notre action réflexe, au niveau médullaire et au niveau de la chaîne plexique pré-vertébrale, est donc puissante pour équilibrer l’innervation neuro-végétative des viscères de la cavité abdominale. Là aussi, il est vain de chercher une action franche et isolée sur le Parasympathique ou le Sympathique, tant leurs fibres sont liées et enchevêtrées.',
@@ -586,7 +586,7 @@ export const chapter4Fr: Chapter = {
       id: 'sne',
       title: 'Système nerveux entérique (SNE)',
       blocks: [
-        { type: 'para', text: 'Pour accomplir ses diverses fonctions — digestion, absorption, assimilation, neutralisation des substances toxiques, immunité — l’intestin grêle et le colon sont dotés de leur propre système nerveux, le SNE. Il est connecté à l’innervation extrinsèque par le nerf vague et, par lui, en relation avec le système nerveux central.' },
+        { type: 'para', text: 'Pour accomplir ses diverses fonctions — digestion, absorption, assimilation, neutralisation des substances toxiques, immunité — l’intestin grêle et le côlon sont dotés de leur propre système nerveux, le SNE. Il est connecté à l’innervation extrinsèque par le nerf vague et, par lui, en relation avec le système nerveux central.' },
         { type: 'lead', label: 'Constitution', text: 'il est constitué de plexus : le plexus d’Auerbach et le plexus de Meissner. (figure 4.41)' },
         { type: 'figure', src: '/chapter-4/figure-4-41.png', alt: 'Coupe d’un segment intestinal — plexus myentérique et sous-muqueux', caption: 'Figure 4.41 — Système nerveux intrinsèque', orientation: 'landscape' },
         { type: 'leadBullets', items: [
@@ -600,7 +600,7 @@ export const chapter4Fr: Chapter = {
           'l’intestin produit des neurotransmetteurs communs avec le cerveau : sérotonine, acétylcholine, noradrénaline, GABA ;',
           'l’intestin produit 80 % des cellules immunitaires.',
         ]},
-        { type: 'para', text: 'Le SNE mérite bien son qualificatif de deuxième cerveau. Cette indépendance relative aurait permis de libérer l’encéphale de tâches qui l’accapareraient et l’empêcheraient d’exercer d’autres fonctions plus nobles : « Ce serait un des paramètres qui aurait permis le développement de l’intelligence » (Eric Marlien).' },
+        { type: 'para', text: 'Le SNE mérite bien son qualificatif de deuxième cerveau. Cette indépendance relative aurait permis de libérer l’encéphale de tâches qui l’accapareraient et l’empêcheraient d’exercer d’autres fonctions plus nobles : « Ce serait un des paramètrès qui aurait permis le développement de l’intelligence » (Eric Marlien).' },
         { type: 'lead', label: 'Zones réflexes podales', text: 'ce sont celles de l’intestin.' },
       ],
     },
@@ -610,14 +610,14 @@ export const chapter4Fr: Chapter = {
       blocks: [
         { type: 'lead', label: 'Constitution', text: '' },
         { type: 'leadBullets', items: [
-          { label: 'Médullo-surrénale', text: 'elle a la même origine embryologique que les ganglions du plexus aorto-rénal (10ᵉ et 11ᵉ ganglions thoraciques). (figure 4.42)' },
+          { label: 'Médullo-surrénale', text: 'elle à la même origine embryologique que les ganglions du plexus aorto-rénal (10ᵉ et 11ᵉ ganglions thoraciques). (figure 4.42)' },
         ]},
         { type: 'figure', src: '/chapter-4/figure-4-42.png', alt: 'Glandes surrénales — rapports rétro-péritonéaux', caption: 'Figure 4.42 — Glandes surrénales', orientation: 'landscape' },
         { type: 'para', text: 'Cette prédominance de l’innervation sympathique est liée au rôle des glandes surrénales dans les états de stress ou émotionnels. La médullo-surrénale produit l’adrénaline lors de la phase d’urgence du syndrome général d’adaptation.' },
         {
           type: 'xref',
-          label: 'Voir la reference dans le chapitre 5',
-          text: 'Mecanisme de stress',
+          label: 'Voir la référence dans le chapitre 5',
+          text: 'Mécanisme de stress',
           href: '/lecture/chapitre-5?xrefBack=%2Fchapitre-4%23p-glandes-surrenales-4&xrefBackLabel=Retour%20au%20chapitre%204#p-sga-0',
         },
         { type: 'lead', label: 'Fonction', text: '' },
@@ -628,7 +628,7 @@ export const chapter4Fr: Chapter = {
         { type: 'lead', label: 'Zones réflexes', text: '(Cf. Chapitre 16)' },
         {
           type: 'xref',
-          label: 'Voir la reference dans le chapitre 16',
+          label: 'Voir la référence dans le chapitre 16',
           text: 'Reins',
           href: '/lecture/chapitre-16?xrefBack=%2Fchapitre-4%23p-glandes-surrenales-7&xrefBackLabel=Retour%20au%20chapitre%204#sec-presentation',
         },

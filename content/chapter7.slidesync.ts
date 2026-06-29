@@ -16,10 +16,10 @@ export const chapter7Slides: SyncSlide[] = [
   { src: '/chapter-7/slides/slide-12.png', title: 'Double reseau nerveux : somatique et autonome' },
   { src: '/chapter-7/slides/slide-13.png', title: 'Physiologie parieto-viscerale : le role du transverse' },
   { src: '/chapter-7/slides/slide-14.png', title: 'Consequences mecaniques et pathologies' },
-  { src: '/chapter-7/slides/slide-15.png', title: 'Synthese somatique : les quatre quadrants' },
+  { src: '/chapter-7/slides/slide-15.png', title: 'Synthèse somatique : les quatre quadrants' },
   { src: '/chapter-7/slides/slide-16.png', title: 'Cartographie des douleurs projetees' },
   { src: '/chapter-7/slides/slide-17.png', title: 'L approche ROP : de l anatomie a l equilibre' },
-  { src: '/chapter-7/slides/slide-18.png', title: 'Synthese clinique ROP : de l abdomen au pied' },
+  { src: '/chapter-7/slides/slide-18.png', title: 'Synthèse clinique ROP : de l’abdomen au pied' },
 ]
 
 export const chapter7SlideAnchors: SyncAnchor[] = [

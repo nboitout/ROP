@@ -5,7 +5,7 @@ import { getServerLang } from '@/app/i18n/serverLang'
 
 export const metadata: Metadata = {
   title: 'Chapitre 21 - Systeme erectile masculin et feminin - R.O.P. - Guy Boitout',
-  description: 'Organes erectiles, innervation, physiologie, pathologies courantes et zones reflexes podales en R.O.P.',
+  description: 'Organes érectiles, innervation, physiologie, pathologies courantes et zones réflexes podales en R.O.P.',
   robots: { index: false, follow: false },
 }
 

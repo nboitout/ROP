@@ -24,7 +24,7 @@ export const chapter14Fr: Chapter = {
           'Un rôle important dans le métabolisme et l’immunité ;',
           'Son système nerveux intrinsèque, particulièrement développé ;',
           'Des interactions étroites avec l’axe intestin-cerveau, pouvant s’accompagner d’effets sur la sphère émotionnelle.',
-          'Sur le plan fonctionnel, l’intestin grêle et le colon sont interdépendants.',
+          'Sur le plan fonctionnel, l’intestin grêle et le côlon sont interdépendants.',
         ]},
       ],
     },
@@ -60,7 +60,7 @@ export const chapter14Fr: Chapter = {
       blocks: [
         { type: 'figure', src: '/chapter-14/figure-14-5.png', caption: 'Figure 14.5 — Artère mésentérique supérieure', alt: 'Artère mésentérique supérieure et ses branches', orientation: 'portrait', syncHide: true },
         { type: 'para', text: 'L’intestin grêle a besoin d’une importante irrigation vasculaire et lymphatique pour assurer ses fonctions de digestion, d’absorption et immunitaire.' },
-        { type: 'lead', label: 'Artère mésentérique supérieure', text: 'elle constitue l’axe artériel principal de l’intestin grêle. Elle est une branche de l’aorte abdominale. Son origine se situe 1 cm au-dessous du tronc cœliaque, en regard du disque intervertébral Th12-L1. D’abord rétro-pancréatique puis en avant de la 3ème portion du duodénum, elle chemine entre les deux feuillets du mésentère. Elle donne de nombreuses branches collatérales. Elle irrigue tout l’intestin grêle, le colon ascendant et les 2/3 proximaux du colon transverse.' },
+        { type: 'lead', label: 'Artère mésentérique supérieure', text: 'elle constitue l’axe artériel principal de l’intestin grêle. Elle est une branche de l’aorte abdominale. Son origine se situe 1 cm au-dessous du tronc cœliaque, en regard du disque intervertébral Th12-L1. D’abord rétro-pancréatique puis en avant de la 3ème portion du duodénum, elle chemine entre les deux feuillets du mésentère. Elle donne de nombreuses branches collatérales. Elle irrigue tout l’intestin grêle, le côlon ascendant et les 2/3 proximaux du côlon transverse.' },
         { type: 'para', text: 'Son pouls, perceptible au niveau de la 3ème portion du duodénum, à droite de l’ombilic, peut constituer un repère clinique vasculaire, sans préjuger à lui seul du fonctionnement de l’intestin.' },
         { type: 'lead', label: 'Veine mésentérique supérieure', text: 'située à droite de l’artère mésentérique supérieure, elle fait partie du système porte. Elle draine vers le foie le sang veineux chargé des nutriments absorbés dans l’intestin grêle.' },
         { type: 'lead', label: 'Réseau lymphatique', text: 'l’intestin grêle possède un réseau lymphatique développé. Il participe au système immunitaire. Il prend en charge les molécules de lipides et de protéines à chaîne longue et les vitamines liposolubles A, D, E, K acheminées vers le carrefour jugulo-subclavier gauche, via la citerne de Pecquet et le canal thoracique.' },
@@ -160,7 +160,7 @@ export const chapter14Fr: Chapter = {
         { type: 'lead', label: 'Indications en ROP', text: 'dysbioses, suites de gastro-entérites, entéroptoses (tension anormale de l’intestin grêle associée à des vasoconstrictions, stases veineuses et lymphatiques, et spasmes des plexus nerveux péri-vasculaires), iléus paralytique (inhibition de la motricité et des sécrétions intestinales par irritation du péritoine à dominante sympathique).' },
 
         { type: 'sub', text: 'Maladie de Crohn' },
-        { type: 'para', text: 'Cette maladie touche essentiellement l’iléum et le colon. Plusieurs facteurs y sont associés : génétique, dysbiose, environnement, et émotionnel comme facteur de modulation du vécu et parfois des poussées.' },
+        { type: 'para', text: 'Cette maladie touche essentiellement l’iléum et le côlon. Plusieurs facteurs y sont associés : génétique, dysbiose, environnement, et émotionnel comme facteur de modulation du vécu et parfois des poussées.' },
         { type: 'lead', label: 'Symptômes', text: 'diarrhée liée à l’inflammation de la paroi intestinale, douleurs abdomino-pelviennes, amaigrissement, asthénie, aphtes buccaux, lombalgie, érythèmes noueux des membres, atteinte pancréatique, syndrome dépressif.' },
         { type: 'lead', label: 'Évolution', text: 'chronicité, risque accru de cancer colorectal selon l’extension et l’ancienneté de la maladie. Ces patients sont souvent obligés d’adopter un régime strict comportant peu de fibres.' },
         { type: 'rop', body: [
@@ -180,8 +180,8 @@ export const chapter14Fr: Chapter = {
           'Hiatus œsophagien (nerfs vagues droit et gauche) et cardia.',
           'Petite courbure de l’estomac, riche en fibres vagales.',
         ]},
-        { type: 'figure', src: '/chapter-14/figure-14-17.png', caption: 'Figure 14.17 — Hiatus œsophagien (nerfs vagues droit et gauche) et cardia', alt: 'Hiatus œsophagien et nerfs vagues', orientation: 'landscape' },
-        { type: 'figure', src: '/chapter-14/figure-14-18.png', caption: 'Figure 14.18 — Petite courbure de l’estomac, riche en fibres vagales', alt: 'Petite courbure de l’estomac et fibres vagales', orientation: 'landscape' },
+        { type: 'figure', src: '/chapter-14/figure-14-17.png', caption: 'Hiatus œsophagien (nerfs vagues droit et gauche) et cardia', alt: 'Hiatus œsophagien et nerfs vagues', orientation: 'landscape' },
+        { type: 'figure', src: '/chapter-14/figure-14-18.png', caption: 'Petite courbure de l’estomac, riche en fibres vagales', alt: 'Petite courbure de l’estomac et fibres vagales', orientation: 'landscape' },
 
         { type: 'sub', text: '2. Système sympathique' },
         { type: 'bullets', items: [
@@ -189,7 +189,7 @@ export const chapter14Fr: Chapter = {
           'Plexus cœliaque (solaire).',
           'Plexus lombaire (lien viscéro-somatique).',
         ]},
-        { type: 'figure', src: '/chapter-14/figure-14-20.png', caption: 'Figure 14.20 — Chaîne ganglionnaire lombaire et piliers du diaphragme', alt: 'Chaîne ganglionnaire lombaire et piliers du diaphragme', orientation: 'landscape' },
+        { type: 'figure', src: '/chapter-14/figure-14-20.png', caption: 'Chaîne ganglionnaire lombaire et piliers du diaphragme', alt: 'Chaîne ganglionnaire lombaire et piliers du diaphragme', orientation: 'landscape' },
         { type: 'figure', src: '/chapter-14/Chapter14 Photo Chaine Plexique .png', caption: 'Photo — Chaîne plexique', alt: 'Chaîne plexique', orientation: 'landscape' },
 
         { type: 'para', text: 'N.B. Dans notre expérience clinique, les troubles fonctionnels intestinaux sont souvent observés chez la femme en lien avec des facteurs hormonaux et émotionnels.' },
@@ -201,8 +201,8 @@ export const chapter14Fr: Chapter = {
           'Racine du mésentère : une ligne de la jonction duodéno-jéjunale à l’ombilic, à hauteur de L3-L4 (face plantaire du pied gauche).',
           'Racine du mésentère : une ligne de la valvule iléo-caecale à l’ombilic (face plantaire du pied droit).',
         ]},
-        { type: 'figure', src: '/chapter-14/figure-14-22.jpg', caption: 'Figure 14.22 — Racine du mésentère (entre la jonction duodéno-jéjunale et l’ombilic)', alt: 'Zone réflexe de la racine du mésentère côté jéjunum', orientation: 'portrait' },
-        { type: 'figure', src: '/chapter-14/figure-14-23.jpg', caption: 'Figure 14.23 — Racine du mésentère (entre la valvule iléo-caecale et l’ombilic)', alt: 'Zone réflexe de la racine du mésentère côté iléum', orientation: 'portrait' },
+        { type: 'figure', src: '/chapter-14/figure-14-22.jpg', caption: 'Racine du mésentère (entre la jonction duodéno-jéjunale et l’ombilic)', alt: 'Zone réflexe de la racine du mésentère côté jéjunum', orientation: 'portrait' },
+        { type: 'figure', src: '/chapter-14/figure-14-23.jpg', caption: 'Racine du mésentère (entre la valvule iléo-caecale et l’ombilic)', alt: 'Zone réflexe de la racine du mésentère côté iléum', orientation: 'portrait' },
 
         { type: 'sub', text: 'Zones réflexes podales — Jéjunum (pied gauche)' },
         { type: 'bullets', items: [
@@ -211,7 +211,7 @@ export const chapter14Fr: Chapter = {
           'Limite latérale : jusqu’au bord latéral du pied gauche.',
           'Respecter l’orientation des anses : horizontales pour le jéjunum.',
         ]},
-        { type: 'figure', src: '/chapter-14/figure-14-24.png', caption: 'Figure 14.24 — Jéjunum (limites supérieure et inférieure)', alt: 'Limites de la zone réflexe du jéjunum sur le pied gauche', orientation: 'landscape' },
+        { type: 'figure', src: '/chapter-14/figure-14-24.png', caption: 'Jéjunum (limites supérieure et inférieure)', alt: 'Limites de la zone réflexe du jéjunum sur le pied gauche', orientation: 'landscape' },
 
         { type: 'sub', text: 'Zones réflexes podales — Iléum (pied droit)' },
         { type: 'bullets', items: [
@@ -220,11 +220,11 @@ export const chapter14Fr: Chapter = {
           'Limite latérale : à l’aplomb du 4ème orteil du pied droit.',
           'Respecter l’orientation des anses : verticales pour l’iléum.',
         ]},
-        { type: 'figure', src: '/chapter-14/figure-14-26.png', caption: 'Figure 14.26 — Iléum (limites supérieure et inférieure)', alt: 'Limites de la zone réflexe de l’iléum sur le pied droit', orientation: 'landscape' },
+        { type: 'figure', src: '/chapter-14/figure-14-26.png', caption: 'Iléum (limites supérieure et inférieure)', alt: 'Limites de la zone réflexe de l’iléum sur le pied droit', orientation: 'landscape' },
 
         { type: 'sub', text: '3. Système limbique' },
         { type: 'lead', label: 'Balance cerveau limbique — intestin grêle', text: 'écoute-induction : un pouce sur l’intestin grêle, l’autre pouce sur le cerveau limbique.' },
-        { type: 'figure', src: '/chapter-14/figure-14-28.png', caption: 'Figure 14.28 — Technique balance viscéro-émotionnelle — intestin grêle', alt: 'Balance viscéro-émotionnelle intestin grêle et cerveau limbique', orientation: 'landscape' },
+        { type: 'figure', src: '/chapter-14/figure-14-28.png', caption: 'Technique balance viscéro-émotionnelle — intestin grêle', alt: 'Balance viscéro-émotionnelle intestin grêle et cerveau limbique', orientation: 'landscape' },
       ],
     },
     {
@@ -239,7 +239,7 @@ export const chapter14Fr: Chapter = {
 
         { type: 'sub', text: 'Relations viscéro-émotionnelles' },
         { type: 'para', text: 'Le ventre, et son cortège de douleurs et de troubles digestifs, peut constituer un lieu important d’expression somatique des tensions émotionnelles. Ces tensions favoriseraient une hyperactivité sympathique au détriment du nerf vague.' },
-        { type: 'para', text: 'Sur le plan émotionnel, il est difficile de différencier nettement l’intestin grêle du colon. Dans le cadre clinique, la muqueuse est envisagée comme un récepteur-émetteur d’émotions. Très hormono-dépendant, l’intestin est présenté comme un organe particulièrement impliqué dans la somatisation au long cours. Fibromyalgie et spasmophilie se rencontrent plus souvent chez les femmes en raison de l’interdépendance hormonale et intestinale.' },
+        { type: 'para', text: 'Sur le plan émotionnel, il est difficile de différencier nettement l’intestin grêle du côlon. Dans le cadre clinique, la muqueuse est envisagée comme un récepteur-émetteur d’émotions. Très hormono-dépendant, l’intestin est présenté comme un organe particulièrement impliqué dans la somatisation au long cours. Fibromyalgie et spasmophilie se rencontrent plus souvent chez les femmes en raison de l’interdépendance hormonale et intestinale.' },
         { type: 'para', text: 'La personne « intestin » n’est jamais bien dans sa peau. Elle souffre de fatigue matinale, de douleurs lombaires, des genoux et des pieds (hallux valgus) avec les ongles striés et cassants. Elle est facilement contrariée, de mauvaise humeur qui s’évacue dans la journée.' },
         { type: 'para', text: 'La personne « intestin » a besoin de sécurité. Elle peut se montrer hyper-protectrice envers ses proches. Elle est décrite comme fidèle à ses habitudes et à ses repères. Elle peut aussi manifester une méticulosité remarquable dans son environnement. Elle affiche parfois une fausse assurance pour cacher son anxiété. Elle est hypochondriaque, logorrhéique, avec un peu de théâtralité pour convaincre. Elle est obstinée quand elle a une idée dans la tête, généreuse, susceptible et d’humeur changeante.' },
 

@@ -4,8 +4,8 @@ import type { Metadata } from 'next'
 import { getServerLang } from '@/app/i18n/serverLang'
 
 export const metadata: Metadata = {
-  title: 'Chapitre 12 — Pancreas · R.O.P. · Guy Boitout',
-  description: 'Anatomie, physiologie exocrine et endocrine, diagnostics d’exclusion et zones reflexes podales du pancreas en R.O.P.',
+  title: 'Chapitre 12 — Pancréas · R.O.P. · Guy Boitout',
+  description: 'Anatomie, physiologie exocrine et endocrine, diagnostics d’exclusion et zones réflexes podales du pancréas en R.O.P.',
   robots: { index: false, follow: false },
 }
 

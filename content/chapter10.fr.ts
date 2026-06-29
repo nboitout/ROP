@@ -197,7 +197,7 @@ export const chapter10Fr: Chapter = {
         },
         {
           type: "para",
-          text: "Un conflit aorto-mésentérique peut comprimer D4 et, dans certains cas, la veine rénale gauche, avec retentissement sur la vidange duodénale et le drainage veineux gauche."
+          text: "Un conflit aorto-mésentérique peut comprimer D4 et, dans certains cas, la veine rénale gauche, avec réténtissement sur la vidange duodénale et le drainage veineux gauche."
         },
         {
           type: "sub",
@@ -400,7 +400,7 @@ export const chapter10Fr: Chapter = {
         },
         {
           type: "para",
-          text: "Le syndrome de la pince aorto-mésentérique correspond à une compression de D4 entre l’aorte et l’artère mésentérique supérieure, avec possible retentissement sur la veine rénale gauche."
+          text: "Le syndrome de la pince aorto-mésentérique correspond à une compression de D4 entre l’aorte et l’artère mésentérique supérieure, avec possible réténtissement sur la veine rénale gauche."
         },
         {
           type: "para",

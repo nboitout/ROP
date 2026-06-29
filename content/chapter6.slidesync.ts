@@ -24,7 +24,7 @@ export const chapter6Slides: SyncSlide[] = [
   { src: '/chapter-6/slides/slide-14.png', title: 'Protocole ROP : etage superieur' },
   { src: '/chapter-6/slides/slide-15.png', title: 'Focus clinique : etage superieur' },
   { src: '/chapter-6/slides/slide-16.png', title: 'Protocole ROP : etages moyen et inferieur' },
-  { src: '/chapter-6/slides/slide-17.png', title: 'Synthese : carte polyvagale ROP' },
+  { src: '/chapter-6/slides/slide-17.png', title: 'Synthèse : carte polyvagale ROP' },
 ]
 
 export const chapter6SlideAnchors: SyncAnchor[] = [

@@ -62,7 +62,7 @@ export const chapter2Fr: Chapter = {
         {
           "type": "rop",
           "body": [
-            "La force et la trituration du massage réflexe doivent être proscrits. Plus on appuie, plus on sent ses doigts, moins on sent les repères osseux qui nous guident dans la recherche des zones réflexes, et moins la lecture des zones réflexes est aisée.",
+            "La force et la trituration du massage réflexe doivent être proscrits. Plus on appuie, plus on sent ses doigts, moins on sent les repères osseux qui nous guident dans la recherché des zones réflexes, et moins la lecture des zones réflexes est aisée.",
             "Dans le but de restaurer une bonne qualité des tissus, apparaît le respect que nous accordons à l’organisme. Solliciter, c’est bien le mot qui convient. Même un traitement bien conduit est un stress, certes positif, mais qui doit tenir compte des capacités d’autocorrection de l’individu."
           ]
         },
@@ -75,7 +75,7 @@ export const chapter2Fr: Chapter = {
           "items": [
             {
               "label": "Temps du diagnostic textural",
-              "text": "C’est la recherche des zones réflexes caractérisées par une modification de la texture de la peau occipitale et podale : rugosité, densification, perte de glissement, sensation de cristaux. Elles doivent confirmer le diagnostic obtenu à l’issue de l’examen clinique."
+              "text": "C’est la recherché des zones réflexes caractérisées par une modification de la texture de la peau occipitale et podale : rugosité, densification, perte de glissement, sensation de cristaux. Elles doivent confirmer le diagnostic obtenu à l’issue de l’examen clinique."
             },
             {
               "label": "Temps thérapeutique",
@@ -114,7 +114,7 @@ export const chapter2Fr: Chapter = {
             },
             {
               "label": "Fréquence",
-              "text": "Un intervalle de trois semaines entre chaque séance est le temps nécessaire à l’organisme pour « assimiler » le traitement. Des soins trop rapprochés ne laissent pas le temps aux processus neuro-vasculaires et structurels, qui ont amené aux désordres fonctionnels, de ramener la physiologie dans les viscères et les structures en dysfonctions."
+              "text": "Un intervalle de trois semaines entre chaque séance est le temps nécessaire à l’organisme pour « assimiler » le traitement. Des soins trop rapprochés ne laissent pas le temps aux processus neuro-vasculaires et structurels, qui ont amené aux désordres fonctionnels, de ramèner la physiologie dans les viscères et les structures en dysfonctions."
             }
           ]
         },
@@ -145,7 +145,7 @@ export const chapter2Fr: Chapter = {
             },
             {
               "label": "Écoute émotionnelle",
-              "text": "Il faut éventuellement rechercher les traumatismes physiques ou psycho-émotionnels anciens, oubliés, refoulés dans certaines couches de notre inconscient. L’écoute tissulaire puis émotionnelle peut aider à mettre en évidence les évènements importants et négatifs mémorisés dans l’amygdale et l’hippocampe du système limbique."
+              "text": "Il faut éventuellement recherchér les traumatismes physiques ou psycho-émotionnels anciens, oubliés, refoulés dans certaines couches de notre inconscient. L’écoute tissulaire puis émotionnelle peut aider à mettre en évidence les évènements importants et négatifs mémorisés dans l’amygdale et l’hippocampe du système limbique."
             },
             {
               "label": "Mécanisme de stress",
@@ -183,7 +183,7 @@ export const chapter2Fr: Chapter = {
         {
           "type": "rop",
           "body": [
-            "3. Système limbique — intégrer la dimension stress / émotion / mémoire corporelle, susceptible d’entretenir des boucles végétatives et tissulaires :",
+            "3. Système limbique — intégrer la dimension stress / émotion / mémoire corporelle, susceptible d’entréténir des boucles végétatives et tissulaires :",
             "· Amygdale, hippocampe, insula",
             "· Balance cerveau limbique–viscère en dysfonction : écoute-induction, un pouce sur le viscère en dysfonction dominante, l’autre pouce sur le cerveau limbique"
           ]
@@ -308,7 +308,7 @@ export const chapter2Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "Il est important d’être sensibilisé aux différentes maladies graves, au risque de retarder un diagnostic médical, surtout si les patients nous consultent en première intention, sans être passés par le filtre médical."
+          "text": "Il est important d’être sensibilisé aux différentes maladies graves, au risque de retarder un diagnostic médical, surtout si les patients nous consultent en première intention, sans être passés par le filtré médical."
         },
         {
           "type": "para",
@@ -360,7 +360,7 @@ export const chapter2Fr: Chapter = {
       "blocks": [
         {
           "type": "para",
-          "text": "Nous souffrons de constater des résultats cliniques sans pouvoir les objectiver. Notre action a des effets locaux et généraux :"
+          "text": "Nous souffrons de constater des résultats cliniques sans pouvoir les objectiver. Notre action à des effets locaux et généraux :"
         },
         {
           "type": "bullets",

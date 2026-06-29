@@ -30,7 +30,7 @@ export const chapter9Fr: Chapter = {
       id: 'anatomie',
       title: 'Anatomie',
       blocks: [
-        { type: 'para', text: 'Globalement, l\'estomac a la forme d\'un J et comprend quatre segments et deux zones sphinctériennes.' },
+        { type: 'para', text: 'Globalement, l\'estomac à la forme d\'un J et comprend quatre segments et deux zones sphinctériennes.' },
         { type: 'sub', text: 'Sphincter inférieur œsophagien (SIO)' },
         { type: 'para', text: 'Après la traversée du hiatus œsophagien du diaphragme, à hauteur de Th10, l\'œsophage abdominal présente une zone de haute pression fonctionnelle correspondant au SIO.' },
         { type: 'para', text: 'Le SIO n\'est pas une entité anatomique individualisable, mais une entité physiologique se comportant comme un sphincter.' },
@@ -218,8 +218,8 @@ export const chapter9Fr: Chapter = {
         { type: 'sub', text: 'Reflux gastro-œsophagien, hernie hiatale' },
         {
           type: 'xref',
-          label: 'Voir la reference dans le chapitre 8',
-          text: 'Diaphragme : reflux gastro-oesophagien et hernie hiatale',
+          label: 'Voir la référence dans le chapitre 8',
+          text: 'Diaphragme : reflux gastro-œsophagien et hernie hiatale',
           href: '/lecture/chapitre-8?xrefBack=%2Flecture%2Fchapitre-9%23p-pathologies-courantes-27&xrefBackLabel=Retour%20au%20chapitre%209#p-reflux-hernie-hiatale-0',
         },
         { type: 'sub', text: 'Carences martiales' },
@@ -269,7 +269,7 @@ export const chapter9Fr: Chapter = {
         { type: 'para', text: 'Dans ce cadre symbolique, les troubles fonctionnels de l\'estomac sont interprétés comme la possible inscription tissulaire de conflits émotionnels répétés, sans que cela constitue un mécanisme démontré de l\'ulcération.' },
         { type: 'para', text: 'L\'hypervalorisation est décrite comme une surestimation de soi, avec sentiment de puissance, mauvaise tolérance à la critique, agressivité, colère impulsive, peur de l\'échec ou fuite en avant.' },
         { type: 'para', text: 'La personne « estomac » est alors décrite comme tournée vers la séduction, la réussite et la démonstration de puissance.' },
-        { type: 'para', text: 'L\'expression « Pour qui il se prend, celui-là ? » résume cette polarité dans le langage du modèle.' },
+        { type: 'para', text: 'L\'expression « Pour qui il se prend, celui-là : » résume cette polarité dans le langage du modèle.' },
         { type: 'para', text: 'L\'hypovalorisation se traduit, dans ce même cadre, par un manque de confiance en soi, la résignation, le repli, la dépréciation de soi, des frustrations difficilement verbalisées, des rancœurs non exprimées ou des situations répétées de subordination.' },
       ],
     },
@@ -293,8 +293,8 @@ export const chapter9Fr: Chapter = {
         { type: 'sub', text: 'Syndrome général d\'adaptation' },
         {
           type: 'xref',
-          label: 'Voir la reference dans le chapitre 2',
-          text: 'Zones reflexes occipitales et podales',
+          label: 'Voir la référence dans le chapitre 2',
+          text: 'Zones réflexes occipitales et podales',
           href: '/lecture/traitement-rop?xrefBack=%2Flecture%2Fchapitre-9%23p-zones-reflexes-podales-1&xrefBackLabel=Retour%20au%20chapitre%209#p-hierarchisation-2',
         },
         { type: 'bullets', items: [
@@ -305,8 +305,8 @@ export const chapter9Fr: Chapter = {
         { type: 'sub', text: 'Syndrome loco-régional' },
         {
           type: 'xref',
-          label: 'Voir la reference dans le chapitre 2',
-          text: 'Zones reflexes occipitales et podales',
+          label: 'Voir la référence dans le chapitre 2',
+          text: 'Zones réflexes occipitales et podales',
           href: '/lecture/traitement-rop?xrefBack=%2Flecture%2Fchapitre-9%23p-zones-reflexes-podales-4&xrefBackLabel=Retour%20au%20chapitre%209#p-hierarchisation-2',
         },
         { type: 'bullets', items: [
@@ -319,8 +319,8 @@ export const chapter9Fr: Chapter = {
         { type: 'sub', text: 'Système limbique' },
         {
           type: 'xref',
-          label: 'Voir la reference dans le chapitre 2',
-          text: 'Zones reflexes occipitales et podales',
+          label: 'Voir la référence dans le chapitre 2',
+          text: 'Zones réflexes occipitales et podales',
           href: '/lecture/traitement-rop?xrefBack=%2Flecture%2Fchapitre-9%23p-zones-reflexes-podales-7&xrefBackLabel=Retour%20au%20chapitre%209#p-hierarchisation-2',
         },
         { type: 'para', text: 'Balance cerveau limbique-estomac : écoute-induction, un pouce sur l\'estomac, l\'autre sur le cerveau limbique.' },

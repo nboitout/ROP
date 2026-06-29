@@ -12,10 +12,10 @@ export const chapter20Fr: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Vers la soixantaine, la prostate grossit par déséquilibre hormonal et exerce plus de pression sur l’urètre et la vessie. C’est alors que beaucoup d’hommes commencent à avoir des ennuis urinaires dont les répercussions atteignent aussi leur vie sexuelle et psycho-émotionnelle.",
+            "Vers la soixantaine, la prostate grossit par déséquilibre hormonal et exerce plus de pression sur l’urètre et la vessie. C’est alors que beaucoup d’hommes commencent à avoir des ennuis urinaires dont les réperçussions atteignent aussi leur vie sexuelle et psycho-émotionnelle.",
             "La prostate fournit aussi son lot de troubles de la statique pelvienne, lombo-sciatalgies ou périnéalgies qui peuvent cacher une dysfonction vésico-prostatique et qui sont accentués par la sédentarité, l’obésité et une mauvaise hygiène de vie.",
             "Plus que les femmes, parler de « ces choses-là » pour la plupart des hommes est encore souvent difficile. La chirurgie et les traitements médicamenteux ne sont pas sans risques car ils entraînent des effets secondaires mal vécus: impuissance, incontinence et éjaculation rétrograde.",
-            "La ROP peut contribuer à diminuer les conséquences des problèmes prostatiques à condition que le patient associe une bonne hygiène de vie. La ROP est sans effets iatrogènes et préserve la pudeur des hommes par notre action à distance."
+            "La ROP peut contribuer à diminuer les conséquences des problèmes prostatiques à condition que le patient associé une bonne hygiène de vie. La ROP est sans effets iatrogènes et préserve la pudeur des hommes par notre action à distance."
           ]
         },
         {
@@ -215,7 +215,7 @@ export const chapter20Fr: Chapter = {
           "type": "bullets",
           "items": [
             "Ce mot vient du grec prostatès qui signifie placé devant ou être exposé. De fait, la prostate est placée devant le rectum. Glande sexuelle secondaire mâle, elle sécrète une enzyme, (prostatic specific antigen PSA) dont le taux est important pour le diagnostic du cancer.",
-            "Chez un adulte jeune, elle a la forme d’une châtaigne (figure 20.9). Sa consistance ferme mais souple est comparable au globe oculaire. Son poids est de 20 à 25 g. Son volume augmentant beaucoup après 60 ans, peut devenir gros comme une orange et exercer une pression sur l’urètre et la vessie et occasionner des troubles de la miction.",
+            "Chez un adulte jeune, elle à la forme d’une châtaigne (figure 20.9). Sa consistance ferme mais souple est comparable au globe oculaire. Son poids est de 20 à 25 g. Son volume augmentant beaucoup après 60 ans, peut devenir gros comme une orange et exercer une pression sur l’urètre et la vessie et occasionner des troubles de la miction.",
             "La prostate participe à la composition du sperme et à la protection des spermatozoïdes dans la traversée vagino-utéro-tubaire."
           ]
         },
@@ -391,7 +391,7 @@ export const chapter20Fr: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "par sa migration embryonnaire, le pédicule vasculaire du testicule a une origine haute L2-L3:"
+            "par sa migration embryonnaire, le pédicule vasculaire du testicule à une origine haute L2-L3:"
           ]
         },
         {
@@ -402,7 +402,7 @@ export const chapter20Fr: Chapter = {
           "type": "bullets",
           "items": [
             "l’artère spermatique naît de l’aorte abdominale, près de l’artère rénale (figure 16.10);",
-            "Veineuse: la vascularisation veineuse du testicule présente des particularités proches de celle de l’ovaire (figure 16.10). La veine spermatique droite rejoint la veine cave inférieure, tandis que la veine spermatique gauche rejoint la veine rénale gauche. Une stase veineuse gauche peut favoriser une varicocèle et retentir sur le spermogramme. On parle classiquement d’oligozoospermie lorsque la concentration de spermatozoïdes est inférieure aux valeurs de référence, autour de 15 millions/mL selon les référentiels utilisés; des valeurs très basses correspondent à des formes plus sévères. L’hypospermie correspond à un volume d’éjaculat inférieur aux valeurs attendues.",
+            "Veineuse: la vascularisation veineuse du testicule présente des particularités proches de celle de l’ovaire (figure 16.10). La veine spermatique droite rejoint la veine cave inférieure, tandis que la veine spermatique gauche rejoint la veine rénale gauche. Une stase veineuse gauche peut favoriser une varicocèle et réténtir sur le spermogramme. On parle classiquement d’oligozoospermie lorsque la concentration de spermatozoïdes est inférieure aux valeurs de référence, autour de 15 millions/mL selon les référentiels utilisés; des valeurs très basses correspondent à des formes plus sévères. L’hypospermie correspond à un volume d’éjaculat inférieur aux valeurs attendues.",
             "Le système veineux maintient la prostate en place et amortit les microtraumatismes dont la prostate peut être victime. Le retour veineux est sous le double contrôle du système porte (figure 11.7). Comme pour les hémorroïdes, toute congestion du système porte, et donc du foie, entraîne une congestion de la prostate."
           ]
         },
@@ -683,7 +683,7 @@ export const chapter20Fr: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "il se fait par le toucher rectal (prostate pierreuse, relief induré, anomalie de contour) et par la recherche du taux de PSA qui est produit en trop grande quantité par les cellules cancéreuses. Ce taux doit être inférieur à 4ng/ml de sang après 50 ans. Cependant, toute augmentation du taux de PSA n’est pas synonyme de cancer. Il existe deux types de PSA dans le sang. Ce qui est important dans la prise de sang, c’est le dosage de PSA libre par rapport au PSA total. Plus ce rapport baisse, plus la probabilité de cancer augmente. La biopsie confirme le cancer."
+            "il se fait par le toucher rectal (prostate pierreuse, relief induré, anomalie de contour) et par la recherché du taux de PSA qui est produit en trop grande quantité par les cellules cancéreuses. Ce taux doit être inférieur à 4ng/ml de sang après 50 ans. Cependant, toute augmentation du taux de PSA n’est pas synonyme de cancer. Il existe deux types de PSA dans le sang. Ce qui est important dans la prise de sang, c’est le dosage de PSA libre par rapport au PSA total. Plus ce rapport baisse, plus la probabilité de cancer augmente. La biopsie confirme le cancer."
           ]
         },
         {
@@ -717,7 +717,7 @@ export const chapter20Fr: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "c’est le plus souvent une infection bactérienne de la prostate, parfois sévère. Elle associe fièvre, douleurs pelviennes ou périnéales, brûlures mictionnelles, troubles urinaires et grande fatigue. Chez les hommes jeunes, une origine sexuellement transmissible peut être recherchée selon le contexte, mais elle ne résume pas l’ensemble des prostatites aiguës. Le traitement est médical, avec antibiothérapie adaptée, repos et hydratation.",
+            "c’est le plus souvent une infection bactérienne de la prostate, parfois sévère. Elle associé fièvre, douleurs pelviennes ou périnéales, brûlures mictionnelles, troubles urinaires et grande fatigue. Chez les hommes jeunes, une origine sexuellement transmissible peut être recherchée selon le contexte, mais elle ne résume pas l’ensemble des prostatites aiguës. Le traitement est médical, avec antibiothérapie adaptée, repos et hydratation.",
             "Au toucher rectal, la prostate est peu dure et très douloureuse."
           ]
         },

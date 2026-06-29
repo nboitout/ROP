@@ -107,7 +107,7 @@ export const chapter15Fr: Chapter = {
           "type": "rop",
           "body": [
             "Toute adhérence du caecum, à la suite d’appendicectomie, de colopathie fonctionnelle, de côlon irritable ou spasmodique, fait perdre au caecum sa mobilité et entraîne un réflexe caeco-iléal, une fixation de la sacro-iliaque droite et des douleurs projetées au membre inférieur droit.",
-            "A la suite d’appendicectomie, l’ovaire droit peut perdre sa mobilité et être source de difficultés de procréation. Il faut vérifier la zone réflexe du caecum et de l’ovaire après une appendicectomie.",
+            "À la suite d’appendicectomie, l’ovaire droit peut perdre sa mobilité et être source de difficultés de procréation. Il faut vérifier la zone réflexe du caecum et de l’ovaire après une appendicectomie.",
             "Toute lombo-sciatalgie droite, surtout s’il n’y a pas de notion de traumatisme ou",
             "sur-sollicitation vertébrale, doit nous conduire à vérifier la zone réflexe du caecum."
           ]
@@ -143,7 +143,7 @@ export const chapter15Fr: Chapter = {
         },
         {
           "type": "xref",
-          "label": "Voir la reference dans le chapitre 1",
+          "label": "Voir la référence dans le chapitre 1",
           "text": "Généralités Articulations viscérales",
           "href": "/lecture/chapitre-1?xrefBack=%2Flecture%2Fchapitre-15%23p-anatomie-14&xrefBackLabel=Retour%20au%20chapitre%2015#p-articulations-viscerales-3"
         },
@@ -207,12 +207,12 @@ export const chapter15Fr: Chapter = {
             "Segment périnéal ou canal anal répondant au triangle ano-rectal du périnée et qui regarde dorsalement.",
             "Canal anal: le rectum traverse le diaphragme pelvien pour se terminer à l’anus (figure 15.8) dont la longueur est de 4cm. Il comprend deux sphincters:",
             "Sphincter interne: il est formé des muscles lisses du rectum contrôlés par le Parasympathique pelvien et le Sympathique de Th12 à L1. (Cf. Chapitre 17 Cavité pelvienne, Innervation, page….)",
-            "Sphincter externe: c’est un anneau formé de muscles striés, commandés par le nerf pudendal du système nerveux somatique (Cf. Chapitre17 Cavité pelvienne, Innervation, page….). Il contrôle la continence anale, renforcé par le muscle releveur de l’anus."
+            "Sphincter externe: c’est un anneau formé de muscles striés, commandés par le nerf pudendal du système nerveux somatique (Cf. Chapitre17 Cavité pelvienne, Innervation, page….). Il contrôle la continence anale, renforcé par le muscle relèveur de l’anus."
           ]
         },
         {
           "type": "xref",
-          "label": "Voir la reference dans le chapitre 17",
+          "label": "Voir la référence dans le chapitre 17",
           "text": "Cavité pelvienne, Innervation",
           "href": "/lecture/chapitre-17?xrefBack=%2Flecture%2Fchapitre-15%23p-anatomie-22&xrefBackLabel=Retour%20au%20chapitre%2015#sec-innervation"
         }
@@ -283,7 +283,7 @@ export const chapter15Fr: Chapter = {
           "type": "bullets",
           "items": [
             "Artère mésentérique supérieure: elle irrigue le côlon ascendant et le côlon transverse: jusqu’au 1/3 distal. (Cf. Chapitre 14 Intestin grêle Vascularisation de l’intestin grêle, page…)",
-            "Artère mésentérique inférieure: elle a son origine sur le côté gauche de l’aorte abdominale, juste au-dessus de l’ombilic, à hauteur de la vertèbre L3. C’est à ce niveau que son pouls est perceptible mais souvent difficile à prendre. Son trajet est dans la racine secondaire du mésocôlon sigmoïde. Elle irrigue le tiers distal du côlon transverse, le côlon descendant et le sigmoïde. Elle donne l’artère rectale supérieure, destinée surtout à la partie haute du rectum; la partie moyenne et basse du rectum ainsi que le canal anal dépendent aussi des artères rectales moyenne et inférieure, issues du territoire iliaque interne.",
+            "Artère mésentérique inférieure: elle à son origine sur le côté gauche de l’aorte abdominale, juste au-dessus de l’ombilic, à hauteur de la vertèbre L3. C’est à ce niveau que son pouls est perceptible mais souvent difficile à prendre. Son trajet est dans la racine secondaire du mésocôlon sigmoïde. Elle irrigue le tiers distal du côlon transverse, le côlon descendant et le sigmoïde. Elle donne l’artère rectale supérieure, destinée surtout à la partie haute du rectum; la partie moyenne et basse du rectum ainsi que le canal anal dépendent aussi des artères rectales moyenne et inférieure, issues du territoire iliaque interne.",
             "Veineuse:",
             "Veine mésentérique inférieure: elle draine le côlon descendant, l’angle colique gauche, le sigmoïde et la partie haute du rectum, puis rejoint le plus souvent la veine splénique. La veine splénique et la veine mésentérique supérieure se rejoignent pour former la veine porte (figure 11.5) qui rejoint le foie. Le drainage veineux rectal est mixte: la partie haute appartient au système porte, tandis que les territoires moyen et inférieur communiquent avec le système cave par les veines iliaques internes.",
             "Conséquences:",
@@ -295,7 +295,7 @@ export const chapter15Fr: Chapter = {
         },
         {
           "type": "xref",
-          "label": "Voir la reference dans le chapitre 14",
+          "label": "Voir la référence dans le chapitre 14",
           "text": "Intestin grêle Vascularisation de l’intestin grêle",
           "href": "/lecture/chapitre-14?xrefBack=%2Flecture%2Fchapitre-15%23p-vascularisation-2&xrefBackLabel=Retour%20au%20chapitre%2015#sec-vascularisation"
         },
@@ -307,7 +307,7 @@ export const chapter15Fr: Chapter = {
         },
         {
           "type": "xref",
-          "label": "Voir la reference dans le chapitre 16",
+          "label": "Voir la référence dans le chapitre 16",
           "text": "Rein",
           "href": "/lecture/chapitre-16?xrefBack=%2Flecture%2Fchapitre-15%23p-vascularisation-3&xrefBackLabel=Retour%20au%20chapitre%2015#sec-presentation"
         }
@@ -323,7 +323,7 @@ export const chapter15Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "Comme l’intestin grêle, le côlon a une innervation extrinsèque et intrinsèque."
+          "text": "Comme l’intestin grêle, le côlon à une innervation extrinsèque et intrinsèque."
         },
         {
           "type": "bullets",
@@ -355,7 +355,7 @@ export const chapter15Fr: Chapter = {
         },
         {
           "type": "xref",
-          "label": "Voir la reference dans le chapitre 4",
+          "label": "Voir la référence dans le chapitre 4",
           "text": "Système nerveux autonome",
           "href": "/chapitre-4?xrefBack=%2Flecture%2Fchapitre-15%23p-innervation-4&xrefBackLabel=Retour%20au%20chapitre%2015#sec-presentation"
         },
@@ -413,13 +413,13 @@ export const chapter15Fr: Chapter = {
           "type": "bullets",
           "items": [
             "Sphincter interne: il est constitué de fibres musculaires lisses. Quand le rectum est vide, le sphincter interne est fermé sous l’action du Sympathique qui assure la continence anale. Cette contraction est inconsciente. La pression intra-rectale est inférieure à celle du sphincter lisse. Elle permet de stocker les matières fécales dans l’ampoule rectale, sans sentir le besoin d’aller immédiatement à la selle.",
-            "Quand la pression intra-rectale atteint un certain seuil, les mécanorécepteurs rectaux, stimulés par la dilatation de l’ampoule rectale et ceux des muscles du périnée (releveur de l’anus) provoquent l’envie d’aller à la selle. Le thalamus et les cortex insulaire, cingulaire et orbito-frontal, sont informés, d’une part, par les nerfs afférents neuro-végétatifs du rectum, et d’autre part, par les nerfs pudendaux, informant par leurs fibres afférentes, le cortex pariétal ascendant.",
-            "Sphincter externe: il est le dernier obstacle avant l’exonération des selles. Il est innervé par le nerf pudendal. Son contrôle est volontaire. L’éducation à la propreté apprend l’enfant à contrôler son sphincter externe. Et plus tard, les personnes choisissent d’aller immédiatement à la selle ou « se retenir ». La commande centrale est la circonvolution frontale ascendante (faisceau pyramidal).",
+            "Quand la pression intra-rectale atteint un certain seuil, les mécanorécepteurs rectaux, stimulés par la dilatation de l’ampoule rectale et ceux des muscles du périnée (relèveur de l’anus) provoquent l’envie d’aller à la selle. Le thalamus et les cortex insulaire, cingulaire et orbito-frontal, sont informés, d’une part, par les nerfs afférents neuro-végétatifs du rectum, et d’autre part, par les nerfs pudendaux, informant par leurs fibres afférentes, le cortex pariétal ascendant.",
+            "Sphincter externe: il est le dernier obstacle avant l’exonération des selles. Il est innervé par le nerf pudendal. Son contrôle est volontaire. L’éducation à la propreté apprend l’enfant à contrôler son sphincter externe. Et plus tard, les personnes choisissent d’aller immédiatement à la selle ou « se réténir ». La commande centrale est la circonvolution frontale ascendante (faisceau pyramidal).",
             "Défécation: l’exonération des selles est d’environ 150 g par jour. Les selles contiennent du mucus, des graisses, des protéines et des bactéries. La défécation est la conséquence de plusieurs mécanismes:",
-            "la contraction du rectum et du muscle releveur de l’anus;",
+            "la contraction du rectum et du muscle relèveur de l’anus;",
             "la fermeture recto-sigmoïdienne pour éviter le reflux des matières fécales;",
             "la contraction du diaphragme à glotte fermée et des muscles transverse et obliques de l’abdomen;",
-            "le relâchement du releveur de l’anus qui ouvre le sphincter externe grâce à l’ouverture de l’angle anorectal."
+            "le relâchement du relèveur de l’anus qui ouvre le sphincter externe grâce à l’ouverture de l’angle anorectal."
           ]
         },
         {
@@ -461,10 +461,10 @@ export const chapter15Fr: Chapter = {
             "Constipations droites (ou hautes): elles sont dues à une stase dans le caecum. La poursuite de la digestion aboutit à l’élaboration de toxines responsables de céphalées, dyspepsie, mauvaise haleine. La fosse iliaque droite est sensible à la palpation.",
             "Constipation proximale: (Cf. Motricité colique, page….)",
             "Gastroparésie: elle inhibe le réflexe gastro-colique (besoin de déféquer à l’arrivée des aliments dans l’estomac). Ce réflexe a surtout lieu le matin après le petit-déjeuner.",
-            "Trouble hépato-biliaires et pancréatiques: La bile a un rôle indispensable sur le transit intestinal. Les troubles hépato-biliaires et pancréatiques provoquent un déficit du péristaltisme et de lubrification des villosités intestinales;",
+            "Trouble hépato-biliaires et pancréatiques: La bile à un rôle indispensable sur le transit intestinal. Les troubles hépato-biliaires et pancréatiques provoquent un déficit du péristaltisme et de lubrification des villosités intestinales;",
             "Stress: inhibition du péristaltisme par le stress.",
             "Causes:",
-            "Mode alimentaire: il joue un rôle essentiel: un apport hydrique insuffisant, une alimentation pauvre en fibres, en plus du manque d’activité physique, contribuent à entretenir la constipation. Certains aliments constipent: chocolat, banane, riz. Par contre, les aliments riches en fibres, qui se gorgent d’eau pendant la digestion, aident à aller à la selle, à condition de boire suffisamment d’eau: dattes, figues, artichauts, radis noir, mangue, papaye, prune, pruneaux, raisin mûr, noix, épinard, céleri, endives, pain complet.",
+            "Mode alimentaire: il joue un rôle essentiel: un apport hydrique insuffisant, une alimentation pauvre en fibres, en plus du manque d’activité physique, contribuent à entréténir la constipation. Certains aliments constipent: chocolat, banane, riz. Par contre, les aliments riches en fibres, qui se gorgent d’eau pendant la digestion, aident à aller à la selle, à condition de boire suffisamment d’eau: dattes, figues, artichauts, radis noir, mangue, papaye, prune, pruneaux, raisin mûr, noix, épinard, céleri, endives, pain complet.",
             "Réflexe de défécation inhibé chez:",
             "Les personnes qui ne prennent pas le temps d’aller à la selle;",
             "Les personnes âgées qui perdent la sensibilité rectale;",
@@ -490,7 +490,7 @@ export const chapter15Fr: Chapter = {
             "Phénomènes irritatifs locaux (colites).",
             "Colopathies fonctionnelles et syndrome de l’intestin irritable: on regroupe ici les troubles fonctionnels du côlon lorsqu’aucune lésion organique n’explique les symptômes. Le terme de colite doit rester prudent: il évoque normalement une inflammation, alors que le syndrome de l’intestin irritable relève surtout d’un trouble de l’axe intestin-cerveau, avec hypersensibilité viscérale et troubles du transit.",
             "Colite: le terme est à réserver aux tableaux inflammatoires ou irritatifs confirmés ou fortement suspectés;",
-            "Syndrome de l’intestin irritable: il associe douleurs abdominales récurrentes, ballonnements, modification du transit et hypersensibilité viscérale, sans lésion organique évidente;",
+            "Syndrome de l’intestin irritable: il associé douleurs abdominales récurrentes, ballonnements, modification du transit et hypersensibilité viscérale, sans lésion organique évidente;",
             "Colopathie spasmodique: dans la pratique ROP, elle décrit un côlon réactif, sensible au stress, au froid, aux repas ou à certains aliments, avec spasmes, bruits intestinaux, selles fréquentes ou alternance constipation-diarrhée. Le spasme colique peut modifier localement la vascularisation et les capacités d’absorption."
           ]
         },
@@ -505,7 +505,7 @@ export const chapter15Fr: Chapter = {
             "douleurs abdomino-pelviennes;",
             "douleurs lombaires et sacro-iliaques matinales, s’améliorant lors d’activité physique au cours de la journée;",
             "le stress, l’anxiété ou la fatigue peuvent majorer les symptômes, sans définir la personne;",
-            "une vigilance excessive portée aux sensations digestives peut entretenir le cercle inconfort-inquiétude-spasme."
+            "une vigilance excessive portée aux sensations digestives peut entréténir le cercle inconfort-inquiétude-spasme."
           ]
         }
       ]
@@ -552,7 +552,7 @@ export const chapter15Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "La région colorectale est le siège de cancers fréquents: les douleurs abdominales avec modification des selles, présence de sang, amaigrissement, fatigue doivent inciter à consulter son médecin, surtout s’il y a des antécédents familiaux de polypes et de cancer colorectal."
+          "text": "La région colorectale est le siège de cancers fréquents: les douleurs abdominales avec modification des selles, présence de sang, amaigrissement, fatigue doivent inciter à consulter son médecin, surtout s’il y à des antécédents familiaux de polypes et de cancer colorectal."
         }
       ]
     },

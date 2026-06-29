@@ -73,12 +73,12 @@ export const chapter16Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "La loge rénale a la forme d’un entonnoir ouvert en bas. Elle est interposée entre le péritoine pariétal postérieur, ventralement et le fascia qui la sépare des muscles carré des lombes et psoas, dorsalement. Elle est formée de deux feuillets: (figure 16.3)"
+          "text": "La loge rénale à la forme d’un entonnoir ouvert en bas. Elle est interposée entre le péritoine pariétal postérieur, ventralement et le fascia qui la sépare des muscles carré des lombes et psoas, dorsalement. Elle est formée de deux feuillets: (figure 16.3)"
         },
         {
           "type": "bullets",
           "items": [
-            "Feuillet antérieur (ou prérénal): il passe sur la face antérieure du rein, adhère au péritoine pariétal postérieur et se prolonge vers le hile pour rejoindre le feuillet pré-rénal de l’autre rein. Il est en rapport avec le colon par la lame de Toldt.",
+            "Feuillet antérieur (ou prérénal): il passe sur la face antérieure du rein, adhère au péritoine pariétal postérieur et se prolonge vers le hile pour rejoindre le feuillet pré-rénal de l’autre rein. Il est en rapport avec le côlon par la lame de Toldt.",
             "Feuillet postérieur (ou rétrorénal): il passe en arrière du rein. Il tapisse les muscles carré des lombes et grand psoas (qui lui sert de rail dans sa mobilité) et la partie antéro-latérale de la colonne vertébrale. Il est épais et résistant. Il s’attache au diaphragme au niveau des hiatus pleuraux costo-diaphragmatiques.",
             "Ces deux feuillets, formant le fascia rénal, fusionnent au bord latéral du rein et au niveau du pôle supérieur où ils s’interposent en un feuillet entre le rein et la surrénale. Les deux feuillets adhèrent également à la face inférieure du diaphragme."
           ]
@@ -95,7 +95,7 @@ export const chapter16Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "A l’intérieur de la loge rénale, le rein est plongé dans la graisse périrénale semi-liquide contenue dans une membrane fine, la capsule rénale. A l’extérieur de la capsule, entre la capsule et la loge rénale, il y a une deuxième couche de graisse: la graisse pararénale."
+          "text": "A l’intérieur de la loge rénale, le rein est plongé dans la graisse périrénale semi-liquide contenue dans une membrane fine, la capsule rénale. A l’extérieur de la capsule, entre la capsule et la loge rénale, il y à une deuxième couche de graisse: la graisse pararénale."
         },
         {
           "type": "bullets",
@@ -114,12 +114,12 @@ export const chapter16Fr: Chapter = {
             "la tonicité des muscles de l’abdomen;",
             "accessoirement le pédicule vasculaire;",
             "du volume de graisse périrénale et pararénale.",
-            "A la partie inférieure de la loge rénale, les deux fascias prérénal et rétrorénal ne se rejoignent pas. La loge rénale est donc ouverte en bas, ce qui constitue un véritable entonnoir dans lequel le rein peut s’engouffrer lors de sa descente. Leurs positions dépendent uniquement de leur environnement. Or le volume de la graisse est fonction de l’état nutritionnel et général de la personne. Une diminution du volume de la graisse, par amaigrissement important, la fait « fondre ». Le rein devient flottant et tend à glisser vers le bas en suivant le bord externe du psoas. La défaillance de ces moyens de fixité prédispose à la ptose rénale. (Cf. Pathologie, page…)."
+            "À la partie inférieure de la loge rénale, les deux fascias prérénal et rétrorénal ne se rejoignent pas. La loge rénale est donc ouverte en bas, ce qui constitue un véritable entonnoir dans lequel le rein peut s’engouffrer lors de sa descente. Leurs positions dépendent uniquement de leur environnement. Or le volume de la graisse est fonction de l’état nutritionnel et général de la personne. Une diminution du volume de la graisse, par amaigrissement important, la fait « fondre ». Le rein devient flottant et tend à glisser vers le bas en suivant le bord externe du psoas. La défaillance de ces moyens de fixité prédispose à la ptose rénale. (Cf. Pathologie, page…)."
           ]
         },
         {
           "type": "xref",
-          "label": "Voir la reference dans le chapitre 1",
+          "label": "Voir la référence dans le chapitre 1",
           "text": "Généralités",
           "href": "/lecture/chapitre-1?xrefBack=%2Flecture%2Fchapitre-16%23p-anatomie-8&xrefBackLabel=Retour%20au%20chapitre%2016#p-articulations-viscerales-3"
         },
@@ -152,7 +152,7 @@ export const chapter16Fr: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Glomérule: il filtre le plasma sanguin; (Cf. Physiologie, page…)",
+            "Glomérule: il filtré le plasma sanguin; (Cf. Physiologie, page…)",
             "Tubule: il réabsorbe et sécrète les substances nécessaires à l’organisme"
           ]
         }
@@ -206,9 +206,9 @@ export const chapter16Fr: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "le 2ème duodénum par le fascia de Treitz, l’angle hépatique du colon;",
+            "le 2ème duodénum par le fascia de Treitz, l’angle hépatique du côlon;",
             "Caudalement: l’iléum;",
-            "Latéralement: le colon ascendant dont il est séparé par le fascia de Toldt.",
+            "Latéralement: le côlon ascendant dont il est séparé par le fascia de Toldt.",
             "Rein gauche: il est en relation avec:"
           ]
         },
@@ -219,7 +219,7 @@ export const chapter16Fr: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "le ligament triangulaire gauche du foie, la rate et l’estomac dont il est séparé par la bourse omentale rétro-gastrique, l’angle splénique du colon, le pancréas;",
+            "le ligament triangulaire gauche du foie, la rate et l’estomac dont il est séparé par la bourse omentale rétro-gastrique, l’angle splénique du côlon, le pancréas;",
             "Caudalement: le jéjunum et le système veineux gonadique gauche;",
             "Médialement: l’angle duodéno-jéjunal."
           ]
@@ -255,12 +255,12 @@ export const chapter16Fr: Chapter = {
           "items": [
             "Veine rénale droite: elle se jette directement dans la veine cave inférieure;",
             "Veine rénale gauche: elle est plus longue que la droite, Elle reçoit la veine gonadique spermatique ou ovarienne et la veine lombaire gauche qui draine le sang veineux des vertèbres lombaires, si important pour l’hydratation des disques intervertébraux.",
-            "Le syndrome de la pince aorto-mésentérique, ou nutcracker syndrome (Cf. Chapitre 10 Duodénum, page…), correspond à une compression de la veine rénale gauche entre l’aorte, l’artère mésentérique supérieure et le 3ème duodénum. Dans la lecture clinique ROP, cette compression veineuse gauche peut être mise en relation avec certains tableaux de congestion pelvienne, lombaire ou génitale gauche, sans que cela remplace l’évaluation médicale d’un véritable syndrome de la pince aorto-mésentérique. Les varicocèles gauches et les varices prédominant dans le membre inférieur gauche doivent nous faire rechercher une fixation rénale gauche et une ptose de l’intestin grêle."
+            "Le syndrome de la pince aorto-mésentérique, ou nutcracker syndrome (Cf. Chapitre 10 Duodénum, page…), correspond à une compression de la veine rénale gauche entre l’aorte, l’artère mésentérique supérieure et le 3ème duodénum. Dans la lecture clinique ROP, cette compression veineuse gauche peut être mise en relation avec certains tableaux de congestion pelvienne, lombaire ou génitale gauche, sans que cela remplace l’évaluation médicale d’un véritable syndrome de la pince aorto-mésentérique. Les varicocèles gauches et les varices prédominant dans le membre inférieur gauche doivent nous faire recherchér une fixation rénale gauche et une ptose de l’intestin grêle."
           ]
         },
         {
           "type": "xref",
-          "label": "Voir la reference dans le chapitre 10",
+          "label": "Voir la référence dans le chapitre 10",
           "text": "Duodénum",
           "href": "/lecture/chapitre-10?xrefBack=%2Flecture%2Fchapitre-16%23p-vascularisation-5&xrefBackLabel=Retour%20au%20chapitre%2016#sec-presentation"
         },
@@ -273,7 +273,7 @@ export const chapter16Fr: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Rein droit: on pourrait l’appeler le « rein digestif » par sa proximité avec le foie et le colon ascendant. Sa tendance à migrer vers le bas accentue les problèmes digestifs par les spasmes créés par sa descente, pouvant être tentés d’être attribués à une appendicite.",
+            "Rein droit: on pourrait l’appeler le « rein digestif » par sa proximité avec le foie et le côlon ascendant. Sa tendance à migrer vers le bas accentue les problèmes digestifs par les spasmes créés par sa descente, pouvant être tentés d’être attribués à une appendicite.",
             "Rein gauche: on pourrait l’appeler le « rein génital ». Sa fixation affecte peu le système digestif en dehors d’un spasme de l’angle duodéno-jéjunal, ressenti comme une gastralgie. Par sa relation veineuse avec la sphère uro-génitale, le syndrome de la pince aorto-mésentérique et la fixation du rein gauche peuvent créer des problèmes veineux du testicule gauche (varicocèle) ou de la grande lèvre gauche. Des problèmes sexuels peuvent être attribués à la fixation du rein gauche: pesanteur pelvienne en période prémenstruelle chez la femme, et diminution de la virilité et de la libido, chez l’homme. Une lombo-sciatalgie gauche, même après traumatisme, doit nous conduire à vérifier le rein gauche. La femme enceinte souffre de lombairegie gravidique liée à la compression de la pince aorto-mésentérique par le développement du bébé."
           ]
         }
@@ -453,13 +453,13 @@ export const chapter16Fr: Chapter = {
         },
         {
           "type": "xref",
-          "label": "Voir la reference dans le chapitre 19",
+          "label": "Voir la référence dans le chapitre 19",
           "text": "Organes génitaux féminins",
           "href": "/lecture/chapitre-19?xrefBack=%2Flecture%2Fchapitre-16%23p-pathologies-courantes-5&xrefBackLabel=Retour%20au%20chapitre%2016#sec-ovaires-trompes-presentation"
         },
         {
           "type": "xref",
-          "label": "Voir la reference dans le chapitre 20",
+          "label": "Voir la référence dans le chapitre 20",
           "text": "Organes génitaux masculins",
           "href": "/lecture/chapitre-20?xrefBack=%2Flecture%2Fchapitre-16%23p-pathologies-courantes-5&xrefBackLabel=Retour%20au%20chapitre%2016#sec-presentation"
         },

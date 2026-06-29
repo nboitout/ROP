@@ -9,7 +9,7 @@ import { chapter12Slides, chapter12SlideAnchors } from '@/content/chapter12.slid
 
 export const metadata: Metadata = {
   title: 'Chapitre 12 — Lecture synchronisee · R.O.P. · Guy Boitout',
-  description: 'Lecture combinee : le texte du chapitre 12 (pancreas) et les diapositives de synthese affiches ensemble, synchronises au fil de la lecture.',
+  description: 'Lecture combinée : le texte du chapitre 12 (pancréas) et les diapositives de synthèse affichées ensemble, synchronisées au fil de la lecture.',
   robots: { index: false, follow: false },
 }
 

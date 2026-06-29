@@ -25,7 +25,7 @@ export const chapter19Fr: Chapter = {
       "blocks": [
         {
           "type": "para",
-          "text": "Organe de la gestation, l’utérus a la forme d’un cône (figure 19.2) avec deux cornes où s’abouchent les trompes. Le sommet, ou col, est à hauteur de l’articulation sacro-coccygienne et du trigone de la vessie. Il est orienté vers le bas et solidement attaché au vagin dont le 1/3 inférieur est fixé au plancher pelvien et les 2/3 supérieurs, sont intra-pelviens. Le corps de l’utérus est mobile et occupe une position centrale dans la loge viscérale de la cavité pelvienne, en avant de l’ampoule rectale et au-dessus de la vessie. L’isthme sépare le corps du col utérin. Il se projette au niveau de l’épine ischiatique. L’extrémité inférieure du col, en forme de museau de tanche, est intra-vaginal. Il est percé de l’orifice cervical qui fait communiquer le vagin avec l’utérus."
+          "text": "Organe de la gestation, l’utérus à la forme d’un cône (figure 19.2) avec deux cornes où s’abouchent les trompes. Le sommet, ou col, est à hauteur de l’articulation sacro-coccygienne et du trigone de la vessie. Il est orienté vers le bas et solidement attaché au vagin dont le 1/3 inférieur est fixé au plancher pelvien et les 2/3 supérieurs, sont intra-pelviens. Le corps de l’utérus est mobile et occupe une position centrale dans la loge viscérale de la cavité pelvienne, en avant de l’ampoule rectale et au-dessus de la vessie. L’isthme sépare le corps du col utérin. Il se projette au niveau de l’épine ischiatique. L’extrémité inférieure du col, en forme de museau de tanche, est intra-vaginal. Il est percé de l’orifice cervical qui fait communiquer le vagin avec l’utérus."
         }
       ]
     },
@@ -86,7 +86,7 @@ export const chapter19Fr: Chapter = {
             "Le poids est de 70 à 80gr, Il augmente jusqu’à la ménopause, après quoi c’est l’involution.",
             "Le fond de l’utérus ou dôme utérin est à 2 ou 3cm au-dessous du plan du détroit supérieur de la cavité pelvienne.",
             "Un plan horizontal, passant par le bord supérieur de la symphyse pubienne, rencontre le 1/3 supérieur de l’utérus.",
-            "Chez la femme en âge de procréer, le col a la consistance du lobule du nez et, au contact, il devient érectile. Chez la femme enceinte, le col est mou et érectile. Chez la femme ménopausée, le col est mou et non érectile."
+            "Chez la femme en âge de procréer, le col à la consistance du lobule du nez et, au contact, il devient érectile. Chez la femme enceinte, le col est mou et érectile. Chez la femme ménopausée, le col est mou et non érectile."
           ]
         },
         {
@@ -225,7 +225,7 @@ export const chapter19Fr: Chapter = {
           "items": [
             "son origine médullaire va de Th12 à L2 à hauteur de la vertèbre Th12). Il se continue par deux voies: (figure 17.14)",
             "Chaîne ganglionnaire lombaire et sacrée;",
-            "Plexus hypogastrique supérieur: il prolonge caudalement la chaine plexique pré-vertébrale. Il apporte l’innervation sympathique au plexus hypogastrique inférieur."
+            "Plexus hypogastrique supérieur: il prolonge caudalement la chaîne plexique pré-vertébrale. Il apporte l’innervation sympathique au plexus hypogastrique inférieur."
           ]
         },
         {
@@ -328,7 +328,7 @@ export const chapter19Fr: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "quand le rectum est plein, surtout dans les constipations opiniâtres basses, l’utérus est chassé ventralement."
+            "quand le rectum est plein, surtout dans les constipations opiniâtrès basses, l’utérus est chassé ventralement."
           ]
         },
         {
@@ -451,7 +451,7 @@ export const chapter19Fr: Chapter = {
           "items": [
             "pathologies fonctionnelles",
             "Lombalgies, sacralgies, sciatalgies: elles peuvent être dues à des fixations de l’utérus. Des tensions ligamentaires excessives dévient la région cervico-isthmique de l’utérus et fixent la sacro-iliaque, le muscle piriforme et crée une sciatalgie, le plus souvent à gauche.",
-            "Séquelles traumatiques, chirurgicales, infectieuses et du post-partum: elles créent des adhérences qui se répercutent sur la statique (ptoses) et la dynamique génitale et urinaire.",
+            "Séquelles traumatiques, chirurgicales, infectieuses et du post-partum: elles créent des adhérences qui se réperçutent sur la statique (ptoses) et la dynamique génitale et urinaire.",
             "Troubles circulatoires: Une fixation ou une ptose comprime les nerfs vaso-moteurs et la circulation artérielle, veineuse et lymphatique de la cavité pelvienne et des membres inférieurs (varices, œdèmes).",
             "Dysménorrhées: les fixations articulaires et génitales peuvent créer des douleurs génitales prémenstruelles ou menstruelles par irritation des fibres sympathiques viscéro-sensibles contenues dans le plexus hypogastrique inférieur.",
             "Dyspareunies, anorgasmies: les troubles de la libido et de l’anorgasmie peuvent avoir d’autres causes que tissulaire mais toutes fixations vésico-utéro-vaginale ou coccygienne peuvent rendre les rapports difficiles ou douloureux.",
@@ -461,7 +461,7 @@ export const chapter19Fr: Chapter = {
         },
         {
           "type": "xref",
-          "label": "Voir la reference dans le chapitre 18",
+          "label": "Voir la référence dans le chapitre 18",
           "text": ", IUE",
           "href": "/lecture/chapitre-18?xrefBack=%2Flecture%2Fchapitre-19%23p-uterus-pathologies-courantes-5&xrefBackLabel=Retour%20au%20chapitre%2019#sec-pathologies-courantes"
         }
@@ -488,7 +488,7 @@ export const chapter19Fr: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Les troubles émotionnels et affectifs ne laissent pas indemne la sphère uro-génitale: la peur, les contrariétés, les conflits, mais surtout les violences sexuelles ont des répercussions lourdes qui nuisent au bon équilibre neuro-végétatif, hormonal et émotionnel: trouble des règles, aménorrhées, troubles sexuels dans les deux sexes, infertilité, etc. sans oublier les désordres psychologiques du passé, remontant à l’enfance (viol, inceste, attouchements) difficiles à gérer toute leur vie malgré l’accompagnement psychologique indispensable auprès des professionnels."
+            "Les troubles émotionnels et affectifs ne laissent pas indemne la sphère uro-génitale: la peur, les contrariétés, les conflits, mais surtout les violences sexuelles ont des réperçussions lourdes qui nuisent au bon équilibre neuro-végétatif, hormonal et émotionnel: trouble des règles, aménorrhées, troubles sexuels dans les deux sexes, infertilité, etc. sans oublier les désordres psychologiques du passé, remontant à l’enfance (viol, inceste, attouchements) difficiles à gérer toute leur vie malgré l’accompagnement psychologique indispensable auprès des professionnels."
           ]
         },
         {
@@ -521,7 +521,7 @@ export const chapter19Fr: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "il a la forme d’une amande de 4cm de long, 2cm de large et 1cm d’épaisseur. Son poids est de 6 à 8gr.",
+            "il à la forme d’une amande de 4cm de long, 2cm de large et 1cm d’épaisseur. Son poids est de 6 à 8gr.",
             "Chez la nullipare, l’ovaire est situé très haut, à proximité du nerf obturateur, dans la fossette de Krause, pouvant créer, en cas de congestion ovarienne chez la jeune fille pubère, des gonalgies de type congestif et non mécanique.",
             "Chez la multipare ou la femme plus âgée, l’ovaire tend à descendre en direction du cul-de-sac recto-utérin de Douglas, dans la fossette de Claudius, et peut rentrer en contact avec le muscle piriforme et le nerf sciatique, expliquant certaines lombo-sciatalgies."
           ]
@@ -574,9 +574,9 @@ export const chapter19Fr: Chapter = {
           "type": "bullets",
           "items": [
             "elles ont un conduit cylindrique en forme d’anse, long de 10 à 12cm. On les divise en trois segments: (figure 19.5)",
-            "Isthme: il a une couche musculaire épaisse. Il communique avec l’utérus par l’ostium utérin;",
+            "Isthme: il à une couche musculaire épaisse. Il communique avec l’utérus par l’ostium utérin;",
             "Ampoule: elle est le lieu où se fait la fécondation;",
-            "Pavillon: il a une forme d’entonnoir au contour de douze à treize franges, balayant la surface de l’ovaire pour recueillir l’ovule du follicule de De Graaf de l’ovaire, arrivé à maturité. Au fond du pavillon, s’ouvre l’ostium abdominal.",
+            "Pavillon: il à une forme d’entonnoir au contour de douze à treize franges, balayant la surface de l’ovaire pour recueillir l’ovule du follicule de De Graaf de l’ovaire, arrivé à maturité. Au fond du pavillon, s’ouvre l’ostium abdominal.",
             "Ostium abdominal: il fait communiquer la trompe avec la cavité péritonéale, l’ovaire étant à l’intérieur de la cavité péritonéale. C’est le seul exemple où une cavité muqueuse communique avec une autre cavité muqueuse. Ceci a plusieurs conséquences:",
             "Le liquide de la muqueuse de la trompe, qui nourrit les spermatozoïdes, a deux origines: le liquide péritonéal et la sécrétion de cellules muqueuses des franges du pavillon;",
             "Les risques de grossesses péritonéales par fécondation dans la cavité abdominale;",
@@ -645,7 +645,7 @@ export const chapter19Fr: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "L’artère ovarique nait de l’aorte abdominale près de l’artère rénale à hauteur des vertèbres L2-L3 (figure 16.10). Elle s’anastomose avec les branches terminales de l’artère utérine."
+            "L’artère ovarique naît de l’aorte abdominale près de l’artère rénale à hauteur des vertèbres L2-L3 (figure 16.10). Elle s’anastomose avec les branches terminales de l’artère utérine."
           ]
         },
         {
@@ -655,12 +655,12 @@ export const chapter19Fr: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "il existe une particularité anatomique sur le plan veineux: la veine ovarique droite se jette dans la veine cave. Par contre, la veine ovarique gauche se jette dans la veine rénale gauche (Cf. Chapitre 16 Rein, Veine rénale, page…). Par fixation rénale gauche ou ptôse de l’intestin grêle, la racine du mésentère peut clamper la veine rénale gauche. Il s’en suit une congestion ovarienne et du petit bassin. La présence de varices prédominant dans le membre inférieur gauche doit nous fait rechercher une fixation rénale gauche et une ptôse de l’intestin grêle."
+            "il existe une particularité anatomique sur le plan veineux: la veine ovarique droite se jette dans la veine cave. Par contre, la veine ovarique gauche se jette dans la veine rénale gauche (Cf. Chapitre 16 Rein, Veine rénale, page…). Par fixation rénale gauche ou ptôse de l’intestin grêle, la racine du mésentère peut clamper la veine rénale gauche. Il s’en suit une congestion ovarienne et du petit bassin. La présence de varices prédominant dans le membre inférieur gauche doit nous fait recherchér une fixation rénale gauche et une ptôse de l’intestin grêle."
           ]
         },
         {
           "type": "xref",
-          "label": "Voir la reference dans le chapitre 16",
+          "label": "Voir la référence dans le chapitre 16",
           "text": "Rein, Veine rénale",
           "href": "/lecture/chapitre-16?xrefBack=%2Flecture%2Fchapitre-19%23p-ovaires-trompes-rapports-13&xrefBackLabel=Retour%20au%20chapitre%2019#sec-vascularisation"
         }
@@ -711,7 +711,7 @@ export const chapter19Fr: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "l’ovaire est mobile sous l’action du diaphragme, des efforts de poussée et de retenue urinaire ou fécale et lors du coït."
+            "l’ovaire est mobile sous l’action du diaphragme, des efforts de poussée et de réténue urinaire ou fécale et lors du coït."
           ]
         },
         {
@@ -842,7 +842,7 @@ export const chapter19Fr: Chapter = {
           "items": [
             "douleurs lors des rapports sexuels:",
             "superficielle: ou d’intromission, d’origine psychique: c’est le vaginisme;",
-            "de présence: 2 à 3cm plus profonde par rupture du releveur de l’anus (viol, accouchement difficile, épisiotomie large);",
+            "de présence: 2 à 3cm plus profonde par rupture du relèveur de l’anus (viol, accouchement difficile, épisiotomie large);",
             "profonde: c’est le fameux choc balistique (le pénis butte contre un utérus fixé). La douleur fulgurante et rémanente plusieurs heures après les rapports, est un spasme de l’abdomen par irritation du péritoine étiré par le col utérin dévié par rupture d’un ligament utérosacré: c’est le syndrome de Masters et Alben survenu lors de l’accouchement.",
             "Endométriose;",
             "Infection.",
@@ -889,7 +889,7 @@ export const chapter19Fr: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Grave chez la jeune fille (recherche de tumeur);",
+            "Grave chez la jeune fille (recherché de tumeur);",
             "Femme en activité génitale: fibrome, endométriose, infections, cancer du col ou ovarien;",
             "Phase per ou post ménopausique: cancer du corps utérin et du vagin."
           ]
@@ -1003,7 +1003,7 @@ export const chapter19Fr: Chapter = {
             "Retard de règles: pertes un peu marron, dites « sépia »;",
             "Douleur dans la fosse iliaque droite ou gauche (les douleurs de règles normales sont centrales);",
             "Défense à la palpation;",
-            "Parfois, les douleurs du début sont une lombalgie, d’où méfiance et ne pas se jeter sur le symptôme: toujours demander chez toute femme la date des dernières règles."
+            "Parfois, les douleurs du début sont une lombalgie, d’où méfiance et ne pas se jétér sur le symptôme: toujours demander chez toute femme la date des dernières règles."
           ]
         },
         {
@@ -1087,7 +1087,7 @@ export const chapter19Fr: Chapter = {
           "type": "bullets",
           "items": [
             "L’endométriose est une maladie inflammatoire chronique caractérisée par la présence de tissu semblable à l’endomètre en dehors de la cavité utérine. Les localisations les plus fréquentes concernent le péritoine pelvien, les ovaires, les trompes, les ligaments utérosacraux, la vessie ou le tube digestif.",
-            "Sa présence sur les ligaments utérosacraux peut s’accompagner d’importantes lombalgies et sacralgies. Sa symptomatologie clinique associe souvent dysménorrhées, douleurs abdominales et lombo-sacrées, dyspareunies et troubles digestifs, avec parfois un retentissement sur la fertilité."
+            "Sa présence sur les ligaments utérosacraux peut s’accompagner d’importantes lombalgies et sacralgies. Sa symptomatologie clinique associé souvent dysménorrhées, douleurs abdominales et lombo-sacrées, dyspareunies et troubles digestifs, avec parfois un réténtissement sur la fertilité."
           ]
         },
         {
@@ -1116,7 +1116,7 @@ export const chapter19Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "La personne «génitale » femme a besoin de maternité, de recevoir, de donner et d’abriter. Elle a peur de l’abandon, de couper le cordon ombilical. A la ménopause, les modifications physiques sont vécues comme une perte de sa féminité et de son pouvoir de séduction."
+          "text": "La personne «génitale » femme a besoin de maternité, de recevoir, de donner et d’abriter. Elle a peur de l’abandon, de couper le cordon ombilical. À la ménopause, les modifications physiques sont vécues comme une perte de sa féminité et de son pouvoir de séduction."
         },
         {
           "type": "para",
@@ -1124,11 +1124,11 @@ export const chapter19Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "Seins: ils sont le symbole de la féminité. A la puberté, les seins poussent et il est difficile de les cacher, même en rentrant les épaules ou en croisant les bras. Les seins nourrissent et représentent le point d’ancrage de la famille. La personne «sein» a besoin de protéger et d’être protégée. Elle recherche la relation idéale. Elle supporte mal les bouleversements affectifs, le départ des enfants, les violences verbales entre frères et sœurs. Elle est soumise pour ne pas créer de heurts. Elle craint d’être abandonnée ou trompée et peut développer, si c’est le cas, kystes, mastites, mastose, voire un cancer du sein. Elle culpabilise et ressent un sentiment d’échec."
+          "text": "Seins: ils sont le symbole de la féminité. À la puberté, les seins poussent et il est difficile de les cacher, même en rentrant les épaules ou en croisant les bras. Les seins nourrissent et représentent le point d’ancrage de la famille. La personne «sein» a besoin de protéger et d’être protégée. Elle recherche la relation idéale. Elle supporte mal les bouleversements affectifs, le départ des enfants, les violences verbales entre frères et sœurs. Elle est soumise pour ne pas créer de heurts. Elle craint d’être abandonnée ou trompée et peut développer, si c’est le cas, kystes, mastites, mastose, voire un cancer du sein. Elle culpabilise et ressent un sentiment d’échec."
         },
         {
           "type": "para",
-          "text": "La personne « sein » a un désir inassouvi de maternité, surtout quand elle atteint un certain âge, quand elle ne pourra plus avoir d’enfants. Elle éprouve alors des difficultés à trouver sa place. Elle désire ressembler à une icône et se fait une représentation idéalisée de la superwoman envoûtante et dominatrice. Elle affiche une sérénité de façade pour masquer son besoin de sécurité."
+          "text": "La personne « sein » à un désir inassouvi de maternité, surtout quand elle atteint un certain âge, quand elle ne pourra plus avoir d’enfants. Elle éprouve alors des difficultés à trouver sa place. Elle désire ressembler à une icône et se fait une représentation idéalisée de la superwoman envoûtante et dominatrice. Elle affiche une sérénité de façade pour masquer son besoin de sécurité."
         }
       ]
     },

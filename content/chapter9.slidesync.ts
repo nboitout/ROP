@@ -27,7 +27,7 @@ export const chapter9Slides: SyncSlide[] = [
   { src: '/chapter-9/slides/slide-16.png', title: 'Le continuum pathologique gastrique' },
   { src: '/chapter-9/slides/slide-17.png', title: 'Focus clinique ROP : trois dysfonctions cles' },
   { src: '/chapter-9/slides/slide-18.png', title: 'Cascade pathologique : l hypochlorhydrie et le fer' },
-  { src: '/chapter-9/slides/slide-19.png', title: 'Cartographie ROP : cibles reflexes' },
+  { src: '/chapter-9/slides/slide-19.png', title: 'Cartographie ROP : cibles réflexes' },
   { src: '/chapter-9/slides/slide-20.png', title: 'Le profil emotionnel : l organe du moi social' },
   { src: '/chapter-9/slides/slide-21.png', title: 'Tableau de bord therapeutique ROP' },
 ]
