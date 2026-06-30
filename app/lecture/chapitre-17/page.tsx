@@ -1,10 +1,11 @@
 import { cookies } from 'next/headers'
 import { redirect } from 'next/navigation'
 import type { Metadata } from 'next'
-import ChapterReader from '@/components/ChapterReader'
+import SlideSyncReader from '@/components/SlideSyncReader'
 import { getChapter } from '@/content/registry'
 import { getServerLang } from '@/app/i18n/serverLang'
 import { translations } from '@/app/i18n/translations'
+import { chapter17Slides, chapter17SlideAnchors } from '@/content/chapter17.slidesync'
 
 export const metadata: Metadata = {
   title: 'Chapitre 17 — Cavité pelvienne · R.O.P. · Guy Boitout',
@@ -24,13 +25,14 @@ export default async function Chapitre17LecturePage({
 
   const { lang: langParam } = await searchParams
   const lang = await getServerLang(langParam)
-  const { chapter, contentLang } = getChapter('chapter-17', lang)
+  const { chapter } = getChapter('chapter-17', 'fr')
 
   return (
-    <ChapterReader
+    <SlideSyncReader
       chapter={chapter}
       bookTitle={translations[lang].reader.bookTitle}
-      contentLang={contentLang}
+      slides={chapter17Slides}
+      anchors={chapter17SlideAnchors}
       backHref="/chapitres-gratuits"
     />
   )

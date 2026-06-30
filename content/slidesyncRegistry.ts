@@ -13,6 +13,7 @@ import { chapter13Slides, chapter13SlideAnchors } from './chapter13.slidesync'
 import { chapter14Slides, chapter14SlideAnchorsFr } from './chapter14.slidesync'
 import { chapter15Slides, chapter15SlideAnchors } from './chapter15.slidesync'
 import { chapter16Slides, chapter16SlideAnchors } from './chapter16.slidesync'
+import { chapter17Slides, chapter17SlideAnchors } from './chapter17.slidesync'
 
 type SyncSlideLike = { title: string }
 type SyncAnchorLike = { sectionId: string; slide: number | number[] }
@@ -38,6 +39,7 @@ const slideVisualSources: Record<string, SlideVisualSource> = {
   'chapter-14': { slides: chapter14Slides, anchors: chapter14SlideAnchorsFr },
   'chapter-15': { slides: chapter15Slides, anchors: chapter15SlideAnchors },
   'chapter-16': { slides: chapter16Slides, anchors: chapter16SlideAnchors },
+  'chapter-17': { slides: chapter17Slides, anchors: chapter17SlideAnchors },
 }
 
 function normalizeForSearch(value: string): string {
