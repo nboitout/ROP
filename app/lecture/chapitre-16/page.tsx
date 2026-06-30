@@ -1,10 +1,11 @@
 import { cookies } from 'next/headers'
 import { redirect } from 'next/navigation'
 import type { Metadata } from 'next'
-import ChapterReader from '@/components/ChapterReader'
+import SlideSyncReader from '@/components/SlideSyncReader'
 import { getChapter } from '@/content/registry'
 import { getServerLang } from '@/app/i18n/serverLang'
 import { translations } from '@/app/i18n/translations'
+import { chapter16Slides, chapter16SlideAnchors } from '@/content/chapter16.slidesync'
 
 export const metadata: Metadata = {
   title: 'Chapitre 16 — Reins · R.O.P. · Guy Boitout',
@@ -24,13 +25,14 @@ export default async function Chapitre16LecturePage({
 
   const { lang: langParam } = await searchParams
   const lang = await getServerLang(langParam)
-  const { chapter, contentLang } = getChapter('chapter-16', lang)
+  const { chapter } = getChapter('chapter-16', 'fr')
 
   return (
-    <ChapterReader
+    <SlideSyncReader
       chapter={chapter}
       bookTitle={translations[lang].reader.bookTitle}
-      contentLang={contentLang}
+      slides={chapter16Slides}
+      anchors={chapter16SlideAnchors}
       backHref="/chapitres-gratuits"
     />
   )
