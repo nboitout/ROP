@@ -1,10 +1,11 @@
 import { cookies } from 'next/headers'
 import { redirect } from 'next/navigation'
 import type { Metadata } from 'next'
-import ChapterReader from '@/components/ChapterReader'
+import SlideSyncReader from '@/components/SlideSyncReader'
 import { getChapter } from '@/content/registry'
 import { getServerLang } from '@/app/i18n/serverLang'
 import { translations } from '@/app/i18n/translations'
+import { chapter15Slides, chapter15SlideAnchors } from '@/content/chapter15.slidesync'
 
 export const metadata: Metadata = {
   title: 'Chapitre 15 — Côlon et rectum · R.O.P. · Guy Boitout',
@@ -24,13 +25,14 @@ export default async function Chapitre15LecturePage({
 
   const { lang: langParam } = await searchParams
   const lang = await getServerLang(langParam)
-  const { chapter, contentLang } = getChapter('chapter-15', lang)
+  const { chapter } = getChapter('chapter-15', 'fr')
 
   return (
-    <ChapterReader
+    <SlideSyncReader
       chapter={chapter}
       bookTitle={translations[lang].reader.bookTitle}
-      contentLang={contentLang}
+      slides={chapter15Slides}
+      anchors={chapter15SlideAnchors}
       backHref="/chapitres-gratuits"
     />
   )
