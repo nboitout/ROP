@@ -9,6 +9,7 @@ import { chapter9Slides, chapter9SlideAnchors } from './chapter9.slidesync'
 import { chapter10Slides, chapter10SlideAnchors } from './chapter10.slidesync'
 import { chapter11Slides, chapter11SlideAnchors } from './chapter11.slidesync'
 import { chapter12Slides, chapter12SlideAnchors } from './chapter12.slidesync'
+import { chapter13Slides, chapter13SlideAnchors } from './chapter13.slidesync'
 import { chapter14Slides, chapter14SlideAnchorsFr } from './chapter14.slidesync'
 
 type SyncSlideLike = { title: string }
@@ -31,6 +32,7 @@ const slideVisualSources: Record<string, SlideVisualSource> = {
   'chapter-10': { slides: chapter10Slides, anchors: chapter10SlideAnchors },
   'chapter-11': { slides: chapter11Slides, anchors: chapter11SlideAnchors },
   'chapter-12': { slides: chapter12Slides, anchors: chapter12SlideAnchors },
+  'chapter-13': { slides: chapter13Slides, anchors: chapter13SlideAnchors },
   'chapter-14': { slides: chapter14Slides, anchors: chapter14SlideAnchorsFr },
 }
 

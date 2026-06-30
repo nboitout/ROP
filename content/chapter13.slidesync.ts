@@ -1,0 +1,56 @@
+// Chapter 13 - slide <-> text synchronisation map for the combined reading
+// experience (/lecture/chapitre-13).
+//
+// Slides are pre-rendered from:
+// public/chapter-13/Chapter13 Slides de synthese - FR.pdf
+
+export type SyncSlide = { src: string; title: string; orientation?: 'portrait' }
+export type SyncAnchor = { sectionId: string; blockIndex: number; slide: number; gapBefore?: 'half' }
+
+export const chapter13Slides: SyncSlide[] = [
+  { src: '/chapter-13/slides/slide-01.png', title: 'La Rate' },
+  { src: '/chapter-13/slides/slide-02.png', title: 'Identite et fonctions premieres' },
+  { src: '/chapter-13/slides/slide-03.png', title: 'Profil physiologique' },
+  { src: '/chapter-13/slides/slide-04.png', title: 'Topographie viscerale' },
+  { src: '/chapter-13/slides/slide-05.png', title: 'Morphologie externe et faces' },
+  { src: '/chapter-13/slides/slide-06.png', title: 'Le reseau de fixite' },
+  { src: '/chapter-13/slides/slide-07.png', title: 'Dualite tissulaire : pulpe blanche et pulpe rouge' },
+  { src: '/chapter-13/slides/slide-08.png', title: 'Vascularisation : le reseau sanguin' },
+  { src: '/chapter-13/slides/slide-09.png', title: 'Le reseau vasculaire : arteriel et veineux' },
+  { src: '/chapter-13/slides/slide-10.png', title: 'Innervation et zone d ecoute ROP' },
+  { src: '/chapter-13/slides/slide-11.png', title: 'Matrice fonctionnelle : le parenchyme splenique' },
+  { src: '/chapter-13/slides/slide-12.png', title: 'Vulnerabilite et mecaniques traumatiques' },
+  { src: '/chapter-13/slides/slide-13.png', title: 'Diagnostic d exclusion : signes d alerte' },
+  { src: '/chapter-13/slides/slide-14.png', title: 'Vulnerabilites : traumatismes et mononucleose' },
+  { src: '/chapter-13/slides/slide-15.png', title: 'Focus pathologique : la mononucleose' },
+  { src: '/chapter-13/slides/slide-16.png', title: 'Indications ROP et troubles fonctionnels' },
+  { src: '/chapter-13/slides/slide-17.png', title: 'Relations holistiques de la rate' },
+  { src: '/chapter-13/slides/slide-18.png', title: 'Cartographie podale : les zones reflexes' },
+  { src: '/chapter-13/slides/slide-19.png', title: 'Cartographie podale : zones reflexes' },
+  { src: '/chapter-13/slides/slide-20.png', title: 'Synthese : l ecoute splenique' },
+  { src: '/chapter-13/slides/slide-21.png', title: 'Synthese clinique ROP' },
+]
+
+export const chapter13SlideAnchors: SyncAnchor[] = [
+  { sectionId: 'presentation', blockIndex: -1, slide: 1 },
+  { sectionId: 'presentation', blockIndex: 0, slide: 2 },
+  { sectionId: 'presentation', blockIndex: 2, slide: 3 },
+  { sectionId: 'situation', blockIndex: 0, slide: 4 },
+  { sectionId: 'anatomie', blockIndex: 0, slide: 5 },
+  { sectionId: 'anatomie', blockIndex: 6, slide: 6 },
+  { sectionId: 'anatomie', blockIndex: 3, slide: 7 },
+  { sectionId: 'vascularisation', blockIndex: 0, slide: 8 },
+  { sectionId: 'vascularisation', blockIndex: 1, slide: 9 },
+  { sectionId: 'innervation', blockIndex: 0, slide: 10 },
+  { sectionId: 'physiologie', blockIndex: 0, slide: 11 },
+  { sectionId: 'pathologies-courantes', blockIndex: 8, slide: 12 },
+  { sectionId: 'pathologies-courantes', blockIndex: 0, slide: 13 },
+  { sectionId: 'pathologies-courantes', blockIndex: 9, slide: 14 },
+  { sectionId: 'pathologies-courantes', blockIndex: 12, slide: 15 },
+  { sectionId: 'pathologies-courantes', blockIndex: 17, slide: 16 },
+  { sectionId: 'relations-viscero-somatiques', blockIndex: 0, slide: 17 },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 0, slide: 18 },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 1, slide: 19 },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 4, slide: 20 },
+  { sectionId: 'conseils', blockIndex: 0, slide: 21 },
+]
