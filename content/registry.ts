@@ -63,6 +63,10 @@ import { chapter20De } from './chapter20.de'
 import { chapter20Es } from './chapter20.es'
 import { chapter20It } from './chapter20.it'
 import { chapter21Fr } from './chapter21.fr'
+import { chapter21En } from './chapter21.en'
+import { chapter21De } from './chapter21.de'
+import { chapter21Es } from './chapter21.es'
+import { chapter21It } from './chapter21.it'
 
 /**
  * Per-chapter, per-language content. French is the canonical fallback.
@@ -93,7 +97,7 @@ const registry: Record<string, Partial<Record<Lang, Chapter>>> = {
   'chapter-18': { fr: chapter18Fr, en: chapter18En, de: chapter18De, es: chapter18Es, it: chapter18It },
   'chapter-19': { fr: chapter19Fr, en: chapter19En, de: chapter19De, es: chapter19Es, it: chapter19It },
   'chapter-20': { fr: chapter20Fr, en: chapter20En, de: chapter20De, es: chapter20Es, it: chapter20It },
-  'chapter-21': { fr: chapter21Fr },
+  'chapter-21': { fr: chapter21Fr, en: chapter21En, de: chapter21De, es: chapter21Es, it: chapter21It },
 }
 
 /**
