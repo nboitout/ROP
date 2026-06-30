@@ -43,6 +43,10 @@ import { chapter16De } from './chapter16.de'
 import { chapter16Es } from './chapter16.es'
 import { chapter16It } from './chapter16.it'
 import { chapter17Fr } from './chapter17.fr'
+import { chapter17En } from './chapter17.en'
+import { chapter17De } from './chapter17.de'
+import { chapter17Es } from './chapter17.es'
+import { chapter17It } from './chapter17.it'
 import { chapter18Fr } from './chapter18.fr'
 import { chapter19Fr } from './chapter19.fr'
 import { chapter20Fr } from './chapter20.fr'
@@ -73,7 +77,7 @@ const registry: Record<string, Partial<Record<Lang, Chapter>>> = {
   'chapter-14': { fr: chapter14Fr, en: chapter14En, de: chapter14De, es: chapter14Es, it: chapter14It },
   'chapter-15': { fr: chapter15Fr, en: chapter15En, de: chapter15De, es: chapter15Es, it: chapter15It },
   'chapter-16': { fr: chapter16Fr, en: chapter16En, de: chapter16De, es: chapter16Es, it: chapter16It },
-  'chapter-17': { fr: chapter17Fr },
+  'chapter-17': { fr: chapter17Fr, en: chapter17En, de: chapter17De, es: chapter17Es, it: chapter17It },
   'chapter-18': { fr: chapter18Fr },
   'chapter-19': { fr: chapter19Fr },
   'chapter-20': { fr: chapter20Fr },
