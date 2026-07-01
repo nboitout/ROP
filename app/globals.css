@@ -817,7 +817,7 @@ a.ss-switch-opt:hover { color:var(--gold); }
 .visual-showcase-copy {
   position:relative;
   z-index:1;
-  max-width:1240px;
+  width:100%;
   padding:0 42px 22px;
 }
 .visual-showcase-eyebrow {
@@ -842,9 +842,9 @@ a.ss-switch-opt:hover { color:var(--gold); }
   margin:0 0 10px;
   color:var(--cream);
   font-family:'Cormorant Garamond',serif;
-  font-size:clamp(1.9rem,3vw,2.72rem);
+  font-size:clamp(1.72rem,2.35vw,2.08rem);
   font-weight:300;
-  line-height:1;
+  line-height:1.04;
   white-space:nowrap;
 }
 .visual-showcase-body {
@@ -921,6 +921,12 @@ a.ss-switch-opt:hover { color:var(--gold); }
     overflow-x:auto;
     width:auto;
     padding:0 42px 10px;
+  }
+}
+@media (min-width:721px) and (max-width:1120px) {
+  .visual-showcase h2 {
+    max-width:780px;
+    white-space:normal;
   }
 }
 @media (max-width:720px) {
