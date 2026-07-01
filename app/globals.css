@@ -668,7 +668,7 @@ a.ss-switch-opt:hover { color:var(--gold); }
     flex-direction:column;
     justify-content:center;
     align-items:flex-end;
-    gap:8px;
+    gap:6px;
     width:34px;
   }
   .ss-section-pin {
