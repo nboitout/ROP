@@ -31,9 +31,9 @@ export default function HomepageVisualShowcase() {
       }}
     >
       <div className="visual-showcase-copy">
-        <p className="visual-showcase-eyebrow">Atlas visuel</p>
+        <p className="visual-showcase-eyebrow">Atlas du 3e Livre</p>
         <h2 id="visual-showcase-title">
-          Plus de 400 visuels pour relier l’anatomie, la clinique et le geste.
+          Plus de 400 visuels pour relier l’anatomie, la physiologie et le geste thérapeutique.
         </h2>
         <p className="visual-showcase-body">
           Une sélection de planches issues des chapitres donne un aperçu de la richesse graphique du livre:
