@@ -51,7 +51,7 @@ export default function HomepageVisualShowcase() {
         <div className="visual-showcase-track">
           {loopSlides.map((slide, index) => (
             <figure className="visual-showcase-slide" key={`${slide.key}-${index}`}>
-              <img src={slide.src} alt="" loading="lazy" decoding="async" />
+              <img src={slide.src} alt="" loading="eager" decoding="async" />
             </figure>
           ))}
         </div>
