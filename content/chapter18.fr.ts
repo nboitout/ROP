@@ -30,7 +30,7 @@ export const chapter18Fr: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Organe réservoir de l’urine, la vessie est située dans la partie antérieure de la loge viscérale de la cavité pelvienne, logée dans un berceau entre les muscles élévateurs de l’anus du périnée et les muscles obturateurs internes. (figure 17.6)"
+            "Organe réservoir de l’urine, la vessie est située dans la partie antérieure de la loge viscérale de la cavité pelvienne, logée dans un berceau entre les muscles élévateurs de l’anus du périnée et les muscles obturateurs internes."
           ]
         },
         {
@@ -40,7 +40,6 @@ export const chapter18Fr: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "(figure 18.1.)",
             "En arrière du pubis;",
             "La face supérieure, ou dôme vésical, est recouverte, ventralement, par le péritoine et, dorsalement, par le corps de l’utérus;",
             "la face postéro-inférieure ou trigonale est posée sur le vagin."
@@ -53,13 +52,12 @@ export const chapter18Fr: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "(figure 18.2.)",
             "En arrière du pubis;",
             "le dôme vésical est recouvert par le péritoine;",
             "au-dessus de la prostate.",
             "la face postéro-inférieure ou trigonale est en avant du rectum.",
             "La partie supérieure ou corps de la vessie est mobile. La partie inférieure comprenant la base et le col, est fixée, solidaire de l’urètre et, par son intermédiaire, au plancher pelvien.",
-            "Vide, la vessie est aplatie et non palpable. Pleine, elle est globuleuse, ovoïde et dépasse en haut le pubis pour rentrer dans la cavité abdominale. (figure 18.3.)"
+            "Vide, la vessie est aplatie et non palpable. Pleine, elle est globuleuse, ovoïde et dépasse en haut le pubis pour rentrer dans la cavité abdominale."
           ]
         }
       ]
@@ -86,7 +84,7 @@ export const chapter18Fr: Chapter = {
           "type": "bullets",
           "items": [
             "le muscle détrusor est formé de trois couches de fibres lisses:",
-            "Fibres externes: longitudinales, elles s’entremêlent avec les ligaments pubo-vésicaux (figure 18.4.). Toute tension asymétrique des ligaments pubo-vésicaux est responsable d’une envie impérieuse d’uriner par contraction anormale et permanente de la vessie entraînant une diminution de la capacité de remplissage (éréthisme vésical).",
+            "Fibres externes: longitudinales, elles s’entremêlent avec les ligaments pubo-vésicaux. Toute tension asymétrique des ligaments pubo-vésicaux est responsable d’une envie impérieuse d’uriner par contraction anormale et permanente de la vessie entraînant une diminution de la capacité de remplissage (éréthisme vésical).",
             "Fibres moyennes: circulaires, elles forment le sphincter lisse.",
             "Fibres internes: formée de fibres entrecroisées, peu développées chez le sujet jeune, elles le sont chez le sujet âgé prostatique obligé de pousser pour uriner: c’est la vessie de lutte."
           ]
@@ -108,7 +106,7 @@ export const chapter18Fr: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "c’est la partie la plus importante de la vessie sur le plan fonctionnel par sa richesse en tensorécepteurs et volorécepteurs. Situé à la face postéro-inférieure, le trigone repose, chez la femme, sur la face antérieure du vagin (figure 18.1.), il est l’abouchement de trois orifices: (figure 18.4.)",
+            "c’est la partie la plus importante de la vessie sur le plan fonctionnel par sa richesse en tensorécepteurs et volorécepteurs. Situé à la face postéro-inférieure, le trigone repose, chez la femme, sur la face antérieure du vagin, il est l’abouchement de trois orifices:",
             "Deux orifices urétéraux;",
             "Un orifice urétral."
           ]
@@ -134,7 +132,7 @@ export const chapter18Fr: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "elle est très hormono-dépendante: en fonction du cycle menstruel et des stress émotionnels, les incontinences apparaissent par déséquilibres neuro-végétatifs et hormonaux qui réténtissent sur la dynamique de la vessie."
+            "elle est très hormono-dépendante: en fonction du cycle menstruel et des stress émotionnels, les incontinences apparaissent par déséquilibres neuro-végétatifs et hormonaux qui retentissent sur la dynamique de la vessie."
           ]
         },
         {
@@ -152,7 +150,7 @@ export const chapter18Fr: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Il épouse le sommet de la vessie en formant le cul-de sac vésico-utérin chez la femme ou vésico-rectal chez l’homme (figure 17.7). Les ptoses viscérales de l’intestin grêle, la chirurgie abdominale, les infections, les spasmes viscéraux, réténtissent sur le péritoine. Le glissement normal entre le péritoine et la vessie est freiné par les tensions du péritoine."
+            "Il épouse le sommet de la vessie en formant le cul-de sac vésico-utérin chez la femme ou vésico-rectal chez l’homme. Les ptoses viscérales de l’intestin grêle, la chirurgie abdominale, les infections, les spasmes viscéraux, retentissent sur le péritoine. Le glissement normal entre le péritoine et la vessie est freiné par les tensions du péritoine."
           ]
         },
         {
@@ -163,7 +161,7 @@ export const chapter18Fr: Chapter = {
           "type": "bullets",
           "items": [
             "ils ont un rôle de suspenseur de la vessie comparable au ballon dans son filet:",
-            "le Ligament ombilical médian (ouraque): reliquat embryonnaire, il relie l’ombilic à l’apex de la vessie et au pubis (figures 18.1 et 18.2), Il prolonge vers le bas le ligament falciforme du foie (figure 11.9). Il échange des fibres avec les ligaments pubo-vésicaux et pubo-urétraux (figure 18.5. A. B.) qui échangent des fibres avec le muscle détrusor de la vessie. Sa section par la chirurgie (césarienne) peut être une cause d’incontinence urinaire et d’éréthisme vésical.",
+            "le Ligament ombilical médian (ouraque): reliquat embryonnaire, il relie l’ombilic à l’apex de la vessie et au pubis, Il prolonge vers le bas le ligament falciforme du foie. Il échange des fibres avec les ligaments pubo-vésicaux et pubo-urétraux qui échangent des fibres avec le muscle détrusor de la vessie. Sa section par la chirurgie (césarienne) peut être une cause d’incontinence urinaire et d’éréthisme vésical.",
             "les ligaments ombilico-prévésicaux sont deux cordons fibreux vestiges des artères ombilicales tendus obliquement de l’ombilic aux faces inférolatérales de la vessie. Ils se prolongent latéralement dans la cavité pelvienne par l’aponévrose du muscle obturateur interne et du muscle piriforme pour se terminer, en arrière, sur l’ischium où s’insèrent le ligament sacro-tubéral et les muscles ischio-jambiers.",
             "Ligaments pubovésicaux (chez la femme) et puboprostatiques (chez l’homme): ils fixent la vessie au pubis. Leurs fibres sont en continuité avec le détrusor. La tension des ligaments crée un état d’hypercontractilité (éréthisme) et le col vésical est déstabilisé, avec sensation de pesanteur dans le bas-ventre."
           ]
@@ -175,15 +173,15 @@ export const chapter18Fr: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "lames sacro-recto-cervico-pubiennes (SRGCP) (figure 17.5)",
+            "lames sacro-recto-cervico-pubiennes (SRGCP)",
             "Plexus veineux de Santorini: il est situé dans l’espace prévésical (entre le pubis et la vessie). La tonicité des veines maintient le col vésical en bonne place. Il est en relation avec les systèmes hémorroïdal et porto-cave (figure 11.7). Tout trouble fonctionnel du système porte se réperçute sur le plexus veineux de Santorini. Le relâchement du système musculo-ligamentaire vésical déstabilise le plexus veineux de Santorini favorisant une incontinence urinaire.",
-            "Plancher pelvien du périnée (figure 17.9)"
+            "Plancher pelvien du périnée"
           ]
         },
         {
           "type": "rop",
           "body": [
-            "Il y à un continuum anatomique entre le diaphragme, le foie, la cavité pelvienne, la vessie et les hanches. Le bon fonctionnement de la vessie repose sur ses liens avec le péritoine, la symphyse pubienne, les ligaments pubovésicaux et pubo-urétraux, la fosse obturatrice sur laquelle elle est posée, les muscles de la hanche."
+            "Il y a un continuum anatomique entre le diaphragme, le foie, la cavité pelvienne, la vessie et les hanches. Le bon fonctionnement de la vessie repose sur ses liens avec le péritoine, la symphyse pubienne, les ligaments pubovésicaux et pubo-urétraux, la fosse obturatrice sur laquelle elle est posée, les muscles de la hanche."
           ]
         }
       ]
@@ -199,7 +197,6 @@ export const chapter18Fr: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "(figure 18.1.)",
             "Ventralement: le pubis et le plexus veineux prévésical;",
             "Céphaliquement et ventralement: le péritoine;",
             "Céphaliquement et dorsalement: le corps de l’utérus;",
@@ -215,7 +212,6 @@ export const chapter18Fr: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "(figure 18.2.)",
             "Ventralement: le pubis;",
             "Céphaliquement: le péritoine",
             "Dorsalement: l’aponévrose prostato-péritonéale de Denonvilliers;",
@@ -236,7 +232,7 @@ export const chapter18Fr: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "les branches de l’artère iliaque interne; (figure 17.6)"
+            "les branches de l’artère iliaque interne;"
           ]
         },
         {
@@ -262,18 +258,12 @@ export const chapter18Fr: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "nerf pudendal S2 à S4 (figure 17.10.)"
+            "nerf pudendal S2 à S4"
           ]
         },
         {
           "type": "sub",
           "text": "Sphincter lisse du détrusor"
-        },
-        {
-          "type": "bullets",
-          "items": [
-            "(figure 17.14.)"
-          ]
         },
         {
           "type": "sub",
@@ -313,7 +303,7 @@ export const chapter18Fr: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "l’hypothalamus et tronc cérébral contrôlent les systèmes sympathique et parasympathique. La formation réticulaire du tronc cérébral exerce son rôle de filtrage des influx périphériques (émotion, peur) provenant du cerveau limbique. (Cf. Chapitre 17, Innervation autonome de la cavité pelvienne, page …)"
+            "l’hypothalamus et tronc cérébral contrôlent les systèmes sympathique et parasympathique. La formation réticulaire du tronc cérébral exerce son rôle de filtrage des influx périphériques (émotion, peur) provenant du cerveau limbique."
           ]
         },
         {
@@ -369,7 +359,7 @@ export const chapter18Fr: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "le système musculaire occlusif – muscles pubo-vésical, pubo-coccygien, élévateur de l’anus, transverse profond - à un rôle faible dans la continence au repos mais réel lors des efforts physiques, la toux, les éternuements."
+            "le système musculaire occlusif – muscles pubo-vésical, pubo-coccygien, élévateur de l’anus, transverse profond - a un rôle faible dans la continence au repos mais réel lors des efforts physiques, la toux, les éternuements."
           ]
         },
         {
@@ -379,7 +369,7 @@ export const chapter18Fr: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "lorsque le volume urinaire augmente, l’étirement de la paroi vésicale sollicité les tensorécepteurs et volorécepteurs. Les informations afférentes sont intégrées par les centres médullaires, sous contrôle cortical. Tant que la miction est différée, le détrusor reste relâché et les sphincters maintiennent la continence. Lorsque la décision d’uriner est prise et que le contexte le permet, la commande parasympathique favorise la contraction du détrusor et le relâchement du sphincter lisse."
+            "lorsque le volume urinaire augmente, l’étirement de la paroi vésicale sollicite les tensorécepteurs et volorécepteurs. Les informations afférentes sont intégrées par les centres médullaires, sous contrôle cortical. Tant que la miction est différée, le détrusor reste relâché et les sphincters maintiennent la continence. Lorsque la décision d’uriner est prise et que le contexte le permet, la commande parasympathique favorise la contraction du détrusor et le relâchement du sphincter lisse."
           ]
         },
         {
@@ -416,7 +406,7 @@ export const chapter18Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "Par l’éducation, le cortex cérébral contrôle l’activité vésicale. Si le système limbique, siège des émotions et de la peur, prend le pas sur le cortex (Cf. Chapitre 5 Mécanisme de stress, page…) il modifie le contrôle neuro-musculaire de la vessie d’où envies impérieuses, pollakiurie, énurésie."
+          "text": "Par l’éducation, le cortex cérébral contrôle l’activité vésicale. Si le système limbique, siège des émotions et de la peur, prend le pas sur le cortex, il modifie le contrôle neuro-musculaire de la vessie d’où envies impérieuses, pollakiurie, énurésie."
         },
         {
           "type": "xref",
@@ -437,7 +427,7 @@ export const chapter18Fr: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "l’aspiration thoracique, l’aimantation diaphragmatique, l’orientation du pelvis non hermétiquement clos et le dôme utérin exercent un délestage-absorption des pressions sur les organes pelviens (Cf. Chapitre 17 Cavité pelvienne, page…)"
+            "l’aspiration thoracique, l’aimantation diaphragmatique, l’orientation du pelvis non hermétiquement clos et le dôme utérin exercent un délestage-absorption des pressions sur les organes pelviens."
           ]
         },
         {
@@ -453,13 +443,13 @@ export const chapter18Fr: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "pour que les muscles du périnée exercent correctement leur rôle de soutènement et de sphincter, ils doivent rester à l’intérieur de l’enceinte manométrique pelvienne (figure 18.6). Si, lors d’un effondrement du périnée, l’urètre s’abaisse et sort de l’enceinte manométrique, la pression abdominale par la contraction des muscles abdominaux lors des efforts de toux, d’éternuement, de défécation, de l’accouchement ou de certaines activités sportives, s’exerce uniquement sur la vessie. Elle renforce même la pression vésicale au détriment du sphincter urétéral sorti de l’enceinte manométrique provoquant une incontinence urinaire d’effort."
+            "pour que les muscles du périnée exercent correctement leur rôle de soutènement et de sphincter, ils doivent rester à l’intérieur de l’enceinte manométrique pelvienne. Si, lors d’un effondrement du périnée, l’urètre s’abaisse et sort de l’enceinte manométrique, la pression abdominale par la contraction des muscles abdominaux lors des efforts de toux, d’éternuement, de défécation, de l’accouchement ou de certaines activités sportives, s’exerce uniquement sur la vessie. Elle renforce même la pression vésicale au détriment du sphincter urétéral sorti de l’enceinte manométrique provoquant une incontinence urinaire d’effort."
           ]
         },
         {
           "type": "rop",
           "body": [
-            "le renforcement trop précoce des muscles abdominaux chez la femme dans le post-partum, aggrave cette incontinence. Il faut d’abord rééquilibrer la tension des fascias s’exerçant sur les berges urétrales afin de réintroduire le sphincter urétral à l’intérieur de l’enceinte manométrique. Le renforcement des muscles abdominaux pourra ensuite être entrepris en privilégiant une rééducation hypopressive basée sur le rôle expirateur du muscle transverse de l’abdomen. (Cf. Gymnastique périnéale hypopressive, page…)"
+            "le renforcement trop précoce des muscles abdominaux chez la femme dans le post-partum, aggrave cette incontinence. Il faut d’abord rééquilibrer la tension des fascias s’exerçant sur les berges urétrales afin de réintroduire le sphincter urétral à l’intérieur de l’enceinte manométrique. Le renforcement des muscles abdominaux pourra ensuite être entrepris en privilégiant une rééducation hypopressive basée sur le rôle expirateur du muscle transverse de l’abdomen."
           ]
         }
       ]
@@ -497,7 +487,7 @@ export const chapter18Fr: Chapter = {
         {
           "type": "rop",
           "body": [
-            "Notre action sur l’IUE vise à rééquilibrer les tensions des fascias entourant l’urètre en agissant sur le plexus pudendal, les attaches du périnée sur le coccyx, la symphyse pubienne, les branches ischio-pubiennes et le noyau fibreux central du périnée. Le système hormonal participe à cet équilibre des fascias. (Cf. Chapitre 19 Cycle menstruel, page…)"
+            "Notre action sur l’IUE vise à rééquilibrer les tensions des fascias entourant l’urètre en agissant sur le plexus pudendal, les attaches du périnée sur le coccyx, la symphyse pubienne, les branches ischio-pubiennes et le noyau fibreux central du périnée. Le système hormonal participe à cet équilibre des fascias."
           ]
         },
         {
@@ -634,8 +624,8 @@ export const chapter18Fr: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Parasympathique pelvien (sacré): moelle sacrée S2-S3 S4 (étage vertébral L1-L2); (figures 4.23)",
-            "Colonne vertébrale, articulations costo-transversaires Th10 à L2 (vertèbres Th11-Th12), chaîne ganglionnaire latéro-vertébrale thoracique inférieure, lombaire et sacrée); (figures 4.29 et 4.32)",
+            "Parasympathique pelvien (sacré): moelle sacrée S2-S3 S4 (étage vertébral L1-L2);",
+            "Colonne vertébrale, articulations costo-transversaires Th10 à L2 (vertèbres Th11-Th12), chaîne ganglionnaire latéro-vertébrale thoracique inférieure, lombaire et sacrée);",
             "Foie, intestins, reins (cystites, cystalgies chroniques);"
           ]
         },
@@ -646,12 +636,12 @@ export const chapter18Fr: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Cavité pelvienne, périnée: (figures 17.15, 17.16 et 17.17)",
-            "Vessie: (figures 18.7, 18.8 et 18.9)",
+            "Cavité pelvienne, périnée",
+            "Vessie",
             "Ligaments pubo-vésicaux: bord postérieur de la malléole tibiale;",
-            "Trigone de la vessie, région cervico-isthmique de l’utérus/ prostate: repérer la zone réflexe du noyau fibreux central du périnée, en avant du coccyx (figure 18.10), un sillon orienté dorsalement et postérieur aboutit à une fossette à la face postéro-médiale du calcanéum;",
+            "Trigone de la vessie, région cervico-isthmique de l’utérus/ prostate: repérer la zone réflexe du noyau fibreux central du périnée, en avant du coccyx, un sillon orienté dorsalement et postérieur aboutit à une fossette à la face postéro-médiale du calcanéum;",
             "Vessie et corps de l’utérus: zone légèrement bombée antérieure au trigone;",
-            "Fente uro-génitale, noyau fibreux central du périnée, urètre et sphincter externe de la vessie: bord inférieur du calcanéum en avant du coccyx. (figure 18.10)"
+            "Fente uro-génitale, noyau fibreux central du périnée, urètre et sphincter externe de la vessie: bord inférieur du calcanéum en avant du coccyx."
           ]
         },
         {
@@ -661,7 +651,7 @@ export const chapter18Fr: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Balance cerveau limbique-vessie: écoute-induction, un pouce sur la vessie, l’autre pouce sur cerveau limbique. (figure 1.12)"
+            "Balance cerveau limbique-vessie: écoute-induction, un pouce sur la vessie, l’autre pouce sur cerveau limbique."
           ]
         }
       ]
