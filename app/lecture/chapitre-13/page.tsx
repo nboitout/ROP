@@ -34,6 +34,7 @@ export default async function Chapitre13LecturePage({
       slides={chapter13Slides}
       anchors={chapter13SlideAnchors}
       backHref="/chapitres-gratuits"
+      sectionRail
     />
   )
 }

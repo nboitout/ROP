@@ -23,6 +23,7 @@ type Props = {
   anchors: SyncAnchor[]
   // "Tous les chapitres" link target (the free-chapters list).
   backHref?: string
+  sectionRail?: boolean
 }
 
 type XrefReturn = { href: string; label: string } | null
@@ -146,7 +147,7 @@ function asSlideList(slide: number | number[] | undefined) {
   return slide ?? []
 }
 
-export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, backHref = '/chapitres-gratuits' }: Props) {
+export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, backHref = '/chapitres-gratuits', sectionRail = false }: Props) {
   const { lang, t } = useLanguage()
   const searchParams = useSearchParams()
   const ui = SS_UI[lang] ?? SS_UI.fr
@@ -162,6 +163,7 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
   )
   const [progress, setProgress] = useState(0)
   const [active, setActive] = useState(1)
+  const [activeSectionId, setActiveSectionId] = useState(chapter.sections[0]?.id ?? '')
   const [lightbox, setLightbox] = useState<{ src: string; alt: string; caption: string; orientation?: 'portrait' | 'landscape' } | null>(null)
   const [lightboxZoom, setLightboxZoom] = useState(1)
   const [isPhonePortrait, setIsPhonePortrait] = useState(false)
@@ -269,6 +271,16 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
         }
       })
       setActive(current)
+
+      const sectionThreshold = window.innerHeight * 0.36
+      let currentSection = chapter.sections[0]?.id ?? ''
+      chapter.sections.forEach((section) => {
+        const sectionEl = document.getElementById(`sec-${section.id}`)
+        if (sectionEl && sectionEl.getBoundingClientRect().top <= sectionThreshold) {
+          currentSection = section.id
+        }
+      })
+      setActiveSectionId(currentSection)
     }
     onScroll()
     window.addEventListener('scroll', onScroll, { passive: true })
@@ -385,6 +397,12 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
     goToSlide(ropJumpSlide)
   }
 
+  function goToSection(sectionId: string) {
+    track('sync_section_nav', { section: sectionId })
+    setActiveSectionId(sectionId)
+    animateTo(() => document.getElementById(`sec-${sectionId}`))
+  }
+
   function openSlideLightbox(n: number) {
     const s = slides[n - 1]
     if (!s) return
@@ -409,6 +427,30 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
   return (
     <div className="cr-root">
       <div className="cr-progress" aria-hidden><div className="cr-progress-bar" style={{ transform: `scaleX(${progress})` }} /></div>
+
+      {sectionRail && (
+        <nav className="ss-section-rail" aria-label="Navigation du chapitre">
+          <div className="ss-section-rail-line" aria-hidden />
+          {chapter.sections.map((section, index) => {
+            const isActive = activeSectionId === section.id
+            return (
+              <button
+                key={section.id}
+                type="button"
+                className={`ss-section-pin${isActive ? ' is-active' : ''}`}
+                onClick={() => goToSection(section.id)}
+                aria-current={isActive ? 'location' : undefined}
+              >
+                <span className="ss-section-tick" aria-hidden />
+                <span className="ss-section-card">
+                  <span className="ss-section-num">{String(index + 1).padStart(2, '0')}</span>
+                  <span className="ss-section-title">{section.title}</span>
+                </span>
+              </button>
+            )
+          })}
+        </nav>
+      )}
 
       <div className="cr-topbar">
         <Link href={backHref} className="cr-home">{t.reader.back}</Link>
