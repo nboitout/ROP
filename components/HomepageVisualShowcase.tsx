@@ -39,6 +39,9 @@ export default function HomepageVisualShowcase() {
           Une sélection de planches issues des chapitres donne un aperçu de la richesse graphique du livre:
           cartes réflexes, schémas anatomiques, synthèses cliniques et repères thérapeutiques.
         </p>
+        <p className="visual-showcase-mobile-body">
+          Un aperçu mobile des cartes, schémas et synthèses du livre.
+        </p>
         <span className="visual-showcase-control">
           {paused ? 'Carousel en pause' : 'Cliquer pour mettre en pause'}
         </span>
