@@ -660,71 +660,64 @@ a.ss-switch-opt:hover { color:var(--gold); }
 @media (min-width:1280px) {
   .ss-section-rail {
     position:fixed;
-    right:max(12px, calc((100vw - 1480px) / 2 + 10px));
+    right:max(14px, calc((100vw - 1480px) / 2 + 12px));
     top:96px;
     bottom:36px;
     z-index:95;
     display:flex;
     flex-direction:column;
     justify-content:center;
-    gap:5px;
-    width:22px;
-  }
-  .ss-section-rail-line {
-    position:absolute;
-    right:10px;
-    top:0;
-    bottom:0;
-    width:1px;
-    background:repeating-linear-gradient(to bottom, rgba(26,26,24,.16) 0 5px, transparent 5px 15px);
-    pointer-events:none;
+    align-items:flex-end;
+    gap:8px;
+    width:34px;
   }
   .ss-section-pin {
     position:relative;
     display:flex;
     align-items:center;
     justify-content:flex-end;
-    width:22px;
-    height:12px;
+    width:34px;
+    height:10px;
     border:0;
     background:transparent;
     padding:0;
     cursor:pointer;
-    color:rgba(26,26,24,.28);
+    color:rgba(26,26,24,.22);
   }
   .ss-section-tick {
     position:absolute;
-    right:4px;
-    width:7px;
-    height:1px;
+    right:0;
+    width:9px;
+    height:2px;
+    border-radius:999px;
     background:currentColor;
-    transition:width .18s ease, background .18s ease;
+    transition:width .18s ease, background .18s ease, opacity .18s ease;
   }
   .ss-section-pin:hover .ss-section-tick,
   .ss-section-pin:focus-visible .ss-section-tick {
-    width:13px;
-    background:var(--gold);
+    width:18px;
+    background:rgba(160,124,58,.7);
   }
   .ss-section-pin.is-active .ss-section-tick {
-    width:16px;
-    background:rgba(26,26,24,.68);
+    width:30px;
+    background:rgba(26,26,24,.9);
   }
   .ss-section-card {
     position:absolute;
-    right:28px;
-    min-width:168px;
-    max-width:220px;
+    right:42px;
+    min-width:232px;
+    max-width:300px;
     display:grid;
     grid-template-columns:auto 1fr;
-    gap:7px;
+    gap:10px;
     align-items:center;
-    padding:7px 9px;
-    border:1px solid rgba(26,26,24,.1);
-    border-radius:6px;
-    background:rgba(251,248,241,.95);
-    box-shadow:0 10px 24px rgba(26,26,24,.1);
+    padding:12px 14px;
+    border:1px solid rgba(26,26,24,.08);
+    border-radius:12px;
+    background:rgba(255,255,255,.96);
+    box-shadow:0 16px 42px rgba(26,26,24,.13), 0 2px 6px rgba(26,26,24,.06);
     opacity:0;
-    transform:translateX(5px) scale(.98);
+    transform:translateX(6px) scale(.985);
     pointer-events:none;
     transition:opacity .18s ease, transform .18s ease;
   }
@@ -734,16 +727,17 @@ a.ss-switch-opt:hover { color:var(--gold); }
     transform:translateX(0) scale(1);
   }
   .ss-section-num {
-    font-size:.55rem;
-    letter-spacing:.12em;
-    color:var(--gold);
+    font-size:.66rem;
+    letter-spacing:0;
+    color:rgba(26,26,24,.45);
     font-weight:700;
+    font-family:'DM Sans',sans-serif;
   }
   .ss-section-title {
-    font-family:'Cormorant Garamond',serif;
-    font-size:.9rem;
-    line-height:1.1;
-    color:var(--ink);
+    font-family:'DM Sans',sans-serif;
+    font-size:.86rem;
+    line-height:1.25;
+    color:rgba(26,26,24,.82);
     white-space:nowrap;
     overflow:hidden;
     text-overflow:ellipsis;

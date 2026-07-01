@@ -430,7 +430,6 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
 
       {sectionRail && (
         <nav className="ss-section-rail" aria-label="Navigation du chapitre">
-          <div className="ss-section-rail-line" aria-hidden />
           {chapter.sections.map((section, index) => {
             const isActive = activeSectionId === section.id
             return (
