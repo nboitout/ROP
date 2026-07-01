@@ -32,6 +32,9 @@ function LangCell({ href, status }: { href: string | null; status: LangStatus })
   if (status === 'none' || !href) {
     return <span className="adm-chip none">{STATUS_LABEL.none}</span>
   }
+  if (status === 'fallback') {
+    return <span className="adm-chip fallback">{STATUS_LABEL.fallback}</span>
+  }
   return (
     <a className={`adm-chip ${status}`} href={href} target="_blank" rel="noopener noreferrer">
       {STATUS_LABEL[status]} -&gt;
