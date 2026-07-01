@@ -5,7 +5,7 @@
 // Navigating the slides (arrows / dots) scrolls the text to the matching
 // passage, so the two media stay in step in both directions.
 
-import { Fragment, useEffect, useMemo, useRef, useState } from 'react'
+import { Fragment, type MouseEvent, useEffect, useMemo, useRef, useState } from 'react'
 import Link from 'next/link'
 import { useSearchParams } from 'next/navigation'
 import type { Chapter, Block, Section } from '@/content/types'
@@ -164,11 +164,13 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
   const [progress, setProgress] = useState(0)
   const [active, setActive] = useState(1)
   const [activeSectionId, setActiveSectionId] = useState(chapter.sections[0]?.id ?? '')
+  const [railHoverIndex, setRailHoverIndex] = useState<number | null>(null)
   const [lightbox, setLightbox] = useState<{ src: string; alt: string; caption: string; orientation?: 'portrait' | 'landscape' } | null>(null)
   const [lightboxZoom, setLightboxZoom] = useState(1)
   const [isPhonePortrait, setIsPhonePortrait] = useState(false)
   const xrefReturn = getSafeXrefReturn(searchParams)
   const articleRef = useRef<HTMLElement>(null)
+  const sectionRailRef = useRef<HTMLElement>(null)
   // While a slide-driven scroll is in flight, the scroll handler must not
   // fight the manually selected slide.
   const suppressSyncUntil = useRef(0)
@@ -427,6 +429,25 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
     animateTo(() => document.getElementById(`sec-${sectionId}`))
   }
 
+  function handleSectionRailMove(e: MouseEvent<HTMLElement>) {
+    const buttons = Array.from(sectionRailRef.current?.querySelectorAll<HTMLElement>('.ss-section-pin') ?? [])
+    if (buttons.length === 0) return
+    const closest = buttons.reduce((best, button, index) => {
+      const rect = button.getBoundingClientRect()
+      const distance = Math.abs(e.clientY - (rect.top + rect.height / 2))
+      return distance < best.distance ? { index, distance } : best
+    }, { index: 0, distance: Infinity })
+    setRailHoverIndex((current) => current === closest.index ? current : closest.index)
+  }
+
+  function sectionRailTickWidth(index: number, isActive: boolean) {
+    const base = isActive ? 30 : 9
+    if (railHoverIndex === null) return base
+    const distance = Math.abs(index - railHoverIndex)
+    const hoverWidth = [34, 25, 17, 12][distance] ?? 9
+    return Math.max(base, hoverWidth)
+  }
+
   function openSlideLightbox(n: number) {
     const s = slides[n - 1]
     if (!s) return
@@ -453,7 +474,13 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
       <div className="cr-progress" aria-hidden><div className="cr-progress-bar" style={{ transform: `scaleX(${progress})` }} /></div>
 
       {sectionRail && (
-        <nav className="ss-section-rail" aria-label="Navigation du chapitre">
+        <nav
+          ref={sectionRailRef}
+          className="ss-section-rail"
+          aria-label="Navigation du chapitre"
+          onMouseMove={handleSectionRailMove}
+          onMouseLeave={() => setRailHoverIndex(null)}
+        >
           {chapter.sections.map((section, index) => {
             const isActive = activeSectionId === section.id
             return (
@@ -464,7 +491,7 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
                 onClick={() => goToSection(section.id)}
                 aria-current={isActive ? 'location' : undefined}
               >
-                <span className="ss-section-tick" aria-hidden />
+                <span className="ss-section-tick" style={{ width: `${sectionRailTickWidth(index, isActive)}px` }} aria-hidden />
                 <span className="ss-section-card">
                   <span className="ss-section-num">{String(index + 1).padStart(2, '0')}</span>
                   <span className="ss-section-title">{section.title}</span>
