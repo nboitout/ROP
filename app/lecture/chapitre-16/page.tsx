@@ -5,7 +5,19 @@ import SlideSyncReader from '@/components/SlideSyncReader'
 import { getChapter } from '@/content/registry'
 import { getServerLang } from '@/app/i18n/serverLang'
 import { translations } from '@/app/i18n/translations'
-import { chapter16Slides, chapter16SlideAnchors } from '@/content/chapter16.slidesync'
+import type { Lang } from '@/app/i18n/translations'
+import {
+  chapter16Slides, chapter16SlidesEn, chapter16SlidesDe, chapter16SlidesEs, chapter16SlidesIt,
+  chapter16SlideAnchors,
+} from '@/content/chapter16.slidesync'
+
+const DECKS: Record<Lang, typeof chapter16Slides> = {
+  fr: chapter16Slides,
+  en: chapter16SlidesEn,
+  de: chapter16SlidesDe,
+  es: chapter16SlidesEs,
+  it: chapter16SlidesIt,
+}
 
 export const metadata: Metadata = {
   title: 'Chapitre 16 — Reins · R.O.P. · Guy Boitout',
@@ -25,13 +37,13 @@ export default async function Chapitre16LecturePage({
 
   const { lang: langParam } = await searchParams
   const lang = await getServerLang(langParam)
-  const { chapter } = getChapter('chapter-16', 'fr')
+  const { chapter } = getChapter('chapter-16', lang)
 
   return (
     <SlideSyncReader
       chapter={chapter}
       bookTitle={translations[lang].reader.bookTitle}
-      slides={chapter16Slides}
+      slides={DECKS[lang]}
       anchors={chapter16SlideAnchors}
       backHref="/chapitres-gratuits"
     />

@@ -26,6 +26,86 @@ export const chapter15Slides: SyncSlide[] = [
   { src: '/chapter-15/slides/slide-16.png', title: 'Cartographie podale ROP' },
 ]
 
+function withChapter15Titles(titles: string[]): SyncSlide[] {
+  return chapter15Slides.map((slide, index) => ({ ...slide, title: titles[index] ?? slide.title }))
+}
+
+export const chapter15SlidesEn = withChapter15Titles([
+  'Colon and Rectum',
+  'Architecture of the colonic frame',
+  'Origin: caecum and ileocaecal junction',
+  'Ascending colon, transverse colon and colic flexures',
+  'Descending colon and sigmoid loop',
+  'Pelvic crossroads: rectum and anal canal',
+  'Functional matrix: anorectal control',
+  'Vascular supply and consequences',
+  'Autonomic neural wiring',
+  'Physiology: motility and absorption',
+  'Autonomic wiring: innervation and reflexes',
+  'Mechanics of defecation',
+  'Clinical picture: constipation and colopathies',
+  'Viscerosomatic synthesis',
+  'ROP mapping: nervous system, limbic system and microbiota',
+  'ROP foot mapping',
+])
+
+export const chapter15SlidesDe = withChapter15Titles([
+  'Kolon und Rektum',
+  'Architektur des Kolonrahmens',
+  'Ursprung: Caecum und ileocaecaler Uebergang',
+  'Aufsteigendes Kolon, Querkolon und Kolonflexuren',
+  'Absteigendes Kolon und Sigmaschleife',
+  'Pelviner Kreuzungspunkt: Rektum und Analkanal',
+  'Funktionelle Matrix: anorektale Kontrolle',
+  'Gefaessversorgung und Folgen',
+  'Autonome nervale Verschaltung',
+  'Physiologie: Motilitaet und Absorption',
+  'Autonome Verschaltung: Innervation und Reflexe',
+  'Mechanik der Defaekation',
+  'Klinik: Obstipation und Kolopathien',
+  'Viszerosomatische Synthese',
+  'ROP-Kartographie: Nervensystem, limbisches System und Mikrobiota',
+  'ROP-Fusskartographie',
+])
+
+export const chapter15SlidesEs = withChapter15Titles([
+  'Colon y recto',
+  'Arquitectura del marco colonico',
+  'Origen: ciego y union ileocecal',
+  'Colon ascendente, transverso y angulos colonicos',
+  'Colon descendente y asa sigmoidea',
+  'Encrucijada pelvica: recto y canal anal',
+  'Matriz funcional: control anorrectal',
+  'Irrigacion vascular y consecuencias',
+  'Cableado neurologico autonomo',
+  'Fisiologia: motilidad y absorcion',
+  'Cableado autonomo: inervacion y reflejos',
+  'Mecanica de la defecacion',
+  'Clinica: estrenimiento y colopatias',
+  'Sintesis viscerosomatica',
+  'Cartografia ROP: sistema nervioso, limbico y microbiota',
+  'Cartografia podal ROP',
+])
+
+export const chapter15SlidesIt = withChapter15Titles([
+  'Colon e retto',
+  'Architettura della cornice colica',
+  'Origine: cieco e giunzione ileocecale',
+  'Colon ascendente, trasverso e flessure coliche',
+  'Discesa e ansa sigmoidea',
+  'Crocevia pelvico: retto e canale anale',
+  'Matrice funzionale: controllo anorettale',
+  'Irrorazione vascolare e conseguenze',
+  'Cablaggio neurologico autonomo',
+  'Fisiologia: motilita e assorbimento',
+  'Cablaggio autonomo: innervazione e riflessi',
+  'Meccanica della defecazione',
+  'Clinica: stipsi e colopatie',
+  'Sintesi viscerosomatica',
+  'Mappatura ROP: sistema nervoso, sistema limbico e microbiota',
+  'Mappatura podalica ROP',
+])
+
 export const chapter15SlideAnchors: SyncAnchor[] = [
   { sectionId: 'presentation', blockIndex: -1, slide: 1 },
   { sectionId: 'presentation', blockIndex: 0, slide: 2 },
