@@ -26,6 +26,19 @@ const ALWAYS_EXCLUDED_EMAILS = [
   'guyboitout.osteo@free.fr', // Guy Boitout (author / reviewer)
 ]
 
+// Team members who should disappear from the dashboard only from a given date
+// onward, while preserving any earlier historical traffic.
+const DATE_SCOPED_EXCLUSIONS = [
+  {
+    startDate: '2026-06-27',
+    emails: ['matei.boitout@gmail.com'],
+    readerIds: [
+      'b5bd7511-f9f1-4b25-bae4-8300acb2c4c7', // Matei - mobile
+      '7e3032dd-0416-4446-852f-8c16ca4e61ee', // Matei - desktop
+    ],
+  },
+]
+
 // ---- Types ----
 
 export interface LeadRow {
@@ -238,6 +251,10 @@ function rowsToLeadsLegacy(rows: string[][]): LeadRow[] {
 
 const UUID_RE = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i
 
+function isoDate(timestamp: string): string {
+  return timestamp.slice(0, 10)
+}
+
 function rowsToEvents(rows: string[][]): EventRow[] {
   if (rows.length < 2) return []
   return rows.slice(1).map((r) => {
@@ -348,15 +365,65 @@ export async function fetchAllSheets(): Promise<{
   const allEvents = rowsToEvents(eventsResult.rows)
   const allVisits = rowsToVisits(visitsResult.rows).filter((v) => !v.page.includes('/admin'))
 
+  const datedReaderExclusions = new Map<string, string>()
+  DATE_SCOPED_EXCLUSIONS.forEach(({ startDate, readerIds }) => {
+    readerIds.forEach((readerId) => {
+      const key = readerId.trim().toLowerCase()
+      if (!key) return
+      const existing = datedReaderExclusions.get(key)
+      if (!existing || startDate < existing) datedReaderExclusions.set(key, startDate)
+    })
+  })
+
+  const datedEmailExclusions = DATE_SCOPED_EXCLUSIONS.flatMap(({ startDate, emails }) =>
+    emails
+      .map((email) => email.trim().toLowerCase())
+      .filter(Boolean)
+      .map((email) => ({ email, startDate }))
+  )
+
   // Also add readerIds found via email lookup in Leads
   allLeads
     .filter((l) => excludedEmails.has(l.email.toLowerCase()))
     .forEach((l) => { if (l.readerId) excludedReaderIds.add(l.readerId.toLowerCase()) })
 
+  // Date-scoped email exclusions can mint new reader_ids over time (new device,
+  // cleared cookies, etc.). Add those ids with the same cutoff date instead of
+  // excluding them globally, so pre-cutoff history remains visible.
+  allLeads.forEach((l) => {
+    const email = l.email.toLowerCase()
+    const leadDate = isoDate(l.timestamp)
+    datedEmailExclusions.forEach(({ email: excludedEmail, startDate }) => {
+      if (email !== excludedEmail || leadDate < startDate || !l.readerId) return
+      const readerId = l.readerId.toLowerCase()
+      const existing = datedReaderExclusions.get(readerId)
+      if (!existing || startDate < existing) datedReaderExclusions.set(readerId, startDate)
+    })
+  })
+
+  const isDatedExcludedReader = (readerId: string, timestamp: string) => {
+    const startDate = datedReaderExclusions.get(readerId.toLowerCase())
+    return !!startDate && isoDate(timestamp) >= startDate
+  }
+
+  const isDatedExcludedLead = (lead: LeadRow) =>
+    datedEmailExclusions.some(
+      ({ email, startDate }) => lead.email.toLowerCase() === email && isoDate(lead.timestamp) >= startDate
+    ) || isDatedExcludedReader(lead.readerId, lead.timestamp)
+
   // Apply exclusions first
-  const cleanLeads  = allLeads.filter((l) => !excludedReaderIds.has(l.readerId.toLowerCase()) && !excludedEmails.has(l.email.toLowerCase()))
-  const cleanEvents = allEvents.filter((e) => !excludedReaderIds.has(e.readerId.toLowerCase()))
-  const cleanVisits = allVisits.filter((v) => !excludedReaderIds.has(v.readerId.toLowerCase()))
+  const cleanLeads = allLeads.filter(
+    (l) =>
+      !excludedReaderIds.has(l.readerId.toLowerCase()) &&
+      !excludedEmails.has(l.email.toLowerCase()) &&
+      !isDatedExcludedLead(l)
+  )
+  const cleanEvents = allEvents.filter(
+    (e) => !excludedReaderIds.has(e.readerId.toLowerCase()) && !isDatedExcludedReader(e.readerId, e.timestamp)
+  )
+  const cleanVisits = allVisits.filter(
+    (v) => !excludedReaderIds.has(v.readerId.toLowerCase()) && !isDatedExcludedReader(v.readerId, v.timestamp)
+  )
 
   // --- Traffic-quality filter --------------------------------------------
   // One rule instead of the old stack of country / desktop-Linux / stale-Chrome
