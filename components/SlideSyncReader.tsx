@@ -389,6 +389,28 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
     animateTo(() => articleRef.current?.querySelector<HTMLElement>(`[data-slide-anchor="${slide}"]`) ?? null)
   }
 
+  function slideForSection(sectionId: string) {
+    const inSection = anchors.filter((a) => a.sectionId === sectionId)
+    if (inSection.length > 0) {
+      const blocks = inSection.filter((a) => a.blockIndex >= 0)
+      const pick = (blocks.length ? blocks : inSection).reduce((lo, a) =>
+        a.blockIndex < lo.blockIndex ? a : lo
+      )
+      return asSlideList(pick.slide)[0] ?? null
+    }
+
+    const sectionEl = document.getElementById(`sec-${sectionId}`)
+    if (!sectionEl) return null
+    const sectionTop = sectionEl.offsetTop
+    let current = 1
+    articleRef.current?.querySelectorAll<HTMLElement>('[data-slide-anchor]').forEach((anchorEl) => {
+      if (anchorEl.offsetTop <= sectionTop) {
+        current = Number(anchorEl.dataset.slideAnchor) || current
+      }
+    })
+    return current
+  }
+
   // Jump to the reflex-zone (ROP) section by landing on its first reflex-zone
   // slide's pointer in the text, with the deck synced to that slide.
   function goToReflexZones() {
@@ -398,7 +420,9 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
   }
 
   function goToSection(sectionId: string) {
-    track('sync_section_nav', { section: sectionId })
+    const sectionSlide = slideForSection(sectionId)
+    if (sectionSlide) setActive(sectionSlide)
+    track('sync_section_nav', { section: sectionId, slide: sectionSlide })
     setActiveSectionId(sectionId)
     animateTo(() => document.getElementById(`sec-${sectionId}`))
   }
