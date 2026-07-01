@@ -8,7 +8,7 @@ import { translations } from '@/app/i18n/translations'
 import type { Lang } from '@/app/i18n/translations'
 import {
   chapter15Slides, chapter15SlidesEn, chapter15SlidesDe, chapter15SlidesEs, chapter15SlidesIt,
-  chapter15SlideAnchors,
+  chapter15SlideAnchors, chapter15SlideAnchorsEn,
 } from '@/content/chapter15.slidesync'
 
 const DECKS: Record<Lang, typeof chapter15Slides> = {
@@ -17,6 +17,17 @@ const DECKS: Record<Lang, typeof chapter15Slides> = {
   de: chapter15SlidesDe,
   es: chapter15SlidesEs,
   it: chapter15SlidesIt,
+}
+
+// The English deck has its own artwork and one extra slide, so it uses a
+// dedicated anchor table; the other languages reuse the French diagrams and
+// anchors.
+const ANCHORS: Record<Lang, typeof chapter15SlideAnchors> = {
+  fr: chapter15SlideAnchors,
+  en: chapter15SlideAnchorsEn,
+  de: chapter15SlideAnchors,
+  es: chapter15SlideAnchors,
+  it: chapter15SlideAnchors,
 }
 
 export const metadata: Metadata = {
@@ -44,7 +55,7 @@ export default async function Chapitre15LecturePage({
       chapter={chapter}
       bookTitle={translations[lang].reader.bookTitle}
       slides={DECKS[lang]}
-      anchors={chapter15SlideAnchors}
+      anchors={ANCHORS[lang]}
       backHref="/chapitres-gratuits"
     />
   )
