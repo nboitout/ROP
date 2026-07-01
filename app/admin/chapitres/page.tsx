@@ -3,7 +3,6 @@ import { translations, type Lang } from '@/app/i18n/translations'
 import { getChapterLangs, getChapterTranslations } from '@/content/registry'
 import { getChapterSlideVisuals } from '@/content/slidesyncRegistry'
 import ChapterBoard, { type BoardRow, type LangStatus } from '@/components/admin/ChapterBoard'
-import HomepageVisualShowcase from '@/components/HomepageVisualShowcase'
 import {
   chapterQualityIssues,
   chapterQualityMetrics,
@@ -393,7 +392,6 @@ export default async function AdminChapitresPage() {
         </div>
       </section>
 
-      <HomepageVisualShowcase />
     </main>
   )
 }

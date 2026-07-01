@@ -1,8 +1,8 @@
 'use client'
 
 import Image from 'next/image'
-import { useState, useEffect } from 'react'
 import HeroCarousel from '@/components/HeroCarousel'
+import HomepageVisualShowcase from '@/components/HomepageVisualShowcase'
 import QuoteSlider from '@/components/QuoteSlider'
 import FreeChapterForm from '@/components/FreeChapterForm'
 import BookNotifyForm from '@/components/BookNotifyForm'
@@ -18,15 +18,8 @@ const CARD_SLUG: Record<string, string> = {
   '14': 'chapter-14',
 }
 
-const INFOGRAPHICS = [
-  { src: '/assets/infographic-fig1.png', caption: 'Chapitre 5' },
-  { src: '/assets/HomePage -- Illustration SNA sur le pied FR.png', caption: 'Chapitre 4', orientation: 'landscape' },
-  { src: '/assets/infographic-fig3.png', caption: 'Chapitre 1' },
-]
-
 export default function HomePage() {
   const { t, lang } = useLanguage()
-  const [lightboxSrc, setLightboxSrc] = useState<string | null>(null)
 
   function trackCta(cta: string) {
     fetch('/api/track', {
@@ -36,13 +29,6 @@ export default function HomePage() {
       keepalive: true,
     }).catch(() => {})
   }
-
-  useEffect(() => {
-    if (!lightboxSrc) return
-    function onKey(e: KeyboardEvent) { if (e.key === 'Escape') setLightboxSrc(null) }
-    window.addEventListener('keydown', onKey)
-    return () => window.removeEventListener('keydown', onKey)
-  }, [lightboxSrc])
 
   return (
     <main>
@@ -86,25 +72,6 @@ export default function HomePage() {
               <div className="hl-name">Guy Boitout</div>
               <div className="hl-role">{t.hero.role}</div>
             </div>
-            <div className="hl-infographics">
-              <p className="hl-ig-subtitle">De nombreux supports visuels pour chaque chapitre</p>
-              <div className="ig-grid">
-                {INFOGRAPHICS.map(({ src, caption, orientation }) => (
-                  <button
-                    key={src}
-                    className={`ig-card${orientation === 'landscape' ? ' is-landscape' : ''}`}
-                    onClick={() => setLightboxSrc(src)}
-                    aria-label={`Agrandir l'infographie : ${caption}`}
-                  >
-                    <div className="ig-img-wrap">
-                      <Image src={src} alt={caption} fill style={{ objectFit: 'contain' }} sizes="(max-width:768px) 90vw, 20vw" unoptimized={src.endsWith('.gif')} />
-                      <span className="ig-zoom" aria-hidden>⌕</span>
-                    </div>
-                    <p className="ig-caption">{caption}</p>
-                  </button>
-                ))}
-              </div>
-            </div>
           </div>
         </div>
         <div className="hr">
@@ -119,6 +86,8 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      <HomepageVisualShowcase />
 
       {/* AUTEUR */}
       <section id="auteur">
@@ -477,14 +446,6 @@ export default function HomePage() {
         </div>
       </footer>
 
-      {lightboxSrc && (
-        <div className="ig-lightbox" onClick={() => setLightboxSrc(null)} role="dialog" aria-modal="true" aria-label="Infographie agrandie">
-          <button className="ig-lb-close" onClick={() => setLightboxSrc(null)} aria-label="Fermer">×</button>
-          <div className="ig-lb-inner" onClick={(e) => e.stopPropagation()}>
-            <img src={lightboxSrc} alt="" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
-          </div>
-        </div>
-      )}
     </main>
   )
 }
