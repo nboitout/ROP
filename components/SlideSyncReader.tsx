@@ -24,6 +24,7 @@ type Props = {
   // "Tous les chapitres" link target (the free-chapters list).
   backHref?: string
   sectionRail?: boolean
+  showClinicalCaseResource?: boolean
 }
 
 type XrefReturn = { href: string; label: string } | null
@@ -147,7 +148,7 @@ function asSlideList(slide: number | number[] | undefined) {
   return slide ?? []
 }
 
-export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, backHref = '/chapitres-gratuits', sectionRail = true }: Props) {
+export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, backHref = '/chapitres-gratuits', sectionRail = true, showClinicalCaseResource = false }: Props) {
   const { lang, t } = useLanguage()
   const searchParams = useSearchParams()
   const ui = SS_UI[lang] ?? SS_UI.fr
@@ -171,6 +172,8 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
   const xrefReturn = getSafeXrefReturn(searchParams)
   const articleRef = useRef<HTMLElement>(null)
   const sectionRailRef = useRef<HTMLElement>(null)
+  const resourceOpenedAt = useRef<number | null>(null)
+  const resourceNameRef = useRef<string | null>(null)
   // While a slide-driven scroll is in flight, the scroll handler must not
   // fight the manually selected slide.
   const suppressSyncUntil = useRef(0)
@@ -323,7 +326,20 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
     }
   }, [])
 
+  function openResource(name: string, img: { src: string; alt: string; caption: string }) {
+    resourceOpenedAt.current = Date.now()
+    resourceNameRef.current = name
+    setLightbox({ ...img, orientation: 'landscape' })
+    track('resource_open', { resource: name })
+  }
+
   function closeLightbox() {
+    if (resourceNameRef.current && resourceOpenedAt.current) {
+      const seconds = Math.round((Date.now() - resourceOpenedAt.current) / 1000)
+      track('resource_close', { resource: resourceNameRef.current, duration_seconds: seconds })
+    }
+    resourceNameRef.current = null
+    resourceOpenedAt.current = null
     setLightbox(null)
     setLightboxZoom(1)
   }
@@ -675,6 +691,23 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
           })}
         </article>
       </div>
+
+      {showClinicalCaseResource && chapter.clinicalCase && (
+        <div className="cr-resources">
+          <p className="cr-resources-label">{t.reader.resources}</p>
+          <div className="cr-resources-row">
+            <button
+              type="button"
+              className="cr-resource-card cr-resource-card--case"
+              onClick={() => openResource('clinical_case', chapter.clinicalCase!)}
+              aria-label={t.reader.clinicalCase}
+            >
+              <img src={chapter.clinicalCase.src} alt="" aria-hidden />
+              <span className="cr-resource-name">{t.reader.clinicalCase}</span>
+            </button>
+          </div>
+        </div>
+      )}
 
       {lightbox && (
         <div

@@ -399,5 +399,10 @@ export const chapter13Fr: Chapter = {
         }
       ]
     }
-  ]
+  ],
+  clinicalCase: {
+    src: "/chapter-13/clinical-case.png",
+    alt: "Cas clinique - fatigue post-mononucleose et point de cote gauche",
+    caption: "Cas clinique - Chapitre 13",
+  },
 }
