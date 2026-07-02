@@ -43,7 +43,7 @@ export const chapter10Fr: Chapter = {
     },
     {
       id: "anatomie-figure-10-1",
-      title: "Anatomie (figure 10.1)",
+      title: "Anatomie",
       blocks: [
         {
           type: "para",

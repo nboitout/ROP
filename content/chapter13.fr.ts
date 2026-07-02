@@ -38,7 +38,7 @@ export const chapter13Fr: Chapter = {
       blocks: [
         {
           type: "para",
-          text: "La rate est située sous l’hémi-coupole diaphragmatique gauche, dans la partie postéro-supérieure de l’abdomen (figure 13.1). Elle est recouverte par la partie latérale inférieure du thorax, au niveau des 9e, 10e et 11e côtes gauches. Son grand axe suit celui de la 10e côte gauche."
+          text: "La rate est située sous l’hémi-coupole diaphragmatique gauche, dans la partie postéro-supérieure de l’abdomen. Elle est recouverte par la partie latérale inférieure du thorax, au niveau des 9e, 10e et 11e côtes gauches. Son grand axe suit celui de la 10e côte gauche."
         },
         {
           type: "para",
@@ -56,7 +56,7 @@ export const chapter13Fr: Chapter = {
         },
         {
           type: "para",
-          text: "La rate présente deux faces, trois bords et deux extrémités, ou pôles (figure 13.2)."
+          text: "La rate présente deux faces, trois bords et deux extrémités, ou pôles."
         },
         {
           type: "bullets",
@@ -93,7 +93,7 @@ export const chapter13Fr: Chapter = {
         },
         {
           type: "para",
-          text: "La rate est peu fixée par des replis péritonéaux, ce qui lui permet de suivre les mouvements du diaphragme (figure 13.3). Ces replis la relient :"
+          text: "La rate est peu fixée par des replis péritonéaux, ce qui lui permet de suivre les mouvements du diaphragme. Ces replis la relient :"
         },
         {
           type: "bullets",
@@ -134,7 +134,7 @@ export const chapter13Fr: Chapter = {
         },
         {
           type: "para",
-          text: "L’artère splénique est la plus grosse branche du tronc cœliaque (figure 13.4). Son trajet sinueux longe le bord supérieur du pancréas, puis s’insinue entre les deux feuillets du ligament splénorénal avant de se diviser en plusieurs branches à partir du hile de la rate."
+          text: "L’artère splénique est la plus grosse branche du tronc cœliaque. Son trajet sinueux longe le bord supérieur du pancréas, puis s’insinue entre les deux feuillets du ligament splénorénal avant de se diviser en plusieurs branches à partir du hile de la rate."
         },
         {
           type: "para",
@@ -371,7 +371,7 @@ export const chapter13Fr: Chapter = {
           type: "bullets",
           items: [
             "Colonne vertébrale et articulations costo-transversaires, en lien avec la chaîne ganglionnaire latéro-vertébrale thoracique Th6-Th9 (figures 4.23 et 4.29).",
-            "Plexus cœliaque (figure 13.5)."
+            "Plexus cœliaque."
           ]
         },
         {
@@ -382,7 +382,7 @@ export const chapter13Fr: Chapter = {
           type: "bullets",
           items: [
             "Organes reliés à la rate par des ligaments : estomac, pancréas, rein gauche et racine du méso-côlon transverse.",
-            "Rate : repérer d’abord l’angle splénique du côlon, plus haut que l’angle hépatique du côlon, médial et supérieur à la styloïde du 5e métatarse gauche. La zone réflexe est posée sur l’angle splénique, sous l’extrémité gauche de l’hémi-coupole diaphragmatique gauche (figure 13.6).",
+            "Rate : repérer d’abord l’angle splénique du côlon, plus haut que l’angle hépatique du côlon, médial et supérieur à la styloïde du 5e métatarse gauche. La zone réflexe est posée sur l’angle splénique, sous l’extrémité gauche de l’hémi-coupole diaphragmatique gauche.",
             "Foie : travailler le lobe gauche et l’ensemble du foie afin d’agir sur le système porte et d’améliorer la circulation de la veine splénique.",
             "Thorax postéro-inférieur gauche : diaphragme, angle splénique du côlon, 9e, 10e et 11e côtes."
           ]

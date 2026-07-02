@@ -772,7 +772,6 @@ export const chapter12Fr: Chapter = {
             "Colonne vertébrale, articulations costo-transversaires, chaîne ganglionnaire latéro-vertébrale thoracique (Th8-Th10 gauches).",
             "(figures 4.23 et 4.29)",
             "Plexus prevertebral.",
-            "(figures 12.4 et 12.6)"
           ]
         },
         {
@@ -798,8 +797,8 @@ export const chapter12Fr: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Tête du pancréas : face plantaire du pied droit, dans le cadre duodénal (figure 12.5), avec repérage de la grande caroncule et du sphincter d'Oddi à la jonction des 2/3 supérieurs et du 1/3 inférieur du 2ème duodénum, et de la petite caroncule au 1/3 supérieur.",
-            "Queue du pancréas : face plantaire du pied gauche (figure 12.7) ; repérer d'abord la styloïde du 5ème métatarse, puis l'angle splénique du côlon situe médialement et légèrement au-dessus de la styloïde.",
+            "Tête du pancréas : face plantaire du pied droit, dans le cadre duodénal, avec repérage de la grande caroncule et du sphincter d'Oddi à la jonction des 2/3 supérieurs et du 1/3 inférieur du 2ème duodénum, et de la petite caroncule au 1/3 supérieur.",
+            "Queue du pancréas : face plantaire du pied gauche ; repérer d'abord la styloïde du 5ème métatarse, puis l'angle splénique du côlon situe médialement et légèrement au-dessus de la styloïde.",
             "La rate est décrite ici comme « posee » sur l'angle splénique du côlon, sous l'hemi-coupole diaphragmatique.",
             "La queue du pancréas est médiale à la rate.",
             "Corps du pancréas : partant de la rate, un sillon cutané oblique médialement, caudalement et à droite rejoint le bord médial du pied gauche à hauteur des vertèbres L2-L3."

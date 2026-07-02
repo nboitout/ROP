@@ -52,7 +52,7 @@ export const chapter8Fr: Chapter = {
         {
           "type": "lead",
           "label": "Le diaphragme comprend trois parties et des orifices",
-          "text": "(figure 8.1)"
+          "text": ""
         },
         {
           "type": "para",
@@ -115,7 +115,7 @@ export const chapter8Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "Le diaphragme s’attache dorsalement sur la colonne lombaire par les piliers principaux et accessoires. (figure 8.1)"
+          "text": "Le diaphragme s’attache dorsalement sur la colonne lombaire par les piliers principaux et accessoires."
         },
         {
           "type": "para",
@@ -177,7 +177,7 @@ export const chapter8Fr: Chapter = {
         {
           "type": "lead",
           "label": "On décrit",
-          "text": "(figure 8.1)"
+          "text": ""
         },
         {
           "type": "lead",
@@ -283,7 +283,7 @@ export const chapter8Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "Ils laissent également le passage à la veine azygos à droite et à la veine hémi-azygos à gauche. (figure 8.6)"
+          "text": "Ils laissent également le passage à la veine azygos à droite et à la veine hémi-azygos à gauche."
         },
         {
           "type": "sub",
@@ -377,7 +377,7 @@ export const chapter8Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "Le péritoine, auquel il est relié par les muscles de Juvara et Rouget, issus du diaphragme. (figure 8.12)"
+          "text": "Le péritoine, auquel il est relié par les muscles de Juvara et Rouget, issus du diaphragme."
         },
         {
           "type": "para",
@@ -396,7 +396,7 @@ export const chapter8Fr: Chapter = {
         {
           "type": "lead",
           "label": "Artérielle",
-          "text": "le diaphragme reçoit le sang artériel par: (figure 8.5)"
+          "text": "le diaphragme reçoit le sang artériel par:"
         },
         {
           "type": "para",
@@ -424,7 +424,7 @@ export const chapter8Fr: Chapter = {
         {
           "type": "lead",
           "label": "Veines du système azygos",
-          "text": "elles cheminent de chaque côté de la colonne vertébrale. (figure 8.6)"
+          "text": "elles cheminent de chaque côté de la colonne vertébrale."
         },
         {
           "type": "para",
@@ -477,7 +477,7 @@ export const chapter8Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "Ils sont les principaux nerfs inspirateurs du diaphragme. (figure 8.2)"
+          "text": "Ils sont les principaux nerfs inspirateurs du diaphragme."
         },
         {
           "type": "para",
@@ -679,12 +679,12 @@ export const chapter8Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "Les fibres musculaires de Juvara et Rouget (figure 8.6) viennent, dans cette description, affiner l’adaptation du hiatus œsophagien aux variations de pression pour son ouverture et sa fermeture."
+          "text": "Les fibres musculaires de Juvara et Rouget viennent, dans cette description, affiner l’adaptation du hiatus œsophagien aux variations de pression pour son ouverture et sa fermeture."
         },
         {
           "type": "lead",
           "label": "Cravate d’Helvetius",
-          "text": "le système anti-reflux, appelé cravate d’Helvetius (figure 8.13), est assuré conjointement par la tension des piliers du diaphragme, le SIO, les fascias et les fibres musculaires phrénico-œsophagiennes."
+          "text": "le système anti-reflux, appelé cravate d’Helvetius, est assuré conjointement par la tension des piliers du diaphragme, le SIO, les fascias et les fibres musculaires phrénico-œsophagiennes."
         },
         {
           "type": "para",
@@ -740,7 +740,7 @@ export const chapter8Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "On distingue deux types de hernies hiatales (figure 8.8):"
+          "text": "On distingue deux types de hernies hiatales:"
         },
         {
           "type": "lead",
@@ -949,7 +949,7 @@ export const chapter8Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "En raison de l’obliquité caudale, ventrale et gauche du centre phrénique (figure 8.2), la coupole diaphragmatique gauche est en regard du 6ème espace intercostal antérieur gauche, alors que la coupole diaphragmatique droite est en regard du 5ème espace intercostal droit."
+          "text": "En raison de l’obliquité caudale, ventrale et gauche du centre phrénique, la coupole diaphragmatique gauche est en regard du 6ème espace intercostal antérieur gauche, alors que la coupole diaphragmatique droite est en regard du 5ème espace intercostal droit."
         },
         {
           "type": "figure",
@@ -973,7 +973,7 @@ export const chapter8Fr: Chapter = {
         {
           "type": "lead",
           "label": "Centre phrénique",
-          "text": "à la palpation de la texture de la peau, la partie gauche du centre phrénique est située plus bas que la partie droite, sous la tête du 1er métatarse. (figure 8.3)"
+          "text": "à la palpation de la texture de la peau, la partie gauche du centre phrénique est située plus bas que la partie droite, sous la tête du 1er métatarse."
         },
         {
           "type": "lead",
@@ -990,7 +990,7 @@ export const chapter8Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "L’attache antérieure xyphoïdienne est sur le tubercule du naviculaire. (figure 8.4)"
+          "text": "L’attache antérieure xyphoïdienne est sur le tubercule du naviculaire."
         },
         {
           "type": "para",
@@ -1034,7 +1034,7 @@ export const chapter8Fr: Chapter = {
         {
           "type": "lead",
           "label": "Hiatus de Marfran et de Larrey",
-          "text": "appendice xyphoïde, tubercule du naviculaire. (figures 8.2 et 8.4)"
+          "text": "appendice xyphoïde, tubercule du naviculaire."
         },
         {
           "type": "figure",
@@ -1055,7 +1055,7 @@ export const chapter8Fr: Chapter = {
         {
           "type": "lead",
           "label": "Jonction azygo-cave",
-          "text": "2ème et 3ème articulations chondro-costales droites. (figures 8.7 et 8.8)"
+          "text": "2ème et 3ème articulations chondro-costales droites."
         },
         {
           "type": "figure",
@@ -1070,7 +1070,7 @@ export const chapter8Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "3ème, 4ème et 5ème vertèbres cervicales sur la vue sagittale médiale de la première phalange du gros orteil et sur la vue sagittale latérale. (figures 4.23 et 8.5)"
+          "text": "3ème, 4ème et 5ème vertèbres cervicales sur la vue sagittale médiale de la première phalange du gros orteil et sur la vue sagittale latérale. (figure 4.23)"
         },
         {
           "type": "figure",
@@ -1082,7 +1082,7 @@ export const chapter8Fr: Chapter = {
         {
           "type": "lead",
           "label": "Triangle de Sédillot",
-          "text": "bord supérieur de la malléole tibiale. (figure 8.5)"
+          "text": "bord supérieur de la malléole tibiale."
         },
         {
           "type": "figure",

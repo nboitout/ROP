@@ -15,7 +15,7 @@ export const chapter7Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "Elle abrite le tractus gastro-intestinal, le foie, le pancréas, la rate, les reins, les glandes surrenales et les urétéres, ainsi que les principaux axes neuro-vasculaires (figure 7.1)."
+          "text": "Elle abrite le tractus gastro-intestinal, le foie, le pancréas, la rate, les reins, les glandes surrenales et les urétéres, ainsi que les principaux axes neuro-vasculaires."
         },
         {
           "type": "para",
@@ -49,7 +49,7 @@ export const chapter7Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "Schématiquement, la cavité abdominale est un demi-cylindre creux vertical dont les parois sont : (figure 7.2)"
+          "text": "Schématiquement, la cavité abdominale est un demi-cylindre creux vertical dont les parois sont :"
         },
         {
           "type": "bullets",
@@ -85,7 +85,7 @@ export const chapter7Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "Ces mouvements délimitent plusieurs espaces anatomiques : (figure 7.2)"
+          "text": "Ces mouvements délimitent plusieurs espaces anatomiques :"
         },
         {
           "type": "sub",
@@ -137,7 +137,7 @@ export const chapter7Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "Ses viscères occupent la cavité pelvienne (figure 7.1)."
+          "text": "Ses viscères occupent la cavité pelvienne."
         },
         {
           "type": "para",
@@ -163,7 +163,7 @@ export const chapter7Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "Il est constitue de deux feuillets : (figure 7.3)"
+          "text": "Il est constitue de deux feuillets :"
         },
         {
           "type": "sub",
@@ -285,7 +285,7 @@ export const chapter7Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "Les mésos prennent le nom du viscère qu’ils rejoignent (figure 7.4) : mésogastre, mésentère, mésocôlon transverse, mésosigmoïde."
+          "text": "Les mésos prennent le nom du viscère qu’ils rejoignent : mésogastre, mésentère, mésocôlon transverse, mésosigmoïde."
         },
         {
           "type": "para",
@@ -437,7 +437,7 @@ export const chapter7Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "Les trois branches de l’aorte abdominale destinees au système digestif sont : (figure 7.5)"
+          "text": "Les trois branches de l’aorte abdominale destinees au système digestif sont :"
         },
         {
           "type": "para",
@@ -469,7 +469,7 @@ export const chapter7Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "Son pouls peut parfois être recherché à gauche du tronc cœliaque et légèrement plus haut. (figure 7.6)"
+          "text": "Son pouls peut parfois être recherché à gauche du tronc cœliaque et légèrement plus haut."
         },
         {
           "type": "sub",
@@ -850,7 +850,7 @@ export const chapter7Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "Si nous tracons une ligne horizontale passant par l’ombilic et une ligne verticale passant par la ligne xypho-ombilicale, nous délimitons quatre quadrants : (figure 7.17)"
+          "text": "Si nous tracons une ligne horizontale passant par l’ombilic et une ligne verticale passant par la ligne xypho-ombilicale, nous délimitons quatre quadrants :"
         },
         {
           "type": "para",
@@ -887,9 +887,9 @@ export const chapter7Fr: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Racine du mésentère ; (figures 7.7, 7.8 ; figures 7.9, 7.10)",
-            "Racine du mésocôlon transverse ; (figures 7.11, 7.12 ; figures 7.13, 7.14)",
-            "Racine du mésosigmoïde. (figures 7.15, 7.16)"
+            "Racine du mésentère ;",
+            "Racine du mésocôlon transverse ;",
+            "Racine du mésosigmoïde."
           ]
         }
       ]
