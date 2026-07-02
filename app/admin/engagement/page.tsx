@@ -277,7 +277,7 @@ export default async function EngagementPage() {
         <Scorecard
           label="Return Visitor Rate"
           value={`${returnRate.toFixed(1)}%`}
-          subtitle="of distinct visitors"
+          subtitle="came back on a later day"
         />
         <Scorecard
           label="Homepage Intent Rate"
