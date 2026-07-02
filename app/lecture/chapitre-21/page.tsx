@@ -1,10 +1,20 @@
 import { cookies } from 'next/headers'
 import { redirect } from 'next/navigation'
 import type { Metadata } from 'next'
-import ChapterReader from '@/components/ChapterReader'
+import SlideSyncReader from '@/components/SlideSyncReader'
 import { getChapter } from '@/content/registry'
 import { getServerLang } from '@/app/i18n/serverLang'
 import { translations } from '@/app/i18n/translations'
+import type { Lang } from '@/app/i18n/translations'
+import { chapter21Slides, chapter21SlideAnchors } from '@/content/chapter21.slidesync'
+
+const DECKS: Record<Lang, typeof chapter21Slides> = {
+  fr: chapter21Slides,
+  en: chapter21Slides,
+  de: chapter21Slides,
+  es: chapter21Slides,
+  it: chapter21Slides,
+}
 
 export const metadata: Metadata = {
   title: 'Chapitre 21 - Systeme erectile masculin et feminin - R.O.P. - Guy Boitout',
@@ -24,13 +34,14 @@ export default async function Chapitre21LecturePage({
 
   const { lang: langParam } = await searchParams
   const lang = await getServerLang(langParam)
-  const { chapter, contentLang } = getChapter('chapter-21', lang)
+  const { chapter } = getChapter('chapter-21', lang)
 
   return (
-    <ChapterReader
+    <SlideSyncReader
       chapter={chapter}
       bookTitle={translations[lang].reader.bookTitle}
-      contentLang={contentLang}
+      slides={DECKS[lang]}
+      anchors={chapter21SlideAnchors}
       backHref="/chapitres-gratuits"
     />
   )
