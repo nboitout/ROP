@@ -1,5 +1,6 @@
 import { cookies } from 'next/headers'
 import { redirect } from 'next/navigation'
+import { canReadFreeChapter } from '@/lib/access'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { getServerLang } from '@/app/i18n/serverLang'
@@ -31,7 +32,7 @@ export const metadata: Metadata = {
 
 export default async function ChapitresGratuitsPage() {
   const cookieStore = await cookies()
-  if (!cookieStore.get('free_chapters_access')) {
+  if (!canReadFreeChapter(cookieStore)) {
     redirect('/?gate=free#acces-libre')
   }
 

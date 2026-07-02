@@ -1,5 +1,6 @@
 import { cookies } from 'next/headers'
 import { redirect } from 'next/navigation'
+import { canReadPaidChapter } from '@/lib/access'
 import type { Metadata } from 'next'
 import SlideSyncReader from '@/components/SlideSyncReader'
 import { getChapter } from '@/content/registry'
@@ -28,10 +29,7 @@ export default async function Chapitre5SyncPage({
   searchParams: Promise<{ lang?: string }>
 }) {
   const cookieStore = await cookies()
-  const hasAdminSession = !!cookieStore.get('admin_session')
-  const hasPaidAccess = !!cookieStore.get('paid_access')
-
-  if (!hasAdminSession && !hasPaidAccess) {
+  if (!canReadPaidChapter(cookieStore)) {
     redirect('/#acheter')
   }
 

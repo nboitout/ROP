@@ -1,5 +1,6 @@
 import { cookies } from 'next/headers'
 import { redirect } from 'next/navigation'
+import { canReadPaidChapter } from '@/lib/access'
 import type { Metadata } from 'next'
 import SlideSyncReader from '@/components/SlideSyncReader'
 import { getChapter } from '@/content/registry'
@@ -31,8 +32,8 @@ export default async function Chapitre18LecturePage({
   searchParams: Promise<{ lang?: string }>
 }) {
   const cookieStore = await cookies()
-  if (!cookieStore.get('free_chapters_access') && !cookieStore.get('admin_session')) {
-    redirect('/?gate=free#acces-libre')
+  if (!canReadPaidChapter(cookieStore)) {
+    redirect('/#acheter')
   }
 
   const { lang: langParam } = await searchParams

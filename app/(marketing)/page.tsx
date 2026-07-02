@@ -1,5 +1,6 @@
 'use client'
 
+import { Fragment } from 'react'
 import Image from 'next/image'
 import HeroCarousel from '@/components/HeroCarousel'
 import HomepageVisualShowcase from '@/components/HomepageVisualShowcase'
@@ -313,13 +314,13 @@ export default function HomePage() {
               </p>
               <div className="hier-row">
                 {t.protocole.hierarchy.steps.map((step, i) => (
-                  <>
-                    <div key={step} className="hier-step">
+                  <Fragment key={`${i}-${step}`}>
+                    <div className="hier-step">
                       <div className="hier-step-n">{t.protocole.hierarchy.stepOrdinals[i]}</div>
                       <div className="hier-step-t">{step}</div>
                     </div>
-                    {i < 2 && <div key={`arr-${i}`} className="hier-arr">→</div>}
-                  </>
+                    {i < 2 && <div className="hier-arr">→</div>}
+                  </Fragment>
                 ))}
               </div>
             </div>

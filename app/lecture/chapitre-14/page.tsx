@@ -1,5 +1,6 @@
 import { cookies } from 'next/headers'
 import { redirect } from 'next/navigation'
+import { canReadFreeChapter } from '@/lib/access'
 import type { Metadata } from 'next'
 import SlideSyncReader from '@/components/SlideSyncReader'
 import { getChapter } from '@/content/registry'
@@ -38,7 +39,7 @@ export default async function Chapitre14SyncPage({
   const cookieStore = await cookies()
   // Open to free-chapter readers (synchronized is now the default entry from
   // /chapitres-gratuits) and to admins.
-  if (!cookieStore.get('free_chapters_access') && !cookieStore.get('admin_session')) {
+  if (!canReadFreeChapter(cookieStore)) {
     redirect('/?gate=free#acces-libre')
   }
 

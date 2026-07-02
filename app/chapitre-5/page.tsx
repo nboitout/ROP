@@ -1,5 +1,6 @@
 import { cookies } from 'next/headers'
 import { redirect } from 'next/navigation'
+import { canReadPaidChapter } from '@/lib/access'
 import type { Metadata } from 'next'
 import { getServerLang } from '@/app/i18n/serverLang'
 
@@ -15,10 +16,7 @@ export default async function Chapitre5Page({
   searchParams: Promise<{ lang?: string }>
 }) {
   const cookieStore = await cookies()
-  const hasAdminSession = !!cookieStore.get('admin_session')
-  const hasPaidAccess = !!cookieStore.get('paid_access')
-
-  if (!hasAdminSession && !hasPaidAccess) {
+  if (!canReadPaidChapter(cookieStore)) {
     redirect('/#acheter')
   }
 

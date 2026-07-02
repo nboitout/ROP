@@ -1,5 +1,6 @@
 import { cookies } from 'next/headers'
 import { redirect } from 'next/navigation'
+import { canReadDraftChapter } from '@/lib/access'
 import type { Metadata } from 'next'
 import ChapterReader from '@/components/ChapterReader'
 import { getChapter } from '@/content/registry'
@@ -20,7 +21,7 @@ export default async function Chapitre4Page({
   searchParams: Promise<{ lang?: string }>
 }) {
   const cookieStore = await cookies()
-  if (!cookieStore.get('admin_session')) {
+  if (!canReadDraftChapter(cookieStore)) {
     redirect('/admin/login')
   }
 

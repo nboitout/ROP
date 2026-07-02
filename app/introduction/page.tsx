@@ -1,5 +1,6 @@
 import { cookies } from 'next/headers'
 import { redirect } from 'next/navigation'
+import { canReadFreeChapter } from '@/lib/access'
 import type { Metadata } from 'next'
 import ChapterReader from '@/components/ChapterReader'
 import { getChapter } from '@/content/registry'
@@ -18,7 +19,7 @@ export default async function IntroductionPage({
   searchParams: Promise<{ lang?: string }>
 }) {
   const cookieStore = await cookies()
-  if (!cookieStore.get('free_chapters_access') && !cookieStore.get('admin_session')) {
+  if (!canReadFreeChapter(cookieStore)) {
     redirect('/?gate=free#acces-libre')
   }
 

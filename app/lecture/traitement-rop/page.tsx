@@ -1,5 +1,6 @@
 import { cookies } from 'next/headers'
 import { redirect } from 'next/navigation'
+import { canReadFreeChapter } from '@/lib/access'
 import type { Metadata } from 'next'
 import SlideSyncReader from '@/components/SlideSyncReader'
 import { getChapter } from '@/content/registry'
@@ -39,9 +40,7 @@ export default async function TraitementRopPage({
   searchParams: Promise<{ lang?: string }>
 }) {
   const cookieStore = await cookies()
-  const hasAdminSession = !!cookieStore.get('admin_session')
-
-  if (!hasAdminSession && !cookieStore.get('free_chapters_access')) {
+  if (!canReadFreeChapter(cookieStore)) {
     redirect('/?gate=free#acces-libre')
   }
 

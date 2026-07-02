@@ -1,5 +1,6 @@
 import { cookies } from 'next/headers'
 import { redirect } from 'next/navigation'
+import { canReadPaidChapter } from '@/lib/access'
 import type { Metadata } from 'next'
 import SlideSyncReader from '@/components/SlideSyncReader'
 import { getChapter } from '@/content/registry'
@@ -19,9 +20,8 @@ export default async function Chapitre3SyncPage({
   searchParams: Promise<{ lang?: string }>
 }) {
   const cookieStore = await cookies()
-  // Open to free-chapter readers and admins.
-  if (!cookieStore.get('free_chapters_access') && !cookieStore.get('admin_session')) {
-    redirect('/?gate=free#acces-libre')
+  if (!canReadPaidChapter(cookieStore)) {
+    redirect('/#acheter')
   }
 
   // Chapter 3 exists in French only; serve the French content + deck regardless
