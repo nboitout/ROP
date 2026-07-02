@@ -6,10 +6,10 @@
 
 import type { Chapter } from './types'
 
-export const chapter4En: Chapter = {
-  slug: "chapter-4",
+export const chapter4LegacyEn: Chapter = {
+  slug: "chapter-4-legacy",
   number: "4",
-  title: "Autonomic Nervous System",
+  title: "Autonomic Nervous System (legacy)",
   sections: [
     {
       id: "presentation",

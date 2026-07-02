@@ -14,7 +14,7 @@ export const dynamic = 'force-dynamic'
 const ROUTES: Record<string, { slug: string; href: string; classicHref?: string; syncHref?: string }> = {
   '00': { slug: 'introduction', href: '/introduction', classicHref: '/introduction' },
   '02': { slug: 'chapter-2', href: '/lecture/traitement-rop', syncHref: '/lecture/traitement-rop' },
-  '04': { slug: 'chapter-4', href: '/chapitre-4', classicHref: '/chapitre-4' },
+  '04': { slug: 'chapter-4', href: '/lecture/chapitre-4', syncHref: '/lecture/chapitre-4' },
   '05': { slug: 'chapter-5', href: '/lecture/chapitre-5', syncHref: '/lecture/chapitre-5' },
   '06': { slug: 'chapter-6', href: '/lecture/chapitre-6', syncHref: '/lecture/chapitre-6' },
   '11': { slug: 'chapter-11', href: '/lecture/chapitre-11', syncHref: '/lecture/chapitre-11' },

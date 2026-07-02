@@ -1,6 +1,7 @@
 import { chapter1Slides, chapter1SlideAnchors } from './chapter1.slidesync'
 import { chapter2Slides, chapter2SlideAnchorsFr } from './chapter2.slidesync'
 import { chapter3Slides, chapter3SlideAnchors } from './chapter3.slidesync'
+import { chapter4Slides, chapter4SlideAnchors } from './chapter4.slidesync'
 import { chapter5Slides, chapter5SlideAnchors } from './chapter5.slidesync'
 import { chapter6Slides, chapter6SlideAnchors } from './chapter6.slidesync'
 import { chapter7Slides, chapter7SlideAnchors } from './chapter7.slidesync'
@@ -28,6 +29,7 @@ const slideVisualSources: Record<string, SlideVisualSource> = {
   'chapter-1': { slides: chapter1Slides, anchors: chapter1SlideAnchors },
   'chapter-2': { slides: chapter2Slides, anchors: chapter2SlideAnchorsFr },
   'chapter-3': { slides: chapter3Slides, anchors: chapter3SlideAnchors },
+  'chapter-4': { slides: chapter4Slides, anchors: chapter4SlideAnchors },
   'chapter-5': { slides: chapter5Slides, anchors: chapter5SlideAnchors },
   'chapter-6': { slides: chapter6Slides, anchors: chapter6SlideAnchors },
   'chapter-7': { slides: chapter7Slides, anchors: chapter7SlideAnchors },

@@ -845,7 +845,8 @@ a.ss-switch-opt:hover { color:var(--gold); }
   .ss-layout { display:block; padding-top:62px; }
   .ss-stagecol { position:sticky; top:62px; z-index:200; padding:10px 14px 12px;
     background:rgba(251,248,241,.97); backdrop-filter:blur(10px); border-bottom:1px solid rgba(26,26,24,.1); }
-  .ss-stage { position:relative; }
+  .ss-stage,
+  .ss-stage--portrait { position:relative; top:auto; }
   .ss-stage-eyebrow { display:none; }
   .ss-frame { max-width:520px; margin:0 auto; border-radius:4px; box-shadow:0 6px 20px rgba(26,26,24,.12); }
   .ss-frame--portrait { aspect-ratio:3/4; width:min(260px,70vw); height:auto; max-width:100%; }

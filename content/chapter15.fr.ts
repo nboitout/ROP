@@ -357,7 +357,7 @@ export const chapter15Fr: Chapter = {
           "type": "xref",
           "label": "Voir la référence dans le chapitre 4",
           "text": "Système nerveux autonome",
-          "href": "/chapitre-4?xrefBack=%2Flecture%2Fchapitre-15%23p-innervation-4&xrefBackLabel=Retour%20au%20chapitre%2015#sec-presentation"
+          "href": "/lecture/chapitre-4?xrefBack=%2Flecture%2Fchapitre-15%23p-innervation-4&xrefBackLabel=Retour%20au%20chapitre%2015#sec-presentation"
         },
         {
           "type": "sub",
