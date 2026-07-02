@@ -128,7 +128,7 @@ export const chapter8Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "Les fibres musculaires qui prolongent le pilier médian droit constituent la boucle de l’anneau musculaire du hiatus œsophagien. (Cf. Hiatus œsophagien, page…)"
+          "text": "Les fibres musculaires qui prolongent le pilier médian droit constituent la boucle de l’anneau musculaire du hiatus œsophagien."
         },
         {
           "type": "lead",
@@ -385,7 +385,7 @@ export const chapter8Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "Nous reviendrons sur les causes du reflux gastro-œsophagien et de la hernie hiatale, page…"
+          "text": "Nous reviendrons sur les causes du reflux gastro-œsophagien et de la hernie hiatale."
         }
       ]
     },
@@ -452,7 +452,7 @@ export const chapter8Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "Il participe au système porto-cave. (Cf. Chapitre 11 Foie, page…)"
+          "text": "Il participe au système porto-cave."
         },
         {
           "type": "xref",
@@ -565,7 +565,7 @@ export const chapter8Fr: Chapter = {
         {
           "type": "lead",
           "label": "Fonction de cohésion et de mobilité viscérale",
-          "text": "l’alternance inspiration-expiration, à raison d’environ 16/min, soit un ordre de grandeur de plusieurs dizaines de milliers de cycles par 24 heures, participe au glissement relatif des viscères par l’intermédiaire des séreuses mobilisées par le diaphragme. (Cf. Chapitre 1 Généralités, page…)"
+          "text": "l’alternance inspiration-expiration, à raison d’environ 16/min, soit un ordre de grandeur de plusieurs dizaines de milliers de cycles par 24 heures, participe au glissement relatif des viscères par l’intermédiaire des séreuses mobilisées par le diaphragme."
         },
         {
           "type": "xref",
@@ -600,7 +600,7 @@ export const chapter8Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "Dans le cadre ROP, la pression positive abdominale permet aux viscères sous-diaphragmatiques de bénéficier d’un effet de soutien diaphragmatique. (Cf. Chapitre 1 Généralités, page…)"
+          "text": "Dans le cadre ROP, la pression positive abdominale permet aux viscères sous-diaphragmatiques de bénéficier d’un effet de soutien diaphragmatique."
         },
         {
           "type": "xref",
@@ -610,7 +610,7 @@ export const chapter8Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "Dans ce même cadre, ce mécanisme peut contribuer à mieux répartir une partie des contraintes de pression exercées sur les organes pelviens et le plancher périnéal. (Cf. Chapitre 18 Vessie, page…)"
+          "text": "Dans ce même cadre, ce mécanisme peut contribuer à mieux répartir une partie des contraintes de pression exercées sur les organes pelviens et le plancher périnéal."
         },
         {
           "type": "xref",
@@ -730,7 +730,7 @@ export const chapter8Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "Lésion fréquente, elle correspond au déplacement d’une partie de la grosse tubérosité de l’estomac (Cf. Chapitre 9 Estomac, page…) dans le médiastin, à travers le hiatus œsophagien, par affaissement de la partie musculaire du diaphragme, surtout du pilier droit."
+          "text": "Lésion fréquente, elle correspond au déplacement d’une partie de la grosse tubérosité de l’estomac dans le médiastin, à travers le hiatus œsophagien, par affaissement de la partie musculaire du diaphragme, surtout du pilier droit."
         },
         {
           "type": "xref",
@@ -762,7 +762,7 @@ export const chapter8Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "Gastroparésie. (Cf. Chapitre 9 Estomac, page…)"
+          "text": "Gastroparésie."
         },
         {
           "type": "xref",
@@ -892,7 +892,7 @@ export const chapter8Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "Les traumatismes de la charnière thoraco-lombaire et costale inférieure ne se résument pas, dans le cadre clinique ROP, à une atteinte ostéo-articulaire; des fixations rénales peuvent aussi être recherchées en association. (Cf. chapitre 16 Reins, page…)"
+          "text": "Les traumatismes de la charnière thoraco-lombaire et costale inférieure ne se résument pas, dans le cadre clinique ROP, à une atteinte ostéo-articulaire; des fixations rénales peuvent aussi être recherchées en association."
         },
         {
           "type": "xref",

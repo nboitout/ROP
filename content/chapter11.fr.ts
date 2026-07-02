@@ -349,10 +349,6 @@ export const chapter11Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "(Voir Fonction du foie, page....)"
-        },
-        {
-          "type": "para",
           "text": "En pénétrant dans le foie par le hile, l’artère hépatique propre et la veine porte se divisent en deux branches, droite et gauche, puis en de multiples vaisseaux qui pénètrent dans le parenchyme hépatique jusqu’à former un réseau dense de capillaires sinusoïdes vascularisant les hépatocytes groupés en lobules."
         },
         {
@@ -568,7 +564,6 @@ export const chapter11Fr: Chapter = {
             "Cela peut contribuer, parmi d’autres facteurs, aux nausées ou vomissements pendant la grossesse.",
             "Les contraceptifs oraux peuvent s’accompagner d’effets indésirables hépato-biliaires chez certaines patientes.",
             "L’excès de protéines et de graisses peut être mal toléré par les personnes cliniquement sensibles sur le plan hépatique.",
-            "(Cf. Syndrome prémenstruel, page....)",
             "Zone 3 : foie infectieux et immunitaire.",
             "La partie droite du lobe droit est considérée, dans cette lecture clinique, comme plus souvent concernée lors d’atteintes infectieuses du foie, notamment les hépatites.",
             "Le foie participe à la réponse immunitaire et à l’épuration de certaines charges circulantes.",
@@ -693,10 +688,6 @@ export const chapter11Fr: Chapter = {
           "text": "Le contexte hormonal peut influencer la composition de la bile et la dynamique sphinctérienne biliaire."
         },
         {
-          "type": "para",
-          "text": "(Cf. Syndrome prémenstruel, page....)"
-        },
-        {
           "type": "sub",
           "text": "Pathologie"
         },
@@ -743,10 +734,6 @@ export const chapter11Fr: Chapter = {
         {
           "type": "para",
           "text": "La bile est influencée par le contexte hormonal."
-        },
-        {
-          "type": "para",
-          "text": "(Cf. Fonction hormonale, page....)"
         },
         {
           "type": "para",

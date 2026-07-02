@@ -108,11 +108,11 @@ export const chapter16Fr: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "l’aspiration thoracique et de l’aimantation diaphragmatique; (Cf. Chapitre1 Généralités, page…)",
+            "l’aspiration thoracique et de l’aimantation diaphragmatique;",
             "la tonicité des muscles de l’abdomen;",
             "accessoirement le pédicule vasculaire;",
             "du volume de graisse périrénale et pararénale.",
-            "À la partie inférieure de la loge rénale, les deux fascias prérénal et rétrorénal ne se rejoignent pas. La loge rénale est donc ouverte en bas, ce qui constitue un véritable entonnoir dans lequel le rein peut s’engouffrer lors de sa descente. Leurs positions dépendent uniquement de leur environnement. Or le volume de la graisse est fonction de l’état nutritionnel et général de la personne. Une diminution du volume de la graisse, par amaigrissement important, la fait « fondre ». Le rein devient flottant et tend à glisser vers le bas en suivant le bord externe du psoas. La défaillance de ces moyens de fixité prédispose à la ptose rénale. (Cf. Pathologie, page…)."
+            "À la partie inférieure de la loge rénale, les deux fascias prérénal et rétrorénal ne se rejoignent pas. La loge rénale est donc ouverte en bas, ce qui constitue un véritable entonnoir dans lequel le rein peut s’engouffrer lors de sa descente. Leurs positions dépendent uniquement de leur environnement. Or le volume de la graisse est fonction de l’état nutritionnel et général de la personne. Une diminution du volume de la graisse, par amaigrissement important, la fait « fondre ». Le rein devient flottant et tend à glisser vers le bas en suivant le bord externe du psoas. La défaillance de ces moyens de fixité prédispose à la ptose rénale."
           ]
         },
         {
@@ -150,7 +150,7 @@ export const chapter16Fr: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Glomérule: il filtré le plasma sanguin; (Cf. Physiologie, page…)",
+            "Glomérule: il filtré le plasma sanguin;",
             "Tubule: il réabsorbe et sécrète les substances nécessaires à l’organisme"
           ]
         }
@@ -253,7 +253,7 @@ export const chapter16Fr: Chapter = {
           "items": [
             "Veine rénale droite: elle se jette directement dans la veine cave inférieure;",
             "Veine rénale gauche: elle est plus longue que la droite, Elle reçoit la veine gonadique spermatique ou ovarienne et la veine lombaire gauche qui draine le sang veineux des vertèbres lombaires, si important pour l’hydratation des disques intervertébraux.",
-            "Le syndrome de la pince aorto-mésentérique, ou nutcracker syndrome (Cf. Chapitre 10 Duodénum, page…), correspond à une compression de la veine rénale gauche entre l’aorte, l’artère mésentérique supérieure et le 3ème duodénum. Dans la lecture clinique ROP, cette compression veineuse gauche peut être mise en relation avec certains tableaux de congestion pelvienne, lombaire ou génitale gauche, sans que cela remplace l’évaluation médicale d’un véritable syndrome de la pince aorto-mésentérique. Les varicocèles gauches et les varices prédominant dans le membre inférieur gauche doivent nous faire recherchér une fixation rénale gauche et une ptose de l’intestin grêle."
+            "Le syndrome de la pince aorto-mésentérique, ou nutcracker syndrome, correspond à une compression de la veine rénale gauche entre l’aorte, l’artère mésentérique supérieure et le 3ème duodénum. Dans la lecture clinique ROP, cette compression veineuse gauche peut être mise en relation avec certains tableaux de congestion pelvienne, lombaire ou génitale gauche, sans que cela remplace l’évaluation médicale d’un véritable syndrome de la pince aorto-mésentérique. Les varicocèles gauches et les varices prédominant dans le membre inférieur gauche doivent nous faire recherchér une fixation rénale gauche et une ptose de l’intestin grêle."
           ]
         },
         {
@@ -422,10 +422,10 @@ export const chapter16Fr: Chapter = {
             "baisse de la libido;",
             "douleurs articulaires par excès d’acide urique;",
             "infection urinaire à « urine claire » (ou apyrétique);",
-            "lombairegie gravidique; (Cf. Chapitre 19 Organes génitaux féminins, page…)",
-            "hypertrophie bénigne de la prostate; (Cf. Chapitre 20 Organes génitaux masculins, page…)",
+            "lombairegie gravidique;",
+            "hypertrophie bénigne de la prostate;",
             "dépression nerveuse post-traumatique",
-            "Ptoses rénales: Les reins n’ont pas à proprement parler d’attaches: leurs moyens de fixité dépendent de leur environnement. (page …)",
+            "Ptoses rénales: Les reins n’ont pas à proprement parler d’attaches: leurs moyens de fixité dépendent de leur environnement.",
             "Le signe radiologique d’un rein ptosé est la perte de contact de son pôle supérieur avec la 11ème côte, ce qui lui fait perdre l’effet d’aspiration thoracique et d’aimantation diaphragmatique.",
             "Les ptoses sont d’origine congénitale ou acquise:",
             "Ptoses congénitale (ou ectopiques): la surrénale suit le rein. nous avons peu d’effets, si ce n’est, dynamiser le rein.",

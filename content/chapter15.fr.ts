@@ -99,7 +99,7 @@ export const chapter15Fr: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Fonction de l’appendice vermiforme: c’est un organe lymphoïde qui constitue un réservoir protégé de bactéries amies (ou commensales, Cf. Microbiote, page….) utiles pour combattre les bactéries pathogènes, surtout quand les individus vivent dans un environnement souillé ou ayant une mauvaise hygiène de vie.",
+            "Fonction de l’appendice vermiforme: c’est un organe lymphoïde qui constitue un réservoir protégé de bactéries amies (ou commensales) utiles pour combattre les bactéries pathogènes, surtout quand les individus vivent dans un environnement souillé ou ayant une mauvaise hygiène de vie.",
             "Point de McBurney: il est situé au 1/3 distal de la ligne ombilico-épine iliaque antéro-supérieure droite. Sa douleur à la palpation signe l’inflammation de l’appendice vermiforme."
           ]
         },
@@ -132,7 +132,7 @@ export const chapter15Fr: Chapter = {
             "Côlon transverse:",
             "Il occupe successivement l’hypochondre droit, l’épigastre et l’hypochondre gauche de l’abdomen (figure 14.1). Il est oblique crânialement et à gauche. Il est plus proche de la paroi abdominale antérieure dans sa partie moyenne que les angles coliques droit et gauche plus profondément situés.",
             "Mésocôlon transverse: c’est un repli du péritoine qui relie le côlon transverse à la paroi abdominale postérieure par l’intermédiaire de sa racine. (figure 7.4)",
-            "Racine du mésocôlon transverse: elle constitue une cloison qui sépare la cavité abdominale en deux étages. Cf. Chapitre 1 Généralités Articulations viscérales, page…)",
+            "Racine du mésocôlon transverse: elle constitue une cloison qui sépare la cavité abdominale en deux étages.",
             "Le mésocôlon transverse permet une grande mobilité au côlon transverse, à l’exception de l’angle hépatique. Il s’adapte aux mouvements du corps et de l’estomac.",
             "Lorsque le côlon transverse est de type normal, il est situé entre deux lignes horizontales dont la supérieure passe par les 9èmes cartilages costaux, et l’inférieure, par l’ombilic, selon Testut (Traité d’anatomie humaine).",
             "« Sa situation est des plus variables. Ses variations sont dues à l’angle splénique qui est plus mobile que l’angle hépatique » (J.P. Barral, ostéopathe D.O. Manipulations viscérales, tome 1, Editions Elsevier-Masson):",
@@ -206,8 +206,8 @@ export const chapter15Fr: Chapter = {
             "Segment pelvien ou ampoule rectale, au-dessus du périnée et qui regarde caudalement. Il suit la courbure du sacrum;",
             "Segment périnéal ou canal anal répondant au triangle ano-rectal du périnée et qui regarde dorsalement.",
             "Canal anal: le rectum traverse le diaphragme pelvien pour se terminer à l’anus dont la longueur est de 4cm. Il comprend deux sphincters:",
-            "Sphincter interne: il est formé des muscles lisses du rectum contrôlés par le Parasympathique pelvien et le Sympathique de Th12 à L1. (Cf. Chapitre 17 Cavité pelvienne, Innervation, page….)",
-            "Sphincter externe: c’est un anneau formé de muscles striés, commandés par le nerf pudendal du système nerveux somatique (Cf. Chapitre17 Cavité pelvienne, Innervation, page….). Il contrôle la continence anale, renforcé par le muscle relèveur de l’anus."
+            "Sphincter interne: il est formé des muscles lisses du rectum contrôlés par le Parasympathique pelvien et le Sympathique de Th12 à L1.",
+            "Sphincter externe: c’est un anneau formé de muscles striés, commandés par le nerf pudendal du système nerveux somatique. Il contrôle la continence anale, renforcé par le muscle relèveur de l’anus."
           ]
         },
         {
@@ -282,7 +282,7 @@ export const chapter15Fr: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Artère mésentérique supérieure: elle irrigue le côlon ascendant et le côlon transverse: jusqu’au 1/3 distal. (Cf. Chapitre 14 Intestin grêle Vascularisation de l’intestin grêle, page…)",
+            "Artère mésentérique supérieure: elle irrigue le côlon ascendant et le côlon transverse: jusqu’au 1/3 distal.",
             "Artère mésentérique inférieure: elle à son origine sur le côté gauche de l’aorte abdominale, juste au-dessus de l’ombilic, à hauteur de la vertèbre L3. C’est à ce niveau que son pouls est perceptible mais souvent difficile à prendre. Son trajet est dans la racine secondaire du mésocôlon sigmoïde. Elle irrigue le tiers distal du côlon transverse, le côlon descendant et le sigmoïde. Elle donne l’artère rectale supérieure, destinée surtout à la partie haute du rectum; la partie moyenne et basse du rectum ainsi que le canal anal dépendent aussi des artères rectales moyenne et inférieure, issues du territoire iliaque interne.",
             "Veineuse:",
             "Veine mésentérique inférieure: elle draine le côlon descendant, l’angle colique gauche, le sigmoïde et la partie haute du rectum, puis rejoint le plus souvent la veine splénique. La veine splénique et la veine mésentérique supérieure se rejoignent pour former la veine porte (figure 11.5) qui rejoint le foie. Le drainage veineux rectal est mixte: la partie haute appartient au système porte, tandis que les territoires moyen et inférieur communiquent avec le système cave par les veines iliaques internes.",
@@ -302,7 +302,7 @@ export const chapter15Fr: Chapter = {
         {
           "type": "rop",
           "body": [
-            "Pour toute lombo-sciatalgie gauche, il est important de vérifier les zones réflexes de la région recto-sigmoïdienne, le foie, le rein gauche et la veine rénale gauche où aboutit la veine lombale gauche qui draine le sang veineux lombal. (Cf. Chapitre 16 Rein, page….)"
+            "Pour toute lombo-sciatalgie gauche, il est important de vérifier les zones réflexes de la région recto-sigmoïdienne, le foie, le rein gauche et la veine rénale gauche où aboutit la veine lombale gauche qui draine le sang veineux lombal."
           ]
         },
         {
@@ -350,7 +350,7 @@ export const chapter15Fr: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Innervation intrinsèque: c’est le système nerveux entérique. (Cf. Chapitre 4 Système nerveux autonome, page…)"
+            "Innervation intrinsèque: c’est le système nerveux entérique."
           ]
         },
         {
@@ -459,7 +459,7 @@ export const chapter15Fr: Chapter = {
             "Constipations distales ou basses):",
             "Constipations gauche: souvent mieux supportées, elles ont souvent une origine mécanique; stagnation des selles dans l’ampoule rectale, le sigmoïde ou le côlon descendant.",
             "Constipations droites (ou hautes): elles sont dues à une stase dans le caecum. La poursuite de la digestion aboutit à l’élaboration de toxines responsables de céphalées, dyspepsie, mauvaise haleine. La fosse iliaque droite est sensible à la palpation.",
-            "Constipation proximale: (Cf. Motricité colique, page….)",
+            "Constipation proximale:",
             "Gastroparésie: elle inhibe le réflexe gastro-colique (besoin de déféquer à l’arrivée des aliments dans l’estomac). Ce réflexe a surtout lieu le matin après le petit-déjeuner.",
             "Trouble hépato-biliaires et pancréatiques: La bile à un rôle indispensable sur le transit intestinal. Les troubles hépato-biliaires et pancréatiques provoquent un déficit du péristaltisme et de lubrification des villosités intestinales;",
             "Stress: inhibition du péristaltisme par le stress.",
@@ -531,7 +531,7 @@ export const chapter15Fr: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Il est difficile de différencier le côlon et l’intestin grêle sur le plan émotionnel Cf. chapitre… Intestin grêle, page…). Le facteur stress et le terrain anxiogène jouent pour une grande part dans les colopathies fonctionnelles."
+            "Il est difficile de différencier le côlon et l’intestin grêle sur le plan émotionnel. Le facteur stress et le terrain anxiogène jouent pour une grande part dans les colopathies fonctionnelles."
           ]
         }
       ]
@@ -605,7 +605,7 @@ export const chapter15Fr: Chapter = {
           "type": "bullets",
           "items": [
             "Balance cerveau limbique-côlon: écoute-induction, un pouce sur le côlon, l’autre pouce sur cerveau limbique: (figure 1.12)",
-            "Dysbiose: c’est un déséquilibre du microbiote (Cf. Dysbiose, page…). Le traitement est le même que pour les colopathies. Il faut combattre les causes:",
+            "Dysbiose: c’est un déséquilibre du microbiote. Le traitement est le même que pour les colopathies. Il faut combattre les causes:",
             "L’excès de protéines animales, les graisses, les sucres raffinés, au détriment des légumes et des fruits;",
             "prise d’antibiotiques itérative;",
             "baisse des défenses immunitaires."

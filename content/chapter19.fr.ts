@@ -455,7 +455,7 @@ export const chapter19Fr: Chapter = {
             "Troubles circulatoires: Une fixation ou une ptose comprime les nerfs vaso-moteurs et la circulation artérielle, veineuse et lymphatique de la cavité pelvienne et des membres inférieurs (varices, œdèmes).",
             "Dysménorrhées: les fixations articulaires et génitales peuvent créer des douleurs génitales prémenstruelles ou menstruelles par irritation des fibres sympathiques viscéro-sensibles contenues dans le plexus hypogastrique inférieur.",
             "Dyspareunies, anorgasmies: les troubles de la libido et de l’anorgasmie peuvent avoir d’autres causes que tissulaire mais toutes fixations vésico-utéro-vaginale ou coccygienne peuvent rendre les rapports difficiles ou douloureux.",
-            "Hystérectomie: par l’absence de l’utérus, les forces gravitaires abdominales s’exercent directement sur la vessie dont le sphincter externe tend à sortir de son enceinte manométrique et entraîner une IUE. (Cf. Chapitre 18, IUE, page…)",
+            "Hystérectomie: par l’absence de l’utérus, les forces gravitaires abdominales s’exercent directement sur la vessie dont le sphincter externe tend à sortir de son enceinte manométrique et entraîner une IUE.",
             "ROP des suites d’hystérectomies: zones réflexes de l’intestin, de la vessie, du rectum, les plexus lombaire et sacré, le cadre pelvien (sacrum, coccyx, fosses obturatrices, piriformes)."
           ]
         },
@@ -655,7 +655,7 @@ export const chapter19Fr: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "il existe une particularité anatomique sur le plan veineux: la veine ovarique droite se jette dans la veine cave. Par contre, la veine ovarique gauche se jette dans la veine rénale gauche (Cf. Chapitre 16 Rein, Veine rénale, page…). Par fixation rénale gauche ou ptôse de l’intestin grêle, la racine du mésentère peut clamper la veine rénale gauche. Il s’en suit une congestion ovarienne et du petit bassin. La présence de varices prédominant dans le membre inférieur gauche doit nous fait recherchér une fixation rénale gauche et une ptôse de l’intestin grêle."
+            "il existe une particularité anatomique sur le plan veineux: la veine ovarique droite se jette dans la veine cave. Par contre, la veine ovarique gauche se jette dans la veine rénale gauche. Par fixation rénale gauche ou ptôse de l’intestin grêle, la racine du mésentère peut clamper la veine rénale gauche. Il s’en suit une congestion ovarienne et du petit bassin. La présence de varices prédominant dans le membre inférieur gauche doit nous fait recherchér une fixation rénale gauche et une ptôse de l’intestin grêle."
           ]
         },
         {
@@ -769,7 +769,7 @@ export const chapter19Fr: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "la production hormonale se fait sous le contrôle hypothalamo-hypophysaire, régulation par biofeedback. Ces hormones sexuelles sont d’origine stéroïdienne: le cholestérol, synthétisé par le foie, est la substance de base de ces hormones. Leur dégradation se fait dans le foie puis elles sont éliminées par l’urine et la bile. Nous voyons, une fois de plus, l’importance du foie sur le système génital. Les symptômes digestifs au moment des règles – constipation, nausées, ballonnements, migraines, jambes lourdes - témoignent de son rôle sur la sphère uro-génitale. Il n’est pas exagéré de dire que, d’une certaine manière, le foie « gouverne » l’utérus. (Cf. Syndrome prémenstruel, page…)"
+            "la production hormonale se fait sous le contrôle hypothalamo-hypophysaire, régulation par biofeedback. Ces hormones sexuelles sont d’origine stéroïdienne: le cholestérol, synthétisé par le foie, est la substance de base de ces hormones. Leur dégradation se fait dans le foie puis elles sont éliminées par l’urine et la bile. Nous voyons, une fois de plus, l’importance du foie sur le système génital. Les symptômes digestifs au moment des règles – constipation, nausées, ballonnements, migraines, jambes lourdes - témoignent de son rôle sur la sphère uro-génitale. Il n’est pas exagéré de dire que, d’une certaine manière, le foie « gouverne » l’utérus."
           ]
         }
       ]
@@ -799,7 +799,7 @@ export const chapter19Fr: Chapter = {
           "items": [
             "rythmées par le cycle menstruel:",
             "Douleurs inter-menstruelles: elles sont liées à l’ovulation;",
-            "Douleurs prémenstruelles; (Cf. Syndrome prémenstruel, page…)",
+            "Douleurs prémenstruelles;",
             "Douleurs menstruelles:",
             "dysménorrhée obstructive: retard du flux par malposition utérine, hypoplasie utérine, sténose du vagin;",
             "dysménorrhée congestive: le flux est normal, mais associé à des douleurs (endométriose, infections, troubles de la statique pelvienne)."

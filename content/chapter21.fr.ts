@@ -99,8 +99,8 @@ export const chapter21Fr: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Déficit gonadique : diminution de la fertilité, baisse de libido, dysménorrhée, pré-ménopause et andropause précoces Cf. Chapitre 5 Mécanisme de stress, page…)",
-            "Chez l’homme : les troubles sexuels sont nombreux et fréquents : perte de la libido, pannes sexuelles, problèmes d’érection, éjaculation rapide, incapacité à éjaculer, douleurs pendant les rapports. (Cf. Chapitre 16 Reins, vascularisation veineuse, rein gauche, page…)",
+            "Déficit gonadique : diminution de la fertilité, baisse de libido, dysménorrhée, pré-ménopause et andropause précoces",
+            "Chez l’homme : les troubles sexuels sont nombreux et fréquents : perte de la libido, pannes sexuelles, problèmes d’érection, éjaculation rapide, incapacité à éjaculer, douleurs pendant les rapports.",
             "Chez la femme : les troubles sexuels sont aussi nombreux et fréquents, manque d’intérêt sexuel (faible libido), sécheresse vaginale, douleurs pendant les rapports, vaginisme (spasmes douloureux des muscles du vagin), anorgasmie.",
             "Causes organiques : diabète, hyperlipidémie, hypertension artérielle, insuffisance coronarienne, AVC, obésité.",
             "Causes psycho-émotionnelles : Cf. Relations viscéro-émotionnelles)."
@@ -136,10 +136,6 @@ export const chapter21Fr: Chapter = {
       "id": "relations-viscero-emotionnelles",
       "title": "Relations viscéro-émotionnelles",
       "blocks": [
-        {
-          "type": "para",
-          "text": "(Cf. Chapitres organes génitaux féminins, page… et masculins, page…)"
-        },
         {
           "type": "para",
           "text": "Il n’est pas toujours facile de faire la part des causes physiques et psycho-émotionnelles, mais ces dernières sont nombreuses et fréquentes dans les deux sexes."

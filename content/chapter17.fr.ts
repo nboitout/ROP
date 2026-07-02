@@ -163,7 +163,7 @@ export const chapter17Fr: Chapter = {
             "Les branches ischiopubiennes, ventralement;",
             "Les ligaments sacrotubéraux, dorsalement.",
             "Il est divisé par une ligne virtuelle entre les deux tubérosités ischiatiques, en deux triangles:",
-            "Triangle antérieur uro-génital: horizontal, il est traversé par le hiatus uro-génital. A sa face externe sont fixés les muscles bulbo-caverneux et bulbo-spongieux et les organes érectiles du pénis et du clitoris. (Cf. Chapitre 21 Système érectile masculin et féminin, page…)",
+            "Triangle antérieur uro-génital: horizontal, il est traversé par le hiatus uro-génital. A sa face externe sont fixés les muscles bulbo-caverneux et bulbo-spongieux et les organes érectiles du pénis et du clitoris.",
             "Triangle postérieur anal: orienté dorsalement et caudalement, il est traversé par le canal anal et le sphincter anal externe. Latéralement au canal anal, la fosse ischioanale est parcourue par le nerf pudendal.",
             "Muscles du périnée: ce sont des muscles striés commandés par le nerf pudendal (S2-S4). On distingue:",
             "Muscles profonds du périnée: élévateur de l’anus, transverse profond et coccygien. Ils forment le diaphragme pelvien ayant une fonction de soutènement grâce à leurs fibres parallèles.",
@@ -297,8 +297,8 @@ export const chapter17Fr: Chapter = {
             "Hypothalamus: il commande le bon fonctionnement du système uro-génital par les voies neuro-végétative et hormonale: il assure la régulation nerveuse du désir, les mécanismes neuronaux de l’excitation sexuelle, la régulation hormonale du cycle menstruel et de la grossesse. Il est situé sous le plancher du 3ème ventricule, il occupe donc une position centrale et vitale dans le cerveau.",
             "Hypophyse: située juste au-dessous de l’hypothalamus, elle est logée dans la selle turcique du sphénoïde, près de la symphyse sphéno-basilaire. Par la FSH, la LH et la prolactine, elle contrôle l’activité hormonale des organes génitaux.",
             "Glande pinéale ou épiphyse: elle occupe aussi une position centrale en arrière de l’hypothalamus. Elle baigne dans le liquide cérébro-spinal donc stimulée par le mouvement respiratoire primaire. Elle contrôle et régule l’hypothalamus. Par son hormone, la mélatonine, elle règle le rythme veille-sommeil, adapte l’organisme aux rythmes saisonniers. Elle lutte contre le vieillissement et stimule l’activité sexuelle. Son rôle est essentiel sur le système immunitaire et sur les mécanismes d’adaptation au stress.",
-            "Système limbique: il est le cerveau de nos pulsions et de nos émotions, qui sont elles-mêmes dépendantes de notre mémoire des évènements qui ont marqué notre vie depuis notre petite enfance (Cf. Chapitre 3 SNC, Cerveau, limbique ou émotionnel, page…). Il adapte les choix de programme de l’hypothalamus aux besoins de l’organisme.",
-            "Cortex préfrontal: il soumet les comportements à certaines volontés et intentions. Situé dans la circonvolution frontale ascendante, il est le centre régulateur du psychisme, de la conscience et du sens moral. (Cf. Chapitre 3 SNC, Cortex préfrontal et orbito-nasal, page…)."
+            "Système limbique: il est le cerveau de nos pulsions et de nos émotions, qui sont elles-mêmes dépendantes de notre mémoire des évènements qui ont marqué notre vie depuis notre petite enfance. Il adapte les choix de programme de l’hypothalamus aux besoins de l’organisme.",
+            "Cortex préfrontal: il soumet les comportements à certaines volontés et intentions. Situé dans la circonvolution frontale ascendante, il est le centre régulateur du psychisme, de la conscience et du sens moral."
           ]
         },
         {
@@ -324,12 +324,6 @@ export const chapter17Fr: Chapter = {
         {
           "type": "sub",
           "text": "Effet turgor et pressions intra-cavitaires"
-        },
-        {
-          "type": "bullets",
-          "items": [
-            "(Cf. Chapitre 1 Généralités, effet turgor et pressions intra-cavitaires, page…)"
-          ]
         },
         {
           "type": "xref",
@@ -389,7 +383,7 @@ export const chapter17Fr: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "au cours de l’accouchement, elles surviennent chez la multipare ou la primipare quand l’enfant est « arraché » à la ventouse ou aux forceps, sans tenir compte des contractions utérines de la mère et sur une large épisiotomie. (Cf. Chapitre 18 Vessie, Incontinence urinaire d’effort, page…)",
+            "au cours de l’accouchement, elles surviennent chez la multipare ou la primipare quand l’enfant est « arraché » à la ventouse ou aux forceps, sans tenir compte des contractions utérines de la mère et sur une large épisiotomie.",
             "Les autres causes de ptoses sont la vieillesse, les dépressions, les ptoses viscérales hautes (intestin grêle), les antéversions utérines, les constipations basses, les fixations de la symphyse pubienne et du coccyx."
           ]
         },

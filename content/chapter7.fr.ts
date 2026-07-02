@@ -527,7 +527,7 @@ export const chapter7Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "(Cf. chapitre 15 Côlon, Vascularisation, page...) elle naît le plus souvent à hauteur de L3."
+          "text": "Elle naît le plus souvent à hauteur de L3."
         },
         {
           "type": "xref",
@@ -819,10 +819,10 @@ export const chapter7Fr: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Douleurs ; (Cf. innervation, page...)",
+            "Douleurs ;",
             "Déficiences hiatales et inguinales : après une chirurgie abdomino-pelvienne, les cicatrices peuvent modifier la répartition des contraintes de la paroi et du péritoine, et favoriser des zones de faiblesse pariétale.",
-            "Reflux gastro-œsophagien et hernie hiatale au niveau de la jonction œsophago-cardio-tuberositaire ; (Cf. Hernie hiatale, page...)",
-            "Hernie inguinale réductible par béance de l’orifice profond du canal inguinal. (Cf. Hernie inguinale, page... et figure 20.7)",
+            "Reflux gastro-œsophagien et hernie hiatale au niveau de la jonction œsophago-cardio-tuberositaire ;",
+            "Hernie inguinale réductible par béance de l’orifice profond du canal inguinal. (figure 20.7)",
             "Tiraillement des mésos avec conséquences neuro-vasculaires et douloureuses, et, au sens clinique, participation possible à certaines ptoses viscérales."
           ]
         },
