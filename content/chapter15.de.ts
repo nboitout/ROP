@@ -15,7 +15,7 @@ export const chapter15De: Chapter = {
       "blocks": [
         {
           "type": "para",
-          "text": "Das Kolon, oder Dickdarm, bildet einen Rahmen um den Dünndarm. Es erstreckt sich von der Ileozäkalverbindung bis zum Rektum und ist beim Erwachsenen etwa 1,5 m lang. (Abbildung 15.1)"
+          "text": "Das Kolon, oder Dickdarm, bildet einen Rahmen um den Dünndarm. Es erstreckt sich von der Ileozäkalverbindung bis zum Rektum und ist beim Erwachsenen etwa 1,5 m lang."
         },
         {
           "type": "sub",
@@ -64,7 +64,7 @@ export const chapter15De: Chapter = {
         },
         {
           "type": "para",
-          "text": "In der rechten Fossa iliaca liegt das Zäkum 2 bis 3 cm unterhalb der Ileozäkalverbindung und etwa zwei Querfinger oberhalb des Leistenbands. (Abbildung 15.2)"
+          "text": "In der rechten Fossa iliaca liegt das Zäkum 2 bis 3 cm unterhalb der Ileozäkalverbindung und etwa zwei Querfinger oberhalb des Leistenbands."
         },
         {
           "type": "para",
@@ -76,7 +76,7 @@ export const chapter15De: Chapter = {
         },
         {
           "type": "para",
-          "text": "Das Ileum mündet über zwei Falten in das Zäkum, die die Ileozäkalklappe bilden. (Abbildung 15.3) Die Klappe liegt auf Höhe des Wirbels S1. Wenn das Zäkum gefüllt oder kontrahiert ist, spannen sich die beiden Falten der Ileozäkalklappe an und verhindern einen zäkoilealen Reflux."
+          "text": "Das Ileum mündet über zwei Falten in das Zäkum, die die Ileozäkalklappe bilden. Die Klappe liegt auf Höhe des Wirbels S1. Wenn das Zäkum gefüllt oder kontrahiert ist, spannen sich die beiden Falten der Ileozäkalklappe an und verhindern einen zäkoilealen Reflux."
         },
         {
           "type": "para",
@@ -88,17 +88,17 @@ export const chapter15De: Chapter = {
         },
         {
           "type": "para",
-          "text": "Tatsächlich ähnelt die Appendix einem Wurm. Sie ist 6 bis 12 cm lang und hat einen Durchmesser von 5 bis 8 mm. Sie liegt 2 bis 3 cm unterhalb der Ileozäkalverbindung und befindet sich meist retrozäkal, an der Stelle, an der die drei longitudinalen Bänder, oder Taeniae coli, zusammenlaufen. (Abbildung 15.1)"
+          "text": "Tatsächlich ähnelt die Appendix einem Wurm. Sie ist 6 bis 12 cm lang und hat einen Durchmesser von 5 bis 8 mm. Sie liegt 2 bis 3 cm unterhalb der Ileozäkalverbindung und befindet sich meist retrozäkal, an der Stelle, an der die drei longitudinalen Bänder, oder Taeniae coli, zusammenlaufen."
         },
         {
           "type": "bullets",
           "items": [
-            "Lagevarianten der Appendix vermiformis: Die Appendix kann auch subzäkal liegen und in die Beckenhöhle hineinreichen. Seltener kann sie infolge einer Fehlrotation der Darmschlingen während der Embryogenese im rechten Hypochondrium oder präileal beziehungsweise postileal liegen. (Abbildung 15.4)"
+            "Lagevarianten der Appendix vermiformis: Die Appendix kann auch subzäkal liegen und in die Beckenhöhle hineinreichen. Seltener kann sie infolge einer Fehlrotation der Darmschlingen während der Embryogenese im rechten Hypochondrium oder präileal beziehungsweise postileal liegen."
           ]
         },
         {
           "type": "para",
-          "text": "Die Appendix vermiformis liegt intraperitoneal. Sie ist über das Mesoappendix mit dem Ileum verbunden. (Abbildung 15.1) Mit dem Ovar ist sie durch das appendikulo-ovarielle Ligament verbunden."
+          "text": "Die Appendix vermiformis liegt intraperitoneal. Sie ist über das Mesoappendix mit dem Ileum verbunden. Mit dem Ovar ist sie durch das appendikulo-ovarielle Ligament verbunden."
         },
         {
           "type": "bullets",
@@ -131,7 +131,7 @@ export const chapter15De: Chapter = {
           "type": "bullets",
           "items": [
             "Rechte Kolonflexur (oder Flexura hepatica):",
-            "Sie misst 70 bis 80 mm. In der Frontalebene liegt sie unter dem rechten Leberlappen, auf Höhe der rechten 8. Rippe. Sie ist durch peritoneale Ligamente mit Leber, Gallenblase, Zwerchfell und rechter Niere verbunden. (Abbildung 15.5)",
+            "Sie misst 70 bis 80 mm. In der Frontalebene liegt sie unter dem rechten Leberlappen, auf Höhe der rechten 8. Rippe. Sie ist durch peritoneale Ligamente mit Leber, Gallenblase, Zwerchfell und rechter Niere verbunden.",
             "Colon transversum:",
             "Es nimmt nacheinander das rechte Hypochondrium, das Epigastrium und das linke Hypochondrium ein. (Abbildung 14.1) Es verläuft schräg nach kranial und links. In seinem mittleren Abschnitt liegt es näher an der vorderen Bauchwand als die rechte und linke Kolonflexur, die tiefer gelegen sind.",
             "Mesocolon transversum: Diese Peritonealfalte verbindet das Colon transversum über seine Wurzel mit der hinteren Bauchwand. (Abbildung 7.4)",
@@ -159,7 +159,7 @@ export const chapter15De: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Linke Kolonflexur (oder Flexura splenica): Diese Flexur ist spitzer, mit einem durchschnittlichen Winkel von 50°, und liegt in einer Sagittalebene. (Abbildung 15.5)",
+            "Linke Kolonflexur (oder Flexura splenica): Diese Flexur ist spitzer, mit einem durchschnittlichen Winkel von 50°, und liegt in einer Sagittalebene.",
             "Sie liegt höher als die Flexura hepatica, auf Höhe der linken 8. Rippe und des Wirbels T11. Sie bildet eine Wiege für die Milz. Sie ist mit dem Magen, dem Pankreasschwanz, dem linken dreieckigen Leberband, der linken Niere und dem Zwerchfell verbunden; das Ligamentum phrenicocolicum stützt die Milz."
           ]
         },
@@ -173,7 +173,7 @@ export const chapter15De: Chapter = {
           "type": "bullets",
           "items": [
             "Colon descendens:",
-            "Es verläuft vertikal und tief in der Lumbalregion (Abbildung 15.6) und wird vom Jejunum bedeckt. (Abbildung 14.1) Es ist retroperitoneal und über die Toldt-Faszie mit der hinteren Bauchwand verbunden. Das Colon descendens trägt Appendices omentales."
+            "Es verläuft vertikal und tief in der Lumbalregion und wird vom Jejunum bedeckt. (Abbildung 14.1) Es ist retroperitoneal und über die Toldt-Faszie mit der hinteren Bauchwand verbunden. Das Colon descendens trägt Appendices omentales."
           ]
         },
         {
@@ -186,9 +186,9 @@ export const chapter15De: Chapter = {
           "type": "bullets",
           "items": [
             "Colon sigmoideum:",
-            "Es liegt intraperitoneal und bildet eine breite S-förmige Schleife, von 40 cm beim kurzen Sigmoid bis 80 cm beim langen Sigmoid. Es zieht nach dorsal, medial und kaudal in das Becken (Abbildung 15.6), zum Douglas-Raum hin und bis zum dritten Sakralwirbel. Beim Mann liegt es zwischen Rektum und Blase; bei der Frau zwischen Rektum und Genitalorganen.",
+            "Es liegt intraperitoneal und bildet eine breite S-förmige Schleife, von 40 cm beim kurzen Sigmoid bis 80 cm beim langen Sigmoid. Es zieht nach dorsal, medial und kaudal in das Becken, zum Douglas-Raum hin und bis zum dritten Sakralwirbel. Beim Mann liegt es zwischen Rektum und Blase; bei der Frau zwischen Rektum und Genitalorganen.",
             "In seinem Verlauf kreuzt es den linken Musculus psoas major. Es besitzt nur wenige Haustren, oder Aussackungen, und lediglich zwei longitudinale Bänder. Sein kennzeichnendes Merkmal ist seine sehr große Beweglichkeit, die durch das Mesosigmoid ermöglicht wird.",
-            "Mesosigmoid: Dies ist eine umgekehrt V-förmige Peritonealfalte. Ihre Spitze liegt nahe der Teilung der linken Arteria iliaca communis in die Arteria iliaca interna und externa, in der Nähe des linken Iliosakralgelenks. Sie verbindet das Colon sigmoideum über zwei Wurzeln mit der hinteren Bauchwand: (Abbildung 15.7)",
+            "Mesosigmoid: Dies ist eine umgekehrt V-förmige Peritonealfalte. Ihre Spitze liegt nahe der Teilung der linken Arteria iliaca communis in die Arteria iliaca interna und externa, in der Nähe des linken Iliosakralgelenks. Sie verbindet das Colon sigmoideum über zwei Wurzeln mit der hinteren Bauchwand:",
             "Hauptwurzel: Diese vertikale Wurzel verläuft lateral entlang der vorderen Sakralforamina und endet vor dem dritten Sakralwirbel. Sie enthält die oberen Rektalgefäße und den Plexus hypogastricus superior.",
             "Nebenwurzel: Diese Wurzel verläuft schräg nach kaudal und links, entlang des medialen Randes des Psoasmuskels und des lateralen Sakralrandes. Sie enthält die Arteria mesenterica inferior."
           ]
@@ -204,11 +204,11 @@ export const chapter15De: Chapter = {
           "items": [
             "Rektum (bedeutet gerade):",
             "Das Rektum setzt das Colon sigmoideum auf Höhe des dritten Sakralwirbels fort und endet an der Analöffnung. Es besitzt keine Haustren, keine Bänder und keine Appendices omentales. Es ist 15 cm lang.",
-            "Es ist zunächst retroperitoneal und anschließend subperitoneal. Es liegt ventral des Sakrums und dorsal des Excavatio rectouterina bei der Frau oder des Excavatio rectovesicalis beim Mann (früher Douglas-Raum). (Abbildung 15.8)",
+            "Es ist zunächst retroperitoneal und anschließend subperitoneal. Es liegt ventral des Sakrums und dorsal des Excavatio rectouterina bei der Frau oder des Excavatio rectovesicalis beim Mann (früher Douglas-Raum).",
             "Es umfasst zwei Segmente, die in unterschiedlichen Ebenen ausgerichtet sind. Zusammen bilden sie den anorektalen Winkel von 90°, auch perineale Krümmung genannt; dieser Winkel öffnet sich nach dorsal und wird durch die puborektale Schlinge des Musculus levator ani aufrechterhalten:",
-            "Beckensegment, oder Ampulla recti: Dieses Segment liegt oberhalb des Perineums, ist nach kaudal gerichtet und folgt der Krümmung des Sakrums. (Abbildung 15.8);",
+            "Beckensegment, oder Ampulla recti: Dieses Segment liegt oberhalb des Perineums, ist nach kaudal gerichtet und folgt der Krümmung des Sakrums;",
             "Perineales Segment, oder Analkanal: Dieses Segment entspricht dem anorektalen Dreieck des Perineums und ist nach dorsal gerichtet.",
-            "Analkanal: Das Rektum durchquert das Diaphragma pelvis und endet am Anus. (Abbildung 15.8) Der Analkanal ist 4 cm lang und besitzt zwei Sphinkter:",
+            "Analkanal: Das Rektum durchquert das Diaphragma pelvis und endet am Anus. Der Analkanal ist 4 cm lang und besitzt zwei Sphinkter:",
             "Innerer Sphinkter: Dieser Sphinkter wird von der glatten Muskulatur des Rektums gebildet und vom pelvinen Parasympathikus sowie von sympathischen Fasern aus T12 bis L1 gesteuert. (Siehe Kapitel 17 Beckenhöhle, Innervation, Seite….)",
             "Äußerer Sphinkter: Dieser Ring aus quergestreifter Muskulatur wird durch den Nervus pudendus des somatischen Nervensystems gesteuert. (Siehe Kapitel 17 Beckenhöhle, Innervation, Seite….) Er kontrolliert die anale Kontinenz, verstärkt durch den Musculus levator ani."
           ]
@@ -280,7 +280,7 @@ export const chapter15De: Chapter = {
         },
         {
           "type": "para",
-          "text": "Das Kolon wird von Kollateralästen der Arteria mesenterica superior und inferior versorgt. (Abbildung 15.9)"
+          "text": "Das Kolon wird von Kollateralästen der Arteria mesenterica superior und inferior versorgt."
         },
         {
           "type": "bullets",
@@ -372,7 +372,7 @@ export const chapter15De: Chapter = {
             "Sympathikus: Die für Rektum und Analkanal bestimmten Fasern entspringen vor allem aus den unteren thorakolumbalen Segmenten. Sie ziehen zum Plexus mesentericus inferior und anschließend zum Plexus hypogastricus superior, bevor sie zu den Plexus hypogastrici inferiores absteigen. (Abbildung 4.26)",
             "Pelviner Parasympathikus: Seine Fasern entspringen dem sakralen Rückenmark, S2-S4. In der Oberflächenlesung wird ihre Projektion klassisch in der unteren Lumbalregion verortet.",
             "Plexus hypogastricus superior: Sympathische und parasympathische Fasern aus dem Plexus mesentericus inferior erreichen den Plexus hypogastricus superior, der auf Höhe des Wirbels L5 liegt. Aus ihm gehen der rechte und linke Nervus hypogastricus hervor. (Abbildung 4.36)",
-            "Plexus hypogastricus inferior: Der rechte und linke Nervus hypogastricus verlaufen entlang der lateralen Rektumwand und erreichen den rechten und linken Plexus hypogastricus inferior, die innerhalb der sakro-rekto-genito-pubischen Lamellen liegen. Sie liefern die sympathische und parasympathische Innervation der Beckenorgane. (Abbildung 15.10)",
+            "Plexus hypogastricus inferior: Der rechte und linke Nervus hypogastricus verlaufen entlang der lateralen Rektumwand und erreichen den rechten und linken Plexus hypogastricus inferior, die innerhalb der sakro-rekto-genito-pubischen Lamellen liegen. Sie liefern die sympathische und parasympathische Innervation der Beckenorgane.",
             "Wirkung des Sympathikus: Verschluss, Tonus und relative Trockenheit der Rektumschleimhaut;",
             "Wirkung des Parasympathikus: Öffnung, Schleimhautsekretion und reflektorische Auslösung der Defäkation."
           ]
@@ -573,7 +573,7 @@ export const chapter15De: Chapter = {
             "Nervus vagus, Hirnnerv X; (Abbildungen 4.11 und 4.17)",
             "Pelviner Parasympathikus; (Abbildung 4.23)",
             "Wirbelsäule, kostotransversale Gelenke (thorakale laterovertebrale Ganglienkette (T9-T12)); (Abbildungen 4.23, 4.29 und 4.32)",
-            "Prävertebraler Plexus. (Abbildungen 15.11 und 15.12)"
+            "Prävertebraler Plexus."
           ]
         },
         {
@@ -583,9 +583,9 @@ export const chapter15De: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Kolon: (Abbildungen 15.11 und 15.12)",
+            "Kolon:",
             "Zäkum: Plantarfläche des rechten Fußes, in Linie mit der vierten Zehe, entlang des vorderen Fersenrands und bis zur Ileozäkalverbindung;",
-            "Ileozäkalverbindung und Ileozäkalklappe: Stellen Sie sich ein V vor, dessen Spitze der Fundus des Zäkums am vorderen Rand der rechten Ferse ist. Der mediale Schenkel des V entspricht der Reflexzone der Ileozäkalverbindung; (Abbildung 15.13)",
+            "Ileozäkalverbindung und Ileozäkalklappe: Stellen Sie sich ein V vor, dessen Spitze der Fundus des Zäkums am vorderen Rand der rechten Ferse ist. Der mediale Schenkel des V entspricht der Reflexzone der Ileozäkalverbindung;",
             "Colon ascendens: eine Zone, die vom Zäkum bis zum Processus styloideus des rechten fünften Mittelfußknochens verläuft.",
             "Rechte Kolonflexur: am Processus styloideus des rechten fünften Mittelfußknochens und an der Zwerchfellkuppel.",
             "Colon transversum: Da seine Lage variiert, ist die Reflexzone seines mittleren Abschnitts schwer zu identifizieren. Entscheidend ist, auf die Reflexzonen seiner beiden Enden, die rechte und linke Kolonflexur, sowie auf die Wurzel des Mesocolon transversum einzuwirken.",
@@ -593,10 +593,10 @@ export const chapter15De: Chapter = {
             "Linke Kolonflexur: den Processus styloideus des rechten fünften Mittelfußknochens identifizieren. Die Reflexzone der linken Kolonflexur liegt etwas höher als die der rechten Kolonflexur;",
             "Colon descendens: eine Reflexzone entlang des lateralen Randes des linken Fußes bis zum lateralen Anteil des vorderen Fersenrandes;",
             "Colon sigmoideum: Es ist schwierig, die Reflexzone des mittleren Abschnitts des Colon sigmoideum zu lokalisieren, wegen seiner posteromedialen Richtung, seiner sehr großen Beweglichkeit und der topografischen Darstellung des Babys in Fetalstellung auf den Füßen.",
-            "Wie beim Colon transversum ist entscheidend, auf die Reflexzonen seiner beiden Enden einzuwirken: auf seine Verbindung mit dem Colon descendens auf Höhe des Ramus iliopubicus (Abbildung 15.12), auf seine Verbindung mit dem Rektum auf Höhe des dritten Sakralwirbels und auf die Wurzeln des Mesosigmoids.",
+            "Wie beim Colon transversum ist entscheidend, auf die Reflexzonen seiner beiden Enden einzuwirken: auf seine Verbindung mit dem Colon descendens auf Höhe des Ramus iliopubicus, auf seine Verbindung mit dem Rektum auf Höhe des dritten Sakralwirbels und auf die Wurzeln des Mesosigmoids.",
             "Wurzeln des Mesosigmoids: nur am linken Fuß, eine Linie entlang des vorderen Randes der posteromedialen Tuberositas calcanei, entsprechend dem vorderen Rand des Sakrums, vom linken Iliosakralgelenk bis S3. (Abbildungen 7.15 und 7.16)",
-            "Rektum: der vordere Rand der posteromedialen Tuberositas calcanei an beiden Füßen. (Abbildung 15.14)",
-            "Anus: das untere Ende der posteromedialen Tuberositas calcanei identifizieren. Die Reflexzone liegt unmittelbar davor. (Abbildung 15.14)",
+            "Rektum: der vordere Rand der posteromedialen Tuberositas calcanei an beiden Füßen.",
+            "Anus: das untere Ende der posteromedialen Tuberositas calcanei identifizieren. Die Reflexzone liegt unmittelbar davor.",
             "Plexus hypogastricus inferior, hinterer Anteil: Sakralkanal von S2 bis S4. (Abbildung 4.28 und Bis Abbildung 4.28)"
           ]
         },

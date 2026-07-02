@@ -15,7 +15,7 @@ export const chapter15Es: Chapter = {
       "blocks": [
         {
           "type": "para",
-          "text": "El colon, o intestino grueso, forma un marco alrededor del intestino delgado. Se extiende desde la unión ileocecal hasta el recto y mide aproximadamente 1,5 m de longitud en el adulto. (figura 15.1)"
+          "text": "El colon, o intestino grueso, forma un marco alrededor del intestino delgado. Se extiende desde la unión ileocecal hasta el recto y mide aproximadamente 1,5 m de longitud en el adulto."
         },
         {
           "type": "sub",
@@ -64,7 +64,7 @@ export const chapter15Es: Chapter = {
         },
         {
           "type": "para",
-          "text": "En la fosa ilíaca derecha, el ciego se sitúa de 2 a 3 cm por debajo de la unión ileocecal y aproximadamente dos traveses de dedo por encima del ligamento inguinal. (figura 15.2)"
+          "text": "En la fosa ilíaca derecha, el ciego se sitúa de 2 a 3 cm por debajo de la unión ileocecal y aproximadamente dos traveses de dedo por encima del ligamento inguinal."
         },
         {
           "type": "para",
@@ -76,7 +76,7 @@ export const chapter15Es: Chapter = {
         },
         {
           "type": "para",
-          "text": "El íleon desemboca en el ciego mediante dos pliegues que forman la válvula ileocecal. (figura 15.3) La válvula se sitúa a nivel vertebral S1. Cuando el ciego está lleno o contraído, los dos pliegues de la válvula ileocecal se tensan e impiden el reflujo cecoileal."
+          "text": "El íleon desemboca en el ciego mediante dos pliegues que forman la válvula ileocecal. La válvula se sitúa a nivel vertebral S1. Cuando el ciego está lleno o contraído, los dos pliegues de la válvula ileocecal se tensan e impiden el reflujo cecoileal."
         },
         {
           "type": "para",
@@ -88,17 +88,17 @@ export const chapter15Es: Chapter = {
         },
         {
           "type": "para",
-          "text": "En efecto, el apéndice se parece a un gusano. Mide de 6 a 12 cm de longitud y de 5 a 8 mm de diámetro. Se sitúa de 2 a 3 cm por debajo de la unión ileocecal y es con mayor frecuencia retrocecal, en el punto donde convergen las tres bandas longitudinales, o tenias del colon. (figura 15.1)"
+          "text": "En efecto, el apéndice se parece a un gusano. Mide de 6 a 12 cm de longitud y de 5 a 8 mm de diámetro. Se sitúa de 2 a 3 cm por debajo de la unión ileocecal y es con mayor frecuencia retrocecal, en el punto donde convergen las tres bandas longitudinales, o tenias del colon."
         },
         {
           "type": "bullets",
           "items": [
-            "Posiciones del apéndice vermiforme: el apéndice también puede ser subcecal y extenderse hacia la cavidad pélvica. Más raramente, debido a una malrotación de las asas intestinales durante la embriogénesis, puede situarse en el hipocondrio derecho o en posición preileal o postileal. (figura 15.4)"
+            "Posiciones del apéndice vermiforme: el apéndice también puede ser subcecal y extenderse hacia la cavidad pélvica. Más raramente, debido a una malrotación de las asas intestinales durante la embriogénesis, puede situarse en el hipocondrio derecho o en posición preileal o postileal."
           ]
         },
         {
           "type": "para",
-          "text": "El apéndice vermiforme es intraperitoneal. Está unido al íleon por el mesoapéndice. (figura 15.1) Está unido al ovario por el ligamento apendiculo-ovárico."
+          "text": "El apéndice vermiforme es intraperitoneal. Está unido al íleon por el mesoapéndice. Está unido al ovario por el ligamento apendiculo-ovárico."
         },
         {
           "type": "bullets",
@@ -131,7 +131,7 @@ export const chapter15Es: Chapter = {
           "type": "bullets",
           "items": [
             "Flexura cólica derecha (o flexura hepática):",
-            "Mide de 70 a 80 mm. En el plano frontal, se sitúa por debajo del lóbulo derecho del hígado, a la altura de la octava costilla derecha. Está unida por ligamentos peritoneales al hígado, la vesícula biliar, el diafragma y el riñón derecho. (figura 15.5)",
+            "Mide de 70 a 80 mm. En el plano frontal, se sitúa por debajo del lóbulo derecho del hígado, a la altura de la octava costilla derecha. Está unida por ligamentos peritoneales al hígado, la vesícula biliar, el diafragma y el riñón derecho.",
             "Colon transverso:",
             "Ocupa sucesivamente el hipocondrio derecho, el epigastrio y el hipocondrio izquierdo. (figura 14.1) Discurre oblicuamente hacia arriba y hacia la izquierda. En su porción media, se sitúa más cerca de la pared abdominal anterior que las flexuras cólicas derecha e izquierda, que se encuentran más profundas.",
             "Mesocolon transverso: este pliegue peritoneal conecta el colon transverso con la pared abdominal posterior a través de su raíz. (figura 7.4)",
@@ -159,7 +159,7 @@ export const chapter15Es: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Flexura cólica izquierda (o flexura esplénica): esta flexura es más aguda, con un ángulo medio de 50°, y se sitúa en un plano sagital. (figura 15.5)",
+            "Flexura cólica izquierda (o flexura esplénica): esta flexura es más aguda, con un ángulo medio de 50°, y se sitúa en un plano sagital.",
             "Se encuentra más alta que la flexura hepática, a la altura de la octava costilla izquierda y de la vértebra T11. Forma una cuna para el bazo. Está unida al estómago, a la cola del páncreas, al ligamento triangular izquierdo del hígado, al riñón izquierdo y al diafragma; el ligamento frenocólico sostiene el bazo."
           ]
         },
@@ -173,7 +173,7 @@ export const chapter15Es: Chapter = {
           "type": "bullets",
           "items": [
             "Colon descendente:",
-            "Es vertical y profundo en la región lumbar (figura 15.6), y está cubierto por el yeyuno. (figura 14.1) Es retroperitoneal y está unido a la pared abdominal posterior por la fascia de Toldt. El colon descendente presenta apéndices omentales."
+            "Es vertical y profundo en la región lumbar, y está cubierto por el yeyuno. (figura 14.1) Es retroperitoneal y está unido a la pared abdominal posterior por la fascia de Toldt. El colon descendente presenta apéndices omentales."
           ]
         },
         {
@@ -186,9 +186,9 @@ export const chapter15Es: Chapter = {
           "type": "bullets",
           "items": [
             "Colon sigmoide:",
-            "Es intraperitoneal y forma una amplia asa en forma de S, desde 40 cm en un sigma corto hasta 80 cm en un sigma largo. Discurre hacia atrás, medialmente y caudalmente dentro de la pelvis (figura 15.6), hacia el fondo de saco de Douglas y hasta la tercera vértebra sacra. En el hombre, se sitúa entre el recto y la vejiga; en la mujer, entre el recto y los órganos genitales.",
+            "Es intraperitoneal y forma una amplia asa en forma de S, desde 40 cm en un sigma corto hasta 80 cm en un sigma largo. Discurre hacia atrás, medialmente y caudalmente dentro de la pelvis, hacia el fondo de saco de Douglas y hasta la tercera vértebra sacra. En el hombre, se sitúa entre el recto y la vejiga; en la mujer, entre el recto y los órganos genitales.",
             "En su trayecto cruza el músculo psoas mayor izquierdo. Presenta pocas haustras, o saculaciones, y solo dos bandas longitudinales. Su característica definitoria es su gran movilidad, proporcionada por el mesosigmoides.",
-            "Mesosigmoides: es un pliegue peritoneal en forma de V invertida. Su vértice se sitúa cerca de la división de la arteria ilíaca común izquierda en las arterias ilíacas interna y externa, próximo a la articulación sacroilíaca izquierda. Conecta el colon sigmoide con la pared abdominal posterior mediante dos raíces: (figura 15.7)",
+            "Mesosigmoides: es un pliegue peritoneal en forma de V invertida. Su vértice se sitúa cerca de la división de la arteria ilíaca común izquierda en las arterias ilíacas interna y externa, próximo a la articulación sacroilíaca izquierda. Conecta el colon sigmoide con la pared abdominal posterior mediante dos raíces:",
             "Raíz principal: esta raíz vertical discurre lateralmente a lo largo de los forámenes sacros anteriores y termina por delante de la tercera vértebra sacra. Contiene los vasos rectales superiores y el plexo hipogástrico superior.",
             "Raíz secundaria: esta raíz discurre oblicuamente hacia abajo y hacia la izquierda, a lo largo del borde medial del músculo psoas y del borde lateral del sacro. Contiene la arteria mesentérica inferior."
           ]
@@ -204,11 +204,11 @@ export const chapter15Es: Chapter = {
           "items": [
             "Recto (que significa recto):",
             "El recto se continúa desde el colon sigmoide a la altura de la tercera vértebra sacra y termina en el orificio anal. No presenta haustras, ni tenias, ni apéndices omentales. Mide 15 cm de longitud.",
-            "Primero es retroperitoneal y luego subperitoneal. Se sitúa anterior al sacro y posterior al fondo de saco rectouterino en la mujer, o al fondo de saco rectovesical en el hombre (antiguamente denominado fondo de saco de Douglas). (figura 15.8)",
+            "Primero es retroperitoneal y luego subperitoneal. Se sitúa anterior al sacro y posterior al fondo de saco rectouterino en la mujer, o al fondo de saco rectovesical en el hombre (antiguamente denominado fondo de saco de Douglas).",
             "Comprende dos segmentos orientados en planos diferentes. Juntos forman el ángulo anorrectal de 90°, también denominado curvatura perineal; este ángulo se abre dorsalmente y se mantiene por la cincha puborrectal del músculo elevador del ano:",
-            "Segmento pélvico, o ampolla rectal: este segmento se sitúa por encima del periné, se orienta caudalmente y sigue la curvatura del sacro. (figura 15.8);",
+            "Segmento pélvico, o ampolla rectal: este segmento se sitúa por encima del periné, se orienta caudalmente y sigue la curvatura del sacro;",
             "Segmento perineal, o conducto anal: este segmento corresponde al triángulo anorrectal del periné y se orienta dorsalmente.",
-            "Conducto anal: el recto atraviesa el diafragma pélvico y termina en el ano. (figura 15.8) El conducto anal mide 4 cm y presenta dos esfínteres:",
+            "Conducto anal: el recto atraviesa el diafragma pélvico y termina en el ano. El conducto anal mide 4 cm y presenta dos esfínteres:",
             "Esfínter interno: este esfínter está formado por la musculatura lisa del recto y está controlado por el sistema parasimpático pélvico y las fibras simpáticas de T12 a L1. (Véase Capítulo 17 Cavidad pélvica, Inervación, página….)",
             "Esfínter externo: este anillo de músculo estriado está controlado por el nervio pudendo del sistema nervioso somático. (Véase Capítulo 17 Cavidad pélvica, Inervación, página….) Controla la continencia anal, reforzada por el músculo elevador del ano."
           ]
@@ -280,7 +280,7 @@ export const chapter15Es: Chapter = {
         },
         {
           "type": "para",
-          "text": "El colon recibe irrigación de ramas colaterales de las arterias mesentéricas superior e inferior. (figura 15.9)"
+          "text": "El colon recibe irrigación de ramas colaterales de las arterias mesentéricas superior e inferior."
         },
         {
           "type": "bullets",
@@ -372,7 +372,7 @@ export const chapter15Es: Chapter = {
             "Simpática: las fibras destinadas al recto y al conducto anal proceden principalmente de los niveles toracolumbares inferiores. Alcanzan el plexo mesentérico inferior y luego el plexo hipogástrico superior antes de descender hacia los plexos hipogástricos inferiores. (figura 4.26)",
             "Sistema parasimpático pélvico: sus fibras proceden de la médula sacra, S2-S3-S4. En lectura de superficie, su proyección se localiza clásicamente en la región lumbar baja.",
             "Plexo hipogástrico superior: las fibras simpáticas y parasimpáticas procedentes del plexo mesentérico inferior alcanzan el plexo hipogástrico superior, situado a la altura de la vértebra L5. De él nacen los nervios hipogástricos derecho e izquierdo. (figura 4.36)",
-            "Plexo hipogástrico inferior: los nervios hipogástricos derecho e izquierdo discurren a lo largo de la pared lateral del recto y alcanzan los plexos hipogástricos inferiores derecho e izquierdo, contenidos dentro de las láminas sacro-recto-genito-pubianas. Proporcionan inervación simpática y parasimpática a los órganos pélvicos. (figura 15.10)",
+            "Plexo hipogástrico inferior: los nervios hipogástricos derecho e izquierdo discurren a lo largo de la pared lateral del recto y alcanzan los plexos hipogástricos inferiores derecho e izquierdo, contenidos dentro de las láminas sacro-recto-genito-pubianas. Proporcionan inervación simpática y parasimpática a los órganos pélvicos.",
             "Acción del sistema simpático: cierre, tono y relativa sequedad de la mucosa rectal;",
             "Acción del sistema parasimpático: apertura, secreción mucosa y desencadenamiento reflejo de la defecación."
           ]
@@ -573,7 +573,7 @@ export const chapter15Es: Chapter = {
             "Nervio vago, nervio craneal X; (figuras 4.11 y 4.17)",
             "Sistema parasimpático pélvico; (figura 4.23)",
             "Columna vertebral, articulaciones costotransversas (cadena ganglionar laterovertebral torácica (T9-T12)); (figuras 4.23 y 4.29 y 4.32)",
-            "Plexo prevertebral. (figuras 15.11 y 15.12)"
+            "Plexo prevertebral."
           ]
         },
         {
@@ -583,9 +583,9 @@ export const chapter15Es: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Colon: (figuras 15.11 y 15.12)",
+            "Colon:",
             "Ciego: superficie plantar del pie derecho, en línea con el cuarto dedo, a lo largo del borde anterior del talón y hasta la unión ileocecal;",
-            "Unión ileocecal y válvula ileocecal: imaginar una V cuyo vértice es el fondo del ciego, en el borde anterior del talón derecho. La rama medial de la V corresponde a la zona refleja de la unión ileocecal; (figura 15.13)",
+            "Unión ileocecal y válvula ileocecal: imaginar una V cuyo vértice es el fondo del ciego, en el borde anterior del talón derecho. La rama medial de la V corresponde a la zona refleja de la unión ileocecal;",
             "Colon ascendente: una zona que va desde el ciego hasta la apófisis estiloides del quinto metatarsiano derecho.",
             "Flexura cólica derecha: contra la apófisis estiloides del quinto metatarsiano derecho y la cúpula diafragmática.",
             "Colon transverso: debido a la variabilidad de su posición, la zona refleja de su porción media es difícil de identificar. Lo esencial es actuar sobre las zonas reflejas de sus dos extremos, las flexuras cólicas derecha e izquierda, y sobre la raíz del mesocolon transverso.",
@@ -593,10 +593,10 @@ export const chapter15Es: Chapter = {
             "Flexura cólica izquierda: identificar la apófisis estiloides del quinto metatarsiano derecho. La zona refleja de la flexura cólica izquierda se sitúa ligeramente más alta que la de la flexura cólica derecha;",
             "Colon descendente: una zona refleja a lo largo del borde lateral del pie izquierdo hasta la parte lateral del borde anterior del talón;",
             "Colon sigmoide: es difícil localizar la zona refleja de la parte media del colon sigmoide debido a su dirección posteromedial, su gran movilidad y la representación topográfica del bebé en posición fetal en los pies.",
-            "Al igual que para el colon transverso, lo esencial es actuar sobre las zonas reflejas de sus dos extremos: su unión con el colon descendente a nivel de la rama iliopúbica (figura 15.12), su unión con el recto frente a la tercera vértebra sacra y las raíces del mesosigmoides.",
+            "Al igual que para el colon transverso, lo esencial es actuar sobre las zonas reflejas de sus dos extremos: su unión con el colon descendente a nivel de la rama iliopúbica, su unión con el recto frente a la tercera vértebra sacra y las raíces del mesosigmoides.",
             "Raíces del mesosigmoides: solo en el pie izquierdo, una línea que discurre a lo largo del borde anterior de la tuberosidad posteromedial del calcáneo, correspondiente al borde anterior del sacro, desde la articulación sacroilíaca izquierda hasta S3. (figuras 7.15 y 7.16)",
-            "Recto: el borde anterior de la tuberosidad posteromedial del calcáneo en ambos pies. (figura 15.14)",
-            "Ano: identificar el extremo inferior de la tuberosidad posteromedial del calcáneo. La zona refleja se sitúa inmediatamente anterior a él. (figura 15.14)",
+            "Recto: el borde anterior de la tuberosidad posteromedial del calcáneo en ambos pies.",
+            "Ano: identificar el extremo inferior de la tuberosidad posteromedial del calcáneo. La zona refleja se sitúa inmediatamente anterior a él.",
             "Plexo hipogástrico inferior, parte posterior: canal sacro de S2 a S4. (figura 4.28 y Bis figura 4.28)"
           ]
         },

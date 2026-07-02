@@ -11,7 +11,7 @@ export const chapter15Fr: Chapter = {
       "blocks": [
         {
           "type": "para",
-          "text": "Le côlon, ou gros intestin, forme un cadre qui entoure l’intestin grêle. Il s’étend de la jonction iléo-caecale, au rectum et sa longueur est d’environ 1.50m chez l’adulte. (figure 15.1)"
+          "text": "Le côlon, ou gros intestin, forme un cadre qui entoure l’intestin grêle. Il s’étend de la jonction iléo-caecale, au rectum et sa longueur est d’environ 1.50m chez l’adulte."
         },
         {
           "type": "sub",
@@ -60,7 +60,7 @@ export const chapter15Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "Dans la fosse iliaque droite, il est 2 à 3cm au-dessous de la jonction iléo-caecale, et à deux travers de doigt au-dessus du ligament inguinal. (figure 15.2)"
+          "text": "Dans la fosse iliaque droite, il est 2 à 3cm au-dessous de la jonction iléo-caecale, et à deux travers de doigt au-dessus du ligament inguinal."
         },
         {
           "type": "para",
@@ -72,7 +72,7 @@ export const chapter15Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "L’iléum s’abouche dans le caecum, en deux replis qui forment la valvule iléo-caecale (figure 15.3). Celle-ci, est située à hauteur de la vertèbre S1. Quand le caecum est plein ou contracté, les deux replis de la valvule iléo-caecale se tendent et empêchent le reflux caeco-iléal."
+          "text": "L’iléum s’abouche dans le caecum, en deux replis qui forment la valvule iléo-caecale. Celle-ci, est située à hauteur de la vertèbre S1. Quand le caecum est plein ou contracté, les deux replis de la valvule iléo-caecale se tendent et empêchent le reflux caeco-iléal."
         },
         {
           "type": "para",
@@ -84,17 +84,17 @@ export const chapter15Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "Effectivement, il ressemble à un ver de 6 à 12cm de long pour un diamètre entre 5 à 8mm. Il est situé 2 à 3cm sous la jonction iléo-caecale. Il est majoritairement rétro-caecal, à la réunion des trois bandelettes longitudinales (ou taeniae coli). (figure15.1)"
+          "text": "Effectivement, il ressemble à un ver de 6 à 12cm de long pour un diamètre entre 5 à 8mm. Il est situé 2 à 3cm sous la jonction iléo-caecale. Il est majoritairement rétro-caecal, à la réunion des trois bandelettes longitudinales (ou taeniae coli)."
         },
         {
           "type": "bullets",
           "items": [
-            "Positions de l’appendice vermiforme: il peut parfois être sous-caecal, pénétrant dans la cavité pelvienne. Plus rarement, il peut se situer dans l’hypochondre droit, préiléal ou postiléal, par mauvaise rotation des anses intestinales pendant l’embryogénèse. (figure 15.4)"
+            "Positions de l’appendice vermiforme: il peut parfois être sous-caecal, pénétrant dans la cavité pelvienne. Plus rarement, il peut se situer dans l’hypochondre droit, préiléal ou postiléal, par mauvaise rotation des anses intestinales pendant l’embryogénèse."
           ]
         },
         {
           "type": "para",
-          "text": "L’appendice vermiforme est intra-péritonéal. Il est relié à l’iléum par le méso-appendiculaire (figure 15.1). Il est relié à l’ovaire par le ligament appendico-ovarien."
+          "text": "L’appendice vermiforme est intra-péritonéal. Il est relié à l’iléum par le méso-appendiculaire. Il est relié à l’ovaire par le ligament appendico-ovarien."
         },
         {
           "type": "bullets",
@@ -128,7 +128,7 @@ export const chapter15Fr: Chapter = {
           "type": "bullets",
           "items": [
             "Angle colique droit (ou angle hépatique):",
-            "Il mesure 70 à 80mm. Il est situé, dans un plan frontal, sous le lobe droit du foie, à hauteur de la 8ème côte droite. Il est relié, par des ligaments péritonéaux, au foie, à la vésicule biliaire, au diaphragme et au rein droit. (figure15.5)",
+            "Il mesure 70 à 80mm. Il est situé, dans un plan frontal, sous le lobe droit du foie, à hauteur de la 8ème côte droite. Il est relié, par des ligaments péritonéaux, au foie, à la vésicule biliaire, au diaphragme et au rein droit.",
             "Côlon transverse:",
             "Il occupe successivement l’hypochondre droit, l’épigastre et l’hypochondre gauche de l’abdomen (figure 14.1). Il est oblique crânialement et à gauche. Il est plus proche de la paroi abdominale antérieure dans sa partie moyenne que les angles coliques droit et gauche plus profondément situés.",
             "Mésocôlon transverse: c’est un repli du péritoine qui relie le côlon transverse à la paroi abdominale postérieure par l’intermédiaire de sa racine. (figure 7.4)",
@@ -156,7 +156,7 @@ export const chapter15Fr: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Angle colique gauche (ou angle splénique): il est plus aigu, en moyenne 50°, situé dans un plan sagittal. (figure15.5)",
+            "Angle colique gauche (ou angle splénique): il est plus aigu, en moyenne 50°, situé dans un plan sagittal.",
             "Il est situé plus haut que l’angle hépatique, à hauteur de la 8ème côte gauche et de la vertèbre Th11. Il sert de berceau à la rate. Il est rattaché à l’estomac, à la queue du pancréas, au ligament triangulaire gauche du foie, au rein gauche et au diaphragme dont le ligament phrénico-colique soutient la rate."
           ]
         },
@@ -170,7 +170,7 @@ export const chapter15Fr: Chapter = {
           "type": "bullets",
           "items": [
             "Côlon descendant:",
-            "Il est vertical et profond dans la partie lombaire (figure 15.6), recouvert par le jéjunum (figure 14.1). Il est rétro-péritonéal et relié à la paroi abdominale postérieure par le fascia de Toldt. Le côlon descendant présente des appendices omentaux."
+            "Il est vertical et profond dans la partie lombaire, recouvert par le jéjunum (figure 14.1). Il est rétro-péritonéal et relié à la paroi abdominale postérieure par le fascia de Toldt. Le côlon descendant présente des appendices omentaux."
           ]
         },
         {
@@ -183,9 +183,9 @@ export const chapter15Fr: Chapter = {
           "type": "bullets",
           "items": [
             "Côlon sigmoïde:",
-            "Il est intra-péritonéal. Il décrit une large boucle en forme de S (d’où son nom) de 40cm (sigmoïde court) à 80cm (sigmoïde long). Il se dirige dorsalement, médialement et caudalement dans le bassin (figure 15.6) vers le cul-de-sac de Douglas jusqu’à la 3ème vertèbre sacrée, entre le rectum et la vessie chez l’homme, entre le rectum et les organes génitaux chez la femme.",
+            "Il est intra-péritonéal. Il décrit une large boucle en forme de S (d’où son nom) de 40cm (sigmoïde court) à 80cm (sigmoïde long). Il se dirige dorsalement, médialement et caudalement dans le bassin vers le cul-de-sac de Douglas jusqu’à la 3ème vertèbre sacrée, entre le rectum et la vessie chez l’homme, entre le rectum et les organes génitaux chez la femme.",
             "Dans son trajet, il croise le grand psoas gauche. Il présente peu d’haustrations (bosselures) et seulement deux bandelettes longitudinales. Sa caractéristique est sa très grande mobilité grâce à son mésosigmoïde.",
-            "Mésosigmoïde: c’est un repli du péritoine en forme de V inversé dont le sommet est près de la division de l’artère iliaque commune gauche en artères iliaques interne et externe, à hauteur de la sacro-iliaque gauche. Il relie le côlon sigmoïde à la paroi abdominale postérieure par l’intermédiaire de ses deux racines: (figure 15.7)",
+            "Mésosigmoïde: c’est un repli du péritoine en forme de V inversé dont le sommet est près de la division de l’artère iliaque commune gauche en artères iliaques interne et externe, à hauteur de la sacro-iliaque gauche. Il relie le côlon sigmoïde à la paroi abdominale postérieure par l’intermédiaire de ses deux racines:",
             "Racine principale: verticale, elle longe latéralement les trous sacrés antérieurs pour se terminer en avant de la 3ème vertèbre sacrée. Elle contient les vaisseaux rectaux supérieurs et le plexus hypogastrique supérieur.",
             "Racine secondaire: oblique caudalement et à gauche, elle longe le bord médial du muscle psoas et le bord latéral du sacrum. Elle contient l’artère mésentérique inférieure."
           ]
@@ -201,11 +201,11 @@ export const chapter15Fr: Chapter = {
           "items": [
             "Rectum (qui veut dire droit):",
             "Il fait suite au sigmoïde, au niveau de la 3ème vertèbre sacrée, et se termine par l’orifice anal. Il n’a ni haustrations ni bandelettes ni appendices omentaux. Sa longueur est de 15cm.",
-            "Il est rétropéritonéal puis subpéritonéal. Il est en antérieur au sacrum et postérieur au cul-de-sac recto-utérin chez la femme ou au cul-de-sac recto-vésical chez l’homme (anciennement cul-de-sac de Douglas). (figure 15.8)",
+            "Il est rétropéritonéal puis subpéritonéal. Il est en antérieur au sacrum et postérieur au cul-de-sac recto-utérin chez la femme ou au cul-de-sac recto-vésical chez l’homme (anciennement cul-de-sac de Douglas).",
             "Il comprend deux segments orientés dans deux plans différents formant l’angle ano-rectal de 90°appelé courbure périnéale, ouverte dorsalement et maintenue par le faisceau puborectal du muscle élévateur de l’anus:",
-            "Segment pelvien ou ampoule rectale, au-dessus du périnée et qui regarde caudalement. Il suit la courbure du sacrum (figure 15.8);",
+            "Segment pelvien ou ampoule rectale, au-dessus du périnée et qui regarde caudalement. Il suit la courbure du sacrum;",
             "Segment périnéal ou canal anal répondant au triangle ano-rectal du périnée et qui regarde dorsalement.",
-            "Canal anal: le rectum traverse le diaphragme pelvien pour se terminer à l’anus (figure 15.8) dont la longueur est de 4cm. Il comprend deux sphincters:",
+            "Canal anal: le rectum traverse le diaphragme pelvien pour se terminer à l’anus dont la longueur est de 4cm. Il comprend deux sphincters:",
             "Sphincter interne: il est formé des muscles lisses du rectum contrôlés par le Parasympathique pelvien et le Sympathique de Th12 à L1. (Cf. Chapitre 17 Cavité pelvienne, Innervation, page….)",
             "Sphincter externe: c’est un anneau formé de muscles striés, commandés par le nerf pudendal du système nerveux somatique (Cf. Chapitre17 Cavité pelvienne, Innervation, page….). Il contrôle la continence anale, renforcé par le muscle relèveur de l’anus."
           ]
@@ -277,7 +277,7 @@ export const chapter15Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "Le côlon est vascularisé par les collatérales des artères mésentériques supérieure et inférieure: (figure15.9)"
+          "text": "Le côlon est vascularisé par les collatérales des artères mésentériques supérieure et inférieure:"
         },
         {
           "type": "bullets",
@@ -369,7 +369,7 @@ export const chapter15Fr: Chapter = {
             "Sympathique: les fibres destinées au rectum et au canal anal proviennent surtout des étages thoraco-lombaires bas. Elles rejoignent le plexus mésentérique inférieur puis le plexus hypogastrique supérieur, avant de descendre vers les plexus hypogastriques inférieurs. (figure 4.26)",
             "Parasympathique pelvien: ses fibres sont issues de la moelle sacrale S2-S3-S4. En lecture de surface, leur projection se repère classiquement à hauteur lombaire basse.",
             "Plexus hypogastrique supérieur: les fibres sympathiques et parasympathiques venant du plexus mésentérique inférieur rejoignent le plexus hypogastrique supérieur situé à hauteur de la vertèbre L5. Il est à l’origine des nerfs hypogastriques droit et gauche. (figure 4.36)",
-            "Plexus hypogastrique inférieur: les nerfs hypogastriques droit et gauche longent la paroi latérale du rectum et rejoignent les plexus hypogastrique inférieur droit et gauche, contenus à l’intérieur des lames sacro-recto-génito-pubiennes. Ils apportent l’innervation sympathique et parasympathique aux organes pelviens. (figure 15.10)",
+            "Plexus hypogastrique inférieur: les nerfs hypogastriques droit et gauche longent la paroi latérale du rectum et rejoignent les plexus hypogastrique inférieur droit et gauche, contenus à l’intérieur des lames sacro-recto-génito-pubiennes. Ils apportent l’innervation sympathique et parasympathique aux organes pelviens.",
             "Action du sympathique: fermeture, tonus et relative sécheresse de la muqueuse rectale;",
             "Action du parasympathique: ouverture, sécrétion de la muqueuse et déclenchement réflexe de la défécation."
           ]
@@ -570,7 +570,7 @@ export const chapter15Fr: Chapter = {
             "Nerf vague X; (figures 4.11 et 4.17)",
             "Parasympathique pelvien; (figure 4.23)",
             "Colonne vertébrale, articulations costo-transversaires (chaîne ganglionnaire latéro-vertébrale thoracique (Th9-Th12); (figures 4.23 et 4.29 et 4.32)",
-            "Plexus prévertébral. (figures 15.11 et 15.12)"
+            "Plexus prévertébral."
           ]
         },
         {
@@ -580,9 +580,9 @@ export const chapter15Fr: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Côlon: (figures 15.11 et 15.12)",
+            "Côlon:",
             "Caecum: face plantaire du pied droit, à l’aplomb du 4ème orteil, sur le bord antérieur du talon, jusqu’à la jonction iléo-caecale;",
-            "Jonction iléo-caecale et valvule iléo-caecale: imaginer un V dont la pointe est le fond du caecum, sur le bord antérieur du talon droit. La branche médiale du V est la zone réflexe de la jonction iléo-caecale; (figure 15.13)",
+            "Jonction iléo-caecale et valvule iléo-caecale: imaginer un V dont la pointe est le fond du caecum, sur le bord antérieur du talon droit. La branche médiale du V est la zone réflexe de la jonction iléo-caecale;",
             "Côlon ascendant: Une zone allant du caecum à la styloïde du 5ème métatarse droit.",
             "Angle colique droit: contre la styloïde du 5ème métatarse droit et la coupole diaphragmatique",
             "Côlon transverse: en raison de la variation de sa position, sa zone réflexe est difficilement repérable dans sa partie moyenne. L’essentiel est d’agir sur les zones réflexes de ses deux extrémités: les angles coliques droit et gauche, et sur la racine du mésocôlon transverse.",
@@ -590,10 +590,10 @@ export const chapter15Fr: Chapter = {
             "Angle colique gauche: repérer la styloïde du 5ème métatarse droit, la zone réflexe de l’angle colique gauche est légèrement plus haute que l’angle colique droit;",
             "Côlon descendant: une zone réflexe le long du bord latéral du pied gauche à la partie latérale du bord antérieur du talon;",
             "Côlon sigmoïde: Il est difficile de localiser la zone réflexe de la partie moyenne du côlon sigmoïde en raison de sa direction postéro-médiale, sa très grande mobilité et la présentation topique du bébé en position fœtale dans les pieds.",
-            "Comme pour le côlon transverse, l’essentiel est d’agir sur les zones réflexes de ses deux extrémités: sa jonction avec le côlon descendant à hauteur de la branche iliopubienne (figure 15.12) et celle avec le rectum, à hauteur de la 3ème vertèbre sacrée et sur les racines du mésosigmoïde",
+            "Comme pour le côlon transverse, l’essentiel est d’agir sur les zones réflexes de ses deux extrémités: sa jonction avec le côlon descendant à hauteur de la branche iliopubienne et celle avec le rectum, à hauteur de la 3ème vertèbre sacrée et sur les racines du mésosigmoïde",
             "Racines du mésosigmoïde: sur le pied gauche uniquement, une ligne longeant le bord antérieur de la tubérosité postéro-médiale du calcanéum (bord antérieur du sacrum), depuis la sacro-iliaque gauche jusqu’à S3 (figures 7.15 et 7.16)",
-            "Rectum: le bord antérieur de la tubérosité postéro-médiale du calcanéum sur les deux pieds. (figure 15.14)",
-            "Anus: repérer l’extrémité inférieure de la tubérosité postéro-médiale du calcanéum. La zone réflexe se situe juste en avant. (figure 15.14)",
+            "Rectum: le bord antérieur de la tubérosité postéro-médiale du calcanéum sur les deux pieds.",
+            "Anus: repérer l’extrémité inférieure de la tubérosité postéro-médiale du calcanéum. La zone réflexe se situe juste en avant.",
             "plexus hypogastrique inférieur (partie postérieure): canal sacré à hauteur de S2 à S4 (figure 4.28 et Bis figure 4.28)"
           ]
         },

@@ -15,7 +15,7 @@ export const chapter15It: Chapter = {
       "blocks": [
         {
           "type": "para",
-          "text": "Il colon, o intestino crasso, forma una cornice attorno all’intestino tenue. Si estende dalla giunzione ileocecale al retto e nell’adulto misura circa 1,5 m di lunghezza. (figura 15.1)"
+          "text": "Il colon, o intestino crasso, forma una cornice attorno all’intestino tenue. Si estende dalla giunzione ileocecale al retto e nell’adulto misura circa 1,5 m di lunghezza."
         },
         {
           "type": "sub",
@@ -64,7 +64,7 @@ export const chapter15It: Chapter = {
         },
         {
           "type": "para",
-          "text": "Nella fossa iliaca destra, il cieco si trova da 2 a 3 cm al di sotto della giunzione ileocecale e a circa due dita trasverse al di sopra del legamento inguinale. (figura 15.2)"
+          "text": "Nella fossa iliaca destra, il cieco si trova da 2 a 3 cm al di sotto della giunzione ileocecale e a circa due dita trasverse al di sopra del legamento inguinale."
         },
         {
           "type": "para",
@@ -76,7 +76,7 @@ export const chapter15It: Chapter = {
         },
         {
           "type": "para",
-          "text": "L’ileo sbocca nel cieco mediante due pliche che formano la valvola ileocecale. (figura 15.3) La valvola è situata a livello della vertebra S1. Quando il cieco è pieno o contratto, le due pliche della valvola ileocecale si tendono e impediscono il reflusso cieco-ileale."
+          "text": "L’ileo sbocca nel cieco mediante due pliche che formano la valvola ileocecale. La valvola è situata a livello della vertebra S1. Quando il cieco è pieno o contratto, le due pliche della valvola ileocecale si tendono e impediscono il reflusso cieco-ileale."
         },
         {
           "type": "para",
@@ -88,17 +88,17 @@ export const chapter15It: Chapter = {
         },
         {
           "type": "para",
-          "text": "In effetti, l’appendice ricorda un verme. Misura da 6 a 12 cm di lunghezza e da 5 a 8 mm di diametro. Si trova da 2 a 3 cm al di sotto della giunzione ileocecale ed è nella maggior parte dei casi retrocecale, nel punto in cui convergono le tre bande longitudinali, o tenie del colon. (figura 15.1)"
+          "text": "In effetti, l’appendice ricorda un verme. Misura da 6 a 12 cm di lunghezza e da 5 a 8 mm di diametro. Si trova da 2 a 3 cm al di sotto della giunzione ileocecale ed è nella maggior parte dei casi retrocecale, nel punto in cui convergono le tre bande longitudinali, o tenie del colon."
         },
         {
           "type": "bullets",
           "items": [
-            "Posizioni dell’appendice vermiforme: l’appendice può anche essere subcecale ed estendersi nella cavità pelvica. Più raramente, per malrotazione delle anse intestinali durante l’embriogenesi, può trovarsi nell’ipocondrio destro oppure in posizione preileale o postileale. (figura 15.4)"
+            "Posizioni dell’appendice vermiforme: l’appendice può anche essere subcecale ed estendersi nella cavità pelvica. Più raramente, per malrotazione delle anse intestinali durante l’embriogenesi, può trovarsi nell’ipocondrio destro oppure in posizione preileale o postileale."
           ]
         },
         {
           "type": "para",
-          "text": "L’appendice vermiforme è intraperitoneale. È collegata all’ileo dal mesoappendice. (figura 15.1) È collegata all’ovaio dal legamento appendico-ovarico."
+          "text": "L’appendice vermiforme è intraperitoneale. È collegata all’ileo dal mesoappendice. È collegata all’ovaio dal legamento appendico-ovarico."
         },
         {
           "type": "bullets",
@@ -131,7 +131,7 @@ export const chapter15It: Chapter = {
           "type": "bullets",
           "items": [
             "Flessura colica destra (o flessura epatica):",
-            "Misura da 70 a 80 mm. Nel piano frontale si trova al di sotto del lobo destro del fegato, in corrispondenza dell’ottava costa destra. È collegata mediante legamenti peritoneali al fegato, alla colecisti, al diaframma e al rene destro. (figura 15.5)",
+            "Misura da 70 a 80 mm. Nel piano frontale si trova al di sotto del lobo destro del fegato, in corrispondenza dell’ottava costa destra. È collegata mediante legamenti peritoneali al fegato, alla colecisti, al diaframma e al rene destro.",
             "Colon trasverso:",
             "Occupa successivamente l’ipocondrio destro, l’epigastrio e l’ipocondrio sinistro. (figura 14.1) Decorre obliquamente verso l’alto e a sinistra. Nella sua parte media è più vicino alla parete addominale anteriore rispetto alle flessure coliche destra e sinistra, che sono situate più profondamente.",
             "Mesocolon trasverso: questa piega peritoneale collega il colon trasverso alla parete addominale posteriore attraverso la sua radice. (figura 7.4)",
@@ -159,7 +159,7 @@ export const chapter15It: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Flessura colica sinistra (o flessura splenica): questa flessura è più acuta, con un angolo medio di 50°, ed è situata in un piano sagittale. (figura 15.5)",
+            "Flessura colica sinistra (o flessura splenica): questa flessura è più acuta, con un angolo medio di 50°, ed è situata in un piano sagittale.",
             "È situata più in alto della flessura epatica, in corrispondenza dell’ottava costa sinistra e della vertebra T11. Costituisce una sorta di culla per la milza. È collegata allo stomaco, alla coda del pancreas, al legamento triangolare sinistro del fegato, al rene sinistro e al diaframma; il legamento frenicocolico sostiene la milza."
           ]
         },
@@ -173,7 +173,7 @@ export const chapter15It: Chapter = {
           "type": "bullets",
           "items": [
             "Colon discendente:",
-            "È verticale e profondo nella regione lombare (figura 15.6) ed è ricoperto dal digiuno. (figura 14.1) È retroperitoneale ed è fissato alla parete addominale posteriore dalla fascia di Toldt. Il colon discendente presenta appendici omentali."
+            "È verticale e profondo nella regione lombare ed è ricoperto dal digiuno. (figura 14.1) È retroperitoneale ed è fissato alla parete addominale posteriore dalla fascia di Toldt. Il colon discendente presenta appendici omentali."
           ]
         },
         {
@@ -186,9 +186,9 @@ export const chapter15It: Chapter = {
           "type": "bullets",
           "items": [
             "Colon sigmoideo:",
-            "È intraperitoneale e forma un’ampia ansa a S, da 40 cm in un sigma corto fino a 80 cm in un sigma lungo. Decorre posteriormente, medialmente e caudalmente nel bacino (figura 15.6), verso il cavo di Douglas e fino alla terza vertebra sacrale. Nell’uomo è situato tra retto e vescica; nella donna, tra retto e organi genitali.",
+            "È intraperitoneale e forma un’ampia ansa a S, da 40 cm in un sigma corto fino a 80 cm in un sigma lungo. Decorre posteriormente, medialmente e caudalmente nel bacino, verso il cavo di Douglas e fino alla terza vertebra sacrale. Nell’uomo è situato tra retto e vescica; nella donna, tra retto e organi genitali.",
             "Nel suo decorso incrocia il muscolo grande psoas sinistro. Presenta poche haustra e soltanto due bande longitudinali. La sua caratteristica principale è la grandissima mobilità, conferita dal mesosigmoide.",
-            "Mesosigmoide: è una piega peritoneale a V rovesciata. Il suo apice si trova vicino alla divisione dell’arteria iliaca comune sinistra nelle arterie iliache interna ed esterna, in prossimità dell’articolazione sacroiliaca sinistra. Collega il colon sigmoideo alla parete addominale posteriore tramite due radici: (figura 15.7)",
+            "Mesosigmoide: è una piega peritoneale a V rovesciata. Il suo apice si trova vicino alla divisione dell’arteria iliaca comune sinistra nelle arterie iliache interna ed esterna, in prossimità dell’articolazione sacroiliaca sinistra. Collega il colon sigmoideo alla parete addominale posteriore tramite due radici:",
             "Radice principale: questa radice verticale decorre lateralmente ai forami sacrali anteriori e termina davanti alla terza vertebra sacrale. Contiene i vasi rettali superiori e il plesso ipogastrico superiore.",
             "Radice secondaria: questa radice decorre obliquamente in basso e a sinistra, lungo il margine mediale del muscolo psoas e il margine laterale del sacro. Contiene l’arteria mesenterica inferiore."
           ]
@@ -204,11 +204,11 @@ export const chapter15It: Chapter = {
           "items": [
             "Retto (dal latino rectus, cioè dritto):",
             "Il retto continua il colon sigmoideo all’altezza della terza vertebra sacrale e termina all’orifizio anale. Non presenta haustra, né tenie, né appendici omentali. Misura 15 cm di lunghezza.",
-            "È dapprima retroperitoneale e poi sottoperitoneale. Si trova anteriormente al sacro e posteriormente al cavo retto-uterino nella donna, oppure al cavo retto-vescicale nell’uomo (un tempo detto cavo di Douglas). (figura 15.8)",
+            "È dapprima retroperitoneale e poi sottoperitoneale. Si trova anteriormente al sacro e posteriormente al cavo retto-uterino nella donna, oppure al cavo retto-vescicale nell’uomo (un tempo detto cavo di Douglas).",
             "Comprende due segmenti orientati in piani differenti. Insieme formano l’angolo anorettale di 90°, detto anche curvatura perineale; questo angolo è aperto dorsalmente ed è mantenuto dal fascio puborettale del muscolo elevatore dell’ano:",
-            "Segmento pelvico, o ampolla rettale: questo segmento è situato al di sopra del perineo, è orientato caudalmente e segue la curvatura del sacro. (figura 15.8);",
+            "Segmento pelvico, o ampolla rettale: questo segmento è situato al di sopra del perineo, è orientato caudalmente e segue la curvatura del sacro;",
             "Segmento perineale, o canale anale: questo segmento corrisponde al triangolo anorettale del perineo ed è orientato dorsalmente.",
-            "Canale anale: il retto attraversa il diaframma pelvico e termina all’ano. (figura 15.8) Il canale anale misura 4 cm di lunghezza e presenta due sfinteri:",
+            "Canale anale: il retto attraversa il diaframma pelvico e termina all’ano. Il canale anale misura 4 cm di lunghezza e presenta due sfinteri:",
             "Sfintere interno: è formato dalla muscolatura liscia del retto ed è controllato dal parasimpatico pelvico e dalle fibre simpatiche da T12 a L1. (Vedi Capitolo 17 Cavità pelvica, Innervazione, pagina….)",
             "Sfintere esterno: questo anello di muscolatura striata è controllato dal nervo pudendo del sistema nervoso somatico. (Vedi Capitolo 17 Cavità pelvica, Innervazione, pagina….) Controlla la continenza anale ed è rinforzato dal muscolo elevatore dell’ano."
           ]
@@ -280,7 +280,7 @@ export const chapter15It: Chapter = {
         },
         {
           "type": "para",
-          "text": "Il colon è irrorato da rami collaterali delle arterie mesenteriche superiore e inferiore. (figura 15.9)"
+          "text": "Il colon è irrorato da rami collaterali delle arterie mesenteriche superiore e inferiore."
         },
         {
           "type": "bullets",
@@ -372,7 +372,7 @@ export const chapter15It: Chapter = {
             "Simpatico: le fibre destinate al retto e al canale anale originano soprattutto dai segmenti toraco-lombari inferiori. Esse raggiungono il plesso mesenterico inferiore e poi il plesso ipogastrico superiore, prima di discendere verso i plessi ipogastrici inferiori. (figura 4.26)",
             "Parasimpatico pelvico: le sue fibre originano dal midollo sacrale, S2-S4. Nella lettura di superficie, la loro proiezione si colloca classicamente nella regione lombare bassa.",
             "Plesso ipogastrico superiore: le fibre simpatiche e parasimpatiche provenienti dal plesso mesenterico inferiore raggiungono il plesso ipogastrico superiore, situato in corrispondenza della vertebra L5. Da esso originano i nervi ipogastrici destro e sinistro. (figura 4.36)",
-            "Plesso ipogastrico inferiore: i nervi ipogastrici destro e sinistro decorrono lungo la parete laterale del retto e raggiungono i plessi ipogastrici inferiori destro e sinistro, contenuti nelle lamine sacro-retto-genito-pubiche. Essi forniscono innervazione simpatica e parasimpatica agli organi pelvici. (figura 15.10)",
+            "Plesso ipogastrico inferiore: i nervi ipogastrici destro e sinistro decorrono lungo la parete laterale del retto e raggiungono i plessi ipogastrici inferiori destro e sinistro, contenuti nelle lamine sacro-retto-genito-pubiche. Essi forniscono innervazione simpatica e parasimpatica agli organi pelvici.",
             "Azione del simpatico: chiusura, tono e relativa secchezza della mucosa rettale;",
             "Azione del parasimpatico: apertura, secrezione mucosa e innesco riflesso della defecazione."
           ]
@@ -573,7 +573,7 @@ export const chapter15It: Chapter = {
             "Nervo vago, nervo cranico X; (figure 4.11 e 4.17)",
             "Parasimpatico pelvico; (figura 4.23)",
             "Colonna vertebrale, articolazioni costo-trasversarie (catena gangliare laterovertebrale toracica T9-T12); (figure 4.23 e 4.29 e 4.32)",
-            "Plesso prevertebrale. (figure 15.11 e 15.12)"
+            "Plesso prevertebrale."
           ]
         },
         {
@@ -583,9 +583,9 @@ export const chapter15It: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Colon: (figure 15.11 e 15.12)",
+            "Colon:",
             "Cieco: faccia plantare del piede destro, in corrispondenza del quarto dito, lungo il margine anteriore del calcagno fino alla giunzione ileocecale;",
-            "Giunzione ileocecale e valvola ileocecale: immaginare una V il cui vertice corrisponde al fondo del cieco, sul margine anteriore del tallone destro. Il ramo mediale della V corrisponde alla zona riflessa della giunzione ileocecale; (figura 15.13)",
+            "Giunzione ileocecale e valvola ileocecale: immaginare una V il cui vertice corrisponde al fondo del cieco, sul margine anteriore del tallone destro. Il ramo mediale della V corrisponde alla zona riflessa della giunzione ileocecale;",
             "Colon ascendente: una zona che va dal cieco al processo stiloideo del quinto metatarso destro.",
             "Flessura colica destra: contro il processo stiloideo del quinto metatarso destro e la cupola diaframmatica.",
             "Colon trasverso: poiché la sua posizione è variabile, la zona riflessa della sua parte media è difficile da individuare. Il punto essenziale è agire sulle zone riflesse delle sue due estremità, cioè flessura colica destra e sinistra, e sulla radice del mesocolon trasverso.",
@@ -593,10 +593,10 @@ export const chapter15It: Chapter = {
             "Flessura colica sinistra: individuare il processo stiloideo del quinto metatarso destro. La zona riflessa della flessura colica sinistra si trova leggermente più in alto rispetto a quella della flessura colica destra;",
             "Colon discendente: una zona riflessa lungo il margine laterale del piede sinistro fino alla parte laterale del margine anteriore del tallone;",
             "Colon sigmoideo: è difficile localizzare la zona riflessa della parte media del sigma a causa del suo decorso postero-mediale, della sua grandissima mobilità e della rappresentazione topografica del bambino in posizione fetale sui piedi.",
-            "Come per il colon trasverso, il punto essenziale è agire sulle zone riflesse delle sue due estremità: la giunzione con il colon discendente all’altezza del ramo iliopubico (figura 15.12), la giunzione con il retto in corrispondenza della terza vertebra sacrale e le radici del mesosigmoide.",
+            "Come per il colon trasverso, il punto essenziale è agire sulle zone riflesse delle sue due estremità: la giunzione con il colon discendente all’altezza del ramo iliopubico, la giunzione con il retto in corrispondenza della terza vertebra sacrale e le radici del mesosigmoide.",
             "Radici del mesosigmoide: solo sul piede sinistro, una linea che decorre lungo il margine anteriore della tuberosità posteromediale del calcagno, corrispondente al margine anteriore del sacro, dall’articolazione sacroiliaca sinistra fino a S3. (figure 7.15 e 7.16)",
-            "Retto: il margine anteriore della tuberosità posteromediale del calcagno su entrambi i piedi. (figura 15.14)",
-            "Ano: individuare l’estremità inferiore della tuberosità posteromediale del calcagno. La zona riflessa si trova immediatamente anteriormente. (figura 15.14)",
+            "Retto: il margine anteriore della tuberosità posteromediale del calcagno su entrambi i piedi.",
+            "Ano: individuare l’estremità inferiore della tuberosità posteromediale del calcagno. La zona riflessa si trova immediatamente anteriormente.",
             "Plesso ipogastrico inferiore, parte posteriore: canale sacrale da S2 a S4. (figura 4.28 e Bis figura 4.28)"
           ]
         },

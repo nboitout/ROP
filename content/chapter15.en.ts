@@ -15,7 +15,7 @@ export const chapter15En: Chapter = {
       "blocks": [
         {
           "type": "para",
-          "text": "The colon, or large intestine, frames the small intestine. It extends from the ileocaecal junction to the rectum and is approximately 1.5 m long in adults. (figure 15.1)"
+          "text": "The colon, or large intestine, frames the small intestine. It extends from the ileocaecal junction to the rectum and is approximately 1.5 m long in adults."
         },
         {
           "type": "sub",
@@ -64,7 +64,7 @@ export const chapter15En: Chapter = {
         },
         {
           "type": "para",
-          "text": "In the right iliac fossa, the caecum lies 2 to 3 cm below the ileocaecal junction and approximately two fingerbreadths above the inguinal ligament. (figure 15.2)"
+          "text": "In the right iliac fossa, the caecum lies 2 to 3 cm below the ileocaecal junction and approximately two fingerbreadths above the inguinal ligament."
         },
         {
           "type": "para",
@@ -76,7 +76,7 @@ export const chapter15En: Chapter = {
         },
         {
           "type": "para",
-          "text": "The ileum opens into the caecum through two folds that form the ileocaecal valve. (figure 15.3) The valve is located at the S1 vertebral level. When the caecum is full or contracted, the two folds of the ileocaecal valve become taut and prevent caeco-ileal reflux."
+          "text": "The ileum opens into the caecum through two folds that form the ileocaecal valve. The valve is located at the S1 vertebral level. When the caecum is full or contracted, the two folds of the ileocaecal valve become taut and prevent caeco-ileal reflux."
         },
         {
           "type": "para",
@@ -88,17 +88,17 @@ export const chapter15En: Chapter = {
         },
         {
           "type": "para",
-          "text": "Indeed, the appendix resembles a worm. It is 6 to 12 cm long and 5 to 8 mm in diameter. It lies 2 to 3 cm below the ileocaecal junction and is most often retrocaecal, at the point where the three longitudinal bands, or taeniae coli, converge. (figure 15.1)"
+          "text": "Indeed, the appendix resembles a worm. It is 6 to 12 cm long and 5 to 8 mm in diameter. It lies 2 to 3 cm below the ileocaecal junction and is most often retrocaecal, at the point where the three longitudinal bands, or taeniae coli, converge."
         },
         {
           "type": "bullets",
           "items": [
-            "Positions of the vermiform appendix: the appendix may also be subcaecal and extend into the pelvic cavity. More rarely, because of malrotation of the intestinal loops during embryogenesis, it may lie in the right hypochondrium or in a pre-ileal or post-ileal position. (figure 15.4)"
+            "Positions of the vermiform appendix: the appendix may also be subcaecal and extend into the pelvic cavity. More rarely, because of malrotation of the intestinal loops during embryogenesis, it may lie in the right hypochondrium or in a pre-ileal or post-ileal position."
           ]
         },
         {
           "type": "para",
-          "text": "The vermiform appendix is intraperitoneal. It is attached to the ileum by the mesoappendix. (figure 15.1) It is attached to the ovary by the appendiculo-ovarian ligament."
+          "text": "The vermiform appendix is intraperitoneal. It is attached to the ileum by the mesoappendix. It is attached to the ovary by the appendiculo-ovarian ligament."
         },
         {
           "type": "bullets",
@@ -131,7 +131,7 @@ export const chapter15En: Chapter = {
           "type": "bullets",
           "items": [
             "Right colic flexure (or hepatic flexure):",
-            "It measures 70 to 80 mm. In the frontal plane, it lies beneath the right lobe of the liver, opposite the right eighth rib. It is attached by peritoneal ligaments to the liver, gallbladder, diaphragm and right kidney. (figure 15.5)",
+            "It measures 70 to 80 mm. In the frontal plane, it lies beneath the right lobe of the liver, opposite the right eighth rib. It is attached by peritoneal ligaments to the liver, gallbladder, diaphragm and right kidney.",
             "Transverse colon:",
             "It successively occupies the right hypochondrium, epigastrium and left hypochondrium. (figure 14.1) It runs obliquely upward and to the left. In its middle portion, it lies closer to the anterior abdominal wall than the right and left colic flexures, which are more deeply situated.",
             "Transverse mesocolon: this fold of peritoneum connects the transverse colon to the posterior abdominal wall via its root. (figure 7.4)",
@@ -159,7 +159,7 @@ export const chapter15En: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Left colic flexure (or splenic flexure): this flexure is sharper, with an average angle of 50°, and lies in a sagittal plane. (figure 15.5)",
+            "Left colic flexure (or splenic flexure): this flexure is sharper, with an average angle of 50°, and lies in a sagittal plane.",
             "It lies higher than the hepatic flexure, opposite the left eighth rib and the T11 vertebra. It forms a cradle for the spleen. It is attached to the stomach, the pancreatic tail, the left triangular ligament of the liver, the left kidney and the diaphragm; the phrenicocolic ligament supports the spleen."
           ]
         },
@@ -173,7 +173,7 @@ export const chapter15En: Chapter = {
           "type": "bullets",
           "items": [
             "Descending colon:",
-            "It is vertical and deep in the lumbar region (figure 15.6), and is covered by the jejunum. (figure 14.1) It is retroperitoneal and attached to the posterior abdominal wall by Toldt’s fascia. The descending colon bears omental appendices."
+            "It is vertical and deep in the lumbar region, and is covered by the jejunum. (figure 14.1) It is retroperitoneal and attached to the posterior abdominal wall by Toldt’s fascia. The descending colon bears omental appendices."
           ]
         },
         {
@@ -186,9 +186,9 @@ export const chapter15En: Chapter = {
           "type": "bullets",
           "items": [
             "Sigmoid colon:",
-            "It is intraperitoneal and forms a broad S-shaped loop, from 40 cm in a short sigmoid colon to 80 cm in a long sigmoid colon. It runs backward, medially and caudally into the pelvis (figure 15.6), toward the pouch of Douglas and as far as the third sacral vertebra. In men, it lies between the rectum and bladder; in women, between the rectum and the genital organs.",
+            "It is intraperitoneal and forms a broad S-shaped loop, from 40 cm in a short sigmoid colon to 80 cm in a long sigmoid colon. It runs backward, medially and caudally into the pelvis, toward the pouch of Douglas and as far as the third sacral vertebra. In men, it lies between the rectum and bladder; in women, between the rectum and the genital organs.",
             "Along its course, it crosses the left psoas major. It has few haustrations, or sacculations, and only two longitudinal bands. Its defining feature is its very great mobility, provided by the mesosigmoid.",
-            "Mesosigmoid: this is an inverted V-shaped fold of peritoneum. Its apex lies near the division of the left common iliac artery into the internal and external iliac arteries, close to the left sacroiliac joint. It connects the sigmoid colon to the posterior abdominal wall through two roots: (figure 15.7)",
+            "Mesosigmoid: this is an inverted V-shaped fold of peritoneum. Its apex lies near the division of the left common iliac artery into the internal and external iliac arteries, close to the left sacroiliac joint. It connects the sigmoid colon to the posterior abdominal wall through two roots:",
             "Main root: this vertical root runs laterally along the anterior sacral foramina and ends in front of the third sacral vertebra. It contains the superior rectal vessels and the superior hypogastric plexus.",
             "Secondary root: this root runs obliquely downward and to the left, along the medial border of the psoas muscle and the lateral border of the sacrum. It contains the inferior mesenteric artery."
           ]
@@ -204,11 +204,11 @@ export const chapter15En: Chapter = {
           "items": [
             "Rectum (meaning straight):",
             "The rectum continues from the sigmoid colon opposite the third sacral vertebra and ends at the anal orifice. It has no haustrations, no bands and no omental appendices. It is 15 cm long.",
-            "It is first retroperitoneal and then subperitoneal. It lies anterior to the sacrum and posterior to the rectouterine pouch in women, or to the rectovesical pouch in men (formerly the pouch of Douglas). (figure 15.8)",
+            "It is first retroperitoneal and then subperitoneal. It lies anterior to the sacrum and posterior to the rectouterine pouch in women, or to the rectovesical pouch in men (formerly the pouch of Douglas).",
             "It comprises two segments oriented in different planes. Together they form the 90° anorectal angle, also called the perineal curvature; this angle opens dorsally and is maintained by the puborectal sling of the levator ani muscle:",
-            "Pelvic segment, or rectal ampulla: this segment lies above the perineum, faces caudally and follows the curvature of the sacrum. (figure 15.8);",
+            "Pelvic segment, or rectal ampulla: this segment lies above the perineum, faces caudally and follows the curvature of the sacrum;",
             "Perineal segment, or anal canal: this segment corresponds to the anorectal triangle of the perineum and faces dorsally.",
-            "Anal canal: the rectum crosses the pelvic diaphragm and ends at the anus. (figure 15.8) The anal canal is 4 cm long and has two sphincters:",
+            "Anal canal: the rectum crosses the pelvic diaphragm and ends at the anus. The anal canal is 4 cm long and has two sphincters:",
             "Internal sphincter: this sphincter is formed by the smooth muscle of the rectum and is controlled by the pelvic parasympathetic system and the sympathetic fibres from T12 to L1. (See Chapter 17 Pelvic Cavity, Innervation, page….)",
             "External sphincter: this ring of striated muscle is controlled by the pudendal nerve of the somatic nervous system. (See Chapter 17 Pelvic Cavity, Innervation, page….) It controls anal continence, reinforced by the levator ani muscle."
           ]
@@ -280,7 +280,7 @@ export const chapter15En: Chapter = {
         },
         {
           "type": "para",
-          "text": "The colon is supplied by collateral branches of the superior and inferior mesenteric arteries. (figure 15.9)"
+          "text": "The colon is supplied by collateral branches of the superior and inferior mesenteric arteries."
         },
         {
           "type": "bullets",
@@ -372,7 +372,7 @@ export const chapter15En: Chapter = {
             "Sympathetic: fibres destined for the rectum and anal canal arise mainly from the lower thoracolumbar levels. They join the inferior mesenteric plexus and then the superior hypogastric plexus before descending toward the inferior hypogastric plexuses. (figure 4.26)",
             "Pelvic parasympathetic system: its fibres arise from the sacral spinal cord, S2-S3-S4. In surface reading, their projection is classically located in the lower lumbar region.",
             "Superior hypogastric plexus: sympathetic and parasympathetic fibres from the inferior mesenteric plexus join the superior hypogastric plexus, located opposite the L5 vertebra. It gives rise to the right and left hypogastric nerves. (figure 4.36)",
-            "Inferior hypogastric plexus: the right and left hypogastric nerves run along the lateral wall of the rectum and join the right and left inferior hypogastric plexuses, which are contained within the sacro-recto-genito-pubic laminae. They provide sympathetic and parasympathetic innervation to the pelvic organs. (figure 15.10)",
+            "Inferior hypogastric plexus: the right and left hypogastric nerves run along the lateral wall of the rectum and join the right and left inferior hypogastric plexuses, which are contained within the sacro-recto-genito-pubic laminae. They provide sympathetic and parasympathetic innervation to the pelvic organs.",
             "Action of the sympathetic system: closure, tone and relative dryness of the rectal mucosa;",
             "Action of the parasympathetic system: opening, mucosal secretion and reflex triggering of defecation."
           ]
@@ -573,7 +573,7 @@ export const chapter15En: Chapter = {
             "Vagus nerve, cranial nerve X; (figures 4.11 and 4.17)",
             "Pelvic parasympathetic system; (figure 4.23)",
             "Spinal column, costotransverse joints (thoracic laterovertebral ganglion chain (T9-T12)); (figures 4.23 and 4.29 and 4.32)",
-            "Prevertebral plexus. (figures 15.11 and 15.12)"
+            "Prevertebral plexus."
           ]
         },
         {
@@ -583,9 +583,9 @@ export const chapter15En: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Colon: (figures 15.11 and 15.12)",
+            "Colon:",
             "Caecum: plantar surface of the right foot, in line with the fourth toe, along the anterior border of the heel and up to the ileocaecal junction;",
-            "Ileocaecal junction and ileocaecal valve: imagine a V whose point is the fundus of the caecum, on the anterior border of the right heel. The medial branch of the V corresponds to the reflex zone of the ileocaecal junction; (figure 15.13)",
+            "Ileocaecal junction and ileocaecal valve: imagine a V whose point is the fundus of the caecum, on the anterior border of the right heel. The medial branch of the V corresponds to the reflex zone of the ileocaecal junction;",
             "Ascending colon: a zone running from the caecum to the styloid process of the right fifth metatarsal.",
             "Right colic flexure: against the styloid process of the right fifth metatarsal and the diaphragmatic dome.",
             "Transverse colon: because its position varies, the reflex zone of its middle portion is difficult to identify. The key point is to act on the reflex zones of its two ends, the right and left colic flexures, and on the root of the transverse mesocolon.",
@@ -593,10 +593,10 @@ export const chapter15En: Chapter = {
             "Left colic flexure: identify the styloid process of the right fifth metatarsal. The reflex zone of the left colic flexure lies slightly higher than that of the right colic flexure;",
             "Descending colon: a reflex zone along the lateral border of the left foot to the lateral part of the anterior border of the heel;",
             "Sigmoid colon: it is difficult to locate the reflex zone of the middle part of the sigmoid colon because of its posteromedial direction, its very great mobility and the topographical representation of the baby in foetal position on the feet.",
-            "As with the transverse colon, the key point is to act on the reflex zones of its two ends: its junction with the descending colon at the iliopubic ramus (figure 15.12), its junction with the rectum opposite the third sacral vertebra, and the roots of the mesosigmoid.",
+            "As with the transverse colon, the key point is to act on the reflex zones of its two ends: its junction with the descending colon at the iliopubic ramus, its junction with the rectum opposite the third sacral vertebra, and the roots of the mesosigmoid.",
             "Roots of the mesosigmoid: on the left foot only, a line running along the anterior border of the posteromedial tuberosity of the calcaneus, corresponding to the anterior border of the sacrum, from the left sacroiliac joint to S3. (figures 7.15 and 7.16)",
-            "Rectum: the anterior border of the posteromedial tuberosity of the calcaneus on both feet. (figure 15.14)",
-            "Anus: identify the inferior end of the posteromedial tuberosity of the calcaneus. The reflex zone lies immediately anterior to it. (figure 15.14)",
+            "Rectum: the anterior border of the posteromedial tuberosity of the calcaneus on both feet.",
+            "Anus: identify the inferior end of the posteromedial tuberosity of the calcaneus. The reflex zone lies immediately anterior to it.",
             "Inferior hypogastric plexus, posterior part: sacral canal from S2 to S4. (figure 4.28 and Bis figure 4.28)"
           ]
         },
