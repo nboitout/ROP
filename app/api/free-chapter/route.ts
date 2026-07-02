@@ -1,5 +1,11 @@
 import { NextRequest, NextResponse, after } from 'next/server'
 import { randomUUID } from 'crypto'
+import {
+  hasInternalTrafficMarker,
+  isAlwaysExcludedEmail,
+  isDateScopedExcludedEmail,
+  markInternalTraffic,
+} from '@/lib/internalTraffic'
 
 export const maxDuration = 30
 
@@ -34,6 +40,12 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: 'Invalid email' }, { status: 400 })
   }
 
+  const nowIsoDate = new Date().toISOString().slice(0, 10)
+  const isInternalLead =
+    hasInternalTrafficMarker(req) ||
+    isAlwaysExcludedEmail(body.email) ||
+    isDateScopedExcludedEmail(body.email, nowIsoDate)
+
   const existing = req.cookies.get('reader_id')?.value
   const readerId = existing && /^[0-9a-f-]{36}$/i.test(existing) ? existing : randomUUID()
 
@@ -42,25 +54,28 @@ export async function POST(req: NextRequest) {
   const lang: string = typeof body.lang === 'string' ? body.lang : ''
   const country: string = req.headers.get('x-vercel-ip-country') ?? ''
 
-  // Persist the lead via the Apps Script (writes to the "Leads" sheet).
-  after(() => forwardToAppsScript({
-    type: 'lead',
-    timestamp: new Date().toISOString(),
-    readerId,
-    sessionId,
-    source,
-    firstName: typeof body.firstName === 'string' ? body.firstName : '',
-    lastName: typeof body.lastName === 'string' ? body.lastName : '',
-    fullName: body.fullName,
-    email: body.email,
-    profession: typeof body.profession === 'string' ? body.profession : '',
-    lang,
-    country,
-    userAgent: req.headers.get('user-agent') ?? '',
-    referer: req.headers.get('referer') ?? '',
-  }))
+  if (!isInternalLead) {
+    // Persist the lead via the Apps Script (writes to the "Leads" sheet).
+    after(() => forwardToAppsScript({
+      type: 'lead',
+      timestamp: new Date().toISOString(),
+      readerId,
+      sessionId,
+      source,
+      firstName: typeof body.firstName === 'string' ? body.firstName : '',
+      lastName: typeof body.lastName === 'string' ? body.lastName : '',
+      fullName: body.fullName,
+      email: body.email,
+      profession: typeof body.profession === 'string' ? body.profession : '',
+      lang,
+      country,
+      userAgent: req.headers.get('user-agent') ?? '',
+      referer: req.headers.get('referer') ?? '',
+    }))
+  }
 
   const res = NextResponse.json({ ok: true })
+  if (isInternalLead) markInternalTraffic(res)
 
   // Make sure anonymous sign-ups still get a stable readerId.
   if (!existing) {

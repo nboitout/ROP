@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
+import { ADMIN_SESSION_COOKIE, markInternalTraffic } from '@/lib/internalTraffic'
 
-const COOKIE_NAME = 'admin_session'
 const ONE_DAY = 60 * 60 * 24
 
 export async function POST(req: NextRequest): Promise<NextResponse> {
@@ -16,19 +16,20 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
   }
 
   const response = NextResponse.json({ ok: true })
-  response.cookies.set(COOKIE_NAME, 'authenticated', {
+  response.cookies.set(ADMIN_SESSION_COOKIE, 'authenticated', {
     httpOnly: true,
     secure: process.env.NODE_ENV === 'production',
     sameSite: 'lax',
     maxAge: ONE_DAY,
     path: '/',
   })
+  markInternalTraffic(response)
   return response
 }
 
-export async function DELETE(_req: NextRequest): Promise<NextResponse> {
+export async function DELETE(): Promise<NextResponse> {
   const response = NextResponse.json({ ok: true })
-  response.cookies.set(COOKIE_NAME, '', {
+  response.cookies.set(ADMIN_SESSION_COOKIE, '', {
     httpOnly: true,
     secure: process.env.NODE_ENV === 'production',
     sameSite: 'lax',

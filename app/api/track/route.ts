@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse, after } from 'next/server'
 import { randomUUID } from 'crypto'
+import { hasInternalTrafficMarker, markInternalTraffic } from '@/lib/internalTraffic'
 
 export const maxDuration = 30
 
@@ -24,10 +25,13 @@ async function forwardToAppsScript(payload: Record<string, unknown>) {
 }
 
 export async function POST(req: NextRequest) {
-  // Don't record traffic from logged-in admins (owner / reviewers like Guy) —
-  // their browsing shouldn't pollute the engagement stats.
-  if (req.cookies.get('admin_session')) {
-    return NextResponse.json({ ok: true, skipped: 'admin' })
+  // Don't record internal traffic. As soon as someone visits while logged into
+  // admin, we stamp a long-lived internal marker so later public browsing from
+  // the same browser also stays out of the sheets.
+  if (hasInternalTrafficMarker(req)) {
+    const response = NextResponse.json({ ok: true, skipped: 'internal' })
+    markInternalTraffic(response)
+    return response
   }
 
   const body = await req.json().catch(() => null)
