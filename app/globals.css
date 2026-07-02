@@ -796,6 +796,18 @@ a.ss-switch-opt:hover { color:var(--gold); }
 .ss-jump-arrow { flex-shrink:0; color:var(--gold); font-size:.95rem; transition:transform .2s; }
 .ss-jump:hover .ss-jump-arrow { transform:translateY(2px); }
 
+.ss-case-chip { display:inline-flex; align-items:center; justify-content:center; gap:7px;
+  width:fit-content; margin:12px auto 0; padding:7px 11px;
+  border:1px solid rgba(160,124,58,.28); border-radius:999px;
+  background:rgba(251,248,241,.82); color:var(--sage); cursor:pointer;
+  font-size:.58rem; font-weight:700; letter-spacing:.14em; text-transform:uppercase;
+  box-shadow:0 4px 16px rgba(26,26,24,.08);
+  transition:border-color .18s, color .18s, background .18s, transform .12s; }
+.ss-case-chip:hover { border-color:rgba(160,124,58,.58); color:var(--gold); background:#fbf8f1; }
+.ss-case-chip:active { transform:translateY(1px); }
+.ss-case-chip-icon { width:16px; height:16px; display:inline-flex; align-items:center; justify-content:center; flex-shrink:0; }
+.ss-case-chip-label { line-height:1; white-space:nowrap; }
+
 .ss-article { grid-column:2; padding:20px 36px 120px; max-width:680px; --ss-article-pad-x:36px; }
 
 /* "page break" — blank scroll gap before a section heading (à la Word) */
@@ -833,7 +845,7 @@ a.ss-switch-opt:hover { color:var(--gold); }
   .ss-layout { display:block; padding-top:62px; }
   .ss-stagecol { position:sticky; top:62px; z-index:200; padding:10px 14px 12px;
     background:rgba(251,248,241,.97); backdrop-filter:blur(10px); border-bottom:1px solid rgba(26,26,24,.1); }
-  .ss-stage { position:static; }
+  .ss-stage { position:relative; }
   .ss-stage-eyebrow { display:none; }
   .ss-frame { max-width:520px; margin:0 auto; border-radius:4px; box-shadow:0 6px 20px rgba(26,26,24,.12); }
   .ss-frame--portrait { aspect-ratio:3/4; width:min(260px,70vw); height:auto; max-width:100%; }
@@ -844,10 +856,15 @@ a.ss-switch-opt:hover { color:var(--gold); }
   .ss-stage-title { font-size:.92rem; }
   .ss-dots { display:none; }
   .ss-pagebreak { height:42vh; min-height:200px; }
-  /* compact, single-line jump button in the sticky mobile band */
-  .ss-jump { max-width:520px; margin:8px auto 0; padding:7px 12px; gap:8px; }
-  .ss-jump-label { display:none; }
-  .ss-jump-section { font-size:.86rem; }
+  .ss-jump { position:absolute; top:8px; left:8px; width:34px; height:34px; margin:0; padding:0;
+    justify-content:center; border-radius:50%; background:rgba(251,248,241,.9); box-shadow:0 4px 14px rgba(26,26,24,.14); }
+  .ss-jump-text,
+  .ss-jump-arrow { display:none; }
+  .ss-jump-icon { font-size:.95rem; }
+  .ss-case-chip { position:absolute; top:8px; right:8px; width:34px; height:34px; margin:0; padding:0;
+    border-radius:50%; background:rgba(251,248,241,.9); box-shadow:0 4px 14px rgba(26,26,24,.14); }
+  .ss-case-chip-label { position:absolute; width:1px; height:1px; padding:0; margin:-1px;
+    overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
   .ss-article { padding:24px 20px 100px; max-width:none; margin:0 auto; --ss-article-pad-x:20px; }
   .ss-anchor,
   .ss-article [data-pos-anchor] { scroll-margin-top:calc(62px + 56vw); }
