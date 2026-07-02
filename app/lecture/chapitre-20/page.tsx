@@ -1,10 +1,20 @@
 import { cookies } from 'next/headers'
 import { redirect } from 'next/navigation'
 import type { Metadata } from 'next'
-import ChapterReader from '@/components/ChapterReader'
+import SlideSyncReader from '@/components/SlideSyncReader'
 import { getChapter } from '@/content/registry'
 import { getServerLang } from '@/app/i18n/serverLang'
 import { translations } from '@/app/i18n/translations'
+import type { Lang } from '@/app/i18n/translations'
+import { chapter20Slides, chapter20SlideAnchors } from '@/content/chapter20.slidesync'
+
+const DECKS: Record<Lang, typeof chapter20Slides> = {
+  fr: chapter20Slides,
+  en: chapter20Slides,
+  de: chapter20Slides,
+  es: chapter20Slides,
+  it: chapter20Slides,
+}
 
 export const metadata: Metadata = {
   title: 'Chapitre 20 — Organes génitaux masculins · R.O.P. · Guy Boitout',
@@ -24,13 +34,14 @@ export default async function Chapitre20LecturePage({
 
   const { lang: langParam } = await searchParams
   const lang = await getServerLang(langParam)
-  const { chapter, contentLang } = getChapter('chapter-20', lang)
+  const { chapter } = getChapter('chapter-20', lang)
 
   return (
-    <ChapterReader
+    <SlideSyncReader
       chapter={chapter}
       bookTitle={translations[lang].reader.bookTitle}
-      contentLang={contentLang}
+      slides={DECKS[lang]}
+      anchors={chapter20SlideAnchors}
       backHref="/chapitres-gratuits"
     />
   )
