@@ -88,8 +88,6 @@ export default function ChapterBoard({ parts, rows }: { parts: Part[]; rows: Boa
                 <td>
                   {r.title}
                   {r.free && <span className="adm-row-badge free">Free access</span>}
-                  {r.gated && <span className="adm-row-badge paid">Paid</span>}
-                  {r.draft && <span className="adm-row-badge draft">Draft</span>}
                 </td>
                 <td className="muted">{r.partTitle}</td>
                 <td><LangCell href={r.href ? `${r.href}?lang=fr` : null} status={r.fr} /></td>

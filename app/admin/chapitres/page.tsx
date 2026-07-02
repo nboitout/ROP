@@ -199,6 +199,11 @@ export default async function AdminChapitresPage() {
 
   const analyzedRows = qualityRows.filter((r): r is QualityRow & { metrics: ChapterQualityMetrics } => !!r.metrics)
   const attentionRows = qualityRows.filter((r) => r.issues.some((issue) => issue.tone !== 'info'))
+  const chaptersWithSyncSlides = analyzedRows.filter((row) => row.metrics.slidesCount > 0).length
+  const chaptersWithReflexZonePictures = analyzedRows.filter(
+    (row) => row.metrics.podalZoneSectionCount > 0 && row.metrics.podalZonePhotoCount > 0,
+  ).length
+  const chaptersWithClinicalCases = analyzedRows.filter((row) => row.metrics.clinicalCaseCount > 0).length
   const avgReadMinutes = analyzedRows.length > 0
     ? Math.round(analyzedRows.reduce((sum, row) => sum + row.metrics.readingMinutes, 0) / analyzedRows.length)
     : 0
@@ -220,36 +225,64 @@ export default async function AdminChapitresPage() {
         </div>
       </div>
 
+      <p className="adm-section-title adm-section-title-first">Text availability</p>
+      <p className="adm-page-sub adm-asset-intro">
+        These cards count chapter text only: live pages and translations. Slides, reflex-zone pictures, and clinical cases are tracked separately below.
+      </p>
+
       <div className="adm-scorecards">
         <div className="adm-scorecard">
-          <p className="adm-scorecard-label">Built chapters</p>
+          <p className="adm-scorecard-label">Text pages built</p>
           <p className="adm-scorecard-value">{builtTotal}<span style={{ fontSize: '1rem', color: 'var(--adm-i30)' }}> / {total}</span></p>
-          <p className="adm-scorecard-sub">pages live</p>
+          <p className="adm-scorecard-sub">chapter text pages live</p>
         </div>
         <div className="adm-scorecard">
-          <p className="adm-scorecard-label">FR</p>
+          <p className="adm-scorecard-label">FR text</p>
           <p className="adm-scorecard-value">{frLive}<span style={{ fontSize: '1rem', color: 'var(--adm-i30)' }}> / {total}</span></p>
-          <p className="adm-scorecard-sub">chapters translated</p>
+          <p className="adm-scorecard-sub">text chapters translated</p>
         </div>
         <div className="adm-scorecard">
-          <p className="adm-scorecard-label">EN</p>
+          <p className="adm-scorecard-label">EN text</p>
           <p className="adm-scorecard-value">{enLive}<span style={{ fontSize: '1rem', color: 'var(--adm-i30)' }}> / {total}</span></p>
-          <p className="adm-scorecard-sub">chapters translated</p>
+          <p className="adm-scorecard-sub">text chapters translated</p>
         </div>
         <div className="adm-scorecard">
-          <p className="adm-scorecard-label">DE</p>
+          <p className="adm-scorecard-label">DE text</p>
           <p className="adm-scorecard-value">{deLive}<span style={{ fontSize: '1rem', color: 'var(--adm-i30)' }}> / {total}</span></p>
-          <p className="adm-scorecard-sub">chapters translated</p>
+          <p className="adm-scorecard-sub">text chapters translated</p>
         </div>
         <div className="adm-scorecard">
-          <p className="adm-scorecard-label">ES</p>
+          <p className="adm-scorecard-label">ES text</p>
           <p className="adm-scorecard-value">{esLive}<span style={{ fontSize: '1rem', color: 'var(--adm-i30)' }}> / {total}</span></p>
-          <p className="adm-scorecard-sub">chapters translated</p>
+          <p className="adm-scorecard-sub">text chapters translated</p>
         </div>
         <div className="adm-scorecard">
-          <p className="adm-scorecard-label">IT</p>
+          <p className="adm-scorecard-label">IT text</p>
           <p className="adm-scorecard-value">{itLive}<span style={{ fontSize: '1rem', color: 'var(--adm-i30)' }}> / {total}</span></p>
-          <p className="adm-scorecard-sub">chapters translated</p>
+          <p className="adm-scorecard-sub">text chapters translated</p>
+        </div>
+      </div>
+
+      <p className="adm-section-title">Chapter assets</p>
+      <p className="adm-page-sub adm-asset-intro">
+        Separate from the text counts above: these cards track richer learning assets available in the chapter reading experience.
+      </p>
+
+      <div className="adm-scorecards adm-asset-scorecards">
+        <div className="adm-scorecard adm-scorecard-asset">
+          <p className="adm-scorecard-label">Sync slides</p>
+          <p className="adm-scorecard-value">{chaptersWithSyncSlides}<span style={{ fontSize: '1rem', color: 'var(--adm-i30)' }}> / {total}</span></p>
+          <p className="adm-scorecard-sub">chapters with synced reading-mode slides</p>
+        </div>
+        <div className="adm-scorecard adm-scorecard-asset">
+          <p className="adm-scorecard-label">ROP reflex zones</p>
+          <p className="adm-scorecard-value">{chaptersWithReflexZonePictures}<span style={{ fontSize: '1rem', color: 'var(--adm-i30)' }}> / {total}</span></p>
+          <p className="adm-scorecard-sub">chapters with a reflex-zone section and pictures</p>
+        </div>
+        <div className="adm-scorecard adm-scorecard-asset">
+          <p className="adm-scorecard-label">Clinical cases</p>
+          <p className="adm-scorecard-value">{chaptersWithClinicalCases}<span style={{ fontSize: '1rem', color: 'var(--adm-i30)' }}> / {total}</span></p>
+          <p className="adm-scorecard-sub">chapters with a dedicated clinical case</p>
         </div>
       </div>
 
@@ -336,7 +369,10 @@ export default async function AdminChapitresPage() {
                           {row.metrics.slidesCount} slides / {row.metrics.podalZoneSlideCount} podal-zone slides
                         </span>
                         <span className="adm-quality-cell-sub">
-                          {row.metrics.podalZonePhotoCount} podal-zone photos / {formatDensity(row.metrics.figuresPer1000Words)} figures per 1k
+                          {row.metrics.podalZoneSectionCount} podal-zone sections / {row.metrics.podalZonePhotoCount} podal-zone photos
+                        </span>
+                        <span className="adm-quality-cell-sub">
+                          {formatDensity(row.metrics.figuresPer1000Words)} figures per 1k words
                         </span>
                         <span className="adm-quality-cell-sub">
                           {resourceLabel(row.metrics)} / {row.metrics.ropBlockCount} ROP blocks / {row.metrics.xrefCount} references

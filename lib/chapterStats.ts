@@ -31,6 +31,7 @@ export type ChapterQualityMetrics = {
   figuresPer1000Words: number
   slidesCount: number
   podalZoneSlideCount: number
+  podalZoneSectionCount: number
   podalZonePhotoCount: number
   revisionSheetCount: number
   clinicalCaseCount: number
@@ -147,6 +148,7 @@ export function chapterQualityMetrics(
   let paragraphCount = 0
   let bulletCount = 0
   let figureCount = 0
+  let podalZoneSectionCount = 0
   let podalZonePhotoCount = 0
   let xrefCount = 0
   let ropBlockCount = 0
@@ -161,6 +163,7 @@ export function chapterQualityMetrics(
   for (const section of chapter.sections) {
     let sectionWords = countWords(section.title)
     const sectionIsPodalZone = isPodalReflexText(`${section.id} ${section.title}`)
+    if (sectionIsPodalZone) podalZoneSectionCount++
     let insidePodalZone = sectionIsPodalZone
 
     for (const block of section.blocks) {
@@ -223,6 +226,7 @@ export function chapterQualityMetrics(
     figuresPer1000Words: wordCount > 0 ? figureCount / (wordCount / 1000) : 0,
     slidesCount,
     podalZoneSlideCount,
+    podalZoneSectionCount,
     podalZonePhotoCount,
     revisionSheetCount,
     clinicalCaseCount,
