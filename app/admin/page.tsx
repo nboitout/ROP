@@ -236,7 +236,7 @@ export default async function AdminOverviewPage({
 <div className="adm-scorecards">
         <Scorecard label="Unique Visitors" value={uniqueVisitors.toLocaleString()} />
         <Scorecard label="Total Readers" value={totalLeads.toLocaleString()} />
-        <Scorecard label="Conversion Rate" value={formatPct(convRate)} subtitle="readers / visitors" />
+        <Scorecard label="Conversion Rate" value={formatPct(convRate)} subtitle="became a registered reader" />
         <Scorecard label="Return Visitor Rate" value={formatPct(returnRate)} subtitle="came back on a later day" />
         <Scorecard
           label="Avg Time — Homepage"
