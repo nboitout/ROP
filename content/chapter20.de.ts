@@ -26,7 +26,7 @@ export const chapter20De: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "es umfasst die Hoden, Nebenhoden, Ductus deferentes, Samenbläschen, Ductus ejaculatorii, Prostata, Urethra und Penis. (Abbildung 20.1)"
+            "es umfasst die Hoden, Nebenhoden, Ductus deferentes, Samenbläschen, Ductus ejaculatorii, Prostata, Urethra und Penis."
           ]
         }
       ]
@@ -42,7 +42,7 @@ export const chapter20De: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "die Gonaden entstehen in der Nähe der Nieren. Ab dem 3. Schwangerschaftsmonat wandern sie, geführt von einem Gewebestrang, dem Gubernaculum (Abbildung 20.2 A), von der hinteren Bauchwand zum Eingang des Leistenkanals:"
+            "die Gonaden entstehen in der Nähe der Nieren. Ab dem 3. Schwangerschaftsmonat wandern sie, geführt von einem Gewebestrang, dem Gubernaculum, von der hinteren Bauchwand zum Eingang des Leistenkanals:"
           ]
         },
         {
@@ -53,7 +53,7 @@ export const chapter20De: Chapter = {
           "type": "bullets",
           "items": [
             "nur das Ligamentum teres uteri, ein Überrest des Gubernaculums, setzt seine Migration durch den Leistenkanal fort.",
-            "Beim Mann wandern die Hoden weiter durch den Leistenkanal (Abbildung 20.3) und ziehen dabei Arterien, Venen, Lymphgefäße, Nerven und den Ductus deferens mit sich. Sie erreichen den tiefen Leistenring etwa im 6. Monat, durchqueren den Kanal während des 7. Monats und gelangen gegen Ende des 8. Monats in ihre endgültige intraskrotale Lage. Diese Migration wird durch das Hormonsystem, das fetale Wachstum und die Gewichtszunahme der Hoden reguliert.",
+            "Beim Mann wandern die Hoden weiter durch den Leistenkanal und ziehen dabei Arterien, Venen, Lymphgefäße, Nerven und den Ductus deferens mit sich. Sie erreichen den tiefen Leistenring etwa im 6. Monat, durchqueren den Kanal während des 7. Monats und gelangen gegen Ende des 8. Monats in ihre endgültige intraskrotale Lage. Diese Migration wird durch das Hormonsystem, das fetale Wachstum und die Gewichtszunahme der Hoden reguliert.",
             "Anomalien sind häufig und reichen von einer einfachen inguinoskrotalen Ektopie bis zur pelvinen, iliakalen oder lumbalen Kryptorchie, die Ursache von Sterilität sein oder das Krebsrisiko erhöhen kann."
           ]
         },
@@ -80,7 +80,7 @@ export const chapter20De: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "sie liegt tief in der Beckenhöhle, zwischen Trigonum und Blasenhals kranial, dem Musculus transversus perinei profundus kaudal, 2 bis 3 cm dorsal der Symphysis pubica und ventral der Ampulla recti. (Abbildung 20.1)"
+            "sie liegt tief in der Beckenhöhle, zwischen Trigonum und Blasenhals kranial, dem Musculus transversus perinei profundus kaudal, 2 bis 3 cm dorsal der Symphysis pubica und ventral der Ampulla recti."
           ]
         }
       ]
@@ -97,7 +97,7 @@ export const chapter20De: Chapter = {
           "type": "bullets",
           "items": [
             "im Skrotum gelegen, sind sie der Ort der Spermienbildung und der hormonellen Sekretion, insbesondere der Testosteronproduktion.",
-            "Der erwachsene Hoden ist ovoid und etwa 5 cm lang. Er ist von einer widerstandsfähigen Membran, der Tunica albuginea, bedeckt und von einer Hülle, dem Processus vaginalis, umgeben (Abbildung 20.4). Sein innerer Aufbau besteht aus Läppchen mit 400 bis 600 Tubuli seminiferi, dem Ort der Produktion und Reifung der Spermatozoen (Spermatogenese). Diese Kanälchen münden am oberen Hodenpol in den Nebenhodengang."
+            "Der erwachsene Hoden ist ovoid und etwa 5 cm lang. Er ist von einer widerstandsfähigen Membran, der Tunica albuginea, bedeckt und von einer Hülle, dem Processus vaginalis, umgeben. Sein innerer Aufbau besteht aus Läppchen mit 400 bis 600 Tubuli seminiferi, dem Ort der Produktion und Reifung der Spermatozoen (Spermatogenese). Diese Kanälchen münden am oberen Hodenpol in den Nebenhodengang."
           ]
         },
         {
@@ -127,7 +127,7 @@ export const chapter20De: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "dies ist ein etwa 4 cm langer Tunnel durch die vordere Bauchwand, unmittelbar oberhalb und parallel zum Ligamentum inguinale (Abbildung 20.5). Er besitzt zwei Öffnungen:"
+            "dies ist ein etwa 4 cm langer Tunnel durch die vordere Bauchwand, unmittelbar oberhalb und parallel zum Ligamentum inguinale. Er besitzt zwei Öffnungen:"
           ]
         },
         {
@@ -157,7 +157,7 @@ export const chapter20De: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "der Leistenkanal wird aus denselben Schichten gebildet wie die vordere Bauchwand (Abbildung 20.3). Er lässt den Funiculus spermaticus passieren, der die inguinalen Gefäße, den Ductus deferens sowie den Nervus iliohypogastricus, Nervus ilioinguinalis und Nervus genitofemoralis enthält, Kollateraläste des Plexus lumbalis (L1 bis L4) (Abbildung 20.6). Beim Mann tragen diese Nerven zur sensiblen Innervation von Pubis und Skrotum bei, bei der Frau zur Innervation des Pubis und der großen Schamlippen."
+            "der Leistenkanal wird aus denselben Schichten gebildet wie die vordere Bauchwand. Er lässt den Funiculus spermaticus passieren, der die inguinalen Gefäße, den Ductus deferens sowie den Nervus iliohypogastricus, Nervus ilioinguinalis und Nervus genitofemoralis enthält, Kollateraläste des Plexus lumbalis (L1 bis L4). Beim Mann tragen diese Nerven zur sensiblen Innervation von Pubis und Skrotum bei, bei der Frau zur Innervation des Pubis und der großen Schamlippen."
           ]
         },
         {
@@ -167,7 +167,7 @@ export const chapter20De: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "als Schwachstelle der vorderen Bauchwand ist der Leistenkanal eine häufige Ursache von Leistenhernien, die beim Mann deutlich häufiger auftreten als bei der Frau. (Abbildung 20.7)"
+            "als Schwachstelle der vorderen Bauchwand ist der Leistenkanal eine häufige Ursache von Leistenhernien, die beim Mann deutlich häufiger auftreten als bei der Frau."
           ]
         },
         {
@@ -177,7 +177,7 @@ export const chapter20De: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "sein proximaler Ansatz (Abbildung 20.8) befindet sich am Ligamentum inguinale und am Pubis. Er begleitet den Funiculus spermaticus im Leistenkanal. Sein distaler Ansatz liegt an der fibrösen Hülle des Skrotums. Er wird vom Nervus genitofemoralis und vom Nervus ilioinguinalis innerviert. Er ist der Hebemuskel des Skrotums und begünstigt die Passage der Spermien durch den Ductus deferens, indem er den Innendruck in Hoden und Nebenhoden erhöht."
+            "sein proximaler Ansatz befindet sich am Ligamentum inguinale und am Pubis. Er begleitet den Funiculus spermaticus im Leistenkanal. Sein distaler Ansatz liegt an der fibrösen Hülle des Skrotums. Er wird vom Nervus genitofemoralis und vom Nervus ilioinguinalis innerviert. Er ist der Hebemuskel des Skrotums und begünstigt die Passage der Spermien durch den Ductus deferens, indem er den Innendruck in Hoden und Nebenhoden erhöht."
           ]
         },
         {
@@ -193,7 +193,7 @@ export const chapter20De: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "als männliche akzessorische Geschlechtsdrüsen liegen sie dorsal der Prostata (Abbildung 20.9), innerhalb der Denonvilliers-Faszie, welche die Prostata vom Rektum trennt.",
+            "als männliche akzessorische Geschlechtsdrüsen liegen sie dorsal der Prostata, innerhalb der Denonvilliers-Faszie, welche die Prostata vom Rektum trennt.",
             "Die Samenbläschen messen 5 bis 8 cm in der Länge und 1,5 cm in der Breite und haben die Konsistenz einer etwas reifen Feige.",
             "Sie produzieren einen erheblichen Anteil der Samenflüssigkeit, insbesondere reich an Fruktose, die die Spermienfunktion unterstützt und zum Volumen des Ejakulats beiträgt."
           ]
@@ -205,7 +205,7 @@ export const chapter20De: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "die beiden Ductus deferentes vereinigen sich mit den Ausführungsgängen der Samenbläschen zu den Ductus ejaculatorii, die in die prostatische Urethra münden. (Abbildung 20.9)"
+            "die beiden Ductus deferentes vereinigen sich mit den Ausführungsgängen der Samenbläschen zu den Ductus ejaculatorii, die in die prostatische Urethra münden."
           ]
         },
         {
@@ -216,7 +216,7 @@ export const chapter20De: Chapter = {
           "type": "bullets",
           "items": [
             "dieses Wort stammt vom griechischen prostatès und bedeutet „davorstehend“ oder „ausgesetzt“. Tatsächlich liegt die Prostata vor dem Rektum. Als männliche akzessorische Geschlechtsdrüse sezerniert sie das prostataspezifische Antigen (PSA), ein Enzym, dessen Spiegel für Diagnose und Überwachung prostatischer Erkrankungen bedeutsam ist.",
-            "Beim jungen Erwachsenen hat sie die Form einer Kastanie (Abbildung 20.9). Ihre feste, aber geschmeidige Konsistenz ist mit der des Augapfels vergleichbar. Ihr Gewicht beträgt 20 bis 25 g. Da ihr Volumen nach dem 60. Lebensjahr stark zunimmt, kann sie die Größe einer Orange erreichen und Druck auf Urethra und Blase ausüben, wodurch Miktionsstörungen entstehen.",
+            "Beim jungen Erwachsenen hat sie die Form einer Kastanie. Ihre feste, aber geschmeidige Konsistenz ist mit der des Augapfels vergleichbar. Ihr Gewicht beträgt 20 bis 25 g. Da ihr Volumen nach dem 60. Lebensjahr stark zunimmt, kann sie die Größe einer Orange erreichen und Druck auf Urethra und Blase ausüben, wodurch Miktionsstörungen entstehen.",
             "Die Prostata beteiligt sich an der Zusammensetzung des Spermas und am Schutz der Spermatozoen während ihrer Passage durch Vagina, Uterus und Tuben."
           ]
         },
@@ -248,7 +248,7 @@ export const chapter20De: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "er liegt medial und wird von der prostatischen Urethra durchzogen, die eine schlitzförmige Struktur enthält, den Utriculus prostaticus (Abbildung 20.10). Dieser ist der atrophierte Überrest der weiblichen Tuben, des Uterus und der Vagina. Ältere Autoren nannten ihn die „männliche Vagina“.",
+            "er liegt medial und wird von der prostatischen Urethra durchzogen, die eine schlitzförmige Struktur enthält, den Utriculus prostaticus. Dieser ist der atrophierte Überrest der weiblichen Tuben, des Uterus und der Vagina. Ältere Autoren nannten ihn die „männliche Vagina“.",
             "Östrogensensibel hypertrophiert der Mittellappen in der Andropause infolge eines hormonellen Ungleichgewichts zwischen Androgenen und Testosteron. Seine Volumenzunahme komprimiert die Urethra, erschwert die Miktion, und die Ejakulation nimmt einen retrograden Verlauf zur Blase."
           ]
         },
@@ -270,7 +270,7 @@ export const chapter20De: Chapter = {
           "type": "bullets",
           "items": [
             "sie ist zugleich Harn- und Samenleiter. Man unterscheidet zwei Abschnitte:",
-            "Prostatische Urethra (Abbildung 20.10): Dies ist der intraprostatische Abschnitt. Er nimmt die beiden Ductus ejaculatorii auf. Etwa fünfzehn kleine Öffnungen ermöglichen den Abfluss des Prostatasekrets in die Urethra."
+            "Prostatische Urethra: Dies ist der intraprostatische Abschnitt. Er nimmt die beiden Ductus ejaculatorii auf. Etwa fünfzehn kleine Öffnungen ermöglichen den Abfluss des Prostatasekrets in die Urethra."
           ]
         },
         {
@@ -900,8 +900,8 @@ export const chapter20De: Chapter = {
           "type": "bullets",
           "items": [
             "Beckenhöhle, Perineum: (Abbildungen 17.15, 17.16 und 17.17)",
-            "Hoden: Dies ist dieselbe Reflexzone wie beim Ovar: vorderer Rand der Ferse, in der Senkrechten zum 4. und 5. Zeh; (Abbildungen 20.11 und 19.8).",
-            "Leistenkanal, Funiculus spermaticus und Musculus cremaster: auf Höhe der vorderen tibiotarsalen Gelenklinie; (Abbildungen 19.4 und 20.12)",
+            "Hoden: Dies ist dieselbe Reflexzone wie beim Ovar: vorderer Rand der Ferse, in der Senkrechten zum 4. und 5. Zeh; (Abbildung 19.8).",
+            "Leistenkanal, Funiculus spermaticus und Musculus cremaster: auf Höhe der vorderen tibiotarsalen Gelenklinie; (Abbildung 19.4)",
             "Prostata, Samenbläschen und Plexus hypogastricus inferior (mittlerer Teil): kleine Vertiefung ventral des Sakrokokzygealgelenks. (Abbildungen 18.7 und 18.9)"
           ]
         },

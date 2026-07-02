@@ -43,9 +43,7 @@ export const chapter18Es: Chapter = {
         },
         {
           "type": "bullets",
-          "items": [
-            "(figura 18.1.)",
-            "Por detrás del pubis;",
+          "items": [            "Por detrás del pubis;",
             "La superficie superior, o cúpula vesical, está cubierta ventralmente por el peritoneo y dorsalmente por el cuerpo del útero;",
             "la superficie posteroinferior, o trigonal, descansa sobre la vagina."
           ]
@@ -56,14 +54,12 @@ export const chapter18Es: Chapter = {
         },
         {
           "type": "bullets",
-          "items": [
-            "(figura 18.2.)",
-            "Por detrás del pubis;",
+          "items": [            "Por detrás del pubis;",
             "La cúpula vesical está cubierta por el peritoneo;",
             "Por encima de la próstata;",
             "La superficie posteroinferior, o trigonal, se sitúa por delante del recto.",
             "La parte superior, o cuerpo, de la vejiga es móvil. La parte inferior, que comprende la base y el cuello, está fija, en continuidad con la uretra y, a través de ella, con el suelo pélvico.",
-            "Cuando está vacía, la vejiga es aplanada y no palpable. Cuando está llena, se vuelve globulosa y ovoide, y asciende por encima del pubis hacia la cavidad abdominal. (figura 18.3.)"
+            "Cuando está vacía, la vejiga es aplanada y no palpable. Cuando está llena, se vuelve globulosa y ovoide, y asciende por encima del pubis hacia la cavidad abdominal."
           ]
         }
       ]
@@ -90,7 +86,7 @@ export const chapter18Es: Chapter = {
           "type": "bullets",
           "items": [
             "el músculo detrusor está formado por tres capas de fibras musculares lisas:",
-            "Fibras externas: longitudinales; se entrelazan con los ligamentos pubovesicales (figura 18.4.). Cualquier tensión asimétrica de los ligamentos pubovesicales puede causar urgencia urinaria por una contracción vesical anómala y sostenida, lo que reduce la capacidad de llenado, o irritabilidad vesical (eretismo vesical).",
+            "Fibras externas: longitudinales; se entrelazan con los ligamentos pubovesicales. Cualquier tensión asimétrica de los ligamentos pubovesicales puede causar urgencia urinaria por una contracción vesical anómala y sostenida, lo que reduce la capacidad de llenado, o irritabilidad vesical (eretismo vesical).",
             "Fibras medias: circulares; forman el esfínter liso.",
             "Fibras internas: formadas por fibras entrecruzadas, poco desarrolladas en el sujeto joven pero más desarrolladas en los pacientes mayores con obstrucción prostática que deben pujar para orinar; esto produce la vejiga trabeculada de obstrucción."
           ]
@@ -112,7 +108,7 @@ export const chapter18Es: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "desde el punto de vista funcional, es la parte más importante de la vejiga por su riqueza en receptores de tensión y de volumen. Situado en la superficie posteroinferior, el trígono descansa, en la mujer, sobre la superficie anterior de la vagina (figura 18.1.); contiene tres orificios: (figura 18.4.)",
+            "desde el punto de vista funcional, es la parte más importante de la vejiga por su riqueza en receptores de tensión y de volumen. Situado en la superficie posteroinferior, el trígono descansa, en la mujer, sobre la superficie anterior de la vagina; contiene tres orificios:",
             "Dos orificios ureterales;",
             "Un orificio uretral."
           ]
@@ -167,7 +163,7 @@ export const chapter18Es: Chapter = {
           "type": "bullets",
           "items": [
             "actúan como sistema suspensor de la vejiga, como una pelota suspendida en una red:",
-            "el ligamento umbilical mediano (uraco): vestigio embrionario, conecta el ombligo con el vértice de la vejiga y con el pubis (figuras 18.1 y 18.2). Prolonga hacia abajo el ligamento falciforme del hígado (figura 11.9). Comparte fibras con los ligamentos pubovesicales y pubouretrales (figura 18.5 A, B), que a su vez comparten fibras con el músculo detrusor de la vejiga. La sección quirúrgica de este ligamento (cesárea) puede ser causa de incontinencia urinaria e irritabilidad vesical (eretismo vesical).",
+            "el ligamento umbilical mediano (uraco): vestigio embrionario, conecta el ombligo con el vértice de la vejiga y con el pubis. Prolonga hacia abajo el ligamento falciforme del hígado (figura 11.9). Comparte fibras con los ligamentos pubovesicales y pubouretrales, que a su vez comparten fibras con el músculo detrusor de la vejiga. La sección quirúrgica de este ligamento (cesárea) puede ser causa de incontinencia urinaria e irritabilidad vesical (eretismo vesical).",
             "los ligamentos umbilicoprevesicales son dos cordones fibrosos, vestigios de las arterias umbilicales, tendidos oblicuamente desde el ombligo hasta las superficies inferolaterales de la vejiga. Se prolongan lateralmente en la cavidad pélvica a través de las aponeurosis de los músculos obturador interno y piriforme, y terminan posteriormente en el isquion, donde se insertan el ligamento sacrotuberoso y los músculos isquiotibiales.",
             "Ligamentos pubovesicales (en la mujer) y puboprostáticos (en el hombre): fijan la vejiga al pubis. Sus fibras están en continuidad con el detrusor. La tensión ligamentaria induce hipercontractilidad vesical (eretismo) y desestabiliza el cuello vesical, produciendo una sensación de pesadez en el hipogastrio."
           ]
@@ -202,9 +198,7 @@ export const chapter18Es: Chapter = {
         },
         {
           "type": "bullets",
-          "items": [
-            "(figura 18.1.)",
-            "Ventralmente: el pubis y el plexo venoso prevesical;",
+          "items": [            "Ventralmente: el pubis y el plexo venoso prevesical;",
             "Craneal y ventralmente: el peritoneo;",
             "Craneal y dorsalmente: el cuerpo del útero;",
             "Caudal y dorsalmente: el cuello uterino y la vagina;",
@@ -218,9 +212,7 @@ export const chapter18Es: Chapter = {
         },
         {
           "type": "bullets",
-          "items": [
-            "(figura 18.2.)",
-            "Ventralmente: el pubis;",
+          "items": [            "Ventralmente: el pubis;",
             "Cranealmente: el peritoneo;",
             "Dorsalmente: la fascia prostatoperitoneal de Denonvilliers;",
             "Caudalmente: la próstata;",
@@ -457,7 +449,7 @@ export const chapter18Es: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "para que los músculos del periné desempeñen correctamente su función de sostén y esfinteriana, deben permanecer dentro de la cámara manométrica pélvica (figura 18.6). Si, durante un descenso del periné, la uretra desciende y sale de la cámara manométrica, la presión abdominal generada por la contracción de los músculos abdominales durante la tos, el estornudo, la defecación, el parto o determinadas actividades deportivas se ejerce únicamente sobre la vejiga. Incluso aumenta la presión vesical en detrimento del esfínter uretral, que ha salido de la cámara manométrica, provocando una incontinencia urinaria de esfuerzo."
+            "para que los músculos del periné desempeñen correctamente su función de sostén y esfinteriana, deben permanecer dentro de la cámara manométrica pélvica. Si, durante un descenso del periné, la uretra desciende y sale de la cámara manométrica, la presión abdominal generada por la contracción de los músculos abdominales durante la tos, el estornudo, la defecación, el parto o determinadas actividades deportivas se ejerce únicamente sobre la vejiga. Incluso aumenta la presión vesical en detrimento del esfínter uretral, que ha salido de la cámara manométrica, provocando una incontinencia urinaria de esfuerzo."
           ]
         },
         {
@@ -651,11 +643,11 @@ export const chapter18Es: Chapter = {
           "type": "bullets",
           "items": [
             "Cavidad pélvica, periné: (figuras 17.15, 17.16 y 17.17)",
-            "Vejiga: (figuras 18.7, 18.8 y 18.9)",
+            "Vejiga:",
             "Ligamentos pubovesicales: borde posterior del maléolo tibial;",
-            "Trígono vesical, región cérvico-ístmica del útero/próstata: localizar la zona refleja del núcleo fibroso central del periné, anterior al cóccix (figura 18.10); un surco orientado dorsal y posteriormente conduce a una pequeña depresión en la superficie posteromedial del calcáneo;",
+            "Trígono vesical, región cérvico-ístmica del útero/próstata: localizar la zona refleja del núcleo fibroso central del periné, anterior al cóccix; un surco orientado dorsal y posteriormente conduce a una pequeña depresión en la superficie posteromedial del calcáneo;",
             "Vejiga y cuerpo del útero: zona ligeramente abombada anterior al trígono;",
-            "Hendidura urogenital, núcleo fibroso central del periné, uretra y esfínter externo de la vejiga: borde inferior del calcáneo por delante del cóccix. (figura 18.10)"
+            "Hendidura urogenital, núcleo fibroso central del periné, uretra y esfínter externo de la vejiga: borde inferior del calcáneo por delante del cóccix."
           ]
         },
         {

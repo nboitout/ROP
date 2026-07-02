@@ -29,7 +29,7 @@ export const chapter16Es: Chapter = {
       "blocks": [
         {
           "type": "para",
-          "text": "Los riñones se sitúan lateralmente a la columna toracolumbar, entre el peritoneo y la pared abdominal posterior. Son retroperitoneales (figura 16.1) y se encuentran principalmente por encima del mesocolon transverso. Están orientados oblicuamente, de modo que el polo inferior se sitúa más lateral que el polo superior."
+          "text": "Los riñones se sitúan lateralmente a la columna toracolumbar, entre el peritoneo y la pared abdominal posterior. Son retroperitoneales y se encuentran principalmente por encima del mesocolon transverso. Están orientados oblicuamente, de modo que el polo inferior se sitúa más lateral que el polo superior."
         },
         {
           "type": "bullets",
@@ -43,9 +43,7 @@ export const chapter16Es: Chapter = {
         },
         {
           "type": "bullets",
-          "items": [
-            "(figura 16.2)",
-            "Riñón derecho: el riñón derecho se sitúa ligeramente más bajo que el izquierdo por la presencia del hígado. Se extiende desde las costillas 11.ª y 12.ª hasta L4;",
+          "items": [            "Riñón derecho: el riñón derecho se sitúa ligeramente más bajo que el izquierdo por la presencia del hígado. Se extiende desde las costillas 11.ª y 12.ª hasta L4;",
             "Riñón izquierdo: se extiende desde la 11.ª costilla hasta L3."
           ]
         },
@@ -77,7 +75,7 @@ export const chapter16Es: Chapter = {
         },
         {
           "type": "para",
-          "text": "El compartimento fascial renal tiene forma de embudo y está abierto inferiormente. Se interpone entre el peritoneo parietal posterior, por delante, y la fascia que lo separa de los músculos cuadrado lumbar y psoas, por detrás. Está formado por dos hojas: (figura 16.3)"
+          "text": "El compartimento fascial renal tiene forma de embudo y está abierto inferiormente. Se interpone entre el peritoneo parietal posterior, por delante, y la fascia que lo separa de los músculos cuadrado lumbar y psoas, por detrás. Está formado por dos hojas:"
         },
         {
           "type": "bullets",
@@ -95,7 +93,7 @@ export const chapter16Es: Chapter = {
         },
         {
           "type": "sub",
-          "text": "Contenido: grasa renal: (figura 16.3)"
+          "text": "Contenido: grasa renal:"
         },
         {
           "type": "para",
@@ -134,7 +132,7 @@ export const chapter16Es: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "en una sección sagital medial del riñón, se distinguen dos regiones del parénquima: (figura 16.4)",
+            "en una sección sagital medial del riñón, se distinguen dos regiones del parénquima:",
             "la corteza: en la periferia;",
             "la médula: en el centro."
           ]
@@ -151,7 +149,7 @@ export const chapter16Es: Chapter = {
         },
         {
           "type": "para",
-          "text": "La nefrona es la unidad funcional del riñón. (figura 16.5) Su función es mantener constantes el volumen y la composición del medio interno, conservando así la homeostasis. Consta de dos partes:"
+          "text": "La nefrona es la unidad funcional del riñón. Su función es mantener constantes el volumen y la composición del medio interno, conservando así la homeostasis. Consta de dos partes:"
         },
         {
           "type": "bullets",
@@ -173,16 +171,16 @@ export const chapter16Es: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "cranealmente, ambos riñones se relacionan con el diafragma y los hiatos pleuro-costo-diafragmáticos; caudalmente, con los músculos psoas y cuadrado lumbar; y, más lateralmente, con el músculo transverso del abdomen. (figura 16.3)"
+            "cranealmente, ambos riñones se relacionan con el diafragma y los hiatos pleuro-costo-diafragmáticos; caudalmente, con los músculos psoas y cuadrado lumbar; y, más lateralmente, con el músculo transverso del abdomen."
           ]
         },
         {
           "type": "para",
-          "text": "El 12.º nervio intercostal, o nervio subcostal, y los nervios del plexo lumbar discurren dentro de la grasa pararrenal: nervios iliohipogástrico, ilioinguinal y cutáneo femoral lateral. (figura 16.6)"
+          "text": "El 12.º nervio intercostal, o nervio subcostal, y los nervios del plexo lumbar discurren dentro de la grasa pararrenal: nervios iliohipogástrico, ilioinguinal y cutáneo femoral lateral."
         },
         {
           "type": "para",
-          "text": "Triángulo de Jean-Louis Petit y cuadrilátero de Grynfelt: estas dos regiones de la fosa lumbar constituyen puntos débiles de la pared abdominal posterior. (figura 16.7) Permiten un acceso relativamente directo al riñón, con poca interposición de tejidos blandos y sin fascículos de los músculos oblicuo interno u oblicuo externo. En esta región se encuentra directamente el músculo transverso del abdomen y se abordan indirectamente el nervio subcostal y el plexo lumbar."
+          "text": "Triángulo de Jean-Louis Petit y cuadrilátero de Grynfelt: estas dos regiones de la fosa lumbar constituyen puntos débiles de la pared abdominal posterior. Permiten un acceso relativamente directo al riñón, con poca interposición de tejidos blandos y sin fascículos de los músculos oblicuo interno u oblicuo externo. En esta región se encuentra directamente el músculo transverso del abdomen y se abordan indirectamente el nervio subcostal y el plexo lumbar."
         },
         {
           "type": "rop",
@@ -199,7 +197,7 @@ export const chapter16Es: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Riñón derecho: se relaciona con: (figura 16.8)",
+            "Riñón derecho: se relaciona con:",
             "Cranealmente: el hígado a través del ligamento hepatorrenal;"
           ]
         },
@@ -244,7 +242,7 @@ export const chapter16Es: Chapter = {
         },
         {
           "type": "para",
-          "text": "Cada riñón suele estar irrigado por una sola arteria renal (figura 16.9), que nace de la aorta justo por debajo de la arteria mesentérica superior. Se divide en cinco arterias segmentarias terminales que irrigan el parénquima renal. Estas arterias no se anastomosan entre sí: cada territorio vascular es independiente, lo que permite una resección quirúrgica parcial."
+          "text": "Cada riñón suele estar irrigado por una sola arteria renal, que nace de la aorta justo por debajo de la arteria mesentérica superior. Se divide en cinco arterias segmentarias terminales que irrigan el parénquima renal. Estas arterias no se anastomosan entre sí: cada territorio vascular es independiente, lo que permite una resección quirúrgica parcial."
         },
         {
           "type": "sub",
@@ -252,7 +250,7 @@ export const chapter16Es: Chapter = {
         },
         {
           "type": "para",
-          "text": "La vena renal se sitúa por delante de la arteria renal, con diferencias importantes entre los lados derecho e izquierdo. (figura 16.10)"
+          "text": "La vena renal se sitúa por delante de la arteria renal, con diferencias importantes entre los lados derecho e izquierdo."
         },
         {
           "type": "bullets",
@@ -445,7 +443,7 @@ export const chapter16Es: Chapter = {
             "fijaciones de las costillas 11.ª y 12.ª, de T10 a L1;",
             "disfunción del psoas, o psoítis.",
             "Fijaciones anteriores: el riñón derecho es más propenso a las fijaciones anteriores y a la ptosis. Tanto si el riñón está ptósico como si está fijado, ha perdido su movilidad normal.",
-            "Las mujeres se ven afectadas con mayor frecuencia por la ptosis debido al embarazo, el parto, la retroversión uterina y la menopausia. Se distinguen tres grados de ptosis: (figura 16.11)",
+            "Las mujeres se ven afectadas con mayor frecuencia por la ptosis debido al embarazo, el parto, la retroversión uterina y la menopausia. Se distinguen tres grados de ptosis:",
             "Primer grado: riñón “intercostal”, en el que la irritación del 12.º nervio intercostal irradia hacia el trocánter mayor.",
             "Síntomas: el paciente se sujeta el flanco, le resulta difícil respirar profundamente y tolera mal la tos y el estornudo.",
             "Segundo grado: riñón “abdominogenital” o “cutáneo femoral”.",
@@ -574,8 +572,8 @@ export const chapter16Es: Chapter = {
           "items": [
             "Nervio vago X; (figuras 4.11 y 4.17)",
             "Columna vertebral, articulaciones costotransversas (cadena ganglionar laterovertebral torácica, T7-T11-L1, cóccix); (figuras 4.23 y 4.29 y 4.32)",
-            "Plexo prevertebral; (figuras 16.12 y 16.13)",
-            "Glándulas suprarrenales: (figuras 16.12, 16.13 y figura 16.13 ter)",
+            "Plexo prevertebral;",
+            "Glándulas suprarrenales:",
             "Plexo lumbar L1 a L4 y sus ramas. (Véase Réflexothérapie occipito-podale et système neuro-méningé, Elsevier Masson, páginas 25 a 28)"
           ]
         },
@@ -593,11 +591,9 @@ export const chapter16Es: Chapter = {
         },
         {
           "type": "bullets",
-          "items": [
-            "(figuras 16.12, 16.13 y 16.14)",
-            "Polo inferior: a la altura de L3 o L4, en la vertical del primer y segundo dedos, por encima del borde anterior del talón;",
+          "items": [            "Polo inferior: a la altura de L3 o L4, en la vertical del primer y segundo dedos, por encima del borde anterior del talón;",
             "Polo superior: a la altura de T12;",
-            "Glándula suprarrenal: en la cima del polo superior del riñón; (figura 16.15)",
+            "Glándula suprarrenal: en la cima del polo superior del riñón;",
             "Borde lateral: es convexo;",
             "Borde medial: cóncavo. El hilio se localiza a la altura de L1."
           ]
@@ -609,7 +605,7 @@ export const chapter16Es: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "el triángulo de Jean-Louis Petit y el cuadrilátero de Grynfelt corresponden al hueso cuboides. (figura 16.17)"
+            "el triángulo de Jean-Louis Petit y el cuadrilátero de Grynfelt corresponden al hueso cuboides."
           ]
         },
         {
@@ -619,7 +615,7 @@ export const chapter16Es: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "asociar las caras plantar y dorsal del riñón: (figura 16.18)",
+            "asociar las caras plantar y dorsal del riñón:",
             "Orientar ambos pulgares uno hacia el otro, uno sobre la cara dorsal y el otro sobre la cara plantar;",
             "Estimular la zona refleja y, luego, utilizar el ritmo respiratorio para seguir el movimiento caudalmente durante la inspiración y cranealmente durante la espiración. Es una forma útil de evaluar la movilidad del riñón.",
             "Con la misma maniobra, pero sin el ritmo respiratorio, seguir la motilidad del riñón.",

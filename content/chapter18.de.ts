@@ -43,9 +43,7 @@ export const chapter18De: Chapter = {
         },
         {
           "type": "bullets",
-          "items": [
-            "(Abbildung 18.1.)",
-            "hinter dem Schambein;",
+          "items": [            "hinter dem Schambein;",
             "Die obere Fläche, bzw. der Blasendom, ist ventral vom Peritoneum und dorsal vom Uteruskörper bedeckt;",
             "die posteroinferiore, bzw. trigonale, Fläche ruht auf der Vagina."
           ]
@@ -56,14 +54,12 @@ export const chapter18De: Chapter = {
         },
         {
           "type": "bullets",
-          "items": [
-            "(Abbildung 18.2.)",
-            "hinter dem Schambein;",
+          "items": [            "hinter dem Schambein;",
             "Der Blasendom ist vom Peritoneum bedeckt;",
             "oberhalb der Prostata;",
             "Die posteroinferiore, bzw. trigonale, Fläche liegt anterior des Rektums.",
             "Der obere Anteil, bzw. Körper, der Blase ist beweglich. Der untere Anteil, der Basis und Hals umfasst, ist fixiert, setzt sich in die Urethra fort und ist über diese mit dem Beckenboden verbunden.",
-            "Im leeren Zustand ist die Blase abgeflacht und nicht tastbar. Im gefüllten Zustand wird sie kugelig und eiförmig, steigt über das Schambein hinaus und tritt in die Bauchhöhle ein. (Abbildung 18.3.)"
+            "Im leeren Zustand ist die Blase abgeflacht und nicht tastbar. Im gefüllten Zustand wird sie kugelig und eiförmig, steigt über das Schambein hinaus und tritt in die Bauchhöhle ein."
           ]
         }
       ]
@@ -90,7 +86,7 @@ export const chapter18De: Chapter = {
           "type": "bullets",
           "items": [
             "Der Musculus detrusor vesicae besteht aus drei Schichten glatter Muskelfasern:",
-            "Äußere Fasern: longitudinal; sie verflechten sich mit den Ligamenta pubovesicalia (Abbildung 18.4.). Jede asymmetrische Spannung der pubovesikalen Ligamente kann durch eine anhaltende abnorme Blasenkontraktion Harndrang auslösen, was zu verminderter Füllungskapazität bzw. Blasenreizbarkeit (vesikalem Eretismus) führt.",
+            "Äußere Fasern: longitudinal; sie verflechten sich mit den Ligamenta pubovesicalia. Jede asymmetrische Spannung der pubovesikalen Ligamente kann durch eine anhaltende abnorme Blasenkontraktion Harndrang auslösen, was zu verminderter Füllungskapazität bzw. Blasenreizbarkeit (vesikalem Eretismus) führt.",
             "Mittlere Fasern: zirkulär; sie bilden den glatten Sphinkter.",
             "Innere Fasern: aus sich kreuzenden Fasern gebildet, bei jungen Personen nur wenig entwickelt, bei älteren Patienten mit prostatischer Obstruktion, die beim Wasserlassen pressen müssen, stärker ausgeprägt; daraus entsteht die trabekulierte Obstruktionsblase."
           ]
@@ -112,7 +108,7 @@ export const chapter18De: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Funktionell ist dies der wichtigste Teil der Harnblase, da es reich an Spannungs- und Volumenrezeptoren ist. An der posteroinferioren Fläche gelegen, ruht das Trigonum bei der Frau auf der Vorderwand der Vagina (Abbildung 18.1.); es enthält drei Öffnungen: (Abbildung 18.4.)",
+            "Funktionell ist dies der wichtigste Teil der Harnblase, da es reich an Spannungs- und Volumenrezeptoren ist. An der posteroinferioren Fläche gelegen, ruht das Trigonum bei der Frau auf der Vorderwand der Vagina; es enthält drei Öffnungen:",
             "zwei Ureteröffnungen;",
             "eine Urethraöffnung."
           ]
@@ -167,7 +163,7 @@ export const chapter18De: Chapter = {
           "type": "bullets",
           "items": [
             "Sie wirken als Aufhängesystem der Blase, ähnlich einer Kugel, die in einem Netz aufgehängt ist:",
-            "das Ligamentum umbilicale medianum (Urachus): Als embryonaler Überrest verbindet es den Nabel mit dem Blasenapex und dem Schambein (Abbildungen 18.1 und 18.2). Es setzt das Ligamentum falciforme der Leber nach kaudal fort (Abbildung 11.9). Es tauscht Fasern mit den Ligamenta pubovesicalia und pubourethralia aus (Abbildung 18.5 A, B), die ihrerseits Fasern mit dem Musculus detrusor vesicae austauschen. Eine chirurgische Durchtrennung dieses Ligaments (Kaiserschnitt) kann eine Ursache für Harninkontinenz und Blasenreizbarkeit (vesikalen Eretismus) sein.",
+            "das Ligamentum umbilicale medianum (Urachus): Als embryonaler Überrest verbindet es den Nabel mit dem Blasenapex und dem Schambein. Es setzt das Ligamentum falciforme der Leber nach kaudal fort (Abbildung 11.9). Es tauscht Fasern mit den Ligamenta pubovesicalia und pubourethralia aus, die ihrerseits Fasern mit dem Musculus detrusor vesicae austauschen. Eine chirurgische Durchtrennung dieses Ligaments (Kaiserschnitt) kann eine Ursache für Harninkontinenz und Blasenreizbarkeit (vesikalen Eretismus) sein.",
             "die prävesikalen Umbilikalligamente sind zwei fibröse Stränge, Überreste der Umbilikalarterien, die schräg vom Nabel zu den inferolateralen Flächen der Blase gespannt sind. Sie setzen sich lateral in die Beckenhöhle über die Aponeurosen des M. obturatorius internus und des M. piriformis fort und enden posterior am Ischium, wo das Lig. sacrotuberale und die ischiokruralen Muskeln ansetzen.",
             "Pubovesikale Ligamente (bei der Frau) und puboprostatische Ligamente (beim Mann): Sie befestigen die Blase am Schambein. Ihre Fasern stehen in Kontinuität mit dem Detrusor. Ligamentäre Spannung induziert eine Blasenhyperkontraktilität (Eretismus) und destabilisiert den Blasenhals, wodurch ein Schweregefühl im Unterbauch entsteht."
           ]
@@ -202,9 +198,7 @@ export const chapter18De: Chapter = {
         },
         {
           "type": "bullets",
-          "items": [
-            "(Abbildung 18.1.)",
-            "ventral: das Schambein und der prävesikale Venenplexus;",
+          "items": [            "ventral: das Schambein und der prävesikale Venenplexus;",
             "kranial und ventral: das Peritoneum;",
             "kranial und dorsal: der Uteruskörper;",
             "kaudal und dorsal: die Zervix und die Vagina;",
@@ -218,9 +212,7 @@ export const chapter18De: Chapter = {
         },
         {
           "type": "bullets",
-          "items": [
-            "(Abbildung 18.2.)",
-            "ventral: das Schambein;",
+          "items": [            "ventral: das Schambein;",
             "kranial: das Peritoneum;",
             "dorsal: die prostatoperitoneale Faszie nach Denonvilliers;",
             "kaudal: die Prostata;",
@@ -457,7 +449,7 @@ export const chapter18De: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Damit die Muskeln des Perineums ihre Stütz- und Sphinkterfunktion korrekt ausüben können, müssen sie innerhalb der pelvinen manometrischen Kammer bleiben (Abbildung 18.6). Wenn sich bei einem Absinken des Perineums die Urethra senkt und die manometrische Kammer verlässt, wirkt der durch die Kontraktion der Bauchmuskeln beim Husten, Niesen, Stuhlgang, bei der Geburt oder bei bestimmten sportlichen Aktivitäten erzeugte abdominale Druck ausschließlich auf die Blase. Er erhöht sogar den Blasendruck auf Kosten des Urethrasphinkters, der die manometrische Kammer verlassen hat, und verursacht dadurch eine Belastungsharninkontinenz."
+            "Damit die Muskeln des Perineums ihre Stütz- und Sphinkterfunktion korrekt ausüben können, müssen sie innerhalb der pelvinen manometrischen Kammer bleiben. Wenn sich bei einem Absinken des Perineums die Urethra senkt und die manometrische Kammer verlässt, wirkt der durch die Kontraktion der Bauchmuskeln beim Husten, Niesen, Stuhlgang, bei der Geburt oder bei bestimmten sportlichen Aktivitäten erzeugte abdominale Druck ausschließlich auf die Blase. Er erhöht sogar den Blasendruck auf Kosten des Urethrasphinkters, der die manometrische Kammer verlassen hat, und verursacht dadurch eine Belastungsharninkontinenz."
           ]
         },
         {
@@ -651,11 +643,11 @@ export const chapter18De: Chapter = {
           "type": "bullets",
           "items": [
             "Beckenhöhle, Perineum: (Abbildungen 17.15, 17.16 und 17.17)",
-            "Harnblase: (Abbildungen 18.7, 18.8 und 18.9)",
+            "Harnblase:",
             "Pubovesikale Ligamente: hinterer Rand des Malleolus tibialis;",
-            "Blasentrigonum, zerviko-isthmische Region des Uterus/der Prostata: die Reflexzone des zentralen sehnigen Zentrums des Perineums vor dem Kokzyx lokalisieren (Abbildung 18.10); eine nach dorsal und posterior gerichtete Rinne führt zu einer kleinen Vertiefung an der posteromedialen Fläche des Kalkaneus;",
+            "Blasentrigonum, zerviko-isthmische Region des Uterus/der Prostata: die Reflexzone des zentralen sehnigen Zentrums des Perineums vor dem Kokzyx lokalisieren; eine nach dorsal und posterior gerichtete Rinne führt zu einer kleinen Vertiefung an der posteromedialen Fläche des Kalkaneus;",
             "Blase und Uteruskörper: leicht vorgewölbte Zone anterior des Trigonums;",
-            "Urogenitalspalt, zentrales sehniges Zentrum des Perineums, Urethra und äußerer Blasensphinkter: unterer Rand des Kalkaneus anterior des Kokzyx. (Abbildung 18.10)"
+            "Urogenitalspalt, zentrales sehniges Zentrum des Perineums, Urethra und äußerer Blasensphinkter: unterer Rand des Kalkaneus anterior des Kokzyx."
           ]
         },
         {

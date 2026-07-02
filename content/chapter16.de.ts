@@ -29,7 +29,7 @@ export const chapter16De: Chapter = {
       "blocks": [
         {
           "type": "para",
-          "text": "Die Nieren liegen seitlich der thorakolumbalen Wirbelsäule, zwischen dem Peritoneum und der hinteren Bauchwand. Sie sind retroperitoneal gelegen (Abbildung 16.1) und befinden sich überwiegend oberhalb des Colon transversum bzw. des Mesocolon transversum. Sie sind schräg ausgerichtet, sodass der untere Pol weiter lateral liegt als der obere Pol."
+          "text": "Die Nieren liegen seitlich der thorakolumbalen Wirbelsäule, zwischen dem Peritoneum und der hinteren Bauchwand. Sie sind retroperitoneal gelegen und befinden sich überwiegend oberhalb des Colon transversum bzw. des Mesocolon transversum. Sie sind schräg ausgerichtet, sodass der untere Pol weiter lateral liegt als der obere Pol."
         },
         {
           "type": "bullets",
@@ -43,9 +43,7 @@ export const chapter16De: Chapter = {
         },
         {
           "type": "bullets",
-          "items": [
-            "(Abbildung 16.2)",
-            "Rechte Niere: Die rechte Niere liegt wegen der Leber etwas tiefer als die linke. Sie erstreckt sich von der 11. und 12. Rippe bis L4;",
+          "items": [            "Rechte Niere: Die rechte Niere liegt wegen der Leber etwas tiefer als die linke. Sie erstreckt sich von der 11. und 12. Rippe bis L4;",
             "Linke Niere: Sie erstreckt sich von der 11. Rippe bis L3."
           ]
         },
@@ -77,7 +75,7 @@ export const chapter16De: Chapter = {
         },
         {
           "type": "para",
-          "text": "Die Nierenfaszienloge ist trichterförmig und nach kaudal offen. Sie liegt zwischen dem hinteren parietalen Peritoneum ventral und der Faszie, die sie dorsal vom Musculus quadratus lumborum und vom Musculus psoas trennt. Sie besteht aus zwei Blättern: (Abbildung 16.3)"
+          "text": "Die Nierenfaszienloge ist trichterförmig und nach kaudal offen. Sie liegt zwischen dem hinteren parietalen Peritoneum ventral und der Faszie, die sie dorsal vom Musculus quadratus lumborum und vom Musculus psoas trennt. Sie besteht aus zwei Blättern:"
         },
         {
           "type": "bullets",
@@ -95,7 +93,7 @@ export const chapter16De: Chapter = {
         },
         {
           "type": "sub",
-          "text": "Inhalt: Nierenfett: (Abbildung 16.3)"
+          "text": "Inhalt: Nierenfett:"
         },
         {
           "type": "para",
@@ -134,7 +132,7 @@ export const chapter16De: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "In einem medialen Sagittalschnitt der Niere lassen sich zwei Parenchymbereiche unterscheiden: (Abbildung 16.4)",
+            "In einem medialen Sagittalschnitt der Niere lassen sich zwei Parenchymbereiche unterscheiden:",
             "der Kortex: peripher gelegen;",
             "die Medulla: zentral gelegen."
           ]
@@ -151,7 +149,7 @@ export const chapter16De: Chapter = {
         },
         {
           "type": "para",
-          "text": "Das Nephron ist die funktionelle Einheit der Niere. (Abbildung 16.5) Seine Aufgabe besteht darin, Volumen und Zusammensetzung des inneren Milieus konstant zu halten und damit die Homöostase zu sichern. Es besteht aus zwei Anteilen:"
+          "text": "Das Nephron ist die funktionelle Einheit der Niere. Seine Aufgabe besteht darin, Volumen und Zusammensetzung des inneren Milieus konstant zu halten und damit die Homöostase zu sichern. Es besteht aus zwei Anteilen:"
         },
         {
           "type": "bullets",
@@ -173,16 +171,16 @@ export const chapter16De: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Kranial stehen beide Nieren mit dem Zwerchfell und den pleuro-kosto-diaphragmatischen Hiatus in Beziehung; kaudal mit dem Musculus psoas und dem Musculus quadratus lumborum; weiter lateral mit dem Musculus transversus abdominis. (Abbildung 16.3)"
+            "Kranial stehen beide Nieren mit dem Zwerchfell und den pleuro-kosto-diaphragmatischen Hiatus in Beziehung; kaudal mit dem Musculus psoas und dem Musculus quadratus lumborum; weiter lateral mit dem Musculus transversus abdominis."
           ]
         },
         {
           "type": "para",
-          "text": "Der 12. Interkostalnerv, oder Nervus subcostalis, sowie die Nerven des Plexus lumbalis verlaufen im pararenalen Fett: Nervus iliohypogastricus, Nervus ilioinguinalis und Nervus cutaneus femoris lateralis. (Abbildung 16.6)"
+          "text": "Der 12. Interkostalnerv, oder Nervus subcostalis, sowie die Nerven des Plexus lumbalis verlaufen im pararenalen Fett: Nervus iliohypogastricus, Nervus ilioinguinalis und Nervus cutaneus femoris lateralis."
         },
         {
           "type": "para",
-          "text": "Dreieck von Jean-Louis Petit und Viereck von Grynfelt: Diese beiden Regionen der Lendengrube bilden Schwachstellen der hinteren Bauchwand. (Abbildung 16.7) Sie ermöglichen einen relativ direkten Zugang zur Niere, mit geringer Weichteilinterposition und ohne Faserbündel der inneren oder äußeren schrägen Bauchmuskulatur. In dieser Region trifft man direkt auf den Musculus transversus abdominis und nähert sich indirekt dem Nervus subcostalis und dem Plexus lumbalis."
+          "text": "Dreieck von Jean-Louis Petit und Viereck von Grynfelt: Diese beiden Regionen der Lendengrube bilden Schwachstellen der hinteren Bauchwand. Sie ermöglichen einen relativ direkten Zugang zur Niere, mit geringer Weichteilinterposition und ohne Faserbündel der inneren oder äußeren schrägen Bauchmuskulatur. In dieser Region trifft man direkt auf den Musculus transversus abdominis und nähert sich indirekt dem Nervus subcostalis und dem Plexus lumbalis."
         },
         {
           "type": "rop",
@@ -199,7 +197,7 @@ export const chapter16De: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Rechte Niere: Sie steht in Beziehung zu: (Abbildung 16.8)",
+            "Rechte Niere: Sie steht in Beziehung zu:",
             "Kranial: zur Leber über das Ligamentum hepatorenale;"
           ]
         },
@@ -244,7 +242,7 @@ export const chapter16De: Chapter = {
         },
         {
           "type": "para",
-          "text": "Jede Niere wird in der Regel von einer einzelnen Nierenarterie versorgt (Abbildung 16.9), die knapp unterhalb der Arteria mesenterica superior aus der Aorta entspringt. Sie teilt sich in fünf terminale Segmentarterien, die das Nierenparenchym versorgen. Diese Arterien anastomosieren nicht miteinander: Jedes Gefäßterritorium ist unabhängig, was eine chirurgische Teilresektion ermöglicht."
+          "text": "Jede Niere wird in der Regel von einer einzelnen Nierenarterie versorgt, die knapp unterhalb der Arteria mesenterica superior aus der Aorta entspringt. Sie teilt sich in fünf terminale Segmentarterien, die das Nierenparenchym versorgen. Diese Arterien anastomosieren nicht miteinander: Jedes Gefäßterritorium ist unabhängig, was eine chirurgische Teilresektion ermöglicht."
         },
         {
           "type": "sub",
@@ -252,7 +250,7 @@ export const chapter16De: Chapter = {
         },
         {
           "type": "para",
-          "text": "Die Nierenvene liegt vor der Nierenarterie; zwischen rechter und linker Seite bestehen wichtige Unterschiede. (Abbildung 16.10)"
+          "text": "Die Nierenvene liegt vor der Nierenarterie; zwischen rechter und linker Seite bestehen wichtige Unterschiede."
         },
         {
           "type": "bullets",
@@ -445,7 +443,7 @@ export const chapter16De: Chapter = {
             "Fixationen der 11. und 12. Rippe, von T10 bis L1;",
             "Psoas-Dysfunktion, oder Psoitis.",
             "Anteriore Fixationen: Die rechte Niere neigt stärker zu anterioren Fixationen und zur Ptose. Ob die Niere ptotisch oder fixiert ist: Sie hat ihre normale Mobilität verloren.",
-            "Frauen sind häufiger von Ptosen betroffen, bedingt durch Schwangerschaft, Geburt, Uterusretroversion und Menopause. Es werden drei Ptosegrade unterschieden: (Abbildung 16.11)",
+            "Frauen sind häufiger von Ptosen betroffen, bedingt durch Schwangerschaft, Geburt, Uterusretroversion und Menopause. Es werden drei Ptosegrade unterschieden:",
             "Erster Grad: „interkostale“ Niere, bei der eine Reizung des 12. Interkostalnervs zum Trochanter major ausstrahlt.",
             "Symptome: Der Patient hält sich die Flanke, tiefes Durchatmen fällt schwer, Husten und Niesen werden schlecht toleriert.",
             "Zweiter Grad: „abdominogenitale“ oder „femorokutane“ Niere.",
@@ -574,8 +572,8 @@ export const chapter16De: Chapter = {
           "items": [
             "Nervus vagus X; (Abbildungen 4.11 und 4.17)",
             "Wirbelsäule, Kostotransversalgelenke (thorakale laterovertebrale Ganglienkette, T7-T11-L1, Steißbein); (Abbildungen 4.23 und 4.29 und 4.32)",
-            "Prävertebraler Plexus; (Abbildungen 16.12 und 16.13)",
-            "Nebennieren: (Abbildungen 16.12, 16.13 und Abbildung 16.13 ter)",
+            "Prävertebraler Plexus;",
+            "Nebennieren:",
             "Plexus lumbalis L1 bis L4 und seine Äste. (siehe Réflexothérapie occipito-podale et système neuro-méningé, Elsevier Masson, Seiten 25 bis 28)"
           ]
         },
@@ -593,11 +591,9 @@ export const chapter16De: Chapter = {
         },
         {
           "type": "bullets",
-          "items": [
-            "(Abbildungen 16.12, 16.13 und 16.14)",
-            "Unterer Pol: gegenüber L3 oder L4, in der Projektion der ersten und zweiten Zehe, oberhalb des vorderen Fersenrandes;",
+          "items": [            "Unterer Pol: gegenüber L3 oder L4, in der Projektion der ersten und zweiten Zehe, oberhalb des vorderen Fersenrandes;",
             "Oberer Pol: gegenüber T12;",
-            "Nebenniere: am Scheitel des oberen Nierenpols; (Abbildung 16.15)",
+            "Nebenniere: am Scheitel des oberen Nierenpols;",
             "Lateraler Rand: Er ist konvex;",
             "Medialer Rand: konkav. Der Hilus liegt gegenüber L1."
           ]
@@ -609,7 +605,7 @@ export const chapter16De: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Das Dreieck von Jean-Louis Petit und das Grynfelt-Viereck entsprechen dem Os cuboideum. (Abbildung 16.17)"
+            "Das Dreieck von Jean-Louis Petit und das Grynfelt-Viereck entsprechen dem Os cuboideum."
           ]
         },
         {
@@ -619,7 +615,7 @@ export const chapter16De: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Plantar- und Dorsalseite der Niere miteinander verbinden: (Abbildung 16.18)",
+            "Plantar- und Dorsalseite der Niere miteinander verbinden:",
             "Die beiden Daumen zueinander ausrichten, einen auf der Dorsalseite und den anderen auf der Plantarseite;",
             "Die Reflexzone stimulieren, dann mithilfe des Atemrhythmus der Bewegung bei der Inspiration nach kaudal und bei der Exspiration nach kranial folgen. Dies ist eine nützliche Möglichkeit, die Nierenmobilität zu testen.",
             "Mit derselben Technik, jedoch ohne Atemrhythmus, der Motilität der Niere folgen.",

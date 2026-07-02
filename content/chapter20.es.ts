@@ -26,7 +26,7 @@ export const chapter20Es: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "comprende los testículos, los epidídimos, los conductos deferentes, las vesículas seminales, los conductos eyaculadores, la próstata, la uretra y el pene (figura 20.1)."
+            "comprende los testículos, los epidídimos, los conductos deferentes, las vesículas seminales, los conductos eyaculadores, la próstata, la uretra y el pene."
           ]
         }
       ]
@@ -42,7 +42,7 @@ export const chapter20Es: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "las gónadas se forman cerca de los riñones. A partir del 3.er mes de gestación, guiadas por un cordón tisular, el gubernáculo (figura 20.2 A), migran desde la pared abdominal posterior hacia la entrada del conducto inguinal:"
+            "las gónadas se forman cerca de los riñones. A partir del 3.er mes de gestación, guiadas por un cordón tisular, el gubernáculo, migran desde la pared abdominal posterior hacia la entrada del conducto inguinal:"
           ]
         },
         {
@@ -53,7 +53,7 @@ export const chapter20Es: Chapter = {
           "type": "bullets",
           "items": [
             "solo el ligamento redondo, vestigio del gubernáculo, continúa su migración a través del conducto inguinal.",
-            "En el hombre, los testículos continúan su migración a través del conducto inguinal (figura 20.3), arrastrando consigo arterias, venas, vasos linfáticos, nervios y el conducto deferente. Alcanzan el anillo inguinal profundo alrededor del 6.º mes, atraviesan el conducto durante el 7.º mes y llegan a su posición intraescrotal definitiva hacia el final del 8.º mes. Esta migración está regulada por el sistema hormonal, el crecimiento fetal y el aumento de peso de los testículos.",
+            "En el hombre, los testículos continúan su migración a través del conducto inguinal, arrastrando consigo arterias, venas, vasos linfáticos, nervios y el conducto deferente. Alcanzan el anillo inguinal profundo alrededor del 6.º mes, atraviesan el conducto durante el 7.º mes y llegan a su posición intraescrotal definitiva hacia el final del 8.º mes. Esta migración está regulada por el sistema hormonal, el crecimiento fetal y el aumento de peso de los testículos.",
             "Las anomalías son frecuentes, desde la simple ectopia inguinoescrotal hasta la criptorquidia pélvica, ilíaca o lumbar, que puede causar infertilidad o aumentar el riesgo de cáncer."
           ]
         },
@@ -80,7 +80,7 @@ export const chapter20Es: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "está situada profundamente en la cavidad pélvica, entre el trígono y el cuello de la vejiga por arriba, el músculo transverso profundo del periné por abajo, 2 a 3 cm por detrás de la sínfisis púbica y por delante de la ampolla rectal (figura 20.1)."
+            "está situada profundamente en la cavidad pélvica, entre el trígono y el cuello de la vejiga por arriba, el músculo transverso profundo del periné por abajo, 2 a 3 cm por detrás de la sínfisis púbica y por delante de la ampolla rectal."
           ]
         }
       ]
@@ -97,7 +97,7 @@ export const chapter20Es: Chapter = {
           "type": "bullets",
           "items": [
             "situados en el escroto, son el lugar de formación de los espermatozoides y de secreción hormonal, en particular de testosterona.",
-            "De forma ovoide y con una longitud de 5 cm en el adulto, el testículo está recubierto por una membrana resistente, la túnica albugínea. Está rodeado por una vaina, el proceso vaginal (figura 20.4). Su estructura interna está formada por lobulillos que contienen entre 400 y 600 túbulos seminíferos, lugar de producción y maduración de los espermatozoides (espermatogénesis). Estos túbulos desembocan, en el polo superior del testículo, en el conducto epididimario."
+            "De forma ovoide y con una longitud de 5 cm en el adulto, el testículo está recubierto por una membrana resistente, la túnica albugínea. Está rodeado por una vaina, el proceso vaginal. Su estructura interna está formada por lobulillos que contienen entre 400 y 600 túbulos seminíferos, lugar de producción y maduración de los espermatozoides (espermatogénesis). Estos túbulos desembocan, en el polo superior del testículo, en el conducto epididimario."
           ]
         },
         {
@@ -127,7 +127,7 @@ export const chapter20Es: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "es un túnel de 4 cm a través de la pared abdominal anterior, justo por encima y paralelo al ligamento inguinal (figura 20.5). Presenta dos orificios:"
+            "es un túnel de 4 cm a través de la pared abdominal anterior, justo por encima y paralelo al ligamento inguinal. Presenta dos orificios:"
           ]
         },
         {
@@ -157,7 +157,7 @@ export const chapter20Es: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "el conducto inguinal está formado por las mismas capas que la pared abdominal anterior (figura 20.3). Da paso al cordón espermático, que contiene los vasos inguinales, el conducto deferente y los nervios iliohipogástrico, ilioinguinal y genitofemoral, ramas colaterales del plexo lumbar (L1 a L4) (figura 20.6). En el hombre, estos nervios contribuyen a la inervación sensitiva del pubis y del escroto y, en la mujer, a la del pubis y de los labios mayores."
+            "el conducto inguinal está formado por las mismas capas que la pared abdominal anterior. Da paso al cordón espermático, que contiene los vasos inguinales, el conducto deferente y los nervios iliohipogástrico, ilioinguinal y genitofemoral, ramas colaterales del plexo lumbar (L1 a L4). En el hombre, estos nervios contribuyen a la inervación sensitiva del pubis y del escroto y, en la mujer, a la del pubis y de los labios mayores."
           ]
         },
         {
@@ -167,7 +167,7 @@ export const chapter20Es: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "dado que el conducto inguinal es una zona de debilidad de la pared abdominal anterior, constituye una localización frecuente de hernias inguinales, mucho más comunes en el hombre que en la mujer (figura 20.7)."
+            "dado que el conducto inguinal es una zona de debilidad de la pared abdominal anterior, constituye una localización frecuente de hernias inguinales, mucho más comunes en el hombre que en la mujer."
           ]
         },
         {
@@ -177,7 +177,7 @@ export const chapter20Es: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "su inserción proximal (figura 20.8) se encuentra en el ligamento inguinal y el pubis. Acompaña al cordón espermático a través del conducto inguinal. Su inserción distal se encuentra en la túnica fibrosa del escroto. Está inervado por los nervios genitofemoral e ilioinguinal. Eleva el escroto y favorece el paso de los espermatozoides por el conducto deferente al aumentar la presión interna del testículo y del epidídimo."
+            "su inserción proximal se encuentra en el ligamento inguinal y el pubis. Acompaña al cordón espermático a través del conducto inguinal. Su inserción distal se encuentra en la túnica fibrosa del escroto. Está inervado por los nervios genitofemoral e ilioinguinal. Eleva el escroto y favorece el paso de los espermatozoides por el conducto deferente al aumentar la presión interna del testículo y del epidídimo."
           ]
         },
         {
@@ -193,7 +193,7 @@ export const chapter20Es: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "glándulas sexuales accesorias masculinas, están situadas por detrás de la próstata (figura 20.9), dentro de la fascia de Denonvilliers, que separa la próstata del recto.",
+            "glándulas sexuales accesorias masculinas, están situadas por detrás de la próstata, dentro de la fascia de Denonvilliers, que separa la próstata del recto.",
             "Las vesículas seminales miden de 5 a 8 cm de longitud y 1,5 cm de anchura, y tienen la consistencia de un higo ligeramente maduro.",
             "Producen una parte importante del líquido seminal, particularmente rico en fructosa, que sostiene la función de los espermatozoides y contribuye al volumen del eyaculado."
           ]
@@ -205,7 +205,7 @@ export const chapter20Es: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "los dos conductos deferentes se unen a los conductos de las vesículas seminales para formar los conductos eyaculadores, que desembocan en la uretra prostática (figura 20.9)."
+            "los dos conductos deferentes se unen a los conductos de las vesículas seminales para formar los conductos eyaculadores, que desembocan en la uretra prostática."
           ]
         },
         {
@@ -216,7 +216,7 @@ export const chapter20Es: Chapter = {
           "type": "bullets",
           "items": [
             "esta palabra procede del griego prostates, que significa situado delante o expuesto. En efecto, la próstata se encuentra delante del recto. Glándula sexual accesoria masculina, secreta el antígeno prostático específico (PSA), una enzima cuyo nivel es importante para el diagnóstico y el seguimiento de las enfermedades prostáticas.",
-            "En el adulto joven, tiene forma de castaña (figura 20.9). Su consistencia, firme pero flexible, es comparable a la del globo ocular. Pesa de 20 a 25 g. Como su volumen aumenta considerablemente después de los 60 años, puede llegar a tener el tamaño de una naranja y ejercer presión sobre la uretra y la vejiga, provocando trastornos de la micción.",
+            "En el adulto joven, tiene forma de castaña. Su consistencia, firme pero flexible, es comparable a la del globo ocular. Pesa de 20 a 25 g. Como su volumen aumenta considerablemente después de los 60 años, puede llegar a tener el tamaño de una naranja y ejercer presión sobre la uretra y la vejiga, provocando trastornos de la micción.",
             "La próstata participa en la composición del semen y en la protección de los espermatozoides durante su paso por la vagina, el útero y las trompas uterinas."
           ]
         },
@@ -248,7 +248,7 @@ export const chapter20Es: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "situado medialmente, está atravesado por la uretra prostática, que contiene una estructura en forma de hendidura, el utrículo prostático (figura 20.10). Este es el vestigio atrofiado de las trompas uterinas, el útero y la vagina femeninos. Los autores antiguos lo llamaban la “vagina masculina”.",
+            "situado medialmente, está atravesado por la uretra prostática, que contiene una estructura en forma de hendidura, el utrículo prostático. Este es el vestigio atrofiado de las trompas uterinas, el útero y la vagina femeninos. Los autores antiguos lo llamaban la “vagina masculina”.",
             "Sensible a los estrógenos, el lóbulo medio se hipertrofia durante la andropausia como consecuencia de un desequilibrio hormonal que implica a los andrógenos y la testosterona. Su aumento de volumen comprime la uretra, dificulta la micción y hace que la eyaculación siga un trayecto retrógrado hacia la vejiga."
           ]
         },
@@ -270,7 +270,7 @@ export const chapter20Es: Chapter = {
           "type": "bullets",
           "items": [
             "sirve a la vez de conducto urinario y reproductor. Se distinguen dos partes:",
-            "Uretra prostática (figura 20.10): es la porción que atraviesa la próstata. Recibe los dos conductos eyaculadores. Unos quince pequeños orificios permiten que el líquido prostático fluya hacia la uretra."
+            "Uretra prostática: es la porción que atraviesa la próstata. Recibe los dos conductos eyaculadores. Unos quince pequeños orificios permiten que el líquido prostático fluya hacia la uretra."
           ]
         },
         {
@@ -900,8 +900,8 @@ export const chapter20Es: Chapter = {
           "type": "bullets",
           "items": [
             "Cavidad pélvica, periné (figuras 17.15, 17.16 y 17.17);",
-            "Testículo: es la misma zona refleja que el ovario: borde anterior del talón, en línea con el 4.º y el 5.º dedos (figuras 20.11 y 19.8);",
-            "Conducto inguinal, cordón espermático y músculo cremáster: a nivel de la interlínea tibiotarsiana anterior (figuras 19.4 y 20.12);",
+            "Testículo: es la misma zona refleja que el ovario: borde anterior del talón, en línea con el 4.º y el 5.º dedos (figura 19.8);",
+            "Conducto inguinal, cordón espermático y músculo cremáster: a nivel de la interlínea tibiotarsiana anterior (figura 19.4);",
             "Próstata, vesícula seminal y plexo hipogástrico inferior (parte media): pequeña depresión anterior a la articulación sacrococcígea (figuras 18.7 y 18.9)."
           ]
         },

@@ -16,7 +16,7 @@ export const chapter19En: Chapter = {
         },
         {
           "type": "para",
-          "text": "The female reproductive system comprises the uterus and vagina opening onto the vulva, two ovaries, and two fallopian tubes (figure 19.1)."
+          "text": "The female reproductive system comprises the uterus and vagina opening onto the vulva, two ovaries, and two fallopian tubes."
         }
       ]
     },
@@ -26,7 +26,7 @@ export const chapter19En: Chapter = {
       "blocks": [
         {
           "type": "para",
-          "text": "The uterus, the organ of gestation, has the shape of a cone (figure 19.2), with two horns into which the fallopian tubes open. The apex, or cervix, lies at the level of the sacrococcygeal joint and the trigone of the bladder. It is directed downward and firmly attached to the vagina, whose lower third is fixed to the pelvic floor and whose upper two thirds are intrapelvic. The body of the uterus is mobile and occupies a central position in the visceral compartment of the pelvic cavity, anterior to the rectal ampulla and above the bladder. The isthmus separates the body from the cervix. It projects at the level of the ischial spine. The lower end of the cervix, with its tench-mouth appearance, is intravaginal. It is pierced by the cervical os, which connects the vagina with the uterus."
+          "text": "The uterus, the organ of gestation, has the shape of a cone, with two horns into which the fallopian tubes open. The apex, or cervix, lies at the level of the sacrococcygeal joint and the trigone of the bladder. It is directed downward and firmly attached to the vagina, whose lower third is fixed to the pelvic floor and whose upper two thirds are intrapelvic. The body of the uterus is mobile and occupies a central position in the visceral compartment of the pelvic cavity, anterior to the rectal ampulla and above the bladder. The isthmus separates the body from the cervix. It projects at the level of the ischial spine. The lower end of the cervix, with its tench-mouth appearance, is intravaginal. It is pierced by the cervical os, which connects the vagina with the uterus."
         }
       ]
     },
@@ -72,7 +72,7 @@ export const chapter19En: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "in the sagittal plane, in a standing woman, the long axis of the uterine body (figure 19.3) is oriented cranially and ventrally, forming an angle of 120° with the cervix. The vagina is oriented at 60-70° to the horizontal.",
+            "in the sagittal plane, in a standing woman, the long axis of the uterine body is oriented cranially and ventrally, forming an angle of 120° with the cervix. The vagina is oriented at 60-70° to the horizontal.",
             "In the frontal plane, the uterus is rarely vertical: the body is most often oriented to the right and the cervix to the left. The position and orientation of the uterus depend on the tension of its fixation structures."
           ]
         },
@@ -120,7 +120,7 @@ export const chapter19En: Chapter = {
             "these are folds of peritoneum (figure 17.7) directed dorsally and laterally. They connect the uterus transversely to the internal pelvic wall:",
             "the upper part, or mesometrium, is flexible and contains three folds for the round ligament, the fallopian tube (or mesosalpinx), and the ovary (or mesovarium);",
             "the lower part, or parametrium, is thick and strong. It adheres to the pelvic floor and contains the uterine arteries.",
-            "Round ligaments: relatively weak, they extend from the uterine horns to the labia majora and the pubis. Initially directed ventrally and laterally, they then pass through the inguinal canal. They maintain the uterine body in anteversion (figure 19.1)."
+            "Round ligaments: relatively weak, they extend from the uterine horns to the labia majora and the pubis. Initially directed ventrally and laterally, they then pass through the inguinal canal. They maintain the uterine body in anteversion."
           ]
         },
         {
@@ -166,7 +166,7 @@ export const chapter19En: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "the female organ of copulation (figure 19.3), it crosses the pelvic floor. Its lower part opens onto the vulva, and its upper part is intrapelvic. The vaginal dome inserts around the cervix, forming vaginal fornices with it, which are effaced according to the axis of cervical deviation. Inclined at 60-70° to the horizontal and firmly attached to the pelvic floor, the vagina is a powerful support structure for the urogenital organs: the base of the bladder rests upon it."
+            "the female organ of copulation, it crosses the pelvic floor. Its lower part opens onto the vulva, and its upper part is intrapelvic. The vaginal dome inserts around the cervix, forming vaginal fornices with it, which are effaced according to the axis of cervical deviation. Inclined at 60-70° to the horizontal and firmly attached to the pelvic floor, the vagina is a powerful support structure for the urogenital organs: the base of the bladder rests upon it."
           ]
         }
       ]
@@ -506,7 +506,7 @@ export const chapter19En: Chapter = {
           "type": "bullets",
           "items": [
             "Ovaries: the female gonads, the two ovaries are the site of oocyte formation and the seat of hormonal secretions: estrogen and progesterone.",
-            "Fallopian tubes: they connect the ovaries to the uterine cavity. The oocyte released each month by the ovary migrates into the tube to meet the spermatozoa. The fertilized oocyte then reaches the uterine cavity (figure 19.5)."
+            "Fallopian tubes: they connect the ovaries to the uterine cavity. The oocyte released each month by the ovary migrates into the tube to meet the spermatozoa. The fertilized oocyte then reaches the uterine cavity."
           ]
         }
       ]
@@ -561,7 +561,7 @@ export const chapter19En: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Lombo-ovarian ligament, or suspensory ligament: it attaches the ovary to the pelvic wall and lumbar aponeuroses (figure 19.6);",
+            "Lombo-ovarian ligament, or suspensory ligament: it attaches the ovary to the pelvic wall and lumbar aponeuroses;",
             "Utero-ovarian ligament: this is the posterior fold of the broad ligament. It connects the ovary to the uterine horn by means of a mesentery (the mesovarium) on the posterior surface of the broad ligament;",
             "Tubo-ovarian ligament: it connects the ovary to the fimbrial end of the fallopian tube.",
             "The supporting role of these ligaments is relative. Above all, they act as conduits for vessels and as orienting structures for the ovary through the muscle fibers they contain."
@@ -574,7 +574,7 @@ export const chapter19En: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "they form a cylindrical loop-shaped duct, 10 to 12 cm long. They are divided into three segments (figure 19.5):",
+            "they form a cylindrical loop-shaped duct, 10 to 12 cm long. They are divided into three segments:",
             "Isthmus: it has a thick muscular layer. It communicates with the uterus through the uterine ostium;",
             "Ampulla: this is the site of fertilization;",
             "Infundibulum: it is funnel-shaped, with a contour of twelve to thirteen fimbriae that sweep the surface of the ovary to collect the oocyte from the mature Graafian follicle. At the bottom of the infundibulum opens the abdominal ostium.",
@@ -636,7 +636,7 @@ export const chapter19En: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "During its embryonic migration from the posterior abdominal region, the ovary carries with it the ovarian arterial, venous, and lymphatic vessels, as well as the nerves and surrounding connective tissue, to form the suspensory ligament of the ovary, or lombo-ovarian ligament (figure 19.6)."
+            "During its embryonic migration from the posterior abdominal region, the ovary carries with it the ovarian arterial, venous, and lymphatic vessels, as well as the nerves and surrounding connective tissue, to form the suspensory ligament of the ovary, or lombo-ovarian ligament."
           ]
         },
         {
@@ -1183,8 +1183,8 @@ export const chapter19En: Chapter = {
           "type": "bullets",
           "items": [
             "groove running from the central fibrous body to the cervico-isthmic region;",
-            "Dome and horn of the uterus: zone above the anterior border of the heel in its medial part (figure 19.7);",
-            "Inguinal canal and round ligament: anterior tibiotarsal joint line (figures 19.4 and 20.12)."
+            "Dome and horn of the uterus: zone above the anterior border of the heel in its medial part;",
+            "Inguinal canal and round ligament: anterior tibiotarsal joint line (figure 20.12)."
           ]
         },
         {
@@ -1221,7 +1221,7 @@ export const chapter19En: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Pelvic cavity; ovary: anterior border of the heel, in line with the 4th and 5th toes (figures 19.7 and 19.8)"
+            "Pelvic cavity; ovary: anterior border of the heel, in line with the 4th and 5th toes"
           ]
         },
         {
@@ -1231,7 +1231,7 @@ export const chapter19En: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "it runs along the anterior border of the heel from the ovarian reflex zone to the uterotubal junction located in line with the 1st and 2nd toes. This is also the reflex zone of the anterior part of the inferior hypogastric plexus (figures 19.7 and 19.9)."
+            "it runs along the anterior border of the heel from the ovarian reflex zone to the uterotubal junction located in line with the 1st and 2nd toes. This is also the reflex zone of the anterior part of the inferior hypogastric plexus."
           ]
         }
       ]

@@ -23,7 +23,7 @@ export const chapter21It: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Gli organi genitali esterni dell’uomo e della donna si inseriscono sulla faccia inferiore del triangolo urogenitale del perineo, con il quale sono intimamente solidali. (figura 21.1)"
+            "Gli organi genitali esterni dell’uomo e della donna si inseriscono sulla faccia inferiore del triangolo urogenitale del perineo, con il quale sono intimamente solidali."
           ]
         }
       ]
@@ -35,15 +35,15 @@ export const chapter21It: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Organi erettili: (figura 21.1)",
+            "Organi erettili:",
             "Corpi cavernosi: organi erettili pari, hanno le loro inserzioni nella parte prossimale dell’arco pubico. Sono chiamati pilastri del clitoride o del pene. Alle estremità distali si riuniscono per formare il corpo del clitoride nella donna e le porzioni dorsali del pene nell’uomo.",
             "Bulbi del vestibolo: nella donna sono due organi erettili situati ai lati dell’orifizio vaginale. Partecipano al turgore erettile della vulva e sono omologhi al corpo spongioso maschile, senza formare direttamente il glande del clitoride.",
             "Corpo spongioso: nell’uomo è impari, mediano, e nasce con un rigonfiamento, il bulbo del pene, fissato alla membrana perineale. Termina nel glande. Contiene l’uretra. Contribuisce a espellere il contenuto dell’uretra durante la minzione e durante l’eiaculazione dello sperma nell’uomo.",
-            "Muscoli degli organi erettili: (figura 21.2)",
+            "Muscoli degli organi erettili:",
             "Muscoli ischiocavernosi: pari, si inseriscono sul margine mediale dei rami ischiopubici e sui pilastri del clitoride e del pene. Contraendosi, propulsano il sangue dai pilastri verso il corpo del pene e del clitoride.",
             "Muscoli bulbospongiosi: pari, si inseriscono sul perineo, sul bulbo del vestibolo nella donna e sul corpo spongioso nell’uomo. Contraendosi, spingono il sangue verso il pene e il clitoride. Nell’uomo facilitano lo svuotamento dell’uretra dopo la minzione e l’eiaculazione dello sperma mediante le loro contrazioni riflesse.",
             "Legamenti del pene: il pene è fissato da due legamenti:",
-            "Legamento sospensore: è fissato superiormente alla sinfisi pubica e alla linea alba della parete addominale anteriore; (figura 21.2)",
+            "Legamento sospensore: è fissato superiormente alla sinfisi pubica e alla linea alba della parete addominale anteriore;",
             "Legamento fundiforme: è fissato alla linea alba.",
             "Ghiandole vestibolari di Bartolino: nella donna sono situate nel perineo, posteriormente ai bulbi vestibolari. Partecipano alla lubrificazione dell’ingresso vaginale. La lubrificazione vaginale dipende anche dalla trasudazione vascolare attraverso la parete vaginale durante l’eccitazione sessuale.",
             "Ghiandole bulbouretrali di Cowper: nell’uomo sono situate nel bulbo del perineo. Secernono un liquido alcalino che protegge gli spermatozoi durante il loro passaggio attraverso l’uretra e la vagina nel corso dell’eccitazione sessuale."
@@ -71,8 +71,8 @@ export const chapter21It: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Innervazione somatica: il nervo pudendo è il principale nervo del perineo. Assicura la sensibilità degli organi genitali esterni e il comando somatico dei muscoli perineali striati, in particolare dei muscoli bulbospongiosi e ischiocavernosi. (figure 21.3 e 21.4)",
-            "Innervazione autonoma: (figure 4.26 e 21.5)",
+            "Innervazione somatica: il nervo pudendo è il principale nervo del perineo. Assicura la sensibilità degli organi genitali esterni e il comando somatico dei muscoli perineali striati, in particolare dei muscoli bulbospongiosi e ischiocavernosi.",
+            "Innervazione autonoma: (figura 4.26)",
             "Sistema parasimpatico sacrale da S2 a S4: partecipa alla vasodilatazione e al riempimento dei corpi erettili;",
             "Sistema simpatico toracolombare da L1 a L3: interviene in particolare nella fase di emissione dell’eiaculazione."
           ]
@@ -159,8 +159,8 @@ export const chapter21It: Chapter = {
           "type": "bullets",
           "items": [
             "Nervo pudendo (S2 a S4): faccia laterale del tallone, plesso sacrale, spina ischiatica; (figure 17.15 e 17.16),",
-            "Faccia plantare del tallone: (figura 21.6)",
-            "Nervo pudendo (seguito): margine mediale del ramo ischiopubico (figura 21.7)",
+            "Faccia plantare del tallone:",
+            "Nervo pudendo (seguito): margine mediale del ramo ischiopubico",
             "Corpi cavernosi e muscoli ischiocavernosi: margine mediale dei rami ischiopubici;",
             "Organi erettili: estremità mediale del ramo iliopubico (bordo anteriore del tallone);",
             "Legamenti sacrotuberoso e sacrospinoso: bordo posteriore dei talloni; (figura 17.21)",

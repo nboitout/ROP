@@ -16,7 +16,7 @@ export const chapter19De: Chapter = {
         },
         {
           "type": "para",
-          "text": "Das weibliche Fortpflanzungssystem umfasst den Uterus und die Vagina, die sich zur Vulva hin öffnet, sowie zwei Ovarien und zwei Eileiter (Abbildung 19.1)."
+          "text": "Das weibliche Fortpflanzungssystem umfasst den Uterus und die Vagina, die sich zur Vulva hin öffnet, sowie zwei Ovarien und zwei Eileiter."
         }
       ]
     },
@@ -26,7 +26,7 @@ export const chapter19De: Chapter = {
       "blocks": [
         {
           "type": "para",
-          "text": "Der Uterus, das Organ der Gestation, ist kegelförmig (Abbildung 19.2) und besitzt zwei Hörner, in die die Eileiter einmünden. Die Spitze, der Gebärmutterhals beziehungsweise die Zervix, liegt auf Höhe des Sakrokokzygealgelenks und des Blasentrigonums. Sie ist nach kaudal gerichtet und fest mit der Vagina verbunden, deren unteres Drittel am Beckenboden fixiert ist, während die oberen zwei Drittel intrapelvin liegen. Der Uteruskörper ist mobil und nimmt im viszeralen Kompartiment der Beckenhöhle eine zentrale Stellung ein, vor der Rektumampulle und oberhalb der Harnblase. Der Isthmus trennt den Corpus uteri von der Zervix und projiziert sich auf Höhe der Spina ischiadica. Das untere Ende der Zervix mit seinem fischmaulartigen Erscheinungsbild liegt intravaginal. Es ist vom äußeren Muttermund durchbrochen, der die Vagina mit der Uterushöhle verbindet."
+          "text": "Der Uterus, das Organ der Gestation, ist kegelförmig und besitzt zwei Hörner, in die die Eileiter einmünden. Die Spitze, der Gebärmutterhals beziehungsweise die Zervix, liegt auf Höhe des Sakrokokzygealgelenks und des Blasentrigonums. Sie ist nach kaudal gerichtet und fest mit der Vagina verbunden, deren unteres Drittel am Beckenboden fixiert ist, während die oberen zwei Drittel intrapelvin liegen. Der Uteruskörper ist mobil und nimmt im viszeralen Kompartiment der Beckenhöhle eine zentrale Stellung ein, vor der Rektumampulle und oberhalb der Harnblase. Der Isthmus trennt den Corpus uteri von der Zervix und projiziert sich auf Höhe der Spina ischiadica. Das untere Ende der Zervix mit seinem fischmaulartigen Erscheinungsbild liegt intravaginal. Es ist vom äußeren Muttermund durchbrochen, der die Vagina mit der Uterushöhle verbindet."
         }
       ]
     },
@@ -72,7 +72,7 @@ export const chapter19De: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "In der Sagittalebene ist bei der stehenden Frau die Längsachse des Uteruskörpers (Abbildung 19.3) kranial und ventral ausgerichtet und bildet mit der Zervix einen Winkel von 120°. Die Vagina ist in einem Winkel von 60-70° zur Horizontalen orientiert.",
+            "In der Sagittalebene ist bei der stehenden Frau die Längsachse des Uteruskörpers kranial und ventral ausgerichtet und bildet mit der Zervix einen Winkel von 120°. Die Vagina ist in einem Winkel von 60-70° zur Horizontalen orientiert.",
             "In der Frontalebene steht der Uterus nur selten vollkommen vertikal: Der Corpus ist meist nach rechts, die Zervix nach links gerichtet. Lage und Orientierung des Uterus hängen von der Spannung seiner Fixationsstrukturen ab."
           ]
         },
@@ -120,7 +120,7 @@ export const chapter19De: Chapter = {
             "Diese Peritonealfalten (Abbildung 17.7) sind dorsal und lateral ausgerichtet. Sie verbinden den Uterus transversal mit der inneren Beckenwand:",
             "Der obere Teil, das Mesometrium, ist flexibel und enthält drei Peritonealfalten für das Ligamentum teres uteri, den Eileiter (Mesosalpinx) und das Ovar (Mesovarium);",
             "der untere Teil, das Parametrium, ist dick und fest. Er haftet am Beckenboden und enthält die Uterusarterien.",
-            "Ligamenta teretia uteri: Sie sind relativ wenig kräftig und ziehen von den Uterushörnern zu den großen Labien und zum Pubis. Zunächst sind sie ventral und lateral orientiert, danach verlaufen sie durch den Leistenkanal. Sie halten den Uteruskörper in Anteversion (Abbildung 19.1)."
+            "Ligamenta teretia uteri: Sie sind relativ wenig kräftig und ziehen von den Uterushörnern zu den großen Labien und zum Pubis. Zunächst sind sie ventral und lateral orientiert, danach verlaufen sie durch den Leistenkanal. Sie halten den Uteruskörper in Anteversion."
           ]
         },
         {
@@ -166,7 +166,7 @@ export const chapter19De: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Als weibliches Kopulationsorgan (Abbildung 19.3) durchquert sie den Beckenboden. Ihr unterer Anteil öffnet sich zur Vulva, der obere Anteil liegt intrapelvin. Das Scheidengewölbe inseriert am Umfang der Zervix und bildet mit ihr die Vaginalfornices, die sich entsprechend der Achse der zervikalen Abweichung abflachen. Bei einer Neigung von 60-70° zur Horizontalen und fester Verankerung am Beckenboden ist die Vagina ein kräftiges Stützelement der urogenitalen Organe: Die Blasenbasis ruht auf ihr."
+            "Als weibliches Kopulationsorgan durchquert sie den Beckenboden. Ihr unterer Anteil öffnet sich zur Vulva, der obere Anteil liegt intrapelvin. Das Scheidengewölbe inseriert am Umfang der Zervix und bildet mit ihr die Vaginalfornices, die sich entsprechend der Achse der zervikalen Abweichung abflachen. Bei einer Neigung von 60-70° zur Horizontalen und fester Verankerung am Beckenboden ist die Vagina ein kräftiges Stützelement der urogenitalen Organe: Die Blasenbasis ruht auf ihr."
           ]
         }
       ]
@@ -506,7 +506,7 @@ export const chapter19De: Chapter = {
           "type": "bullets",
           "items": [
             "Ovarien: Als weibliche Gonaden sind die beiden Ovarien der Ort der Oozytenbildung und der hormonellen Sekretion von Östrogen und Progesteron.",
-            "Eileiter: Sie verbinden die Ovarien mit der Uterushöhle. Die jeden Monat vom Ovar freigesetzte Eizelle wandert in den Eileiter, um dort auf Spermatozoen zu treffen. Die befruchtete Eizelle erreicht anschließend die Uterushöhle (Abbildung 19.5)."
+            "Eileiter: Sie verbinden die Ovarien mit der Uterushöhle. Die jeden Monat vom Ovar freigesetzte Eizelle wandert in den Eileiter, um dort auf Spermatozoen zu treffen. Die befruchtete Eizelle erreicht anschließend die Uterushöhle."
           ]
         }
       ]
@@ -561,7 +561,7 @@ export const chapter19De: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Ligamentum suspensorium ovarii, oder lumbo-ovarielles Ligament: Es befestigt das Ovar an der Beckenwand und an den lumbalen Aponeurosen (Abbildung 19.6);",
+            "Ligamentum suspensorium ovarii, oder lumbo-ovarielles Ligament: Es befestigt das Ovar an der Beckenwand und an den lumbalen Aponeurosen;",
             "Ligamentum utero-ovaricum: Dies ist der hintere Flügel des Ligamentum latum. Es verbindet das Ovar mit dem Uterushorn über ein Mesenterium, das Mesovarium, an der hinteren Fläche des Ligamentum latum;",
             "Ligamentum tubo-ovaricum: Es verbindet das Ovar mit dem Fimbrientrichter des Eileiters.",
             "Die Haltefunktion dieser Ligamente ist relativ. Vor allem wirken sie als Leitstrukturen für Gefäße und als Orientierungselemente des Ovars durch die in ihnen enthaltenen Muskelfasern."
@@ -574,7 +574,7 @@ export const chapter19De: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Sie bilden zylindrische, schlingenförmige Gänge von 10 bis 12 cm Länge. Man unterteilt sie in drei Abschnitte (Abbildung 19.5):",
+            "Sie bilden zylindrische, schlingenförmige Gänge von 10 bis 12 cm Länge. Man unterteilt sie in drei Abschnitte:",
             "Isthmus: Er besitzt eine dicke Muskelschicht. Er kommuniziert über das Ostium uterinum mit dem Uterus;",
             "Ampulle: Sie ist der Ort der Befruchtung;",
             "Infundibulum: Es ist trichterförmig und von zwölf bis dreizehn Fimbrien gesäumt, die die Oberfläche des Ovars abtasten, um die Eizelle aus dem reifen Graaf-Follikel aufzunehmen. Am Grund des Infundibulums öffnet sich das abdominale Ostium.",
@@ -636,7 +636,7 @@ export const chapter19De: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Während seiner embryonalen Migration aus der hinteren Bauchregion zieht das Ovar die ovariellen arteriellen, venösen und lymphatischen Gefäße sowie die Nerven und das sie umgebende Bindegewebe mit sich, wodurch das Ligamentum suspensorium ovarii, oder lumbo-ovarielle Ligament, gebildet wird (Abbildung 19.6)."
+            "Während seiner embryonalen Migration aus der hinteren Bauchregion zieht das Ovar die ovariellen arteriellen, venösen und lymphatischen Gefäße sowie die Nerven und das sie umgebende Bindegewebe mit sich, wodurch das Ligamentum suspensorium ovarii, oder lumbo-ovarielle Ligament, gebildet wird."
           ]
         },
         {
@@ -1183,8 +1183,8 @@ export const chapter19De: Chapter = {
           "type": "bullets",
           "items": [
             "Rinne vom zentralen Sehnenkörper des Perineums zur zerviko-isthmischen Region;",
-            "Dom und Horn des Uterus: Zone oberhalb des vorderen Fersenrandes in seinem medialen Anteil (Abbildung 19.7);",
-            "Leistenkanal und Ligamentum teres uteri: vordere tibiotarsale Gelenklinie (Abbildungen 19.4 und 20.12)."
+            "Dom und Horn des Uterus: Zone oberhalb des vorderen Fersenrandes in seinem medialen Anteil;",
+            "Leistenkanal und Ligamentum teres uteri: vordere tibiotarsale Gelenklinie (Abbildung 20.12)."
           ]
         },
         {
@@ -1221,7 +1221,7 @@ export const chapter19De: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Beckenhöhle; Ovar: vorderer Fersenrand, senkrecht unterhalb des 4. und 5. Zehs (Abbildungen 19.7 und 19.8)"
+            "Beckenhöhle; Ovar: vorderer Fersenrand, senkrecht unterhalb des 4. und 5. Zehs"
           ]
         },
         {
@@ -1231,7 +1231,7 @@ export const chapter19De: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Er verläuft entlang des vorderen Fersenrandes von der ovariellen Reflexzone bis zur uterotubaren Verbindung, die senkrecht unterhalb des 1. und 2. Zehs liegt. Dies ist zugleich die Reflexzone des vorderen Anteils des Plexus hypogastricus inferior (Abbildungen 19.7 und 19.9)."
+            "Er verläuft entlang des vorderen Fersenrandes von der ovariellen Reflexzone bis zur uterotubaren Verbindung, die senkrecht unterhalb des 1. und 2. Zehs liegt. Dies ist zugleich die Reflexzone des vorderen Anteils des Plexus hypogastricus inferior."
           ]
         }
       ]

@@ -15,7 +15,7 @@ export const chapter19Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "Appareil de reproduction de la femme: il comprend: l’utérus et le vagin s’ouvrant sur la vulve, deux ovaires et deux trompes. (figure 19.1)"
+          "text": "Appareil de reproduction de la femme: il comprend: l’utérus et le vagin s’ouvrant sur la vulve, deux ovaires et deux trompes."
         }
       ]
     },
@@ -25,7 +25,7 @@ export const chapter19Fr: Chapter = {
       "blocks": [
         {
           "type": "para",
-          "text": "Organe de la gestation, l’utérus à la forme d’un cône (figure 19.2) avec deux cornes où s’abouchent les trompes. Le sommet, ou col, est à hauteur de l’articulation sacro-coccygienne et du trigone de la vessie. Il est orienté vers le bas et solidement attaché au vagin dont le 1/3 inférieur est fixé au plancher pelvien et les 2/3 supérieurs, sont intra-pelviens. Le corps de l’utérus est mobile et occupe une position centrale dans la loge viscérale de la cavité pelvienne, en avant de l’ampoule rectale et au-dessus de la vessie. L’isthme sépare le corps du col utérin. Il se projette au niveau de l’épine ischiatique. L’extrémité inférieure du col, en forme de museau de tanche, est intra-vaginal. Il est percé de l’orifice cervical qui fait communiquer le vagin avec l’utérus."
+          "text": "Organe de la gestation, l’utérus à la forme d’un cône avec deux cornes où s’abouchent les trompes. Le sommet, ou col, est à hauteur de l’articulation sacro-coccygienne et du trigone de la vessie. Il est orienté vers le bas et solidement attaché au vagin dont le 1/3 inférieur est fixé au plancher pelvien et les 2/3 supérieurs, sont intra-pelviens. Le corps de l’utérus est mobile et occupe une position centrale dans la loge viscérale de la cavité pelvienne, en avant de l’ampoule rectale et au-dessus de la vessie. L’isthme sépare le corps du col utérin. Il se projette au niveau de l’épine ischiatique. L’extrémité inférieure du col, en forme de museau de tanche, est intra-vaginal. Il est percé de l’orifice cervical qui fait communiquer le vagin avec l’utérus."
         }
       ]
     },
@@ -71,7 +71,7 @@ export const chapter19Fr: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "dans un plan sagittal, chez une femme en position debout, le grand axe du corps utérin (figure 19.3) est orienté céphaliquement et ventralement, faisant un angle de 120° avec le col. Le vagin est orienté à 60-70° par rapport à l’horizontal.",
+            "dans un plan sagittal, chez une femme en position debout, le grand axe du corps utérin est orienté céphaliquement et ventralement, faisant un angle de 120° avec le col. Le vagin est orienté à 60-70° par rapport à l’horizontal.",
             "Dans un plan frontal, l’utérus est rarement vertical: le corps est le plus souvent orienté à droite et le col à gauche. La situation et l’orientation de l’utérus sont tributaires de la tension de ses moyens de fixation."
           ]
         },
@@ -119,7 +119,7 @@ export const chapter19Fr: Chapter = {
             "ce sont des replis du péritoine (figure 17.7) orientés dorsalement et latéralement. Ils relient transversalement l’utérus à la paroi pelvienne interne:",
             "la partie supérieure ou mésomètre est souple et comprend trois ailerons pour le ligament rond, la trompe (ou mésosalpinx) et l’ovaire (ou mésovarium);",
             "la partie inférieure ou paramètre est épaisse et solide. Elle adhère au plancher pelvien. Elle contient les artères utérines.",
-            "Ligaments ronds: peu solides, ils sont tendus des cornes de l’utérus aux grandes lèvres et au pubis. Orientés d’abord ventralement et latéralement, ils passent ensuite dans le canal inguinal. Ils maintiennent le corps utérin en antéversion. (figure 19.1)"
+            "Ligaments ronds: peu solides, ils sont tendus des cornes de l’utérus aux grandes lèvres et au pubis. Orientés d’abord ventralement et latéralement, ils passent ensuite dans le canal inguinal. Ils maintiennent le corps utérin en antéversion."
           ]
         },
         {
@@ -165,7 +165,7 @@ export const chapter19Fr: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "organe féminin de la copulation (figure 19.3), il traverse le plancher pelvien. Sa partie inférieure s’ouvre sur la vulve, sa partie supérieure est intra-pelvienne. Le dôme vaginal s’insère sur le pourtour du col utérin, dessinant avec lui des culs-de-sacs vaginaux, qui s’effacent selon l’axe de déviation du col utérin. Incliné à 60-70°, à l’horizontal et solidement fixé au plancher pelvien, le vagin est un puissant moyen de soutènement des organes uro-génitaux: la base de la vessie repose sur lui."
+            "organe féminin de la copulation, il traverse le plancher pelvien. Sa partie inférieure s’ouvre sur la vulve, sa partie supérieure est intra-pelvienne. Le dôme vaginal s’insère sur le pourtour du col utérin, dessinant avec lui des culs-de-sacs vaginaux, qui s’effacent selon l’axe de déviation du col utérin. Incliné à 60-70°, à l’horizontal et solidement fixé au plancher pelvien, le vagin est un puissant moyen de soutènement des organes uro-génitaux: la base de la vessie repose sur lui."
           ]
         }
       ]
@@ -505,7 +505,7 @@ export const chapter19Fr: Chapter = {
           "type": "bullets",
           "items": [
             "Ovaires: glandes génitales de la femme, les deux ovaires sont le lieu de formation des ovules et le siège de sécrétions hormonales: œstrogène et progestérone.",
-            "Trompes de Fallope: elles relient les ovaires à la cavité utérine. L’ovule libéré tous les mois par l’ovaire, migre dans la trompe à la rencontre des spermatozoïdes. L’ovule fécondé gagne ensuite la cavité utérine. (figure 19.5)"
+            "Trompes de Fallope: elles relient les ovaires à la cavité utérine. L’ovule libéré tous les mois par l’ovaire, migre dans la trompe à la rencontre des spermatozoïdes. L’ovule fécondé gagne ensuite la cavité utérine."
           ]
         }
       ]
@@ -560,7 +560,7 @@ export const chapter19Fr: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Ligament lombo-ovarien ou ligament suspenseur: il attache l’ovaire à la paroi pelvienne et aux aponévroses lombaires; (figure 19.6)",
+            "Ligament lombo-ovarien ou ligament suspenseur: il attache l’ovaire à la paroi pelvienne et aux aponévroses lombaires;",
             "Ligament utéro-ovarien: c’est l’aileron postérieur du ligament large. Il relie l’ovaire à la corne de l’utérus par l’intermédiaire d’un mésentère (le mésovarium) à la face postérieure du ligament large;",
             "Ligament tubo-ovarien: il relie l’ovaire au pavillon de la trompe.",
             "Le rôle de maintien de ces ligaments est relatif. Ils ont surtout un rôle de porte-vaisseaux et d’orientation de l’ovaire par les fibres musculaires qu’ils contiennent."
@@ -573,7 +573,7 @@ export const chapter19Fr: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "elles ont un conduit cylindrique en forme d’anse, long de 10 à 12cm. On les divise en trois segments: (figure 19.5)",
+            "elles ont un conduit cylindrique en forme d’anse, long de 10 à 12cm. On les divise en trois segments:",
             "Isthme: il à une couche musculaire épaisse. Il communique avec l’utérus par l’ostium utérin;",
             "Ampoule: elle est le lieu où se fait la fécondation;",
             "Pavillon: il à une forme d’entonnoir au contour de douze à treize franges, balayant la surface de l’ovaire pour recueillir l’ovule du follicule de De Graaf de l’ovaire, arrivé à maturité. Au fond du pavillon, s’ouvre l’ostium abdominal.",
@@ -635,7 +635,7 @@ export const chapter19Fr: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Dans sa migration embryonnaire depuis la région abdominale postérieure, l’ovaire entraine avec lui les vaisseaux ovariques artériels, veineux et lymphatiques, ainsi que les nerfs et le tissu conjonctif qui les entourent pour former le ligament suspenseur de l’ovaire ou ligament lombo-ovarien. (figure 19.6)"
+            "Dans sa migration embryonnaire depuis la région abdominale postérieure, l’ovaire entraine avec lui les vaisseaux ovariques artériels, veineux et lymphatiques, ainsi que les nerfs et le tissu conjonctif qui les entourent pour former le ligament suspenseur de l’ovaire ou ligament lombo-ovarien."
           ]
         },
         {
@@ -1182,8 +1182,8 @@ export const chapter19Fr: Chapter = {
           "type": "bullets",
           "items": [
             "sillon allant du noyau fibreux central à la région cervico-isthmique;",
-            "Dôme et corne de l’utérus: zone au-dessus du bord antérieur du talon dans sa partie médiale; (figure 19.7)",
-            "Canal inguinal et ligament rond: interligne tibio-tarsien antérieur. (figures 19.4 et 20.12)"
+            "Dôme et corne de l’utérus: zone au-dessus du bord antérieur du talon dans sa partie médiale;",
+            "Canal inguinal et ligament rond: interligne tibio-tarsien antérieur. (figure 20.12)"
           ]
         },
         {
@@ -1220,7 +1220,7 @@ export const chapter19Fr: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Cavité pelvienne; Ovaire: bord antérieur du talon, à l’aplomb des 4ème et 5ème orteils (figures 19.7 et 19.8)"
+            "Cavité pelvienne; Ovaire: bord antérieur du talon, à l’aplomb des 4ème et 5ème orteils"
           ]
         },
         {
@@ -1230,7 +1230,7 @@ export const chapter19Fr: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "elle longe le bord antérieur du talon depuis la zone réflexe de l’ovaire à la jonction utéro-tubaire située à l’aplomb des 1er et 2ème orteils (c’est aussi la zone réflexe de la partie antérieure du plexus hypogastrique inférieur). (figures 19.7 et 19.9)"
+            "elle longe le bord antérieur du talon depuis la zone réflexe de l’ovaire à la jonction utéro-tubaire située à l’aplomb des 1er et 2ème orteils (c’est aussi la zone réflexe de la partie antérieure du plexus hypogastrique inférieur)."
           ]
         }
       ]

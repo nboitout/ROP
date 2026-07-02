@@ -16,7 +16,7 @@ export const chapter19Es: Chapter = {
         },
         {
           "type": "para",
-          "text": "El aparato reproductor femenino comprende el útero y la vagina, que se abre a la vulva, así como dos ovarios y dos trompas de Falopio. (figura 19.1)"
+          "text": "El aparato reproductor femenino comprende el útero y la vagina, que se abre a la vulva, así como dos ovarios y dos trompas de Falopio."
         }
       ]
     },
@@ -26,7 +26,7 @@ export const chapter19Es: Chapter = {
       "blocks": [
         {
           "type": "para",
-          "text": "El útero, órgano de la gestación, tiene forma de cono (figura 19.2), con dos cuernos en los que desembocan las trompas de Falopio. El vértice, o cuello uterino, se sitúa a la altura de la articulación sacrococcígea y del trígono vesical. Está orientado hacia abajo y firmemente unido a la vagina, cuyo tercio inferior está fijado al suelo pélvico y cuyos dos tercios superiores se encuentran dentro de la pelvis. El cuerpo del útero es móvil y ocupa una posición central en el compartimento visceral de la cavidad pélvica, por delante de la ampolla rectal y por encima de la vejiga. El istmo separa el cuerpo del cuello uterino y se proyecta a la altura de la espina isquiática. El extremo inferior del cuello, con su aspecto en “hocico de tenca”, se sitúa dentro de la vagina. Está atravesado por el orificio cervical, que comunica la vagina con la cavidad uterina."
+          "text": "El útero, órgano de la gestación, tiene forma de cono, con dos cuernos en los que desembocan las trompas de Falopio. El vértice, o cuello uterino, se sitúa a la altura de la articulación sacrococcígea y del trígono vesical. Está orientado hacia abajo y firmemente unido a la vagina, cuyo tercio inferior está fijado al suelo pélvico y cuyos dos tercios superiores se encuentran dentro de la pelvis. El cuerpo del útero es móvil y ocupa una posición central en el compartimento visceral de la cavidad pélvica, por delante de la ampolla rectal y por encima de la vejiga. El istmo separa el cuerpo del cuello uterino y se proyecta a la altura de la espina isquiática. El extremo inferior del cuello, con su aspecto en “hocico de tenca”, se sitúa dentro de la vagina. Está atravesado por el orificio cervical, que comunica la vagina con la cavidad uterina."
         }
       ]
     },
@@ -72,7 +72,7 @@ export const chapter19Es: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "en el plano sagital, en una mujer de pie, el eje mayor del cuerpo uterino (figura 19.3) se dirige craneal y ventralmente, formando un ángulo de 120° con el cuello. La vagina está orientada a 60-70° respecto a la horizontal.",
+            "en el plano sagital, en una mujer de pie, el eje mayor del cuerpo uterino se dirige craneal y ventralmente, formando un ángulo de 120° con el cuello. La vagina está orientada a 60-70° respecto a la horizontal.",
             "En el plano frontal, el útero rara vez es vertical: el cuerpo se orienta con mayor frecuencia hacia la derecha y el cuello hacia la izquierda. La situación y la orientación del útero dependen de la tensión de sus estructuras de fijación."
           ]
         },
@@ -120,7 +120,7 @@ export const chapter19Es: Chapter = {
             "son pliegues del peritoneo (figura 17.7) orientados dorsal y lateralmente. Unen transversalmente el útero a la pared pélvica interna:",
             "la parte superior, o mesometrio, es flexible y comprende tres repliegues peritoneales asociados al ligamento redondo, a la trompa de Falopio (o mesosálpinx) y al ovario (o mesoovario);",
             "la parte inferior, o parametrio, es gruesa y sólida. Se adhiere al suelo pélvico y contiene las arterias uterinas.",
-            "Ligamentos redondos: relativamente poco resistentes, se extienden desde los cuernos uterinos hasta los labios mayores y el pubis. Primero se orientan ventral y lateralmente, y después atraviesan el canal inguinal. Mantienen el cuerpo uterino en anteversión. (figura 19.1)"
+            "Ligamentos redondos: relativamente poco resistentes, se extienden desde los cuernos uterinos hasta los labios mayores y el pubis. Primero se orientan ventral y lateralmente, y después atraviesan el canal inguinal. Mantienen el cuerpo uterino en anteversión."
           ]
         },
         {
@@ -166,7 +166,7 @@ export const chapter19Es: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "órgano femenino de la cópula (figura 19.3), atraviesa el suelo pélvico. Su parte inferior se abre a la vulva y su parte superior se sitúa dentro de la pelvis. La cúpula vaginal se inserta alrededor del cuello uterino y forma con él los fondos de saco vaginales, que se borran según el eje de desviación del cuello. Inclinada a 60-70° respecto a la horizontal y firmemente fijada al suelo pélvico, la vagina es una potente estructura de sostén de los órganos urogenitales: la base de la vejiga descansa sobre ella."
+            "órgano femenino de la cópula, atraviesa el suelo pélvico. Su parte inferior se abre a la vulva y su parte superior se sitúa dentro de la pelvis. La cúpula vaginal se inserta alrededor del cuello uterino y forma con él los fondos de saco vaginales, que se borran según el eje de desviación del cuello. Inclinada a 60-70° respecto a la horizontal y firmemente fijada al suelo pélvico, la vagina es una potente estructura de sostén de los órganos urogenitales: la base de la vejiga descansa sobre ella."
           ]
         }
       ]
@@ -506,7 +506,7 @@ export const chapter19Es: Chapter = {
           "type": "bullets",
           "items": [
             "Ovarios: glándulas genitales femeninas, los dos ovarios son el lugar de formación de los ovocitos y la fuente de secreción hormonal: estrógenos y progesterona.",
-            "Trompas de Falopio: conectan los ovarios con la cavidad uterina. Cada mes, el ovocito liberado por el ovario migra a la trompa para encontrarse con los espermatozoides. El ovocito fecundado alcanza después la cavidad uterina. (figura 19.5)"
+            "Trompas de Falopio: conectan los ovarios con la cavidad uterina. Cada mes, el ovocito liberado por el ovario migra a la trompa para encontrarse con los espermatozoides. El ovocito fecundado alcanza después la cavidad uterina."
           ]
         }
       ]
@@ -561,7 +561,7 @@ export const chapter19Es: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Ligamento suspensorio del ovario, o ligamento lumboovárico: fija el ovario a la pared pélvica y a las aponeurosis lumbares; (figura 19.6)",
+            "Ligamento suspensorio del ovario, o ligamento lumboovárico: fija el ovario a la pared pélvica y a las aponeurosis lumbares;",
             "Ligamento útero-ovárico: corresponde al repliegue posterior del ligamento ancho. Une el ovario al cuerno uterino mediante un mesenterio (el mesoovario) en la cara posterior del ligamento ancho;",
             "Ligamento tubo-ovárico: une el ovario al extremo fimbrial de la trompa de Falopio.",
             "El papel de sostén de estos ligamentos es relativo. Sobre todo actúan como porta-vasos y como estructuras que orientan el ovario mediante las fibras musculares que contienen."
@@ -574,7 +574,7 @@ export const chapter19Es: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "forman conductos cilíndricos en forma de asa, de 10 a 12 cm de longitud. Se dividen en tres segmentos: (figura 19.5)",
+            "forman conductos cilíndricos en forma de asa, de 10 a 12 cm de longitud. Se dividen en tres segmentos:",
             "Istmo: posee una capa muscular gruesa. Comunica con el útero por el ostium uterino;",
             "Ampolla: es el lugar donde se produce la fecundación;",
             "Infundíbulo: tiene forma de embudo y está bordeado por doce o trece fimbrias, que barren la superficie del ovario para recoger el ovocito del folículo de De Graaf maduro. En el fondo del infundíbulo se abre el ostium abdominal.",
@@ -636,7 +636,7 @@ export const chapter19Es: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Durante su migración embrionaria desde la región abdominal posterior, el ovario arrastra consigo los vasos ováricos arteriales, venosos y linfáticos, así como los nervios y el tejido conjuntivo que los rodean, para formar el ligamento suspensorio del ovario, o ligamento lumboovárico. (figura 19.6)"
+            "Durante su migración embrionaria desde la región abdominal posterior, el ovario arrastra consigo los vasos ováricos arteriales, venosos y linfáticos, así como los nervios y el tejido conjuntivo que los rodean, para formar el ligamento suspensorio del ovario, o ligamento lumboovárico."
           ]
         },
         {
@@ -1183,8 +1183,8 @@ export const chapter19Es: Chapter = {
           "type": "bullets",
           "items": [
             "surco que va desde el núcleo fibroso central hasta la región cervico-ístmica;",
-            "Cúpula y cuerno del útero: zona por encima del borde anterior del talón, en su parte medial; (figura 19.7)",
-            "Canal inguinal y ligamento redondo: interlínea tibiotarsiana anterior. (figuras 19.4 y 20.12)"
+            "Cúpula y cuerno del útero: zona por encima del borde anterior del talón, en su parte medial;",
+            "Canal inguinal y ligamento redondo: interlínea tibiotarsiana anterior. (figura 20.12)"
           ]
         },
         {
@@ -1221,7 +1221,7 @@ export const chapter19Es: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Cavidad pélvica; ovario: borde anterior del talón, en la vertical de los 4.º y 5.º dedos (figuras 19.7 y 19.8)"
+            "Cavidad pélvica; ovario: borde anterior del talón, en la vertical de los 4.º y 5.º dedos"
           ]
         },
         {
@@ -1231,7 +1231,7 @@ export const chapter19Es: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "discurre a lo largo del borde anterior del talón desde la zona refleja del ovario hasta la unión uterotubárica, situada en la vertical de los 1.º y 2.º dedos (esta es también la zona refleja de la parte anterior del plexo hipogástrico inferior). (figuras 19.7 y 19.9)"
+            "discurre a lo largo del borde anterior del talón desde la zona refleja del ovario hasta la unión uterotubárica, situada en la vertical de los 1.º y 2.º dedos (esta es también la zona refleja de la parte anterior del plexo hipogástrico inferior)."
           ]
         }
       ]

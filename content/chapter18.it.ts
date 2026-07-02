@@ -43,9 +43,7 @@ export const chapter18It: Chapter = {
         },
         {
           "type": "bullets",
-          "items": [
-            "(figura 18.1.)",
-            "Posteriormente al pube;",
+          "items": [            "Posteriormente al pube;",
             "La superficie superiore, o cupola vescicale, è ricoperta ventralmente dal peritoneo e dorsalmente dal corpo dell’utero;",
             "La superficie postero-inferiore, o trigonale, poggia sulla vagina."
           ]
@@ -56,14 +54,12 @@ export const chapter18It: Chapter = {
         },
         {
           "type": "bullets",
-          "items": [
-            "(figura 18.2.)",
-            "Posteriormente al pube;",
+          "items": [            "Posteriormente al pube;",
             "La cupola vescicale è ricoperta dal peritoneo;",
             "Superiormente alla prostata;",
             "La superficie postero-inferiore, o trigonale, si trova anteriormente al retto.",
             "La parte superiore, o corpo, della vescica è mobile. La parte inferiore, comprendente la base e il collo, è fissa, in continuità con l’uretra e, tramite essa, con il pavimento pelvico.",
-            "A vescica vuota, essa è appiattita e non palpabile. Quando è piena, diventa globosa e ovoidale, risalendo al di sopra del pube nella cavità addominale. (figura 18.3.)"
+            "A vescica vuota, essa è appiattita e non palpabile. Quando è piena, diventa globosa e ovoidale, risalendo al di sopra del pube nella cavità addominale."
           ]
         }
       ]
@@ -90,7 +86,7 @@ export const chapter18It: Chapter = {
           "type": "bullets",
           "items": [
             "il muscolo detrusore è formato da tre strati di fibre muscolari lisce:",
-            "Fibre esterne: longitudinali; si intrecciano con i legamenti pubovescicali (figura 18.4.). Qualsiasi tensione asimmetrica dei legamenti pubovescicali può provocare urgenza minzionale attraverso una contrazione vescicale anomala e sostenuta, determinando una riduzione della capacità di riempimento, o irritabilità vescicale (eretismo vescicale).",
+            "Fibre esterne: longitudinali; si intrecciano con i legamenti pubovescicali. Qualsiasi tensione asimmetrica dei legamenti pubovescicali può provocare urgenza minzionale attraverso una contrazione vescicale anomala e sostenuta, determinando una riduzione della capacità di riempimento, o irritabilità vescicale (eretismo vescicale).",
             "Fibre medie: circolari; formano lo sfintere liscio.",
             "Fibre interne: formate da fibre intrecciate, poco sviluppate nel soggetto giovane ma più sviluppate nei pazienti anziani con ostruzione prostatica, costretti a spingere per urinare; ciò produce la vescica trabecolata da ostruzione."
           ]
@@ -112,7 +108,7 @@ export const chapter18It: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "dal punto di vista funzionale, è la parte più importante della vescica per la ricchezza di recettori di tensione e di volume. Situato sulla superficie postero-inferiore, il trigono poggia, nella donna, sulla superficie anteriore della vagina (figura 18.1.); contiene tre orifizi: (figura 18.4.)",
+            "dal punto di vista funzionale, è la parte più importante della vescica per la ricchezza di recettori di tensione e di volume. Situato sulla superficie postero-inferiore, il trigono poggia, nella donna, sulla superficie anteriore della vagina; contiene tre orifizi:",
             "Due orifizi ureterali;",
             "Un orifizio uretrale."
           ]
@@ -167,7 +163,7 @@ export const chapter18It: Chapter = {
           "type": "bullets",
           "items": [
             "agiscono come sistema sospensore della vescica, simile a una palla sospesa nella propria rete:",
-            "Il legamento ombelicale mediano (uraco): residuo embrionale, collega l’ombelico all’apice della vescica e al pube (figure 18.1 e 18.2). Prolunga inferiormente il legamento falciforme del fegato (figura 11.9). Condivide fibre con i legamenti pubovescicali e pubouretrali (figura 18.5 A, B), che a loro volta condividono fibre con il muscolo detrusore della vescica. La sezione chirurgica di questo legamento (taglio cesareo) può essere causa di incontinenza urinaria e di irritabilità vescicale (eretismo vescicale).",
+            "Il legamento ombelicale mediano (uraco): residuo embrionale, collega l’ombelico all’apice della vescica e al pube. Prolunga inferiormente il legamento falciforme del fegato (figura 11.9). Condivide fibre con i legamenti pubovescicali e pubouretrali, che a loro volta condividono fibre con il muscolo detrusore della vescica. La sezione chirurgica di questo legamento (taglio cesareo) può essere causa di incontinenza urinaria e di irritabilità vescicale (eretismo vescicale).",
             "I legamenti ombelicali prevescicali sono due cordoni fibrosi, residui delle arterie ombelicali, tesi obliquamente dall’ombelico alle superfici inferolaterali della vescica. Si prolungano lateralmente nella cavità pelvica attraverso le aponeurosi dei muscoli otturatore interno e piriforme e terminano posteriormente sull’ischio, dove si inseriscono il legamento sacrotuberoso e i muscoli ischiocrurali.",
             "Legamenti pubovescicali (nella donna) e puboprostatici (nell’uomo): fissano la vescica al pube. Le loro fibre sono in continuità con il detrusore. La tensione legamentosa induce ipercontrattilità vescicale (eretismo) e destabilizza il collo vescicale, producendo una sensazione di pesantezza al basso ventre."
           ]
@@ -202,9 +198,7 @@ export const chapter18It: Chapter = {
         },
         {
           "type": "bullets",
-          "items": [
-            "(figura 18.1.)",
-            "Ventralmente: il pube e il plesso venoso prevescicale;",
+          "items": [            "Ventralmente: il pube e il plesso venoso prevescicale;",
             "Cranialmente e ventralmente: il peritoneo;",
             "Cranialmente e dorsalmente: il corpo dell’utero;",
             "Caudalmente e dorsalmente: il collo dell’utero e la vagina;",
@@ -218,9 +212,7 @@ export const chapter18It: Chapter = {
         },
         {
           "type": "bullets",
-          "items": [
-            "(figura 18.2.)",
-            "Ventralmente: il pube;",
+          "items": [            "Ventralmente: il pube;",
             "Cranialmente: il peritoneo;",
             "Dorsalmente: la fascia prostatoperitoneale di Denonvilliers;",
             "Caudalmente: la prostata;",
@@ -457,7 +449,7 @@ export const chapter18It: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "affinché i muscoli del perineo svolgano correttamente le loro funzioni di sostegno e di sfintere, devono rimanere all’interno della camera manometrica pelvica (figura 18.6). Se, durante un cedimento del perineo, l’uretra si abbassa ed esce dalla camera manometrica, la pressione addominale generata dalla contrazione dei muscoli addominali durante la tosse, gli starnuti, la defecazione, il parto o alcune attività sportive si esercita solo sulla vescica. Essa aumenta persino la pressione vescicale a scapito dello sfintere uretrale, uscito dalla camera manometrica, provocando incontinenza urinaria da sforzo."
+            "affinché i muscoli del perineo svolgano correttamente le loro funzioni di sostegno e di sfintere, devono rimanere all’interno della camera manometrica pelvica. Se, durante un cedimento del perineo, l’uretra si abbassa ed esce dalla camera manometrica, la pressione addominale generata dalla contrazione dei muscoli addominali durante la tosse, gli starnuti, la defecazione, il parto o alcune attività sportive si esercita solo sulla vescica. Essa aumenta persino la pressione vescicale a scapito dello sfintere uretrale, uscito dalla camera manometrica, provocando incontinenza urinaria da sforzo."
           ]
         },
         {
@@ -651,11 +643,11 @@ export const chapter18It: Chapter = {
           "type": "bullets",
           "items": [
             "Cavità pelvica, perineo: (figure 17.15, 17.16 e 17.17)",
-            "Vescica: (figure 18.7, 18.8 e 18.9)",
+            "Vescica:",
             "Legamenti pubovescicali: bordo posteriore del malleolo tibiale;",
-            "Trigono vescicale, regione cervico-istmica dell’utero/prostata: individuare la zona riflessa del nucleo fibroso centrale del perineo, anteriormente al coccige (figura 18.10); un solco orientato dorsalmente e posteriormente conduce a una piccola depressione sulla superficie postero-mediale del calcagno;",
+            "Trigono vescicale, regione cervico-istmica dell’utero/prostata: individuare la zona riflessa del nucleo fibroso centrale del perineo, anteriormente al coccige; un solco orientato dorsalmente e posteriormente conduce a una piccola depressione sulla superficie postero-mediale del calcagno;",
             "Vescica e corpo dell’utero: zona lievemente rilevata anteriormente al trigono;",
-            "Fessura urogenitale, nucleo fibroso centrale del perineo, uretra e sfintere esterno della vescica: bordo inferiore del calcagno anteriormente al coccige. (figura 18.10)"
+            "Fessura urogenitale, nucleo fibroso centrale del perineo, uretra e sfintere esterno della vescica: bordo inferiore del calcagno anteriormente al coccige."
           ]
         },
         {

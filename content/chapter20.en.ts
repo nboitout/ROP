@@ -26,7 +26,7 @@ export const chapter20En: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "it comprises the testes, epididymides, deferent ducts, seminal vesicles, ejaculatory ducts, prostate, urethra, and penis. (figure 20.1)"
+            "it comprises the testes, epididymides, deferent ducts, seminal vesicles, ejaculatory ducts, prostate, urethra, and penis."
           ]
         }
       ]
@@ -42,7 +42,7 @@ export const chapter20En: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "the gonads form near the kidneys. From the 3rd month of gestation, the gonads, guided by a tissue cord, the gubernaculum (figure 20.2 A), migrate from the posterior abdominal wall toward the entrance of the inguinal canal:"
+            "the gonads form near the kidneys. From the 3rd month of gestation, the gonads, guided by a tissue cord, the gubernaculum, migrate from the posterior abdominal wall toward the entrance of the inguinal canal:"
           ]
         },
         {
@@ -53,7 +53,7 @@ export const chapter20En: Chapter = {
           "type": "bullets",
           "items": [
             "only the round ligament, a remnant of the gubernaculum, continues its migration through the inguinal canal.",
-            "In men, the testes continue their migration through the inguinal canal (figure 20.3), carrying with them arteries, veins, lymphatics, nerves, and the deferent duct. The testes reach the deep inguinal ring around the 6th month, pass through the canal during the 7th month, and reach their definitive intrascrotal position toward the end of the 8th month. This migration is regulated by the hormonal system, fetal growth, and the increasing weight of the testes.",
+            "In men, the testes continue their migration through the inguinal canal, carrying with them arteries, veins, lymphatics, nerves, and the deferent duct. The testes reach the deep inguinal ring around the 6th month, pass through the canal during the 7th month, and reach their definitive intrascrotal position toward the end of the 8th month. This migration is regulated by the hormonal system, fetal growth, and the increasing weight of the testes.",
             "Anomalies are common, ranging from simple inguinoscrotal ectopia to pelvic, iliac, or lumbar cryptorchidism, which may cause infertility or cancer."
           ]
         },
@@ -80,7 +80,7 @@ export const chapter20En: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "it is located deep within the pelvic cavity, between the trigone and the neck of the bladder superiorly, the deep transverse perineal muscle inferiorly, 2 to 3 cm posterior to the pubic symphysis, and anterior to the rectal ampulla. (figure 20.1)"
+            "it is located deep within the pelvic cavity, between the trigone and the neck of the bladder superiorly, the deep transverse perineal muscle inferiorly, 2 to 3 cm posterior to the pubic symphysis, and anterior to the rectal ampulla."
           ]
         }
       ]
@@ -97,7 +97,7 @@ export const chapter20En: Chapter = {
           "type": "bullets",
           "items": [
             "in the scrotum, they are the site of spermatozoon formation and of hormonal secretion, namely testosterone.",
-            "Ovoid in shape and 5 cm long in adults, the testis is covered by a resistant membrane, the tunica albuginea. It is surrounded by a sheath, the vaginal process (figure 20.4). Its internal structure consists of lobules containing 400 to 600 seminiferous tubules, the site of sperm production and maturation (spermatogenesis). These tubules open, at the superior pole of the testis, into the epididymal duct."
+            "Ovoid in shape and 5 cm long in adults, the testis is covered by a resistant membrane, the tunica albuginea. It is surrounded by a sheath, the vaginal process. Its internal structure consists of lobules containing 400 to 600 seminiferous tubules, the site of sperm production and maturation (spermatogenesis). These tubules open, at the superior pole of the testis, into the epididymal duct."
           ]
         },
         {
@@ -127,7 +127,7 @@ export const chapter20En: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "this is a 4 cm tunnel through the anterior abdominal wall, just above and parallel to the inguinal ligament (figure 20.5). It has two openings:"
+            "this is a 4 cm tunnel through the anterior abdominal wall, just above and parallel to the inguinal ligament. It has two openings:"
           ]
         },
         {
@@ -157,7 +157,7 @@ export const chapter20En: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "the inguinal canal is formed by the same layers as the anterior abdominal wall (figure 20.3). It transmits the spermatic cord, which contains the inguinal vessels, the deferent duct, and the iliohypogastric, ilioinguinal, and genitofemoral nerves, collateral branches of the lumbar plexus (L1 to L4) (figure 20.6). In men, these nerves contribute to the sensory innervation of the pubis and scrotum and, in women, to that of the pubis and labia majora."
+            "the inguinal canal is formed by the same layers as the anterior abdominal wall. It transmits the spermatic cord, which contains the inguinal vessels, the deferent duct, and the iliohypogastric, ilioinguinal, and genitofemoral nerves, collateral branches of the lumbar plexus (L1 to L4). In men, these nerves contribute to the sensory innervation of the pubis and scrotum and, in women, to that of the pubis and labia majora."
           ]
         },
         {
@@ -167,7 +167,7 @@ export const chapter20En: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "as an area of weakness in the anterior abdominal wall, the inguinal canal is responsible for inguinal hernias, which are much more frequent in men than in women. (figure 20.7)"
+            "as an area of weakness in the anterior abdominal wall, the inguinal canal is responsible for inguinal hernias, which are much more frequent in men than in women."
           ]
         },
         {
@@ -177,7 +177,7 @@ export const chapter20En: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "its proximal attachment (figure 20.8) is on the inguinal ligament and pubis. It accompanies the spermatic cord through the inguinal canal. Its distal attachment is on the fibrous tunic of the scrotum. It is innervated by the genitofemoral and ilioinguinal nerves. It is the elevator muscle of the scrotum, which promotes the migration of sperm through the deferent duct by increasing the internal pressure of the testis and epididymis."
+            "its proximal attachment is on the inguinal ligament and pubis. It accompanies the spermatic cord through the inguinal canal. Its distal attachment is on the fibrous tunic of the scrotum. It is innervated by the genitofemoral and ilioinguinal nerves. It is the elevator muscle of the scrotum, which promotes the migration of sperm through the deferent duct by increasing the internal pressure of the testis and epididymis."
           ]
         },
         {
@@ -193,7 +193,7 @@ export const chapter20En: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "male accessory sex glands, they lie posterior to the prostate (figure 20.9), contained within Denonvilliers fascia, which separates the prostate from the rectum.",
+            "male accessory sex glands, they lie posterior to the prostate, contained within Denonvilliers fascia, which separates the prostate from the rectum.",
             "Measuring 5 to 8 cm in length and 1.5 cm in width, the seminal vesicles have the consistency of a slightly ripe fig.",
             "They produce a significant portion of the seminal fluid, rich in particular in fructose, which supports sperm function and contributes to ejaculate volume."
           ]
@@ -205,7 +205,7 @@ export const chapter20En: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "the two deferent ducts join the ducts of the seminal vesicles to form the ejaculatory ducts, which open into the prostatic urethra. (figure 20.9)"
+            "the two deferent ducts join the ducts of the seminal vesicles to form the ejaculatory ducts, which open into the prostatic urethra."
           ]
         },
         {
@@ -216,7 +216,7 @@ export const chapter20En: Chapter = {
           "type": "bullets",
           "items": [
             "this word comes from the Greek prostates, meaning placed in front of or exposed. Indeed, the prostate lies in front of the rectum. A male accessory sex gland, it secretes an enzyme, prostate-specific antigen (PSA), whose level is important in the diagnosis of cancer.",
-            "In a young adult, it has the shape of a chestnut (figure 20.9). Its firm but supple consistency is comparable to that of the eyeball. It weighs 20 to 25 g. As its volume increases substantially after the age of 60, it may become as large as an orange and exert pressure on the urethra and bladder, causing voiding disorders.",
+            "In a young adult, it has the shape of a chestnut. Its firm but supple consistency is comparable to that of the eyeball. It weighs 20 to 25 g. As its volume increases substantially after the age of 60, it may become as large as an orange and exert pressure on the urethra and bladder, causing voiding disorders.",
             "The prostate contributes to the composition of semen and to the protection of spermatozoa during their passage through the vagina, uterus, and fallopian tubes."
           ]
         },
@@ -248,7 +248,7 @@ export const chapter20En: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "medial, it is traversed by the prostatic urethra, which presents a slit, the prostatic utricle (figure 20.10). This is the atrophied remnant of the female fallopian tubes, uterus, and vagina. Older authors called it the “male vagina.”",
+            "medial, it is traversed by the prostatic urethra, which presents a slit, the prostatic utricle. This is the atrophied remnant of the female fallopian tubes, uterus, and vagina. Older authors called it the “male vagina.”",
             "Estrogen-sensitive, the middle lobe hypertrophies during andropause as a result of hormonal imbalance affecting androgens and testosterone. Its increase in volume compresses the urethra, making micturition difficult, and ejaculation follows a retrograde course toward the bladder."
           ]
         },
@@ -270,7 +270,7 @@ export const chapter20En: Chapter = {
           "type": "bullets",
           "items": [
             "it is both a urinary and a spermatic duct. Two parts are distinguished:",
-            "Prostatic urethra (figure 20.10): this is the portion passing through the prostate. It is joined by the two ejaculatory ducts. About fifteen small orifices allow prostatic fluid to flow into the urethra."
+            "Prostatic urethra: this is the portion passing through the prostate. It is joined by the two ejaculatory ducts. About fifteen small orifices allow prostatic fluid to flow into the urethra."
           ]
         },
         {
@@ -900,8 +900,8 @@ export const chapter20En: Chapter = {
           "type": "bullets",
           "items": [
             "Pelvic cavity, perineum: (figures 17.15, 17.16 and 17.17)",
-            "Testis: this is the same reflex zone as the ovary: anterior border of the heel, in line with the 4th and 5th toes; (figures 20.11 and 19.8).",
-            "Inguinal canal, spermatic cord, and cremaster muscle: at the anterior tibiotarsal joint line; (figures 19.4 and 20.12)",
+            "Testis: this is the same reflex zone as the ovary: anterior border of the heel, in line with the 4th and 5th toes; (figure 19.8).",
+            "Inguinal canal, spermatic cord, and cremaster muscle: at the anterior tibiotarsal joint line; (figure 19.4)",
             "Prostate, seminal vesicle, and inferior hypogastric plexus (middle part): small depression anterior to the sacrococcygeal joint. (figures 18.7 and 18.9)"
           ]
         },

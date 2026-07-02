@@ -30,28 +30,28 @@ export const chapter17De: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Kranial: die obere Beckenapertur (Abbildung 17.1), auch Beckeneingang;",
-            "Kaudal: die untere Beckenapertur (Abbildung 17.2), auch Beckenausgang, der durch das Perineum verschlossen wird.",
+            "Kranial: die obere Beckenapertur, auch Beckeneingang;",
+            "Kaudal: die untere Beckenapertur, auch Beckenausgang, der durch das Perineum verschlossen wird.",
             "Sie nimmt den Raum zwischen den unteren Anteilen der Hüftbeine, dem Sakrum und dem Kokzyx ein.",
-            "Der subperitoneale Beckenraum füllt den Raum zwischen dem Peritoneum und den osteomuskulären Wänden aus (Abbildung 17.3). Er steht mit dem retroperitonealen Bereich des Abdomens sowie mit den glutealen und obturatorischen Regionen über mehrere Öffnungen in Verbindung: die Foramina ischiadica majus und minus (bzw. die große und kleine Incisura ischiadica), die Foramina obturatoria sowie den Raum zwischen Hüftbein und Leistenband (Abbildung 17.4).",
-            "Er wird durch Septen unterteilt (Abbildung 17.5):",
+            "Der subperitoneale Beckenraum füllt den Raum zwischen dem Peritoneum und den osteomuskulären Wänden aus. Er steht mit dem retroperitonealen Bereich des Abdomens sowie mit den glutealen und obturatorischen Regionen über mehrere Öffnungen in Verbindung: die Foramina ischiadica majus und minus (bzw. die große und kleine Incisura ischiadica), die Foramina obturatoria sowie den Raum zwischen Hüftbein und Leistenband.",
+            "Er wird durch Septen unterteilt:",
             "Sagittale Septen: die sakro-rekto-genito-pubischen Laminae (bei der Frau das Ligamentum uterosacrale und das Ligamentum pubocervicale), die sich zwischen Sakrum und Pubis ausspannen. Sie verhindern laterale Bewegungen der Beckenorgane. Sie enthalten den Plexus hypogastricus inferior, der die autonome Innervation der Beckenorgane vermittelt.",
             "Transversale Septen: zwischen den Beckenviszera gelegen; hierzu gehören die lateralen Rektalligamente und bei der Frau das Ligamentum transversum cervicis. Sie dienen als Leitstrukturen für die Gefäße und Nerven, welche die Beckenorgane versorgen.",
             "Dieses Septensystem grenzt Kompartimente ab:",
             "ein mediales viszerales Kompartiment: Es wird von dorsal nach ventral eingenommen von:",
             "bei der Frau: Rektum, Uterus und seinen Adnexen (Ovarien und Tubae uterinae) sowie der Harnblase;",
             "beim Mann: Rektum, Samenwegen und Samenbläschen sowie der Harnblase.",
-            "zwei laterale Kompartimente: Sie enthalten die Beckengefäße und die Nerven des autonomen Nervensystems, eingebettet in reichlich fibrofettiges Bindegewebe, und versorgen die Beckenorgane (Abbildung 17.6).",
+            "zwei laterale Kompartimente: Sie enthalten die Beckengefäße und die Nerven des autonomen Nervensystems, eingebettet in reichlich fibrofettiges Bindegewebe, und versorgen die Beckenorgane.",
             "Im subperitonealen Beckenraum finden sich:",
             "die Arteria iliaca interna: Sie versorgt die Beckenwände und die Viszera;",
             "die Plexus des somatischen Nervensystems: Plexus sacralis, pudendus und coccygeus.",
             "Das Peritoneum legt sich wie ein Tuch über die Beckenviszera und bildet dabei Umschlagfalten bzw. Rezessus:",
-            "bei der Frau: Das Peritoneum folgt den Konturen von Harnblase und Uterus und bildet den vesikouterinen Rezessus; zwischen Uterus und Rektum bildet es den rektouterinen Rezessus (Douglas-Raum) (Abbildung 17.7).",
+            "bei der Frau: Das Peritoneum folgt den Konturen von Harnblase und Uterus und bildet den vesikouterinen Rezessus; zwischen Uterus und Rektum bildet es den rektouterinen Rezessus (Douglas-Raum).",
             "beim Mann: Der rektovesikale Rezessus liegt zwischen Harnblase und Rektum.",
             "Der Douglas-Raum ist der am tiefsten gelegene Abschnitt der Peritonealhöhle.",
             "Obwohl die Beckenorgane subperitoneal liegen und keine Serosa besitzen, können sie sich dank der Einschaltung des Peritoneums gegeneinander bewegen. Eine peritoneale Beteiligung (Infektion, Operation, Trauma, Stauung) wirkt sich auf Statik und Dynamik der Beckenorgane aus.",
             "Vertebro-coxo-pelvine Einheit: Das urogenitale System lässt sich nicht ohne seinen osteo-muskulo-artikulären Rahmen verstehen, mit dem es eng verbunden ist. Jede artikuläre Blockierung stört die Mobilität der Beckenorgane; umgekehrt führt jede viszerale Fixierung, ob traumatischen, infektiösen, chirurgischen oder kongestiven Ursprungs, zu artikulären Fixierungen.",
-            "Die funktionelle vertebro-coxo-pelvine Einheit umfasst 7 Gelenke (Abbildung 17.1):",
+            "Die funktionelle vertebro-coxo-pelvine Einheit umfasst 7 Gelenke:",
             "2 Sakroiliakalgelenke;",
             "2 Coxofemoralgelenke;",
             "1 Sakrokokzygealgelenk;",
@@ -64,11 +64,11 @@ export const chapter17De: Chapter = {
             "Übertragung absteigender Gravitationskräfte und aufsteigender Kräfte im Zusammenhang mit dem Stehen und Gehen;",
             "Ableitung eines Teils der mechanischen Belastungen in Richtung der unteren Extremitäten.",
             "Um diesen Anforderungen gerecht zu werden, weist das Becken besondere anatomische Eigenschaften auf:",
-            "Ausrichtung des Beckens: Der Beckeneingang ist nach kaudal und ventral geneigt, sodass sich der abdominale Druck vor allem auf die knöchernen Stützpfeiler und nur in geringem Maße auf die Beckenviszera ausübt (Abbildung 17.8):",
+            "Ausrichtung des Beckens: Der Beckeneingang ist nach kaudal und ventral geneigt, sodass sich der abdominale Druck vor allem auf die knöchernen Stützpfeiler und nur in geringem Maße auf die Beckenviszera ausübt:",
             "die inneren Fossa iliacae;",
             "das Promontorium sacrale;",
             "die Rami iliopubici.",
-            "Das Becken ist kein hermetisch geschlossener Raum: Die Beckenwände weisen Öffnungen und Ausschnitte auf (oben genannt), die durch Ligamente begrenzt und durch Weichteile (Muskeln, Aponeurosen, Membranen) verschlossen werden. Diese dämpfen den verbleibenden Druck auf die Beckenviszera (Abbildungen 17.9 und 17.10)."
+            "Das Becken ist kein hermetisch geschlossener Raum: Die Beckenwände weisen Öffnungen und Ausschnitte auf (oben genannt), die durch Ligamente begrenzt und durch Weichteile (Muskeln, Aponeurosen, Membranen) verschlossen werden. Diese dämpfen den verbleibenden Druck auf die Beckenviszera."
           ]
         }
       ]
@@ -91,7 +91,7 @@ export const chapter17De: Chapter = {
         },
         {
           "type": "para",
-          "text": "Er ist in besonderem Maße ein wichtiger Zeuge der auf Sakrum und Hüfte wirkenden Spannungen (Abbildung 17.9). Jede Spannung der am Sakrum ansetzenden Beckenorgane fixiert das Sakroiliakalgelenk und erhöht die Kontraktion des Musculus piriformis. Seine Aponeurose wird außerdem vom Plexus sacralis (Abbildung 17.10) und von dessen Endast, dem Nervus ischiadicus, durchzogen, der das Becken durch das Foramen ischiadicum majus verlässt. Eine Kontraktur des Piriformis irritiert den Nervus ischiadicus und erklärt so ischialgiforme Schmerzen."
+          "text": "Er ist in besonderem Maße ein wichtiger Zeuge der auf Sakrum und Hüfte wirkenden Spannungen. Jede Spannung der am Sakrum ansetzenden Beckenorgane fixiert das Sakroiliakalgelenk und erhöht die Kontraktion des Musculus piriformis. Seine Aponeurose wird außerdem vom Plexus sacralis und von dessen Endast, dem Nervus ischiadicus, durchzogen, der das Becken durch das Foramen ischiadicum majus verlässt. Eine Kontraktur des Piriformis irritiert den Nervus ischiadicus und erklärt so ischialgiforme Schmerzen."
         },
         {
           "type": "sub",
@@ -99,7 +99,7 @@ export const chapter17De: Chapter = {
         },
         {
           "type": "para",
-          "text": "Es verbindet das Perineum mit der Glutealregion (früher Gesäßregion). Es wird vom Musculus obturator internus (Abbildung 17.9) durchquert, begleitet von den Mm. gemelli superior und inferior sowie vom Nervus pudendus, der das Perineum innerviert."
+          "text": "Es verbindet das Perineum mit der Glutealregion (früher Gesäßregion). Es wird vom Musculus obturator internus durchquert, begleitet von den Mm. gemelli superior und inferior sowie vom Nervus pudendus, der das Perineum innerviert."
         },
         {
           "type": "rop",
@@ -111,7 +111,7 @@ export const chapter17De: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Foramen obturatum: Es entsteht durch die Verbindung der ilio- und ischiopubischen Äste und wird durch die Membrana obturatoria verschlossen (Abbildung 17.11).",
+            "Foramen obturatum: Es entsteht durch die Verbindung der ilio- und ischiopubischen Äste und wird durch die Membrana obturatoria verschlossen.",
             "Membrana obturatoria: Endopelvin ist sie vom Musculus obturator internus und exopelvin vom Musculus obturator externus bedeckt; beide sind pelvitrochantäre Muskeln und Außenrotatoren der Hüfte. Sie wird durch das subpubische Band verstärkt, das an der Gelenkkapsel der Hüfte ansetzt. Die Harnblase ruht auf den beiden Membranae obturatoriae.",
             "Beziehung zwischen Harnblase und Hüfte: Die Membrana obturatoria, wie ein Trommelfell gespannt, bildet einen Mechanismus zur Entlastung und Übertragung der Drücke der intrapelvinen Organe während des Gehens. Das Wechselspiel von Zug und Entspannung der ligamentären Spannungen sowie des subpubischen Bandes bei Hüftbewegungen erlaubt es, einen Teil der auf die intrapelvinen Organe wirkenden Kompressionskräfte abzuleiten, entweder zu den unteren Extremitäten oder zur Symphysis pubica und zu den Sakroiliakalgelenken. Gleichzeitig entsteht eine Art endopelviner Sog auf die Blutgefäße, die die Membrana obturatoria durchqueren. Diese Pumpwirkung fördert den intrapelvinen Kreislaufaustausch."
           ]
@@ -125,8 +125,8 @@ export const chapter17De: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Canalis obturatorius: Er liegt im subpubischen Anteil des Foramen obturatum und wird vom Nervus obturatorius durchquert (Abbildung 17.11), der den Musculus obturator externus und die Adduktoren der Hüfte innerviert. Seine Irritation erzeugt Schmerzen an der medialen Seite des Knies (siehe Okzipito-podale Reflexotherapie und neuromeningeales System, Seiten 31 bis 33).",
-            "Ligamentum sacrospinale und Ligamentum sacrotuberale: Sie begrenzen die Foramina zwischen Beckenhöhle sowie glutealer und perinealer Region (Abbildung 17.11).",
+            "Canalis obturatorius: Er liegt im subpubischen Anteil des Foramen obturatum und wird vom Nervus obturatorius durchquert, der den Musculus obturator externus und die Adduktoren der Hüfte innerviert. Seine Irritation erzeugt Schmerzen an der medialen Seite des Knies (siehe Okzipito-podale Reflexotherapie und neuromeningeales System, Seiten 31 bis 33).",
+            "Ligamentum sacrospinale und Ligamentum sacrotuberale: Sie begrenzen die Foramina zwischen Beckenhöhle sowie glutealer und perinealer Region.",
             "Ligamentum sacrotuberale: Es spannt sich vom Ischium zum Sakrum und Kokzyx;",
             "Ligamentum sacrospinale: Es spannt sich von der Spina ischiadica zum Sakrum und Kokzyx.",
             "Sie stabilisieren das Kokzyx lateral. Zudem spielen sie eine wichtige Rolle für Stabilität und Mobilität des Sakrums zwischen den Darmbeinen, da sie zusammen mit den vorderen Sakroiliakalligamenten als Bremsen der sakralen Nutation wirken (die Kontranutation wird durch die Spannung der posterioren Iliosakralligamente begrenzt)."
@@ -161,15 +161,15 @@ export const chapter17De: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Es besteht aus einer Gesamtheit von Muskeln und Faszien, die den Beckenausgang verschließen. Sie konvergieren zum zentralen sehnigen Körper des Perineums. Das Perineum wird begrenzt durch (Abbildung 17.2):",
+            "Es besteht aus einer Gesamtheit von Muskeln und Faszien, die den Beckenausgang verschließen. Sie konvergieren zum zentralen sehnigen Körper des Perineums. Das Perineum wird begrenzt durch:",
             "den unteren Rand der Symphysis pubica;",
             "die Spitze des Kokzyx;",
             "die Rami ischiopubici, ventral;",
             "die Ligamenta sacrotuberalia, dorsal.",
-            "Es wird durch eine gedachte Linie zwischen den beiden Sitzbeinhöckern in zwei Dreiecke unterteilt (Abbildung 17.12):",
-            "Vorderes urogenitales Dreieck: Es ist horizontal ausgerichtet und wird vom Hiatus urogenitalis durchquert (Abbildung 17.9). An seiner äußeren Fläche setzen die Muskeln bulbocavernosus und bulbospongiosus sowie die erektilen Organe von Penis und Klitoris an (siehe Kapitel 21 Männliches und weibliches erektiles System, Seite …).",
+            "Es wird durch eine gedachte Linie zwischen den beiden Sitzbeinhöckern in zwei Dreiecke unterteilt:",
+            "Vorderes urogenitales Dreieck: Es ist horizontal ausgerichtet und wird vom Hiatus urogenitalis durchquert. An seiner äußeren Fläche setzen die Muskeln bulbocavernosus und bulbospongiosus sowie die erektilen Organe von Penis und Klitoris an (siehe Kapitel 21 Männliches und weibliches erektiles System, Seite …).",
             "Hinteres anales Dreieck: Es ist nach dorsal und kaudal ausgerichtet und wird vom Analkanal und vom äußeren Analsphinkter durchquert. Lateral des Analkanals wird die Fossa ischioanalis vom Nervus pudendus durchzogen.",
-            "Muskeln des Perineums: Es handelt sich um quergestreifte Muskeln (Abbildung 17.9), die vom Nervus pudendus (S2-S4) gesteuert werden. Man unterscheidet:",
+            "Muskeln des Perineums: Es handelt sich um quergestreifte Muskeln, die vom Nervus pudendus (S2-S4) gesteuert werden. Man unterscheidet:",
             "Tiefe Perinealmuskeln: Musculus levator ani, Musculus transversus perinei profundus und Musculus coccygeus. Sie bilden das Beckenboden-Diaphragma, das dank seiner parallel verlaufenden Fasern eine Stützfunktion besitzt.",
             "Oberflächliche Perinealmuskeln: der äußere Sphinkter und der Musculus transversus perinei superficialis. Dank ihrer zirkulären Fasern haben sie eine Sphinkterfunktion für die urogenitalen und analen Öffnungen.",
             "Funktion des Perineums: Das Perineum erfüllt eine doppelte Funktion:",
@@ -196,7 +196,7 @@ export const chapter17De: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Arteriae iliacae internae: Sie entspringen aus der Arteria iliaca communis (Abbildung 17.3) auf Höhe der Bandscheibe L5-S1, verlaufen entlang des anteromedialen Randes des Sakroiliakalgelenks und teilen sich in zwei Äste:",
+            "Arteriae iliacae internae: Sie entspringen aus der Arteria iliaca communis auf Höhe der Bandscheibe L5-S1, verlaufen entlang des anteromedialen Randes des Sakroiliakalgelenks und teilen sich in zwei Äste:",
             "Hinterer Ast: Er versorgt die posteroinferiore Bauchwand, die hintere Beckenwand und die Glutealregion.",
             "Vorderer Ast: Er versorgt die Beckenviszera, das Perineum, die Adduktorenregion und beim Fetus die Plazenta.",
             "Die Gonadalarterien und die Arteria sacralis mediana, die aus der Aorta abdominalis entspringen, vervollständigen die arterielle Versorgung des Beckens."
@@ -238,15 +238,13 @@ export const chapter17De: Chapter = {
         },
         {
           "type": "bullets",
-          "items": [
-            "(Abbildung 17.10)",
-            "Plexus sacralis L5 bis S3: Er wird von den vorderen Ästen L4 bis S3 gebildet und gibt Kollateraläste an den Musculus piriformis und die pelvitrochantären Muskeln ab, mit Ausnahme des Musculus obturator externus (Nervus obturatorius), sowie an die Glutealnerven.",
+          "items": [            "Plexus sacralis L5 bis S3: Er wird von den vorderen Ästen L4 bis S3 gebildet und gibt Kollateraläste an den Musculus piriformis und die pelvitrochantären Muskeln ab, mit Ausnahme des Musculus obturator externus (Nervus obturatorius), sowie an die Glutealnerven.",
             "Sein Endast ist der Nervus ischiadicus. Dorsal steht er in Beziehung zum Musculus piriformis.",
-            "Ischiotrochantäre Rinne: Der Nervus ischiadicus und der Nervus cutaneus femoris posterior verlassen das Foramen ischiadicum majus und durchqueren die Glutealregion in der ischiotrochantären Rinne (Abbildung 17.13), wobei sie zwischen den oberflächlichen Muskeln (Glutealmuskeln) und den tiefen Muskeln (Musculus obturator internus, Mm. gemelli und Musculus quadratus femoris) verlaufen.",
+            "Ischiotrochantäre Rinne: Der Nervus ischiadicus und der Nervus cutaneus femoris posterior verlassen das Foramen ischiadicum majus und durchqueren die Glutealregion in der ischiotrochantären Rinne, wobei sie zwischen den oberflächlichen Muskeln (Glutealmuskeln) und den tiefen Muskeln (Musculus obturator internus, Mm. gemelli und Musculus quadratus femoris) verlaufen.",
             "Plexus pudendus S2 bis S4: Er ist kranial mit dem Plexus sacralis und kaudal mit dem Plexus coccygeus anastomosiert:",
             "Seine viszeralen Kollateraläste (oder Nervi erigentes nach Eckardt) parasympathischer Natur versorgen die Beckenorgane;",
             "seine somatischen muskulären Kollateraläste innervieren die tiefen Muskeln des Perineums: Musculus levator ani, Musculus transversus perinei profundus und Musculus coccygeus;",
-            "Nervus pudendus (Abbildung 17.10): Er verlässt das Foramen ischiadicum majus unterhalb des Musculus piriformis, zieht unter den Beckenboden durch das Foramen ischiadicum minus, indem er die Spina ischiadica umgreift, und verläuft zwischen Ligamentum sacrospinale und Ligamentum sacrotuberale. Er zieht entlang des Ramus ischiopubicus im Alcock-Kanal (einer Faszienduplikatur des Musculus obturator internus). Er gibt zwei Äste ab:",
+            "Nervus pudendus: Er verlässt das Foramen ischiadicum majus unterhalb des Musculus piriformis, zieht unter den Beckenboden durch das Foramen ischiadicum minus, indem er die Spina ischiadica umgreift, und verläuft zwischen Ligamentum sacrospinale und Ligamentum sacrotuberale. Er zieht entlang des Ramus ischiopubicus im Alcock-Kanal (einer Faszienduplikatur des Musculus obturator internus). Er gibt zwei Äste ab:",
             "Motorischer Ast: Er innerviert die tiefen und oberflächlichen Muskeln des Perineums.",
             "Sensibler Ast: Er innerviert die Haut des analen Dreiecks, den zentralen sehnigen Körper des Perineums, beim Mann das Skrotum und bei der Frau die Labienregion. Sein Endast, der Nervus dorsalis penis bzw. clitoridis, verläuft unmittelbar unterhalb der Symphysis pubica und innerviert den Penis und seine Glans bzw. die Klitoris."
           ]
@@ -280,9 +278,7 @@ export const chapter17De: Chapter = {
         },
         {
           "type": "bullets",
-          "items": [
-            "(Abbildung 17.14)",
-            "Sympathikus: Die präganglionären Neurone entspringen dem Seitenhorn des Rückenmarks von Th12 bis L1, auf Höhe der Wirbel Th11 bis Th12, und setzen sich über zwei Bahnen fort:",
+          "items": [            "Sympathikus: Die präganglionären Neurone entspringen dem Seitenhorn des Rückenmarks von Th12 bis L1, auf Höhe der Wirbel Th11 bis Th12, und setzen sich über zwei Bahnen fort:",
             "lumbale und sakrale paravertebrale Ganglienketten;",
             "prävertebrale Plexusbahn: Ovar und Hoden werden durch den Plexus aorticorenalis innerviert, der aus dem 10., 11. und 12. thorakalen Ganglion sowie dem 1. lumbalen Ganglion hervorgeht;",
             "die übrigen Beckenorgane werden durch den Plexus mesentericus inferior innerviert, der aus dem 12. thorakalen Ganglion hervorgeht. Diese sympathischen Fasern schließen sich anschließend dem Plexus hypogastricus superior an.",
@@ -358,7 +354,7 @@ export const chapter17De: Chapter = {
             "+5 bis +10 cm H2O auf inframesokolischer Höhe.",
             "Unter physiologischen Bedingungen sind die Organe der Beckenhöhle relativ gut vor den Drücken der viszeralen Säule geschützt, die aus der thorakalen und abdominalen Höhle kommen. Dies geschieht durch Entlastung und Absorption intrakavitärer Drücke mittels:",
             "Thorakaler Sog und thorakodiaphragmatische Anziehung: Die subdiaphragmatischen Organe unterliegen dem thorakalen Sog, umso stärker, je näher sie dem Zwerchfell liegen. Umgekehrt gilt: “Je weiter man sich vom Zwerchfell nach kaudal entfernt, desto weniger profitieren die Organe vom thorakalen Sog und von der diaphragmalen Anziehung. Sie üben daher eine Gravitationskraft auf die Beckenorgane aus, die umso größer ist, je weiter sie vom Zwerchfell entfernt liegen” (Urogenital Manipulations, Jean-Pierre Barral, Elsevier).",
-            "Ausrichtung der Beckenhöhle: Dank der kaudalen und ventralen Ausrichtung der Beckenhöhle verteilen sich die Gravitationskräfte auf den knöchernen Umfang des Beckenausgangs (Abbildung 17.8).",
+            "Ausrichtung der Beckenhöhle: Dank der kaudalen und ventralen Ausrichtung der Beckenhöhle verteilen sich die Gravitationskräfte auf den knöchernen Umfang des Beckenausgangs.",
             "Kuppelförmige Konfiguration der Beckenviszera: Der im Zentrum der Beckenhöhle gelegene Uteruskörper verstärkt diese Verteilung der Gravitationskräfte auf den Umfang des Beckenausgangs zusätzlich und entlastet dadurch die Beckenorgane weiter.",
             "Kontraktilität und Elastizität der Perinealmuskulatur: Die Perinealmuskeln leiten die verbleibenden Gravitationskräfte nach kranial und horizontal zum Umfang des Beckenausgangs zurück.",
             "Gleichgewicht der drei Diaphragmen: Das Perineum, bzw. Beckenboden-Diaphragma, passt sich fortlaufend den Druckschwankungen an, die mit den Bewegungen des thorakalen Zwerchfells verbunden sind. Dieses wiederum gleicht Spannungsveränderungen des kranialen Diaphragmas (Falx cerebri und Tentorium cerebelli) aus, die durch den Wechsel von Flexion und Extension in der kraniosakralen primären respiratorischen Bewegung entstehen.",
@@ -512,13 +508,11 @@ export const chapter17De: Chapter = {
         },
         {
           "type": "bullets",
-          "items": [
-            "(Abbildungen 17.15, 17.16 und 17.17)",
-            "Foramen ischiadicum majus und Musculus piriformis;",
+          "items": [            "Foramen ischiadicum majus und Musculus piriformis;",
             "Fossa ischiotrochanterica und Nervus ischiadicus;",
             "Foramen ischiadicum minus sowie Obturatoren- und Gemelli-Muskeln;",
-            "Fossa obturatoria und Obturatorenmuskeln (Abbildungen 17.18 und 17.19);",
-            "Plexus pudendus (Abbildungen 17.15, 17.18 und 17.20)."
+            "Fossa obturatoria und Obturatorenmuskeln;",
+            "Plexus pudendus."
           ]
         },
         {
@@ -529,7 +523,7 @@ export const chapter17De: Chapter = {
           "type": "bullets",
           "items": [
             "Kokzyx (Abbildung 4.23);",
-            "Ligamentum sacrotuberale und Ligamentum sacrospinale (Abbildungen 17.21 und 17.22);"
+            "Ligamentum sacrotuberale und Ligamentum sacrospinale;"
           ]
         },
         {

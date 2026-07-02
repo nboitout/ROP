@@ -16,7 +16,7 @@ export const chapter19It: Chapter = {
         },
         {
           "type": "para",
-          "text": "L’apparato riproduttivo femminile comprende l’utero e la vagina, che si apre sulla vulva, insieme a due ovaie e due tube di Falloppio (figura 19.1)."
+          "text": "L’apparato riproduttivo femminile comprende l’utero e la vagina, che si apre sulla vulva, insieme a due ovaie e due tube di Falloppio."
         }
       ]
     },
@@ -26,7 +26,7 @@ export const chapter19It: Chapter = {
       "blocks": [
         {
           "type": "para",
-          "text": "L’utero, organo della gestazione, ha forma conica (figura 19.2), con due corni nei quali sboccano le tube di Falloppio. L’apice, o cervice, si trova a livello dell’articolazione sacro-coccigea e del trigono vescicale. È orientato verso il basso ed è saldamente fissato alla vagina, il cui terzo inferiore è ancorato al pavimento pelvico, mentre i due terzi superiori sono intrapelvici. Il corpo dell’utero è mobile e occupa una posizione centrale nella loggia viscerale della cavità pelvica, anteriormente all’ampolla rettale e superiormente alla vescica. L’istmo separa il corpo dal collo uterino e si proietta a livello della spina ischiatica. L’estremità inferiore della cervice, con il suo aspetto a muso di tinca, è intravaginale. È attraversata dall’orifizio cervicale, che mette in comunicazione la vagina con la cavità uterina."
+          "text": "L’utero, organo della gestazione, ha forma conica, con due corni nei quali sboccano le tube di Falloppio. L’apice, o cervice, si trova a livello dell’articolazione sacro-coccigea e del trigono vescicale. È orientato verso il basso ed è saldamente fissato alla vagina, il cui terzo inferiore è ancorato al pavimento pelvico, mentre i due terzi superiori sono intrapelvici. Il corpo dell’utero è mobile e occupa una posizione centrale nella loggia viscerale della cavità pelvica, anteriormente all’ampolla rettale e superiormente alla vescica. L’istmo separa il corpo dal collo uterino e si proietta a livello della spina ischiatica. L’estremità inferiore della cervice, con il suo aspetto a muso di tinca, è intravaginale. È attraversata dall’orifizio cervicale, che mette in comunicazione la vagina con la cavità uterina."
         }
       ]
     },
@@ -72,7 +72,7 @@ export const chapter19It: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "nel piano sagittale, nella donna in stazione eretta, l’asse maggiore del corpo uterino (figura 19.3) è orientato cranialmente e ventralmente, formando un angolo di 120° con la cervice. La vagina è orientata a 60-70° rispetto all’orizzontale.",
+            "nel piano sagittale, nella donna in stazione eretta, l’asse maggiore del corpo uterino è orientato cranialmente e ventralmente, formando un angolo di 120° con la cervice. La vagina è orientata a 60-70° rispetto all’orizzontale.",
             "Nel piano frontale, l’utero è raramente verticale: il corpo è più spesso orientato a destra e la cervice a sinistra. La posizione e l’orientamento dell’utero dipendono dalla tensione dei suoi mezzi di fissità."
           ]
         },
@@ -120,7 +120,7 @@ export const chapter19It: Chapter = {
             "sono pieghe del peritoneo (figura 17.7) orientate dorsalmente e lateralmente. Collegano trasversalmente l’utero alla parete pelvica interna:",
             "la parte superiore, o mesometrio, è flessibile e comprende tre alette per il legamento rotondo, la tuba di Falloppio (o mesosalpinge) e l’ovaio (o mesovario);",
             "la parte inferiore, o parametrio, è spessa e robusta. Aderisce al pavimento pelvico e contiene le arterie uterine.",
-            "Legamenti rotondi: relativamente poco robusti, si estendono dai corni uterini alle grandi labbra e al pube. Dapprima orientati ventralmente e lateralmente, attraversano poi il canale inguinale. Mantengono il corpo uterino in antiversione (figura 19.1)."
+            "Legamenti rotondi: relativamente poco robusti, si estendono dai corni uterini alle grandi labbra e al pube. Dapprima orientati ventralmente e lateralmente, attraversano poi il canale inguinale. Mantengono il corpo uterino in antiversione."
           ]
         },
         {
@@ -166,7 +166,7 @@ export const chapter19It: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "organo femminile della copulazione (figura 19.3), attraversa il pavimento pelvico. La sua parte inferiore si apre sulla vulva, mentre la parte superiore è intrapelvica. La cupola vaginale si inserisce intorno alla cervice e forma con essa i fornici vaginali, che si appianano secondo l’asse di deviazione cervicale. Inclinata di 60-70° rispetto all’orizzontale e saldamente fissata al pavimento pelvico, la vagina è un potente mezzo di sostegno degli organi uro-genitali: la base della vescica poggia su di essa."
+            "organo femminile della copulazione, attraversa il pavimento pelvico. La sua parte inferiore si apre sulla vulva, mentre la parte superiore è intrapelvica. La cupola vaginale si inserisce intorno alla cervice e forma con essa i fornici vaginali, che si appianano secondo l’asse di deviazione cervicale. Inclinata di 60-70° rispetto all’orizzontale e saldamente fissata al pavimento pelvico, la vagina è un potente mezzo di sostegno degli organi uro-genitali: la base della vescica poggia su di essa."
           ]
         }
       ]
@@ -506,7 +506,7 @@ export const chapter19It: Chapter = {
           "type": "bullets",
           "items": [
             "Ovaie: ghiandole genitali femminili, le due ovaie sono la sede della formazione degli ovociti e della secrezione ormonale: estrogeni e progesterone.",
-            "Tube di Falloppio: collegano le ovaie alla cavità uterina. Ogni mese, l’ovocita liberato dall’ovaio migra nella tuba per incontrare gli spermatozoi. L’ovocita fecondato raggiunge quindi la cavità uterina (figura 19.5)."
+            "Tube di Falloppio: collegano le ovaie alla cavità uterina. Ogni mese, l’ovocita liberato dall’ovaio migra nella tuba per incontrare gli spermatozoi. L’ovocita fecondato raggiunge quindi la cavità uterina."
           ]
         }
       ]
@@ -561,7 +561,7 @@ export const chapter19It: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Legamento sospensore dell’ovaio, o legamento lombo-ovarico: fissa l’ovaio alla parete pelvica e alle aponeurosi lombari (figura 19.6);",
+            "Legamento sospensore dell’ovaio, o legamento lombo-ovarico: fissa l’ovaio alla parete pelvica e alle aponeurosi lombari;",
             "Legamento utero-ovarico: corrisponde all’aletta posteriore del legamento largo. Collega l’ovaio al corno uterino mediante un mesentere, il mesovario, sulla faccia posteriore del legamento largo;",
             "Legamento tubo-ovarico: collega l’ovaio al padiglione della tuba.",
             "Il ruolo di sostegno di questi legamenti è relativo. Soprattutto, essi fungono da porta-vasi e orientano l’ovaio attraverso le fibre muscolari che contengono."
@@ -574,7 +574,7 @@ export const chapter19It: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "formano condotti cilindrici a forma di ansa, lunghi 10-12 cm. Si dividono in tre segmenti (figura 19.5):",
+            "formano condotti cilindrici a forma di ansa, lunghi 10-12 cm. Si dividono in tre segmenti:",
             "Istmo: presenta uno strato muscolare spesso. Comunica con l’utero attraverso l’ostio uterino;",
             "Ampolla: è il luogo in cui avviene la fecondazione;",
             "Infundibolo o padiglione: ha forma di imbuto ed è bordato da dodici-tredici fimbrie, che spazzano la superficie dell’ovaio per raccogliere l’ovocita dal follicolo di Graaf maturo. Sul fondo dell’infundibolo si apre l’ostio addominale.",
@@ -636,7 +636,7 @@ export const chapter19It: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Durante la sua migrazione embrionale dalla regione addominale posteriore, l’ovaio trascina con sé i vasi ovarici arteriosi, venosi e linfatici, nonché i nervi e il tessuto connettivo che li circondano, per formare il legamento sospensore dell’ovaio, o legamento lombo-ovarico (figura 19.6)."
+            "Durante la sua migrazione embrionale dalla regione addominale posteriore, l’ovaio trascina con sé i vasi ovarici arteriosi, venosi e linfatici, nonché i nervi e il tessuto connettivo che li circondano, per formare il legamento sospensore dell’ovaio, o legamento lombo-ovarico."
           ]
         },
         {
@@ -1183,8 +1183,8 @@ export const chapter19It: Chapter = {
           "type": "bullets",
           "items": [
             "solco che va dal nucleo fibroso centrale alla regione cervico-istmica;",
-            "Cupola e corno dell’utero: zona al di sopra del margine anteriore del tallone nella sua parte mediale (figura 19.7);",
-            "Canale inguinale e legamento rotondo: interlinea tibio-tarsica anteriore (figure 19.4 e 20.12)."
+            "Cupola e corno dell’utero: zona al di sopra del margine anteriore del tallone nella sua parte mediale;",
+            "Canale inguinale e legamento rotondo: interlinea tibio-tarsica anteriore (figura 20.12)."
           ]
         },
         {
@@ -1221,7 +1221,7 @@ export const chapter19It: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Cavità pelvica; ovaio: margine anteriore del tallone, in corrispondenza del 4° e 5° dito (figure 19.7 e 19.8)"
+            "Cavità pelvica; ovaio: margine anteriore del tallone, in corrispondenza del 4° e 5° dito"
           ]
         },
         {
@@ -1231,7 +1231,7 @@ export const chapter19It: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "decorre lungo il margine anteriore del tallone, dalla zona riflessa dell’ovaio fino alla giunzione utero-tubarica, situata in corrispondenza del 1° e 2° dito (questa è anche la zona riflessa della parte anteriore del plesso ipogastrico inferiore). (figure 19.7 e 19.9)"
+            "decorre lungo il margine anteriore del tallone, dalla zona riflessa dell’ovaio fino alla giunzione utero-tubarica, situata in corrispondenza del 1° e 2° dito (questa è anche la zona riflessa della parte anteriore del plesso ipogastrico inferiore)."
           ]
         }
       ]

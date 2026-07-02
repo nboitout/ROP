@@ -30,28 +30,28 @@ export const chapter17It: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Cranialmente: dall’apertura superiore della pelvi (figura 17.1), o stretto superiore;",
-            "Caudalmente: dall’apertura inferiore della pelvi (figura 17.2), o stretto inferiore, chiuso dal perineo.",
+            "Cranialmente: dall’apertura superiore della pelvi, o stretto superiore;",
+            "Caudalmente: dall’apertura inferiore della pelvi, o stretto inferiore, chiuso dal perineo.",
             "Occupa lo spazio compreso tra le porzioni inferiori delle ossa coxali, il sacro e il coccige.",
-            "Lo spazio pelvico sottoperitoneale colma lo spazio tra il peritoneo e le pareti osteomuscolari (figura 17.3). Comunica con la regione retroperitoneale dell’addome e con le regioni glutea e otturatoria attraverso diversi orifizi: i forami ischiatici maggiore e minore (o grandi e piccole incisure ischiatiche), i forami otturatori e lo spazio compreso tra l’osso coxale e il legamento inguinale (figura 17.4).",
-            "È suddiviso da setti (figura 17.5):",
+            "Lo spazio pelvico sottoperitoneale colma lo spazio tra il peritoneo e le pareti osteomuscolari. Comunica con la regione retroperitoneale dell’addome e con le regioni glutea e otturatoria attraverso diversi orifizi: i forami ischiatici maggiore e minore (o grandi e piccole incisure ischiatiche), i forami otturatori e lo spazio compreso tra l’osso coxale e il legamento inguinale.",
+            "È suddiviso da setti:",
             "Setti sagittali: le lamine sacro-retto-genito-pubiche (i legamenti uterosacrali e pubocervicali nella donna), tese tra il sacro e il pube. Impediscono i movimenti laterali degli organi pelvici. Contengono il plesso ipogastrico inferiore, che apporta l’innervazione autonoma agli organi pelvici.",
             "Setti trasversali: situati tra i visceri pelvici; comprendono i legamenti laterali del retto e, nella donna, il legamento cervicale trasverso. Fungono da vie di passaggio per i vasi e i nervi destinati agli organi pelvici.",
             "Questo sistema di compartimentazione delimita logge:",
             "una loggia viscerale mediale: occupata, da dorsale a ventrale, da:",
             "nella donna: il retto, l’utero e i suoi annessi (ovaie e tube uterine) e la vescica;",
             "nell’uomo: il retto, le vie spermatiche e le vescicole seminali, e la vescica.",
-            "due logge laterali: occupate dai vasi pelvici e dai nervi del sistema autonomo, avvolti da abbondante tessuto connettivo fibroadiposo e destinati agli organi pelvici (figura 17.6).",
+            "due logge laterali: occupate dai vasi pelvici e dai nervi del sistema autonomo, avvolti da abbondante tessuto connettivo fibroadiposo e destinati agli organi pelvici.",
             "Nello spazio pelvico sottoperitoneale si trovano:",
             "l’arteria iliaca interna: irriga le pareti e i visceri pelvici;",
             "i plessi del sistema nervoso somatico: plessi sacrale, pudendo e coccigeo.",
             "Il peritoneo si adagia sui visceri pelvici come un telo, formando recessi:",
-            "nella donna: il peritoneo segue il profilo della vescica e dell’utero, formando il cavo vescico-uterino, e tra l’utero e il retto, il cavo retto-uterino (cavo di Douglas) (figura 17.7).",
+            "nella donna: il peritoneo segue il profilo della vescica e dell’utero, formando il cavo vescico-uterino, e tra l’utero e il retto, il cavo retto-uterino (cavo di Douglas).",
             "nell’uomo: il cavo retto-vescicale si interpone tra la vescica e il retto.",
             "Il cavo di Douglas è la parte più declive della cavità peritoneale.",
             "Sebbene gli organi pelvici siano sottoperitoneali e privi di rivestimento sieroso, possono muoversi gli uni rispetto agli altri grazie all’interposizione del peritoneo. Un interessamento peritoneale (infezione, chirurgia, trauma, congestione) si ripercuote sulla statica e sulla dinamica degli organi pelvici.",
             "Unità vertebro-coxo-pelvica: la sfera urogenitale non può essere compresa senza il suo quadro osteo-muscolo-articolare, al quale è intimamente legata. Qualsiasi blocco articolare altera la mobilità degli organi pelvici e, inversamente, qualsiasi fissazione viscerale, sia essa di origine traumatica, infettiva, chirurgica o congestizia, sarà causa di fissazioni articolari.",
-            "L’unità funzionale vertebro-coxo-pelvica comprende 7 articolazioni (figura 17.1):",
+            "L’unità funzionale vertebro-coxo-pelvica comprende 7 articolazioni:",
             "2 sacroiliache;",
             "2 coxofemorali;",
             "1 sacrococcigea;",
@@ -64,11 +64,11 @@ export const chapter17It: Chapter = {
             "la trasmissione delle forze gravitarie discendenti e delle forze ascendenti legate alla stazione eretta e al cammino;",
             "lo smaltimento di una parte delle sollecitazioni meccaniche verso gli arti inferiori.",
             "Per rispondere a queste esigenze, la pelvi presenta particolarità anatomiche specifiche:",
-            "Orientamento della pelvi: lo stretto superiore della pelvi è inclinato in basso e in avanti, così che la pressione addominale si esercita soprattutto sui contrafforti ossei e solo in minima parte sui visceri pelvici (figura 17.8):",
+            "Orientamento della pelvi: lo stretto superiore della pelvi è inclinato in basso e in avanti, così che la pressione addominale si esercita soprattutto sui contrafforti ossei e solo in minima parte sui visceri pelvici:",
             "le fosse iliache interne;",
             "il promontorio sacrale;",
             "i rami iliopubici.",
-            "La pelvi non è una cavità ermeticamente chiusa: le pareti pelviche presentano orifizi e incisure (citati sopra), delimitati da legamenti e chiusi da tessuti molli (muscoli, aponeurosi, membrane), che attenuano la pressione residua sui visceri pelvici (figure 17.9 e 17.10)."
+            "La pelvi non è una cavità ermeticamente chiusa: le pareti pelviche presentano orifizi e incisure (citati sopra), delimitati da legamenti e chiusi da tessuti molli (muscoli, aponeurosi, membrane), che attenuano la pressione residua sui visceri pelvici."
           ]
         }
       ]
@@ -91,7 +91,7 @@ export const chapter17It: Chapter = {
         },
         {
           "type": "para",
-          "text": "è, per eccellenza, un grande indicatore delle tensioni che si esercitano sul sacro e sull’anca (figura 17.9). Qualsiasi tensione proveniente dagli organi pelvici che si inseriscono sul sacro fissa l’articolazione sacroiliaca e aumenta la contrazione del muscolo piriforme. La sua aponeurosi è inoltre attraversata dal plesso sacrale (figura 17.10) e dal suo ramo terminale, il nervo sciatico, che esce dalla pelvi attraverso il grande forame ischiatico. La contrattura del piriforme irrita il nervo sciatico, spiegando le sciatalgie."
+          "text": "è, per eccellenza, un grande indicatore delle tensioni che si esercitano sul sacro e sull’anca. Qualsiasi tensione proveniente dagli organi pelvici che si inseriscono sul sacro fissa l’articolazione sacroiliaca e aumenta la contrazione del muscolo piriforme. La sua aponeurosi è inoltre attraversata dal plesso sacrale e dal suo ramo terminale, il nervo sciatico, che esce dalla pelvi attraverso il grande forame ischiatico. La contrattura del piriforme irrita il nervo sciatico, spiegando le sciatalgie."
         },
         {
           "type": "sub",
@@ -99,7 +99,7 @@ export const chapter17It: Chapter = {
         },
         {
           "type": "para",
-          "text": "mette in comunicazione il perineo con la regione glutea (un tempo regione natiche). È attraversato dal muscolo otturatore interno (figura 17.9), accompagnato dai muscoli gemelli superiore e inferiore e dal nervo pudendo, che innerva il perineo."
+          "text": "mette in comunicazione il perineo con la regione glutea (un tempo regione natiche). È attraversato dal muscolo otturatore interno, accompagnato dai muscoli gemelli superiore e inferiore e dal nervo pudendo, che innerva il perineo."
         },
         {
           "type": "rop",
@@ -111,7 +111,7 @@ export const chapter17It: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Forame otturatorio: formato dalla giunzione dei rami ilio- e ischiopubici, è chiuso dalla membrana otturatoria (figura 17.11).",
+            "Forame otturatorio: formato dalla giunzione dei rami ilio- e ischiopubici, è chiuso dalla membrana otturatoria.",
             "Membrana otturatoria: sul versante endopelvico è ricoperta dal muscolo otturatore interno e, sul versante esopelvico, dal muscolo otturatore esterno, due muscoli pelvitrocanterici rotatori esterni dell’anca. È rinforzata dalla benderella sottopubica, che si inserisce sulla capsula articolare dell’anca. La vescica poggia sulle due membrane otturatorie.",
             "Relazione vescica-anca: la membrana otturatoria, tesa come una membrana timpanica, costituisce un meccanismo di scarico e di trasferimento delle pressioni degli organi intrapelvici durante il cammino. L’alternanza di trazione e rilasciamento delle tensioni legamentose e della benderella sottopubica durante i movimenti dell’anca permette di dissipare una parte delle forze compressive esercitate sugli organi intrapelvici, sia verso gli arti inferiori, sia verso la sinfisi pubica e le sacroiliache. Nello stesso tempo si produce una sorta di “aspirazione” endopelvica dei vasi sanguigni che attraversano la membrana otturatoria. Questa azione di pompaggio favorisce gli scambi circolatori intrapelvici."
           ]
@@ -125,8 +125,8 @@ export const chapter17It: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Canale otturatorio: situato nella porzione sottopubica del forame otturatorio, è attraversato dal nervo otturatore (figura 17.11), che innerva il muscolo otturatore esterno e i muscoli adduttori dell’anca. La sua irritazione provoca dolore sulla faccia mediale del ginocchio (cfr. Riflessoterapia occipito-podale e sistema neuromeningeo, pagine 31-33).",
-            "Legamenti sacrospinoso e sacrotuberoso: delimitano i forami tra la cavità pelvica e le regioni glutea e perineale (figura 17.11).",
+            "Canale otturatorio: situato nella porzione sottopubica del forame otturatorio, è attraversato dal nervo otturatore, che innerva il muscolo otturatore esterno e i muscoli adduttori dell’anca. La sua irritazione provoca dolore sulla faccia mediale del ginocchio (cfr. Riflessoterapia occipito-podale e sistema neuromeningeo, pagine 31-33).",
+            "Legamenti sacrospinoso e sacrotuberoso: delimitano i forami tra la cavità pelvica e le regioni glutea e perineale.",
             "Legamento sacrotuberoso: teso dall’ischio al sacro e al coccige;",
             "Legamento sacrospinoso: teso dalla spina ischiatica al sacro e al coccige.",
             "Stabilizzano lateralmente il coccige. Svolgono inoltre un ruolo importante nella stabilità e nella mobilità del sacro tra le ossa iliache, poiché fungono da freni della nutazione sacrale in associazione con i legamenti sacroiliaci anteriori (la contronutazione è limitata dalla tensione dei legamenti iliosacrali posteriori)."
@@ -161,15 +161,15 @@ export const chapter17It: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "è costituito da un insieme di muscoli e fasce che chiudono lo stretto inferiore della pelvi. Convergono verso il nucleo fibroso centrale del perineo. Il perineo è delimitato da (figura 17.2):",
+            "è costituito da un insieme di muscoli e fasce che chiudono lo stretto inferiore della pelvi. Convergono verso il nucleo fibroso centrale del perineo. Il perineo è delimitato da:",
             "Il margine inferiore della sinfisi pubica;",
             "L’apice del coccige;",
             "I rami ischiopubici, ventralmente;",
             "I legamenti sacrotuberosi, dorsalmente.",
-            "È diviso da una linea immaginaria tra le due tuberosità ischiatiche in due triangoli (figura 17.12):",
-            "Triangolo urogenitale anteriore: orientato orizzontalmente e attraversato dallo iato urogenitale (figura 17.9). Sulla sua faccia esterna si inseriscono i muscoli bulbocavernoso e bulbospongioso e gli organi erettili del pene e del clitoride (cfr. Capitolo 21 Sistema erettile maschile e femminile, pagina…).",
+            "È diviso da una linea immaginaria tra le due tuberosità ischiatiche in due triangoli:",
+            "Triangolo urogenitale anteriore: orientato orizzontalmente e attraversato dallo iato urogenitale. Sulla sua faccia esterna si inseriscono i muscoli bulbocavernoso e bulbospongioso e gli organi erettili del pene e del clitoride (cfr. Capitolo 21 Sistema erettile maschile e femminile, pagina…).",
             "Triangolo anale posteriore: orientato dorsalmente e caudalmente, è attraversato dal canale anale e dallo sfintere anale esterno. Lateralmente al canale anale, la fossa ischioanale è percorsa dal nervo pudendo.",
-            "Muscoli del perineo: sono muscoli striati (figura 17.9) comandati dal nervo pudendo (S2-S4). Si distinguono:",
+            "Muscoli del perineo: sono muscoli striati comandati dal nervo pudendo (S2-S4). Si distinguono:",
             "Muscoli profondi del perineo: elevatore dell’ano, trasverso profondo del perineo e coccigeo. Formano il diaframma pelvico, con funzione di sostegno grazie alle fibre parallele.",
             "Muscoli superficiali del perineo: sfintere esterno e trasverso superficiale del perineo. Hanno una funzione sfinterica per gli orifizi urogenitale e anale grazie alle fibre circolari.",
             "Funzione del perineo: il perineo assolve una duplice funzione:",
@@ -196,7 +196,7 @@ export const chapter17It: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Arterie iliache interne: originano dall’arteria iliaca comune (figura 17.3) a livello del disco L5-S1, decorrono lungo il margine anteromediale dell’articolazione sacroiliaca e si dividono in due rami:",
+            "Arterie iliache interne: originano dall’arteria iliaca comune a livello del disco L5-S1, decorrono lungo il margine anteromediale dell’articolazione sacroiliaca e si dividono in due rami:",
             "Ramo posteriore: irrora la parete posteroinferiore dell’addome, la parete posteriore della pelvi e la regione glutea.",
             "Ramo anteriore: irrora i visceri pelvici, il perineo, la regione degli adduttori e, nel feto, la placenta.",
             "Le arterie gonadiche e l’arteria sacrale mediana, che originano dall’aorta addominale, completano la vascolarizzazione arteriosa della pelvi."
@@ -238,15 +238,13 @@ export const chapter17It: Chapter = {
         },
         {
           "type": "bullets",
-          "items": [
-            "(figura 17.10)",
-            "Plesso sacrale da L5 a S3: formato dai rami anteriori da L4 a S3, emette rami collaterali per il piriforme e per i muscoli pelvitrocanterici, a eccezione dell’otturatore esterno (nervo otturatore), e per i nervi glutei.",
+          "items": [            "Plesso sacrale da L5 a S3: formato dai rami anteriori da L4 a S3, emette rami collaterali per il piriforme e per i muscoli pelvitrocanterici, a eccezione dell’otturatore esterno (nervo otturatore), e per i nervi glutei.",
             "Il suo ramo terminale è il nervo sciatico. Posteriormente, è in rapporto con il muscolo piriforme.",
-            "Doccia ischiotrocanterica: il nervo sciatico e il nervo cutaneo femorale posteriore lasciano il grande forame ischiatico e attraversano la regione glutea nella doccia ischiotrocanterica (figura 17.13), passando tra i muscoli superficiali (muscoli glutei) e i muscoli profondi (otturatore interno, gemelli e quadrato femorale).",
+            "Doccia ischiotrocanterica: il nervo sciatico e il nervo cutaneo femorale posteriore lasciano il grande forame ischiatico e attraversano la regione glutea nella doccia ischiotrocanterica, passando tra i muscoli superficiali (muscoli glutei) e i muscoli profondi (otturatore interno, gemelli e quadrato femorale).",
             "Plesso pudendo da S2 a S4: è anastomizzato cranialmente con il plesso sacrale e caudalmente con il plesso coccigeo:",
             "I suoi rami collaterali viscerali (o nervi erigenti di Eckardt), di natura parasimpatica, sono destinati agli organi pelvici;",
             "I suoi rami collaterali muscolari somatici innervano i muscoli profondi del perineo: elevatore dell’ano, trasverso profondo del perineo e coccigeo;",
-            "Nervo pudendo (figura 17.10): lascia il grande forame ischiatico sotto il muscolo piriforme, passa sotto il pavimento pelvico attraverso il piccolo forame ischiatico contornando la spina ischiatica e decorre tra i legamenti sacrospinoso e sacrotuberoso. Segue il ramo ischiopubico nel canale di Alcock (sdoppiamento fasciale dell’aponeurosi del muscolo otturatore interno). Dà due rami:",
+            "Nervo pudendo: lascia il grande forame ischiatico sotto il muscolo piriforme, passa sotto il pavimento pelvico attraverso il piccolo forame ischiatico contornando la spina ischiatica e decorre tra i legamenti sacrospinoso e sacrotuberoso. Segue il ramo ischiopubico nel canale di Alcock (sdoppiamento fasciale dell’aponeurosi del muscolo otturatore interno). Dà due rami:",
             "Ramo motorio: innerva i muscoli profondi e superficiali del perineo.",
             "Ramo sensitivo: innerva la cute del triangolo anale, il nucleo fibroso centrale del perineo, lo scroto nell’uomo e la regione labiale nella donna. Il suo ramo terminale, il nervo dorsale del pene o del clitoride, passa immediatamente al di sotto della sinfisi pubica e innerva il pene e il glande, oppure il clitoride."
           ]
@@ -280,9 +278,7 @@ export const chapter17It: Chapter = {
         },
         {
           "type": "bullets",
-          "items": [
-            "(figura 17.14)",
-            "Simpatico: i neuroni pregangliari originano dal corno laterale del midollo spinale da T12 a L1, all’altezza delle vertebre T11-T12, e proseguono lungo due vie:",
+          "items": [            "Simpatico: i neuroni pregangliari originano dal corno laterale del midollo spinale da T12 a L1, all’altezza delle vertebre T11-T12, e proseguono lungo due vie:",
             "Catene gangliari paravertebrali lombari e sacrali;",
             "Via plessica prevertebrale: l’ovaio e il testicolo sono innervati dal plesso aortorenale, proveniente dal 10°, 11° e 12° ganglio toracico e dal 1° ganglio lombare;",
             "Gli altri organi pelvici sono innervati dal plesso mesenterico inferiore, proveniente dal 12° ganglio toracico. Queste fibre simpatiche raggiungono poi il plesso ipogastrico superiore.",
@@ -358,7 +354,7 @@ export const chapter17It: Chapter = {
             "da +5 a +10 cm H2O al piano sottomesocolico.",
             "In condizioni fisiologiche, gli organi della cavità pelvica sono relativamente ben protetti dalle pressioni della colonna viscerale provenienti dalle cavità toracica e addominale grazie allo scarico-assorbimento delle pressioni intracavitarie mediante:",
             "Aspirazione toracica e attrazione toraco-diaframmatica: gli organi sottodiaframmatici subiscono l’aspirazione toracica, tanto più quanto più sono vicini al diaframma. Inversamente, “più ci si allontana dal diaframma verso il basso, meno gli organi beneficiano dell’aspirazione toracica e dell’attrazione diaframmatica. Essi esercitano quindi una forza gravitazionale sugli organi pelvici, tanto maggiore quanto più sono lontani dal diaframma” (Manipolazioni urogenitali, Jean-Pierre Barral, Elsevier).",
-            "Orientamento della cavità pelvica: grazie all’orientamento caudale e ventrale della cavità pelvica, le forze gravitazionali si distribuiscono sul perimetro osseo dello stretto inferiore (figura 17.8).",
+            "Orientamento della cavità pelvica: grazie all’orientamento caudale e ventrale della cavità pelvica, le forze gravitazionali si distribuiscono sul perimetro osseo dello stretto inferiore.",
             "Configurazione a cupola dei visceri pelvici: il corpo dell’utero, situato al centro della cavità pelvica, rafforza ulteriormente questa distribuzione delle forze gravitazionali sul perimetro dello stretto inferiore, alleggerendo ancora di più la pressione sugli organi pelvici.",
             "Contrattilità ed elasticità dei muscoli del perineo: i muscoli del perineo rinviano le forze gravitazionali residue verso l’alto e orizzontalmente verso il perimetro dello stretto inferiore.",
             "Equilibrio dei tre diaframmi: il perineo, o diaframma pelvico, si adatta costantemente alle variazioni di pressione legate ai movimenti del diaframma toracico, che a sua volta equilibra le modificazioni di tensione del diaframma cranico (falce cerebrale e tentorio del cervelletto) dovute all’alternanza di flessione ed estensione del movimento respiratorio primario cranio-sacrale.",
@@ -512,13 +508,11 @@ export const chapter17It: Chapter = {
         },
         {
           "type": "bullets",
-          "items": [
-            "(figure 17.15, 17.16 e 17.17)",
-            "Grande forame ischiatico e muscolo piriforme;",
+          "items": [            "Grande forame ischiatico e muscolo piriforme;",
             "Fossa ischiotrocanterica e nervo sciatico;",
             "Piccolo forame ischiatico e muscoli otturatori e gemelli;",
-            "Fossa otturatoria e muscoli otturatori (figure 17.18 e 17.19);",
-            "Plesso pudendo (figure 17.15, 17.18 e 17.20)."
+            "Fossa otturatoria e muscoli otturatori;",
+            "Plesso pudendo."
           ]
         },
         {
@@ -529,7 +523,7 @@ export const chapter17It: Chapter = {
           "type": "bullets",
           "items": [
             "coccige (figura 4.23);",
-            "Legamenti sacrotuberoso e sacrospinoso (figure 17.21 e 17.22);"
+            "Legamenti sacrotuberoso e sacrospinoso;"
           ]
         },
         {

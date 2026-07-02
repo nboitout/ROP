@@ -29,7 +29,7 @@ export const chapter16En: Chapter = {
       "blocks": [
         {
           "type": "para",
-          "text": "The kidneys are located lateral to the thoracolumbar spine, between the peritoneum and the posterior abdominal wall. They are retroperitoneal (figure 16.1) and predominantly supramesocolic. They are inclined, so that the lower pole lies more laterally than the upper pole."
+          "text": "The kidneys are located lateral to the thoracolumbar spine, between the peritoneum and the posterior abdominal wall. They are retroperitoneal and predominantly supramesocolic. They are inclined, so that the lower pole lies more laterally than the upper pole."
         },
         {
           "type": "bullets",
@@ -43,9 +43,7 @@ export const chapter16En: Chapter = {
         },
         {
           "type": "bullets",
-          "items": [
-            "(figure 16.2)",
-            "Right kidney: it lies slightly lower than the left kidney because of the liver. It extends from the 11th and 12th ribs to L4;",
+          "items": [            "Right kidney: it lies slightly lower than the left kidney because of the liver. It extends from the 11th and 12th ribs to L4;",
             "Left kidney: it extends from the 11th rib to L3."
           ]
         },
@@ -77,7 +75,7 @@ export const chapter16En: Chapter = {
         },
         {
           "type": "para",
-          "text": "The renal compartment is shaped like a funnel open inferiorly. It is interposed between the posterior parietal peritoneum ventrally and the fascia that separates it from the quadratus lumborum and psoas muscles dorsally. It is formed by two layers: (figure 16.3)"
+          "text": "The renal compartment is shaped like a funnel open inferiorly. It is interposed between the posterior parietal peritoneum ventrally and the fascia that separates it from the quadratus lumborum and psoas muscles dorsally. It is formed by two layers:"
         },
         {
           "type": "bullets",
@@ -95,7 +93,7 @@ export const chapter16En: Chapter = {
         },
         {
           "type": "sub",
-          "text": "Contents: renal fat: (figure 16.3)"
+          "text": "Contents: renal fat:"
         },
         {
           "type": "para",
@@ -134,7 +132,7 @@ export const chapter16En: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "on a medial sagittal section of the kidney, two structures of the parenchyma are distinguished: (figure 16.4)",
+            "on a medial sagittal section of the kidney, two structures of the parenchyma are distinguished:",
             "the cortex: at the periphery;",
             "the medulla: centrally."
           ]
@@ -151,7 +149,7 @@ export const chapter16En: Chapter = {
         },
         {
           "type": "para",
-          "text": "The nephron is the functional unit of the kidney. (figure 16.5) Its purpose is to keep the volume and composition of the internal milieu constant, that is, to maintain homeostasis. It has two parts:"
+          "text": "The nephron is the functional unit of the kidney. Its purpose is to keep the volume and composition of the internal milieu constant, that is, to maintain homeostasis. It has two parts:"
         },
         {
           "type": "bullets",
@@ -173,16 +171,16 @@ export const chapter16En: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "both kidneys are related cranially to the diaphragm and the pleuro-costo-diaphragmatic hiatuses, caudally to the psoas and quadratus lumborum, and more laterally to the transversus abdominis muscle. (figure 16.3)"
+            "both kidneys are related cranially to the diaphragm and the pleuro-costo-diaphragmatic hiatuses, caudally to the psoas and quadratus lumborum, and more laterally to the transversus abdominis muscle."
           ]
         },
         {
           "type": "para",
-          "text": "The 12th intercostal nerve, or subcostal nerve, and the nerves of the lumbar plexus run within the pararenal fatty layer: the iliohypogastric, ilioinguinal and lateral femoral cutaneous nerves. (figure 16.6)"
+          "text": "The 12th intercostal nerve, or subcostal nerve, and the nerves of the lumbar plexus run within the pararenal fatty layer: the iliohypogastric, ilioinguinal and lateral femoral cutaneous nerves."
         },
         {
           "type": "para",
-          "text": "Triangle of Jean-Louis Petit and quadrilateral of Grynfelt: these are two regions of the lumbar fossa that constitute weak points of the posterior abdominal wall. (figure 16.7) They allow access to the kidney with little interposition of soft tissue, where there are no bundles of the internal and external oblique muscles. We are in direct contact with the transversus abdominis muscle and, indirectly, with the subcostal nerve and the nerves of the lumbar plexus."
+          "text": "Triangle of Jean-Louis Petit and quadrilateral of Grynfelt: these are two regions of the lumbar fossa that constitute weak points of the posterior abdominal wall. They allow access to the kidney with little interposition of soft tissue, where there are no bundles of the internal and external oblique muscles. We are in direct contact with the transversus abdominis muscle and, indirectly, with the subcostal nerve and the nerves of the lumbar plexus."
         },
         {
           "type": "rop",
@@ -199,7 +197,7 @@ export const chapter16En: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Right kidney: it is related to: (figure 16.8)",
+            "Right kidney: it is related to:",
             "Cranially: the liver through the hepatorenal ligament;"
           ]
         },
@@ -244,7 +242,7 @@ export const chapter16En: Chapter = {
         },
         {
           "type": "para",
-          "text": "Each kidney is supplied by a single artery: the renal artery (figure 16.9), which arises from the aorta just below the superior mesenteric artery. It divides into five terminal segmental arteries that supply the renal parenchyma. These arteries do not anastomose with one another: each vascularised region is independent, allowing partial surgical resection."
+          "text": "Each kidney is supplied by a single artery: the renal artery, which arises from the aorta just below the superior mesenteric artery. It divides into five terminal segmental arteries that supply the renal parenchyma. These arteries do not anastomose with one another: each vascularised region is independent, allowing partial surgical resection."
         },
         {
           "type": "sub",
@@ -252,7 +250,7 @@ export const chapter16En: Chapter = {
         },
         {
           "type": "para",
-          "text": "Located anterior to the renal artery, the renal vein differs on the right and left sides. (figure 16.10)"
+          "text": "Located anterior to the renal artery, the renal vein differs on the right and left sides."
         },
         {
           "type": "bullets",
@@ -415,7 +413,7 @@ export const chapter16En: Chapter = {
           "type": "bullets",
           "items": [
             "functional pathologies",
-            "lumbar pain at “cockcrow”, around 4 or 5 a.m.;",
+            "lumbar pain at “cockcrow”, around 4 or 5 a.m;",
             "morning thirst;",
             "deep morning fatigue, sometimes described as essential fatigue;",
             "congested eyes with “bags” under the eyes;",
@@ -445,7 +443,7 @@ export const chapter16En: Chapter = {
             "fixations of the 11th and 12th ribs, from T10 to L1;",
             "psoas problem, or psoitis.",
             "Anterior fixations: the right kidney is more prone to anterior fixations and ptosis. Whether the kidney is ptotic or fixed, however, it has lost its normal mobility.",
-            "Women are more affected by ptosis because of pregnancy, childbirth, uterine retroversion and menopause. Three degrees of ptosis are distinguished: (figure 16.11)",
+            "Women are more affected by ptosis because of pregnancy, childbirth, uterine retroversion and menopause. Three degrees of ptosis are distinguished:",
             "First degree: “intercostal” kidney, in which irritation of the 12th intercostal nerve radiates toward the greater trochanter.",
             "Symptoms: the person holds the flank, finds deep breathing difficult, and tolerates coughing and sneezing poorly.",
             "Second degree: “abdominogenital” or “femoral cutaneous” kidney.",
@@ -574,8 +572,8 @@ export const chapter16En: Chapter = {
           "items": [
             "Vagus nerve X; (figures 4.11 and 4.17)",
             "Spinal column, costotransverse joints (thoracic laterovertebral ganglion chain, T7-T11-L1, coccyx); (figures 4.23 and 4.29 and 4.32)",
-            "Prevertebral plexus; (figures 16.12 and 16.13)",
-            "Adrenal glands: (figures 16.12, 16.13 and figure 16.13 ter)",
+            "Prevertebral plexus;",
+            "Adrenal glands:",
             "Lumbar plexus L1 to L4 and its branches. (See Réflexothérapie occipito-podale et système neuro-méningé, Elsevier Masson, pages 25 to 28)"
           ]
         },
@@ -593,11 +591,9 @@ export const chapter16En: Chapter = {
         },
         {
           "type": "bullets",
-          "items": [
-            "(figures 16.12, 16.13 and 16.14)",
-            "Lower pole: it is at the level of the L3 or L4 vertebra, in line with the first and second toes, above the anterior border of the heel;",
+          "items": [            "Lower pole: it is at the level of the L3 or L4 vertebra, in line with the first and second toes, above the anterior border of the heel;",
             "Upper pole: it is at the level of the T12 vertebra;",
-            "Adrenal gland: it is at the summit of the upper pole of the kidney; (figure 16.15)",
+            "Adrenal gland: it is at the summit of the upper pole of the kidney;",
             "Lateral border: it is convex;",
             "Medial border: it is concave. The hilum is located at the level of the L1 vertebra."
           ]
@@ -609,7 +605,7 @@ export const chapter16En: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "the triangle of Jean-Louis Petit and the quadrilateral of Grynfelt correspond to the cuboid bone. (figure 16.17)"
+            "the triangle of Jean-Louis Petit and the quadrilateral of Grynfelt correspond to the cuboid bone."
           ]
         },
         {
@@ -619,7 +615,7 @@ export const chapter16En: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "associate the plantar and dorsal surfaces of the kidney: (figure 16.18)",
+            "associate the plantar and dorsal surfaces of the kidney:",
             "Orient the two thumbs toward each other, one on the dorsal surface and the other on the plantar surface;",
             "Stimulate their reflex zone, then, with the help of breathing, follow the movement caudally during inspiration and cephalically during expiration. This is a good way to test kidney mobility.",
             "Using the same manoeuvre, but without breathing, follow the motility of the kidney.",

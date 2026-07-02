@@ -25,7 +25,7 @@ export const chapter20Fr: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "il comprend: les testicules, les épididymes, les conduits déférents, les vésicules séminales, les conduits éjaculateurs, la prostate, l’urètre et le pénis. (figure 20.1)"
+            "il comprend: les testicules, les épididymes, les conduits déférents, les vésicules séminales, les conduits éjaculateurs, la prostate, l’urètre et le pénis."
           ]
         }
       ]
@@ -41,7 +41,7 @@ export const chapter20Fr: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "les gonades se forment près des reins. A partir du 3ème mois de gestation, les gonades guidées par un cordon tissulaire, le gubernaculum (figure 20.2. A.), migrent depuis la paroi abdominale postérieure vers l’entrée du canal inguinal:"
+            "les gonades se forment près des reins. A partir du 3ème mois de gestation, les gonades guidées par un cordon tissulaire, le gubernaculum, migrent depuis la paroi abdominale postérieure vers l’entrée du canal inguinal:"
           ]
         },
         {
@@ -52,7 +52,7 @@ export const chapter20Fr: Chapter = {
           "type": "bullets",
           "items": [
             "seul le ligament rond qui est un reliquat du gubernaculum, continue sa migration à travers du canal inguinal.",
-            "Chez l’homme, les testicules continuent à migrer dans le canal inguinal (figure 20.3), en entraînant avec eux artères, veines, lymphatiques, nerfs et le canal déférent. Les testicules atteignent l’orifice profond du canal inguinal autour du 6ème mois, franchissent le canal durant le 7ème mois et atteignent leur position intra-scrotale définitive vers la fin du 8ème mois. Cette migration est réglée par le système hormonal, la croissance du fœtus et l’augmentation de poids des testicules.",
+            "Chez l’homme, les testicules continuent à migrer dans le canal inguinal, en entraînant avec eux artères, veines, lymphatiques, nerfs et le canal déférent. Les testicules atteignent l’orifice profond du canal inguinal autour du 6ème mois, franchissent le canal durant le 7ème mois et atteignent leur position intra-scrotale définitive vers la fin du 8ème mois. Cette migration est réglée par le système hormonal, la croissance du fœtus et l’augmentation de poids des testicules.",
             "Les anomalies sont fréquentes, allant de l’ectopie simple inguino-scrotale à la cryptorchidie pelvienne, iliaque ou lombale, causes de stérilité ou de cancer."
           ]
         },
@@ -79,7 +79,7 @@ export const chapter20Fr: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "elle est profondément située dans la cavité pelvienne, entre le trigone et le col de la vessie, au-dessus, le muscle transverse profond du périnée, au-dessous, 2 à 3 cm en arrière de la symphyse pubienne et en avant de l’ampoule rectale. (figure 20.1)"
+            "elle est profondément située dans la cavité pelvienne, entre le trigone et le col de la vessie, au-dessus, le muscle transverse profond du périnée, au-dessous, 2 à 3 cm en arrière de la symphyse pubienne et en avant de l’ampoule rectale."
           ]
         }
       ]
@@ -96,7 +96,7 @@ export const chapter20Fr: Chapter = {
           "type": "bullets",
           "items": [
             "dans le scrotum, ils sont le lieu de formation de spermatozoïdes et le siège de sécrétions hormonales: la testostérone.",
-            "De forme ovoïde de 5 cm de long chez l’adulte, le testicule est recouvert par une membrane résistante, l’albuginée. Il est entouré par une gaine, le processus vaginal (figure 20.4). Sa constitution interne comprend des lobules contenant 400 à 600 canalicules séminifères, lieu de production et de maturation des spermatozoïdes (spermatogenèse). Ces canalicules débouchent, au pôle supérieur du testicule, dans le canal de l’épididyme."
+            "De forme ovoïde de 5 cm de long chez l’adulte, le testicule est recouvert par une membrane résistante, l’albuginée. Il est entouré par une gaine, le processus vaginal. Sa constitution interne comprend des lobules contenant 400 à 600 canalicules séminifères, lieu de production et de maturation des spermatozoïdes (spermatogenèse). Ces canalicules débouchent, au pôle supérieur du testicule, dans le canal de l’épididyme."
           ]
         },
         {
@@ -126,7 +126,7 @@ export const chapter20Fr: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "c’est un tunnel de 4 cm à travers la paroi abdominale antérieure, juste au-dessus et parallèlement au ligament inguinal (figure 20.5). Il présente deux orifices:"
+            "c’est un tunnel de 4 cm à travers la paroi abdominale antérieure, juste au-dessus et parallèlement au ligament inguinal. Il présente deux orifices:"
           ]
         },
         {
@@ -156,7 +156,7 @@ export const chapter20Fr: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "le canal inguinal est constitué par les mêmes feuillets que la paroi abdominale antérieure. (figure 20.3). Il livre passage au cordon spermatique contenant les vaisseaux inguinaux, le canal déférent, les nerfs iliohypogastrique, ilioinguinal et génitofémoral, branches collatérales du plexus lombal (L1 à L4) (figure 20.6). Ces nerfs contribuent, chez l’homme, à l’innervation sensitive du pubis et du scrotum, et chez la femme, à l’innervation du pubis et des grandes lèvres."
+            "le canal inguinal est constitué par les mêmes feuillets que la paroi abdominale antérieure.. Il livre passage au cordon spermatique contenant les vaisseaux inguinaux, le canal déférent, les nerfs iliohypogastrique, ilioinguinal et génitofémoral, branches collatérales du plexus lombal (L1 à L4). Ces nerfs contribuent, chez l’homme, à l’innervation sensitive du pubis et du scrotum, et chez la femme, à l’innervation du pubis et des grandes lèvres."
           ]
         },
         {
@@ -166,7 +166,7 @@ export const chapter20Fr: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "zone de faiblesse de la paroi abdominale antérieure, le canal inguinal est cause de hernies inguinales beaucoup plus fréquentes chez l’homme que chez la femme. (figure 20.7)"
+            "zone de faiblesse de la paroi abdominale antérieure, le canal inguinal est cause de hernies inguinales beaucoup plus fréquentes chez l’homme que chez la femme."
           ]
         },
         {
@@ -176,7 +176,7 @@ export const chapter20Fr: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "son insertion proximale (figure 20.8) est sur le ligament inguinal et le pubis. Il accompagne le cordon spermatique dans le canal inguinal. Son insertion distale est sur la tunique fibreuse des bourses. Il est innervé par les nerfs génitofémoral et ilioinguinal. C’est le muscle élévateur des bourses, ce qui favorise la migration du sperme dans le canal déférent en augmentant la pression interne du testicule et de l’épididyme."
+            "son insertion proximale est sur le ligament inguinal et le pubis. Il accompagne le cordon spermatique dans le canal inguinal. Son insertion distale est sur la tunique fibreuse des bourses. Il est innervé par les nerfs génitofémoral et ilioinguinal. C’est le muscle élévateur des bourses, ce qui favorise la migration du sperme dans le canal déférent en augmentant la pression interne du testicule et de l’épididyme."
           ]
         },
         {
@@ -192,7 +192,7 @@ export const chapter20Fr: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "glandes sexuelles secondaires mâles, elles sont postérieures à la prostate (figure 20.9), contenues dans l’aponévrose de Denonvilliers qui sépare la prostate du rectum.",
+            "glandes sexuelles secondaires mâles, elles sont postérieures à la prostate, contenues dans l’aponévrose de Denonvilliers qui sépare la prostate du rectum.",
             "Mesurant 5 à 8 cm de long et 1,5 cm de large, les vésicules séminales ont la consistance d’une figue un peu mûre.",
             "Elles produisent une part importante du liquide séminal, riche notamment en fructose, qui soutient la fonction des spermatozoïdes et contribue au volume de l’éjaculat."
           ]
@@ -204,7 +204,7 @@ export const chapter20Fr: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "les deux canaux déférents rejoignent les canaux des vésicules séminales pour former les canaux éjaculateurs qui aboutissent dans l’urètre prostatique. (figure 20.9)"
+            "les deux canaux déférents rejoignent les canaux des vésicules séminales pour former les canaux éjaculateurs qui aboutissent dans l’urètre prostatique."
           ]
         },
         {
@@ -215,7 +215,7 @@ export const chapter20Fr: Chapter = {
           "type": "bullets",
           "items": [
             "Ce mot vient du grec prostatès qui signifie placé devant ou être exposé. De fait, la prostate est placée devant le rectum. Glande sexuelle secondaire mâle, elle sécrète une enzyme, (prostatic specific antigen PSA) dont le taux est important pour le diagnostic du cancer.",
-            "Chez un adulte jeune, elle à la forme d’une châtaigne (figure 20.9). Sa consistance ferme mais souple est comparable au globe oculaire. Son poids est de 20 à 25 g. Son volume augmentant beaucoup après 60 ans, peut devenir gros comme une orange et exercer une pression sur l’urètre et la vessie et occasionner des troubles de la miction.",
+            "Chez un adulte jeune, elle à la forme d’une châtaigne. Sa consistance ferme mais souple est comparable au globe oculaire. Son poids est de 20 à 25 g. Son volume augmentant beaucoup après 60 ans, peut devenir gros comme une orange et exercer une pression sur l’urètre et la vessie et occasionner des troubles de la miction.",
             "La prostate participe à la composition du sperme et à la protection des spermatozoïdes dans la traversée vagino-utéro-tubaire."
           ]
         },
@@ -247,7 +247,7 @@ export const chapter20Fr: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "médial, il est parcouru par l’urètre prostatique qui présente une fente l’utricule prostatique (figure 20.10). Celui-ci est le vestige atrophié des trompes, de l’utérus et du vagin chez la femme. Les anciens l’appelaient le «vagin mâle ».",
+            "médial, il est parcouru par l’urètre prostatique qui présente une fente l’utricule prostatique. Celui-ci est le vestige atrophié des trompes, de l’utérus et du vagin chez la femme. Les anciens l’appelaient le «vagin mâle ».",
             "Œstrogéno-dépendant, le lobe moyen s’hypertrophie à l’andropause par déséquilibre hormonal entre androgènes et testostérone. Son augmentation de volume comprime l’urètre, rendant la miction difficile et les éjaculations ont un trajet rétrograde vers la vessie."
           ]
         },
@@ -269,7 +269,7 @@ export const chapter20Fr: Chapter = {
           "type": "bullets",
           "items": [
             "il est à la fois un conduit urinaire et spermatique. On distingue deux parties:",
-            "Urètre prostatique (figure 20.10) lors de son trajet intra-prostatique. Il est rejoint par les deux canaux éjaculateurs Une quinzaine de petits orifices permettent l’écoulement du liquide prostatique dans l’urètre."
+            "Urètre prostatique lors de son trajet intra-prostatique. Il est rejoint par les deux canaux éjaculateurs Une quinzaine de petits orifices permettent l’écoulement du liquide prostatique dans l’urètre."
           ]
         },
         {
@@ -899,8 +899,8 @@ export const chapter20Fr: Chapter = {
           "type": "bullets",
           "items": [
             "Cavité pelvienne, périnée: (figures 17.15, 17.16 et 17.17)",
-            "Testicule: c’est la même zone réflexe que l’ovaire: bord antérieur du talon, à l’aplomb des 4ème et 5ème orteils; (figures 20.11 et 19.8).",
-            "Canal inguinal, cordon spermatique et muscle crémaster: au niveau de l’interligne tibio-tarsien antérieur; (figures 19.4 et 20.12)",
+            "Testicule: c’est la même zone réflexe que l’ovaire: bord antérieur du talon, à l’aplomb des 4ème et 5ème orteils; (figure 19.8).",
+            "Canal inguinal, cordon spermatique et muscle crémaster: au niveau de l’interligne tibio-tarsien antérieur; (figure 19.4)",
             "Prostate, vésicule séminale et plexus hypogastrique inférieur (partie moyenne): petite dépression en avant de l’articulation sacro-coccygienne. (figures 18.7 et 18.9)"
           ]
         },

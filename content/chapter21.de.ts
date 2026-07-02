@@ -23,7 +23,7 @@ export const chapter21De: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Die äußeren Geschlechtsorgane von Mann und Frau setzen an der Unterfläche des urogenitalen Dreiecks des Perineums an, mit dem sie eng verbunden sind. (Abbildung 21.1)"
+            "Die äußeren Geschlechtsorgane von Mann und Frau setzen an der Unterfläche des urogenitalen Dreiecks des Perineums an, mit dem sie eng verbunden sind."
           ]
         }
       ]
@@ -35,15 +35,15 @@ export const chapter21De: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Erektile Organe: (Abbildung 21.1)",
+            "Erektile Organe:",
             "Corpora cavernosa: paarige Schwellkörper; sie setzen proximal am Schambogen an. Sie werden als Schenkel der Klitoris bzw. des Penis bezeichnet. An ihren distalen Enden vereinigen sie sich und bilden bei der Frau den Körper der Klitoris und beim Mann die dorsalen Anteile des Penis.",
             "Bulbi vestibuli: Bei der Frau handelt es sich um zwei erektile Organe beidseits des Vaginalorifiziums. Sie beteiligen sich an der erektilen Blutfüllung der Vulva und sind dem männlichen Corpus spongiosum homolog, ohne direkt die Glans der Klitoris zu bilden.",
             "Corpus spongiosum: Beim Mann ist es unpaar, medial gelegen und beginnt mit einer Auftreibung, dem Bulbus penis, der an der Perinealmembran befestigt ist. Es endet in der Glans. Es enthält die Harnröhre. Es trägt dazu bei, den Inhalt der Urethra beim Wasserlassen und bei der Ejakulation des Samens auszutreiben.",
-            "Muskeln der erektilen Organe: (Abbildung 21.2)",
+            "Muskeln der erektilen Organe:",
             "Musculi ischiocavernosi: paarige Muskeln; sie setzen am medialen Rand der Rami ischiopubici sowie an den Schenkeln von Klitoris und Penis an. Durch ihre Kontraktion treiben sie Blut aus den Schenkeln in den Körper von Penis und Klitoris.",
             "Musculi bulbospongiosi: paarige Muskeln; sie inserieren am Perineum, bei der Frau am Bulbus vestibuli und beim Mann am Corpus spongiosum. Durch ihre Kontraktion treiben sie Blut in Richtung Penis und Klitoris. Beim Mann erleichtern ihre reflektorischen Kontraktionen die Entleerung der Harnröhre nach der Miktion sowie nach der Ejakulation.",
             "Bänder des Penis: Der Penis ist durch zwei Bänder befestigt:",
-            "Ligamentum suspensorium: Es ist kranial an der Symphysis pubica und an der Linea alba der vorderen Bauchwand befestigt; (Abbildung 21.2)",
+            "Ligamentum suspensorium: Es ist kranial an der Symphysis pubica und an der Linea alba der vorderen Bauchwand befestigt;",
             "Ligamentum fundiforme: Es ist an der Linea alba befestigt.",
             "Bartholin-Drüsen, vestibuläre Drüsen: Bei der Frau liegen sie im Perineum, dorsal der Bulbi vestibuli. Sie tragen zur Lubrikation des Scheideneingangs bei. Die vaginale Lubrikation hängt während sexueller Erregung außerdem von der vaskulären Transsudation durch die Vaginalwand ab.",
             "Cowper-Drüsen, bulbourethrale Drüsen: Beim Mann liegen sie im Bulbus des Perineums. Sie sezernieren eine alkalische Flüssigkeit, die die Spermatozoen während der sexuellen Erregung bei ihrem Durchtritt durch Urethra und Vagina schützt."
@@ -71,8 +71,8 @@ export const chapter21De: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Somatische Innervation: Der Nervus pudendus ist der Hauptnerv des Perineums. Er vermittelt die Sensibilität der äußeren Geschlechtsorgane und die somatisch-motorische Steuerung der quergestreiften perinealen Muskulatur, insbesondere der Musculi bulbospongiosi und ischiocavernosi. (Abbildungen 21.3 und 21.4)",
-            "Autonome Innervation: (Abbildungen 4.26 und 21.5)",
+            "Somatische Innervation: Der Nervus pudendus ist der Hauptnerv des Perineums. Er vermittelt die Sensibilität der äußeren Geschlechtsorgane und die somatisch-motorische Steuerung der quergestreiften perinealen Muskulatur, insbesondere der Musculi bulbospongiosi und ischiocavernosi.",
+            "Autonome Innervation: (Abbildung 4.26)",
             "Sakrales parasympathisches System S2 bis S4: Es beteiligt sich an der Vasodilatation und an der Füllung der Schwellkörper;",
             "Thorakolumbales sympathisches System L1 bis L3: Es ist insbesondere an der Emissionsphase der Ejakulation beteiligt."
           ]
@@ -159,8 +159,8 @@ export const chapter21De: Chapter = {
           "type": "bullets",
           "items": [
             "Nervus pudendus (S2 bis S4): laterale Fersenfläche, sakraler Plexus, Spina ischiadica; (Abbildungen 17.15 und 17.16),",
-            "Plantare Fersenfläche: (Abbildung 21.6)",
-            "Nervus pudendus (Fortsetzung): medialer Rand des Ramus ischiopubicus (Abbildung 21.7)",
+            "Plantare Fersenfläche:",
+            "Nervus pudendus (Fortsetzung): medialer Rand des Ramus ischiopubicus",
             "Corpora cavernosa und Musculi ischiocavernosi: medialer Rand der Rami ischiopubici;",
             "Erektile Organe: mediales Ende des Ramus iliopubicus (vorderer Fersenrand);",
             "Ligamenta sacrotuberale und sacrospinale: hinterer Fersenrand; (Abbildung 17.21)",

@@ -23,7 +23,7 @@ export const chapter21En: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "The external genital organs of both men and women attach to the inferior surface of the urogenital triangle of the perineum, with which they are intimately connected. (figure 21.1)"
+            "The external genital organs of both men and women attach to the inferior surface of the urogenital triangle of the perineum, with which they are intimately connected."
           ]
         }
       ]
@@ -35,15 +35,15 @@ export const chapter21En: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Erectile organs: (figure 21.1)",
+            "Erectile organs:",
             "Corpora cavernosa: paired erectile organs, they attach proximally to the pubic arch. They are known as the crura of the clitoris or penis. At their distal ends, they unite to form the body of the clitoris in women and the dorsal parts of the penis in men.",
             "Bulbs of the vestibule: in women, these are two erectile organs located on either side of the vaginal orifice. They participate in erectile engorgement of the vulva and are homologous to the male corpus spongiosum, without directly forming the glans of the clitoris.",
             "Corpus spongiosum: in men, it is unpaired, medial, and begins as an enlargement, the bulb of the penis, attached to the perineal membrane. It ends in the glans. It contains the urethra. It contributes to expelling urethral contents during micturition and during ejaculation of semen in men.",
-            "Muscles of the erectile organs: (figure 21.2)",
+            "Muscles of the erectile organs:",
             "Ischiocavernosus muscles: paired muscles, they attach to the medial border of the ischiopubic rami and to the crura of the clitoris and penis. When they contract, they propel blood from the crura toward the body of the penis and clitoris.",
             "Bulbospongiosus muscles: paired muscles, they insert onto the perineum, the bulb of the vestibule in women, and the corpus spongiosum in men. When they contract, they drive blood toward the penis and clitoris. In men, their reflex contractions facilitate emptying of the urethra after micturition and ejaculation of semen.",
             "Ligaments of the penis: the penis is attached by two ligaments:",
-            "Suspensory ligament: it is attached superiorly to the pubic symphysis and to the linea alba of the anterior abdominal wall; (figure 21.2)",
+            "Suspensory ligament: it is attached superiorly to the pubic symphysis and to the linea alba of the anterior abdominal wall;",
             "Fundiform ligament: it is attached to the linea alba.",
             "Bartholin vestibular glands: in women, they are located in the perineum, posterior to the vestibular bulbs. They contribute to lubrication of the vaginal introitus. Vaginal lubrication also depends on vascular transudation through the vaginal wall during sexual arousal.",
             "Cowper bulbourethral glands: in men, they are located in the bulb of the perineum. They secrete an alkaline fluid that protects the spermatozoa during their passage through the urethra and vagina during sexual arousal."
@@ -71,8 +71,8 @@ export const chapter21En: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Somatic innervation: the pudendal nerve is the principal nerve of the perineum. It provides sensation to the external genital organs and somatic motor control of the striated perineal muscles, especially the bulbospongiosus and ischiocavernosus muscles. (figures 21.3 and 21.4)",
-            "Autonomic innervation: (figures 4.26 and 21.5)",
+            "Somatic innervation: the pudendal nerve is the principal nerve of the perineum. It provides sensation to the external genital organs and somatic motor control of the striated perineal muscles, especially the bulbospongiosus and ischiocavernosus muscles.",
+            "Autonomic innervation: (figure 4.26)",
             "Sacral parasympathetic system S2 to S4: it participates in vasodilation and filling of the erectile bodies;",
             "Thoracolumbar sympathetic system L1 to L3: it is involved in particular in the emission phase of ejaculation."
           ]
@@ -159,8 +159,8 @@ export const chapter21En: Chapter = {
           "type": "bullets",
           "items": [
             "Pudendal nerve (S2 to S4): lateral surface of the heel, sacral plexus, ischial spine; (figures 17.15 and 17.16),",
-            "Plantar surface of the heel: (figure 21.6)",
-            "Pudendal nerve (continued): medial border of the ischiopubic ramus (figure 21.7)",
+            "Plantar surface of the heel:",
+            "Pudendal nerve (continued): medial border of the ischiopubic ramus",
             "Corpora cavernosa and ischiocavernosus muscles: medial border of the ischiopubic rami;",
             "Erectile organs: medial end of the iliopubic ramus (anterior border of the heel);",
             "Sacrotuberous and sacrospinous ligaments: posterior border of the heels; (figure 17.21)",

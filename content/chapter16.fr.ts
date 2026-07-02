@@ -25,7 +25,7 @@ export const chapter16Fr: Chapter = {
       "blocks": [
         {
           "type": "para",
-          "text": "Les reins sont situés latéralement à la colonne thoraco-lombaire, entre le péritoine et la paroi abdominale postérieure. Ils sont rétropéritonéaux (figure 16.1), majoritairement sus-mésocoliques. Ils sont inclinés, de sorte que le pôle inférieur est plus latéral que le pôle supérieur."
+          "text": "Les reins sont situés latéralement à la colonne thoraco-lombaire, entre le péritoine et la paroi abdominale postérieure. Ils sont rétropéritonéaux, majoritairement sus-mésocoliques. Ils sont inclinés, de sorte que le pôle inférieur est plus latéral que le pôle supérieur."
         },
         {
           "type": "bullets",
@@ -39,9 +39,7 @@ export const chapter16Fr: Chapter = {
         },
         {
           "type": "bullets",
-          "items": [
-            "(figure 16.2)",
-            "Rein droit: il est légèrement plus bas que le rein gauche, à cause de la présence du foie. Il est entre la 11ème et la 12ème côte et L4;",
+          "items": [            "Rein droit: il est légèrement plus bas que le rein gauche, à cause de la présence du foie. Il est entre la 11ème et la 12ème côte et L4;",
             "Rein gauche: il est entre la 11ème côte et L3."
           ]
         },
@@ -73,7 +71,7 @@ export const chapter16Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "La loge rénale à la forme d’un entonnoir ouvert en bas. Elle est interposée entre le péritoine pariétal postérieur, ventralement et le fascia qui la sépare des muscles carré des lombes et psoas, dorsalement. Elle est formée de deux feuillets: (figure 16.3)"
+          "text": "La loge rénale à la forme d’un entonnoir ouvert en bas. Elle est interposée entre le péritoine pariétal postérieur, ventralement et le fascia qui la sépare des muscles carré des lombes et psoas, dorsalement. Elle est formée de deux feuillets:"
         },
         {
           "type": "bullets",
@@ -91,7 +89,7 @@ export const chapter16Fr: Chapter = {
         },
         {
           "type": "sub",
-          "text": "Le contenu: la graisse rénale: (figure 16.3)"
+          "text": "Le contenu: la graisse rénale:"
         },
         {
           "type": "para",
@@ -130,7 +128,7 @@ export const chapter16Fr: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "selon une coupe sagittale médiale du rein, on distingue deux structures du parenchyme: (figure 16.4)",
+            "selon une coupe sagittale médiale du rein, on distingue deux structures du parenchyme:",
             "le cortex: à la périphérie;",
             "la médullaire: au centre."
           ]
@@ -147,7 +145,7 @@ export const chapter16Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "Le néphron constitue l’unité fonctionnelle du rein. (figure 16.5) Il a pour but de maintenir constants le volume et la composition du milieu intérieur (homéostasie). Il comporte deux parties:"
+          "text": "Le néphron constitue l’unité fonctionnelle du rein. Il a pour but de maintenir constants le volume et la composition du milieu intérieur (homéostasie). Il comporte deux parties:"
         },
         {
           "type": "bullets",
@@ -169,16 +167,16 @@ export const chapter16Fr: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "les deux reins sont en rapport, céphaliquement, avec le diaphragme et les hiatus pleuro-costo-diaphragmatiques, caudalement, avec le psoas et le carré des lombes, et plus latéralement, avec le muscle transverse de l’abdomen. (figure 16.3)"
+            "les deux reins sont en rapport, céphaliquement, avec le diaphragme et les hiatus pleuro-costo-diaphragmatiques, caudalement, avec le psoas et le carré des lombes, et plus latéralement, avec le muscle transverse de l’abdomen."
           ]
         },
         {
           "type": "para",
-          "text": "Dans la couche graisseuse pararénale, cheminent le 12ème nerf intercostal (ou subcostal) et les nerfs du plexus lombaire: nerfs iliohypogastrique, ilioinguinal et cutané fémoral. (figure 16.6)"
+          "text": "Dans la couche graisseuse pararénale, cheminent le 12ème nerf intercostal (ou subcostal) et les nerfs du plexus lombaire: nerfs iliohypogastrique, ilioinguinal et cutané fémoral."
         },
         {
           "type": "para",
-          "text": "Triangle de Jean-Louis Petit et quadrilatère de Grynfelt: ce sont deux régions de la fosse lombaire qui constituent des points faibles de la paroi abdominale postérieure (figure 16.7). Elles permettent d’aborder le rein sans grande interposition de tissus mous où il n’existe pas de faisceaux des muscles obliques interne et externe. Nous sommes en contact directement avec le muscle transverse de l’abdomen et, indirectement, avec le nerf subcostal et les nerfs du plexus lombaire."
+          "text": "Triangle de Jean-Louis Petit et quadrilatère de Grynfelt: ce sont deux régions de la fosse lombaire qui constituent des points faibles de la paroi abdominale postérieure. Elles permettent d’aborder le rein sans grande interposition de tissus mous où il n’existe pas de faisceaux des muscles obliques interne et externe. Nous sommes en contact directement avec le muscle transverse de l’abdomen et, indirectement, avec le nerf subcostal et les nerfs du plexus lombaire."
         },
         {
           "type": "rop",
@@ -195,7 +193,7 @@ export const chapter16Fr: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Rein droit: il est en relation avec: (figure 16.8)",
+            "Rein droit: il est en relation avec:",
             "Céphaliquement: le foie par le ligament hépato-rénal;"
           ]
         },
@@ -240,7 +238,7 @@ export const chapter16Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "Chaque rein est vascularisé par une seule artère: l’artère rénale (figure 16.9) naît de l’aorte juste au-dessous de l’artère mésentérique supérieure. Elle se divise en cinq artères segmentaires terminales pour vasculariser le parenchyme rénal. Elles ne sont pas anastomosées entre elles: chaque région vascularisée est indépendante, permettant une résection partielle chirurgicale."
+          "text": "Chaque rein est vascularisé par une seule artère: l’artère rénale naît de l’aorte juste au-dessous de l’artère mésentérique supérieure. Elle se divise en cinq artères segmentaires terminales pour vasculariser le parenchyme rénal. Elles ne sont pas anastomosées entre elles: chaque région vascularisée est indépendante, permettant une résection partielle chirurgicale."
         },
         {
           "type": "sub",
@@ -248,7 +246,7 @@ export const chapter16Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "Située en avant de l’artère rénale, elle est différente selon la droite et la gauche. (figure 16.10)"
+          "text": "Située en avant de l’artère rénale, elle est différente selon la droite et la gauche."
         },
         {
           "type": "bullets",
@@ -441,7 +439,7 @@ export const chapter16Fr: Chapter = {
             "fixations des 11ème et 12ème côtes, de Th10 à L1",
             "problème de psoas (psoïtis)",
             "Fixations antérieures: le rein droit est plus sujet aux fixations antérieures et aux ptoses. Mais que le rein soit ptosé ou fixé, il a perdu sa mobilité normale.",
-            "Les femmes sont plus concernées par les ptoses en raison de la grossesse, de l’accouchement, d’une rétroversion utérine, et de la ménopause. On distingue trois degrés de ptose: (figure 16.11)",
+            "Les femmes sont plus concernées par les ptoses en raison de la grossesse, de l’accouchement, d’une rétroversion utérine, et de la ménopause. On distingue trois degrés de ptose:",
             "1er degré: rein « intercostal », l’irritation du 12ème nerf intercostal irradie vers le grand trochanter.",
             "Symptômes: la personne se tient le flanc, respiration à fond difficile, supporte mal toux et éternuement",
             "2ème degré: rein « abdomino-génital » ou « cutané fémoral »",
@@ -570,8 +568,8 @@ export const chapter16Fr: Chapter = {
           "items": [
             "Nerf vague X; (figures 4.11 et 4.17)",
             "Colonne vertébrale, articulations costo-transversaires (chaîne ganglionnaire latéro-vertébrale thoracique (Th7-Th11-L1, coccyx); (figures 4.23 et 4.29 et 4.32)",
-            "Plexus prévertébral; (figures 16.12 et 16.13)",
-            "Surrénales: (figures 16.12, 16.13 et Ter figure 16.13)",
+            "Plexus prévertébral;",
+            "Surrénales:",
             "Plexus lombaire L1 à L4 et ses branches. (Cf. Réflexothérapie occipito-podale et système neuro-méningé, Elsevier Masson, pages 28 à 25)"
           ]
         },
@@ -589,11 +587,9 @@ export const chapter16Fr: Chapter = {
         },
         {
           "type": "bullets",
-          "items": [
-            "(figures 16.12, 16.13 et 16.14)",
-            "Pôle inférieur: il est à hauteur de la vertèbre L3 ou L4, à l’aplomb des 1er et 2ème orteils, au-dessus du bord antérieur du talon;",
+          "items": [            "Pôle inférieur: il est à hauteur de la vertèbre L3 ou L4, à l’aplomb des 1er et 2ème orteils, au-dessus du bord antérieur du talon;",
             "Pôle supérieur: il est à hauteur de la vertèbre Th12;",
-            "Glande surrénale: elle est au sommet du pôle supérieur du rein; (figure 16.15)",
+            "Glande surrénale: elle est au sommet du pôle supérieur du rein;",
             "Bord latéral: il est convexe;",
             "Bord médial: il est concave. Le hile se situe à hauteur de la vertèbre L1."
           ]
@@ -605,7 +601,7 @@ export const chapter16Fr: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "le triangle de Jean-Louis Petit et le quadrilatère de Grynfelt sont en regard de l’os cuboïde. (figure 16.17)"
+            "le triangle de Jean-Louis Petit et le quadrilatère de Grynfelt sont en regard de l’os cuboïde."
           ]
         },
         {
@@ -615,7 +611,7 @@ export const chapter16Fr: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "associer faces plantaire et dorsale du rein: (figure 16.18)",
+            "associer faces plantaire et dorsale du rein:",
             "Orienter les deux pouces l’un vers l’autre, l’un sur la face dorsale, l’autre sur la face plantaire;",
             "Solliciter leur zone réflexe, puis à l’aide de la respiration, suivre le mouvement en direction caudale lors de l’inspiration et en direction céphalique lors de l’expiration, C’est un bon moyen de tester la mobilité du rein.",
             "par la même manœuvre, mais sans la respiration, suivre la motilité du rein.",

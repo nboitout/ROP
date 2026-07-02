@@ -43,9 +43,7 @@ export const chapter18En: Chapter = {
         },
         {
           "type": "bullets",
-          "items": [
-            "(figure 18.1.)",
-            "Posterior to the pubis;",
+          "items": [            "Posterior to the pubis;",
             "The superior surface, or vesical dome, is covered ventrally by the peritoneum and dorsally by the body of the uterus;",
             "the posteroinferior, or trigonal, surface rests on the vagina."
           ]
@@ -56,14 +54,12 @@ export const chapter18En: Chapter = {
         },
         {
           "type": "bullets",
-          "items": [
-            "(figure 18.2.)",
-            "Posterior to the pubis;",
+          "items": [            "Posterior to the pubis;",
             "the vesical dome is covered by the peritoneum;",
             "above the prostate.",
             "the posteroinferior, or trigonal, surface lies anterior to the rectum.",
             "The superior part, or body, of the bladder is mobile. The inferior part, comprising the base and neck, is fixed, continuous with the urethra and, through it, with the pelvic floor.",
-            "When empty, the bladder is flattened and not palpable. When full, it is globular, ovoid, and rises above the pubis into the abdominal cavity. (figure 18.3.)"
+            "When empty, the bladder is flattened and not palpable. When full, it is globular, ovoid, and rises above the pubis into the abdominal cavity."
           ]
         }
       ]
@@ -90,7 +86,7 @@ export const chapter18En: Chapter = {
           "type": "bullets",
           "items": [
             "the detrusor muscle is formed by three layers of smooth fibers:",
-            "External fibers: longitudinal; they interlace with the pubovesical ligaments (figure 18.4.). Any asymmetric tension of the pubovesical ligaments is responsible for an urgent desire to urinate, through abnormal and permanent bladder contraction leading to reduced filling capacity (vesical erethism).",
+            "External fibers: longitudinal; they interlace with the pubovesical ligaments. Any asymmetric tension of the pubovesical ligaments is responsible for an urgent desire to urinate, through abnormal and permanent bladder contraction leading to reduced filling capacity (vesical erethism).",
             "Middle fibers: circular; they form the smooth sphincter.",
             "Internal fibers: formed by interlacing fibers, poorly developed in young subjects, but developed in older prostatic patients who must strain to urinate: this is the trabeculated bladder of obstruction."
           ]
@@ -112,7 +108,7 @@ export const chapter18En: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "functionally, this is the most important part of the bladder because of its richness in tension receptors and volume receptors. Located on the posteroinferior surface, the trigone rests, in women, on the anterior surface of the vagina (figure 18.1.); it receives the openings of three orifices: (figure 18.4.)",
+            "functionally, this is the most important part of the bladder because of its richness in tension receptors and volume receptors. Located on the posteroinferior surface, the trigone rests, in women, on the anterior surface of the vagina; it receives the openings of three orifices:",
             "Two ureteral orifices;",
             "One urethral orifice."
           ]
@@ -167,7 +163,7 @@ export const chapter18En: Chapter = {
           "type": "bullets",
           "items": [
             "they act as a suspensory system for the bladder, comparable to a ball held in its net:",
-            "the median umbilical ligament (urachus): an embryonic remnant, it connects the umbilicus to the apex of the bladder and to the pubis (figures 18.1 and 18.2). It extends the falciform ligament of the liver downward (figure 11.9). It exchanges fibers with the pubovesical and pubourethral ligaments (figure 18.5. A. B.), which in turn exchange fibers with the detrusor muscle of the bladder. Surgical sectioning of this ligament (cesarean section) may be a cause of urinary incontinence and vesical erethism.",
+            "the median umbilical ligament (urachus): an embryonic remnant, it connects the umbilicus to the apex of the bladder and to the pubis. It extends the falciform ligament of the liver downward (figure 11.9). It exchanges fibers with the pubovesical and pubourethral ligaments, which in turn exchange fibers with the detrusor muscle of the bladder. Surgical sectioning of this ligament (cesarean section) may be a cause of urinary incontinence and vesical erethism.",
             "the prevesical umbilical ligaments are two fibrous cords, remnants of the umbilical arteries, stretched obliquely from the umbilicus to the inferolateral surfaces of the bladder. They extend laterally into the pelvic cavity through the aponeurosis of the internal obturator and piriformis muscles and terminate posteriorly on the ischium, where the sacrotuberous ligament and the hamstring muscles insert.",
             "Pubovesical ligaments (in women) and puboprostatic ligaments (in men): they attach the bladder to the pubis. Their fibers are continuous with the detrusor. Ligamentous tension creates a state of hypercontractility (erethism), and the bladder neck is destabilized, with a sensation of heaviness in the lower abdomen."
           ]
@@ -202,9 +198,7 @@ export const chapter18En: Chapter = {
         },
         {
           "type": "bullets",
-          "items": [
-            "(figure 18.1.)",
-            "Ventrally: the pubis and the prevesical venous plexus;",
+          "items": [            "Ventrally: the pubis and the prevesical venous plexus;",
             "Cranially and ventrally: the peritoneum;",
             "Cranially and dorsally: the body of the uterus;",
             "Caudally and dorsally: the cervix and the vagina;",
@@ -218,9 +212,7 @@ export const chapter18En: Chapter = {
         },
         {
           "type": "bullets",
-          "items": [
-            "(figure 18.2.)",
-            "Ventrally: the pubis;",
+          "items": [            "Ventrally: the pubis;",
             "Cranially: the peritoneum;",
             "Dorsally: Denonvilliers’ prostatoperitoneal fascia;",
             "Caudally: the prostate;",
@@ -457,7 +449,7 @@ export const chapter18En: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "for the muscles of the perineum to perform their supporting and sphincteric roles correctly, they must remain within the pelvic manometric chamber (figure 18.6). If, during collapse of the perineum, the urethra descends and exits the manometric chamber, abdominal pressure generated by contraction of the abdominal muscles during coughing, sneezing, defecation, childbirth, or certain sporting activities is exerted only on the bladder. It even increases vesical pressure at the expense of the urethral sphincter that has left the manometric chamber, causing stress urinary incontinence."
+            "for the muscles of the perineum to perform their supporting and sphincteric roles correctly, they must remain within the pelvic manometric chamber. If, during collapse of the perineum, the urethra descends and exits the manometric chamber, abdominal pressure generated by contraction of the abdominal muscles during coughing, sneezing, defecation, childbirth, or certain sporting activities is exerted only on the bladder. It even increases vesical pressure at the expense of the urethral sphincter that has left the manometric chamber, causing stress urinary incontinence."
           ]
         },
         {
@@ -651,11 +643,11 @@ export const chapter18En: Chapter = {
           "type": "bullets",
           "items": [
             "Pelvic cavity, perineum: (figures 17.15, 17.16 and 17.17)",
-            "Bladder: (figures 18.7, 18.8 and 18.9)",
+            "Bladder:",
             "Pubovesical ligaments: posterior border of the tibial malleolus;",
-            "Bladder trigone, cervico-isthmic region of the uterus/prostate: locate the reflex zone of the central fibrous body of the perineum, anterior to the coccyx (figure 18.10); a dorsally and posteriorly oriented groove leads to a small depression on the posteromedial surface of the calcaneus;",
+            "Bladder trigone, cervico-isthmic region of the uterus/prostate: locate the reflex zone of the central fibrous body of the perineum, anterior to the coccyx; a dorsally and posteriorly oriented groove leads to a small depression on the posteromedial surface of the calcaneus;",
             "Bladder and body of the uterus: slightly raised zone anterior to the trigone;",
-            "Urogenital slit, central fibrous body of the perineum, urethra, and external sphincter of the bladder: inferior border of the calcaneus anterior to the coccyx. (figure 18.10)"
+            "Urogenital slit, central fibrous body of the perineum, urethra, and external sphincter of the bladder: inferior border of the calcaneus anterior to the coccyx."
           ]
         },
         {

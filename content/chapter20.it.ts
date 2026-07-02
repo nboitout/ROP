@@ -25,7 +25,7 @@ export const chapter20It: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "comprende: i testicoli, gli epididimi, i dotti deferenti, le vescicole seminali, i dotti eiaculatori, la prostata, l’uretra e il pene. (figura 20.1)"
+            "comprende: i testicoli, gli epididimi, i dotti deferenti, le vescicole seminali, i dotti eiaculatori, la prostata, l’uretra e il pene."
           ]
         }
       ]
@@ -41,7 +41,7 @@ export const chapter20It: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "le gonadi si formano in prossimità dei reni. A partire dal 3° mese di gestazione, guidate da un cordone tissutale, il gubernaculum (figura 20.2 A), migrano dalla parete addominale posteriore verso l’ingresso del canale inguinale:"
+            "le gonadi si formano in prossimità dei reni. A partire dal 3° mese di gestazione, guidate da un cordone tissutale, il gubernaculum, migrano dalla parete addominale posteriore verso l’ingresso del canale inguinale:"
           ]
         },
         {
@@ -52,7 +52,7 @@ export const chapter20It: Chapter = {
           "type": "bullets",
           "items": [
             "solo il legamento rotondo, residuo del gubernaculum, continua la propria migrazione attraverso il canale inguinale.",
-            "Nell’uomo, i testicoli proseguono la loro migrazione attraverso il canale inguinale (figura 20.3), trascinando con sé arterie, vene, vasi linfatici, nervi e il dotto deferente. Raggiungono l’anello inguinale profondo intorno al 6° mese, attraversano il canale durante il 7° mese e raggiungono la loro posizione intrascrotale definitiva verso la fine dell’8° mese. Questa migrazione è regolata dal sistema ormonale, dalla crescita fetale e dall’aumento di peso dei testicoli.",
+            "Nell’uomo, i testicoli proseguono la loro migrazione attraverso il canale inguinale, trascinando con sé arterie, vene, vasi linfatici, nervi e il dotto deferente. Raggiungono l’anello inguinale profondo intorno al 6° mese, attraversano il canale durante il 7° mese e raggiungono la loro posizione intrascrotale definitiva verso la fine dell’8° mese. Questa migrazione è regolata dal sistema ormonale, dalla crescita fetale e dall’aumento di peso dei testicoli.",
             "Le anomalie sono frequenti e vanno dalla semplice ectopia inguino-scrotale alla criptorchidia pelvica, iliaca o lombare, che possono causare infertilità o aumentare il rischio di cancro."
           ]
         },
@@ -79,7 +79,7 @@ export const chapter20It: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "è situata in profondità nella cavità pelvica, tra il trigono e il collo della vescica superiormente, il muscolo trasverso profondo del perineo inferiormente, 2-3 cm posteriormente alla sinfisi pubica e anteriormente all’ampolla rettale. (figura 20.1)"
+            "è situata in profondità nella cavità pelvica, tra il trigono e il collo della vescica superiormente, il muscolo trasverso profondo del perineo inferiormente, 2-3 cm posteriormente alla sinfisi pubica e anteriormente all’ampolla rettale."
           ]
         }
       ]
@@ -96,7 +96,7 @@ export const chapter20It: Chapter = {
           "type": "bullets",
           "items": [
             "situati nello scroto, sono la sede della formazione degli spermatozoi e della secrezione ormonale, in particolare del testosterone.",
-            "Di forma ovoidale e lungo 5 cm nell’adulto, il testicolo è rivestito da una membrana resistente, la tonaca albuginea. È circondato da una guaina, il processo vaginale (figura 20.4). La sua struttura interna comprende lobuli contenenti 400-600 tubuli seminiferi, sede della produzione e della maturazione degli spermatozoi (spermatogenesi). Questi tubuli sboccano, al polo superiore del testicolo, nel dotto epididimario."
+            "Di forma ovoidale e lungo 5 cm nell’adulto, il testicolo è rivestito da una membrana resistente, la tonaca albuginea. È circondato da una guaina, il processo vaginale. La sua struttura interna comprende lobuli contenenti 400-600 tubuli seminiferi, sede della produzione e della maturazione degli spermatozoi (spermatogenesi). Questi tubuli sboccano, al polo superiore del testicolo, nel dotto epididimario."
           ]
         },
         {
@@ -126,7 +126,7 @@ export const chapter20It: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "è un tunnel di 4 cm attraverso la parete addominale anteriore, appena al di sopra e parallelamente al legamento inguinale (figura 20.5). Presenta due orifizi:"
+            "è un tunnel di 4 cm attraverso la parete addominale anteriore, appena al di sopra e parallelamente al legamento inguinale. Presenta due orifizi:"
           ]
         },
         {
@@ -156,7 +156,7 @@ export const chapter20It: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "il canale inguinale è formato dagli stessi strati della parete addominale anteriore (figura 20.3). Dà passaggio al funicolo spermatico, che contiene i vasi inguinali, il dotto deferente e i nervi ileoipogastrico, ileoinguinale e genitofemorale, rami collaterali del plesso lombare (L1-L4) (figura 20.6). Nell’uomo, questi nervi contribuiscono all’innervazione sensitiva del pube e dello scroto e, nella donna, a quella del pube e delle grandi labbra."
+            "il canale inguinale è formato dagli stessi strati della parete addominale anteriore. Dà passaggio al funicolo spermatico, che contiene i vasi inguinali, il dotto deferente e i nervi ileoipogastrico, ileoinguinale e genitofemorale, rami collaterali del plesso lombare (L1-L4). Nell’uomo, questi nervi contribuiscono all’innervazione sensitiva del pube e dello scroto e, nella donna, a quella del pube e delle grandi labbra."
           ]
         },
         {
@@ -166,7 +166,7 @@ export const chapter20It: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "poiché il canale inguinale è una zona di debolezza della parete addominale anteriore, è una sede frequente di ernie inguinali, molto più comuni nell’uomo che nella donna. (figura 20.7)"
+            "poiché il canale inguinale è una zona di debolezza della parete addominale anteriore, è una sede frequente di ernie inguinali, molto più comuni nell’uomo che nella donna."
           ]
         },
         {
@@ -176,7 +176,7 @@ export const chapter20It: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "la sua inserzione prossimale (figura 20.8) si trova sul legamento inguinale e sul pube. Accompagna il funicolo spermatico nel canale inguinale. La sua inserzione distale è sulla tonaca fibrosa dello scroto. È innervato dai nervi genitofemorale e ileoinguinale. Eleva lo scroto e favorisce il passaggio dello sperma nel dotto deferente aumentando la pressione interna del testicolo e dell’epididimo."
+            "la sua inserzione prossimale si trova sul legamento inguinale e sul pube. Accompagna il funicolo spermatico nel canale inguinale. La sua inserzione distale è sulla tonaca fibrosa dello scroto. È innervato dai nervi genitofemorale e ileoinguinale. Eleva lo scroto e favorisce il passaggio dello sperma nel dotto deferente aumentando la pressione interna del testicolo e dell’epididimo."
           ]
         },
         {
@@ -192,7 +192,7 @@ export const chapter20It: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "ghiandole sessuali accessorie maschili, sono situate posteriormente alla prostata (figura 20.9), all’interno della fascia di Denonvilliers, che separa la prostata dal retto.",
+            "ghiandole sessuali accessorie maschili, sono situate posteriormente alla prostata, all’interno della fascia di Denonvilliers, che separa la prostata dal retto.",
             "Le vescicole seminali misurano 5-8 cm di lunghezza e 1,5 cm di larghezza e hanno la consistenza di un fico leggermente maturo.",
             "Producono una parte significativa del liquido seminale, particolarmente ricca di fruttosio, che sostiene la funzione degli spermatozoi e contribuisce al volume dell’eiaculato."
           ]
@@ -204,7 +204,7 @@ export const chapter20It: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "i due dotti deferenti si uniscono ai dotti delle vescicole seminali per formare i dotti eiaculatori, che sboccano nell’uretra prostatica. (figura 20.9)"
+            "i due dotti deferenti si uniscono ai dotti delle vescicole seminali per formare i dotti eiaculatori, che sboccano nell’uretra prostatica."
           ]
         },
         {
@@ -215,7 +215,7 @@ export const chapter20It: Chapter = {
           "type": "bullets",
           "items": [
             "questo termine deriva dal greco prostates, che significa posto davanti o esposto. Di fatto, la prostata è situata davanti al retto. Ghiandola sessuale accessoria maschile, secerne l’antigene prostatico specifico (PSA), un enzima il cui livello è importante nella diagnosi e nel monitoraggio delle patologie prostatiche.",
-            "Nel giovane adulto ha la forma di una castagna (figura 20.9). La sua consistenza, ferma ma elastica, è paragonabile a quella del bulbo oculare. Pesa 20-25 g. Poiché il suo volume aumenta notevolmente dopo i 60 anni, può diventare grande come un’arancia ed esercitare pressione sull’uretra e sulla vescica, causando disturbi della minzione.",
+            "Nel giovane adulto ha la forma di una castagna. La sua consistenza, ferma ma elastica, è paragonabile a quella del bulbo oculare. Pesa 20-25 g. Poiché il suo volume aumenta notevolmente dopo i 60 anni, può diventare grande come un’arancia ed esercitare pressione sull’uretra e sulla vescica, causando disturbi della minzione.",
             "La prostata contribuisce alla composizione dello sperma e alla protezione degli spermatozoi durante il loro passaggio attraverso vagina, utero e tube uterine."
           ]
         },
@@ -247,7 +247,7 @@ export const chapter20It: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "situato medialmente, è attraversato dall’uretra prostatica, che contiene una struttura a fessura, l’utricolo prostatico (figura 20.10). Esso rappresenta il residuo atrofico delle tube uterine, dell’utero e della vagina femminili. Gli autori antichi lo chiamavano “vagina maschile”.",
+            "situato medialmente, è attraversato dall’uretra prostatica, che contiene una struttura a fessura, l’utricolo prostatico. Esso rappresenta il residuo atrofico delle tube uterine, dell’utero e della vagina femminili. Gli autori antichi lo chiamavano “vagina maschile”.",
             "Sensibile agli estrogeni, il lobo medio si ipertrofizza durante l’andropausa per effetto di uno squilibrio ormonale che coinvolge androgeni e testosterone. Il suo aumento di volume comprime l’uretra, rendendo difficile la minzione, e l’eiaculazione assume un decorso retrogrado verso la vescica."
           ]
         },
@@ -269,7 +269,7 @@ export const chapter20It: Chapter = {
           "type": "bullets",
           "items": [
             "è al tempo stesso un condotto urinario e riproduttivo. Si distinguono due parti:",
-            "Uretra prostatica (figura 20.10): è il tratto che attraversa la prostata. Riceve i due dotti eiaculatori. Circa quindici piccoli orifizi permettono al liquido prostatico di defluire nell’uretra."
+            "Uretra prostatica: è il tratto che attraversa la prostata. Riceve i due dotti eiaculatori. Circa quindici piccoli orifizi permettono al liquido prostatico di defluire nell’uretra."
           ]
         },
         {
@@ -899,8 +899,8 @@ export const chapter20It: Chapter = {
           "type": "bullets",
           "items": [
             "Cavità pelvica, perineo: (figure 17.15, 17.16 e 17.17)",
-            "Testicolo: è la stessa zona riflessa dell’ovaio: bordo anteriore del tallone, in linea con il 4° e il 5° dito; (figure 20.11 e 19.8).",
-            "Canale inguinale, funicolo spermatico e muscolo cremastere: a livello dell’interlinea tibio-tarsica anteriore; (figure 19.4 e 20.12)",
+            "Testicolo: è la stessa zona riflessa dell’ovaio: bordo anteriore del tallone, in linea con il 4° e il 5° dito; (figura 19.8).",
+            "Canale inguinale, funicolo spermatico e muscolo cremastere: a livello dell’interlinea tibio-tarsica anteriore; (figura 19.4)",
             "Prostata, vescicola seminale e plesso ipogastrico inferiore (parte media): piccola depressione anteriore all’articolazione sacro-coccigea. (figure 18.7 e 18.9)"
           ]
         },

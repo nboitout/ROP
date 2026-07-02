@@ -30,28 +30,28 @@ export const chapter17Es: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Cranealmente: la abertura superior de la pelvis (figura 17.1), o estrecho superior;",
-            "Caudalmente: la abertura inferior de la pelvis (figura 17.2), o estrecho inferior, cerrado por el periné.",
+            "Cranealmente: la abertura superior de la pelvis, o estrecho superior;",
+            "Caudalmente: la abertura inferior de la pelvis, o estrecho inferior, cerrado por el periné.",
             "Ocupa el espacio comprendido entre las porciones inferiores de los huesos coxales, el sacro y el cóccix.",
-            "El espacio pelviano subperitoneal ocupa el espacio situado entre el peritoneo y las paredes osteomusculares (figura 17.3). Comunica con la región retroperitoneal del abdomen y con las regiones glútea y obturatriz a través de varios orificios: los forámenes ciáticos mayor y menor (o escotaduras ciáticas mayor y menor), los forámenes obturadores y el espacio comprendido entre el hueso coxal y el ligamento inguinal (figura 17.4).",
-            "Está dividido por tabiques (figura 17.5):",
+            "El espacio pelviano subperitoneal ocupa el espacio situado entre el peritoneo y las paredes osteomusculares. Comunica con la región retroperitoneal del abdomen y con las regiones glútea y obturatriz a través de varios orificios: los forámenes ciáticos mayor y menor (o escotaduras ciáticas mayor y menor), los forámenes obturadores y el espacio comprendido entre el hueso coxal y el ligamento inguinal.",
+            "Está dividido por tabiques:",
             "Tabiques sagitales: las láminas sacro-recto-genito-pubianas (los ligamentos uterosacros y pubocervicales en la mujer), extendidas entre el sacro y el pubis. Impiden los movimientos laterales de los órganos pélvicos. Contienen el plexo hipogástrico inferior, que aporta la inervación autónoma a los órganos pélvicos.",
             "Tabiques transversales: situados entre las vísceras pélvicas; comprenden los ligamentos laterales del recto y, en la mujer, el ligamento cervical transverso. Sirven de vía de paso para los vasos y nervios destinados a los órganos pélvicos.",
             "Este sistema de tabicación delimita compartimentos:",
             "un compartimento visceral medial: ocupado, de dorsal a ventral, por:",
             "en la mujer: el recto, el útero y sus anexos (ovarios y trompas uterinas) y la vejiga;",
             "en el hombre: el recto, las vías espermáticas y las vesículas seminales, y la vejiga.",
-            "dos compartimentos laterales: ocupados por los vasos pélvicos y los nervios del sistema autónomo, amortiguados por abundante tejido conjuntivo fibroadiposo y destinados a los órganos pélvicos (figura 17.6).",
+            "dos compartimentos laterales: ocupados por los vasos pélvicos y los nervios del sistema autónomo, amortiguados por abundante tejido conjuntivo fibroadiposo y destinados a los órganos pélvicos.",
             "En el espacio pelviano subperitoneal se encuentran:",
             "la arteria ilíaca interna: irriga las paredes y las vísceras pélvicas;",
             "los plexos del sistema nervioso somático: plexos sacro, pudendo y coccígeo.",
             "El peritoneo se dispone como un paño sobre las vísceras pélvicas, formando recesos:",
-            "en la mujer: el peritoneo sigue el contorno de la vejiga y del útero, formando el fondo de saco vesicouterino, y entre el útero y el recto, el fondo de saco rectouterino (fondo de saco de Douglas) (figura 17.7).",
+            "en la mujer: el peritoneo sigue el contorno de la vejiga y del útero, formando el fondo de saco vesicouterino, y entre el útero y el recto, el fondo de saco rectouterino (fondo de saco de Douglas).",
             "en el hombre: el fondo de saco rectovesical se interpone entre la vejiga y el recto.",
             "El fondo de saco de Douglas es la parte más declive de la cavidad peritoneal.",
             "Aunque los órganos pélvicos son subperitoneales y carecen de revestimiento seroso, pueden moverse unos respecto a otros gracias a la interposición del peritoneo. Una afectación peritoneal (infección, cirugía, traumatismo, congestión) repercute en la estática y la dinámica de los órganos pélvicos.",
             "Unidad vertebro-coxo-pélvica: la esfera urogenital no puede concebirse sin su marco osteomusculoarticular, al que está íntimamente ligada. Cualquier bloqueo articular altera la movilidad de los órganos pélvicos y, a la inversa, cualquier fijación visceral, ya sea de origen traumático, infeccioso, quirúrgico o congestivo, será causa de fijaciones articulares.",
-            "La unidad funcional vertebro-coxo-pélvica comprende 7 articulaciones (figura 17.1):",
+            "La unidad funcional vertebro-coxo-pélvica comprende 7 articulaciones:",
             "2 sacroilíacas;",
             "2 coxofemorales;",
             "1 sacrococcígea;",
@@ -64,11 +64,11 @@ export const chapter17Es: Chapter = {
             "la transmisión de las fuerzas gravitatorias descendentes y de las fuerzas ascendentes relacionadas con la bipedestación y la marcha;",
             "la evacuación de una parte de las solicitaciones mecánicas hacia los miembros inferiores.",
             "Para responder a estas exigencias, la pelvis presenta particularidades anatómicas específicas:",
-            "Orientación de la pelvis: el estrecho superior de la pelvis está inclinado hacia abajo y hacia delante, de modo que la presión abdominal se ejerce sobre todo sobre los contrafuertes óseos y solo en pequeña medida sobre las vísceras pélvicas (figura 17.8):",
+            "Orientación de la pelvis: el estrecho superior de la pelvis está inclinado hacia abajo y hacia delante, de modo que la presión abdominal se ejerce sobre todo sobre los contrafuertes óseos y solo en pequeña medida sobre las vísceras pélvicas:",
             "las fosas ilíacas internas;",
             "el promontorio sacro;",
             "las ramas iliopúbicas.",
-            "La pelvis no es una cavidad herméticamente cerrada: las paredes pélvicas presentan orificios y escotaduras (citados anteriormente), delimitados por ligamentos y cerrados por tejidos blandos (músculos, aponeurosis, membranas), que atenúan la presión residual sobre las vísceras pélvicas (figuras 17.9 y 17.10)."
+            "La pelvis no es una cavidad herméticamente cerrada: las paredes pélvicas presentan orificios y escotaduras (citados anteriormente), delimitados por ligamentos y cerrados por tejidos blandos (músculos, aponeurosis, membranas), que atenúan la presión residual sobre las vísceras pélvicas."
           ]
         }
       ]
@@ -91,7 +91,7 @@ export const chapter17Es: Chapter = {
         },
         {
           "type": "para",
-          "text": "es, por excelencia, un gran indicador de las tensiones que se ejercen sobre el sacro y la cadera (figura 17.9). Cualquier tensión procedente de los órganos pélvicos que se insertan en el sacro fija la articulación sacroilíaca y aumenta la contracción del músculo piriforme. Su aponeurosis está asimismo recorrida por el plexo sacro (figura 17.10) y por su rama terminal, el nervio ciático, que sale de la pelvis por el foramen ciático mayor. La contractura del piriforme irrita el nervio ciático, lo que explica las ciatalgias."
+          "text": "es, por excelencia, un gran indicador de las tensiones que se ejercen sobre el sacro y la cadera. Cualquier tensión procedente de los órganos pélvicos que se insertan en el sacro fija la articulación sacroilíaca y aumenta la contracción del músculo piriforme. Su aponeurosis está asimismo recorrida por el plexo sacro y por su rama terminal, el nervio ciático, que sale de la pelvis por el foramen ciático mayor. La contractura del piriforme irrita el nervio ciático, lo que explica las ciatalgias."
         },
         {
           "type": "sub",
@@ -99,7 +99,7 @@ export const chapter17Es: Chapter = {
         },
         {
           "type": "para",
-          "text": "comunica el periné con la región glútea (antiguamente, región glútea o nalgas). Está atravesado por el músculo obturador interno (figura 17.9), acompañado por los músculos gemelos superior e inferior y por el nervio pudendo, que inerva el periné."
+          "text": "comunica el periné con la región glútea (antiguamente, región glútea o nalgas). Está atravesado por el músculo obturador interno, acompañado por los músculos gemelos superior e inferior y por el nervio pudendo, que inerva el periné."
         },
         {
           "type": "rop",
@@ -111,7 +111,7 @@ export const chapter17Es: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Foramen obturador: formado por la unión de las ramas ilio- e isquiopúbicas, está cerrado por la membrana obturatriz (figura 17.11).",
+            "Foramen obturador: formado por la unión de las ramas ilio- e isquiopúbicas, está cerrado por la membrana obturatriz.",
             "Membrana obturatriz: en su cara endopélvica está recubierta por el músculo obturador interno y, en su cara exopélvica, por el músculo obturador externo, dos músculos pelvitrocantéricos rotadores externos de la cadera. Está reforzada por la bandeleta subpúbica, que se inserta en la cápsula articular de la cadera. La vejiga reposa sobre las dos membranas obturatrices.",
             "Relación vejiga-cadera: la membrana obturatriz, tensa como una membrana timpánica, constituye un mecanismo de descarga y transferencia de las presiones de los órganos intrapélvicos durante la marcha. La alternancia de tracción y relajación de las tensiones ligamentosas y de la bandeleta subpúbica durante los movimientos de la cadera permite disipar una parte de las fuerzas compresivas ejercidas sobre los órganos intrapélvicos, ya sea hacia los miembros inferiores, ya sea hacia la sínfisis púbica y las sacroilíacas. Al mismo tiempo, se produce una especie de “aspiración” endopélvica de los vasos sanguíneos que atraviesan la membrana obturatriz. Esta acción de bombeo favorece los intercambios circulatorios intrapélvicos."
           ]
@@ -125,8 +125,8 @@ export const chapter17Es: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Canal obturador: situado en la porción subpúbica del foramen obturador, está atravesado por el nervio obturador (figura 17.11), que inerva el músculo obturador externo y los músculos aductores de la cadera. Su irritación provoca dolor en la cara medial de la rodilla (véase Reflexoterapia occipito-podal y sistema neuromeníngeo, páginas 31 a 33).",
-            "Ligamentos sacroespinoso y sacrotuberoso: delimitan los forámenes entre la cavidad pélvica y las regiones glútea y perineal (figura 17.11).",
+            "Canal obturador: situado en la porción subpúbica del foramen obturador, está atravesado por el nervio obturador, que inerva el músculo obturador externo y los músculos aductores de la cadera. Su irritación provoca dolor en la cara medial de la rodilla (véase Reflexoterapia occipito-podal y sistema neuromeníngeo, páginas 31 a 33).",
+            "Ligamentos sacroespinoso y sacrotuberoso: delimitan los forámenes entre la cavidad pélvica y las regiones glútea y perineal.",
             "Ligamento sacrotuberoso: extendido desde el isquion hasta el sacro y el cóccix;",
             "Ligamento sacroespinoso: extendido desde la espina ciática hasta el sacro y el cóccix.",
             "Estabilizan lateralmente el cóccix. También desempeñan un papel importante en la estabilidad y la movilidad del sacro entre los huesos ilíacos, ya que actúan como frenos de la nutación sacra en asociación con los ligamentos sacroilíacos anteriores (la contranutación está limitada por la tensión de los ligamentos iliosacros posteriores)."
@@ -161,15 +161,15 @@ export const chapter17Es: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "consiste en un conjunto de músculos y fascias que cierran el estrecho inferior de la pelvis. Convergen hacia el núcleo fibroso central del periné. El periné está delimitado por (figura 17.2):",
+            "consiste en un conjunto de músculos y fascias que cierran el estrecho inferior de la pelvis. Convergen hacia el núcleo fibroso central del periné. El periné está delimitado por:",
             "El borde inferior de la sínfisis púbica;",
             "El vértice del cóccix;",
             "Las ramas isquiopúbicas, ventralmente;",
             "Los ligamentos sacrotuberosos, dorsalmente.",
-            "Está dividido por una línea imaginaria entre las dos tuberosidades isquiáticas en dos triángulos (figura 17.12):",
-            "Triángulo urogenital anterior: orientado horizontalmente y atravesado por el hiato urogenital (figura 17.9). En su cara externa se insertan los músculos bulbocavernoso y bulboesponjoso, así como los órganos eréctiles del pene y del clítoris (véase Capítulo 21 Sistema eréctil masculino y femenino, página…).",
+            "Está dividido por una línea imaginaria entre las dos tuberosidades isquiáticas en dos triángulos:",
+            "Triángulo urogenital anterior: orientado horizontalmente y atravesado por el hiato urogenital. En su cara externa se insertan los músculos bulbocavernoso y bulboesponjoso, así como los órganos eréctiles del pene y del clítoris (véase Capítulo 21 Sistema eréctil masculino y femenino, página…).",
             "Triángulo anal posterior: orientado dorsal y caudalmente, está atravesado por el canal anal y el esfínter anal externo. Lateralmente al canal anal, la fosa isquioanal está recorrida por el nervio pudendo.",
-            "Músculos del periné: son músculos estriados (figura 17.9) controlados por el nervio pudendo (S2-S4). Se distinguen:",
+            "Músculos del periné: son músculos estriados controlados por el nervio pudendo (S2-S4). Se distinguen:",
             "Músculos profundos del periné: elevador del ano, transverso profundo del periné y músculo coccígeo. Forman el diafragma pélvico, que tiene una función de sostén gracias a sus fibras paralelas.",
             "Músculos superficiales del periné: el esfínter externo y el transverso superficial del periné. Tienen una función esfinteriana de los orificios urogenital y anal gracias a sus fibras circulares.",
             "Función del periné: el periné tiene una doble función:",
@@ -196,7 +196,7 @@ export const chapter17Es: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Arterias ilíacas internas: nacen de la arteria ilíaca común (figura 17.3) a la altura del disco L5-S1, recorren el borde anteromedial de la articulación sacroilíaca y se dividen en dos ramas:",
+            "Arterias ilíacas internas: nacen de la arteria ilíaca común a la altura del disco L5-S1, recorren el borde anteromedial de la articulación sacroilíaca y se dividen en dos ramas:",
             "Rama posterior: irriga la pared posteroinferior del abdomen, la pared posterior de la pelvis y la región glútea.",
             "Rama anterior: irriga las vísceras pélvicas, el periné, la región de los aductores y, en el feto, la placenta.",
             "Las arterias gonadales y la arteria sacra media, que nacen de la aorta abdominal, completan la vascularización arterial de la pelvis."
@@ -238,15 +238,13 @@ export const chapter17Es: Chapter = {
         },
         {
           "type": "bullets",
-          "items": [
-            "(figura 17.10)",
-            "Plexo sacro L5 a S3: formado por los ramos anteriores de L4 a S3, emite ramas colaterales para los músculos piriforme y pelvitrocantéricos, con excepción del obturador externo (nervio obturador), y para los nervios glúteos.",
+          "items": [            "Plexo sacro L5 a S3: formado por los ramos anteriores de L4 a S3, emite ramas colaterales para los músculos piriforme y pelvitrocantéricos, con excepción del obturador externo (nervio obturador), y para los nervios glúteos.",
             "Su rama terminal es el nervio ciático. Posteriormente, se relaciona con el músculo piriforme.",
-            "Surco isquiotrocantérico: los nervios ciático y cutáneo femoral posterior salen del foramen ciático mayor y atraviesan la región glútea por el surco isquiotrocantérico (figura 17.13), pasando entre los músculos superficiales (músculos glúteos) y los músculos profundos (obturador interno, gemelos y cuadrado femoral).",
+            "Surco isquiotrocantérico: los nervios ciático y cutáneo femoral posterior salen del foramen ciático mayor y atraviesan la región glútea por el surco isquiotrocantérico, pasando entre los músculos superficiales (músculos glúteos) y los músculos profundos (obturador interno, gemelos y cuadrado femoral).",
             "Plexo pudendo S2 a S4: se anastomosa cranealmente con el plexo sacro y caudalmente con el plexo coccígeo:",
             "Sus ramas colaterales viscerales (o nervios erigentes de Eckardt), de naturaleza parasimpática, están destinadas a los órganos pélvicos;",
             "Sus ramas colaterales musculares somáticas inervan los músculos profundos del periné: elevador del ano, transverso profundo del periné y músculo coccígeo;",
-            "Nervio pudendo (figura 17.10): sale del foramen ciático mayor por debajo del músculo piriforme, penetra bajo el suelo perineal a través del foramen ciático menor rodeando la espina isquiática y pasa entre los ligamentos sacroespinoso y sacrotuberoso. Discurre a lo largo de la rama isquiopúbica en el canal de Alcock (desdoblamiento fascial del músculo obturador interno). Da dos ramas:",
+            "Nervio pudendo: sale del foramen ciático mayor por debajo del músculo piriforme, penetra bajo el suelo perineal a través del foramen ciático menor rodeando la espina isquiática y pasa entre los ligamentos sacroespinoso y sacrotuberoso. Discurre a lo largo de la rama isquiopúbica en el canal de Alcock (desdoblamiento fascial del músculo obturador interno). Da dos ramas:",
             "Rama motora: inerva los músculos profundos y superficiales del periné.",
             "Rama sensitiva: inerva la piel del triángulo anal, el núcleo fibroso central del periné, el escroto en el hombre y la región labial en la mujer. Su rama terminal, el nervio dorsal del pene o del clítoris, pasa justo por debajo de la sínfisis púbica e inerva el pene y su glande, o el clítoris."
           ]
@@ -280,9 +278,7 @@ export const chapter17Es: Chapter = {
         },
         {
           "type": "bullets",
-          "items": [
-            "(figura 17.14)",
-            "Simpático: las neuronas preganglionares se originan en el asta lateral de la médula espinal de T12 a L1, a la altura de las vértebras T11 a T12, y se continúan por dos vías:",
+          "items": [            "Simpático: las neuronas preganglionares se originan en el asta lateral de la médula espinal de T12 a L1, a la altura de las vértebras T11 a T12, y se continúan por dos vías:",
             "Cadenas ganglionares paravertebrales lumbares y sacras;",
             "Vía plexual prevertebral: el ovario y el testículo están inervados por el plexo aorticorrenal, procedente de los ganglios torácicos 10.º, 11.º y 12.º y del 1.er ganglio lumbar;",
             "Los demás órganos pélvicos están inervados por el plexo mesentérico inferior, procedente del 12.º ganglio torácico. Estas fibras simpáticas se unen después al plexo hipogástrico superior.",
@@ -358,7 +354,7 @@ export const chapter17Es: Chapter = {
             "de +5 a +10 cm H2O en el nivel inframesocólico.",
             "En condiciones fisiológicas, los órganos de la cavidad pélvica están relativamente bien protegidos de las presiones de la columna visceral procedente de las cavidades torácica y abdominal gracias a la descarga-absorción de las presiones intracavitarias mediante:",
             "Aspiración torácica y atracción toracodiafragmática: los órganos subdiafragmáticos están sometidos a la aspiración torácica, tanto más cuanto más próximos se encuentran al diafragma. A la inversa, “cuanto más nos alejamos del diafragma hacia abajo, menos se benefician los órganos de la aspiración torácica y de la atracción diafragmática. Por tanto, ejercen una fuerza gravitatoria sobre los órganos pélvicos, tanto mayor cuanto más alejados están del diafragma” (Manipulaciones urogenitales, Jean-Pierre Barral, Elsevier).",
-            "Orientación de la cavidad pélvica: gracias a la orientación caudal y ventral de la cavidad pélvica, las fuerzas gravitatorias se distribuyen sobre el perímetro óseo del estrecho inferior (figura 17.8).",
+            "Orientación de la cavidad pélvica: gracias a la orientación caudal y ventral de la cavidad pélvica, las fuerzas gravitatorias se distribuyen sobre el perímetro óseo del estrecho inferior.",
             "Configuración en cúpula de las vísceras pélvicas: el cuerpo del útero, situado en el centro de la cavidad pélvica, refuerza aún más esta distribución de las fuerzas gravitatorias sobre el perímetro del estrecho inferior, aliviando todavía más la presión sobre los órganos pélvicos.",
             "Contractilidad y elasticidad de los músculos del periné: los músculos del periné redirigen las fuerzas gravitatorias residuales hacia arriba y horizontalmente hacia el perímetro del estrecho inferior.",
             "Equilibrio de los tres diafragmas: el periné, o diafragma pélvico, se adapta permanentemente a las variaciones de presión vinculadas a los movimientos del diafragma torácico, que a su vez equilibra las modificaciones de tensión del diafragma craneal (hoz del cerebro y tienda del cerebelo) debidas a la alternancia de flexión y extensión del movimiento respiratorio primario craneosacro.",
@@ -512,13 +508,11 @@ export const chapter17Es: Chapter = {
         },
         {
           "type": "bullets",
-          "items": [
-            "(figuras 17.15, 17.16 y 17.17)",
-            "Foramen ciático mayor y músculo piriforme;",
+          "items": [            "Foramen ciático mayor y músculo piriforme;",
             "Fosa isquiotrocantérica y nervio ciático;",
             "Foramen ciático menor y músculos obturadores y gemelos;",
-            "Fosa obturatriz y músculos obturadores (figuras 17.18 y 17.19);",
-            "Plexo pudendo (figuras 17.15, 17.18 y 17.20)."
+            "Fosa obturatriz y músculos obturadores;",
+            "Plexo pudendo."
           ]
         },
         {
@@ -529,7 +523,7 @@ export const chapter17Es: Chapter = {
           "type": "bullets",
           "items": [
             "cóccix (figura 4.23);",
-            "Ligamentos sacrotuberoso y sacroespinoso (figuras 17.21 y 17.22);"
+            "Ligamentos sacrotuberoso y sacroespinoso;"
           ]
         },
         {

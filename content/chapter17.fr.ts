@@ -26,28 +26,28 @@ export const chapter17Fr: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Céphaliquement: l’ouverture supérieure du pelvis (figure 17.1), ou détroit supérieur du pelvis;",
-            "Caudalement: l’ouverture inférieure du pelvis (figure 17.2) ou détroit inférieur, fermé par le périnée.",
+            "Céphaliquement: l’ouverture supérieure du pelvis, ou détroit supérieur du pelvis;",
+            "Caudalement: l’ouverture inférieure du pelvis ou détroit inférieur, fermé par le périnée.",
             "Elle occupe l’espace entre la partie inférieure des os coxaux, le sacrum et le coccyx.",
-            "L’espace pelvi-sous-péritonéal: il comble l’espace entre le péritoine et les parois ostéo-musculaires (figure 17.3). Il est en communication avec la région rétro-péritonéale de l’abdomen et les régions glutéales et obturatrices, par des orifices: grands et petits foramens ischiatiques (ou grande et petite incisures ischiatiques), foramens obturés et l’espace entre l’os coxal et le ligament inguinal. (figure 17.4)",
-            "Il est divisé par des cloisons: (figure 17.5)",
+            "L’espace pelvi-sous-péritonéal: il comble l’espace entre le péritoine et les parois ostéo-musculaires. Il est en communication avec la région rétro-péritonéale de l’abdomen et les régions glutéales et obturatrices, par des orifices: grands et petits foramens ischiatiques (ou grande et petite incisures ischiatiques), foramens obturés et l’espace entre l’os coxal et le ligament inguinal.",
+            "Il est divisé par des cloisons:",
             "Cloisons sagittales: les lames sacro-recto-génito-pubiennes (ligaments utérosacral et pubocervical chez la femme) tendues entre le sacrum et le pubis. Elles empêchent les mouvements latéraux des organes pelviens. Elles contiennent le plexus hypogastrique inférieur apportant l’innervation autonome aux organes pelviens.",
             "Cloisons transversales: entre les viscères pelviens: ailerons du rectum, ligament transversal cervical (ou large de l’utérus) chez la femme. Elles servent de porte-vaisseaux et nerfs destinés aux organes pelviens.",
             "Ce système de cloisonnement délimite des loges:",
             "une loge viscérale médiale: elle est occupée, de dorsal à ventral, par:",
             "chez la femme: rectum, utérus et ses annexes (ovaires et trompes) et vessie",
             "chez l’homme: rectum, voies spermatiques et vésicules séminales et vessie.",
-            "deux loges latérales: elles sont occupées par les vaisseaux et les nerfs du système autonome, calfeutrés par un abondant tissu cellulo-graisseux, et destinés aux organes pelviens. (figure 17.6)",
+            "deux loges latérales: elles sont occupées par les vaisseaux et les nerfs du système autonome, calfeutrés par un abondant tissu cellulo-graisseux, et destinés aux organes pelviens.",
             "Dans l’espace pelvi-sous-péritonéal figurent:",
             "l’artère iliaque interne: elle assure l’irrigation des parois et des viscères;",
             "Les plexus du système nerveux somatique: plexus sacré, pudendal et coccygien.",
             "Le péritoine repose comme un drap sur les viscères pelviens en formant des culs-de-sacs:",
-            "chez la femme: le péritoine épouse le contour de la vessie et de l’utérus: le cul-de-sac vésico-utérin, et entre l’utérus et le rectum: le cul-de-sac recto-utérin de Douglas). (figure 17.7)",
+            "chez la femme: le péritoine épouse le contour de la vessie et de l’utérus: le cul-de-sac vésico-utérin, et entre l’utérus et le rectum: le cul-de-sac recto-utérin de Douglas).",
             "Chez l’homme: le cul-de-sac recto-vésical de Douglas s’interpose entre la vessie et le rectum.",
             "Le cul-de-sac de Douglas est la partie la plus déclive de l’abdomen.",
             "Bien que sous-péritonéaux et dépourvus de séreuse, les organes pelviens peuvent bouger les uns par rapport aux autres grâce à l’interposition du péritoine. Une atteinte péritonéale (infection, chirurgie, traumatisme, congestion) se réperçute sur la statique et la dynamique des organes pelviens.",
             "Unité vertébro-coxo-pelvienne: la sphère uro-génitale ne peut se concevoir sans son cadre ostéo-musculo-articulaire auquel elle est intimement liée. Tout blocage articulaire perturbe la mobilité des organes pelviens et, inversement, toute fixation viscérale, qu’elle soit d’origine traumatique, infectieuse, chirurgicale ou congestive, sera la cause de fixations articulaires.",
-            "L’unité fonctionnelle vertébro-coxo-pelvienne compte 7 articulations: (figure 17.1)",
+            "L’unité fonctionnelle vertébro-coxo-pelvienne compte 7 articulations:",
             "2 sacro-iliaques;",
             "2 coxo-fémorales;",
             "1 sacro-coccygienne;",
@@ -60,11 +60,11 @@ export const chapter17Fr: Chapter = {
             "la transmission des forces gravitaires descendantes et des forces ascendantes liées à la station debout et à la marche;",
             "l’évacuation d’une partie des contraintes mécaniques vers les membres inférieurs.",
             "Pour répondre à ces exigences: le pelvis présente des particularités anatomiques:",
-            "Orientation du pelvis: le détroit supérieur du pelvis est incliné en bas et en avant, si bien que la pression abdominale s’exerce surtout sur les contreforts osseux et peu sur les viscères pelviens: (figure 17.8)",
+            "Orientation du pelvis: le détroit supérieur du pelvis est incliné en bas et en avant, si bien que la pression abdominale s’exerce surtout sur les contreforts osseux et peu sur les viscères pelviens:",
             "les fosses iliaques internes;",
             "le promontoire sacré;",
             "les branches ilio-pubiennes.",
-            "Le pelvis n’est pas hermétiquement clos: les parois du pelvis présentent des orifices et des échancrures (cités plus haut) délimitées par des ligaments et obstrués par des tissus mous (muscles, aponévroses, membranes) qui amortissent le reliquat de pression sur les viscères pelviens. (figures 17.9 et 17.10)"
+            "Le pelvis n’est pas hermétiquement clos: les parois du pelvis présentent des orifices et des échancrures (cités plus haut) délimitées par des ligaments et obstrués par des tissus mous (muscles, aponévroses, membranes) qui amortissent le reliquat de pression sur les viscères pelviens."
           ]
         }
       ]
@@ -87,7 +87,7 @@ export const chapter17Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "il est, par excellence, le grand témoin des tensions s’exerçant sur le sacrum et la hanche (figure 17.9).Toute tension des organes pelviens s’attachant sur le sacrum, fixe la sacro-iliaque et augmente la contraction du muscle piriforme. Or, son aponévrose est parcourue par le plexus sacré (figure 17.10) et sa branche terminale, le nerf grand sciatique qui sort du bassin par le grand foramen ischiatique. La contracture du piriforme irrite le nerf grand sciatique, expliquant les sciatalgies."
+          "text": "il est, par excellence, le grand témoin des tensions s’exerçant sur le sacrum et la hanche.Toute tension des organes pelviens s’attachant sur le sacrum, fixe la sacro-iliaque et augmente la contraction du muscle piriforme. Or, son aponévrose est parcourue par le plexus sacré et sa branche terminale, le nerf grand sciatique qui sort du bassin par le grand foramen ischiatique. La contracture du piriforme irrite le nerf grand sciatique, expliquant les sciatalgies."
         },
         {
           "type": "sub",
@@ -95,7 +95,7 @@ export const chapter17Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "il fait communiquer le périnée et la région glutéale (anciennement fessière). Il est traversé par le muscle obturateur interne (figure 17.9) accompagné par les muscles jumeaux supérieur et inférieur et par le nerf pudendal qui innerve le périnée."
+          "text": "il fait communiquer le périnée et la région glutéale (anciennement fessière). Il est traversé par le muscle obturateur interne accompagné par les muscles jumeaux supérieur et inférieur et par le nerf pudendal qui innerve le périnée."
         },
         {
           "type": "rop",
@@ -107,7 +107,7 @@ export const chapter17Fr: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Foramen obturé: formé par la jonction des branches ilio et ischio-pubiennes, il est obstrué par la membrane obturatrice (figure 17.11).",
+            "Foramen obturé: formé par la jonction des branches ilio et ischio-pubiennes, il est obstrué par la membrane obturatrice.",
             "Membrane obturatrice: elle est recouverte du côté endo-pelvien par le muscle obturateur interne et, du côté exopelvien, par le muscle obturateur externe, deux muscles pelvi-trochantérieurs rotateurs externes de la hanche. Elle est renforcée par la bandelette sub-pubienne qui s’insère sur la capsule articulaire de la hanche.. La vessie repose sur les deux membranes obturatrices.",
             "Relation vessie-hanche: la membrane obturatrice, dépressive comme un tympan, constitue un mécanisme de délestage et de transfert des pressions des organes intra-pelviens lors de la marche: l’alternance des tractions et relâchements des tensions ligamentaires et de la bandelette sub-pubienne lors des mouvements de la hanche permet d’évacuer une partie des forces compressives s’exerçant sur les organes intra-pelviens, soit vers les membres inférieurs, soit vers la symphyse pubienne et les sacro-iliaques. Il se produit, en même temps, une sorte « d’aspiration » endo-pelvienne des vaisseaux sanguins traversant la membrane obturatrice. Ce pompage favorise les échanges circulatoires intra-pelviens."
           ]
@@ -121,8 +121,8 @@ export const chapter17Fr: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Canal obturateur: situé dans la partie sub-pubienne du foramen obturé, il est traversé par le nerf obturateur (figure 17.11) qui innerve les muscles obturateur externe et adducteurs de la hanche. Son irritation crée une douleur à la face médiale du genou (Cf. Réflexothérapie occipito-podale et système neuro-méningé, pages 31 à 33).",
-            "Ligaments sacroépineux et sacrotubéral: ils délimitent les foramens entre la cavité pelvienne et les régions glutéale et périnéale. (figure 17.11)",
+            "Canal obturateur: situé dans la partie sub-pubienne du foramen obturé, il est traversé par le nerf obturateur qui innerve les muscles obturateur externe et adducteurs de la hanche. Son irritation crée une douleur à la face médiale du genou (Cf. Réflexothérapie occipito-podale et système neuro-méningé, pages 31 à 33).",
+            "Ligaments sacroépineux et sacrotubéral: ils délimitent les foramens entre la cavité pelvienne et les régions glutéale et périnéale.",
             "Ligament sacrotubéral: tendu de l’ischion au sacrum et au coccyx;",
             "Ligament sacroépineux: tendu de l’épine sciatique au sacrum et au coccyx.",
             "Ils stabilisent latéralement le coccyx. Ils jouent également un rôle important sur la stabilité et la mobilité du sacrum entre les iliaques, puisqu’ils sont les freins de la nutation sacrée en association avec les ligaments sacro-iliaque antérieurs (la contre-nutation est limitée par la tension des ligaments ilio-sacrés postérieurs)."
@@ -157,15 +157,15 @@ export const chapter17Fr: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "c’est un ensemble de muscles et de fascias fermant le détroit inférieur du pelvis. Ils convergent vers le noyau fibreux central du périnée. Le périnée est délimité par: (figure 17.2)",
+            "c’est un ensemble de muscles et de fascias fermant le détroit inférieur du pelvis. Ils convergent vers le noyau fibreux central du périnée. Le périnée est délimité par:",
             "Le bord inférieur de la symphyse pubienne;",
             "L’apex du coccyx;",
             "Les branches ischiopubiennes, ventralement;",
             "Les ligaments sacrotubéraux, dorsalement.",
-            "Il est divisé par une ligne virtuelle entre les deux tubérosités ischiatiques, en deux triangles (figure 17.12):",
-            "Triangle antérieur uro-génital: horizontal, il est traversé par le hiatus uro-génital (figure 17.9). A sa face externe sont fixés les muscles bulbo-caverneux et bulbo-spongieux et les organes érectiles du pénis et du clitoris. (Cf. Chapitre 21 Système érectile masculin et féminin, page…)",
+            "Il est divisé par une ligne virtuelle entre les deux tubérosités ischiatiques, en deux triangles:",
+            "Triangle antérieur uro-génital: horizontal, il est traversé par le hiatus uro-génital. A sa face externe sont fixés les muscles bulbo-caverneux et bulbo-spongieux et les organes érectiles du pénis et du clitoris. (Cf. Chapitre 21 Système érectile masculin et féminin, page…)",
             "Triangle postérieur anal: orienté dorsalement et caudalement, il est traversé par le canal anal et le sphincter anal externe. Latéralement au canal anal, la fosse ischioanale est parcourue par le nerf pudendal.",
-            "Muscles du périnée: ce sont des muscles striés (figure 17.9) commandés par le nerf pudendal (S2-S4). On distingue:",
+            "Muscles du périnée: ce sont des muscles striés commandés par le nerf pudendal (S2-S4). On distingue:",
             "Muscles profonds du périnée: élévateur de l’anus, transverse profond et coccygien. Ils forment le diaphragme pelvien ayant une fonction de soutènement grâce à leurs fibres parallèles.",
             "Muscles superficiels du périnée: sphincter externe et transverse superficiel. Ils ont une fonction de sphincters des orifices uro-génital et anal grâce à leurs fibres circulaires.",
             "Fonction du périnée: le périnée est confronté à une double fonction:",
@@ -192,7 +192,7 @@ export const chapter17Fr: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Artères iliaques internes: elles naissent de l’artère iliaque commune (figure 17.3) à hauteur du disque L5-S1, longent le bord antéro-médial de l’articulation sacro-iliaque et se divisent en deux branches:",
+            "Artères iliaques internes: elles naissent de l’artère iliaque commune à hauteur du disque L5-S1, longent le bord antéro-médial de l’articulation sacro-iliaque et se divisent en deux branches:",
             "Branche postérieure: elle irrigue la paroi postéro-inférieure de l’abdomen, la paroi postérieure du pelvis et la région glutéale.",
             "Branche antérieure: elle irrigue les viscères pelviens, le périnée, la région des adducteurs, et chez le fœtus, le placenta.",
             "Les artères gonadiques et l’artère sacrale médiale qui naissent de l’aorte abdominale complètent la vascularisation du pelvis."
@@ -234,15 +234,13 @@ export const chapter17Fr: Chapter = {
         },
         {
           "type": "bullets",
-          "items": [
-            "(figure 17.10)",
-            "Plexus sacré L5 à S3: formé par les rameaux antérieurs de L4 à S3, il donne des branches collatérales aux muscles piriforme et pelvi-trochantériens, à l’exception de l’obturateur externe (nerf obturateur) et les nerfs fessiers.",
+          "items": [            "Plexus sacré L5 à S3: formé par les rameaux antérieurs de L4 à S3, il donne des branches collatérales aux muscles piriforme et pelvi-trochantériens, à l’exception de l’obturateur externe (nerf obturateur) et les nerfs fessiers.",
             "Sa branche terminale: est le nerf grand sciatique. Il répond, en arrière, au muscle piriforme.",
-            "Gouttière ischio-trochantérienne: les nerfs grand et petit sciatique quittent le grand foramen ischiatique et traversent la région glutéale dans la gouttière ischio-trochantérienne (figure 17.13) en passant entre les muscles superficiels (muscles glutéaux) et les muscles profonds (muscles obturateur interne, jumeaux et carré fémoral).",
+            "Gouttière ischio-trochantérienne: les nerfs grand et petit sciatique quittent le grand foramen ischiatique et traversent la région glutéale dans la gouttière ischio-trochantérienne en passant entre les muscles superficiels (muscles glutéaux) et les muscles profonds (muscles obturateur interne, jumeaux et carré fémoral).",
             "Plexus pudendal S2 à S4: il est anastomosé au plexus sacré céphaliquement et au plexus coccygien caudalement:",
             "Ses branches collatérales viscérales (ou nerf érecteur d’Eckardt) parasympathiques sont destinées aux organes pelviens;",
             "Ses branches collatérales musculaires somatiques innervent les muscles profonds du périnée: relèveur de l’anus, transverse profond et coccygien;",
-            "Nerf pudendal (figure 17.10): il quitte le grand foramen ischiatique sous le muscle piriforme, pénètre sous le plancher périnéal par le petit foramen ischiatique en contournant l’épine ischiatique et passe entre les ligaments sacroépineux et sacrotubéral. Il longe la branche ischiopubienne dans le canal d’Alcock (dédoublement de l’aponévrose du muscle obturateur interne). Il donne deux branches:",
+            "Nerf pudendal: il quitte le grand foramen ischiatique sous le muscle piriforme, pénètre sous le plancher périnéal par le petit foramen ischiatique en contournant l’épine ischiatique et passe entre les ligaments sacroépineux et sacrotubéral. Il longe la branche ischiopubienne dans le canal d’Alcock (dédoublement de l’aponévrose du muscle obturateur interne). Il donne deux branches:",
             "Branche motrice: elle innerve les muscles profonds et superficiels du périnée.",
             "Branche sensitive: elle innerve la peau du triangle anal, le noyau fibreux central du périnée, le scrotum chez l’homme, et la région labiale chez la femme. Sa branche terminale, le nerf dorsal du pénis ou du clitoris passe juste au-dessous de la symphyse pubienne et innerve le pénis et son gland ou le clitoris."
           ]
@@ -276,9 +274,7 @@ export const chapter17Fr: Chapter = {
         },
         {
           "type": "bullets",
-          "items": [
-            "(figure 17.14)",
-            "Sympathique: les cellules d’origine médullaire naissent de la corne latérale de la moelle de Th12 à L1, à hauteur des vertèbres Th11 à Th12 et se continuent en deux voies:",
+          "items": [            "Sympathique: les cellules d’origine médullaire naissent de la corne latérale de la moelle de Th12 à L1, à hauteur des vertèbres Th11 à Th12 et se continuent en deux voies:",
             "Chaines ganglionnaires latéro-vertébrales lombaires et sacrées;",
             "Chaîne plexique prévertébrale: l’ovaire et le testicule sont innervés par le plexus aortorénal issu des 10ème, 11ème et 12ème ganglions thoraciques et du 1er ganglion lombaire;",
             "Les autres organes pelviens sont innervés par le plexus mésentérique inférieur issu du 12ème ganglion thoracique. Ces fibres sympathiques rejoignent ensuite le plexus hypogastrique supérieur.",
@@ -354,7 +350,7 @@ export const chapter17Fr: Chapter = {
             "+5 à +10 cm d’eau à l’étage sous-mésocolique.",
             "Dans les conditions physiologiques, les organes de la cavité pelvienne sont relativement bien protégés des pressions de la colonne viscérale venant des cavités thoracique et abdominale grâce au délestage-absorption des pressions intra-cavitaires par:",
             "Aspiration thoracique et aimantation thoraco-diaphragmatique: les organes sous-diaphragmatiques subissent l’aspiration thoracique et ce d’autant plus qu’ils sont proches du diaphragme. Inversement. « Plus l’on s’éloigne du diaphragme vers le bas, moins les organes profitent de l’aspiration thoracique et de l’aimantation diaphragmatique. Ils exercent donc une force gravitaire sur les organes pelviens, d’autant plus grande qu’ils sont loin du diaphragme » (Manipulations uro-génitales, Jean-Pierre Barral, Elsevier).",
-            "Orientation de la cavité pelvienne: grâce à l’orientation caudale et ventrale de la cavité pelvienne, les forces gravitaires se répartissent sur le pourtour osseux du détroit inférieur (figure 17.8)",
+            "Orientation de la cavité pelvienne: grâce à l’orientation caudale et ventrale de la cavité pelvienne, les forces gravitaires se répartissent sur le pourtour osseux du détroit inférieur",
             "Forme de dôme des viscères pelviens: le corps de l’utérus situé au centre de la cavité pelvienne, renforce encore cette répartition des forces gravitaires sur le pourtour du détroit inférieur, soulageant encore d’autant la pression sur les organes pelviens.",
             "Contractilité et l’élasticité des muscles du périnée: les muscles du périnée renvoient vers le haut et horizontalement vers le pourtour du détroit inférieur les forces gravitaires résiduelles.",
             "équilibre des trois diaphragmes: le périnée, ou diaphragme pelvien, s’adapte en permanence aux variations de pressions liées aux mouvements du diaphragme thoracique, qui, lui-même, équilibre les modifications de tensions du diaphragme crânien (faux du cerveau et tente du cervelet) dues à l’alternance des flexions et extensions du mouvement respiratoire primaire crânio-sacré.",
@@ -508,13 +504,11 @@ export const chapter17Fr: Chapter = {
         },
         {
           "type": "bullets",
-          "items": [
-            "(figures 17.15, 17.16 et 17.17)",
-            "Grand foramen ischiatique et muscle piriforme;",
+          "items": [            "Grand foramen ischiatique et muscle piriforme;",
             "Fosse ischio-trochantérienne et nerf sciatique;",
             "Petit foramen ischiatique et muscles obturateurs et jumeaux;",
-            "Fosse obturée et muscles obturateurs; (figures 17.18 et 17.19)",
-            "Plexus pudendal; (figures 17.15, 17.18 et 17.20)"
+            "Fosse obturée et muscles obturateurs;",
+            "Plexus pudendal;"
           ]
         },
         {
@@ -525,7 +519,7 @@ export const chapter17Fr: Chapter = {
           "type": "bullets",
           "items": [
             "coccyx; (figure 4.23)",
-            "Ligaments sacrotubéral et sacroépineux; (figures 17.21 et 17.22)"
+            "Ligaments sacrotubéral et sacroépineux;"
           ]
         },
         {

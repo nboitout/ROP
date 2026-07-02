@@ -29,7 +29,7 @@ export const chapter16It: Chapter = {
       "blocks": [
         {
           "type": "para",
-          "text": "I reni si trovano lateralmente alla colonna toraco-lombare, tra il peritoneo e la parete addominale posteriore. Sono retroperitoneali (figura 16.1) e situati prevalentemente al di sopra del mesocolon trasverso. Sono orientati obliquamente, con il polo inferiore più laterale rispetto al polo superiore."
+          "text": "I reni si trovano lateralmente alla colonna toraco-lombare, tra il peritoneo e la parete addominale posteriore. Sono retroperitoneali e situati prevalentemente al di sopra del mesocolon trasverso. Sono orientati obliquamente, con il polo inferiore più laterale rispetto al polo superiore."
         },
         {
           "type": "bullets",
@@ -43,9 +43,7 @@ export const chapter16It: Chapter = {
         },
         {
           "type": "bullets",
-          "items": [
-            "(figura 16.2)",
-            "Rene destro: il rene destro è situato leggermente più in basso del sinistro a causa della presenza del fegato. Si estende dall’11a e 12a costa fino a L4;",
+          "items": [            "Rene destro: il rene destro è situato leggermente più in basso del sinistro a causa della presenza del fegato. Si estende dall’11a e 12a costa fino a L4;",
             "Rene sinistro: si estende dall’11a costa fino a L3."
           ]
         },
@@ -77,7 +75,7 @@ export const chapter16It: Chapter = {
         },
         {
           "type": "para",
-          "text": "La loggia fasciale renale ha forma di imbuto ed è aperta inferiormente. È situata tra il peritoneo parietale posteriore anteriormente e la fascia che la separa dai muscoli quadrato dei lombi e psoas posteriormente. È formata da due foglietti: (figura 16.3)"
+          "text": "La loggia fasciale renale ha forma di imbuto ed è aperta inferiormente. È situata tra il peritoneo parietale posteriore anteriormente e la fascia che la separa dai muscoli quadrato dei lombi e psoas posteriormente. È formata da due foglietti:"
         },
         {
           "type": "bullets",
@@ -95,7 +93,7 @@ export const chapter16It: Chapter = {
         },
         {
           "type": "sub",
-          "text": "Contenuto: grasso renale: (figura 16.3)"
+          "text": "Contenuto: grasso renale:"
         },
         {
           "type": "para",
@@ -134,7 +132,7 @@ export const chapter16It: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "in una sezione sagittale mediale del rene si distinguono due regioni parenchimali: (figura 16.4)",
+            "in una sezione sagittale mediale del rene si distinguono due regioni parenchimali:",
             "la corticale: alla periferia;",
             "la midollare: al centro."
           ]
@@ -151,7 +149,7 @@ export const chapter16It: Chapter = {
         },
         {
           "type": "para",
-          "text": "Il nefrone è l’unità funzionale del rene. (figura 16.5) Il suo ruolo è mantenere costanti il volume e la composizione dell’ambiente interno, preservando così l’omeostasi. Comprende due parti:"
+          "text": "Il nefrone è l’unità funzionale del rene. Il suo ruolo è mantenere costanti il volume e la composizione dell’ambiente interno, preservando così l’omeostasi. Comprende due parti:"
         },
         {
           "type": "bullets",
@@ -173,16 +171,16 @@ export const chapter16It: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "cranialmente, entrambi i reni sono in rapporto con il diaframma e con gli iati pleuro-costo-diaframmatici; caudalmente, con i muscoli psoas e quadrato dei lombi; e più lateralmente, con il muscolo trasverso dell’addome. (figura 16.3)"
+            "cranialmente, entrambi i reni sono in rapporto con il diaframma e con gli iati pleuro-costo-diaframmatici; caudalmente, con i muscoli psoas e quadrato dei lombi; e più lateralmente, con il muscolo trasverso dell’addome."
           ]
         },
         {
           "type": "para",
-          "text": "Il 12° nervo intercostale, o nervo sottocostale, e i nervi del plesso lombare decorrono nel grasso pararenale: i nervi ileoipogastrico, ileoinguinale e cutaneo femorale laterale. (figura 16.6)"
+          "text": "Il 12° nervo intercostale, o nervo sottocostale, e i nervi del plesso lombare decorrono nel grasso pararenale: i nervi ileoipogastrico, ileoinguinale e cutaneo femorale laterale."
         },
         {
           "type": "para",
-          "text": "Triangolo di Jean-Louis Petit e quadrilatero di Grynfelt: queste due regioni della fossa lombare costituiscono punti deboli della parete addominale posteriore. (figura 16.7) Consentono un accesso relativamente diretto al rene, con scarsa interposizione di tessuti molli e senza fasci dei muscoli obliquo interno o obliquo esterno. In questa regione si incontra direttamente il muscolo trasverso dell’addome e si raggiungono indirettamente il nervo sottocostale e il plesso lombare."
+          "text": "Triangolo di Jean-Louis Petit e quadrilatero di Grynfelt: queste due regioni della fossa lombare costituiscono punti deboli della parete addominale posteriore. Consentono un accesso relativamente diretto al rene, con scarsa interposizione di tessuti molli e senza fasci dei muscoli obliquo interno o obliquo esterno. In questa regione si incontra direttamente il muscolo trasverso dell’addome e si raggiungono indirettamente il nervo sottocostale e il plesso lombare."
         },
         {
           "type": "rop",
@@ -199,7 +197,7 @@ export const chapter16It: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Rene destro: è in rapporto con: (figura 16.8)",
+            "Rene destro: è in rapporto con:",
             "Cranialmente: il fegato tramite il legamento epatorenale;"
           ]
         },
@@ -244,7 +242,7 @@ export const chapter16It: Chapter = {
         },
         {
           "type": "para",
-          "text": "Ogni rene è generalmente irrorato da una sola arteria renale (figura 16.9), che origina dall’aorta appena al di sotto dell’arteria mesenterica superiore. Si divide in cinque arterie segmentarie terminali che vascolarizzano il parenchima renale. Queste arterie non si anastomizzano tra loro: ciascun territorio vascolare è indipendente, consentendo una resezione chirurgica parziale."
+          "text": "Ogni rene è generalmente irrorato da una sola arteria renale, che origina dall’aorta appena al di sotto dell’arteria mesenterica superiore. Si divide in cinque arterie segmentarie terminali che vascolarizzano il parenchima renale. Queste arterie non si anastomizzano tra loro: ciascun territorio vascolare è indipendente, consentendo una resezione chirurgica parziale."
         },
         {
           "type": "sub",
@@ -252,7 +250,7 @@ export const chapter16It: Chapter = {
         },
         {
           "type": "para",
-          "text": "La vena renale decorre anteriormente all’arteria renale, con importanti differenze tra lato destro e lato sinistro. (figura 16.10)"
+          "text": "La vena renale decorre anteriormente all’arteria renale, con importanti differenze tra lato destro e lato sinistro."
         },
         {
           "type": "bullets",
@@ -445,7 +443,7 @@ export const chapter16It: Chapter = {
             "fissazioni dell’11a e 12a costa, da T10 a L1;",
             "disfunzione dello psoas, o psoite.",
             "Fissazioni anteriori: il rene destro è più predisposto alle fissazioni anteriori e alla ptosi. Che il rene sia ptosico o fissato, ha perso la sua normale mobilità.",
-            "Le donne sono più spesso interessate dalla ptosi a causa della gravidanza, del parto, della retroversione uterina e della menopausa. Si distinguono tre gradi di ptosi: (figura 16.11)",
+            "Le donne sono più spesso interessate dalla ptosi a causa della gravidanza, del parto, della retroversione uterina e della menopausa. Si distinguono tre gradi di ptosi:",
             "Primo grado: rene “intercostale”, in cui l’irritazione del 12° nervo intercostale si irradia verso il grande trocantere.",
             "Sintomi: il paziente si tiene il fianco, trova difficile respirare profondamente e tollera male tosse e starnuti.",
             "Secondo grado: rene “addomino-genitale” o “cutaneo femorale”.",
@@ -574,8 +572,8 @@ export const chapter16It: Chapter = {
           "items": [
             "Nervo vago X; (figure 4.11 e 4.17)",
             "Colonna vertebrale, articolazioni costo-trasversarie (catena gangliare laterovertebrale toracica, T7-T11-L1, coccige); (figure 4.23 e 4.29 e 4.32)",
-            "Plesso prevertebrale; (figure 16.12 e 16.13)",
-            "Ghiandole surrenali: (figure 16.12, 16.13 e figura 16.13 ter)",
+            "Plesso prevertebrale;",
+            "Ghiandole surrenali:",
             "Plesso lombare da L1 a L4 e sue branche. (Vedi Réflexothérapie occipito-podale et système neuro-méningé, Elsevier Masson, pagine 25-28)"
           ]
         },
@@ -593,11 +591,9 @@ export const chapter16It: Chapter = {
         },
         {
           "type": "bullets",
-          "items": [
-            "(figure 16.12, 16.13 e 16.14)",
-            "Polo inferiore: in corrispondenza di L3 o L4, in asse con il primo e il secondo dito, al di sopra del margine anteriore del tallone;",
+          "items": [            "Polo inferiore: in corrispondenza di L3 o L4, in asse con il primo e il secondo dito, al di sopra del margine anteriore del tallone;",
             "Polo superiore: in corrispondenza di T12;",
-            "Ghiandola surrenale: al vertice del polo superiore del rene; (figura 16.15)",
+            "Ghiandola surrenale: al vertice del polo superiore del rene;",
             "Margine laterale: è convesso;",
             "Margine mediale: concavo. L’ilo è situato in corrispondenza di L1."
           ]
@@ -609,7 +605,7 @@ export const chapter16It: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "il triangolo di Jean-Louis Petit e il quadrilatero di Grynfelt corrispondono all’osso cuboide. (figura 16.17)"
+            "il triangolo di Jean-Louis Petit e il quadrilatero di Grynfelt corrispondono all’osso cuboide."
           ]
         },
         {
@@ -619,7 +615,7 @@ export const chapter16It: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "associare le superfici plantare e dorsale del rene: (figura 16.18)",
+            "associare le superfici plantare e dorsale del rene:",
             "Orientare i due pollici l’uno verso l’altro, uno sulla superficie dorsale e l’altro sulla superficie plantare;",
             "Stimolare la zona riflessa, quindi utilizzare il ritmo respiratorio per seguire il movimento in direzione caudale durante l’inspirazione e in direzione craniale durante l’espirazione. È un mezzo utile per testare la mobilità del rene.",
             "Con la stessa manovra, ma senza il ritmo respiratorio, seguire la motilità del rene.",

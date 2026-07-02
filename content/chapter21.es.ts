@@ -23,7 +23,7 @@ export const chapter21Es: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Los órganos genitales externos del hombre y de la mujer se fijan a la cara inferior del triángulo urogenital del periné, con el que están estrechamente relacionados. (figura 21.1)"
+            "Los órganos genitales externos del hombre y de la mujer se fijan a la cara inferior del triángulo urogenital del periné, con el que están estrechamente relacionados."
           ]
         }
       ]
@@ -35,15 +35,15 @@ export const chapter21Es: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Órganos eréctiles: (figura 21.1)",
+            "Órganos eréctiles:",
             "Cuerpos cavernosos: órganos eréctiles pares que se insertan proximalmente en el arco púbico. Se denominan pilares del clítoris o del pene. En sus extremos distales se unen para formar el cuerpo del clítoris en la mujer y las porciones dorsales del pene en el hombre.",
             "Bulbos del vestíbulo: en la mujer, son dos órganos eréctiles situados a ambos lados del orificio vaginal. Participan en la congestión eréctil de la vulva y son homólogos al cuerpo esponjoso masculino, sin formar directamente el glande del clítoris.",
             "Cuerpo esponjoso: en el hombre, es una estructura impar y mediana que comienza como un engrosamiento, el bulbo del pene, fijado a la membrana perineal. Termina en el glande. Contiene la uretra. Contribuye al vaciamiento uretral durante la micción y durante la eyaculación del semen.",
-            "Músculos de los órganos eréctiles: (figura 21.2)",
+            "Músculos de los órganos eréctiles:",
             "Músculos isquiocavernosos: músculos pares que se insertan en el borde medial de las ramas isquiopubianas y en los pilares del clítoris y del pene. Al contraerse, impulsan la sangre desde los pilares hacia el cuerpo del pene y del clítoris.",
             "Músculos bulboesponjosos: músculos pares que se insertan en el periné, en el bulbo del vestíbulo en la mujer y en el cuerpo esponjoso en el hombre. Al contraerse, desplazan la sangre hacia el pene y el clítoris. En el hombre, sus contracciones reflejas facilitan el vaciamiento de la uretra tras la micción y la eyaculación.",
             "Ligamentos del pene: el pene está fijado por dos ligamentos:",
-            "Ligamento suspensorio: se fija superiormente a la sínfisis púbica y a la línea alba de la pared abdominal anterior; (figura 21.2)",
+            "Ligamento suspensorio: se fija superiormente a la sínfisis púbica y a la línea alba de la pared abdominal anterior;",
             "Ligamento fundiforme: se fija a la línea alba.",
             "Glándulas vestibulares mayores de Bartolino: en la mujer, se sitúan en el periné, por detrás de los bulbos vestibulares. Participan en la lubricación del introito vaginal. La lubricación vaginal también depende de la trasudación vascular a través de la pared vaginal durante la excitación sexual.",
             "Glándulas bulbouretrales de Cowper: en el hombre, se sitúan en el bulbo del periné. Secretan un líquido alcalino que protege a los espermatozoides durante su paso por la uretra y la vagina en el curso de la excitación sexual."
@@ -71,8 +71,8 @@ export const chapter21Es: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Inervación somática: el nervio pudendo es el principal nervio del periné. Asegura la sensibilidad de los órganos genitales externos y el control motor somático de la musculatura perineal estriada, en particular de los músculos bulboesponjosos e isquiocavernosos. (figuras 21.3 y 21.4)",
-            "Inervación autónoma: (figuras 4.26 y 21.5)",
+            "Inervación somática: el nervio pudendo es el principal nervio del periné. Asegura la sensibilidad de los órganos genitales externos y el control motor somático de la musculatura perineal estriada, en particular de los músculos bulboesponjosos e isquiocavernosos.",
+            "Inervación autónoma: (figura 4.26)",
             "Sistema parasimpático sacro de S2 a S4: participa en la vasodilatación y en el llenado de los tejidos eréctiles;",
             "Sistema simpático toracolumbar de L1 a L3: interviene especialmente en la fase de emisión de la eyaculación."
           ]
@@ -159,8 +159,8 @@ export const chapter21Es: Chapter = {
           "type": "bullets",
           "items": [
             "Nervio pudendo (S2 a S4): cara lateral del talón, plexo sacro, espina isquiática; (figuras 17.15 y 17.16),",
-            "Cara plantar del talón: (figura 21.6)",
-            "Nervio pudendo (continuación): borde medial de la rama isquiopubiana (figura 21.7)",
+            "Cara plantar del talón:",
+            "Nervio pudendo (continuación): borde medial de la rama isquiopubiana",
             "Cuerpos cavernosos y músculos isquiocavernosos: borde medial de las ramas isquiopubianas;",
             "Órganos eréctiles: extremo medial de la rama iliopubiana (borde anterior del talón);",
             "Ligamentos sacrotuberoso y sacroespinoso: borde posterior de los talones; (figura 17.21)",
