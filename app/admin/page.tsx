@@ -4,6 +4,7 @@ import AdminStackedCountryChart, { StackedTimePoint } from '@/components/admin/A
 import AdminPieChart, { PieDataPoint } from '@/components/admin/AdminPieChart'
 import DaySelect from '@/components/admin/DaySelect'
 import { fmtParis, parisDate, parisHour, fmtDuration } from '@/lib/adminFormat'
+import { perVisitSeconds, type LeaveLike } from '@/lib/dwell'
 
 export const dynamic = 'force-dynamic'
 
@@ -15,6 +16,12 @@ function formatPct(n: number) {
 
 function formatDuration(secs: number) {
   return fmtDuration(secs)
+}
+
+function avgDuration(rows: LeaveLike[]): number {
+  const visits = perVisitSeconds(rows)
+  if (visits.length === 0) return 0
+  return visits.reduce((a, b) => a + b, 0) / visits.length
 }
 
 // Turn an ISO 3166 country code (FR, MT, …) into a full name (France, Malta).
@@ -76,17 +83,14 @@ export default async function AdminOverviewPage({
   const returningVisitors = [...visitorDates.values()].filter((dates) => dates.size > 1).length
   const returnRate = totalVisitors > 0 ? (returningVisitors / totalVisitors) * 100 : 0
 
-  // --- Avg chapter dwell time ---
-  const chapterLeaves = filteredVisits.filter(
-    (v) =>
-      v.event === 'page_leave' &&
-      (v.page.includes('/chapitre') || v.page.includes('/introduction'))
+  // --- Avg homepage dwell time ---
+  const avgHome = avgDuration(
+    filteredVisits.filter((v) => {
+      if (v.event !== 'page_leave') return false
+      const p = v.page.replace(/^https?:\/\/[^/]+/, '')
+      return p === '/' || p === ''
+    })
   )
-  const dwellTotal = chapterLeaves.reduce((sum, v) => {
-    const n = parseFloat(v.duration_seconds)
-    return isNaN(n) ? sum : sum + n
-  }, 0)
-  const avgDwell = chapterLeaves.length > 0 ? dwellTotal / chapterLeaves.length : 0
 
   // --- Stacked bar: unique visitors per day, stacked by country (top 10 + Other) ---
   // Count distinct reader_ids per bucket (not raw page_visit events), so reloads
@@ -235,9 +239,9 @@ export default async function AdminOverviewPage({
         <Scorecard label="Conversion Rate" value={formatPct(convRate)} subtitle="readers / visitors" />
         <Scorecard label="Return Visitor Rate" value={formatPct(returnRate)} subtitle="of distinct visitors" />
         <Scorecard
-          label="Avg Chapter Dwell"
-          value={formatDuration(avgDwell)}
-          subtitle="chapter + intro"
+          label="Avg Time — Homepage"
+          value={formatDuration(avgHome)}
+          subtitle="page_leave events"
         />
       </div>
 
