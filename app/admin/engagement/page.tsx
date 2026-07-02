@@ -62,9 +62,9 @@ const CTA_BUCKET: Record<string, string> = {
   hero_summary: 'See chapters list',
   chapters_buy: 'Order the full book',
   pricing_notify: 'Notify me on release',
-  // Outbound links in the "about Guy" section → the R.O.P. Institute site.
-  author_institut: 'Institut R.O.P. — site',
-  author_formations: 'Institut R.O.P. — training',
+  // Outbound links in the "about Guy" section -> the R.O.P. Institute site.
+  author_institut: 'Institut R.O.P. - site',
+  author_formations: 'Institut R.O.P. - training',
 }
 
 export default async function EngagementPage() {
@@ -78,9 +78,9 @@ export default async function EngagementPage() {
     return p.includes('/chapitre-2') || p.includes('/lecture/traitement-rop')
   }))
   const avgIntro = avgDuration(pageLeaves.filter((v) => v.page.includes('/introduction')))
-  const avgHome = avgDuration(pageLeaves.filter((v) => {
+  const avgChapter14 = avgDuration(pageLeaves.filter((v) => {
     const p = v.page.replace(/^https?:\/\/[^/]+/, '')
-    return p === '/' || p === ''
+    return p.includes('/chapitre-14') || p.includes('/lecture/chapitre-14')
   }))
 
   // Return visitor rate: % of distinct visitors seen on more than one distinct date
@@ -123,11 +123,11 @@ export default async function EngagementPage() {
     }))
     .sort((a, b) => pageOrder(a.name) - pageOrder(b.name))
 
-  // Bar: CTA clicks — group by cta field in data JSON. Seed the two outbound
+  // Bar: CTA clicks - group by cta field in data JSON. Seed the two outbound
   // "about Guy" links at zero so they're always visible, even before any click.
   const ctaCount = new Map<string, number>([
-    ['Institut R.O.P. — site', 0],
-    ['Institut R.O.P. — training', 0],
+    ['Institut R.O.P. - site', 0],
+    ['Institut R.O.P. - training', 0],
   ])
   events
     .filter((e) => e.event === 'cta_click')
@@ -139,7 +139,7 @@ export default async function EngagementPage() {
       } catch {
         // data is plain string
       }
-      // Legacy split notify names → one notify CTA, then into its action bucket.
+      // Legacy split notify names -> one notify CTA, then into its action bucket.
       if (ctaName === 'pricing_notify_digital' || ctaName === 'pricing_notify_print') ctaName = 'pricing_notify'
       const bucket = CTA_BUCKET[ctaName] ?? ctaName
       ctaCount.set(bucket, (ctaCount.get(bucket) ?? 0) + 1)
@@ -165,16 +165,20 @@ export default async function EngagementPage() {
   events.filter((e) => e.event === 'cta_click').forEach((e) => {
     if (!e.readerId) return
     let cta = e.data
-    try { cta = (JSON.parse(e.data) as Record<string, string>).cta ?? e.data } catch { /* plain string */ }
+    try {
+      cta = (JSON.parse(e.data) as Record<string, string>).cta ?? e.data
+    } catch {
+      /* plain string */
+    }
     anyClick.add(e.readerId)
     if (READ_BUY.has(cta)) readBuyClick.add(e.readerId)
   })
   const qualifiedVisitors = new Set<string>([...dwell10, ...anyClick])
-  // readBuyClick ⊆ anyClick ⊆ qualifiedVisitors, so its size is the numerator.
+  // readBuyClick subset anyClick subset qualifiedVisitors, so its size is the numerator.
   const intentRate = qualifiedVisitors.size > 0 ? (readBuyClick.size / qualifiedVisitors.size) * 100 : 0
 
-  // Language switches: deliberate FR↔EN↔… toggles, grouped as "from → to".
-  // (A high count of e.g. fr → en means the audience is landing on the wrong
+  // Language switches: deliberate FR<->EN<->... toggles, grouped as "from -> to".
+  // (A high count of e.g. fr -> en means the audience is landing on the wrong
   // default language and correcting it by hand.)
   const switchCount = new Map<string, number>()
   let totalSwitches = 0
@@ -192,7 +196,7 @@ export default async function EngagementPage() {
       }
       if (!from || !to) return
       totalSwitches += 1
-      const key = `${from} → ${to}`
+      const key = `${from} -> ${to}`
       switchCount.set(key, (switchCount.get(key) ?? 0) + 1)
     })
   const switchData: BarDataPoint[] = [...switchCount.entries()]
@@ -214,18 +218,18 @@ export default async function EngagementPage() {
   // Return frequency distribution: buckets 0, 1, 2, 3, 4+
   const returnBuckets: BarDataPoint[] = [
     { name: '0 returns', value: 0 },
-    { name: '1 return',  value: 0 },
+    { name: '1 return', value: 0 },
     { name: '2 returns', value: 0 },
     { name: '3 returns', value: 0 },
-    { name: '4+',        value: 0 },
+    { name: '4+', value: 0 },
   ]
   visitorDates.forEach((dates) => {
     const returns = dates.size - 1
-    if      (returns === 0) returnBuckets[0].value++
+    if (returns === 0) returnBuckets[0].value++
     else if (returns === 1) returnBuckets[1].value++
     else if (returns === 2) returnBuckets[2].value++
     else if (returns === 3) returnBuckets[3].value++
-    else                    returnBuckets[4].value++
+    else returnBuckets[4].value++
   })
 
   return (
@@ -240,18 +244,18 @@ export default async function EngagementPage() {
 
       <div className="adm-scorecards">
         <Scorecard
-          label="Avg Time — Chapter 2"
+          label="Avg Time - Chapter 2"
           value={formatDuration(avgChapter2)}
           subtitle="page_leave events"
         />
         <Scorecard
-          label="Avg Time — Introduction"
+          label="Avg Time - Introduction"
           value={formatDuration(avgIntro)}
           subtitle="page_leave events"
         />
         <Scorecard
-          label="Avg Time — Homepage"
-          value={formatDuration(avgHome)}
+          label="Avg Time - Chapter 14"
+          value={formatDuration(avgChapter14)}
           subtitle="page_leave events"
         />
         <Scorecard
@@ -262,21 +266,21 @@ export default async function EngagementPage() {
         <Scorecard
           label="Homepage Intent Rate"
           value={`${intentRate.toFixed(1)}%`}
-          subtitle=">10s or clicked → read/buy"
+          subtitle=">10s or clicked -> read/buy"
         />
         <Scorecard
           label="Language Switches"
           value={totalSwitches.toLocaleString()}
-          subtitle="deliberate from → to toggles"
+          subtitle="deliberate from -> to toggles"
         />
       </div>
 
       <div className="adm-chart-card compact-plot" style={{ marginBottom: 24 }}>
-        <p className="adm-chart-title">Return frequency — visitors by number of return visits</p>
+        <p className="adm-chart-title">Return frequency - visitors by number of return visits</p>
         <p className="adm-page-sub" style={{ marginTop: -10, marginBottom: 18, maxWidth: 720, lineHeight: 1.6 }}>
-          Groups visitors by how many <strong>separate days</strong> they came back. “0 returns” = seen on
-          one day only; “2 returns” = seen on 3 different dates. Same-day reloads don’t count. Identity is the
-          browser’s anonymous <code>reader_id</code> cookie, so clearing cookies or switching device shows up
+          Groups visitors by how many <strong>separate days</strong> they came back. &quot;0 returns&quot; = seen on
+          one day only; &quot;2 returns&quot; = seen on 3 different dates. Same-day reloads don&apos;t count. Identity is the
+          browser&apos;s anonymous <code>reader_id</code> cookie, so clearing cookies or switching device shows up
           as a new visitor.
         </p>
         <div className="adm-chart-plot-wrap narrow">
@@ -289,7 +293,7 @@ export default async function EngagementPage() {
           <p className="adm-chart-title">Avg Dwell Time per Page (seconds)</p>
           <p className="adm-page-sub" style={{ marginTop: -10, marginBottom: 18, lineHeight: 1.6 }}>
             Average <strong>active</strong> seconds spent on each page before leaving (time with the tab
-            hidden isn’t counted). The homepage and the sign-up gate are reported separately. Chapter 2
+            hidden isn&apos;t counted). The homepage and the sign-up gate are reported separately. Chapter 2
             now combines classic and synchronized reading routes in the headline scorecard above.
           </p>
           <AdminBarChart data={dwellData} color="#4a6b5a" layout="vertical" showValues />
@@ -297,13 +301,13 @@ export default async function EngagementPage() {
         <div className="adm-chart-card">
           <p className="adm-chart-title">CTA Clicks by Type</p>
           <p className="adm-page-sub" style={{ marginTop: -10, marginBottom: 18, lineHeight: 1.6 }}>
-            Homepage button clicks grouped by the visitor’s action: <strong>Read the 3 chapters</strong>
+            Homepage button clicks grouped by the visitor&apos;s action: <strong>Read the 3 chapters</strong>
             (both the hero and pricing-plan buttons), <strong>Order the full book</strong>,
             <strong>Notify me on release</strong>, and <strong>See chapters list</strong>. Counts clicks,
-            not people. Pre-launch the editions aren’t purchasable yet, so the print/online plan buttons
-            fall under “Notify me on release” — a separate buy action will be added once the book is on sale.
-            The two outbound links in the “about Guy” section are also tracked here as
-            <strong>Institut R.O.P. — site</strong> and <strong>Institut R.O.P. — training</strong>.
+            not people. Pre-launch the editions aren&apos;t purchasable yet, so the print/online plan buttons
+            fall under &quot;Notify me on release&quot; - a separate buy action will be added once the book is on sale.
+            The two outbound links in the &quot;about Guy&quot; section are also tracked here as
+            <strong>Institut R.O.P. - site</strong> and <strong>Institut R.O.P. - training</strong>.
           </p>
           <AdminBarChart data={ctaData} color="#c9a35e" layout="vertical" showValues />
         </div>
@@ -314,19 +318,19 @@ export default async function EngagementPage() {
         <p className="adm-page-sub" style={{ marginTop: -10, marginBottom: 18, maxWidth: 640, lineHeight: 1.6 }}>
           This chart only counts visitors who arrive through a link <strong>tagged</strong> with UTM
           parameters (e.g. <code>?utm_source=facebook&amp;utm_medium=social</code>). An ordinary,
-          untagged link — even an organic Facebook or Instagram post — will <strong>not</strong> appear
-          here; it’s recorded as direct/referral instead. To measure a channel, add UTM tags to the link
+          untagged link - even an organic Facebook or Instagram post - will <strong>not</strong> appear
+          here; it&apos;s recorded as direct/referral instead. To measure a channel, add UTM tags to the link
           you share there. The chart stays empty until tagged campaigns are used.
         </p>
         <AdminBarChart data={utmData} color="#4a6b5a" showValues />
       </div>
 
       <div className="adm-chart-card" style={{ marginBottom: 32 }}>
-        <p className="adm-chart-title">Language Switches (from → to)</p>
+        <p className="adm-chart-title">Language Switches (from -&gt; to)</p>
         <p className="adm-page-sub" style={{ marginTop: -10, marginBottom: 18, maxWidth: 680, lineHeight: 1.6 }}>
           Counts <strong>deliberate</strong> language toggles via the FR/EN/DE/ES/IT selector, as
-          <code>from → to</code>. The site opens in French by default, so a lot of e.g. <code>fr → en</code>
-          would signal that part of the audience lands on the wrong language and corrects it — a cue to
+          <code>from -&gt; to</code>. The site opens in French by default, so a lot of e.g. <code>fr -&gt; en</code>
+          would signal that part of the audience lands on the wrong language and corrects it - a cue to
           auto-detect the browser locale. Counts switches, not people. Empty until visitors start toggling.
         </p>
         <AdminBarChart data={switchData} color="#c9a35e" layout="vertical" showValues />
