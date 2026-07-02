@@ -352,15 +352,48 @@
 }
 
 .adm-asset-scorecards {
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 12px;
 }
 
 .adm-scorecard-asset {
   border-top-color: var(--adm-gold);
+  min-width: 0;
+  padding: 18px 20px 17px;
+}
+
+.adm-scorecard-asset .adm-scorecard-label {
+  margin-bottom: 8px;
+}
+
+.adm-scorecard-asset .adm-scorecard-value {
+  font-size: 1.82rem;
+}
+
+.adm-scorecard-asset .adm-scorecard-sub {
+  font-size: .66rem;
+}
+
+.adm-rop-coverage-wrap {
+  background: #fff;
+  margin-top: -18px;
+  margin-bottom: 36px;
+}
+
+.adm-rop-coverage-table {
+  min-width: 840px;
+}
+
+.adm-rop-coverage-table td {
+  vertical-align: top;
+}
+
+@media (max-width: 1260px) {
+  .adm-asset-scorecards { grid-template-columns: repeat(3, 1fr); }
 }
 
 @media (max-width: 700px) {
-  .adm-asset-scorecards { grid-template-columns: 1fr; }
+  .adm-asset-scorecards { grid-template-columns: repeat(2, 1fr); }
 }
 
 /* ---- Charts grid ---- */

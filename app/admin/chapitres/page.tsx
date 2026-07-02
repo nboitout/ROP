@@ -198,12 +198,18 @@ export default async function AdminChapitresPage() {
   })
 
   const analyzedRows = qualityRows.filter((r): r is QualityRow & { metrics: ChapterQualityMetrics } => !!r.metrics)
+  const launchAssetRows = analyzedRows.filter((row) => !ROUTES[row.num]?.draft)
   const attentionRows = qualityRows.filter((r) => r.issues.some((issue) => issue.tone !== 'info'))
-  const chaptersWithSyncSlides = analyzedRows.filter((row) => row.metrics.slidesCount > 0).length
-  const chaptersWithReflexZonePictures = analyzedRows.filter(
-    (row) => row.metrics.podalZoneSectionCount > 0 && row.metrics.podalZonePhotoCount > 0,
-  ).length
-  const chaptersWithClinicalCases = analyzedRows.filter((row) => row.metrics.clinicalCaseCount > 0).length
+  const chaptersWithSyncSlides = launchAssetRows.filter((row) => row.metrics.slidesCount > 0).length
+  const chaptersWithReflexZoneText = launchAssetRows.filter((row) => row.metrics.podalZoneSectionCount > 0).length
+  const chaptersWithReflexZonePictures = launchAssetRows.filter((row) => row.metrics.podalZonePhotoCount > 0).length
+  const chaptersWithReflexZoneSlideSupport = launchAssetRows.filter((row) => row.metrics.podalZoneSlideCount > 0).length
+  const chaptersWithClinicalCases = launchAssetRows.filter((row) => row.metrics.clinicalCaseCount > 0).length
+  const reflexZoneCoverageRows = launchAssetRows.filter(
+    (row) => row.metrics.podalZoneSectionCount > 0
+      || row.metrics.podalZonePhotoCount > 0
+      || row.metrics.podalZoneSlideCount > 0,
+  )
   const avgReadMinutes = analyzedRows.length > 0
     ? Math.round(analyzedRows.reduce((sum, row) => sum + row.metrics.readingMinutes, 0) / analyzedRows.length)
     : 0
@@ -265,7 +271,7 @@ export default async function AdminChapitresPage() {
 
       <p className="adm-section-title">Chapter assets</p>
       <p className="adm-page-sub adm-asset-intro">
-        Separate from the text counts above: these cards track richer learning assets available in the chapter reading experience.
+        Separate from the text counts above: these cards track richer learning assets available in the launch reading experience.
       </p>
 
       <div className="adm-scorecards adm-asset-scorecards">
@@ -275,15 +281,77 @@ export default async function AdminChapitresPage() {
           <p className="adm-scorecard-sub">chapters with synced reading-mode slides</p>
         </div>
         <div className="adm-scorecard adm-scorecard-asset">
-          <p className="adm-scorecard-label">ROP reflex zones</p>
+          <p className="adm-scorecard-label">ROP zone text</p>
+          <p className="adm-scorecard-value">{chaptersWithReflexZoneText}<span style={{ fontSize: '1rem', color: 'var(--adm-i30)' }}> / {total}</span></p>
+          <p className="adm-scorecard-sub">chapters with a full reflex-zone text section</p>
+        </div>
+        <div className="adm-scorecard adm-scorecard-asset">
+          <p className="adm-scorecard-label">ROP zone pictures</p>
           <p className="adm-scorecard-value">{chaptersWithReflexZonePictures}<span style={{ fontSize: '1rem', color: 'var(--adm-i30)' }}> / {total}</span></p>
-          <p className="adm-scorecard-sub">chapters with a reflex-zone section and pictures</p>
+          <p className="adm-scorecard-sub">chapters with reflex-zone pictures</p>
+        </div>
+        <div className="adm-scorecard adm-scorecard-asset">
+          <p className="adm-scorecard-label">ROP zone slides</p>
+          <p className="adm-scorecard-value">{chaptersWithReflexZoneSlideSupport}<span style={{ fontSize: '1rem', color: 'var(--adm-i30)' }}> / {total}</span></p>
+          <p className="adm-scorecard-sub">chapters with synced reflex-zone slides</p>
         </div>
         <div className="adm-scorecard adm-scorecard-asset">
           <p className="adm-scorecard-label">Clinical cases</p>
           <p className="adm-scorecard-value">{chaptersWithClinicalCases}<span style={{ fontSize: '1rem', color: 'var(--adm-i30)' }}> / {total}</span></p>
           <p className="adm-scorecard-sub">chapters with a dedicated clinical case</p>
         </div>
+      </div>
+
+      <div className="adm-table-wrap adm-rop-coverage-wrap">
+        <table className="adm-table adm-rop-coverage-table">
+          <thead>
+            <tr>
+              <th style={{ width: 44 }}>#</th>
+              <th>Chapter</th>
+              <th>Zone text</th>
+              <th>Zone pictures</th>
+              <th>Zone slide support</th>
+            </tr>
+          </thead>
+          <tbody>
+            {reflexZoneCoverageRows.map((row) => (
+              <tr key={row.num}>
+                <td className="adm-board-num">{row.num}</td>
+                <td>
+                  {row.href ? (
+                    <a className="adm-quality-title-link" href={row.href} target="_blank" rel="noopener noreferrer">
+                      {row.title}
+                    </a>
+                  ) : (
+                    <span>{row.title}</span>
+                  )}
+                  <span className="adm-quality-cell-sub">{row.partTitle}</span>
+                </td>
+                <td>
+                  {row.metrics.podalZoneSectionCount > 0 ? (
+                    <span className="adm-quality-flag info">{row.metrics.podalZoneSectionCount} full section</span>
+                  ) : (
+                    <span className="muted">No full section</span>
+                  )}
+                </td>
+                <td>
+                  {row.metrics.podalZonePhotoCount > 0 ? (
+                    <span className="adm-quality-flag info">{row.metrics.podalZonePhotoCount} picture{row.metrics.podalZonePhotoCount > 1 ? 's' : ''}</span>
+                  ) : (
+                    <span className="muted">No zone picture</span>
+                  )}
+                </td>
+                <td>
+                  {row.metrics.podalZoneSlideCount > 0 ? (
+                    <span className="adm-quality-flag info">{row.metrics.podalZoneSlideCount} slide{row.metrics.podalZoneSlideCount > 1 ? 's' : ''}</span>
+                  ) : (
+                    <span className="muted">No synced zone slide</span>
+                  )}
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
       </div>
 
       <ChapterBoard parts={t.parts} rows={rows} />
