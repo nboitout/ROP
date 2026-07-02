@@ -230,7 +230,7 @@ export default async function AdminChapitresPage() {
         These cards count chapter text only: live pages and translations. Slides, reflex-zone pictures, and clinical cases are tracked separately below.
       </p>
 
-      <div className="adm-scorecards">
+      <div className="adm-scorecards adm-text-scorecards">
         <div className="adm-scorecard">
           <p className="adm-scorecard-label">Text pages built</p>
           <p className="adm-scorecard-value">{builtTotal}<span style={{ fontSize: '1rem', color: 'var(--adm-i30)' }}> / {total}</span></p>

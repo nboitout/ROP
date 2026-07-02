@@ -305,13 +305,43 @@
   color: var(--adm-ink);
   line-height: 1;
   margin-bottom: 6px;
-  letter-spacing: -.02em;
+  letter-spacing: 0;
 }
 
 .adm-scorecard-sub {
   font-size: .69rem;
   font-weight: 500;
   color: var(--adm-i30);
+}
+
+.adm-text-scorecards {
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.adm-text-scorecards .adm-scorecard {
+  min-width: 0;
+  padding: 18px 20px 17px;
+}
+
+.adm-text-scorecards .adm-scorecard-label {
+  margin-bottom: 8px;
+}
+
+.adm-text-scorecards .adm-scorecard-value {
+  font-size: 1.82rem;
+}
+
+.adm-text-scorecards .adm-scorecard-sub {
+  font-size: .66rem;
+}
+
+@media (max-width: 1260px) {
+  .adm-text-scorecards { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 700px) {
+  .adm-text-scorecards { grid-template-columns: repeat(2, 1fr); }
 }
 
 .adm-asset-intro {
