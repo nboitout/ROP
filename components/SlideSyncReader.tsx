@@ -148,6 +148,16 @@ function asSlideList(slide: number | number[] | undefined) {
   return slide ?? []
 }
 
+const slidePreloadCache = new Set<string>()
+
+function preloadSlideImage(src: string | undefined) {
+  if (!src || typeof window === 'undefined' || slidePreloadCache.has(src)) return
+  slidePreloadCache.add(src)
+  const img = new Image()
+  img.decoding = 'async'
+  img.src = src
+}
+
 export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, backHref = '/chapitres-gratuits', sectionRail = true, showClinicalCaseResource = false }: Props) {
   const { lang, t } = useLanguage()
   const searchParams = useSearchParams()
@@ -232,14 +242,46 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
   }, [chapter.slug])
 
   useEffect(() => {
-    const prioritySlides = new Set<number>([0, 1, active - 2, active - 1, active])
-    prioritySlides.forEach((index) => {
-      const slide = slides[index]
-      if (!slide || typeof window === 'undefined') return
-      const img = new Image()
-      img.src = slide.src
-    })
+    const activeIndex = active - 1
+    for (let index = activeIndex - 3; index <= activeIndex + 6; index += 1) {
+      preloadSlideImage(slides[index]?.src)
+    }
   }, [active, slides])
+
+  useEffect(() => {
+    if (typeof window === 'undefined') return
+    let cancelled = false
+    let index = 0
+    let handle: { type: 'idle' | 'timer'; id: number } | undefined
+    const schedule = (callback: () => void) => {
+      if (typeof window.requestIdleCallback === 'function') {
+        return { type: 'idle' as const, id: window.requestIdleCallback(callback, { timeout: 1500 }) }
+      }
+      return { type: 'timer' as const, id: window.setTimeout(callback, 400) }
+    }
+    const cancel = (pending: { type: 'idle' | 'timer'; id: number }) => {
+      if (pending.type === 'idle' && typeof window.cancelIdleCallback === 'function') {
+        window.cancelIdleCallback(pending.id)
+      } else {
+        window.clearTimeout(pending.id)
+      }
+    }
+    const warmNextBatch = () => {
+      if (cancelled) return
+      let warmed = 0
+      while (index < slides.length && warmed < 2) {
+        preloadSlideImage(slides[index]?.src)
+        index += 1
+        warmed += 1
+      }
+      if (index < slides.length) handle = schedule(warmNextBatch)
+    }
+    handle = schedule(warmNextBatch)
+    return () => {
+      cancelled = true
+      if (handle) cancel(handle)
+    }
+  }, [slides])
 
   // Restore reading position on return.
   useEffect(() => {
@@ -479,7 +521,7 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
   const activeSlide = slides[active - 1]
   const activeSlideIsPortrait = activeSlide?.orientation === 'portrait'
   const renderedSlideIndexes = useMemo(() => {
-    const indexes = new Set([active - 2, active - 1, active])
+    const indexes = new Set([active - 3, active - 2, active - 1, active, active + 1])
     return Array.from(indexes)
       .filter((index) => index >= 0 && index < slides.length)
       .sort((a, b) => a - b)
@@ -564,8 +606,8 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
                     src={s.src}
                     alt={s.title}
                     className={`ss-slide${i + 1 === active ? ' is-active' : ''}`}
-                    loading={i + 1 === active ? 'eager' : 'lazy'}
-                    fetchPriority={i + 1 === active ? 'high' : 'auto'}
+                    loading={Math.abs(i + 1 - active) <= 1 ? 'eager' : 'lazy'}
+                    fetchPriority={i + 1 === active ? 'high' : 'low'}
                     decoding="async"
                     aria-hidden={i + 1 !== active}
                   />

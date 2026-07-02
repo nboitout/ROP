@@ -1,7 +1,7 @@
 export type SyncSlide = { src: string; title: string; orientation?: 'portrait' }
 export type SyncAnchor = { sectionId: string; blockIndex: number; slide: number | number[]; gapBefore?: 'half' }
 
-export const chapter7Slides: SyncSlide[] = [
+const chapter7SlidesBySource: SyncSlide[] = [
   { src: '/chapter-7/slides/slide-01.png', title: 'Chapitre 7 - Cavites abdominale et peritoneale' },
   { src: '/chapter-7/slides/slide-02.png', title: 'Le contenant abdominal : frontieres et pressions' },
   { src: '/chapter-7/slides/slide-03.png', title: 'Les trois espaces visceraux (le contenu)' },
@@ -22,7 +22,17 @@ export const chapter7Slides: SyncSlide[] = [
   { src: '/chapter-7/slides/slide-18.png', title: 'Synthèse clinique ROP : de l’abdomen au pied' },
 ]
 
-export const chapter7SlideAnchors: SyncAnchor[] = [
+const chapter7ReadingOrder = [1, 2, 3, 4, 6, 5, 8, 10, 9, 11, 12, 13, 7, 14, 15, 16, 17, 18]
+const chapter7SlideNumberByReadingOrder = new Map(chapter7ReadingOrder.map((sourceSlide, index) => [sourceSlide, index + 1]))
+
+function remapChapter7Slide(slide: number | number[]) {
+  if (Array.isArray(slide)) return slide.map((n) => chapter7SlideNumberByReadingOrder.get(n) ?? n)
+  return chapter7SlideNumberByReadingOrder.get(slide) ?? slide
+}
+
+export const chapter7Slides: SyncSlide[] = chapter7ReadingOrder.map((slideNumber) => chapter7SlidesBySource[slideNumber - 1])
+
+const chapter7SlideAnchorsBySource: SyncAnchor[] = [
   { sectionId: 'presentation', blockIndex: 0, slide: 1 },
   { sectionId: 'situation', blockIndex: 0, slide: 2 },
   { sectionId: 'situation', blockIndex: 5, slide: 3 },
@@ -42,3 +52,8 @@ export const chapter7SlideAnchors: SyncAnchor[] = [
   { sectionId: 'zones-reflexes-podales', blockIndex: 0, slide: 17 },
   { sectionId: 'zones-reflexes-podales', blockIndex: 1, slide: 18 },
 ]
+
+export const chapter7SlideAnchors: SyncAnchor[] = chapter7SlideAnchorsBySource.map((anchor) => ({
+  ...anchor,
+  slide: remapChapter7Slide(anchor.slide),
+}))

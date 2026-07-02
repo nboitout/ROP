@@ -32,7 +32,7 @@ export const chapter12SlideAnchors: SyncAnchor[] = [
   { sectionId: 'vascularisation', blockIndex: 0, slide: 6 },
   { sectionId: 'innervation', blockIndex: 0, slide: 7 },
   { sectionId: 'physiologie', blockIndex: 0, slide: 8 },
-  { sectionId: 'interet-en-rop-2', blockIndex: 3, slide: 9 },
+  { sectionId: 'interet-en-rop-2', blockIndex: 0, slide: 9 },
   { sectionId: 'diagnostics-exclusion', blockIndex: 0, slide: 10 },
   { sectionId: 'diabete', blockIndex: 0, slide: 11 },
   { sectionId: 'pancreatite', blockIndex: 0, slide: 12 },

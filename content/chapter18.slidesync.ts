@@ -7,7 +7,7 @@
 export type SyncSlide = { src: string; title: string; orientation?: 'portrait' }
 export type SyncAnchor = { sectionId: string; blockIndex: number; slide: number | number[]; gapBefore?: 'half' }
 
-export const chapter18Slides: SyncSlide[] = [
+const chapter18SlidesBySource: SyncSlide[] = [
   { src: '/chapter-18/slides/slide-01.png', title: 'La vessie : anatomie, physiologie et ROP' },
   { src: '/chapter-18/slides/slide-02.png', title: 'Le panorama clinique' },
   { src: '/chapter-18/slides/slide-03.png', title: 'Situation anatomique dans la cavite pelvienne (femme)' },
@@ -32,8 +32,19 @@ export const chapter18Slides: SyncSlide[] = [
   { src: '/chapter-18/slides/slide-22.png', title: 'Application ROP : zones reflexes podales' },
 ]
 
+const chapter18ReadingOrder = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 14, 13, 15, 16, 17, 18, 19, 20, 21, 22]
+const chapter18SlideNumberByReadingOrder = new Map(chapter18ReadingOrder.map((sourceSlide, index) => [sourceSlide, index + 1]))
+
+function remapChapter18Slide(slide: number | number[]) {
+  if (Array.isArray(slide)) return slide.map((n) => chapter18SlideNumberByReadingOrder.get(n) ?? n)
+  return chapter18SlideNumberByReadingOrder.get(slide) ?? slide
+}
+
+export const chapter18Slides: SyncSlide[] = chapter18ReadingOrder.map((slideNumber) => chapter18SlidesBySource[slideNumber - 1])
+
 function withChapter18Titles(titles: string[]): SyncSlide[] {
-  return chapter18Slides.map((slide, index) => ({ ...slide, title: titles[index] ?? slide.title }))
+  const orderedTitles = chapter18ReadingOrder.map((slideNumber) => titles[slideNumber - 1])
+  return chapter18Slides.map((slide, index) => ({ ...slide, title: orderedTitles[index] ?? slide.title }))
 }
 
 export const chapter18SlidesEn = withChapter18Titles([
@@ -136,7 +147,7 @@ export const chapter18SlidesIt = withChapter18Titles([
   'Applicazione ROP: zone riflesse podaliche',
 ])
 
-export const chapter18SlideAnchors: SyncAnchor[] = [
+const chapter18SlideAnchorsBySource: SyncAnchor[] = [
   { sectionId: 'presentation', blockIndex: -1, slide: 1 },
   { sectionId: 'presentation', blockIndex: 0, slide: 2 },
   { sectionId: 'situation', blockIndex: 1, slide: 3 },
@@ -160,3 +171,8 @@ export const chapter18SlideAnchors: SyncAnchor[] = [
   { sectionId: 'zones-reflexes-podales', blockIndex: 0, slide: 21 },
   { sectionId: 'zones-reflexes-podales', blockIndex: 2, slide: 22 },
 ]
+
+export const chapter18SlideAnchors: SyncAnchor[] = chapter18SlideAnchorsBySource.map((anchor) => ({
+  ...anchor,
+  slide: remapChapter18Slide(anchor.slide),
+}))

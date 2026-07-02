@@ -30,7 +30,7 @@ export const chapter11SlideAnchors: SyncAnchor[] = [
   { sectionId: 'presentation', blockIndex: 0, slide: 1 },
   { sectionId: 'presentation', blockIndex: 9, slide: 2 },
   { sectionId: 'anatomie', blockIndex: 0, slide: 3 },
-  { sectionId: 'interet-en-rop-3', blockIndex: 3, slide: 4 },
+  { sectionId: 'interet-en-rop-3', blockIndex: 0, slide: 4 },
   { sectionId: 'vascularisation', blockIndex: 0, slide: 5 },
   { sectionId: 'vascularisation', blockIndex: 10, slide: 6 },
   { sectionId: 'vascularisation', blockIndex: 14, slide: 7 },

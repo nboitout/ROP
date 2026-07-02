@@ -7,7 +7,7 @@
 export type SyncSlide = { src: string; title: string; orientation?: 'portrait' }
 export type SyncAnchor = { sectionId: string; blockIndex: number; slide: number; gapBefore?: 'half' }
 
-export const chapter15Slides: SyncSlide[] = [
+const chapter15SlidesBySource: SyncSlide[] = [
   { src: '/chapter-15/slides/slide-01.png', title: 'Colon et Rectum' },
   { src: '/chapter-15/slides/slide-02.png', title: 'Architecture du cadre colique' },
   { src: '/chapter-15/slides/slide-03.png', title: 'Origine : caecum et jonction ileo-caecale' },
@@ -26,8 +26,18 @@ export const chapter15Slides: SyncSlide[] = [
   { src: '/chapter-15/slides/slide-16.png', title: 'Cartographie podale ROP' },
 ]
 
+const chapter15ReadingOrder = [1, 2, 3, 4, 5, 6, 8, 9, 10, 7, 11, 12, 13, 14, 15, 16]
+const chapter15SlideNumberByReadingOrder = new Map(chapter15ReadingOrder.map((sourceSlide, index) => [sourceSlide, index + 1]))
+
+function remapChapter15Slide(slide: number) {
+  return chapter15SlideNumberByReadingOrder.get(slide) ?? slide
+}
+
+export const chapter15Slides: SyncSlide[] = chapter15ReadingOrder.map((slideNumber) => chapter15SlidesBySource[slideNumber - 1])
+
 function withChapter15Titles(titles: string[]): SyncSlide[] {
-  return chapter15Slides.map((slide, index) => ({ ...slide, title: titles[index] ?? slide.title }))
+  const orderedTitles = chapter15ReadingOrder.map((slideNumber) => titles[slideNumber - 1])
+  return chapter15Slides.map((slide, index) => ({ ...slide, title: orderedTitles[index] ?? slide.title }))
 }
 
 // English deck — rendered from the dedicated English synthesis slides
@@ -35,7 +45,7 @@ function withChapter15Titles(titles: string[]): SyncSlide[] {
 // DE/ES/IT (which reuse the French diagrams with translated titles), the English
 // deck has its own artwork and one extra slide (16 — colon reflex zones), so it
 // uses its own anchor table (chapter15SlideAnchorsEn) below.
-export const chapter15SlidesEn: SyncSlide[] = [
+const chapter15SlidesEnBySource: SyncSlide[] = [
   { src: '/chapter-15/slides/en/slide-01.png', title: 'Colon and Rectum' },
   { src: '/chapter-15/slides/en/slide-02.png', title: 'Architecture of the Colonic Frame' },
   { src: '/chapter-15/slides/en/slide-03.png', title: 'The Origin: Cecum and Ileocecal Junction' },
@@ -54,6 +64,15 @@ export const chapter15SlidesEn: SyncSlide[] = [
   { src: '/chapter-15/slides/en/slide-16.png', title: 'ROP Cartography: Reflex Zones of the Colon' },
   { src: '/chapter-15/slides/en/slide-17.png', title: 'ROP Podal Cartography' },
 ]
+
+const chapter15ReadingOrderEn = [1, 2, 3, 4, 5, 6, 8, 9, 10, 7, 11, 12, 13, 14, 15, 16, 17]
+const chapter15SlideNumberByReadingOrderEn = new Map(chapter15ReadingOrderEn.map((sourceSlide, index) => [sourceSlide, index + 1]))
+
+function remapChapter15SlideEn(slide: number) {
+  return chapter15SlideNumberByReadingOrderEn.get(slide) ?? slide
+}
+
+export const chapter15SlidesEn: SyncSlide[] = chapter15ReadingOrderEn.map((slideNumber) => chapter15SlidesEnBySource[slideNumber - 1])
 
 export const chapter15SlidesDe = withChapter15Titles([
   'Kolon und Rektum',
@@ -112,7 +131,7 @@ export const chapter15SlidesIt = withChapter15Titles([
   'Mappatura podalica ROP',
 ])
 
-export const chapter15SlideAnchors: SyncAnchor[] = [
+const chapter15SlideAnchorsBySource: SyncAnchor[] = [
   { sectionId: 'presentation', blockIndex: -1, slide: 1 },
   { sectionId: 'presentation', blockIndex: 0, slide: 2 },
   { sectionId: 'anatomie', blockIndex: 0, slide: 3 },
@@ -131,12 +150,17 @@ export const chapter15SlideAnchors: SyncAnchor[] = [
   { sectionId: 'zones-reflexes-podales', blockIndex: 0, slide: 16 },
 ]
 
+export const chapter15SlideAnchors: SyncAnchor[] = chapter15SlideAnchorsBySource.map((anchor) => ({
+  ...anchor,
+  slide: remapChapter15Slide(anchor.slide),
+}))
+
 // English anchor table — the English deck has 17 slides (one extra colon
 // reflex-zone slide, 16). Slides 1–15 mirror the French anchors; the reflex-zone
 // section carries both the colon reflex-zone slide (16) and the podal
 // cartography (17). The English content mirrors the French block structure, so
 // the shared block indices apply.
-export const chapter15SlideAnchorsEn: SyncAnchor[] = [
+const chapter15SlideAnchorsEnBySource: SyncAnchor[] = [
   { sectionId: 'presentation', blockIndex: -1, slide: 1 },
   { sectionId: 'presentation', blockIndex: 0, slide: 2 },
   { sectionId: 'anatomie', blockIndex: 0, slide: 3 },
@@ -155,3 +179,8 @@ export const chapter15SlideAnchorsEn: SyncAnchor[] = [
   { sectionId: 'zones-reflexes-podales', blockIndex: 0, slide: 16 },
   { sectionId: 'zones-reflexes-podales', blockIndex: 3, slide: 17 },
 ]
+
+export const chapter15SlideAnchorsEn: SyncAnchor[] = chapter15SlideAnchorsEnBySource.map((anchor) => ({
+  ...anchor,
+  slide: remapChapter15SlideEn(anchor.slide),
+}))
