@@ -13,6 +13,19 @@ function avgDuration(rows: LeaveLike[]): number {
   return visits.reduce((a, b) => a + b, 0) / visits.length
 }
 
+function avgSampleSubtitle(rows: LeaveLike[]): string {
+  const readers = new Set(
+    rows
+      .filter((r) => {
+        const n = parseFloat(r.duration_seconds)
+        return !!r.readerId && !isNaN(n) && n > 0
+      })
+      .map((r) => r.readerId)
+  )
+  const count = readers.size
+  return `${count.toLocaleString()} reader${count === 1 ? '' : 's'}`
+}
+
 function formatDuration(secs: number): string {
   return fmtDuration(secs)
 }
@@ -73,15 +86,18 @@ export default async function EngagementPage() {
   const pageLeaves = visits.filter((v) => v.event === 'page_leave')
 
   // Avg time per specific page
-  const avgChapter2 = avgDuration(pageLeaves.filter((v) => {
+  const chapter2Leaves = pageLeaves.filter((v) => {
     const p = v.page.replace(/^https?:\/\/[^/]+/, '')
     return p.includes('/chapitre-2') || p.includes('/lecture/traitement-rop')
-  }))
-  const avgIntro = avgDuration(pageLeaves.filter((v) => v.page.includes('/introduction')))
-  const avgChapter14 = avgDuration(pageLeaves.filter((v) => {
+  })
+  const introLeaves = pageLeaves.filter((v) => v.page.includes('/introduction'))
+  const chapter14Leaves = pageLeaves.filter((v) => {
     const p = v.page.replace(/^https?:\/\/[^/]+/, '')
     return p.includes('/chapitre-14') || p.includes('/lecture/chapitre-14')
-  }))
+  })
+  const avgChapter2 = avgDuration(chapter2Leaves)
+  const avgIntro = avgDuration(introLeaves)
+  const avgChapter14 = avgDuration(chapter14Leaves)
 
   // Return visitor rate: % of distinct visitors seen on more than one distinct date
   const pageVisits = visits.filter((v) => v.event === 'page_visit')
@@ -246,17 +262,17 @@ export default async function EngagementPage() {
         <Scorecard
           label="Avg Time - Chapter 2"
           value={formatDuration(avgChapter2)}
-          subtitle="page_leave events"
+          subtitle={avgSampleSubtitle(chapter2Leaves)}
         />
         <Scorecard
           label="Avg Time - Introduction"
           value={formatDuration(avgIntro)}
-          subtitle="page_leave events"
+          subtitle={avgSampleSubtitle(introLeaves)}
         />
         <Scorecard
           label="Avg Time - Chapter 14"
           value={formatDuration(avgChapter14)}
-          subtitle="page_leave events"
+          subtitle={avgSampleSubtitle(chapter14Leaves)}
         />
         <Scorecard
           label="Return Visitor Rate"
