@@ -4,20 +4,13 @@ import { Fragment } from 'react'
 import Image from 'next/image'
 import HeroCarousel from '@/components/HeroCarousel'
 import HomepageVisualShowcase from '@/components/HomepageVisualShowcase'
+import BookJourney from '@/components/BookJourney'
 import QuoteSlider from '@/components/QuoteSlider'
 import FreeChapterForm from '@/components/FreeChapterForm'
 import BookNotifyForm from '@/components/BookNotifyForm'
 import LanguageToggle from '@/components/LanguageToggle'
 import { useLanguage } from '@/app/i18n/LanguageContext'
 import { getSessionId } from '@/lib/session'
-import { chapterMetaSnapshot } from '@/lib/chapterMetaSnapshot'
-import { snapshotMeta } from '@/lib/chapterStats'
-
-const CARD_SLUG: Record<string, string> = {
-  '00': 'introduction',
-  '02': 'chapter-2',
-  '14': 'chapter-14',
-}
 
 export default function HomePage() {
   const { t, lang } = useLanguage()
@@ -196,77 +189,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ARCHITECTURE */}
-      <section id="architecture">
-        <div className="arch-intro">
-          <div>
-            <div className="lbl">{t.architecture.lbl}</div>
-            <h2>{t.architecture.h2.before}<em>{t.architecture.h2.em}</em>{t.architecture.h2.after}</h2>
-          </div>
-          <p className="arch-desc">{t.architecture.desc}</p>
-        </div>
-        <div className="flow">
-          {t.architecture.flow.map((fc) => (
-            <div key={fc.t} className="fc">
-              <div className={`fc-icon${fc.icon === '🫁' || fc.icon === '💧' ? ' go' : ''}`}>{fc.icon}</div>
-              <div className="fc-t">{fc.t}</div>
-              <div className="fc-s">{fc.s}</div>
-              <div className="fc-chs">
-                {fc.chs.map(([label, cls]) => (
-                  <span key={label} className={`fch${cls ? ` ${cls}` : ''}`}>{label}</span>
-                ))}
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* CHAPITRES */}
-      <section id="chapitres">
-        <div className="ch-hd">
-          <div>
-            <div className="lbl">{t.chapters.lbl}</div>
-            <h2>{t.chapters.h2.before}<em>{t.chapters.h2.em}</em>{t.chapters.h2.after}</h2>
-          </div>
-          <p className="ch-hd-d">{t.chapters.desc}</p>
-        </div>
-        {t.chapters.parts.map((part) => {
-          const partCards = t.chapters.cards.filter((c) => c.part === part.id)
-          if (!partCards.length) return null
-          return (
-            <div key={part.id} className="ch-part">
-              <div className="ch-part-h">{part.title}</div>
-              <div className="ch-grid">
-                {partCards.map((card) => {
-                  const isFree = card.variant === 'free'
-                  return (
-                    <ChapterCard
-                      key={card.num}
-                      num={card.num}
-                      variant={card.variant}
-                      label={card.label}
-                      title={card.title}
-                      tags={card.tags}
-                      meta={isFree && CARD_SLUG[card.num] && chapterMetaSnapshot[CARD_SLUG[card.num]]
-                        ? snapshotMeta(chapterMetaSnapshot[CARD_SLUG[card.num]], lang)
-                        : ('meta' in card ? (card as { meta?: string }).meta : undefined)}
-                      isFree={isFree}
-                      freeBadge={t.chapters.freeBadge}
-                      freeBtnLabel={t.chapters.freeBtnLabel}
-                      freeBtnHref="/chapitres-gratuits"
-                    >
-                      {card.body}
-                    </ChapterCard>
-                  )
-                })}
-              </div>
-            </div>
-          )
-        })}
-        <div className="ch-foot">
-          <a href="#acheter" className="btn b-gold" onClick={() => trackCta('chapters_buy')}>{t.chapters.cta}</a>
-        </div>
-      </section>
+      {/* SOMMAIRE — FIL CONDUCTEUR */}
+      <BookJourney />
 
       {/* PROTOCOLE */}
       <section id="protocole">
@@ -448,43 +372,5 @@ export default function HomePage() {
       </footer>
 
     </main>
-  )
-}
-
-/* ── Shared chapter card component ── */
-function ChapterCard({
-  num, variant, label, title, tags, meta, isFree, freeBadge, freeBtnLabel, freeBtnHref, children,
-}: {
-  num: string
-  variant?: 'free'
-  label: string
-  title: string
-  tags: string[]
-  meta?: string
-  isFree: boolean
-  freeBadge: string
-  freeBtnLabel: string
-  freeBtnHref: string
-  children: React.ReactNode
-}) {
-  return (
-    <div className={`cc${variant ? ` ${variant}` : ''}`}>
-      <div className="cc-top">
-        <div className="cc-n">{num}</div>
-        {isFree && <span className="badge bf">{freeBadge}</span>}
-      </div>
-      <div className="cc-body">
-        <div className="cc-lbl">{label}</div>
-        <h3 className="cc-title">{title}</h3>
-        <p className="cc-txt">{children}</p>
-        <div className="cc-tags">
-          {tags.map((tag) => <span key={tag} className="ct">{tag}</span>)}
-        </div>
-        {meta && <p className="cc-meta">{meta}</p>}
-        {isFree && (
-          <a href={freeBtnHref} className="cc-free-link">{freeBtnLabel}</a>
-        )}
-      </div>
-    </div>
   )
 }

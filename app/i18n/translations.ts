@@ -65,6 +65,12 @@ const fr = {
       { icon: '💧', t: 'Uro-génital & pelvien', s: "Reins, cavité pelvienne, vessie, organes génitaux et système érectile — anatomie et abords R.O.P.", chs: [['Ch. 16 · Reins', ''], ['Ch. 17 · Pelvis', ''], ['Ch. 18 · Vessie', ''], ['Ch. 19-21 · Génital', '']] },
     ],
   },
+  journey: {
+    part: 'Partie',
+    stats: ['22 chapitres', '5 parties', '3 chapitres en accès libre'],
+    hint: 'Sélectionnez un chapitre pour en afficher l\'aperçu.',
+    count: (n: number) => `${n} chapitre${n > 1 ? 's' : ''}`,
+  },
   chapters: {
     lbl: 'Sommaire complet',
     h2: { before: 'Le ', em: 'sommaire', after: ' complet' },
@@ -415,6 +421,12 @@ const en: typeof fr = {
       { icon: '🫁', t: 'Abdominal Viscera', s: 'Cavities, diaphragm, digestive tract, accessory glands, and colon — anatomy and R.O.P. mapping.', chs: [['Ch. 7-8 · Framework', ''], ['Ch. 9-10 · Digestive', ''], ['Ch. 11-13 · Glands', ''], ['Ch. 14-15 · Intestines', '']] },
       { icon: '💧', t: 'Urogenital & Pelvic', s: 'Kidneys, pelvic cavity, bladder, reproductive organs, and erectile system — anatomy and R.O.P. approach.', chs: [['Ch. 16 · Kidneys', ''], ['Ch. 17 · Pelvis', ''], ['Ch. 18 · Bladder', ''], ['Ch. 19-21 · Genital', '']] },
     ],
+  },
+  journey: {
+    part: 'Part',
+    stats: ['22 chapters', '5 parts', '3 free-access chapters'],
+    hint: 'Select a chapter to preview its contents.',
+    count: (n: number) => `${n} chapter${n > 1 ? 's' : ''}`,
   },
   chapters: {
     lbl: 'Complete Table of Contents',
@@ -767,6 +779,12 @@ const de: typeof fr = {
       { icon: '💧', t: 'Urogenital & Becken', s: 'Nieren, Beckenhöhle, Harnblase, Geschlechtsorgane und Erektionssystem — Anatomie und R.O.P.-Ansatz.', chs: [['Kap. 16 · Nieren', ''], ['Kap. 17 · Becken', ''], ['Kap. 18 · Blase', ''], ['Kap. 19-21 · Genital', '']] },
     ],
   },
+  journey: {
+    part: 'Teil',
+    stats: ['22 Kapitel', '5 Teile', '3 frei zugängliche Kapitel'],
+    hint: 'Wählen Sie ein Kapitel, um eine Vorschau zu sehen.',
+    count: (n: number) => `${n} Kapitel`,
+  },
   chapters: {
     lbl: 'Vollständiges Inhaltsverzeichnis',
     h2: { before: 'Das vollständige ', em: 'Inhaltsverzeichnis', after: '' },
@@ -1118,6 +1136,12 @@ const es: typeof fr = {
       { icon: '💧', t: 'Urogenital y pélvico', s: 'Riñones, cavidad pélvica, vejiga, órganos genitales y sistema eréctil — anatomía y abordaje R.O.P.', chs: [['Cap. 16 · Riñones', ''], ['Cap. 17 · Pelvis', ''], ['Cap. 18 · Vejiga', ''], ['Cap. 19-21 · Genital', '']] },
     ],
   },
+  journey: {
+    part: 'Parte',
+    stats: ['22 capítulos', '5 partes', '3 capítulos de acceso libre'],
+    hint: 'Seleccione un capítulo para ver un adelanto de su contenido.',
+    count: (n: number) => `${n} capítulo${n > 1 ? 's' : ''}`,
+  },
   chapters: {
     lbl: 'Índice completo',
     h2: { before: 'El ', em: 'índice', after: ' completo' },
@@ -1468,6 +1492,12 @@ const it: typeof fr = {
       { icon: '🫁', t: 'Visceri addominali', s: 'Cavità, diaframma, tubo digerente, ghiandole annesse e colon — anatomia e cartografia R.O.P.', chs: [['Cap. 7-8 · Cornice', ''], ['Cap. 9-10 · Digerente', ''], ['Cap. 11-13 · Ghiandole', ''], ['Cap. 14-15 · Intestini', '']] },
       { icon: '💧', t: 'Uro-genitale e pelvico', s: 'Reni, cavità pelvica, vescica, organi genitali e sistema erettile — anatomia e approccio R.O.P.', chs: [['Cap. 16 · Reni', ''], ['Cap. 17 · Pelvi', ''], ['Cap. 18 · Vescica', ''], ['Cap. 19-21 · Genitale', '']] },
     ],
+  },
+  journey: {
+    part: 'Parte',
+    stats: ['22 capitoli', '5 parti', '3 capitoli ad accesso libero'],
+    hint: 'Seleziona un capitolo per visualizzarne l\'anteprima.',
+    count: (n: number) => (n > 1 ? `${n} capitoli` : `${n} capitolo`),
   },
   chapters: {
     lbl: 'Indice completo',
