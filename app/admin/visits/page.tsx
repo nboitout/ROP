@@ -23,27 +23,6 @@ function deviceType(ua: string): string {
   return 'Desktop'
 }
 
-// Same crawler signature used by the server-side bot filter in lib/sheets.ts.
-const BOT_UA = /bot|crawl|spider|slurp|mediapartners|bingpreview|google-read-aloud|read-aloud|google web preview|apis-google|feedfetcher|facebookexternal|embedly|quora link preview|pinterest|vkshare|whatsapp|telegram|headless|phantomjs|python-requests|curl|wget|httpclient|go-http-client|java\/|okhttp|axios|node-fetch|libwww|scrapy/i
-const DESKTOP_LINUX = /X11; Linux x86_64/
-
-// Bot-likelihood signals for a single visitor. The primary rule mirrors the
-// server-side filter: a real visitor accumulates a few seconds of active time;
-// crawlers and instant bounces don't. `dwellSeconds` = this reader's total
-// active time (summed page_leave durations).
-const MIN_DWELL_SECONDS = 4
-function botSignals(ua: string, dwellSeconds: number): { verdict: string; flags: string[] } {
-  const flags: string[] = []
-  if (!ua) flags.push('no user-agent')
-  if (BOT_UA.test(ua)) flags.push('crawler UA')
-  if (dwellSeconds < MIN_DWELL_SECONDS) flags.push(`under ${MIN_DWELL_SECONDS}s dwell`)
-  if (DESKTOP_LINUX.test(ua) && dwellSeconds === 0) flags.push('desktop-Linux, no dwell')
-  let verdict = 'Likely human'
-  if (flags.some((f) => f === 'crawler UA' || f === 'no user-agent')) verdict = 'Likely bot'
-  else if (dwellSeconds < MIN_DWELL_SECONDS) verdict = 'Likely bot'
-  return { verdict, flags }
-}
-
 // One visit = all the pageviews of one reader on one Paris calendar day.
 interface Visit {
   readerId: string
@@ -69,24 +48,31 @@ export default async function VisitsPage({
   searchParams: Promise<{ country?: string }>
 }) {
   const { country } = await searchParams
-  const { visits } = await fetchAllSheets()
+  const { visits, leads } = await fetchAllSheets()
 
-  // Per-reader dwell, total (drives the bot verdict — mirrors the server-side
-  // filter) and per Paris day (shown on each visit row).
-  const totalDwell = new Map<string, { total: number; count: number }>()
+  // Reader identity from the Leads sheet: anyone who submitted the email gate
+  // is known by name/email; everyone else stays an anonymous cookie ID. A
+  // reader may have submitted several forms — keep the first entry that has a
+  // name, otherwise the first with an email.
+  const identity = new Map<string, { name: string; email: string }>()
+  leads.forEach((l) => {
+    if (!l.readerId) return
+    const key = l.readerId.toLowerCase()
+    const name = [l.firstName, l.lastName].filter(Boolean).join(' ').trim() || l.fullName.trim()
+    const cur = identity.get(key)
+    if (cur && (cur.name || !name)) return
+    identity.set(key, { name, email: l.email.trim() })
+  })
+
+  // Per-reader dwell per Paris day (shown on each visit row).
   const dayDwell = new Map<string, number>()
   visits
     .filter((v) => v.event === 'page_leave' && v.readerId)
     .forEach((v) => {
       const n = parseFloat(v.duration_seconds)
-      const d = totalDwell.get(v.readerId) ?? { total: 0, count: 0 }
-      d.count += 1
-      if (!isNaN(n) && n > 0) {
-        d.total += n
-        const dayKey = `${v.readerId}|${parisDate(v.timestamp)}`
-        dayDwell.set(dayKey, (dayDwell.get(dayKey) ?? 0) + n)
-      }
-      totalDwell.set(v.readerId, d)
+      if (isNaN(n) || n <= 0) return
+      const dayKey = `${v.readerId}|${parisDate(v.timestamp)}`
+      dayDwell.set(dayKey, (dayDwell.get(dayKey) ?? 0) + n)
     })
 
   const pageVisits = visits.filter((v) => v.event === 'page_visit')
@@ -172,9 +158,10 @@ export default async function VisitsPage({
           <h1 className="adm-page-title">Visits inspector</h1>
           <p className="adm-page-sub">
             One line per <strong>visit</strong> — all the pages a reader viewed on one day, newest
-            first (max 250). Only traffic that passed the quality filter is included — owner,
-            self-declared crawlers, and anyone under 4 seconds of active time are already removed
-            upstream, so this is effectively your real audience.
+            first (max 250). Readers who signed up via the email gate appear by name; the rest show
+            their anonymous cookie ID. Only traffic that passed the quality filter is included —
+            owner, self-declared crawlers, and anyone under 4 seconds of active time are already
+            removed upstream, so this is effectively your real audience.
           </p>
           <p className="adm-page-sub">
             {uniqueReaders.toLocaleString()} unique visitor{uniqueReaders === 1 ? '' : 's'} ·{' '}
@@ -223,30 +210,36 @@ export default async function VisitsPage({
               <th>Ret.</th>
               <th>Referer</th>
               <th>UTM</th>
-              <th>Verdict</th>
-              <th>User-agent</th>
             </tr>
           </thead>
           <tbody>
             {rows.map((g, i) => {
-              // Verdict stays on the reader's all-time dwell — same signal the
-              // server-side filter uses — so one quick revisit day doesn't flag
-              // an established reader as a bot.
-              const { verdict, flags } = botSignals(g.userAgent, totalDwell.get(g.readerId)?.total ?? 0)
               const dwellToday = dayDwell.get(`${g.readerId}|${g.day}`) ?? 0
               const ref = (g.referer || '').replace(/^https?:\/\//, '').replace(/\/$/, '')
               // Genuine return = this reader was seen on an earlier day than this visit.
               const isReturn = (firstSeen.get(g.readerId) ?? g.day) < g.day
               const sameMinute = fmtParis(g.firstTs) === fmtParis(g.lastTs)
-              const verdictColor =
-                verdict === 'Likely bot' ? 'rgba(200,80,60,.95)' : verdict === 'Suspicious' ? 'rgba(190,140,40,.95)' : 'rgba(74,107,90,.95)'
+              const who = identity.get(g.readerId.toLowerCase())
               return (
                 <tr key={i}>
                   <td className="muted" style={{ whiteSpace: 'nowrap' }}>
                     {fmtParis(g.firstTs)}
                     {!sameMinute && ` → ${fmtTimeOnly(g.lastTs)}`}
                   </td>
-                  <td className="muted" style={{ fontFamily: 'monospace', fontSize: '.72rem' }}>{(g.readerId || '').slice(0, 8) || '—'}</td>
+                  <td style={{ maxWidth: 180 }}>
+                    {who ? (
+                      <>
+                        {who.name || who.email}
+                        {who.name && who.email && (
+                          <span className="muted" style={{ display: 'block', fontSize: '.72rem' }}>{who.email}</span>
+                        )}
+                      </>
+                    ) : (
+                      <span className="muted" style={{ fontFamily: 'monospace', fontSize: '.72rem' }}>
+                        {(g.readerId || '').slice(0, 8) || '—'}
+                      </span>
+                    )}
+                  </td>
                   <td style={{ whiteSpace: 'nowrap' }}>{countryLabel(g.country)}</td>
                   <td>{deviceType(g.userAgent)}</td>
                   <td style={{ maxWidth: 240 }}>
@@ -261,23 +254,12 @@ export default async function VisitsPage({
                   <td>{isReturn ? 'yes' : '—'}</td>
                   <td className="muted" style={{ maxWidth: 140, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{ref || '—'}</td>
                   <td className="muted">{g.utm_source || '—'}</td>
-                  <td style={{ color: verdictColor, fontWeight: 600, whiteSpace: 'nowrap' }}>
-                    {verdict}
-                    {flags.length > 0 && (
-                      <span className="muted" style={{ display: 'block', fontWeight: 400, fontSize: '.72rem' }}>
-                        {flags.join(', ')}
-                      </span>
-                    )}
-                  </td>
-                  <td style={{ maxWidth: 320, fontSize: '.72rem', lineHeight: 1.4, color: 'rgba(245,240,232,.7)' }}>
-                    {g.userAgent || '—'}
-                  </td>
                 </tr>
               )
             })}
             {rows.length === 0 && (
               <tr>
-                <td colSpan={11} className="muted">No matching visits</td>
+                <td colSpan={9} className="muted">No matching visits</td>
               </tr>
             )}
           </tbody>
