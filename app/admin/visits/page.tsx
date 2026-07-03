@@ -44,6 +44,25 @@ function botSignals(ua: string, dwellSeconds: number): { verdict: string; flags:
   return { verdict, flags }
 }
 
+// One visit = all the pageviews of one reader on one Paris calendar day.
+interface Visit {
+  readerId: string
+  day: string
+  firstTs: string
+  lastTs: string
+  pages: string[] // journey in chronological order, consecutive repeats collapsed
+  pageviews: number
+  country: string
+  userAgent: string
+  referer: string
+  utm_source: string
+}
+
+const PARIS_TZ = 'Europe/Paris'
+const fmtTimeOnly = (t: string) =>
+  new Intl.DateTimeFormat('fr-FR', { timeZone: PARIS_TZ, hour: '2-digit', minute: '2-digit', hour12: false })
+    .format(new Date(t))
+
 export default async function VisitsPage({
   searchParams,
 }: {
@@ -52,19 +71,25 @@ export default async function VisitsPage({
   const { country } = await searchParams
   const { visits } = await fetchAllSheets()
 
-  // Per-reader dwell: total active seconds + whether any page_leave was recorded.
-  const dwell = new Map<string, { total: number; count: number }>()
+  // Per-reader dwell, total (drives the bot verdict — mirrors the server-side
+  // filter) and per Paris day (shown on each visit row).
+  const totalDwell = new Map<string, { total: number; count: number }>()
+  const dayDwell = new Map<string, number>()
   visits
     .filter((v) => v.event === 'page_leave' && v.readerId)
     .forEach((v) => {
       const n = parseFloat(v.duration_seconds)
-      const d = dwell.get(v.readerId) ?? { total: 0, count: 0 }
+      const d = totalDwell.get(v.readerId) ?? { total: 0, count: 0 }
       d.count += 1
-      if (!isNaN(n) && n > 0) d.total += n
-      dwell.set(v.readerId, d)
+      if (!isNaN(n) && n > 0) {
+        d.total += n
+        const dayKey = `${v.readerId}|${parisDate(v.timestamp)}`
+        dayDwell.set(dayKey, (dayDwell.get(dayKey) ?? 0) + n)
+      }
+      totalDwell.set(v.readerId, d)
     })
 
-  let pageVisits = visits.filter((v) => v.event === 'page_visit')
+  const pageVisits = visits.filter((v) => v.event === 'page_visit')
 
   // Earliest day each reader was ever seen. We use this for a *genuine*
   // cross-day return, because the raw isReturning flag only means "a reader_id
@@ -78,30 +103,66 @@ export default async function VisitsPage({
     if (!cur || day < cur) firstSeen.set(v.readerId, day)
   })
 
+  // Group pageviews into visits: one per reader per Paris day. The raw
+  // page_visit stream has one row per page navigation (and re-fires on a
+  // language switch), so listing it directly shows a single visitor as many
+  // lines. Here each line is one visitor's whole day, with the journey inline.
+  const groups = new Map<string, Visit>()
+  ;[...pageVisits]
+    .sort((a, b) => new Date(a.timestamp).getTime() - new Date(b.timestamp).getTime())
+    .forEach((v) => {
+      const day = parisDate(v.timestamp)
+      // Cookie-less pageviews have no readerId; fall back to UA+country so they
+      // at least don't all merge into one anonymous mega-visit.
+      const id = v.readerId || `anon:${v.userAgent}:${v.country}`
+      const key = `${id}|${day}`
+      const page = v.page.replace(/^https?:\/\/[^/]+/, '') || '/'
+      const g = groups.get(key)
+      if (!g) {
+        groups.set(key, {
+          readerId: v.readerId,
+          day,
+          firstTs: v.timestamp,
+          lastTs: v.timestamp,
+          pages: [page],
+          pageviews: 1,
+          country: v.country,
+          userAgent: v.userAgent,
+          referer: v.referer,
+          utm_source: v.utm_source,
+        })
+      } else {
+        g.lastTs = v.timestamp
+        g.pageviews += 1
+        if (g.pages[g.pages.length - 1] !== page) g.pages.push(page)
+        if (!g.referer) g.referer = v.referer
+        if (!g.utm_source) g.utm_source = v.utm_source
+      }
+    })
+  const allVisits = [...groups.values()]
+
   // Optional country filter (?country=KR or ?country=South Korea).
   const filter = (country ?? '').trim().toLowerCase()
-  if (filter) {
-    pageVisits = pageVisits.filter((v) => {
-      const code = (v.country || '').toLowerCase()
-      return code === filter || countryLabel(v.country).toLowerCase() === filter
-    })
-  }
+  const filtered = filter
+    ? allVisits.filter((g) => {
+        const code = (g.country || '').toLowerCase()
+        return code === filter || countryLabel(g.country).toLowerCase() === filter
+      })
+    : allVisits
 
-  const rows = [...pageVisits]
-    .sort((a, b) => new Date(b.timestamp).getTime() - new Date(a.timestamp).getTime())
+  const rows = [...filtered]
+    .sort((a, b) => new Date(b.lastTs).getTime() - new Date(a.lastTs).getTime())
     .slice(0, 250)
 
-  // Country tallies for the quick-filter chips.
+  // Country tallies for the quick-filter chips — visits, not pageviews.
   const byCountry = new Map<string, number>()
-  visits
-    .filter((v) => v.event === 'page_visit')
-    .forEach((v) => {
-      const c = countryLabel(v.country)
-      byCountry.set(c, (byCountry.get(c) ?? 0) + 1)
-    })
+  allVisits.forEach((g) => {
+    const c = countryLabel(g.country)
+    byCountry.set(c, (byCountry.get(c) ?? 0) + 1)
+  })
   const countryChips = [...byCountry.entries()].sort((a, b) => b[1] - a[1]).slice(0, 12)
 
-  const fmtTs = (t: string) => fmtParis(t)
+  const uniqueReaders = new Set(pageVisits.map((v) => v.readerId).filter(Boolean)).size
 
   return (
     <main className="adm-page">
@@ -110,9 +171,15 @@ export default async function VisitsPage({
           <p className="adm-page-eyebrow">Dashboard</p>
           <h1 className="adm-page-title">Visits inspector</h1>
           <p className="adm-page-sub">
-            Raw <code>page_visit</code> rows (newest first, max 250) for the traffic that passed the
-            quality filter — owner, self-declared crawlers, and anyone who stayed under 4 seconds of
-            active time are already removed upstream, so this is effectively your real audience.
+            One line per <strong>visit</strong> — all the pages a reader viewed on one day, newest
+            first (max 250). Only traffic that passed the quality filter is included — owner,
+            self-declared crawlers, and anyone under 4 seconds of active time are already removed
+            upstream, so this is effectively your real audience.
+          </p>
+          <p className="adm-page-sub">
+            {uniqueReaders.toLocaleString()} unique visitor{uniqueReaders === 1 ? '' : 's'} ·{' '}
+            {allVisits.length.toLocaleString()} visit{allVisits.length === 1 ? '' : 's'} ·{' '}
+            {pageVisits.length.toLocaleString()} pageview{pageVisits.length === 1 ? '' : 's'} all-time
           </p>
         </div>
       </div>
@@ -151,9 +218,9 @@ export default async function VisitsPage({
               <th>Reader</th>
               <th>Country</th>
               <th>Device</th>
-              <th>Dwell (total)</th>
+              <th>Pages viewed</th>
+              <th>Dwell (day)</th>
               <th>Ret.</th>
-              <th>Page</th>
               <th>Referer</th>
               <th>UTM</th>
               <th>Verdict</th>
@@ -161,30 +228,39 @@ export default async function VisitsPage({
             </tr>
           </thead>
           <tbody>
-            {rows.map((v, i) => {
-              const d = dwell.get(v.readerId)
-              const hasDwell = !!d && d.count > 0
-              const { verdict, flags } = botSignals(v.userAgent, d?.total ?? 0)
-              const page = v.page.replace(/^https?:\/\/[^/]+/, '') || '/'
-              const ref = (v.referer || '').replace(/^https?:\/\//, '').replace(/\/$/, '')
+            {rows.map((g, i) => {
+              // Verdict stays on the reader's all-time dwell — same signal the
+              // server-side filter uses — so one quick revisit day doesn't flag
+              // an established reader as a bot.
+              const { verdict, flags } = botSignals(g.userAgent, totalDwell.get(g.readerId)?.total ?? 0)
+              const dwellToday = dayDwell.get(`${g.readerId}|${g.day}`) ?? 0
+              const ref = (g.referer || '').replace(/^https?:\/\//, '').replace(/\/$/, '')
               // Genuine return = this reader was seen on an earlier day than this visit.
-              const day = parisDate(v.timestamp)
-              const isReturn = (firstSeen.get(v.readerId) ?? day) < day
+              const isReturn = (firstSeen.get(g.readerId) ?? g.day) < g.day
+              const sameMinute = fmtParis(g.firstTs) === fmtParis(g.lastTs)
               const verdictColor =
                 verdict === 'Likely bot' ? 'rgba(200,80,60,.95)' : verdict === 'Suspicious' ? 'rgba(190,140,40,.95)' : 'rgba(74,107,90,.95)'
               return (
                 <tr key={i}>
-                  <td className="muted" style={{ whiteSpace: 'nowrap' }}>{fmtTs(v.timestamp)}</td>
-                  <td className="muted" style={{ fontFamily: 'monospace', fontSize: '.72rem' }}>{(v.readerId || '').slice(0, 8) || '—'}</td>
-                  <td style={{ whiteSpace: 'nowrap' }}>{countryLabel(v.country)}</td>
-                  <td>{deviceType(v.userAgent)}</td>
                   <td className="muted" style={{ whiteSpace: 'nowrap' }}>
-                    {hasDwell ? fmtDuration(d!.total) : '—'}
+                    {fmtParis(g.firstTs)}
+                    {!sameMinute && ` → ${fmtTimeOnly(g.lastTs)}`}
+                  </td>
+                  <td className="muted" style={{ fontFamily: 'monospace', fontSize: '.72rem' }}>{(g.readerId || '').slice(0, 8) || '—'}</td>
+                  <td style={{ whiteSpace: 'nowrap' }}>{countryLabel(g.country)}</td>
+                  <td>{deviceType(g.userAgent)}</td>
+                  <td style={{ maxWidth: 240 }}>
+                    {g.pageviews} page{g.pageviews === 1 ? '' : 's'}
+                    <span className="muted" style={{ display: 'block', fontSize: '.72rem', lineHeight: 1.4 }}>
+                      {g.pages.join(' → ')}
+                    </span>
+                  </td>
+                  <td className="muted" style={{ whiteSpace: 'nowrap' }}>
+                    {dwellToday > 0 ? fmtDuration(dwellToday) : '—'}
                   </td>
                   <td>{isReturn ? 'yes' : '—'}</td>
-                  <td className="muted" style={{ maxWidth: 160, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{page}</td>
                   <td className="muted" style={{ maxWidth: 140, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{ref || '—'}</td>
-                  <td className="muted">{v.utm_source || '—'}</td>
+                  <td className="muted">{g.utm_source || '—'}</td>
                   <td style={{ color: verdictColor, fontWeight: 600, whiteSpace: 'nowrap' }}>
                     {verdict}
                     {flags.length > 0 && (
@@ -194,7 +270,7 @@ export default async function VisitsPage({
                     )}
                   </td>
                   <td style={{ maxWidth: 320, fontSize: '.72rem', lineHeight: 1.4, color: 'rgba(245,240,232,.7)' }}>
-                    {v.userAgent || '—'}
+                    {g.userAgent || '—'}
                   </td>
                 </tr>
               )

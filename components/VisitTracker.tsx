@@ -93,7 +93,7 @@ export default function VisitTracker() {
       fetch('/api/visit', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ event: 'page_leave', lang: langRef.current, page: prev, duration_seconds: seconds }),
+        body: JSON.stringify({ event: 'page_leave', lang: langRef.current, page: prev, duration_seconds: seconds, sessionId: getSessionId() }),
         keepalive: true,
       }).catch(() => {})
     }
