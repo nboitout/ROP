@@ -9,6 +9,7 @@ import type { Lang } from '@/app/i18n/translations'
 
 const PdfSlideViewer = dynamic(() => import('@/components/PdfSlideViewer'), { ssr: false })
 import BookNotifyForm from '@/components/BookNotifyForm'
+import ReflexZoneAtlas from '@/components/ReflexZoneAtlas'
 import { currentTopAnchorId, saveReadingPosition, loadReadingPosition, restoreToAnchor } from '@/lib/readingPosition'
 import { useLanguage } from '@/app/i18n/LanguageContext'
 import { getSessionId } from '@/lib/session'
@@ -570,5 +571,7 @@ function BlockView({ block, onOpenImage, anchorId }: { block: Block; onOpenImage
           {block.body.map((p, i) => <p key={i} className="cr-rop-p">{p}</p>)}
         </aside>
       )
+    case 'reflexAtlas':
+      return <div {...anchor}><ReflexZoneAtlas /></div>
   }
 }

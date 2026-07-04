@@ -204,23 +204,7 @@ export const chapter14Fr: Chapter = {
         { type: 'figure', src: '/chapter-14/figure-14-22.jpg', caption: 'Racine du mésentère (entre la jonction duodéno-jéjunale et l’ombilic)', alt: 'Zone réflexe de la racine du mésentère côté jéjunum', orientation: 'portrait' },
         { type: 'figure', src: '/chapter-14/figure-14-23.jpg', caption: 'Racine du mésentère (entre la valvule iléo-caecale et l’ombilic)', alt: 'Zone réflexe de la racine du mésentère côté iléum', orientation: 'portrait' },
 
-        { type: 'sub', text: 'Zones réflexes podales — Jéjunum (pied gauche)' },
-        { type: 'bullets', items: [
-          'Limite supérieure : une ligne horizontale à hauteur des styloïdes des 5èmes métatarses.',
-          'Limite inférieure : le bord antérieur des talons (branches ilio-pubiennes).',
-          'Limite latérale : jusqu’au bord latéral du pied gauche.',
-          'Respecter l’orientation des anses : horizontales pour le jéjunum.',
-        ]},
-        { type: 'figure', src: '/chapter-14/figure-14-24.png', caption: 'Jéjunum (limites supérieure et inférieure)', alt: 'Limites de la zone réflexe du jéjunum sur le pied gauche', orientation: 'landscape' },
-
-        { type: 'sub', text: 'Zones réflexes podales — Iléum (pied droit)' },
-        { type: 'bullets', items: [
-          'Limite supérieure : une ligne horizontale à hauteur des styloïdes des 5èmes métatarses.',
-          'Limite inférieure : le bord antérieur des talons (branches ilio-pubiennes).',
-          'Limite latérale : à l’aplomb du 4ème orteil du pied droit.',
-          'Respecter l’orientation des anses : verticales pour l’iléum.',
-        ]},
-        { type: 'figure', src: '/chapter-14/figure-14-26.png', caption: 'Iléum (limites supérieure et inférieure)', alt: 'Limites de la zone réflexe de l’iléum sur le pied droit', orientation: 'landscape' },
+        { type: 'reflexAtlas' },
 
         { type: 'sub', text: '3. Système limbique' },
         { type: 'lead', label: 'Balance cerveau limbique — intestin grêle', text: 'écoute-induction : un pouce sur l’intestin grêle, l’autre pouce sur le cerveau limbique.' },

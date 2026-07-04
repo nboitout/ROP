@@ -12,6 +12,7 @@ import type { Chapter, Block, Section } from '@/content/types'
 import { useLanguage } from '@/app/i18n/LanguageContext'
 import { getSessionId } from '@/lib/session'
 import { currentTopAnchorId, saveReadingPosition, loadReadingPosition, restoreToAnchor } from '@/lib/readingPosition'
+import ReflexZoneAtlas from '@/components/ReflexZoneAtlas'
 
 type SyncSlide = { src: string; title: string; orientation?: 'portrait' }
 type SyncAnchor = { sectionId: string; blockIndex: number; slide: number | number[]; gapBefore?: 'half' }
@@ -221,12 +222,17 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
     [chapter.sections]
   )
 
-  // Slide the jump lands on: the first reflex-zone slide of the ROP section —
-  // its earliest *content-block* anchor (blockIndex >= 0), skipping the
-  // heading anchor (e.g. the closing-quote slide that sits above the title).
-  // Falls back to the section's earliest anchor of any kind.
+  // Slide the jump lands on: preferably the interactive reflex-zone atlas
+  // block; otherwise the section's earliest *content-block* anchor
+  // (blockIndex >= 0), skipping the heading anchor (e.g. the closing-quote
+  // slide that sits above the title). Falls back to the earliest anchor.
   const ropJumpSlide = useMemo(() => {
     if (!ropSection) return null
+    const atlasIndex = ropSection.blocks.findIndex((b) => b.type === 'reflexAtlas')
+    if (atlasIndex >= 0) {
+      const atlasSlide = asSlideList(anchorBySlide.get(`${ropSection.id}:${atlasIndex}`)?.slide)[0]
+      if (atlasSlide) return atlasSlide
+    }
     const inSection = anchors.filter((a) => a.sectionId === ropSection.id)
     if (inSection.length === 0) return null
     const blocks = inSection.filter((a) => a.blockIndex >= 0)
@@ -234,7 +240,7 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
       a.blockIndex < lo.blockIndex ? a : lo
     )
     return asSlideList(pick.slide)[0] ?? null
-  }, [anchors, ropSection])
+  }, [anchors, ropSection, anchorBySlide])
 
   useEffect(() => {
     track('sync_reader_open')
@@ -859,5 +865,7 @@ function BlockView({ block, onOpenImage, ui }: { block: Block; onOpenImage: (b: 
           {block.body.map((p, i) => <p key={i} className="cr-rop-p">{p}</p>)}
         </aside>
       )
+    case 'reflexAtlas':
+      return <ReflexZoneAtlas />
   }
 }

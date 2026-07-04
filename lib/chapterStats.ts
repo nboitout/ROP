@@ -98,6 +98,7 @@ function wordsInBlock(block: Block): number {
     case 'xref':
       return countWords(block.label) + countWords(block.text ?? '')
     case 'figure':
+    case 'reflexAtlas':
       return 0
   }
 }
@@ -118,6 +119,7 @@ function blockParagraphTexts(block: Block): string[] {
     case 'xref':
       return [`${block.label} ${block.text ?? ''}`.trim()]
     case 'figure':
+    case 'reflexAtlas':
       return []
   }
 }

@@ -210,23 +210,7 @@ export const chapter14It: Chapter = {
         { type: 'figure', src: '/chapter-14/it/Chapter14 Fig22 IT.png', caption: 'Figura 14.22 — Radice del mesentere (tra la giunzione digiuno-digiunale e l\'ombelico)', alt: 'Zona riflessiva della radice del mesentere — lato digiuno', orientation: 'portrait' },
         { type: 'figure', src: '/chapter-14/it/Chapter14 Fig23 IT.png', caption: 'Figura 14.23 — Radice del mesentere (tra la valvola ileocecale e l\'ombelico)', alt: 'Zona riflessiva della radice del mesentere — lato ileo', orientation: 'narrow' },
 
-        { type: 'sub', text: 'Zone riflesse podali — Digiuno (piede sinistro)' },
-        { type: 'bullets', items: [
-          'Limite superiore: una linea orizzontale a livello delle apofisi stiloidi dei 5° metatarsi.',
-          'Limite inferiore: il bordo anteriore dei talloni (branche ileo-pubiche).',
-          'Limite laterale: fino al bordo laterale del piede sinistro.',
-          'Rispettare l\'orientamento delle anse: orizzontali per il digiuno.',
-        ]},
-        { type: 'figure', src: '/chapter-14/it/Chapter14 Fig24 IT.png', caption: 'Figura 14.24 — Digiuno (limiti superiore e inferiore)', alt: 'Limiti della zona riflessiva del digiuno sul piede sinistro', orientation: 'portrait' },
-
-        { type: 'sub', text: 'Zone riflesse podali — Ileo (piede destro)' },
-        { type: 'bullets', items: [
-          'Limite superiore: una linea orizzontale a livello delle apofisi stiloidi dei 5° metatarsi.',
-          'Limite inferiore: il bordo anteriore dei talloni (branche ileo-pubiche).',
-          'Limite laterale: a piombo del 4° dito del piede destro.',
-          'Rispettare l\'orientamento delle anse: verticali per l\'ileo.',
-        ]},
-        { type: 'figure', src: '/chapter-14/it/Chapter14 Fig26 IT.png', caption: 'Figura 14.26 — Ileo (limiti superiore e inferiore)', alt: 'Limiti della zona riflessiva dell\'ileo sul piede destro', orientation: 'portrait' },
+        { type: 'reflexAtlas' },
 
         { type: 'sub', text: '3. Sistema limbico' },
         { type: 'lead', label: 'Bilancio cervello limbico — intestino tenue', text: 'ascolto-induzione: un pollice sull\'intestino tenue, l\'altro pollice sul cervello limbico.' },
