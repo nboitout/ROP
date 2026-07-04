@@ -11,6 +11,10 @@ type Item = { href: string; label: string }
 const ITEMS: Item[] = [
   { href: '/prototype-pied', label: '3D Prototype →' },
   { href: '/prototype-chapitre-14', label: 'Interactive reflex zones →' },
+  {
+    href: '/assets/Mitochondries%2C%20vitalit%C3%A9%20et%20energie.pdf',
+    label: 'Mitochondries, vitalité et énergie →',
+  },
 ]
 
 export default function AdminResearchMenu() {
