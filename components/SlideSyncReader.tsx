@@ -679,7 +679,7 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
           </div>
         </div>
 
-        <article ref={articleRef} className="ss-article">
+        <article ref={articleRef} className="ss-article" data-chapter={chapter.slug}>
           <div className="cr-hero">
             <p className="cr-hero-eyebrow">{t.reader.chapterPrefix} {chapter.number}</p>
             <h1 className="cr-hero-title">{chapter.title}</h1>

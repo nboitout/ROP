@@ -854,6 +854,9 @@ a.ss-switch-opt:hover { color:var(--gold); }
   margin-left:calc(var(--ss-article-pad-x) * -1);
   margin-right:calc(var(--ss-article-pad-x) * -1);
 }
+.ss-article[data-chapter="chapter-4"] #sec-zones-reflexes-podales .cr-fig-portrait .cr-fig-btn { aspect-ratio:2/3; }
+.ss-article[data-chapter="chapter-4"] #sec-zones-reflexes-podales .cr-fig-landscape .cr-fig-btn { aspect-ratio:3/2; }
+.ss-article[data-chapter="chapter-4"] #sec-zones-reflexes-podales .cr-fig-btn img { height:100%; object-fit:contain; }
 
 @media (max-width:1180px){
   .ss-layout { grid-template-columns:minmax(0,1fr) minmax(0,560px); }

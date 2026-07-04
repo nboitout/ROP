@@ -65,5 +65,5 @@ export const chapter4SlideAnchors: SyncAnchor[] = [
   { sectionId: 'plexus-pelvien', blockIndex: 0, slide: 24 },
   { sectionId: 'sne', blockIndex: 0, slide: 25 },
   { sectionId: 'zones-reflexes-podales', blockIndex: 0, slide: 26, gapBefore: 'half' },
-  { sectionId: 'zones-reflexes-podales', blockIndex: 40, slide: 27 },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 52, slide: 27 },
 ]

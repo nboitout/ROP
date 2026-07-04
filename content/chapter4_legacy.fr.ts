@@ -166,7 +166,7 @@ export const chapter4LegacyFr: Chapter = {
           { label: 'Ganglions submaxillaire et sublingual (plancher buccal)', text: 'partie rétro-capitale de la phalange distale des orteils.' },
           { label: 'Ganglion otique', text: 'partie médiale de la diaphyse de la phalange moyenne du 3ᵉ orteil.' },
         ]},
-        { type: 'figure', src: '/chapter-4/figure-4-4.png', alt: 'Tronc cérébral — palpation entre les deux pouces', caption: 'Figure 4.4 — Tronc cérébral (entre les deux pouces)', orientation: 'portrait' },
+        { type: 'figure', src: '/chapter-4/figure-4-4.png', alt: 'Palpation de la zone réflexe podale du territoire céphalique : tronc cérébral entre les deux pouces', caption: 'Figure 4.4 — Zone réflexe podale — territoire céphalique : tronc cérébral (entre les deux pouces)', orientation: 'portrait' },
 
         { type: 'sub', text: 'Territoire cervico-thoraco-abdominal' },
         { type: 'lead', label: 'Nerf vague X', text: 'il apporte l’innervation parasympathique aux organes cervico-thoraco-abdominaux.' },
@@ -202,8 +202,8 @@ export const chapter4LegacyFr: Chapter = {
           { label: 'Moelle allongée', text: 'face médiale de l’articulation inter-phalangienne du gros orteil.' },
           { label: 'Foramen jugulaire, ganglions supérieur et inférieur', text: 'articulation inter-phalangienne proximale des 4ᵉ et 5ᵉ orteils, du côté latéral sur le 4ᵉ et du côté médial sur le 5ᵉ.' },
         ]},
-        { type: 'figure', src: '/chapter-4/figure-4-7.png', alt: 'Zone réflexe podale de la moelle allongée', caption: 'Figure 4.7 — Moelle allongée (zone réflexe podale)', orientation: 'portrait' },
-        { type: 'figure', src: '/chapter-4/figure-4-8.png', alt: 'Zone réflexe podale du foramen jugulaire et des ganglions', caption: 'Figure 4.8 — Foramen jugulaire et ganglions (zone réflexe podale)', orientation: 'portrait' },
+        { type: 'figure', src: '/chapter-4/figure-4-7.png', alt: 'Palpation de la zone réflexe podale du trajet crânien du nerf vague : moelle allongée', caption: 'Figure 4.7 — Zone réflexe podale — trajet crânien du nerf vague : moelle allongée', orientation: 'portrait' },
+        { type: 'figure', src: '/chapter-4/figure-4-8.png', alt: 'Palpation de la zone réflexe podale du trajet crânien du nerf vague : foramen jugulaire et ganglions', caption: 'Figure 4.8 — Zone réflexe podale — trajet crânien du nerf vague : foramen jugulaire et ganglions', orientation: 'portrait' },
 
         { type: 'lead', label: 'Étage cervical', text: 'dans le cou, le nerf vague descend dans la gaine carotidienne, puis s’anastomose avec les ganglions sympathiques cervicaux supérieur et inférieur.' },
         { type: 'figure', src: '/chapter-4/figure-4-9.png', alt: 'Coupe transversale cervicale — fascias et loges du cou', caption: 'Figure 4.9 — Étage cervical', orientation: 'landscape' },
@@ -242,7 +242,7 @@ export const chapter4LegacyFr: Chapter = {
           { label: 'Sinus et glomus carotidiens (bifurcation carotidienne)', text: 'à hauteur de la vertèbre C4, face latérale de la diaphyse de la phalange proximale du gros orteil.' },
           { label: 'Plexus pré-viscéraux', text: 'pharynx, larynx, œsophage.' },
         ]},
-        { type: 'figure', src: '/chapter-4/figure-4-12.png', alt: 'Palpation des zones réflexes podales du nerf vague — territoires crânien et cervical', caption: 'Figure 4.12 — Zones réflexes podales du nerf vague (territoires crânien et cervical)', orientation: 'landscape' },
+        { type: 'figure', src: '/chapter-4/figure-4-12.png', alt: 'Palpation des zones réflexes podales du nerf vague : territoires crânien et cervical', caption: 'Figure 4.12 — Zones réflexes podales — nerf vague : territoires crânien et cervical', orientation: 'landscape' },
 
         { type: 'sub', text: 'Étage thoracique' },
         { type: 'para', text: 'Les deux nerfs vagues pénètrent dans le thorax par son orifice supérieur, en dedans du dôme pleural et en arrière des articulations sterno-claviculaires. Ils deviennent satellites de l’œsophage dans le médiastin. Ils sont destinés au cœur, aux poumons et à l’œsophage :' },
@@ -294,14 +294,14 @@ export const chapter4LegacyFr: Chapter = {
           text: 'Diaphragme',
           href: '/lecture/chapitre-8?xrefBack=%2Fchapitre-4-legacy%23p-parasympathique-visceromoteur-61&xrefBackLabel=Retour%20au%20chapitre%204#p-presentation-0',
         },
-        { type: 'figure', src: '/chapter-4/figure-4-18.png', alt: 'Territoire diaphragmatique du nerf vague X (zone réflexe podale)', caption: 'Figure 4.18 — Territoire diaphragmatique du nerf vague X (zone réflexe podale)', orientation: 'portrait' },
+        { type: 'figure', src: '/chapter-4/figure-4-18.png', alt: 'Palpation de la zone réflexe podale de l’étage diaphragmatique : hiatus œsophagien', caption: 'Figure 4.18 — Zone réflexe podale — étage diaphragmatique : hiatus œsophagien', orientation: 'portrait' },
 
         { type: 'sub', text: 'Étage abdominal' },
         { type: 'leadBullets', items: [
           { label: 'Nerf vague gauche (devenu antérieur)', text: 'il glisse sur le bord antérieur du cardia et innerve la petite courbure de l’estomac, le pylore, le duodénum et les voies biliaires. Il se termine dans le plexus cœliaque (anciennement solaire).' },
           { label: 'Nerf vague droit (devenu postérieur)', text: 'il est en arrière de l’œsophage abdominal et de l’estomac, qu’il innerve. Il se termine dans le ganglion semi-lunaire du plexus cœliaque.' },
         ]},
-        { type: 'figure', src: '/chapter-4/figure-4-19.png', alt: 'Petite courbure de l’estomac — innervation vagale', caption: 'Figure 4.19 — Petite courbure de l’estomac', orientation: 'portrait' },
+        { type: 'figure', src: '/chapter-4/figure-4-19.png', alt: 'Palpation de la zone réflexe podale de la fonction viscéro-motrice du nerf vague : petite courbure de l’estomac', caption: 'Figure 4.19 — Zone réflexe podale — fonction viscéro-motrice du nerf vague : petite courbure de l’estomac', orientation: 'portrait' },
         { type: 'leadBullets', items: [
           { label: 'Plexus pré-vertébraux (préaortiques)', text: 'ce sont les plexus des viscères abdominaux. Ils s’étalent le long de l’aorte abdominale et sont la convergence des fibres parasympathiques et sympathiques qui apportent la double innervation autonome aux viscères de l’abdomen.' },
           { label: 'Zone de Cannon-Böhm', text: 'elle est située à la jonction des 2/3 droits et du 1/3 gauche du côlon transverse. Elle représente la frontière entre le territoire contrôlé par le nerf vague et le parasympathique pelvien. (Cf. Chapitre 15 Côlon)' },
@@ -326,7 +326,7 @@ export const chapter4LegacyFr: Chapter = {
           { label: 'Petite courbure de l’estomac', text: 'une ligne entre le cardia et le pylore.' },
           { label: 'Zone de Cannon-Böhm', text: 'jonction 2/3 droit-1/3 gauche du côlon transverse.' },
         ]},
-        { type: 'figure', src: '/chapter-4/figure-4-21.png', alt: 'Zone de Cannon-Böhm (zone réflexe podale)', caption: 'Figure 4.21 — Zone de Cannon-Böhm (zone réflexe podale)', orientation: 'portrait' },
+        { type: 'figure', src: '/chapter-4/figure-4-21.png', alt: 'Palpation de la zone réflexe podale de la fonction viscéro-motrice du nerf vague : zone de Cannon-Böhm', caption: 'Figure 4.21 — Zone réflexe podale — fonction viscéro-motrice du nerf vague : zone de Cannon-Böhm', orientation: 'portrait' },
         { type: 'lead', label: 'Plexus pré-vertébraux', text: '' },
         { type: 'figure', src: '/chapter-4/figure-4-22.png', alt: 'Territoire abdominal droit du nerf vague X', caption: 'Figure 4.22 — Territoire abdominal droit du nerf vague X', orientation: 'landscape' },
 
@@ -425,7 +425,7 @@ export const chapter4LegacyFr: Chapter = {
         { type: 'leadBullets', items: [
           { label: 'Chaîne ganglionnaire latéro-vertébrale thoracique', text: 'elle n’est pas directement accessible : c’est par l’intermédiaire des articulations costo-vertébrales que l’on peut agir sur elle, le long du bord dorsal de la base de la 1ʳᵉ phalange du gros orteil et du 1er métatarse.' },
         ]},
-        { type: 'figure', src: '/chapter-4/figure-4-29.png', alt: 'Chaîne ganglionnaire latéro-vertébrale thoracique (zone réflexe podale)', caption: 'Figure 4.29 — Chaîne ganglionnaire latéro-vertébrale thoracique (zone réflexe podale)', orientation: 'landscape' },
+        { type: 'figure', src: '/chapter-4/figure-4-29.png', alt: 'Palpation de la zone réflexe podale du sympathique viscéro-moteur : chaîne ganglionnaire latéro-vertébrale thoracique', caption: 'Figure 4.29 — Zone réflexe podale — sympathique viscéro-moteur : chaîne ganglionnaire latéro-vertébrale thoracique', orientation: 'landscape' },
 
         // ——— Part 3b : chaînes ganglionnaires cervicale et lombale ———
         { type: 'lead', label: 'Chaîne ganglionnaire cervicale', text: 'elle prolonge en direction céphalique la chaîne ganglionnaire thoracique. Elle compte trois ganglions situés en avant des processus transverses des vertèbres cervicales, de la 1ʳᵉ articulation costo-vertébrale à la base du crâne :' },
@@ -470,7 +470,7 @@ export const chapter4LegacyFr: Chapter = {
           { label: 'Ganglion cervical moyen', text: 'idem au GCI, juste au-dessus de C7.' },
           { label: 'Ganglion cervical supérieur', text: 'jonction diaphyse-tête médiale plantaire de la 1ʳᵉ phalange du gros orteil, au niveau de C1-C2-C3.' },
         ]},
-        { type: 'figure', src: '/chapter-4/figure-4-32.png', alt: 'Ganglion cervical inférieur (zone réflexe podale)', caption: 'Figure 4.32 — Ganglion cervical inférieur (zone réflexe podale)', orientation: 'portrait' },
+        { type: 'figure', src: '/chapter-4/figure-4-32.png', alt: 'Palpation de la zone réflexe podale de la chaîne ganglionnaire cervicale : ganglion cervical inférieur', caption: 'Figure 4.32 — Zone réflexe podale — chaîne ganglionnaire cervicale : ganglion cervical inférieur', orientation: 'portrait' },
         { type: 'lead', label: 'Chaîne ganglionnaire lombale', text: 'elle prolonge caudalement la chaîne ganglionnaire thoracique. Elle compte quatre ganglions.' },
         { type: 'figure', src: '/chapter-4/figure-4-33.png', alt: 'Chaîne ganglionnaire lombale', caption: 'Figure 4.33 — Chaîne ganglionnaire lombale', orientation: 'landscape' },
 
@@ -484,7 +484,7 @@ export const chapter4LegacyFr: Chapter = {
           { label: 'Piliers du diaphragme', text: '' },
           { label: 'Innervation du psoas', text: 'racines lombales de L1 à L4, plexus lombal, nerf fémoral (Cf. ROP et système neuro-méningé, pages 28-29 et 34).' },
         ]},
-        { type: 'figure', src: '/chapter-4/figure-4-34.png', alt: 'Piliers du diaphragme (zone réflexe podale)', caption: 'Figure 4.34 — Piliers du diaphragme (zone réflexe podale)', orientation: 'landscape' },
+        { type: 'figure', src: '/chapter-4/figure-4-34.png', alt: 'Palpation de la zone réflexe podale de la chaîne ganglionnaire lombale : piliers du diaphragme', caption: 'Figure 4.34 — Zone réflexe podale — chaîne ganglionnaire lombale : piliers du diaphragme', orientation: 'landscape' },
         { type: 'lead', label: 'Chaîne ganglionnaire sacrale et coccygienne', text: 'elle prolonge caudalement la chaîne ganglionnaire lombale. Elle compte quatre ganglions sacraux, qui longent la berge médiale des trous sacraux antérieurs, et un ganglion impair à la réunion des deux chaînes ganglionnaires, à la face antérieure du coccyx. Elle apporte l’innervation sympathique aux organes uro-génitaux, au sigmoïde, au rectum et à l’anus.' },
         { type: 'figure', src: '/chapter-4/figure-4-35.png', alt: 'Chaîne ganglionnaire sacrale et coccygienne', caption: 'Figure 4.35 — Chaîne ganglionnaire sacrale et coccygienne', orientation: 'landscape' },
         { type: 'rop', body: [
@@ -573,13 +573,13 @@ export const chapter4LegacyFr: Chapter = {
           { label: 'Plexus hypogastrique inférieur (fibres antérieures)', text: 'face plantaire, partie médiale du bord antérieur du talon, à la jonction de la zone réflexe de la trompe de Fallope et du dôme utérin.' },
         ]},
         { type: 'figure', src: '/chapter-4/figure-4-37.png', alt: 'Plexus hypogastrique inférieur (fibres antérieures)', caption: 'Figure 4.37 — Plexus hypogastrique inférieur (fibres antérieures)', orientation: 'landscape' },
-        { type: 'figure', src: '/chapter-4/figure-4-38.png', alt: 'Plexus hypogastrique inférieur — fibres antérieures (zone réflexe podale)', caption: 'Figure 4.38 — Plexus hypogastrique inférieur (fibres antérieures, zone réflexe podale)', orientation: 'portrait' },
+        { type: 'figure', src: '/chapter-4/figure-4-38.png', alt: 'Palpation de la zone réflexe podale du plexus pelvien : plexus hypogastrique inférieur, fibres antérieures', caption: 'Figure 4.38 — Zone réflexe podale — plexus pelvien : plexus hypogastrique inférieur, fibres antérieures', orientation: 'portrait' },
         { type: 'leadBullets', items: [
           { label: 'Plexus hypogastrique inférieur (fibres moyennes)', text: 'face médiale du talon, zone réflexe de la région cervico-isthmique de l’utérus (ou de la prostate).' },
           { label: 'Plexus hypogastrique inférieur (fibres postérieures)', text: 'face médiale du talon, partie moyenne du bord antérieur de la tubérosité postéro-médiale du calcanéum.' },
         ]},
         { type: 'figure', src: '/chapter-4/figure-4-39.png', alt: 'Plexus hypogastrique inférieur — parties moyenne et postérieure', caption: 'Figure 4.39 — Plexus hypogastrique inférieur (parties moyenne et postérieure)', orientation: 'landscape' },
-        { type: 'figure', src: '/chapter-4/figure-4-40.png', alt: 'Plexus hypogastrique inférieur (zones réflexes podales)', caption: 'Figure 4.40 — Plexus hypogastrique inférieur (zones réflexes podales)', orientation: 'landscape' },
+        { type: 'figure', src: '/chapter-4/figure-4-40.png', alt: 'Palpation des zones réflexes podales du plexus pelvien : plexus hypogastrique inférieur, fibres moyennes et postérieures', caption: 'Figure 4.40 — Zones réflexes podales — plexus pelvien : plexus hypogastrique inférieur, fibres moyennes et postérieures', orientation: 'landscape' },
       ],
     },
     {
