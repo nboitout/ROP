@@ -10,7 +10,7 @@ type Item = { href: string; label: string }
 
 const ITEMS: Item[] = [
   { href: '/prototype-pied', label: '3D Prototype →' },
-  { href: '/prototype-chapitre-14', label: 'Chapter 14 — Reflex atlas →' },
+  { href: '/prototype-chapitre-14', label: 'Interactive reflex zones →' },
 ]
 
 export default function AdminResearchMenu() {
