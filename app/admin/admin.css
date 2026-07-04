@@ -206,6 +206,54 @@
   margin-top: 6px;
 }
 
+/* ---- Research dropdown (prototypes / experiments) ---- */
+.adm-research {
+  position: relative;
+  display: inline-flex;
+}
+.adm-research-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+.adm-research-caret {
+  font-size: .6rem;
+  opacity: .7;
+}
+.adm-research-menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  min-width: 232px;
+  display: flex;
+  flex-direction: column;
+  padding: 6px;
+  background: rgba(245,240,232,.99);
+  border: 1px solid var(--adm-border);
+  border-radius: 8px;
+  box-shadow: 0 16px 40px rgba(26,26,24,.16), 0 2px 6px rgba(26,26,24,.08);
+  z-index: 120;
+}
+.adm-research-item {
+  padding: 9px 12px;
+  border-radius: 5px;
+  font-size: .74rem;
+  font-weight: 500;
+  letter-spacing: .03em;
+  color: var(--adm-i50);
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color .15s, background .15s;
+}
+.adm-research-item:hover {
+  color: var(--adm-ink);
+  background: var(--adm-i08);
+}
+
 /* ---- Prototype CTA button ---- */
 .adm-cta {
   display: inline-flex;

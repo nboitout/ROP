@@ -1,10 +1,10 @@
 // Chapter 14 content — Spanish
 // Source: public/Chapter-14/Chapitre 14 Intestin grêle - Parties 1a, 1b, 2, 3.docx (Guy Boitout)
 
-import type { Chapter } from './types'
+import type { Chapter } from '../types'
 
 export const chapter14Es: Chapter = {
-  slug: 'chapter-14',
+  slug: 'chapter-14-prototype',
   number: '14',
   title: 'Intestino delgado',
   sections: [
@@ -210,23 +210,7 @@ export const chapter14Es: Chapter = {
         { type: 'figure', src: '/chapter-14/es/Chapter14 Fig22 ES.png', caption: 'Figura 14.22 — Raíz del mesenterio (entre la unión duodeno-yeyunal y el ombligo)', alt: 'Zona refleja de la raíz del mesenterio — lado yeyuno', orientation: 'portrait' },
         { type: 'figure', src: '/chapter-14/figure-14-23.jpg', caption: 'Figura 14.23 — Raíz del mesenterio (entre la válvula ileocecal y el ombligo)', alt: 'Zona refleja de la raíz del mesenterio — lado íleon', orientation: 'narrow' },
 
-        { type: 'sub', text: 'Zonas reflejas podales — Yeyuno (pie izquierdo)' },
-        { type: 'bullets', items: [
-          'Límite superior: una línea horizontal a la altura de las apófisis estiloides de los 5.os metatarsianos.',
-          'Límite inferior: el borde anterior de los talones (ramas iliopubianas).',
-          'Límite lateral: hasta el borde lateral del pie izquierdo.',
-          'Respetar la orientación de las asas: horizontales para el yeyuno.',
-        ]},
-        { type: 'figure', src: '/chapter-14/figure-14-24.png', caption: 'Figura 14.24 — Yeyuno (límites superior e inferior)', alt: 'Límites de la zona refleja del yeyuno en el pie izquierdo', orientation: 'portrait' },
-
-        { type: 'sub', text: 'Zonas reflejas podales — Íleon (pie derecho)' },
-        { type: 'bullets', items: [
-          'Límite superior: una línea horizontal a la altura de las apófisis estiloides de los 5.os metatarsianos.',
-          'Límite inferior: el borde anterior de los talones (ramas iliopubianas).',
-          'Límite lateral: a la vertical del 4.° dedo del pie derecho.',
-          'Respetar la orientación de las asas: verticales para el íleon.',
-        ]},
-        { type: 'figure', src: '/chapter-14/figure-14-26.png', caption: 'Figura 14.26 — Íleon (límites superior e inferior)', alt: 'Límites de la zona refleja del íleon en el pie derecho', orientation: 'portrait' },
+        { type: 'reflexAtlas' },
 
         { type: 'sub', text: '3. Sistema límbico' },
         { type: 'lead', label: 'Balance cerebro límbico — intestino delgado', text: 'escucha-inducción: un pulgar sobre el intestino delgado, el otro sobre el cerebro límbico.' },

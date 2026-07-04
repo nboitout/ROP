@@ -13,7 +13,7 @@ export type SyncSlide = { src: string; title: string; orientation?: 'portrait' }
 // blockIndex refers to the position in chapter14Fr sections[].blocks[].
 // blockIndex -1 anchors a slide to the section heading itself (the marker is
 // rendered just above the <h2> instead of inside a content block).
-export type SyncAnchor = { sectionId: string; blockIndex: number; slide: number; gapBefore?: 'half' }
+export type SyncAnchor = { sectionId: string; blockIndex: number; slide: number | number[]; gapBefore?: 'half' }
 
 // French deck — re-rendered from the trimmed/reorganised synthese.pdf (16 pages,
 // slides 1–16), followed by the supplementary anatomical figure-slides (17–22).
@@ -199,13 +199,11 @@ export const chapter14SlideAnchors: SyncAnchor[] = [
   // Sympathetic-system slide, right above figure 14.20 (block 7 after figure
   // 14.19 moved to the deck).
   { sectionId: 'rop',            blockIndex: 7,  slide: 20 },
-  // Jejunum reflex-zone slide, right above figure 14.24 (block 16).
-  { sectionId: 'rop',            blockIndex: 16, slide: 21 },
-  // Ileum reflex-zone slide, right below the "Iléum (pied droit)" heading
-  // (rendered above the bullets, which are block 18).
-  { sectionId: 'rop',            blockIndex: 18, slide: 22 },
-  // ROP intervention synthesis — after the reflex-zone slides, at the limbic step.
-  { sectionId: 'rop',            blockIndex: 20, slide: 23 },
+  // Jejunum + ileum reflex-zone cartography slides now both sit on the
+  // interactive atlas block (rop block 14).
+  { sectionId: 'rop',            blockIndex: 14, slide: [21, 22] },
+  // ROP intervention synthesis — after the reflex-zone atlas, at the limbic step.
+  { sectionId: 'rop',            blockIndex: 15, slide: 23 },
   // Viscero-emotional profile — final slide encountered in the text.
   { sectionId: 'relations',      blockIndex: 2,  slide: 24 },
 ]
@@ -243,9 +241,11 @@ export const chapter14SlideAnchorsFr: SyncAnchor[] = [
   // Plexus cœliaque slide; the marker appears just before the new plexique photo.
   { sectionId: 'rop',            blockIndex: 8,  slide: 22, gapBefore: 'half' },
   { sectionId: 'rop',            blockIndex: 12, slide: 23 },
-  { sectionId: 'rop',            blockIndex: 18, slide: 24 },
-  // Synthèse d'intervention ROP — after the reflex-zone slides, at the limbic step.
-  { sectionId: 'rop',            blockIndex: 20, slide: 25 },
+  // Jéjunum + iléum cartography now sit together on the interactive atlas
+  // block (rop block 14).
+  { sectionId: 'rop',            blockIndex: 14, slide: [23, 24] },
+  // Synthèse d'intervention ROP — after the reflex-zone atlas, at the limbic step.
+  { sectionId: 'rop',            blockIndex: 15, slide: 25 },
   // Profil viscéro-émotionnel — at "Relations viscéro-émotionnelles".
   { sectionId: 'relations',      blockIndex: 2,  slide: 26 },
 ]

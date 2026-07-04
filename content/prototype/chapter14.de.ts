@@ -1,10 +1,10 @@
 // Chapter 14 content — German
 // Source: public/Chapter-14/Chapitre 14 Intestin grêle - Parties 1a, 1b, 2, 3.docx (Guy Boitout)
 
-import type { Chapter } from './types'
+import type { Chapter } from '../types'
 
 export const chapter14De: Chapter = {
-  slug: 'chapter-14',
+  slug: 'chapter-14-prototype',
   number: '14',
   title: 'Dünndarm',
   sections: [
@@ -210,23 +210,7 @@ export const chapter14De: Chapter = {
         { type: 'figure', src: '/chapter-14/ge/Chapter14 Fig22 GE.png', caption: 'Abbildung 14.22 — Mesenterialwurzel (zwischen der duodenojejunalen Verbindung und dem Nabel)', alt: 'Reflexzone der Mesenterialwurzel — Jejunumseite', orientation: 'portrait' },
         { type: 'figure', src: '/chapter-14/ge/Chapter14 Fig23 GE.png', caption: 'Abbildung 14.23 — Mesenterialwurzel (zwischen der Ileozökalklappe und dem Nabel)', alt: 'Reflexzone der Mesenterialwurzel — Ileumseite', orientation: 'narrow' },
 
-        { type: 'sub', text: 'Podale Reflexzonen — Jejunum (linker Fuß)' },
-        { type: 'bullets', items: [
-          'Obere Grenze: eine horizontale Linie auf Höhe der Styloidfortsätze der 5. Metatarsalknochen.',
-          'Untere Grenze: der vordere Rand der Fersen (Äste des Iliopubikalbogens).',
-          'Laterale Grenze: bis zum lateralen Rand des linken Fußes.',
-          'Die Ausrichtung der Schlingen beachten: horizontal für das Jejunum.',
-        ]},
-        { type: 'figure', src: '/chapter-14/ge/Chapter14 Fig24 GE.png', caption: 'Abbildung 14.24 — Jejunum (obere und untere Grenze)', alt: 'Grenzen der Jejunum-Reflexzone am linken Fuß', orientation: 'narrow' },
-
-        { type: 'sub', text: 'Podale Reflexzonen — Ileum (rechter Fuß)' },
-        { type: 'bullets', items: [
-          'Obere Grenze: eine horizontale Linie auf Höhe der Styloidfortsätze der 5. Metatarsalknochen.',
-          'Untere Grenze: der vordere Rand der Fersen (Äste des Iliopubikalbogens).',
-          'Laterale Grenze: in der Verlängerung der 4. Zehe des rechten Fußes.',
-          'Die Ausrichtung der Schlingen beachten: vertikal für das Ileum.',
-        ]},
-        { type: 'figure', src: '/chapter-14/ge/Chapter14 Fig26 GE.png', caption: 'Abbildung 14.26 — Ileum (obere und untere Grenze)', alt: 'Grenzen der Ileum-Reflexzone am rechten Fuß', orientation: 'narrow' },
+        { type: 'reflexAtlas' },
 
         { type: 'sub', text: '3. Limbisches System' },
         { type: 'lead', label: 'Limbisches Gehirn — Dünndarm-Balance', text: 'Induktion-Zuhören: ein Daumen auf dem Dünndarm, der andere auf dem limbischen Gehirn.' },

@@ -1,10 +1,10 @@
 // Chapter 14 content — English
 // Source: public/chapter-14/Chapter14 Intestin grêle EN.docx (Guy Boitout)
 
-import type { Chapter } from './types'
+import type { Chapter } from '../types'
 
 export const chapter14En: Chapter = {
-  slug: 'chapter-14',
+  slug: 'chapter-14-prototype',
   number: '14',
   title: 'Small Intestine',
   sections: [
@@ -210,23 +210,7 @@ export const chapter14En: Chapter = {
         { type: 'figure', src: '/chapter-14/en/figure-14-22.png', caption: 'Root of the mesentery (between the duodenojejunal junction and the umbilicus)', alt: 'Reflex zone of the root of the mesentery — jejunum side', orientation: 'portrait' },
         { type: 'figure', src: '/chapter-14/en/figure-14-23.png', caption: 'Root of the mesentery (between the ileocaecal valve and the umbilicus)', alt: 'Reflex zone of the root of the mesentery — ileum side', orientation: 'portrait' },
 
-        { type: 'sub', text: 'Podal reflex zones — Jejunum (left foot)' },
-        { type: 'bullets', items: [
-          'Upper limit: a horizontal line at the level of the styloid processes of the 5th metatarsals.',
-          'Lower limit: the anterior border of the heels (iliopubic rami).',
-          'Lateral limit: extending to the lateral border of the left foot.',
-          'Respect the orientation of the loops: horizontal for the jejunum.',
-        ]},
-        { type: 'figure', src: '/chapter-14/en/figure-14-24.png', caption: 'Jejunum (upper and lower limits)', alt: 'Limits of the jejunum reflex zone on the left foot', orientation: 'landscape' },
-
-        { type: 'sub', text: 'Podal reflex zones — Ileum (right foot)' },
-        { type: 'bullets', items: [
-          'Upper limit: a horizontal line at the level of the styloid processes of the 5th metatarsals.',
-          'Lower limit: the anterior border of the heels (iliopubic rami).',
-          'Lateral limit: aligned with the fourth toe of the right foot.',
-          'Respect the orientation of the loops: vertical for the ileum.',
-        ]},
-        { type: 'figure', src: '/chapter-14/en/figure-14-26.png', caption: 'Ileum (upper and lower limits)', alt: 'Limits of the ileum reflex zone on the right foot', orientation: 'landscape' },
+        { type: 'reflexAtlas' },
 
         { type: 'sub', text: '3. Limbic system' },
         { type: 'lead', label: 'Limbic brain — small intestine balance', text: 'listening-induction: one thumb on the small intestine, the other thumb on the limbic brain.' },

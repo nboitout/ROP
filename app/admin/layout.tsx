@@ -1,6 +1,7 @@
 import './admin.css'
 import Link from 'next/link'
 import AdminNavLink from '@/components/admin/AdminNavLink'
+import AdminResearchMenu from '@/components/admin/AdminResearchMenu'
 import LogoutButton from '@/components/admin/LogoutButton'
 
 export default async function AdminLayout({
@@ -25,14 +26,7 @@ export default async function AdminLayout({
             <span className="adm-nav-sep" aria-hidden="true" />
             <AdminNavLink href="/admin/sales-plan" className="sales">Sales Plan</AdminNavLink>
             <span className="adm-nav-sep" aria-hidden="true" />
-            <a
-              href="/prototype-pied"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="adm-nav-link"
-            >
-              3D Prototype -&gt;
-            </a>
+            <AdminResearchMenu />
           </div>
         </div>
         <div className="adm-nav-right">
