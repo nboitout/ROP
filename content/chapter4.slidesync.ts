@@ -6,7 +6,7 @@
 // order, while each slide image still points to its rendered PDF page.
 
 export type SyncSlide = { src: string; title: string; orientation?: 'portrait' }
-export type SyncAnchor = { sectionId: string; blockIndex: number; slide: number; gapBefore?: 'half' }
+export type SyncAnchor = { sectionId: string; blockIndex: number; slide: number | number[]; gapBefore?: 'half' }
 
 export const chapter4Slides: SyncSlide[] = [
   { src: '/chapter-4/slides/slide-01.png', title: 'Systeme nerveux autonome' },
@@ -35,6 +35,16 @@ export const chapter4Slides: SyncSlide[] = [
   { src: '/chapter-4/slides/slide-23.png', title: 'Le carrefour pelvien' },
   { src: '/chapter-4/slides/slide-24.png', title: 'Le systeme nerveux enterique : le deuxieme cerveau' },
   { src: '/chapter-4/slides/slide-25.png', title: 'Zones reflexes podales : grands reperes du SNA' },
+  { src: '/chapter-4/figure-4-11.png', title: 'Cartographie : nerf vague X, territoires cranien et cervical' },
+  { src: '/chapter-4/figure-4-14.png', title: 'Cartographie : nerf vague X, territoire thoracique gauche' },
+  { src: '/chapter-4/figure-4-15.png', title: 'Cartographie : nerf vague X, territoire thoracique droit' },
+  { src: '/chapter-4/figure-4-17.png', title: 'Cartographie : nerf vague X, territoire abdominal gauche' },
+  { src: '/chapter-4/figure-4-22.png', title: 'Cartographie : nerf vague X, territoire abdominal droit' },
+  { src: '/chapter-4/figure-4-24.png', title: 'Cartographie : parasympathique pelvien' },
+  { src: '/chapter-4/figure-4-28.png', title: 'Cartographie : articulations costo-vertebrales', orientation: 'portrait' },
+  { src: '/chapter-4/figure-4-31.png', title: 'Cartographie : chaine ganglionnaire latero-vertebrale' },
+  { src: '/chapter-4/figure-4-37.png', title: 'Cartographie : plexus hypogastrique inferieur, fibres anterieures' },
+  { src: '/chapter-4/figure-4-39.png', title: 'Cartographie : plexus hypogastrique inferieur, fibres moyennes et posterieures' },
   { src: '/chapter-4/slides/slide-27.png', title: 'Principes therapeutiques en ROP' },
 ]
 
@@ -65,5 +75,14 @@ export const chapter4SlideAnchors: SyncAnchor[] = [
   { sectionId: 'plexus-pelvien', blockIndex: 0, slide: 24 },
   { sectionId: 'sne', blockIndex: 0, slide: 25 },
   { sectionId: 'zones-reflexes-podales', blockIndex: 0, slide: 26, gapBefore: 'half' },
-  { sectionId: 'zones-reflexes-podales', blockIndex: 52, slide: 27 },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 11, slide: 27 },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 18, slide: [28, 29] },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 22, slide: 30 },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 23, slide: 31 },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 24, slide: 32 },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 30, slide: 33 },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 34, slide: 34 },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 50, slide: 35 },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 51, slide: 36 },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 52, slide: 37 },
 ]
