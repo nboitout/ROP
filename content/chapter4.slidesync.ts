@@ -6,7 +6,16 @@
 // order, while each slide image still points to its rendered PDF page.
 
 export type SyncSlide = { src: string; title: string; orientation?: 'portrait' }
-export type SyncAnchor = { sectionId: string; blockIndex: number; slide: number | number[]; gapBefore?: 'half' }
+export type SyncAnchorPoint = { sectionId: string; blockIndex: number }
+export type SyncAnchor = SyncAnchorPoint & {
+  slide: number | number[]
+  gapBefore?: 'half'
+  end?: SyncAnchorPoint
+}
+
+const endAt = (sectionId: string, blockIndex: number): Pick<SyncAnchor, 'end'> => ({
+  end: { sectionId, blockIndex },
+})
 
 export const chapter4Slides: SyncSlide[] = [
   { src: '/chapter-4/slides/slide-01.png', title: 'Systeme nerveux autonome' },
@@ -50,38 +59,38 @@ export const chapter4Slides: SyncSlide[] = [
 
 export const chapter4SlideAnchors: SyncAnchor[] = [
   { sectionId: 'presentation', blockIndex: 0, slide: 1 },
-  { sectionId: 'presentation', blockIndex: 2, slide: 2 },
-  { sectionId: 'presentation', blockIndex: 8, slide: 3 },
-  { sectionId: 'organisation', blockIndex: 0, slide: 4 },
+  { sectionId: 'presentation', blockIndex: 2, slide: 2, ...endAt('presentation', 3) },
+  { sectionId: 'presentation', blockIndex: 8, slide: 3, ...endAt('presentation', 10) },
+  { sectionId: 'organisation', blockIndex: 0, slide: 4, ...endAt('parasympathique-visceromoteur', -1) },
   { sectionId: 'parasympathique-visceromoteur', blockIndex: 1, slide: 5, gapBefore: 'half' },
   { sectionId: 'parasympathique-visceromoteur', blockIndex: 2, slide: 6 },
   { sectionId: 'parasympathique-visceromoteur', blockIndex: 3, slide: 7 },
   { sectionId: 'parasympathique-visceromoteur', blockIndex: 4, slide: 8 },
-  { sectionId: 'parasympathique-visceromoteur', blockIndex: 5, slide: 9 },
+  { sectionId: 'parasympathique-visceromoteur', blockIndex: 5, slide: 9, ...endAt('parasympathique-visceromoteur', 6) },
   { sectionId: 'parasympathique-visceromoteur', blockIndex: 7, slide: 10 },
-  { sectionId: 'parasympathique-visceromoteur', blockIndex: 9, slide: 11 },
+  { sectionId: 'parasympathique-visceromoteur', blockIndex: 9, slide: 11, ...endAt('parasympathique-visceromoteur', 10) },
   { sectionId: 'parasympathique-visceromoteur', blockIndex: 12, slide: 12 },
   { sectionId: 'parasympathique-visceromoteur', blockIndex: 13, slide: 13 },
   { sectionId: 'parasympathique-visceromoteur', blockIndex: 14, slide: 14 },
-  { sectionId: 'parasympathique-visceromoteur', blockIndex: 16, slide: 15 },
-  { sectionId: 'nerf-vague-sensitif', blockIndex: 0, slide: 16, gapBefore: 'half' },
+  { sectionId: 'parasympathique-visceromoteur', blockIndex: 16, slide: 15, ...endAt('nerf-vague-sensitif', -1) },
+  { sectionId: 'nerf-vague-sensitif', blockIndex: 0, slide: 16, gapBefore: 'half', ...endAt('sympathique-visceromoteur', -1) },
   { sectionId: 'sympathique-visceromoteur', blockIndex: 0, slide: 17, gapBefore: 'half' },
   { sectionId: 'sympathique-visceromoteur', blockIndex: 2, slide: 18 },
   { sectionId: 'sympathique-visceromoteur', blockIndex: 5, slide: 19 },
-  { sectionId: 'sympathique-visceromoteur', blockIndex: 9, slide: 20 },
-  { sectionId: 'sympathique-visceromoteur', blockIndex: 18, slide: 21 },
-  { sectionId: 'sympathique-sensitif', blockIndex: 0, slide: 22, gapBefore: 'half' },
+  { sectionId: 'sympathique-visceromoteur', blockIndex: 9, slide: 20, ...endAt('sympathique-visceromoteur', 10) },
+  { sectionId: 'sympathique-visceromoteur', blockIndex: 18, slide: 21, ...endAt('sympathique-sensitif', -1) },
+  { sectionId: 'sympathique-sensitif', blockIndex: 0, slide: 22, gapBefore: 'half', ...endAt('chaine-plexique-prevertebrale', -1) },
   { sectionId: 'chaine-plexique-prevertebrale', blockIndex: 0, slide: 23 },
   { sectionId: 'plexus-pelvien', blockIndex: 0, slide: 24 },
   { sectionId: 'sne', blockIndex: 0, slide: 25 },
   { sectionId: 'zones-reflexes-podales', blockIndex: -1, slide: 26 },
-  { sectionId: 'zones-reflexes-podales', blockIndex: 11, slide: 27 },
-  { sectionId: 'zones-reflexes-podales', blockIndex: 18, slide: [28, 29] },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 11, slide: 27, ...endAt('zones-reflexes-podales', 13) },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 18, slide: [28, 29], ...endAt('zones-reflexes-podales', 20) },
   { sectionId: 'zones-reflexes-podales', blockIndex: 22, slide: 30 },
   { sectionId: 'zones-reflexes-podales', blockIndex: 23, slide: 31 },
-  { sectionId: 'zones-reflexes-podales', blockIndex: 24, slide: 32 },
-  { sectionId: 'zones-reflexes-podales', blockIndex: 30, slide: 33 },
-  { sectionId: 'zones-reflexes-podales', blockIndex: 34, slide: 34 },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 24, slide: 32, ...endAt('zones-reflexes-podales', 25) },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 30, slide: 33, ...endAt('zones-reflexes-podales', 32) },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 34, slide: 34, ...endAt('zones-reflexes-podales', 36) },
   { sectionId: 'zones-reflexes-podales', blockIndex: 50, slide: 35 },
   { sectionId: 'zones-reflexes-podales', blockIndex: 51, slide: 36 },
   { sectionId: 'zones-reflexes-podales', blockIndex: 52, slide: 37 },

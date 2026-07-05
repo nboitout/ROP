@@ -15,7 +15,24 @@ import { currentTopAnchorId, saveReadingPosition, loadReadingPosition, restoreTo
 import ReflexZoneAtlas from '@/components/ReflexZoneAtlas'
 
 type SyncSlide = { src: string; title: string; orientation?: 'portrait' }
-type SyncAnchor = { sectionId: string; blockIndex: number; slide: number | number[]; gapBefore?: 'half' }
+type SyncAnchorPoint = { sectionId: string; blockIndex: number }
+type SyncAnchor = SyncAnchorPoint & {
+  slide: number | number[]
+  gapBefore?: 'half'
+  end?: SyncAnchorPoint
+}
+type LightboxItem = {
+  src: string
+  alt: string
+  caption: string
+  orientation?: 'portrait' | 'landscape'
+  kind?: 'slide' | 'figure'
+}
+type LightboxState = LightboxItem & {
+  gallery?: LightboxItem[]
+  galleryIndex?: number
+  alignY?: 'top' | 'bottom'
+}
 
 type Props = {
   chapter: Chapter
@@ -144,9 +161,41 @@ function normalizeSectionLabel(value: string) {
     .toLowerCase()
 }
 
+function isReflexZoneSectionId(value: string) {
+  const normalized = normalizeSectionLabel(value)
+  return normalized === 'rop' || (normalized.includes('zone') && normalized.includes('reflex'))
+}
+
 function asSlideList(slide: number | number[] | undefined) {
   if (typeof slide === 'number') return [slide]
   return slide ?? []
+}
+
+function pointKey(sectionId: string, blockIndex: number) {
+  return `${sectionId}:${blockIndex}`
+}
+
+function uniqueSlides(values: number[]) {
+  const seen = new Set<number>()
+  return values.filter((value) => {
+    if (!Number.isFinite(value) || seen.has(value)) return false
+    seen.add(value)
+    return true
+  })
+}
+
+function slidesFromAnchors(anchors: SyncAnchor[] | undefined) {
+  return uniqueSlides((anchors ?? []).flatMap((anchor) => asSlideList(anchor.slide)))
+}
+
+function parseSlideList(value: string | undefined) {
+  if (!value) return []
+  return uniqueSlides(
+    value
+      .split(/[\s,]+/)
+      .map((item) => Number(item))
+      .filter((item) => Number.isFinite(item))
+  )
 }
 
 const slidePreloadCache = new Set<string>()
@@ -174,15 +223,16 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
     typeof window !== 'undefined' ? getSessionId() : ''
   )
   const [progress, setProgress] = useState(0)
-  const [active, setActive] = useState(1)
+  const [active, setActive] = useState<number | null>(null)
   const [activeSectionId, setActiveSectionId] = useState(chapter.sections[0]?.id ?? '')
   const [railHoverIndex, setRailHoverIndex] = useState<number | null>(null)
-  const [lightbox, setLightbox] = useState<{ src: string; alt: string; caption: string; orientation?: 'portrait' | 'landscape' } | null>(null)
+  const [lightbox, setLightbox] = useState<LightboxState | null>(null)
   const [lightboxZoom, setLightboxZoom] = useState(1)
   const [isPhonePortrait, setIsPhonePortrait] = useState(false)
   const xrefReturn = getSafeXrefReturn(searchParams)
   const articleRef = useRef<HTMLElement>(null)
   const sectionRailRef = useRef<HTMLElement>(null)
+  const lightboxScrollRef = useRef<HTMLDivElement>(null)
   const resourceOpenedAt = useRef<number | null>(null)
   const resourceNameRef = useRef<string | null>(null)
   // While a slide-driven scroll is in flight, the scroll handler must not
@@ -205,7 +255,26 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
 
   const anchorBySlide = useMemo(() => {
     const m = new Map<string, SyncAnchor>()
-    for (const a of anchors) m.set(`${a.sectionId}:${a.blockIndex}`, a)
+    for (const a of anchors) m.set(pointKey(a.sectionId, a.blockIndex), a)
+    return m
+  }, [anchors])
+
+  const anchorsByPoint = useMemo(() => {
+    const m = new Map<string, SyncAnchor[]>()
+    for (const anchor of anchors) {
+      const key = pointKey(anchor.sectionId, anchor.blockIndex)
+      m.set(key, [...(m.get(key) ?? []), anchor])
+    }
+    return m
+  }, [anchors])
+
+  const endSlidesByPoint = useMemo(() => {
+    const m = new Map<string, number[]>()
+    for (const anchor of anchors) {
+      if (!anchor.end) continue
+      const key = pointKey(anchor.end.sectionId, anchor.end.blockIndex)
+      m.set(key, uniqueSlides([...(m.get(key) ?? []), ...asSlideList(anchor.slide)]))
+    }
     return m
   }, [anchors])
 
@@ -251,7 +320,7 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
   }, [chapter.slug])
 
   useEffect(() => {
-    const activeIndex = active - 1
+    const activeIndex = (active ?? 1) - 1
     for (let index = activeIndex - 3; index <= activeIndex + 6; index += 1) {
       preloadSlideImage(slides[index]?.src)
     }
@@ -318,14 +387,42 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
       }
 
       if (Date.now() < suppressSyncUntil.current) return
-      // Active slide = last anchor whose top has crossed 45% of the viewport.
+      // Active slide = the latest start anchor that has crossed the reading
+      // cursor, unless its explicit end anchor has crossed too. Recomputing
+      // from geometry makes the same boundary work in both scroll directions.
       const threshold = window.innerHeight * 0.45
-      let current = 1
-      el.querySelectorAll<HTMLElement>('[data-slide-anchor]').forEach((a) => {
-        if (a.getBoundingClientRect().top <= threshold) {
-          current = Number(a.dataset.slideAnchor) || current
+      const events: {
+        top: number
+        kind: 'end' | 'start'
+        slide: number
+        order: number
+      }[] = []
+      el.querySelectorAll<HTMLElement>('[data-slide-anchor], [data-slide-end-anchor]').forEach((a, order) => {
+        const top = a.getBoundingClientRect().top
+        const startSlide = Number(a.dataset.slideAnchor)
+        if (Number.isFinite(startSlide) && startSlide > 0) {
+          events.push({ top, kind: 'start', slide: startSlide, order })
         }
+        parseSlideList(a.dataset.slideEndAnchor).forEach((slide) => {
+          events.push({ top, kind: 'end', slide, order })
+        })
       })
+      events.sort((a, b) => {
+        const topDiff = a.top - b.top
+        if (topDiff !== 0) return topDiff
+        if (a.kind !== b.kind) return a.kind === 'end' ? -1 : 1
+        return a.order - b.order || a.slide - b.slide
+      })
+
+      let current: number | null = null
+      for (const event of events) {
+        if (event.top > threshold) break
+        if (event.kind === 'start') {
+          current = event.slide
+        } else if (current === event.slide) {
+          current = null
+        }
+      }
       setActive(current)
 
       const sectionThreshold = window.innerHeight * 0.36
@@ -351,7 +448,17 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
 
   useEffect(() => {
     if (!lightbox) return
-    function onKey(e: KeyboardEvent) { if (e.key === 'Escape') closeLightbox() }
+    function onKey(e: KeyboardEvent) {
+      if (e.key === 'Escape') closeLightbox()
+      if (e.key === 'ArrowRight') {
+        e.preventDefault()
+        moveLightboxGallery(1)
+      }
+      if (e.key === 'ArrowLeft') {
+        e.preventDefault()
+        moveLightboxGallery(-1)
+      }
+    }
     window.addEventListener('keydown', onKey)
     const prev = document.body.style.overflow
     document.body.style.overflow = 'hidden'
@@ -380,7 +487,7 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
   function openResource(name: string, img: { src: string; alt: string; caption: string }) {
     resourceOpenedAt.current = Date.now()
     resourceNameRef.current = name
-    setLightbox({ ...img, orientation: 'landscape' })
+    setLightbox({ ...img, orientation: 'landscape', kind: 'figure', alignY: 'top' })
     track('resource_open', { resource: name })
   }
 
@@ -395,6 +502,43 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
     setLightboxZoom(1)
   }
 
+  function alignLightboxViewport() {
+    if (!lightbox || lightbox.alignY !== 'bottom') return
+    const scrollEl = lightboxScrollRef.current
+    if (!scrollEl) return
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        scrollEl.scrollTop = Math.max(0, scrollEl.scrollHeight - scrollEl.clientHeight)
+        scrollEl.scrollLeft = Math.max(0, (scrollEl.scrollWidth - scrollEl.clientWidth) / 2)
+      })
+    })
+  }
+
+  function setLightboxItem(item: LightboxItem, gallery?: LightboxItem[], galleryIndex = 0) {
+    setLightbox({
+      ...item,
+      gallery,
+      galleryIndex,
+      alignY: item.kind === 'slide' ? 'bottom' : 'top',
+    })
+  }
+
+  function moveLightboxGallery(delta: number) {
+    setLightbox((current) => {
+      const gallery = current?.gallery
+      if (!current || !gallery || gallery.length < 2) return current
+      const nextIndex = (current.galleryIndex ?? 0) + delta
+      const wrapped = (nextIndex + gallery.length) % gallery.length
+      const nextItem = gallery[wrapped]
+      return {
+        ...nextItem,
+        gallery,
+        galleryIndex: wrapped,
+        alignY: nextItem.kind === 'slide' ? 'bottom' : 'top',
+      }
+    })
+  }
+
   function cancelNav() {
     if (navAnim.current) {
       cancelAnimationFrame(navAnim.current.raf)
@@ -407,9 +551,8 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
   // from the live element, so lazy-loaded figures growing mid-scroll can't
   // strand the animation short of the destination. Sync stays suppressed until
   // arrival (however long a far jump takes); a manual scroll cancels it.
-  function animateTo(getEl: () => HTMLElement | null) {
+  function animateTo(getEl: () => HTMLElement | null, targetOffset = 96) {
     cancelNav()
-    const MARGIN = 96
     suppressSyncUntil.current = Infinity
 
     // The site sets html{scroll-behavior:smooth}; force instant positioning so
@@ -437,7 +580,7 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
     const step = (now: number) => {
       const el = getEl()
       if (!el) { cleanup(); navAnim.current = null; return }
-      const desired = el.getBoundingClientRect().top + window.scrollY - MARGIN
+      const desired = el.getBoundingClientRect().top + window.scrollY - targetOffset
       const dist = desired - window.scrollY
       settled = Math.abs(dist) < 2 ? settled + 1 : 0
       // Ease toward the live target; recomputed each frame.
@@ -455,7 +598,10 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
     const slide = Math.min(slides.length, Math.max(1, n))
     setActive(slide)
     track('sync_slide_nav', { slide })
-    animateTo(() => articleRef.current?.querySelector<HTMLElement>(`[data-slide-anchor="${slide}"]`) ?? null)
+    animateTo(
+      () => articleRef.current?.querySelector<HTMLElement>(`[data-slide-anchor="${slide}"]`) ?? null,
+      window.innerHeight * 0.42
+    )
   }
 
   function slideForSection(sectionId: string) {
@@ -515,26 +661,137 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
     return Math.max(base, hoverWidth)
   }
 
-  function openSlideLightbox(n: number) {
+  function slideLightboxItem(n: number): LightboxItem | null {
     const s = slides[n - 1]
-    if (!s) return
-    setLightbox({
+    if (!s) return null
+    return {
       src: s.src,
       alt: s.title,
       caption: ui.caption(n, s.title),
       orientation: s.orientation === 'portrait' ? 'portrait' : 'landscape',
-    })
+      kind: 'slide',
+    }
+  }
+
+  function figureLightboxItem(block: Block): LightboxItem | null {
+    if (block.type !== 'figure' || block.syncHide) return null
+    return {
+      src: block.src,
+      alt: block.alt,
+      caption: block.caption,
+      orientation: block.orientation === 'portrait' || block.orientation === 'narrow' ? 'portrait' : 'landscape',
+      kind: 'figure',
+    }
+  }
+
+  function anchorForSlide(n: number) {
+    return anchors.find((anchor) => asSlideList(anchor.slide).includes(n)) ?? null
+  }
+
+  function reflexAnchorForBlock(sectionId: string, blockIndex: number) {
+    if (!isReflexZoneSectionId(sectionId)) return null
+    return anchors.find((anchor) => {
+      if (!anchor.end || anchor.sectionId !== sectionId || anchor.end.sectionId !== sectionId) return false
+      if (!isReflexZoneSectionId(anchor.sectionId)) return false
+      const start = Math.max(0, anchor.blockIndex)
+      const end = anchor.end.blockIndex
+      return blockIndex >= start && blockIndex <= end
+    }) ?? null
+  }
+
+  function firstFigureInAnchorRange(anchor: SyncAnchor) {
+    if (!anchor.end || anchor.end.sectionId !== anchor.sectionId) return null
+    const section = chapter.sections.find((s) => s.id === anchor.sectionId)
+    if (!section) return null
+    const start = Math.max(0, anchor.blockIndex)
+    const end = Math.min(section.blocks.length - 1, anchor.end.blockIndex)
+    for (let i = start; i <= end; i += 1) {
+      const item = figureLightboxItem(section.blocks[i])
+      if (item) return item
+    }
+    return null
+  }
+
+  function reflexGalleryForSlide(n: number) {
+    const slideItem = slideLightboxItem(n)
+    const anchor = anchorForSlide(n)
+    if (!slideItem || !anchor || !anchor.end || !isReflexZoneSectionId(anchor.sectionId)) {
+      return slideItem ? [slideItem] : []
+    }
+    const items = asSlideList(anchor.slide)
+      .map((slideNumber) => slideLightboxItem(slideNumber))
+      .filter((item): item is LightboxItem => !!item)
+    const figureItem = firstFigureInAnchorRange(anchor)
+    if (figureItem) items.push(figureItem)
+    return items.length > 0 ? items : [slideItem]
+  }
+
+  function reflexGalleryForFigure(sectionId: string, blockIndex: number, image: LightboxItem) {
+    const anchor = reflexAnchorForBlock(sectionId, blockIndex)
+    if (!anchor) return [image]
+    const slideItems = asSlideList(anchor.slide)
+      .map((slideNumber) => slideLightboxItem(slideNumber))
+      .filter((item): item is LightboxItem => !!item)
+    return [...slideItems, image]
+  }
+
+  function openSlideLightbox(n: number) {
+    const gallery = reflexGalleryForSlide(n)
+    const current = gallery.findIndex((item) => item.kind === 'slide' && item.src === slides[n - 1]?.src)
+    const index = current >= 0 ? current : 0
+    const item = gallery[index]
+    if (!item) return
+    setLightboxItem(item, gallery.length > 1 ? gallery : undefined, index)
+  }
+
+  function openFigureLightbox(image: LightboxItem, sectionId: string, blockIndex: number) {
+    const figureItem = { ...image, kind: 'figure' as const }
+    const gallery = reflexGalleryForFigure(sectionId, blockIndex, figureItem)
+    const current = gallery.findIndex((item) => item.kind === 'figure' && item.src === figureItem.src)
+    const index = current >= 0 ? current : 0
+    setLightboxItem(figureItem, gallery.length > 1 ? gallery : undefined, index)
   }
 
   const rotateLandscapeLightbox = lightbox?.orientation === 'landscape' && isPhonePortrait
-  const activeSlide = slides[active - 1]
+
+  useEffect(() => {
+    alignLightboxViewport()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [lightbox?.src, lightboxZoom, rotateLandscapeLightbox])
+
+  const activeSlideNumber = active ?? 0
+  const activeSlide = active ? slides[active - 1] : undefined
   const activeSlideIsPortrait = activeSlide?.orientation === 'portrait'
   const renderedSlideIndexes = useMemo(() => {
+    if (!active) return []
     const indexes = new Set([active - 3, active - 2, active - 1, active, active + 1])
     return Array.from(indexes)
       .filter((index) => index >= 0 && index < slides.length)
       .sort((a, b) => a - b)
   }, [active, slides.length])
+  const lightboxGalleryCount = lightbox?.gallery?.length ?? 0
+  const lightboxGalleryIndex = lightbox?.galleryIndex ?? 0
+
+  function slidesAtPoint(sectionId: string, blockIndex: number) {
+    return slidesFromAnchors(anchorsByPoint.get(pointKey(sectionId, blockIndex)))
+  }
+
+  function hasHalfGapBefore(sectionId: string, blockIndex: number) {
+    return (anchorsByPoint.get(pointKey(sectionId, blockIndex)) ?? [])
+      .some((anchor) => anchor.gapBefore === 'half')
+  }
+
+  function renderEndSentinel(sectionId: string, blockIndex: number) {
+    const endSlides = endSlidesByPoint.get(pointKey(sectionId, blockIndex))
+    if (!endSlides?.length) return null
+    return (
+      <span
+        className="ss-end-anchor"
+        data-slide-end-anchor={endSlides.join(' ')}
+        aria-hidden
+      />
+    )
+  }
 
   return (
     <div className="cr-root">
@@ -603,42 +860,43 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
               <div className="ss-stage-main">
             <button
               type="button"
-              className={`ss-frame${activeSlideIsPortrait ? ' ss-frame--portrait' : ''}`}
-              onClick={() => openSlideLightbox(active)}
-              aria-label={ui.enlarge(active, activeSlide?.title ?? '')}
+              className={`ss-frame${activeSlideIsPortrait ? ' ss-frame--portrait' : ''}${activeSlide ? '' : ' ss-frame--empty'}`}
+              onClick={() => { if (active) openSlideLightbox(active) }}
+              disabled={!activeSlide}
+              aria-label={activeSlide && active ? ui.enlarge(active, activeSlide.title) : ui.slides}
             >
-              {renderedSlideIndexes.map((i) => {
+              {activeSlide ? renderedSlideIndexes.map((i) => {
                 const s = slides[i]
                 return (
                   <img
                     key={s.src}
                     src={s.src}
                     alt={s.title}
-                    className={`ss-slide${i + 1 === active ? ' is-active' : ''}`}
-                    loading={Math.abs(i + 1 - active) <= 1 ? 'eager' : 'lazy'}
-                    fetchPriority={i + 1 === active ? 'high' : 'low'}
+                    className={`ss-slide${i + 1 === activeSlideNumber ? ' is-active' : ''}`}
+                    loading={Math.abs(i + 1 - activeSlideNumber) <= 1 ? 'eager' : 'lazy'}
+                    fetchPriority={i + 1 === activeSlideNumber ? 'high' : 'low'}
                     decoding="async"
-                    aria-hidden={i + 1 !== active}
+                    aria-hidden={i + 1 !== activeSlideNumber}
                   />
                 )
-              })}
-              <span className="cr-fig-zoom ss-frame-zoom" aria-hidden>⌕</span>
+              }) : <span className="ss-frame-empty-mark" aria-hidden />}
+              {activeSlide && <span className="cr-fig-zoom ss-frame-zoom" aria-hidden>⌕</span>}
             </button>
             <div className="ss-stage-bar">
               <button
                 className="cr-viewer-nav-btn"
-                onClick={() => goToSlide(active - 1)}
-                disabled={active <= 1}
+                onClick={() => { if (active) goToSlide(active - 1) }}
+                disabled={!active || active <= 1}
                 aria-label={ui.prev}
               >‹</button>
               <div className="ss-stage-meta">
-                <span className="ss-stage-count">{active} / {slides.length}</span>
-                <span className="ss-stage-title">{slides[active - 1]?.title}</span>
+                <span className="ss-stage-count">{active ?? '-'} / {slides.length}</span>
+                <span className="ss-stage-title">{activeSlide?.title}</span>
               </div>
               <button
                 className="cr-viewer-nav-btn"
-                onClick={() => goToSlide(active + 1)}
-                disabled={active >= slides.length}
+                onClick={() => { if (active) goToSlide(active + 1) }}
+                disabled={!active || active >= slides.length}
                 aria-label={ui.next}
               >›</button>
             </div>
@@ -691,8 +949,7 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
           </div>
 
           {chapter.sections.map((section) => {
-            const headingAnchor = anchorBySlide.get(`${section.id}:-1`)
-            const headingSlides = asSlideList(headingAnchor?.slide)
+            const headingSlides = slidesAtPoint(section.id, -1)
             const hasPageBreak = PAGE_BREAK_BEFORE.has(section.id)
             return (
             <Fragment key={section.id}>
@@ -718,6 +975,7 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
               </div>
             )}
             <section id={`sec-${section.id}`} className="cr-section">
+              {renderEndSentinel(section.id, -1)}
               {!hasPageBreak && headingSlides.length > 0 && (
                 <div className="ss-anchor ss-anchor-heading">
                   {headingSlides.map((slide) => (
@@ -737,11 +995,17 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
               )}
               {!isRopInterestSection(section) && <h2 className="cr-h2">{section.title}</h2>}
               {section.blocks.map((b, i) => {
-                const anchor = anchorBySlide.get(`${section.id}:${i}`)
-                const slideList = asSlideList(anchor?.slide)
+                const slideList = slidesAtPoint(section.id, i)
+                const endSentinel = renderEndSentinel(section.id, i)
                 const posId = `p-${section.id}-${i}`
-                const view = <BlockView block={b} onOpenImage={setLightbox} ui={ui} />
-                if (view === null && slideList.length === 0) return null
+                const view = (
+                  <BlockView
+                    block={b}
+                    onOpenImage={(image) => openFigureLightbox(image, section.id, i)}
+                    ui={ui}
+                  />
+                )
+                if (view === null && slideList.length === 0 && !endSentinel) return null
                 if (slideList.length === 0) {
                   return (
                     <div
@@ -749,6 +1013,7 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
                       id={posId}
                       data-pos-anchor=""
                     >
+                      {endSentinel}
                       {view}
                     </div>
                   )
@@ -758,8 +1023,9 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
                     key={i}
                     id={posId}
                     data-pos-anchor=""
-                    className={`ss-anchor${anchor?.gapBefore === 'half' ? ' ss-anchor-halfbreak' : ''}`}
+                    className={`ss-anchor${hasHalfGapBefore(section.id, i) ? ' ss-anchor-halfbreak' : ''}`}
                   >
+                    {endSentinel}
                     {slideList.map((slide) => (
                       <div key={slide} data-slide-anchor={slide}>
                         <button
@@ -794,13 +1060,20 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
           <div className="cr-lightbox-bar" onClick={(e) => e.stopPropagation()}>
             <span className="cr-lightbox-caption">{lightbox.caption}</span>
             <div className="cr-lightbox-controls">
+              {lightboxGalleryCount > 1 && (
+                <>
+                  <button className="cr-viewer-nav-btn" onClick={() => moveLightboxGallery(-1)} aria-label="Image précédente">‹</button>
+                  <span className="cr-viewer-nav-count">{lightboxGalleryIndex + 1} / {lightboxGalleryCount}</span>
+                  <button className="cr-viewer-nav-btn" onClick={() => moveLightboxGallery(1)} aria-label="Image suivante">›</button>
+                </>
+              )}
               <button className="cr-viewer-nav-btn" onClick={() => setLightboxZoom(z => Math.max(0.5, +(z - 0.25).toFixed(2)))} disabled={lightboxZoom <= 0.5} aria-label="Dézoomer">−</button>
               <button className="cr-viewer-zoom-reset" onClick={() => setLightboxZoom(1)} title="Réinitialiser">{Math.round(lightboxZoom * 100)}%</button>
               <button className="cr-viewer-nav-btn" onClick={() => setLightboxZoom(z => Math.min(4, +(z + 0.25).toFixed(2)))} disabled={lightboxZoom >= 4} aria-label="Zoomer">+</button>
               <button className="cr-lightbox-close" onClick={closeLightbox} aria-label="Fermer">×</button>
             </div>
           </div>
-          <div className="cr-lightbox-scroll" onClick={(e) => e.stopPropagation()}>
+          <div ref={lightboxScrollRef} className="cr-lightbox-scroll" onClick={(e) => e.stopPropagation()}>
             <figure className="cr-lightbox-fig">
               {lightbox.orientation === 'landscape' && (
                 <p className="cr-lightbox-rotate-hint">{ui.rotateHint}</p>
@@ -808,6 +1081,7 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
               <img
                 src={lightbox.src}
                 alt={lightbox.alt}
+                onLoad={alignLightboxViewport}
                 style={{
                   transform: `${rotateLandscapeLightbox ? 'rotate(90deg) ' : ''}scale(${lightboxZoom})`,
                   transformOrigin: rotateLandscapeLightbox ? 'center center' : 'top center',
@@ -825,7 +1099,7 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
   )
 }
 
-function BlockView({ block, onOpenImage, ui }: { block: Block; onOpenImage: (b: { src: string; alt: string; caption: string }) => void; ui: typeof SS_UI.fr }) {
+function BlockView({ block, onOpenImage, ui }: { block: Block; onOpenImage: (b: LightboxItem) => void; ui: typeof SS_UI.fr }) {
   const { t } = useLanguage()
   switch (block.type) {
     case 'para':
@@ -863,7 +1137,13 @@ function BlockView({ block, onOpenImage, ui }: { block: Block; onOpenImage: (b: 
           <button
             type="button"
             className="cr-fig-btn"
-            onClick={() => onOpenImage({ src: block.src, alt: block.alt, caption: block.caption })}
+            onClick={() => onOpenImage({
+              src: block.src,
+              alt: block.alt,
+              caption: block.caption,
+              orientation: block.orientation === 'portrait' || block.orientation === 'narrow' ? 'portrait' : 'landscape',
+              kind: 'figure',
+            })}
             aria-label={ui.enlargeFigure(block.caption)}
           >
             <img src={block.src} alt={block.alt} loading="lazy" />

@@ -839,7 +839,7 @@ export const chapter4Fr: Chapter = {
           "type": "figure",
           "src": "/chapter-4/figure-4-4.png",
           "alt": "Palpation de la zone réflexe podale du territoire céphalique : tronc cérébral entre les deux pouces",
-          "caption": "Figure 4.4 — Zone réflexe podale — territoire céphalique : tronc cérébral (entre les deux pouces)",
+          "caption": "Territoire céphalique : tronc cérébral (entre les deux pouces)",
           "orientation": "portrait"
         },
         {
@@ -867,14 +867,14 @@ export const chapter4Fr: Chapter = {
           "type": "figure",
           "src": "/chapter-4/figure-4-7.png",
           "alt": "Palpation de la zone réflexe podale du trajet crânien du nerf vague : moelle allongée",
-          "caption": "Figure 4.7 — Zone réflexe podale — trajet crânien du nerf vague : moelle allongée",
+          "caption": "Trajet crânien du nerf vague : moelle allongée",
           "orientation": "portrait"
         },
         {
           "type": "figure",
           "src": "/chapter-4/figure-4-8.png",
           "alt": "Palpation de la zone réflexe podale du trajet crânien du nerf vague : foramen jugulaire et ganglions",
-          "caption": "Figure 4.8 — Zone réflexe podale — trajet crânien du nerf vague : foramen jugulaire et ganglions",
+          "caption": "Trajet crânien du nerf vague : foramen jugulaire et ganglions",
           "orientation": "portrait"
         },
         {
@@ -898,7 +898,7 @@ export const chapter4Fr: Chapter = {
           "type": "figure",
           "src": "/chapter-4/figure-4-12.png",
           "alt": "Palpation des zones réflexes podales du nerf vague : territoires crânien et cervical",
-          "caption": "Figure 4.12 — Zones réflexes podales — nerf vague : territoires crânien et cervical",
+          "caption": "Nerf vague : territoires crânien et cervical",
           "orientation": "landscape"
         },
         {
@@ -951,7 +951,7 @@ export const chapter4Fr: Chapter = {
           "type": "figure",
           "src": "/chapter-4/figure-4-18.png",
           "alt": "Palpation de la zone réflexe podale de l’étage diaphragmatique : hiatus œsophagien",
-          "caption": "Figure 4.18 — Zone réflexe podale — étage diaphragmatique : hiatus œsophagien",
+          "caption": "Étage diaphragmatique : hiatus œsophagien",
           "orientation": "portrait"
         },
         {
@@ -987,14 +987,14 @@ export const chapter4Fr: Chapter = {
           "type": "figure",
           "src": "/chapter-4/figure-4-19.png",
           "alt": "Palpation de la zone réflexe podale de la fonction viscéro-motrice du nerf vague : petite courbure de l’estomac",
-          "caption": "Figure 4.19 — Zone réflexe podale — fonction viscéro-motrice du nerf vague : petite courbure de l’estomac",
+          "caption": "Fonction viscéro-motrice du nerf vague : petite courbure de l’estomac",
           "orientation": "portrait"
         },
         {
           "type": "figure",
           "src": "/chapter-4/figure-4-21.png",
           "alt": "Palpation de la zone réflexe podale de la fonction viscéro-motrice du nerf vague : zone de Cannon-Böhm",
-          "caption": "Figure 4.21 — Zone réflexe podale — fonction viscéro-motrice du nerf vague : zone de Cannon-Böhm",
+          "caption": "Fonction viscéro-motrice du nerf vague : zone de Cannon-Böhm",
           "orientation": "portrait"
         },
         {
@@ -1049,7 +1049,7 @@ export const chapter4Fr: Chapter = {
           "type": "figure",
           "src": "/chapter-4/figure-4-29.png",
           "alt": "Palpation de la zone réflexe podale du sympathique viscéro-moteur : chaîne ganglionnaire latéro-vertébrale thoracique",
-          "caption": "Figure 4.29 — Zone réflexe podale — sympathique viscéro-moteur : chaîne ganglionnaire latéro-vertébrale thoracique",
+          "caption": "Sympathique viscéro-moteur : chaîne ganglionnaire latéro-vertébrale thoracique",
           "orientation": "landscape"
         },
         {
@@ -1085,7 +1085,7 @@ export const chapter4Fr: Chapter = {
           "type": "figure",
           "src": "/chapter-4/figure-4-32.png",
           "alt": "Palpation de la zone réflexe podale de la chaîne ganglionnaire cervicale : ganglion cervical inférieur",
-          "caption": "Figure 4.32 — Zone réflexe podale — chaîne ganglionnaire cervicale : ganglion cervical inférieur",
+          "caption": "Chaîne ganglionnaire cervicale : ganglion cervical inférieur",
           "orientation": "portrait"
         },
         {
@@ -1113,7 +1113,7 @@ export const chapter4Fr: Chapter = {
           "type": "figure",
           "src": "/chapter-4/figure-4-34.png",
           "alt": "Palpation de la zone réflexe podale de la chaîne ganglionnaire lombale : piliers du diaphragme",
-          "caption": "Figure 4.34 — Zone réflexe podale — chaîne ganglionnaire lombale : piliers du diaphragme",
+          "caption": "Chaîne ganglionnaire lombale : piliers du diaphragme",
           "orientation": "landscape"
         },
         {
@@ -1197,14 +1197,14 @@ export const chapter4Fr: Chapter = {
           "type": "figure",
           "src": "/chapter-4/figure-4-38.png",
           "alt": "Palpation de la zone réflexe podale du plexus pelvien : plexus hypogastrique inférieur, fibres antérieures",
-          "caption": "Figure 4.38 — Zone réflexe podale — plexus pelvien : plexus hypogastrique inférieur, fibres antérieures",
+          "caption": "Plexus pelvien : plexus hypogastrique inférieur, fibres antérieures",
           "orientation": "portrait"
         },
         {
           "type": "figure",
           "src": "/chapter-4/figure-4-40.png",
           "alt": "Palpation des zones réflexes podales du plexus pelvien : plexus hypogastrique inférieur, fibres moyennes et postérieures",
-          "caption": "Figure 4.40 — Zones réflexes podales — plexus pelvien : plexus hypogastrique inférieur, fibres moyennes et postérieures",
+          "caption": "Plexus pelvien : plexus hypogastrique inférieur, fibres moyennes et postérieures",
           "orientation": "landscape"
         },
         {
@@ -1217,6 +1217,12 @@ export const chapter4Fr: Chapter = {
           "text": "ceux sont celles de l’intestin."
         },
         {
+          "type": "xref",
+          "label": "Voir les zones réflexes dans le chapitre 14",
+          "text": "Intestin grêle — zones réflexes podales",
+          "href": "/lecture/chapitre-14?xrefBack=%2Flecture%2Fchapitre-4%23p-zones-reflexes-podales-53&xrefBackLabel=Retour%20au%20chapitre%204#p-rop-14"
+        },
+        {
           "type": "sub",
           "text": "Glandes surrénales"
         },
@@ -1224,6 +1230,12 @@ export const chapter4Fr: Chapter = {
           "type": "lead",
           "label": "Zones réflexes",
           "text": "(Cf. Chapitre 16)"
+        },
+        {
+          "type": "xref",
+          "label": "Voir les zones réflexes dans le chapitre 16",
+          "text": "Reins — zones réflexes podales",
+          "href": "/lecture/chapitre-16?xrefBack=%2Flecture%2Fchapitre-4%23p-zones-reflexes-podales-56&xrefBackLabel=Retour%20au%20chapitre%204#sec-zones-reflexes-podales"
         }
       ]
     }

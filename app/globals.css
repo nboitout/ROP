@@ -773,6 +773,11 @@ a.ss-switch-opt:hover { color:var(--gold); }
   border-radius:6px; overflow:hidden; background:#f4efe3; cursor:zoom-in;
   box-shadow:0 10px 34px rgba(26,26,24,.12); transition:box-shadow .25s; }
 .ss-frame:hover { box-shadow:0 16px 44px rgba(26,26,24,.2); }
+.ss-frame:disabled { cursor:default; }
+.ss-frame:disabled:hover { box-shadow:0 10px 34px rgba(26,26,24,.12); }
+.ss-frame--empty { display:flex; align-items:center; justify-content:center;
+  background:linear-gradient(135deg,rgba(255,255,255,.46),rgba(237,231,217,.68)); }
+.ss-frame-empty-mark { width:clamp(46px,18%,88px); height:1px; background:rgba(160,124,58,.32); }
 /* portrait slide — tall frame sized to the viewport height so it shows large */
 .ss-frame--portrait { aspect-ratio:3/4; width:auto; height:min(74vh,660px); max-width:100%;
   margin-left:auto; margin-right:auto; }
@@ -834,6 +839,7 @@ a.ss-switch-opt:hover { color:var(--gold); }
 .ss-pagebreak--anchored { display:flex; align-items:center; justify-content:center; }
 
 .ss-anchor { scroll-margin-top:96px; }
+.ss-end-anchor { display:block; width:0; height:0; overflow:hidden; }
 .ss-anchor-halfbreak { padding-top:36vh; }
 .ss-marker { display:inline-flex; align-items:center; gap:8px; background:none; border:none; padding:0; margin:6px 0 10px;
   cursor:zoom-in; font-family:'DM Sans',sans-serif; font-size:.68rem; font-weight:600; letter-spacing:.16em;
