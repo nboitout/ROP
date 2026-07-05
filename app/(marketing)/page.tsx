@@ -37,6 +37,9 @@ export default function HomePage() {
             <a href="#acheter">{t.nav.commander}</a>
             <a href="/chapitres-gratuits" className="n-cta">{t.nav.chapitreGratuit}</a>
           </nav>
+          <a href="/chapitres-gratuits" className="h-mobile-cta" onClick={() => trackCta('header_mobile_free_chapters')}>
+            {t.nav.chapitreGratuit}
+          </a>
           <LanguageToggle />
         </div>
       </header>

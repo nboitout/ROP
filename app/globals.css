@@ -33,6 +33,7 @@ nav a { font-size:.71rem; font-weight:500; letter-spacing:.09em; text-transform:
 nav a:hover { opacity:1; color:var(--sage); }
 .n-cta { background:var(--sage) !important; color:var(--cream) !important; opacity:1 !important; padding:8px 18px; border-radius:2px; }
 .n-cta:hover { background:#3a5a4a !important; opacity:1 !important; }
+.h-mobile-cta { display:none; align-items:center; justify-content:center; min-height:32px; padding:7px 12px; border-radius:2px; background:var(--sage); color:var(--cream); font-size:.66rem; font-weight:700; letter-spacing:.08em; line-height:1.05; text-align:center; text-decoration:none; text-transform:uppercase; box-shadow:0 4px 14px rgba(74,107,90,.22); }
 .h-right { display:flex; align-items:center; gap:16px; }
 .lang-select-wrap { position:relative; flex-shrink:0; }
 .lang-select-wrap::after { content:'▾'; position:absolute; right:8px; top:50%; transform:translateY(-50%); color:var(--cream); font-size:.6rem; pointer-events:none; }
@@ -329,6 +330,8 @@ footer > div > p { font-size:.95rem; color:rgba(245,240,232,.84); line-height:1.
   .jn-body-ct { padding:0 12px 12px 44px; }
   header { padding:0 22px; }
   nav { display:none; }
+  .h-right { gap:10px; }
+  .h-mobile-cta { display:inline-flex; max-width:34vw; }
   .hl-sub { white-space:normal; }
   .ap { max-width:420px; }
   .f-bot { padding:10px 20px; flex-direction:column; gap:5px; }
@@ -337,6 +340,14 @@ footer > div > p { font-size:.95rem; color:rgba(245,240,232,.84); line-height:1.
   .hero-main { aspect-ratio:4/3; }
   .hero-gallery-top { flex-direction:column; }
   .hero-thumbs { grid-template-columns:repeat(4,1fr); gap:8px; }
+}
+
+@media(max-width:520px){
+  header { height:58px; padding:0 12px; gap:8px; }
+  .h-logo { font-size:.83rem; letter-spacing:.07em; white-space:nowrap; }
+  .h-right { gap:7px; min-width:0; }
+  .h-mobile-cta { max-width:38vw; min-height:30px; padding:6px 9px; font-size:.58rem; letter-spacing:.055em; overflow-wrap:anywhere; }
+  .lang-select { max-width:86px; padding:6px 24px 6px 10px; font-size:.64rem; letter-spacing:.04em; }
 }
 
 @media(max-width:1320px){
