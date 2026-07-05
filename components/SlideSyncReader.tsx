@@ -503,12 +503,14 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
   }
 
   function alignLightboxViewport() {
-    if (!lightbox || lightbox.alignY !== 'bottom') return
+    if (!lightbox) return
     const scrollEl = lightboxScrollRef.current
     if (!scrollEl) return
     requestAnimationFrame(() => {
       requestAnimationFrame(() => {
-        scrollEl.scrollTop = Math.max(0, scrollEl.scrollHeight - scrollEl.clientHeight)
+        scrollEl.scrollTop = lightbox.alignY === 'bottom'
+          ? Math.max(0, scrollEl.scrollHeight - scrollEl.clientHeight)
+          : 0
         scrollEl.scrollLeft = Math.max(0, (scrollEl.scrollWidth - scrollEl.clientWidth) / 2)
       })
     })
@@ -688,25 +690,31 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
     return anchors.find((anchor) => asSlideList(anchor.slide).includes(n)) ?? null
   }
 
-  function reflexAnchorForBlock(sectionId: string, blockIndex: number) {
-    if (!isReflexZoneSectionId(sectionId)) return null
-    return anchors.find((anchor) => {
-      if (!anchor.end || anchor.sectionId !== sectionId || anchor.end.sectionId !== sectionId) return false
-      if (!isReflexZoneSectionId(anchor.sectionId)) return false
-      const start = Math.max(0, anchor.blockIndex)
-      const end = anchor.end.blockIndex
-      return blockIndex >= start && blockIndex <= end
-    }) ?? null
-  }
-
-  function firstFigureInAnchorRange(anchor: SyncAnchor) {
-    if (!anchor.end || anchor.end.sectionId !== anchor.sectionId) return null
+  function reflexAnchorBlockRange(anchor: SyncAnchor) {
+    if (!isReflexZoneSectionId(anchor.sectionId)) return null
     const section = chapter.sections.find((s) => s.id === anchor.sectionId)
     if (!section) return null
     const start = Math.max(0, anchor.blockIndex)
-    const end = Math.min(section.blocks.length - 1, anchor.end.blockIndex)
-    for (let i = start; i <= end; i += 1) {
-      const item = figureLightboxItem(section.blocks[i])
+    const endBlock = anchor.end?.sectionId === anchor.sectionId ? anchor.end.blockIndex : start + 1
+    const endExclusive = Math.min(section.blocks.length, Math.max(start + 1, endBlock))
+    return { section, start, endExclusive }
+  }
+
+  function reflexAnchorForBlock(sectionId: string, blockIndex: number) {
+    if (!isReflexZoneSectionId(sectionId)) return null
+    const matches = anchors.filter((anchor) => {
+      if (anchor.sectionId !== sectionId) return false
+      const range = reflexAnchorBlockRange(anchor)
+      return !!range && blockIndex >= range.start && blockIndex < range.endExclusive
+    })
+    return matches.find((anchor) => Math.max(0, anchor.blockIndex) === blockIndex) ?? matches[0] ?? null
+  }
+
+  function firstFigureInAnchorRange(anchor: SyncAnchor) {
+    const range = reflexAnchorBlockRange(anchor)
+    if (!range) return null
+    for (let i = range.start; i < range.endExclusive; i += 1) {
+      const item = figureLightboxItem(range.section.blocks[i])
       if (item) return item
     }
     return null
@@ -715,7 +723,7 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
   function reflexGalleryForSlide(n: number) {
     const slideItem = slideLightboxItem(n)
     const anchor = anchorForSlide(n)
-    if (!slideItem || !anchor || !anchor.end || !isReflexZoneSectionId(anchor.sectionId)) {
+    if (!slideItem || !anchor || !isReflexZoneSectionId(anchor.sectionId)) {
       return slideItem ? [slideItem] : []
     }
     const items = asSlideList(anchor.slide)
