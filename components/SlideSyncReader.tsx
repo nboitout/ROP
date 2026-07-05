@@ -71,6 +71,7 @@ const SS_UI: Record<string, {
   enlargeShort: string; marker: (n: number, t: string) => string
   caption: (n: number, t: string) => string; jumpLabel: string
   jumpTitle: (s: string) => string; enlargeFigure: (c: string) => string
+  endMarker: (slides: number[]) => string
   rotateHint: string
 }> = {
   fr: {
@@ -86,6 +87,7 @@ const SS_UI: Record<string, {
     jumpLabel: 'Accès direct — zones réflexes',
     jumpTitle: (s: string) => `Aller directement à : ${s}`,
     enlargeFigure: (caption: string) => `Agrandir : ${caption}`,
+    endMarker: (slides: number[]) => slides.length > 1 ? `Fin diapos ${slides.join(', ')}` : `Fin diapo ${slides[0]}`,
     rotateHint: 'Tournez votre téléphone pour afficher cette diapositive en plein format.',
   },
   en: {
@@ -101,6 +103,7 @@ const SS_UI: Record<string, {
     jumpLabel: 'Direct access — reflex zones',
     jumpTitle: (s: string) => `Go directly to: ${s}`,
     enlargeFigure: (caption: string) => `Enlarge: ${caption}`,
+    endMarker: (slides: number[]) => slides.length > 1 ? `End slides ${slides.join(', ')}` : `End slide ${slides[0]}`,
     rotateHint: 'Rotate your phone to view this slide at full size.',
   },
   de: {
@@ -116,6 +119,7 @@ const SS_UI: Record<string, {
     jumpLabel: 'Direktzugang — Reflexzonen',
     jumpTitle: (s: string) => `Direkt springen zu: ${s}`,
     enlargeFigure: (caption: string) => `Vergrößern: ${caption}`,
+    endMarker: (slides: number[]) => slides.length > 1 ? `Ende Folien ${slides.join(', ')}` : `Ende Folie ${slides[0]}`,
     rotateHint: 'Drehen Sie Ihr Telefon, um diese Folie in voller Größe anzuzeigen.',
   },
   es: {
@@ -131,6 +135,7 @@ const SS_UI: Record<string, {
     jumpLabel: 'Acceso directo — zonas reflejas',
     jumpTitle: (s: string) => `Ir directamente a: ${s}`,
     enlargeFigure: (caption: string) => `Ampliar: ${caption}`,
+    endMarker: (slides: number[]) => slides.length > 1 ? `Fin diapositivas ${slides.join(', ')}` : `Fin diapositiva ${slides[0]}`,
     rotateHint: 'Gire el teléfono para ver esta diapositiva a tamaño completo.',
   },
   it: {
@@ -146,6 +151,7 @@ const SS_UI: Record<string, {
     jumpLabel: 'Accesso diretto — zone riflesse',
     jumpTitle: (s: string) => `Vai direttamente a: ${s}`,
     enlargeFigure: (caption: string) => `Ingrandisci: ${caption}`,
+    endMarker: (slides: number[]) => slides.length > 1 ? `Fine diapositive ${slides.join(', ')}` : `Fine diapositiva ${slides[0]}`,
     rotateHint: 'Ruota il telefono per visualizzare questa diapositiva a pieno formato.',
   },
 }
@@ -153,6 +159,9 @@ const SS_UI: Record<string, {
 // Section ids that get a "page break" — a tall blank gap the reader scrolls
 // through before the section heading, à la Word page break.
 const PAGE_BREAK_BEFORE = new Set<string>(['anatomie', 'zones-reflexes-podales'])
+const SHOW_SYNC_END_ANCHORS =
+  process.env.NEXT_PUBLIC_SHOW_SLIDE_END_ANCHORS === '1' ||
+  process.env.NODE_ENV !== 'production'
 
 function normalizeSectionLabel(value: string) {
   return value
@@ -799,10 +808,17 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
     if (!endSlides?.length) return null
     return (
       <span
-        className="ss-end-anchor"
+        className={`ss-end-anchor${SHOW_SYNC_END_ANCHORS ? ' ss-end-anchor--visible' : ''}`}
         data-slide-end-anchor={endSlides.join(' ')}
-        aria-hidden
-      />
+        aria-hidden={!SHOW_SYNC_END_ANCHORS}
+      >
+        {SHOW_SYNC_END_ANCHORS && (
+          <>
+            <span className="ss-end-anchor-line" aria-hidden />
+            <span className="ss-end-anchor-label">{ui.endMarker(endSlides)}</span>
+          </>
+        )}
+      </span>
     )
   }
 

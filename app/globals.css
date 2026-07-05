@@ -840,6 +840,12 @@ a.ss-switch-opt:hover { color:var(--gold); }
 
 .ss-anchor { scroll-margin-top:96px; }
 .ss-end-anchor { display:block; width:0; height:0; overflow:hidden; }
+.ss-end-anchor--visible { width:auto; height:auto; overflow:visible; display:flex; align-items:center; gap:10px;
+  margin:18px 0; color:rgba(160,124,58,.86); pointer-events:none; }
+.ss-end-anchor-line { flex:1; height:1px; background:linear-gradient(90deg,rgba(160,124,58,.48),rgba(160,124,58,.08)); }
+.ss-end-anchor-label { flex-shrink:0; padding:3px 8px; border:1px solid rgba(160,124,58,.32); border-radius:999px;
+  background:rgba(251,248,241,.86); font-family:'DM Sans',sans-serif; font-size:.58rem; font-weight:700;
+  letter-spacing:.14em; text-transform:uppercase; line-height:1.2; }
 .ss-anchor-halfbreak { padding-top:36vh; }
 .ss-marker { display:inline-flex; align-items:center; gap:8px; background:none; border:none; padding:0; margin:6px 0 10px;
   cursor:zoom-in; font-family:'DM Sans',sans-serif; font-size:.68rem; font-weight:600; letter-spacing:.16em;
