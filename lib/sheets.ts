@@ -425,6 +425,17 @@ export async function fetchAllSheets(): Promise<{
     (v) => !excludedReaderIds.has(v.readerId.toLowerCase()) && !isDatedExcludedReader(v.readerId, v.timestamp)
   )
 
+  const leadReaderIds = new Set(cleanLeads.map((l) => l.readerId.toLowerCase()).filter(Boolean))
+  const firstSeenDateByReader = new Map<string, string>()
+  cleanVisits
+    .filter((v) => v.event === 'page_visit' && v.readerId)
+    .forEach((v) => {
+      const readerId = v.readerId.toLowerCase()
+      const day = isoDate(v.timestamp)
+      const existing = firstSeenDateByReader.get(readerId)
+      if (!existing || day < existing) firstSeenDateByReader.set(readerId, day)
+    })
+
   // --- Traffic-quality filter --------------------------------------------
   // One rule instead of the old stack of country / desktop-Linux / stale-Chrome
   // / no-UA heuristics: a real visitor stays a few seconds, a bot or an instant
@@ -449,6 +460,12 @@ export async function fetchAllSheets(): Promise<{
   const filteredVisits = cleanVisits.filter((v) => {
     if (v.timestamp.slice(0, 10) < BOT_FILTER_START) return true     // historical seed data
     if (BOT_UA.test(v.userAgent ?? '')) return false                 // self-declared crawler
+    const readerId = v.readerId.toLowerCase()
+    const isReturningLead =
+      leadReaderIds.has(readerId) &&
+      !!firstSeenDateByReader.get(readerId) &&
+      firstSeenDateByReader.get(readerId)! < isoDate(v.timestamp)
+    if (isReturningLead) return true
     return (dwellByReader.get(v.readerId) ?? 0) >= MIN_DWELL_SECONDS  // stayed long enough to be real
   })
 
