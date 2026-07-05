@@ -13,12 +13,14 @@ import ReflexZoneAtlas from '@/components/ReflexZoneAtlas'
 import { currentTopAnchorId, saveReadingPosition, loadReadingPosition, restoreToAnchor } from '@/lib/readingPosition'
 import { useLanguage } from '@/app/i18n/LanguageContext'
 import { getSessionId } from '@/lib/session'
+import { readerXrefHref } from '@/lib/access'
 
 type Props = {
   chapter: Chapter
   bookTitle: string
   backHref?: string
   contentLang?: Lang
+  restrictPaidXrefs?: boolean
 }
 
 type XrefReturn = { href: string; label: string } | null
@@ -39,7 +41,7 @@ function getSafeXrefReturn(params: { get(name: string): string | null } | null):
   }
 }
 
-export default function ChapterReader({ chapter, bookTitle, backHref = '/chapitres-gratuits', contentLang = 'fr' }: Props) {
+export default function ChapterReader({ chapter, bookTitle, backHref = '/chapitres-gratuits', contentLang = 'fr', restrictPaidXrefs = false }: Props) {
   const { lang, t } = useLanguage()
   const searchParams = useSearchParams()
   const showFallbackNotice = lang !== contentLang
@@ -340,7 +342,14 @@ export default function ChapterReader({ chapter, bookTitle, backHref = '/chapitr
             <section key={section.id} id={`sec-${section.id}`} data-section-id={section.id} className="cr-section">
               {!isRopInterestSection(section) && <h2 className="cr-h2">{section.title}</h2>}
               {section.blocks.map((b, i) => (
-                <BlockView key={i} block={b} onOpenImage={setLightbox} anchorId={`p-${section.id}-${i}`} />
+                <BlockView
+                  key={i}
+                  block={b}
+                  onOpenImage={setLightbox}
+                  anchorId={`p-${section.id}-${i}`}
+                  sourceChapterKey={chapter.slug}
+                  restrictPaidXrefs={restrictPaidXrefs}
+                />
               ))}
             </section>
           ))}
@@ -503,7 +512,19 @@ export default function ChapterReader({ chapter, bookTitle, backHref = '/chapitr
   )
 }
 
-function BlockView({ block, onOpenImage, anchorId }: { block: Block; onOpenImage: (b: { src: string; alt: string; caption: string }) => void; anchorId?: string }) {
+function BlockView({
+  block,
+  onOpenImage,
+  anchorId,
+  sourceChapterKey,
+  restrictPaidXrefs,
+}: {
+  block: Block
+  onOpenImage: (b: { src: string; alt: string; caption: string }) => void
+  anchorId?: string
+  sourceChapterKey: string
+  restrictPaidXrefs: boolean
+}) {
   const { t } = useLanguage()
   // Shared position anchor (same id in the synchronized reader) so the
   // sync/classic switch can reopen the other version at the same passage.
@@ -557,7 +578,7 @@ function BlockView({ block, onOpenImage, anchorId }: { block: Block; onOpenImage
     case 'xref':
       return (
         <p {...anchor} className="cr-xref">
-          <Link href={block.href} className="cr-xref-link">
+          <Link href={readerXrefHref(block.href, sourceChapterKey, restrictPaidXrefs)} className="cr-xref-link">
             <span className="cr-xref-kicker">{block.label}</span>
             {block.text && <span className="cr-xref-title">{block.text}</span>}
             <span className="cr-xref-arrow" aria-hidden>→</span>

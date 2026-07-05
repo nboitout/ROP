@@ -201,6 +201,10 @@ export default function HomePage() {
         <p style={{ fontSize: '.93rem', color: 'rgba(245,240,232,.74)', maxWidth: 580, lineHeight: 1.8, marginTop: -6 }}>
           {t.protocole.p}
         </p>
+        <div className="protocol-links">
+          <a href="https://www.reflexo-occipitopodale.com/accueil" target="_blank" rel="noopener noreferrer" className="btn b-out" onClick={() => trackCta('protocol_institut')}>{t.author.btn1}</a>
+          <a href="https://www.reflexo-occipitopodale.com/formations-r%C3%A9flexo-occipito-podale" target="_blank" rel="noopener noreferrer" className="btn b-out" onClick={() => trackCta('protocol_formations')}>{t.author.btn2}</a>
+        </div>
         <div className="prot-grid">
           <div>
             {t.protocole.steps.map((s) => (

@@ -1,6 +1,6 @@
 import { cookies } from 'next/headers'
 import { redirect } from 'next/navigation'
-import { canReadFreeChapter } from '@/lib/access'
+import { canReadFreeChapter, canReadPaidChapter } from '@/lib/access'
 import type { Metadata } from 'next'
 import SlideSyncReader from '@/components/SlideSyncReader'
 import { getChapter } from '@/content/registry'
@@ -42,6 +42,7 @@ export default async function Chapitre14SyncPage({
   if (!canReadFreeChapter(cookieStore)) {
     redirect('/?gate=free#acces-libre')
   }
+  const restrictPaidXrefs = !canReadPaidChapter(cookieStore)
 
   // The synthesis deck exists in all five languages for chapter 14; serve the
   // reader's language.
@@ -55,6 +56,7 @@ export default async function Chapitre14SyncPage({
       slides={DECKS[lang]}
       anchors={ANCHORS[lang]}
       backHref="/chapitres-gratuits"
+      restrictPaidXrefs={restrictPaidXrefs}
     />
   )
 }

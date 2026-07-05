@@ -1,6 +1,6 @@
 import { cookies } from 'next/headers'
 import { redirect } from 'next/navigation'
-import { canReadFreeChapter } from '@/lib/access'
+import { canReadFreeChapter, canReadPaidChapter } from '@/lib/access'
 import type { Metadata } from 'next'
 import ChapterReader from '@/components/ChapterReader'
 import { getChapter } from '@/content/registry'
@@ -22,10 +22,11 @@ export default async function IntroductionPage({
   if (!canReadFreeChapter(cookieStore)) {
     redirect('/?gate=free#acces-libre')
   }
+  const restrictPaidXrefs = !canReadPaidChapter(cookieStore)
 
   const { lang: langParam } = await searchParams
   const lang = await getServerLang(langParam)
   const { chapter, contentLang } = getChapter('introduction', lang)
   const bookTitle = translations[lang].reader.bookTitle
-  return <ChapterReader chapter={chapter} bookTitle={bookTitle} contentLang={contentLang} />
+  return <ChapterReader chapter={chapter} bookTitle={bookTitle} contentLang={contentLang} restrictPaidXrefs={restrictPaidXrefs} />
 }

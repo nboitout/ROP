@@ -170,6 +170,9 @@ h1 em { font-style:italic; color:var(--gold-l); }
 
 /* PROTOCOLE */
 #protocole { background:var(--ink); padding:80px; }
+.protocol-links { display:flex; flex-wrap:wrap; gap:12px; margin:20px 0 28px; }
+#protocole .protocol-links .btn { border-color:rgba(245,240,232,.45); color:var(--cream); }
+#protocole .protocol-links .btn:hover { border-color:var(--gold-l); color:var(--gold-l); }
 .prot-grid { display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:start; margin-top:56px; }
 .pstep { display:grid; grid-template-columns:48px 1fr; gap:20px; padding:28px 0; border-bottom:1px solid rgba(245,240,232,.06); }
 .pstep:last-child { border-bottom:none; }
@@ -639,17 +642,32 @@ footer > div > p { font-size:1rem; color:rgba(245,240,232,.84); line-height:1.9;
 
 .cg-foot { text-align:center; margin-top:32px; padding-top:20px; border-top:1px solid rgba(26,26,24,.08); }
 .cg-foot p { font-size:.92rem; line-height:1.65; color:rgba(26,26,24,.62); max-width:none; margin:0 auto; }
-.cg-foot a { color:var(--sage); text-decoration:underline; text-underline-offset:3px; }
-.cg-foot a:hover { color:var(--gold); }
+  .cg-foot a { color:var(--sage); text-decoration:underline; text-underline-offset:3px; }
+  .cg-foot a:hover { color:var(--gold); }
 
-@media (max-width:640px){
-  .cg-topbar { padding:0 16px; gap:12px; }
+  .buy-root { display:flex; flex-direction:column; }
+  .buy-main { width:100%; max-width:840px; margin:0 auto; padding:122px 28px 72px; }
+  .buy-panel { background:#fff; border:1px solid rgba(160,124,58,.22); border-radius:6px; padding:44px;
+    box-shadow:0 18px 54px rgba(26,26,24,.1); text-align:center; }
+  .buy-eyebrow { margin:0 0 14px; font-size:.72rem; letter-spacing:.22em; text-transform:uppercase;
+    color:var(--gold); font-weight:700; }
+  .buy-panel h1 { margin:0 auto 16px; font-family:'Cormorant Garamond',serif; font-size:clamp(2rem,4vw,3rem);
+    line-height:1.05; font-weight:300; color:var(--ink); }
+  .buy-lead { max-width:620px; margin:0 auto 28px; font-size:1rem; line-height:1.7; color:rgba(26,26,24,.72); }
+  .buy-actions { display:flex; justify-content:center; align-items:center; flex-wrap:wrap; gap:12px; }
+
+  @media (max-width:640px){
+    .cg-topbar { padding:0 16px; gap:12px; }
   .cg-topbar-title .cg-bookname { display:none; }
   .cg-topbar-title .cg-sep { display:none; }
-  .cg-main { padding:96px 18px 60px; }
-  .cg-hero { padding-bottom:36px; }
-  .cg-grid { grid-template-columns:1fr; gap:16px; }
-}
+    .cg-main { padding:96px 18px 60px; }
+    .cg-hero { padding-bottom:36px; }
+    .cg-grid { grid-template-columns:1fr; gap:16px; }
+    .buy-main { padding:102px 18px 52px; }
+    .buy-panel { padding:32px 20px; }
+    .buy-actions { align-items:stretch; }
+    .buy-actions .btn { width:100%; text-align:center; }
+  }
 
 /* ========== SLIDE-SYNC READER (prototype /lecture/chapitre-5) ========== */
 /* Mode switch (Synchronisée / Classique) in the reader top bar */

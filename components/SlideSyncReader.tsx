@@ -13,6 +13,7 @@ import { useLanguage } from '@/app/i18n/LanguageContext'
 import { getSessionId } from '@/lib/session'
 import { currentTopAnchorId, saveReadingPosition, loadReadingPosition, restoreToAnchor } from '@/lib/readingPosition'
 import ReflexZoneAtlas from '@/components/ReflexZoneAtlas'
+import { readerXrefHref } from '@/lib/access'
 
 type SyncSlide = { src: string; title: string; orientation?: 'portrait' }
 type SyncAnchorPoint = { sectionId: string; blockIndex: number; itemIndex?: number }
@@ -43,6 +44,7 @@ type Props = {
   backHref?: string
   sectionRail?: boolean
   showClinicalCaseResource?: boolean
+  restrictPaidXrefs?: boolean
 }
 
 type XrefReturn = { href: string; label: string } | null
@@ -219,7 +221,7 @@ function preloadSlideImage(src: string | undefined) {
   img.src = src
 }
 
-export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, backHref = '/chapitres-gratuits', sectionRail = true, showClinicalCaseResource = false }: Props) {
+export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, backHref = '/chapitres-gratuits', sectionRail = true, showClinicalCaseResource = false, restrictPaidXrefs = false }: Props) {
   const { lang, t } = useLanguage()
   const searchParams = useSearchParams()
   const ui = SS_UI[lang] ?? SS_UI.fr
@@ -1049,6 +1051,8 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
                     ui={ui}
                     eagerImage={eagerFigurePoints.has(pointKey(section.id, i))}
                     renderEndSentinelForItem={(itemIndex) => renderEndSentinel(section.id, i, itemIndex)}
+                    sourceChapterKey={chapter.slug}
+                    restrictPaidXrefs={restrictPaidXrefs}
                   />
                 )
                 if (view === null && slideList.length === 0 && !endSentinel) return null
@@ -1179,12 +1183,16 @@ function BlockView({
   ui,
   eagerImage = false,
   renderEndSentinelForItem,
+  sourceChapterKey,
+  restrictPaidXrefs,
 }: {
   block: Block
   onOpenImage: (b: LightboxItem) => void
   ui: typeof SS_UI.fr
   eagerImage?: boolean
   renderEndSentinelForItem?: (itemIndex: number) => ReactNode
+  sourceChapterKey: string
+  restrictPaidXrefs: boolean
 }) {
   const { t } = useLanguage()
   switch (block.type) {
@@ -1256,7 +1264,7 @@ function BlockView({
     case 'xref':
       return (
         <p className="cr-xref">
-          <Link href={block.href} className="cr-xref-link">
+          <Link href={readerXrefHref(block.href, sourceChapterKey, restrictPaidXrefs)} className="cr-xref-link">
             <span className="cr-xref-kicker">{block.label}</span>
             {block.text && <span className="cr-xref-title">{block.text}</span>}
             <span className="cr-xref-arrow" aria-hidden>→</span>

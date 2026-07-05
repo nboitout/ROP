@@ -28,7 +28,7 @@ const fr = {
     comingSoon: 'Couverture\nà venir',
     publisherSelf: 'Auto-édition',
     bio: [
-      "Guy Boitout est le fondateur de la Réflexologie Occipito-Podale (R.O.P.), une technique de massage basée sur la représentation tridimensionnelle du corps sur le pied et l'occiput. Depuis plus de trente ans, il enseigne et diffuse cette approche à travers l'Institut de Formation R.O.P., basé à Sully-sur-Loire.",
+      "Guy Boitout est le fondateur de la Réflexologie Occipito-Podale (R.O.P.), une technique de massage basée sur la représentation tridimensionnelle du corps sur le pied et l'occiput. Depuis plus de cinquante ans, il enseigne et diffuse cette approche à travers l'Institut de Formation R.O.P., basé à Sully-sur-Loire.",
       "Kinésithérapeute de formation, il découvre la réflexologie (méthode Ingham) en 1978, puis l'ostéopathie viscérale avec Jean-Pierre Barral — deux étapes décisives qui l'amèneront, avec Jean-Pierre Vadala, à créer la cartographie réflexe R.O.P. en 3D. Ses deux premiers ouvrages ont paru aux Éditions Elsevier-Masson ; ce troisième et dernier volet paraît en auto-édition.",
       "Ses formations sont agréées pour la formation continue (numéro d'agrément 24450434645, préfecture du Centre-Val de Loire) et s'adressent aux réflexothérapeutes, ostéopathes, kinésithérapeutes et professionnels de santé.",
     ],
@@ -37,7 +37,7 @@ const fr = {
   },
   genese: {
     lbl: "Genèse de l'ouvrage",
-    h2: { before: 'Un parcours de ', em: 'trente ans' },
+    h2: { before: 'Un parcours de ', em: 'cinquante ans' },
     p1: "Ce troisième volume s'inscrit dans la continuité de ce qui fait l'originalité de la Réflexothérapie Occipito-Podale : une représentation globale du corps en 3D sous la forme d'un bébé en position fœtale dans les pieds, les zones réflexes occipitales, et une référence constante à l'anatomie et à la physiologie.",
     p2: "Après un premier livre consacré au système ostéo-musculo-articulaire et un deuxième centré sur les nerfs somatiques spinaux et crâniens, cet ouvrage aborde le système nerveux autonome, le mécanisme de stress et les viscères abdominaux — le cœur invisible de la régulation du corps.",
     timeline: [

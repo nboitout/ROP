@@ -7,14 +7,7 @@ import { getServerLang } from '@/app/i18n/serverLang'
 import { translations } from '@/app/i18n/translations'
 import { getChapter } from '@/content/registry'
 import { chapterMeta } from '@/lib/chapterStats'
-
-const HREF_TO_SLUG: Record<string, string> = {
-  '/introduction': 'introduction',
-  '/chapitre-2': 'chapter-2',
-  '/lecture/traitement-rop': 'chapter-2',
-  '/chapitre-14': 'chapter-14',
-  '/lecture/chapitre-14': 'chapter-14',
-}
+import { chapterKeyFromHref, isFreeChapterKey } from '@/lib/access'
 
 // Chapters that have a synthesis deck: free readers start in the synchronized
 // reading experience (text + slides) by default, in the languages for which a
@@ -41,13 +34,16 @@ export default async function ChapitresGratuitsPage() {
   const p = t.chaptersPage
 
   const chapters = p.chapters.map((c) => {
-    const slug = HREF_TO_SLUG[c.href]
+    const slug = chapterKeyFromHref(c.href)
     const meta = slug ? chapterMeta(getChapter(slug, lang).chapter, lang) : c.meta
     // Default readers into the synchronized experience where a deck exists in
     // their language.
     const sync = SYNC[c.href]
     const href = sync && sync.langs.has(lang) ? sync.href : c.href
     return { ...c, href, meta }
+  }).filter((c) => {
+    const slug = chapterKeyFromHref(c.href)
+    return slug ? isFreeChapterKey(slug) : true
   })
 
   return (

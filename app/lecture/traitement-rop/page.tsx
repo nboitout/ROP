@@ -1,6 +1,6 @@
 import { cookies } from 'next/headers'
 import { redirect } from 'next/navigation'
-import { canReadFreeChapter } from '@/lib/access'
+import { canReadFreeChapter, canReadPaidChapter } from '@/lib/access'
 import type { Metadata } from 'next'
 import SlideSyncReader from '@/components/SlideSyncReader'
 import { getChapter } from '@/content/registry'
@@ -43,6 +43,7 @@ export default async function TraitementRopPage({
   if (!canReadFreeChapter(cookieStore)) {
     redirect('/?gate=free#acces-libre')
   }
+  const restrictPaidXrefs = !canReadPaidChapter(cookieStore)
 
   const { lang: langParam } = await searchParams
   const lang = await getServerLang(langParam)
@@ -55,6 +56,7 @@ export default async function TraitementRopPage({
       slides={DECKS[lang]}
       anchors={ANCHORS[lang]}
       backHref="/chapitres-gratuits"
+      restrictPaidXrefs={restrictPaidXrefs}
     />
   )
 }
