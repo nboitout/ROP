@@ -898,6 +898,8 @@ a.ss-switch-opt:hover { color:var(--gold); }
 /* marker rendered above a section heading rather than inside a block */
 .ss-anchor-heading { margin:4px 0 2px; }
 .ss-anchor-pagebreak { text-align:center; }
+.ss-article[data-chapter="chapter-6"] .cr-rop .cr-rop-p + .ss-anchor { margin-top:clamp(180px,32vh,320px); }
+.ss-article[data-chapter="chapter-6"] .cr-section:last-of-type { padding-bottom:56vh; }
 
 /* inline figures stay within the narrower text column */
 .ss-article .cr-fig { margin:36px auto; }
