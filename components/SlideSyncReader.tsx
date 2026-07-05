@@ -223,7 +223,7 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
     typeof window !== 'undefined' ? getSessionId() : ''
   )
   const [progress, setProgress] = useState(0)
-  const [active, setActive] = useState<number | null>(null)
+  const [active, setActive] = useState<number | null>(() => slides.length > 0 ? 1 : null)
   const [activeSectionId, setActiveSectionId] = useState(chapter.sections[0]?.id ?? '')
   const [railHoverIndex, setRailHoverIndex] = useState<number | null>(null)
   const [lightbox, setLightbox] = useState<LightboxState | null>(null)
@@ -418,7 +418,7 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
         return a.order - b.order || a.slide - b.slide
       })
 
-      let current: number | null = null
+      let current: number | null = slides.length > 0 ? 1 : null
       for (const event of events) {
         if (event.top > threshold) break
         if (event.kind === 'start') {
@@ -871,48 +871,51 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
                 ))}
               </div>
               <div className="ss-stage-main">
-            <button
-              type="button"
-              className={`ss-frame${activeSlideIsPortrait ? ' ss-frame--portrait' : ''}${activeSlide ? '' : ' ss-frame--empty'}`}
-              onClick={() => { if (active) openSlideLightbox(active) }}
-              disabled={!activeSlide}
-              aria-label={activeSlide && active ? ui.enlarge(active, activeSlide.title) : ui.slides}
-            >
-              {activeSlide ? renderedSlideIndexes.map((i) => {
-                const s = slides[i]
-                return (
-                  <img
-                    key={s.src}
-                    src={s.src}
-                    alt={s.title}
-                    className={`ss-slide${i + 1 === activeSlideNumber ? ' is-active' : ''}`}
-                    loading={Math.abs(i + 1 - activeSlideNumber) <= 1 ? 'eager' : 'lazy'}
-                    fetchPriority={i + 1 === activeSlideNumber ? 'high' : 'low'}
-                    decoding="async"
-                    aria-hidden={i + 1 !== activeSlideNumber}
-                  />
-                )
-              }) : <span className="ss-frame-empty-mark" aria-hidden />}
-              {activeSlide && <span className="cr-fig-zoom ss-frame-zoom" aria-hidden>⌕</span>}
-            </button>
-            <div className="ss-stage-bar">
-              <button
-                className="cr-viewer-nav-btn"
-                onClick={() => { if (active) goToSlide(active - 1) }}
-                disabled={!active || active <= 1}
-                aria-label={ui.prev}
-              >‹</button>
-              <div className="ss-stage-meta">
-                <span className="ss-stage-count">{active ?? '-'} / {slides.length}</span>
-                <span className="ss-stage-title">{activeSlide?.title}</span>
-              </div>
-              <button
-                className="cr-viewer-nav-btn"
-                onClick={() => { if (active) goToSlide(active + 1) }}
-                disabled={!active || active >= slides.length}
-                aria-label={ui.next}
-              >›</button>
-            </div>
+            {activeSlide && (
+              <>
+                <button
+                  type="button"
+                  className={`ss-frame${activeSlideIsPortrait ? ' ss-frame--portrait' : ''}`}
+                  onClick={() => { if (active) openSlideLightbox(active) }}
+                  aria-label={active ? ui.enlarge(active, activeSlide.title) : ui.slides}
+                >
+                  {renderedSlideIndexes.map((i) => {
+                    const s = slides[i]
+                    return (
+                      <img
+                        key={s.src}
+                        src={s.src}
+                        alt={s.title}
+                        className={`ss-slide${i + 1 === activeSlideNumber ? ' is-active' : ''}`}
+                        loading={Math.abs(i + 1 - activeSlideNumber) <= 1 ? 'eager' : 'lazy'}
+                        fetchPriority={i + 1 === activeSlideNumber ? 'high' : 'low'}
+                        decoding="async"
+                        aria-hidden={i + 1 !== activeSlideNumber}
+                      />
+                    )
+                  })}
+                  <span className="cr-fig-zoom ss-frame-zoom" aria-hidden>⌕</span>
+                </button>
+                <div className="ss-stage-bar">
+                  <button
+                    className="cr-viewer-nav-btn"
+                    onClick={() => { if (active) goToSlide(active - 1) }}
+                    disabled={!active || active <= 1}
+                    aria-label={ui.prev}
+                  >‹</button>
+                  <div className="ss-stage-meta">
+                    <span className="ss-stage-count">{active} / {slides.length}</span>
+                    <span className="ss-stage-title">{activeSlide.title}</span>
+                  </div>
+                  <button
+                    className="cr-viewer-nav-btn"
+                    onClick={() => { if (active) goToSlide(active + 1) }}
+                    disabled={!active || active >= slides.length}
+                    aria-label={ui.next}
+                  >›</button>
+                </div>
+              </>
+            )}
               </div>
             </div>
             {showClinicalCaseResource && chapter.clinicalCase && (
@@ -1160,17 +1163,27 @@ function BlockView({ block, onOpenImage, ui }: { block: Block; onOpenImage: (b: 
           {block.items.map((it, i) => <li key={i}>{it}</li>)}
         </ul>
       )
-    case 'leadBullets':
+    case 'leadBullets': {
+      const [intro, ...items] = block.items
+      const hasReflexZoneIntro = !!intro?.text && normalizeSectionLabel(intro.label) === 'zones reflexes podales'
       return (
-        <ul className="cr-ul cr-ul-lead">
-          {block.items.map((it, i) => (
-            <li key={i}>
-              <strong className="cr-lead-label">{it.label}{it.text ? ' —' : ''}</strong>
-              {it.text ? ' ' + it.text : ''}
-            </li>
-          ))}
-        </ul>
+        <>
+          {hasReflexZoneIntro && (
+            <p className="cr-p">
+              {intro.label} — {intro.text}
+            </p>
+          )}
+          <ul className="cr-ul cr-ul-lead">
+            {(hasReflexZoneIntro ? items : block.items).map((it, i) => (
+              <li key={i}>
+                <strong className="cr-lead-label">{it.label}{it.text ? ' —' : ''}</strong>
+                {it.text ? ' ' + it.text : ''}
+              </li>
+            ))}
+          </ul>
+        </>
       )
+    }
     case 'figure':
       if (block.syncHide) return null
       return (
