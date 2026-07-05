@@ -299,6 +299,10 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
     if (PAGE_BREAK_BEFORE.has(ropSection.id)) {
       const headingSlide = asSlideList(anchorBySlide.get(`${ropSection.id}:-1`)?.slide)[0]
       if (headingSlide) return headingSlide
+      const gatewaySlide = asSlideList(anchors.find((anchor) =>
+        anchor.end?.sectionId === ropSection.id && anchor.end.blockIndex === -1
+      )?.slide)[0]
+      if (gatewaySlide) return gatewaySlide
     }
     const atlasIndex = ropSection.blocks.findIndex((b) => b.type === 'reflexAtlas')
     if (atlasIndex >= 0) {
@@ -770,6 +774,7 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
   const activeSlideNumber = active ?? 0
   const activeSlide = active ? slides[active - 1] : undefined
   const activeSlideIsPortrait = activeSlide?.orientation === 'portrait'
+  const showRopJump = !!ropSection && !!ropJumpSlide && activeSectionId !== ropSection.id
   const renderedSlideIndexes = useMemo(() => {
     if (!active) return []
     const indexes = new Set([active - 3, active - 2, active - 1, active, active + 1])
@@ -930,7 +935,7 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
                 <span className="ss-case-chip-label">{t.reader.clinicalCase}</span>
               </button>
             )}
-            {ropSection && ropJumpSlide && (
+            {showRopJump && (
               <button
                 type="button"
                 className="ss-jump"
@@ -1051,6 +1056,34 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
                   </div>
                 )
               })}
+              {(() => {
+                const trailingIndex = section.blocks.length
+                const slideList = slidesAtPoint(section.id, trailingIndex)
+                const endSentinel = renderEndSentinel(section.id, trailingIndex)
+                if (slideList.length === 0 && !endSentinel) return null
+                return (
+                  <div
+                    id={`p-${section.id}-${trailingIndex}`}
+                    data-pos-anchor=""
+                    className={slideList.length > 0 ? `ss-anchor${hasHalfGapBefore(section.id, trailingIndex) ? ' ss-anchor-halfbreak' : ''}` : undefined}
+                  >
+                    {endSentinel}
+                    {slideList.map((slide) => (
+                      <div key={slide} data-slide-anchor={slide}>
+                        <button
+                          type="button"
+                          className="ss-marker"
+                          onClick={() => openSlideLightbox(slide)}
+                          title={ui.enlargeShort}
+                        >
+                          <span className="ss-marker-dot" aria-hidden />
+                          {ui.marker(slide, slides[slide - 1]?.title ?? '')}
+                        </button>
+                      </div>
+                    ))}
+                  </div>
+                )
+              })()}
             </section>
             </Fragment>
             )

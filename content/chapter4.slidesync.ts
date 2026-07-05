@@ -83,7 +83,7 @@ export const chapter4SlideAnchors: SyncAnchor[] = [
   { sectionId: 'chaine-plexique-prevertebrale', blockIndex: 0, slide: 23 },
   { sectionId: 'plexus-pelvien', blockIndex: 0, slide: 24 },
   { sectionId: 'sne', blockIndex: 0, slide: 25 },
-  { sectionId: 'zones-reflexes-podales', blockIndex: -1, slide: 26 },
+  { sectionId: 'glandes-surrenales', blockIndex: 2, slide: 26, ...endAt('zones-reflexes-podales', -1) },
   { sectionId: 'zones-reflexes-podales', blockIndex: 11, slide: 27, ...endAt('zones-reflexes-podales', 13) },
   { sectionId: 'zones-reflexes-podales', blockIndex: 18, slide: [28, 29], ...endAt('zones-reflexes-podales', 20) },
   { sectionId: 'zones-reflexes-podales', blockIndex: 22, slide: 30, ...endAt('zones-reflexes-podales', 23) },
