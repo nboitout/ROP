@@ -5,7 +5,7 @@
 // Navigating the slides (arrows / dots) scrolls the text to the matching
 // passage, so the two media stay in step in both directions.
 
-import { Fragment, type MouseEvent, useEffect, useMemo, useRef, useState } from 'react'
+import { Fragment, type MouseEvent, type ReactNode, useEffect, useMemo, useRef, useState } from 'react'
 import Link from 'next/link'
 import { useSearchParams } from 'next/navigation'
 import type { Chapter, Block, Section } from '@/content/types'
@@ -15,7 +15,7 @@ import { currentTopAnchorId, saveReadingPosition, loadReadingPosition, restoreTo
 import ReflexZoneAtlas from '@/components/ReflexZoneAtlas'
 
 type SyncSlide = { src: string; title: string; orientation?: 'portrait' }
-type SyncAnchorPoint = { sectionId: string; blockIndex: number }
+type SyncAnchorPoint = { sectionId: string; blockIndex: number; itemIndex?: number }
 type SyncAnchor = SyncAnchorPoint & {
   slide: number | number[]
   gapBefore?: 'half'
@@ -180,8 +180,12 @@ function asSlideList(slide: number | number[] | undefined) {
   return slide ?? []
 }
 
-function pointKey(sectionId: string, blockIndex: number) {
-  return `${sectionId}:${blockIndex}`
+function pointKey(sectionId: string, blockIndex: number, itemIndex?: number) {
+  return itemIndex === undefined ? `${sectionId}:${blockIndex}` : `${sectionId}:${blockIndex}:${itemIndex}`
+}
+
+function anchorPointKey(point: SyncAnchorPoint) {
+  return pointKey(point.sectionId, point.blockIndex, point.itemIndex)
 }
 
 function uniqueSlides(values: number[]) {
@@ -264,14 +268,14 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
 
   const anchorBySlide = useMemo(() => {
     const m = new Map<string, SyncAnchor>()
-    for (const a of anchors) m.set(pointKey(a.sectionId, a.blockIndex), a)
+    for (const a of anchors) m.set(anchorPointKey(a), a)
     return m
   }, [anchors])
 
   const anchorsByPoint = useMemo(() => {
     const m = new Map<string, SyncAnchor[]>()
     for (const anchor of anchors) {
-      const key = pointKey(anchor.sectionId, anchor.blockIndex)
+      const key = anchorPointKey(anchor)
       m.set(key, [...(m.get(key) ?? []), anchor])
     }
     return m
@@ -281,7 +285,7 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
     const m = new Map<string, number[]>()
     for (const anchor of anchors) {
       if (!anchor.end) continue
-      const key = pointKey(anchor.end.sectionId, anchor.end.blockIndex)
+      const key = anchorPointKey(anchor.end)
       m.set(key, uniqueSlides([...(m.get(key) ?? []), ...asSlideList(anchor.slide)]))
     }
     return m
@@ -794,8 +798,8 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
   const lightboxGalleryCount = lightbox?.gallery?.length ?? 0
   const lightboxGalleryIndex = lightbox?.galleryIndex ?? 0
 
-  function slidesAtPoint(sectionId: string, blockIndex: number) {
-    return slidesFromAnchors(anchorsByPoint.get(pointKey(sectionId, blockIndex)))
+  function slidesAtPoint(sectionId: string, blockIndex: number, itemIndex?: number) {
+    return slidesFromAnchors(anchorsByPoint.get(pointKey(sectionId, blockIndex, itemIndex)))
   }
 
   function hasHalfGapBefore(sectionId: string, blockIndex: number) {
@@ -803,8 +807,8 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
       .some((anchor) => anchor.gapBefore === 'half')
   }
 
-  function renderEndSentinel(sectionId: string, blockIndex: number) {
-    const endSlides = endSlidesByPoint.get(pointKey(sectionId, blockIndex))
+  function renderEndSentinel(sectionId: string, blockIndex: number, itemIndex?: number) {
+    const endSlides = endSlidesByPoint.get(pointKey(sectionId, blockIndex, itemIndex))
     if (!endSlides?.length) return null
     return (
       <span
@@ -1035,6 +1039,7 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
                     block={b}
                     onOpenImage={(image) => openFigureLightbox(image, section.id, i)}
                     ui={ui}
+                    renderEndSentinelForItem={(itemIndex) => renderEndSentinel(section.id, i, itemIndex)}
                   />
                 )
                 if (view === null && slideList.length === 0 && !endSentinel) return null
@@ -1159,7 +1164,17 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
   )
 }
 
-function BlockView({ block, onOpenImage, ui }: { block: Block; onOpenImage: (b: LightboxItem) => void; ui: typeof SS_UI.fr }) {
+function BlockView({
+  block,
+  onOpenImage,
+  ui,
+  renderEndSentinelForItem,
+}: {
+  block: Block
+  onOpenImage: (b: LightboxItem) => void
+  ui: typeof SS_UI.fr
+  renderEndSentinelForItem?: (itemIndex: number) => ReactNode
+}) {
   const { t } = useLanguage()
   switch (block.type) {
     case 'para':
@@ -1182,6 +1197,7 @@ function BlockView({ block, onOpenImage, ui }: { block: Block; onOpenImage: (b: 
     case 'leadBullets': {
       const [intro, ...items] = block.items
       const hasReflexZoneIntro = !!intro?.text && normalizeSectionLabel(intro.label) === 'zones reflexes podales'
+      const visibleItems = hasReflexZoneIntro ? items : block.items
       return (
         <>
           {hasReflexZoneIntro && (
@@ -1190,12 +1206,16 @@ function BlockView({ block, onOpenImage, ui }: { block: Block; onOpenImage: (b: 
             </p>
           )}
           <ul className="cr-ul cr-ul-lead">
-            {(hasReflexZoneIntro ? items : block.items).map((it, i) => (
-              <li key={i}>
-                <strong className="cr-lead-label">{it.label}{it.text ? ' —' : ''}</strong>
-                {it.text ? ' ' + it.text : ''}
-              </li>
-            ))}
+            {visibleItems.map((it, i) => {
+              const itemIndex = hasReflexZoneIntro ? i + 1 : i
+              return (
+                <li key={itemIndex}>
+                  <strong className="cr-lead-label">{it.label}{it.text ? ' —' : ''}</strong>
+                  {it.text ? ' ' + it.text : ''}
+                  {renderEndSentinelForItem?.(itemIndex)}
+                </li>
+              )
+            })}
           </ul>
         </>
       )

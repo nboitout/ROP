@@ -6,15 +6,15 @@
 // order, while each slide image still points to its rendered PDF page.
 
 export type SyncSlide = { src: string; title: string; orientation?: 'portrait' }
-export type SyncAnchorPoint = { sectionId: string; blockIndex: number }
+export type SyncAnchorPoint = { sectionId: string; blockIndex: number; itemIndex?: number }
 export type SyncAnchor = SyncAnchorPoint & {
   slide: number | number[]
   gapBefore?: 'half'
   end?: SyncAnchorPoint
 }
 
-const endAt = (sectionId: string, blockIndex: number): Pick<SyncAnchor, 'end'> => ({
-  end: { sectionId, blockIndex },
+const endAt = (sectionId: string, blockIndex: number, itemIndex?: number): Pick<SyncAnchor, 'end'> => ({
+  end: { sectionId, blockIndex, ...(itemIndex === undefined ? {} : { itemIndex }) },
 })
 
 export const chapter4Slides: SyncSlide[] = [
@@ -44,7 +44,7 @@ export const chapter4Slides: SyncSlide[] = [
   { src: '/chapter-4/slides/slide-23.png', title: 'Le carrefour pelvien' },
   { src: '/chapter-4/slides/slide-24.png', title: 'Le systeme nerveux enterique : le deuxieme cerveau' },
   { src: '/chapter-4/slides/slide-25.png', title: 'Zones reflexes podales : grands reperes du SNA' },
-  { src: '/chapter-4/figure-4-11.png', title: 'Cartographie : nerf vague X, territoires cranien et cervical' },
+  { src: '/chapter-4/Chapter4 - Fig2 Rework Series FR.png', title: 'Chapter4 - Fig2 Rework Series FR' },
   { src: '/chapter-4/figure-4-14.png', title: 'Cartographie : nerf vague X, territoire thoracique gauche' },
   { src: '/chapter-4/figure-4-15.png', title: 'Cartographie : nerf vague X, territoire thoracique droit' },
   { src: '/chapter-4/figure-4-17.png', title: 'Cartographie : nerf vague X, territoire abdominal gauche' },
@@ -84,7 +84,7 @@ export const chapter4SlideAnchors: SyncAnchor[] = [
   { sectionId: 'plexus-pelvien', blockIndex: 0, slide: 24 },
   { sectionId: 'sne', blockIndex: 0, slide: 25 },
   { sectionId: 'glandes-surrenales', blockIndex: 2, slide: 26, ...endAt('zones-reflexes-podales', -1) },
-  { sectionId: 'zones-reflexes-podales', blockIndex: 11, slide: 27, ...endAt('zones-reflexes-podales', 13) },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 0, slide: 27, ...endAt('zones-reflexes-podales', 1, 9) },
   { sectionId: 'zones-reflexes-podales', blockIndex: 18, slide: [28, 29], ...endAt('zones-reflexes-podales', 20) },
   { sectionId: 'zones-reflexes-podales', blockIndex: 22, slide: 30, ...endAt('zones-reflexes-podales', 23) },
   { sectionId: 'zones-reflexes-podales', blockIndex: 23, slide: 31, ...endAt('zones-reflexes-podales', 24) },
