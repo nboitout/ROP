@@ -36,6 +36,15 @@ function countryLabel(code: string): string {
   }
 }
 
+function isGuyBoitoutReferer(referer: string): boolean {
+  if (!referer) return false
+  try {
+    return new URL(referer).hostname === 'www.guy-boitout.com'
+  } catch {
+    return false
+  }
+}
+
 export default async function AdminOverviewPage({
   searchParams,
 }: {
@@ -63,6 +72,8 @@ export default async function AdminOverviewPage({
 
   // --- Unique visitors (distinct readerId in page_visit events) ---
   const pageVisits = filteredVisits.filter((v) => v.event === 'page_visit')
+  const liveSiteVisits = filteredVisits.filter((v) => isGuyBoitoutReferer(v.referer))
+  const liveSitePageVisits = liveSiteVisits.filter((v) => v.event === 'page_visit')
   const uniqueVisitorSet = new Set(pageVisits.map((v) => v.readerId).filter(Boolean))
   const uniqueVisitors = uniqueVisitorSet.size
 
@@ -96,7 +107,7 @@ export default async function AdminOverviewPage({
   // Count distinct reader_ids per bucket (not raw page_visit events), so reloads
   // and returns within a bucket don't inflate the numbers.
   const countryVisitors = new Map<string, Set<string>>()
-  pageVisits.forEach((v) => {
+  liveSitePageVisits.forEach((v) => {
     const c = countryLabel(v.country || 'Unknown')
     if (!countryVisitors.has(c)) countryVisitors.set(c, new Set())
     if (v.readerId) countryVisitors.get(c)!.add(v.readerId)
@@ -110,7 +121,7 @@ export default async function AdminOverviewPage({
 
   // distinct reader_ids per (date, country bucket)
   const perDate = new Map<string, Map<string, Set<string>>>()
-  pageVisits.forEach((v) => {
+  liveSitePageVisits.forEach((v) => {
     const date = parisDate(v.timestamp)
     const c = countryLabel(v.country || 'Unknown')
     const key = topCountrySet.has(c) ? c : 'Other'
@@ -138,7 +149,7 @@ export default async function AdminOverviewPage({
 
   // --- Pie chart: visitors by language ---
   const langCount = new Map<string, number>()
-  pageVisits.forEach((v) => {
+  liveSitePageVisits.forEach((v) => {
     const l = v.lang || 'Unknown'
     langCount.set(l, (langCount.get(l) ?? 0) + 1)
   })
@@ -150,7 +161,7 @@ export default async function AdminOverviewPage({
   // already applied in fetchAllSheets, so this omits the owner's own visits and
   // bots). Distinct reader_ids per country, not raw page_visit events. ---
   const allTimeCountry = new Map<string, Set<string>>()
-  visits
+  liveSiteVisits
     .filter((v) => v.event === 'page_visit')
     .forEach((v) => {
       const c = countryLabel(v.country || 'Unknown')
@@ -166,9 +177,9 @@ export default async function AdminOverviewPage({
   const todayParisDay = parisDate(new Date())
   const selectedDay = day && /^\d{4}-\d{2}-\d{2}$/.test(day) ? day : todayParisDay
   // Days offered in the picker: today + every day that has visit data, newest first
-  const dayOptions = [...new Set([todayParisDay, ...pageVisits.map((v) => parisDate(v.timestamp))])]
+  const dayOptions = [...new Set([todayParisDay, ...liveSitePageVisits.map((v) => parisDate(v.timestamp))])]
     .sort((a, b) => (a < b ? 1 : -1))
-  const dayVisits = pageVisits.filter((v) => parisDate(v.timestamp) === selectedDay)
+  const dayVisits = liveSitePageVisits.filter((v) => parisDate(v.timestamp) === selectedDay)
   const dayVisitorCount = new Set(dayVisits.map((v) => v.readerId).filter(Boolean)).size
   // rank that day's countries by distinct visitors
   const dayCountryVisitors = new Map<string, Set<string>>()
