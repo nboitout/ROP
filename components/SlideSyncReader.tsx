@@ -135,7 +135,7 @@ const SS_UI: Record<string, {
 
 // Section ids that get a "page break" — a tall blank gap the reader scrolls
 // through before the section heading, à la Word page break.
-const PAGE_BREAK_BEFORE = new Set<string>(['anatomie'])
+const PAGE_BREAK_BEFORE = new Set<string>(['anatomie', 'zones-reflexes-podales'])
 
 function normalizeSectionLabel(value: string) {
   return value
@@ -222,12 +222,15 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
     [chapter.sections]
   )
 
-  // Slide the jump lands on: preferably the interactive reflex-zone atlas
-  // block; otherwise the section's earliest *content-block* anchor
-  // (blockIndex >= 0), skipping the heading anchor (e.g. the closing-quote
-  // slide that sits above the title). Falls back to the earliest anchor.
+  // Slide the jump lands on: page-break sections can intentionally use a
+  // heading anchor; otherwise prefer the interactive reflex-zone atlas block
+  // or the section's earliest content-block anchor.
   const ropJumpSlide = useMemo(() => {
     if (!ropSection) return null
+    if (PAGE_BREAK_BEFORE.has(ropSection.id)) {
+      const headingSlide = asSlideList(anchorBySlide.get(`${ropSection.id}:-1`)?.slide)[0]
+      if (headingSlide) return headingSlide
+    }
     const atlasIndex = ropSection.blocks.findIndex((b) => b.type === 'reflexAtlas')
     if (atlasIndex >= 0) {
       const atlasSlide = asSlideList(anchorBySlide.get(`${ropSection.id}:${atlasIndex}`)?.slide)[0]
@@ -690,11 +693,32 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
           {chapter.sections.map((section) => {
             const headingAnchor = anchorBySlide.get(`${section.id}:-1`)
             const headingSlides = asSlideList(headingAnchor?.slide)
+            const hasPageBreak = PAGE_BREAK_BEFORE.has(section.id)
             return (
             <Fragment key={section.id}>
-            {PAGE_BREAK_BEFORE.has(section.id) && <div className="ss-pagebreak" aria-hidden />}
+            {hasPageBreak && (
+              <div className={`ss-pagebreak${headingSlides.length > 0 ? ' ss-pagebreak--anchored' : ''}`}>
+                {headingSlides.length > 0 && (
+                  <div className="ss-anchor ss-anchor-pagebreak">
+                    {headingSlides.map((slide) => (
+                      <div key={slide} data-slide-anchor={slide}>
+                        <button
+                          type="button"
+                          className="ss-marker"
+                          onClick={() => openSlideLightbox(slide)}
+                          title={ui.enlargeShort}
+                        >
+                          <span className="ss-marker-dot" aria-hidden />
+                          {ui.marker(slide, slides[slide - 1]?.title ?? '')}
+                        </button>
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </div>
+            )}
             <section id={`sec-${section.id}`} className="cr-section">
-              {headingSlides.length > 0 && (
+              {!hasPageBreak && headingSlides.length > 0 && (
                 <div className="ss-anchor ss-anchor-heading">
                   {headingSlides.map((slide) => (
                     <div key={slide} data-slide-anchor={slide}>

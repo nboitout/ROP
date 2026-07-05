@@ -28,7 +28,7 @@ const ROUTES: Record<string, ChapterRoute> = {
   '01': { slug: 'chapter-1', href: '/lecture/chapitre-1', classicHref: '/chapitre-1', syncHref: '/lecture/chapitre-1' },
   '02': { slug: 'chapter-2', href: '/lecture/traitement-rop', classicHref: '/chapitre-2', syncHref: '/lecture/traitement-rop' },
   '03': { slug: 'chapter-3', href: '/lecture/chapitre-3', classicHref: '/chapitre-3', syncHref: '/lecture/chapitre-3' },
-  '04': { slug: 'chapter-4', href: '/lecture/chapitre-4', classicHref: '/chapitre-4', syncHref: '/lecture/chapitre-4', draft: true },
+  '04': { slug: 'chapter-4', href: '/lecture/chapitre-4', syncHref: '/lecture/chapitre-4', draft: true },
   '05': { slug: 'chapter-5', href: '/lecture/chapitre-5', classicHref: '/chapitre-5', syncHref: '/lecture/chapitre-5' },
   '06': { slug: 'chapter-6', href: '/lecture/chapitre-6', classicHref: '/chapitre-6', syncHref: '/lecture/chapitre-6' },
   '07': { slug: 'chapter-7', href: '/lecture/chapitre-7', classicHref: '/chapitre-7', syncHref: '/lecture/chapitre-7' },

@@ -831,6 +831,7 @@ a.ss-switch-opt:hover { color:var(--gold); }
 
 /* "page break" — blank scroll gap before a section heading (à la Word) */
 .ss-pagebreak { height:72vh; min-height:320px; }
+.ss-pagebreak--anchored { display:flex; align-items:center; justify-content:center; }
 
 .ss-anchor { scroll-margin-top:96px; }
 .ss-anchor-halfbreak { padding-top:36vh; }
@@ -841,6 +842,7 @@ a.ss-switch-opt:hover { color:var(--gold); }
 .ss-marker-dot { width:7px; height:7px; border-radius:50%; background:var(--gold); flex-shrink:0; }
 /* marker rendered above a section heading rather than inside a block */
 .ss-anchor-heading { margin:4px 0 2px; }
+.ss-anchor-pagebreak { text-align:center; }
 
 /* inline figures stay within the narrower text column */
 .ss-article .cr-fig { margin:36px auto; }
