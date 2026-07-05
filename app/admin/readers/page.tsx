@@ -18,6 +18,7 @@ const ALL_LANGS: { code: string; label: string }[] = [
   { code: 'de', label: 'German' },
   { code: 'es', label: 'Spanish' },
   { code: 'it', label: 'Italian' },
+  { code: 'th', label: 'Thai' },
 ]
 
 function daysAgo(days: number): string {

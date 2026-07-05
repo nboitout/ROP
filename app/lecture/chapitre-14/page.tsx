@@ -14,7 +14,7 @@ import {
 
 // Synthesis deck per language (all five available for chapter 14).
 const DECKS: Record<Lang, typeof chapter14Slides> = {
-  fr: chapter14Slides, en: chapter14SlidesEn, de: chapter14SlidesDe, es: chapter14SlidesEs, it: chapter14SlidesIt,
+  fr: chapter14Slides, en: chapter14SlidesEn, de: chapter14SlidesDe, es: chapter14SlidesEs, it: chapter14SlidesIt, th: chapter14SlidesEn,
 }
 
 // The French PDF was reorganised independently, so French uses its own anchor
@@ -22,7 +22,7 @@ const DECKS: Record<Lang, typeof chapter14Slides> = {
 const ANCHORS: Record<Lang, typeof chapter14SlideAnchors> = {
   fr: chapter14SlideAnchorsFr,
   en: chapter14SlideAnchors, de: chapter14SlideAnchors,
-  es: chapter14SlideAnchors, it: chapter14SlideAnchors,
+  es: chapter14SlideAnchors, it: chapter14SlideAnchors, th: chapter14SlideAnchors,
 }
 
 export const metadata: Metadata = {

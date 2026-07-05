@@ -231,6 +231,7 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
     de: 'Zuruck zur Lekture',
     es: 'Volver a la lectura',
     it: 'Torna alla lettura',
+    th: 'กลับไปอ่าน',
   }[lang] ?? 'Back to reading'
   const [sessionId] = useState<string>(() =>
     typeof window !== 'undefined' ? getSessionId() : ''

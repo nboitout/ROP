@@ -5,7 +5,7 @@ import { useRouter } from 'next/navigation'
 import { translations, type Lang } from './translations'
 import { getSessionId } from '@/lib/session'
 
-const LANGS: Lang[] = ['fr', 'en', 'de', 'es', 'it']
+const LANGS: Lang[] = ['fr', 'en', 'de', 'es', 'it', 'th']
 
 type LanguageContextValue = {
   lang: Lang
@@ -43,15 +43,20 @@ export function LanguageProvider({
   useEffect(() => {
     const urlLang = new URLSearchParams(window.location.search).get('lang')
     if (urlLang && LANGS.includes(urlLang as Lang)) {
-      if (urlLang !== lang) setLangState(urlLang as Lang)
+      if (urlLang !== lang) {
+        // eslint-disable-next-line react-hooks/set-state-in-effect
+        setLangState(urlLang as Lang)
+      }
       return
     }
     const match = document.cookie.match(/(?:^|; )lang=([^;]+)/)
     if (match) {
       const cookieLang = match[1] as Lang
-      if (LANGS.includes(cookieLang) && cookieLang !== lang) setLangState(cookieLang)
+      if (LANGS.includes(cookieLang) && cookieLang !== lang) {
+        setLangState(cookieLang)
+      }
     }
-  }, [])
+  }, []) // eslint-disable-line react-hooks/exhaustive-deps
 
   function setLang(l: Lang) {
     // Record the deliberate language change (from → to). Only fires on a real

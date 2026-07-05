@@ -12,7 +12,7 @@ import {
 
 export const metadata: Metadata = { title: 'Chapters · Admin R.O.P.' }
 
-const LANGS: Lang[] = ['fr', 'en', 'de', 'es', 'it']
+const LANGS: Lang[] = ['fr', 'en', 'de', 'es', 'it', 'th']
 
 const ROUTES: Record<string, { href: string; key: string; gated?: boolean; draft?: boolean }> = {
   '00': { href: '/introduction', key: 'introduction' },
@@ -223,7 +223,7 @@ export default async function AdminChapitresPage() {
       <div className="adm-page-header">
         <div>
           <p className="adm-page-eyebrow">Preparation</p>
-          <h1 className="adm-page-title">Chapters — FR / EN / DE / ES / IT</h1>
+          <h1 className="adm-page-title">Chapters — FR / EN / DE / ES / IT / TH</h1>
           <p className="adm-page-sub">
             Each link opens the chapter in the selected language without changing the site language.
             Useful for reviewing versions side by side, with one tab per language.

@@ -9,6 +9,7 @@ const LANGS: { code: Lang; label: string }[] = [
   { code: 'de', label: 'Deutsch' },
   { code: 'es', label: 'Español' },
   { code: 'it', label: 'Italiano' },
+  { code: 'th', label: 'ไทย' },
 ]
 
 export default function LanguageToggle() {

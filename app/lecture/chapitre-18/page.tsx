@@ -18,6 +18,7 @@ const DECKS: Record<Lang, typeof chapter18Slides> = {
   de: chapter18SlidesDe,
   es: chapter18SlidesEs,
   it: chapter18SlidesIt,
+  th: chapter18SlidesEn,
 }
 
 export const metadata: Metadata = {

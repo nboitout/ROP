@@ -18,6 +18,7 @@ const DECKS: Record<Lang, typeof chapter15Slides> = {
   de: chapter15SlidesDe,
   es: chapter15SlidesEs,
   it: chapter15SlidesIt,
+  th: chapter15SlidesEn,
 }
 
 // The English deck has its own artwork and one extra slide, so it uses a
@@ -29,6 +30,7 @@ const ANCHORS: Record<Lang, typeof chapter15SlideAnchors> = {
   de: chapter15SlideAnchors,
   es: chapter15SlideAnchors,
   it: chapter15SlideAnchors,
+  th: chapter15SlideAnchorsEn,
 }
 
 export const metadata: Metadata = {

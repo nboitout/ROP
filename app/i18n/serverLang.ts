@@ -1,7 +1,7 @@
 import { cookies } from 'next/headers'
 import type { Lang } from './translations'
 
-const LANGS: Lang[] = ['fr', 'en', 'de', 'es', 'it']
+const LANGS: Lang[] = ['fr', 'en', 'de', 'es', 'it', 'th']
 
 /** Type guard: is the value one of the supported languages? */
 export function isLang(value: string | undefined | null): value is Lang {

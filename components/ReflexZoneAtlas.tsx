@@ -24,6 +24,7 @@ import type { Lang } from '@/app/i18n/translations'
 
 type Foot = 'jejunum' | 'ileum'
 type LandmarkKey = 'upper' | 'lower' | 'lateral' | 'loops'
+type AtlasLang = Exclude<Lang, 'th'>
 
 type Bound = { label: string; detail: string }
 type Strings = {
@@ -45,7 +46,11 @@ type Strings = {
   bounds: Record<Foot, Record<LandmarkKey, Bound>>
 }
 
-const ASSETS: Record<Lang, Record<Foot, { carto: string; photo: string }>> = {
+function atlasLang(lang: Lang): AtlasLang {
+  return lang === 'th' ? 'en' : lang
+}
+
+const ASSETS: Record<AtlasLang, Record<Foot, { carto: string; photo: string }>> = {
   fr: {
     jejunum: { carto: '/chapter-14/figure-14-25.png', photo: '/chapter-14/figure-14-24.png' },
     ileum: { carto: '/chapter-14/figure-14-27.png', photo: '/chapter-14/figure-14-26.png' },
@@ -70,7 +75,7 @@ const ASSETS: Record<Lang, Record<Foot, { carto: string; photo: string }>> = {
 
 const LANDMARK_ORDER: LandmarkKey[] = ['upper', 'lower', 'lateral', 'loops']
 
-const STRINGS: Record<Lang, Strings> = {
+const STRINGS: Record<AtlasLang, Strings> = {
   fr: {
     eyebrow: 'Atlas interactif',
     title: 'Zones réflexes podales',
@@ -370,7 +375,7 @@ function AtlasStage({
   setReveal: (b: boolean) => void
   onEnlarge: (kind: 'carto' | 'photo') => void
 }) {
-  const assets = ASSETS[lang][foot]
+  const assets = ASSETS[atlasLang(lang)][foot]
   const tab = s.tab[foot]
   return (
     <div className="rza-stage">
@@ -448,7 +453,7 @@ function AtlasStage({
 
 export default function ReflexZoneAtlas() {
   const { lang } = useLanguage()
-  const s = STRINGS[lang] ?? STRINGS.fr
+  const s = STRINGS[atlasLang(lang)]
   const [foot, setFoot] = useState<Foot>('jejunum')
   const [active, setActive] = useState<LandmarkKey | null>(null)
   const [reveal, setReveal] = useState(false)
@@ -456,7 +461,7 @@ export default function ReflexZoneAtlas() {
   const [lightbox, setLightbox] = useState<{ src: string; caption: string } | null>(null)
 
   function enlarge(kind: 'carto' | 'photo') {
-    const assets = ASSETS[lang][foot]
+    const assets = ASSETS[atlasLang(lang)][foot]
     setLightbox({
       src: kind === 'carto' ? assets.carto : assets.photo,
       caption: `${s.tab[foot].name} — ${kind === 'carto' ? s.carto : s.gesture}`,

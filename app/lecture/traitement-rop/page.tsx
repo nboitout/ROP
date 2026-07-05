@@ -18,6 +18,7 @@ const DECKS: Record<Lang, typeof chapter2Slides> = {
   de: chapter2SlidesDe,
   es: chapter2SlidesEs,
   it: chapter2SlidesIt,
+  th: chapter2SlidesEn,
 }
 
 const ANCHORS: Record<Lang, typeof chapter2SlideAnchors> = {
@@ -26,6 +27,7 @@ const ANCHORS: Record<Lang, typeof chapter2SlideAnchors> = {
   de: chapter2SlideAnchors,
   es: chapter2SlideAnchors,
   it: chapter2SlideAnchors,
+  th: chapter2SlideAnchors,
 }
 
 export const metadata: Metadata = {

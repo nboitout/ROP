@@ -22,15 +22,15 @@ import {
 } from '@/content/prototype/chapter14.slidesync'
 
 const CHAPTERS: Record<Lang, typeof chapter14Fr> = {
-  fr: chapter14Fr, en: chapter14En, de: chapter14De, es: chapter14Es, it: chapter14It,
+  fr: chapter14Fr, en: chapter14En, de: chapter14De, es: chapter14Es, it: chapter14It, th: chapter14En,
 }
 const DECKS: Record<Lang, typeof chapter14Slides> = {
-  fr: chapter14Slides, en: chapter14SlidesEn, de: chapter14SlidesDe, es: chapter14SlidesEs, it: chapter14SlidesIt,
+  fr: chapter14Slides, en: chapter14SlidesEn, de: chapter14SlidesDe, es: chapter14SlidesEs, it: chapter14SlidesIt, th: chapter14SlidesEn,
 }
 const ANCHORS: Record<Lang, typeof chapter14SlideAnchors> = {
   fr: chapter14SlideAnchorsFr,
   en: chapter14SlideAnchors, de: chapter14SlideAnchors,
-  es: chapter14SlideAnchors, it: chapter14SlideAnchors,
+  es: chapter14SlideAnchors, it: chapter14SlideAnchors, th: chapter14SlideAnchors,
 }
 
 export const metadata: Metadata = {
