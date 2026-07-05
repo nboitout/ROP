@@ -927,6 +927,13 @@ export const chapter4Fr: Chapter = {
           ]
         },
         {
+          "type": "figure",
+          "src": "/chapter-4/figure-4-18.png",
+          "alt": "Palpation de la zone réflexe podale de l’étage diaphragmatique : hiatus œsophagien",
+          "caption": "Étage diaphragmatique : hiatus œsophagien",
+          "orientation": "portrait"
+        },
+        {
           "type": "sub",
           "text": "Nerf vague X - étage diaphragmatique / hiatus œsophagien"
         },
@@ -946,13 +953,6 @@ export const chapter4Fr: Chapter = {
               "text": "tenir compte de la différence de hauteur des deux coupoles diaphragmatiques, la gauche étant plus basse que la droite. (Cf. chapitre diaphragme, page…)"
             }
           ]
-        },
-        {
-          "type": "figure",
-          "src": "/chapter-4/figure-4-18.png",
-          "alt": "Palpation de la zone réflexe podale de l’étage diaphragmatique : hiatus œsophagien",
-          "caption": "Étage diaphragmatique : hiatus œsophagien",
-          "orientation": "portrait"
         },
         {
           "type": "sub",
