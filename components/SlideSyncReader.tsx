@@ -289,6 +289,16 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
     return m
   }, [anchors])
 
+  const eagerFigurePoints = useMemo(() => {
+    const points = new Set<string>()
+    for (const anchor of anchors) {
+      if (anchor.itemIndex !== undefined) continue
+      points.add(pointKey(anchor.sectionId, anchor.blockIndex))
+      points.add(pointKey(anchor.sectionId, anchor.blockIndex + 1))
+    }
+    return points
+  }, [anchors])
+
   // The chapter's ROP section (reflex-zone maps in the feet) — readers spend a
   // lot of time here, so the pinned stage offers a one-tap jump to it.
   const ropSection = useMemo(
@@ -1037,6 +1047,7 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
                     block={b}
                     onOpenImage={(image) => openFigureLightbox(image, section.id, i)}
                     ui={ui}
+                    eagerImage={eagerFigurePoints.has(pointKey(section.id, i))}
                     renderEndSentinelForItem={(itemIndex) => renderEndSentinel(section.id, i, itemIndex)}
                   />
                 )
@@ -1166,11 +1177,13 @@ function BlockView({
   block,
   onOpenImage,
   ui,
+  eagerImage = false,
   renderEndSentinelForItem,
 }: {
   block: Block
   onOpenImage: (b: LightboxItem) => void
   ui: typeof SS_UI.fr
+  eagerImage?: boolean
   renderEndSentinelForItem?: (itemIndex: number) => ReactNode
 }) {
   const { t } = useLanguage()
@@ -1234,7 +1247,7 @@ function BlockView({
             })}
             aria-label={ui.enlargeFigure(block.caption)}
           >
-            <img src={block.src} alt={block.alt} loading="lazy" />
+            <img src={block.src} alt={block.alt} loading={eagerImage ? 'eager' : 'lazy'} />
             <span className="cr-fig-zoom" aria-hidden>⌕</span>
           </button>
           <figcaption>{block.caption}</figcaption>
