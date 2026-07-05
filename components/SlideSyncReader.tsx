@@ -159,9 +159,7 @@ const SS_UI: Record<string, {
 // Section ids that get a "page break" — a tall blank gap the reader scrolls
 // through before the section heading, à la Word page break.
 const PAGE_BREAK_BEFORE = new Set<string>(['anatomie', 'zones-reflexes-podales'])
-const SHOW_SYNC_END_ANCHORS =
-  process.env.NEXT_PUBLIC_SHOW_SLIDE_END_ANCHORS === '1' ||
-  process.env.NODE_ENV !== 'production'
+const SHOW_SYNC_END_ANCHORS = process.env.NEXT_PUBLIC_SHOW_SLIDE_END_ANCHORS !== '0'
 
 function normalizeSectionLabel(value: string) {
   return value
