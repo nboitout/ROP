@@ -332,7 +332,13 @@ export const chapter13Fr: Chapter = {
       blocks: [
         {
           type: "para",
-          text: "La rate et le pancréas sont difficiles à différencier sur le plan émotionnel (voir chapitre 12, Pancréas)."
+          text: "La rate et le pancréas sont difficiles à différencier sur le plan émotionnel."
+        },
+        {
+          type: "xref",
+          label: "Voir la référence dans le chapitre 12",
+          text: "Pancréas : relations viscéro-émotionnelles",
+          href: "/lecture/chapitre-12?xrefBack=%2Flecture%2Fchapitre-13%23p-relations-viscero-emotionnelles-0&xrefBackLabel=Retour%20au%20chapitre%2013#p-relations-viscero-emotionnelles-0"
         },
         {
           type: "para",

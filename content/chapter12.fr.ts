@@ -423,17 +423,27 @@ export const chapter12Fr: Chapter = {
             "Glandes surrenales",
             "Sous l'action de l'axe hypothalamo-hypophyso-surrénalien, l'adrénaline sécrétée par la medullo-surrénale contribue à l'élévation de la glycémie en situation de stress.",
             "Le cortisol sécrété par la cortico-surrénale participe également au maintien de la disponibilité du glucose en période de stress et d'activité.",
-            "Voir la référence dans le chapitre 5 : Mécanisme de stress",
             "Intestin et microbiote",
             "Les bactéries qui peuplent l'intestin vivent normalement dans une relation de symbiose avec l'hôte.",
             "Le stress, l'inflammation et une altération de la barrière intestinale peuvent s'accompagner d'une dysbiose, c'est-à-dire d'une modification de la composition du microbiote au détriment de certains équilibres fonctionnels.",
             "Certaines dysbioses sont associées à l'insulino-résistance et au diabète de type 2.",
             "Dans ce contexte, la glycémie peut s'élever et le pancréas être davantage sollicité pour maintenir un taux glycemique compatible avec l'homéostasie.",
-            "Voir la référence dans le chapitre 14 : Intestin grêle : dysbioses",
             "Hormones gastro-intestinales",
             "En cas de glycémie post-prandiale, des hormones intestinales comme le GLP-1 participent au ralentissement de la vidange gastrique, à l'inhibition du glucagon et à la stimulation de la sécrétion d'insuline.",
             "La place exacte du GLP-2 dans cette description doit être interprétée avec prudence."
           ]
+        },
+        {
+          "type": "xref",
+          "label": "Voir la référence dans le chapitre 5",
+          "text": "Mécanisme de stress : axe HHS, adrénaline et cortisol",
+          "href": "/lecture/chapitre-5?xrefBack=%2Flecture%2Fchapitre-12%23p-interet-en-rop-2-0&xrefBackLabel=Retour%20au%20chapitre%2012#p-sga-7"
+        },
+        {
+          "type": "xref",
+          "label": "Voir la référence dans le chapitre 14",
+          "text": "Intestin grêle : dysbioses",
+          "href": "/lecture/chapitre-14?xrefBack=%2Flecture%2Fchapitre-12%23p-interet-en-rop-2-0&xrefBackLabel=Retour%20au%20chapitre%2012#p-pathologies-6"
         }
       ]
     },

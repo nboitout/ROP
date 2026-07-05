@@ -22,6 +22,12 @@ export const chapter4Fr: Chapter = {
           "text": "Dans le chapitre 1 Généralité, nous savons vu l’importance de la mobilité des viscères. Cette mobilité dépend, en grande partie, du bon fonctionnement des deux composantes du système nerveux autonome (SNA): le Parasympathique et le Sympathique."
         },
         {
+          "type": "xref",
+          "label": "Voir la référence dans le chapitre 1",
+          "text": "Mobilité viscérale : définitions et moteurs",
+          "href": "/lecture/chapitre-1?xrefBack=%2Flecture%2Fchapitre-4%23p-presentation-1&xrefBackLabel=Retour%20au%20chapitre%204#sec-mobilite-viscerale"
+        },
+        {
           "type": "para",
           "text": "Ces deux composantes du SNA sont chargées d’ajuster le fonctionnement des viscères et des glandes aux besoins de l’organisme, tout en préservant conjointement avec les systèmes hormonal et immunitaire, l’équilibre du milieu intérieur ou homéostasie."
         },
@@ -50,9 +56,15 @@ export const chapter4Fr: Chapter = {
             },
             {
               "label": "Homéostasie",
-              "text": "le maître-mot du rôle du SNA est l’adaptation en réponse à une situation de stress, de conflit ou d’émotions, en vue de préserver l’homéostasie (pH sanguin, glycémie, constantes biologiques, température, etc.). (Cf. Chapitre 5 Mécanisme de stress)."
+              "text": "le maître-mot du rôle du SNA est l’adaptation en réponse à une situation de stress, de conflit ou d’émotions, en vue de préserver l’homéostasie (pH sanguin, glycémie, constantes biologiques, température, etc.)."
             }
           ]
+        },
+        {
+          "type": "xref",
+          "label": "Voir la référence dans le chapitre 5",
+          "text": "Mécanisme de stress, homéostasie et allostasie",
+          "href": "/lecture/chapitre-5?xrefBack=%2Flecture%2Fchapitre-4%23p-presentation-8&xrefBackLabel=Retour%20au%20chapitre%204#p-definitions-2"
         },
         {
           "type": "sub",
@@ -83,17 +95,35 @@ export const chapter4Fr: Chapter = {
             },
             {
               "label": "Cerveau",
-              "text": "il a son propre système de régulation de la circulation sanguine car il ne peut supporter des variations brusques de sa circulation sanguine. Son système de régulation repose sur le sinus et le glomus carotidiens, situés à la bifurcation carotidienne, à hauteur de la vertèbre C4, commandés conjointement par le ganglion sympathique cervical supérieur et les nerfs glossopharyngien IX et vague X. (Cf. Sinus et glomus carotidiens,)"
+              "text": "il a son propre système de régulation de la circulation sanguine car il ne peut supporter des variations brusques de sa circulation sanguine. Son système de régulation repose sur le sinus et le glomus carotidiens, situés à la bifurcation carotidienne, à hauteur de la vertèbre C4, commandés conjointement par le ganglion sympathique cervical supérieur et les nerfs glossopharyngien IX et vague X."
             },
             {
               "label": "Corps érectiles sexuels (corps caverneux et corps spongieux)",
-              "text": "l’apport sanguin pour l’érection des organes érectiles, (pénis et clitoris) est gouverné par le Parasympathique. (Cf. Chapitre 21 Système érectile masculin et fémini)"
+              "text": "l’apport sanguin pour l’érection des organes érectiles, (pénis et clitoris) est gouverné par le Parasympathique."
             },
             {
               "label": "Action anti-inflammatoire",
-              "text": "les fibres sensitives du nerf vague, principal nerf parasympathique, informent l’hypothalamus de l’état des fonctions internes. Selon l’état de stress, l’hypothalamus met en route l’axe hormonal hypothalamo-hypophyso-surrénalien. (Chapitre 5 Mécanisme de stress) en faisant libérer les corticoïdes anti-inflammatoires."
+              "text": "les fibres sensitives du nerf vague, principal nerf parasympathique, informent l’hypothalamus de l’état des fonctions internes. Selon l’état de stress, l’hypothalamus met en route l’axe hormonal hypothalamo-hypophyso-surrénalien en faisant libérer les corticoïdes anti-inflammatoires."
             }
           ]
+        },
+        {
+          "type": "xref",
+          "label": "Voir la référence dans le chapitre 4",
+          "text": "Glomus carotidiens : chémorécepteur O2 / CO2 et équilibre acido-basique",
+          "href": "/lecture/chapitre-4?xrefBack=%2Flecture%2Fchapitre-4%23p-presentation-11&xrefBackLabel=Retour%20au%20chapitre%204#p-parasympathique-visceromoteur-8"
+        },
+        {
+          "type": "xref",
+          "label": "Voir la référence dans le chapitre 21",
+          "text": "Système érectile masculin et féminin",
+          "href": "/lecture/chapitre-21?xrefBack=%2Flecture%2Fchapitre-4%23p-presentation-11&xrefBackLabel=Retour%20au%20chapitre%204#sec-presentation"
+        },
+        {
+          "type": "xref",
+          "label": "Voir la référence dans le chapitre 5",
+          "text": "Mécanisme de stress",
+          "href": "/lecture/chapitre-5?xrefBack=%2Flecture%2Fchapitre-4%23p-presentation-11&xrefBackLabel=Retour%20au%20chapitre%204#p-presentation-0"
         },
         {
           "type": "sub",
@@ -113,7 +143,13 @@ export const chapter4Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "Le SNA est une des clés de notre action. Fidèles à notre principe « priorité au nerf », c’est d’abord en portant notre action sur le SNA que nous restituons les fonctions viscéro-glandulaires. Les déséquilibres du SNA sont, le plus souvent, en amont des dysfonctions viscéro-glandulaires. Celles-ci ne sont que les conséquences d’un état de stress où le SNA n’a pas pu mettre en route les mécanismes d’adaptation-compensation nécessaires au retour à l’équilibre. (Cf. Chapitre 5 Mécanisme de stress)"
+          "text": "Le SNA est une des clés de notre action. Fidèles à notre principe « priorité au nerf », c’est d’abord en portant notre action sur le SNA que nous restituons les fonctions viscéro-glandulaires. Les déséquilibres du SNA sont, le plus souvent, en amont des dysfonctions viscéro-glandulaires. Celles-ci ne sont que les conséquences d’un état de stress où le SNA n’a pas pu mettre en route les mécanismes d’adaptation-compensation nécessaires au retour à l’équilibre."
+        },
+        {
+          "type": "xref",
+          "label": "Voir la référence dans le chapitre 5",
+          "text": "Mécanisme de stress",
+          "href": "/lecture/chapitre-5?xrefBack=%2Flecture%2Fchapitre-4%23p-presentation-19&xrefBackLabel=Retour%20au%20chapitre%204#p-definitions-2"
         },
         {
           "type": "bullets",
@@ -154,7 +190,13 @@ export const chapter4Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "Des cellules de la névroglie (Cf. chapitre 3 Système nerveux central), les astrocytes éliminent les synapses entre les neurones lorsqu’elles sont privées de sommeil."
+          "text": "Des cellules de la névroglie, les astrocytes éliminent les synapses entre les neurones lorsqu’elles sont privées de sommeil."
+        },
+        {
+          "type": "xref",
+          "label": "Voir la référence dans le chapitre 3",
+          "text": "Système nerveux central : cellules gliales et régulation cérébrale",
+          "href": "/lecture/chapitre-3?xrefBack=%2Flecture%2Fchapitre-4%23p-presentation-28&xrefBackLabel=Retour%20au%20chapitre%204#p-section-3-organisation-anatomique-84"
         },
         {
           "type": "para",
@@ -187,9 +229,15 @@ export const chapter4Fr: Chapter = {
             },
             {
               "label": "Système nerveux entérique (SNE)",
-              "text": "aux deux composantes, parasympathique et sympathique, du SNA, il faut, en réalité ajouter une troisième composante, le système nerveux entérique (SNE) qui gouverne l’intestin d’une façon autonome. C’est notre fameux deuxième cerveau qui fonctionne en pilote automatique sans avoir recours au Parasympathique et au Sympathique dans les conditions physiologiques. Ceux-ci ne prennent le contrôle que quand apparaissent des dysfonctions de l’intestin. (Cf. Chapitre 9 Système nerveux entérique)"
+              "text": "aux deux composantes, parasympathique et sympathique, du SNA, il faut, en réalité ajouter une troisième composante, le système nerveux entérique (SNE) qui gouverne l’intestin d’une façon autonome. C’est notre fameux deuxième cerveau qui fonctionne en pilote automatique sans avoir recours au Parasympathique et au Sympathique dans les conditions physiologiques. Ceux-ci ne prennent le contrôle que quand apparaissent des dysfonctions de l’intestin."
             }
           ]
+        },
+        {
+          "type": "xref",
+          "label": "Voir la référence dans le chapitre 14",
+          "text": "Système nerveux entérique de l’intestin grêle",
+          "href": "/lecture/chapitre-14?xrefBack=%2Flecture%2Fchapitre-4%23p-organisation-2&xrefBackLabel=Retour%20au%20chapitre%204#p-innervation-8"
         }
       ]
     },
@@ -274,9 +322,15 @@ export const chapter4Fr: Chapter = {
             "Noyau ambigu ou ventral: les neurones, issus du noyau ventral sont constitués de fibres myélinisées à conduction rapide de l’influx nerveux. Ils innervent essentiellement les organes sus-diaphragmatiques:",
             "le larynx, le pharynx,",
             "l’œsophage dont ils activent la progression du bol alimentaire vers l’estomac;",
-            "Le cœur: Les atriums (anciennement oreillettes), situés à la base du cœur (partie supérieure du cœur), ont une prédominance vagale. Le noyau ambigu exerce un contrôle sur l’activité cardiaque, non seulement sur le rythme (bradycardie), mais surtout sur la variabilité du rythme cardiaque (VRC) pour adapter le cœur aux mécanismes de stress (Cf. chapitre 6 Théorie polyvagale)",
+            "Le cœur: Les atriums (anciennement oreillettes), situés à la base du cœur (partie supérieure du cœur), ont une prédominance vagale. Le noyau ambigu exerce un contrôle sur l’activité cardiaque, non seulement sur le rythme (bradycardie), mais surtout sur la variabilité du rythme cardiaque (VRC) pour adapter le cœur aux mécanismes de stress.",
             "les poumons dont ils sont broncho-constricteurs et augmentent la sécrétion mucosale."
           ]
+        },
+        {
+          "type": "xref",
+          "label": "Voir la référence dans le chapitre 6",
+          "text": "Théorie polyvagale : branche ventrale, noyau ambigu et variabilité du rythme cardiaque",
+          "href": "/lecture/chapitre-6?xrefBack=%2Flecture%2Fchapitre-4%23p-parasympathique-visceromoteur-5&xrefBackLabel=Retour%20au%20chapitre%204#p-theorie-polyvagale-12"
         },
         {
           "type": "sub",
@@ -324,9 +378,15 @@ export const chapter4Fr: Chapter = {
           "items": [
             "Contre-indications: plaques d’athérome.",
             "Indications: tachycardie, dysrythmie cardiaque, hypertension, syndrome vagal.",
-            "Syndrome vagal: c’est une vagotonie, par hyperstimulation vagale. Les symptômes sont: drop-attack, vertige, hypotension, petite absence, évanouissement. (Cf. chapitre 6 Théorie polyvagale, paragraphe 3, Malaise vagal)",
+            "Syndrome vagal: c’est une vagotonie, par hyperstimulation vagale. Les symptômes sont: drop-attack, vertige, hypotension, petite absence, évanouissement.",
             "Après un repas trop copieux, la congestion jugulo-carotidienne comprime le nerf vague et l’irrite dans la gaine carotidienne."
           ]
+        },
+        {
+          "type": "xref",
+          "label": "Voir la référence dans le chapitre 6",
+          "text": "Théorie polyvagale : malaise vagal",
+          "href": "/lecture/chapitre-6?xrefBack=%2Flecture%2Fchapitre-4%23p-parasympathique-visceromoteur-9&xrefBackLabel=Retour%20au%20chapitre%204#p-theorie-polyvagale-6"
         },
         {
           "type": "para",
@@ -391,9 +451,15 @@ export const chapter4Fr: Chapter = {
             },
             {
               "label": "Zone de Cannon-Böhm",
-              "text": "elle est située à la jonction des 2/3 droits et du 1/3 gauche du colon transverse. Elle représente la frontière entre le territoire contrôlé par le nerf vague et le parasympathique pelvien. (Cf. chapitre 15 Colon)"
+              "text": "elle est située à la jonction des 2/3 droits et du 1/3 gauche du colon transverse. Elle représente la frontière entre le territoire contrôlé par le nerf vague et le parasympathique pelvien."
             }
           ]
+        },
+        {
+          "type": "xref",
+          "label": "Voir la référence dans le chapitre 15",
+          "text": "Côlon transverse et cadre colique",
+          "href": "/lecture/chapitre-15?xrefBack=%2Flecture%2Fchapitre-4%23p-parasympathique-visceromoteur-14&xrefBackLabel=Retour%20au%20chapitre%204#p-situation-1"
         },
         {
           "type": "para",
@@ -445,7 +511,7 @@ export const chapter4Fr: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Rôle majeur du nerf vague: les fibres sensitives représentent 70 à 80% des fibres du nerf vague. Elles informent, en permanence, le cerveau de l’état de l’intérieur du corps. Le Dr Donatini, spécialiste du microbiote intestinal, est convaincu que des maladies neuro-dégénératives, telles que la maladie de Parkinson, la sclérose en plaques et la maladie d’Alzheimer, sont en relation avec le système nerveux entérique (Cf. paragraphe 9 Système nerveux entérique) par le nerf vague qui envoie des informations au cerveau sur l’état du microbiote.",
+            "Rôle majeur du nerf vague: les fibres sensitives représentent 70 à 80% des fibres du nerf vague. Elles informent, en permanence, le cerveau de l’état de l’intérieur du corps. Le Dr Donatini, spécialiste du microbiote intestinal, est convaincu que des maladies neuro-dégénératives, telles que la maladie de Parkinson, la sclérose en plaques et la maladie d’Alzheimer, sont en relation avec le système nerveux entérique par le nerf vague qui envoie des informations au cerveau sur l’état du microbiote.",
             "Intéroception: la sensibilité viscérale, appelée intéroception, est le plus souvent inconsciente. Elle donne le sentiment vague de l’existence viscérale appelée cénesthésie.",
             "Les récepteurs viscéraux sont appelés intérocepteurs. Ils sont variés: mécanorécepteurs, thermorécepteurs, baro et chémorécepteurs.",
             "Les intérocepteurs parasympathiques: ils sont localisés dans les couches musculaires et la muqueuse des viscères.",
@@ -462,6 +528,12 @@ export const chapter4Fr: Chapter = {
             "Immunité: les neurones sensitifs sont en relation avec le riche réseau lymphatique de l’intestin grêle. Le nerf vague est l’intermédiaire entre le système lymphatique et les centres nerveux supérieurs.",
             "Trophicité: au plus près des tissus des viscères, les neurones sensitifs assurent le maintien et le renouvellement de leurs cellules."
           ]
+        },
+        {
+          "type": "xref",
+          "label": "Voir la référence dans le chapitre 14",
+          "text": "Système nerveux entérique et microbiote intestinal",
+          "href": "/lecture/chapitre-14?xrefBack=%2Flecture%2Fchapitre-4%23p-nerf-vague-sensitif-0&xrefBackLabel=Retour%20au%20chapitre%204#p-innervation-8"
         }
       ]
     },
@@ -641,7 +713,13 @@ export const chapter4Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "« Les interrelations médullaires entre les voies de la sensibilité viscérale et les voies de la sensibilité somatique sont à l’origine des douleurs rapportées et de contractures réflexes » (Pr Guy Lazortes). C’est ainsi qu’une douleur viscérale ne se projette pas toujours en regard du viscère atteint. Elle se projette sur un territoire cutané, appelé dermatome, correspondant au segment médullaire auquel aboutissent les voies sensitives du viscère. (Cf. Intérêt clinique)"
+          "text": "« Les interrelations médullaires entre les voies de la sensibilité viscérale et les voies de la sensibilité somatique sont à l’origine des douleurs rapportées et de contractures réflexes » (Pr Guy Lazortes). C’est ainsi qu’une douleur viscérale ne se projette pas toujours en regard du viscère atteint. Elle se projette sur un territoire cutané, appelé dermatome, correspondant au segment médullaire auquel aboutissent les voies sensitives du viscère."
+        },
+        {
+          "type": "xref",
+          "label": "Voir la référence dans ce chapitre",
+          "text": "Intérêt clinique : myélomères et relations viscérales",
+          "href": "/lecture/chapitre-4?xrefBack=%2Flecture%2Fchapitre-4%23p-sympathique-sensitif-3&xrefBackLabel=Retour%20au%20chapitre%204#p-sympathique-visceromoteur-2"
         },
         {
           "type": "para",
@@ -774,11 +852,17 @@ export const chapter4Fr: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Cette prédominance de l’innervation sympathique est liée au rôle des glandes surrénales dans les états de stress ou émotionnels. Elle produit l’adrénaline lors de la phase d’urgence du syndrome général d’adaptation (Cf. chapitre 5 Mécanisme de stress)",
+            "Cette prédominance de l’innervation sympathique est liée au rôle des glandes surrénales dans les états de stress ou émotionnels. Elle produit l’adrénaline lors de la phase d’urgence du syndrome général d’adaptation.",
             "Fonction",
             "L’adrénaline provoque une accélération du rythme cardiaque (tachycardie) et une vasoconstriction.",
             "Corticosurrénale: elle stimule la sécrétion d’aldostérone qui accroit la sécrétion de rénine¸ qui, elle-même, augmente la volémie (volume total de sang circulant dans l’organisme)."
           ]
+        },
+        {
+          "type": "xref",
+          "label": "Voir la référence dans le chapitre 5",
+          "text": "Syndrome général d’adaptation : phase d’alarme et adrénaline",
+          "href": "/lecture/chapitre-5?xrefBack=%2Flecture%2Fchapitre-4%23p-glandes-surrenales-1&xrefBackLabel=Retour%20au%20chapitre%204#p-sga-7"
         }
       ]
     },
@@ -950,9 +1034,15 @@ export const chapter4Fr: Chapter = {
             },
             {
               "label": "N.B.",
-              "text": "tenir compte de la différence de hauteur des deux coupoles diaphragmatiques, la gauche étant plus basse que la droite. (Cf. chapitre diaphragme, page…)"
+              "text": "tenir compte de la différence de hauteur des deux coupoles diaphragmatiques, la gauche étant plus basse que la droite."
             }
           ]
+        },
+        {
+          "type": "xref",
+          "label": "Voir la référence dans le chapitre 8",
+          "text": "Zones réflexes podales du diaphragme : coupoles diaphragmatiques",
+          "href": "/lecture/chapitre-8?xrefBack=%2Flecture%2Fchapitre-4%23p-zones-reflexes-podales-22&xrefBackLabel=Retour%20au%20chapitre%204#p-zones-reflexes-podales-5"
         },
         {
           "type": "sub",
@@ -1229,7 +1319,7 @@ export const chapter4Fr: Chapter = {
         {
           "type": "lead",
           "label": "Zones réflexes",
-          "text": "(Cf. Chapitre 16)"
+          "text": ""
         },
         {
           "type": "xref",

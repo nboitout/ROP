@@ -211,7 +211,6 @@ export const chapter11Fr: Chapter = {
             "Elle adhère également au diaphragme dans sa traversée de l’orifice du même nom.",
             "La veine cave inférieure et le ligament coronaire constituent les attaches les plus solides du foie.",
             "Effet Turgor et pressions intracavitaires",
-            "Voir la référence dans le chapitre 1 : Effet turgor et pressions intracavitaires",
             "Faces du foie",
             "Le foie présente trois faces chez le vivant.",
             "Le foie d’autopsie, vidé de son sang, apparaît plutôt comme une masse aplatie présentant deux faces supérieure et inférieure.",
@@ -228,6 +227,12 @@ export const chapter11Fr: Chapter = {
             "Face supérieure du lobe gauche : elle s’aplatit jusqu’à devenir concave au niveau de la foliole gauche du centre phrénique, sur lequel reposent le péricarde et la face inférieure du cœur.",
             "Elle est plus basse que l’hémi-coupole droite, à hauteur du 6ème espace intercostal."
           ]
+        },
+        {
+          "type": "xref",
+          "label": "Voir la référence dans le chapitre 1",
+          "text": "Séreuses : glissement et pressions",
+          "href": "/lecture/chapitre-1?xrefBack=%2Flecture%2Fchapitre-11%23p-interet-en-rop-2-0&xrefBackLabel=Retour%20au%20chapitre%2011#p-articulations-viscerales-3"
         }
       ]
     },

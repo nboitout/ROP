@@ -615,8 +615,14 @@ export const chapter19Fr: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "il est plus en relation avec le système uro-génital en raison du système de distribution veino-lymphatique (Cf. Vascularisation veineuse) et de la situation du col utérin, majoritairement fixé caudalement et à gauche, entrainant des douleurs congestives de l’ovaire gauche."
+            "il est plus en relation avec le système uro-génital en raison du système de distribution veino-lymphatique et de la situation du col utérin, majoritairement fixé caudalement et à gauche, entrainant des douleurs congestives de l’ovaire gauche."
           ]
+        },
+        {
+          "type": "xref",
+          "label": "Voir la référence dans ce chapitre",
+          "text": "Vascularisation de l’utérus",
+          "href": "/lecture/chapitre-19?xrefBack=%2Flecture%2Fchapitre-19%23p-ovaires-trompes-rapports-5&xrefBackLabel=Retour%20au%20chapitre%2019#sec-uterus-vascularisation"
         },
         {
           "type": "sub",

@@ -16,7 +16,13 @@ export const chapter14Fr: Chapter = {
       blocks: [
         { type: 'para', text: 'L’intestin grêle (ou petit intestin) est le viscère abdominal le plus long du corps : sur le cadavre, sa longueur est autour de 6 à 7 mètres, alors que chez le vivant, elle est nettement moindre en raison de son tonus musculaire. Il est constitué de deux parties :' },
         { type: 'bullets', items: ['Le duodénum', 'Le jéjunum-iléum.'] },
-        { type: 'para', text: 'Ils s’étendent du pylore à la valvule iléo-caecale et jouent un rôle majeur dans la digestion et l’absorption. Bien que faisant partie de l’intestin grêle, le duodénum a fait l’objet d’un chapitre séparé (Chapitre 10) en raison de sa spécificité anatomique et physiologique.' },
+        { type: 'para', text: 'Ils s’étendent du pylore à la valvule iléo-caecale et jouent un rôle majeur dans la digestion et l’absorption. Bien que faisant partie de l’intestin grêle, le duodénum a fait l’objet d’un chapitre séparé en raison de sa spécificité anatomique et physiologique.' },
+        {
+          type: 'xref',
+          label: 'Voir la référence dans le chapitre 10',
+          text: 'Duodénum : présentation anatomique et physiologique',
+          href: '/lecture/chapitre-10?xrefBack=%2Flecture%2Fchapitre-14%23p-presentation-2&xrefBackLabel=Retour%20au%20chapitre%2014#sec-presentation',
+        },
         { type: 'para', text: 'Le jéjunum-iléum se distingue du duodénum par :' },
         { type: 'bullets', items: [
           'Une paroi fine, lisse, entièrement péritonisée et très mobile. Sa lumière n’est que de 2 à 3 cm de diamètre ;',
