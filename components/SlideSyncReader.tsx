@@ -837,6 +837,28 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
     )
   }
 
+  function renderSlideAnchors(sectionId: string, blockIndex: number, itemIndex?: number) {
+    const slideList = slidesAtPoint(sectionId, blockIndex, itemIndex)
+    if (slideList.length === 0) return null
+    return (
+      <>
+        {slideList.map((slide) => (
+          <div key={slide} className="ss-anchor" data-slide-anchor={slide}>
+            <button
+              type="button"
+              className="ss-marker"
+              onClick={() => openSlideLightbox(slide)}
+              title={ui.enlargeShort}
+            >
+              <span className="ss-marker-dot" aria-hidden />
+              {ui.marker(slide, slides[slide - 1]?.title ?? '')}
+            </button>
+          </div>
+        ))}
+      </>
+    )
+  }
+
   return (
     <div className="cr-root">
       <div className="cr-progress" aria-hidden><div className="cr-progress-bar" style={{ transform: `scaleX(${progress})` }} /></div>
@@ -1051,6 +1073,7 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
                     onOpenImage={(image) => openFigureLightbox(image, section.id, i)}
                     ui={ui}
                     eagerImage={eagerFigurePoints.has(pointKey(section.id, i))}
+                    renderSlideAnchorsForItem={(itemIndex) => renderSlideAnchors(section.id, i, itemIndex)}
                     renderEndSentinelForItem={(itemIndex) => renderEndSentinel(section.id, i, itemIndex)}
                     sourceChapterKey={chapter.slug}
                     restrictPaidXrefs={restrictPaidXrefs}
@@ -1183,6 +1206,7 @@ function BlockView({
   onOpenImage,
   ui,
   eagerImage = false,
+  renderSlideAnchorsForItem,
   renderEndSentinelForItem,
   sourceChapterKey,
   restrictPaidXrefs,
@@ -1191,6 +1215,7 @@ function BlockView({
   onOpenImage: (b: LightboxItem) => void
   ui: typeof SS_UI.fr
   eagerImage?: boolean
+  renderSlideAnchorsForItem?: (itemIndex: number) => ReactNode
   renderEndSentinelForItem?: (itemIndex: number) => ReactNode
   sourceChapterKey: string
   restrictPaidXrefs: boolean
@@ -1211,7 +1236,12 @@ function BlockView({
     case 'bullets':
       return (
         <ul className="cr-ul">
-          {block.items.map((it, i) => <li key={i}>{it}</li>)}
+          {block.items.map((it, i) => (
+            <li key={i}>
+              {renderSlideAnchorsForItem?.(i)}
+              {it}
+            </li>
+          ))}
         </ul>
       )
     case 'leadBullets': {
@@ -1276,7 +1306,13 @@ function BlockView({
       return (
         <aside className="cr-rop">
           <p className="cr-rop-title">{t.reader.ropTitle}</p>
-          {block.body.map((p, i) => <p key={i} className="cr-rop-p">{p}</p>)}
+          {block.body.map((p, i) => (
+            <Fragment key={i}>
+              {renderSlideAnchorsForItem?.(i)}
+              <p className="cr-rop-p">{p}</p>
+            </Fragment>
+          ))}
+          {renderSlideAnchorsForItem?.(block.body.length)}
         </aside>
       )
     case 'reflexAtlas':

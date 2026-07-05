@@ -5,7 +5,7 @@
 // public/chapter-6/Chapter6 Slides de synthese FR.pdf
 
 export type SyncSlide = { src: string; title: string; orientation?: 'portrait' }
-export type SyncAnchor = { sectionId: string; blockIndex: number; slide: number | number[]; gapBefore?: 'half' }
+export type SyncAnchor = { sectionId: string; blockIndex: number; itemIndex?: number; slide: number | number[]; gapBefore?: 'half' }
 
 export const chapter6Slides: SyncSlide[] = [
   { src: '/chapter-6/slides/slide-01.png', title: 'Theorie polyvagale et ROP' },
@@ -37,19 +37,24 @@ export const chapter6SlideAnchors: SyncAnchor[] = [
   { sectionId: 'presentation-generale', blockIndex: 0, slide: 1 },
   { sectionId: 'presentation-generale', blockIndex: 2, slide: 2 },
   { sectionId: 'theorie-polyvagale', blockIndex: 0, slide: 3 },
-  { sectionId: 'theorie-polyvagale', blockIndex: 1, slide: 4 },
+  { sectionId: 'theorie-polyvagale', blockIndex: 10, itemIndex: 0, slide: 4 },
   { sectionId: 'theorie-polyvagale', blockIndex: 3, slide: 5 },
   { sectionId: 'theorie-polyvagale', blockIndex: 4, slide: 6 },
   { sectionId: 'theorie-polyvagale', blockIndex: 5, slide: 7 },
   { sectionId: 'theorie-polyvagale', blockIndex: 7, slide: 8 },
   { sectionId: 'theorie-polyvagale', blockIndex: 8, slide: 9 },
   { sectionId: 'theorie-polyvagale', blockIndex: 12, slide: 10 },
-  { sectionId: 'theorie-polyvagale', blockIndex: 13, slide: 11 },
-  { sectionId: 'engagement-social', blockIndex: 0, slide: 12 },
+  { sectionId: 'engagement-social', blockIndex: 0, slide: 11 },
+  { sectionId: 'engagement-social', blockIndex: 2, slide: 12 },
   { sectionId: 'engagement-social', blockIndex: 3, slide: 13 },
   { sectionId: 'engagement-social', blockIndex: 4, slide: 14 },
   { sectionId: 'engagement-social', blockIndex: 5, slide: 15 },
   { sectionId: 'engagement-social', blockIndex: 7, slide: 16 },
-  { sectionId: 'engagement-social', blockIndex: 11, slide: 17 },
-  { sectionId: 'engagement-social', blockIndex: 12, slide: [18, 19, 20, 21, 22, 23] },
+  { sectionId: 'engagement-social', blockIndex: 12, itemIndex: 0, slide: 17 },
+  { sectionId: 'engagement-social', blockIndex: 12, itemIndex: 1, slide: 18 },
+  { sectionId: 'engagement-social', blockIndex: 12, itemIndex: 2, slide: 19 },
+  { sectionId: 'engagement-social', blockIndex: 12, itemIndex: 3, slide: 20 },
+  { sectionId: 'engagement-social', blockIndex: 12, itemIndex: 4, slide: 21 },
+  { sectionId: 'engagement-social', blockIndex: 12, itemIndex: 5, slide: 22 },
+  { sectionId: 'engagement-social', blockIndex: 12, itemIndex: 6, slide: 23 },
 ]
