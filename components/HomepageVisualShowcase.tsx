@@ -2,6 +2,7 @@
 'use client'
 
 import { useState } from 'react'
+import { useLanguage } from '@/app/i18n/LanguageContext'
 
 const showcaseSlides = Array.from({ length: 10 }, (_, index) => {
   const number = String(index + 1).padStart(2, '0')
@@ -12,6 +13,7 @@ const showcaseSlides = Array.from({ length: 10 }, (_, index) => {
 })
 
 export default function HomepageVisualShowcase() {
+  const { t } = useLanguage()
   const [paused, setPaused] = useState(false)
   const loopSlides = [...showcaseSlides, ...showcaseSlides]
 
@@ -31,19 +33,18 @@ export default function HomepageVisualShowcase() {
       }}
     >
       <div className="visual-showcase-copy">
-        <p className="visual-showcase-eyebrow">Atlas du 3e Livre</p>
+        <p className="visual-showcase-eyebrow">{t.visualShowcase.eyebrow}</p>
         <h2 id="visual-showcase-title">
-          Plus de 400 visuels pour relier l’anatomie, la physiologie et le geste thérapeutique.
+          {t.visualShowcase.title}
         </h2>
         <p className="visual-showcase-body">
-          Une sélection de planches issues des chapitres donne un aperçu de la richesse graphique du livre:
-          cartes réflexes, schémas anatomiques, synthèses cliniques et repères thérapeutiques.
+          {t.visualShowcase.body}
         </p>
         <p className="visual-showcase-mobile-body">
-          Un aperçu mobile des cartes, schémas et synthèses du livre.
+          {t.visualShowcase.mobileBody}
         </p>
         <span className="visual-showcase-control">
-          {paused ? 'Carousel en pause' : 'Cliquer pour mettre en pause'}
+          {paused ? t.visualShowcase.paused : t.visualShowcase.pause}
         </span>
       </div>
 

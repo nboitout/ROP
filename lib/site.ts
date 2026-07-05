@@ -6,6 +6,6 @@ export const SITE_TITLE =
   'Reflexotherapie occipito-podale et visceres des cavites abdominale et pelvienne - Guy Boitout'
 
 export const SITE_DESCRIPTION =
-  'Troisieme ouvrage de Guy Boitout sur la Reflexologie Occipito-Podale: systeme nerveux autonome, mecanisme de stress et visceres abdomino-pelviens pour les praticiens.'
+  'Troisieme ouvrage de Guy Boitout sur la Reflexotherapie Occipito-Podale, au service des praticiens.'
 
 export const SOCIAL_IMAGE_PATH = '/opengraph-image'

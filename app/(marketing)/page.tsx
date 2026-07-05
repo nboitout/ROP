@@ -72,7 +72,6 @@ export default function HomePage() {
           <div className="hero-gallery">
             <div className="hero-gallery-top">
               <div>
-                <div className="hero-gallery-kicker">{t.hero.galleryKicker}</div>
                 <div className="hero-gallery-title">{t.hero.galleryTitle}</div>
               </div>
             </div>
@@ -105,11 +104,11 @@ export default function HomePage() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Image src="/Livre1.png" alt="Réflexothérapie occipito-podale" width={200} height={267} style={{ width: '100%', height: 'auto' }} />
+                <Image src="/Livre1.png" alt={t.author.books[0].title} width={200} height={267} style={{ width: '100%', height: 'auto' }} />
                 <div className="pb-cap">
-                  <strong>Livre 1 · 2015</strong>
-                  Réflexothérapie occipito-podale
-                  <span className="pb-pub">Éd. Elsevier-Masson</span>
+                  <strong>{t.author.books[0].label}</strong>
+                  {t.author.books[0].title}
+                  <span className="pb-pub">{t.author.books[0].publisher}</span>
                 </div>
               </a>
               <a
@@ -118,19 +117,19 @@ export default function HomePage() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Image src="/Livre2.png" alt="Réflexothérapie occipito-podale et système neuro-méningé" width={200} height={267} style={{ width: '100%', height: 'auto' }} />
+                <Image src="/Livre2.png" alt={t.author.books[1].title} width={200} height={267} style={{ width: '100%', height: 'auto' }} />
                 <div className="pb-cap">
-                  <strong>Livre 2 · 2021</strong>
-                  Réflexothérapie occipito-podale et système neuro-méningé
-                  <span className="pb-pub">Éd. Elsevier-Masson</span>
+                  <strong>{t.author.books[1].label}</strong>
+                  {t.author.books[1].title}
+                  <span className="pb-pub">{t.author.books[1].publisher}</span>
                 </div>
               </a>
               <a className="pb" href="#acheter">
                 <div className="pb-soon">{t.author.comingSoon}</div>
                 <div className="pb-cap">
-                  <strong>Livre 3 · 2026</strong>
-                  Réflexothérapie occipito-podale et viscères des cavités abdominale et pelvienne
-                  <span className="pb-pub">{t.author.publisherSelf}</span>
+                  <strong>{t.author.books[2].label}</strong>
+                  {t.author.books[2].title}
+                  <span className="pb-pub">{t.author.books[2].publisher}</span>
                 </div>
               </a>
             </div>
@@ -194,13 +193,14 @@ export default function HomePage() {
 
       {/* PROTOCOLE */}
       <section id="protocole">
-        <div className="lbl c">{t.protocole.lbl}</div>
         <h2 className="on-dk">
           {t.protocole.h2.before}<em>{t.protocole.h2.em}</em>{t.protocole.h2.after}
         </h2>
-        <p style={{ fontSize: '.93rem', color: 'rgba(245,240,232,.74)', maxWidth: 580, lineHeight: 1.8, marginTop: -6 }}>
-          {t.protocole.p}
-        </p>
+        <div className="protocol-intro">
+          <span>{t.protocole.p}</span>
+          {' '}
+          <a href="/lecture/traitement-rop" onClick={() => trackCta('protocol_free_chapter')}>{t.protocole.freeCta}</a>
+        </div>
         <div className="protocol-links">
           <a href="https://www.reflexo-occipitopodale.com/accueil" target="_blank" rel="noopener noreferrer" className="btn b-out" onClick={() => trackCta('protocol_institut')}>{t.author.btn1}</a>
           <a href="https://www.reflexo-occipitopodale.com/formations-r%C3%A9flexo-occipito-podale" target="_blank" rel="noopener noreferrer" className="btn b-out" onClick={() => trackCta('protocol_formations')}>{t.author.btn2}</a>
@@ -353,7 +353,7 @@ export default function HomePage() {
           </div>
         </div>
 
-        <div id="notify" className="cr-end" style={{ marginTop: 56, paddingTop: 0, borderTop: 'none' }}>
+        <div id="notify" className="cr-end" style={{ marginTop: 28, paddingTop: 0, borderTop: 'none' }}>
           <div className="cr-end-card">
             <p className="cr-end-eyebrow">{t.pricing.notify.eyebrow}</p>
             <h3 className="cr-end-title">{t.pricing.notify.title}</h3>

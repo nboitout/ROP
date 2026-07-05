@@ -2,15 +2,17 @@
 
 import { useEffect, useRef, useState } from 'react'
 import Image from 'next/image'
+import { useLanguage } from '@/app/i18n/LanguageContext'
 
 const slides = [
-  { src: '/assets/Guy1.jpeg', alt: 'Guy Boitout photo 1' },
-  { src: '/assets/Guy2.jpeg', alt: 'Guy Boitout photo 2' },
-  { src: '/assets/Guy3.jpeg', alt: 'Guy Boitout en formation' },
-  { src: '/assets/Guy4.jpeg', alt: 'Guy Boitout photo 4' },
+  { src: '/assets/Guy1.jpeg' },
+  { src: '/assets/Guy2.jpeg' },
+  { src: '/assets/Guy3.jpeg' },
+  { src: '/assets/Guy4.jpeg' },
 ]
 
 export default function HeroCarousel() {
+  const { t } = useLanguage()
   const [active, setActive] = useState(2)
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null)
   const reducedMotion =
@@ -44,7 +46,7 @@ export default function HeroCarousel() {
           <Image
             key={slide.src}
             src={slide.src}
-            alt={slide.alt}
+            alt={t.hero.photoAlt(i + 1)}
             fill
             sizes="(max-width:960px) 100vw, 46vw"
             className={i === active ? 'active' : ''}
@@ -58,7 +60,7 @@ export default function HeroCarousel() {
             key={slide.src}
             className={`hero-thumb${i === active ? ' is-active' : ''}`}
             type="button"
-            aria-label={`Afficher photo ${i + 1}`}
+            aria-label={t.hero.photoAria(i + 1)}
             onClick={() => goTo(i)}
           >
             <div className="hero-thumb-frame">
