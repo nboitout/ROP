@@ -268,18 +268,6 @@ export default async function EngagementPage({
     .sort((a, b) => b[1] - a[1])
     .map(([name, value]) => ({ name, value }))
 
-  // Bar: UTM sources
-  const utmCount = new Map<string, number>()
-  visits
-    .filter((v) => v.utm_source && v.utm_source.trim() !== '')
-    .forEach((v) => {
-      const s = v.utm_source.trim()
-      utmCount.set(s, (utmCount.get(s) ?? 0) + 1)
-    })
-  const utmData: BarDataPoint[] = [...utmCount.entries()]
-    .sort((a, b) => b[1] - a[1])
-    .map(([name, value]) => ({ name, value }))
-
   // Return frequency distribution: buckets 0, 1, 2, 3, 4+
   const returnVisitorDates = new Map<string, Set<string>>()
   returnPageVisits.forEach((v) => {
@@ -352,7 +340,7 @@ export default async function EngagementPage({
           <DeviceFilterLinks active={device} />
         </div>
         <p className="adm-page-sub" style={{ marginTop: -10, marginBottom: 18, maxWidth: 720, lineHeight: 1.6 }}>
-          Groups visitors by how many <strong>separate days</strong> they came back. &quot;0 returns&quot; = seen on
+          Groups visitors by how many <strong>separate days</strong>{' '}they came back. &quot;0 returns&quot; = seen on
           one day only; &quot;2 returns&quot; = seen on 3 different dates. Same-day reloads don&apos;t count. Identity is the
           browser&apos;s anonymous <code>reader_id</code> cookie, so clearing cookies or switching device shows up
           as a new visitor. Showing <strong>{deviceFilterLabel(device).toLowerCase()}</strong>.
@@ -369,7 +357,7 @@ export default async function EngagementPage({
             <DeviceFilterLinks active={device} />
           </div>
           <p className="adm-page-sub" style={{ marginTop: -10, marginBottom: 18, lineHeight: 1.6 }}>
-            Average <strong>active</strong> time spent on each page before leaving (time with the tab
+            Average <strong>active</strong>{' '}time spent on each page before leaving (time with the tab
             hidden isn&apos;t counted). The homepage and the sign-up gate are reported separately. Chapter 2
             now combines classic and synchronized reading routes in the headline scorecard above. Showing{' '}
             <strong>{deviceFilterLabel(device).toLowerCase()}</strong>.
@@ -386,35 +374,23 @@ export default async function EngagementPage({
         <div className="adm-chart-card">
           <p className="adm-chart-title">CTA Clicks by Type</p>
           <p className="adm-page-sub" style={{ marginTop: -10, marginBottom: 18, lineHeight: 1.6 }}>
-            Homepage button clicks grouped by the visitor&apos;s action: <strong>Read the 3 chapters</strong>
-            (both the hero and pricing-plan buttons), <strong>Order the full book</strong>,
+            Homepage button clicks grouped by the visitor&apos;s action: <strong>Read the 3 chapters</strong>{' '}
+            (both the hero and pricing-plan buttons), <strong>Order the full book</strong>,{' '}
             <strong>Notify me on release</strong>, and <strong>See chapters list</strong>. Counts clicks,
             not people. Pre-launch the editions aren&apos;t purchasable yet, so the print/online plan buttons
             fall under &quot;Notify me on release&quot; - a separate buy action will be added once the book is on sale.
             The two outbound links in the &quot;about Guy&quot; section are also tracked here as
-            <strong>Institut R.O.P. - site</strong> and <strong>Institut R.O.P. - training</strong>.
+            <strong>Institut R.O.P. - site</strong>{' '}and <strong>Institut R.O.P. - training</strong>.
           </p>
           <AdminBarChart data={ctaData} color="#c9a35e" layout="vertical" showValues />
         </div>
       </div>
 
       <div className="adm-chart-card" style={{ marginBottom: 32 }}>
-        <p className="adm-chart-title">UTM Sources</p>
-        <p className="adm-page-sub" style={{ marginTop: -10, marginBottom: 18, maxWidth: 640, lineHeight: 1.6 }}>
-          This chart only counts visitors who arrive through a link <strong>tagged</strong> with UTM
-          parameters (e.g. <code>?utm_source=facebook&amp;utm_medium=social</code>). An ordinary,
-          untagged link - even an organic Facebook or Instagram post - will <strong>not</strong> appear
-          here; it&apos;s recorded as direct/referral instead. To measure a channel, add UTM tags to the link
-          you share there. The chart stays empty until tagged campaigns are used.
-        </p>
-        <AdminBarChart data={utmData} color="#4a6b5a" showValues />
-      </div>
-
-      <div className="adm-chart-card" style={{ marginBottom: 32 }}>
         <p className="adm-chart-title">Language Switches (from -&gt; to)</p>
         <p className="adm-page-sub" style={{ marginTop: -10, marginBottom: 18, maxWidth: 680, lineHeight: 1.6 }}>
-          Counts <strong>deliberate</strong> language toggles via the FR/EN/DE/ES/IT selector, as
-          <code>from -&gt; to</code>. The site opens in French by default, so a lot of e.g. <code>fr -&gt; en</code>
+          Counts <strong>deliberate</strong>{' '}language toggles via the FR/EN/DE/ES/IT selector, as{' '}
+          <code>from -&gt; to</code>. The site opens in French by default, so a lot of e.g. <code>fr -&gt; en</code>{' '}
           would signal that part of the audience lands on the wrong language and corrects it - a cue to
           auto-detect the browser locale. Counts switches, not people. Empty until visitors start toggling.
         </p>
