@@ -8,6 +8,8 @@ import type { Lang } from '@/app/i18n/translations'
 const showcaseFolders: Partial<Record<Lang, string>> = {
   en: '/assets/homepage-beauties/en',
   de: '/assets/homepage-beauties/de',
+  es: '/assets/homepage-beauties/es',
+  it: '/assets/homepage-beauties/it',
 }
 
 function getShowcaseSlides(lang: Lang) {
