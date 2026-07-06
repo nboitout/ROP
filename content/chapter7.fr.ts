@@ -15,7 +15,7 @@ export const chapter7Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "Elle abrite le tractus gastro-intestinal, le foie, le pancréas, la rate, les reins, les glandes surrenales et les urétéres, ainsi que les principaux axes neuro-vasculaires."
+          "text": "Elle abrite le tractus gastro-intestinal, le foie, le pancréas, la rate, les reins, les glandes surrénales et les uretères, ainsi que les principaux axes neuro-vasculaires."
         },
         {
           "type": "para",
@@ -23,7 +23,7 @@ export const chapter7Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "Bien que séparés de la cavité thoracique par le diaphragme, les viscères de la cavité abdominale, soumis à une pression abdominale globalement positive, sont influences par les variations de pression regnant dans la cavité thoracique."
+          "text": "Bien que séparés de la cavité thoracique par le diaphragme, les viscères de la cavité abdominale, soumis à une pression abdominale globalement positive, sont influencés par les variations de pression régnant dans la cavité thoracique."
         },
         {
           "type": "sub",
@@ -31,7 +31,7 @@ export const chapter7Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "La paroi interne de la cavité abdominale est tapissee par la séreuse péritonéale."
+          "text": "La paroi interne de la cavité abdominale est tapissée par la séreuse péritonéale."
         },
         {
           "type": "para",
@@ -54,8 +54,8 @@ export const chapter7Fr: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Cephaliquement : le diaphragme ;",
-            "Dorsalement : un mur osteo-musculaire solide, forme des muscles carres des lombes et grand psoas de part et d’autre de la colonne thoraco-lombaire ;",
+            "Céphaliquement : le diaphragme ;",
+            "Dorsalement : un mur ostéo-musculaire solide, formé des muscles carrés des lombes et grand psoas de part et d’autre de la colonne thoraco-lombaire ;",
             "Latéralement : les muscles abdominaux : transverse de l’abdomen, obliques internes et externes ;",
             "Ventralement : les muscles grands droits de l’abdomen ;",
             "Caudalement : les fosses iliaques internes droite et gauche des os coxaux circonscrivant l’ouverture supérieure de la cavité pelvienne."
@@ -69,11 +69,11 @@ export const chapter7Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "Le péritoine est séparé des plans musculaires par des fascias interposes : fascia thoraco-abdominal, fascia transversalis, aponévroses des muscles de la colonne vertébrale et de la hanche."
+          "text": "Le péritoine est séparé des plans musculaires par des fascias interposés : fascia thoraco-abdominal, fascia transversalis, aponévroses des muscles de la colonne vertébrale et de la hanche."
         },
         {
           "type": "para",
-          "text": "Au sens clinique, ces fascias peuvent participer à des contraintes mecaniques susceptibles d’influencer la cavité péritonéale et son contenu viscéral."
+          "text": "Au sens clinique, ces fascias peuvent participer à des contraintes mécaniques susceptibles d’influencer la cavité péritonéale et son contenu viscéral."
         },
         {
           "type": "sub",
@@ -97,7 +97,7 @@ export const chapter7Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "Ces viscères sont enveloppes par le péritoine et relies au péritoine pariétal postérieur par des replis appeles mésos."
+          "text": "Ces viscères sont enveloppés par le péritoine et reliés au péritoine pariétal postérieur par des replis appelés mésos."
         },
         {
           "type": "para",
@@ -113,7 +113,7 @@ export const chapter7Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "Ces viscères paraissent independants du péritoine."
+          "text": "Ces viscères paraissent indépendants du péritoine."
         },
         {
           "type": "para",
@@ -121,11 +121,11 @@ export const chapter7Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "Ils ne sont donc pas appendus au péritoine comme les viscères portes par un méso."
+          "text": "Ils ne sont donc pas appendus au péritoine comme les viscères portés par un méso."
         },
         {
           "type": "para",
-          "text": "Leur maintien depend notamment de leurs rapports fasciaux, vasculaires, péritonéaux et des pressions locales."
+          "text": "Leur maintien dépend notamment de leurs rapports fasciaux, vasculaires, péritonéaux et des pressions locales."
         },
         {
           "type": "para",
@@ -141,11 +141,11 @@ export const chapter7Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "Ils ne sont séparés de la cavité abdominale que par le péritoine, qui se reflechit au-dessus d’eux."
+          "text": "Ils ne sont séparés de la cavité abdominale que par le péritoine, qui se réfléchit au-dessus d’eux."
         },
         {
           "type": "para",
-          "text": "Leur mobilité peut, au sens clinique, être influencee par les tensions du péritoine."
+          "text": "Leur mobilité peut, au sens clinique, être influencée par les tensions du péritoine."
         }
       ]
     },
@@ -163,7 +163,7 @@ export const chapter7Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "Il est constitue de deux feuillets :"
+          "text": "Il est constitué de deux feuillets :"
         },
         {
           "type": "sub",
@@ -171,11 +171,11 @@ export const chapter7Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "C’est un tissu conjonctif au contact des parois de la cavité abdominale, double d’un tissu cellulaire plus epais dans la région lombo-iliaque."
+          "text": "C’est un tissu conjonctif au contact des parois de la cavité abdominale, doublé d’un tissu cellulaire plus épais dans la région lombo-iliaque."
         },
         {
           "type": "para",
-          "text": "Il se reflechit, au niveau du hile du viscère, pour devenir le feuillet viscéral."
+          "text": "Il se réfléchit, au niveau du hile du viscère, pour devenir le feuillet viscéral."
         },
         {
           "type": "sub",
@@ -183,7 +183,7 @@ export const chapter7Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "Il est forme d’un revétément mésothélial mince et translucide, adhérant aux viscères qu’il entoure."
+          "text": "Il est formé d’un revêtement mésothélial mince et translucide, adhérant aux viscères qu’il entoure."
         },
         {
           "type": "sub",
@@ -191,11 +191,11 @@ export const chapter7Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "C’est l’espace virtuel situe entre les deux feuillets péritonéaux."
+          "text": "C’est l’espace virtuel situé entre les deux feuillets péritonéaux."
         },
         {
           "type": "para",
-          "text": "Il est occupe par le liquide péritonéal."
+          "text": "Il est occupé par le liquide péritonéal."
         },
         {
           "type": "para",
@@ -207,7 +207,7 @@ export const chapter7Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "Il contient principalement de l’eau, des electrolytes, des proteines, des cellules immunitaires, dont des macrophages, et divers facteurs de surface."
+          "text": "Il contient principalement de l’eau, des électrolytes, des protéines, des cellules immunitaires, dont des macrophages, et divers facteurs de surface."
         },
         {
           "type": "sub",
@@ -215,19 +215,19 @@ export const chapter7Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "Le terme designe ici des composants tensio-actifs capables de diminuer la tension de surface entre deux couches tissulaires ou liquidiennes."
+          "text": "Le terme désigne ici des composants tensio-actifs capables de diminuer la tension de surface entre deux couches tissulaires ou liquidiennes."
         },
         {
           "type": "para",
-          "text": "Il est surtout décrit au niveau pulmonaire, ou il favorise la stabilité alveolaire."
+          "text": "Il est surtout décrit au niveau pulmonaire, où il favorise la stabilité alvéolaire."
         },
         {
           "type": "para",
-          "text": "Son insuffisance est impliquee dans la dêtresse respiratoire neonatale du premature."
+          "text": "Son insuffisance est impliquée dans la détresse respiratoire néonatale du prématuré."
         },
         {
           "type": "para",
-          "text": "Au niveau abdominal, on peut réténir que certains facteurs de surface participent au glissement des feuillets péritonéaux et à la mobilité interviscérale."
+          "text": "Au niveau abdominal, on peut retenir que certains facteurs de surface participent au glissement des feuillets péritonéaux et à la mobilité interviscérale."
         },
         {
           "type": "para",
@@ -261,7 +261,7 @@ export const chapter7Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "Les viscères péritonisés sont relies au péritoine pariétal postérieur par des mésos (figure 1.6)."
+          "text": "Les viscères péritonisés sont reliés au péritoine pariétal postérieur par des mésos (figure 1.6)."
         },
         {
           "type": "para",
@@ -269,7 +269,7 @@ export const chapter7Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "Ils sont parcourus par le pedicule vasculo-nerveux destine aux viscères."
+          "text": "Ils sont parcourus par le pédicule vasculo-nerveux destiné aux viscères."
         },
         {
           "type": "sub",
@@ -277,7 +277,7 @@ export const chapter7Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "Les mésos sont attaches au péritoine pariétal postérieur par un tissu conjonctif d’ancrage, la racine du méso."
+          "text": "Les mésos sont attachés au péritoine pariétal postérieur par un tissu conjonctif d’ancrage, la racine du méso."
         },
         {
           "type": "para",
@@ -312,11 +312,11 @@ export const chapter7Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "Ils reunissent un ou deux viscères entre eux."
+          "text": "Ils réunissent un ou deux viscères entre eux."
         },
         {
           "type": "para",
-          "text": "Ils prennent le nom des viscères qu’ils reunissent :"
+          "text": "Ils prennent le nom des viscères qu’ils réunissent :"
         },
         {
           "type": "bullets",
@@ -333,7 +333,7 @@ export const chapter7Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "Le fascia transversalis est une fine membrane qui séparé le muscle transverse de l’abdomen des plans péritonéaux profonds."
+          "text": "Le fascia transversalis est une fine membrane qui sépare le muscle transverse de l’abdomen des plans péritonéaux profonds."
         },
         {
           "type": "para",
@@ -349,7 +349,7 @@ export const chapter7Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "Cette disposition explique la possibilité d’échanges ou de diffusion entre cavité péritonéale et voies genitales internes."
+          "text": "Cette disposition explique la possibilité d’échanges ou de diffusion entre cavité péritonéale et voies génitales internes."
         },
         {
           "type": "para",
@@ -375,7 +375,7 @@ export const chapter7Fr: Chapter = {
             "racines des mésos et zones de moindre résistance",
             "Dans le cadre ROP, les racines des mésos sont considérées comme des zones réflexes majeures.",
             "La sollicitation de leurs zones réflexes vise à accompagner la régulation fonctionnelle viscérale.",
-            "La grande mobilité du côlon transverse et du côlon sigmoide rend leurs positions variables.",
+            "La grande mobilité du côlon transverse et du côlon sigmoïde rend leurs positions variables.",
             "Dans la pratique ROP, leurs zones réflexes sont souvent jugées plus difficiles à percevoir dans leur partie moyenne.",
             "En revanche, leurs extrémités proximale et distale, ainsi que leurs racines, peuvent être plus aisément sollicitées.",
             "La sollicitation des zones réflexes du péritoine (mésentère, mésocôlon, mésosigmoïde) vise, dans le cadre ROP, à accompagner l’équilibre des tensions péritonéales, notamment au voisinage de ses zones de moindre résistance."
@@ -397,15 +397,15 @@ export const chapter7Fr: Chapter = {
         },
         {
           "type": "sub",
-          "text": "Anevrisme et test de palpation aortique"
+          "text": "Anévrisme et test de palpation aortique"
         },
         {
           "type": "para",
-          "text": "Son diamêtre normal est de l’ordre de grandeur de 2 à 3 cm."
+          "text": "Son diamètre normal est de l’ordre de grandeur de 2 à 3 cm."
         },
         {
           "type": "para",
-          "text": "Anevrisme : il est important, dans l’examen clinique, d’apprecier le calibre aortique et le caractere expansif de la pulsation en raison du risque d’anevrisme."
+          "text": "Anévrisme : il est important, dans l’examen clinique, d’apprécier le calibre aortique et le caractère expansif de la pulsation en raison du risque d’anevrisme."
         },
         {
           "type": "para",
@@ -413,11 +413,11 @@ export const chapter7Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "Prendre l’aorte abdominale entre les doigts pour apprecier ses bords droit et gauche."
+          "text": "Prendre l’aorte abdominale entre les doigts pour apprécier ses bords droit et gauche."
         },
         {
           "type": "para",
-          "text": "Le patient, membres inférieurs allonges, peut placer les deux mains dans le dos afin de majorer la lordose lombaire si cela facilite la palpation."
+          "text": "Le patient, membres inférieurs allongés, peut placer les deux mains dans le dos afin de majorer la lordose lombaire si cela facilite la palpation."
         },
         {
           "type": "para",
@@ -437,7 +437,7 @@ export const chapter7Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "Les trois branches de l’aorte abdominale destinees au système digestif sont :"
+          "text": "Les trois branches de l’aorte abdominale destinées au système digestif sont :"
         },
         {
           "type": "para",
@@ -445,7 +445,7 @@ export const chapter7Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "Son pouls peut parfois être perçu en région epigastrique haute chez les sujets minces."
+          "text": "Son pouls peut parfois être perçu en région épigastrique haute chez les sujets minces."
         },
         {
           "type": "para",
@@ -461,7 +461,7 @@ export const chapter7Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "Artère gastrique gauche : elle naît du tronc cœliaque et suit la petite courbure de l’estomac jusqu’au pylore, ou elle s’anastomose avec l’artère gastrique droite, issue de l’artère hépatique propre."
+          "text": "Artère gastrique gauche : elle naît du tronc cœliaque et suit la petite courbure de l’estomac jusqu’au pylore, où elle s’anastomose avec l’artère gastrique droite, issue de l’artère hépatique propre."
         },
         {
           "type": "sub",
@@ -493,7 +493,7 @@ export const chapter7Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "Dans la pratique ROP, elle est consideree comme un temoin de l’activité de la rate."
+          "text": "Dans la pratique ROP, elle est considérée comme un témoin de l’activité de la rate."
         },
         {
           "type": "sub",
@@ -511,7 +511,7 @@ export const chapter7Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "Son pouls peut parfois être recherché au voisinage de la jonction duodeno-jejunale."
+          "text": "Son pouls peut parfois être recherché au voisinage de la jonction duodéno-jéjunale."
         },
         {
           "type": "para",
@@ -519,7 +519,7 @@ export const chapter7Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "Dans la pratique ROP, elle est consideree comme un temoin de l’activité de ces territoires."
+          "text": "Dans la pratique ROP, elle est considérée comme un témoin de l’activité de ces territoires."
         },
         {
           "type": "sub",
@@ -545,7 +545,7 @@ export const chapter7Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "Dans la pratique ROP, elle est consideree comme un temoin fonctionnel de ce territoire."
+          "text": "Dans la pratique ROP, elle est considérée comme un témoin fonctionnel de ce territoire."
         },
         {
           "type": "sub",
@@ -571,7 +571,7 @@ export const chapter7Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "Il possède en revanche un reseau lymphatique important participant au drainage et à la réabsorption du liquide péritonéal."
+          "text": "Il possède en revanche un réseau lymphatique important participant au drainage et à la réabsorption du liquide péritonéal."
         },
         {
           "type": "para",
@@ -602,7 +602,7 @@ export const chapter7Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "Il est innerve par le système nerveux somatique, comme les parois de la cavité abdominale."
+          "text": "Il est innervé par le système nerveux somatique, comme les parois de la cavité abdominale."
         },
         {
           "type": "para",
@@ -610,7 +610,7 @@ export const chapter7Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "Cette innervation explique la douleur pariétale bien localisée et certaines projections douloureuses parieto-somatiques."
+          "text": "Cette innervation explique la douleur pariétale bien localisée et certaines projections douloureuses pariéto-somatiques."
         },
         {
           "type": "para",
@@ -630,7 +630,7 @@ export const chapter7Fr: Chapter = {
         },
         {
           "type": "sub",
-          "text": "Nerfs phreniques"
+          "text": "Nerfs phréniques"
         },
         {
           "type": "para",
@@ -638,11 +638,11 @@ export const chapter7Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "Leur irritation peut s’accompagner de douleurs projétées scapulaires ou cervicales, en particulier à droite pour les atteintes hépato-diaphragmatiques."
+          "text": "Leur irritation peut s’accompagner de douleurs projetées scapulaires ou cervicales, en particulier à droite pour les atteintes hépato-diaphragmatiques."
         },
         {
           "type": "para",
-          "text": "L’association à une symptomatologie de type périarthrite scapulo-humerale relève davantage d’un cadre clinique interprétatif que d’une relation spécifique démontrée."
+          "text": "L’association à une symptomatologie de type périarthrite scapulo-humérale relève davantage d’un cadre clinique interprétatif que d’une relation spécifique démontrée."
         },
         {
           "type": "sub",
@@ -654,7 +654,7 @@ export const chapter7Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "Leur irritation peut s’accompagner de douleurs lombaires irradiant vers la région inguinale, les grandes levres ou le scrotum, ainsi que vers la face antérieure de la cuisse. (figure 16.6)"
+          "text": "Leur irritation peut s’accompagner de douleurs lombaires irradiant vers la région inguinale, les grandes lèvres ou le scrotum, ainsi que vers la face antérieure de la cuisse. (figure 16.6)"
         },
         {
           "type": "sub",
@@ -662,7 +662,7 @@ export const chapter7Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "Il est innerve par le système nerveux autonome, en particulier sympathique et parasympathique via les plexus viscéraux."
+          "text": "Il est innervé par le système nerveux autonome, en particulier sympathique et parasympathique via les plexus viscéraux."
         },
         {
           "type": "para",
@@ -684,7 +684,7 @@ export const chapter7Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "Elle exerce une contre-force opposee au diaphragme lors des efforts, de la toux, de l’étérnuement, de la defecation et de l’accouchement."
+          "text": "Elle exerce une contre-force opposée au diaphragme lors des efforts, de la toux, de l’éternuement, de la défécation et de l’accouchement."
         },
         {
           "type": "para",
@@ -696,7 +696,7 @@ export const chapter7Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "Dans le cadre clinique ROP, cette traction relative est susceptible de s’accompagner de tensions parieto-viscérales et de réponses douloureuses ou musculaires associées."
+          "text": "Dans le cadre clinique ROP, cette traction relative est susceptible de s’accompagner de tensions pariéto-viscérales et de réponses douloureuses ou musculaires associées."
         },
         {
           "type": "sub",
@@ -726,7 +726,7 @@ export const chapter7Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "Il présente de nombreuses microvillosites augmentant la surface d’echange entre la cavité péritonéale et les circulations sanguine et lymphatique, dans un ordre de grandeur élevé."
+          "text": "Il présente de nombreuses microvillosites augmentant la surface d’échange entre la cavité péritonéale et les circulations sanguine et lymphatique, dans un ordre de grandeur élevé."
         },
         {
           "type": "sub",
@@ -738,11 +738,11 @@ export const chapter7Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "Lors de l’inspiration, la mécanique diaphragmatique et les rapports hépato-péritonéaux peuvent favoriser une redistribution du liquide vers les parties déclives, notamment la gouttière parieto-colique droite et le cul-de-sac de Douglas."
+          "text": "Lors de l’inspiration, la mécanique diaphragmatique et les rapports hépato-péritonéaux peuvent favoriser une redistribution du liquide vers les parties déclives, notamment la gouttière pariéto-colique droite et le cul-de-sac de Douglas."
         },
         {
           "type": "para",
-          "text": "Lors de l’expiration, le liquide peut remonter sous l’effet combine des variations de pression thoraco-abdominales."
+          "text": "Lors de l’expiration, le liquide peut remonter sous l’effet combiné des variations de pression thoraco-abdominales."
         },
         {
           "type": "para",
@@ -783,8 +783,8 @@ export const chapter7Fr: Chapter = {
           "items": [
             "Traumatisme de l’abdomen avec effraction viscérale ;",
             "Ulcère perforé gastro-duodénal ;",
-            "Septicemie par voie sanguine ;",
-            "Appendicite non traitee avec perforation ;",
+            "Septicémie par voie sanguine ;",
+            "Appendicite non traitée avec perforation ;",
             "Grossesse extra-utérine compliquée de rupture et d’hémorragie interne."
           ]
         },
@@ -828,7 +828,7 @@ export const chapter7Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "Infertilite par séquelle d’appendicectomie : des adhérences post-opératoires du pelvis droit peuvent réduire la mobilité tubo-ovarienne et altérer la captation ovocytaire."
+          "text": "Infertilité par séquelle d’appendicectomie : des adhérences post-opératoires du pelvis droit peuvent réduire la mobilité tubo-ovarienne et altérer la captation ovocytaire."
         },
         {
           "type": "para",
@@ -842,7 +842,7 @@ export const chapter7Fr: Chapter = {
       "blocks": [
         {
           "type": "para",
-          "text": "Par les liens entre le péritoine pariétal et le système musculo-articulaire, on peut decrire, au plan clinique, quatre quadrants de contraintes viscérosomatiques."
+          "text": "Par les liens entre le péritoine pariétal et le système musculo-articulaire, on peut décrire, au plan clinique, quatre quadrants de contraintes viscérosomatiques."
         },
         {
           "type": "sub",
@@ -850,7 +850,7 @@ export const chapter7Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "Si nous tracons une ligne horizontale passant par l’ombilic et une ligne verticale passant par la ligne xypho-ombilicale, nous délimitons quatre quadrants :"
+          "text": "Si nous traçons une ligne horizontale passant par l’ombilic et une ligne verticale passant par la ligne xypho-ombilicale, nous délimitons quatre quadrants :"
         },
         {
           "type": "para",
@@ -862,13 +862,13 @@ export const chapter7Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "Les exemples cliniques rapportes sont nombreux :"
+          "text": "Les exemples cliniques rapportés sont nombreux :"
         },
         {
           "type": "bullets",
           "items": [
             "cruralgie et dysfonction rénale homolatérales ;",
-            "sciatalgie et dysfonction uro-genitale homolatérales ;",
+            "sciatalgie et dysfonction uro-génitale homolatérales ;",
             "douleur du pied d’origine rénale ou colique homolatérale ;",
             "scapulalgie et PSH droite d’origine hépatique ou pulmonaire droite ;",
             "scapulalgie et PSH gauche d’origine pulmonaire gauche, cardiaque ou stomacale."
