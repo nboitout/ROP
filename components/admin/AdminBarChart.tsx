@@ -55,12 +55,13 @@ export default function AdminBarChart({
   }
   if (layout === 'vertical') {
     const maxChars = Math.floor((yAxisWidth - 8) / 6.5)
+    const rightMargin = showValues ? 56 : 16
     return (
       <ResponsiveContainer width="100%" height={Math.max(200, data.length * 36 + 40)}>
         <BarChart
           data={data}
           layout="vertical"
-          margin={{ top: 0, right: 16, left: 0, bottom: 0 }}
+          margin={{ top: 0, right: rightMargin, left: 0, bottom: 0 }}
         >
           <CartesianGrid strokeDasharray="3 3" stroke="rgba(26,26,24,.12)" horizontal={false} />
           <XAxis
