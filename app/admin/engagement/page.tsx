@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import { fetchAllSheets } from '@/lib/sheets'
 import Scorecard from '@/components/admin/Scorecard'
 import AdminBarChart, { BarDataPoint } from '@/components/admin/AdminBarChart'
@@ -48,7 +49,7 @@ const SLUG_LABELS: Record<string, string> = {
 function pageLabel(rawPath: string): string {
   const p = rawPath.replace(/^https?:\/\/[^/]+/, '') || '/'
   if (SLUG_LABELS[p]) return SLUG_LABELS[p]
-  const m = p.match(/^\/chapitre-(\d+)/)
+  const m = p.match(/^\/(?:lecture\/)?chapitre-(\d+)/)
   if (m) return `Chapter ${m[1]}`
   return p
 }
@@ -340,13 +341,14 @@ export default async function EngagementPage({
             <div className="adm-filter-row adm-chart-filter-row">
               <span className="adm-filter-label">Device</span>
               {(['all', 'mobile', 'desktop'] as DeviceFilter[]).map((option) => (
-                <a
+                <Link
                   key={option}
                   className={`adm-filter-btn${device === option ? ' active' : ''}`}
                   href={deviceFilterHref(option)}
+                  scroll={false}
                 >
                   {deviceFilterLabel(option)}
-                </a>
+                </Link>
               ))}
             </div>
           </div>
