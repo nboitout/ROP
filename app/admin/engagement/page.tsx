@@ -80,10 +80,39 @@ const CTA_BUCKET: Record<string, string> = {
   author_formations: 'Institut R.O.P. - training',
 }
 
-export default async function EngagementPage() {
+type DeviceFilter = 'all' | 'mobile' | 'desktop'
+
+function deviceFilterHref(device: DeviceFilter): string {
+  return device === 'all' ? '/admin/engagement' : `/admin/engagement?device=${device}`
+}
+
+function deviceFilterLabel(device: DeviceFilter): string {
+  if (device === 'mobile') return 'Mobile'
+  if (device === 'desktop') return 'Laptop/desktop'
+  return 'All devices'
+}
+
+function isMobileDevice(ua: string): boolean {
+  return /Mobi|iPhone|iPod|Android|Windows Phone|BlackBerry|IEMobile|Opera Mini/i.test(ua)
+}
+
+function matchesDeviceFilter(ua: string, device: DeviceFilter): boolean {
+  if (device === 'all') return true
+  const isMobile = isMobileDevice(ua)
+  return device === 'mobile' ? isMobile : !isMobile
+}
+
+export default async function EngagementPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ device?: string }>
+}) {
+  const params = await searchParams
+  const device: DeviceFilter = params.device === 'mobile' || params.device === 'desktop' ? params.device : 'all'
   const { events, visits } = await fetchAllSheets()
 
   const pageLeaves = visits.filter((v) => v.event === 'page_leave')
+  const dwellLeaves = pageLeaves.filter((v) => matchesDeviceFilter(v.userAgent, device))
 
   // Avg time per specific page
   const chapter2Leaves = pageLeaves.filter((v) => {
@@ -117,7 +146,7 @@ export default async function EngagementPage() {
   // then group those per-visit sums by page label so the average isn't deflated.
   const visitByKey = new Map<string, { label: string; secs: number }>()
   let dwellAnon = 0
-  pageLeaves.forEach((v) => {
+  dwellLeaves.forEach((v) => {
     const n = parseFloat(v.duration_seconds)
     if (isNaN(n) || n <= 0) return
     const label = pageLabel(v.page)
@@ -306,13 +335,35 @@ export default async function EngagementPage() {
 
       <div className="adm-charts-grid">
         <div className="adm-chart-card">
-          <p className="adm-chart-title">Avg Dwell Time per Page (seconds)</p>
+          <div className="adm-chart-heading-row">
+            <p className="adm-chart-title">Avg Dwell Time per Page</p>
+            <div className="adm-filter-row adm-chart-filter-row">
+              <span className="adm-filter-label">Device</span>
+              {(['all', 'mobile', 'desktop'] as DeviceFilter[]).map((option) => (
+                <a
+                  key={option}
+                  className={`adm-filter-btn${device === option ? ' active' : ''}`}
+                  href={deviceFilterHref(option)}
+                >
+                  {deviceFilterLabel(option)}
+                </a>
+              ))}
+            </div>
+          </div>
           <p className="adm-page-sub" style={{ marginTop: -10, marginBottom: 18, lineHeight: 1.6 }}>
-            Average <strong>active</strong> seconds spent on each page before leaving (time with the tab
+            Average <strong>active</strong> time spent on each page before leaving (time with the tab
             hidden isn&apos;t counted). The homepage and the sign-up gate are reported separately. Chapter 2
-            now combines classic and synchronized reading routes in the headline scorecard above.
+            now combines classic and synchronized reading routes in the headline scorecard above. Showing{' '}
+            <strong>{deviceFilterLabel(device).toLowerCase()}</strong>.
           </p>
-          <AdminBarChart data={dwellData} color="#4a6b5a" layout="vertical" showValues />
+          <AdminBarChart
+            data={dwellData}
+            color="#4a6b5a"
+            layout="vertical"
+            valueFormatter={fmtDuration}
+            valueName="Avg time"
+            showValues
+          />
         </div>
         <div className="adm-chart-card">
           <p className="adm-chart-title">CTA Clicks by Type</p>

@@ -22,6 +22,8 @@ interface Props {
   color?: string
   layout?: 'vertical' | 'horizontal'
   yAxisWidth?: number
+  valueFormatter?: (value: number) => string
+  valueName?: string
   // Show the value as an always-visible label on each bar (incl. zero/thin bars
   // that are hard or impossible to hover for a tooltip).
   showValues?: boolean
@@ -45,6 +47,8 @@ export default function AdminBarChart({
   color = '#4a6b5a',
   layout = 'horizontal',
   yAxisWidth = 160,
+  valueFormatter,
+  valueName = 'Count',
   showValues = false,
 }: Props) {
   const valueLabelStyle = {
@@ -67,6 +71,7 @@ export default function AdminBarChart({
           <XAxis
             type="number"
             tick={{ fill: 'rgba(26,26,24,.58)', fontSize: 11, fontFamily: 'DM Sans, sans-serif' }}
+            tickFormatter={valueFormatter}
             axisLine={false}
             tickLine={false}
             allowDecimals={false}
@@ -80,6 +85,10 @@ export default function AdminBarChart({
             tickLine={false}
           />
           <Tooltip
+            formatter={(value) => [
+              valueFormatter && typeof value === 'number' ? valueFormatter(value) : value,
+              valueName,
+            ]}
             contentStyle={{
               background: '#1a1a18',
               border: '1px solid rgba(160,124,58,.3)',
@@ -90,9 +99,9 @@ export default function AdminBarChart({
             }}
             cursor={{ fill: 'rgba(26,26,24,.03)' }}
           />
-          <Bar dataKey="value" name="Count" radius={[0, 3, 3, 0]}>
+          <Bar dataKey="value" name={valueName} radius={[0, 3, 3, 0]}>
             {showValues && (
-              <LabelList dataKey="value" position="right" style={valueLabelStyle} />
+              <LabelList dataKey="value" position="right" style={valueLabelStyle} formatter={valueFormatter} />
             )}
             {data.map((_, i) => (
               <Cell
@@ -118,11 +127,16 @@ export default function AdminBarChart({
         />
         <YAxis
           tick={{ fill: 'rgba(26,26,24,.58)', fontSize: 11, fontFamily: 'DM Sans, sans-serif' }}
+          tickFormatter={valueFormatter}
           axisLine={false}
           tickLine={false}
           allowDecimals={false}
         />
         <Tooltip
+          formatter={(value) => [
+            valueFormatter && typeof value === 'number' ? valueFormatter(value) : value,
+            valueName,
+          ]}
           contentStyle={{
             background: '#1a1a18',
             border: '1px solid rgba(160,124,58,.3)',
@@ -133,9 +147,9 @@ export default function AdminBarChart({
           }}
           cursor={{ fill: 'rgba(26,26,24,.03)' }}
         />
-        <Bar dataKey="value" name="Count" radius={[3, 3, 0, 0]}>
+        <Bar dataKey="value" name={valueName} radius={[3, 3, 0, 0]}>
           {showValues && (
-            <LabelList dataKey="value" position="top" style={valueLabelStyle} />
+            <LabelList dataKey="value" position="top" style={valueLabelStyle} formatter={valueFormatter} />
           )}
           {data.map((_, i) => (
             <Cell

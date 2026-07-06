@@ -1,7 +1,7 @@
 // Shared formatting helpers for the admin dashboard.
 // - Timestamps are rendered in French local time (Europe/Paris — CET/CEST),
 //   not UTC, since the audience and owner are in France.
-// - Durations are shown in seconds, switching to minutes once they exceed 2 min.
+// - Durations are shown in seconds, switching to minutes once they exceed 1 min.
 
 const PARIS_TZ = 'Europe/Paris'
 
@@ -54,12 +54,12 @@ export function parisHour(input: string | number | Date): number {
 }
 
 /**
- * Format a duration given in seconds. Stays in seconds up to 2 minutes, then
- * switches to minutes (e.g. 95 → "95s", 150 → "2m 30s", 180 → "3m").
+ * Format a duration given in seconds. Stays in seconds up to 1 minute, then
+ * switches to minutes (e.g. 59 -> "59s", 95 -> "1m 35s", 180 -> "3m").
  */
 export function fmtDuration(seconds: number): string {
   if (!seconds || seconds <= 0) return '—'
-  if (seconds < 120) return `${Math.round(seconds)}s`
+  if (seconds < 60) return `${Math.round(seconds)}s`
   const m = Math.floor(seconds / 60)
   const s = Math.round(seconds % 60)
   return s === 0 ? `${m}m` : `${m}m ${String(s).padStart(2, '0')}s`
