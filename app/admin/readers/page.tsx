@@ -9,6 +9,11 @@ export const dynamic = 'force-dynamic'
 // Canonical profession list from the sign-up form — shown in full on the
 // "Readers by Profession" chart so every option stays visible even at zero.
 const ALL_PROFESSIONS: readonly string[] = translations.fr.form.professionOptions
+const REFLEXO_PROFESSION =
+  ALL_PROFESSIONS.find((p) => {
+    const normalized = normalizeProfession(p)
+    return normalized.includes('reflexotherapeute') || normalized.includes('reflexologue')
+  }) ?? 'Réflexothérapeute'
 
 // Every supported site language, in a fixed display order, so the
 // "Readers by Language" chart always shows all of them — even at zero.
@@ -25,6 +30,22 @@ function daysAgo(days: number): string {
   const d = new Date()
   d.setDate(d.getDate() - days)
   return d.toISOString().slice(0, 10)
+}
+
+function normalizeProfession(value: string): string {
+  return value
+    .trim()
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+}
+
+function chartProfession(value: string): string {
+  const normalized = normalizeProfession(value)
+  if (normalized.includes('reflexotherapeute') || normalized.includes('reflexologue')) {
+    return REFLEXO_PROFESSION
+  }
+  return value.trim()
 }
 
 export default async function ReadersPage() {
@@ -69,7 +90,7 @@ export default async function ReadersPage() {
   let professionOther = 0
   let professionBlank = 0
   dedupedLeads.forEach((l) => {
-    const p = (l.profession || '').trim()
+    const p = chartProfession(l.profession || '')
     if (!p) {
       professionBlank += 1
     } else if (profCount.has(p)) {
