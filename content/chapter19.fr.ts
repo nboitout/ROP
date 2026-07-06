@@ -641,7 +641,7 @@ export const chapter19Fr: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Dans sa migration embryonnaire depuis la région abdominale postérieure, l’ovaire entraine avec lui les vaisseaux ovariques artériels, veineux et lymphatiques, ainsi que les nerfs et le tissu conjonctif qui les entourent pour former le ligament suspenseur de l’ovaire ou ligament lombo-ovarien."
+            "Dans sa migration embryonnaire depuis la région abdominale postérieure, l’ovaire entraîne avec lui les vaisseaux ovariques artériels, veineux et lymphatiques, ainsi que les nerfs et le tissu conjonctif qui les entourent pour former le ligament suspenseur de l’ovaire ou ligament lombo-ovarien."
           ]
         },
         {

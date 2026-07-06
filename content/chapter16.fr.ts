@@ -39,7 +39,8 @@ export const chapter16Fr: Chapter = {
         },
         {
           "type": "bullets",
-          "items": [            "Rein droit: il est légèrement plus bas que le rein gauche, à cause de la présence du foie. Il est entre la 11ème et la 12ème côte et L4;",
+          "items": [
+            "Rein droit: il est légèrement plus bas que le rein gauche, à cause de la présence du foie. Il est entre la 11ème et la 12ème côte et L4;",
             "Rein gauche: il est entre la 11ème côte et L3."
           ]
         },
@@ -587,7 +588,8 @@ export const chapter16Fr: Chapter = {
         },
         {
           "type": "bullets",
-          "items": [            "Pôle inférieur: il est à hauteur de la vertèbre L3 ou L4, à l’aplomb des 1er et 2ème orteils, au-dessus du bord antérieur du talon;",
+          "items": [
+            "Pôle inférieur: il est à hauteur de la vertèbre L3 ou L4, à l’aplomb des 1er et 2ème orteils, au-dessus du bord antérieur du talon;",
             "Pôle supérieur: il est à hauteur de la vertèbre Th12;",
             "Glande surrénale: elle est au sommet du pôle supérieur du rein;",
             "Bord latéral: il est convexe;",

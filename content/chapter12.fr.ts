@@ -11,7 +11,7 @@ export const chapter12Fr: Chapter = {
       "blocks": [
         {
           "type": "para",
-          "text": "On distingue le pancréas exocrine, qui produit le suc pancréatique nécessaire à la digestion, du pancréas endocrine, qui produit des hormones impliquees dans la régulation de la glycémie, notamment l'insuline, le glucagon, la somatostatine et le polypeptide pancréatique."
+          "text": "On distingue le pancréas exocrine, qui produit le suc pancréatique nécessaire à la digestion, du pancréas endocrine, qui produit des hormones impliquées dans la régulation de la glycémie, notamment l'insuline, le glucagon, la somatostatine et le polypeptide pancréatique."
         },
         {
           "type": "para",
@@ -143,7 +143,7 @@ export const chapter12Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "L'ouverture de l'ampoule de Vater est controlee par le sphincter d'Oddi."
+          "text": "L'ouverture de l'ampoule de Vater est contrôlée par le sphincter d'Oddi."
         },
         {
           "type": "sub",
@@ -177,7 +177,7 @@ export const chapter12Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "Le mésocôlon transverse est également en continuite avec le petit omentum."
+          "text": "Le mésocôlon transverse est également en continuité avec le petit omentum."
         },
         {
           "type": "sub",
@@ -247,7 +247,7 @@ export const chapter12Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "Son système vasculaire est en continuite avec celui du foie, du duodénum et de la rate."
+          "text": "Son système vasculaire est en continuité avec celui du foie, du duodénum et de la rate."
         },
         {
           "type": "para",
@@ -313,11 +313,11 @@ export const chapter12Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "La commande sympathique impliquee ici est classiquement rapportee aux etages medullaires thoraciques moyens, notamment Th8-Th10 gauches."
+          "text": "La commande sympathique impliquée ici est classiquement rapportee aux etages medullaires thoraciques moyens, notamment Th8-Th10 gauches."
         },
         {
           "type": "sub",
-          "text": "Plexus prevertebral"
+          "text": "Plexus prévertébral"
         },
         {
           "type": "para",
@@ -348,11 +348,11 @@ export const chapter12Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "Le pancréas exocrine represente environ 95 % du tissu pancréatique."
+          "text": "Le pancréas exocrine représente environ 95 % du tissu pancréatique."
         },
         {
           "type": "para",
-          "text": "Il produit le suc pancréatique, compose d'eau, d'electrolytes, de bicarbonates et d'enzymes digestives."
+          "text": "Il produit le suc pancréatique, composé d'eau, d'électrolytes, de bicarbonates et d'enzymes digestives."
         },
         {
           "type": "para",
@@ -370,7 +370,7 @@ export const chapter12Fr: Chapter = {
           "type": "bullets",
           "items": [
             "Amylase : digestion de l'amidon.",
-            "Chymotrypsine : digestion des proteines.",
+            "Chymotrypsine : digestion des protéines.",
             "Lipase : digestion des lipides en glycérol, monoglycérides et acides gras."
           ]
         },
@@ -388,7 +388,7 @@ export const chapter12Fr: Chapter = {
             "Le remplissage de l'estomac ;",
             "L'activité du nerf vague ;",
             "La neutralisation de l'acidité gastrique par la sécrétine dans le duodénum ;",
-            "L'action de la cholecystokinine et d'autres regulations neuro-hormonales locales."
+            "L'action de la cholécystokinine et d'autres régulations neuro-hormonales locales."
           ]
         }
       ]
@@ -405,13 +405,13 @@ export const chapter12Fr: Chapter = {
             "Pancréas endocrine",
             "La fonction endocrine du pancréas participe à la régulation de la glycémie.",
             "Le glucose est un substrat énergétique indispensable à l'organisme.",
-            "Les besoins en glucose du cerveau representent environ 20 % de la consommation totale de l'organisme.",
+            "Les besoins en glucose du cerveau représentent environ 20 % de la consommation totale de l'organisme.",
             "La glycémie fait partie des grandes constantes biologiques de l'homéostasie.",
             "Bien que nos besoins en glucose varient selon l'activité, la glycémie doit rester dans une fourchette compatible avec le fonctionnement normal, de l'ordre de 0,80 à 1,20 g/L dans les repères ici réténus.",
             "Régulation de la glycémie",
             "Elle met en jeu le pancréas, le foie, les reins, l'intestin et son microbiote, ainsi que l'axe hypothalamo-hypophyso-surrénalien, ou axe HHS, impliqué dans la réponse au stress.",
             "Pancréas",
-            "Les îlots de Langerhans ne representent qu'une faible proportion du tissu pancréatique.",
+            "Les îlots de Langerhans ne représentent qu'une faible proportion du tissu pancréatique.",
             "Ils produisent notamment l'insuline et le glucagon.",
             "L'insuline a un effet hypoglycémiant et le glucagon un effet hyperglycémiant.",
             "Foie",
@@ -420,14 +420,14 @@ export const chapter12Fr: Chapter = {
             "Reins",
             "Ils participent à l'homéostasie glucidique, notamment par la réabsorption tubulaire du glucose filtré et, dans certains contextes, par la néoglucogenèse.",
             "En cas d'hyperglycémie depassant les capacités de réabsorption, une glycosurie peut apparaître.",
-            "Glandes surrenales",
+            "Glandes surrénales",
             "Sous l'action de l'axe hypothalamo-hypophyso-surrénalien, l'adrénaline sécrétée par la medullo-surrénale contribue à l'élévation de la glycémie en situation de stress.",
             "Le cortisol sécrété par la cortico-surrénale participe également au maintien de la disponibilité du glucose en période de stress et d'activité.",
             "Intestin et microbiote",
             "Les bactéries qui peuplent l'intestin vivent normalement dans une relation de symbiose avec l'hôte.",
             "Le stress, l'inflammation et une altération de la barrière intestinale peuvent s'accompagner d'une dysbiose, c'est-à-dire d'une modification de la composition du microbiote au détriment de certains équilibres fonctionnels.",
             "Certaines dysbioses sont associées à l'insulino-résistance et au diabète de type 2.",
-            "Dans ce contexte, la glycémie peut s'élever et le pancréas être davantage sollicité pour maintenir un taux glycemique compatible avec l'homéostasie.",
+            "Dans ce contexte, la glycémie peut s'élever et le pancréas être davantage sollicité pour maintenir un taux glycémique compatible avec l'homéostasie.",
             "Hormones gastro-intestinales",
             "En cas de glycémie post-prandiale, des hormones intestinales comme le GLP-1 participent au ralentissement de la vidange gastrique, à l'inhibition du glucagon et à la stimulation de la sécrétion d'insuline.",
             "La place exacte du GLP-2 dans cette description doit être interprétée avec prudence."
@@ -458,7 +458,7 @@ export const chapter12Fr: Chapter = {
             "Dans notre pratique de ROP, nous pouvons différencier trois segments du pancréas.",
             "Zone 1 : la tête du pancréas",
             "Elle correspond surtout au pancréas exocrine.",
-            "Sa fonction est étroitement liee, dans ce cadre, au foie et à la deuxieme portion du duodénum : l'ampoule de Vater reçoit le cholédoque et le canal de Wirsung.",
+            "Sa fonction est étroitement liee, dans ce cadre, au foie et à la deuxième portion du duodénum : l'ampoule de Vater reçoit le cholédoque et le canal de Wirsung.",
             "Son lien métamérique est présente comme proche de celui du foie : Th7 a Th9 droits.",
             "Zone 2 : le corps du pancréas",
             "Il est à la fois exocrine et endocrine.",
@@ -477,7 +477,7 @@ export const chapter12Fr: Chapter = {
       "blocks": [
         {
           "type": "para",
-          "text": "Les patients porteurs d'une maladie grave ne consultent pas necessairement en premiere intention pour celle-ci."
+          "text": "Les patients porteurs d'une maladie grave ne consultent pas necessairement en première intention pour celle-ci."
         },
         {
           "type": "para",
@@ -504,7 +504,7 @@ export const chapter12Fr: Chapter = {
             "Prurit ;",
             "Polyurie ;",
             "Soif intense ;",
-            "Douleur epigastrique vive, transfixiante et surtout nocturne ;",
+            "Douleur épigastrique vive, transfixiante et surtout nocturne ;",
             "Douleurs dorsales basses, ou lombaires supérieures, surtout nocturnes ;",
             "Hepatomegalie ;",
             "Fatigue intense au moindre effort ;",
@@ -571,7 +571,7 @@ export const chapter12Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "Risque accru de macrosomie et de certaines complications neonatales ; certaines malformations peuvent être associées à des desequilibres glycemiques maternels precoces."
+          "text": "Risque accru de macrosomie et de certaines complications néonatales ; certaines malformations peuvent être associées à des déséquilibres glycémiques maternels précoces."
         }
       ]
     },
@@ -581,7 +581,7 @@ export const chapter12Fr: Chapter = {
       "blocks": [
         {
           "type": "para",
-          "text": "Les conséquences de l'hyperglycémie prolongee incluent des neuropathies, des pathologies cardio-vasculaires et des atteintes osteo-articulaires."
+          "text": "Les conséquences de l'hyperglycémie prolongée incluent des neuropathies, des pathologies cardio-vasculaires et des atteintes ostéo-articulaires."
         },
         {
           "type": "sub",
@@ -653,11 +653,11 @@ export const chapter12Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "Le diabète est une maladie evolutive."
+          "text": "Le diabète est une maladie évolutive."
         },
         {
           "type": "para",
-          "text": "S'il n'est pas accompagne d'une prise en charge hygiéno-diététique adaptee, du controle des facteurs de risque et des traitements appropries, il peut s'aggraver avec les complications citees ci-dessus."
+          "text": "S'il n'est pas accompagné d'une prise en charge hygiéno-diététique adaptée, du contrôle des facteurs de risque et des traitements appropriés, il peut s'aggraver avec les complications citées ci-dessus."
         }
       ]
     },
@@ -727,7 +727,7 @@ export const chapter12Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "Ils reagiraient à l'injustice, aux ruptures familiales ou affectives, aux evenements lourds, aux deuils non acceptes, comme la perte d'un enfant, à la confrontation à la mortalite, à une enfance meurtrie ou volee, ou encore à la violence."
+          "text": "Ils réagiraient à l'injustice, aux ruptures familiales ou affectives, aux événements lourds, aux deuils non acceptés, comme la perte d'un enfant, à la confrontation à la mortalité, à une enfance meurtrie ou volée, ou encore à la violence."
         },
         {
           "type": "para",
@@ -781,7 +781,7 @@ export const chapter12Fr: Chapter = {
             "(figures 4.11 et 4.17)",
             "Colonne vertébrale, articulations costo-transversaires, chaîne ganglionnaire latéro-vertébrale thoracique (Th8-Th10 gauches).",
             "(figures 4.23 et 4.29)",
-            "Plexus prevertebral.",
+            "Plexus prévertébral.",
           ]
         },
         {

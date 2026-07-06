@@ -563,7 +563,7 @@ export const chapter20Fr: Chapter = {
           "type": "bullets",
           "items": [
             "le sphincter lisse et le sphincter strié contrôlent la continence urinaire de la vessie. La contraction du sphincter strié exerce aussi une compression des glandes prostatiques au moment du passage du sperme dans l’urètre prostatique.",
-            "Constitution du sperme: les spermatozoïdes sont produits dans les testicules puis mûrissent et sont stockés principalement dans l’épididyme. Le sperme est alcalin et se compose des spermatozoïdes, des sécrétions de l’épididyme, des vésicules séminales et de la prostate. Une éjaculation est généralement de l’ordre de 2 à 6 cm³. Les vésicules séminales produisent une part importante du liquide séminal, riche notamment en fructose et en prostaglandines."
+            "Constitution du sperme: les spermatozoïdes sont produits dans les testicules puis mûrissent et sont stockés principalement dans l’épididyme. Le sperme est alcalin et se composé des spermatozoïdes, des sécrétions de l’épididyme, des vésicules séminales et de la prostate. Une éjaculation est généralement de l’ordre de 2 à 6 cm³. Les vésicules séminales produisent une part importante du liquide séminal, riche notamment en fructose et en prostaglandines."
           ]
         },
         {

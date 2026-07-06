@@ -135,7 +135,7 @@ export const chapter17Fr: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "leurs rétractions entrainent:",
+            "leurs rétractions entraînent:",
             "Fixation du coccyx avec les conséquences sur le périnée et ses sphincters;",
             "Fixation de l’articulation sacro-iliaque;",
             "Fixation de la charnière L4-L5-S1: le ligament sacrotubéral se prolonge vers L5-L4 et les ligaments ilio-lombaires. Sa rétraction empêche l’écartement des ischions qui doit normalement avoir lieu en position assise. C’est une source de douleurs lombo-pelviennes aggravées en position assise.",
@@ -234,7 +234,8 @@ export const chapter17Fr: Chapter = {
         },
         {
           "type": "bullets",
-          "items": [            "Plexus sacré L5 à S3: formé par les rameaux antérieurs de L4 à S3, il donne des branches collatérales aux muscles piriforme et pelvi-trochantériens, à l’exception de l’obturateur externe (nerf obturateur) et les nerfs fessiers.",
+          "items": [
+            "Plexus sacré L5 à S3: formé par les rameaux antérieurs de L4 à S3, il donne des branches collatérales aux muscles piriforme et pelvi-trochantériens, à l’exception de l’obturateur externe (nerf obturateur) et les nerfs fessiers.",
             "Sa branche terminale: est le nerf grand sciatique. Il répond, en arrière, au muscle piriforme.",
             "Gouttière ischio-trochantérienne: les nerfs grand et petit sciatique quittent le grand foramen ischiatique et traversent la région glutéale dans la gouttière ischio-trochantérienne en passant entre les muscles superficiels (muscles glutéaux) et les muscles profonds (muscles obturateur interne, jumeaux et carré fémoral).",
             "Plexus pudendal S2 à S4: il est anastomosé au plexus sacré céphaliquement et au plexus coccygien caudalement:",
@@ -274,8 +275,9 @@ export const chapter17Fr: Chapter = {
         },
         {
           "type": "bullets",
-          "items": [            "Sympathique: les cellules d’origine médullaire naissent de la corne latérale de la moelle de Th12 à L1, à hauteur des vertèbres Th11 à Th12 et se continuent en deux voies:",
-            "Chaines ganglionnaires latéro-vertébrales lombaires et sacrées;",
+          "items": [
+            "Sympathique: les cellules d’origine médullaire naissent de la corne latérale de la moelle de Th12 à L1, à hauteur des vertèbres Th11 à Th12 et se continuent en deux voies:",
+            "Chaînes ganglionnaires latéro-vertébrales lombaires et sacrées;",
             "Chaîne plexique prévertébrale: l’ovaire et le testicule sont innervés par le plexus aortorénal issu des 10ème, 11ème et 12ème ganglions thoraciques et du 1er ganglion lombaire;",
             "Les autres organes pelviens sont innervés par le plexus mésentérique inférieur issu du 12ème ganglion thoracique. Ces fibres sympathiques rejoignent ensuite le plexus hypogastrique supérieur.",
             "Rameaux communicants gris: issus des ganglions de la chaîne ganglionnaire latéro-vertébrale sacrée, ils rejoignent les rameaux antérieurs du plexus sacré pour apporter l’innervation sympathique aux nerfs somatiques sacré et pudendal.",
@@ -373,7 +375,7 @@ export const chapter17Fr: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Ptoses: les orifices urinaire, anal et vaginal sont des points de moindre résistance: si les forces gravitaires augmentent et si un orifice voit ses forces de clôture diminuées, le périnée offre moins de résistance et ne peut plus s’opposer aux forces gravitaires, les viscères migrent petit à petit vers leurs orifices, c’est la ptose: insuffisance urinaire d’effort, prolapsus utérin, prolapsus rectal"
+            "Ptoses: les orifices urinaire, anal et vaginal sont des points de moindre résistance: si les forces gravitaires augmentent et si un orifice voit ses forces de clôture diminuées, le périnée offre moins de résistance et ne peut plus s’opposér aux forces gravitaires, les viscères migrent petit à petit vers leurs orifices, c’est la ptose: insuffisance urinaire d’effort, prolapsus utérin, prolapsus rectal"
           ]
         },
         {
@@ -498,7 +500,8 @@ export const chapter17Fr: Chapter = {
         },
         {
           "type": "bullets",
-          "items": [            "Grand foramen ischiatique et muscle piriforme;",
+          "items": [
+            "Grand foramen ischiatique et muscle piriforme;",
             "Fosse ischio-trochantérienne et nerf sciatique;",
             "Petit foramen ischiatique et muscles obturateurs et jumeaux;",
             "Fosse obturée et muscles obturateurs;",

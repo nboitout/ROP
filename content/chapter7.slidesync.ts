@@ -2,23 +2,23 @@ export type SyncSlide = { src: string; title: string; orientation?: 'portrait' }
 export type SyncAnchor = { sectionId: string; blockIndex: number; slide: number | number[]; gapBefore?: 'half' }
 
 const chapter7SlidesBySource: SyncSlide[] = [
-  { src: '/chapter-7/slides/slide-01.png', title: 'Chapitre 7 - Cavites abdominale et peritoneale' },
+  { src: '/chapter-7/slides/slide-01.png', title: 'Chapitre 7 - Cavités abdominale et péritonéale' },
   { src: '/chapter-7/slides/slide-02.png', title: 'Le contenant abdominal : frontieres et pressions' },
   { src: '/chapter-7/slides/slide-03.png', title: 'Les trois espaces visceraux (le contenu)' },
-  { src: '/chapter-7/slides/slide-04.png', title: 'L architecture du peritoine' },
-  { src: '/chapter-7/slides/slide-05.png', title: 'Architecture du peritoine : une sereuse complexe' },
-  { src: '/chapter-7/slides/slide-06.png', title: 'L ecosysteme liquidien et la dynamique peritoneale' },
+  { src: '/chapter-7/slides/slide-04.png', title: 'L architecture du péritoine' },
+  { src: '/chapter-7/slides/slide-05.png', title: 'Architecture du péritoine : une sereuse complexe' },
+  { src: '/chapter-7/slides/slide-06.png', title: 'L écosystème liquidien et la dynamique péritonéale' },
   { src: '/chapter-7/slides/slide-07.png', title: 'Dynamique des fluides : l aimantation diaphragmatique' },
-  { src: '/chapter-7/slides/slide-08.png', title: 'Les amarres peritoneales : typologie des replis' },
+  { src: '/chapter-7/slides/slide-08.png', title: 'Les amarres péritonéales : typologie des replis' },
   { src: '/chapter-7/slides/slide-09.png', title: 'Les racines et les mesos : les points d ancrage' },
-  { src: '/chapter-7/slides/slide-10.png', title: 'Carrefours, hiatus et tensions mecaniques' },
+  { src: '/chapter-7/slides/slide-10.png', title: 'Carrefours, hiatus et tensions mécaniques' },
   { src: '/chapter-7/slides/slide-11.png', title: 'L axe vasculaire principal' },
-  { src: '/chapter-7/slides/slide-12.png', title: 'Double reseau nerveux : somatique et autonome' },
-  { src: '/chapter-7/slides/slide-13.png', title: 'Physiologie parieto-viscerale : le role du transverse' },
-  { src: '/chapter-7/slides/slide-14.png', title: 'Consequences mecaniques et pathologies' },
+  { src: '/chapter-7/slides/slide-12.png', title: 'Double réseau nerveux : somatique et autonome' },
+  { src: '/chapter-7/slides/slide-13.png', title: 'Physiologie parieto-viscérale : le role du transverse' },
+  { src: '/chapter-7/slides/slide-14.png', title: 'Conséquences mécaniques et pathologies' },
   { src: '/chapter-7/slides/slide-15.png', title: 'Synthèse somatique : les quatre quadrants' },
   { src: '/chapter-7/slides/slide-16.png', title: 'Cartographie des douleurs projetees' },
-  { src: '/chapter-7/slides/slide-17.png', title: 'L approche ROP : de l anatomie a l equilibre' },
+  { src: '/chapter-7/slides/slide-17.png', title: 'L approche ROP : de l anatomie a l équilibre' },
   { src: '/chapter-7/slides/slide-18.png', title: 'Synthèse clinique ROP : de l’abdomen au pied' },
 ]
 

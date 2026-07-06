@@ -101,7 +101,7 @@ export const chapter13Fr: Chapter = {
             "à l’estomac, par le ligament gastrosplénique, antérieur au hile de la rate ;",
             "au pancréas, par le ligament pancréaticosplénique, postérieur au hile de la rate ; la queue du pancréas se situe entre ces deux ligaments ;",
             "au côlon, par le ligament phrénocolique, qui sert de plancher à la rate ;",
-            "au diaphragme, par le ligament phrénosplénique ou ligament suspenseur de la rate, qui s’oppose au glissement de la rate vers le bas ;",
+            "au diaphragme, par le ligament phrénosplénique ou ligament suspenseur de la rate, qui s’opposé au glissement de la rate vers le bas ;",
             "au rein gauche, par le ligament splénorénal ;",
             "au pédicule vasculaire de la rate, qui participe également à son attache."
           ]
@@ -408,7 +408,7 @@ export const chapter13Fr: Chapter = {
   ],
   clinicalCase: {
     src: "/chapter-13/clinical-case.png",
-    alt: "Cas clinique - fatigue post-mononucleose et point de cote gauche",
+    alt: "Cas clinique - fatigue post-mononucléose et point de cote gauche",
     caption: "Cas clinique - Chapitre 13",
   },
 }

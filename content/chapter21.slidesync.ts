@@ -8,19 +8,19 @@ export type SyncSlide = { src: string; title: string; orientation?: 'portrait' }
 export type SyncAnchor = { sectionId: string; blockIndex: number; slide: number | number[]; gapBefore?: 'half' }
 
 export const chapter21Slides: SyncSlide[] = [
-  { src: '/chapter-21/slides/slide-01.png', title: 'Systeme erectile masculin et feminin' },
-  { src: '/chapter-21/slides/slide-02.png', title: 'Finalite et situation anatomique' },
+  { src: '/chapter-21/slides/slide-01.png', title: 'Système érectile masculin et féminin' },
+  { src: '/chapter-21/slides/slide-02.png', title: 'Finalité et situation anatomique' },
   { src: '/chapter-21/slides/slide-03.png', title: 'La dynamique musculaire' },
   { src: '/chapter-21/slides/slide-04.png', title: 'Glandes annexes et vascularisation' },
-  { src: '/chapter-21/slides/slide-05.png', title: 'Reseau vasculaire et drainage' },
-  { src: '/chapter-21/slides/slide-06.png', title: 'Cablage somatique : le nerf pudendal' },
-  { src: '/chapter-21/slides/slide-07.png', title: 'Controle autonome : dualite sympathique et parasympathique' },
-  { src: '/chapter-21/slides/slide-08.png', title: 'La sequence physiologique' },
+  { src: '/chapter-21/slides/slide-05.png', title: 'Réseau vasculaire et drainage' },
+  { src: '/chapter-21/slides/slide-06.png', title: 'Câblage somatique : le nerf pudendal' },
+  { src: '/chapter-21/slides/slide-07.png', title: 'Contrôle autonome : dualité sympathique et parasympathique' },
+  { src: '/chapter-21/slides/slide-08.png', title: 'La séquence physiologique' },
   { src: '/chapter-21/slides/slide-09.png', title: 'Perspective clinique : dysfonctions sexuelles' },
-  { src: '/chapter-21/slides/slide-10.png', title: 'La dimension psycho-emotionnelle' },
+  { src: '/chapter-21/slides/slide-10.png', title: 'La dimension psycho-émotionnelle' },
   { src: '/chapter-21/slides/slide-11.png', title: 'Cartographie ROP : le nerf pudendal' },
-  { src: '/chapter-21/slides/slide-12.png', title: 'Cartographie ROP : structures erectiles et ligaments' },
-  { src: '/chapter-21/slides/slide-13.png', title: 'Synergie de la fonction erectile' },
+  { src: '/chapter-21/slides/slide-12.png', title: 'Cartographie ROP : structures érectiles et ligaments' },
+  { src: '/chapter-21/slides/slide-13.png', title: 'Synergie de la fonction érectile' },
 ]
 
 export const chapter21SlideAnchors: SyncAnchor[] = [

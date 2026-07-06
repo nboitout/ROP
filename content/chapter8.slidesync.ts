@@ -32,7 +32,7 @@ export const chapter8Slides: SyncSlide[] = [
   },
   {
     src: "/chapter-8/slides/slide-08.png",
-    title: "Les hiatus accessoires et leurs vulnerabilites"
+    title: "Les hiatus accessoires et leurs vulnérabilités"
   },
   {
     src: "/chapter-8/slides/slide-07.png",
@@ -40,15 +40,15 @@ export const chapter8Slides: SyncSlide[] = [
   },
   {
     src: "/chapter-8/slides/slide-09.png",
-    title: "Le cablage electrique : les nerfs phreniques"
+    title: "Le câblage électrique : les nerfs phréniques"
   },
   {
     src: "/chapter-8/slides/slide-11.png",
-    title: "L equilibre barometrique et le soutien visceral"
+    title: "L équilibre barometrique et le soutien visceral"
   },
   {
     src: "/chapter-8/slides/slide-13.png",
-    title: "Biomecanique de la JOCT"
+    title: "Biomécanique de la JOCT"
   },
   {
     src: "/chapter-8/slides/slide-12.png",
@@ -56,7 +56,7 @@ export const chapter8Slides: SyncSlide[] = [
   },
   {
     src: "/chapter-8/slides/slide-14.png",
-    title: "Pathologie mecanique : les hernies hiatales"
+    title: "Pathologie mécanique : les hernies hiatales"
   },
   {
     src: "/chapter-8/slides/slide-15.png",

@@ -696,7 +696,7 @@ export const chapter8Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "Dans le cadre de cette présentation, cette continence est également reliée à la valvule de Gubaroff, qui s’oppose au reflux gastro-œsophagien."
+          "text": "Dans le cadre de cette présentation, cette continence est également reliée à la valvule de Gubaroff, qui s’opposé au reflux gastro-œsophagien."
         }
       ]
     },

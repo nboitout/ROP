@@ -14,14 +14,14 @@ export const chapter10Slides: SyncSlide[] = [
   { src: '/chapter-10/slides/slide-04.png', title: 'D2 et les papilles duodenales' },
   { src: '/chapter-10/slides/slide-05.png', title: 'Muscle de Treitz et dynamique de vidange' },
   { src: '/chapter-10/slides/slide-06.png', title: 'Cartographie palpatoire : quadrilatere de Rogie' },
-  { src: '/chapter-10/slides/slide-07.png', title: 'Vascularisation arterielle et veineuse' },
-  { src: '/chapter-10/slides/slide-08.png', title: 'Reseau neurologique et autonomie' },
+  { src: '/chapter-10/slides/slide-07.png', title: 'Vascularisation artérielle et veineuse' },
+  { src: '/chapter-10/slides/slide-08.png', title: 'Réseau neurologique et autonomie' },
   { src: '/chapter-10/slides/slide-09.png', title: 'Dynamique secretoire et biochimique' },
-  { src: '/chapter-10/slides/slide-10.png', title: 'Regulation et hydrolyse' },
+  { src: '/chapter-10/slides/slide-10.png', title: 'Régulation et hydrolyse' },
   { src: '/chapter-10/slides/slide-11.png', title: 'Grille de lecture pathologique' },
-  { src: '/chapter-10/slides/slide-12.png', title: 'Conflit mecanique de D4' },
+  { src: '/chapter-10/slides/slide-12.png', title: 'Conflit mécanique de D4' },
   { src: '/chapter-10/slides/slide-14.png', title: 'Synthèse ROP : axe viscéro-somatique et limbique' },
-  { src: '/chapter-10/slides/slide-13.png', title: 'Objectifs therapeutiques en ROP' },
+  { src: '/chapter-10/slides/slide-13.png', title: 'Objectifs thérapeutiques en ROP' },
 ]
 
 export const chapter10SlideAnchors: SyncAnchor[] = [

@@ -365,7 +365,7 @@ export const chapter4Fr: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Le sinus carotidien est un barorécepteur qui mesure l’étirement de la paroi carotidienne sous l’action de la pression artérielle, afin de la réguler aux besoins de l’organisme. La stimulation du sinus carotidien entraine une bradycardie et une hypotension artérielle, pouvant aller jusqu’à la syncope lors d’un choc à ce niveau.",
+            "Le sinus carotidien est un barorécepteur qui mesure l’étirement de la paroi carotidienne sous l’action de la pression artérielle, afin de la réguler aux besoins de l’organisme. La stimulation du sinus carotidien entraîne une bradycardie et une hypotension artérielle, pouvant aller jusqu’à la syncope lors d’un choc à ce niveau.",
             "Glomus carotidiens: il est un chémorécepteur qui mesure les taux d’O2 et CO2 sanguins. Il régule l’équilibre acido-basique."
           ]
         },
@@ -652,8 +652,8 @@ export const chapter4Fr: Chapter = {
         },
         {
           "type": "lead",
-          "label": "Chaine ganglionnaire sacrale et coccygienne",
-          "text": "elle prolonge caudalement la chaine ganglionnaire lombale. Elle compte quatre ganglions sacraux qui longent la berge médiale des trous sacraux antérieurs, et un ganglion impair à la réunion des deux chaines ganglionnaires à la face antérieure du coccyx. Elle apporte l’innervation sympathique aux organes uro-génitaux, au sigmoïde, au rectum et à l’anus."
+          "label": "Chaîne ganglionnaire sacrale et coccygienne",
+          "text": "elle prolonge caudalement la chaîne ganglionnaire lombale. Elle compte quatre ganglions sacraux qui longent la berge médiale des trous sacraux antérieurs, et un ganglion impair à la réunion des deux chaînes ganglionnaires à la face antérieure du coccyx. Elle apporte l’innervation sympathique aux organes uro-génitaux, au sigmoïde, au rectum et à l’anus."
         },
         {
           "type": "sub",
@@ -661,7 +661,7 @@ export const chapter4Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "Tout traumatisme du coccyx (chute, suite d’accouchement) affecte le ganglion impair avec répercussion sur l’ensemble de la chaine ganglionnaire latéro-vertébrale. Cela affecte aussi la dure-mère qui s’attache sur la 2ème vertèbre sacrale et sur le coccyx par le ligament duro-coccygien."
+          "text": "Tout traumatisme du coccyx (chute, suite d’accouchement) affecte le ganglion impair avec répercussion sur l’ensemble de la chaîne ganglionnaire latéro-vertébrale. Cela affecte aussi la dure-mère qui s’attache sur la 2ème vertèbre sacrale et sur le coccyx par le ligament duro-coccygien."
         },
         {
           "type": "lead",
@@ -691,11 +691,11 @@ export const chapter4Fr: Chapter = {
             },
             {
               "label": "Contingent somatique",
-              "text": "les nerfs sympathiques sensitifs, originaires du contingent somatique, des vaisseaux et de la peau rejoignent la chaine ganglionnaire latéro-vertébrale et les rameaux communicants gris reliant la chaine ganglionnaire au nerf spinal."
+              "text": "les nerfs sympathiques sensitifs, originaires du contingent somatique, des vaisseaux et de la peau rejoignent la chaîne ganglionnaire latéro-vertébrale et les rameaux communicants gris reliant la chaîne ganglionnaire au nerf spinal."
             },
             {
               "label": "Contingent viscéral",
-              "text": "les neurones sensitifs, originaires des viscères, rejoignent la chaine ganglionnaire latéro-vertébrale,"
+              "text": "les neurones sensitifs, originaires des viscères, rejoignent la chaîne ganglionnaire latéro-vertébrale,"
             },
             {
               "label": "Terminaison",
@@ -729,14 +729,14 @@ export const chapter4Fr: Chapter = {
     },
     {
       "id": "chaine-plexique-prevertebrale",
-      "title": "Chaine plexique pré-vertébrale (ou pré aortique)",
+      "title": "Chaîne plexique pré-vertébrale (ou pré aortique)",
       "blocks": [
         {
           "type": "leadBullets",
           "items": [
             {
               "label": "Anatomie",
-              "text": "elle est constituée de plexus interposés entre les chaines ganglionnaires latéro-vertébrales et les viscères, en avant de l’aorte abdominale et des piliers du diaphragme. Elle s’étend du foramen aortique du diaphragme (au niveau de la vertèbre Th12), jusqu’à la bifurcation aortique située au niveau de la vertèbre L4."
+              "text": "elle est constituée de plexus interposés entre les chaînes ganglionnaires latéro-vertébrales et les viscères, en avant de l’aorte abdominale et des piliers du diaphragme. Elle s’étend du foramen aortique du diaphragme (au niveau de la vertèbre Th12), jusqu’à la bifurcation aortique située au niveau de la vertèbre L4."
             },
             {
               "label": "Constitution",
@@ -783,7 +783,7 @@ export const chapter4Fr: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Les nerfs splanchniques proviennent directement de la corne latérale de la moelle épinière, sans faire synapse dans leur traversée des ganglions latéro-vertébraux. Notre action réflexe, au niveau médullaire et au niveau de la chaine plexique pré vertébrale, est donc puissante pour équilibrer l’innervation neuro-végétative des viscères de la cavité abdominale. Là aussi, il est vain d’avoir une action franche et isolée sur le Parasympathique ou le Sympathique, tant leurs fibres sont liées et enchevêtrées."
+            "Les nerfs splanchniques proviennent directement de la corne latérale de la moelle épinière, sans faire synapse dans leur traversée des ganglions latéro-vertébraux. Notre action réflexe, au niveau médullaire et au niveau de la chaîne plexique pré vertébrale, est donc puissante pour équilibrer l’innervation neuro-végétative des viscères de la cavité abdominale. Là aussi, il est vain d’avoir une action franche et isolée sur le Parasympathique ou le Sympathique, tant leurs fibres sont liées et enchevêtrées."
           ]
         }
       ]
@@ -1154,7 +1154,7 @@ export const chapter4Fr: Chapter = {
           "type": "leadBullets",
           "items": [
             {
-              "label": "Chaine ganglionnaire cervicale",
+              "label": "Chaîne ganglionnaire cervicale",
               "text": "espace entre le bord médial plantaire de la 1ère phalange du gros orteil et sa face plantaire."
             },
             {
@@ -1218,7 +1218,7 @@ export const chapter4Fr: Chapter = {
           "type": "leadBullets",
           "items": [
             {
-              "label": "Chaine ganglionnaire sacrale",
+              "label": "Chaîne ganglionnaire sacrale",
               "text": "face antérieure du sacrum sur le bord antérieur de la tubérosité postéro-médiale du calcanéum;"
             },
             {
@@ -1255,7 +1255,7 @@ export const chapter4Fr: Chapter = {
         },
         {
           "type": "lead",
-          "label": "Chaine plexique pré vertébrale",
+          "label": "Chaîne plexique pré vertébrale",
           "text": "face plantaire des deux pieds dans l’axe médian (à l’aplomb du 3ème orteil), depuis la zone réflexe du diaphragme jusqu’au bord antérieur du talon."
         },
         {
