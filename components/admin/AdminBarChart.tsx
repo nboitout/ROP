@@ -22,7 +22,7 @@ interface Props {
   color?: string
   layout?: 'vertical' | 'horizontal'
   yAxisWidth?: number
-  valueFormatter?: (value: number) => string
+  valueFormat?: 'number' | 'duration'
   valueName?: string
   // Show the value as an always-visible label on each bar (incl. zero/thin bars
   // that are hard or impossible to hover for a tooltip).
@@ -31,6 +31,14 @@ interface Props {
 
 function truncate(s: string, max: number) {
   return s.length > max ? s.slice(0, max - 1) + '…' : s
+}
+
+function formatDuration(seconds: number): string {
+  if (!seconds || seconds <= 0) return '—'
+  if (seconds < 60) return `${Math.round(seconds)}s`
+  const m = Math.floor(seconds / 60)
+  const s = Math.round(seconds % 60)
+  return s === 0 ? `${m}m` : `${m}m ${String(s).padStart(2, '0')}s`
 }
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -47,10 +55,11 @@ export default function AdminBarChart({
   color = '#4a6b5a',
   layout = 'horizontal',
   yAxisWidth = 160,
-  valueFormatter,
+  valueFormat = 'number',
   valueName = 'Count',
   showValues = false,
 }: Props) {
+  const valueFormatter = valueFormat === 'duration' ? formatDuration : undefined
   const valueLabelStyle = {
     fill: 'rgba(26,26,24,.78)',
     fontSize: 11,

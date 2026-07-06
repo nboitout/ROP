@@ -360,7 +360,7 @@ export default async function EngagementPage({
             data={dwellData}
             color="#4a6b5a"
             layout="vertical"
-            valueFormatter={fmtDuration}
+            valueFormat="duration"
             valueName="Avg time"
             showValues
           />
