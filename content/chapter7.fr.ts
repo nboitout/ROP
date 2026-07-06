@@ -261,7 +261,7 @@ export const chapter7Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "Les viscères péritonisés sont reliés au péritoine pariétal postérieur par des mésos (figure 1.6)."
+          "text": "Les viscères péritonisés sont reliés au péritoine pariétal postérieur par des mésos."
         },
         {
           "type": "para",
@@ -321,8 +321,8 @@ export const chapter7Fr: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "grand omentum ou omentum gastro-colique ; (figure 1.6)",
-            "petit omentum ou omentum gastro-hépatique ; (figure 1.7)",
+            "grand omentum ou omentum gastro-colique ;",
+            "petit omentum ou omentum gastro-hépatique ;",
             "omentum gastro-splénique : il relie l’estomac à la rate",
             "omentum pancréatico-splénique : il relie le pancréas à la rate"
           ]
@@ -337,7 +337,7 @@ export const chapter7Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "Il ne fait pas partie du péritoine, mais peut, au sens clinique, participer à des contraintes péritonéales et viscérales. (figure 1.9)"
+          "text": "Il ne fait pas partie du péritoine, mais peut, au sens clinique, participer à des contraintes péritonéales et viscérales."
         },
         {
           "type": "sub",
@@ -358,8 +358,8 @@ export const chapter7Fr: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Jonction avec la cavité thoracique : hiatus œsophagien, impliqué dans certaines hernies hiatales (figure 8.7)",
-            "Jonction avec la cavité pelvienne : canal inguinal, siège des hernies inguinales (figure 20.7 A et B),",
+            "Jonction avec la cavité thoracique : hiatus œsophagien, impliqué dans certaines hernies hiatales",
+            "Jonction avec la cavité pelvienne : canal inguinal, siège des hernies inguinales,",
             "Jonction avec la cuisse : à travers l’anneau fémoral, au-dessous du ligament inguinal, siège des hernies fémorales."
           ]
         }
@@ -626,7 +626,7 @@ export const chapter7Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "La douleur pariétale antérieure se projette localement sur le revêtement cutané en regard du territoire concerné ; ceci peut être rapproché, en clinique réflexe, des dermalgies décrites par Jarricot (figure 1.11)."
+          "text": "La douleur pariétale antérieure se projette localement sur le revêtement cutané en regard du territoire concerné ; ceci peut être rapproché, en clinique réflexe, des dermalgies décrites par Jarricot."
         },
         {
           "type": "sub",
@@ -634,7 +634,7 @@ export const chapter7Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "Ils innervent le péritoine diaphragmatique et participent à l’innervation de la capsule hépatique (figure 8.2)."
+          "text": "Ils innervent le péritoine diaphragmatique et participent à l’innervation de la capsule hépatique."
         },
         {
           "type": "para",
@@ -654,7 +654,7 @@ export const chapter7Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "Leur irritation peut s’accompagner de douleurs lombaires irradiant vers la région inguinale, les grandes lèvres ou le scrotum, ainsi que vers la face antérieure de la cuisse. (figure 16.6)"
+          "text": "Leur irritation peut s’accompagner de douleurs lombaires irradiant vers la région inguinale, les grandes lèvres ou le scrotum, ainsi que vers la face antérieure de la cuisse."
         },
         {
           "type": "sub",
@@ -822,7 +822,7 @@ export const chapter7Fr: Chapter = {
             "Douleurs ;",
             "Déficiences hiatales et inguinales : après une chirurgie abdomino-pelvienne, les cicatrices peuvent modifier la répartition des contraintes de la paroi et du péritoine, et favoriser des zones de faiblesse pariétale.",
             "Reflux gastro-œsophagien et hernie hiatale au niveau de la jonction œsophago-cardio-tuberositaire ;",
-            "Hernie inguinale réductible par béance de l’orifice profond du canal inguinal. (figure 20.7)",
+            "Hernie inguinale réductible par béance de l’orifice profond du canal inguinal.",
             "Tiraillement des mésos avec conséquences neuro-vasculaires et douloureuses, et, au sens clinique, participation possible à certaines ptoses viscérales."
           ]
         },
