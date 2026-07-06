@@ -998,7 +998,7 @@ export const chapter11Fr: Chapter = {
           "type": "xref",
           "label": "Voir la référence dans le chapitre 2",
           "text": "Zones réflexes occipitales et podales",
-          "href": "/lecture/traitement-rop?xrefBack=%2Flecture%2Fchapitre-11%23p-zones-reflexes-podales-du-foie-et-des-voies-biliaires-1&xrefBackLabel=Retour%20au%20chapitre%2011#p-hierarchisation-2"
+          "href": "/lecture/traitement-rop?xrefBack=%2Flecture%2Fchapitre-11%23p-zones-reflexes-podales-du-foie-et-des-voies-biliaires-1&xrefBackLabel=Retour%20au%20chapitre%2011#p-hierarchisation-3"
         },
         {
           "type": "para",
@@ -1021,7 +1021,7 @@ export const chapter11Fr: Chapter = {
           "type": "xref",
           "label": "Voir la référence dans le chapitre 2",
           "text": "Zones réflexes occipitales et podales",
-          "href": "/lecture/traitement-rop?xrefBack=%2Flecture%2Fchapitre-11%23p-zones-reflexes-podales-du-foie-et-des-voies-biliaires-6&xrefBackLabel=Retour%20au%20chapitre%2011#p-hierarchisation-2"
+          "href": "/lecture/traitement-rop?xrefBack=%2Flecture%2Fchapitre-11%23p-zones-reflexes-podales-du-foie-et-des-voies-biliaires-6&xrefBackLabel=Retour%20au%20chapitre%2011#p-hierarchisation-4"
         },
         {
           "type": "sub",
@@ -1079,7 +1079,7 @@ export const chapter11Fr: Chapter = {
           "type": "xref",
           "label": "Voir la référence dans le chapitre 2",
           "text": "Zones réflexes occipitales et podales",
-          "href": "/lecture/traitement-rop?xrefBack=%2Flecture%2Fchapitre-11%23p-systeme-limbique-0&xrefBackLabel=Retour%20au%20chapitre%2011#p-hierarchisation-2"
+          "href": "/lecture/traitement-rop?xrefBack=%2Flecture%2Fchapitre-11%23p-systeme-limbique-0&xrefBackLabel=Retour%20au%20chapitre%2011#p-hierarchisation-5"
         },
         {
           "type": "lead",

@@ -443,7 +443,7 @@ export const chapter12Fr: Chapter = {
           "type": "xref",
           "label": "Voir la référence dans le chapitre 14",
           "text": "Intestin grêle : dysbioses",
-          "href": "/lecture/chapitre-14?xrefBack=%2Flecture%2Fchapitre-12%23p-interet-en-rop-2-0&xrefBackLabel=Retour%20au%20chapitre%2012#p-pathologies-6"
+          "href": "/lecture/chapitre-14?xrefBack=%2Flecture%2Fchapitre-12%23p-interet-en-rop-2-0&xrefBackLabel=Retour%20au%20chapitre%2012#p-pathologies-7"
         }
       ]
     },
@@ -762,7 +762,7 @@ export const chapter12Fr: Chapter = {
           "type": "xref",
           "label": "Voir la référence dans le chapitre 5",
           "text": "Mécanisme de stress",
-          "href": "/lecture/chapitre-5?xrefBack=%2Flecture%2Fchapitre-12%23p-indications-1&xrefBackLabel=Retour%20au%20chapitre%2012#p-presentation-0"
+          "href": "/lecture/chapitre-5?xrefBack=%2Flecture%2Fchapitre-12%23p-indications-1&xrefBackLabel=Retour%20au%20chapitre%2012#p-sga-7"
         }
       ]
     },
@@ -786,7 +786,7 @@ export const chapter12Fr: Chapter = {
           "type": "xref",
           "label": "Voir la référence dans le chapitre 2",
           "text": "Zones réflexes occipitales et podales",
-          "href": "/lecture/traitement-rop?xrefBack=%2Flecture%2Fchapitre-12%23p-zones-reflexes-podales-1&xrefBackLabel=Retour%20au%20chapitre%2012#p-hierarchisation-2"
+          "href": "/lecture/traitement-rop?xrefBack=%2Flecture%2Fchapitre-12%23p-zones-reflexes-podales-1&xrefBackLabel=Retour%20au%20chapitre%2012#p-hierarchisation-3"
         },
         {
           "type": "sub",
@@ -796,7 +796,7 @@ export const chapter12Fr: Chapter = {
           "type": "xref",
           "label": "Voir la référence dans le chapitre 2",
           "text": "Zones réflexes occipitales et podales",
-          "href": "/lecture/traitement-rop?xrefBack=%2Flecture%2Fchapitre-12%23p-zones-reflexes-podales-4&xrefBackLabel=Retour%20au%20chapitre%2012#p-hierarchisation-2"
+          "href": "/lecture/traitement-rop?xrefBack=%2Flecture%2Fchapitre-12%23p-zones-reflexes-podales-4&xrefBackLabel=Retour%20au%20chapitre%2012#p-hierarchisation-4"
         },
         {
           "type": "sub",
