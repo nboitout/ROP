@@ -3,18 +3,29 @@
 
 import { useState } from 'react'
 import { useLanguage } from '@/app/i18n/LanguageContext'
+import type { Lang } from '@/app/i18n/translations'
 
-const showcaseSlides = Array.from({ length: 10 }, (_, index) => {
-  const number = String(index + 1).padStart(2, '0')
-  return {
-    src: `/assets/homepage-beauties/beauty-${number}.jpg`,
-    key: `beauty-${number}`,
-  }
-})
+const showcaseFolders: Partial<Record<Lang, string>> = {
+  en: '/assets/homepage-beauties/en',
+  de: '/assets/homepage-beauties/de',
+}
+
+function getShowcaseSlides(lang: Lang) {
+  const folder = showcaseFolders[lang] ?? '/assets/homepage-beauties'
+
+  return Array.from({ length: 10 }, (_, index) => {
+    const number = String(index + 1).padStart(2, '0')
+    return {
+      src: `${folder}/beauty-${number}.jpg`,
+      key: `${lang}-beauty-${number}`,
+    }
+  })
+}
 
 export default function HomepageVisualShowcase() {
-  const { t } = useLanguage()
+  const { t, lang } = useLanguage()
   const [paused, setPaused] = useState(false)
+  const showcaseSlides = getShowcaseSlides(lang)
   const loopSlides = [...showcaseSlides, ...showcaseSlides]
 
   return (
