@@ -103,6 +103,24 @@ function matchesDeviceFilter(ua: string, device: DeviceFilter): boolean {
   return device === 'mobile' ? isMobile : !isMobile
 }
 
+function DeviceFilterLinks({ active }: { active: DeviceFilter }) {
+  return (
+    <div className="adm-filter-row adm-chart-filter-row">
+      <span className="adm-filter-label">Device</span>
+      {(['all', 'mobile', 'desktop'] as DeviceFilter[]).map((option) => (
+        <Link
+          key={option}
+          className={`adm-filter-btn${active === option ? ' active' : ''}`}
+          href={deviceFilterHref(option)}
+          scroll={false}
+        >
+          {deviceFilterLabel(option)}
+        </Link>
+      ))}
+    </div>
+  )
+}
+
 export default async function EngagementPage({
   searchParams,
 }: {
@@ -131,6 +149,7 @@ export default async function EngagementPage({
 
   // Return visitor rate: % of distinct visitors seen on more than one distinct date
   const pageVisits = visits.filter((v) => v.event === 'page_visit')
+  const returnPageVisits = pageVisits.filter((v) => matchesDeviceFilter(v.userAgent, device))
   const visitorDates = new Map<string, Set<string>>()
   pageVisits.forEach((v) => {
     if (!v.readerId) return
@@ -262,6 +281,12 @@ export default async function EngagementPage({
     .map(([name, value]) => ({ name, value }))
 
   // Return frequency distribution: buckets 0, 1, 2, 3, 4+
+  const returnVisitorDates = new Map<string, Set<string>>()
+  returnPageVisits.forEach((v) => {
+    if (!v.readerId) return
+    if (!returnVisitorDates.has(v.readerId)) returnVisitorDates.set(v.readerId, new Set())
+    returnVisitorDates.get(v.readerId)!.add(v.timestamp.slice(0, 10))
+  })
   const returnBuckets: BarDataPoint[] = [
     { name: '0 returns', value: 0 },
     { name: '1 return', value: 0 },
@@ -269,7 +294,7 @@ export default async function EngagementPage({
     { name: '3 returns', value: 0 },
     { name: '4+', value: 0 },
   ]
-  visitorDates.forEach((dates) => {
+  returnVisitorDates.forEach((dates) => {
     const returns = dates.size - 1
     if (returns === 0) returnBuckets[0].value++
     else if (returns === 1) returnBuckets[1].value++
@@ -322,12 +347,15 @@ export default async function EngagementPage({
       </div>
 
       <div className="adm-chart-card compact-plot" style={{ marginBottom: 24 }}>
-        <p className="adm-chart-title">Return frequency - visitors by number of return visits</p>
+        <div className="adm-chart-heading-row">
+          <p className="adm-chart-title">Return frequency - visitors by number of return visits</p>
+          <DeviceFilterLinks active={device} />
+        </div>
         <p className="adm-page-sub" style={{ marginTop: -10, marginBottom: 18, maxWidth: 720, lineHeight: 1.6 }}>
           Groups visitors by how many <strong>separate days</strong> they came back. &quot;0 returns&quot; = seen on
           one day only; &quot;2 returns&quot; = seen on 3 different dates. Same-day reloads don&apos;t count. Identity is the
           browser&apos;s anonymous <code>reader_id</code> cookie, so clearing cookies or switching device shows up
-          as a new visitor.
+          as a new visitor. Showing <strong>{deviceFilterLabel(device).toLowerCase()}</strong>.
         </p>
         <div className="adm-chart-plot-wrap narrow">
           <AdminBarChart data={returnBuckets} color="#4a6b5a" showValues />
@@ -338,19 +366,7 @@ export default async function EngagementPage({
         <div className="adm-chart-card">
           <div className="adm-chart-heading-row">
             <p className="adm-chart-title">Avg Dwell Time per Page</p>
-            <div className="adm-filter-row adm-chart-filter-row">
-              <span className="adm-filter-label">Device</span>
-              {(['all', 'mobile', 'desktop'] as DeviceFilter[]).map((option) => (
-                <Link
-                  key={option}
-                  className={`adm-filter-btn${device === option ? ' active' : ''}`}
-                  href={deviceFilterHref(option)}
-                  scroll={false}
-                >
-                  {deviceFilterLabel(option)}
-                </Link>
-              ))}
-            </div>
+            <DeviceFilterLinks active={device} />
           </div>
           <p className="adm-page-sub" style={{ marginTop: -10, marginBottom: 18, lineHeight: 1.6 }}>
             Average <strong>active</strong> time spent on each page before leaving (time with the tab
