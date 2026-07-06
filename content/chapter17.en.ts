@@ -210,7 +210,7 @@ export const chapter17En: Chapter = {
           "type": "bullets",
           "items": [
             "Internal iliac veins: they run alongside the internal iliac arteries and join the common iliac veins.",
-            "Pelvic venous plexuses: they contribute to maintaining the pelvic organs. They drain into the portal system (figure 11.5)."
+            "Pelvic venous plexuses: they contribute to maintaining the pelvic organs. They drain into the portal system."
           ]
         },
         {
@@ -223,7 +223,7 @@ export const chapter17En: Chapter = {
           "type": "bullets",
           "items": [
             "Median sacral veins: they join the two common iliac veins to form the inferior vena cava.",
-            "Gonadal veins: they have different courses. The right gonadal vein joins the inferior vena cava, whereas the left gonadal vein joins the left renal vein (figure 16.10)."
+            "Gonadal veins: they have different courses. The right gonadal vein joins the inferior vena cava, whereas the left gonadal vein joins the left renal vein."
           ]
         }
       ]
@@ -293,7 +293,7 @@ export const chapter17En: Chapter = {
         },
         {
           "type": "para",
-          "text": "The sympathetic and parasympathetic systems are under the control of the hypothalamus, which itself regulates the endocrine function of the pituitary gland (figure 3.13):"
+          "text": "The sympathetic and parasympathetic systems are under the control of the hypothalamus, which itself regulates the endocrine function of the pituitary gland:"
         },
         {
           "type": "bullets",
@@ -494,8 +494,8 @@ export const chapter17En: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Pelvic parasympathetic system (sacral); (figure 4.23)",
-            "Spinal column, costotransverse joints (lower thoracic, lumbar and sacral laterovertebral ganglionic chain) (figures 4.23 and 4.29 and 4.32)."
+            "Pelvic parasympathetic system (sacral);",
+            "Spinal column, costotransverse joints (lower thoracic, lumbar and sacral laterovertebral ganglionic chain)."
           ]
         },
         {
@@ -522,7 +522,7 @@ export const chapter17En: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "coccyx (figure 4.23);",
+            "coccyx;",
             "Sacrotuberous and sacrospinous ligaments;"
           ]
         },
@@ -533,7 +533,6 @@ export const chapter17En: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "(figure 4.23)",
             "upper attachments: perimeter of the foramen magnum, C2",
             "lower attachments: 2nd sacral vertebra"
           ]

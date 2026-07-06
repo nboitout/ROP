@@ -206,7 +206,7 @@ export const chapter17Fr: Chapter = {
           "type": "bullets",
           "items": [
             "Veines iliaques internes: elles longent les artères iliaques internes, rejoignent les veines iliaques communes.",
-            "Plexus veineux pelviens: ils contribuent au maintien des organes pelviens. Ils se drainent dans le système porte (figure 11.5)"
+            "Plexus veineux pelviens: ils contribuent au maintien des organes pelviens. Ils se drainent dans le système porte"
           ]
         },
         {
@@ -219,7 +219,7 @@ export const chapter17Fr: Chapter = {
           "type": "bullets",
           "items": [
             "Veines sacrales médiales: elles rejoignent la les deux veines iliaques communes pour former la veine cave inférieure.",
-            "Veines gonadiques: elles ont des destinées différentes. La veine gonadique droite rejoint la veine cave inférieure alors que la veine gonadique gauche rejoint la veine rénale gauche. (figure 16.10)"
+            "Veines gonadiques: elles ont des destinées différentes. La veine gonadique droite rejoint la veine cave inférieure alors que la veine gonadique gauche rejoint la veine rénale gauche."
           ]
         }
       ]
@@ -291,7 +291,7 @@ export const chapter17Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "Le Sympathique et le Parasympathique sont sous le contrôle de l’hypothalamus qui, lui-même, régule la fonction endocrinienne de l’hypophyse: (figure 3.13)"
+          "text": "Le Sympathique et le Parasympathique sont sous le contrôle de l’hypothalamus qui, lui-même, régule la fonction endocrinienne de l’hypophyse:"
         },
         {
           "type": "bullets",
@@ -486,8 +486,8 @@ export const chapter17Fr: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Parasympathique pelvien (sacré); (figure 4.23)",
-            "Colonne vertébrale, articulations costo-transversaires (chaîne ganglionnaire latéro-vertébrale thoracique inférieure, lombaire et sacrée (figures 4.23 et 4.29 et 4.32)."
+            "Parasympathique pelvien (sacré);",
+            "Colonne vertébrale, articulations costo-transversaires (chaîne ganglionnaire latéro-vertébrale thoracique inférieure, lombaire et sacrée."
           ]
         },
         {
@@ -515,7 +515,7 @@ export const chapter17Fr: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "coccyx; (figure 4.23)",
+            "coccyx;",
             "Ligaments sacrotubéral et sacroépineux;"
           ]
         },
@@ -526,7 +526,6 @@ export const chapter17Fr: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "(figure 4.23)",
             "attaches supérieures: pourtour du foramen magnum, C2",
             "attaches inférieures: 2ème vertèbre sacrée"
           ]

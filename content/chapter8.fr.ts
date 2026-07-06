@@ -458,7 +458,7 @@ export const chapter8Fr: Chapter = {
           "type": "xref",
           "label": "Voir la référence dans le chapitre 11",
           "text": "Foie",
-          "href": "/lecture/chapitre-11?xrefBack=%2Flecture%2Fchapitre-8%23p-vascularisation-13&xrefBackLabel=Retour%20au%20chapitre%208#sec-vascularisation"
+          "href": "/lecture/chapitre-11?xrefBack=%2Flecture%2Fchapitre-8%23p-vascularisation-13&xrefBackLabel=Retour%20au%20chapitre%208#p-vascularisation-13"
         }
       ]
     },
@@ -571,7 +571,7 @@ export const chapter8Fr: Chapter = {
           "type": "xref",
           "label": "Voir la référence dans le chapitre 1",
           "text": "Généralités",
-          "href": "/lecture/chapitre-1?xrefBack=%2Flecture%2Fchapitre-8%23p-physiologie-0&xrefBackLabel=Retour%20au%20chapitre%208#p-articulations-viscerales-3"
+          "href": "/lecture/chapitre-1?xrefBack=%2Flecture%2Fchapitre-8%23p-physiologie-0&xrefBackLabel=Retour%20au%20chapitre%208#p-mobilite-viscerale-12"
         },
         {
           "type": "lead",
@@ -606,7 +606,7 @@ export const chapter8Fr: Chapter = {
           "type": "xref",
           "label": "Voir la référence dans le chapitre 1",
           "text": "Généralités",
-          "href": "/lecture/chapitre-1?xrefBack=%2Flecture%2Fchapitre-8%23p-physiologie-7&xrefBackLabel=Retour%20au%20chapitre%208#p-articulations-viscerales-3"
+          "href": "/lecture/chapitre-1?xrefBack=%2Flecture%2Fchapitre-8%23p-physiologie-7&xrefBackLabel=Retour%20au%20chapitre%208#p-articulations-viscerales-4"
         },
         {
           "type": "para",
@@ -616,7 +616,7 @@ export const chapter8Fr: Chapter = {
           "type": "xref",
           "label": "Voir la référence dans le chapitre 18",
           "text": "Vessie",
-          "href": "/lecture/chapitre-18?xrefBack=%2Flecture%2Fchapitre-8%23p-physiologie-8&xrefBackLabel=Retour%20au%20chapitre%208#sec-presentation"
+          "href": "/lecture/chapitre-18?xrefBack=%2Flecture%2Fchapitre-8%23p-physiologie-8&xrefBackLabel=Retour%20au%20chapitre%208#p-physiologie-19"
         },
         {
           "type": "lead",
@@ -736,7 +736,7 @@ export const chapter8Fr: Chapter = {
           "type": "xref",
           "label": "Voir la référence dans le chapitre 9",
           "text": "Estomac",
-          "href": "/lecture/chapitre-9?xrefBack=%2Flecture%2Fchapitre-8%23p-pathologies-courantes-diagnostic-d-exclusion-indications-troubles-fonctionnels-6&xrefBackLabel=Retour%20au%20chapitre%208#sec-presentation"
+          "href": "/lecture/chapitre-9?xrefBack=%2Flecture%2Fchapitre-8%23p-pathologies-courantes-diagnostic-d-exclusion-indications-troubles-fonctionnels-6&xrefBackLabel=Retour%20au%20chapitre%208#p-anatomie-10"
         },
         {
           "type": "para",
@@ -768,7 +768,7 @@ export const chapter8Fr: Chapter = {
           "type": "xref",
           "label": "Voir la référence dans le chapitre 9",
           "text": "Estomac",
-          "href": "/lecture/chapitre-9?xrefBack=%2Flecture%2Fchapitre-8%23p-pathologies-courantes-diagnostic-d-exclusion-indications-troubles-fonctionnels-12&xrefBackLabel=Retour%20au%20chapitre%208#sec-presentation"
+          "href": "/lecture/chapitre-9?xrefBack=%2Flecture%2Fchapitre-8%23p-pathologies-courantes-diagnostic-d-exclusion-indications-troubles-fonctionnels-12&xrefBackLabel=Retour%20au%20chapitre%208#p-pathologies-courantes-15"
         },
         {
           "type": "para",
@@ -898,7 +898,7 @@ export const chapter8Fr: Chapter = {
           "type": "xref",
           "label": "Voir la référence dans le chapitre 16",
           "text": "Reins",
-          "href": "/lecture/chapitre-16?xrefBack=%2Flecture%2Fchapitre-8%23p-relations-viscero-somatiques-10&xrefBackLabel=Retour%20au%20chapitre%208#sec-presentation"
+          "href": "/lecture/chapitre-16?xrefBack=%2Flecture%2Fchapitre-8%23p-relations-viscero-somatiques-10&xrefBackLabel=Retour%20au%20chapitre%208#p-rapports-4"
         }
       ]
     },
@@ -999,7 +999,7 @@ export const chapter8Fr: Chapter = {
         {
           "type": "lead",
           "label": "Piliers du diaphragme",
-          "text": "c’est l’espace entre, d’une part, le bord plantaire des quatre premières vertèbres lombaires à droite et des trois premières vertèbres à gauche, et, d’autre part, le bord médial de la voûte plantaire. (figure 4.32)"
+          "text": "c’est l’espace entre, d’une part, le bord plantaire des quatre premières vertèbres lombaires à droite et des trois premières vertèbres à gauche, et, d’autre part, le bord médial de la voûte plantaire."
         },
         {
           "type": "sub",
@@ -1012,7 +1012,7 @@ export const chapter8Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "D’où l’importance de bien situer la coupole diaphragmatique gauche. (figures 4.17 et 4.18)"
+          "text": "D’où l’importance de bien situer la coupole diaphragmatique gauche."
         },
         {
           "type": "figure",
@@ -1029,7 +1029,7 @@ export const chapter8Fr: Chapter = {
         {
           "type": "lead",
           "label": "Hiatus de la veine cave inférieure",
-          "text": "sa zone réflexe est confondue avec le centre phrénique du côté droit. (figure 4.22)"
+          "text": "sa zone réflexe est confondue avec le centre phrénique du côté droit."
         },
         {
           "type": "lead",
@@ -1046,7 +1046,7 @@ export const chapter8Fr: Chapter = {
         {
           "type": "lead",
           "label": "Hiatus de Henlé",
-          "text": "zone réflexe des articulations costo-transversaires des deux dernières côtes sur la face frontale dorsale médiale des pieds, à hauteur de Th11 et Th12. (figure 4.29)"
+          "text": "zone réflexe des articulations costo-transversaires des deux dernières côtes sur la face frontale dorsale médiale des pieds, à hauteur de Th11 et Th12."
         },
         {
           "type": "sub",
@@ -1070,7 +1070,7 @@ export const chapter8Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "3ème, 4ème et 5ème vertèbres cervicales sur la vue sagittale médiale de la première phalange du gros orteil et sur la vue sagittale latérale. (figure 4.23)"
+          "text": "3ème, 4ème et 5ème vertèbres cervicales sur la vue sagittale médiale de la première phalange du gros orteil et sur la vue sagittale latérale."
         },
         {
           "type": "figure",
@@ -1094,7 +1094,7 @@ export const chapter8Fr: Chapter = {
         {
           "type": "lead",
           "label": "Médiastin",
-          "text": "face plantaire de la tête des 1ers métatarsiens. (figures 4.14 et 4.15)"
+          "text": "face plantaire de la tête des 1ers métatarsiens."
         },
         {
           "type": "sub",
@@ -1102,7 +1102,7 @@ export const chapter8Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "Vertèbres Th7 à Th12. (figures 4.29 et 4.30)"
+          "text": "Vertèbres Th7 à Th12."
         },
         {
           "type": "figure",
@@ -1113,7 +1113,7 @@ export const chapter8Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "Nerf intercostalbrachial de Hyrtl pour l’asthme, l’eczéma et les allergies: jonction diaphyse-tête latérale du 5ème métatarse. (figure 4.29)"
+          "text": "Nerf intercostalbrachial de Hyrtl pour l’asthme, l’eczéma et les allergies: jonction diaphyse-tête latérale du 5ème métatarse."
         },
         {
           "type": "figure",

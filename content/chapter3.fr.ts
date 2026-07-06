@@ -163,7 +163,7 @@ export const chapter3Fr: Chapter = {
           'Diencéphale : dans le même plan sagittal que le sinus droit, à la jonction de la faux du cerveau et de la tente du cervelet ; les deux repères se confondent à la jonction diaphyse-tête médiale.',
           'Hypophyse : jonction diaphyse-base médiale, en avant de la synchondrose sphéno-basilaire.',
           'Vascularisation : chaîne ganglionnaire cervicale et sinus carotidien.',
-          'Dure-mère crânienne : se reporter au livre Réflexothérapie occipito-podale et système neuro-méningé, Elsevier Masson, page 85, figure 7.8, et page 109, figure 8.12.',
+          'Dure-mère crânienne : se reporter au livre Réflexothérapie occipito-podale et système neuro-méningé, Elsevier Masson, page 85 et page 109.',
         ]},
         { type: 'bullets', items: [
           'Faux du cerveau et faux du cervelet : mêmes repères que tronc cérébral et bulbe olfactif.',

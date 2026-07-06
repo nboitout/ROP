@@ -40,7 +40,7 @@ export const chapter15It: Chapter = {
         {
           "type": "lead",
           "label": "Il colon si trova nella cavità addominale, nel compartimento sottomesocolico",
-          "text": "(figura 14.1)"
+          "text": ""
         },
         {
           "type": "bullets",
@@ -118,7 +118,7 @@ export const chapter15It: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Colon ascendente: decorre obliquamente in alto e posteriormente. È superficiale, aderisce alla parete addominale anteriore e non è ricoperto dall’ileo. (figura 14.1) È retroperitoneale ed è unito alla parete addominale posteriore dalla fascia di Toldt."
+            "Colon ascendente: decorre obliquamente in alto e posteriormente. È superficiale, aderisce alla parete addominale anteriore e non è ricoperto dall’ileo. È retroperitoneale ed è unito alla parete addominale posteriore dalla fascia di Toldt."
           ]
         },
         {
@@ -133,8 +133,8 @@ export const chapter15It: Chapter = {
             "Flessura colica destra (o flessura epatica):",
             "Misura da 70 a 80 mm. Nel piano frontale si trova al di sotto del lobo destro del fegato, in corrispondenza dell’ottava costa destra. È collegata mediante legamenti peritoneali al fegato, alla colecisti, al diaframma e al rene destro.",
             "Colon trasverso:",
-            "Occupa successivamente l’ipocondrio destro, l’epigastrio e l’ipocondrio sinistro. (figura 14.1) Decorre obliquamente verso l’alto e a sinistra. Nella sua parte media è più vicino alla parete addominale anteriore rispetto alle flessure coliche destra e sinistra, che sono situate più profondamente.",
-            "Mesocolon trasverso: questa piega peritoneale collega il colon trasverso alla parete addominale posteriore attraverso la sua radice. (figura 7.4)",
+            "Occupa successivamente l’ipocondrio destro, l’epigastrio e l’ipocondrio sinistro. Decorre obliquamente verso l’alto e a sinistra. Nella sua parte media è più vicino alla parete addominale anteriore rispetto alle flessure coliche destra e sinistra, che sono situate più profondamente.",
+            "Mesocolon trasverso: questa piega peritoneale collega il colon trasverso alla parete addominale posteriore attraverso la sua radice.",
             "Radice del mesocolon trasverso: questa radice costituisce un setto che divide la cavità addominale in due compartimenti. (Vedi Capitolo 1 Generalità, Articolazioni viscerali, pagina…)",
             "Il mesocolon trasverso conferisce al colon trasverso una notevole mobilità, fatta eccezione per la flessura epatica. Si adatta ai movimenti del corpo e dello stomaco.",
             "Quando il colon trasverso presenta una configurazione normale, è situato tra due linee orizzontali: una linea superiore passante per le none cartilagini costali e una linea inferiore passante per l’ombelico, secondo Testut (Traité d’anatomie humaine).",
@@ -173,7 +173,7 @@ export const chapter15It: Chapter = {
           "type": "bullets",
           "items": [
             "Colon discendente:",
-            "È verticale e profondo nella regione lombare ed è ricoperto dal digiuno. (figura 14.1) È retroperitoneale ed è fissato alla parete addominale posteriore dalla fascia di Toldt. Il colon discendente presenta appendici omentali."
+            "È verticale e profondo nella regione lombare ed è ricoperto dal digiuno. È retroperitoneale ed è fissato alla parete addominale posteriore dalla fascia di Toldt. Il colon discendente presenta appendici omentali."
           ]
         },
         {
@@ -229,7 +229,7 @@ export const chapter15It: Chapter = {
           "type": "bullets",
           "items": [
             "Cieco: presenta i seguenti rapporti:",
-            "Dorsalmente: il peritoneo parietale; il muscolo ileopsoas, rivestito dalla fascia iliaca; il 12° nervo intercostale, o nervo sottocostale; e i nervi del plesso lombare: nervi ileoinguinale, ileoipogastrico, genitofemorale e femorale. (figura 16.6)",
+            "Dorsalmente: il peritoneo parietale; il muscolo ileopsoas, rivestito dalla fascia iliaca; il 12° nervo intercostale, o nervo sottocostale; e i nervi del plesso lombare: nervi ileoinguinale, ileoipogastrico, genitofemorale e femorale.",
             "Ventralmente: la parete addominale anteriore",
             "Medialmente: l’ileo attraverso il peritoneo",
             "Lateralmente: la fossa iliaca inferiormente e la parete addominale laterale superiormente.",
@@ -288,7 +288,7 @@ export const chapter15It: Chapter = {
             "Arteria mesenterica superiore: irrora il colon ascendente e il colon trasverso fino al suo terzo distale. (Vedi Capitolo 14 Intestino tenue, Vascolarizzazione dell’intestino tenue, pagina…)",
             "Arteria mesenterica inferiore: origina dal lato sinistro dell’aorta addominale, subito al di sopra dell’ombelico, in corrispondenza della vertebra L3. Il suo polso può essere percepito a questo livello, sebbene sia spesso difficile da palpare. L’arteria decorre nella radice secondaria del mesocolon sigmoideo. Irrora il terzo distale del colon trasverso, il colon discendente e il colon sigmoideo. Dà origine all’arteria rettale superiore, che irrora soprattutto il retto superiore. Il retto medio e inferiore, così come il canale anale, ricevono inoltre sangue dalle arterie rettali media e inferiore, che originano dal territorio iliaco interno.",
             "Drenaggio venoso:",
-            "Vena mesenterica inferiore: drena il colon discendente, la flessura colica sinistra, il colon sigmoideo e il retto superiore, per confluire nella maggior parte dei casi nella vena splenica. La vena splenica e la vena mesenterica superiore si uniscono a formare la vena porta (figura 11.5), che trasporta il sangue al fegato. Il drenaggio venoso rettale è misto: il retto superiore appartiene al sistema portale, mentre i territori medio e inferiore comunicano con il sistema cavale attraverso le vene iliache interne.",
+            "Vena mesenterica inferiore: drena il colon discendente, la flessura colica sinistra, il colon sigmoideo e il retto superiore, per confluire nella maggior parte dei casi nella vena splenica. La vena splenica e la vena mesenterica superiore si uniscono a formare la vena porta, che trasporta il sangue al fegato. Il drenaggio venoso rettale è misto: il retto superiore appartiene al sistema portale, mentre i territori medio e inferiore comunicano con il sistema cavale attraverso le vene iliache interne.",
             "Conseguenze:",
             "Ipertensione portale: una patologia epatica può associarsi a ipertensione portale e favorire la dilatazione delle vene rettali superiori o vere e proprie varici rettali. Le emorroidi interne devono essere distinte da tali varici: derivano soprattutto da congestione locale dei cuscinetti anali, favorita da stipsi, sforzo evacuativo, gravidanza o alterazioni del transito. Nella pratica ROP, questa regione deve essere considerata per le sue connessioni digestive, venose e pelviche.",
             "Lombalgia e lombosciatalgia: la stessa stasi venosa può causare congestione delle vene lombari e foraminali intervertebrali. Questa congestione foraminale può contribuire alla compressione delle radici nervose lombosacrali nel loro passaggio attraverso i forami intervertebrali.",
@@ -332,13 +332,13 @@ export const chapter15It: Chapter = {
           "type": "bullets",
           "items": [
             "Innervazione estrinseca:",
-            "Simpatica: le fibre destinate al colon originano globalmente dai livelli toraco-lombari e raggiungono poi i plessi prevertebrali: (figura 4.26)",
+            "Simpatica: le fibre destinate al colon originano globalmente dai livelli toraco-lombari e raggiungono poi i plessi prevertebrali:",
             "plesso mesenterico superiore per il colon prossimale;",
             "plesso mesenterico inferiore per il colon distale.",
             "Parasimpatico: il nervo vago e il parasimpatico pelvico condividono l’innervazione parasimpatica del colon. Le loro fibre decorrono nei plessi mesenterici, dove si intrecciano con quelle del simpatico.",
             "Nervo vago: accompagna il colon prossimale fino ai due terzi prossimali del colon trasverso;",
             "Parasimpatico pelvico: origina dalle radici sacrali S2-S4, clinicamente proiettate nei reperi ROP della regione lombare bassa. Innerva il terzo distale del colon trasverso, il colon discendente, il sigma, il retto e lo sfintere liscio dell’ano. La zona di transizione tra l’influenza vagale e il parasimpatico pelvico corrisponde alla zona di Cannon-Böhm.",
-            "Zona di Cannon-Böhm: non si tratta di una zona anatomica in senso stretto, ma di un crocevia vascolo-nervoso (figura 4.20) costituito da:",
+            "Zona di Cannon-Böhm: non si tratta di una zona anatomica in senso stretto, ma di un crocevia vascolo-nervoso costituito da:",
             "l’anastomosi delle arterie mesenteriche superiore e inferiore;",
             "l’incontro funzionale del nervo vago e del parasimpatico sacrale.",
             "In caso di colopatia, la cute di questa zona è indurita e sensibile."
@@ -369,9 +369,9 @@ export const chapter15It: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Simpatico: le fibre destinate al retto e al canale anale originano soprattutto dai segmenti toraco-lombari inferiori. Esse raggiungono il plesso mesenterico inferiore e poi il plesso ipogastrico superiore, prima di discendere verso i plessi ipogastrici inferiori. (figura 4.26)",
+            "Simpatico: le fibre destinate al retto e al canale anale originano soprattutto dai segmenti toraco-lombari inferiori. Esse raggiungono il plesso mesenterico inferiore e poi il plesso ipogastrico superiore, prima di discendere verso i plessi ipogastrici inferiori.",
             "Parasimpatico pelvico: le sue fibre originano dal midollo sacrale, S2-S4. Nella lettura di superficie, la loro proiezione si colloca classicamente nella regione lombare bassa.",
-            "Plesso ipogastrico superiore: le fibre simpatiche e parasimpatiche provenienti dal plesso mesenterico inferiore raggiungono il plesso ipogastrico superiore, situato in corrispondenza della vertebra L5. Da esso originano i nervi ipogastrici destro e sinistro. (figura 4.36)",
+            "Plesso ipogastrico superiore: le fibre simpatiche e parasimpatiche provenienti dal plesso mesenterico inferiore raggiungono il plesso ipogastrico superiore, situato in corrispondenza della vertebra L5. Da esso originano i nervi ipogastrici destro e sinistro.",
             "Plesso ipogastrico inferiore: i nervi ipogastrici destro e sinistro decorrono lungo la parete laterale del retto e raggiungono i plessi ipogastrici inferiori destro e sinistro, contenuti nelle lamine sacro-retto-genito-pubiche. Essi forniscono innervazione simpatica e parasimpatica agli organi pelvici.",
             "Azione del simpatico: chiusura, tono e relativa secchezza della mucosa rettale;",
             "Azione del parasimpatico: apertura, secrezione mucosa e innesco riflesso della defecazione."
@@ -570,9 +570,9 @@ export const chapter15It: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Nervo vago, nervo cranico X; (figure 4.11 e 4.17)",
-            "Parasimpatico pelvico; (figura 4.23)",
-            "Colonna vertebrale, articolazioni costo-trasversarie (catena gangliare laterovertebrale toracica T9-T12); (figure 4.23 e 4.29 e 4.32)",
+            "Nervo vago, nervo cranico X;",
+            "Parasimpatico pelvico;",
+            "Colonna vertebrale, articolazioni costo-trasversarie (catena gangliare laterovertebrale toracica T9-T12);",
             "Plesso prevertebrale."
           ]
         },
@@ -589,15 +589,15 @@ export const chapter15It: Chapter = {
             "Colon ascendente: una zona che va dal cieco al processo stiloideo del quinto metatarso destro.",
             "Flessura colica destra: contro il processo stiloideo del quinto metatarso destro e la cupola diaframmatica.",
             "Colon trasverso: poiché la sua posizione è variabile, la zona riflessa della sua parte media è difficile da individuare. Il punto essenziale è agire sulle zone riflesse delle sue due estremità, cioè flessura colica destra e sinistra, e sulla radice del mesocolon trasverso.",
-            "Radice del mesocolon trasverso: una linea dalla seconda porzione del duodeno a L2 sulla faccia plantare del piede destro, poi una linea da L2 alla coda del pancreas sulla faccia plantare del piede sinistro. (figure 7.11, 7.12, 7.13 e 7.14)",
+            "Radice del mesocolon trasverso: una linea dalla seconda porzione del duodeno a L2 sulla faccia plantare del piede destro, poi una linea da L2 alla coda del pancreas sulla faccia plantare del piede sinistro.",
             "Flessura colica sinistra: individuare il processo stiloideo del quinto metatarso destro. La zona riflessa della flessura colica sinistra si trova leggermente più in alto rispetto a quella della flessura colica destra;",
             "Colon discendente: una zona riflessa lungo il margine laterale del piede sinistro fino alla parte laterale del margine anteriore del tallone;",
             "Colon sigmoideo: è difficile localizzare la zona riflessa della parte media del sigma a causa del suo decorso postero-mediale, della sua grandissima mobilità e della rappresentazione topografica del bambino in posizione fetale sui piedi.",
             "Come per il colon trasverso, il punto essenziale è agire sulle zone riflesse delle sue due estremità: la giunzione con il colon discendente all’altezza del ramo iliopubico, la giunzione con il retto in corrispondenza della terza vertebra sacrale e le radici del mesosigmoide.",
-            "Radici del mesosigmoide: solo sul piede sinistro, una linea che decorre lungo il margine anteriore della tuberosità posteromediale del calcagno, corrispondente al margine anteriore del sacro, dall’articolazione sacroiliaca sinistra fino a S3. (figure 7.15 e 7.16)",
+            "Radici del mesosigmoide: solo sul piede sinistro, una linea che decorre lungo il margine anteriore della tuberosità posteromediale del calcagno, corrispondente al margine anteriore del sacro, dall’articolazione sacroiliaca sinistra fino a S3.",
             "Retto: il margine anteriore della tuberosità posteromediale del calcagno su entrambi i piedi.",
             "Ano: individuare l’estremità inferiore della tuberosità posteromediale del calcagno. La zona riflessa si trova immediatamente anteriormente.",
-            "Plesso ipogastrico inferiore, parte posteriore: canale sacrale da S2 a S4. (figura 4.28 e Bis figura 4.28)"
+            "Plesso ipogastrico inferiore, parte posteriore: canale sacrale da S2 a S4."
           ]
         },
         {
@@ -607,7 +607,7 @@ export const chapter15It: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Equilibrio cervello limbico-colon: ascolto-induzione, con un pollice sul colon e l’altro sul cervello limbico. (figura 1.12)",
+            "Equilibrio cervello limbico-colon: ascolto-induzione, con un pollice sul colon e l’altro sul cervello limbico.",
             "Disbiosi: è uno squilibrio del microbiota (vedi Disbiosi, pagina…). Il trattamento è lo stesso delle colopatie. Occorre combatterne le cause:",
             "eccesso di proteine animali, grassi e zuccheri raffinati, a scapito di frutta e verdura;",
             "uso ripetuto di antibiotici;",

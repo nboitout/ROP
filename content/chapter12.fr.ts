@@ -778,9 +778,7 @@ export const chapter12Fr: Chapter = {
           "type": "bullets",
           "items": [
             "Nerfs vagues X.",
-            "(figures 4.11 et 4.17)",
             "Colonne vertébrale, articulations costo-transversaires, chaîne ganglionnaire latéro-vertébrale thoracique (Th8-Th10 gauches).",
-            "(figures 4.23 et 4.29)",
             "Plexus prévertébral.",
           ]
         },
@@ -822,7 +820,6 @@ export const chapter12Fr: Chapter = {
           "type": "bullets",
           "items": [
             "Balance cerveau limbique-pancréas : écoute-induction, un pouce sur le pancréas, l'autre pouce sur le cerveau limbique.",
-            "(figure 1.12)"
           ]
         }
       ]

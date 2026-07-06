@@ -210,7 +210,7 @@ export const chapter17It: Chapter = {
           "type": "bullets",
           "items": [
             "Vene iliache interne: decorrono accanto alle arterie iliache interne e raggiungono le vene iliache comuni.",
-            "Plessi venosi pelvici: contribuiscono al sostegno degli organi pelvici e comunicano con il sistema portale (figura 11.5)."
+            "Plessi venosi pelvici: contribuiscono al sostegno degli organi pelvici e comunicano con il sistema portale."
           ]
         },
         {
@@ -223,7 +223,7 @@ export const chapter17It: Chapter = {
           "type": "bullets",
           "items": [
             "Vene sacrali mediane: si uniscono alle due vene iliache comuni per formare la vena cava inferiore.",
-            "Vene gonadiche: hanno destini differenti. La vena gonadica destra raggiunge la vena cava inferiore, mentre la vena gonadica sinistra raggiunge la vena renale sinistra (figura 16.10)."
+            "Vene gonadiche: hanno destini differenti. La vena gonadica destra raggiunge la vena cava inferiore, mentre la vena gonadica sinistra raggiunge la vena renale sinistra."
           ]
         }
       ]
@@ -293,7 +293,7 @@ export const chapter17It: Chapter = {
         },
         {
           "type": "para",
-          "text": "Il simpatico e il parasimpatico sono sotto il controllo dell’ipotalamo, che a sua volta regola la funzione endocrina dell’ipofisi (figura 3.13):"
+          "text": "Il simpatico e il parasimpatico sono sotto il controllo dell’ipotalamo, che a sua volta regola la funzione endocrina dell’ipofisi:"
         },
         {
           "type": "bullets",
@@ -494,8 +494,8 @@ export const chapter17It: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Sistema parasimpatico pelvico (sacrale); (figura 4.23)",
-            "Colonna vertebrale, articolazioni costo-trasversarie (catena gangliare paravertebrale toracica inferiore, lombare e sacrale) (figure 4.23 e 4.29 e 4.32)."
+            "Sistema parasimpatico pelvico (sacrale);",
+            "Colonna vertebrale, articolazioni costo-trasversarie (catena gangliare paravertebrale toracica inferiore, lombare e sacrale)."
           ]
         },
         {
@@ -522,7 +522,7 @@ export const chapter17It: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "coccige (figura 4.23);",
+            "coccige;",
             "Legamenti sacrotuberoso e sacrospinoso;"
           ]
         },
@@ -533,7 +533,6 @@ export const chapter17It: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "(figura 4.23)",
             "inserzioni superiori: perimetro del forame magno, C2",
             "inserzioni inferiori: 2a vertebra sacrale"
           ]

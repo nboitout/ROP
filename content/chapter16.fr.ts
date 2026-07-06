@@ -567,8 +567,8 @@ export const chapter16Fr: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Nerf vague X; (figures 4.11 et 4.17)",
-            "Colonne vertébrale, articulations costo-transversaires (chaîne ganglionnaire latéro-vertébrale thoracique (Th7-Th11-L1, coccyx); (figures 4.23 et 4.29 et 4.32)",
+            "Nerf vague X;",
+            "Colonne vertébrale, articulations costo-transversaires (chaîne ganglionnaire latéro-vertébrale thoracique (Th7-Th11-L1, coccyx);",
             "Plexus prévertébral;",
             "Surrénales:",
             "Plexus lombaire L1 à L4 et ses branches. (Cf. Réflexothérapie occipito-podale et système neuro-méningé, Elsevier Masson, pages 28 à 25)"
@@ -629,7 +629,7 @@ export const chapter16Fr: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Balance cerveau limbique-rein: écoute-induction, un pouce sur le rein, l’autre pouce sur cerveau limbique (figure 1.12)"
+            "Balance cerveau limbique-rein: écoute-induction, un pouce sur le rein, l’autre pouce sur cerveau limbique"
           ]
         }
       ]

@@ -105,7 +105,7 @@ export const chapter19It: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "ricopre la maggior parte del corpo uterino formando recessi (figura 17.7): il cavo vescico-uterino, tra vescica e utero, e il cavo retto-uterino di Douglas, tra vagina e retto. Quest’ultimo è il punto più declive della cavità addominale.",
+            "ricopre la maggior parte del corpo uterino formando recessi: il cavo vescico-uterino, tra vescica e utero, e il cavo retto-uterino di Douglas, tra vagina e retto. Quest’ultimo è il punto più declive della cavità addominale.",
             "Normalmente il peritoneo deve scorrere sulla cupola uterina ed essere privo di aderenze, affinché il corpo uterino conservi la propria mobilità.",
             "Qualsiasi spasmo, sequela chirurgica o infettiva degli organi addominali può deviare il corpo uterino e ridurne la mobilità."
           ]
@@ -117,7 +117,7 @@ export const chapter19It: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "sono pieghe del peritoneo (figura 17.7) orientate dorsalmente e lateralmente. Collegano trasversalmente l’utero alla parete pelvica interna:",
+            "sono pieghe del peritoneo orientate dorsalmente e lateralmente. Collegano trasversalmente l’utero alla parete pelvica interna:",
             "la parte superiore, o mesometrio, è flessibile e comprende tre alette per il legamento rotondo, la tuba di Falloppio (o mesosalpinge) e l’ovaio (o mesovario);",
             "la parte inferiore, o parametrio, è spessa e robusta. Aderisce al pavimento pelvico e contiene le arterie uterine.",
             "Legamenti rotondi: relativamente poco robusti, si estendono dai corni uterini alle grandi labbra e al pube. Dapprima orientati ventralmente e lateralmente, attraversano poi il canale inguinale. Mantengono il corpo uterino in antiversione."
@@ -130,9 +130,9 @@ export const chapter19It: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Lamine sacro-retto-genito-cervico-pubiche (SRGCP): tese sagittalmente dal sacro al pube, compartimentano la cavità pelvica e solidarizzano tra loro gli organi pelvici. La loro parte posteriore costituisce i legamenti uterosacrali (figura 17.5).",
+            "Lamine sacro-retto-genito-cervico-pubiche (SRGCP): tese sagittalmente dal sacro al pube, compartimentano la cavità pelvica e solidarizzano tra loro gli organi pelvici. La loro parte posteriore costituisce i legamenti uterosacrali.",
             "Legamenti uterosacrali: rappresentano la parte posteriore delle lamine SRGCP. Collegano l’istmo uterino alle vertebre sacrali S2, S3 e S4. Mantengono saldamente la cervice ancorata al sacro. La loro fibrosi o rottura è la principale causa di deviazione cervicale.",
-            "Pavimento pelvico del perineo: costituito da tessuto fibro-muscolare, è il principale elemento di sostegno del sistema uro-genitale (figura 17.9)."
+            "Pavimento pelvico del perineo: costituito da tessuto fibro-muscolare, è il principale elemento di sostegno del sistema uro-genitale."
           ]
         },
         {
@@ -178,7 +178,7 @@ export const chapter19It: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Cranialmente: il peritoneo (figura 17.7);",
+            "Cranialmente: il peritoneo;",
             "ventralmente: il peritoneo e la vescica, dalla quale è separato dal cavo vescico-uterino;",
             "dorsalmente: il peritoneo e il retto, dal quale è separato dal cavo retto-uterino di Douglas;",
             "lateralmente: i legamenti larghi;",
@@ -198,7 +198,7 @@ export const chapter19It: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "l’arteria uterina, ramo dell’arteria iliaca interna (figura 17.6), è molto sinuosa per adattarsi allo sviluppo dell’utero durante la gravidanza."
+            "l’arteria uterina, ramo dell’arteria iliaca interna, è molto sinuosa per adattarsi allo sviluppo dell’utero durante la gravidanza."
           ]
         },
         {
@@ -224,7 +224,7 @@ export const chapter19It: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "la sua origine midollare si estende da T12 a L2, a livello vertebrale T12. Prosegue attraverso due vie (figura 17.14):",
+            "la sua origine midollare si estende da T12 a L2, a livello vertebrale T12. Prosegue attraverso due vie:",
             "catena gangliare lombare e sacrale;",
             "plesso ipogastrico superiore: prolunga caudalmente la catena plessica prevertebrale e apporta l’innervazione simpatica al plesso ipogastrico inferiore."
           ]
@@ -246,7 +246,7 @@ export const chapter19It: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "è situato nella cavità pelvica (figura 17.14), contenuto nella lamina SRGCP. Apporta l’innervazione simpatica e parasimpatica agli organi uro-genitali, al retto e all’ano. I legamenti uterosacrali sono particolarmente ricchi di fibre simpatiche viscerosensitive. La loro rottura e fibrosi generano congestioni e dolori (dismenorree) attraverso le deviazioni che provocano a livello della cervice."
+            "è situato nella cavità pelvica, contenuto nella lamina SRGCP. Apporta l’innervazione simpatica e parasimpatica agli organi uro-genitali, al retto e all’ano. I legamenti uterosacrali sono particolarmente ricchi di fibre simpatiche viscerosensitive. La loro rottura e fibrosi generano congestioni e dolori (dismenorree) attraverso le deviazioni che provocano a livello della cervice."
           ]
         },
         {
@@ -534,7 +534,7 @@ export const chapter19It: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "è situata nell’aletta superiore del legamento largo (figura 17.7), sopra e davanti all’ovaio e posteriormente al legamento rotondo. La tuba è molto mobile."
+            "è situata nell’aletta superiore del legamento largo, sopra e davanti all’ovaio e posteriormente al legamento rotondo. La tuba è molto mobile."
           ]
         }
       ]
@@ -550,7 +550,7 @@ export const chapter19It: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "è situato nel cavo retro-uterino, posteriormente al legamento largo al quale è collegato da una piega del peritoneo chiamata aletta posteriore (figura 17.7), contro la parete laterale del bacino.",
+            "è situato nel cavo retro-uterino, posteriormente al legamento largo al quale è collegato da una piega del peritoneo chiamata aletta posteriore, contro la parete laterale del bacino.",
             "Non è rivestito dal peritoneo viscerale (è non peritoneizzato) ed è libero nella cavità pelvica."
           ]
         },
@@ -646,7 +646,7 @@ export const chapter19It: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "l’arteria ovarica nasce dall’aorta addominale vicino all’arteria renale, a livello delle vertebre L2-L3 (figura 16.10). Si anastomizza con i rami terminali dell’arteria uterina."
+            "l’arteria ovarica nasce dall’aorta addominale vicino all’arteria renale, a livello delle vertebre L2-L3. Si anastomizza con i rami terminali dell’arteria uterina."
           ]
         },
         {
@@ -682,7 +682,7 @@ export const chapter19It: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "origine midollare T10-T11 e T12 (figura 4.26);",
+            "origine midollare T10-T11 e T12;",
             "Plesso aortorenale: situato davanti all’arteria renale, riceve il nervo piccolo splancnico proveniente dal 10°, 11° e 12° ganglio toracico e dal 1° ganglio lombare. È destinato al rene e all’ovaio.",
             "Parasimpatico pelvico (sacrale) da S2 a S4, a livello della vertebra L1."
           ]
@@ -1148,10 +1148,10 @@ export const chapter19It: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Colonna vertebrale: livello midollare simpatico T12-L2 (a livello delle vertebre T10-T12), catena gangliare paravertebrale lombare e sacrale (figure 4.29 e 4.32);",
-            "Parasimpatico pelvico (sacrale): midollo sacrale S2-S3-S4 (livello vertebrale L1-L2) (figura 4.23);",
-            "Fegato (figure 11.10 e 11.11);",
-            "Rene sinistro (figure 16.13 e 16.14)."
+            "Colonna vertebrale: livello midollare simpatico T12-L2 (a livello delle vertebre T10-T12), catena gangliare paravertebrale lombare e sacrale;",
+            "Parasimpatico pelvico (sacrale): midollo sacrale S2-S3-S4 (livello vertebrale L1-L2);",
+            "Fegato;",
+            "Rene sinistro."
           ]
         },
         {
@@ -1161,7 +1161,7 @@ export const chapter19It: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Cavità pelvica, perineo (figure 17.15, 17.16 e 17.17);"
+            "Cavità pelvica, perineo;"
           ]
         },
         {
@@ -1171,7 +1171,6 @@ export const chapter19It: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "(figure 18.7 e 18.9)",
             "Regione cervico-istmica dell’utero e plesso ipogastrico inferiore (parte media): piccola depressione anteriormente all’articolazione sacro-coccigea;"
           ]
         },
@@ -1184,7 +1183,7 @@ export const chapter19It: Chapter = {
           "items": [
             "solco che va dal nucleo fibroso centrale alla regione cervico-istmica;",
             "Cupola e corno dell’utero: zona al di sopra del margine anteriore del tallone nella sua parte mediale;",
-            "Canale inguinale e legamento rotondo: interlinea tibio-tarsica anteriore (figura 20.12)."
+            "Canale inguinale e legamento rotondo: interlinea tibio-tarsica anteriore."
           ]
         },
         {
@@ -1194,7 +1193,7 @@ export const chapter19It: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Bilanciamento cervello limbico-utero: ascolto-induzione, un pollice sull’utero, l’altro pollice sul cervello limbico (figura 1.12)."
+            "Bilanciamento cervello limbico-utero: ascolto-induzione, un pollice sull’utero, l’altro pollice sul cervello limbico."
           ]
         },
         {
@@ -1208,10 +1207,10 @@ export const chapter19It: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Colonna vertebrale: livelli midollari simpatici (da T10 a livello della vertebra T9 fino a T11 a livello della vertebra T10, L5, sacro), catena gangliare paravertebrale lombare e sacrale (figure 4.23, 4.29 e 4.32)",
-            "Parasimpatico pelvico: a livello della vertebra L1 (figura 4.23)",
-            "Fegato (figure 11.10 e 11.11);",
-            "Rene sinistro (figure 16.13 e 16.14)."
+            "Colonna vertebrale: livelli midollari simpatici (da T10 a livello della vertebra T9 fino a T11 a livello della vertebra T10, L5, sacro), catena gangliare paravertebrale lombare e sacrale",
+            "Parasimpatico pelvico: a livello della vertebra L1",
+            "Fegato;",
+            "Rene sinistro."
           ]
         },
         {

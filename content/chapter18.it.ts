@@ -34,7 +34,7 @@ export const chapter18It: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "La vescica, serbatoio dell’urina, è situata nella parte anteriore della loggia viscerale della cavità pelvica, alloggiata in una sorta di culla tra i muscoli elevatori dell’ano del perineo e i muscoli otturatori interni. (figura 17.6)"
+            "La vescica, serbatoio dell’urina, è situata nella parte anteriore della loggia viscerale della cavità pelvica, alloggiata in una sorta di culla tra i muscoli elevatori dell’ano del perineo e i muscoli otturatori interni."
           ]
         },
         {
@@ -152,7 +152,7 @@ export const chapter18It: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "si riflette sull’apice della vescica formando, nella donna, il recesso vescico-uterino o, nell’uomo, il recesso retto-vescicale (figura 17.7). La ptosi viscerale dell’intestino tenue, la chirurgia addominale, le infezioni e gli spasmi viscerali si ripercuotono tutti sul peritoneo. Il normale scorrimento tra peritoneo e vescica viene limitato dalle tensioni del peritoneo."
+            "si riflette sull’apice della vescica formando, nella donna, il recesso vescico-uterino o, nell’uomo, il recesso retto-vescicale. La ptosi viscerale dell’intestino tenue, la chirurgia addominale, le infezioni e gli spasmi viscerali si ripercuotono tutti sul peritoneo. Il normale scorrimento tra peritoneo e vescica viene limitato dalle tensioni del peritoneo."
           ]
         },
         {
@@ -163,7 +163,7 @@ export const chapter18It: Chapter = {
           "type": "bullets",
           "items": [
             "agiscono come sistema sospensore della vescica, simile a una palla sospesa nella propria rete:",
-            "Il legamento ombelicale mediano (uraco): residuo embrionale, collega l’ombelico all’apice della vescica e al pube. Prolunga inferiormente il legamento falciforme del fegato (figura 11.9). Condivide fibre con i legamenti pubovescicali e pubouretrali, che a loro volta condividono fibre con il muscolo detrusore della vescica. La sezione chirurgica di questo legamento (taglio cesareo) può essere causa di incontinenza urinaria e di irritabilità vescicale (eretismo vescicale).",
+            "Il legamento ombelicale mediano (uraco): residuo embrionale, collega l’ombelico all’apice della vescica e al pube. Prolunga inferiormente il legamento falciforme del fegato. Condivide fibre con i legamenti pubovescicali e pubouretrali, che a loro volta condividono fibre con il muscolo detrusore della vescica. La sezione chirurgica di questo legamento (taglio cesareo) può essere causa di incontinenza urinaria e di irritabilità vescicale (eretismo vescicale).",
             "I legamenti ombelicali prevescicali sono due cordoni fibrosi, residui delle arterie ombelicali, tesi obliquamente dall’ombelico alle superfici inferolaterali della vescica. Si prolungano lateralmente nella cavità pelvica attraverso le aponeurosi dei muscoli otturatore interno e piriforme e terminano posteriormente sull’ischio, dove si inseriscono il legamento sacrotuberoso e i muscoli ischiocrurali.",
             "Legamenti pubovescicali (nella donna) e puboprostatici (nell’uomo): fissano la vescica al pube. Le loro fibre sono in continuità con il detrusore. La tensione legamentosa induce ipercontrattilità vescicale (eretismo) e destabilizza il collo vescicale, producendo una sensazione di pesantezza al basso ventre."
           ]
@@ -175,9 +175,9 @@ export const chapter18It: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Lamine sacro-retto-cervico-pubiche (SRGCP) (figura 17.5)",
-            "Plesso venoso di Santorini: è situato nello spazio prevescicale, tra il pube e la vescica. Il tono venoso mantiene il collo vescicale nella sua corretta posizione. È in rapporto con i sistemi emorroidario e porto-cavale (figura 11.7). Qualsiasi disturbo funzionale del sistema portale si ripercuote sul plesso venoso di Santorini. Il rilasciamento del sistema muscolo-legamentoso vescicale destabilizza il plesso venoso di Santorini e favorisce l’incontinenza urinaria.",
-            "Pavimento pelvico del perineo (figura 17.9)"
+            "Lamine sacro-retto-cervico-pubiche (SRGCP)",
+            "Plesso venoso di Santorini: è situato nello spazio prevescicale, tra il pube e la vescica. Il tono venoso mantiene il collo vescicale nella sua corretta posizione. È in rapporto con i sistemi emorroidario e porto-cavale. Qualsiasi disturbo funzionale del sistema portale si ripercuote sul plesso venoso di Santorini. Il rilasciamento del sistema muscolo-legamentoso vescicale destabilizza il plesso venoso di Santorini e favorisce l’incontinenza urinaria.",
+            "Pavimento pelvico del perineo"
           ]
         },
         {
@@ -232,7 +232,7 @@ export const chapter18It: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "rami dell’arteria iliaca interna; (figura 17.6)"
+            "rami dell’arteria iliaca interna;"
           ]
         },
         {
@@ -258,7 +258,7 @@ export const chapter18It: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "nervo pudendo S2-S4 (figura 17.10.)"
+            "nervo pudendo S2-S4"
           ]
         },
         {
@@ -268,7 +268,6 @@ export const chapter18It: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "(figura 17.14.)"
           ]
         },
         {
@@ -630,8 +629,8 @@ export const chapter18It: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Sistema parasimpatico pelvico (sacrale): midollo sacrale S2-S3-S4 (livello vertebrale L1-L2); (figure 4.23)",
-            "Colonna vertebrale, articolazioni costotrasversarie T10-L2 (vertebre T11-T12), catena gangliare paravertebrale toracica inferiore, lombare e sacrale; (figure 4.29 e 4.32)",
+            "Sistema parasimpatico pelvico (sacrale): midollo sacrale S2-S3-S4 (livello vertebrale L1-L2);",
+            "Colonna vertebrale, articolazioni costotrasversarie T10-L2 (vertebre T11-T12), catena gangliare paravertebrale toracica inferiore, lombare e sacrale;",
             "Fegato, intestini, reni (cistite, cistalgia cronica);"
           ]
         },
@@ -642,7 +641,7 @@ export const chapter18It: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Cavità pelvica, perineo: (figure 17.15, 17.16 e 17.17)",
+            "Cavità pelvica, perineo:",
             "Vescica:",
             "Legamenti pubovescicali: bordo posteriore del malleolo tibiale;",
             "Trigono vescicale, regione cervico-istmica dell’utero/prostata: individuare la zona riflessa del nucleo fibroso centrale del perineo, anteriormente al coccige; un solco orientato dorsalmente e posteriormente conduce a una piccola depressione sulla superficie postero-mediale del calcagno;",
@@ -657,7 +656,7 @@ export const chapter18It: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Bilanciamento cervello limbico-vescica: ascolto-induzione, un pollice sulla vescica, l’altro pollice sul cervello limbico. (figura 1.12)"
+            "Bilanciamento cervello limbico-vescica: ascolto-induzione, un pollice sulla vescica, l’altro pollice sul cervello limbico."
           ]
         }
       ]

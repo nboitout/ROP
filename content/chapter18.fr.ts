@@ -174,7 +174,7 @@ export const chapter18Fr: Chapter = {
           "type": "bullets",
           "items": [
             "lames sacro-recto-cervico-pubiennes (SRGCP)",
-            "Plexus veineux de Santorini: il est situé dans l’espace prévésical (entre le pubis et la vessie). La tonicité des veines maintient le col vésical en bonne place. Il est en relation avec les systèmes hémorroïdal et porto-cave (figure 11.7). Tout trouble fonctionnel du système porte se réperçute sur le plexus veineux de Santorini. Le relâchement du système musculo-ligamentaire vésical déstabilise le plexus veineux de Santorini favorisant une incontinence urinaire.",
+            "Plexus veineux de Santorini: il est situé dans l’espace prévésical (entre le pubis et la vessie). La tonicité des veines maintient le col vésical en bonne place. Il est en relation avec les systèmes hémorroïdal et porto-cave. Tout trouble fonctionnel du système porte se réperçute sur le plexus veineux de Santorini. Le relâchement du système musculo-ligamentaire vésical déstabilise le plexus veineux de Santorini favorisant une incontinence urinaire.",
             "Plancher pelvien du périnée"
           ]
         },

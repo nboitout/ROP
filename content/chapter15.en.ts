@@ -40,7 +40,7 @@ export const chapter15En: Chapter = {
         {
           "type": "lead",
           "label": "The colon lies within the abdominal cavity, in the inframesocolic compartment",
-          "text": "(figure 14.1)"
+          "text": ""
         },
         {
           "type": "bullets",
@@ -118,7 +118,7 @@ export const chapter15En: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Ascending colon: it runs obliquely upward and backward. It is superficial, attached to the anterior abdominal wall and not covered by the ileum. (figure 14.1) It is retroperitoneal and attached to the posterior abdominal wall by Toldt’s fascia."
+            "Ascending colon: it runs obliquely upward and backward. It is superficial, attached to the anterior abdominal wall and not covered by the ileum. It is retroperitoneal and attached to the posterior abdominal wall by Toldt’s fascia."
           ]
         },
         {
@@ -133,8 +133,8 @@ export const chapter15En: Chapter = {
             "Right colic flexure (or hepatic flexure):",
             "It measures 70 to 80 mm. In the frontal plane, it lies beneath the right lobe of the liver, opposite the right eighth rib. It is attached by peritoneal ligaments to the liver, gallbladder, diaphragm and right kidney.",
             "Transverse colon:",
-            "It successively occupies the right hypochondrium, epigastrium and left hypochondrium. (figure 14.1) It runs obliquely upward and to the left. In its middle portion, it lies closer to the anterior abdominal wall than the right and left colic flexures, which are more deeply situated.",
-            "Transverse mesocolon: this fold of peritoneum connects the transverse colon to the posterior abdominal wall via its root. (figure 7.4)",
+            "It successively occupies the right hypochondrium, epigastrium and left hypochondrium. It runs obliquely upward and to the left. In its middle portion, it lies closer to the anterior abdominal wall than the right and left colic flexures, which are more deeply situated.",
+            "Transverse mesocolon: this fold of peritoneum connects the transverse colon to the posterior abdominal wall via its root.",
             "Root of the transverse mesocolon: this root forms a partition that separates the abdominal cavity into two compartments. (See Chapter 1 Generalities, Visceral Joints, page…)",
             "The transverse mesocolon gives the transverse colon considerable mobility, except at the hepatic flexure. It adapts to movements of the body and stomach.",
             "When the transverse colon has a normal configuration, it lies between two horizontal lines: an upper line passing through the ninth costal cartilages and a lower line passing through the umbilicus, according to Testut (Traité d’anatomie humaine).",
@@ -173,7 +173,7 @@ export const chapter15En: Chapter = {
           "type": "bullets",
           "items": [
             "Descending colon:",
-            "It is vertical and deep in the lumbar region, and is covered by the jejunum. (figure 14.1) It is retroperitoneal and attached to the posterior abdominal wall by Toldt’s fascia. The descending colon bears omental appendices."
+            "It is vertical and deep in the lumbar region, and is covered by the jejunum. It is retroperitoneal and attached to the posterior abdominal wall by Toldt’s fascia. The descending colon bears omental appendices."
           ]
         },
         {
@@ -229,7 +229,7 @@ export const chapter15En: Chapter = {
           "type": "bullets",
           "items": [
             "Caecum: its relations are as follows:",
-            "Dorsally: the parietal peritoneum; the iliopsoas, covered by the iliac fascia; the 12th intercostal nerve, or subcostal nerve; and the nerves of the lumbar plexus: the ilioinguinal, iliohypogastric, genitofemoral and femoral nerves. (figure 16.6)",
+            "Dorsally: the parietal peritoneum; the iliopsoas, covered by the iliac fascia; the 12th intercostal nerve, or subcostal nerve; and the nerves of the lumbar plexus: the ilioinguinal, iliohypogastric, genitofemoral and femoral nerves.",
             "Ventrally: the anterior abdominal wall",
             "Medially: the ileum through the peritoneum",
             "Laterally: the iliac fossa inferiorly and the lateral abdominal wall superiorly.",
@@ -288,7 +288,7 @@ export const chapter15En: Chapter = {
             "Superior mesenteric artery: this artery supplies the ascending colon and the transverse colon as far as its distal third. (See Chapter 14 Small Intestine, Blood Supply of the Small Intestine, page…)",
             "Inferior mesenteric artery: this artery arises from the left side of the abdominal aorta, just above the umbilicus, opposite the L3 vertebra. Its pulse may be felt at this level, although it is often difficult to palpate. The artery runs in the secondary root of the sigmoid mesocolon. It supplies the distal third of the transverse colon, the descending colon and the sigmoid colon. It gives rise to the superior rectal artery, which mainly supplies the upper rectum. The middle and lower rectum, as well as the anal canal, are also supplied by the middle and inferior rectal arteries, which arise from the internal iliac territory.",
             "Venous drainage:",
-            "Inferior mesenteric vein: this vein drains the descending colon, the left colic flexure, the sigmoid colon and the upper rectum, then most often joins the splenic vein. The splenic vein and superior mesenteric vein unite to form the portal vein (figure 11.5), which carries blood to the liver. Rectal venous drainage is mixed: the upper rectum belongs to the portal system, whereas the middle and lower territories communicate with the caval system through the internal iliac veins.",
+            "Inferior mesenteric vein: this vein drains the descending colon, the left colic flexure, the sigmoid colon and the upper rectum, then most often joins the splenic vein. The splenic vein and superior mesenteric vein unite to form the portal vein, which carries blood to the liver. Rectal venous drainage is mixed: the upper rectum belongs to the portal system, whereas the middle and lower territories communicate with the caval system through the internal iliac veins.",
             "Consequences:",
             "Portal hypertension: liver disease may be associated with portal hypertension and may promote dilatation of the superior rectal veins or true rectal varices. Internal haemorrhoids must be distinguished from these varices: they arise mainly from local congestion of the anal cushions, promoted by constipation, straining, pregnancy or transit disorders. In ROP practice, this region should be considered in terms of its digestive, venous and pelvic relationships.",
             "Low back pain and lumbosciatica: the same venous stasis can cause congestion of the lumbar veins and intervertebral foraminal veins. This foraminal congestion may contribute to compression of the lumbosacral nerve roots as they pass through the intervertebral foramina.",
@@ -332,13 +332,13 @@ export const chapter15En: Chapter = {
           "type": "bullets",
           "items": [
             "Extrinsic innervation:",
-            "Sympathetic: fibres destined for the colon generally arise from the thoracolumbar levels and then join the prevertebral plexuses: (figure 4.26)",
+            "Sympathetic: fibres destined for the colon generally arise from the thoracolumbar levels and then join the prevertebral plexuses:",
             "superior mesenteric plexus for the proximal colon;",
             "inferior mesenteric plexus for the distal colon.",
             "Parasympathetic: the vagus nerve and pelvic parasympathetic system share the parasympathetic innervation of the colon. Their fibres travel within the mesenteric plexuses, where they intertwine with sympathetic fibres.",
             "Vagus nerve: it accompanies the proximal colon as far as the proximal two thirds of the transverse colon;",
             "Pelvic parasympathetic system: this system arises from the sacral roots S2-S4, clinically projected in ROP landmarks of the lower lumbar region. It innervates the distal third of the transverse colon, the descending colon, the sigmoid colon, the rectum and the smooth sphincter of the anus. The transition zone between vagal influence and the pelvic parasympathetic system corresponds to the Cannon-Böhm zone.",
-            "Cannon-Böhm zone: this is not an anatomical zone stricto sensu, but a vasculonervous crossroads (figure 4.20) formed by:",
+            "Cannon-Böhm zone: this is not an anatomical zone stricto sensu, but a vasculonervous crossroads formed by:",
             "the anastomosis of the superior and inferior mesenteric arteries;",
             "the functional meeting of the vagus nerve and the sacral parasympathetic system.",
             "In cases of colopathy, the skin in this zone is indurated and sensitive."
@@ -369,9 +369,9 @@ export const chapter15En: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Sympathetic: fibres destined for the rectum and anal canal arise mainly from the lower thoracolumbar levels. They join the inferior mesenteric plexus and then the superior hypogastric plexus before descending toward the inferior hypogastric plexuses. (figure 4.26)",
+            "Sympathetic: fibres destined for the rectum and anal canal arise mainly from the lower thoracolumbar levels. They join the inferior mesenteric plexus and then the superior hypogastric plexus before descending toward the inferior hypogastric plexuses.",
             "Pelvic parasympathetic system: its fibres arise from the sacral spinal cord, S2-S3-S4. In surface reading, their projection is classically located in the lower lumbar region.",
-            "Superior hypogastric plexus: sympathetic and parasympathetic fibres from the inferior mesenteric plexus join the superior hypogastric plexus, located opposite the L5 vertebra. It gives rise to the right and left hypogastric nerves. (figure 4.36)",
+            "Superior hypogastric plexus: sympathetic and parasympathetic fibres from the inferior mesenteric plexus join the superior hypogastric plexus, located opposite the L5 vertebra. It gives rise to the right and left hypogastric nerves.",
             "Inferior hypogastric plexus: the right and left hypogastric nerves run along the lateral wall of the rectum and join the right and left inferior hypogastric plexuses, which are contained within the sacro-recto-genito-pubic laminae. They provide sympathetic and parasympathetic innervation to the pelvic organs.",
             "Action of the sympathetic system: closure, tone and relative dryness of the rectal mucosa;",
             "Action of the parasympathetic system: opening, mucosal secretion and reflex triggering of defecation."
@@ -570,9 +570,9 @@ export const chapter15En: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Vagus nerve, cranial nerve X; (figures 4.11 and 4.17)",
-            "Pelvic parasympathetic system; (figure 4.23)",
-            "Spinal column, costotransverse joints (thoracic laterovertebral ganglion chain (T9-T12)); (figures 4.23 and 4.29 and 4.32)",
+            "Vagus nerve, cranial nerve X;",
+            "Pelvic parasympathetic system;",
+            "Spinal column, costotransverse joints (thoracic laterovertebral ganglion chain (T9-T12));",
             "Prevertebral plexus."
           ]
         },
@@ -589,15 +589,15 @@ export const chapter15En: Chapter = {
             "Ascending colon: a zone running from the caecum to the styloid process of the right fifth metatarsal.",
             "Right colic flexure: against the styloid process of the right fifth metatarsal and the diaphragmatic dome.",
             "Transverse colon: because its position varies, the reflex zone of its middle portion is difficult to identify. The key point is to act on the reflex zones of its two ends, the right and left colic flexures, and on the root of the transverse mesocolon.",
-            "Root of the transverse mesocolon: a line from the second portion of the duodenum to L2 on the plantar surface of the right foot, then a line from L2 to the tail of the pancreas on the plantar surface of the left foot. (figures 7.11, 7.12, 7.13 and 7.14)",
+            "Root of the transverse mesocolon: a line from the second portion of the duodenum to L2 on the plantar surface of the right foot, then a line from L2 to the tail of the pancreas on the plantar surface of the left foot.",
             "Left colic flexure: identify the styloid process of the right fifth metatarsal. The reflex zone of the left colic flexure lies slightly higher than that of the right colic flexure;",
             "Descending colon: a reflex zone along the lateral border of the left foot to the lateral part of the anterior border of the heel;",
             "Sigmoid colon: it is difficult to locate the reflex zone of the middle part of the sigmoid colon because of its posteromedial direction, its very great mobility and the topographical representation of the baby in foetal position on the feet.",
             "As with the transverse colon, the key point is to act on the reflex zones of its two ends: its junction with the descending colon at the iliopubic ramus, its junction with the rectum opposite the third sacral vertebra, and the roots of the mesosigmoid.",
-            "Roots of the mesosigmoid: on the left foot only, a line running along the anterior border of the posteromedial tuberosity of the calcaneus, corresponding to the anterior border of the sacrum, from the left sacroiliac joint to S3. (figures 7.15 and 7.16)",
+            "Roots of the mesosigmoid: on the left foot only, a line running along the anterior border of the posteromedial tuberosity of the calcaneus, corresponding to the anterior border of the sacrum, from the left sacroiliac joint to S3.",
             "Rectum: the anterior border of the posteromedial tuberosity of the calcaneus on both feet.",
             "Anus: identify the inferior end of the posteromedial tuberosity of the calcaneus. The reflex zone lies immediately anterior to it.",
-            "Inferior hypogastric plexus, posterior part: sacral canal from S2 to S4. (figure 4.28 and Bis figure 4.28)"
+            "Inferior hypogastric plexus, posterior part: sacral canal from S2 to S4."
           ]
         },
         {
@@ -607,7 +607,7 @@ export const chapter15En: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Limbic brain-colon balance: listening-induction, with one thumb on the colon and the other thumb on the limbic brain. (figure 1.12)",
+            "Limbic brain-colon balance: listening-induction, with one thumb on the colon and the other thumb on the limbic brain.",
             "Dysbiosis: this is an imbalance of the microbiota (see Dysbiosis, page…). Treatment is the same as for colopathies. The causes must be addressed:",
             "excess animal proteins, fats and refined sugars, to the detriment of vegetables and fruit;",
             "repeated antibiotic use;",

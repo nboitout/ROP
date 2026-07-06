@@ -105,7 +105,7 @@ export const chapter19En: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "it covers most of the uterine body, forming recesses (figure 17.7): the vesicouterine pouch, between the bladder and the uterus, and the rectouterine pouch of Douglas, between the vagina and the rectum. The latter is the most dependent point of the abdominal cavity.",
+            "it covers most of the uterine body, forming recesses: the vesicouterine pouch, between the bladder and the uterus, and the rectouterine pouch of Douglas, between the vagina and the rectum. The latter is the most dependent point of the abdominal cavity.",
             "Normally, the peritoneum must glide over the uterine dome and remain free of adhesions so that the uterine body retains its mobility.",
             "Any spasm or surgical or infectious sequelae involving the abdominal organs may deviate the body of the uterus and cause it to lose mobility."
           ]
@@ -117,7 +117,7 @@ export const chapter19En: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "these are folds of peritoneum (figure 17.7) directed dorsally and laterally. They connect the uterus transversely to the internal pelvic wall:",
+            "these are folds of peritoneum directed dorsally and laterally. They connect the uterus transversely to the internal pelvic wall:",
             "the upper part, or mesometrium, is flexible and contains three folds for the round ligament, the fallopian tube (or mesosalpinx), and the ovary (or mesovarium);",
             "the lower part, or parametrium, is thick and strong. It adheres to the pelvic floor and contains the uterine arteries.",
             "Round ligaments: relatively weak, they extend from the uterine horns to the labia majora and the pubis. Initially directed ventrally and laterally, they then pass through the inguinal canal. They maintain the uterine body in anteversion."
@@ -130,9 +130,9 @@ export const chapter19En: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Sacro-recto-genito-cervico-pubic laminae (SRGCP): stretched sagittally from the sacrum to the pubis, they compartmentalize and connect the pelvic organs to one another. Their posterior part forms the uterosacral ligaments (figure 17.5).",
+            "Sacro-recto-genito-cervico-pubic laminae (SRGCP): stretched sagittally from the sacrum to the pubis, they compartmentalize and connect the pelvic organs to one another. Their posterior part forms the uterosacral ligaments.",
             "Uterosacral ligaments: these are the posterior part of the SRGCP laminae. They connect the uterine isthmus to the sacral vertebrae S2, S3, and S4. They firmly anchor the cervix to the sacrum. Their fibrosis or rupture is the main cause of cervical deviation.",
-            "Pelvic floor of the perineum: composed of fibromuscular tissue, it is the major support element of the urogenital system (figure 17.9)."
+            "Pelvic floor of the perineum: composed of fibromuscular tissue, it is the major support element of the urogenital system."
           ]
         },
         {
@@ -178,7 +178,7 @@ export const chapter19En: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Cranially: the peritoneum (figure 17.7);",
+            "Cranially: the peritoneum;",
             "Ventrally: the peritoneum and the bladder, from which it is separated by the vesicouterine pouch;",
             "Dorsally: the peritoneum and the rectum, from which it is separated by the rectouterine pouch of Douglas;",
             "Laterally: the broad ligaments;",
@@ -198,7 +198,7 @@ export const chapter19En: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "the uterine artery, a branch of the internal iliac artery (figure 17.6), is highly tortuous in order to adapt to the development of the uterus during pregnancy."
+            "the uterine artery, a branch of the internal iliac artery, is highly tortuous in order to adapt to the development of the uterus during pregnancy."
           ]
         },
         {
@@ -224,7 +224,7 @@ export const chapter19En: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "its spinal origin extends from T12 to L2 at the level of vertebra T12. It continues along two pathways (figure 17.14):",
+            "its spinal origin extends from T12 to L2 at the level of vertebra T12. It continues along two pathways:",
             "lumbar and sacral ganglionic chain;",
             "superior hypogastric plexus: it continues the prevertebral plexus chain caudally. It provides sympathetic innervation to the inferior hypogastric plexus."
           ]
@@ -246,7 +246,7 @@ export const chapter19En: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "it is located in the pelvic cavity (figure 17.14), contained within the SRGCP lamina. It provides sympathetic and parasympathetic innervation to the urogenital organs, rectum, and anus. The uterosacral ligaments are particularly rich in viscerosensory sympathetic fibers. Their rupture and fibrosis generate congestion and pain (dysmenorrhea) through the deviations they cause at the level of the cervix."
+            "it is located in the pelvic cavity, contained within the SRGCP lamina. It provides sympathetic and parasympathetic innervation to the urogenital organs, rectum, and anus. The uterosacral ligaments are particularly rich in viscerosensory sympathetic fibers. Their rupture and fibrosis generate congestion and pain (dysmenorrhea) through the deviations they cause at the level of the cervix."
           ]
         },
         {
@@ -534,7 +534,7 @@ export const chapter19En: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "it is located in the superior fold of the broad ligament (figure 17.7), above and anterior to the ovary and posterior to the round ligament. The tube is very mobile."
+            "it is located in the superior fold of the broad ligament, above and anterior to the ovary and posterior to the round ligament. The tube is very mobile."
           ]
         }
       ]
@@ -550,7 +550,7 @@ export const chapter19En: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "it is located in the retrouterine cavity, posterior to the broad ligament, to which it is connected by a peritoneal fold called the posterior fold (figure 17.7), against the lateral wall of the pelvis.",
+            "it is located in the retrouterine cavity, posterior to the broad ligament, to which it is connected by a peritoneal fold called the posterior fold, against the lateral wall of the pelvis.",
             "It is not covered by visceral peritoneum (it is non-peritonealized) and is free within the pelvic cavity."
           ]
         },
@@ -646,7 +646,7 @@ export const chapter19En: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "The ovarian artery arises from the abdominal aorta near the renal artery at the level of vertebrae L2-L3 (figure 16.10). It anastomoses with the terminal branches of the uterine artery."
+            "The ovarian artery arises from the abdominal aorta near the renal artery at the level of vertebrae L2-L3. It anastomoses with the terminal branches of the uterine artery."
           ]
         },
         {
@@ -682,7 +682,7 @@ export const chapter19En: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "spinal origin T10-T11 and T12 (figure 4.26);",
+            "spinal origin T10-T11 and T12;",
             "Aorticorenal plexus: located anterior to the renal artery, it receives the lesser splanchnic nerve arising from the 10th, 11th, and 12th thoracic ganglia and the 1st lumbar ganglion. It supplies the kidney and the ovary.",
             "Pelvic (sacral) parasympathetic system S2 to S4 (at the level of vertebra L1)."
           ]
@@ -1148,10 +1148,10 @@ export const chapter19En: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Spinal column: sympathetic spinal level T12 to L2 (at the level of vertebrae T10 to T12), lumbar and sacral paravertebral ganglionic chain (figures 4.29 and 4.32);",
-            "Pelvic (sacral) parasympathetic system: sacral spinal cord S2-S3-S4 (vertebral level L1-L2) (figures 4.23);",
-            "Liver (figures 11.10 and 11.11);",
-            "Left kidney (figures 16.13 and 16.14)."
+            "Spinal column: sympathetic spinal level T12 to L2 (at the level of vertebrae T10 to T12), lumbar and sacral paravertebral ganglionic chain;",
+            "Pelvic (sacral) parasympathetic system: sacral spinal cord S2-S3-S4 (vertebral level L1-L2);",
+            "Liver;",
+            "Left kidney."
           ]
         },
         {
@@ -1161,7 +1161,7 @@ export const chapter19En: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Pelvic cavity, perineum (figures 17.15, 17.16 and 17.17);"
+            "Pelvic cavity, perineum;"
           ]
         },
         {
@@ -1171,7 +1171,6 @@ export const chapter19En: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "(figures 18.7 and 18.9)",
             "Cervico-isthmic region of the uterus and inferior hypogastric plexus (middle part): small depression anterior to the sacrococcygeal joint;"
           ]
         },
@@ -1184,7 +1183,7 @@ export const chapter19En: Chapter = {
           "items": [
             "groove running from the central fibrous body to the cervico-isthmic region;",
             "Dome and horn of the uterus: zone above the anterior border of the heel in its medial part;",
-            "Inguinal canal and round ligament: anterior tibiotarsal joint line (figure 20.12)."
+            "Inguinal canal and round ligament: anterior tibiotarsal joint line."
           ]
         },
         {
@@ -1194,7 +1193,7 @@ export const chapter19En: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Limbic brain-uterus balancing: listening-induction, one thumb on the uterus, the other thumb on the limbic brain (figure 1.12)."
+            "Limbic brain-uterus balancing: listening-induction, one thumb on the uterus, the other thumb on the limbic brain."
           ]
         },
         {
@@ -1208,10 +1207,10 @@ export const chapter19En: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Spinal column: sympathetic spinal level (from T10 at the level of vertebra T9 to T11 at the level of vertebra T10, L5, sacrum), lumbar and sacral paravertebral ganglionic chain (figures 4.23, 4.29 and 4.32)",
-            "Pelvic parasympathetic system: at the level of vertebra L1 (figure 4.23)",
-            "Liver (figures 11.10 and 11.11);",
-            "Left kidney (figures 16.13 and 16.14)."
+            "Spinal column: sympathetic spinal level (from T10 at the level of vertebra T9 to T11 at the level of vertebra T10, L5, sacrum), lumbar and sacral paravertebral ganglionic chain",
+            "Pelvic parasympathetic system: at the level of vertebra L1",
+            "Liver;",
+            "Left kidney."
           ]
         },
         {

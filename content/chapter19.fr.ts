@@ -104,7 +104,7 @@ export const chapter19Fr: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "il recouvre la majeure partie du corps utérin en dessinant des culs-de-sacs (figure 17.7): le cul-de-sac vésico-utérin, entre la vessie et l’utérus, et le cul-de-sac recto-utérin de Douglas, entre le vagin et le rectum. Ce dernier est le point le plus déclive de la cavité abdominale.",
+            "il recouvre la majeure partie du corps utérin en dessinant des culs-de-sacs: le cul-de-sac vésico-utérin, entre la vessie et l’utérus, et le cul-de-sac recto-utérin de Douglas, entre le vagin et le rectum. Ce dernier est le point le plus déclive de la cavité abdominale.",
             "Le péritoine doit normalement glisser sur le dôme utérin et être exempt d’adhérence, pour que le corps utérin garde sa mobilité.",
             "Tous spasmes, séquelles chirurgicales ou infectieuses des organes de l’abdomen, peuvent dévier le corps et lui faire perdre sa mobilité."
           ]
@@ -116,7 +116,7 @@ export const chapter19Fr: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "ce sont des replis du péritoine (figure 17.7) orientés dorsalement et latéralement. Ils relient transversalement l’utérus à la paroi pelvienne interne:",
+            "ce sont des replis du péritoine orientés dorsalement et latéralement. Ils relient transversalement l’utérus à la paroi pelvienne interne:",
             "la partie supérieure ou mésomètre est souple et comprend trois ailerons pour le ligament rond, la trompe (ou mésosalpinx) et l’ovaire (ou mésovarium);",
             "la partie inférieure ou paramètre est épaisse et solide. Elle adhère au plancher pelvien. Elle contient les artères utérines.",
             "Ligaments ronds: peu solides, ils sont tendus des cornes de l’utérus aux grandes lèvres et au pubis. Orientés d’abord ventralement et latéralement, ils passent ensuite dans le canal inguinal. Ils maintiennent le corps utérin en antéversion."
@@ -129,9 +129,9 @@ export const chapter19Fr: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Lames sacro-recto-génito-cervico-pubiennes (SRGCP): tendues sagittalement du sacrum au pubis, elles cloisonnent et solidarisent les organes pelviens entre eux. Leur partie postérieure constitue les ligaments utérosacraux. (figure 17.5)",
+            "Lames sacro-recto-génito-cervico-pubiennes (SRGCP): tendues sagittalement du sacrum au pubis, elles cloisonnent et solidarisent les organes pelviens entre eux. Leur partie postérieure constitue les ligaments utérosacraux.",
             "Ligaments utérosacraux: c’est la partie postérieure des lames SRGCP. Ils relient l’isthme de l’utérus aux vertèbres sacrées S2, S3, S4. Ils maintiennent solidement le col de l’utérus au sacrum. Leur fibrose ou rupture est la principale cause de déviation du col.",
-            "Plancher pelvien du périnée: constitué d’un tissu fibro-musculaire, il est l’élément majeur de soutien du système uro-génital. (figure 17.9)"
+            "Plancher pelvien du périnée: constitué d’un tissu fibro-musculaire, il est l’élément majeur de soutien du système uro-génital."
           ]
         },
         {
@@ -177,7 +177,7 @@ export const chapter19Fr: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Céphaliquement: le péritoine; (figure 17.7)",
+            "Céphaliquement: le péritoine;",
             "Ventralement: le péritoine et la vessie dont il est séparé par le cul-de-sac vésico-utérin;",
             "Dorsalement: le péritoine et le rectum dont il est séparé par le cul-de-sac recto-utérin de Douglas.",
             "Latéralement: les ligaments larges;",
@@ -197,7 +197,7 @@ export const chapter19Fr: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "l’artère utérine, branche de l’artère iliaque interne (figure 17.6) est très sinueuse pour s’adapter au développement de l’utérus pendant la grossesse."
+            "l’artère utérine, branche de l’artère iliaque interne est très sinueuse pour s’adapter au développement de l’utérus pendant la grossesse."
           ]
         },
         {
@@ -223,7 +223,7 @@ export const chapter19Fr: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "son origine médullaire va de Th12 à L2 à hauteur de la vertèbre Th12). Il se continue par deux voies: (figure 17.14)",
+            "son origine médullaire va de Th12 à L2 à hauteur de la vertèbre Th12). Il se continue par deux voies:",
             "Chaîne ganglionnaire lombaire et sacrée;",
             "Plexus hypogastrique supérieur: il prolonge caudalement la chaîne plexique pré-vertébrale. Il apporte l’innervation sympathique au plexus hypogastrique inférieur."
           ]
@@ -245,7 +245,7 @@ export const chapter19Fr: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "il est situé dans la cavité pelvienne (figure 17.14), contenu dans la lame SRGCP. Il apporte l’innervation sympathique et parasympathique aux organes uro-génitaux, au rectum et à l’anus. Les ligaments utérosacraux sont particulièrement fournis en fibres sympathiques viscéro-sensibles. Leur rupture et fibrose engendrent des congestions et des douleurs (dysménorrhées) par les déviations causées au niveau du col."
+            "il est situé dans la cavité pelvienne, contenu dans la lame SRGCP. Il apporte l’innervation sympathique et parasympathique aux organes uro-génitaux, au rectum et à l’anus. Les ligaments utérosacraux sont particulièrement fournis en fibres sympathiques viscéro-sensibles. Leur rupture et fibrose engendrent des congestions et des douleurs (dysménorrhées) par les déviations causées au niveau du col."
           ]
         },
         {
@@ -533,7 +533,7 @@ export const chapter19Fr: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "elle est située dans l’aileron supérieur du ligament large (figure 17.7), au-dessus et en avant de l’ovaire et en arrière du ligament rond. La trompe est très mobile."
+            "elle est située dans l’aileron supérieur du ligament large, au-dessus et en avant de l’ovaire et en arrière du ligament rond. La trompe est très mobile."
           ]
         }
       ]
@@ -549,7 +549,7 @@ export const chapter19Fr: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "il est situé dans le cavum rétro-utérin, en arrière du ligament large auquel il est relié par un repli du péritoine appelé aileron postérieur (figure 17.7), contre la paroi latérale du pelvis.",
+            "il est situé dans le cavum rétro-utérin, en arrière du ligament large auquel il est relié par un repli du péritoine appelé aileron postérieur, contre la paroi latérale du pelvis.",
             "Il n’est pas enveloppé par le péritoine viscéral (il est non péritonisé) et il est libre dans la cavité pelvienne."
           ]
         },
@@ -651,7 +651,7 @@ export const chapter19Fr: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "L’artère ovarique naît de l’aorte abdominale près de l’artère rénale à hauteur des vertèbres L2-L3 (figure 16.10). Elle s’anastomose avec les branches terminales de l’artère utérine."
+            "L’artère ovarique naît de l’aorte abdominale près de l’artère rénale à hauteur des vertèbres L2-L3. Elle s’anastomose avec les branches terminales de l’artère utérine."
           ]
         },
         {
@@ -687,7 +687,7 @@ export const chapter19Fr: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "origine médullaire Th10-Th11 et Th12; (figure 4.26)",
+            "origine médullaire Th10-Th11 et Th12;",
             "Plexus aortorénal: situé en avant de l’artère rénale, il reçoit le nerf petit splanchnique issu des 10ème, 11ème et 12ème ganglions thoraciques et du 1er ganglion lombaire. Il est destiné au rein et à l’ovaire.",
             "Parasympathique pelvien (sacré) S2 à S4 (à hauteur de la vertèbre L1)"
           ]
@@ -1153,10 +1153,10 @@ export const chapter19Fr: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Colonne vertébrale: étage médullaire sympathique: Th12 à L2 (à hauteur des vertèbres Th10 à Th12), chaîne ganglionnaire latéro-vertébrale lombaire et sacrée; (figures 4.29 et 4.32)",
-            "Parasympathique pelvien (sacré): moelle sacrée S2-S3-S4 (étage vertébral L1-L2); (figures 4.23)",
-            "Foie; (figures 11.10 et 11.11)",
-            "Rein gauche. (figures 16.13 et figure 16.14)"
+            "Colonne vertébrale: étage médullaire sympathique: Th12 à L2 (à hauteur des vertèbres Th10 à Th12), chaîne ganglionnaire latéro-vertébrale lombaire et sacrée;",
+            "Parasympathique pelvien (sacré): moelle sacrée S2-S3-S4 (étage vertébral L1-L2);",
+            "Foie;",
+            "Rein gauche."
           ]
         },
         {
@@ -1166,7 +1166,7 @@ export const chapter19Fr: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Cavité pelvienne, périnée; (figures 17.15, 17.16 et 17.17)"
+            "Cavité pelvienne, périnée;"
           ]
         },
         {
@@ -1176,7 +1176,6 @@ export const chapter19Fr: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "(figures 18.7 et 18.9)",
             "Région cervico-isthmique de l’utérus et plexus hypogastrique inférieur (partie moyenne): petite dépression en avant de l’articulation sacro-coccygienne;"
           ]
         },
@@ -1189,7 +1188,7 @@ export const chapter19Fr: Chapter = {
           "items": [
             "sillon allant du noyau fibreux central à la région cervico-isthmique;",
             "Dôme et corne de l’utérus: zone au-dessus du bord antérieur du talon dans sa partie médiale;",
-            "Canal inguinal et ligament rond: interligne tibio-tarsien antérieur. (figure 20.12)"
+            "Canal inguinal et ligament rond: interligne tibio-tarsien antérieur."
           ]
         },
         {
@@ -1199,7 +1198,7 @@ export const chapter19Fr: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Balance cerveau limbique-utérus: écoute-induction, un pouce sur l’utérus, l’autre pouce sur cerveau limbique. (figure 1.12)"
+            "Balance cerveau limbique-utérus: écoute-induction, un pouce sur l’utérus, l’autre pouce sur cerveau limbique."
           ]
         },
         {
@@ -1213,9 +1212,9 @@ export const chapter19Fr: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Colonne vertébrale: étage médullaire sympathique (de Th10 à hauteur de la vertèbre Th9 à Th11 à hauteur de la vertèbre Th10, L5, sacrum), chaîne ganglionnaire latéro-vertébrale lombaire et sacrée (figures 4.23, 4.29 et 4.32)",
-            "Parasympathique pelvien: à hauteur de la vertèbre L1 (figure 4.23)",
-            "Foie;(figures 11.10 et 11.11)",
+            "Colonne vertébrale: étage médullaire sympathique (de Th10 à hauteur de la vertèbre Th9 à Th11 à hauteur de la vertèbre Th10, L5, sacrum), chaîne ganglionnaire latéro-vertébrale lombaire et sacrée",
+            "Parasympathique pelvien: à hauteur de la vertèbre L1",
+            "Foie;",
             "rein gauche; (16.13 et 16.14)"
           ]
         },

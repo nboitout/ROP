@@ -57,7 +57,7 @@ export const chapter21Fr: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Artérielle : branches terminales des artères pudendales internes, elles-mêmes branches antérieures des artères iliaques internes. (figure 17.3)",
+            "Artérielle : branches terminales des artères pudendales internes, elles-mêmes branches antérieures des artères iliaques internes.",
             "Veineuse : les veines pudendales internes accompagnent les artères pudendales internes et rejoignent principalement le système iliaque interne. Dans la lecture clinique ROP, les congestions veineuses pelviennes peuvent être prises en compte, mais il convient de ne pas assimiler directement le drainage veineux des organes érectiles au système porte hépatique."
           ]
         }
@@ -71,7 +71,7 @@ export const chapter21Fr: Chapter = {
           "type": "bullets",
           "items": [
             "Innervation somatique : le nerf pudendal est le principal nerf du périnée. Il assure la sensibilité des organes génitaux externes et la commande somatique des muscles périnéaux striés, notamment les muscles bulbospongieux et ischiocaverneux.",
-            "Innervation autonome : (figure 4.26)",
+            "Innervation autonome :",
             "Système parasympathique sacré S2 à S4 : il participe à la vasodilatation et au remplissage des corps érectiles ;",
             "Système sympathique thoraco-lombaire L1 à L3 : il intervient notamment dans la phase d’émission de l’éjaculation."
           ]
@@ -153,14 +153,14 @@ export const chapter21Fr: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Nerf pudendal (S2 à S4) : face latérale du talon, plexus sacré, épine ischiatique ; (figures 17.15 et 17.16),",
+            "Nerf pudendal (S2 à S4) : face latérale du talon, plexus sacré, épine ischiatique ;,",
             "Face plantaire du talon :",
             "Nerf pudendal (suite) : bord médial de la branche ischiopubienne",
             "Corps caverneux et muscles ischiocaverneux : bord médial des branches ischiopubiennes ;",
             "Organes érectiles : extrémité médiale de la branche iliopubienne (bord antérieur du talon) ;",
-            "Ligaments sacrotubéral et sacroépineux : bord postérieur des talons ; (figure 17.21)",
-            "Cerveau limbique ; (figure 3.7)",
-            "Nerf olfactif I. (figure 3.7)"
+            "Ligaments sacrotubéral et sacroépineux : bord postérieur des talons ;",
+            "Cerveau limbique ;",
+            "Nerf olfactif I."
           ]
         }
       ]

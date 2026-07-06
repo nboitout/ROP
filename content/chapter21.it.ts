@@ -58,7 +58,7 @@ export const chapter21It: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Arteriosa: rami terminali delle arterie pudende interne, a loro volta rami anteriori delle arterie iliache interne. (figura 17.3)",
+            "Arteriosa: rami terminali delle arterie pudende interne, a loro volta rami anteriori delle arterie iliache interne.",
             "Venosa: le vene pudende interne accompagnano le arterie pudende interne e drenano principalmente nel sistema iliaco interno. Nella lettura clinica ROP si possono prendere in considerazione le congestioni venose pelviche, ma non si deve assimilare direttamente il drenaggio venoso degli organi erettili al sistema portale epatico."
           ]
         }
@@ -72,7 +72,7 @@ export const chapter21It: Chapter = {
           "type": "bullets",
           "items": [
             "Innervazione somatica: il nervo pudendo è il principale nervo del perineo. Assicura la sensibilità degli organi genitali esterni e il comando somatico dei muscoli perineali striati, in particolare dei muscoli bulbospongiosi e ischiocavernosi.",
-            "Innervazione autonoma: (figura 4.26)",
+            "Innervazione autonoma:",
             "Sistema parasimpatico sacrale da S2 a S4: partecipa alla vasodilatazione e al riempimento dei corpi erettili;",
             "Sistema simpatico toracolombare da L1 a L3: interviene in particolare nella fase di emissione dell’eiaculazione."
           ]
@@ -158,14 +158,14 @@ export const chapter21It: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Nervo pudendo (S2 a S4): faccia laterale del tallone, plesso sacrale, spina ischiatica; (figure 17.15 e 17.16),",
+            "Nervo pudendo (S2 a S4): faccia laterale del tallone, plesso sacrale, spina ischiatica;,",
             "Faccia plantare del tallone:",
             "Nervo pudendo (seguito): margine mediale del ramo ischiopubico",
             "Corpi cavernosi e muscoli ischiocavernosi: margine mediale dei rami ischiopubici;",
             "Organi erettili: estremità mediale del ramo iliopubico (bordo anteriore del tallone);",
-            "Legamenti sacrotuberoso e sacrospinoso: bordo posteriore dei talloni; (figura 17.21)",
-            "Cervello limbico; (figura 3.7)",
-            "Nervo olfattivo I. (figura 3.7)"
+            "Legamenti sacrotuberoso e sacrospinoso: bordo posteriore dei talloni;",
+            "Cervello limbico;",
+            "Nervo olfattivo I."
           ]
         }
       ]

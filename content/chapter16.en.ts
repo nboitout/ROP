@@ -570,8 +570,8 @@ export const chapter16En: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Vagus nerve X; (figures 4.11 and 4.17)",
-            "Spinal column, costotransverse joints (thoracic laterovertebral ganglion chain, T7-T11-L1, coccyx); (figures 4.23 and 4.29 and 4.32)",
+            "Vagus nerve X;",
+            "Spinal column, costotransverse joints (thoracic laterovertebral ganglion chain, T7-T11-L1, coccyx);",
             "Prevertebral plexus;",
             "Adrenal glands:",
             "Lumbar plexus L1 to L4 and its branches. (See Réflexothérapie occipito-podale et système neuro-méningé, Elsevier Masson, pages 25 to 28)"
@@ -631,7 +631,7 @@ export const chapter16En: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Limbic brain-kidney balance: listening-induction, with one thumb on the kidney and the other thumb on the limbic brain. (figure 1.12)"
+            "Limbic brain-kidney balance: listening-induction, with one thumb on the kidney and the other thumb on the limbic brain."
           ]
         }
       ]

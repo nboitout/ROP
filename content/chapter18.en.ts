@@ -34,7 +34,7 @@ export const chapter18En: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "A reservoir organ for urine, the bladder is situated in the anterior part of the visceral compartment of the pelvic cavity, lodged in a cradle between the levator ani muscles of the perineum and the internal obturator muscles. (figure 17.6)"
+            "A reservoir organ for urine, the bladder is situated in the anterior part of the visceral compartment of the pelvic cavity, lodged in a cradle between the levator ani muscles of the perineum and the internal obturator muscles."
           ]
         },
         {
@@ -152,7 +152,7 @@ export const chapter18En: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "It follows the apex of the bladder, forming the vesicouterine pouch in women or the vesicorectal pouch in men (figure 17.7). Visceral ptosis of the small intestine, abdominal surgery, infections, and visceral spasms all affect the peritoneum. Normal gliding between the peritoneum and the bladder is restricted by peritoneal tensions."
+            "It follows the apex of the bladder, forming the vesicouterine pouch in women or the vesicorectal pouch in men. Visceral ptosis of the small intestine, abdominal surgery, infections, and visceral spasms all affect the peritoneum. Normal gliding between the peritoneum and the bladder is restricted by peritoneal tensions."
           ]
         },
         {
@@ -163,7 +163,7 @@ export const chapter18En: Chapter = {
           "type": "bullets",
           "items": [
             "they act as a suspensory system for the bladder, comparable to a ball held in its net:",
-            "the median umbilical ligament (urachus): an embryonic remnant, it connects the umbilicus to the apex of the bladder and to the pubis. It extends the falciform ligament of the liver downward (figure 11.9). It exchanges fibers with the pubovesical and pubourethral ligaments, which in turn exchange fibers with the detrusor muscle of the bladder. Surgical sectioning of this ligament (cesarean section) may be a cause of urinary incontinence and vesical erethism.",
+            "the median umbilical ligament (urachus): an embryonic remnant, it connects the umbilicus to the apex of the bladder and to the pubis. It extends the falciform ligament of the liver downward. It exchanges fibers with the pubovesical and pubourethral ligaments, which in turn exchange fibers with the detrusor muscle of the bladder. Surgical sectioning of this ligament (cesarean section) may be a cause of urinary incontinence and vesical erethism.",
             "the prevesical umbilical ligaments are two fibrous cords, remnants of the umbilical arteries, stretched obliquely from the umbilicus to the inferolateral surfaces of the bladder. They extend laterally into the pelvic cavity through the aponeurosis of the internal obturator and piriformis muscles and terminate posteriorly on the ischium, where the sacrotuberous ligament and the hamstring muscles insert.",
             "Pubovesical ligaments (in women) and puboprostatic ligaments (in men): they attach the bladder to the pubis. Their fibers are continuous with the detrusor. Ligamentous tension creates a state of hypercontractility (erethism), and the bladder neck is destabilized, with a sensation of heaviness in the lower abdomen."
           ]
@@ -175,9 +175,9 @@ export const chapter18En: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "sacro-recto-cervico-pubic laminae (SRGCP) (figure 17.5)",
-            "Santorini’s venous plexus: it is located in the prevesical space, between the pubis and the bladder. Venous tone maintains the bladder neck in its proper position. It is related to the hemorrhoidal and portocaval systems (figure 11.7). Any functional disorder of the portal system affects Santorini’s venous plexus. Relaxation of the vesical musculo-ligamentous system destabilizes Santorini’s venous plexus, favoring urinary incontinence.",
-            "Pelvic floor of the perineum (figure 17.9)"
+            "sacro-recto-cervico-pubic laminae (SRGCP)",
+            "Santorini’s venous plexus: it is located in the prevesical space, between the pubis and the bladder. Venous tone maintains the bladder neck in its proper position. It is related to the hemorrhoidal and portocaval systems. Any functional disorder of the portal system affects Santorini’s venous plexus. Relaxation of the vesical musculo-ligamentous system destabilizes Santorini’s venous plexus, favoring urinary incontinence.",
+            "Pelvic floor of the perineum"
           ]
         },
         {
@@ -232,7 +232,7 @@ export const chapter18En: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "branches of the internal iliac artery; (figure 17.6)"
+            "branches of the internal iliac artery;"
           ]
         },
         {
@@ -258,7 +258,7 @@ export const chapter18En: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "pudendal nerve S2 to S4 (figure 17.10.)"
+            "pudendal nerve S2 to S4"
           ]
         },
         {
@@ -268,7 +268,6 @@ export const chapter18En: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "(figure 17.14.)"
           ]
         },
         {
@@ -630,8 +629,8 @@ export const chapter18En: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Pelvic (sacral) parasympathetic system: sacral spinal cord S2-S3-S4 (vertebral level L1-L2); (figures 4.23)",
-            "Spinal column, costotransverse joints T10 to L2 (vertebrae T11-T12), lower thoracic, lumbar and sacral paravertebral ganglionic chain; (figures 4.29 and 4.32)",
+            "Pelvic (sacral) parasympathetic system: sacral spinal cord S2-S3-S4 (vertebral level L1-L2);",
+            "Spinal column, costotransverse joints T10 to L2 (vertebrae T11-T12), lower thoracic, lumbar and sacral paravertebral ganglionic chain;",
             "Liver, intestines, kidneys (cystitis, chronic cystalgia);"
           ]
         },
@@ -642,7 +641,7 @@ export const chapter18En: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Pelvic cavity, perineum: (figures 17.15, 17.16 and 17.17)",
+            "Pelvic cavity, perineum:",
             "Bladder:",
             "Pubovesical ligaments: posterior border of the tibial malleolus;",
             "Bladder trigone, cervico-isthmic region of the uterus/prostate: locate the reflex zone of the central fibrous body of the perineum, anterior to the coccyx; a dorsally and posteriorly oriented groove leads to a small depression on the posteromedial surface of the calcaneus;",
@@ -657,7 +656,7 @@ export const chapter18En: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Limbic brain-bladder balancing: listening-induction, one thumb on the bladder, the other thumb on the limbic brain. (figure 1.12)"
+            "Limbic brain-bladder balancing: listening-induction, one thumb on the bladder, the other thumb on the limbic brain."
           ]
         }
       ]

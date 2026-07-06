@@ -36,7 +36,7 @@ export const chapter15Fr: Chapter = {
         {
           "type": "lead",
           "label": "Le côlon est dans la cavité abdominale, à l’étage infra-mésocolique",
-          "text": "(figure 14.1)"
+          "text": ""
         },
         {
           "type": "bullets",
@@ -115,7 +115,7 @@ export const chapter15Fr: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Côlon ascendant: il est oblique, céphaliquement et dorsalement, superficiel, relié à la paroi abdominale antérieure, et non recouvert par l’iléum (figure 14.1). Il est rétro-péritonéal et relié à la paroi abdominale postérieure par le fascia de Toldt."
+            "Côlon ascendant: il est oblique, céphaliquement et dorsalement, superficiel, relié à la paroi abdominale antérieure, et non recouvert par l’iléum. Il est rétro-péritonéal et relié à la paroi abdominale postérieure par le fascia de Toldt."
           ]
         },
         {
@@ -130,8 +130,8 @@ export const chapter15Fr: Chapter = {
             "Angle colique droit (ou angle hépatique):",
             "Il mesure 70 à 80mm. Il est situé, dans un plan frontal, sous le lobe droit du foie, à hauteur de la 8ème côte droite. Il est relié, par des ligaments péritonéaux, au foie, à la vésicule biliaire, au diaphragme et au rein droit.",
             "Côlon transverse:",
-            "Il occupe successivement l’hypochondre droit, l’épigastre et l’hypochondre gauche de l’abdomen (figure 14.1). Il est oblique crânialement et à gauche. Il est plus proche de la paroi abdominale antérieure dans sa partie moyenne que les angles coliques droit et gauche plus profondément situés.",
-            "Mésocôlon transverse: c’est un repli du péritoine qui relie le côlon transverse à la paroi abdominale postérieure par l’intermédiaire de sa racine. (figure 7.4)",
+            "Il occupe successivement l’hypochondre droit, l’épigastre et l’hypochondre gauche de l’abdomen. Il est oblique crânialement et à gauche. Il est plus proche de la paroi abdominale antérieure dans sa partie moyenne que les angles coliques droit et gauche plus profondément situés.",
+            "Mésocôlon transverse: c’est un repli du péritoine qui relie le côlon transverse à la paroi abdominale postérieure par l’intermédiaire de sa racine.",
             "Racine du mésocôlon transverse: elle constitue une cloison qui sépare la cavité abdominale en deux étages.",
             "Le mésocôlon transverse permet une grande mobilité au côlon transverse, à l’exception de l’angle hépatique. Il s’adapte aux mouvements du corps et de l’estomac.",
             "Lorsque le côlon transverse est de type normal, il est situé entre deux lignes horizontales dont la supérieure passe par les 9èmes cartilages costaux, et l’inférieure, par l’ombilic, selon Testut (Traité d’anatomie humaine).",
@@ -170,7 +170,7 @@ export const chapter15Fr: Chapter = {
           "type": "bullets",
           "items": [
             "Côlon descendant:",
-            "Il est vertical et profond dans la partie lombaire, recouvert par le jéjunum (figure 14.1). Il est rétro-péritonéal et relié à la paroi abdominale postérieure par le fascia de Toldt. Le côlon descendant présente des appendices omentaux."
+            "Il est vertical et profond dans la partie lombaire, recouvert par le jéjunum. Il est rétro-péritonéal et relié à la paroi abdominale postérieure par le fascia de Toldt. Le côlon descendant présente des appendices omentaux."
           ]
         },
         {
@@ -226,7 +226,7 @@ export const chapter15Fr: Chapter = {
           "type": "bullets",
           "items": [
             "caecum: il est en rapport avec:",
-            "Dorsalement: le péritoine pariétal, le psoas-iliaque recouvert par le fascia iliaca, le 12ème nerf intercostal (ou subcostal) et les nerfs du plexus lombal (nerfs ilioinguinal, iliohypogastrique, génito-fémoral et fémoral. (figure 16.6)",
+            "Dorsalement: le péritoine pariétal, le psoas-iliaque recouvert par le fascia iliaca, le 12ème nerf intercostal (ou subcostal) et les nerfs du plexus lombal (nerfs ilioinguinal, iliohypogastrique, génito-fémoral et fémoral.",
             "Ventralement: la paroi abdominale antérieure",
             "Médialement: l’iléum par le péritoine",
             "Latéralement: la fosse iliaque, en bas et la paroi abdominale latérale, en haut",
@@ -285,7 +285,7 @@ export const chapter15Fr: Chapter = {
             "Artère mésentérique supérieure: elle irrigue le côlon ascendant et le côlon transverse: jusqu’au 1/3 distal.",
             "Artère mésentérique inférieure: elle à son origine sur le côté gauche de l’aorte abdominale, juste au-dessus de l’ombilic, à hauteur de la vertèbre L3. C’est à ce niveau que son pouls est perceptible mais souvent difficile à prendre. Son trajet est dans la racine secondaire du mésocôlon sigmoïde. Elle irrigue le tiers distal du côlon transverse, le côlon descendant et le sigmoïde. Elle donne l’artère rectale supérieure, destinée surtout à la partie haute du rectum; la partie moyenne et basse du rectum ainsi que le canal anal dépendent aussi des artères rectales moyenne et inférieure, issues du territoire iliaque interne.",
             "Veineuse:",
-            "Veine mésentérique inférieure: elle draine le côlon descendant, l’angle colique gauche, le sigmoïde et la partie haute du rectum, puis rejoint le plus souvent la veine splénique. La veine splénique et la veine mésentérique supérieure se rejoignent pour former la veine porte (figure 11.5) qui rejoint le foie. Le drainage veineux rectal est mixte: la partie haute appartient au système porte, tandis que les territoires moyen et inférieur communiquent avec le système cave par les veines iliaques internes.",
+            "Veine mésentérique inférieure: elle draine le côlon descendant, l’angle colique gauche, le sigmoïde et la partie haute du rectum, puis rejoint le plus souvent la veine splénique. La veine splénique et la veine mésentérique supérieure se rejoignent pour former la veine porte qui rejoint le foie. Le drainage veineux rectal est mixte: la partie haute appartient au système porte, tandis que les territoires moyen et inférieur communiquent avec le système cave par les veines iliaques internes.",
             "Conséquences:",
             "Hypertension portale: un problème hépatique peut s’accompagner d’une hypertension portale et favoriser une dilatation des veines rectales supérieures ou de véritables varices rectales. Les hémorroïdes internes doivent être distinguées de ces varices: elles relèvent surtout d’une congestion locale des coussinets anaux, favorisée par la constipation, les efforts de poussée, la grossesse ou les troubles du transit. En pratique ROP, cette région reste à considérer dans sa double appartenance digestive, veineuse et pelvienne.",
             "Lombalgie et lombo-sciatalgie: cette même stase veineuse crée une congestion des veines lombales et foraminales intervertébrales. Cette congestion foraminale contribue à comprimer les racines nerveuses lombo-sacrées dans leur traversée des foramens intervertébraux.",
@@ -329,13 +329,13 @@ export const chapter15Fr: Chapter = {
           "type": "bullets",
           "items": [
             "Innervation extrinsèque:",
-            "Sympathique: les fibres destinées au côlon proviennent globalement des étages thoraco-lombaires, puis rejoignent les plexus prévertébraux: (figure 4.26)",
+            "Sympathique: les fibres destinées au côlon proviennent globalement des étages thoraco-lombaires, puis rejoignent les plexus prévertébraux:",
             "plexus mésentérique supérieur pour le côlon proximal;",
             "plexus mésentérique inférieur pour le côlon distal.",
             "Parasympathique: le nerf vague et le parasympathique pelvien se partagent l’innervation parasympathique du côlon. Leurs fibres cheminent dans les plexus mésentériques, où elles s’enchevêtrent avec celles du sympathique.",
             "Nerf vague: il accompagne le côlon proximal jusqu’aux deux tiers proximaux du côlon transverse;",
             "Parasympathique pelvien: il naît des racines sacrales S2-S4, projetées cliniquement dans les repères ROP de la région lombaire basse. Il innerve le tiers distal du côlon transverse, le côlon descendant, le sigmoïde, le rectum et le sphincter lisse de l’anus. La zone de transition entre l’influence vagale et le parasympathique pelvien correspond à la zone de Cannon-Böhm.",
-            "Zone de Cannon-Böhm: ce n’est pas une zone anatomique stricto sensus mais un carrefour vasculo-nerveux (figure 4.20) constitué par:",
+            "Zone de Cannon-Böhm: ce n’est pas une zone anatomique stricto sensus mais un carrefour vasculo-nerveux constitué par:",
             "l’anastomose des artères mésentériques supérieure et inférieure;",
             "la rencontre fonctionnelle du nerf vague et du parasympathique sacré.",
             "En cas de colopathie, la peau de cette zone est indurée et sensible."
@@ -366,9 +366,9 @@ export const chapter15Fr: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Sympathique: les fibres destinées au rectum et au canal anal proviennent surtout des étages thoraco-lombaires bas. Elles rejoignent le plexus mésentérique inférieur puis le plexus hypogastrique supérieur, avant de descendre vers les plexus hypogastriques inférieurs. (figure 4.26)",
+            "Sympathique: les fibres destinées au rectum et au canal anal proviennent surtout des étages thoraco-lombaires bas. Elles rejoignent le plexus mésentérique inférieur puis le plexus hypogastrique supérieur, avant de descendre vers les plexus hypogastriques inférieurs.",
             "Parasympathique pelvien: ses fibres sont issues de la moelle sacrale S2-S3-S4. En lecture de surface, leur projection se repère classiquement à hauteur lombaire basse.",
-            "Plexus hypogastrique supérieur: les fibres sympathiques et parasympathiques venant du plexus mésentérique inférieur rejoignent le plexus hypogastrique supérieur situé à hauteur de la vertèbre L5. Il est à l’origine des nerfs hypogastriques droit et gauche. (figure 4.36)",
+            "Plexus hypogastrique supérieur: les fibres sympathiques et parasympathiques venant du plexus mésentérique inférieur rejoignent le plexus hypogastrique supérieur situé à hauteur de la vertèbre L5. Il est à l’origine des nerfs hypogastriques droit et gauche.",
             "Plexus hypogastrique inférieur: les nerfs hypogastriques droit et gauche longent la paroi latérale du rectum et rejoignent les plexus hypogastrique inférieur droit et gauche, contenus à l’intérieur des lames sacro-recto-génito-pubiennes. Ils apportent l’innervation sympathique et parasympathique aux organes pelviens.",
             "Action du sympathique: fermeture, tonus et relative sécheresse de la muqueuse rectale;",
             "Action du parasympathique: ouverture, sécrétion de la muqueuse et déclenchement réflexe de la défécation."
@@ -567,9 +567,9 @@ export const chapter15Fr: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Nerf vague X; (figures 4.11 et 4.17)",
-            "Parasympathique pelvien; (figure 4.23)",
-            "Colonne vertébrale, articulations costo-transversaires (chaîne ganglionnaire latéro-vertébrale thoracique (Th9-Th12); (figures 4.23 et 4.29 et 4.32)",
+            "Nerf vague X;",
+            "Parasympathique pelvien;",
+            "Colonne vertébrale, articulations costo-transversaires (chaîne ganglionnaire latéro-vertébrale thoracique (Th9-Th12);",
             "Plexus prévertébral."
           ]
         },
@@ -586,15 +586,15 @@ export const chapter15Fr: Chapter = {
             "Côlon ascendant: Une zone allant du caecum à la styloïde du 5ème métatarse droit.",
             "Angle colique droit: contre la styloïde du 5ème métatarse droit et la coupole diaphragmatique",
             "Côlon transverse: en raison de la variation de sa position, sa zone réflexe est difficilement repérable dans sa partie moyenne. L’essentiel est d’agir sur les zones réflexes de ses deux extrémités: les angles coliques droit et gauche, et sur la racine du mésocôlon transverse.",
-            "Racine du mésocôlon transverse: une ligne de la 2ème portion du duodénum à L2 (face plantaire du pied droit), puis une ligne de L2 à la queue du pancréas (face plantaire du pied gauche) (figures 7.11, 7.12, 7.13 et 7.14)",
+            "Racine du mésocôlon transverse: une ligne de la 2ème portion du duodénum à L2 (face plantaire du pied droit), puis une ligne de L2 à la queue du pancréas (face plantaire du pied gauche)",
             "Angle colique gauche: repérer la styloïde du 5ème métatarse droit, la zone réflexe de l’angle colique gauche est légèrement plus haute que l’angle colique droit;",
             "Côlon descendant: une zone réflexe le long du bord latéral du pied gauche à la partie latérale du bord antérieur du talon;",
             "Côlon sigmoïde: Il est difficile de localiser la zone réflexe de la partie moyenne du côlon sigmoïde en raison de sa direction postéro-médiale, sa très grande mobilité et la présentation topique du bébé en position fœtale dans les pieds.",
             "Comme pour le côlon transverse, l’essentiel est d’agir sur les zones réflexes de ses deux extrémités: sa jonction avec le côlon descendant à hauteur de la branche iliopubienne et celle avec le rectum, à hauteur de la 3ème vertèbre sacrée et sur les racines du mésosigmoïde",
-            "Racines du mésosigmoïde: sur le pied gauche uniquement, une ligne longeant le bord antérieur de la tubérosité postéro-médiale du calcanéum (bord antérieur du sacrum), depuis la sacro-iliaque gauche jusqu’à S3 (figures 7.15 et 7.16)",
+            "Racines du mésosigmoïde: sur le pied gauche uniquement, une ligne longeant le bord antérieur de la tubérosité postéro-médiale du calcanéum (bord antérieur du sacrum), depuis la sacro-iliaque gauche jusqu’à S3",
             "Rectum: le bord antérieur de la tubérosité postéro-médiale du calcanéum sur les deux pieds.",
             "Anus: repérer l’extrémité inférieure de la tubérosité postéro-médiale du calcanéum. La zone réflexe se situe juste en avant.",
-            "plexus hypogastrique inférieur (partie postérieure): canal sacré à hauteur de S2 à S4 (figure 4.28 et Bis figure 4.28)"
+            "plexus hypogastrique inférieur (partie postérieure): canal sacré à hauteur de S2 à S4"
           ]
         },
         {
@@ -604,7 +604,7 @@ export const chapter15Fr: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Balance cerveau limbique-côlon: écoute-induction, un pouce sur le côlon, l’autre pouce sur cerveau limbique: (figure 1.12)",
+            "Balance cerveau limbique-côlon: écoute-induction, un pouce sur le côlon, l’autre pouce sur cerveau limbique:",
             "Dysbiose: c’est un déséquilibre du microbiote. Le traitement est le même que pour les colopathies. Il faut combattre les causes:",
             "L’excès de protéines animales, les graisses, les sucres raffinés, au détriment des légumes et des fruits;",
             "prise d’antibiotiques itérative;",

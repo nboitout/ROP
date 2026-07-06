@@ -146,7 +146,7 @@ export const chapter13Fr: Chapter = {
         },
         {
           type: "para",
-          text: "Plusieurs veines constituent la veine splénique, qui longe l’arrière de la queue et du corps du pancréas. Elle reçoit la veine mésentérique inférieure et s’unit à la veine mésentérique supérieure pour constituer la veine porte (figure 11.5)."
+          text: "Plusieurs veines constituent la veine splénique, qui longe l’arrière de la queue et du corps du pancréas. Elle reçoit la veine mésentérique inférieure et s’unit à la veine mésentérique supérieure pour constituer la veine porte."
         }
       ]
     },
@@ -376,7 +376,7 @@ export const chapter13Fr: Chapter = {
         {
           type: "bullets",
           items: [
-            "Colonne vertébrale et articulations costo-transversaires, en lien avec la chaîne ganglionnaire latéro-vertébrale thoracique Th6-Th9 (figures 4.23 et 4.29).",
+            "Colonne vertébrale et articulations costo-transversaires, en lien avec la chaîne ganglionnaire latéro-vertébrale thoracique Th6-Th9.",
             "Plexus cœliaque."
           ]
         },
@@ -400,7 +400,7 @@ export const chapter13Fr: Chapter = {
         {
           type: "bullets",
           items: [
-            "Balance cerveau limbique-rate : écoute-induction, un pouce sur la rate, l’autre pouce sur le cerveau limbique (figure 1.12)."
+            "Balance cerveau limbique-rate : écoute-induction, un pouce sur la rate, l’autre pouce sur le cerveau limbique."
           ]
         }
       ]

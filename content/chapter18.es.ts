@@ -34,7 +34,7 @@ export const chapter18Es: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "La vejiga, órgano reservorio de la orina, está situada en la parte anterior del compartimento visceral de la cavidad pélvica, alojada en una cuna entre los músculos elevadores del ano del periné y los músculos obturadores internos. (figura 17.6)"
+            "La vejiga, órgano reservorio de la orina, está situada en la parte anterior del compartimento visceral de la cavidad pélvica, alojada en una cuna entre los músculos elevadores del ano del periné y los músculos obturadores internos."
           ]
         },
         {
@@ -152,7 +152,7 @@ export const chapter18Es: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "se refleja sobre el vértice de la vejiga, formando el fondo de saco vesicouterino en la mujer o el fondo de saco rectovesical en el hombre (figura 17.7). Las ptosis viscerales del intestino delgado, la cirugía abdominal, las infecciones y los espasmos viscerales repercuten sobre el peritoneo. El deslizamiento normal entre el peritoneo y la vejiga queda limitado por la tensión del peritoneo."
+            "se refleja sobre el vértice de la vejiga, formando el fondo de saco vesicouterino en la mujer o el fondo de saco rectovesical en el hombre. Las ptosis viscerales del intestino delgado, la cirugía abdominal, las infecciones y los espasmos viscerales repercuten sobre el peritoneo. El deslizamiento normal entre el peritoneo y la vejiga queda limitado por la tensión del peritoneo."
           ]
         },
         {
@@ -163,7 +163,7 @@ export const chapter18Es: Chapter = {
           "type": "bullets",
           "items": [
             "actúan como sistema suspensor de la vejiga, como una pelota suspendida en una red:",
-            "el ligamento umbilical mediano (uraco): vestigio embrionario, conecta el ombligo con el vértice de la vejiga y con el pubis. Prolonga hacia abajo el ligamento falciforme del hígado (figura 11.9). Comparte fibras con los ligamentos pubovesicales y pubouretrales, que a su vez comparten fibras con el músculo detrusor de la vejiga. La sección quirúrgica de este ligamento (cesárea) puede ser causa de incontinencia urinaria e irritabilidad vesical (eretismo vesical).",
+            "el ligamento umbilical mediano (uraco): vestigio embrionario, conecta el ombligo con el vértice de la vejiga y con el pubis. Prolonga hacia abajo el ligamento falciforme del hígado. Comparte fibras con los ligamentos pubovesicales y pubouretrales, que a su vez comparten fibras con el músculo detrusor de la vejiga. La sección quirúrgica de este ligamento (cesárea) puede ser causa de incontinencia urinaria e irritabilidad vesical (eretismo vesical).",
             "los ligamentos umbilicoprevesicales son dos cordones fibrosos, vestigios de las arterias umbilicales, tendidos oblicuamente desde el ombligo hasta las superficies inferolaterales de la vejiga. Se prolongan lateralmente en la cavidad pélvica a través de las aponeurosis de los músculos obturador interno y piriforme, y terminan posteriormente en el isquion, donde se insertan el ligamento sacrotuberoso y los músculos isquiotibiales.",
             "Ligamentos pubovesicales (en la mujer) y puboprostáticos (en el hombre): fijan la vejiga al pubis. Sus fibras están en continuidad con el detrusor. La tensión ligamentaria induce hipercontractilidad vesical (eretismo) y desestabiliza el cuello vesical, produciendo una sensación de pesadez en el hipogastrio."
           ]
@@ -175,9 +175,9 @@ export const chapter18Es: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "láminas sacro-recto-cérvico-púbicas (SRGCP) (figura 17.5)",
-            "Plexo venoso de Santorini: está situado en el espacio prevesical, entre el pubis y la vejiga. La tonicidad venosa mantiene el cuello vesical en su posición adecuada. Está relacionado con los sistemas hemorroidal y portocava (figura 11.7). Cualquier trastorno funcional del sistema porta repercute en el plexo venoso de Santorini. La relajación del sistema musculoligamentoso vesical desestabiliza el plexo venoso de Santorini y favorece la incontinencia urinaria.",
-            "Suelo pélvico del periné (figura 17.9)"
+            "láminas sacro-recto-cérvico-púbicas (SRGCP)",
+            "Plexo venoso de Santorini: está situado en el espacio prevesical, entre el pubis y la vejiga. La tonicidad venosa mantiene el cuello vesical en su posición adecuada. Está relacionado con los sistemas hemorroidal y portocava. Cualquier trastorno funcional del sistema porta repercute en el plexo venoso de Santorini. La relajación del sistema musculoligamentoso vesical desestabiliza el plexo venoso de Santorini y favorece la incontinencia urinaria.",
+            "Suelo pélvico del periné"
           ]
         },
         {
@@ -232,7 +232,7 @@ export const chapter18Es: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "ramas de la arteria ilíaca interna; (figura 17.6)"
+            "ramas de la arteria ilíaca interna;"
           ]
         },
         {
@@ -258,7 +258,7 @@ export const chapter18Es: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "nervio pudendo S2 a S4 (figura 17.10.)"
+            "nervio pudendo S2 a S4"
           ]
         },
         {
@@ -268,7 +268,6 @@ export const chapter18Es: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "(figura 17.14.)"
           ]
         },
         {
@@ -630,8 +629,8 @@ export const chapter18Es: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Sistema parasimpático pélvico (sacro): médula sacra S2-S3-S4 (nivel vertebral L1-L2); (figuras 4.23)",
-            "Columna vertebral, articulaciones costotransversas T10 a L2 (vértebras T11-T12), cadena ganglionar paravertebral torácica inferior, lumbar y sacra; (figuras 4.29 y 4.32)",
+            "Sistema parasimpático pélvico (sacro): médula sacra S2-S3-S4 (nivel vertebral L1-L2);",
+            "Columna vertebral, articulaciones costotransversas T10 a L2 (vértebras T11-T12), cadena ganglionar paravertebral torácica inferior, lumbar y sacra;",
             "Hígado, intestinos, riñones (cistitis, cistalgia crónica);"
           ]
         },
@@ -642,7 +641,7 @@ export const chapter18Es: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Cavidad pélvica, periné: (figuras 17.15, 17.16 y 17.17)",
+            "Cavidad pélvica, periné:",
             "Vejiga:",
             "Ligamentos pubovesicales: borde posterior del maléolo tibial;",
             "Trígono vesical, región cérvico-ístmica del útero/próstata: localizar la zona refleja del núcleo fibroso central del periné, anterior al cóccix; un surco orientado dorsal y posteriormente conduce a una pequeña depresión en la superficie posteromedial del calcáneo;",
@@ -657,7 +656,7 @@ export const chapter18Es: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Equilibrio cerebro límbico-vejiga: escucha-inducción, un pulgar sobre la vejiga y el otro pulgar sobre el cerebro límbico. (figura 1.12)"
+            "Equilibrio cerebro límbico-vejiga: escucha-inducción, un pulgar sobre la vejiga y el otro pulgar sobre el cerebro límbico."
           ]
         }
       ]

@@ -58,7 +58,7 @@ export const chapter21Es: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Arterial: ramas terminales de las arterias pudendas internas, que a su vez son ramas anteriores de las arterias ilíacas internas. (figura 17.3)",
+            "Arterial: ramas terminales de las arterias pudendas internas, que a su vez son ramas anteriores de las arterias ilíacas internas.",
             "Venosa: las venas pudendas internas acompañan a las arterias pudendas internas y drenan principalmente hacia el sistema ilíaco interno. Desde la perspectiva clínica de la ROP, pueden tenerse en cuenta las congestiones venosas pélvicas, pero no conviene asimilar directamente el drenaje venoso de los órganos eréctiles al sistema porta hepático."
           ]
         }
@@ -72,7 +72,7 @@ export const chapter21Es: Chapter = {
           "type": "bullets",
           "items": [
             "Inervación somática: el nervio pudendo es el principal nervio del periné. Asegura la sensibilidad de los órganos genitales externos y el control motor somático de la musculatura perineal estriada, en particular de los músculos bulboesponjosos e isquiocavernosos.",
-            "Inervación autónoma: (figura 4.26)",
+            "Inervación autónoma:",
             "Sistema parasimpático sacro de S2 a S4: participa en la vasodilatación y en el llenado de los tejidos eréctiles;",
             "Sistema simpático toracolumbar de L1 a L3: interviene especialmente en la fase de emisión de la eyaculación."
           ]
@@ -158,14 +158,14 @@ export const chapter21Es: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Nervio pudendo (S2 a S4): cara lateral del talón, plexo sacro, espina isquiática; (figuras 17.15 y 17.16),",
+            "Nervio pudendo (S2 a S4): cara lateral del talón, plexo sacro, espina isquiática;,",
             "Cara plantar del talón:",
             "Nervio pudendo (continuación): borde medial de la rama isquiopubiana",
             "Cuerpos cavernosos y músculos isquiocavernosos: borde medial de las ramas isquiopubianas;",
             "Órganos eréctiles: extremo medial de la rama iliopubiana (borde anterior del talón);",
-            "Ligamentos sacrotuberoso y sacroespinoso: borde posterior de los talones; (figura 17.21)",
-            "Sistema límbico; (figura 3.7)",
-            "Nervio olfatorio I. (figura 3.7)"
+            "Ligamentos sacrotuberoso y sacroespinoso: borde posterior de los talones;",
+            "Sistema límbico;",
+            "Nervio olfatorio I."
           ]
         }
       ]

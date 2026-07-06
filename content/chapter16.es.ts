@@ -570,8 +570,8 @@ export const chapter16Es: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Nervio vago X; (figuras 4.11 y 4.17)",
-            "Columna vertebral, articulaciones costotransversas (cadena ganglionar laterovertebral torácica, T7-T11-L1, cóccix); (figuras 4.23 y 4.29 y 4.32)",
+            "Nervio vago X;",
+            "Columna vertebral, articulaciones costotransversas (cadena ganglionar laterovertebral torácica, T7-T11-L1, cóccix);",
             "Plexo prevertebral;",
             "Glándulas suprarrenales:",
             "Plexo lumbar L1 a L4 y sus ramas. (Véase Réflexothérapie occipito-podale et système neuro-méningé, Elsevier Masson, páginas 25 a 28)"
@@ -631,7 +631,7 @@ export const chapter16Es: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Equilibrio sistema límbico-riñón: técnica de escucha/inducción, con un pulgar sobre el riñón y el otro sobre el sistema límbico. (figura 1.12)"
+            "Equilibrio sistema límbico-riñón: técnica de escucha/inducción, con un pulgar sobre el riñón y el otro sobre el sistema límbico."
           ]
         }
       ]

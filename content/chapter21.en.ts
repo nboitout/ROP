@@ -58,7 +58,7 @@ export const chapter21En: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Arterial: terminal branches of the internal pudendal arteries, themselves anterior branches of the internal iliac arteries. (figure 17.3)",
+            "Arterial: terminal branches of the internal pudendal arteries, themselves anterior branches of the internal iliac arteries.",
             "Venous: the internal pudendal veins accompany the internal pudendal arteries and drain mainly into the internal iliac system. In the clinical interpretation used in ROP, pelvic venous congestion may be taken into account, but venous drainage of the erectile organs should not be directly equated with the hepatic portal system."
           ]
         }
@@ -72,7 +72,7 @@ export const chapter21En: Chapter = {
           "type": "bullets",
           "items": [
             "Somatic innervation: the pudendal nerve is the principal nerve of the perineum. It provides sensation to the external genital organs and somatic motor control of the striated perineal muscles, especially the bulbospongiosus and ischiocavernosus muscles.",
-            "Autonomic innervation: (figure 4.26)",
+            "Autonomic innervation:",
             "Sacral parasympathetic system S2 to S4: it participates in vasodilation and filling of the erectile bodies;",
             "Thoracolumbar sympathetic system L1 to L3: it is involved in particular in the emission phase of ejaculation."
           ]
@@ -158,14 +158,14 @@ export const chapter21En: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Pudendal nerve (S2 to S4): lateral surface of the heel, sacral plexus, ischial spine; (figures 17.15 and 17.16),",
+            "Pudendal nerve (S2 to S4): lateral surface of the heel, sacral plexus, ischial spine;,",
             "Plantar surface of the heel:",
             "Pudendal nerve (continued): medial border of the ischiopubic ramus",
             "Corpora cavernosa and ischiocavernosus muscles: medial border of the ischiopubic rami;",
             "Erectile organs: medial end of the iliopubic ramus (anterior border of the heel);",
-            "Sacrotuberous and sacrospinous ligaments: posterior border of the heels; (figure 17.21)",
-            "Limbic brain; (figure 3.7)",
-            "Olfactory nerve I. (figure 3.7)"
+            "Sacrotuberous and sacrospinous ligaments: posterior border of the heels;",
+            "Limbic brain;",
+            "Olfactory nerve I."
           ]
         }
       ]

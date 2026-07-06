@@ -402,16 +402,16 @@ export const chapter20Es: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "la arteria testicular nace de la aorta abdominal, cerca de la arteria renal (figura 16.10);",
-            "Venosa: el drenaje venoso del testículo presenta particularidades anatómicas similares a las del ovario (figura 16.10). La vena testicular derecha drena en la vena cava inferior, mientras que la vena testicular izquierda drena en la vena renal izquierda. La estasis venosa izquierda puede favorecer un varicocele y repercutir en el espermiograma. Clásicamente se habla de oligozoospermia cuando la concentración de espermatozoides se sitúa por debajo de los valores de referencia, alrededor de 15 millones/mL según los criterios utilizados; valores muy bajos corresponden a formas más severas. La hipospermia corresponde a un volumen de eyaculado inferior a los valores esperados.",
-            "El sistema venoso ayuda a mantener la próstata en posición y amortigua los microtraumatismos a los que puede estar expuesta. El retorno venoso está bajo el doble control del sistema porta (figura 11.7). Al igual que ocurre con las hemorroides, toda congestión del sistema porta, y por tanto del hígado, provoca congestión de la próstata."
+            "la arteria testicular nace de la aorta abdominal, cerca de la arteria renal;",
+            "Venosa: el drenaje venoso del testículo presenta particularidades anatómicas similares a las del ovario. La vena testicular derecha drena en la vena cava inferior, mientras que la vena testicular izquierda drena en la vena renal izquierda. La estasis venosa izquierda puede favorecer un varicocele y repercutir en el espermiograma. Clásicamente se habla de oligozoospermia cuando la concentración de espermatozoides se sitúa por debajo de los valores de referencia, alrededor de 15 millones/mL según los criterios utilizados; valores muy bajos corresponden a formas más severas. La hipospermia corresponde a un volumen de eyaculado inferior a los valores esperados.",
+            "El sistema venoso ayuda a mantener la próstata en posición y amortigua los microtraumatismos a los que puede estar expuesta. El retorno venoso está bajo el doble control del sistema porta. Al igual que ocurre con las hemorroides, toda congestión del sistema porta, y por tanto del hígado, provoca congestión de la próstata."
           ]
         },
         {
           "type": "rop",
           "body": [
             "El hígado, el riñón izquierdo y el intestino delgado forman parte de las zonas reflejas que deben abordarse cuando se trata el sistema urogenital y los trastornos venosos de los miembros inferiores.",
-            "La fijación del riñón izquierdo o la compresión de la vena renal por la raíz del mesenterio o por la pinza aortomesentérica tras una ptosis del intestino delgado (figura 16.10) frena el retorno venoso en la cavidad pélvica, provocando varicoceles izquierdos y varices predominantes en el miembro inferior izquierdo."
+            "La fijación del riñón izquierdo o la compresión de la vena renal por la raíz del mesenterio o por la pinza aortomesentérica tras una ptosis del intestino delgado frena el retorno venoso en la cavidad pélvica, provocando varicoceles izquierdos y varices predominantes en el miembro inferior izquierdo."
           ]
         }
       ]
@@ -433,7 +433,7 @@ export const chapter20Es: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "origen medular T10-T11 y T12 (figura 4.26);",
+            "origen medular T10-T11 y T12;",
             "Sistema parasimpático pélvico S2 a S4, a la altura de la vértebra L1;"
           ]
         },
@@ -475,7 +475,7 @@ export const chapter20Es: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "aporta la inervación simpática al plexo hipogástrico inferior (figura 17.14)."
+            "aporta la inervación simpática al plexo hipogástrico inferior."
           ]
         },
         {
@@ -886,10 +886,10 @@ export const chapter20Es: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Columna vertebral: nivel medular simpático T10 a T12 (a la altura de las vértebras T10 a T12), L5, sacro, cóccix, cadena ganglionar paravertebral lumbar y sacra (figuras 4.29 y 4.32);",
-            "Sistema parasimpático pélvico (sacro): médula sacra S2-S3-S4 (nivel vertebral L1-L2) (figura 4.23);",
-            "Hígado (figuras 11.10 y 11.11);",
-            "Riñón izquierdo (figuras 16.13 y 16.14)."
+            "Columna vertebral: nivel medular simpático T10 a T12 (a la altura de las vértebras T10 a T12), L5, sacro, cóccix, cadena ganglionar paravertebral lumbar y sacra;",
+            "Sistema parasimpático pélvico (sacro): médula sacra S2-S3-S4 (nivel vertebral L1-L2);",
+            "Hígado;",
+            "Riñón izquierdo."
           ]
         },
         {
@@ -899,10 +899,10 @@ export const chapter20Es: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Cavidad pélvica, periné (figuras 17.15, 17.16 y 17.17);",
-            "Testículo: es la misma zona refleja que el ovario: borde anterior del talón, en línea con el 4.º y el 5.º dedos (figura 19.8);",
-            "Conducto inguinal, cordón espermático y músculo cremáster: a nivel de la interlínea tibiotarsiana anterior (figura 19.4);",
-            "Próstata, vesícula seminal y plexo hipogástrico inferior (parte media): pequeña depresión anterior a la articulación sacrococcígea (figuras 18.7 y 18.9)."
+            "Cavidad pélvica, periné;",
+            "Testículo: es la misma zona refleja que el ovario: borde anterior del talón, en línea con el 4.º y el 5.º dedos;",
+            "Conducto inguinal, cordón espermático y músculo cremáster: a nivel de la interlínea tibiotarsiana anterior;",
+            "Próstata, vesícula seminal y plexo hipogástrico inferior (parte media): pequeña depresión anterior a la articulación sacrococcígea."
           ]
         },
         {
@@ -912,7 +912,7 @@ export const chapter20Es: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Equilibración cerebro límbico-próstata: técnica de escucha-inducción, un pulgar sobre la próstata y el otro sobre el cerebro límbico (figura 1.12)."
+            "Equilibración cerebro límbico-próstata: técnica de escucha-inducción, un pulgar sobre la próstata y el otro sobre el cerebro límbico."
           ]
         }
       ]

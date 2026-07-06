@@ -210,7 +210,7 @@ export const chapter17Es: Chapter = {
           "type": "bullets",
           "items": [
             "Venas ilíacas internas: discurren junto a las arterias ilíacas internas y se unen a las venas ilíacas comunes.",
-            "Plexos venosos pélvicos: contribuyen al sostén de los órganos pélvicos y comunican con el sistema porta (figura 11.5)."
+            "Plexos venosos pélvicos: contribuyen al sostén de los órganos pélvicos y comunican con el sistema porta."
           ]
         },
         {
@@ -223,7 +223,7 @@ export const chapter17Es: Chapter = {
           "type": "bullets",
           "items": [
             "Venas sacras medias: se unen a las dos venas ilíacas comunes para formar la vena cava inferior.",
-            "Venas gonadales: tienen trayectos diferentes. La vena gonadal derecha desemboca en la vena cava inferior, mientras que la vena gonadal izquierda desemboca en la vena renal izquierda (figura 16.10)."
+            "Venas gonadales: tienen trayectos diferentes. La vena gonadal derecha desemboca en la vena cava inferior, mientras que la vena gonadal izquierda desemboca en la vena renal izquierda."
           ]
         }
       ]
@@ -293,7 +293,7 @@ export const chapter17Es: Chapter = {
         },
         {
           "type": "para",
-          "text": "El simpático y el parasimpático están bajo el control del hipotálamo, que a su vez regula la función endocrina de la hipófisis (figura 3.13):"
+          "text": "El simpático y el parasimpático están bajo el control del hipotálamo, que a su vez regula la función endocrina de la hipófisis:"
         },
         {
           "type": "bullets",
@@ -494,8 +494,8 @@ export const chapter17Es: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Sistema parasimpático pélvico (sacro); (figura 4.23)",
-            "Columna vertebral, articulaciones costotransversas (cadena ganglionar paravertebral torácica inferior, lumbar y sacra) (figuras 4.23 y 4.29 y 4.32)."
+            "Sistema parasimpático pélvico (sacro);",
+            "Columna vertebral, articulaciones costotransversas (cadena ganglionar paravertebral torácica inferior, lumbar y sacra)."
           ]
         },
         {
@@ -522,7 +522,7 @@ export const chapter17Es: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "cóccix (figura 4.23);",
+            "cóccix;",
             "Ligamentos sacrotuberoso y sacroespinoso;"
           ]
         },
@@ -533,7 +533,6 @@ export const chapter17Es: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "(figura 4.23)",
             "inserciones superiores: perímetro del foramen magno, C2",
             "inserciones inferiores: 2.ª vértebra sacra"
           ]

@@ -401,16 +401,16 @@ export const chapter20Fr: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "l’artère spermatique naît de l’aorte abdominale, près de l’artère rénale (figure 16.10);",
-            "Veineuse: la vascularisation veineuse du testicule présente des particularités proches de celle de l’ovaire (figure 16.10). La veine spermatique droite rejoint la veine cave inférieure, tandis que la veine spermatique gauche rejoint la veine rénale gauche. Une stase veineuse gauche peut favoriser une varicocèle et réténtir sur le spermogramme. On parle classiquement d’oligozoospermie lorsque la concentration de spermatozoïdes est inférieure aux valeurs de référence, autour de 15 millions/mL selon les référentiels utilisés; des valeurs très basses correspondent à des formes plus sévères. L’hypospermie correspond à un volume d’éjaculat inférieur aux valeurs attendues.",
-            "Le système veineux maintient la prostate en place et amortit les microtraumatismes dont la prostate peut être victime. Le retour veineux est sous le double contrôle du système porte (figure 11.7). Comme pour les hémorroïdes, toute congestion du système porte, et donc du foie, entraîne une congestion de la prostate."
+            "l’artère spermatique naît de l’aorte abdominale, près de l’artère rénale;",
+            "Veineuse: la vascularisation veineuse du testicule présente des particularités proches de celle de l’ovaire. La veine spermatique droite rejoint la veine cave inférieure, tandis que la veine spermatique gauche rejoint la veine rénale gauche. Une stase veineuse gauche peut favoriser une varicocèle et réténtir sur le spermogramme. On parle classiquement d’oligozoospermie lorsque la concentration de spermatozoïdes est inférieure aux valeurs de référence, autour de 15 millions/mL selon les référentiels utilisés; des valeurs très basses correspondent à des formes plus sévères. L’hypospermie correspond à un volume d’éjaculat inférieur aux valeurs attendues.",
+            "Le système veineux maintient la prostate en place et amortit les microtraumatismes dont la prostate peut être victime. Le retour veineux est sous le double contrôle du système porte. Comme pour les hémorroïdes, toute congestion du système porte, et donc du foie, entraîne une congestion de la prostate."
           ]
         },
         {
           "type": "rop",
           "body": [
             "Le foie, le rein gauche et l’intestin grêle font partie des zones réflexes à aborder quand on traite le système uro-génital et les problèmes veineux des membres inférieurs.",
-            "La fixation du rein gauche ou le clampage de la veine rénale par la racine du mésentère ou par la pince aorto-mésentérique à la suite de ptose de l’intestin grêle (figure 16.10), freine le retour veineux dans la cavité pelvienne, occasionnant des varicocèles gauches et des varices prédominant dans le membre inférieur gauche. Prostate et vésicules séminales:"
+            "La fixation du rein gauche ou le clampage de la veine rénale par la racine du mésentère ou par la pince aorto-mésentérique à la suite de ptose de l’intestin grêle, freine le retour veineux dans la cavité pelvienne, occasionnant des varicocèles gauches et des varices prédominant dans le membre inférieur gauche. Prostate et vésicules séminales:"
           ]
         }
       ]
@@ -432,7 +432,7 @@ export const chapter20Fr: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "origine médullaire Th10-Th11 et Th12; (figure 4.26)",
+            "origine médullaire Th10-Th11 et Th12;",
             "Parasympathique pelvien S2 à S4 (à hauteur de la vertèbre L1);"
           ]
         },
@@ -474,7 +474,7 @@ export const chapter20Fr: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "il apporte l’innervation sympathique au plexus hypogastrique inférieur. (figure 17.14)"
+            "il apporte l’innervation sympathique au plexus hypogastrique inférieur."
           ]
         },
         {
@@ -885,10 +885,10 @@ export const chapter20Fr: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Colonne vertébrale: étage médullaire sympathique Th10 à Th12 (à hauteur des vertèbres Th10 à Th12), L5, sacrum, coccyx), chaîne ganglionnaire latéro-vertébrale lombaire et sacrée; (figures 4.29 et 4.32)",
-            "Parasympathique pelvien (sacré): moelle sacrée S2-S3-S4 (étage vertébral L1-L2); (figures 4.23)",
-            "Foie; (figures 11.10 et 11.11)",
-            "Rein gauche. (figures 16.13 et figure 16.14)"
+            "Colonne vertébrale: étage médullaire sympathique Th10 à Th12 (à hauteur des vertèbres Th10 à Th12), L5, sacrum, coccyx), chaîne ganglionnaire latéro-vertébrale lombaire et sacrée;",
+            "Parasympathique pelvien (sacré): moelle sacrée S2-S3-S4 (étage vertébral L1-L2);",
+            "Foie;",
+            "Rein gauche."
           ]
         },
         {
@@ -898,10 +898,10 @@ export const chapter20Fr: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Cavité pelvienne, périnée: (figures 17.15, 17.16 et 17.17)",
-            "Testicule: c’est la même zone réflexe que l’ovaire: bord antérieur du talon, à l’aplomb des 4ème et 5ème orteils; (figure 19.8).",
-            "Canal inguinal, cordon spermatique et muscle crémaster: au niveau de l’interligne tibio-tarsien antérieur; (figure 19.4)",
-            "Prostate, vésicule séminale et plexus hypogastrique inférieur (partie moyenne): petite dépression en avant de l’articulation sacro-coccygienne. (figures 18.7 et 18.9)"
+            "Cavité pelvienne, périnée:",
+            "Testicule: c’est la même zone réflexe que l’ovaire: bord antérieur du talon, à l’aplomb des 4ème et 5ème orteils;.",
+            "Canal inguinal, cordon spermatique et muscle crémaster: au niveau de l’interligne tibio-tarsien antérieur;",
+            "Prostate, vésicule séminale et plexus hypogastrique inférieur (partie moyenne): petite dépression en avant de l’articulation sacro-coccygienne."
           ]
         },
         {
@@ -911,7 +911,7 @@ export const chapter20Fr: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Balance cerveau limbique-prostate: écoute-induction, un pouce sur la prostate, l’autre pouce sur cerveau limbique. (figure 1.12)"
+            "Balance cerveau limbique-prostate: écoute-induction, un pouce sur la prostate, l’autre pouce sur cerveau limbique."
           ]
         }
       ]

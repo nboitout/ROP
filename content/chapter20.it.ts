@@ -401,16 +401,16 @@ export const chapter20It: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "l’arteria testicolare nasce dall’aorta addominale, in prossimità dell’arteria renale (figura 16.10);",
-            "Venosa: il drenaggio venoso del testicolo presenta caratteristiche anatomiche simili a quelle dell’ovaio (figura 16.10). La vena testicolare destra drena nella vena cava inferiore, mentre la vena testicolare sinistra drena nella vena renale sinistra. La stasi venosa sinistra può favorire il varicocele e alterare lo spermiogramma. Si parla classicamente di oligozoospermia quando la concentrazione degli spermatozoi è inferiore ai valori di riferimento, circa 15 milioni/mL secondo gli standard utilizzati; valori molto bassi corrispondono a forme più severe. L’ipospermia corrisponde a un volume dell’eiaculato inferiore ai valori attesi.",
-            "Il sistema venoso contribuisce a mantenere la prostata in posizione e ad assorbire i microtraumi a cui la prostata può essere esposta. Il ritorno venoso è sotto il duplice controllo del sistema portale (figura 11.7). Come per le emorroidi, qualsiasi congestione del sistema portale, e quindi del fegato, provoca congestione della prostata."
+            "l’arteria testicolare nasce dall’aorta addominale, in prossimità dell’arteria renale;",
+            "Venosa: il drenaggio venoso del testicolo presenta caratteristiche anatomiche simili a quelle dell’ovaio. La vena testicolare destra drena nella vena cava inferiore, mentre la vena testicolare sinistra drena nella vena renale sinistra. La stasi venosa sinistra può favorire il varicocele e alterare lo spermiogramma. Si parla classicamente di oligozoospermia quando la concentrazione degli spermatozoi è inferiore ai valori di riferimento, circa 15 milioni/mL secondo gli standard utilizzati; valori molto bassi corrispondono a forme più severe. L’ipospermia corrisponde a un volume dell’eiaculato inferiore ai valori attesi.",
+            "Il sistema venoso contribuisce a mantenere la prostata in posizione e ad assorbire i microtraumi a cui la prostata può essere esposta. Il ritorno venoso è sotto il duplice controllo del sistema portale. Come per le emorroidi, qualsiasi congestione del sistema portale, e quindi del fegato, provoca congestione della prostata."
           ]
         },
         {
           "type": "rop",
           "body": [
             "Il fegato, il rene sinistro e l’intestino tenue fanno parte delle zone riflesse da trattare quando si interviene sul sistema uro-genitale e sui disturbi venosi degli arti inferiori.",
-            "La fissazione del rene sinistro o la compressione della vena renale da parte della radice del mesentere o della pinza aorto-mesenterica in seguito a ptosi dell’intestino tenue (figura 16.10) rallenta il ritorno venoso nella cavità pelvica, causando varicoceli sinistri e varici predominanti nell’arto inferiore sinistro. Prostata e vescicole seminali:"
+            "La fissazione del rene sinistro o la compressione della vena renale da parte della radice del mesentere o della pinza aorto-mesenterica in seguito a ptosi dell’intestino tenue rallenta il ritorno venoso nella cavità pelvica, causando varicoceli sinistri e varici predominanti nell’arto inferiore sinistro. Prostata e vescicole seminali:"
           ]
         }
       ]
@@ -432,7 +432,7 @@ export const chapter20It: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "origine midollare T10-T11 e T12; (figura 4.26)",
+            "origine midollare T10-T11 e T12;",
             "Parasimpatico pelvico S2-S4, a livello della vertebra L1;"
           ]
         },
@@ -474,7 +474,7 @@ export const chapter20It: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "apporta l’innervazione simpatica al plesso ipogastrico inferiore. (figura 17.14)"
+            "apporta l’innervazione simpatica al plesso ipogastrico inferiore."
           ]
         },
         {
@@ -885,10 +885,10 @@ export const chapter20It: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Colonna vertebrale: livello midollare simpatico T10-T12 (a livello delle vertebre T10-T12), L5, sacro, coccige, catena gangliare paravertebrale lombare e sacrale; (figure 4.29 e 4.32)",
-            "Sistema parasimpatico pelvico (sacrale): midollo sacrale S2-S3-S4 (livello vertebrale L1-L2); (figura 4.23)",
-            "Fegato; (figure 11.10 e 11.11)",
-            "Rene sinistro. (figure 16.13 e 16.14)"
+            "Colonna vertebrale: livello midollare simpatico T10-T12 (a livello delle vertebre T10-T12), L5, sacro, coccige, catena gangliare paravertebrale lombare e sacrale;",
+            "Sistema parasimpatico pelvico (sacrale): midollo sacrale S2-S3-S4 (livello vertebrale L1-L2);",
+            "Fegato;",
+            "Rene sinistro."
           ]
         },
         {
@@ -898,10 +898,10 @@ export const chapter20It: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Cavità pelvica, perineo: (figure 17.15, 17.16 e 17.17)",
-            "Testicolo: è la stessa zona riflessa dell’ovaio: bordo anteriore del tallone, in linea con il 4° e il 5° dito; (figura 19.8).",
-            "Canale inguinale, funicolo spermatico e muscolo cremastere: a livello dell’interlinea tibio-tarsica anteriore; (figura 19.4)",
-            "Prostata, vescicola seminale e plesso ipogastrico inferiore (parte media): piccola depressione anteriore all’articolazione sacro-coccigea. (figure 18.7 e 18.9)"
+            "Cavità pelvica, perineo:",
+            "Testicolo: è la stessa zona riflessa dell’ovaio: bordo anteriore del tallone, in linea con il 4° e il 5° dito;.",
+            "Canale inguinale, funicolo spermatico e muscolo cremastere: a livello dell’interlinea tibio-tarsica anteriore;",
+            "Prostata, vescicola seminale e plesso ipogastrico inferiore (parte media): piccola depressione anteriore all’articolazione sacro-coccigea."
           ]
         },
         {
@@ -911,7 +911,7 @@ export const chapter20It: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Bilanciamento cervello limbico-prostata: tecnica di ascolto-induzione, un pollice sulla prostata e l’altro sul cervello limbico. (figura 1.12)"
+            "Bilanciamento cervello limbico-prostata: tecnica di ascolto-induzione, un pollice sulla prostata e l’altro sul cervello limbico."
           ]
         }
       ]

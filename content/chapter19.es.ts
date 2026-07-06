@@ -105,7 +105,7 @@ export const chapter19Es: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "cubre la mayor parte del cuerpo uterino, formando fondos de saco (figura 17.7): el fondo de saco vesicouterino, entre la vejiga y el útero, y el fondo de saco rectouterino de Douglas, entre la vagina y el recto. Este último es el punto más declive de la cavidad abdominal.",
+            "cubre la mayor parte del cuerpo uterino, formando fondos de saco: el fondo de saco vesicouterino, entre la vejiga y el útero, y el fondo de saco rectouterino de Douglas, entre la vagina y el recto. Este último es el punto más declive de la cavidad abdominal.",
             "Normalmente, el peritoneo debe deslizarse sobre la cúpula uterina y permanecer libre de adherencias para que el cuerpo uterino conserve su movilidad.",
             "Todo espasmo o toda secuela quirúrgica o infecciosa que afecte a los órganos abdominales puede desplazar el cuerpo uterino y reducir su movilidad."
           ]
@@ -117,7 +117,7 @@ export const chapter19Es: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "son pliegues del peritoneo (figura 17.7) orientados dorsal y lateralmente. Unen transversalmente el útero a la pared pélvica interna:",
+            "son pliegues del peritoneo orientados dorsal y lateralmente. Unen transversalmente el útero a la pared pélvica interna:",
             "la parte superior, o mesometrio, es flexible y comprende tres repliegues peritoneales asociados al ligamento redondo, a la trompa de Falopio (o mesosálpinx) y al ovario (o mesoovario);",
             "la parte inferior, o parametrio, es gruesa y sólida. Se adhiere al suelo pélvico y contiene las arterias uterinas.",
             "Ligamentos redondos: relativamente poco resistentes, se extienden desde los cuernos uterinos hasta los labios mayores y el pubis. Primero se orientan ventral y lateralmente, y después atraviesan el canal inguinal. Mantienen el cuerpo uterino en anteversión."
@@ -130,9 +130,9 @@ export const chapter19Es: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Láminas sacro-recto-génito-cérvico-púbicas (SRGCP): extendidas sagitalmente desde el sacro hasta el pubis, compartimentan la cavidad pélvica y solidarizan entre sí los órganos pélvicos. Su parte posterior forma los ligamentos uterosacros. (figura 17.5)",
+            "Láminas sacro-recto-génito-cérvico-púbicas (SRGCP): extendidas sagitalmente desde el sacro hasta el pubis, compartimentan la cavidad pélvica y solidarizan entre sí los órganos pélvicos. Su parte posterior forma los ligamentos uterosacros.",
             "Ligamentos uterosacros: corresponden a la parte posterior de las láminas SRGCP. Unen el istmo uterino a las vértebras sacras S2, S3 y S4. Anclan firmemente el cuello uterino al sacro. Su fibrosis o ruptura constituye la causa principal de desviación cervical.",
-            "Suelo pélvico del periné: compuesto por tejido fibromuscular, constituye el principal elemento de sostén del sistema urogenital. (figura 17.9)"
+            "Suelo pélvico del periné: compuesto por tejido fibromuscular, constituye el principal elemento de sostén del sistema urogenital."
           ]
         },
         {
@@ -178,7 +178,7 @@ export const chapter19Es: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Cranealmente: el peritoneo; (figura 17.7)",
+            "Cranealmente: el peritoneo;",
             "Ventralmente: el peritoneo y la vejiga, de la que está separado por el fondo de saco vesicouterino;",
             "Dorsalmente: el peritoneo y el recto, del que está separado por el fondo de saco rectouterino de Douglas.",
             "Lateralmente: los ligamentos anchos;",
@@ -198,7 +198,7 @@ export const chapter19Es: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "la arteria uterina, rama de la arteria ilíaca interna (figura 17.6), es muy sinuosa para adaptarse al desarrollo del útero durante el embarazo."
+            "la arteria uterina, rama de la arteria ilíaca interna, es muy sinuosa para adaptarse al desarrollo del útero durante el embarazo."
           ]
         },
         {
@@ -224,7 +224,7 @@ export const chapter19Es: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "su origen medular se extiende de T12 a L2, correspondiente al nivel vertebral T12. Continúa por dos vías: (figura 17.14)",
+            "su origen medular se extiende de T12 a L2, correspondiente al nivel vertebral T12. Continúa por dos vías:",
             "cadena ganglionar lumbar y sacra;",
             "plexo hipogástrico superior: prolonga caudalmente la cadena plexual prevertebral y aporta la inervación simpática al plexo hipogástrico inferior."
           ]
@@ -246,7 +246,7 @@ export const chapter19Es: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "se sitúa en la cavidad pélvica (figura 17.14), contenido en la lámina SRGCP. Aporta la inervación simpática y parasimpática a los órganos urogenitales, al recto y al ano. Los ligamentos uterosacros son especialmente ricos en fibras simpáticas viscerosensitivas. Su ruptura y fibrosis generan congestión y dolor (dismenorrea) por las desviaciones que producen a nivel del cuello uterino."
+            "se sitúa en la cavidad pélvica, contenido en la lámina SRGCP. Aporta la inervación simpática y parasimpática a los órganos urogenitales, al recto y al ano. Los ligamentos uterosacros son especialmente ricos en fibras simpáticas viscerosensitivas. Su ruptura y fibrosis generan congestión y dolor (dismenorrea) por las desviaciones que producen a nivel del cuello uterino."
           ]
         },
         {
@@ -534,7 +534,7 @@ export const chapter19Es: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "se sitúa en el repliegue superior del ligamento ancho (figura 17.7), por encima y por delante del ovario, y por detrás del ligamento redondo. La trompa es muy móvil."
+            "se sitúa en el repliegue superior del ligamento ancho, por encima y por delante del ovario, y por detrás del ligamento redondo. La trompa es muy móvil."
           ]
         }
       ]
@@ -550,7 +550,7 @@ export const chapter19Es: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "se sitúa en la cavidad retrouterina, por detrás del ligamento ancho, al que está unido por un pliegue peritoneal denominado repliegue posterior (figura 17.7), contra la pared lateral de la pelvis.",
+            "se sitúa en la cavidad retrouterina, por detrás del ligamento ancho, al que está unido por un pliegue peritoneal denominado repliegue posterior, contra la pared lateral de la pelvis.",
             "No está cubierto por peritoneo visceral (es no peritonizado) y queda libre dentro de la cavidad pélvica."
           ]
         },
@@ -646,7 +646,7 @@ export const chapter19Es: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "la arteria ovárica nace de la aorta abdominal cerca de la arteria renal, a la altura de las vértebras L2-L3 (figura 16.10). Se anastomosa con las ramas terminales de la arteria uterina."
+            "la arteria ovárica nace de la aorta abdominal cerca de la arteria renal, a la altura de las vértebras L2-L3. Se anastomosa con las ramas terminales de la arteria uterina."
           ]
         },
         {
@@ -682,7 +682,7 @@ export const chapter19Es: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "origen medular T10-T11 y T12; (figura 4.26)",
+            "origen medular T10-T11 y T12;",
             "Plexo aorticorrenal: situado por delante de la arteria renal, recibe el nervio esplácnico menor procedente de los ganglios torácicos 10.º, 11.º y 12.º y del 1.er ganglio lumbar. Está destinado al riñón y al ovario.",
             "Sistema parasimpático pélvico (sacro) S2 a S4 (a la altura de la vértebra L1)."
           ]
@@ -1148,10 +1148,10 @@ export const chapter19Es: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Columna vertebral: nivel medular simpático T12 a L2 (a la altura de las vértebras T10 a T12), cadena ganglionar paravertebral lumbar y sacra; (figuras 4.29 y 4.32)",
-            "Sistema parasimpático pélvico (sacro): médula sacra S2-S3-S4 (nivel vertebral L1-L2); (figuras 4.23)",
-            "Hígado; (figuras 11.10 y 11.11)",
-            "Riñón izquierdo. (figuras 16.13 y figura 16.14)"
+            "Columna vertebral: nivel medular simpático T12 a L2 (a la altura de las vértebras T10 a T12), cadena ganglionar paravertebral lumbar y sacra;",
+            "Sistema parasimpático pélvico (sacro): médula sacra S2-S3-S4 (nivel vertebral L1-L2);",
+            "Hígado;",
+            "Riñón izquierdo."
           ]
         },
         {
@@ -1161,7 +1161,7 @@ export const chapter19Es: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Cavidad pélvica, periné; (figuras 17.15, 17.16 y 17.17)"
+            "Cavidad pélvica, periné;"
           ]
         },
         {
@@ -1171,7 +1171,6 @@ export const chapter19Es: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "(figuras 18.7 y 18.9)",
             "Región cervico-ístmica del útero y plexo hipogástrico inferior (parte media): pequeña depresión anterior a la articulación sacrococcígea;"
           ]
         },
@@ -1184,7 +1183,7 @@ export const chapter19Es: Chapter = {
           "items": [
             "surco que va desde el núcleo fibroso central hasta la región cervico-ístmica;",
             "Cúpula y cuerno del útero: zona por encima del borde anterior del talón, en su parte medial;",
-            "Canal inguinal y ligamento redondo: interlínea tibiotarsiana anterior. (figura 20.12)"
+            "Canal inguinal y ligamento redondo: interlínea tibiotarsiana anterior."
           ]
         },
         {
@@ -1194,7 +1193,7 @@ export const chapter19Es: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Equilibración cerebro límbico-útero: técnica de escucha-inducción, un pulgar sobre el útero y el otro sobre el cerebro límbico. (figura 1.12)"
+            "Equilibración cerebro límbico-útero: técnica de escucha-inducción, un pulgar sobre el útero y el otro sobre el cerebro límbico."
           ]
         },
         {
@@ -1208,9 +1207,9 @@ export const chapter19Es: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Columna vertebral: niveles medulares simpáticos (desde T10 a la altura de la vértebra T9 hasta T11 a la altura de la vértebra T10, L5, sacro), cadena ganglionar paravertebral lumbar y sacra (figuras 4.23, 4.29 y 4.32)",
-            "Sistema parasimpático pélvico: a la altura de la vértebra L1 (figura 4.23)",
-            "Hígado; (figuras 11.10 y 11.11)",
+            "Columna vertebral: niveles medulares simpáticos (desde T10 a la altura de la vértebra T9 hasta T11 a la altura de la vértebra T10, L5, sacro), cadena ganglionar paravertebral lumbar y sacra",
+            "Sistema parasimpático pélvico: a la altura de la vértebra L1",
+            "Hígado;",
             "riñón izquierdo; (16.13 y 16.14)"
           ]
         },

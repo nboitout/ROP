@@ -570,8 +570,8 @@ export const chapter16It: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Nervo vago X; (figure 4.11 e 4.17)",
-            "Colonna vertebrale, articolazioni costo-trasversarie (catena gangliare laterovertebrale toracica, T7-T11-L1, coccige); (figure 4.23 e 4.29 e 4.32)",
+            "Nervo vago X;",
+            "Colonna vertebrale, articolazioni costo-trasversarie (catena gangliare laterovertebrale toracica, T7-T11-L1, coccige);",
             "Plesso prevertebrale;",
             "Ghiandole surrenali:",
             "Plesso lombare da L1 a L4 e sue branche. (Vedi Réflexothérapie occipito-podale et système neuro-méningé, Elsevier Masson, pagine 25-28)"
@@ -631,7 +631,7 @@ export const chapter16It: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Equilibrio sistema limbico-rene: tecnica di ascolto/induzione, con un pollice sul rene e l’altro sul sistema limbico. (figura 1.12)"
+            "Equilibrio sistema limbico-rene: tecnica di ascolto/induzione, con un pollice sul rene e l’altro sul sistema limbico."
           ]
         }
       ]

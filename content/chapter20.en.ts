@@ -402,16 +402,16 @@ export const chapter20En: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "the spermatic artery arises from the abdominal aorta, near the renal artery (figure 16.10);",
-            "Venous: the venous vascular supply of the testis has anatomical features similar to those of the ovary (figure 16.10). The right spermatic vein drains into the inferior vena cava, whereas the left spermatic vein drains into the left renal vein. Left-sided venous stasis may promote varicocele and affect the semen analysis. Oligozoospermia is classically defined when sperm concentration is below reference values, around 15 million/mL according to the reference standards used; very low values correspond to more severe forms. Hypospermia corresponds to an ejaculate volume below expected values.",
-            "The venous system maintains the prostate in place and absorbs microtrauma to which the prostate may be exposed. Venous return is under the dual control of the portal system (figure 11.7). As with hemorrhoids, any congestion of the portal system, and therefore of the liver, causes congestion of the prostate."
+            "the spermatic artery arises from the abdominal aorta, near the renal artery;",
+            "Venous: the venous vascular supply of the testis has anatomical features similar to those of the ovary. The right spermatic vein drains into the inferior vena cava, whereas the left spermatic vein drains into the left renal vein. Left-sided venous stasis may promote varicocele and affect the semen analysis. Oligozoospermia is classically defined when sperm concentration is below reference values, around 15 million/mL according to the reference standards used; very low values correspond to more severe forms. Hypospermia corresponds to an ejaculate volume below expected values.",
+            "The venous system maintains the prostate in place and absorbs microtrauma to which the prostate may be exposed. Venous return is under the dual control of the portal system. As with hemorrhoids, any congestion of the portal system, and therefore of the liver, causes congestion of the prostate."
           ]
         },
         {
           "type": "rop",
           "body": [
             "The liver, left kidney, and small intestine are among the reflex zones to address when treating the urogenital system and venous disorders of the lower limbs.",
-            "Fixation of the left kidney or clamping of the renal vein by the root of the mesentery or by the aortomesenteric clamp following ptosis of the small intestine (figure 16.10) slows venous return in the pelvic cavity, causing left-sided varicoceles and varicose veins predominating in the left lower limb. Prostate and seminal vesicles:"
+            "Fixation of the left kidney or clamping of the renal vein by the root of the mesentery or by the aortomesenteric clamp following ptosis of the small intestine slows venous return in the pelvic cavity, causing left-sided varicoceles and varicose veins predominating in the left lower limb. Prostate and seminal vesicles:"
           ]
         }
       ]
@@ -433,7 +433,7 @@ export const chapter20En: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "spinal origin T10-T11 and T12; (figure 4.26)",
+            "spinal origin T10-T11 and T12;",
             "Pelvic parasympathetic system S2 to S4 (at the level of vertebra L1);"
           ]
         },
@@ -475,7 +475,7 @@ export const chapter20En: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "it provides sympathetic innervation to the inferior hypogastric plexus. (figure 17.14)"
+            "it provides sympathetic innervation to the inferior hypogastric plexus."
           ]
         },
         {
@@ -886,10 +886,10 @@ export const chapter20En: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Spinal column: sympathetic spinal level T10 to T12 (at the level of vertebrae T10 to T12), L5, sacrum, coccyx), lumbar and sacral paravertebral ganglionic chain; (figures 4.29 and 4.32)",
-            "Pelvic (sacral) parasympathetic system: sacral spinal cord S2-S3-S4 (vertebral level L1-L2); (figures 4.23)",
-            "Liver; (figures 11.10 and 11.11)",
-            "Left kidney. (figures 16.13 and figure 16.14)"
+            "Spinal column: sympathetic spinal level T10 to T12 (at the level of vertebrae T10 to T12), L5, sacrum, coccyx), lumbar and sacral paravertebral ganglionic chain;",
+            "Pelvic (sacral) parasympathetic system: sacral spinal cord S2-S3-S4 (vertebral level L1-L2);",
+            "Liver;",
+            "Left kidney."
           ]
         },
         {
@@ -899,10 +899,10 @@ export const chapter20En: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Pelvic cavity, perineum: (figures 17.15, 17.16 and 17.17)",
-            "Testis: this is the same reflex zone as the ovary: anterior border of the heel, in line with the 4th and 5th toes; (figure 19.8).",
-            "Inguinal canal, spermatic cord, and cremaster muscle: at the anterior tibiotarsal joint line; (figure 19.4)",
-            "Prostate, seminal vesicle, and inferior hypogastric plexus (middle part): small depression anterior to the sacrococcygeal joint. (figures 18.7 and 18.9)"
+            "Pelvic cavity, perineum:",
+            "Testis: this is the same reflex zone as the ovary: anterior border of the heel, in line with the 4th and 5th toes;.",
+            "Inguinal canal, spermatic cord, and cremaster muscle: at the anterior tibiotarsal joint line;",
+            "Prostate, seminal vesicle, and inferior hypogastric plexus (middle part): small depression anterior to the sacrococcygeal joint."
           ]
         },
         {
@@ -912,7 +912,7 @@ export const chapter20En: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Limbic brain-prostate balancing: listening-induction technique, one thumb on the prostate, the other thumb on the limbic brain. (figure 1.12)"
+            "Limbic brain-prostate balancing: listening-induction technique, one thumb on the prostate, the other thumb on the limbic brain."
           ]
         }
       ]
