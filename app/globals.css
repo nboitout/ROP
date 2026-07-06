@@ -1279,3 +1279,18 @@ a.ss-switch-opt:hover { color:var(--gold); }
   .rza-title { font-size:1.5rem; }
   .rza-media-btn img { max-height:none; }
 }
+
+/* ========== MOBILE FORM ERGONOMICS (sign-up gate + notify) ========== */
+/* iOS Safari auto-zooms the whole page when a focused control renders text
+   under 16px, forcing the visitor to pinch back out after every field. Hold
+   all form controls at 16px on touch-sized layouts. Kept at the end of the
+   stylesheet so it wins over the base rules declared above. */
+@media (max-width:960px){
+  .fg input, .fselect, .cr-notify-row input { font-size:16px; }
+}
+@media (max-width:520px){
+  .fcard { padding:24px 18px; }
+}
+/* Gate arrivals are scrolled straight to the form card; keep it clear of the
+   fixed header. */
+.fcard { scroll-margin-top:78px; }

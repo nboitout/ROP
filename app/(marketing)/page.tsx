@@ -1,7 +1,9 @@
 'use client'
 
-import { Fragment } from 'react'
+import { Fragment, Suspense, useEffect } from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
+import { useSearchParams } from 'next/navigation'
 import HeroCarousel from '@/components/HeroCarousel'
 import HomepageVisualShowcase from '@/components/HomepageVisualShowcase'
 import BookJourney from '@/components/BookJourney'
@@ -11,6 +13,22 @@ import BookNotifyForm from '@/components/BookNotifyForm'
 import LanguageToggle from '@/components/LanguageToggle'
 import { useLanguage } from '@/app/i18n/LanguageContext'
 import { getSessionId } from '@/lib/session'
+
+// Gated chapter pages redirect to /?gate=free#acces-libre. The native anchor
+// jump lands on the section's marketing copy; on mobile the form card sits a
+// full screen below it. Once the page is interactive, bring the form itself
+// into view so the visitor can start typing immediately.
+function GateFormFocus() {
+  const searchParams = useSearchParams()
+  const isGate = searchParams.get('gate') === 'free'
+  useEffect(() => {
+    if (!isGate) return
+    requestAnimationFrame(() => {
+      document.querySelector('.fcard')?.scrollIntoView({ block: 'start' })
+    })
+  }, [isGate])
+  return null
+}
 
 export default function HomePage() {
   const { t, lang } = useLanguage()
@@ -26,6 +44,10 @@ export default function HomePage() {
 
   return (
     <main>
+      <Suspense fallback={null}>
+        <GateFormFocus />
+      </Suspense>
+
       {/* HEADER */}
       <header>
         <a className="h-logo" href="#">Guy Boitout</a>
@@ -35,11 +57,11 @@ export default function HomePage() {
             <a href="#chapitres">{t.nav.sommaire}</a>
             <a href="#protocole">{t.nav.protocole}</a>
             <a href="#acheter">{t.nav.commander}</a>
-            <a href="/chapitres-gratuits" className="n-cta">{t.nav.chapitreGratuit}</a>
+            <Link href="/chapitres-gratuits" className="n-cta">{t.nav.chapitreGratuit}</Link>
           </nav>
-          <a href="/chapitres-gratuits" className="h-mobile-cta" onClick={() => trackCta('header_mobile_free_chapters')}>
+          <Link href="/chapitres-gratuits" className="h-mobile-cta" onClick={() => trackCta('header_mobile_free_chapters')}>
             {t.nav.chapitreGratuit}
-          </a>
+          </Link>
           <LanguageToggle />
         </div>
       </header>
@@ -62,7 +84,7 @@ export default function HomePage() {
               ))}
             </div>
             <div className="hero-ctas">
-              <a href="/chapitres-gratuits" className="btn b-gold" onClick={() => trackCta('hero_chapters')}>{t.hero.cta1}</a>
+              <Link href="/chapitres-gratuits" className="btn b-gold" onClick={() => trackCta('hero_chapters')}>{t.hero.cta1}</Link>
               <a href="#chapitres" className="btn b-ghost" onClick={() => trackCta('hero_summary')}>{t.hero.cta2}</a>
             </div>
             <div className="hl-author">
@@ -202,7 +224,7 @@ export default function HomePage() {
         <div className="protocol-intro">
           <span>{t.protocole.p}</span>
           {' '}
-          <a href="/lecture/traitement-rop" onClick={() => trackCta('protocol_free_chapter')}>{t.protocole.freeCta}</a>
+          <Link href="/lecture/traitement-rop" onClick={() => trackCta('protocol_free_chapter')}>{t.protocole.freeCta}</Link>
         </div>
         <div className="protocol-links">
           <a href="https://www.reflexo-occipitopodale.com/accueil" target="_blank" rel="noopener noreferrer" className="btn b-out" onClick={() => trackCta('protocol_institut')}>{t.author.btn1}</a>
@@ -321,7 +343,7 @@ export default function HomePage() {
           <p className="pricing-readfirst-eyebrow">{t.pricing.readFirst.eyebrow}</p>
           <p className="pricing-readfirst-title">{t.pricing.readFirst.title}</p>
           <p className="pricing-readfirst-sub">{t.pricing.readFirst.sub}</p>
-          <a href="/chapitres-gratuits" className="btn b-gold" style={{ display: 'inline-block' }} onClick={() => trackCta('pricing_readfirst')}>{t.pricing.readFirst.cta}</a>
+          <Link href="/chapitres-gratuits" className="btn b-gold" style={{ display: 'inline-block' }} onClick={() => trackCta('pricing_readfirst')}>{t.pricing.readFirst.cta}</Link>
         </div>
         <div className="pg">
           <div className="pc">

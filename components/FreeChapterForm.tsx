@@ -1,11 +1,22 @@
 'use client'
 
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { useLanguage } from '@/app/i18n/LanguageContext'
 import { getSessionId } from '@/lib/session'
 
-type FieldErrors = { firstName?: string; lastName?: string; email?: string; profession?: string }
+type FieldErrors = { firstName?: string; lastName?: string; email?: string; profession?: string; consent?: string }
+
+// Submit-error handling walks this list top-to-bottom and brings the first
+// invalid control into view — on a phone the failing field is usually above
+// the submit button, outside the viewport.
+const FIELD_IDS: [keyof FieldErrors, string][] = [
+  ['firstName', 'ffn'],
+  ['lastName', 'fln'],
+  ['email', 'fe'],
+  ['profession', 'fj'],
+  ['consent', 'fc'],
+]
 
 export default function FreeChapterForm() {
   const { t, lang } = useLanguage()
@@ -22,6 +33,13 @@ export default function FreeChapterForm() {
   const [serverError, setServerError] = useState('')
   const [loading, setLoading] = useState(false)
   const [success, setSuccess] = useState(false)
+  const bannerRef = useRef<HTMLDivElement>(null)
+
+  // A server error appears above the fields, off-screen when the visitor just
+  // tapped submit at the bottom of the form — bring it into view.
+  useEffect(() => {
+    if (serverError) bannerRef.current?.scrollIntoView({ block: 'center' })
+  }, [serverError])
 
   const profession = professionSelect === f.professionOther ? professionOtherText.trim() : professionSelect
 
@@ -33,6 +51,7 @@ export default function FreeChapterForm() {
     if (!email.trim()) errors.email = f.errorEmail
     else if (!emailRegex.test(email)) errors.email = f.errorEmailInvalid
     if (!professionSelect) errors.profession = f.errorProfession
+    if (!consent) errors.consent = f.errorConsent
     return errors
   }
 
@@ -41,9 +60,11 @@ export default function FreeChapterForm() {
     setServerError('')
     const errors = validate()
     setFieldErrors(errors)
-    if (Object.keys(errors).length > 0) return
-    if (!consent) {
-      setServerError(f.errorConsent)
+    const firstInvalid = FIELD_IDS.find(([key]) => errors[key])
+    if (firstInvalid) {
+      const el = document.getElementById(firstInvalid[1])
+      el?.focus({ preventScroll: true })
+      el?.scrollIntoView({ block: 'center' })
       return
     }
 
@@ -83,13 +104,14 @@ export default function FreeChapterForm() {
       <h3>{f.title}</h3>
       <p className="fs">{f.subtitle}</p>
 
-      {serverError && <div className="ferror-banner on">{serverError}</div>}
+      {serverError && <div ref={bannerRef} className="ferror-banner on">{serverError}</div>}
 
-      <div style={{ display: 'flex', gap: 10 }}>
-        <div className={`fg${fieldErrors.firstName ? ' has-error' : ''}`} style={{ flex: 1 }}>
+      <div className="fg-row">
+        <div className={`fg${fieldErrors.firstName ? ' has-error' : ''}`}>
           <label htmlFor="ffn">{f.firstNameLbl}</label>
           <input
             id="ffn"
+            name="firstName"
             type="text"
             placeholder={f.firstNamePlaceholder}
             value={firstName}
@@ -99,10 +121,11 @@ export default function FreeChapterForm() {
           <span className="field-error">{fieldErrors.firstName}</span>
         </div>
 
-        <div className={`fg${fieldErrors.lastName ? ' has-error' : ''}`} style={{ flex: 1 }}>
+        <div className={`fg${fieldErrors.lastName ? ' has-error' : ''}`}>
           <label htmlFor="fln">{f.lastNameLbl}</label>
           <input
             id="fln"
+            name="lastName"
             type="text"
             placeholder={f.lastNamePlaceholder}
             value={lastName}
@@ -117,7 +140,11 @@ export default function FreeChapterForm() {
         <label htmlFor="fe">{f.emailLbl}</label>
         <input
           id="fe"
+          name="email"
           type="email"
+          inputMode="email"
+          autoCapitalize="none"
+          spellCheck={false}
           placeholder={f.emailPlaceholder}
           value={email}
           onChange={(e) => setEmail(e.target.value)}
@@ -130,6 +157,7 @@ export default function FreeChapterForm() {
         <label htmlFor="fj">{f.professionLbl}</label>
         <select
           id="fj"
+          name="profession"
           className="fselect"
           value={professionSelect}
           onChange={(e) => { setProfessionSelect(e.target.value); setProfessionOtherText('') }}
@@ -143,6 +171,7 @@ export default function FreeChapterForm() {
         {professionSelect === f.professionOther && (
           <input
             type="text"
+            name="professionOther"
             placeholder={f.professionOtherPlaceholder}
             value={professionOtherText}
             onChange={(e) => setProfessionOtherText(e.target.value)}
@@ -152,21 +181,23 @@ export default function FreeChapterForm() {
         <span className="field-error">{fieldErrors.profession}</span>
       </div>
 
-      <div className="fg" style={{ display: 'flex', gap: 10, alignItems: 'flex-start', marginTop: 4 }}>
+      <div className={`fg${fieldErrors.consent ? ' has-error' : ''}`} style={{ display: 'flex', flexWrap: 'wrap', gap: 10, alignItems: 'flex-start', marginTop: 4 }}>
         <input
           id="fc"
+          name="consent"
           type="checkbox"
           checked={consent}
           onChange={(e) => setConsent(e.target.checked)}
-          style={{ width: 'auto', marginTop: 2, flexShrink: 0 }}
+          style={{ width: 18, height: 18, marginTop: 2, flexShrink: 0 }}
         />
-        <label htmlFor="fc" style={{ fontSize: '.72rem', lineHeight: 1.5, textTransform: 'none', letterSpacing: 0, opacity: 1 }}>
+        <label htmlFor="fc" style={{ flex: 1, minWidth: 0, fontSize: '.72rem', lineHeight: 1.5, textTransform: 'none', letterSpacing: 0, opacity: 1 }}>
           {f.consentText.split(f.privacyLink).map((part, i, arr) =>
             i < arr.length - 1
               ? [part, <a key={i} href="/confidentialite" style={{ color: 'var(--gold-l)' }}>{f.privacyLink}</a>]
               : part
           )}
         </label>
+        <span className="field-error" style={{ width: '100%', marginTop: 0 }}>{fieldErrors.consent}</span>
       </div>
 
       <button
