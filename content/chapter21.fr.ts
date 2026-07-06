@@ -110,13 +110,13 @@ export const chapter21Fr: Chapter = {
           "type": "xref",
           "label": "Voir la référence dans le chapitre 5",
           "text": "Mécanisme de stress",
-          "href": "/lecture/chapitre-5?xrefBack=%2Flecture%2Fchapitre-21%23p-pathologies-courantes-0&xrefBackLabel=Retour%20au%20chapitre%2021#p-presentation-0"
+          "href": "/lecture/chapitre-5?xrefBack=%2Flecture%2Fchapitre-21%23p-pathologies-courantes-0&xrefBackLabel=Retour%20au%20chapitre%2021#p-sga-9"
         },
         {
           "type": "xref",
           "label": "Voir la référence dans le chapitre 16",
           "text": "Reins, vascularisation veineuse, rein gauche",
-          "href": "/lecture/chapitre-16?xrefBack=%2Flecture%2Fchapitre-21%23p-pathologies-courantes-0&xrefBackLabel=Retour%20au%20chapitre%2021#sec-vascularisation"
+          "href": "/lecture/chapitre-16?xrefBack=%2Flecture%2Fchapitre-21%23p-pathologies-courantes-0&xrefBackLabel=Retour%20au%20chapitre%2021#p-vascularisation-5"
         }
       ]
     },

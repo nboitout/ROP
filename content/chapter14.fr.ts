@@ -21,7 +21,7 @@ export const chapter14Fr: Chapter = {
           type: 'xref',
           label: 'Voir la référence dans le chapitre 10',
           text: 'Duodénum : présentation anatomique et physiologique',
-          href: '/lecture/chapitre-10?xrefBack=%2Flecture%2Fchapitre-14%23p-presentation-2&xrefBackLabel=Retour%20au%20chapitre%2014#sec-presentation',
+          href: '/lecture/chapitre-10?xrefBack=%2Flecture%2Fchapitre-14%23p-presentation-2&xrefBackLabel=Retour%20au%20chapitre%2014#p-presentation-1',
         },
         { type: 'para', text: 'Le jéjunum-iléum se distingue du duodénum par :' },
         { type: 'bullets', items: [

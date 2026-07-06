@@ -463,7 +463,7 @@ export const chapter19Fr: Chapter = {
           "type": "xref",
           "label": "Voir la référence dans le chapitre 18",
           "text": ", IUE",
-          "href": "/lecture/chapitre-18?xrefBack=%2Flecture%2Fchapitre-19%23p-uterus-pathologies-courantes-5&xrefBackLabel=Retour%20au%20chapitre%2019#sec-pathologies-courantes"
+          "href": "/lecture/chapitre-18?xrefBack=%2Flecture%2Fchapitre-19%23p-uterus-pathologies-courantes-5&xrefBackLabel=Retour%20au%20chapitre%2019#p-pathologies-courantes-1"
         }
       ]
     },
@@ -622,7 +622,7 @@ export const chapter19Fr: Chapter = {
           "type": "xref",
           "label": "Voir la référence dans ce chapitre",
           "text": "Vascularisation de l’utérus",
-          "href": "/lecture/chapitre-19?xrefBack=%2Flecture%2Fchapitre-19%23p-ovaires-trompes-rapports-5&xrefBackLabel=Retour%20au%20chapitre%2019#sec-uterus-vascularisation"
+          "href": "/lecture/chapitre-19?xrefBack=%2Flecture%2Fchapitre-19%23p-ovaires-trompes-rapports-5&xrefBackLabel=Retour%20au%20chapitre%2019#p-uterus-vascularisation-3"
         },
         {
           "type": "sub",
@@ -668,7 +668,7 @@ export const chapter19Fr: Chapter = {
           "type": "xref",
           "label": "Voir la référence dans le chapitre 16",
           "text": "Rein, Veine rénale",
-          "href": "/lecture/chapitre-16?xrefBack=%2Flecture%2Fchapitre-19%23p-ovaires-trompes-rapports-13&xrefBackLabel=Retour%20au%20chapitre%2019#sec-vascularisation"
+          "href": "/lecture/chapitre-16?xrefBack=%2Flecture%2Fchapitre-19%23p-ovaires-trompes-rapports-13&xrefBackLabel=Retour%20au%20chapitre%2019#p-vascularisation-5"
         }
       ]
     },

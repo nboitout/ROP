@@ -177,7 +177,7 @@ export const chapter17Fr: Chapter = {
           "type": "xref",
           "label": "Voir la référence dans le chapitre 21",
           "text": "Système érectile masculin et féminin",
-          "href": "/lecture/chapitre-21?xrefBack=%2Flecture%2Fchapitre-17%23p-anatomie-14&xrefBackLabel=Retour%20au%20chapitre%2017#sec-presentation"
+          "href": "/lecture/chapitre-21?xrefBack=%2Flecture%2Fchapitre-17%23p-anatomie-14&xrefBackLabel=Retour%20au%20chapitre%2017#p-anatomie-0"
         }
       ]
     },
@@ -307,13 +307,13 @@ export const chapter17Fr: Chapter = {
           "type": "xref",
           "label": "Voir la référence dans le chapitre 3",
           "text": "SNC, Cerveau, limbique ou émotionnel",
-          "href": "/lecture/chapitre-3?xrefBack=%2Flecture%2Fchapitre-17%23p-innervation-10&xrefBackLabel=Retour%20au%20chapitre%2017#sec-section-2-cadre-terminologique"
+          "href": "/lecture/chapitre-3?xrefBack=%2Flecture%2Fchapitre-17%23p-innervation-10&xrefBackLabel=Retour%20au%20chapitre%2017#p-section-3-organisation-anatomique-22"
         },
         {
           "type": "xref",
           "label": "Voir la référence dans le chapitre 3",
           "text": "SNC, Cortex préfrontal et orbito-nasal",
-          "href": "/lecture/chapitre-3?xrefBack=%2Flecture%2Fchapitre-17%23p-innervation-10&xrefBackLabel=Retour%20au%20chapitre%2017#sec-section-3-organisation-anatomique"
+          "href": "/lecture/chapitre-3?xrefBack=%2Flecture%2Fchapitre-17%23p-innervation-10&xrefBackLabel=Retour%20au%20chapitre%2017#p-section-3-organisation-anatomique-85"
         },
         {
           "type": "sub",
@@ -393,7 +393,7 @@ export const chapter17Fr: Chapter = {
           "type": "xref",
           "label": "Voir la référence dans le chapitre 18",
           "text": "Vessie, Incontinence urinaire d’effort",
-          "href": "/lecture/chapitre-18?xrefBack=%2Flecture%2Fchapitre-17%23p-pathologies-courantes-2&xrefBackLabel=Retour%20au%20chapitre%2017#sec-pathologies-courantes"
+          "href": "/lecture/chapitre-18?xrefBack=%2Flecture%2Fchapitre-17%23p-pathologies-courantes-2&xrefBackLabel=Retour%20au%20chapitre%2017#p-pathologies-courantes-1"
         },
         {
           "type": "sub",

@@ -214,7 +214,7 @@ export const chapter15Fr: Chapter = {
           "type": "xref",
           "label": "Voir la référence dans le chapitre 17",
           "text": "Cavité pelvienne, Innervation",
-          "href": "/lecture/chapitre-17?xrefBack=%2Flecture%2Fchapitre-15%23p-anatomie-22&xrefBackLabel=Retour%20au%20chapitre%2015#sec-innervation"
+          "href": "/lecture/chapitre-17?xrefBack=%2Flecture%2Fchapitre-15%23p-anatomie-22&xrefBackLabel=Retour%20au%20chapitre%2015#p-innervation-1"
         }
       ]
     },
@@ -297,7 +297,7 @@ export const chapter15Fr: Chapter = {
           "type": "xref",
           "label": "Voir la référence dans le chapitre 14",
           "text": "Intestin grêle Vascularisation de l’intestin grêle",
-          "href": "/lecture/chapitre-14?xrefBack=%2Flecture%2Fchapitre-15%23p-vascularisation-2&xrefBackLabel=Retour%20au%20chapitre%2015#sec-vascularisation"
+          "href": "/lecture/chapitre-14?xrefBack=%2Flecture%2Fchapitre-15%23p-vascularisation-2&xrefBackLabel=Retour%20au%20chapitre%2015#p-vascularisation-2"
         },
         {
           "type": "rop",
@@ -309,7 +309,7 @@ export const chapter15Fr: Chapter = {
           "type": "xref",
           "label": "Voir la référence dans le chapitre 16",
           "text": "Rein",
-          "href": "/lecture/chapitre-16?xrefBack=%2Flecture%2Fchapitre-15%23p-vascularisation-3&xrefBackLabel=Retour%20au%20chapitre%2015#sec-presentation"
+          "href": "/lecture/chapitre-16?xrefBack=%2Flecture%2Fchapitre-15%23p-vascularisation-3&xrefBackLabel=Retour%20au%20chapitre%2015#p-vascularisation-5"
         }
       ]
     },
@@ -357,7 +357,7 @@ export const chapter15Fr: Chapter = {
           "type": "xref",
           "label": "Voir la référence dans le chapitre 4",
           "text": "Système nerveux autonome",
-          "href": "/lecture/chapitre-4?xrefBack=%2Flecture%2Fchapitre-15%23p-innervation-4&xrefBackLabel=Retour%20au%20chapitre%2015#sec-presentation"
+          "href": "/lecture/chapitre-4?xrefBack=%2Flecture%2Fchapitre-15%23p-innervation-4&xrefBackLabel=Retour%20au%20chapitre%2015#p-sne-0"
         },
         {
           "type": "sub",

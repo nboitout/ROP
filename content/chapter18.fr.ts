@@ -310,7 +310,7 @@ export const chapter18Fr: Chapter = {
           "type": "xref",
           "label": "Voir la référence dans le chapitre 17",
           "text": ", Innervation autonome de la cavité pelvienne",
-          "href": "/lecture/chapitre-17?xrefBack=%2Flecture%2Fchapitre-18%23p-innervation-11&xrefBackLabel=Retour%20au%20chapitre%2018#sec-innervation"
+          "href": "/lecture/chapitre-17?xrefBack=%2Flecture%2Fchapitre-18%23p-innervation-11&xrefBackLabel=Retour%20au%20chapitre%2018#p-innervation-6"
         }
       ]
     },
@@ -412,7 +412,7 @@ export const chapter18Fr: Chapter = {
           "type": "xref",
           "label": "Voir la référence dans le chapitre 5",
           "text": "Mécanisme de stress",
-          "href": "/lecture/chapitre-5?xrefBack=%2Flecture%2Fchapitre-18%23p-physiologie-16&xrefBackLabel=Retour%20au%20chapitre%2018#p-presentation-0"
+          "href": "/lecture/chapitre-5?xrefBack=%2Flecture%2Fchapitre-18%23p-physiologie-16&xrefBackLabel=Retour%20au%20chapitre%2018#p-sga-4"
         },
         {
           "type": "rop",
@@ -434,7 +434,7 @@ export const chapter18Fr: Chapter = {
           "type": "xref",
           "label": "Voir la référence dans le chapitre 17",
           "text": "Cavité pelvienne",
-          "href": "/lecture/chapitre-17?xrefBack=%2Flecture%2Fchapitre-18%23p-physiologie-19&xrefBackLabel=Retour%20au%20chapitre%2018#sec-presentation"
+          "href": "/lecture/chapitre-17?xrefBack=%2Flecture%2Fchapitre-18%23p-physiologie-19&xrefBackLabel=Retour%20au%20chapitre%2018#p-innervation-15"
         },
         {
           "type": "sub",
@@ -494,7 +494,7 @@ export const chapter18Fr: Chapter = {
           "type": "xref",
           "label": "Voir la référence dans le chapitre 19",
           "text": "Cycle menstruel",
-          "href": "/lecture/chapitre-19?xrefBack=%2Flecture%2Fchapitre-18%23p-pathologies-courantes-4&xrefBackLabel=Retour%20au%20chapitre%2018#sec-uterus-physiologie"
+          "href": "/lecture/chapitre-19?xrefBack=%2Flecture%2Fchapitre-18%23p-pathologies-courantes-4&xrefBackLabel=Retour%20au%20chapitre%2018#p-uterus-physiologie-16"
         },
         {
           "type": "bullets",
