@@ -405,7 +405,7 @@ export const chapter7Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "Anévrisme : il est important, dans l’examen clinique, d’apprécier le calibre aortique et le caractère expansif de la pulsation en raison du risque d’anevrisme."
+          "text": "Anévrisme : il est important, dans l’examen clinique, d’apprécier le calibre aortique et le caractère expansif de la pulsation en raison du risque d’anévrisme."
         },
         {
           "type": "para",
