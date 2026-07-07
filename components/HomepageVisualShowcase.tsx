@@ -1,7 +1,7 @@
-/* eslint-disable @next/next/no-img-element */
 'use client'
 
 import { useState } from 'react'
+import Image from 'next/image'
 import { useLanguage } from '@/app/i18n/LanguageContext'
 import type { Lang } from '@/app/i18n/translations'
 
@@ -34,16 +34,6 @@ export default function HomepageVisualShowcase() {
     <section
       className={`visual-showcase${paused ? ' is-paused' : ''}`}
       aria-labelledby="visual-showcase-title"
-      role="button"
-      tabIndex={0}
-      aria-pressed={paused}
-      onClick={() => setPaused((value) => !value)}
-      onKeyDown={(event) => {
-        if (event.key === 'Enter' || event.key === ' ') {
-          event.preventDefault()
-          setPaused((value) => !value)
-        }
-      }}
     >
       <div className="visual-showcase-copy">
         <p className="visual-showcase-eyebrow">{t.visualShowcase.eyebrow}</p>
@@ -56,16 +46,31 @@ export default function HomepageVisualShowcase() {
         <p className="visual-showcase-mobile-body">
           {t.visualShowcase.mobileBody}
         </p>
-        <span className="visual-showcase-control">
+        <button
+          type="button"
+          className="visual-showcase-control"
+          aria-pressed={paused}
+          onClick={() => setPaused((value) => !value)}
+        >
           {paused ? t.visualShowcase.paused : t.visualShowcase.pause}
-        </span>
+        </button>
       </div>
 
       <div className="visual-showcase-frame" aria-hidden="true">
         <div className="visual-showcase-track">
           {loopSlides.map((slide, index) => (
             <figure className="visual-showcase-slide" key={`${slide.key}-${index}`}>
-              <img src={slide.src} alt="" loading="lazy" decoding="async" />
+              {/* Eager on purpose: the track drifts via a CSS transform, so
+                  lazy loading fires too late and half-decoded slides scroll
+                  into view. next/image keeps the eager cost small by serving
+                  resized AVIF/WebP instead of the raw 1440px JPEGs. */}
+              <Image
+                src={slide.src}
+                alt=""
+                fill
+                loading="eager"
+                sizes="(max-width:720px) 82vw, (max-width:1545px) 22vw, 340px"
+              />
             </figure>
           ))}
         </div>

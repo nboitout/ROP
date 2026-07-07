@@ -964,11 +964,6 @@ a.ss-switch-opt:hover { color:var(--gold); }
   color:var(--cream);
   border:1px solid rgba(245,240,232,.16);
   box-shadow:0 24px 70px rgba(26,26,24,.16);
-  cursor:pointer;
-  outline:none;
-}
-.visual-showcase:focus-visible {
-  box-shadow:0 0 0 3px rgba(201,163,94,.42), 0 24px 70px rgba(26,26,24,.16);
 }
 .visual-showcase::before {
   content:'';
@@ -1034,10 +1029,16 @@ a.ss-switch-opt:hover { color:var(--gold); }
   border-radius:999px;
   background:rgba(245,240,232,.08);
   color:rgba(245,240,232,.84);
+  font-family:inherit;
   font-size:.62rem;
   font-weight:600;
   letter-spacing:.14em;
   text-transform:uppercase;
+  cursor:pointer;
+}
+.visual-showcase-control:focus-visible {
+  outline:none;
+  box-shadow:0 0 0 3px rgba(201,163,94,.42);
 }
 .visual-showcase-frame {
   position:relative;
