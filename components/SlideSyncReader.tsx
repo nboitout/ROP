@@ -75,6 +75,7 @@ const SS_UI: Record<string, {
   jumpTitle: (s: string) => string; enlargeFigure: (c: string) => string
   endMarker: (slides: number[]) => string
   rotateHint: string
+  hideSlides: string; showSlides: string
 }> = {
   fr: {
     eyebrow: 'Synthèse visuelle — suit votre lecture',
@@ -91,6 +92,8 @@ const SS_UI: Record<string, {
     enlargeFigure: (caption: string) => `Agrandir : ${caption}`,
     endMarker: (slides: number[]) => slides.length > 1 ? `Fin diapos ${slides.join(', ')}` : `Fin diapo ${slides[0]}`,
     rotateHint: 'Tournez votre téléphone pour afficher cette diapositive en plein format.',
+    hideSlides: 'Masquer les diapositives',
+    showSlides: 'Afficher les diapositives',
   },
   en: {
     eyebrow: 'Visual synthesis — follows your reading',
@@ -107,6 +110,8 @@ const SS_UI: Record<string, {
     enlargeFigure: (caption: string) => `Enlarge: ${caption}`,
     endMarker: (slides: number[]) => slides.length > 1 ? `End slides ${slides.join(', ')}` : `End slide ${slides[0]}`,
     rotateHint: 'Rotate your phone to view this slide at full size.',
+    hideSlides: 'Hide the slides',
+    showSlides: 'Show the slides',
   },
   de: {
     eyebrow: 'Visuelle Synthese — folgt Ihrer Lektüre',
@@ -123,6 +128,8 @@ const SS_UI: Record<string, {
     enlargeFigure: (caption: string) => `Vergrößern: ${caption}`,
     endMarker: (slides: number[]) => slides.length > 1 ? `Ende Folien ${slides.join(', ')}` : `Ende Folie ${slides[0]}`,
     rotateHint: 'Drehen Sie Ihr Telefon, um diese Folie in voller Größe anzuzeigen.',
+    hideSlides: 'Folien ausblenden',
+    showSlides: 'Folien einblenden',
   },
   es: {
     eyebrow: 'Síntesis visual — sigue su lectura',
@@ -139,6 +146,8 @@ const SS_UI: Record<string, {
     enlargeFigure: (caption: string) => `Ampliar: ${caption}`,
     endMarker: (slides: number[]) => slides.length > 1 ? `Fin diapositivas ${slides.join(', ')}` : `Fin diapositiva ${slides[0]}`,
     rotateHint: 'Gire el teléfono para ver esta diapositiva a tamaño completo.',
+    hideSlides: 'Ocultar las diapositivas',
+    showSlides: 'Mostrar las diapositivas',
   },
   it: {
     eyebrow: 'Sintesi visiva — segue la lettura',
@@ -155,6 +164,8 @@ const SS_UI: Record<string, {
     enlargeFigure: (caption: string) => `Ingrandisci: ${caption}`,
     endMarker: (slides: number[]) => slides.length > 1 ? `Fine diapositive ${slides.join(', ')}` : `Fine diapositiva ${slides[0]}`,
     rotateHint: 'Ruota il telefono per visualizzare questa diapositiva a pieno formato.',
+    hideSlides: 'Nascondi le diapositive',
+    showSlides: 'Mostra le diapositive',
   },
 }
 
@@ -243,6 +254,9 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
   const [lightbox, setLightbox] = useState<LightboxState | null>(null)
   const [lightboxZoom, setLightboxZoom] = useState(1)
   const [isPhonePortrait, setIsPhonePortrait] = useState(false)
+  // Distraction-free reading: collapse the pinned slide stage to a slim
+  // restore chip. The choice is remembered across chapters and visits.
+  const [slidesHidden, setSlidesHidden] = useState(false)
   const xrefReturn = getSafeXrefReturn(searchParams)
   const articleRef = useRef<HTMLElement>(null)
   const sectionRailRef = useRef<HTMLElement>(null)
@@ -348,6 +362,24 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
     track('sync_reader_open')
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [chapter.slug])
+
+  // Applied after mount (not as the initial state) so server and first client
+  // render stay identical.
+  useEffect(() => {
+    let raf = 0
+    try {
+      if (localStorage.getItem('rop_slides_hidden') === '1') {
+        raf = requestAnimationFrame(() => setSlidesHidden(true))
+      }
+    } catch {}
+    return () => cancelAnimationFrame(raf)
+  }, [])
+
+  function setSlidesVisibility(visible: boolean) {
+    setSlidesHidden(!visible)
+    try { localStorage.setItem('rop_slides_hidden', visible ? '0' : '1') } catch {}
+    track(visible ? 'sync_slides_shown' : 'sync_slides_hidden', { slide: active })
+  }
 
   useEffect(() => {
     const activeIndex = (active ?? 1) - 1
@@ -964,6 +996,26 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
       <div className="ss-layout">
         <div className="ss-stagecol">
           <div className={`ss-stage${activeSlideIsPortrait ? ' ss-stage--portrait' : ''}`}>
+            {slidesHidden ? (
+            <button
+              type="button"
+              className="ss-stage-restore"
+              onClick={() => setSlidesVisibility(true)}
+              title={ui.showSlides}
+            >
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+                <rect x="3" y="3" width="18" height="18" rx="2" />
+                <circle cx="8.5" cy="8.5" r="1.5" />
+                <path d="M21 15l-5-5L5 21" />
+              </svg>
+              <span className="ss-stage-restore-label">{ui.showSlides}</span>
+              {active !== null && <span className="ss-stage-restore-count">{active} / {slides.length}</span>}
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+                <path d="M6 9l6 6 6-6" />
+              </svg>
+            </button>
+            ) : (
+            <>
             <div className="ss-stage-row">
               <div className="ss-dots" role="tablist" aria-label={ui.slides}>
                 {slides.map((s, i) => (
@@ -1026,6 +1078,20 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
                     disabled={!active || active >= slides.length}
                     aria-label={ui.next}
                   >›</button>
+                  <button
+                    type="button"
+                    className="ss-stage-hide"
+                    onClick={() => setSlidesVisibility(false)}
+                    aria-label={ui.hideSlides}
+                    title={ui.hideSlides}
+                  >
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+                      <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94" />
+                      <path d="M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19" />
+                      <path d="M14.12 14.12a3 3 0 1 1-4.24-4.24" />
+                      <line x1="1" y1="1" x2="23" y2="23" />
+                    </svg>
+                  </button>
                 </div>
               </>
             )}
@@ -1065,6 +1131,8 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
                 </span>
                 <span className="ss-jump-arrow" aria-hidden>↓</span>
               </button>
+            )}
+            </>
             )}
           </div>
         </div>
