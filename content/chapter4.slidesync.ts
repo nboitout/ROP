@@ -43,7 +43,7 @@ export const chapter4Slides: SyncSlide[] = [
   { src: '/chapter-4/slides/slide-21.png', title: 'Plexus prévertébraux abdominaux' },
   { src: '/chapter-4/slides/slide-23.png', title: 'Le carrefour pelvien' },
   { src: '/chapter-4/slides/slide-24.png', title: 'Le système nerveux entérique : le deuxième cerveau' },
-  { src: '/chapter-4/slides/slide-25.png', title: 'Zones réflexes podales : grands repères du SNA' },
+  { src: '/chapter-4/slides/slide-25.png', title: 'Zones réflexes podales' },
   { src: '/chapter-4/Chapter4 - Fig2 Rework Series FR.png', title: 'Chapter4 - Fig2 Rework Series FR' },
   { src: '/chapter-4/Chapter4 - Fig3 Rework Series FR.png', title: 'Reperes ROP du tronc cerebral, de la base endocrinienne et des noyaux limbiques' },
   { src: '/chapter-4/Chapter4 - Fig3 moelle allongée FR.png', title: 'Base exocranienne : moelle allongee et noyaux du nerf vague X' },
