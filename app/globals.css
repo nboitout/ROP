@@ -1121,6 +1121,9 @@ a.ss-switch-opt:hover { color:var(--gold); }
     width:auto;
     padding:0 42px 10px;
   }
+  /* Hand-swiped strip: no drift to pause, and no need for the loop copy. */
+  .visual-showcase-control { display:none; }
+  .visual-showcase-slide--dup { display:none; }
 }
 @media (min-width:721px) and (max-width:1120px) {
   .visual-showcase h2 {

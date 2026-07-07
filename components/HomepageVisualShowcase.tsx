@@ -59,7 +59,13 @@ export default function HomepageVisualShowcase() {
       <div className="visual-showcase-frame" aria-hidden="true">
         <div className="visual-showcase-track">
           {loopSlides.map((slide, index) => (
-            <figure className="visual-showcase-slide" key={`${slide.key}-${index}`}>
+            // Second copy exists only to make the drift loop seamless; under
+            // prefers-reduced-motion the strip is swiped by hand and the
+            // duplicates are hidden.
+            <figure
+              className={`visual-showcase-slide${index >= showcaseSlides.length ? ' visual-showcase-slide--dup' : ''}`}
+              key={`${slide.key}-${index}`}
+            >
               {/* Eager on purpose: the track drifts via a CSS transform, so
                   lazy loading fires too late and half-decoded slides scroll
                   into view. next/image keeps the eager cost small by serving
