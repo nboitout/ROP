@@ -3,9 +3,11 @@ import './globals.css'
 import { LanguageProvider } from '@/app/i18n/LanguageContext'
 import { getServerLang } from '@/app/i18n/serverLang'
 import VisitTracker from '@/components/VisitTracker'
-import { SITE_DESCRIPTION, SITE_NAME, SITE_TITLE, SITE_URL, SOCIAL_IMAGE_PATH } from '@/lib/site'
+import { APP_NAME, SITE_DESCRIPTION, SITE_NAME, SITE_TITLE, SITE_URL, SOCIAL_IMAGE_PATH } from '@/lib/site'
 
-export const metadata: Metadata = {
+export async function generateMetadata(): Promise<Metadata> {
+  const lang = await getServerLang()
+  return {
   metadataBase: new URL(SITE_URL),
   title: SITE_TITLE,
   description: SITE_DESCRIPTION,
@@ -45,12 +47,13 @@ export const metadata: Metadata = {
   formatDetection: {
     telephone: false,
   },
-  // iOS "Add to Home Screen": default app name and standalone launch.
+  // iOS "Add to Home Screen": default app name (localized) and standalone launch.
   appleWebApp: {
     capable: true,
-    title: '3e livre ROP',
+    title: APP_NAME[lang] ?? APP_NAME.fr,
     statusBarStyle: 'default',
   },
+  }
 }
 
 export const viewport: Viewport = {
@@ -64,6 +67,9 @@ export default async function RootLayout({ children }: { children: React.ReactNo
       <head>
         {/* Legacy variant of mobile-web-app-capable for iOS < 17.4 */}
         <meta name="apple-mobile-web-app-capable" content="yes" />
+        {/* use-credentials so the manifest request carries the lang cookie
+            and the app name comes back in the reader's language. */}
+        <link rel="manifest" href="/manifest.webmanifest" crossOrigin="use-credentials" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link
