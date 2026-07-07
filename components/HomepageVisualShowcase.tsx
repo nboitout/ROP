@@ -1,9 +1,15 @@
 'use client'
 
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import Image from 'next/image'
 import { useLanguage } from '@/app/i18n/LanguageContext'
 import type { Lang } from '@/app/i18n/translations'
+
+// Constant drift speed for the marquee. The distance is measured in pixels
+// at runtime (Web Animations API) instead of a percentage CSS keyframe:
+// iOS Safari mis-computes the track's max-content width, which turned the
+// -50% keyframe into a near-zero crawl.
+const DRIFT_SPEED_PX_PER_S = 60
 
 const showcaseFolders: Partial<Record<Lang, string>> = {
   en: '/assets/homepage-beauties/en',
@@ -27,8 +33,47 @@ function getShowcaseSlides(lang: Lang) {
 export default function HomepageVisualShowcase() {
   const { t, lang } = useLanguage()
   const [paused, setPaused] = useState(false)
+  const trackRef = useRef<HTMLDivElement>(null)
+  const animRef = useRef<Animation | null>(null)
   const showcaseSlides = getShowcaseSlides(lang)
   const loopSlides = [...showcaseSlides, ...showcaseSlides]
+
+  useEffect(() => {
+    const el = trackRef.current
+    if (!el || typeof el.animate !== 'function') return
+    if (matchMedia('(prefers-reduced-motion: reduce)').matches) return
+
+    const start = () => {
+      // One seamless loop = half the duplicated track plus half a gap.
+      const gap = parseFloat(getComputedStyle(el).columnGap) || 0
+      const shift = (el.scrollWidth + gap) / 2
+      if (shift <= 0) return
+      const wasPaused = animRef.current?.playState === 'paused'
+      animRef.current?.cancel()
+      const anim = el.animate(
+        [{ transform: 'translate3d(0,0,0)' }, { transform: `translate3d(${-shift}px,0,0)` }],
+        { duration: (shift / DRIFT_SPEED_PX_PER_S) * 1000, iterations: Infinity }
+      )
+      if (wasPaused) anim.pause()
+      animRef.current = anim
+    }
+
+    start()
+    const ro = new ResizeObserver(start)
+    ro.observe(el)
+    return () => {
+      ro.disconnect()
+      animRef.current?.cancel()
+      animRef.current = null
+    }
+  }, [])
+
+  useEffect(() => {
+    const anim = animRef.current
+    if (!anim) return
+    if (paused) anim.pause()
+    else anim.play()
+  }, [paused])
 
   return (
     <section
@@ -57,7 +102,7 @@ export default function HomepageVisualShowcase() {
       </div>
 
       <div className="visual-showcase-frame" aria-hidden="true">
-        <div className="visual-showcase-track">
+        <div className="visual-showcase-track" ref={trackRef}>
           {loopSlides.map((slide, index) => (
             // Second copy exists only to make the drift loop seamless; under
             // prefers-reduced-motion the strip is swiped by hand and the

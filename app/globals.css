@@ -1082,18 +1082,17 @@ a.ss-switch-opt:hover { color:var(--gold); }
   -webkit-mask-image:linear-gradient(90deg, transparent 0, #000 7%, #000 93%, transparent 100%);
   mask-image:linear-gradient(90deg, transparent 0, #000 7%, #000 93%, transparent 100%);
 }
+/* The drift itself is a Web Animations API animation driven by the
+   component: iOS Safari mis-computes max-content flex widths, which made a
+   percentage CSS keyframe crawl near-zero. Distance and speed are measured
+   in pixels at runtime; pause/resume is Animation.pause()/play(). */
 .visual-showcase-track {
   display:flex;
   gap:var(--visual-showcase-gap);
   width:max-content;
-  animation:visual-showcase-drift-desktop 55s linear infinite;
-  animation-play-state:running;
   /* Own compositor layer: Safari can freeze animations rasterized inside a
      masked ancestor (.visual-showcase-frame) without this. */
   will-change:transform;
-}
-.visual-showcase.is-paused .visual-showcase-track {
-  animation-play-state:paused;
 }
 .visual-showcase-slide {
   position:relative;
@@ -1112,18 +1111,6 @@ a.ss-switch-opt:hover { color:var(--gold); }
   width:100%;
   height:100%;
   object-fit:cover;
-}
-/* No var() inside the keyframes: Safari has resolved custom properties in
-   @keyframes unreliably, which leaves the track parked at translateX(0).
-   The half-gap offset is baked in per layout (gap 20px desktop, 14px mobile)
-   and translate3d keeps the layer composited. */
-@keyframes visual-showcase-drift-desktop {
-  from { transform:translate3d(0,0,0); }
-  to { transform:translate3d(calc(-50% - 10px),0,0); }
-}
-@keyframes visual-showcase-drift-mobile {
-  from { transform:translate3d(0,0,0); }
-  to { transform:translate3d(calc(-50% - 7px),0,0); }
 }
 @media (min-width:721px) and (max-width:1120px) {
   .visual-showcase h2 {
@@ -1175,10 +1162,6 @@ a.ss-switch-opt:hover { color:var(--gold); }
     -webkit-mask-image:linear-gradient(90deg, transparent 0, #000 4%, #000 96%, transparent 100%);
     mask-image:linear-gradient(90deg, transparent 0, #000 4%, #000 96%, transparent 100%);
   }
-  .visual-showcase-track {
-    animation-name:visual-showcase-drift-mobile;
-    animation-duration:82s;
-  }
   .visual-showcase-slide {
     flex-basis:82vw;
     border-radius:7px;
@@ -1187,11 +1170,10 @@ a.ss-switch-opt:hover { color:var(--gold); }
   .visual-showcase-slide:nth-child(n) { transform:none; }
   .visual-showcase-slide:nth-child(2n) { transform:translateY(4px); }
 }
-/* Last in the showcase cascade so it beats the per-breakpoint
-   animation-name overrides above. */
+/* Reduced motion: the component skips the drift animation entirely; the
+   track becomes a hand-swipeable strip. */
 @media (prefers-reduced-motion: reduce) {
   .visual-showcase-track {
-    animation:none;
     overflow-x:auto;
     width:auto;
     padding:0 42px 10px;
