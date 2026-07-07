@@ -146,9 +146,9 @@ export const chapter1Fr: Chapter = {
     },
     {
       id: 'approche-clinique',
-      title: 'Application clinique en ROP (Réflexo-Occipito-Podale)',
+      title: 'Application clinique en ROP',
       blocks: [
-        { type: 'para', text: 'La ROP (Réflexo-Occipito-Podale) utilise, dans son cadre méthodologique, des circuits réflexes à partir de zones occipitales et podales pour guider l’évaluation et le traitement.' },
+        { type: 'para', text: 'La ROP utilise, dans son cadre méthodologique, des circuits réflexes à partir de zones occipitales et podales pour guider l’évaluation et le traitement.' },
         { type: 'para', text: 'Le praticien recherché :' },
         { type: 'bullets', items: [
           'une restriction principale (mobilité/motilité) ;',

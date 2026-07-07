@@ -1,5 +1,14 @@
 export type SyncSlide = { src: string; title: string; orientation?: 'portrait' }
-export type SyncAnchor = { sectionId: string; blockIndex: number; slide: number | number[]; gapBefore?: 'half' }
+export type SyncAnchorPoint = { sectionId: string; blockIndex: number; itemIndex?: number }
+export type SyncAnchor = SyncAnchorPoint & {
+  slide: number | number[]
+  gapBefore?: 'half'
+  end?: SyncAnchorPoint
+}
+
+const endAt = (sectionId: string, blockIndex: number, itemIndex?: number): Pick<SyncAnchor, 'end'> => ({
+  end: { sectionId, blockIndex, ...(itemIndex === undefined ? {} : { itemIndex }) },
+})
 
 export const chapter1Slides: SyncSlide[] = [
   { src: '/chapter-1/slides/slide-01.png', title: 'Chapitre 1 : Généralités biomécaniques et neurophysiologiques en ROP' },
@@ -19,18 +28,18 @@ export const chapter1Slides: SyncSlide[] = [
 ]
 
 export const chapter1SlideAnchors: SyncAnchor[] = [
-  { sectionId: 'intention', blockIndex: 0, slide: 1 },
-  { sectionId: 'mobilite-viscerale', blockIndex: 1, slide: 2 },
-  { sectionId: 'mobilite-viscerale', blockIndex: 7, slide: 3, gapBefore: 'half' },
-  { sectionId: 'mobilite-viscerale', blockIndex: 12, slide: 4 },
-  { sectionId: 'mobilite-viscerale', blockIndex: 16, slide: 5 },
-  { sectionId: 'mobilite-viscerale', blockIndex: 18, slide: 6 },
-  { sectionId: 'mrp', blockIndex: 0, slide: 7 },
-  { sectionId: 'articulations-viscerales', blockIndex: 0, slide: 8 },
-  { sectionId: 'articulations-viscerales', blockIndex: 6, slide: 9 },
-  { sectionId: 'articulations-viscerales', blockIndex: 9, slide: 10 },
-  { sectionId: 'articulations-viscerales', blockIndex: 10, slide: 11 },
-  { sectionId: 'articulations-viscerales', blockIndex: 15, slide: 12 },
-  { sectionId: 'securite', blockIndex: 0, slide: 13 },
-  { sectionId: 'approche-clinique', blockIndex: 5, slide: 14 },
+  { sectionId: 'intention', blockIndex: 0, slide: 1, ...endAt('intention', 4) },
+  { sectionId: 'mobilite-viscerale', blockIndex: 1, slide: 2, ...endAt('mobilite-viscerale', 7) },
+  { sectionId: 'mobilite-viscerale', blockIndex: 7, slide: 3, gapBefore: 'half', ...endAt('mobilite-viscerale', 12) },
+  { sectionId: 'mobilite-viscerale', blockIndex: 12, slide: 4, ...endAt('mobilite-viscerale', 16) },
+  { sectionId: 'mobilite-viscerale', blockIndex: 16, slide: 5, ...endAt('mobilite-viscerale', 18) },
+  { sectionId: 'mobilite-viscerale', blockIndex: 18, slide: 6, ...endAt('mrp', 0) },
+  { sectionId: 'mrp', blockIndex: 0, slide: 7, ...endAt('articulations-viscerales', 0) },
+  { sectionId: 'articulations-viscerales', blockIndex: 0, slide: 8, ...endAt('articulations-viscerales', 6) },
+  { sectionId: 'articulations-viscerales', blockIndex: 6, slide: 9, ...endAt('articulations-viscerales', 9) },
+  { sectionId: 'articulations-viscerales', blockIndex: 9, slide: 10, ...endAt('articulations-viscerales', 10) },
+  { sectionId: 'articulations-viscerales', blockIndex: 10, slide: 11, ...endAt('articulations-viscerales', 15) },
+  { sectionId: 'articulations-viscerales', blockIndex: 15, slide: 12, ...endAt('securite', 0) },
+  { sectionId: 'securite', blockIndex: 0, slide: 13, ...endAt('securite', 3) },
+  { sectionId: 'approche-clinique', blockIndex: 0, slide: 14, ...endAt('approche-clinique', 7) },
 ]
