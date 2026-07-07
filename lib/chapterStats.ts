@@ -83,6 +83,11 @@ function isPodalReflexText(value: string): boolean {
   return hasReflex && hasPodal
 }
 
+function hasZoneText(value: string): boolean {
+  const normalized = normalizeForSearch(value)
+  return /zone|zona|zonas|zonen/.test(normalized)
+}
+
 function wordsInBlock(block: Block): number {
   switch (block.type) {
     case 'para':
@@ -125,6 +130,12 @@ function blockParagraphTexts(block: Block): string[] {
   }
 }
 
+function blockSearchText(block: Block): string {
+  if (block.type === 'figure') return `${block.caption} ${block.alt}`
+  if (block.type === 'reflexAtlas') return ''
+  return blockParagraphTexts(block).join(' ')
+}
+
 export function chapterStats(chapter: Chapter): { readingMinutes: number; figureCount: number } {
   let wordCount = 0
   let figureCount = 0
@@ -165,7 +176,15 @@ export function chapterQualityMetrics(
 
   for (const section of chapter.sections) {
     let sectionWords = countWords(section.title)
-    const sectionIsPodalZone = isPodalReflexText(`${section.id} ${section.title}`)
+    const sectionHeadingText = `${section.id} ${section.title}`
+    const sectionBodySearchText = section.blocks.map(blockSearchText).join(' ')
+    const sectionSearchText = [
+      sectionHeadingText,
+      sectionBodySearchText,
+    ].join(' ')
+    const sectionIsPodalZone = isPodalReflexText(sectionHeadingText) || (
+      isPodalReflexText(sectionSearchText) && hasZoneText(sectionSearchText)
+    )
     if (sectionIsPodalZone) podalZoneSectionCount++
     let insidePodalZone = sectionIsPodalZone
 
