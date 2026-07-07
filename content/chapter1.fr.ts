@@ -156,7 +156,6 @@ export const chapter1Fr: Chapter = {
       title: 'Application clinique en ROP',
       blocks: [
         { type: 'para', text: 'La ROP utilise, dans son cadre méthodologique, des circuits réflexes à partir de zones occipitales et podales pour guider l’évaluation et le traitement.' },
-        { type: 'para', text: 'Illustration clinique — Balance viscéro-émotionnelle système limbique / foie : cette technique a été choisie pour illustrer le passage des principes généraux à l’application clinique en ROP. Elle met en relation un viscère — le foie — avec ses contraintes de mobilité, ses attaches, son environnement diaphragmatique et ses régulations neurovégétatives, tout en ouvrant sur la dimension émotionnelle via le système limbique. Elle montre ainsi que la ROP ne considère pas l’organe isolément, mais recherche une restriction, ses relais réflexes et son intégration globale. À ce stade du livre, l’objectif n’est pas de détailler un protocole hépatique, mais de donner au lecteur une image concrète de la logique viscéro-émotionnelle de la méthode.' },
         { type: 'para', text: 'Le praticien recherche :' },
         { type: 'bullets', items: [
           'une restriction principale (mobilité/motilité) ;',
@@ -165,11 +164,12 @@ export const chapter1Fr: Chapter = {
         ]},
         { type: 'para', text: 'La démarche thérapeutique vise un “retour à l’équilibre” : induire, écouter, corriger, puis vérifier l’intégration globale.' },
         { type: 'para', text: 'Le même principe peut être décliné pour d’autres viscères, selon les tests ROP et le contexte clinique.' },
+        { type: 'para', text: 'Illustration clinique — Balance viscéro-émotionnelle système limbique / foie : cette technique a été choisie pour illustrer le passage des principes généraux à l’application clinique en ROP. Elle met en relation un viscère — le foie — avec ses contraintes de mobilité, ses attaches, son environnement diaphragmatique et ses régulations neurovégétatives, tout en ouvrant sur la dimension émotionnelle via le système limbique. Elle montre ainsi que la ROP ne considère pas l’organe isolément, mais recherche une restriction, ses relais réflexes et son intégration globale. À ce stade du livre, l’objectif n’est pas de détailler un protocole hépatique, mais de donner au lecteur une image concrète de la logique viscéro-émotionnelle de la méthode.' },
       ],
     },
     {
       id: 'synthese-operationnelle',
-      title: 'Synthèse opérationnelle (pour le praticien)',
+      title: 'Synthèse opérationnelle',
       blocks: [
         { type: 'bullets', items: [
           'Penser “glissement + pressions + innervation” avant de penser “organe isolé”.',
