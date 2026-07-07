@@ -265,8 +265,8 @@ export const chapter2Fr: Chapter = {
           "text": "Traitement par la ROP"
         },
         {
-          "type": "rop",
-          "body": [
+          "type": "bullets",
+          "items": [
             "1. Zones réflexes occipitales",
             "2. Syndrome général d’adaptation : MRP, diencéphale, tronc cérébral, hypophyse, surrénales, colonne vertébrale, foie, rein gauche",
             "3. Syndrome locorégional : région cervico-isthmique de l’utérus, muscle piriforme, ligaments sacro-tubéral et sacro-spinal, nerf pudendal, articulations sacro-coccygienne et sacro-iliaque, plexus sacré et sciatique gauches",

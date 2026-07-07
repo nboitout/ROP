@@ -134,7 +134,7 @@ export const chapter2Es: Chapter = {
           "En su nueva vida como madre, su sistema límbico se activa por la ansiedad, por la ciática y por la reincorporación a la actividad profesional alterada por la maternidad.",
         ]},
         { type: "sub", text: "Tratamiento ROP" },
-        { type: "rop", body: [
+        { type: "bullets", items: [
           "1. Zonas reflejas occipitales",
           "2. Síndrome general de adaptación: MRP, Diencéfalo, Tronco encefálico, Hipófisis, Glándulas suprarrenales, Columna vertebral, Hígado, Riñón izquierdo",
           "3. Síndrome locorregional: Región cérvico-ístmica del útero, Músculo piriforme, Ligamentos sacrotuberoso y sacroespinoso, Nervio pudendo, Articulaciones sacrococcígea y sacroilíaca, Plexos sacro y ciático izquierdos",

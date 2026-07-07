@@ -134,7 +134,7 @@ export const chapter2En: Chapter = {
           "In her new life as a mother, her limbic system is activated by anxiety, by sciatica, and by the return to professional activity disrupted by motherhood.",
         ]},
         { type: "sub", text: "ROP treatment" },
-        { type: "rop", body: [
+        { type: "bullets", items: [
           "1. Occipital reflex zones",
           "2. General adaptation syndrome: PRM, Diencephalon, Brainstem, Pituitary gland, Adrenal glands, Spinal column, Liver, Left kidney",
           "3. Locoregional syndrome: Cervico-isthmic region of the uterus, Piriformis muscle, Sacrotuberous and sacrospinous ligaments, Pudendal nerve, Sacrococcygeal and sacroiliac joints, Left sacral and sciatic plexuses",

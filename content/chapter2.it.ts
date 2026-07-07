@@ -134,7 +134,7 @@ export const chapter2It: Chapter = {
           "Nella sua nuova vita di madre, il suo sistema limbico è attivato dall'ansia, dalla sciatalgia e dal ritorno all'attività professionale perturbato dalla maternità.",
         ]},
         { type: "sub", text: "Trattamento ROP" },
-        { type: "rop", body: [
+        { type: "bullets", items: [
           "1. Zone riflesse occipitali",
           "2. Sindrome generale di adattamento: MRP, Diencefalo, Tronco encefalico, Ipofisi, Ghiandole surrenali, Colonna vertebrale, Fegato, Rene sinistro",
           "3. Sindrome locoregionale: Regione cervico-istmica dell'utero, Muscolo piriforme, Legamenti sacrotuberoso e sacrospinoso, Nervo pudendo, Articolazioni sacrococcigea e sacroiliaca, Plessi sacrale e sciatico sinistri",

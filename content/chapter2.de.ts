@@ -134,7 +134,7 @@ export const chapter2De: Chapter = {
           "In ihrem neuen Leben als Mutter wird ihr limbisches System durch Angst, durch die Ischialgie und durch die durch die Mutterschaft gestörte Rückkehr in die berufliche Tätigkeit aktiviert.",
         ]},
         { type: "sub", text: "ROP-Behandlung" },
-        { type: "rop", body: [
+        { type: "bullets", items: [
           "1. Okzipitale Reflexzonen",
           "2. Allgemeines Anpassungssyndrom: PRM, Diencephalon, Hirnstamm, Hypophyse, Nebennieren, Wirbelsäule, Leber, linke Niere",
           "3. Lokoregionales Syndrom: Zerviko-isthmische Region des Uterus, Musculus piriformis, Ligamentum sacrotuberale und Ligamentum sacrospinale, Nervus pudendus, Sakrokokzygeal- und Iliosakralgelenke, linker sakraler Plexus und linker Plexus ischiadicus",
