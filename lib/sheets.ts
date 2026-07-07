@@ -39,6 +39,16 @@ const DATE_SCOPED_EXCLUSIONS = [
   },
 ]
 
+// Narrow one-off QA exclusions when the exact reader_id is unavailable locally.
+// Keep these as specific as possible and remove them once the cookie id is known.
+const VISIT_SIGNATURE_EXCLUSIONS = [
+  {
+    date: '2026-07-06',
+    country: 'RO',
+    requireAnonymousLead: true,
+  },
+]
+
 // ---- Types ----
 
 export interface LeadRow {
@@ -255,6 +265,10 @@ function isoDate(timestamp: string): string {
   return timestamp.slice(0, 10)
 }
 
+function hasLeadIdentity(readerId: string, leadReaderIds: Set<string>): boolean {
+  return leadReaderIds.has(readerId.toLowerCase())
+}
+
 function rowsToEvents(rows: string[][]): EventRow[] {
   if (rows.length < 2) return []
   return rows.slice(1).map((r) => {
@@ -421,11 +435,19 @@ export async function fetchAllSheets(): Promise<{
   const cleanEvents = allEvents.filter(
     (e) => !excludedReaderIds.has(e.readerId.toLowerCase()) && !isDatedExcludedReader(e.readerId, e.timestamp)
   )
-  const cleanVisits = allVisits.filter(
-    (v) => !excludedReaderIds.has(v.readerId.toLowerCase()) && !isDatedExcludedReader(v.readerId, v.timestamp)
-  )
-
   const leadReaderIds = new Set(cleanLeads.map((l) => l.readerId.toLowerCase()).filter(Boolean))
+  const cleanVisits = allVisits.filter((v) => {
+    if (excludedReaderIds.has(v.readerId.toLowerCase()) || isDatedExcludedReader(v.readerId, v.timestamp)) {
+      return false
+    }
+    return !VISIT_SIGNATURE_EXCLUSIONS.some((rule) => {
+      if (isoDate(v.timestamp) !== rule.date) return false
+      if ((v.country || '').toUpperCase() !== rule.country) return false
+      if (rule.requireAnonymousLead && hasLeadIdentity(v.readerId, leadReaderIds)) return false
+      return true
+    })
+  })
+
   const firstSeenDateByReader = new Map<string, string>()
   cleanVisits
     .filter((v) => v.event === 'page_visit' && v.readerId)
