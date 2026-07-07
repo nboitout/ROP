@@ -1,8 +1,10 @@
 import type { Metadata } from 'next'
+import { revalidatePath, revalidateTag, unstable_cache } from 'next/cache'
 import { translations, type Lang } from '@/app/i18n/translations'
 import { getChapterLangs, getChapterTranslations } from '@/content/registry'
 import { getChapterSlideVisuals } from '@/content/slidesyncRegistry'
 import ChapterBoard, { type BoardRow, type LangStatus } from '@/components/admin/ChapterBoard'
+import RecalculateStatsButton from '@/components/admin/RecalculateStatsButton'
 import {
   chapterQualityIssues,
   chapterQualityMetrics,
@@ -11,6 +13,14 @@ import {
 } from '@/lib/chapterStats'
 
 export const metadata: Metadata = { title: 'Chapters · Admin R.O.P.' }
+
+const CHAPTER_STATS_TAG = 'admin-chapter-stats'
+
+async function recalculateChapterStats() {
+  'use server'
+  revalidateTag(CHAPTER_STATS_TAG, 'max')
+  revalidatePath('/admin/chapitres', 'page')
+}
 
 const LANGS: Lang[] = ['fr', 'en', 'de', 'es', 'it', 'th']
 
@@ -50,12 +60,45 @@ type QualityRow = {
   issues: ChapterQualityIssue[]
 }
 
+type ChapterStatsSnapshot = {
+  generatedAt: string
+  rows: BoardRow[]
+  total: number
+  builtTotal: number
+  frLive: number
+  enLive: number
+  deLive: number
+  esLive: number
+  itLive: number
+  qualityRows: QualityRow[]
+  analyzedRows: Array<QualityRow & { metrics: ChapterQualityMetrics }>
+  launchAssetRows: Array<QualityRow & { metrics: ChapterQualityMetrics }>
+  attentionRows: QualityRow[]
+  chaptersWithSyncSlides: number
+  chaptersWithReflexZoneText: number
+  chaptersWithReflexZonePictures: number
+  chaptersWithReflexZoneSlideSupport: number
+  chaptersWithClinicalCases: number
+  reflexZoneCoverageRows: Array<QualityRow & { metrics: ChapterQualityMetrics }>
+  avgReadMinutes: number
+  avgVisualDensity: number
+  fullyTranslatedRows: number
+}
+
 function formatNumber(n: number): string {
   return n.toLocaleString('en-US')
 }
 
 function formatDensity(n: number): string {
   return n.toFixed(1)
+}
+
+function formatGeneratedAt(value: string): string {
+  return new Intl.DateTimeFormat('fr-FR', {
+    dateStyle: 'short',
+    timeStyle: 'medium',
+    timeZone: 'Europe/Paris',
+  }).format(new Date(value))
 }
 
 function resourceLabel(metrics: ChapterQualityMetrics): string {
@@ -112,7 +155,7 @@ function translationIssues(
   return issues
 }
 
-export default async function AdminChapitresPage() {
+function buildChapterStatsSnapshot(): ChapterStatsSnapshot {
   const t = translations.en.chapters
   const partTitle = new Map(t.parts.map((p) => [p.id, p.title]))
 
@@ -214,6 +257,64 @@ export default async function AdminChapitresPage() {
     : 0
   const fullyTranslatedRows = qualityRows.filter((r) => r.liveLangs.length === LANGS.length).length
 
+  return {
+    generatedAt: new Date().toISOString(),
+    rows,
+    total,
+    builtTotal,
+    frLive,
+    enLive,
+    deLive,
+    esLive,
+    itLive,
+    qualityRows,
+    analyzedRows,
+    launchAssetRows,
+    attentionRows,
+    chaptersWithSyncSlides,
+    chaptersWithReflexZoneText,
+    chaptersWithReflexZonePictures,
+    chaptersWithReflexZoneSlideSupport,
+    chaptersWithClinicalCases,
+    reflexZoneCoverageRows,
+    avgReadMinutes,
+    avgVisualDensity,
+    fullyTranslatedRows,
+  }
+}
+
+const getChapterStatsSnapshot = unstable_cache(
+  async () => buildChapterStatsSnapshot(),
+  [CHAPTER_STATS_TAG],
+  { tags: [CHAPTER_STATS_TAG] },
+)
+
+export default async function AdminChapitresPage() {
+  const t = translations.en.chapters
+  const {
+    generatedAt,
+    rows,
+    total,
+    builtTotal,
+    frLive,
+    enLive,
+    deLive,
+    esLive,
+    itLive,
+    qualityRows,
+    analyzedRows,
+    attentionRows,
+    chaptersWithSyncSlides,
+    chaptersWithReflexZoneText,
+    chaptersWithReflexZonePictures,
+    chaptersWithReflexZoneSlideSupport,
+    chaptersWithClinicalCases,
+    reflexZoneCoverageRows,
+    avgReadMinutes,
+    avgVisualDensity,
+    fullyTranslatedRows,
+  } = await getChapterStatsSnapshot()
+
   return (
     <main className="adm-page">
       <div className="adm-page-header">
@@ -224,6 +325,10 @@ export default async function AdminChapitresPage() {
             Each link opens the chapter in the selected language without changing the site language.
             Useful for reviewing versions side by side, with one tab per language.
           </p>
+        </div>
+        <div className="adm-refresh">
+          <RecalculateStatsButton action={recalculateChapterStats} />
+          <p className="adm-refresh-note">Last calculated {formatGeneratedAt(generatedAt)}</p>
         </div>
       </div>
 

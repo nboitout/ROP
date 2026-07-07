@@ -206,6 +206,47 @@
   margin-top: 6px;
 }
 
+.adm-refresh {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 6px;
+}
+
+.adm-refresh-btn {
+  font-family: 'DM Sans', sans-serif;
+  font-size: .68rem;
+  font-weight: 600;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  border: 1px solid rgba(74,107,90,.35);
+  background: rgba(74,107,90,.08);
+  color: var(--adm-sage);
+  padding: 8px 14px;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: background .15s, color .15s, border-color .15s, opacity .15s;
+}
+
+.adm-refresh-btn:hover:not(:disabled) {
+  background: var(--adm-sage);
+  border-color: var(--adm-sage);
+  color: var(--adm-cream);
+}
+
+.adm-refresh-btn:disabled {
+  cursor: wait;
+  opacity: .62;
+}
+
+.adm-refresh-note {
+  color: var(--adm-i30);
+  font-size: .66rem;
+  margin: 0;
+  white-space: nowrap;
+}
+
 /* ---- Research dropdown (prototypes / experiments) ---- */
 .adm-research {
   position: relative;
