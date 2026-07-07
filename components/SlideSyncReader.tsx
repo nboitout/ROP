@@ -581,17 +581,24 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
     const start = lightboxTouch.current
     lightboxTouch.current = null
     if (!start || (lightbox?.gallery?.length ?? 0) < 2) return
+    // A zoomed image pans with the finger; don't hijack that gesture.
+    if (lightboxZoom > 1) return
     const touch = e.changedTouches[0]
     if (!touch) return
     const dx = touch.clientX - start.x
     const dy = touch.clientY - start.y
-    // A deliberate horizontal swipe — not a tap, not a vertical scroll.
-    if (Math.abs(dx) < 48 || Math.abs(dx) < Math.abs(dy) * 1.5) return
-    // A zoomed image pans horizontally; don't hijack that gesture.
-    const scrollEl = lightboxScrollRef.current
-    if (scrollEl && scrollEl.scrollWidth - scrollEl.clientWidth > 8) return
-    track('lightbox_swipe_nav', { direction: dx < 0 ? 'next' : 'prev' })
-    moveLightboxGallery(dx < 0 ? 1 : -1)
+    const horizontal = Math.abs(dx) >= 40 && Math.abs(dx) > Math.abs(dy) * 1.2
+    const vertical = Math.abs(dy) >= 40 && Math.abs(dy) > Math.abs(dx) * 1.2
+    // When a landscape slide is auto-rotated on a portrait phone, its reading
+    // axis runs vertically on screen — a flick up is the spontaneous "next"
+    // there, so both axes navigate. Unrotated views keep vertical for
+    // scrolling and only navigate horizontally.
+    let delta = 0
+    if (horizontal) delta = dx < 0 ? 1 : -1
+    else if (vertical && rotateLandscapeLightbox) delta = dy < 0 ? 1 : -1
+    if (delta === 0) return
+    track('lightbox_swipe_nav', { direction: delta > 0 ? 'next' : 'prev', axis: horizontal ? 'x' : 'y' })
+    moveLightboxGallery(delta)
   }
 
   function cancelNav() {
