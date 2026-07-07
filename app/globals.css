@@ -841,8 +841,15 @@ a.ss-switch-opt:hover { color:var(--gold); }
   .ss-frame-zoom { opacity:.85; }
 }
 
-.ss-stage-bar { display:flex; align-items:center; gap:14px; margin-top:14px; }
-.ss-stage-meta { flex:1; min-width:0; display:flex; flex-direction:column; align-items:center; text-align:center; gap:2px; }
+.ss-stage-bar { display:flex; align-items:center; gap:14px; margin-top:14px; min-width:0; }
+/* The stage bar sits on cream — restyle the shared lightbox nav buttons,
+   which are white-on-dark, so the arrows are actually visible here. */
+.ss-stage-bar .cr-viewer-nav-btn { color:rgba(26,26,24,.6); border-color:rgba(26,26,24,.16); }
+.ss-stage-bar .cr-viewer-nav-btn:hover:not(:disabled) { background:rgba(26,26,24,.05); border-color:rgba(160,124,58,.5); }
+/* overflow:hidden breaks the Safari min-content circularity of the nowrap
+   title inside this nested flex column; without it iOS can refuse to shrink
+   the meta block and push the bar's last control off-screen. */
+.ss-stage-meta { flex:1; min-width:0; overflow:hidden; display:flex; flex-direction:column; align-items:center; text-align:center; gap:2px; }
 .ss-stage-count { font-size:.7rem; font-weight:600; letter-spacing:.14em; color:var(--gold); }
 .ss-stage-title { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:1.02rem; line-height:1.3;
   color:rgba(26,26,24,.78); overflow:hidden; text-overflow:ellipsis; white-space:nowrap; max-width:100%; }
@@ -956,7 +963,10 @@ a.ss-switch-opt:hover { color:var(--gold); }
   /* on mobile keep the reflex-zone shortcut and the width-capped portrait */
   .ss-stage--portrait .ss-jump { display:flex; }
   .ss-stage--portrait .ss-frame--portrait { width:min(260px,70vw); height:auto; }
-  .ss-stage-bar { max-width:520px; margin:8px auto 0; gap:10px; }
+  .ss-stage-bar { max-width:520px; margin:8px auto 0; gap:8px; }
+  /* Backstop against engine min-content quirks (iOS text boosting): let the
+     fixed controls compress slightly rather than ever leaving the screen. */
+  .ss-stage-bar .cr-viewer-nav-btn, .ss-stage-hide { flex-shrink:1; min-width:26px; }
   .ss-stage-title { font-size:.92rem; }
   .ss-dots { display:none; }
   .ss-pagebreak { height:42vh; min-height:200px; }
