@@ -205,11 +205,7 @@ export default async function AdminChapitresPage() {
   const chaptersWithReflexZonePictures = launchAssetRows.filter((row) => row.metrics.podalZonePhotoCount > 0).length
   const chaptersWithReflexZoneSlideSupport = launchAssetRows.filter((row) => row.metrics.podalZoneSlideCount > 0).length
   const chaptersWithClinicalCases = launchAssetRows.filter((row) => row.metrics.clinicalCaseCount > 0).length
-  const reflexZoneCoverageRows = launchAssetRows.filter(
-    (row) => row.metrics.podalZoneSectionCount > 0
-      || row.metrics.podalZonePhotoCount > 0
-      || row.metrics.podalZoneSlideCount > 0,
-  )
+  const reflexZoneCoverageRows = launchAssetRows
   const avgReadMinutes = analyzedRows.length > 0
     ? Math.round(analyzedRows.reduce((sum, row) => sum + row.metrics.readingMinutes, 0) / analyzedRows.length)
     : 0
