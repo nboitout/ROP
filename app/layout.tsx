@@ -1,4 +1,4 @@
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import './globals.css'
 import { LanguageProvider } from '@/app/i18n/LanguageContext'
 import { getServerLang } from '@/app/i18n/serverLang'
@@ -45,6 +45,16 @@ export const metadata: Metadata = {
   formatDetection: {
     telephone: false,
   },
+  // iOS "Add to Home Screen": default app name and standalone launch.
+  appleWebApp: {
+    capable: true,
+    title: '3e livre ROP',
+    statusBarStyle: 'default',
+  },
+}
+
+export const viewport: Viewport = {
+  themeColor: '#fbf8f1',
 }
 
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
@@ -52,6 +62,8 @@ export default async function RootLayout({ children }: { children: React.ReactNo
   return (
     <html lang={lang}>
       <head>
+        {/* Legacy variant of mobile-web-app-capable for iOS < 17.4 */}
+        <meta name="apple-mobile-web-app-capable" content="yes" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link
