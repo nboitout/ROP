@@ -33,11 +33,11 @@ export const chapter2Fr: Chapter = {
           "items": [
             {
               "label": "Corpuscules de Meissner",
-              "text": "Ils sont enchâssés dans les papilles dermiques, c’est-à-dire les avancées du derme, repoussant l’épidèrme. Ils sont sensibles à une pression fine ou épicritique sans aller jusqu’à la douleur. Ils se trouvent préférentiellement au niveau de la peau glabre de la plante des pieds, de la paume des mains, des lèvres et des organes génitaux."
+              "text": "Ils sont enchâssés dans les papilles dermiques, c’est-à-dire les avancées du derme, repoussant l’épiderme. Ils sont sensibles à une pression fine ou épicritique sans aller jusqu’à la douleur. Ils se trouvent préférentiellement au niveau de la peau glabre de la plante des pieds, de la paume des mains, des lèvres et des organes génitaux."
             },
             {
               "label": "Disques de Merkel",
-              "text": "Ils sont situés à la base de l’épidèrme, juste au-dessus du derme. Ils sont sensibles à une pression douce de la peau."
+              "text": "Ils sont situés à la base de l’épiderme, juste au-dessus du derme. Ils sont sensibles à une pression douce de la peau."
             }
           ]
         },
@@ -62,7 +62,7 @@ export const chapter2Fr: Chapter = {
         {
           "type": "rop",
           "body": [
-            "La force et la trituration du massage réflexe doivent être proscrits. Plus on appuie, plus on sent ses doigts, moins on sent les repères osseux qui nous guident dans la recherché des zones réflexes, et moins la lecture des zones réflexes est aisée.",
+            "La force et la trituration du massage réflexe doivent être proscrites. Plus on appuie, plus on sent ses doigts, moins on sent les repères osseux qui nous guident dans la recherche des zones réflexes, et moins la lecture des zones réflexes est aisée.",
             "Dans le but de restaurer une bonne qualité des tissus, apparaît le respect que nous accordons à l’organisme. Solliciter, c’est bien le mot qui convient. Même un traitement bien conduit est un stress, certes positif, mais qui doit tenir compte des capacités d’autocorrection de l’individu."
           ]
         },
@@ -75,7 +75,7 @@ export const chapter2Fr: Chapter = {
           "items": [
             {
               "label": "Temps du diagnostic textural",
-              "text": "C’est la recherché des zones réflexes caractérisées par une modification de la texture de la peau occipitale et podale : rugosité, densification, perte de glissement, sensation de cristaux. Elles doivent confirmer le diagnostic obtenu à l’issue de l’examen clinique."
+              "text": "C’est la recherche des zones réflexes caractérisées par une modification de la texture de la peau occipitale et podale : rugosité, densification, perte de glissement, sensation de cristaux. Elles doivent confirmer le diagnostic obtenu à l’issue de l’examen clinique."
             },
             {
               "label": "Temps thérapeutique",
@@ -97,7 +97,7 @@ export const chapter2Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "La capacité et la qualité de la réponse de l’organisme dépend de sa vitalité, de ses capacités d’adaptation-compensation en rapport avec la phase du syndrome général d’adaptation dans laquelle évolue la maladie — alarme, adaptation, résistance, épuisement."
+          "text": "La capacité et la qualité de la réponse de l’organisme dépendent de sa vitalité, de ses capacités d’adaptation-compensation en rapport avec la phase du syndrome général d’adaptation dans laquelle évolue la maladie — alarme, adaptation, résistance, épuisement."
         }
       ]
     },
@@ -145,7 +145,7 @@ export const chapter2Fr: Chapter = {
             },
             {
               "label": "Écoute émotionnelle",
-              "text": "Il faut éventuellement recherchér les traumatismes physiques ou psycho-émotionnels anciens, oubliés, refoulés dans certaines couches de notre inconscient. L’écoute tissulaire puis émotionnelle peut aider à mettre en évidence les évènements importants et négatifs mémorisés dans l’amygdale et l’hippocampe du système limbique."
+              "text": "Il faut éventuellement rechercher les traumatismes physiques ou psycho-émotionnels anciens, oubliés, refoulés dans certaines couches de notre inconscient. L’écoute tissulaire puis émotionnelle peut aider à mettre en évidence les évènements importants et négatifs mémorisés dans l’amygdale et l’hippocampe du système limbique."
             },
             {
               "label": "Mécanisme de stress",
@@ -298,17 +298,17 @@ export const chapter2Fr: Chapter = {
             "Douleur thoracique atypique, dyspnée, malaise ;",
             "Sang dans les urines / selles ;",
             "Fièvre, maladies infectieuses ;",
-            "Amaigrissement inexpliqé ;",
+            "Amaigrissement inexpliqué ;",
             "Risque de migration d’un thrombus ;",
             "Pâleur et fatigue importante ;",
             "Déficit neurologique : troubles sphinctériens, troubles sensitifs progressifs ;",
             "Angoisse, peur de mourir ;",
-            "Aveux d’impuissance face à un cas clinique qu’on ne comprend pas."
+            "Aveu d’impuissance face à un cas clinique qu’on ne comprend pas."
           ]
         },
         {
           "type": "para",
-          "text": "Il est important d’être sensibilisé aux différentes maladies graves, au risque de retarder un diagnostic médical, surtout si les patients nous consultent en première intention, sans être passés par le filtré médical."
+          "text": "Il est important d’être sensibilisé aux différentes maladies graves, au risque de retarder un diagnostic médical, surtout si les patients nous consultent en première intention, sans être passés par le filtre médical."
         },
         {
           "type": "para",
