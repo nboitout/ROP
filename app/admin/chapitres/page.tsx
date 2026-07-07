@@ -409,10 +409,10 @@ export default async function AdminChapitresPage() {
           <thead>
             <tr>
               <th style={{ width: 44 }}>#</th>
-              <th>Chapter</th>
-              <th>Zone text</th>
-              <th>Zone pictures</th>
-              <th>Zone slide support</th>
+              <th>Reflex Zones in these chapter</th>
+              <th>text included</th>
+              <th>Photo included</th>
+              <th>Cartography included</th>
             </tr>
           </thead>
           <tbody>
