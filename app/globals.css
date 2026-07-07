@@ -1086,8 +1086,11 @@ a.ss-switch-opt:hover { color:var(--gold); }
   display:flex;
   gap:var(--visual-showcase-gap);
   width:max-content;
-  animation:visual-showcase-drift 55s linear infinite;
+  animation:visual-showcase-drift-desktop 55s linear infinite;
   animation-play-state:running;
+  /* Own compositor layer: Safari can freeze animations rasterized inside a
+     masked ancestor (.visual-showcase-frame) without this. */
+  will-change:transform;
 }
 .visual-showcase.is-paused .visual-showcase-track {
   animation-play-state:paused;
@@ -1110,20 +1113,17 @@ a.ss-switch-opt:hover { color:var(--gold); }
   height:100%;
   object-fit:cover;
 }
-@keyframes visual-showcase-drift {
-  from { transform:translateX(0); }
-  to { transform:translateX(calc(-50% - (var(--visual-showcase-gap) / 2))); }
+/* No var() inside the keyframes: Safari has resolved custom properties in
+   @keyframes unreliably, which leaves the track parked at translateX(0).
+   The half-gap offset is baked in per layout (gap 20px desktop, 14px mobile)
+   and translate3d keeps the layer composited. */
+@keyframes visual-showcase-drift-desktop {
+  from { transform:translate3d(0,0,0); }
+  to { transform:translate3d(calc(-50% - 10px),0,0); }
 }
-@media (prefers-reduced-motion: reduce) {
-  .visual-showcase-track {
-    animation:none;
-    overflow-x:auto;
-    width:auto;
-    padding:0 42px 10px;
-  }
-  /* Hand-swiped strip: no drift to pause, and no need for the loop copy. */
-  .visual-showcase-control { display:none; }
-  .visual-showcase-slide--dup { display:none; }
+@keyframes visual-showcase-drift-mobile {
+  from { transform:translate3d(0,0,0); }
+  to { transform:translate3d(calc(-50% - 7px),0,0); }
 }
 @media (min-width:721px) and (max-width:1120px) {
   .visual-showcase h2 {
@@ -1176,6 +1176,7 @@ a.ss-switch-opt:hover { color:var(--gold); }
     mask-image:linear-gradient(90deg, transparent 0, #000 4%, #000 96%, transparent 100%);
   }
   .visual-showcase-track {
+    animation-name:visual-showcase-drift-mobile;
     animation-duration:82s;
   }
   .visual-showcase-slide {
@@ -1185,6 +1186,19 @@ a.ss-switch-opt:hover { color:var(--gold); }
   }
   .visual-showcase-slide:nth-child(n) { transform:none; }
   .visual-showcase-slide:nth-child(2n) { transform:translateY(4px); }
+}
+/* Last in the showcase cascade so it beats the per-breakpoint
+   animation-name overrides above. */
+@media (prefers-reduced-motion: reduce) {
+  .visual-showcase-track {
+    animation:none;
+    overflow-x:auto;
+    width:auto;
+    padding:0 42px 10px;
+  }
+  /* Hand-swiped strip: no drift to pause, and no need for the loop copy. */
+  .visual-showcase-control { display:none; }
+  .visual-showcase-slide--dup { display:none; }
 }
 
 /* ── CHAPTER 14 — INTERACTIVE REFLEX-ZONE ATLAS ───────────────────────────── */
