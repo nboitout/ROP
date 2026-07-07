@@ -88,6 +88,11 @@ function hasZoneText(value: string): boolean {
   return /zone|zona|zonas|zonen/.test(normalized)
 }
 
+function isRopClinicalApplicationText(value: string): boolean {
+  const normalized = normalizeForSearch(value)
+  return /\brop\b/.test(normalized) && /(application clinique|approche clinique|clinical application|clinical approach)/.test(normalized)
+}
+
 function wordsInBlock(block: Block): number {
   switch (block.type) {
     case 'para':
@@ -182,7 +187,7 @@ export function chapterQualityMetrics(
       sectionHeadingText,
       sectionBodySearchText,
     ].join(' ')
-    const sectionIsPodalZone = isPodalReflexText(sectionHeadingText) || (
+    const sectionIsPodalZone = isPodalReflexText(sectionHeadingText) || isRopClinicalApplicationText(sectionHeadingText) || (
       isPodalReflexText(sectionSearchText) && hasZoneText(sectionSearchText)
     )
     if (sectionIsPodalZone) podalZoneSectionCount++

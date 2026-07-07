@@ -61,9 +61,14 @@ function isPodalReflexText(value: string): boolean {
   return hasReflex && hasPodal
 }
 
+function isRopClinicalApplicationText(value: string): boolean {
+  const normalized = normalizeForSearch(value)
+  return /\brop\b/.test(normalized) && /(application clinique|approche clinique|clinical application|clinical approach)/.test(normalized)
+}
+
 function isPodalAnchorSection(sectionId: string): boolean {
   const normalized = normalizeForSearch(sectionId)
-  return isPodalReflexText(sectionId) || normalized.includes('zones-reflexes')
+  return isPodalReflexText(sectionId) || normalized.includes('zones-reflexes') || isRopClinicalApplicationText(sectionId)
 }
 
 function slideNumbers(slide: number | number[]): number[] {
@@ -81,7 +86,9 @@ export function getChapterSlideVisuals(key: string): { slideCount: number; podal
   })
 
   source.slides.forEach((slide, index) => {
-    if (isPodalReflexText(slide.title)) podalSlides.add(index + 1)
+    if (isPodalReflexText(slide.title) || isRopClinicalApplicationText(slide.title)) {
+      podalSlides.add(index + 1)
+    }
   })
 
   return {

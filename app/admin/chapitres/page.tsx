@@ -15,6 +15,7 @@ import {
 export const metadata: Metadata = { title: 'Chapters · Admin R.O.P.' }
 
 const CHAPTER_STATS_TAG = 'admin-chapter-stats'
+const CHAPTER_STATS_CACHE_VERSION = 'rop-clinical-zone-v2'
 
 async function recalculateChapterStats() {
   'use server'
@@ -285,7 +286,7 @@ function buildChapterStatsSnapshot(): ChapterStatsSnapshot {
 
 const getChapterStatsSnapshot = unstable_cache(
   async () => buildChapterStatsSnapshot(),
-  [CHAPTER_STATS_TAG],
+  [CHAPTER_STATS_TAG, CHAPTER_STATS_CACHE_VERSION],
   { tags: [CHAPTER_STATS_TAG] },
 )
 
