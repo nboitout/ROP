@@ -1,5 +1,5 @@
 // Chapitre 1 — Généralités
-// Source : public/chapter-1/Chapitre 1 Généralités.docx (Guy Boitout)
+// Source : public/chapter-1/Chapter1 Generalites FR.docx (Guy Boitout)
 
 import type { Chapter } from './types'
 
@@ -16,6 +16,7 @@ export const chapter1Fr: Chapter = {
         { type: 'para', text: 'La fonction viscérale dépend de la biochimie et de l’innervation, mais aussi de la capacité des organes à se déformer, à se mobiliser et à glisser les uns par rapport aux autres.' },
         { type: 'para', text: 'Lorsque cette liberté diminue (traumatisme, infection, chirurgie, stress), les tissus solidaires (fascias, structures neuro-vasculaires, appareil musculo-squelettique) s’adaptent et compensent.' },
         { type: 'para', text: 'Dans certains cas, ces compensations peuvent contribuer à des symptômes à distance, selon une logique de chaînes mécaniques et neurovégétatives utilisée en clinique.' },
+        { type: 'para', text: 'Important : certaines notions qui suivent relèvent (a) de la physiologie établie, et (b) du modèle clinique utilisé en ROP (Réflexo-Occipito-Podale).' },
       ],
     },
     {
@@ -27,11 +28,6 @@ export const chapter1Fr: Chapter = {
           'Mobilité : déplacement “subi” ou “induit” par les mouvements du corps et des cavités (respiration, marche, efforts, posture).',
           'Motilité : activité motrice intrinsèque de l’organe (au sens large), modulée par le système nerveux autonome et l’état tissulaire.',
         ]},
-        { type: 'sub', text: 'Motilité : mouvement intrinsèque et lecture clinique' },
-        { type: 'para', text: 'La motilité désigne ici l’activité propre de l’organe : micro-mouvements, variations de tension, de volume et de vascularisation (au sens large).' },
-        { type: 'para', text: 'Sur le plan clinique, le praticien recherché moins une “mesure” instrumentale qu’une cohérence de comportement tissulaire : qualité d’élasticité, direction de préférence, retour, symétrie, capacité d’adaptation.' },
-        { type: 'para', text: 'Dans l’approche ROP (Réflexo-Occipito-Podale), cette “motilité” est appréciée via des tests manuels codifiés et des réponses réflexes utilisées dans la méthode.' },
-        { type: 'para', text: 'Le but est d’identifier des restrictions de mobilité/motilité associées à des chaînes fasciales et neuro-végétatives, puis de chercher une normalisation clinique.' },
         { type: 'para', text: 'La mobilité viscérale est rendue possible par quatre grands déterminants (moteurs et modulateurs).' },
         { type: 'bullets', items: [
           'le système nerveux somatique (mouvements actifs du corps) ;',
@@ -51,12 +47,19 @@ export const chapter1Fr: Chapter = {
         { type: 'leadBullets', items: [
           { label: 'Mouvement respiratoire', text: 'le diaphragme module la mobilité viscérale et les gradients de pression entre cavités.' },
           { label: 'Mouvement cardiaque', text: 'à raison d’environ 100 000 battements/24 h (ordre de grandeur), les mouvements cardiaques induisent des contraintes mécaniques locales dans le thorax.' },
+        ]},
+        { type: 'para', text: 'Ces contraintes peuvent se répercuter sur les structures adjacentes (poumons, médiastin, œsophage) et, indirectement, sur la zone diaphragmatique.' },
+        { type: 'leadBullets', items: [
           { label: 'Péristaltisme', text: 'le transit dépend de réseaux neuro-entériques et du SNA.' },
         ]},
-        { type: 'para', text: 'Ces contraintes peuvent se réperçuter sur les structures adjacentes (poumons, médiastin, œsophage) et, indirectement, sur la zone diaphragmatique.' },
         { type: 'para', text: 'Il peut être modulé par l’état émotionnel, la douleur, l’inflammation, l’alimentation et les rythmes circadiens.' },
+        { type: 'sub', text: 'Motilité : mouvement intrinsèque et lecture clinique' },
+        { type: 'para', text: 'La motilité désigne ici l’activité propre de l’organe : micro-mouvements, variations de tension, de volume et de vascularisation (au sens large).' },
+        { type: 'para', text: 'Sur le plan clinique, le praticien recherche moins une “mesure” instrumentale qu’une cohérence de comportement tissulaire : qualité d’élasticité, direction de préférence, retour, symétrie, capacité d’adaptation.' },
+        { type: 'para', text: 'Dans l’approche ROP, cette “motilité” est appréciée via des tests manuels codifiés et des réponses réflexes utilisées dans la méthode.' },
+        { type: 'para', text: 'Le but est d’identifier des restrictions de mobilité/motilité associées à des chaînes fasciales et neuro-végétatives, puis de chercher une normalisation clinique.' },
         { type: 'sub', text: 'Biorythmes : variations cycliques utiles au diagnostic' },
-        { type: 'para', text: 'De nombreux paramètrès viscéraux varient selon des rythmes (circadien, ultradien, cycles digestifs, cycles hormonaux).' },
+        { type: 'para', text: 'De nombreux paramètres viscéraux varient selon des rythmes (circadien, ultradien, cycles digestifs, cycles hormonaux).' },
         { type: 'para', text: 'Pour le praticien, cela impose :' },
         { type: 'bullets', items: [
           'de replacer le symptôme dans son contexte temporel (moment de la journée, après repas, après effort, cycle menstruel, etc.) ;',
@@ -66,14 +69,12 @@ export const chapter1Fr: Chapter = {
     },
     {
       id: 'mrp',
-      title: 'Parenthèse : théorie crânienne et MRP',
+      title: 'Parenthèse : rythmes corporels, fluides et adaptabilité tissulaire',
       blocks: [
-        { type: 'para', text: 'Certaines écoles décrivent une dynamique de circulation du liquide cérébro-spinal associée à un mécanisme respiratoire primaire (MRP).' },
-        { type: 'para', text: 'Dans un livre pour praticiens, il est utile de préciser que :' },
-        { type: 'bullets', items: [
-          'l’existence et la description fine de ce mécanisme sont discutées selon les référentiels ;',
-          'cliniquement, l’enjeu pratique est la relation entre respiration, pressions, retour veineux/lymphatique, et adaptabilité tissulaire.',
-        ]},
+        { type: 'para', text: 'Certaines approches manuelles décrivent différents rythmes corporels, y compris des rythmes subtils liés aux liquides et aux tissus.' },
+        { type: 'para', text: 'Parmi ces modèles, certaines écoles ostéopathiques évoquent le mécanisme respiratoire primaire (MRP), dont l’existence et la description fine restent discutées selon les référentiels.' },
+        { type: 'para', text: 'Dans ce chapitre, il n’est pas nécessaire de trancher ces modèles, ni d’en faire un fondement de la ROP. L’enjeu pratique pour le praticien ROP est de retenir que la mobilité d’un tissu dépend de sa capacité à s’adapter aux pressions, à la respiration, au retour veineux et lymphatique, aux variations de tonus et aux contraintes mécaniques.' },
+        { type: 'para', text: 'Cette parenthèse permet simplement de situer la ROP : nous parlons ici de mobilité, de motilité, de rythmes et de fluides, mais l’approche reste avant tout clinique, réflexe et tissulaire ; elle ne se confond pas avec une ostéopathie crânienne fondée sur le MRP.' },
       ],
     },
     {
@@ -130,18 +131,24 @@ export const chapter1Fr: Chapter = {
       id: 'perte-de-mobilite',
       title: 'Quand la mobilité se perd : adhérences, ptoses, spasmes',
       blocks: [
-        { type: 'para', text: 'Les pertes de glissement et de compliance se traduisent classiquement par trois familles de phénomènes (souvent intriqués).' },
+        { type: 'para', text: 'Les pertes de glissement et de compliance peuvent se manifester de trois façons principales. Un tissu peut être fixé par des adhérences, sollicité vers le bas par la pesanteur, ou maintenu en tension par une réaction réflexe. Dans la pratique, ces phénomènes sont rarement isolés : une cicatrice peut modifier les pressions locales, une perte de soutien peut favoriser des tensions, et une douleur peut installer une protection musculaire.' },
         { type: 'sub', text: 'Adhérences et fixations' },
-        { type: 'para', text: 'Après chirurgie, infection, inflammation, micro-traumatismes répétés, des adhérences peuvent limiter le glissement.' },
-        { type: 'para', text: 'Elles modifient la mécanique locale et peuvent influencer certains paramètrès de vascularisation selon les cas.' },
-        { type: 'para', text: 'Elles peuvent aussi entréténir un cercle douleur-stress-hypertonie.' },
+        { type: 'para', text: 'Après une chirurgie, une infection, une inflammation ou des micro-traumatismes répétés, des adhérences peuvent limiter le glissement.' },
+        { type: 'para', text: 'L’exemple le plus simple est celui d’une cicatrice abdominale ou pelvienne : appendicectomie, césarienne, cholécystectomie, chirurgie gynécologique ou intervention digestive. Même lorsque la cicatrice est belle en surface, les plans profonds peuvent rester moins souples. La peau, les fascias, le péritoine, les mésos ou les tissus voisins ne glissent plus toujours avec la même liberté.' },
+        { type: 'para', text: 'Une ancienne inflammation peut produire un effet comparable. Après un épisode digestif, gynécologique ou pelvien, une zone peut rester plus dense, plus sensible ou moins mobile, sans que le patient fasse spontanément le lien avec l’événement initial.' },
+        { type: 'para', text: 'Ces fixations modifient la mécanique locale. Elles peuvent aussi créer des compensations à distance : respiration abdominale plus limitée, tiraillement lors de l’extension du tronc, adaptation du bassin, tension lombaire, gêne diaphragmatique ou modification de la posture.' },
+        { type: 'para', text: 'Elles peuvent enfin entretenir un cercle douleur-stress-hypertonie : la zone se protège, les tissus se contractent, le mouvement diminue, puis la restriction s’installe davantage.' },
         { type: 'sub', text: 'Ptoses et contraintes de la pesanteur' },
-        { type: 'para', text: 'La pesanteur impose des contraintes sur les suspensions viscérales.' },
-        { type: 'para', text: 'Les cavités et les moyens d’union répartissent normalement ces charges.' },
-        { type: 'para', text: 'Lorsque le système de soutien se déconditionne (hypotonie, cicatrices, pertes de tonicité abdominale/périnéale), un abaissement viscéral peut être observé, parfois objectivable selon le contexte clinique.' },
+        { type: 'para', text: 'La pesanteur impose en permanence des contraintes sur les organes et sur leurs moyens de suspension.' },
+        { type: 'para', text: 'Normalement, ces contraintes sont réparties par les cavités, les pressions internes, les ligaments viscéraux, les mésos, les omentums, le diaphragme, la paroi abdominale et le plancher pelvien.' },
+        { type: 'para', text: 'Lorsque ce système de soutien se déconditionne — hypotonie, cicatrices, perte de tonicité abdominale ou périnéale, suites de grossesse, station debout prolongée, constipation chronique, toux chronique ou port répété de charges — les viscères peuvent subir une contrainte descendante plus marquée.' },
+        { type: 'para', text: 'Concrètement, certains patients décrivent une sensation de pesanteur abdominale ou pelvienne, une gêne en fin de journée, une fatigue lombaire, un ventre qui “tire” debout, ou une respiration qui devient plus haute et moins abdominale.' },
+        { type: 'para', text: 'Dans la lecture ROP, il ne s’agit pas de poser un diagnostic médical de ptose ou de prolapsus à partir du seul examen manuel. L’intérêt est plus simple : se demander si la pesanteur, les pressions internes, la perte de tonus ou les cicatrices participent à la restriction de mobilité observée.' },
         { type: 'sub', text: 'Spasmes et hypertonies réflexes' },
-        { type: 'para', text: 'Une contrainte viscérale peut s’accompagner de réponses réflexes (somatiques et autonomes) : hypertonies, restrictions de mobilité segmentaire, perturbations du retour veineux/lymphatique, variations du schéma respiratoire.' },
-        { type: 'para', text: 'Cliniquement, l’enjeu est de reconnaître les chaînes de compensation et de retrouver une meilleure adaptabilité tissulaire.' },
+        { type: 'para', text: 'Une contrainte viscérale peut s’accompagner de réponses réflexes, somatiques et autonomes : hypertonies, restrictions de mobilité segmentaire, perturbations du retour veineux ou lymphatique, variations du schéma respiratoire.' },
+        { type: 'para', text: 'L’exemple le plus évident est la défense abdominale : lorsqu’une zone est douloureuse ou irritée, la paroi se contracte spontanément pour protéger la région. Le patient respire moins profondément, évite certains mouvements et adopte parfois une posture de protection.' },
+        { type: 'para', text: 'Le même principe peut se retrouver, de façon plus fonctionnelle, autour du diaphragme, du plancher pelvien, de la région lombaire ou de la paroi abdominale. Une cicatrice sensible, un trouble digestif, une irritation pelvienne, une douleur persistante ou un stress prolongé peuvent s’accompagner de tensions réflexes locales ou régionales.' },
+        { type: 'para', text: 'Cliniquement, l’enjeu est de déterminer si la tension observée est le problème principal ou une réponse de protection. Le praticien cherche alors la chaîne : quelle zone semble perdre sa mobilité en premier, quelles zones compensent, et comment retrouver une meilleure adaptabilité tissulaire.' },
       ],
     },
     {
@@ -149,7 +156,7 @@ export const chapter1Fr: Chapter = {
       title: 'Application clinique en ROP',
       blocks: [
         { type: 'para', text: 'La ROP utilise, dans son cadre méthodologique, des circuits réflexes à partir de zones occipitales et podales pour guider l’évaluation et le traitement.' },
-        { type: 'para', text: 'Le praticien recherché :' },
+        { type: 'para', text: 'Le praticien recherche :' },
         { type: 'bullets', items: [
           'une restriction principale (mobilité/motilité) ;',
           'les relais segmentaires et neuro-végétatifs associés ;',
@@ -157,7 +164,12 @@ export const chapter1Fr: Chapter = {
         ]},
         { type: 'para', text: 'La démarche thérapeutique vise un “retour à l’équilibre” : induire, écouter, corriger, puis vérifier l’intégration globale.' },
         { type: 'para', text: 'Le même principe peut être décliné pour d’autres viscères, selon les tests ROP et le contexte clinique.' },
-        { type: 'sub', text: 'Synthèse opérationnelle (pour le praticien)' },
+      ],
+    },
+    {
+      id: 'synthese-operationnelle',
+      title: 'Synthèse opérationnelle (pour le praticien)',
+      blocks: [
         { type: 'bullets', items: [
           'Penser “glissement + pressions + innervation” avant de penser “organe isolé”.',
           'Relier un symptôme ostéo-articulaire à une hypothèse viscérale possible (douleur projetée, chaînes fasciales).',
