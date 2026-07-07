@@ -883,7 +883,7 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
   const activeSlideNumber = active ?? 0
   const activeSlide = active ? slides[active - 1] : undefined
   const activeSlideIsPortrait = activeSlide?.orientation === 'portrait'
-  const showRopJump = !!ropSection && !!ropJumpSlide && activeSectionId !== ropSection.id
+  const showRopJump = !!ropSection && !!ropJumpSlide
   const renderedSlideIndexes = useMemo(() => {
     if (!active) return []
     const indexes = new Set([active - 3, active - 2, active - 1, active, active + 1])
@@ -997,6 +997,7 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
         <div className="ss-stagecol">
           <div className={`ss-stage${activeSlideIsPortrait ? ' ss-stage--portrait' : ''}`}>
             {slidesHidden ? (
+            <>
             <button
               type="button"
               className="ss-stage-restore"
@@ -1014,6 +1015,22 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
                 <path d="M6 9l6 6 6-6" />
               </svg>
             </button>
+            {showRopJump && (
+              <button
+                type="button"
+                className="ss-jump"
+                onClick={goToReflexZones}
+                title={ui.jumpTitle(ropSection.title)}
+              >
+                <span className="ss-jump-icon" aria-hidden>⌖</span>
+                <span className="ss-jump-text">
+                  <span className="ss-jump-label">{ui.jumpLabel}</span>
+                  <span className="ss-jump-section">{ropSection.title}</span>
+                </span>
+                <span className="ss-jump-arrow" aria-hidden>↓</span>
+              </button>
+            )}
+            </>
             ) : (
             <>
             <div className="ss-stage-row">
