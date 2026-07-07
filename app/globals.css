@@ -496,11 +496,14 @@ footer > div > p { font-size:.95rem; color:rgba(245,240,232,.84); line-height:1.
   .cr-lightbox--auto-rotated .cr-lightbox-fig { width:calc(100vw - 12px); height:calc(100dvh - 64px); justify-content:center; }
   .cr-lightbox--auto-rotated .cr-lightbox-rotate-hint { display:none; }
   .cr-lightbox--auto-rotated .cr-lightbox-fig img { max-width:calc(100dvh - 84px); max-height:calc(100vw - 18px); }
-  .cr-lightbox-return { position:fixed; left:50%; bottom:max(14px, env(safe-area-inset-bottom)); z-index:2;
-    display:flex; align-items:center; justify-content:center; transform:translateX(-50%);
-    min-width:min(82vw,340px); min-height:46px; padding:12px 22px; border:1px solid rgba(245,240,232,.26);
-    border-radius:999px; background:rgba(245,240,232,.95); color:var(--ink); font-size:.82rem; font-weight:700;
-    letter-spacing:.12em; text-transform:uppercase; box-shadow:0 12px 34px rgba(0,0,0,.28); cursor:pointer; }
+  /* Compact corner control (YouTube-Music style) — an icon in the bottom
+     right returns to the half-screen reading view without eating into the
+     slide's real estate. */
+  .cr-lightbox-return { position:fixed; right:max(14px, env(safe-area-inset-right)); bottom:max(14px, env(safe-area-inset-bottom)); z-index:2;
+    display:flex; align-items:center; justify-content:center;
+    width:46px; height:46px; padding:0; border:1px solid rgba(245,240,232,.26);
+    border-radius:999px; background:rgba(245,240,232,.95); color:var(--ink);
+    box-shadow:0 12px 34px rgba(0,0,0,.28); cursor:pointer; }
 }
 
 @media (max-width:940px) and (orientation:landscape){
@@ -832,6 +835,11 @@ a.ss-switch-opt:hover { color:var(--gold); }
 .ss-slide.is-active { opacity:1; }
 .ss-frame-zoom { opacity:0; }
 .ss-frame:hover .ss-frame-zoom { opacity:1; }
+/* No hover on touch screens: keep the expand affordance visible so readers
+   know the slide opens full screen (mirrors the fullscreen collapse icon). */
+@media (hover:none){
+  .ss-frame-zoom { opacity:.85; }
+}
 
 .ss-stage-bar { display:flex; align-items:center; gap:14px; margin-top:14px; }
 .ss-stage-meta { flex:1; min-width:0; display:flex; flex-direction:column; align-items:center; text-align:center; gap:2px; }

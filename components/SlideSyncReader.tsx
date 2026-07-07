@@ -5,7 +5,7 @@
 // Navigating the slides (arrows / dots) scrolls the text to the matching
 // passage, so the two media stay in step in both directions.
 
-import { Fragment, type MouseEvent, type ReactNode, useEffect, useMemo, useRef, useState } from 'react'
+import { Fragment, type MouseEvent, type ReactNode, type TouchEvent as ReactTouchEvent, useEffect, useMemo, useRef, useState } from 'react'
 import Link from 'next/link'
 import { useSearchParams } from 'next/navigation'
 import type { Chapter, Block, Section } from '@/content/types'
@@ -247,6 +247,8 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
   const articleRef = useRef<HTMLElement>(null)
   const sectionRailRef = useRef<HTMLElement>(null)
   const lightboxScrollRef = useRef<HTMLDivElement>(null)
+  // Start point of a touch gesture on the lightbox, for swipe navigation.
+  const lightboxTouch = useRef<{ x: number; y: number } | null>(null)
   const resourceOpenedAt = useRef<number | null>(null)
   const resourceNameRef = useRef<string | null>(null)
   // While a slide-driven scroll is in flight, the scroll handler must not
@@ -569,6 +571,29 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
     })
   }
 
+  function onLightboxTouchStart(e: ReactTouchEvent<HTMLDivElement>) {
+    lightboxTouch.current = e.touches.length === 1
+      ? { x: e.touches[0].clientX, y: e.touches[0].clientY }
+      : null
+  }
+
+  function onLightboxTouchEnd(e: ReactTouchEvent<HTMLDivElement>) {
+    const start = lightboxTouch.current
+    lightboxTouch.current = null
+    if (!start || (lightbox?.gallery?.length ?? 0) < 2) return
+    const touch = e.changedTouches[0]
+    if (!touch) return
+    const dx = touch.clientX - start.x
+    const dy = touch.clientY - start.y
+    // A deliberate horizontal swipe — not a tap, not a vertical scroll.
+    if (Math.abs(dx) < 48 || Math.abs(dx) < Math.abs(dy) * 1.5) return
+    // A zoomed image pans horizontally; don't hijack that gesture.
+    const scrollEl = lightboxScrollRef.current
+    if (scrollEl && scrollEl.scrollWidth - scrollEl.clientWidth > 8) return
+    track('lightbox_swipe_nav', { direction: dx < 0 ? 'next' : 'prev' })
+    moveLightboxGallery(dx < 0 ? 1 : -1)
+  }
+
   function cancelNav() {
     if (navAnim.current) {
       cancelAnimationFrame(navAnim.current.raf)
@@ -771,8 +796,18 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
     return [...slideItems, image]
   }
 
+  function allSlidesGallery() {
+    return slides
+      .map((_, index) => slideLightboxItem(index + 1))
+      .filter((item): item is LightboxItem => !!item)
+  }
+
   function openSlideLightbox(n: number) {
-    const gallery = reflexGalleryForSlide(n)
+    // Reflex-zone slides keep their curated slide+figure pairing; any other
+    // slide opens into the full deck so the reader can browse every slide
+    // (arrows, swipe) without dropping back to the text.
+    const reflexGallery = reflexGalleryForSlide(n)
+    const gallery = reflexGallery.length > 1 ? reflexGallery : allSlidesGallery()
     const current = gallery.findIndex((item) => item.kind === 'slide' && item.src === slides[n - 1]?.src)
     const index = current >= 0 ? current : 0
     const item = gallery[index]
@@ -794,6 +829,17 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
     alignLightboxViewport()
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [lightbox?.src, lightboxZoom, rotateLandscapeLightbox])
+
+  // Warm the neighbours of the current lightbox item so swiping through the
+  // deck shows the next slide instantly.
+  useEffect(() => {
+    const gallery = lightbox?.gallery
+    if (!gallery || gallery.length < 2) return
+    const index = lightbox?.galleryIndex ?? 0
+    for (const delta of [1, -1, 2]) {
+      preloadSlideImage(gallery[(index + delta + gallery.length) % gallery.length]?.src)
+    }
+  }, [lightbox])
 
   const activeSlideNumber = active ?? 0
   const activeSlide = active ? slides[active - 1] : undefined
@@ -947,7 +993,14 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
                       />
                     )
                   })}
-                  <span className="cr-fig-zoom ss-frame-zoom" aria-hidden>⌕</span>
+                  <span className="cr-fig-zoom ss-frame-zoom" aria-hidden>
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M15 3h6v6" />
+                      <path d="M21 3l-7 7" />
+                      <path d="M9 21H3v-6" />
+                      <path d="M3 21l7-7" />
+                    </svg>
+                  </span>
                 </button>
                 <div className="ss-stage-bar">
                   <button
@@ -1175,7 +1228,13 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
               <button className="cr-lightbox-close" onClick={closeLightbox} aria-label="Fermer">×</button>
             </div>
           </div>
-          <div ref={lightboxScrollRef} className="cr-lightbox-scroll" onClick={(e) => e.stopPropagation()}>
+          <div
+            ref={lightboxScrollRef}
+            className="cr-lightbox-scroll"
+            onClick={(e) => e.stopPropagation()}
+            onTouchStart={onLightboxTouchStart}
+            onTouchEnd={onLightboxTouchEnd}
+          >
             <figure className="cr-lightbox-fig">
               {lightbox.orientation === 'landscape' && (
                 <p className="cr-lightbox-rotate-hint">{ui.rotateHint}</p>
@@ -1192,8 +1251,23 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
               <figcaption>{lightbox.caption}</figcaption>
             </figure>
           </div>
-          <button type="button" className="cr-lightbox-return" onClick={closeLightbox}>
-            {closeToReadingLabel}
+          {/* YouTube-Music-style collapse control: a compact corner icon
+              instead of the old full-width pill, so the slide keeps the
+              screen. Corners pointing inward = back to the half-screen
+              text+slide reading view. */}
+          <button
+            type="button"
+            className="cr-lightbox-return"
+            onClick={closeLightbox}
+            aria-label={closeToReadingLabel}
+            title={closeToReadingLabel}
+          >
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+              <path d="M9 3v4a2 2 0 0 1-2 2H3" />
+              <path d="M15 3v4a2 2 0 0 0 2 2h4" />
+              <path d="M9 21v-4a2 2 0 0 0-2-2H3" />
+              <path d="M15 21v-4a2 2 0 0 1 2-2h4" />
+            </svg>
           </button>
         </div>
       )}
