@@ -49,7 +49,7 @@ export const chapter1SlideAnchors: SyncAnchor[] = [
   { sectionId: 'articulations-viscerales', blockIndex: 12, slide: 12, ...endAt('articulations-viscerales', 13) },
   { sectionId: 'articulations-viscerales', blockIndex: 13, slide: 13, ...endAt('securite', 0) },
   { sectionId: 'securite', blockIndex: 0, slide: 14, ...endAt('securite', 3) },
-  { sectionId: 'perte-de-mobilite', blockIndex: 0, slide: 15, gapBefore: 'half', ...endAt('perte-de-mobilite', 13) },
+  { sectionId: 'perte-de-mobilite', blockIndex: 0, slide: 15, ...endAt('perte-de-mobilite', 13) },
   { sectionId: 'perte-de-mobilite', blockIndex: 13, slide: 16, ...endAt('perte-de-mobilite', 16) },
   { sectionId: 'perte-de-mobilite', blockIndex: 16, slide: 17, ...endAt('approche-clinique', 0) },
   { sectionId: 'approche-clinique', blockIndex: 0, slide: 18, ...endAt('synthese-operationnelle', 0) },
