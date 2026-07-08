@@ -578,6 +578,43 @@ footer > div > p { font-size:.95rem; color:rgba(245,240,232,.84); line-height:1.
 .cr-viewer-body .react-pdf__Page { box-shadow:0 8px 40px rgba(0,0,0,.5); }
 .cr-viewer-loading { color:rgba(255,255,255,.45); font-size:.9rem; padding:60px 0; }
 
+/* Dedicated research slide deck */
+.md-root { min-height:100dvh; background:#2a2825; color:var(--cream); overflow-x:clip; }
+.md-topbar { position:sticky; top:0; z-index:20; height:58px; display:grid; grid-template-columns:1fr auto 1fr; align-items:center;
+  padding:0 24px; background:rgba(36,34,32,.96); border-bottom:1px solid rgba(255,255,255,.1); backdrop-filter:blur(12px); }
+.md-back, .md-pdf-link { color:rgba(245,240,232,.78); text-decoration:none; font-size:.7rem; font-weight:700;
+  letter-spacing:.12em; text-transform:uppercase; transition:color .15s; }
+.md-back:hover, .md-pdf-link:hover { color:#fff; }
+.md-pdf-link { justify-self:end; }
+.md-topbar-title { font-family:'Cormorant Garamond',serif; color:rgba(245,240,232,.9); font-size:1.05rem; }
+.md-hero { min-height:34dvh; padding:56px clamp(22px,5vw,72px) 40px; display:grid; grid-template-columns:minmax(0,760px) auto;
+  gap:32px; align-items:end; background:linear-gradient(135deg,#28392f 0%,#1f2b25 48%,#242220 100%); }
+.md-hero-copy { max-width:760px; }
+.md-eyebrow { font-size:.68rem; font-weight:700; letter-spacing:.24em; text-transform:uppercase; color:var(--gold-l); margin-bottom:12px; }
+.md-hero h1 { color:var(--cream); margin:0 0 14px; max-width:760px; }
+.md-subtitle { max-width:650px; color:rgba(245,240,232,.78); font-size:1rem; line-height:1.7; }
+.md-meta { justify-self:end; min-width:190px; display:flex; flex-direction:column; gap:10px; padding:16px 0 0;
+  border-top:1px solid rgba(201,163,94,.42); color:rgba(245,240,232,.74); font-size:.76rem; letter-spacing:.08em; text-transform:uppercase; }
+.md-stage { padding:0; background:#2a2825; }
+.md-stage-bar { position:sticky; top:58px; z-index:15; min-height:56px; display:flex; align-items:center; justify-content:center;
+  gap:18px; padding:10px 20px; background:#242220; border-top:1px solid rgba(255,255,255,.08); border-bottom:1px solid rgba(255,255,255,.1); }
+.md-stage-title { display:flex; align-items:baseline; gap:8px; min-width:148px; color:rgba(245,240,232,.62); font-size:.72rem; letter-spacing:.1em; text-transform:uppercase; }
+.md-stage-title strong { color:rgba(245,240,232,.9); font-size:.86rem; letter-spacing:0; }
+.md-controls { display:flex; align-items:center; gap:8px; }
+.md-viewer-body { min-height:calc(100dvh - 114px); overflow:auto; display:flex; justify-content:center; align-items:flex-start; padding:30px 16px 48px; }
+.md-viewer-body .react-pdf__Document { display:flex; flex-direction:column; align-items:center; }
+.md-viewer-body .react-pdf__Page { box-shadow:0 10px 44px rgba(0,0,0,.52); background:#fff; }
+
+@media (max-width:720px){
+  .md-topbar { grid-template-columns:auto 1fr auto; gap:14px; padding:0 14px; }
+  .md-topbar-title { font-size:.95rem; text-align:center; }
+  .md-hero { grid-template-columns:1fr; min-height:auto; padding:36px 20px 28px; }
+  .md-meta { justify-self:stretch; min-width:0; flex-direction:row; flex-wrap:wrap; justify-content:space-between; }
+  .md-stage-bar { top:58px; justify-content:space-between; gap:8px; padding:8px 10px; overflow-x:auto; }
+  .md-stage-title { min-width:112px; flex-direction:column; gap:2px; }
+  .md-viewer-body { padding:18px 10px 36px; }
+}
+
 /* Resources dock — floating bottom-right */
 .cr-resources { position:fixed; right:18px; bottom:18px; z-index:240;
   background:#fbf8f1; border:1px solid rgba(160,124,58,.28); border-radius:8px;

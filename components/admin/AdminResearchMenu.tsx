@@ -12,7 +12,7 @@ const ITEMS: Item[] = [
   { href: '/prototype-pied', label: '3D Prototype →' },
   { href: '/prototype-chapitre-14', label: 'Interactive reflex zones →' },
   {
-    href: '/assets/mitochondries-vitalite-energie.pdf',
+    href: '/lecture/mitochondries-vitalite-energie',
     label: 'Mitochondries, vitalité et énergie →',
   },
 ]
