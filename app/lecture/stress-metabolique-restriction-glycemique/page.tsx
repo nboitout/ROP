@@ -5,18 +5,18 @@ import ResearchDeckReader from '@/components/ResearchDeckReader'
 import { canReadPaidChapter } from '@/lib/access'
 
 const DECK = {
-  title: 'Mitochondries, vitalité et énergie',
-  pdfUrl: '/assets/mitochondries-vitalite-energie.pdf',
-  titleId: 'mitochondria-title',
+  title: 'Stress métabolique et restriction glycémique',
+  pdfUrl: '/assets/stress-metabolique-restriction-glycemique.pdf',
+  titleId: 'metabolic-stress-title',
 }
 
 export const metadata: Metadata = {
-  title: 'Mitochondries, vitalité et énergie · R.O.P. · Guy Boitout',
-  description: 'Slide deck de recherche sur les mitochondries, la vitalité et l’énergie, présenté dans un lecteur dédié.',
+  title: 'Stress métabolique et restriction glycémique · R.O.P. · Guy Boitout',
+  description: 'Slide deck de recherche sur le stress métabolique et la restriction glycémique, présenté dans un lecteur dédié.',
   robots: { index: false, follow: false },
 }
 
-export default async function MitochondriaDeckPage() {
+export default async function MetabolicStressDeckPage() {
   const cookieStore = await cookies()
   if (!canReadPaidChapter(cookieStore)) {
     redirect('/#acheter')

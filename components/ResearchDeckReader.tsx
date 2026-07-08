@@ -6,9 +6,22 @@ import dynamic from 'next/dynamic'
 
 const PdfSlideViewer = dynamic(() => import('@/components/PdfSlideViewer'), { ssr: false })
 
-const PDF_URL = '/assets/mitochondries-vitalite-energie.pdf'
+type Props = {
+  title: string
+  pdfUrl: string
+  description?: string
+  titleId?: string
+}
 
-export default function MitochondriaDeckReader() {
+const DEFAULT_DESCRIPTION =
+  'Un support de lecture dédié pour parcourir les diapositives dans le même esprit que les decks de synthèse des chapitres.'
+
+export default function ResearchDeckReader({
+  title,
+  pdfUrl,
+  description = DEFAULT_DESCRIPTION,
+  titleId = 'research-deck-title',
+}: Props) {
   const [page, setPage] = useState(1)
   const [pageCount, setPageCount] = useState(0)
   const [zoom, setZoom] = useState(0.9)
@@ -47,18 +60,16 @@ export default function MitochondriaDeckReader() {
       <header className="md-topbar">
         <Link href="/admin/chapitres" className="md-back">Retour</Link>
         <div className="md-topbar-title">R.O.P. · Recherche</div>
-        <a href={PDF_URL} target="_blank" rel="noopener noreferrer" className="md-pdf-link">
+        <a href={pdfUrl} target="_blank" rel="noopener noreferrer" className="md-pdf-link">
           PDF
         </a>
       </header>
 
-      <section className="md-hero" aria-labelledby="mitochondria-title">
+      <section className="md-hero" aria-labelledby={titleId}>
         <div className="md-hero-copy">
           <p className="md-eyebrow">Slide deck de recherche</p>
-          <h1 id="mitochondria-title">Mitochondries, vitalité et énergie</h1>
-          <p className="md-subtitle">
-            Un support de lecture dédié pour parcourir les diapositives dans le même esprit que les decks de synthèse des chapitres.
-          </p>
+          <h1 id={titleId}>{title}</h1>
+          <p className="md-subtitle">{description}</p>
         </div>
         <div className="md-meta" aria-label="Informations du support">
           <span>Guy Boitout</span>
@@ -117,7 +128,7 @@ export default function MitochondriaDeckReader() {
 
         <div className="md-viewer-body" ref={viewerRef}>
           <PdfSlideViewer
-            file={PDF_URL}
+            file={pdfUrl}
             pageNumber={page}
             width={fitWidth * zoom}
             onLoadSuccess={handleLoadSuccess}

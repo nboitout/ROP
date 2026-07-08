@@ -15,6 +15,10 @@ const ITEMS: Item[] = [
     href: '/lecture/mitochondries-vitalite-energie',
     label: 'Mitochondries, vitalité et énergie →',
   },
+  {
+    href: '/lecture/stress-metabolique-restriction-glycemique',
+    label: 'Stress métabolique et restriction glycémique →',
+  },
 ]
 
 export default function AdminResearchMenu() {
