@@ -249,7 +249,7 @@ function buildChapterStatsSnapshot(): ChapterStatsSnapshot {
   const chaptersWithReflexZonePictures = launchAssetRows.filter((row) => row.metrics.podalZonePhotoCount > 0).length
   const chaptersWithReflexZoneSlideSupport = launchAssetRows.filter((row) => row.metrics.podalZoneSlideCount > 0).length
   const chaptersWithClinicalCases = launchAssetRows.filter((row) => row.metrics.clinicalCaseCount > 0).length
-  const reflexZoneCoverageRows = launchAssetRows
+  const reflexZoneCoverageRows = analyzedRows
   const avgReadMinutes = analyzedRows.length > 0
     ? Math.round(analyzedRows.reduce((sum, row) => sum + row.metrics.readingMinutes, 0) / analyzedRows.length)
     : 0
@@ -404,6 +404,7 @@ export default async function AdminChapitresPage() {
         </div>
       </div>
 
+      <p className="adm-section-title">Reflex zones in these chapters</p>
       <div className="adm-table-wrap adm-rop-coverage-wrap">
         <table className="adm-table adm-rop-coverage-table">
           <thead>
