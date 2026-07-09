@@ -27,8 +27,7 @@ type XrefReturn = { href: string; label: string } | null
 
 function isRopInterestSection(section: Section) {
   return /^int[ée]r[êe]t en r\.?o\.?p\.?$/i.test(section.title.trim()) &&
-    section.blocks.length === 1 &&
-    section.blocks[0].type === 'rop'
+    section.blocks[0]?.type === 'rop'
 }
 
 function getSafeXrefReturn(params: { get(name: string): string | null } | null): XrefReturn {

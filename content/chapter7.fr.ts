@@ -367,7 +367,7 @@ export const chapter7Fr: Chapter = {
     },
     {
       "id": "interet-rop-racines",
-      "title": "Intérêt en ROP",
+      "title": "Intérêt en R.O.P.",
       "blocks": [
         {
           "type": "rop",
@@ -581,7 +581,7 @@ export const chapter7Fr: Chapter = {
     },
     {
       "id": "interet-rop-vascularisation",
-      "title": "Intérêt en ROP",
+      "title": "Intérêt en R.O.P.",
       "blocks": [
         {
           "type": "rop",

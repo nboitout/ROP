@@ -327,7 +327,7 @@ export const chapter12Fr: Chapter = {
     },
     {
       "id": "interet-en-rop",
-      "title": "Intérêt en ROP",
+      "title": "Intérêt en R.O.P.",
       "blocks": [
         {
           "type": "rop",
@@ -395,7 +395,7 @@ export const chapter12Fr: Chapter = {
     },
     {
       "id": "interet-en-rop-2",
-      "title": "Intérêt en ROP",
+      "title": "Intérêt en R.O.P.",
       "blocks": [
         {
           "type": "rop",
@@ -449,7 +449,7 @@ export const chapter12Fr: Chapter = {
     },
     {
       "id": "interet-en-rop-3",
-      "title": "Intérêt en ROP",
+      "title": "Intérêt en R.O.P.",
       "blocks": [
         {
           "type": "rop",

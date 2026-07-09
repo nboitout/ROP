@@ -63,7 +63,7 @@ export const chapter11Fr: Chapter = {
     },
     {
       "id": "interet-en-rop",
-      "title": "Intérêt en ROP",
+      "title": "Intérêt en R.O.P.",
       "blocks": [
         {
           "type": "rop",
@@ -198,7 +198,7 @@ export const chapter11Fr: Chapter = {
     },
     {
       "id": "interet-en-rop-2",
-      "title": "Intérêt en ROP",
+      "title": "Intérêt en R.O.P.",
       "blocks": [
         {
           "type": "rop",
@@ -238,7 +238,7 @@ export const chapter11Fr: Chapter = {
     },
     {
       "id": "interet-en-rop-3",
-      "title": "Intérêt en ROP",
+      "title": "Intérêt en R.O.P.",
       "blocks": [
         {
           "type": "rop",
@@ -291,7 +291,7 @@ export const chapter11Fr: Chapter = {
     },
     {
       "id": "interet-en-rop-4",
-      "title": "Intérêt en ROP",
+      "title": "Intérêt en R.O.P.",
       "blocks": [
         {
           "type": "rop",
@@ -428,7 +428,7 @@ export const chapter11Fr: Chapter = {
     },
     {
       "id": "interet-en-rop-5",
-      "title": "Intérêt en ROP",
+      "title": "Intérêt en R.O.P.",
       "blocks": [
         {
           "type": "rop",
@@ -552,7 +552,7 @@ export const chapter11Fr: Chapter = {
     },
     {
       "id": "interet-en-rop-6",
-      "title": "Intérêt en ROP",
+      "title": "Intérêt en R.O.P.",
       "blocks": [
         {
           "type": "rop",
@@ -756,7 +756,7 @@ export const chapter11Fr: Chapter = {
     },
     {
       "id": "interet-en-rop-7",
-      "title": "Intérêt en ROP",
+      "title": "Intérêt en R.O.P.",
       "blocks": [
         {
           "type": "rop",
@@ -976,7 +976,7 @@ export const chapter11Fr: Chapter = {
     },
     {
       "id": "interet-en-rop-8",
-      "title": "Intérêt en ROP",
+      "title": "Intérêt en R.O.P.",
       "blocks": [
         {
           "type": "rop",
