@@ -1,10 +1,15 @@
 // Chapter 8 - slide <-> text synchronisation map for the combined reading
 // experience (/lecture/chapitre-8).
 //
-// Slide images are the pre-rendered pages of the chapter 8 synthesis deck,
-// stored under public/chapter-8/slides/. They are ordered here by their
-// appearance in the reading flow, so the displayed slide numbers progress with
-// the text rather than the source PDF page order.
+// Slides 1-19 are the pre-rendered pages of the chapter 8 synthesis deck,
+// stored under public/chapter-8/slides/.
+//
+// Slides 20+ reuse the cartography pages from:
+// public/chapter-8/Chapter8 Cartes et Photos.pdf
+//
+// They are ordered here by their appearance in the reading flow, so the
+// displayed slide numbers progress with the text rather than the source PDF
+// page order.
 
 export type SyncSlide = { src: string; title: string; orientation?: 'portrait' }
 export type SyncAnchor = { sectionId: string; blockIndex: number; slide: number | number[]; gapBefore?: 'half' }
@@ -87,35 +92,35 @@ export const chapter8Slides: SyncSlide[] = [
     title: "Synthèse : précision de la projection réflexe"
   },
   {
-    src: "/chapter-8/slides/slide-20.png",
+    src: "/chapter-8/cartographie/figure-8-02.png",
     title: "Cartographie podale : coupole diaphragmatique gauche et hiatus œsophagien"
   },
   {
-    src: "/chapter-8/slides/slide-21.png",
+    src: "/chapter-8/cartographie/figure-8-03.png",
     title: "Cartographie podale : coupole diaphragmatique droite"
   },
   {
-    src: "/chapter-8/slides/slide-22.png",
+    src: "/chapter-8/cartographie/figure-8-05.png",
     title: "Cartographie podale : hiatus œsophagien"
   },
   {
-    src: "/chapter-8/slides/slide-23.png",
+    src: "/chapter-8/cartographie/figure-8-07.png",
     title: "Cartographie podale : hiatus de Marfran et de Larrey"
   },
   {
-    src: "/chapter-8/slides/slide-24.png",
+    src: "/chapter-8/cartographie/figure-8-09.png",
     title: "Cartographie podale : jonction azygo-cave"
   },
   {
-    src: "/chapter-8/slides/slide-25.png",
+    src: "/chapter-8/cartographie/figure-8-12.png",
     title: "Cartographie podale : nerf phrénique"
   },
   {
-    src: "/chapter-8/slides/slide-26.png",
+    src: "/chapter-8/cartographie/figure-8-14.png",
     title: "Cartographie podale : articulations costo-vertébrales"
   },
   {
-    src: "/chapter-8/slides/slide-27.png",
+    src: "/chapter-8/cartographie/figure-8-16.png",
     title: "Cartographie podale : nerf intercostal brachial de Hyrtl"
   }
 ]

@@ -953,7 +953,7 @@ export const chapter8Fr: Chapter = {
         },
         {
           "type": "figure",
-          "src": "/chapter-8/figures/figure-8-01.png",
+          "src": "/chapter-8/cartographie/figure-8-01.png",
           "caption": "Obliquité du centre phrénique",
           "alt": "Photo du repérage podal de l’obliquité du centre phrénique",
           "orientation": "landscape"
@@ -1016,7 +1016,7 @@ export const chapter8Fr: Chapter = {
         },
         {
           "type": "figure",
-          "src": "/chapter-8/figures/figure-8-02.png",
+          "src": "/chapter-8/cartographie/figure-8-04.png",
           "caption": "Hiatus œsophagien et cardia",
           "alt": "Photo du repérage podal du hiatus œsophagien et du cardia",
           "orientation": "landscape"
@@ -1038,7 +1038,7 @@ export const chapter8Fr: Chapter = {
         },
         {
           "type": "figure",
-          "src": "/chapter-8/figures/figure-8-03.png",
+          "src": "/chapter-8/cartographie/figure-8-06.png",
           "caption": "Hiatus de Marfran et de Larrey (tubercule du naviculaire, face plantaire)",
           "alt": "Photo du repérage podal des hiatus de Marfran et de Larrey",
           "orientation": "landscape"
@@ -1059,7 +1059,7 @@ export const chapter8Fr: Chapter = {
         },
         {
           "type": "figure",
-          "src": "/chapter-8/figures/figure-8-04.png",
+          "src": "/chapter-8/cartographie/figure-8-08.png",
           "caption": "Jonction azygo-cave (2e et 3e articulations chondro-sternales droites)",
           "alt": "Photo du repérage podal de la jonction azygo-cave",
           "orientation": "landscape"
@@ -1074,7 +1074,7 @@ export const chapter8Fr: Chapter = {
         },
         {
           "type": "figure",
-          "src": "/chapter-8/figures/figure-8-05.png",
+          "src": "/chapter-8/cartographie/figure-8-10.png",
           "caption": "Nerf phrénique (C3-C4-C5)",
           "alt": "Photo du repérage podal du nerf phrénique au niveau cervical",
           "orientation": "landscape"
@@ -1086,7 +1086,7 @@ export const chapter8Fr: Chapter = {
         },
         {
           "type": "figure",
-          "src": "/chapter-8/figures/figure-8-06.png",
+          "src": "/chapter-8/cartographie/figure-8-11.png",
           "caption": "Nerf phrénique (triangle de Sédillot)",
           "alt": "Photo du repérage podal du nerf phrénique au triangle de Sédillot",
           "orientation": "landscape"
@@ -1106,7 +1106,7 @@ export const chapter8Fr: Chapter = {
         },
         {
           "type": "figure",
-          "src": "/chapter-8/figures/figure-8-07.png",
+          "src": "/chapter-8/cartographie/figure-8-13.png",
           "caption": "Articulations costo-vertébrales (entre les deux pouces)",
           "alt": "Photo du repérage podal des articulations costo-vertébrales",
           "orientation": "landscape"
@@ -1117,7 +1117,7 @@ export const chapter8Fr: Chapter = {
         },
         {
           "type": "figure",
-          "src": "/chapter-8/figures/figure-8-08.png",
+          "src": "/chapter-8/cartographie/figure-8-15.png",
           "caption": "Nerf intercostal brachial de Hyrtl",
           "alt": "Photo du repérage podal du nerf intercostal brachial de Hyrtl",
           "orientation": "landscape"
