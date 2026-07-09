@@ -40,6 +40,7 @@ export const chapter11SlideAnchors: SyncAnchor[] = [
   { sectionId: 'physiologie', blockIndex: 0, slide: 11 },
   { sectionId: 'physiologie', blockIndex: 11, slide: 12 },
   { sectionId: 'pathologies-courantes', blockIndex: 0, slide: 13 },
+  { sectionId: 'zones-reflexes-podales-du-foie-et-des-voies-biliaires', blockIndex: -1, slide: 14 },
   { sectionId: 'relations-viscero-somatiques', blockIndex: 0, slide: 14 },
   { sectionId: 'relations-viscero-emotionnelles', blockIndex: 0, slide: 15 },
   { sectionId: 'conseils', blockIndex: 0, slide: 16 },

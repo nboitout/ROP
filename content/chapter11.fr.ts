@@ -1283,3 +1283,32 @@ export const chapter11Fr: Chapter = {
     "description": "Repères visuels du chapitre 11 : foie, voies biliaires, vascularisation, lymphatique, zones réflexes et profils cliniques."
   }
 }
+
+const chapter11ReflexFigures = [
+  { type: "figure", src: "/chapter-11/cartographie/figure-11-01.png", caption: "Cartographie : Nerf vague X dans la moelle allongee", alt: "Cartographie podale du nerf vague X dans la moelle allongee", orientation: "landscape" },
+  { type: "figure", src: "/chapter-11/cartographie/figure-11-02.png", caption: "Photo : Nerf vague X dans la moelle allongee", alt: "Repere podal du nerf vague X dans la moelle allongee", orientation: "landscape" },
+  { type: "figure", src: "/chapter-11/cartographie/figure-11-03.png", caption: "Cartographie : Nerf vague X dans le foramen jugulaire", alt: "Cartographie podale du nerf vague X dans le foramen jugulaire", orientation: "landscape" },
+  { type: "figure", src: "/chapter-11/cartographie/figure-11-04.png", caption: "Photo : Nerf vague X dans le foramen jugulaire", alt: "Repere podal du nerf vague X dans le foramen jugulaire", orientation: "landscape" },
+  { type: "figure", src: "/chapter-11/cartographie/figure-11-05.png", caption: "Cartographie : Hiatus oesophagien et nerfs vagues", alt: "Cartographie podale du hiatus oesophagien et des nerfs vagues", orientation: "landscape" },
+  { type: "figure", src: "/chapter-11/cartographie/figure-11-06.png", caption: "Photo : Hiatus oesophagien et nerfs vagues", alt: "Repere podal du hiatus oesophagien et des nerfs vagues", orientation: "landscape" },
+  { type: "figure", src: "/chapter-11/cartographie/figure-11-07.png", caption: "Cartographie : Foie, lobe gauche", alt: "Cartographie podale du lobe gauche du foie", orientation: "landscape" },
+  { type: "figure", src: "/chapter-11/cartographie/figure-11-08.png", caption: "Photo : Foie, lobe gauche", alt: "Repere podal du lobe gauche du foie", orientation: "landscape" },
+  { type: "figure", src: "/chapter-11/cartographie/figure-11-09.png", caption: "Cartographie : Articulations costo-vertebrales", alt: "Cartographie podale des articulations costo-vertebrales", orientation: "landscape" },
+  { type: "figure", src: "/chapter-11/cartographie/figure-11-10.png", caption: "Photo : Articulations costo-vertebrales", alt: "Repere podal des articulations costo-vertebrales", orientation: "landscape" },
+  { type: "figure", src: "/chapter-11/cartographie/figure-11-11.png", caption: "Cartographie : Foie, lobe droit", alt: "Cartographie podale du lobe droit du foie", orientation: "landscape" },
+  { type: "figure", src: "/chapter-11/cartographie/figure-11-12.png", caption: "Photo : Face inferieure du foie", alt: "Repere podal de la face inferieure du foie", orientation: "landscape" },
+  { type: "figure", src: "/chapter-11/cartographie/figure-11-13.png", caption: "Photo : Vesicule biliaire", alt: "Repere podal de la vesicule biliaire", orientation: "landscape" },
+  { type: "figure", src: "/chapter-11/cartographie/figure-11-14.png", caption: "Photo : Vesicule biliaire", alt: "Repere podal de la vesicule biliaire sur le pouce gauche", orientation: "landscape" },
+  { type: "figure", src: "/chapter-11/cartographie/figure-11-15.png", caption: "Photo : Voies biliaires", alt: "Repere podal des voies biliaires", orientation: "landscape" },
+  { type: "figure", src: "/chapter-11/cartographie/figure-11-16.png", caption: "Photo : Voies biliaires", alt: "Repere podal des voies biliaires entre les deux pouces", orientation: "landscape" },
+  { type: "figure", src: "/chapter-11/cartographie/figure-11-17.png", caption: "Cartographie : Nerf phrenique C3-C4-C5", alt: "Cartographie podale du nerf phrenique C3 C4 C5", orientation: "landscape" },
+  { type: "figure", src: "/chapter-11/cartographie/figure-11-18.png", caption: "Photo : Nerf phrenique C3-C4-C5", alt: "Repere podal du nerf phrenique C3 C4 C5", orientation: "landscape" },
+  { type: "figure", src: "/chapter-11/cartographie/figure-11-19.png", caption: "Cartographie : Nerf phrenique, triangle de Sedillot", alt: "Cartographie podale du nerf phrenique dans le triangle de Sedillot", orientation: "landscape" },
+  { type: "figure", src: "/chapter-11/cartographie/figure-11-20.png", caption: "Photo : Nerf phrenique, triangle de Sedillot", alt: "Repere podal du nerf phrenique dans le triangle de Sedillot", orientation: "landscape" },
+  { type: "figure", src: "/chapter-11/cartographie/figure-11-21.png", caption: "Photo : Technique balance viscero-emotionnelle cerveau limbique-foie", alt: "Repere podal de la balance viscero-emotionnelle cerveau limbique foie", orientation: "landscape" },
+  { type: "figure", src: "/chapter-11/cartographie/figure-11-22.png", caption: "Photo : Technique balance viscero-emotionnelle cerveau limbique-foie", alt: "Technique balance viscero-emotionnelle cerveau limbique foie", orientation: "landscape" },
+] satisfies Chapter["sections"][number]["blocks"]
+
+chapter11Fr.sections
+  .find((section) => section.id === "zones-reflexes-podales-du-foie-et-des-voies-biliaires")
+  ?.blocks.push(...chapter11ReflexFigures)
