@@ -51,8 +51,8 @@ export const chapter10SlideAnchors: SyncAnchor[] = [
   { sectionId: 'zones-reflexes-podales', blockIndex: 1, slide: 15, end: { sectionId: 'zones-reflexes-podales', blockIndex: 3 } },
   { sectionId: 'zones-reflexes-podales', blockIndex: 3, slide: 16 },
   { sectionId: 'zones-reflexes-podales', blockIndex: 5, slide: 17 },
-  { sectionId: 'zones-reflexes-podales', blockIndex: 8, slide: 18 },
-  { sectionId: 'zones-reflexes-podales', blockIndex: 9, slide: 19 },
-  { sectionId: 'zones-reflexes-podales', blockIndex: 10, slide: 20, gapBefore: 'half' },
-  { sectionId: 'zones-reflexes-podales', blockIndex: 11, slide: 21 },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 9, slide: 18 },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 10, slide: 19 },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 12, slide: 20, gapBefore: 'half' },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 13, slide: 21 },
 ]
