@@ -1301,39 +1301,28 @@ const reflexFigure = (
 
 const chapter11ReflexFigureGroups = {
   generalAdaptation: [
-    reflexFigure("01", "Cartographie", "Nerf vague X - moelle allongee", "Cartographie podale du nerf vague X dans la moelle allongee"),
     reflexFigure("02", "Photo", "Nerf vague X - moelle allongee", "Repere podal du nerf vague X dans la moelle allongee"),
-    reflexFigure("03", "Cartographie", "Nerf vague X - foramen jugulaire", "Cartographie podale du nerf vague X dans le foramen jugulaire"),
     reflexFigure("04", "Photo", "Nerf vague X - foramen jugulaire", "Repere podal du nerf vague X dans le foramen jugulaire"),
-    reflexFigure("05", "Cartographie", "Hiatus oesophagien et nerfs vagues", "Cartographie podale du hiatus oesophagien et des nerfs vagues"),
     reflexFigure("06", "Photo", "Hiatus oesophagien et nerfs vagues", "Repere podal du hiatus oesophagien et des nerfs vagues"),
-    reflexFigure("09", "Cartographie", "Articulations costo-vertebrales", "Cartographie podale des articulations costo-vertebrales"),
     reflexFigure("10", "Photo", "Articulations costo-vertebrales", "Repere podal des articulations costo-vertebrales"),
   ],
   phrenicNerve: [
-    reflexFigure("17", "Cartographie", "Nerf phrenique C3-C4-C5", "Cartographie podale du nerf phrenique C3 C4 C5"),
     reflexFigure("18", "Photo", "Nerf phrenique C3-C4-C5", "Repere podal du nerf phrenique C3 C4 C5"),
-    reflexFigure("19", "Cartographie", "Nerf phrenique - triangle de Sedillot", "Cartographie podale du nerf phrenique dans le triangle de Sedillot"),
     reflexFigure("20", "Photo", "Nerf phrenique - triangle de Sedillot", "Repere podal du nerf phrenique dans le triangle de Sedillot"),
   ],
   liverSuperiorAndLeft: [
-    reflexFigure("07", "Cartographie", "Foie - lobe gauche", "Cartographie podale du lobe gauche du foie"),
     reflexFigure("08", "Photo", "Foie - lobe gauche", "Repere podal du lobe gauche du foie"),
   ],
   liverInferiorAndRight: [
-    reflexFigure("11", "Cartographie", "Foie - face inferieure et lobe droit", "Cartographie podale de la face inferieure et du lobe droit du foie"),
     reflexFigure("12", "Photo", "Foie - face inferieure et lobe droit", "Repere podal de la face inferieure et du lobe droit du foie"),
   ],
   gallbladder: [
-    reflexFigure("13", "Photo", "Vesicule biliaire", "Repere podal de la vesicule biliaire"),
     reflexFigure("14", "Photo", "Vesicule biliaire", "Repere podal de la vesicule biliaire sur le pouce gauche"),
   ],
   bileDucts: [
-    reflexFigure("15", "Photo", "Voies biliaires", "Repere podal des voies biliaires"),
     reflexFigure("16", "Photo", "Voies biliaires", "Repere podal des voies biliaires entre les deux pouces"),
   ],
   limbicBalance: [
-    reflexFigure("21", "Photo", "Balance cerveau limbique - foie/vesicule biliaire", "Repere podal de la balance cerveau limbique foie vesicule biliaire"),
     reflexFigure("22", "Photo", "Balance cerveau limbique - foie/vesicule biliaire", "Technique balance cerveau limbique foie vesicule biliaire"),
   ],
 } satisfies Record<string, Chapter["sections"][number]["blocks"]>
