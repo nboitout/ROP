@@ -721,11 +721,14 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
   }
 
   // Jump to the reflex-zone (ROP) section by landing on its first reflex-zone
-  // slide's pointer in the text, with the deck synced to that slide.
+  // section anchor. Some chapters reuse a slide number before the ROP section,
+  // so targeting the slide marker can land on the earlier occurrence instead.
   function goToReflexZones() {
-    if (!ropJumpSlide) return
+    if (!ropSection || !ropJumpSlide) return
     track('sync_jump_section', { section: ropSection?.id, slide: ropJumpSlide })
-    goToSlide(ropJumpSlide)
+    setActive(ropJumpSlide)
+    setActiveSectionId(ropSection.id)
+    animateTo(() => document.getElementById(`sec-${ropSection.id}`))
   }
 
   function goToSection(sectionId: string) {
@@ -883,7 +886,7 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
   const activeSlideNumber = active ?? 0
   const activeSlide = active ? slides[active - 1] : undefined
   const activeSlideIsPortrait = activeSlide?.orientation === 'portrait'
-  const showRopJump = !!ropSection && !!ropJumpSlide
+  const showRopJump = !!ropSection && !!ropJumpSlide && activeSectionId !== ropSection.id
   const renderedSlideIndexes = useMemo(() => {
     if (!active) return []
     const indexes = new Set([active - 3, active - 2, active - 1, active, active + 1])
