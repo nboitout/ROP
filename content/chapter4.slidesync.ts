@@ -65,7 +65,7 @@ export const chapter4Slides: SyncSlide[] = [
 
 export const chapter4SlideAnchors: SyncAnchor[] = [
   { sectionId: 'presentation', blockIndex: 0, slide: 1 },
-  { sectionId: 'presentation', blockIndex: 8, slide: 2, ...endAt('presentation', 10) },
+  { sectionId: 'presentation', blockIndex: 9, itemIndex: 0, slide: 2, ...endAt('presentation', 9, 7) },
   { sectionId: 'presentation', blockIndex: 20, slide: 3 },
   { sectionId: 'presentation', blockIndex: 21, slide: 4 },
   { sectionId: 'presentation', blockIndex: 22, slide: 5 },
