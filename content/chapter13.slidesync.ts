@@ -36,7 +36,7 @@ const chapter13SlidesBySource: SyncSlide[] = [
   { src: '/chapter-13/cartographie/figure-13-03.png', title: 'Cartographie : Rate' },
 ]
 
-const chapter13ReadingOrder = [1, 2, 3, 4, 5, 7, 6, 8, 9, 10, 11, 13, 12, 14, 15, 16, 17, 21, 18, 22, 19, 23, 20]
+const chapter13ReadingOrder = [1, 2, 3, 4, 5, 7, 6, 8, 9, 10, 11, 13, 12, 14, 15, 16, 17, 21, 18, 19, 22, 20, 23]
 const chapter13SlideNumberByReadingOrder = new Map(chapter13ReadingOrder.map((sourceSlide, index) => [sourceSlide, index + 1]))
 
 function remapChapter13Slide(slide: number) {
