@@ -412,3 +412,52 @@ export const chapter13Fr: Chapter = {
     caption: "Cas clinique - Chapitre 13",
   },
 }
+
+type ChapterBlock = Chapter["sections"][number]["blocks"][number]
+
+const reflexFigure = (
+  n: string,
+  title: string,
+  alt: string,
+): ChapterBlock => ({
+  type: "figure",
+  src: `/chapter-13/cartographie/figure-13-${n}.png`,
+  caption: `Photo : ${title}`,
+  alt,
+  orientation: "landscape",
+})
+
+const chapter13ReflexFigureGroups = {
+  generalAdaptation: [
+    reflexFigure("02", "Articulations costo-vertebrales", "Repere podal des articulations costo-vertebrales"),
+  ],
+  spleen: [
+    reflexFigure("04", "Rate", "Repere podal de la rate"),
+  ],
+} satisfies Record<string, Chapter["sections"][number]["blocks"]>
+
+function appendAfterBlock(
+  sectionId: string,
+  match: (block: ChapterBlock) => boolean,
+  figures: Chapter["sections"][number]["blocks"],
+) {
+  const section = chapter13Fr.sections.find((candidate) => candidate.id === sectionId)
+  if (!section) return
+  const index = section.blocks.findIndex(match)
+  if (index >= 0) section.blocks.splice(index + 1, 0, ...figures)
+}
+
+function normalizedText(value: string) {
+  return value.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase()
+}
+
+appendAfterBlock(
+  "zones-reflexes-podales",
+  (block) => block.type === "bullets" && block.items.some((item) => normalizedText(item).includes("articulations costo-transversaires")),
+  chapter13ReflexFigureGroups.generalAdaptation,
+)
+appendAfterBlock(
+  "zones-reflexes-podales",
+  (block) => block.type === "bullets" && block.items.some((item) => normalizedText(item).startsWith("rate")),
+  chapter13ReflexFigureGroups.spleen,
+)

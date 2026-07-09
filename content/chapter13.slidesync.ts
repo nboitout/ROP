@@ -1,8 +1,11 @@
 // Chapter 13 - slide <-> text synchronisation map for the combined reading
 // experience (/lecture/chapitre-13).
 //
-// Slides are pre-rendered from:
+// Slides 1-21 are pre-rendered from:
 // public/chapter-13/Chapter13 Slides de synthese - FR.pdf
+//
+// Slides 22+ reuse the cartography pages from:
+// public/chapter-13/Chapter13 Cartographie et Photos.pdf
 
 export type SyncSlide = { src: string; title: string; orientation?: 'portrait' }
 export type SyncAnchor = { sectionId: string; blockIndex: number; slide: number; gapBefore?: 'half' }
@@ -29,9 +32,11 @@ const chapter13SlidesBySource: SyncSlide[] = [
   { src: '/chapter-13/slides/slide-19.png', title: 'Cartographie podale : zones réflexes' },
   { src: '/chapter-13/slides/slide-20.png', title: 'Synthèse : l écoute splénique' },
   { src: '/chapter-13/slides/slide-21.png', title: 'Synthèse clinique ROP' },
+  { src: '/chapter-13/cartographie/figure-13-01.png', title: 'Cartographie : Articulations costo-vertebrales' },
+  { src: '/chapter-13/cartographie/figure-13-03.png', title: 'Cartographie : Rate' },
 ]
 
-const chapter13ReadingOrder = [1, 2, 3, 4, 5, 7, 6, 8, 9, 10, 11, 13, 12, 14, 15, 16, 17, 21, 18, 19, 20]
+const chapter13ReadingOrder = [1, 2, 3, 4, 5, 7, 6, 8, 9, 10, 11, 13, 12, 14, 15, 16, 17, 21, 18, 22, 19, 23, 20]
 const chapter13SlideNumberByReadingOrder = new Map(chapter13ReadingOrder.map((sourceSlide, index) => [sourceSlide, index + 1]))
 
 function remapChapter13Slide(slide: number) {
@@ -60,7 +65,9 @@ const chapter13SlideAnchorsBySource: SyncAnchor[] = [
   { sectionId: 'relations-viscero-somatiques', blockIndex: 0, slide: 17 },
   { sectionId: 'zones-reflexes-podales', blockIndex: 0, slide: 18 },
   { sectionId: 'zones-reflexes-podales', blockIndex: 1, slide: 19 },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 2, slide: 22 },
   { sectionId: 'zones-reflexes-podales', blockIndex: 4, slide: 20 },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 5, slide: 23 },
   { sectionId: 'conseils', blockIndex: 0, slide: 21 },
 ]
 
