@@ -19,6 +19,10 @@ const ITEMS: Item[] = [
     href: '/lecture/stress-metabolique-restriction-glycemique',
     label: 'Stress métabolique et restriction glycémique →',
   },
+  {
+    href: '/lecture/estrobolome-clairance-hormonale',
+    label: "L'estrobolome et la clairance hormonale →",
+  },
 ]
 
 export default function AdminResearchMenu() {
