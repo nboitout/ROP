@@ -115,6 +115,8 @@ export const chapter9Fr: Chapter = {
         { type: 'sub', text: 'Parasympathique' },
         { type: 'para', text: 'Les nerfs vagues droit et gauche jouent un rôle majeur dans la fonction mécanique et sécrétoire de l\'estomac.' },
         { type: 'para', text: 'Ils stimulent notamment la sécrétion gastrique et participent à la régulation de la motricité gastrique.' },
+        { type: 'figure', src: '/chapter-9/figure-9-vague-moelle-allongee.png', caption: 'Photo — Nerf vague X dans la moelle allongée', alt: 'Repère podal du nerf vague X dans la moelle allongée', orientation: 'landscape' },
+        { type: 'figure', src: '/chapter-9/figure-9-vague-foramen-jugulaire.png', caption: 'Photo — Nerf vague X dans le foramen jugulaire', alt: 'Repère podal du nerf vague X dans le foramen jugulaire', orientation: 'landscape' },
         { type: 'sub', text: 'Sympathique' },
         { type: 'para', text: 'L\'innervation sympathique provient notamment du grand nerf splanchnique issu des niveaux thoraciques moyens.' },
         { type: 'para', text: 'Elle a globalement une action antagoniste de l\'activité vagale sur la motricité et la sécrétion.' },
@@ -302,6 +304,7 @@ export const chapter9Fr: Chapter = {
           'Diaphragme et piliers.',
           'Plexus prévertébral.',
         ]},
+        { type: 'figure', src: '/chapter-9/figure-9-articulations-costo-vertebrales.png', caption: 'Photo — Articulations costo-vertébrales', alt: 'Repère podal des articulations costo-vertébrales entre les deux pouces', orientation: 'landscape' },
         { type: 'sub', text: 'Syndrome loco-régional' },
         {
           type: 'xref',
@@ -316,6 +319,8 @@ export const chapter9Fr: Chapter = {
           'Grande courbure : ligne courbe plus latérale, allant du hiatus œsophagien au pylore.',
           'Pylore : sur le bord médian plantaire des deux pieds, généralement plus marqué sur le pied droit.',
         ]},
+        { type: 'figure', src: '/chapter-9/figure-9-hiatus-vagues.png', caption: 'Photo — Hiatus œsophagien et nerfs vagues droit et gauche', alt: 'Repère podal du hiatus œsophagien avec les nerfs vagues droit et gauche', orientation: 'landscape' },
+        { type: 'figure', src: '/chapter-9/figure-9-petite-courbure.png', caption: 'Photo — Petite courbure de l’estomac', alt: 'Repère podal de la petite courbure de l’estomac entre cardia et pylore', orientation: 'landscape' },
         { type: 'sub', text: 'Système limbique' },
         {
           type: 'xref',
