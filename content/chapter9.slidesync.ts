@@ -1,10 +1,15 @@
 // Chapter 9 - slide <-> text synchronisation map for the combined reading
 // experience (/lecture/chapitre-9).
 //
-// Slide images are the pre-rendered pages of the chapter 9 synthesis deck,
-// stored under public/chapter-9/slides/. They are ordered here by their
-// appearance in the reading flow, so the displayed slide numbers progress with
-// the text rather than the source PDF page order.
+// Slides 1-20 and 25 are pre-rendered pages of the chapter 9 synthesis deck,
+// stored under public/chapter-9/slides/.
+//
+// Slides 21-24 reuse the cartography pages from:
+// public/chapter-9/Chapter 9 Cartographie et Photos.pdf
+//
+// They are ordered here by their appearance in the reading flow, so the
+// displayed slide numbers progress with the text rather than the source PDF
+// page order.
 
 export type SyncSlide = { src: string; title: string; orientation?: 'portrait' }
 export type SyncAnchorPoint = { sectionId: string; blockIndex: number; itemIndex?: number }
@@ -31,10 +36,10 @@ export const chapter9Slides: SyncSlide[] = [
   { src: '/chapter-9/slides/slide-20.png', title: 'Le profil emotionnel : l organe du moi social' },
   { src: '/chapter-9/slides/slide-21.png', title: 'Tableau de bord therapeutique ROP' },
   { src: '/chapter-9/slides/slide-19.png', title: 'Cartographie ROP : cibles reflexes' },
-  { src: '/chapter-9/slides/slide-23.png', title: 'Cartographie : articulations costo-transversaires' },
-  { src: '/chapter-9/slides/slide-22.png', title: 'Cartographie : hiatus oesophagien, nerfs vagues et estomac' },
-  { src: '/chapter-9/slides/slide-24.png', title: 'Cartographie plantaire : estomac' },
-  { src: '/chapter-9/slides/slide-25.png', title: 'Cartographie : relation cerveau limbique-estomac' },
+  { src: '/chapter-9/cartographie/figure-9-05.png', title: 'Cartographie : articulations costo-transversaires' },
+  { src: '/chapter-9/cartographie/figure-9-03.png', title: 'Cartographie : hiatus oesophagien, nerfs vagues et estomac' },
+  { src: '/chapter-9/cartographie/figure-9-07.png', title: 'Cartographie plantaire : estomac' },
+  { src: '/chapter-9/cartographie/figure-9-09.png', title: 'Cartographie : relation cerveau limbique-estomac' },
   { src: '/chapter-9/slides/slide-13.png', title: 'La balance neuro-vegetative en ROP' },
 ]
 

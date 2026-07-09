@@ -302,7 +302,7 @@ export const chapter9Fr: Chapter = {
           'Diaphragme et piliers.',
           'Plexus prévertébral.',
         ]},
-        { type: 'figure', src: '/chapter-9/figure-9-articulations-costo-vertebrales.png', caption: 'Photo — Articulations costo-vertébrales', alt: 'Repère podal des articulations costo-vertébrales entre les deux pouces', orientation: 'landscape' },
+        { type: 'figure', src: '/chapter-9/cartographie/figure-9-06.png', caption: 'Photo — Articulations costo-vertébrales', alt: 'Repère podal des articulations costo-vertébrales entre les deux pouces', orientation: 'landscape' },
         { type: 'sub', text: 'Syndrome loco-régional' },
         {
           type: 'xref',
@@ -317,8 +317,8 @@ export const chapter9Fr: Chapter = {
           'Grande courbure : ligne courbe plus latérale, allant du hiatus œsophagien au pylore.',
           'Pylore : sur le bord médian plantaire des deux pieds, généralement plus marqué sur le pied droit.',
         ]},
-        { type: 'figure', src: '/chapter-9/figure-9-hiatus-vagues.png', caption: 'Photo — Hiatus œsophagien et nerfs vagues droit et gauche', alt: 'Repère podal du hiatus œsophagien avec les nerfs vagues droit et gauche', orientation: 'landscape' },
-        { type: 'figure', src: '/chapter-9/figure-9-petite-courbure.png', caption: 'Photo — Petite courbure de l’estomac', alt: 'Repère podal de la petite courbure de l’estomac entre cardia et pylore', orientation: 'landscape' },
+        { type: 'figure', src: '/chapter-9/cartographie/figure-9-04.png', caption: 'Photo — Hiatus œsophagien et nerfs vagues droit et gauche', alt: 'Repère podal du hiatus œsophagien avec les nerfs vagues droit et gauche', orientation: 'landscape' },
+        { type: 'figure', src: '/chapter-9/cartographie/figure-9-08.png', caption: 'Photo — Petite courbure de l’estomac', alt: 'Repère podal de la petite courbure de l’estomac entre cardia et pylore', orientation: 'landscape' },
         { type: 'sub', text: 'Système limbique' },
         {
           type: 'xref',
