@@ -5,7 +5,8 @@
 // stored under public/chapter-10/slides/.
 
 export type SyncSlide = { src: string; title: string; orientation?: 'portrait' }
-export type SyncAnchor = { sectionId: string; blockIndex: number; slide: number; gapBefore?: 'half' }
+export type SyncAnchorPoint = { sectionId: string; blockIndex: number; itemIndex?: number }
+export type SyncAnchor = SyncAnchorPoint & { slide: number | number[]; gapBefore?: 'half'; end?: SyncAnchorPoint }
 
 export const chapter10Slides: SyncSlide[] = [
   { src: '/chapter-10/slides/slide-01.png', title: 'Chapitre 10 : Duodenum' },
@@ -22,6 +23,13 @@ export const chapter10Slides: SyncSlide[] = [
   { src: '/chapter-10/slides/slide-12.png', title: 'Conflit mécanique de D4' },
   { src: '/chapter-10/slides/slide-14.png', title: 'Synthèse ROP : axe viscéro-somatique et limbique' },
   { src: '/chapter-10/slides/slide-13.png', title: 'Objectifs thérapeutiques en ROP' },
+  { src: '/chapter-10/slides/slide-15.png', title: 'Cartographie : nerf vague X dans la moelle allongee' },
+  { src: '/chapter-10/slides/slide-16.png', title: 'Cartographie : nerf vague X dans le foramen jugulaire' },
+  { src: '/chapter-10/slides/slide-17.png', title: 'Cartographie : articulations costo-transversaires' },
+  { src: '/chapter-10/slides/slide-19.png', title: 'Cartographie : duodenum D1, D2, D3' },
+  { src: '/chapter-10/slides/slide-18.png', title: 'Cartographie : sphincter d Oddi' },
+  { src: '/chapter-10/slides/slide-20.png', title: 'Cartographie : duodenum D4' },
+  { src: '/chapter-10/slides/slide-21.png', title: 'Cartographie : jonction duodeno-jejunale' },
 ]
 
 export const chapter10SlideAnchors: SyncAnchor[] = [
@@ -39,4 +47,12 @@ export const chapter10SlideAnchors: SyncAnchor[] = [
   { sectionId: 'pathologies-courantes', blockIndex: 18, slide: 12 },
   { sectionId: 'relations-viscero-somatiques', blockIndex: 0, slide: 13 },
   { sectionId: 'conseils', blockIndex: 0, slide: 14 },
+  { sectionId: 'zones-reflexes-podales', blockIndex: -1, slide: 13 },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 1, slide: 15, end: { sectionId: 'zones-reflexes-podales', blockIndex: 3 } },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 3, slide: 16 },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 5, slide: 17 },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 8, slide: 18 },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 9, slide: 19 },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 10, slide: 20, gapBefore: 'half' },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 11, slide: 21 },
 ]
