@@ -841,3 +841,55 @@ export const chapter12Fr: Chapter = {
     }
   ]
 }
+
+type ChapterBlock = Chapter["sections"][number]["blocks"][number]
+
+const reflexFigure = (
+  n: string,
+  title: string,
+  alt: string,
+): ChapterBlock => ({
+  type: "figure",
+  src: `/chapter-12/cartographie/figure-12-${n}.png`,
+  caption: `Photo : ${title}`,
+  alt,
+  orientation: "landscape",
+})
+
+const chapter12ReflexFigureGroups = {
+  generalAdaptation: [
+    reflexFigure("02", "Nerf vague X - moelle allongee", "Repere podal du nerf vague X dans la moelle allongee"),
+    reflexFigure("04", "Nerf vague X - foramen jugulaire", "Repere podal du nerf vague X dans le foramen jugulaire"),
+    reflexFigure("06", "Articulations costo-vertebrales", "Repere podal des articulations costo-vertebrales"),
+  ],
+  pancreas: [
+    reflexFigure("08", "Pancreas - tete et col", "Repere podal de la tete et du col du pancreas"),
+    reflexFigure("10", "Pancreas - corps et queue", "Repere podal du corps et de la queue du pancreas"),
+  ],
+} satisfies Record<string, Chapter["sections"][number]["blocks"]>
+
+function appendAfterBlock(
+  sectionId: string,
+  match: (block: ChapterBlock) => boolean,
+  figures: Chapter["sections"][number]["blocks"],
+) {
+  const section = chapter12Fr.sections.find((candidate) => candidate.id === sectionId)
+  if (!section) return
+  const index = section.blocks.findIndex(match)
+  if (index >= 0) section.blocks.splice(index + 1, 0, ...figures)
+}
+
+function normalizedText(value: string) {
+  return value.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase()
+}
+
+appendAfterBlock(
+  "zones-reflexes-podales",
+  (block) => block.type === "bullets" && block.items.some((item) => item.includes("Nerfs vagues")),
+  chapter12ReflexFigureGroups.generalAdaptation,
+)
+appendAfterBlock(
+  "zones-reflexes-podales",
+  (block) => block.type === "bullets" && block.items.some((item) => normalizedText(item).includes("tete du pancreas")),
+  chapter12ReflexFigureGroups.pancreas,
+)

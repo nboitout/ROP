@@ -1,8 +1,11 @@
 // Chapter 12 - slide <-> text synchronisation map for the combined reading
 // experience (/lecture/chapitre-12).
 //
-// Slide images are the pre-rendered pages of the chapter 12 synthesis deck,
+// Slides 1-13 are the pre-rendered pages of the chapter 12 synthesis deck,
 // stored under public/chapter-12/slides/.
+//
+// Slides 14+ reuse the cartography pages from:
+// public/chapter-12/Chapter12 Cartographie et Photos.pdf
 
 export type SyncSlide = { src: string; title: string; orientation?: 'portrait' }
 export type SyncAnchor = { sectionId: string; blockIndex: number; slide: number; gapBefore?: 'half' }
@@ -21,6 +24,11 @@ export const chapter12Slides: SyncSlide[] = [
   { src: '/chapter-12/slides/slide-11.png', title: 'Pathologies glycémiques : le spectre du diabète' },
   { src: '/chapter-12/slides/slide-12.png', title: 'Pathologies severes : pancreatites et tumeurs' },
   { src: '/chapter-12/slides/slide-13.png', title: 'Synthèse viscéro-émotionnelle' },
+  { src: '/chapter-12/cartographie/figure-12-01.png', title: 'Cartographie : Nerf vague X - moelle allongee' },
+  { src: '/chapter-12/cartographie/figure-12-03.png', title: 'Cartographie : Nerf vague X - foramen jugulaire' },
+  { src: '/chapter-12/cartographie/figure-12-05.png', title: 'Cartographie : Articulations costo-vertebrales' },
+  { src: '/chapter-12/cartographie/figure-12-07.png', title: 'Cartographie : Pancreas - tete et col' },
+  { src: '/chapter-12/cartographie/figure-12-09.png', title: 'Cartographie : Pancreas - corps et queue' },
 ]
 
 export const chapter12SlideAnchors: SyncAnchor[] = [
@@ -36,5 +44,11 @@ export const chapter12SlideAnchors: SyncAnchor[] = [
   { sectionId: 'diagnostics-exclusion', blockIndex: 0, slide: 10 },
   { sectionId: 'diabete', blockIndex: 0, slide: 11 },
   { sectionId: 'pancreatite', blockIndex: 0, slide: 12 },
+  { sectionId: 'zones-reflexes-podales', blockIndex: -1, slide: 13 },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 2, slide: 14 },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 3, slide: 15 },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 4, slide: 16 },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 10, slide: 17 },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 11, slide: 18 },
   { sectionId: 'relations-viscero-emotionnelles', blockIndex: 0, slide: 13 },
 ]
