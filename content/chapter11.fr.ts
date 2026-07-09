@@ -1284,31 +1284,107 @@ export const chapter11Fr: Chapter = {
   }
 }
 
-const chapter11ReflexFigures = [
-  { type: "figure", src: "/chapter-11/cartographie/figure-11-01.png", caption: "Cartographie : Nerf vague X dans la moelle allongee", alt: "Cartographie podale du nerf vague X dans la moelle allongee", orientation: "landscape" },
-  { type: "figure", src: "/chapter-11/cartographie/figure-11-02.png", caption: "Photo : Nerf vague X dans la moelle allongee", alt: "Repere podal du nerf vague X dans la moelle allongee", orientation: "landscape" },
-  { type: "figure", src: "/chapter-11/cartographie/figure-11-03.png", caption: "Cartographie : Nerf vague X dans le foramen jugulaire", alt: "Cartographie podale du nerf vague X dans le foramen jugulaire", orientation: "landscape" },
-  { type: "figure", src: "/chapter-11/cartographie/figure-11-04.png", caption: "Photo : Nerf vague X dans le foramen jugulaire", alt: "Repere podal du nerf vague X dans le foramen jugulaire", orientation: "landscape" },
-  { type: "figure", src: "/chapter-11/cartographie/figure-11-05.png", caption: "Cartographie : Hiatus oesophagien et nerfs vagues", alt: "Cartographie podale du hiatus oesophagien et des nerfs vagues", orientation: "landscape" },
-  { type: "figure", src: "/chapter-11/cartographie/figure-11-06.png", caption: "Photo : Hiatus oesophagien et nerfs vagues", alt: "Repere podal du hiatus oesophagien et des nerfs vagues", orientation: "landscape" },
-  { type: "figure", src: "/chapter-11/cartographie/figure-11-07.png", caption: "Cartographie : Foie, lobe gauche", alt: "Cartographie podale du lobe gauche du foie", orientation: "landscape" },
-  { type: "figure", src: "/chapter-11/cartographie/figure-11-08.png", caption: "Photo : Foie, lobe gauche", alt: "Repere podal du lobe gauche du foie", orientation: "landscape" },
-  { type: "figure", src: "/chapter-11/cartographie/figure-11-09.png", caption: "Cartographie : Articulations costo-vertebrales", alt: "Cartographie podale des articulations costo-vertebrales", orientation: "landscape" },
-  { type: "figure", src: "/chapter-11/cartographie/figure-11-10.png", caption: "Photo : Articulations costo-vertebrales", alt: "Repere podal des articulations costo-vertebrales", orientation: "landscape" },
-  { type: "figure", src: "/chapter-11/cartographie/figure-11-11.png", caption: "Cartographie : Foie, lobe droit", alt: "Cartographie podale du lobe droit du foie", orientation: "landscape" },
-  { type: "figure", src: "/chapter-11/cartographie/figure-11-12.png", caption: "Photo : Face inferieure du foie", alt: "Repere podal de la face inferieure du foie", orientation: "landscape" },
-  { type: "figure", src: "/chapter-11/cartographie/figure-11-13.png", caption: "Photo : Vesicule biliaire", alt: "Repere podal de la vesicule biliaire", orientation: "landscape" },
-  { type: "figure", src: "/chapter-11/cartographie/figure-11-14.png", caption: "Photo : Vesicule biliaire", alt: "Repere podal de la vesicule biliaire sur le pouce gauche", orientation: "landscape" },
-  { type: "figure", src: "/chapter-11/cartographie/figure-11-15.png", caption: "Photo : Voies biliaires", alt: "Repere podal des voies biliaires", orientation: "landscape" },
-  { type: "figure", src: "/chapter-11/cartographie/figure-11-16.png", caption: "Photo : Voies biliaires", alt: "Repere podal des voies biliaires entre les deux pouces", orientation: "landscape" },
-  { type: "figure", src: "/chapter-11/cartographie/figure-11-17.png", caption: "Cartographie : Nerf phrenique C3-C4-C5", alt: "Cartographie podale du nerf phrenique C3 C4 C5", orientation: "landscape" },
-  { type: "figure", src: "/chapter-11/cartographie/figure-11-18.png", caption: "Photo : Nerf phrenique C3-C4-C5", alt: "Repere podal du nerf phrenique C3 C4 C5", orientation: "landscape" },
-  { type: "figure", src: "/chapter-11/cartographie/figure-11-19.png", caption: "Cartographie : Nerf phrenique, triangle de Sedillot", alt: "Cartographie podale du nerf phrenique dans le triangle de Sedillot", orientation: "landscape" },
-  { type: "figure", src: "/chapter-11/cartographie/figure-11-20.png", caption: "Photo : Nerf phrenique, triangle de Sedillot", alt: "Repere podal du nerf phrenique dans le triangle de Sedillot", orientation: "landscape" },
-  { type: "figure", src: "/chapter-11/cartographie/figure-11-21.png", caption: "Photo : Technique balance viscero-emotionnelle cerveau limbique-foie", alt: "Repere podal de la balance viscero-emotionnelle cerveau limbique foie", orientation: "landscape" },
-  { type: "figure", src: "/chapter-11/cartographie/figure-11-22.png", caption: "Photo : Technique balance viscero-emotionnelle cerveau limbique-foie", alt: "Technique balance viscero-emotionnelle cerveau limbique foie", orientation: "landscape" },
-] satisfies Chapter["sections"][number]["blocks"]
+type ChapterBlock = Chapter["sections"][number]["blocks"][number]
 
-chapter11Fr.sections
-  .find((section) => section.id === "zones-reflexes-podales-du-foie-et-des-voies-biliaires")
-  ?.blocks.push(...chapter11ReflexFigures)
+const reflexFigure = (
+  n: string,
+  kind: "Cartographie" | "Photo",
+  title: string,
+  alt: string,
+): ChapterBlock => ({
+  type: "figure",
+  src: `/chapter-11/cartographie/figure-11-${n}.png`,
+  caption: `${kind} : ${title}`,
+  alt,
+  orientation: "landscape",
+})
+
+const chapter11ReflexFigureGroups = {
+  generalAdaptation: [
+    reflexFigure("01", "Cartographie", "Nerf vague X - moelle allongee", "Cartographie podale du nerf vague X dans la moelle allongee"),
+    reflexFigure("02", "Photo", "Nerf vague X - moelle allongee", "Repere podal du nerf vague X dans la moelle allongee"),
+    reflexFigure("03", "Cartographie", "Nerf vague X - foramen jugulaire", "Cartographie podale du nerf vague X dans le foramen jugulaire"),
+    reflexFigure("04", "Photo", "Nerf vague X - foramen jugulaire", "Repere podal du nerf vague X dans le foramen jugulaire"),
+    reflexFigure("05", "Cartographie", "Hiatus oesophagien et nerfs vagues", "Cartographie podale du hiatus oesophagien et des nerfs vagues"),
+    reflexFigure("06", "Photo", "Hiatus oesophagien et nerfs vagues", "Repere podal du hiatus oesophagien et des nerfs vagues"),
+    reflexFigure("09", "Cartographie", "Articulations costo-vertebrales", "Cartographie podale des articulations costo-vertebrales"),
+    reflexFigure("10", "Photo", "Articulations costo-vertebrales", "Repere podal des articulations costo-vertebrales"),
+  ],
+  phrenicNerve: [
+    reflexFigure("17", "Cartographie", "Nerf phrenique C3-C4-C5", "Cartographie podale du nerf phrenique C3 C4 C5"),
+    reflexFigure("18", "Photo", "Nerf phrenique C3-C4-C5", "Repere podal du nerf phrenique C3 C4 C5"),
+    reflexFigure("19", "Cartographie", "Nerf phrenique - triangle de Sedillot", "Cartographie podale du nerf phrenique dans le triangle de Sedillot"),
+    reflexFigure("20", "Photo", "Nerf phrenique - triangle de Sedillot", "Repere podal du nerf phrenique dans le triangle de Sedillot"),
+  ],
+  liverSuperiorAndLeft: [
+    reflexFigure("07", "Cartographie", "Foie - lobe gauche", "Cartographie podale du lobe gauche du foie"),
+    reflexFigure("08", "Photo", "Foie - lobe gauche", "Repere podal du lobe gauche du foie"),
+  ],
+  liverInferiorAndRight: [
+    reflexFigure("11", "Cartographie", "Foie - face inferieure et lobe droit", "Cartographie podale de la face inferieure et du lobe droit du foie"),
+    reflexFigure("12", "Photo", "Foie - face inferieure et lobe droit", "Repere podal de la face inferieure et du lobe droit du foie"),
+  ],
+  gallbladder: [
+    reflexFigure("13", "Photo", "Vesicule biliaire", "Repere podal de la vesicule biliaire"),
+    reflexFigure("14", "Photo", "Vesicule biliaire", "Repere podal de la vesicule biliaire sur le pouce gauche"),
+  ],
+  bileDucts: [
+    reflexFigure("15", "Photo", "Voies biliaires", "Repere podal des voies biliaires"),
+    reflexFigure("16", "Photo", "Voies biliaires", "Repere podal des voies biliaires entre les deux pouces"),
+  ],
+  limbicBalance: [
+    reflexFigure("21", "Photo", "Balance cerveau limbique - foie/vesicule biliaire", "Repere podal de la balance cerveau limbique foie vesicule biliaire"),
+    reflexFigure("22", "Photo", "Balance cerveau limbique - foie/vesicule biliaire", "Technique balance cerveau limbique foie vesicule biliaire"),
+  ],
+} satisfies Record<string, Chapter["sections"][number]["blocks"]>
+
+function appendAfterBlock(
+  sectionId: string,
+  match: (block: ChapterBlock) => boolean,
+  figures: Chapter["sections"][number]["blocks"],
+) {
+  const section = chapter11Fr.sections.find((candidate) => candidate.id === sectionId)
+  if (!section) return
+  const index = section.blocks.findIndex(match)
+  if (index >= 0) section.blocks.splice(index + 1, 0, ...figures)
+}
+
+function normalizedLabel(value: string) {
+  return value.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase()
+}
+
+appendAfterBlock(
+  "zones-reflexes-podales-du-foie-et-des-voies-biliaires",
+  (block) => block.type === "para" && block.text.startsWith("Plexus"),
+  chapter11ReflexFigureGroups.generalAdaptation,
+)
+appendAfterBlock(
+  "zones-reflexes-podales-du-foie-et-des-voies-biliaires",
+  (block) => block.type === "lead" && normalizedLabel(block.label) === "nerf phrenique",
+  chapter11ReflexFigureGroups.phrenicNerve,
+)
+appendAfterBlock(
+  "zones-reflexes-podales-du-foie-et-des-voies-biliaires",
+  (block) => block.type === "lead" && block.label === "Ligament triangulaire gauche",
+  chapter11ReflexFigureGroups.liverSuperiorAndLeft,
+)
+appendAfterBlock(
+  "zones-reflexes-podales-du-foie-et-des-voies-biliaires",
+  (block) => block.type === "lead" && normalizedLabel(block.label) === "face inferieure",
+  chapter11ReflexFigureGroups.liverInferiorAndRight,
+)
+appendAfterBlock(
+  "zones-reflexes-podales-du-foie-et-des-voies-biliaires",
+  (block) => block.type === "lead" && normalizedLabel(block.label) === "vesicule biliaire",
+  chapter11ReflexFigureGroups.gallbladder,
+)
+appendAfterBlock(
+  "zones-reflexes-podales-du-foie-et-des-voies-biliaires",
+  (block) => block.type === "lead" && block.label === "Voies biliaires",
+  chapter11ReflexFigureGroups.bileDucts,
+)
+appendAfterBlock(
+  "systeme-limbique",
+  (block) => block.type === "lead" && normalizedLabel(block.label) === "balance cerveau limbique-foie/vesicule biliaire",
+  chapter11ReflexFigureGroups.limbicBalance,
+)
