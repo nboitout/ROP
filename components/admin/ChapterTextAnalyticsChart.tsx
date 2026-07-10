@@ -145,6 +145,7 @@ export default function ChapterTextAnalyticsChart({ rows }: { rows: ChapterTextA
               className={`adm-metric-tab${item.key === metric.key ? ' active' : ''}`}
               onClick={() => setMetricKey(item.key)}
               aria-pressed={item.key === metric.key}
+              title={`${item.label}: ${item.shortLabel}`}
             >
               <span>{item.label}</span>
               <small>{item.shortLabel}</small>

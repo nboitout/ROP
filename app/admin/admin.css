@@ -1425,7 +1425,11 @@
 }
 
 .adm-metric-tab {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   min-width: 0;
+  min-height: 74px;
   border: 1px solid var(--adm-i08);
   border-radius: 3px;
   background: #fff;
@@ -1452,15 +1456,15 @@
 .adm-metric-tab span,
 .adm-metric-tab small {
   display: block;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  overflow-wrap: anywhere;
+  white-space: normal;
 }
 
 .adm-metric-tab span {
   font-size: .76rem;
   font-weight: 700;
   letter-spacing: .05em;
+  line-height: 1.2;
   text-transform: uppercase;
 }
 
@@ -1469,6 +1473,7 @@
   color: var(--adm-i30);
   font-size: .64rem;
   font-weight: 600;
+  line-height: 1.25;
 }
 
 .adm-text-analytics-summary {
