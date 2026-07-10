@@ -1538,6 +1538,43 @@
   padding: 26px;
 }
 
+.adm-reference-view-toggle {
+  display: inline-grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 4px;
+  margin-bottom: 16px;
+  border: 1px solid var(--adm-i08);
+  border-radius: 3px;
+  background: rgba(245,240,232,.58);
+  padding: 4px;
+}
+
+.adm-reference-view-toggle button {
+  border: 1px solid transparent;
+  border-radius: 2px;
+  background: transparent;
+  color: var(--adm-i50);
+  cursor: pointer;
+  font-family: inherit;
+  font-size: .68rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  padding: 8px 12px;
+  text-transform: uppercase;
+  transition: background .15s, border-color .15s, color .15s;
+}
+
+.adm-reference-view-toggle button:hover {
+  color: var(--adm-ink);
+}
+
+.adm-reference-view-toggle button.active {
+  border-color: rgba(74,107,90,.26);
+  background: #fff;
+  color: var(--adm-sage);
+  box-shadow: 0 1px 5px rgba(26,26,24,.06);
+}
+
 .adm-reference-summary {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -1647,6 +1684,173 @@
   padding: 18px;
 }
 
+.adm-reference-network-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(260px, 320px);
+  gap: 22px;
+  align-items: stretch;
+}
+
+.adm-reference-network-wrap {
+  min-width: 0;
+  border: 1px solid var(--adm-i08);
+  border-radius: 3px;
+  background:
+    linear-gradient(90deg, rgba(26,26,24,.04) 1px, transparent 1px),
+    linear-gradient(0deg, rgba(26,26,24,.04) 1px, transparent 1px),
+    #fff;
+  background-size: 56px 56px;
+  overflow: hidden;
+}
+
+.adm-reference-network {
+  display: block;
+  width: 100%;
+  min-height: 420px;
+}
+
+.adm-reference-network-link {
+  fill: none;
+  stroke: rgba(74,107,90,.18);
+  stroke-linecap: round;
+  transition: opacity .15s, stroke .15s;
+}
+
+.adm-reference-network-link.active {
+  stroke: rgba(74,107,90,.42);
+}
+
+.adm-reference-network-node {
+  cursor: pointer;
+  opacity: .42;
+  outline: none;
+  transition: opacity .15s;
+}
+
+.adm-reference-network-node.connected,
+.adm-reference-network-node.selected {
+  opacity: 1;
+}
+
+.adm-reference-network-node circle {
+  fill: #6d7f72;
+  stroke: #fff;
+  stroke-width: 3;
+  filter: drop-shadow(0 2px 5px rgba(26,26,24,.18));
+  transition: fill .15s, stroke .15s;
+}
+
+.adm-reference-network-node circle.center,
+.adm-reference-network-node.selected circle {
+  fill: #a07c3a;
+}
+
+.adm-reference-network-node:focus circle,
+.adm-reference-network-node:hover circle {
+  stroke: rgba(26,26,24,.72);
+}
+
+.adm-reference-network-node text {
+  fill: #fff;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 800;
+  pointer-events: none;
+}
+
+.adm-reference-network-panel {
+  border: 1px solid var(--adm-i08);
+  border-left: 3px solid rgba(160,124,58,.55);
+  border-radius: 3px;
+  background: #fff;
+  padding: 16px;
+}
+
+.adm-reference-network-panel > span,
+.adm-reference-network-panel > strong {
+  display: block;
+}
+
+.adm-reference-network-panel > span {
+  color: var(--adm-i30);
+  font-size: .62rem;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.adm-reference-network-panel > strong {
+  margin-top: 5px;
+  color: var(--adm-ink);
+  font-size: .92rem;
+  line-height: 1.3;
+}
+
+.adm-reference-network-panel p {
+  margin: 12px 0 0;
+  color: var(--adm-i50);
+  font-size: .74rem;
+  line-height: 1.55;
+}
+
+.adm-reference-network-stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.adm-reference-network-stats div {
+  border: 1px solid var(--adm-i08);
+  border-radius: 3px;
+  background: rgba(245,240,232,.58);
+  padding: 9px;
+}
+
+.adm-reference-network-stats b,
+.adm-reference-network-stats small {
+  display: block;
+}
+
+.adm-reference-network-stats b {
+  color: var(--adm-sage);
+  font-size: 1rem;
+}
+
+.adm-reference-network-stats small {
+  margin-top: 2px;
+  color: var(--adm-i30);
+  font-size: .58rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.adm-reference-network-list {
+  margin-top: 14px;
+}
+
+.adm-reference-network-list em,
+.adm-reference-network-list span {
+  display: block;
+}
+
+.adm-reference-network-list em {
+  color: var(--adm-i30);
+  font-size: .62rem;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.adm-reference-network-list span {
+  margin-top: 5px;
+  color: var(--adm-ink);
+  font-size: .72rem;
+  line-height: 1.35;
+}
+
 @media (max-width: 900px) {
   .adm-text-analytics-head {
     flex-direction: column;
@@ -1686,5 +1890,17 @@
 
   .adm-reference-chart .recharts-responsive-container {
     min-width: 560px;
+  }
+
+  .adm-reference-network-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .adm-reference-network-wrap {
+    overflow-x: auto;
+  }
+
+  .adm-reference-network {
+    min-width: 760px;
   }
 }
