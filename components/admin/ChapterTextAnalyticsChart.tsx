@@ -19,11 +19,11 @@ export type ChapterTextAnalyticsRow = {
   partTitle: string
   wordCount: number
   readingMinutes: number
-  figureCount: number
-  figuresPer1000Words: number
+  photosInText: number
+  contentSlideCount: number
 }
 
-type MetricKey = 'readingMinutes' | 'wordCount' | 'figuresPer1000Words' | 'figureCount'
+type MetricKey = 'readingMinutes' | 'wordCount' | 'photosInText' | 'contentSlideCount'
 
 type MetricConfig = {
   key: MetricKey
@@ -52,20 +52,20 @@ const METRICS: MetricConfig[] = [
     format: (value) => `${Math.round(value).toLocaleString('en-US')} words`,
   },
   {
-    key: 'figuresPer1000Words',
-    label: 'Visual density',
-    shortLabel: 'Figures / 1k words',
-    valueName: 'Figures per 1k words',
-    emptyValue: '0.0',
-    format: (value) => value.toFixed(1),
+    key: 'photosInText',
+    label: 'Photos in text',
+    shortLabel: 'Inline photos',
+    valueName: 'Photos in text',
+    emptyValue: '0 photos',
+    format: (value) => `${Math.round(value)} photo${Math.round(value) === 1 ? '' : 's'}`,
   },
   {
-    key: 'figureCount',
-    label: 'Figure count',
-    shortLabel: 'Figures',
-    valueName: 'Figures',
-    emptyValue: '0 figures',
-    format: (value) => `${Math.round(value)} figures`,
+    key: 'contentSlideCount',
+    label: 'Content slides',
+    shortLabel: 'Excludes reflex zones',
+    valueName: 'Slides outside reflex zones',
+    emptyValue: '0 slides',
+    format: (value) => `${Math.round(value)} slide${Math.round(value) === 1 ? '' : 's'}`,
   },
 ]
 
@@ -121,15 +121,15 @@ export default function ChapterTextAnalyticsChart({ rows }: { rows: ChapterTextA
       <div className="adm-chart-card full adm-text-analytics-card">
         <div className="adm-text-analytics-head">
           <div>
-            <p className="adm-chart-title" id="text-analytics-heading">Text analytics bar chart proposal</p>
+            <p className="adm-chart-title" id="text-analytics-heading">Chapter reading and media comparison</p>
             <p className="adm-page-sub adm-text-analytics-sub">
-              One measure at a time, with chapters sorted from highest to lowest so differences are visible without reading the table.
+              One measure at a time, with chapters sorted from highest to lowest so differences are visible at a glance.
             </p>
           </div>
           <div className="adm-text-analytics-count">{chartRows.length} analyzed chapters</div>
         </div>
 
-        <div className="adm-metric-tabs" role="tablist" aria-label="Text analytics metric">
+        <div className="adm-metric-tabs" role="tablist" aria-label="Chapter analytics metric">
           {METRICS.map((item) => (
             <button
               key={item.key}
@@ -174,10 +174,10 @@ export default function ChapterTextAnalyticsChart({ rows }: { rows: ChapterTextA
               <XAxis
                 type="number"
                 tick={{ fill: 'rgba(26,26,24,.58)', fontSize: 11, fontFamily: 'DM Sans, sans-serif' }}
-                tickFormatter={(value) => metric.format(Number(value)).replace(/ words| figures| min/g, '')}
+                tickFormatter={(value) => metric.format(Number(value)).replace(/ words| photos| photo| slides| slide| min/g, '')}
                 axisLine={false}
                 tickLine={false}
-                allowDecimals={metric.key === 'figuresPer1000Words'}
+                allowDecimals={false}
               />
               <YAxis
                 type="category"

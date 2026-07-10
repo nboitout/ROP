@@ -6,17 +6,12 @@ import { getChapterSlideVisuals } from '@/content/slidesyncRegistry'
 import ChapterBoard, { type BoardRow, type LangStatus } from '@/components/admin/ChapterBoard'
 import ChapterTextAnalyticsChart, { type ChapterTextAnalyticsRow } from '@/components/admin/ChapterTextAnalyticsChart'
 import RecalculateStatsButton from '@/components/admin/RecalculateStatsButton'
-import {
-  chapterQualityIssues,
-  chapterQualityMetrics,
-  type ChapterQualityIssue,
-  type ChapterQualityMetrics,
-} from '@/lib/chapterStats'
+import { chapterQualityMetrics, type ChapterQualityMetrics } from '@/lib/chapterStats'
 
 export const metadata: Metadata = { title: 'Chapters · Admin R.O.P.' }
 
 const CHAPTER_STATS_TAG = 'admin-chapter-stats'
-const CHAPTER_STATS_CACHE_VERSION = 'rop-clinical-zone-v2'
+const CHAPTER_STATS_CACHE_VERSION = 'rop-chapter-analytics-v3'
 
 async function recalculateChapterStats() {
   'use server'
@@ -57,9 +52,7 @@ type QualityRow = {
   partTitle: string
   href: string | null
   metrics: ChapterQualityMetrics | null
-  liveLangs: Lang[]
-  missingLangs: Lang[]
-  issues: ChapterQualityIssue[]
+  liveLangCount: number
 }
 
 type ChapterStatsSnapshot = {
@@ -72,10 +65,8 @@ type ChapterStatsSnapshot = {
   deLive: number
   esLive: number
   itLive: number
-  qualityRows: QualityRow[]
   analyzedRows: Array<QualityRow & { metrics: ChapterQualityMetrics }>
   launchAssetRows: Array<QualityRow & { metrics: ChapterQualityMetrics }>
-  attentionRows: QualityRow[]
   chaptersWithSyncSlides: number
   chaptersWithReflexZoneText: number
   chaptersWithReflexZonePictures: number
@@ -83,16 +74,9 @@ type ChapterStatsSnapshot = {
   chaptersWithClinicalCases: number
   reflexZoneCoverageRows: Array<QualityRow & { metrics: ChapterQualityMetrics }>
   avgReadMinutes: number
-  avgVisualDensity: number
+  avgPhotosInText: number
+  avgContentSlides: number
   fullyTranslatedRows: number
-}
-
-function formatNumber(n: number): string {
-  return n.toLocaleString('en-US')
-}
-
-function formatDensity(n: number): string {
-  return n.toFixed(1)
 }
 
 function formatGeneratedAt(value: string): string {
@@ -101,60 +85,6 @@ function formatGeneratedAt(value: string): string {
     timeStyle: 'medium',
     timeZone: 'Europe/Paris',
   }).format(new Date(value))
-}
-
-function resourceLabel(metrics: ChapterQualityMetrics): string {
-  const resources = [
-    metrics.slidesCount ? `${metrics.slidesCount} slides` : '',
-    metrics.revisionSheetCount ? 'revision' : '',
-    metrics.clinicalCaseCount ? 'case' : '',
-  ].filter(Boolean)
-  return resources.length > 0 ? resources.join(' / ') : 'no bonus resource'
-}
-
-function clinicalCaseFlag(metrics: ChapterQualityMetrics | null): ChapterQualityIssue {
-  return metrics?.clinicalCaseCount
-    ? { label: 'Clinical case', tone: 'info' }
-    : { label: 'No clinical case', tone: 'info' }
-}
-
-function translationIssues(
-  metricsByLang: Map<Lang, ChapterQualityMetrics>,
-  liveLangs: Lang[],
-  missingLangs: Lang[],
-): ChapterQualityIssue[] {
-  const issues: ChapterQualityIssue[] = []
-  const fr = metricsByLang.get('fr')
-
-  if (missingLangs.length > 0) {
-    issues.push({ label: `${missingLangs.length} translations missing`, tone: 'info' })
-  }
-  if (!fr) {
-    issues.push({ label: 'Missing French source', tone: 'critical' })
-    return issues
-  }
-
-  for (const lang of liveLangs) {
-    if (lang === 'fr') continue
-    const metrics = metricsByLang.get(lang)
-    if (!metrics) continue
-
-    const wordRatio = fr.wordCount > 0 ? metrics.wordCount / fr.wordCount : 1
-    if (wordRatio < 0.72) {
-      issues.push({ label: `${lang.toUpperCase()} much shorter`, tone: 'warning' })
-    } else if (wordRatio > 1.35) {
-      issues.push({ label: `${lang.toUpperCase()} much longer`, tone: 'warning' })
-    }
-
-    if (metrics.figureCount !== fr.figureCount) {
-      issues.push({ label: `${lang.toUpperCase()} figure mismatch`, tone: 'warning' })
-    }
-    if (metrics.figureMissingAltCount > 0 || metrics.figureMissingCaptionCount > 0) {
-      issues.push({ label: `${lang.toUpperCase()} figure metadata`, tone: 'critical' })
-    }
-  }
-
-  return issues
 }
 
 function buildChapterStatsSnapshot(): ChapterStatsSnapshot {
@@ -194,7 +124,7 @@ function buildChapterStatsSnapshot(): ChapterStatsSnapshot {
   const esLive = rows.filter((r) => r.es === 'live').length
   const itLive = rows.filter((r) => r.it === 'live').length
 
-  const qualityRows: QualityRow[] = t.cards.map((card) => {
+  const chapterMetricRows: QualityRow[] = t.cards.map((card) => {
     const route = ROUTES[card.num]
     if (!route) {
       return {
@@ -203,32 +133,14 @@ function buildChapterStatsSnapshot(): ChapterStatsSnapshot {
         partTitle: partTitle.get(card.part) ?? card.part,
         href: null,
         metrics: null,
-        liveLangs: [],
-        missingLangs: LANGS,
-        issues: [{ label: 'Not built', tone: 'critical' }],
+        liveLangCount: 0,
       }
     }
 
     const translations = getChapterTranslations(route.key)
     const liveLangs = LANGS.filter((lang) => translations[lang])
-    const missingLangs = LANGS.filter((lang) => !translations[lang])
-    const metricsByLang = new Map<Lang, ChapterQualityMetrics>()
     const slideVisuals = getChapterSlideVisuals(route.key)
-
-    for (const lang of liveLangs) {
-      const chapter = translations[lang]
-      if (chapter) {
-        metricsByLang.set(
-          lang,
-          chapterQualityMetrics(chapter, lang === 'fr' ? slideVisuals : undefined),
-        )
-      }
-    }
-
-    const frMetrics = metricsByLang.get('fr') ?? null
-    const issues: ChapterQualityIssue[] = frMetrics
-      ? chapterQualityIssues(frMetrics, translationIssues(metricsByLang, liveLangs, missingLangs))
-      : [{ label: 'No content file', tone: 'critical' }]
+    const frMetrics = translations.fr ? chapterQualityMetrics(translations.fr, slideVisuals) : null
 
     return {
       num: card.num,
@@ -236,15 +148,12 @@ function buildChapterStatsSnapshot(): ChapterStatsSnapshot {
       partTitle: partTitle.get(card.part) ?? card.part,
       href: route.href,
       metrics: frMetrics,
-      liveLangs,
-      missingLangs,
-      issues,
+      liveLangCount: liveLangs.length,
     }
   })
 
-  const analyzedRows = qualityRows.filter((r): r is QualityRow & { metrics: ChapterQualityMetrics } => !!r.metrics)
+  const analyzedRows = chapterMetricRows.filter((r): r is QualityRow & { metrics: ChapterQualityMetrics } => !!r.metrics)
   const launchAssetRows = analyzedRows.filter((row) => !ROUTES[row.num]?.draft)
-  const attentionRows = qualityRows.filter((r) => r.issues.some((issue) => issue.tone !== 'info'))
   const chaptersWithSyncSlides = launchAssetRows.filter((row) => row.metrics.slidesCount > 0).length
   const chaptersWithReflexZoneText = launchAssetRows.filter((row) => row.metrics.podalZoneSectionCount > 0).length
   const chaptersWithReflexZonePictures = launchAssetRows.filter((row) => row.metrics.podalZonePhotoCount > 0).length
@@ -254,10 +163,15 @@ function buildChapterStatsSnapshot(): ChapterStatsSnapshot {
   const avgReadMinutes = analyzedRows.length > 0
     ? Math.round(analyzedRows.reduce((sum, row) => sum + row.metrics.readingMinutes, 0) / analyzedRows.length)
     : 0
-  const avgVisualDensity = analyzedRows.length > 0
-    ? analyzedRows.reduce((sum, row) => sum + row.metrics.figuresPer1000Words, 0) / analyzedRows.length
+  const avgPhotosInText = analyzedRows.length > 0
+    ? Math.round(analyzedRows.reduce((sum, row) => sum + row.metrics.figureCount, 0) / analyzedRows.length)
     : 0
-  const fullyTranslatedRows = qualityRows.filter((r) => r.liveLangs.length === LANGS.length).length
+  const avgContentSlides = analyzedRows.length > 0
+    ? Math.round(
+      analyzedRows.reduce((sum, row) => sum + Math.max(0, row.metrics.slidesCount - row.metrics.podalZoneSlideCount), 0) / analyzedRows.length,
+    )
+    : 0
+  const fullyTranslatedRows = chapterMetricRows.filter((r) => r.liveLangCount === LANGS.length).length
 
   return {
     generatedAt: new Date().toISOString(),
@@ -269,10 +183,8 @@ function buildChapterStatsSnapshot(): ChapterStatsSnapshot {
     deLive,
     esLive,
     itLive,
-    qualityRows,
     analyzedRows,
     launchAssetRows,
-    attentionRows,
     chaptersWithSyncSlides,
     chaptersWithReflexZoneText,
     chaptersWithReflexZonePictures,
@@ -280,7 +192,8 @@ function buildChapterStatsSnapshot(): ChapterStatsSnapshot {
     chaptersWithClinicalCases,
     reflexZoneCoverageRows,
     avgReadMinutes,
-    avgVisualDensity,
+    avgPhotosInText,
+    avgContentSlides,
     fullyTranslatedRows,
   }
 }
@@ -303,9 +216,7 @@ export default async function AdminChapitresPage() {
     deLive,
     esLive,
     itLive,
-    qualityRows,
     analyzedRows,
-    attentionRows,
     chaptersWithSyncSlides,
     chaptersWithReflexZoneText,
     chaptersWithReflexZonePictures,
@@ -313,7 +224,8 @@ export default async function AdminChapitresPage() {
     chaptersWithClinicalCases,
     reflexZoneCoverageRows,
     avgReadMinutes,
-    avgVisualDensity,
+    avgPhotosInText,
+    avgContentSlides,
     fullyTranslatedRows,
   } = await getChapterStatsSnapshot()
   const textAnalyticsRows: ChapterTextAnalyticsRow[] = analyzedRows.map((row) => ({
@@ -322,8 +234,8 @@ export default async function AdminChapitresPage() {
     partTitle: row.partTitle,
     wordCount: row.metrics.wordCount,
     readingMinutes: row.metrics.readingMinutes,
-    figureCount: row.metrics.figureCount,
-    figuresPer1000Words: row.metrics.figuresPer1000Words,
+    photosInText: row.metrics.figureCount,
+    contentSlideCount: Math.max(0, row.metrics.slidesCount - row.metrics.podalZoneSlideCount),
   }))
 
   return (
@@ -481,9 +393,9 @@ export default async function AdminChapitresPage() {
       <ChapterBoard parts={t.parts} rows={rows} />
 
       <section className="adm-quality-section">
-        <p className="adm-section-title">Chapter quality signals</p>
+        <p className="adm-section-title">Chapter analytics comparison</p>
         <p className="adm-page-sub adm-quality-intro">
-          Static checks from the chapter content files: reading load, visual support, structure, translation parity, and review flags.
+          Compare chapters one measure at a time: reading load, text length, inline photos, and synchronized slides outside the reflex-zone section.
         </p>
 
         <div className="adm-scorecards adm-quality-scorecards">
@@ -498,125 +410,20 @@ export default async function AdminChapitresPage() {
             <p className="adm-scorecard-sub">canonical FR content</p>
           </div>
           <div className="adm-scorecard">
-            <p className="adm-scorecard-label">Visual density</p>
-            <p className="adm-scorecard-value">{formatDensity(avgVisualDensity)}</p>
-            <p className="adm-scorecard-sub">figures per 1k words</p>
+            <p className="adm-scorecard-label">Avg text photos</p>
+            <p className="adm-scorecard-value">{avgPhotosInText}</p>
+            <p className="adm-scorecard-sub">inline photos per chapter</p>
           </div>
           <div className="adm-scorecard">
-            <p className="adm-scorecard-label">5-language set</p>
+            <p className="adm-scorecard-label">Avg content slides</p>
+            <p className="adm-scorecard-value">{avgContentSlides}</p>
+            <p className="adm-scorecard-sub">excluding reflex-zone slides</p>
+          </div>
+          <div className="adm-scorecard">
+            <p className="adm-scorecard-label">All languages</p>
             <p className="adm-scorecard-value">{fullyTranslatedRows}<span style={{ fontSize: '1rem', color: 'var(--adm-i30)' }}> / {total}</span></p>
-            <p className="adm-scorecard-sub">FR EN DE ES IT live</p>
+            <p className="adm-scorecard-sub">FR EN DE ES IT TH live</p>
           </div>
-          <div className="adm-scorecard">
-            <p className="adm-scorecard-label">Needs attention</p>
-            <p className="adm-scorecard-value">{attentionRows.length}</p>
-            <p className="adm-scorecard-sub">non-info flags</p>
-          </div>
-        </div>
-
-        <div className="adm-table-wrap adm-quality-table-wrap">
-          <table className="adm-table adm-quality-table">
-            <thead>
-              <tr>
-                <th style={{ width: 44 }}>#</th>
-                <th>Chapter</th>
-                <th>Reading load</th>
-                <th>Visual support</th>
-                <th>Structure</th>
-                <th>Translations</th>
-                <th>Quality flags</th>
-              </tr>
-            </thead>
-            <tbody>
-              {qualityRows.map((row) => (
-                <tr key={row.num}>
-                  <td className="adm-board-num">{row.num}</td>
-                  <td>
-                    {row.href ? (
-                      <a className="adm-quality-title-link" href={row.href} target="_blank" rel="noopener noreferrer">
-                        {row.title}
-                      </a>
-                    ) : (
-                      <span>{row.title}</span>
-                    )}
-                    <span className="adm-quality-cell-sub">{row.partTitle}</span>
-                  </td>
-                  <td>
-                    {row.metrics ? (
-                      <>
-                        <strong>{formatNumber(row.metrics.wordCount)} words</strong>
-                        <span className="adm-quality-cell-sub">
-                          {row.metrics.readingMinutes} min / {row.metrics.sectionCount} sections / avg {formatNumber(row.metrics.avgWordsPerSection)} words
-                        </span>
-                      </>
-                    ) : (
-                      <span className="adm-quality-cell-sub">No chapter content</span>
-                    )}
-                  </td>
-                  <td>
-                    {row.metrics ? (
-                      <>
-                        <strong>{row.metrics.figureCount} figures</strong>
-                        <span className="adm-quality-cell-sub">
-                          {row.metrics.slidesCount} slides / {row.metrics.podalZoneSlideCount} podal-zone slides
-                        </span>
-                        <span className="adm-quality-cell-sub">
-                          {row.metrics.podalZoneSectionCount} podal-zone sections / {row.metrics.podalZonePhotoCount} podal-zone photos
-                        </span>
-                        <span className="adm-quality-cell-sub">
-                          {formatDensity(row.metrics.figuresPer1000Words)} figures per 1k words
-                        </span>
-                        <span className="adm-quality-cell-sub">
-                          {resourceLabel(row.metrics)} / {row.metrics.ropBlockCount} ROP blocks / {row.metrics.xrefCount} references
-                        </span>
-                      </>
-                    ) : (
-                      <span className="adm-quality-cell-sub">No visual data</span>
-                    )}
-                  </td>
-                  <td>
-                    {row.metrics ? (
-                      <>
-                        <strong>{row.metrics.avgSentenceWords} words/sentence</strong>
-                        <span className="adm-quality-cell-sub">
-                          {row.metrics.paragraphCount} paragraphs / avg {row.metrics.avgWordsPerParagraph} words
-                        </span>
-                        <span className="adm-quality-cell-sub">
-                          {row.metrics.longParagraphCount} long paragraphs / {row.metrics.longSentenceCount} long sentences
-                        </span>
-                      </>
-                    ) : (
-                      <span className="adm-quality-cell-sub">No structure data</span>
-                    )}
-                  </td>
-                  <td>
-                    <div className="adm-quality-lang-row">
-                      {LANGS.map((lang) => (
-                        <span
-                          key={lang}
-                          className={`adm-quality-lang ${row.liveLangs.includes(lang) ? 'live' : 'missing'}`}
-                        >
-                          {lang.toUpperCase()}
-                        </span>
-                      ))}
-                    </div>
-                    <span className="adm-quality-cell-sub">
-                      {row.liveLangs.length}/5 live{row.missingLangs.length > 0 ? ` / missing ${row.missingLangs.map((lang) => lang.toUpperCase()).join(', ')}` : ''}
-                    </span>
-                  </td>
-                  <td>
-                    <div className="adm-quality-flags">
-                      {[clinicalCaseFlag(row.metrics), ...row.issues].map((issue, index) => (
-                        <span key={`${issue.label}-${index}`} className={`adm-quality-flag ${issue.tone}`}>
-                          {issue.label}
-                        </span>
-                      ))}
-                    </div>
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
         </div>
 
         <ChapterTextAnalyticsChart rows={textAnalyticsRows} />
