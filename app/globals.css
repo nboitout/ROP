@@ -421,6 +421,17 @@ footer > div > p { font-size:.95rem; color:rgba(245,240,232,.84); line-height:1.
 .cr-ul { list-style:none; padding:0; margin:0 0 22px; }
 .cr-ul li { position:relative; padding:0 0 0 26px; margin:0 0 14px; font-size:1.125rem; line-height:1.7; color:#22221f; }
 .cr-ul li::before { content:''; position:absolute; left:0; top:.78em; width:14px; height:1.5px; background:var(--gold); }
+.cr-ol { margin:0 0 24px 24px; padding:0; }
+.cr-ol li { padding-left:8px; margin:0 0 12px; font-size:1.125rem; line-height:1.7; color:#22221f; }
+
+.cr-table-figure { margin:30px 0; }
+.cr-table-scroll { overflow-x:auto; border:1px solid rgba(74,107,90,.18); border-radius:5px; background:rgba(255,255,255,.6); }
+.cr-table { width:100%; border-collapse:collapse; min-width:520px; font-size:.95rem; line-height:1.45; }
+.cr-table th,
+.cr-table td { padding:12px 14px; border-bottom:1px solid rgba(74,107,90,.14); vertical-align:top; text-align:left; }
+.cr-table th { background:rgba(74,107,90,.08); color:var(--sage); font-size:.72rem; letter-spacing:.08em; text-transform:uppercase; font-weight:700; }
+.cr-table tr:last-child td { border-bottom:0; }
+.cr-table-figure figcaption { font-family:'Cormorant Garamond',serif; font-size:.96rem; font-style:italic; color:rgba(26,26,24,.64); text-align:center; margin-top:10px; }
 
 .cr-fig { margin:40px -80px; }
 .cr-fig-portrait { margin:40px auto; max-width:624px; }

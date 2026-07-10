@@ -334,6 +334,17 @@ export default async function AdminChapitresPage() {
       </div>
 
       <p className="adm-section-title adm-section-title-first">Text availability</p>
+      <div className="adm-special-review">
+        <div>
+          <p className="adm-special-review-kicker">Special review link</p>
+          <h2>Chapter 5 rework</h2>
+          <p>Dedicated draft page for Guy: rewritten stress/allostasis chapter with synchronized slides.</p>
+        </div>
+        <a href="/lecture/chapitre-5-rework" target="_blank" rel="noopener noreferrer">
+          Open rework
+        </a>
+      </div>
+
       <p className="adm-page-sub adm-asset-intro">
         These cards count chapter text only: live pages and translations. Slides, reflex-zone pictures, and clinical cases are tracked separately below.
       </p>

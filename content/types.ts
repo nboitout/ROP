@@ -3,7 +3,9 @@ export type Block =
   | { type: 'lead'; label: string; text: string }
   | { type: 'sub'; text: string }
   | { type: 'bullets'; items: string[] }
+  | { type: 'numbered'; items: string[] }
   | { type: 'leadBullets'; items: { label: string; text: string }[] }
+  | { type: 'table'; headers: string[]; rows: string[][]; caption?: string }
   | { type: 'figure'; src: string; caption: string; alt: string; orientation: 'landscape' | 'portrait' | 'medium' | 'narrow'; syncHide?: true }
   | { type: 'xref'; label: string; href: string; text?: string }
   | { type: 'rop'; body: string[] }

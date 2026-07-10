@@ -548,6 +548,12 @@ function BlockView({
           {block.items.map((it, i) => <li key={i}>{it}</li>)}
         </ul>
       )
+    case 'numbered':
+      return (
+        <ol {...anchor} className="cr-ol">
+          {block.items.map((it, i) => <li key={i}>{it}</li>)}
+        </ol>
+      )
     case 'leadBullets':
       return (
         <ul {...anchor} className="cr-ul cr-ul-lead">
@@ -558,6 +564,28 @@ function BlockView({
             </li>
           ))}
         </ul>
+      )
+    case 'table':
+      return (
+        <figure {...anchor} className="cr-table-figure">
+          <div className="cr-table-scroll">
+            <table className="cr-table">
+              <thead>
+                <tr>
+                  {block.headers.map((header, i) => <th key={i}>{header}</th>)}
+                </tr>
+              </thead>
+              <tbody>
+                {block.rows.map((row, i) => (
+                  <tr key={i}>
+                    {block.headers.map((_, j) => <td key={j}>{row[j] ?? ''}</td>)}
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          {block.caption && <figcaption>{block.caption}</figcaption>}
+        </figure>
       )
     case 'figure':
       return (

@@ -101,9 +101,14 @@ function wordsInBlock(block: Block): number {
     case 'lead':
       return countWords(block.label) + countWords(block.text)
     case 'bullets':
+    case 'numbered':
       return block.items.reduce((n, s) => n + countWords(s), 0)
     case 'leadBullets':
       return block.items.reduce((n, { label, text }) => n + countWords(label) + countWords(text), 0)
+    case 'table':
+      return block.headers.reduce((n, s) => n + countWords(s), 0)
+        + block.rows.flat().reduce((n, s) => n + countWords(s), 0)
+        + countWords(block.caption ?? '')
     case 'rop':
       return block.body.reduce((n, s) => n + countWords(s), 0)
     case 'xref':
@@ -122,9 +127,16 @@ function blockParagraphTexts(block: Block): string[] {
     case 'lead':
       return [`${block.label} ${block.text}`.trim()]
     case 'bullets':
+    case 'numbered':
       return block.items
     case 'leadBullets':
       return block.items.map(({ label, text }) => `${label} ${text}`.trim())
+    case 'table':
+      return [
+        ...block.headers,
+        ...block.rows.flat(),
+        block.caption ?? '',
+      ].filter(Boolean)
     case 'rop':
       return block.body
     case 'xref':
@@ -209,6 +221,7 @@ export function chapterQualityMetrics(
         insidePodalZone = sectionIsPodalZone || isPodalReflexText(block.text)
       }
       if (block.type === 'bullets') bulletCount += block.items.length
+      if (block.type === 'numbered') bulletCount += block.items.length
       if (block.type === 'leadBullets') bulletCount += block.items.length
       if (block.type === 'xref') xrefCount++
       if (block.type === 'rop') ropBlockCount++

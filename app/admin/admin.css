@@ -206,6 +206,62 @@
   margin-top: 6px;
 }
 
+.adm-special-review {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  margin: 16px 0 22px;
+  padding: 18px 20px;
+  border: 1px solid var(--adm-border);
+  border-left: 3px solid var(--adm-gold);
+  background: rgba(160,124,58,.08);
+  border-radius: 4px;
+}
+
+.adm-special-review-kicker {
+  margin: 0 0 6px;
+  color: var(--adm-gold);
+  font-size: .68rem;
+  font-weight: 700;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+
+.adm-special-review h2 {
+  margin: 0 0 4px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.55rem;
+  font-weight: 500;
+  color: var(--adm-ink);
+}
+
+.adm-special-review p {
+  margin: 0;
+  color: var(--adm-i50);
+  font-size: .88rem;
+  line-height: 1.45;
+}
+
+.adm-special-review a {
+  flex-shrink: 0;
+  color: #fff;
+  background: var(--adm-gold);
+  border: 1px solid var(--adm-gold);
+  border-radius: 3px;
+  padding: 9px 14px;
+  text-decoration: none;
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.adm-special-review a:hover {
+  background: #86662e;
+  border-color: #86662e;
+}
+
 .adm-refresh {
   display: flex;
   flex-direction: column;

@@ -1412,6 +1412,17 @@ function BlockView({
           ))}
         </ul>
       )
+    case 'numbered':
+      return (
+        <ol className="cr-ol">
+          {block.items.map((it, i) => (
+            <li key={i}>
+              {renderSlideAnchorsForItem?.(i)}
+              {it}
+            </li>
+          ))}
+        </ol>
+      )
     case 'leadBullets': {
       const [intro, ...items] = block.items
       const hasReflexZoneIntro = !!intro?.text && normalizeSectionLabel(intro.label) === 'zones reflexes podales'
@@ -1438,6 +1449,28 @@ function BlockView({
         </>
       )
     }
+    case 'table':
+      return (
+        <figure className="cr-table-figure">
+          <div className="cr-table-scroll">
+            <table className="cr-table">
+              <thead>
+                <tr>
+                  {block.headers.map((header, i) => <th key={i}>{header}</th>)}
+                </tr>
+              </thead>
+              <tbody>
+                {block.rows.map((row, i) => (
+                  <tr key={i}>
+                    {block.headers.map((_, j) => <td key={j}>{row[j] ?? ''}</td>)}
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          {block.caption && <figcaption>{block.caption}</figcaption>}
+        </figure>
+      )
     case 'figure':
       if (block.syncHide) return null
       return (
