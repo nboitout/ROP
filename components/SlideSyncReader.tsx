@@ -1116,6 +1116,21 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
                 </div>
               </>
             )}
+            {showRopJump && (
+              <button
+                type="button"
+                className="ss-jump"
+                onClick={goToReflexZones}
+                title={ui.jumpTitle(ropSection.title)}
+              >
+                <span className="ss-jump-icon" aria-hidden>⌖</span>
+                <span className="ss-jump-text">
+                  <span className="ss-jump-label">{ui.jumpLabel}</span>
+                  <span className="ss-jump-section">{ropSection.title}</span>
+                </span>
+                <span className="ss-jump-arrow" aria-hidden>↓</span>
+              </button>
+            )}
               </div>
             </div>
             {showClinicalCaseResource && chapter.clinicalCase && (
@@ -1136,21 +1151,6 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
                   </svg>
                 </span>
                 <span className="ss-case-chip-label">{t.reader.clinicalCase}</span>
-              </button>
-            )}
-            {showRopJump && (
-              <button
-                type="button"
-                className="ss-jump"
-                onClick={goToReflexZones}
-                title={ui.jumpTitle(ropSection.title)}
-              >
-                <span className="ss-jump-icon" aria-hidden>⌖</span>
-                <span className="ss-jump-text">
-                  <span className="ss-jump-label">{ui.jumpLabel}</span>
-                  <span className="ss-jump-section">{ropSection.title}</span>
-                </span>
-                <span className="ss-jump-arrow" aria-hidden>↓</span>
               </button>
             )}
             </>
