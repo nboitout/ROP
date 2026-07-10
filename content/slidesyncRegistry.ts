@@ -16,6 +16,9 @@ import { chapter15Slides, chapter15SlideAnchors } from './chapter15.slidesync'
 import { chapter16Slides, chapter16SlideAnchors } from './chapter16.slidesync'
 import { chapter17Slides, chapter17SlideAnchors } from './chapter17.slidesync'
 import { chapter18Slides, chapter18SlideAnchors } from './chapter18.slidesync'
+import { chapter19Slides, chapter19SlideAnchors } from './chapter19.slidesync'
+import { chapter20Slides, chapter20SlideAnchors } from './chapter20.slidesync'
+import { chapter21Slides, chapter21SlideAnchors } from './chapter21.slidesync'
 
 type SyncSlideLike = { title: string }
 type SyncAnchorLike = { sectionId: string; slide: number | number[] }
@@ -44,6 +47,9 @@ const slideVisualSources: Record<string, SlideVisualSource> = {
   'chapter-16': { slides: chapter16Slides, anchors: chapter16SlideAnchors },
   'chapter-17': { slides: chapter17Slides, anchors: chapter17SlideAnchors },
   'chapter-18': { slides: chapter18Slides, anchors: chapter18SlideAnchors },
+  'chapter-19': { slides: chapter19Slides, anchors: chapter19SlideAnchors },
+  'chapter-20': { slides: chapter20Slides, anchors: chapter20SlideAnchors },
+  'chapter-21': { slides: chapter21Slides, anchors: chapter21SlideAnchors },
 }
 
 function normalizeForSearch(value: string): string {

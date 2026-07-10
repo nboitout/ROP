@@ -11,7 +11,7 @@ import { chapterQualityMetrics, type ChapterQualityMetrics } from '@/lib/chapter
 export const metadata: Metadata = { title: 'Chapters · Admin R.O.P.' }
 
 const CHAPTER_STATS_TAG = 'admin-chapter-stats'
-const CHAPTER_STATS_CACHE_VERSION = 'rop-chapter-analytics-v4'
+const CHAPTER_STATS_CACHE_VERSION = 'rop-chapter-analytics-v5'
 
 async function recalculateChapterStats() {
   'use server'
