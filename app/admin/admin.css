@@ -519,20 +519,6 @@
   font-size: .66rem;
 }
 
-.adm-rop-coverage-wrap {
-  background: #fff;
-  margin-top: -18px;
-  margin-bottom: 36px;
-}
-
-.adm-rop-coverage-table {
-  min-width: 840px;
-}
-
-.adm-rop-coverage-table td {
-  vertical-align: top;
-}
-
 @media (max-width: 1260px) {
   .adm-asset-scorecards { grid-template-columns: repeat(3, 1fr); }
 }
@@ -860,43 +846,20 @@
 }
 
 .adm-quality-scorecards {
+  grid-template-columns: repeat(6, minmax(0, 1fr));
   margin-bottom: 28px;
 }
 
-.adm-quality-title-link {
-  color: var(--adm-ink);
-  font-weight: 650;
-  text-decoration: none;
+@media (max-width: 1260px) {
+  .adm-quality-scorecards {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
 }
 
-.adm-quality-title-link:hover {
-  color: var(--adm-sage);
-}
-
-.adm-quality-cell-sub {
-  display: block;
-  color: var(--adm-i30);
-  font-size: .68rem;
-  line-height: 1.45;
-  margin-top: 3px;
-}
-
-.adm-quality-flag {
-  display: inline-flex;
-  align-items: center;
-  min-height: 22px;
-  border-radius: 2px;
-  padding: 3px 8px;
-  font-size: .62rem;
-  font-weight: 650;
-  letter-spacing: .03em;
-  white-space: nowrap;
-}
-
-.adm-quality-flag.info {
-  background: rgba(74,107,90,.08);
-  border: 1px solid rgba(74,107,90,.18);
-  color: var(--adm-sage);
+@media (max-width: 700px) {
+  .adm-quality-scorecards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 /* ---- Login (kept dark — intentional contrast with dashboard) ---- */
@@ -1456,7 +1419,7 @@
 
 .adm-metric-tabs {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: 8px;
   margin-bottom: 16px;
 }

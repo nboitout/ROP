@@ -11,7 +11,7 @@ import { chapterQualityMetrics, type ChapterQualityMetrics } from '@/lib/chapter
 export const metadata: Metadata = { title: 'Chapters · Admin R.O.P.' }
 
 const CHAPTER_STATS_TAG = 'admin-chapter-stats'
-const CHAPTER_STATS_CACHE_VERSION = 'rop-chapter-analytics-v3'
+const CHAPTER_STATS_CACHE_VERSION = 'rop-chapter-analytics-v4'
 
 async function recalculateChapterStats() {
   'use server'
@@ -49,8 +49,6 @@ const ROUTES: Record<string, { href: string; key: string; gated?: boolean; draft
 type QualityRow = {
   num: string
   title: string
-  partTitle: string
-  href: string | null
   metrics: ChapterQualityMetrics | null
   liveLangCount: number
 }
@@ -72,10 +70,10 @@ type ChapterStatsSnapshot = {
   chaptersWithReflexZonePictures: number
   chaptersWithReflexZoneSlideSupport: number
   chaptersWithClinicalCases: number
-  reflexZoneCoverageRows: Array<QualityRow & { metrics: ChapterQualityMetrics }>
   avgReadMinutes: number
   avgPhotosInText: number
   avgContentSlides: number
+  avgCartographies: number
   fullyTranslatedRows: number
 }
 
@@ -130,8 +128,6 @@ function buildChapterStatsSnapshot(): ChapterStatsSnapshot {
       return {
         num: card.num,
         title: card.title,
-        partTitle: partTitle.get(card.part) ?? card.part,
-        href: null,
         metrics: null,
         liveLangCount: 0,
       }
@@ -145,8 +141,6 @@ function buildChapterStatsSnapshot(): ChapterStatsSnapshot {
     return {
       num: card.num,
       title: card.title,
-      partTitle: partTitle.get(card.part) ?? card.part,
-      href: route.href,
       metrics: frMetrics,
       liveLangCount: liveLangs.length,
     }
@@ -159,7 +153,6 @@ function buildChapterStatsSnapshot(): ChapterStatsSnapshot {
   const chaptersWithReflexZonePictures = launchAssetRows.filter((row) => row.metrics.podalZonePhotoCount > 0).length
   const chaptersWithReflexZoneSlideSupport = launchAssetRows.filter((row) => row.metrics.podalZoneSlideCount > 0).length
   const chaptersWithClinicalCases = launchAssetRows.filter((row) => row.metrics.clinicalCaseCount > 0).length
-  const reflexZoneCoverageRows = analyzedRows
   const avgReadMinutes = analyzedRows.length > 0
     ? Math.round(analyzedRows.reduce((sum, row) => sum + row.metrics.readingMinutes, 0) / analyzedRows.length)
     : 0
@@ -170,6 +163,9 @@ function buildChapterStatsSnapshot(): ChapterStatsSnapshot {
     ? Math.round(
       analyzedRows.reduce((sum, row) => sum + Math.max(0, row.metrics.slidesCount - row.metrics.podalZoneSlideCount), 0) / analyzedRows.length,
     )
+    : 0
+  const avgCartographies = analyzedRows.length > 0
+    ? Math.round(analyzedRows.reduce((sum, row) => sum + row.metrics.podalZoneSlideCount, 0) / analyzedRows.length)
     : 0
   const fullyTranslatedRows = chapterMetricRows.filter((r) => r.liveLangCount === LANGS.length).length
 
@@ -190,10 +186,10 @@ function buildChapterStatsSnapshot(): ChapterStatsSnapshot {
     chaptersWithReflexZonePictures,
     chaptersWithReflexZoneSlideSupport,
     chaptersWithClinicalCases,
-    reflexZoneCoverageRows,
     avgReadMinutes,
     avgPhotosInText,
     avgContentSlides,
+    avgCartographies,
     fullyTranslatedRows,
   }
 }
@@ -222,20 +218,20 @@ export default async function AdminChapitresPage() {
     chaptersWithReflexZonePictures,
     chaptersWithReflexZoneSlideSupport,
     chaptersWithClinicalCases,
-    reflexZoneCoverageRows,
     avgReadMinutes,
     avgPhotosInText,
     avgContentSlides,
+    avgCartographies,
     fullyTranslatedRows,
   } = await getChapterStatsSnapshot()
   const textAnalyticsRows: ChapterTextAnalyticsRow[] = analyzedRows.map((row) => ({
     num: row.num,
     title: row.title,
-    partTitle: row.partTitle,
     wordCount: row.metrics.wordCount,
     readingMinutes: row.metrics.readingMinutes,
     photosInText: row.metrics.figureCount,
     contentSlideCount: Math.max(0, row.metrics.slidesCount - row.metrics.podalZoneSlideCount),
+    cartographyCount: row.metrics.podalZoneSlideCount,
   }))
 
   return (
@@ -326,9 +322,9 @@ export default async function AdminChapitresPage() {
           <p className="adm-scorecard-sub">chapters with reflex-zone pictures</p>
         </div>
         <div className="adm-scorecard adm-scorecard-asset">
-          <p className="adm-scorecard-label">ROP zone slides</p>
+          <p className="adm-scorecard-label">Cartographies</p>
           <p className="adm-scorecard-value">{chaptersWithReflexZoneSlideSupport}<span style={{ fontSize: '1rem', color: 'var(--adm-i30)' }}> / {total}</span></p>
-          <p className="adm-scorecard-sub">chapters with synced reflex-zone slides</p>
+          <p className="adm-scorecard-sub">chapters with reflex-zone slide maps</p>
         </div>
         <div className="adm-scorecard adm-scorecard-asset">
           <p className="adm-scorecard-label">Clinical cases</p>
@@ -337,65 +333,12 @@ export default async function AdminChapitresPage() {
         </div>
       </div>
 
-      <p className="adm-section-title">Reflex zones in these chapters</p>
-      <div className="adm-table-wrap adm-rop-coverage-wrap">
-        <table className="adm-table adm-rop-coverage-table">
-          <thead>
-            <tr>
-              <th style={{ width: 44 }}>#</th>
-              <th>Reflex Zones in these chapter</th>
-              <th>text included</th>
-              <th>Photo included</th>
-              <th>Cartography included</th>
-            </tr>
-          </thead>
-          <tbody>
-            {reflexZoneCoverageRows.map((row) => (
-              <tr key={row.num}>
-                <td className="adm-board-num">{row.num}</td>
-                <td>
-                  {row.href ? (
-                    <a className="adm-quality-title-link" href={row.href} target="_blank" rel="noopener noreferrer">
-                      {row.title}
-                    </a>
-                  ) : (
-                    <span>{row.title}</span>
-                  )}
-                  <span className="adm-quality-cell-sub">{row.partTitle}</span>
-                </td>
-                <td>
-                  {row.metrics.podalZoneSectionCount > 0 ? (
-                    <span className="adm-quality-flag info">{row.metrics.podalZoneSectionCount} full section</span>
-                  ) : (
-                    <span className="muted">No full section</span>
-                  )}
-                </td>
-                <td>
-                  {row.metrics.podalZonePhotoCount > 0 ? (
-                    <span className="adm-quality-flag info">{row.metrics.podalZonePhotoCount} picture{row.metrics.podalZonePhotoCount > 1 ? 's' : ''}</span>
-                  ) : (
-                    <span className="muted">No zone picture</span>
-                  )}
-                </td>
-                <td>
-                  {row.metrics.podalZoneSlideCount > 0 ? (
-                    <span className="adm-quality-flag info">{row.metrics.podalZoneSlideCount} slide{row.metrics.podalZoneSlideCount > 1 ? 's' : ''}</span>
-                  ) : (
-                    <span className="muted">No synced zone slide</span>
-                  )}
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
-
       <ChapterBoard parts={t.parts} rows={rows} />
 
       <section className="adm-quality-section">
         <p className="adm-section-title">Chapter analytics comparison</p>
         <p className="adm-page-sub adm-quality-intro">
-          Compare chapters one measure at a time: reading load, text length, inline photos, and synchronized slides outside the reflex-zone section.
+          Compare chapters one measure at a time: reading load, text length, foot massage photos, anatomy/physio slides, and cartographies.
         </p>
 
         <div className="adm-scorecards adm-quality-scorecards">
@@ -410,14 +353,19 @@ export default async function AdminChapitresPage() {
             <p className="adm-scorecard-sub">canonical FR content</p>
           </div>
           <div className="adm-scorecard">
-            <p className="adm-scorecard-label">Avg text photos</p>
+            <p className="adm-scorecard-label">Avg foot massage photos</p>
             <p className="adm-scorecard-value">{avgPhotosInText}</p>
-            <p className="adm-scorecard-sub">inline photos per chapter</p>
+            <p className="adm-scorecard-sub">photos per chapter</p>
           </div>
           <div className="adm-scorecard">
-            <p className="adm-scorecard-label">Avg content slides</p>
+            <p className="adm-scorecard-label">Avg anatomy slides</p>
             <p className="adm-scorecard-value">{avgContentSlides}</p>
-            <p className="adm-scorecard-sub">excluding reflex-zone slides</p>
+            <p className="adm-scorecard-sub">anatomy and physio</p>
+          </div>
+          <div className="adm-scorecard">
+            <p className="adm-scorecard-label">Avg cartographies</p>
+            <p className="adm-scorecard-value">{avgCartographies}</p>
+            <p className="adm-scorecard-sub">reflex-zone slides</p>
           </div>
           <div className="adm-scorecard">
             <p className="adm-scorecard-label">All languages</p>

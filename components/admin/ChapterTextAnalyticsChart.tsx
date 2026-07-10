@@ -16,14 +16,14 @@ import {
 export type ChapterTextAnalyticsRow = {
   num: string
   title: string
-  partTitle: string
   wordCount: number
   readingMinutes: number
   photosInText: number
   contentSlideCount: number
+  cartographyCount: number
 }
 
-type MetricKey = 'readingMinutes' | 'wordCount' | 'photosInText' | 'contentSlideCount'
+type MetricKey = 'readingMinutes' | 'wordCount' | 'photosInText' | 'contentSlideCount' | 'cartographyCount'
 
 type MetricConfig = {
   key: MetricKey
@@ -53,17 +53,25 @@ const METRICS: MetricConfig[] = [
   },
   {
     key: 'photosInText',
-    label: 'Photos in text',
-    shortLabel: 'Inline photos',
-    valueName: 'Photos in text',
+    label: 'Photos of Foot Massage',
+    shortLabel: 'Foot massage photos',
+    valueName: 'Photos of Foot Massage',
     emptyValue: '0 photos',
     format: (value) => `${Math.round(value)} photo${Math.round(value) === 1 ? '' : 's'}`,
   },
   {
     key: 'contentSlideCount',
-    label: 'Content slides',
-    shortLabel: 'Excludes reflex zones',
-    valueName: 'Slides outside reflex zones',
+    label: 'Anatomy and Physio Slides',
+    shortLabel: 'Excludes cartographies',
+    valueName: 'Anatomy and Physio Slides',
+    emptyValue: '0 slides',
+    format: (value) => `${Math.round(value)} slide${Math.round(value) === 1 ? '' : 's'}`,
+  },
+  {
+    key: 'cartographyCount',
+    label: 'Cartographies',
+    shortLabel: 'Reflex-zone slides',
+    valueName: 'Cartographies',
     emptyValue: '0 slides',
     format: (value) => `${Math.round(value)} slide${Math.round(value) === 1 ? '' : 's'}`,
   },
