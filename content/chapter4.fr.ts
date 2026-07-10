@@ -919,13 +919,7 @@ export const chapter4Fr: Chapter = {
             }
           ]
         },
-        {
-          "type": "figure",
-          "src": "/chapter-4/figure-4-4.png",
-          "alt": "Palpation de la zone réflexe podale du territoire céphalique : tronc cérébral entre les deux pouces",
-          "caption": "Territoire céphalique : tronc cérébral (entre les deux pouces)",
-          "orientation": "portrait"
-        },
+
         {
           "type": "sub",
           "text": "Nerf vague X - trajet crânien / foramen jugulaire"
@@ -947,20 +941,8 @@ export const chapter4Fr: Chapter = {
             }
           ]
         },
-        {
-          "type": "figure",
-          "src": "/chapter-4/figure-4-7.png",
-          "alt": "Palpation de la zone réflexe podale du trajet crânien du nerf vague : moelle allongée",
-          "caption": "Trajet crânien du nerf vague : moelle allongée",
-          "orientation": "portrait"
-        },
-        {
-          "type": "figure",
-          "src": "/chapter-4/figure-4-8.png",
-          "alt": "Palpation de la zone réflexe podale du trajet crânien du nerf vague : foramen jugulaire et ganglions",
-          "caption": "Trajet crânien du nerf vague : foramen jugulaire et ganglions",
-          "orientation": "portrait"
-        },
+
+
         {
           "type": "sub",
           "text": "Nerf vague X - étage cervical"
@@ -978,13 +960,7 @@ export const chapter4Fr: Chapter = {
             "Plexus pré viscéraux: pharynx, larynx, œsophage."
           ]
         },
-        {
-          "type": "figure",
-          "src": "/chapter-4/figure-4-12.png",
-          "alt": "Palpation des zones réflexes podales du nerf vague : territoires crânien et cervical",
-          "caption": "Nerf vague : territoires crânien et cervical",
-          "orientation": "landscape"
-        },
+
         {
           "type": "sub",
           "text": "Nerf vague X - étage thoracique / plexus cardiaque"
@@ -1010,13 +986,7 @@ export const chapter4Fr: Chapter = {
             }
           ]
         },
-        {
-          "type": "figure",
-          "src": "/chapter-4/figure-4-18.png",
-          "alt": "Palpation de la zone réflexe podale de l’étage diaphragmatique : hiatus œsophagien",
-          "caption": "Étage diaphragmatique : hiatus œsophagien",
-          "orientation": "portrait"
-        },
+
         {
           "type": "sub",
           "text": "Nerf vague X - étage diaphragmatique / hiatus œsophagien"
@@ -1073,20 +1043,8 @@ export const chapter4Fr: Chapter = {
             }
           ]
         },
-        {
-          "type": "figure",
-          "src": "/chapter-4/figure-4-19.png",
-          "alt": "Palpation de la zone réflexe podale de la fonction viscéro-motrice du nerf vague : petite courbure de l’estomac",
-          "caption": "Fonction viscéro-motrice du nerf vague : petite courbure de l’estomac",
-          "orientation": "portrait"
-        },
-        {
-          "type": "figure",
-          "src": "/chapter-4/figure-4-21.png",
-          "alt": "Palpation de la zone réflexe podale de la fonction viscéro-motrice du nerf vague : zone de Cannon-Böhm",
-          "caption": "Fonction viscéro-motrice du nerf vague : zone de Cannon-Böhm",
-          "orientation": "portrait"
-        },
+
+
         {
           "type": "sub",
           "text": "Parasympathique pelvien (ou sacral)"
@@ -1135,13 +1093,7 @@ export const chapter4Fr: Chapter = {
             "Chaîne ganglionnaire latéro-vertébrale thoracique: elle n’est pas directement accessible: c’est par l’intermédiaire des articulations costo-vertébrales que l’on peut avoir une action sur elle, le long du bord dorsal de la base de la 1ère phalange du gros orteil et du 1er métatarse."
           ]
         },
-        {
-          "type": "figure",
-          "src": "/chapter-4/figure-4-29.png",
-          "alt": "Palpation de la zone réflexe podale du sympathique viscéro-moteur : chaîne ganglionnaire latéro-vertébrale thoracique",
-          "caption": "Sympathique viscéro-moteur : chaîne ganglionnaire latéro-vertébrale thoracique",
-          "orientation": "landscape"
-        },
+
         {
           "type": "sub",
           "text": "Sympathique viscéro-moteur - chaîne ganglionnaire cervicale"
@@ -1171,13 +1123,7 @@ export const chapter4Fr: Chapter = {
             }
           ]
         },
-        {
-          "type": "figure",
-          "src": "/chapter-4/figure-4-32.png",
-          "alt": "Palpation de la zone réflexe podale de la chaîne ganglionnaire cervicale : ganglion cervical inférieur",
-          "caption": "Chaîne ganglionnaire cervicale : ganglion cervical inférieur",
-          "orientation": "portrait"
-        },
+
         {
           "type": "sub",
           "text": "Sympathique viscéro-moteur - chaîne ganglionnaire lombale"
@@ -1199,13 +1145,7 @@ export const chapter4Fr: Chapter = {
             }
           ]
         },
-        {
-          "type": "figure",
-          "src": "/chapter-4/figure-4-34.png",
-          "alt": "Palpation de la zone réflexe podale de la chaîne ganglionnaire lombale : piliers du diaphragme",
-          "caption": "Chaîne ganglionnaire lombale : piliers du diaphragme",
-          "orientation": "landscape"
-        },
+
         {
           "type": "sub",
           "text": "Sympathique viscéro-moteur - chaîne ganglionnaire sacrale et coccygienne"
@@ -1283,20 +1223,8 @@ export const chapter4Fr: Chapter = {
             }
           ]
         },
-        {
-          "type": "figure",
-          "src": "/chapter-4/figure-4-38.png",
-          "alt": "Palpation de la zone réflexe podale du plexus pelvien : plexus hypogastrique inférieur, fibres antérieures",
-          "caption": "Plexus pelvien : plexus hypogastrique inférieur, fibres antérieures",
-          "orientation": "portrait"
-        },
-        {
-          "type": "figure",
-          "src": "/chapter-4/figure-4-40.png",
-          "alt": "Palpation des zones réflexes podales du plexus pelvien : plexus hypogastrique inférieur, fibres moyennes et postérieures",
-          "caption": "Plexus pelvien : plexus hypogastrique inférieur, fibres moyennes et postérieures",
-          "orientation": "landscape"
-        },
+
+
         {
           "type": "sub",
           "text": "Système nerveux intrinsèque ou entérique (SNE)"
@@ -1331,3 +1259,162 @@ export const chapter4Fr: Chapter = {
     }
   ]
 }
+
+type ChapterBlock = Chapter["sections"][number]["blocks"][number]
+
+const reflexFigure = (
+  n: string,
+  kind: "Cartographie" | "Photo",
+  title: string,
+  alt: string,
+): ChapterBlock => ({
+  type: "figure",
+  src: `/chapter-4/cartographie/figure-4-${n}.png`,
+  caption: `${kind} : ${title}`,
+  alt,
+  orientation: "landscape",
+})
+
+const chapter4ReflexFigureGroups = {
+  cephalicTerritory: [
+    reflexFigure("01", "Cartographie", "territoire cephalique du parasympathique", "Cartographie podale du territoire cephalique du parasympathique et des plexus previsceraux des organes de la tete"),
+    reflexFigure("02", "Photo", "tronc cerebral", "Repere podal du tronc cerebral entre les deux pouces"),
+  ],
+  vagusCranial: [
+    reflexFigure("03", "Cartographie", "noyaux du nerf vague X", "Cartographie podale des noyaux du nerf vague X dans la moelle allongee"),
+    reflexFigure("04", "Photo", "nerf vague X dans la moelle allongee", "Repere podal du nerf vague X dans la moelle allongee"),
+    reflexFigure("05", "Cartographie", "nerf vague X dans le foramen jugulaire", "Cartographie podale du nerf vague X dans le foramen jugulaire"),
+    reflexFigure("06", "Photo", "nerf vague X dans le foramen jugulaire", "Repere podal du nerf vague X dans le foramen jugulaire"),
+  ],
+  vagusCervical: [
+    reflexFigure("07", "Cartographie", "nerf larynge superieur, sinus et glomus carotidien", "Cartographie podale du nerf larynge superieur, du sinus carotidien et du glomus carotidien"),
+    reflexFigure("08", "Photo", "sinus carotidien", "Repere podal du sinus carotidien"),
+  ],
+  vagusThoracic: [
+    reflexFigure("09", "Cartographie", "territoire thoracique gauche du nerf vague X", "Cartographie podale du territoire cervical, thoracique et diaphragmatique gauche du nerf vague X"),
+    reflexFigure("10", "Photo", "territoire gauche du nerf vague X", "Repere podal des territoires cervical, thoracique et diaphragmatique gauches du nerf vague X"),
+    reflexFigure("11", "Cartographie", "territoire thoracique droit du nerf vague X", "Cartographie podale du territoire cervical et thoracique droit du nerf vague X"),
+    reflexFigure("12", "Photo", "territoire droit du nerf vague X", "Repere podal du territoire cervical et thoracique droit du nerf vague X"),
+  ],
+  vagusHiatus: [
+    reflexFigure("13", "Cartographie", "hiatus oesophagien et territoire abdominal gauche", "Cartographie podale des nerfs vagues X, du hiatus oesophagien, du cardia, du pylore et de la petite courbure de l estomac"),
+    reflexFigure("14", "Photo", "hiatus oesophagien et nerfs vagues", "Repere podal du hiatus oesophagien et des nerfs vagues droit et gauche"),
+  ],
+  vagusAbdominal: [
+    reflexFigure("15", "Cartographie", "petite courbure de l estomac", "Cartographie podale de la petite courbure de l estomac"),
+    reflexFigure("16", "Photo", "petite courbure de l estomac", "Repere podal de la petite courbure de l estomac"),
+    reflexFigure("17", "Cartographie", "territoire abdominal droit du nerf vague X", "Cartographie podale du territoire abdominal droit du nerf vague X"),
+    reflexFigure("18", "Photo", "territoire abdominal droit du nerf vague X", "Repere podal du territoire abdominal droit du nerf vague X"),
+  ],
+  parasympatheticSacral: [
+    reflexFigure("19", "Cartographie", "origine parasympathique sacree", "Cartographie podale de l origine parasympathique sacree"),
+    reflexFigure("20", "Photo", "origine parasympathique pelvienne ou sacree", "Repere podal de l origine parasympathique pelvienne ou sacree"),
+  ],
+  sympatheticOrigin: [
+    reflexFigure("21", "Cartographie", "origine medullaire du sympathique", "Cartographie podale de l origine medullaire du sympathique"),
+    reflexFigure("22", "Photo", "origine medullaire du sympathique", "Repere podal de l origine medullaire du sympathique"),
+  ],
+  sympatheticThoracic: [
+    reflexFigure("23", "Cartographie", "chaine ganglionnaire thoracique", "Cartographie podale de la chaine ganglionnaire latero-vertebrale thoracique"),
+    reflexFigure("24", "Photo", "chaine ganglionnaire latero-vertebrale thoracique", "Repere podal de la chaine ganglionnaire latero-vertebrale thoracique"),
+  ],
+  sympatheticCervical: [
+    reflexFigure("25", "Cartographie", "chaine ganglionnaire cervicale", "Cartographie podale de la chaine ganglionnaire cervicale"),
+    reflexFigure("26", "Photo", "ganglion cervical inferieur", "Repere podal du ganglion cervical inferieur"),
+  ],
+  sympatheticLumbar: [
+    reflexFigure("27", "Cartographie", "chaine ganglionnaire lombale", "Cartographie podale de la chaine ganglionnaire latero-vertebrale lombale"),
+    reflexFigure("28", "Photo", "chaine ganglionnaire lombaire et piliers du diaphragme", "Repere podal de la chaine ganglionnaire lombaire et des piliers du diaphragme"),
+  ],
+  sympatheticSacrococcygeal: [
+    reflexFigure("29", "Cartographie", "chaine ganglionnaire sacro-coccygienne", "Cartographie podale de la chaine ganglionnaire latero-vertebrale sacro-coccygienne"),
+    reflexFigure("30", "Photo", "chaine ganglionnaire sacro-coccygienne", "Repere podal de la chaine ganglionnaire sacro-coccygienne"),
+  ],
+  hypogastricAnterior: [
+    reflexFigure("31", "Cartographie", "plexus hypogastrique inferieur, fibres anterieures", "Cartographie podale du plexus hypogastrique inferieur, fibres anterieures"),
+    reflexFigure("32", "Photo", "plexus hypogastrique inferieur, fibres anterieures", "Repere podal du plexus hypogastrique inferieur, fibres anterieures"),
+    reflexFigure("33", "Cartographie", "plexus hypogastrique inferieur, fibres moyennes et posterieures", "Cartographie podale du plexus hypogastrique inferieur, fibres moyennes et posterieures"),
+    reflexFigure("34", "Photo", "plexus hypogastrique inferieur, fibres moyennes et posterieures", "Repere podal du plexus hypogastrique inferieur, fibres moyennes et posterieures"),
+  ],
+} satisfies Record<string, Chapter["sections"][number]["blocks"]>
+
+function appendAfterBlock(
+  sectionId: string,
+  match: (block: ChapterBlock) => boolean,
+  figures: Chapter["sections"][number]["blocks"],
+) {
+  const section = chapter4Fr.sections.find((candidate) => candidate.id === sectionId)
+  if (!section) return
+  const index = section.blocks.findIndex(match)
+  if (index >= 0) section.blocks.splice(index + 1, 0, ...figures)
+}
+
+function normalizedLabel(value: string) {
+  return value.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase()
+}
+
+appendAfterBlock(
+  "zones-reflexes-podales",
+  (block) => block.type === "leadBullets" && block.items.some((item) => item.label === "Ganglion otique"),
+  chapter4ReflexFigureGroups.cephalicTerritory,
+)
+appendAfterBlock(
+  "zones-reflexes-podales",
+  (block) => block.type === "leadBullets" && block.items.some((item) => item.label === "Moelle allongée"),
+  chapter4ReflexFigureGroups.vagusCranial,
+)
+appendAfterBlock(
+  "zones-reflexes-podales",
+  (block) => block.type === "bullets" && block.items.some((item) => item.startsWith("Nerf laryngé supérieur")),
+  chapter4ReflexFigureGroups.vagusCervical,
+)
+appendAfterBlock(
+  "zones-reflexes-podales",
+  (block) => block.type === "leadBullets" && block.items.some((item) => item.label === "Plexus cardiaque superficiel"),
+  chapter4ReflexFigureGroups.vagusThoracic,
+)
+appendAfterBlock(
+  "zones-reflexes-podales",
+  (block) => block.type === "leadBullets" && block.items.some((item) => normalizedLabel(item.label).startsWith("hiatus")),
+  chapter4ReflexFigureGroups.vagusHiatus,
+)
+appendAfterBlock(
+  "zones-reflexes-podales",
+  (block) => block.type === "leadBullets" && block.items.some((item) => item.label === "Zone de Cannon-Böhm"),
+  chapter4ReflexFigureGroups.vagusAbdominal,
+)
+appendAfterBlock(
+  "zones-reflexes-podales",
+  (block) => block.type === "leadBullets" && block.items.some((item) => item.label === "Moelle sacrale S2-S3 S4"),
+  chapter4ReflexFigureGroups.parasympatheticSacral,
+)
+appendAfterBlock(
+  "zones-reflexes-podales",
+  (block) => block.type === "bullets" && block.items.some((item) => item.startsWith("Canal vertébral")),
+  chapter4ReflexFigureGroups.sympatheticOrigin,
+)
+appendAfterBlock(
+  "zones-reflexes-podales",
+  (block) => block.type === "bullets" && block.items.some((item) => item.startsWith("Chaîne ganglionnaire latéro-vertébrale thoracique")),
+  chapter4ReflexFigureGroups.sympatheticThoracic,
+)
+appendAfterBlock(
+  "zones-reflexes-podales",
+  (block) => block.type === "leadBullets" && block.items.some((item) => item.label === "Ganglion cervical inférieur"),
+  chapter4ReflexFigureGroups.sympatheticCervical,
+)
+appendAfterBlock(
+  "zones-reflexes-podales",
+  (block) => block.type === "leadBullets" && block.items.some((item) => item.label === "Piliers du diaphragme"),
+  chapter4ReflexFigureGroups.sympatheticLumbar,
+)
+appendAfterBlock(
+  "zones-reflexes-podales",
+  (block) => block.type === "leadBullets" && block.items.some((item) => item.label === "Ganglion impair"),
+  chapter4ReflexFigureGroups.sympatheticSacrococcygeal,
+)
+appendAfterBlock(
+  "zones-reflexes-podales",
+  (block) => block.type === "leadBullets" && block.items.some((item) => item.label === "Plexus hypogastrique inférieur (fibres antérieures)"),
+  chapter4ReflexFigureGroups.hypogastricAnterior,
+)

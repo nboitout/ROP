@@ -885,7 +885,7 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
   const activeSlideNumber = active ?? 0
   const activeSlide = active ? slides[active - 1] : undefined
   const activeSlideIsPortrait = activeSlide?.orientation === 'portrait'
-  const showRopJump = !!ropSection && !!ropJumpSlide && activeSectionId !== ropSection.id
+  const showRopJump = !!ropSection && !!ropJumpSlide
   const renderedSlideIndexes = useMemo(() => {
     if (!active) return []
     const indexes = new Set([active - 3, active - 2, active - 1, active, active + 1])
