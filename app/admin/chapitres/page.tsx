@@ -4,14 +4,17 @@ import { translations, type Lang } from '@/app/i18n/translations'
 import { getChapterLangs, getChapterTranslations } from '@/content/registry'
 import { getChapterSlideVisuals } from '@/content/slidesyncRegistry'
 import ChapterBoard, { type BoardRow, type LangStatus } from '@/components/admin/ChapterBoard'
+import ChapterReferenceGravityMap, { type ChapterReferenceRow } from '@/components/admin/ChapterReferenceGravityMap'
 import ChapterTextAnalyticsChart, { type ChapterTextAnalyticsRow } from '@/components/admin/ChapterTextAnalyticsChart'
 import RecalculateStatsButton from '@/components/admin/RecalculateStatsButton'
+import { chapterKeyFromHref } from '@/lib/access'
 import { chapterQualityMetrics, type ChapterQualityMetrics } from '@/lib/chapterStats'
+import type { Block } from '@/content/types'
 
 export const metadata: Metadata = { title: 'Chapters · Admin R.O.P.' }
 
 const CHAPTER_STATS_TAG = 'admin-chapter-stats'
-const CHAPTER_STATS_CACHE_VERSION = 'rop-chapter-analytics-v5'
+const CHAPTER_STATS_CACHE_VERSION = 'rop-chapter-analytics-v6'
 
 async function recalculateChapterStats() {
   'use server'
@@ -75,6 +78,14 @@ type ChapterStatsSnapshot = {
   avgContentSlides: number
   avgCartographies: number
   fullyTranslatedRows: number
+  referenceRows: ChapterReferenceRow[]
+  totalCrossChapterReferences: number
+  referencedChapterCount: number
+}
+
+type ChapterDisplay = {
+  num: string
+  title: string
 }
 
 function formatGeneratedAt(value: string): string {
@@ -88,6 +99,15 @@ function formatGeneratedAt(value: string): string {
 function buildChapterStatsSnapshot(): ChapterStatsSnapshot {
   const t = translations.en.chapters
   const partTitle = new Map(t.parts.map((p) => [p.id, p.title]))
+  const displayByRouteKey = new Map<string, ChapterDisplay>()
+  const routeKeyByNum = new Map<string, string>()
+
+  for (const card of t.cards) {
+    const route = ROUTES[card.num]
+    if (!route) continue
+    displayByRouteKey.set(route.key, { num: card.num, title: card.title })
+    routeKeyByNum.set(card.num, route.key)
+  }
 
   const rows: BoardRow[] = t.cards.map((card) => {
     const route = ROUTES[card.num]
@@ -168,6 +188,9 @@ function buildChapterStatsSnapshot(): ChapterStatsSnapshot {
     ? Math.round(analyzedRows.reduce((sum, row) => sum + row.metrics.podalZoneSlideCount, 0) / analyzedRows.length)
     : 0
   const fullyTranslatedRows = chapterMetricRows.filter((r) => r.liveLangCount === LANGS.length).length
+  const referenceRows = buildChapterReferenceRows(t.cards, displayByRouteKey, routeKeyByNum)
+  const totalCrossChapterReferences = referenceRows.reduce((sum, row) => sum + row.referenceCount, 0)
+  const referencedChapterCount = referenceRows.length
 
   return {
     generatedAt: new Date().toISOString(),
@@ -191,7 +214,67 @@ function buildChapterStatsSnapshot(): ChapterStatsSnapshot {
     avgContentSlides,
     avgCartographies,
     fullyTranslatedRows,
+    referenceRows,
+    totalCrossChapterReferences,
+    referencedChapterCount,
   }
+}
+
+function isXrefBlock(block: Block): block is Extract<Block, { type: 'xref' }> {
+  return block.type === 'xref'
+}
+
+function buildChapterReferenceRows(
+  cards: typeof translations.en.chapters.cards,
+  displayByRouteKey: Map<string, ChapterDisplay>,
+  routeKeyByNum: Map<string, string>,
+): ChapterReferenceRow[] {
+  const inboundByTarget = new Map<string, Map<string, number>>()
+
+  for (const card of cards) {
+    const sourceKey = routeKeyByNum.get(card.num)
+    if (!sourceKey) continue
+
+    const sourceChapter = getChapterTranslations(sourceKey).fr
+    if (!sourceChapter) continue
+
+    for (const section of sourceChapter.sections) {
+      for (const block of section.blocks) {
+        if (!isXrefBlock(block)) continue
+        const targetKey = chapterKeyFromHref(block.href)
+        if (!targetKey || targetKey === sourceKey || !displayByRouteKey.has(targetKey)) continue
+
+        const inboundSources = inboundByTarget.get(targetKey) ?? new Map<string, number>()
+        inboundSources.set(sourceKey, (inboundSources.get(sourceKey) ?? 0) + 1)
+        inboundByTarget.set(targetKey, inboundSources)
+      }
+    }
+  }
+
+  return Array.from(inboundByTarget.entries())
+    .map(([targetKey, sourceCounts]) => {
+      const target = displayByRouteKey.get(targetKey) as ChapterDisplay
+      const sources = Array.from(sourceCounts.entries())
+        .map(([sourceKey, count]) => {
+          const source = displayByRouteKey.get(sourceKey) as ChapterDisplay
+          return {
+            num: source.num,
+            title: source.title,
+            count,
+          }
+        })
+        .sort((a, b) => b.count - a.count || Number(a.num) - Number(b.num))
+
+      return {
+        targetKey,
+        num: target.num,
+        title: target.title,
+        referenceCount: sources.reduce((sum, source) => sum + source.count, 0),
+        sourceChapterCount: sources.length,
+        sources,
+      }
+    })
+    .sort((a, b) => b.referenceCount - a.referenceCount || b.sourceChapterCount - a.sourceChapterCount || Number(a.num) - Number(b.num))
 }
 
 const getChapterStatsSnapshot = unstable_cache(
@@ -223,6 +306,9 @@ export default async function AdminChapitresPage() {
     avgContentSlides,
     avgCartographies,
     fullyTranslatedRows,
+    referenceRows,
+    totalCrossChapterReferences,
+    referencedChapterCount,
   } = await getChapterStatsSnapshot()
   const textAnalyticsRows: ChapterTextAnalyticsRow[] = analyzedRows.map((row) => ({
     num: row.num,
@@ -375,6 +461,13 @@ export default async function AdminChapitresPage() {
         </div>
 
         <ChapterTextAnalyticsChart rows={textAnalyticsRows} />
+
+        <ChapterReferenceGravityMap
+          rows={referenceRows}
+          totalReferences={totalCrossChapterReferences}
+          referencedChapterCount={referencedChapterCount}
+          analyzedChapterCount={analyzedRows.length}
+        />
       </section>
 
     </main>
