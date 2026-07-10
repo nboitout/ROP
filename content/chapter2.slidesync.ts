@@ -4,10 +4,19 @@
 // Slides are rendered from the Chapter 2 synthesis PDFs in public/chapter-2/.
 
 export type SyncSlide = { src: string; title: string; orientation?: 'portrait' }
+export type SyncAnchorPoint = { sectionId: string; blockIndex: number; itemIndex?: number }
 
 // blockIndex refers to the position in chapter2Fr sections[].blocks[].
 // blockIndex -1 anchors a slide to the section heading itself.
-export type SyncAnchor = { sectionId: string; blockIndex: number; slide: number; gapBefore?: 'half' }
+export type SyncAnchor = SyncAnchorPoint & {
+  slide: number
+  gapBefore?: 'half'
+  end?: SyncAnchorPoint
+}
+
+const endAt = (sectionId: string, blockIndex: number, itemIndex?: number): Pick<SyncAnchor, 'end'> => ({
+  end: { sectionId, blockIndex, ...(itemIndex === undefined ? {} : { itemIndex }) },
+})
 
 export const chapter2Slides: SyncSlide[] = [
   { src: '/chapter-2/slides/slide-01.png', title: 'Traitement par la Réflexothérapie Occipito-Podale (ROP)' },
@@ -115,43 +124,43 @@ export const chapter2SlidesIt: SyncSlide[] = [
 ]
 
 export const chapter2SlideAnchorsFr: SyncAnchor[] = [
-  { sectionId: 'technique', blockIndex: -1, slide: 1 },
-  { sectionId: 'technique', blockIndex: 0, slide: 2 },
-  { sectionId: 'technique', blockIndex: 2, slide: 3 },
-  { sectionId: 'technique', blockIndex: 5, slide: 4, gapBefore: 'half' },
-  { sectionId: 'technique', blockIndex: 6, slide: 5 },
-  { sectionId: 'technique', blockIndex: 11, slide: 6 },
-  { sectionId: 'modalites', blockIndex: 0, slide: 7 },
-  { sectionId: 'hierarchisation', blockIndex: -1, slide: 8 },
-  { sectionId: 'hierarchisation', blockIndex: 2, slide: 9 },
-  { sectionId: 'hierarchisation', blockIndex: 3, slide: 10 },
-  { sectionId: 'hierarchisation', blockIndex: 4, slide: 11 },
-  { sectionId: 'hierarchisation', blockIndex: 5, slide: 12 },
-  { sectionId: 'exemple-clinique', blockIndex: -1, slide: 13 },
-  { sectionId: 'exemple-clinique', blockIndex: 6, slide: 14 },
-  { sectionId: 'exemple-clinique', blockIndex: 10, slide: 15, gapBefore: 'half' },
-  { sectionId: 'contre-indications', blockIndex: -1, slide: 16 },
-  { sectionId: 'indications', blockIndex: -1, slide: 17 },
-  { sectionId: 'conseils', blockIndex: -1, slide: 18 },
+  { sectionId: 'technique', blockIndex: -1, slide: 1, ...endAt('technique', 0) },
+  { sectionId: 'technique', blockIndex: 0, slide: 2, ...endAt('technique', 2) },
+  { sectionId: 'technique', blockIndex: 2, slide: 3, ...endAt('technique', 5) },
+  { sectionId: 'technique', blockIndex: 5, slide: 4, gapBefore: 'half', ...endAt('technique', 6) },
+  { sectionId: 'technique', blockIndex: 6, slide: 5, ...endAt('technique', 11) },
+  { sectionId: 'technique', blockIndex: 11, slide: 6, ...endAt('modalites', 0) },
+  { sectionId: 'modalites', blockIndex: 0, slide: 7, ...endAt('hierarchisation', -1) },
+  { sectionId: 'hierarchisation', blockIndex: -1, slide: 8, ...endAt('hierarchisation', 2) },
+  { sectionId: 'hierarchisation', blockIndex: 2, slide: 9, ...endAt('hierarchisation', 3) },
+  { sectionId: 'hierarchisation', blockIndex: 3, slide: 10, ...endAt('hierarchisation', 4) },
+  { sectionId: 'hierarchisation', blockIndex: 4, slide: 11, ...endAt('hierarchisation', 5) },
+  { sectionId: 'hierarchisation', blockIndex: 5, slide: 12, ...endAt('exemple-clinique', -1) },
+  { sectionId: 'exemple-clinique', blockIndex: -1, slide: 13, ...endAt('exemple-clinique', 6) },
+  { sectionId: 'exemple-clinique', blockIndex: 6, slide: 14, ...endAt('exemple-clinique', 10) },
+  { sectionId: 'exemple-clinique', blockIndex: 10, slide: 15, gapBefore: 'half', ...endAt('contre-indications', -1) },
+  { sectionId: 'contre-indications', blockIndex: -1, slide: 16, ...endAt('indications', -1) },
+  { sectionId: 'indications', blockIndex: -1, slide: 17, ...endAt('conseils', -1) },
+  { sectionId: 'conseils', blockIndex: -1, slide: 18, ...endAt('conseils', 4) },
 ]
 
 export const chapter2SlideAnchors: SyncAnchor[] = [
-  { sectionId: 'technique', blockIndex: -1, slide: 1 },
-  { sectionId: 'technique', blockIndex: 1, slide: 2 },
-  { sectionId: 'technique', blockIndex: 5, slide: 3 },
-  { sectionId: 'technique', blockIndex: 7, slide: 4, gapBefore: 'half' },
-  { sectionId: 'technique', blockIndex: 8, slide: 5 },
-  { sectionId: 'technique', blockIndex: 13, slide: 6 },
-  { sectionId: 'modalites', blockIndex: 0, slide: 7 },
-  { sectionId: 'hierarchisation', blockIndex: -1, slide: 8 },
-  { sectionId: 'hierarchisation', blockIndex: 3, slide: 9 },
-  { sectionId: 'hierarchisation', blockIndex: 4, slide: 10 },
-  { sectionId: 'hierarchisation', blockIndex: 5, slide: 11 },
-  { sectionId: 'hierarchisation', blockIndex: 6, slide: 12 },
-  { sectionId: 'exemple-clinique', blockIndex: -1, slide: 13 },
-  { sectionId: 'exemple-clinique', blockIndex: 6, slide: 14 },
-  { sectionId: 'exemple-clinique', blockIndex: 10, slide: 15, gapBefore: 'half' },
-  { sectionId: 'contre-indications', blockIndex: -1, slide: 16 },
-  { sectionId: 'indications', blockIndex: -1, slide: 17 },
-  { sectionId: 'conseils', blockIndex: -1, slide: 18 },
+  { sectionId: 'technique', blockIndex: -1, slide: 1, ...endAt('technique', 1) },
+  { sectionId: 'technique', blockIndex: 1, slide: 2, ...endAt('technique', 5) },
+  { sectionId: 'technique', blockIndex: 5, slide: 3, ...endAt('technique', 7) },
+  { sectionId: 'technique', blockIndex: 7, slide: 4, gapBefore: 'half', ...endAt('technique', 8) },
+  { sectionId: 'technique', blockIndex: 8, slide: 5, ...endAt('technique', 13) },
+  { sectionId: 'technique', blockIndex: 13, slide: 6, ...endAt('modalites', 0) },
+  { sectionId: 'modalites', blockIndex: 0, slide: 7, ...endAt('hierarchisation', -1) },
+  { sectionId: 'hierarchisation', blockIndex: -1, slide: 8, ...endAt('hierarchisation', 3) },
+  { sectionId: 'hierarchisation', blockIndex: 3, slide: 9, ...endAt('hierarchisation', 4) },
+  { sectionId: 'hierarchisation', blockIndex: 4, slide: 10, ...endAt('hierarchisation', 5) },
+  { sectionId: 'hierarchisation', blockIndex: 5, slide: 11, ...endAt('hierarchisation', 6) },
+  { sectionId: 'hierarchisation', blockIndex: 6, slide: 12, ...endAt('exemple-clinique', -1) },
+  { sectionId: 'exemple-clinique', blockIndex: -1, slide: 13, ...endAt('exemple-clinique', 6) },
+  { sectionId: 'exemple-clinique', blockIndex: 6, slide: 14, ...endAt('exemple-clinique', 10) },
+  { sectionId: 'exemple-clinique', blockIndex: 10, slide: 15, gapBefore: 'half', ...endAt('contre-indications', -1) },
+  { sectionId: 'contre-indications', blockIndex: -1, slide: 16, ...endAt('indications', -1) },
+  { sectionId: 'indications', blockIndex: -1, slide: 17, ...endAt('conseils', -1) },
+  { sectionId: 'conseils', blockIndex: -1, slide: 18, ...endAt('conseils', 4) },
 ]
