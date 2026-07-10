@@ -269,6 +269,11 @@ function hasLeadIdentity(readerId: string, leadReaderIds: Set<string>): boolean 
   return leadReaderIds.has(readerId.toLowerCase())
 }
 
+function connectionKeyForFilter(row: { sessionId: string; readerId: string; timestamp: string }): string {
+  if (row.sessionId) return `sid:${row.sessionId}`
+  return `legacy:${row.readerId.toLowerCase()}|${isoDate(row.timestamp)}`
+}
+
 function rowsToEvents(rows: string[][]): EventRow[] {
   if (rows.length < 2) return []
   return rows.slice(1).map((r) => {
@@ -448,52 +453,40 @@ export async function fetchAllSheets(): Promise<{
     })
   })
 
-  const firstSeenDateByReader = new Map<string, string>()
-  cleanVisits
-    .filter((v) => v.event === 'page_visit' && v.readerId)
-    .forEach((v) => {
-      const readerId = v.readerId.toLowerCase()
-      const day = isoDate(v.timestamp)
-      const existing = firstSeenDateByReader.get(readerId)
-      if (!existing || day < existing) firstSeenDateByReader.set(readerId, day)
-    })
-
   // --- Traffic-quality filter --------------------------------------------
-  // One rule instead of the old stack of country / desktop-Linux / stale-Chrome
-  // / no-UA heuristics: a real visitor stays a few seconds, a bot or an instant
-  // bounce does not. We keep a reader's visits only if they accumulated at least
-  // MIN_DWELL_SECONDS of active time on the site (summed from page_leave events,
-  // which crawlers and sub-4s bounces never produce). Self-declared crawlers are
-  // still dropped by user-agent as a cheap explicit guard. Rows before
-  // BOT_FILTER_START are manually-seeded historical data and are kept as-is.
+  // Keep a whole browsing connection only if it accumulated at least
+  // MIN_DWELL_SECONDS of active time. A "connection" maps to one browser
+  // session (sessionId), with a legacy fallback to readerId+day for older rows.
+  // This removes both first visits and later reconnections that last under 4s.
+  // Self-declared crawlers are still dropped by user-agent as an explicit guard.
+  // Rows before BOT_FILTER_START are historical seed data and are kept as-is.
   const BOT_FILTER_START = '2026-05-28'
   const MIN_DWELL_SECONDS = 4
   const BOT_UA = /bot|crawl|spider|slurp|mediapartners|bingpreview|google-read-aloud|read-aloud|google web preview|apis-google|feedfetcher|facebookexternal|embedly|quora link preview|pinterest|vkshare|whatsapp|telegram|headless|phantomjs|python-requests|curl|wget|httpclient|go-http-client|java\/|okhttp|axios|node-fetch|libwww|scrapy/i
 
-  // Total active seconds per reader, summed across their page_leave events.
-  const dwellByReader = new Map<string, number>()
+  // Total active seconds per connection, summed across page_leave fragments.
+  const dwellByConnection = new Map<string, number>()
   cleanVisits
     .filter((v) => v.event === 'page_leave')
     .forEach((v) => {
       const n = parseFloat(v.duration_seconds)
-      if (!isNaN(n) && n > 0) dwellByReader.set(v.readerId, (dwellByReader.get(v.readerId) ?? 0) + n)
+      if (isNaN(n) || n <= 0) return
+      const key = connectionKeyForFilter(v)
+      dwellByConnection.set(key, (dwellByConnection.get(key) ?? 0) + n)
     })
 
-  const filteredVisits = cleanVisits.filter((v) => {
-    if (v.timestamp.slice(0, 10) < BOT_FILTER_START) return true     // historical seed data
-    if (BOT_UA.test(v.userAgent ?? '')) return false                 // self-declared crawler
-    const readerId = v.readerId.toLowerCase()
-    const isReturningLead =
-      leadReaderIds.has(readerId) &&
-      !!firstSeenDateByReader.get(readerId) &&
-      firstSeenDateByReader.get(readerId)! < isoDate(v.timestamp)
-    if (isReturningLead) return true
-    return (dwellByReader.get(v.readerId) ?? 0) >= MIN_DWELL_SECONDS  // stayed long enough to be real
-  })
+  function keepConnection(row: { timestamp: string; userAgent: string; sessionId: string; readerId: string }): boolean {
+    if (row.timestamp.slice(0, 10) < BOT_FILTER_START) return true
+    if (BOT_UA.test(row.userAgent ?? '')) return false
+    return (dwellByConnection.get(connectionKeyForFilter(row)) ?? 0) >= MIN_DWELL_SECONDS
+  }
+
+  const filteredVisits = cleanVisits.filter((v) => keepConnection(v))
+  const filteredEvents = cleanEvents.filter((e) => keepConnection(e))
 
   return {
     leads:  cleanLeads,
-    events: cleanEvents,
+    events: filteredEvents,
     visits: filteredVisits,
     errors,
   }
