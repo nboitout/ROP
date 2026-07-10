@@ -4,6 +4,7 @@ import { translations, type Lang } from '@/app/i18n/translations'
 import { getChapterLangs, getChapterTranslations } from '@/content/registry'
 import { getChapterSlideVisuals } from '@/content/slidesyncRegistry'
 import ChapterBoard, { type BoardRow, type LangStatus } from '@/components/admin/ChapterBoard'
+import ChapterTextAnalyticsChart, { type ChapterTextAnalyticsRow } from '@/components/admin/ChapterTextAnalyticsChart'
 import RecalculateStatsButton from '@/components/admin/RecalculateStatsButton'
 import {
   chapterQualityIssues,
@@ -315,6 +316,15 @@ export default async function AdminChapitresPage() {
     avgVisualDensity,
     fullyTranslatedRows,
   } = await getChapterStatsSnapshot()
+  const textAnalyticsRows: ChapterTextAnalyticsRow[] = analyzedRows.map((row) => ({
+    num: row.num,
+    title: row.title,
+    partTitle: row.partTitle,
+    wordCount: row.metrics.wordCount,
+    readingMinutes: row.metrics.readingMinutes,
+    figureCount: row.metrics.figureCount,
+    figuresPer1000Words: row.metrics.figuresPer1000Words,
+  }))
 
   return (
     <main className="adm-page">
@@ -608,6 +618,8 @@ export default async function AdminChapitresPage() {
             </tbody>
           </table>
         </div>
+
+        <ChapterTextAnalyticsChart rows={textAnalyticsRows} />
       </section>
 
     </main>
