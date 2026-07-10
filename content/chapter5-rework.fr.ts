@@ -6,42 +6,6 @@ export const chapter5ReworkFr = {
   "title": "Mécanisme de stress - Physiologie de l’adaptation, coût allostatique et approche ROP",
   "sections": [
     {
-      "id": "presentation",
-      "title": "Présentation",
-      "blocks": [
-        {
-          "type": "para",
-          "text": "Mécanisme de stress"
-        },
-        {
-          "type": "para",
-          "text": "Physiologie de l’adaptation, coût allostatique et approche ROP"
-        },
-        {
-          "type": "lead",
-          "label": "Citation",
-          "text": "La santé adaptative dépend moins de l’absence de réaction que de la capacité de l’organisme à achever sa réaction."
-        },
-        {
-          "type": "lead",
-          "label": "FIL DIRECTEUR DU CHAPITRE",
-          "text": "Le stress n’est pas une anomalie : il est une mobilisation protectrice. Le problème apparaît lorsque la réponse persiste, se répète ou ne se clôt pas. Le rôle potentiel de la ROP n’est donc pas de supprimer toute réaction de stress, mais de soutenir la flexibilité autonome et la récupération, dans la limite de ce que les données cliniques permettent aujourd’hui d’affirmer."
-        },
-        {
-          "type": "sub",
-          "text": "Note méthodologique"
-        },
-        {
-          "type": "para",
-          "text": "Ce chapitre distingue trois niveaux de discours. Le premier correspond aux données physiologiques établies : fonctionnement du système nerveux autonome, axes du stress, allostasie, récupération et interoception. Le deuxième présente des modèles récents encore en cours de validation, notamment l’hypermétabolisme cellulaire et le principe de résistance énergétique. Le troisième relève de la lecture clinique ROP : il s’agit d’une hypothèse de travail cohérente avec la physiologie, mais qui ne doit pas être confondue avec un mécanisme d’action déjà démontré."
-        },
-        {
-          "type": "para",
-          "text": "Cette distinction permet de préserver l’identité clinique de la ROP tout en évitant trois raccourcis : considérer le cortisol comme l’unique cause du stress, présenter le corps comme une batterie qui se vide, ou attribuer à la ROP une action directe prouvée sur les mitochondries, les hormones ou le vieillissement."
-        }
-      ]
-    },
-    {
       "id": "le-stress-une-reponse-d-adaptation",
       "title": "1. Le stress : une réponse d’adaptation",
       "blocks": [

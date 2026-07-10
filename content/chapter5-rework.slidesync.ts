@@ -42,7 +42,7 @@ export const chapter5ReworkSlides: SyncSlide[] = [
 ]
 
 export const chapter5ReworkSlideAnchors: SyncAnchor[] = [
-  { sectionId: 'presentation', blockIndex: 0, slide: 1, end: { sectionId: 'de-l-homeostasie-a-l-allostasie', blockIndex: 0 } },
+  { sectionId: 'le-stress-une-reponse-d-adaptation', blockIndex: 0, slide: 1, end: { sectionId: 'de-l-homeostasie-a-l-allostasie', blockIndex: 0 } },
   { sectionId: 'de-l-homeostasie-a-l-allostasie', blockIndex: 0, slide: 2, end: { sectionId: 'la-trilogie-des-stresseurs', blockIndex: 0 } },
   { sectionId: 'la-trilogie-des-stresseurs', blockIndex: 0, slide: 3, end: { sectionId: 'le-stress-n-est-pas-seulement-l-evenement-c-est-la-reponse', blockIndex: 0 } },
   { sectionId: 'le-stress-n-est-pas-seulement-l-evenement-c-est-la-reponse', blockIndex: 0, slide: 4, end: { sectionId: 'la-double-reponse-au-stresseur-urgence-et-soutien', blockIndex: 0 } },
