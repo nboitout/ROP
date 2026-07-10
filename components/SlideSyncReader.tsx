@@ -781,7 +781,9 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
   }
 
   function anchorForSlide(n: number) {
-    return anchors.find((anchor) => asSlideList(anchor.slide).includes(n)) ?? null
+    return anchors.find((anchor) => isReflexZoneSectionId(anchor.sectionId) && asSlideList(anchor.slide).includes(n)) ??
+      anchors.find((anchor) => asSlideList(anchor.slide).includes(n)) ??
+      null
   }
 
   function reflexAnchorBlockRange(anchor: SyncAnchor) {

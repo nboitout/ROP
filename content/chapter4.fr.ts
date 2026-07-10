@@ -1277,63 +1277,46 @@ const reflexFigure = (
 
 const chapter4ReflexFigureGroups = {
   cephalicTerritory: [
-    reflexFigure("01", "Cartographie", "territoire cephalique du parasympathique", "Cartographie podale du territoire cephalique du parasympathique et des plexus previsceraux des organes de la tete"),
     reflexFigure("02", "Photo", "tronc cerebral", "Repere podal du tronc cerebral entre les deux pouces"),
   ],
   vagusCranial: [
-    reflexFigure("03", "Cartographie", "noyaux du nerf vague X", "Cartographie podale des noyaux du nerf vague X dans la moelle allongee"),
     reflexFigure("04", "Photo", "nerf vague X dans la moelle allongee", "Repere podal du nerf vague X dans la moelle allongee"),
-    reflexFigure("05", "Cartographie", "nerf vague X dans le foramen jugulaire", "Cartographie podale du nerf vague X dans le foramen jugulaire"),
     reflexFigure("06", "Photo", "nerf vague X dans le foramen jugulaire", "Repere podal du nerf vague X dans le foramen jugulaire"),
   ],
   vagusCervical: [
-    reflexFigure("07", "Cartographie", "nerf larynge superieur, sinus et glomus carotidien", "Cartographie podale du nerf larynge superieur, du sinus carotidien et du glomus carotidien"),
     reflexFigure("08", "Photo", "sinus carotidien", "Repere podal du sinus carotidien"),
   ],
   vagusThoracic: [
-    reflexFigure("09", "Cartographie", "territoire thoracique gauche du nerf vague X", "Cartographie podale du territoire cervical, thoracique et diaphragmatique gauche du nerf vague X"),
     reflexFigure("10", "Photo", "territoire gauche du nerf vague X", "Repere podal des territoires cervical, thoracique et diaphragmatique gauches du nerf vague X"),
-    reflexFigure("11", "Cartographie", "territoire thoracique droit du nerf vague X", "Cartographie podale du territoire cervical et thoracique droit du nerf vague X"),
     reflexFigure("12", "Photo", "territoire droit du nerf vague X", "Repere podal du territoire cervical et thoracique droit du nerf vague X"),
   ],
   vagusHiatus: [
-    reflexFigure("13", "Cartographie", "hiatus oesophagien et territoire abdominal gauche", "Cartographie podale des nerfs vagues X, du hiatus oesophagien, du cardia, du pylore et de la petite courbure de l estomac"),
     reflexFigure("14", "Photo", "hiatus oesophagien et nerfs vagues", "Repere podal du hiatus oesophagien et des nerfs vagues droit et gauche"),
   ],
   vagusAbdominal: [
-    reflexFigure("15", "Cartographie", "petite courbure de l estomac", "Cartographie podale de la petite courbure de l estomac"),
     reflexFigure("16", "Photo", "petite courbure de l estomac", "Repere podal de la petite courbure de l estomac"),
-    reflexFigure("17", "Cartographie", "territoire abdominal droit du nerf vague X", "Cartographie podale du territoire abdominal droit du nerf vague X"),
     reflexFigure("18", "Photo", "territoire abdominal droit du nerf vague X", "Repere podal du territoire abdominal droit du nerf vague X"),
   ],
   parasympatheticSacral: [
-    reflexFigure("19", "Cartographie", "origine parasympathique sacree", "Cartographie podale de l origine parasympathique sacree"),
     reflexFigure("20", "Photo", "origine parasympathique pelvienne ou sacree", "Repere podal de l origine parasympathique pelvienne ou sacree"),
   ],
   sympatheticOrigin: [
-    reflexFigure("21", "Cartographie", "origine medullaire du sympathique", "Cartographie podale de l origine medullaire du sympathique"),
     reflexFigure("22", "Photo", "origine medullaire du sympathique", "Repere podal de l origine medullaire du sympathique"),
   ],
   sympatheticThoracic: [
-    reflexFigure("23", "Cartographie", "chaine ganglionnaire thoracique", "Cartographie podale de la chaine ganglionnaire latero-vertebrale thoracique"),
     reflexFigure("24", "Photo", "chaine ganglionnaire latero-vertebrale thoracique", "Repere podal de la chaine ganglionnaire latero-vertebrale thoracique"),
   ],
   sympatheticCervical: [
-    reflexFigure("25", "Cartographie", "chaine ganglionnaire cervicale", "Cartographie podale de la chaine ganglionnaire cervicale"),
     reflexFigure("26", "Photo", "ganglion cervical inferieur", "Repere podal du ganglion cervical inferieur"),
   ],
   sympatheticLumbar: [
-    reflexFigure("27", "Cartographie", "chaine ganglionnaire lombale", "Cartographie podale de la chaine ganglionnaire latero-vertebrale lombale"),
     reflexFigure("28", "Photo", "chaine ganglionnaire lombaire et piliers du diaphragme", "Repere podal de la chaine ganglionnaire lombaire et des piliers du diaphragme"),
   ],
   sympatheticSacrococcygeal: [
-    reflexFigure("29", "Cartographie", "chaine ganglionnaire sacro-coccygienne", "Cartographie podale de la chaine ganglionnaire latero-vertebrale sacro-coccygienne"),
     reflexFigure("30", "Photo", "chaine ganglionnaire sacro-coccygienne", "Repere podal de la chaine ganglionnaire sacro-coccygienne"),
   ],
   hypogastricAnterior: [
-    reflexFigure("31", "Cartographie", "plexus hypogastrique inferieur, fibres anterieures", "Cartographie podale du plexus hypogastrique inferieur, fibres anterieures"),
     reflexFigure("32", "Photo", "plexus hypogastrique inferieur, fibres anterieures", "Repere podal du plexus hypogastrique inferieur, fibres anterieures"),
-    reflexFigure("33", "Cartographie", "plexus hypogastrique inferieur, fibres moyennes et posterieures", "Cartographie podale du plexus hypogastrique inferieur, fibres moyennes et posterieures"),
     reflexFigure("34", "Photo", "plexus hypogastrique inferieur, fibres moyennes et posterieures", "Repere podal du plexus hypogastrique inferieur, fibres moyennes et posterieures"),
   ],
 } satisfies Record<string, Chapter["sections"][number]["blocks"]>
