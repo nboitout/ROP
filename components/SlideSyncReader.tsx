@@ -785,11 +785,14 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
     track('sync_jump_section', { section: ropSection?.id, slide: ropJumpSlide })
     setActive(ropJumpSlide)
     setActiveSectionId(ropSection.id)
-    animateTo(() =>
-      ropJumpBlockIndex !== null
+    animateTo(() => {
+      if (PAGE_BREAK_BEFORE.has(ropSection.id)) {
+        return document.getElementById(`sec-${ropSection.id}`)
+      }
+      return ropJumpBlockIndex !== null
         ? document.getElementById(`p-${ropSection.id}-${ropJumpBlockIndex}`)
         : document.getElementById(`sec-${ropSection.id}`)
-    )
+    })
   }
 
   function goToSection(sectionId: string) {
