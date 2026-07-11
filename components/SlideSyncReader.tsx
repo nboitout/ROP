@@ -185,6 +185,51 @@ function isReflexZoneSectionId(value: string) {
   return normalized === 'rop' || (normalized.includes('zone') && normalized.includes('reflex'))
 }
 
+function isRopShortcutLabel(value: string) {
+  const normalized = normalizeSectionLabel(value).replace(/[^a-z0-9]+/g, ' ').trim()
+  const words = normalized.split(/\s+/)
+  return normalized === 'rop' ||
+    normalized.startsWith('rop ') ||
+    words.includes('rop') ||
+    (normalized.includes('zone') && normalized.includes('reflex'))
+}
+
+function isZoneReflexLabel(value: string) {
+  const normalized = normalizeSectionLabel(value).replace(/[^a-z0-9]+/g, ' ').trim()
+  return normalized === 'rop' ||
+    normalized.startsWith('rop ') ||
+    (normalized.includes('zone') && normalized.includes('reflex'))
+}
+
+function blockShortcutText(block: Block) {
+  if (block.type === 'para' || block.type === 'sub') return block.text
+  if (block.type === 'lead') return `${block.label} ${block.text}`
+  if (block.type === 'bullets' || block.type === 'numbered') return block.items.join(' ')
+  if (block.type === 'leadBullets') return block.items.map((item) => `${item.label} ${item.text}`).join(' ')
+  if (block.type === 'table') return `${block.caption ?? ''} ${block.headers.join(' ')} ${block.rows.flat().join(' ')}`
+  if (block.type === 'figure') return `${block.caption} ${block.alt}`
+  if (block.type === 'xref') return `${block.label} ${block.text ?? ''}`
+  if (block.type === 'rop') return block.body.join(' ')
+  return ''
+}
+
+function reflexShortcutBlockIndex(section: Section) {
+  const atlasIndex = section.blocks.findIndex((block) => block.type === 'reflexAtlas')
+  if (atlasIndex >= 0) return atlasIndex
+  const ropIndex = section.blocks.findIndex((block) => block.type === 'rop')
+  if (ropIndex >= 0) return ropIndex
+  const zoneTextIndex = section.blocks.findIndex((block) => isRopShortcutLabel(blockShortcutText(block)))
+  return zoneTextIndex >= 0 ? zoneTextIndex : null
+}
+
+function hasReflexShortcutBlock(section: Section) {
+  return section.blocks.some((block) =>
+    block.type === 'reflexAtlas' ||
+    block.type === 'rop' ||
+    isZoneReflexLabel(blockShortcutText(block))
+  )
+}
+
 function asSlideList(slide: number | number[] | undefined) {
   if (typeof slide === 'number') return [slide]
   return slide ?? []
@@ -316,6 +361,22 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
     }
     return points
   }, [anchors])
+
+  const reflexSection = useMemo(
+    () => chapter.sections.find((section) =>
+      isZoneReflexLabel(section.id) ||
+      isZoneReflexLabel(section.title) ||
+      section.blocks.some((block) => block.type === 'reflexAtlas')
+    ) ??
+      chapter.sections.find(hasReflexShortcutBlock) ??
+      chapter.sections.find((section) => isRopShortcutLabel(section.id) || isRopShortcutLabel(section.title)) ??
+      null,
+    [chapter.sections]
+  )
+  const reflexBlockIndex = useMemo(
+    () => reflexSection ? reflexShortcutBlockIndex(reflexSection) : null,
+    [reflexSection]
+  )
 
   useEffect(() => {
     track('sync_reader_open')
@@ -677,6 +738,36 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
       }
     })
     return current
+  }
+
+  function slideForReflexTarget() {
+    if (!reflexSection) return null
+    if (reflexBlockIndex !== null) {
+      const exactSlide = asSlideList(anchorBySlide.get(`${reflexSection.id}:${reflexBlockIndex}`)?.slide)[0]
+      if (exactSlide) return exactSlide
+      const laterAnchor = anchors.find((anchor) =>
+        anchor.sectionId === reflexSection.id && anchor.blockIndex >= reflexBlockIndex
+      )
+      const laterSlide = asSlideList(laterAnchor?.slide)[0]
+      if (laterSlide) return laterSlide
+    }
+    return slideForSection(reflexSection.id)
+  }
+
+  function goToReflexZonesFromLightbox() {
+    if (!reflexSection) return
+    const slide = slideForReflexTarget()
+    if (slide) setActive(slide)
+    track('lightbox_jump_reflex_zones', { section: reflexSection.id, slide })
+    closeLightbox()
+    animateTo(() => {
+      if (PAGE_BREAK_BEFORE.has(reflexSection.id)) {
+        return document.getElementById(`sec-${reflexSection.id}`)
+      }
+      return reflexBlockIndex !== null
+        ? document.getElementById(`p-${reflexSection.id}-${reflexBlockIndex}`)
+        : document.getElementById(`sec-${reflexSection.id}`)
+    })
   }
 
   function goToSection(sectionId: string) {
@@ -1228,6 +1319,16 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
         >
           <div className="cr-lightbox-bar" onClick={(e) => e.stopPropagation()}>
             <span className="cr-lightbox-caption">{lightbox.caption}</span>
+            {reflexSection && (
+              <button
+                type="button"
+                className="cr-lightbox-reflex"
+                onClick={goToReflexZonesFromLightbox}
+                title={`Aller aux zones réflexes : ${reflexSection.title}`}
+              >
+                Zones réflexes
+              </button>
+            )}
             <div className="cr-lightbox-controls">
               {lightboxGalleryCount > 1 && (
                 <>
@@ -1236,9 +1337,11 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
                   <button className="cr-viewer-nav-btn" onClick={() => moveLightboxGallery(1)} aria-label="Image suivante">›</button>
                 </>
               )}
-              <button className="cr-viewer-nav-btn" onClick={() => setLightboxZoom(z => Math.max(0.5, +(z - 0.25).toFixed(2)))} disabled={lightboxZoom <= 0.5} aria-label="Dézoomer">−</button>
-              <button className="cr-viewer-zoom-reset" onClick={() => setLightboxZoom(1)} title="Réinitialiser">{Math.round(lightboxZoom * 100)}%</button>
-              <button className="cr-viewer-nav-btn" onClick={() => setLightboxZoom(z => Math.min(4, +(z + 0.25).toFixed(2)))} disabled={lightboxZoom >= 4} aria-label="Zoomer">+</button>
+              <span className="cr-lightbox-zoom-controls">
+                <button className="cr-viewer-nav-btn" onClick={() => setLightboxZoom(z => Math.max(0.5, +(z - 0.25).toFixed(2)))} disabled={lightboxZoom <= 0.5} aria-label="Dézoomer">−</button>
+                <button className="cr-viewer-zoom-reset" onClick={() => setLightboxZoom(1)} title="Réinitialiser">{Math.round(lightboxZoom * 100)}%</button>
+                <button className="cr-viewer-nav-btn" onClick={() => setLightboxZoom(z => Math.min(4, +(z + 0.25).toFixed(2)))} disabled={lightboxZoom >= 4} aria-label="Zoomer">+</button>
+              </span>
               <button className="cr-lightbox-close" onClick={closeLightbox} aria-label="Fermer">×</button>
             </div>
           </div>
