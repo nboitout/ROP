@@ -3,6 +3,7 @@
 //
 // Slides are pre-rendered from:
 // public/chapter-16/Chapter16 Slides de synthese - FR.pdf
+// public/chapter-16/Chapter16 Cartographie et Photos.pdf (cartography slides)
 
 export type SyncSlide = { src: string; title: string; orientation?: 'portrait' }
 export type SyncAnchor = { sectionId: string; blockIndex: number; slide: number | number[]; gapBefore?: 'half' }
@@ -31,9 +32,18 @@ const chapter16SlidesBySource: SyncSlide[] = [
   { src: '/chapter-16/slides/slide-21.png', title: 'Cartographie ROP et manoeuvres réflexes' },
   { src: '/chapter-16/slides/slide-22.png', title: 'Recommandations et autocorrection' },
   { src: '/chapter-16/slides/slide-23.png', title: 'Conseils thérapeutiques au patient' },
+  { src: '/chapter-16/cartographie/figure-16-01.png', title: 'Cartographie : Nerf vague X - moelle allongée' },
+  { src: '/chapter-16/cartographie/figure-16-03.png', title: 'Cartographie : Nerf vague X - foramen jugulaire' },
+  { src: '/chapter-16/cartographie/figure-16-05.png', title: 'Cartographie : Chaîne ganglionnaire latéro-vertébrale thoracique' },
+  { src: '/chapter-16/cartographie/figure-16-07.png', title: 'Cartographie : Chaîne ganglionnaire latéro-vertébrale lombale' },
+  { src: '/chapter-16/cartographie/figure-16-09.png', title: 'Cartographie : Rein et surrénale droits' },
+  { src: '/chapter-16/cartographie/figure-16-11.png', title: 'Cartographie : Rein et surrénale gauches' },
+  { src: '/chapter-16/cartographie/figure-16-13.png', title: 'Cartographie : Surrénale gauche' },
+  { src: '/chapter-16/cartographie/figure-16-15.png', title: 'Cartographie : Rein gauche et manœuvre combinée' },
+  { src: '/chapter-16/cartographie/figure-16-17.png', title: 'Cartographie : Plexus lombal et fenêtre dorsale du rein' },
 ]
 
-const chapter16ReadingOrder = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 13, 11, 12, 16, 14, 15, 17, 18, 22, 23, 19, 20, 21]
+const chapter16ReadingOrder = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 13, 11, 12, 16, 14, 15, 17, 18, 22, 23, 19, 20, 21, 24, 25, 26, 27, 28, 29, 30, 32, 31]
 const chapter16SlideNumberByReadingOrder = new Map(chapter16ReadingOrder.map((sourceSlide, index) => [sourceSlide, index + 1]))
 
 function remapChapter16Slide(slide: number | number[]) {
@@ -171,9 +181,19 @@ const chapter16SlideAnchorsBySource: SyncAnchor[] = [
   { sectionId: 'pathologies-courantes', blockIndex: 2, slide: 16 },
   { sectionId: 'pathologies-courantes', blockIndex: 12, slide: 17 },
   { sectionId: 'relations-viscero-emotionnelles', blockIndex: 0, slide: 18 },
+  { sectionId: 'zones-reflexes-podales', blockIndex: -1, slide: 19 },
   { sectionId: 'zones-reflexes-podales', blockIndex: 0, slide: 19 },
   { sectionId: 'zones-reflexes-podales', blockIndex: 4, slide: 20 },
   { sectionId: 'zones-reflexes-podales', blockIndex: 9, slide: 21 },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 3, slide: 24 },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 4, slide: 25 },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 6, slide: 26 },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 9, slide: 27 },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 13, slide: 28 },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 15, slide: 29 },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 16, slide: 30 },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 19, slide: 32 },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 22, slide: 31 },
   { sectionId: 'conseils', blockIndex: 0, slide: [22, 23] },
 ]
 

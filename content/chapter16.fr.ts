@@ -567,12 +567,55 @@ export const chapter16Fr: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Nerf vague X;",
-            "Colonne vertébrale, articulations costo-transversaires (chaîne ganglionnaire latéro-vertébrale thoracique (Th7-Th11-L1, coccyx);",
+            "Nerf vague X;"
+          ]
+        },
+        {
+          "type": "figure",
+          "src": "/chapter-16/cartographie/figure-16-02.png",
+          "caption": "Photo : Nerf vague X dans la moelle allongée",
+          "alt": "Repère podal du nerf vague X dans la moelle allongée",
+          "orientation": "portrait"
+        },
+        {
+          "type": "figure",
+          "src": "/chapter-16/cartographie/figure-16-04.png",
+          "caption": "Photo : Nerf vague X dans le foramen jugulaire",
+          "alt": "Repère podal du nerf vague X dans le foramen jugulaire",
+          "orientation": "portrait"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "Colonne vertébrale, articulations costo-transversaires (chaîne ganglionnaire latéro-vertébrale thoracique (Th7-Th11-L1, coccyx);"
+          ]
+        },
+        {
+          "type": "figure",
+          "src": "/chapter-16/cartographie/figure-16-06.png",
+          "caption": "Photo : Chaîne ganglionnaire latéro-vertébrale thoracique",
+          "alt": "Repère podal de la chaîne ganglionnaire latéro-vertébrale thoracique",
+          "orientation": "landscape"
+        },
+        {
+          "type": "bullets",
+          "items": [
             "Plexus prévertébral;",
-            "Surrénales:",
+            "Surrénales:"
+          ]
+        },
+        {
+          "type": "bullets",
+          "items": [
             "Plexus lombaire L1 à L4 et ses branches. (Cf. Réflexothérapie occipito-podale et système neuro-méningé, Elsevier Masson, pages 28 à 25)"
           ]
+        },
+        {
+          "type": "figure",
+          "src": "/chapter-16/cartographie/figure-16-08.png",
+          "caption": "Photo : Chaîne ganglionnaire lombaire et piliers du diaphragme",
+          "alt": "Repère podal de la chaîne ganglionnaire lombaire et des piliers du diaphragme",
+          "orientation": "landscape"
         },
         {
           "type": "sub",
@@ -587,6 +630,13 @@ export const chapter16Fr: Chapter = {
           "text": "Face plantaire"
         },
         {
+          "type": "figure",
+          "src": "/chapter-16/cartographie/figure-16-10.png",
+          "caption": "Cartographie : Rein et surrénale droits",
+          "alt": "Titre cartographique du rein et de la surrénale droits",
+          "orientation": "landscape"
+        },
+        {
           "type": "bullets",
           "items": [
             "Pôle inférieur: il est à hauteur de la vertèbre L3 ou L4, à l’aplomb des 1er et 2ème orteils, au-dessus du bord antérieur du talon;",
@@ -597,6 +647,20 @@ export const chapter16Fr: Chapter = {
           ]
         },
         {
+          "type": "figure",
+          "src": "/chapter-16/cartographie/figure-16-12.png",
+          "caption": "Photo : Rein gauche",
+          "alt": "Repère podal du rein gauche",
+          "orientation": "portrait"
+        },
+        {
+          "type": "figure",
+          "src": "/chapter-16/cartographie/figure-16-14.png",
+          "caption": "Photo : Surrénale gauche",
+          "alt": "Repère podal de la surrénale gauche",
+          "orientation": "portrait"
+        },
+        {
           "type": "sub",
           "text": "Face dorsale"
         },
@@ -605,6 +669,13 @@ export const chapter16Fr: Chapter = {
           "items": [
             "le triangle de Jean-Louis Petit et le quadrilatère de Grynfelt sont en regard de l’os cuboïde."
           ]
+        },
+        {
+          "type": "figure",
+          "src": "/chapter-16/cartographie/figure-16-18.png",
+          "caption": "Photo : Plexus lombal, triangle de Jean-Louis Petit et quadrilatère de Grynfelt",
+          "alt": "Repère podal du plexus lombal, du triangle de Jean-Louis Petit et du quadrilatère de Grynfelt",
+          "orientation": "landscape"
         },
         {
           "type": "sub",
@@ -621,6 +692,13 @@ export const chapter16Fr: Chapter = {
             "Rate pour le rein gauche",
             "Chez la femme enceinte: associer rein gauche et sphère uro-génitale"
           ]
+        },
+        {
+          "type": "figure",
+          "src": "/chapter-16/cartographie/figure-16-16.png",
+          "caption": "Photo : Manœuvre combinée du rein",
+          "alt": "Repère podal de la manœuvre combinée du rein par voies postérieure et antérieure",
+          "orientation": "portrait"
         },
         {
           "type": "sub",
