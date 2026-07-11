@@ -887,10 +887,67 @@ export const chapter7Fr: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Racine du mésentère ;",
-            "Racine du mésocôlon transverse ;",
+            "Racine du mésentère : entre la jonction duodéno-jéjunale et l’ombilic ;"
+          ]
+        },
+        {
+          "type": "figure",
+          "src": "/chapter-7/cartographie/figure-7-02.png",
+          "caption": "Photo : Racine du mésentère entre la jonction duodéno-jéjunale et l’ombilic",
+          "alt": "Repère podal de la racine du mésentère entre la jonction duodéno-jéjunale et l’ombilic",
+          "orientation": "portrait"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "Racine du mésentère : entre l’ombilic et la valvule iléo-caecale ;"
+          ]
+        },
+        {
+          "type": "figure",
+          "src": "/chapter-7/cartographie/figure-7-04.png",
+          "caption": "Photo : Racine du mésentère entre l’ombilic et la valvule iléocaecale",
+          "alt": "Repère podal de la racine du mésentère entre l’ombilic et la valvule iléocaecale",
+          "orientation": "portrait"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "Racine du mésocôlon transverse : entre le 2ème duodénum et L2 ;"
+          ]
+        },
+        {
+          "type": "figure",
+          "src": "/chapter-7/cartographie/figure-7-06.png",
+          "caption": "Photo : Racine du mésocôlon transverse entre le 2ème duodénum et L2",
+          "alt": "Repère podal de la racine du mésocôlon transverse entre le 2ème duodénum et L2",
+          "orientation": "portrait"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "Racine du mésocôlon transverse : entre L2 et le corps du pancréas ;"
+          ]
+        },
+        {
+          "type": "figure",
+          "src": "/chapter-7/cartographie/figure-7-08.png",
+          "caption": "Photo : Racine du mésocôlon transverse entre L2 et le corps du pancréas",
+          "alt": "Repère podal de la racine du mésocôlon transverse entre L2 et le corps du pancréas",
+          "orientation": "landscape"
+        },
+        {
+          "type": "bullets",
+          "items": [
             "Racine du mésosigmoïde."
           ]
+        },
+        {
+          "type": "figure",
+          "src": "/chapter-7/cartographie/figure-7-10.png",
+          "caption": "Photo : Racines du mésosigmoïde",
+          "alt": "Repère podal des racines du mésosigmoïde entre les deux index",
+          "orientation": "landscape"
         }
       ]
     }

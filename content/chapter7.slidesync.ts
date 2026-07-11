@@ -1,6 +1,12 @@
 export type SyncSlide = { src: string; title: string; orientation?: 'portrait' }
 export type SyncAnchor = { sectionId: string; blockIndex: number; slide: number | number[]; gapBefore?: 'half' }
 
+// Slides 1-18 are pre-rendered from:
+// public/chapter-7/Chapter7_Cavites_Slides_de_synthese_FR_reordered.pdf
+//
+// Slides 19+ reuse the cartography pages from:
+// public/chapter-7/Chapter7 Cartographie et Photos.pdf
+
 const chapter7SlidesBySource: SyncSlide[] = [
   { src: '/chapter-7/slides/slide-01.png', title: 'Chapitre 7 - Cavités abdominale et péritonéale' },
   { src: '/chapter-7/slides/slide-02.png', title: 'Le contenant abdominal : frontieres et pressions' },
@@ -20,9 +26,14 @@ const chapter7SlidesBySource: SyncSlide[] = [
   { src: '/chapter-7/slides/slide-16.png', title: 'Cartographie des douleurs projetees' },
   { src: '/chapter-7/slides/slide-17.png', title: 'L approche ROP : de l anatomie a l équilibre' },
   { src: '/chapter-7/slides/slide-18.png', title: 'Synthèse clinique ROP : de l’abdomen au pied' },
+  { src: '/chapter-7/cartographie/figure-7-01.png', title: 'Cartographie : Racine du mésentère - jonction duodéno-jéjunale à ombilic' },
+  { src: '/chapter-7/cartographie/figure-7-03.png', title: 'Cartographie : Racine du mésentère - ombilic à valvule iléocaecale' },
+  { src: '/chapter-7/cartographie/figure-7-05.png', title: 'Cartographie : Racine du mésocôlon transverse - 2ème duodénum à L2' },
+  { src: '/chapter-7/cartographie/figure-7-07.png', title: 'Cartographie : Racine du mésocôlon transverse - L2 à corps du pancréas' },
+  { src: '/chapter-7/cartographie/figure-7-09.png', title: 'Cartographie : Racine du mésosigmoïde' },
 ]
 
-const chapter7ReadingOrder = [1, 2, 3, 4, 6, 5, 8, 10, 9, 11, 12, 13, 7, 14, 15, 16, 17, 18]
+const chapter7ReadingOrder = [1, 2, 3, 4, 6, 5, 8, 10, 9, 11, 12, 13, 7, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23]
 const chapter7SlideNumberByReadingOrder = new Map(chapter7ReadingOrder.map((sourceSlide, index) => [sourceSlide, index + 1]))
 
 function remapChapter7Slide(slide: number | number[]) {
@@ -49,8 +60,14 @@ const chapter7SlideAnchorsBySource: SyncAnchor[] = [
   { sectionId: 'pathologie', blockIndex: 0, slide: 14 },
   { sectionId: 'relations-peritoneo-somatiques', blockIndex: 0, slide: 15 },
   { sectionId: 'relations-peritoneo-somatiques', blockIndex: 5, slide: 16 },
+  { sectionId: 'zones-reflexes-podales', blockIndex: -1, slide: 17 },
   { sectionId: 'zones-reflexes-podales', blockIndex: 0, slide: 17 },
   { sectionId: 'zones-reflexes-podales', blockIndex: 1, slide: 18 },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 2, slide: 19 },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 4, slide: 20 },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 6, slide: 21 },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 8, slide: 22 },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 10, slide: 23 },
 ]
 
 export const chapter7SlideAnchors: SyncAnchor[] = chapter7SlideAnchorsBySource.map((anchor) => ({
