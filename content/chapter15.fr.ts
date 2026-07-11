@@ -575,14 +575,14 @@ export const chapter15Fr: Chapter = {
           "src": "/chapter-15/cartographie/figure-15-02.png",
           "caption": "Photo : Nerf vague X dans la moelle allongée",
           "alt": "Repère podal du nerf vague X dans la moelle allongée",
-          "orientation": "landscape"
+          "orientation": "portrait"
         },
         {
           "type": "figure",
           "src": "/chapter-15/cartographie/figure-15-04.png",
           "caption": "Photo : Nerf vague X dans le foramen jugulaire",
           "alt": "Repère podal du nerf vague X dans le foramen jugulaire",
-          "orientation": "landscape"
+          "orientation": "portrait"
         },
         {
           "type": "bullets",

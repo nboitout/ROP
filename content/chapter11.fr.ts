@@ -1291,19 +1291,20 @@ const reflexFigure = (
   kind: "Cartographie" | "Photo",
   title: string,
   alt: string,
+  orientation: "landscape" | "portrait" = "landscape",
 ): ChapterBlock => ({
   type: "figure",
   src: `/chapter-11/cartographie/figure-11-${n}.png`,
   caption: `${kind} : ${title}`,
   alt,
-  orientation: "landscape",
+  orientation,
 })
 
 const chapter11ReflexFigureGroups = {
   generalAdaptation: [
-    reflexFigure("02", "Photo", "Nerf vague X - moelle allongee", "Repere podal du nerf vague X dans la moelle allongee"),
-    reflexFigure("04", "Photo", "Nerf vague X - foramen jugulaire", "Repere podal du nerf vague X dans le foramen jugulaire"),
-    reflexFigure("06", "Photo", "Hiatus oesophagien et nerfs vagues", "Repere podal du hiatus oesophagien et des nerfs vagues"),
+    reflexFigure("02", "Photo", "Nerf vague X - moelle allongee", "Repere podal du nerf vague X dans la moelle allongee", "portrait"),
+    reflexFigure("04", "Photo", "Nerf vague X - foramen jugulaire", "Repere podal du nerf vague X dans le foramen jugulaire", "portrait"),
+    reflexFigure("06", "Photo", "Hiatus oesophagien et nerfs vagues", "Repere podal du hiatus oesophagien et des nerfs vagues", "portrait"),
     reflexFigure("10", "Photo", "Articulations costo-vertebrales", "Repere podal des articulations costo-vertebrales"),
   ],
   phrenicNerve: [
@@ -1314,16 +1315,16 @@ const chapter11ReflexFigureGroups = {
     reflexFigure("08", "Photo", "Foie - lobe gauche", "Repere podal du lobe gauche du foie"),
   ],
   liverInferiorAndRight: [
-    reflexFigure("12", "Photo", "Foie - face inferieure et lobe droit", "Repere podal de la face inferieure et du lobe droit du foie"),
+    reflexFigure("12", "Photo", "Foie - face inferieure et lobe droit", "Repere podal de la face inferieure et du lobe droit du foie", "portrait"),
   ],
   gallbladder: [
-    reflexFigure("14", "Photo", "Vesicule biliaire", "Repere podal de la vesicule biliaire sur le pouce gauche"),
+    reflexFigure("14", "Photo", "Vesicule biliaire", "Repere podal de la vesicule biliaire sur le pouce gauche", "portrait"),
   ],
   bileDucts: [
-    reflexFigure("16", "Photo", "Voies biliaires", "Repere podal des voies biliaires entre les deux pouces"),
+    reflexFigure("16", "Photo", "Voies biliaires", "Repere podal des voies biliaires entre les deux pouces", "portrait"),
   ],
   limbicBalance: [
-    reflexFigure("22", "Photo", "Balance cerveau limbique - foie/vesicule biliaire", "Technique balance cerveau limbique foie vesicule biliaire"),
+    reflexFigure("22", "Photo", "Balance cerveau limbique - foie/vesicule biliaire", "Technique balance cerveau limbique foie vesicule biliaire", "portrait"),
   ],
 } satisfies Record<string, Chapter["sections"][number]["blocks"]>
 

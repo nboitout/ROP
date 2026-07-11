@@ -848,23 +848,24 @@ const reflexFigure = (
   n: string,
   title: string,
   alt: string,
+  orientation: "landscape" | "portrait" = "landscape",
 ): ChapterBlock => ({
   type: "figure",
   src: `/chapter-12/cartographie/figure-12-${n}.png`,
   caption: `Photo : ${title}`,
   alt,
-  orientation: "landscape",
+  orientation,
 })
 
 const chapter12ReflexFigureGroups = {
   generalAdaptation: [
-    reflexFigure("02", "Nerf vague X - moelle allongee", "Repere podal du nerf vague X dans la moelle allongee"),
-    reflexFigure("04", "Nerf vague X - foramen jugulaire", "Repere podal du nerf vague X dans le foramen jugulaire"),
+    reflexFigure("02", "Nerf vague X - moelle allongee", "Repere podal du nerf vague X dans la moelle allongee", "portrait"),
+    reflexFigure("04", "Nerf vague X - foramen jugulaire", "Repere podal du nerf vague X dans le foramen jugulaire", "portrait"),
     reflexFigure("06", "Articulations costo-vertebrales", "Repere podal des articulations costo-vertebrales"),
   ],
   pancreas: [
-    reflexFigure("08", "Pancreas - tete et col", "Repere podal de la tete et du col du pancreas"),
-    reflexFigure("10", "Pancreas - corps et queue", "Repere podal du corps et de la queue du pancreas"),
+    reflexFigure("08", "Pancreas - tete et col", "Repere podal de la tete et du col du pancreas", "portrait"),
+    reflexFigure("10", "Pancreas - corps et queue", "Repere podal du corps et de la queue du pancreas", "portrait"),
   ],
 } satisfies Record<string, Chapter["sections"][number]["blocks"]>
 

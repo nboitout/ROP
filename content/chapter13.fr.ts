@@ -419,12 +419,13 @@ const reflexFigure = (
   n: string,
   title: string,
   alt: string,
+  orientation: "landscape" | "portrait" = "landscape",
 ): ChapterBlock => ({
   type: "figure",
   src: `/chapter-13/cartographie/figure-13-${n}.png`,
   caption: `Photo : ${title}`,
   alt,
-  orientation: "landscape",
+  orientation,
 })
 
 const chapter13ReflexFigureGroups = {
@@ -432,7 +433,7 @@ const chapter13ReflexFigureGroups = {
     reflexFigure("02", "Articulations costo-vertebrales", "Repere podal des articulations costo-vertebrales"),
   ],
   spleen: [
-    reflexFigure("04", "Rate", "Repere podal de la rate"),
+    reflexFigure("04", "Rate", "Repere podal de la rate", "portrait"),
   ],
 } satisfies Record<string, Chapter["sections"][number]["blocks"]>
 
