@@ -1267,21 +1267,22 @@ const reflexFigure = (
   kind: "Cartographie" | "Photo",
   title: string,
   alt: string,
+  orientation: "landscape" | "portrait" = "landscape",
 ): ChapterBlock => ({
   type: "figure",
   src: `/chapter-4/cartographie/figure-4-${n}.png`,
   caption: `${kind} : ${title}`,
   alt,
-  orientation: "landscape",
+  orientation,
 })
 
 const chapter4ReflexFigureGroups = {
   cephalicTerritory: [
-    reflexFigure("02", "Photo", "tronc cerebral", "Repere podal du tronc cerebral entre les deux pouces"),
+    reflexFigure("02", "Photo", "tronc cerebral", "Repere podal du tronc cerebral entre les deux pouces", "portrait"),
   ],
   vagusCranial: [
-    reflexFigure("04", "Photo", "nerf vague X dans la moelle allongee", "Repere podal du nerf vague X dans la moelle allongee"),
-    reflexFigure("06", "Photo", "nerf vague X dans le foramen jugulaire", "Repere podal du nerf vague X dans le foramen jugulaire"),
+    reflexFigure("04", "Photo", "nerf vague X dans la moelle allongee", "Repere podal du nerf vague X dans la moelle allongee", "portrait"),
+    reflexFigure("06", "Photo", "nerf vague X dans le foramen jugulaire", "Repere podal du nerf vague X dans le foramen jugulaire", "portrait"),
   ],
   vagusCervical: [
     reflexFigure("08", "Photo", "sinus carotidien", "Repere podal du sinus carotidien"),
@@ -1291,10 +1292,10 @@ const chapter4ReflexFigureGroups = {
     reflexFigure("12", "Photo", "territoire droit du nerf vague X", "Repere podal du territoire cervical et thoracique droit du nerf vague X"),
   ],
   vagusHiatus: [
-    reflexFigure("14", "Photo", "hiatus oesophagien et nerfs vagues", "Repere podal du hiatus oesophagien et des nerfs vagues droit et gauche"),
+    reflexFigure("14", "Photo", "hiatus oesophagien et nerfs vagues", "Repere podal du hiatus oesophagien et des nerfs vagues droit et gauche", "portrait"),
   ],
   vagusAbdominal: [
-    reflexFigure("16", "Photo", "petite courbure de l estomac", "Repere podal de la petite courbure de l estomac"),
+    reflexFigure("16", "Photo", "petite courbure de l estomac", "Repere podal de la petite courbure de l estomac", "portrait"),
     reflexFigure("18", "Photo", "territoire abdominal droit du nerf vague X", "Repere podal du territoire abdominal droit du nerf vague X"),
   ],
   parasympatheticSacral: [
@@ -1307,7 +1308,7 @@ const chapter4ReflexFigureGroups = {
     reflexFigure("24", "Photo", "chaine ganglionnaire latero-vertebrale thoracique", "Repere podal de la chaine ganglionnaire latero-vertebrale thoracique"),
   ],
   sympatheticCervical: [
-    reflexFigure("26", "Photo", "ganglion cervical inferieur", "Repere podal du ganglion cervical inferieur"),
+    reflexFigure("26", "Photo", "ganglion cervical inferieur", "Repere podal du ganglion cervical inferieur", "portrait"),
   ],
   sympatheticLumbar: [
     reflexFigure("28", "Photo", "chaine ganglionnaire lombaire et piliers du diaphragme", "Repere podal de la chaine ganglionnaire lombaire et des piliers du diaphragme"),
@@ -1316,7 +1317,7 @@ const chapter4ReflexFigureGroups = {
     reflexFigure("30", "Photo", "chaine ganglionnaire sacro-coccygienne", "Repere podal de la chaine ganglionnaire sacro-coccygienne"),
   ],
   hypogastricAnterior: [
-    reflexFigure("32", "Photo", "plexus hypogastrique inferieur, fibres anterieures", "Repere podal du plexus hypogastrique inferieur, fibres anterieures"),
+    reflexFigure("32", "Photo", "plexus hypogastrique inferieur, fibres anterieures", "Repere podal du plexus hypogastrique inferieur, fibres anterieures", "portrait"),
     reflexFigure("34", "Photo", "plexus hypogastrique inferieur, fibres moyennes et posterieures", "Repere podal du plexus hypogastrique inferieur, fibres moyennes et posterieures"),
   ],
 } satisfies Record<string, Chapter["sections"][number]["blocks"]>
