@@ -1065,6 +1065,13 @@ a.ss-switch-opt:hover { color:var(--gold); }
   .ss-case-chip-label { position:absolute; width:1px; height:1px; padding:0; margin:-1px;
     overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
   .ss-marker { display:none; }
+  .ss-end-anchor--visible {
+    display:block;
+    width:0;
+    height:0;
+    margin:0;
+    overflow:hidden;
+  }
   .ss-article { padding:24px 20px 100px; max-width:none; margin:0 auto; --ss-article-pad-x:20px; }
   .ss-anchor,
   .ss-article [data-pos-anchor] { scroll-margin-top:calc(62px + 56vw); }
