@@ -760,6 +760,19 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
     if (slide) setActive(slide)
     track('lightbox_jump_reflex_zones', { section: reflexSection.id, slide })
     closeLightbox()
+    jumpToReflexSection()
+  }
+
+  function goToReflexZones() {
+    if (!reflexSection) return
+    const slide = slideForReflexTarget()
+    if (slide) setActive(slide)
+    track('sync_jump_reflex_zones', { section: reflexSection.id, slide })
+    jumpToReflexSection()
+  }
+
+  function jumpToReflexSection() {
+    if (!reflexSection) return
     animateTo(() => {
       if (PAGE_BREAK_BEFORE.has(reflexSection.id)) {
         return document.getElementById(`sec-${reflexSection.id}`)
@@ -1058,6 +1071,21 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
                 <path d="M6 9l6 6 6-6" />
               </svg>
             </button>
+            {reflexSection && (
+              <button
+                type="button"
+                className="ss-reflex-jump"
+                onClick={goToReflexZones}
+                title={ui.jumpTitle(reflexSection.title)}
+              >
+                <span className="ss-reflex-jump-icon" aria-hidden>⌖</span>
+                <span className="ss-reflex-jump-text">
+                  <span className="ss-reflex-jump-label">{ui.jumpLabel}</span>
+                  <span className="ss-reflex-jump-section">{reflexSection.title}</span>
+                </span>
+                <span className="ss-reflex-jump-arrow" aria-hidden>↓</span>
+              </button>
+            )}
             </>
             ) : (
             <>
@@ -1142,6 +1170,21 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
             )}
               </div>
             </div>
+            {reflexSection && (
+              <button
+                type="button"
+                className="ss-reflex-jump"
+                onClick={goToReflexZones}
+                title={ui.jumpTitle(reflexSection.title)}
+              >
+                <span className="ss-reflex-jump-icon" aria-hidden>⌖</span>
+                <span className="ss-reflex-jump-text">
+                  <span className="ss-reflex-jump-label">{ui.jumpLabel}</span>
+                  <span className="ss-reflex-jump-section">{reflexSection.title}</span>
+                </span>
+                <span className="ss-reflex-jump-arrow" aria-hidden>↓</span>
+              </button>
+            )}
             {showClinicalCaseResource && chapter.clinicalCase && (
               <button
                 type="button"

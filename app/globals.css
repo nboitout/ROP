@@ -931,6 +931,20 @@ a.ss-switch-opt:hover { color:var(--gold); }
 .ss-stage-restore-label { white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
 .ss-stage-restore-count { color:var(--gold); flex-shrink:0; }
 
+.ss-reflex-jump { display:flex; align-items:center; justify-content:center; gap:10px;
+  width:100%; max-width:520px; margin:12px auto 0; padding:10px 13px;
+  border:1px solid rgba(160,124,58,.32); border-radius:6px; background:#fffaf0;
+  color:rgba(26,26,24,.76); cursor:pointer; box-shadow:0 8px 20px rgba(26,26,24,.08);
+  transition:border-color .15s, color .15s, background .15s, transform .15s; }
+.ss-reflex-jump:hover { border-color:rgba(160,124,58,.62); color:var(--gold); background:#fff7e6; }
+.ss-reflex-jump:active { transform:translateY(1px); }
+.ss-reflex-jump-icon, .ss-reflex-jump-arrow { flex-shrink:0; color:var(--gold); font-weight:700; }
+.ss-reflex-jump-text { min-width:0; display:flex; flex-direction:column; align-items:flex-start; gap:2px; text-align:left; }
+.ss-reflex-jump-label { font-size:.62rem; font-weight:700; letter-spacing:.14em; text-transform:uppercase;
+  color:rgba(26,26,24,.48); white-space:nowrap; }
+.ss-reflex-jump-section { max-width:100%; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;
+  font-family:'Cormorant Garamond',serif; font-size:1.02rem; line-height:1.1; color:currentColor; }
+
 .ss-case-chip { display:inline-flex; align-items:center; justify-content:center; gap:7px;
   width:fit-content; margin:12px auto 0; padding:7px 11px;
   border:1px solid rgba(160,124,58,.28); border-radius:999px;
@@ -1007,6 +1021,10 @@ a.ss-switch-opt:hover { color:var(--gold); }
   .ss-stage-title { font-size:.92rem; }
   .ss-dots { display:none; }
   .ss-pagebreak { height:42vh; min-height:200px; }
+  .ss-reflex-jump { position:absolute; left:8px; bottom:8px; width:34px; height:34px; margin:0; padding:0;
+    border-radius:50%; background:rgba(251,248,241,.9); box-shadow:0 4px 14px rgba(26,26,24,.14); }
+  .ss-reflex-jump-text, .ss-reflex-jump-arrow { position:absolute; width:1px; height:1px; padding:0; margin:-1px;
+    overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
   .ss-case-chip { position:absolute; top:8px; right:8px; width:34px; height:34px; margin:0; padding:0;
     border-radius:50%; background:rgba(251,248,241,.9); box-shadow:0 4px 14px rgba(26,26,24,.14); }
   .ss-case-chip-label { position:absolute; width:1px; height:1px; padding:0; margin:-1px;
