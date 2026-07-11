@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import Link from 'next/link'
 import { useSearchParams } from 'next/navigation'
 import dynamic from 'next/dynamic'
@@ -28,6 +28,61 @@ type XrefReturn = { href: string; label: string } | null
 function isRopInterestSection(section: Section) {
   return /^int[ée]r[êe]t en r\.?o\.?p\.?$/i.test(section.title.trim()) &&
     section.blocks[0]?.type === 'rop'
+}
+
+function normalizeSectionLabel(value: string) {
+  return value
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, ' ')
+    .trim()
+}
+
+function isRopShortcutLabel(value: string) {
+  const normalized = normalizeSectionLabel(value)
+  const words = normalized.split(/\s+/)
+  return normalized === 'rop' ||
+    normalized.startsWith('rop ') ||
+    words.includes('rop') ||
+    (normalized.includes('zone') && normalized.includes('reflex'))
+}
+
+function isZoneReflexLabel(value: string) {
+  const normalized = normalizeSectionLabel(value)
+  return normalized === 'rop' ||
+    normalized.startsWith('rop ') ||
+    (normalized.includes('zone') && normalized.includes('reflex'))
+}
+
+function blockShortcutText(block: Block) {
+  if (block.type === 'para' || block.type === 'sub') return block.text
+  if (block.type === 'lead') return `${block.label} ${block.text}`
+  if (block.type === 'bullets' || block.type === 'numbered') return block.items.join(' ')
+  if (block.type === 'leadBullets') return block.items.map((item) => `${item.label} ${item.text}`).join(' ')
+  if (block.type === 'table') return `${block.caption ?? ''} ${block.headers.join(' ')} ${block.rows.flat().join(' ')}`
+  if (block.type === 'figure') return `${block.caption} ${block.alt}`
+  if (block.type === 'xref') return `${block.label} ${block.text ?? ''}`
+  if (block.type === 'rop') return block.body.join(' ')
+  return ''
+}
+
+function isReflexZoneSection(section: Section) {
+  return isRopShortcutLabel(section.id) ||
+    isRopShortcutLabel(section.title) ||
+    section.blocks.some((block) =>
+      block.type === 'reflexAtlas' ||
+      block.type === 'rop' ||
+      isRopShortcutLabel(blockShortcutText(block))
+    )
+}
+
+function hasRopShortcutBlock(section: Section) {
+  return section.blocks.some((block) =>
+    block.type === 'reflexAtlas' ||
+    block.type === 'rop' ||
+    isZoneReflexLabel(blockShortcutText(block))
+  )
 }
 
 function getSafeXrefReturn(params: { get(name: string): string | null } | null): XrefReturn {
@@ -73,6 +128,17 @@ export default function ChapterReader({ chapter, bookTitle, backHref = '/chapitr
   const slidesOpenedAt = useRef<number | null>(null)
   const resourceOpenedAt = useRef<number | null>(null)
   const resourceNameRef = useRef<string | null>(null)
+  const ropSection = useMemo(
+    () => chapter.sections.find((section) =>
+      isZoneReflexLabel(section.id) ||
+      isZoneReflexLabel(section.title) ||
+      section.blocks.some((block) => block.type === 'reflexAtlas')
+    ) ??
+      chapter.sections.find(hasRopShortcutBlock) ??
+      chapter.sections.find(isReflexZoneSection) ??
+      null,
+    [chapter.sections]
+  )
 
   // Resources (revision sheet / clinical case): track both the open and how
   // long the lightbox stayed open, so the admin can see engagement with them.
@@ -280,6 +346,12 @@ export default function ChapterReader({ chapter, bookTitle, backHref = '/chapitr
     setTocOpen(false)
   }
 
+  function goToReflexZones() {
+    if (!ropSection) return
+    track('reader_jump_reflex_zones', { section: ropSection.id })
+    scrollTo(ropSection.id)
+  }
+
   return (
     <div className="cr-root">
       <div className="cr-progress" aria-hidden><div className="cr-progress-bar" style={{ transform: `scaleX(${progress})` }} /></div>
@@ -323,6 +395,28 @@ export default function ChapterReader({ chapter, bookTitle, backHref = '/chapitr
         </aside>
 
         {tocOpen && <div className="cr-toc-overlay" onClick={() => setTocOpen(false)} />}
+
+        {ropSection && (
+          <a
+            href={`#sec-${ropSection.id}`}
+            className="cr-reflex-jump"
+            onClick={(event) => {
+              event.preventDefault()
+              goToReflexZones()
+            }}
+            aria-label={`Acces direct : ${ropSection.title}`}
+            title={`Acces direct : ${ropSection.title}`}
+          >
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+              <circle cx="12" cy="12" r="6" />
+              <path d="M12 2v4" />
+              <path d="M12 18v4" />
+              <path d="M2 12h4" />
+              <path d="M18 12h4" />
+            </svg>
+            <span>Zones reflexes</span>
+          </a>
+        )}
 
         <article ref={articleRef} className="cr-article">
           {showFallbackNotice && (

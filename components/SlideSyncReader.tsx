@@ -185,6 +185,51 @@ function isReflexZoneSectionId(value: string) {
   return normalized === 'rop' || (normalized.includes('zone') && normalized.includes('reflex'))
 }
 
+function isRopShortcutLabel(value: string) {
+  const normalized = normalizeSectionLabel(value).replace(/[^a-z0-9]+/g, ' ').trim()
+  const words = normalized.split(/\s+/)
+  return normalized === 'rop' ||
+    normalized.startsWith('rop ') ||
+    words.includes('rop') ||
+    (normalized.includes('zone') && normalized.includes('reflex'))
+}
+
+function isZoneReflexLabel(value: string) {
+  const normalized = normalizeSectionLabel(value).replace(/[^a-z0-9]+/g, ' ').trim()
+  return normalized === 'rop' ||
+    normalized.startsWith('rop ') ||
+    (normalized.includes('zone') && normalized.includes('reflex'))
+}
+
+function blockShortcutText(block: Block) {
+  if (block.type === 'para' || block.type === 'sub') return block.text
+  if (block.type === 'lead') return `${block.label} ${block.text}`
+  if (block.type === 'bullets' || block.type === 'numbered') return block.items.join(' ')
+  if (block.type === 'leadBullets') return block.items.map((item) => `${item.label} ${item.text}`).join(' ')
+  if (block.type === 'table') return `${block.caption ?? ''} ${block.headers.join(' ')} ${block.rows.flat().join(' ')}`
+  if (block.type === 'figure') return `${block.caption} ${block.alt}`
+  if (block.type === 'xref') return `${block.label} ${block.text ?? ''}`
+  if (block.type === 'rop') return block.body.join(' ')
+  return ''
+}
+
+function ropShortcutBlockIndex(section: Section) {
+  const atlasIndex = section.blocks.findIndex((block) => block.type === 'reflexAtlas')
+  if (atlasIndex >= 0) return atlasIndex
+  const ropIndex = section.blocks.findIndex((block) => block.type === 'rop')
+  if (ropIndex >= 0) return ropIndex
+  const zoneTextIndex = section.blocks.findIndex((block) => isRopShortcutLabel(blockShortcutText(block)))
+  return zoneTextIndex >= 0 ? zoneTextIndex : null
+}
+
+function hasRopShortcutBlock(section: Section) {
+  return section.blocks.some((block) =>
+    block.type === 'reflexAtlas' ||
+    block.type === 'rop' ||
+    isZoneReflexLabel(blockShortcutText(block))
+  )
+}
+
 function asSlideList(slide: number | number[] | undefined) {
   if (typeof slide === 'number') return [slide]
   return slide ?? []
@@ -320,14 +365,18 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
   // The chapter's ROP section (reflex-zone maps in the feet) — readers spend a
   // lot of time here, so the pinned stage offers a one-tap jump to it.
   const ropSection = useMemo(
-    () => chapter.sections.find((section) => {
-      const sectionId = normalizeSectionLabel(section.id)
-      if (sectionId === 'rop' || sectionId.startsWith('rop-')) return true
-      if (sectionId.includes('zone') && sectionId.includes('reflex')) return true
-      const title = normalizeSectionLabel(section.title)
-      return title.includes('zone') && title.includes('reflex')
-    }),
+    () => chapter.sections.find((section) =>
+      isZoneReflexLabel(section.id) ||
+      isZoneReflexLabel(section.title) ||
+      section.blocks.some((block) => block.type === 'reflexAtlas')
+    ) ??
+      chapter.sections.find(hasRopShortcutBlock) ??
+      chapter.sections.find((section) => isRopShortcutLabel(section.id) || isRopShortcutLabel(section.title)),
     [chapter.sections]
+  )
+  const ropJumpBlockIndex = useMemo(
+    () => ropSection ? ropShortcutBlockIndex(ropSection) : null,
+    [ropSection]
   )
 
   // Slide the jump lands on: page-break sections can intentionally use a
@@ -348,6 +397,15 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
       const atlasSlide = asSlideList(anchorBySlide.get(`${ropSection.id}:${atlasIndex}`)?.slide)[0]
       if (atlasSlide) return atlasSlide
     }
+    if (ropJumpBlockIndex !== null) {
+      const blockSlide = asSlideList(anchorBySlide.get(`${ropSection.id}:${ropJumpBlockIndex}`)?.slide)[0]
+      if (blockSlide) return blockSlide
+      const blockAnchor = anchors.find((anchor) =>
+        anchor.sectionId === ropSection.id && anchor.blockIndex >= ropJumpBlockIndex
+      )
+      const anchoredSlide = asSlideList(blockAnchor?.slide)[0]
+      if (anchoredSlide) return anchoredSlide
+    }
     const inSection = anchors.filter((a) => a.sectionId === ropSection.id)
     if (inSection.length === 0) return null
     const blocks = inSection.filter((a) => a.blockIndex >= 0)
@@ -355,7 +413,7 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
       a.blockIndex < lo.blockIndex ? a : lo
     )
     return asSlideList(pick.slide)[0] ?? null
-  }, [anchors, ropSection, anchorBySlide])
+  }, [anchors, ropSection, ropJumpBlockIndex, anchorBySlide])
 
   useEffect(() => {
     track('sync_reader_open')
@@ -727,7 +785,11 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
     track('sync_jump_section', { section: ropSection?.id, slide: ropJumpSlide })
     setActive(ropJumpSlide)
     setActiveSectionId(ropSection.id)
-    animateTo(() => document.getElementById(`sec-${ropSection.id}`))
+    animateTo(() =>
+      ropJumpBlockIndex !== null
+        ? document.getElementById(`p-${ropSection.id}-${ropJumpBlockIndex}`)
+        : document.getElementById(`sec-${ropSection.id}`)
+    )
   }
 
   function goToSection(sectionId: string) {
