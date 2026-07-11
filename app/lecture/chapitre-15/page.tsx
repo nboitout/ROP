@@ -33,6 +33,15 @@ const ANCHORS: Record<Lang, typeof chapter15SlideAnchors> = {
   th: chapter15SlideAnchorsEn,
 }
 
+const HIDDEN_DOT_SLIDES: Record<Lang, number[]> = {
+  fr: [27, 28, 29, 30, 31, 32, 33, 34],
+  en: [16, 17],
+  de: [27, 28, 29, 30, 31, 32, 33, 34],
+  es: [27, 28, 29, 30, 31, 32, 33, 34],
+  it: [27, 28, 29, 30, 31, 32, 33, 34],
+  th: [16, 17],
+}
+
 export const metadata: Metadata = {
   title: 'Chapitre 15 — Côlon et rectum · R.O.P. · Guy Boitout',
   description: 'Lecture du chapitre 15 : anatomie, physiologie, pathologies courantes et zones réflexes podales du côlon et du rectum en R.O.P.',
@@ -60,6 +69,7 @@ export default async function Chapitre15LecturePage({
       slides={DECKS[lang]}
       anchors={ANCHORS[lang]}
       backHref="/chapitres-gratuits"
+      hiddenDotSlides={HIDDEN_DOT_SLIDES[lang]}
     />
   )
 }

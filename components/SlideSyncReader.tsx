@@ -45,6 +45,7 @@ type Props = {
   sectionRail?: boolean
   showClinicalCaseResource?: boolean
   restrictPaidXrefs?: boolean
+  hiddenDotSlides?: number[]
 }
 
 type XrefReturn = { href: string; label: string } | null
@@ -276,7 +277,7 @@ function preloadSlideImage(src: string | undefined) {
   img.src = src
 }
 
-export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, backHref = '/chapitres-gratuits', sectionRail = true, showClinicalCaseResource = false, restrictPaidXrefs = false }: Props) {
+export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, backHref = '/chapitres-gratuits', sectionRail = true, showClinicalCaseResource = false, restrictPaidXrefs = false, hiddenDotSlides = [] }: Props) {
   const { lang, t } = useLanguage()
   const searchParams = useSearchParams()
   const ui = SS_UI[lang] ?? SS_UI.fr
@@ -377,6 +378,7 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
     () => reflexSection ? reflexShortcutBlockIndex(reflexSection) : null,
     [reflexSection]
   )
+  const hiddenDotSlideSet = useMemo(() => new Set(hiddenDotSlides), [hiddenDotSlides])
 
   useEffect(() => {
     track('sync_reader_open')
@@ -1098,7 +1100,7 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
             <>
             <div className="ss-stage-row">
               <div className="ss-dots" role="tablist" aria-label={ui.slides}>
-                {slides.map((s, i) => (
+                {slides.map((s, i) => hiddenDotSlideSet.has(i + 1) ? null : (
                   <button
                     key={s.src}
                     className={`ss-dot${i + 1 === active ? ' is-active' : ''}`}
