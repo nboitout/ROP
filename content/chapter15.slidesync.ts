@@ -159,12 +159,12 @@ const chapter15SlideAnchorsBySource: SyncAnchor[] = [
   { sectionId: 'zones-reflexes-podales', blockIndex: 0, slide: 16 },
   { sectionId: 'zones-reflexes-podales', blockIndex: 2, slide: 17 },
   { sectionId: 'zones-reflexes-podales', blockIndex: 3, slide: 18 },
-  { sectionId: 'zones-reflexes-podales', blockIndex: 4, slide: 19 },
-  { sectionId: 'zones-reflexes-podales', blockIndex: 4, slide: 20 },
-  { sectionId: 'zones-reflexes-podales', blockIndex: 5, slide: 21 },
-  { sectionId: 'zones-reflexes-podales', blockIndex: 8, slide: 22 },
-  { sectionId: 'zones-reflexes-podales', blockIndex: 10, slide: 23 },
-  { sectionId: 'zones-reflexes-podales', blockIndex: 13, slide: 24 },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 5, slide: 19 },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 7, slide: 20 },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 8, slide: 21 },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 14, slide: 22 },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 20, slide: 23 },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 22, slide: 24 },
 ]
 
 export const chapter15SlideAnchors: SyncAnchor[] = chapter15SlideAnchorsBySource.map((anchor) => ({

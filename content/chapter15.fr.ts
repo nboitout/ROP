@@ -587,9 +587,28 @@ export const chapter15Fr: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Parasympathique pelvien;",
+            "Parasympathique pelvien;"
+          ]
+        },
+        {
+          "type": "figure",
+          "src": "/chapter-15/cartographie/figure-15-06.png",
+          "caption": "Cartographie : Origine médullaire du Parasympathique pelvien ou sacré",
+          "alt": "Titre cartographique de l'origine médullaire du Parasympathique pelvien ou sacré",
+          "orientation": "landscape"
+        },
+        {
+          "type": "bullets",
+          "items": [
             "Colonne vertébrale, articulations costo-transversaires (chaîne ganglionnaire latéro-vertébrale thoracique (Th9-Th12);"
           ]
+        },
+        {
+          "type": "figure",
+          "src": "/chapter-15/cartographie/figure-15-08.png",
+          "caption": "Cartographie : Origine médullaire du Sympathique",
+          "alt": "Titre cartographique de l'origine médullaire du Sympathique",
+          "orientation": "landscape"
         },
         {
           "type": "figure",
@@ -618,10 +637,24 @@ export const chapter15Fr: Chapter = {
         },
         {
           "type": "figure",
+          "src": "/chapter-15/cartographie/figure-15-15.png",
+          "caption": "Cartographie : Valvule iléocaecale",
+          "alt": "Titre cartographique de la valvule iléocaecale",
+          "orientation": "landscape"
+        },
+        {
+          "type": "figure",
           "src": "/chapter-15/cartographie/figure-15-16.png",
           "caption": "Photo : Valvule iléocaecale",
           "alt": "Repère podal de la valvule iléocaecale sur le pied gauche",
           "orientation": "portrait"
+        },
+        {
+          "type": "figure",
+          "src": "/chapter-15/cartographie/figure-15-12.png",
+          "caption": "Cartographie : Côlon ascendant et côlon transverse",
+          "alt": "Titre cartographique du côlon ascendant et du côlon transverse",
+          "orientation": "landscape"
         },
         {
           "type": "bullets",
@@ -634,6 +667,13 @@ export const chapter15Fr: Chapter = {
         },
         {
           "type": "figure",
+          "src": "/chapter-15/cartographie/figure-15-17.png",
+          "caption": "Cartographie : Racine du mésocôlon transverse entre le 2ème duodénum et L2",
+          "alt": "Titre cartographique de la racine du mésocôlon transverse entre le 2ème duodénum et L2",
+          "orientation": "landscape"
+        },
+        {
+          "type": "figure",
           "src": "/chapter-15/cartographie/figure-15-18.png",
           "caption": "Photo : Racine du mésocôlon transverse",
           "alt": "Repère podal de la racine du mésocôlon transverse",
@@ -641,9 +681,23 @@ export const chapter15Fr: Chapter = {
         },
         {
           "type": "figure",
+          "src": "/chapter-15/cartographie/figure-15-19.png",
+          "caption": "Cartographie : Racine du mésocôlon transverse entre L2 et le corps du pancréas",
+          "alt": "Titre cartographique de la racine du mésocôlon transverse entre L2 et le corps du pancréas",
+          "orientation": "landscape"
+        },
+        {
+          "type": "figure",
           "src": "/chapter-15/cartographie/figure-15-20.png",
           "caption": "Photo : Racine du mésocôlon transverse entre les deux corps du pancréas",
           "alt": "Repère podal de la racine du mésocôlon transverse entre les deux corps du pancréas",
+          "orientation": "landscape"
+        },
+        {
+          "type": "figure",
+          "src": "/chapter-15/cartographie/figure-15-14.png",
+          "caption": "Cartographie : Côlon transverse et côlon descendant",
+          "alt": "Titre cartographique du côlon transverse et du côlon descendant",
           "orientation": "landscape"
         },
         {
@@ -658,6 +712,13 @@ export const chapter15Fr: Chapter = {
             "Anus: repérer l’extrémité inférieure de la tubérosité postéro-médiale du calcanéum. La zone réflexe se situe juste en avant.",
             "plexus hypogastrique inférieur (partie postérieure): canal sacré à hauteur de S2 à S4"
           ]
+        },
+        {
+          "type": "figure",
+          "src": "/chapter-15/cartographie/figure-15-22.png",
+          "caption": "Cartographie : Rectum, anus, mésosigmoïde",
+          "alt": "Titre cartographique du rectum, de l'anus et du mésosigmoïde",
+          "orientation": "landscape"
         },
         {
           "type": "sub",
