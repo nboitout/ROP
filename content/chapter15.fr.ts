@@ -567,9 +567,40 @@ export const chapter15Fr: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Nerf vague X;",
+            "Nerf vague X;"
+          ]
+        },
+        {
+          "type": "figure",
+          "src": "/chapter-15/cartographie/figure-15-02.png",
+          "caption": "Photo : Nerf vague X dans la moelle allongée",
+          "alt": "Repère podal du nerf vague X dans la moelle allongée",
+          "orientation": "landscape"
+        },
+        {
+          "type": "figure",
+          "src": "/chapter-15/cartographie/figure-15-04.png",
+          "caption": "Photo : Nerf vague X dans le foramen jugulaire",
+          "alt": "Repère podal du nerf vague X dans le foramen jugulaire",
+          "orientation": "landscape"
+        },
+        {
+          "type": "bullets",
+          "items": [
             "Parasympathique pelvien;",
-            "Colonne vertébrale, articulations costo-transversaires (chaîne ganglionnaire latéro-vertébrale thoracique (Th9-Th12);",
+            "Colonne vertébrale, articulations costo-transversaires (chaîne ganglionnaire latéro-vertébrale thoracique (Th9-Th12);"
+          ]
+        },
+        {
+          "type": "figure",
+          "src": "/chapter-15/cartographie/figure-15-10.png",
+          "caption": "Photo : Chaîne ganglionnaire latéro-vertébrale thoracique",
+          "alt": "Repère podal de la chaîne ganglionnaire latéro-vertébrale thoracique",
+          "orientation": "landscape"
+        },
+        {
+          "type": "bullets",
+          "items": [
             "Plexus prévertébral."
           ]
         },
@@ -582,11 +613,42 @@ export const chapter15Fr: Chapter = {
           "items": [
             "Côlon:",
             "Caecum: face plantaire du pied droit, à l’aplomb du 4ème orteil, sur le bord antérieur du talon, jusqu’à la jonction iléo-caecale;",
-            "Jonction iléo-caecale et valvule iléo-caecale: imaginer un V dont la pointe est le fond du caecum, sur le bord antérieur du talon droit. La branche médiale du V est la zone réflexe de la jonction iléo-caecale;",
+            "Jonction iléo-caecale et valvule iléo-caecale: imaginer un V dont la pointe est le fond du caecum, sur le bord antérieur du talon droit. La branche médiale du V est la zone réflexe de la jonction iléo-caecale;"
+          ]
+        },
+        {
+          "type": "figure",
+          "src": "/chapter-15/cartographie/figure-15-16.png",
+          "caption": "Photo : Valvule iléocaecale",
+          "alt": "Repère podal de la valvule iléocaecale sur le pied gauche",
+          "orientation": "portrait"
+        },
+        {
+          "type": "bullets",
+          "items": [
             "Côlon ascendant: Une zone allant du caecum à la styloïde du 5ème métatarse droit.",
             "Angle colique droit: contre la styloïde du 5ème métatarse droit et la coupole diaphragmatique",
             "Côlon transverse: en raison de la variation de sa position, sa zone réflexe est difficilement repérable dans sa partie moyenne. L’essentiel est d’agir sur les zones réflexes de ses deux extrémités: les angles coliques droit et gauche, et sur la racine du mésocôlon transverse.",
-            "Racine du mésocôlon transverse: une ligne de la 2ème portion du duodénum à L2 (face plantaire du pied droit), puis une ligne de L2 à la queue du pancréas (face plantaire du pied gauche)",
+            "Racine du mésocôlon transverse: une ligne de la 2ème portion du duodénum à L2 (face plantaire du pied droit), puis une ligne de L2 à la queue du pancréas (face plantaire du pied gauche)"
+          ]
+        },
+        {
+          "type": "figure",
+          "src": "/chapter-15/cartographie/figure-15-18.png",
+          "caption": "Photo : Racine du mésocôlon transverse",
+          "alt": "Repère podal de la racine du mésocôlon transverse",
+          "orientation": "portrait"
+        },
+        {
+          "type": "figure",
+          "src": "/chapter-15/cartographie/figure-15-20.png",
+          "caption": "Photo : Racine du mésocôlon transverse entre les deux corps du pancréas",
+          "alt": "Repère podal de la racine du mésocôlon transverse entre les deux corps du pancréas",
+          "orientation": "landscape"
+        },
+        {
+          "type": "bullets",
+          "items": [
             "Angle colique gauche: repérer la styloïde du 5ème métatarse droit, la zone réflexe de l’angle colique gauche est légèrement plus haute que l’angle colique droit;",
             "Côlon descendant: une zone réflexe le long du bord latéral du pied gauche à la partie latérale du bord antérieur du talon;",
             "Côlon sigmoïde: Il est difficile de localiser la zone réflexe de la partie moyenne du côlon sigmoïde en raison de sa direction postéro-médiale, sa très grande mobilité et la présentation topique du bébé en position fœtale dans les pieds.",

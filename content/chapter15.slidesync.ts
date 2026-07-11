@@ -3,6 +3,7 @@
 //
 // Slides are pre-rendered from:
 // public/chapter-15/Chapter15 Slides de synthese - FR.pdf
+// public/chapter-15/Chapter15 Cartographie et Photos.pdf (cartography slides)
 
 export type SyncSlide = { src: string; title: string; orientation?: 'portrait' }
 export type SyncAnchor = { sectionId: string; blockIndex: number; slide: number; gapBefore?: 'half' }
@@ -24,9 +25,17 @@ const chapter15SlidesBySource: SyncSlide[] = [
   { src: '/chapter-15/slides/slide-14.png', title: 'Synthèse viscéro-somatique' },
   { src: '/chapter-15/slides/slide-15.png', title: 'Cartographie ROP : système nerveux, limbique et microbiote' },
   { src: '/chapter-15/slides/slide-16.png', title: 'Cartographie podale ROP' },
+  { src: '/chapter-15/cartographie/figure-15-01.png', title: 'Cartographie : Nerf vague X - moelle allongée' },
+  { src: '/chapter-15/cartographie/figure-15-03.png', title: 'Cartographie : Nerf vague X - foramen jugulaire' },
+  { src: '/chapter-15/cartographie/figure-15-05.png', title: 'Cartographie : Parasympathique pelvien sacré' },
+  { src: '/chapter-15/cartographie/figure-15-07.png', title: 'Cartographie : Origine médullaire du sympathique' },
+  { src: '/chapter-15/cartographie/figure-15-09.png', title: 'Cartographie : Chaîne ganglionnaire latéro-vertébrale thoracique' },
+  { src: '/chapter-15/cartographie/figure-15-11.png', title: 'Cartographie : Côlon ascendant et côlon transverse' },
+  { src: '/chapter-15/cartographie/figure-15-13.png', title: 'Cartographie : Côlon transverse et côlon descendant' },
+  { src: '/chapter-15/cartographie/figure-15-21.png', title: 'Cartographie : Rectum, anus et mésosigmoïde' },
 ]
 
-const chapter15ReadingOrder = [1, 2, 3, 4, 5, 6, 8, 9, 10, 7, 11, 12, 13, 14, 15, 16]
+const chapter15ReadingOrder = [1, 2, 3, 4, 5, 6, 8, 9, 10, 7, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24]
 const chapter15SlideNumberByReadingOrder = new Map(chapter15ReadingOrder.map((sourceSlide, index) => [sourceSlide, index + 1]))
 
 function remapChapter15Slide(slide: number) {
@@ -148,6 +157,14 @@ const chapter15SlideAnchorsBySource: SyncAnchor[] = [
   { sectionId: 'relations-viscero-somatiques', blockIndex: 0, slide: 14 },
   { sectionId: 'relations-viscero-emotionnelles', blockIndex: 0, slide: 15 },
   { sectionId: 'zones-reflexes-podales', blockIndex: 0, slide: 16 },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 2, slide: 17 },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 3, slide: 18 },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 4, slide: 19 },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 4, slide: 20 },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 5, slide: 21 },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 8, slide: 22 },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 10, slide: 23 },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 13, slide: 24 },
 ]
 
 export const chapter15SlideAnchors: SyncAnchor[] = chapter15SlideAnchorsBySource.map((anchor) => ({
