@@ -940,6 +940,8 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
   const activeSlideNumber = active ?? 0
   const activeSlide = active ? slides[active - 1] : undefined
   const activeSlideIsPortrait = activeSlide?.orientation === 'portrait'
+  const hideReflexJumpOnDesktop = chapter.slug === 'chapter-15' && activeSectionId === reflexSection?.id
+  const reflexJumpClassName = `ss-reflex-jump${hideReflexJumpOnDesktop ? ' ss-reflex-jump--desktop-hidden' : ''}`
   const renderedSlideIndexes = useMemo(() => {
     if (!active) return []
     const indexes = new Set([active - 3, active - 2, active - 1, active, active + 1])
@@ -957,6 +959,11 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
   function hasHalfGapBefore(sectionId: string, blockIndex: number) {
     return (anchorsByPoint.get(pointKey(sectionId, blockIndex)) ?? [])
       .some((anchor) => anchor.gapBefore === 'half')
+  }
+
+  function hasSectionPageBreak(sectionId: string) {
+    if (chapter.slug === 'chapter-15' && sectionId === 'anatomie') return false
+    return PAGE_BREAK_BEFORE.has(sectionId)
   }
 
   function renderEndSentinel(sectionId: string, blockIndex: number, itemIndex?: number) {
@@ -1074,7 +1081,7 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
             {reflexSection && (
               <button
                 type="button"
-                className="ss-reflex-jump"
+                className={reflexJumpClassName}
                 onClick={goToReflexZones}
                 title={ui.jumpTitle(reflexSection.title)}
               >
@@ -1173,7 +1180,7 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
             {reflexSection && (
               <button
                 type="button"
-                className="ss-reflex-jump"
+                className={reflexJumpClassName}
                 onClick={goToReflexZones}
                 title={ui.jumpTitle(reflexSection.title)}
               >
@@ -1220,7 +1227,7 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
 
           {chapter.sections.map((section) => {
             const headingSlides = slidesAtPoint(section.id, -1)
-            const hasPageBreak = PAGE_BREAK_BEFORE.has(section.id)
+            const hasPageBreak = hasSectionPageBreak(section.id)
             return (
             <Fragment key={section.id}>
             {hasPageBreak && (

@@ -948,6 +948,9 @@ a.ss-switch-opt:hover { color:var(--gold); }
   color:rgba(26,26,24,.48); white-space:nowrap; }
 .ss-reflex-jump-section { max-width:100%; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;
   font-family:'Cormorant Garamond',serif; font-size:1.02rem; line-height:1.1; color:currentColor; }
+@media (min-width:981px){
+  .ss-reflex-jump--desktop-hidden { display:none; }
+}
 
 .ss-case-chip { display:inline-flex; align-items:center; justify-content:center; gap:7px;
   width:fit-content; margin:12px auto 0; padding:7px 11px;
