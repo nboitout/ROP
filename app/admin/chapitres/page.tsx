@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { refresh, revalidatePath, unstable_cache, updateTag } from 'next/cache'
+import { refresh, revalidatePath } from 'next/cache'
 import { translations, type Lang } from '@/app/i18n/translations'
 import { getChapterLangs, getChapterTranslations } from '@/content/registry'
 import { getChapterSlideVisuals } from '@/content/slidesyncRegistry'
@@ -13,12 +13,10 @@ import type { Block } from '@/content/types'
 
 export const metadata: Metadata = { title: 'Chapters · Admin R.O.P.' }
 
-const CHAPTER_STATS_TAG = 'admin-chapter-stats'
-const CHAPTER_STATS_CACHE_VERSION = 'rop-chapter-analytics-v6'
+export const dynamic = 'force-dynamic'
 
 async function recalculateChapterStats() {
   'use server'
-  updateTag(CHAPTER_STATS_TAG)
   revalidatePath('/admin/chapitres', 'page')
   refresh()
 }
@@ -278,12 +276,6 @@ function buildChapterReferenceRows(
     .sort((a, b) => b.referenceCount - a.referenceCount || b.sourceChapterCount - a.sourceChapterCount || Number(a.num) - Number(b.num))
 }
 
-const getChapterStatsSnapshot = unstable_cache(
-  async () => buildChapterStatsSnapshot(),
-  [CHAPTER_STATS_TAG, CHAPTER_STATS_CACHE_VERSION],
-  { tags: [CHAPTER_STATS_TAG] },
-)
-
 export default async function AdminChapitresPage() {
   const t = translations.en.chapters
   const {
@@ -310,7 +302,7 @@ export default async function AdminChapitresPage() {
     referenceRows,
     totalCrossChapterReferences,
     referencedChapterCount,
-  } = await getChapterStatsSnapshot()
+  } = buildChapterStatsSnapshot()
   const textAnalyticsRows: ChapterTextAnalyticsRow[] = analyzedRows.map((row) => ({
     num: row.num,
     title: row.title,
