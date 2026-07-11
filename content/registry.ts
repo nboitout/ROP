@@ -99,13 +99,19 @@ const registry: Record<string, Partial<Record<Lang, Chapter>>> = {
   'chapter-21': { fr: chapter21Fr, en: chapter21En, de: chapter21De, es: chapter21Es, it: chapter21It },
 }
 
+export type ChapterKey = keyof typeof registry
+
+export function getChapterKeys(): ChapterKey[] {
+  return Object.keys(registry) as ChapterKey[]
+}
+
 /**
  * Returns the chapter in the requested language when available, otherwise the
  * French version. `contentLang` reports which language was actually returned so
  * the reader can show a fallback notice when it differs from the request.
  */
 export function getChapter(
-  key: keyof typeof registry,
+  key: ChapterKey,
   lang: Lang
 ): { chapter: Chapter; contentLang: Lang } {
   const byLang = registry[key]
