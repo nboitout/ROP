@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { revalidatePath, revalidateTag, unstable_cache } from 'next/cache'
+import { refresh, revalidatePath, unstable_cache, updateTag } from 'next/cache'
 import { translations, type Lang } from '@/app/i18n/translations'
 import { getChapterLangs, getChapterTranslations } from '@/content/registry'
 import { getChapterSlideVisuals } from '@/content/slidesyncRegistry'
@@ -18,8 +18,9 @@ const CHAPTER_STATS_CACHE_VERSION = 'rop-chapter-analytics-v6'
 
 async function recalculateChapterStats() {
   'use server'
-  revalidateTag(CHAPTER_STATS_TAG, 'max')
+  updateTag(CHAPTER_STATS_TAG)
   revalidatePath('/admin/chapitres', 'page')
+  refresh()
 }
 
 const LANGS: Lang[] = ['fr', 'en', 'de', 'es', 'it', 'th']
