@@ -113,7 +113,6 @@ export const chapter15SlideAnchors: SyncAnchor[] = [
   { sectionId: 'pathologies-courantes', blockIndex: 23, slide: 24 },
   { sectionId: 'pathologies-courantes', blockIndex: 25, slide: 25 },
   { sectionId: 'pathologies-courantes', blockIndex: 27, slide: 26 },
-  { sectionId: 'zones-reflexes-podales', blockIndex: -1, slide: 27 },
   { sectionId: 'zones-reflexes-podales', blockIndex: 2, slide: 27 },
   { sectionId: 'zones-reflexes-podales', blockIndex: 3, slide: 28 },
   { sectionId: 'zones-reflexes-podales', blockIndex: 5, slide: 29 },
