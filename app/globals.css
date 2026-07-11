@@ -447,6 +447,10 @@ footer > div > p { font-size:.95rem; color:rgba(245,240,232,.84); line-height:1.
 .cr-fig-btn { display:block; width:100%; background:none; border:none; padding:0; cursor:zoom-in; position:relative; line-height:0; border-radius:4px; overflow:hidden; transition:box-shadow .25s; }
 .cr-fig-btn:hover { box-shadow:0 12px 36px rgba(26,26,24,.18); }
 .cr-fig-btn img { width:100%; height:auto; display:block; background:#fff; }
+.cr-fig-portrait .cr-fig-btn,
+.cr-fig-narrow .cr-fig-btn { aspect-ratio:2/3; }
+.cr-fig-portrait .cr-fig-btn img,
+.cr-fig-narrow .cr-fig-btn img { height:100%; object-fit:cover; object-position:center; }
 .cr-fig-zoom { position:absolute; bottom:12px; right:12px; width:36px; height:36px; border-radius:50%;
   background:rgba(26,26,24,.78); color:var(--cream); font-size:1.05rem; display:flex; align-items:center; justify-content:center;
   opacity:0; transition:opacity .2s; pointer-events:none; }
@@ -995,9 +999,8 @@ a.ss-switch-opt:hover { color:var(--gold); }
   margin-left:calc(var(--ss-article-pad-x) * -1);
   margin-right:calc(var(--ss-article-pad-x) * -1);
 }
-.ss-article[data-chapter="chapter-4"] #sec-zones-reflexes-podales .cr-fig-portrait .cr-fig-btn { aspect-ratio:2/3; }
 .ss-article[data-chapter="chapter-4"] #sec-zones-reflexes-podales .cr-fig-landscape .cr-fig-btn { aspect-ratio:3/2; }
-.ss-article[data-chapter="chapter-4"] #sec-zones-reflexes-podales .cr-fig-btn img { height:100%; object-fit:contain; }
+.ss-article[data-chapter="chapter-4"] #sec-zones-reflexes-podales .cr-fig-landscape .cr-fig-btn img { height:100%; object-fit:contain; }
 
 @media (max-width:1180px){
   .ss-layout { grid-template-columns:minmax(0,1fr) minmax(0,560px); }
