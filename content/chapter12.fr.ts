@@ -486,13 +486,11 @@ export const chapter12Fr: Chapter = {
         {
           "type": "para",
           "text": "C'est le cas du pancréas, dont les atteintes peuvent parfois s'accompagner d'une lombalgie haute aiguë, d'une dorsalgie basse, d'un lumbago ou d'une scapulalgie gauche."
-        }
-      ]
-    },
-    {
-      "id": "diagnostics-exclusion",
-      "title": "Diagnostics d'exclusion",
-      "blocks": [
+        },
+        {
+          "type": "sub",
+          "text": "Diagnostics d'exclusion"
+        },
         {
           "type": "para",
           "text": "Les symptômes qui doivent nous alerter sur une possible gravité sont :"
@@ -511,13 +509,11 @@ export const chapter12Fr: Chapter = {
             "Selles de couleur mastic, flottantes, grasses et luisantes ;",
             "Satiété après le repas puis, une heure après, fringale avec envie de viande rouge, d'aliments gras et sucres."
           ]
-        }
-      ]
-    },
-    {
-      "id": "diabete",
-      "title": "Diabète",
-      "blocks": [
+        },
+        {
+          "type": "sub",
+          "text": "Diabète"
+        },
         {
           "type": "para",
           "text": "C'est une élévation anormale de la glycémie."
@@ -572,13 +568,11 @@ export const chapter12Fr: Chapter = {
         {
           "type": "para",
           "text": "Risque accru de macrosomie et de certaines complications néonatales ; certaines malformations peuvent être associées à des déséquilibres glycémiques maternels précoces."
-        }
-      ]
-    },
-    {
-      "id": "complications-du-diabete",
-      "title": "Complications du diabète",
-      "blocks": [
+        },
+        {
+          "type": "sub",
+          "text": "Complications du diabète"
+        },
         {
           "type": "para",
           "text": "Les conséquences de l'hyperglycémie prolongée incluent des neuropathies, des pathologies cardio-vasculaires et des atteintes ostéo-articulaires."
@@ -658,13 +652,11 @@ export const chapter12Fr: Chapter = {
         {
           "type": "para",
           "text": "S'il n'est pas accompagné d'une prise en charge hygiéno-diététique adaptée, du contrôle des facteurs de risque et des traitements appropriés, il peut s'aggraver avec les complications citées ci-dessus."
-        }
-      ]
-    },
-    {
-      "id": "pancreatite",
-      "title": "Pancreatite",
-      "blocks": [
+        },
+        {
+          "type": "sub",
+          "text": "Pancreatite"
+        },
         {
           "type": "para",
           "text": "C'est une inflammation du pancréas."
@@ -680,13 +672,11 @@ export const chapter12Fr: Chapter = {
             "L'alcool ;",
             "Plus rarement, une complication de la chirurgie biliaire principale ou un traumatisme abdominal."
           ]
-        }
-      ]
-    },
-    {
-      "id": "cancer",
-      "title": "Cancer",
-      "blocks": [
+        },
+        {
+          "type": "sub",
+          "text": "Cancer"
+        },
         {
           "type": "para",
           "text": "Dans la majorite des cas, il s'agit d'un adenocarcinome."
