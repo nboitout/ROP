@@ -244,6 +244,6 @@ export const chapter14SlideAnchorsFr: SyncAnchor[] = [
   { sectionId: 'rop',            blockIndex: 9,  slide: 25 },
   { sectionId: 'rop',            blockIndex: 10, slide: 26 },
   { sectionId: 'rop',            blockIndex: 14, slide: 27 },
-  { sectionId: 'rop',            blockIndex: 15, slide: 28 },
+  { sectionId: 'rop',            blockIndex: 16, slide: 28 },
   { sectionId: 'relations',      blockIndex: 2,  slide: 29 },
 ]

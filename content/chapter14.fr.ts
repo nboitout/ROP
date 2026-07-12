@@ -200,7 +200,7 @@ export const chapter14Fr: Chapter = {
           'Plexus lombaire (lien viscéro-somatique).',
         ]},
         { type: 'figure', src: '/chapter-14/cartographie/figure-14-10.png', caption: 'Photo : Origine médullaire du parasympathique pelvien ou sacré', alt: 'Repère podal de l’origine médullaire du parasympathique pelvien ou sacré', orientation: 'landscape' },
-        { type: 'figure', src: '/chapter-14/cartographie/figure-14-12.png', caption: 'Photo : Chaîne plexique prévertébrale', alt: 'Repère podal de la chaîne plexique prévertébrale', orientation: 'portrait' },
+        { type: 'figure', src: '/chapter-14/cartographie/figure-14-12.png', caption: 'Photo : Chaîne plexique prévertébrale', alt: 'Repère podal de la chaîne plexique prévertébrale', orientation: 'landscape' },
 
         { type: 'para', text: 'N.B. Dans notre expérience clinique, les troubles fonctionnels intestinaux sont souvent observés chez la femme en lien avec des facteurs hormonaux et émotionnels.' },
 
@@ -211,7 +211,7 @@ export const chapter14Fr: Chapter = {
           'Racine du mésentère : une ligne de la jonction duodéno-jéjunale à l’ombilic, à hauteur de L3-L4 (face plantaire du pied gauche).',
           'Racine du mésentère : une ligne de la valvule iléo-caecale à l’ombilic (face plantaire du pied droit).',
         ]},
-        { type: 'figure', src: '/chapter-14/cartographie/figure-14-14.png', caption: 'Photo : Racine du mésentère entre la jonction duodéno-jéjunale et l’ombilic', alt: 'Repère podal de la racine du mésentère côté jéjunum', orientation: 'portrait' },
+        { type: 'figure', src: '/chapter-14/cartographie/figure-14-14.png', caption: 'Photo : Racine du mésentère entre la jonction duodéno-jéjunale et l’ombilic', alt: 'Repère podal de la racine du mésentère côté jéjunum', orientation: 'landscape' },
         { type: 'figure', src: '/chapter-14/cartographie/figure-14-16.png', caption: 'Photo : Racine du mésentère entre la valvule iléo-caecale et l’ombilic', alt: 'Repère podal de la racine du mésentère côté iléum', orientation: 'portrait' },
 
         { type: 'sub', text: 'Zones réflexes podales — Jéjunum (pied gauche)' },
@@ -221,7 +221,7 @@ export const chapter14Fr: Chapter = {
           'Limite latérale : jusqu’au bord latéral du pied gauche.',
           'Respecter l’orientation des anses : horizontales pour le jéjunum.',
         ]},
-        { type: 'figure', src: '/chapter-14/cartographie/figure-14-17.png', caption: 'Photo : Jéjunum (limites supérieure et inférieure)', alt: 'Repère podal du jéjunum sur le pied gauche', orientation: 'portrait' },
+        { type: 'figure', src: '/chapter-14/cartographie/figure-14-17.png', caption: 'Photo : Jéjunum (limites supérieure et inférieure)', alt: 'Repère podal du jéjunum sur le pied gauche', orientation: 'landscape' },
 
         { type: 'sub', text: 'Zones réflexes podales — Iléum (pied droit)' },
         { type: 'bullets', items: [
