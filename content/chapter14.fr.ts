@@ -176,7 +176,7 @@ export const chapter14Fr: Chapter = {
     },
     {
       id: 'rop',
-      title: 'ROP de l’intestin grêle',
+      title: 'Zones réflexes podales',
       blocks: [
         { type: 'sub', text: 'Syndrome général d’adaptation' },
         { type: 'sub', text: '1. Nerf vague' },
