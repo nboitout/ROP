@@ -163,8 +163,9 @@ export const chapter14Fr: Chapter = {
 
         { type: 'lead', label: 'Diagnostic d’exclusion', text: 'certains symptômes doivent orienter les patients vers un médecin : fièvre, sang rouge ou noir dans les selles, déshydratation importante, perte de poids importante et inexpliquée, alternance constipation-diarrhée, vomissements, douleur colique de la région ombilicale, météorisme, occlusion (iléus mécanique ou paralytique), hernie inguinale étranglée, ganglion de Troisier (suspicion de cancer), signe de l’épanchement intra-abdominal.' },
 
-        { type: 'sub', text: 'Indications en ROP' },
-        { type: 'para', text: 'Dysbioses, suites de gastro-entérites, entéroptoses (tension anormale de l’intestin grêle associée à des vasoconstrictions, stases veineuses et lymphatiques, et spasmes des plexus nerveux péri-vasculaires), iléus paralytique (inhibition de la motricité et des sécrétions intestinales par irritation du péritoine à dominante sympathique).' },
+        { type: 'rop', body: [
+          'Dysbioses, suites de gastro-entérites, entéroptoses (tension anormale de l’intestin grêle associée à des vasoconstrictions, stases veineuses et lymphatiques, et spasmes des plexus nerveux péri-vasculaires), iléus paralytique (inhibition de la motricité et des sécrétions intestinales par irritation du péritoine à dominante sympathique).',
+        ]},
 
         { type: 'sub', text: 'Maladie de Crohn' },
         { type: 'para', text: 'Cette maladie touche essentiellement l’iléum et le côlon. Plusieurs facteurs y sont associés : génétique, dysbiose, environnement, et émotionnel comme facteur de modulation du vécu et parfois des poussées.' },
@@ -187,8 +188,10 @@ export const chapter14Fr: Chapter = {
           'Hiatus œsophagien (nerfs vagues droit et gauche) et cardia.',
           'Petite courbure de l’estomac, riche en fibres vagales.',
         ]},
-        { type: 'figure', src: '/chapter-14/figure-14-17.png', caption: 'Hiatus œsophagien (nerfs vagues droit et gauche) et cardia', alt: 'Hiatus œsophagien et nerfs vagues', orientation: 'portrait' },
-        { type: 'figure', src: '/chapter-14/figure-14-18.png', caption: 'Petite courbure de l’estomac, riche en fibres vagales', alt: 'Petite courbure de l’estomac et fibres vagales', orientation: 'portrait' },
+        { type: 'figure', src: '/chapter-14/cartographie/figure-14-02.png', caption: 'Photo : Nerf vague X dans la moelle allongée', alt: 'Repère podal du nerf vague X dans la moelle allongée', orientation: 'portrait' },
+        { type: 'figure', src: '/chapter-14/cartographie/figure-14-04.png', caption: 'Photo : Nerf vague X dans le foramen jugulaire', alt: 'Repère podal du nerf vague X dans le foramen jugulaire', orientation: 'portrait' },
+        { type: 'figure', src: '/chapter-14/cartographie/figure-14-06.png', caption: 'Photo : Hiatus œsophagien et nerfs vagues droit et gauche', alt: 'Repère podal du hiatus œsophagien et des nerfs vagues', orientation: 'portrait' },
+        { type: 'figure', src: '/chapter-14/cartographie/figure-14-08.png', caption: 'Photo : Petite courbure de l’estomac', alt: 'Repère podal de la petite courbure de l’estomac', orientation: 'portrait' },
 
         { type: 'sub', text: '2. Système sympathique' },
         { type: 'bullets', items: [
@@ -196,8 +199,8 @@ export const chapter14Fr: Chapter = {
           'Plexus cœliaque (solaire).',
           'Plexus lombaire (lien viscéro-somatique).',
         ]},
-        { type: 'figure', src: '/chapter-14/figure-14-20.png', caption: 'Chaîne ganglionnaire lombaire et piliers du diaphragme', alt: 'Chaîne ganglionnaire lombaire et piliers du diaphragme', orientation: 'landscape' },
-        { type: 'figure', src: '/chapter-14/Chapter14 Photo Chaine Plexique .png', caption: 'Photo — Chaîne plexique', alt: 'Chaîne plexique', orientation: 'landscape' },
+        { type: 'figure', src: '/chapter-14/cartographie/figure-14-10.png', caption: 'Photo : Origine médullaire du parasympathique pelvien ou sacré', alt: 'Repère podal de l’origine médullaire du parasympathique pelvien ou sacré', orientation: 'landscape' },
+        { type: 'figure', src: '/chapter-14/cartographie/figure-14-12.png', caption: 'Photo : Chaîne plexique prévertébrale', alt: 'Repère podal de la chaîne plexique prévertébrale', orientation: 'portrait' },
 
         { type: 'para', text: 'N.B. Dans notre expérience clinique, les troubles fonctionnels intestinaux sont souvent observés chez la femme en lien avec des facteurs hormonaux et émotionnels.' },
 
@@ -208,8 +211,8 @@ export const chapter14Fr: Chapter = {
           'Racine du mésentère : une ligne de la jonction duodéno-jéjunale à l’ombilic, à hauteur de L3-L4 (face plantaire du pied gauche).',
           'Racine du mésentère : une ligne de la valvule iléo-caecale à l’ombilic (face plantaire du pied droit).',
         ]},
-        { type: 'figure', src: '/chapter-14/figure-14-22.jpg', caption: 'Racine du mésentère (entre la jonction duodéno-jéjunale et l’ombilic)', alt: 'Zone réflexe de la racine du mésentère côté jéjunum', orientation: 'portrait' },
-        { type: 'figure', src: '/chapter-14/figure-14-23.jpg', caption: 'Racine du mésentère (entre la valvule iléo-caecale et l’ombilic)', alt: 'Zone réflexe de la racine du mésentère côté iléum', orientation: 'portrait' },
+        { type: 'figure', src: '/chapter-14/cartographie/figure-14-14.png', caption: 'Photo : Racine du mésentère entre la jonction duodéno-jéjunale et l’ombilic', alt: 'Repère podal de la racine du mésentère côté jéjunum', orientation: 'portrait' },
+        { type: 'figure', src: '/chapter-14/cartographie/figure-14-16.png', caption: 'Photo : Racine du mésentère entre la valvule iléo-caecale et l’ombilic', alt: 'Repère podal de la racine du mésentère côté iléum', orientation: 'portrait' },
 
         { type: 'sub', text: 'Zones réflexes podales — Jéjunum (pied gauche)' },
         { type: 'bullets', items: [
@@ -218,7 +221,7 @@ export const chapter14Fr: Chapter = {
           'Limite latérale : jusqu’au bord latéral du pied gauche.',
           'Respecter l’orientation des anses : horizontales pour le jéjunum.',
         ]},
-        { type: 'figure', src: '/chapter-14/figure-14-24.png', caption: 'Jéjunum (limites supérieure et inférieure)', alt: 'Limites de la zone réflexe du jéjunum sur le pied gauche', orientation: 'portrait' },
+        { type: 'figure', src: '/chapter-14/cartographie/figure-14-17.png', caption: 'Photo : Jéjunum (limites supérieure et inférieure)', alt: 'Repère podal du jéjunum sur le pied gauche', orientation: 'portrait' },
 
         { type: 'sub', text: 'Zones réflexes podales — Iléum (pied droit)' },
         { type: 'bullets', items: [
@@ -227,11 +230,11 @@ export const chapter14Fr: Chapter = {
           'Limite latérale : à l’aplomb du 4ème orteil du pied droit.',
           'Respecter l’orientation des anses : verticales pour l’iléum.',
         ]},
-        { type: 'figure', src: '/chapter-14/figure-14-26.png', caption: 'Iléum (limites supérieure et inférieure)', alt: 'Limites de la zone réflexe de l’iléum sur le pied droit', orientation: 'portrait' },
+        { type: 'figure', src: '/chapter-14/cartographie/figure-14-18.png', caption: 'Photo : Iléum (limites supérieure et inférieure)', alt: 'Repère podal de l’iléum sur le pied droit', orientation: 'portrait' },
 
         { type: 'sub', text: '3. Système limbique' },
         { type: 'lead', label: 'Balance cerveau limbique — intestin grêle', text: 'écoute-induction : un pouce sur l’intestin grêle, l’autre pouce sur le cerveau limbique.' },
-        { type: 'figure', src: '/chapter-14/figure-14-28.png', caption: 'Technique balance viscéro-émotionnelle — intestin grêle', alt: 'Balance viscéro-émotionnelle intestin grêle et cerveau limbique', orientation: 'portrait' },
+        { type: 'figure', src: '/chapter-14/cartographie/figure-14-19.png', caption: 'Photo : Technique balance viscéro-émotionnelle — intestin grêle', alt: 'Technique balance viscéro-émotionnelle intestin grêle et cerveau limbique', orientation: 'portrait' },
       ],
     },
     {
