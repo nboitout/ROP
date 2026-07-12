@@ -163,7 +163,8 @@ export const chapter14Fr: Chapter = {
 
         { type: 'lead', label: 'Diagnostic d’exclusion', text: 'certains symptômes doivent orienter les patients vers un médecin : fièvre, sang rouge ou noir dans les selles, déshydratation importante, perte de poids importante et inexpliquée, alternance constipation-diarrhée, vomissements, douleur colique de la région ombilicale, météorisme, occlusion (iléus mécanique ou paralytique), hernie inguinale étranglée, ganglion de Troisier (suspicion de cancer), signe de l’épanchement intra-abdominal.' },
 
-        { type: 'lead', label: 'Indications en ROP', text: 'dysbioses, suites de gastro-entérites, entéroptoses (tension anormale de l’intestin grêle associée à des vasoconstrictions, stases veineuses et lymphatiques, et spasmes des plexus nerveux péri-vasculaires), iléus paralytique (inhibition de la motricité et des sécrétions intestinales par irritation du péritoine à dominante sympathique).' },
+        { type: 'sub', text: 'Indications en ROP' },
+        { type: 'para', text: 'Dysbioses, suites de gastro-entérites, entéroptoses (tension anormale de l’intestin grêle associée à des vasoconstrictions, stases veineuses et lymphatiques, et spasmes des plexus nerveux péri-vasculaires), iléus paralytique (inhibition de la motricité et des sécrétions intestinales par irritation du péritoine à dominante sympathique).' },
 
         { type: 'sub', text: 'Maladie de Crohn' },
         { type: 'para', text: 'Cette maladie touche essentiellement l’iléum et le côlon. Plusieurs facteurs y sont associés : génétique, dysbiose, environnement, et émotionnel comme facteur de modulation du vécu et parfois des poussées.' },

@@ -211,7 +211,7 @@ export const chapter14SlideAnchors: SyncAnchor[] = [
   { sectionId: 'relations',      blockIndex: 2,  slide: 24 },
 ]
 
-// French anchor table — for the re-rendered 16-page deck (FR only). The Crohn
+// French anchor table — for the re-rendered 21-page deck (FR only). The Crohn
 // case is shown before the ROP sequence; the emotional-profile slide is last
 // because it is the final slide encountered in the text.
 export const chapter14SlideAnchorsFr: SyncAnchor[] = [
@@ -229,13 +229,13 @@ export const chapter14SlideAnchorsFr: SyncAnchor[] = [
   { sectionId: 'physiologie',    blockIndex: 7,  slide: 12 },
   { sectionId: 'physiologie',    blockIndex: 8,  slide: 13 },
   { sectionId: 'pathologies',    blockIndex: 0,  slide: 14 },
-  { sectionId: 'pathologies',    blockIndex: 1,  slide: 15 },
+  { sectionId: 'pathologies',    blockIndex: 1,  slide: 15, gapBefore: 'half' },
   { sectionId: 'pathologies',    blockIndex: 7,  slide: 16 },
   { sectionId: 'pathologies',    blockIndex: 11, slide: 17 },
-  { sectionId: 'pathologies',    blockIndex: 13, slide: 18 },
-  { sectionId: 'pathologies',    blockIndex: 15, slide: 19 },
+  { sectionId: 'pathologies',    blockIndex: 14, slide: 18 },
+  { sectionId: 'pathologies',    blockIndex: 17, slide: 19, gapBefore: 'half' },
   { sectionId: 'rop',            blockIndex: -1, slide: 20 },
-  { sectionId: 'rop',            blockIndex: 1,  slide: 21 },
+  { sectionId: 'rop',            blockIndex: 1,  slide: 21, gapBefore: 'half' },
   { sectionId: 'rop',            blockIndex: 4,  slide: 22 },
   { sectionId: 'rop',            blockIndex: 7,  slide: 23 },
   { sectionId: 'rop',            blockIndex: 8,  slide: 24, gapBefore: 'half' },
