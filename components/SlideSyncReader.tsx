@@ -1034,7 +1034,7 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
                 <span className="ss-section-tick" style={{ width: `${sectionRailTickWidth(index, isActive)}px` }} aria-hidden />
                 <span className="ss-section-card">
                   <span className="ss-section-num">{String(index + 1).padStart(2, '0')}</span>
-                  <span className="ss-section-title">{section.title}</span>
+                  <span className="ss-section-title">{section.railTitle ?? section.title}</span>
                 </span>
               </button>
             )

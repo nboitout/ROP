@@ -412,6 +412,7 @@ export const chapter19Fr: Chapter = {
     {
       "id": "uterus-pathologies-courantes",
       "title": "Pathologies courantes",
+      "railTitle": "Utérus — Pathologies courantes",
       "blocks": [
         {
           "type": "sub",
@@ -783,6 +784,7 @@ export const chapter19Fr: Chapter = {
     {
       "id": "ovaires-trompes-pathologies-courantes",
       "title": "Pathologies courantes",
+      "railTitle": "Ovaires/trompes — Pathologies courantes",
       "blocks": [
         {
           "type": "para",

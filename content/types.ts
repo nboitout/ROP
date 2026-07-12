@@ -11,7 +11,7 @@ export type Block =
   | { type: 'rop'; body: string[] }
   | { type: 'reflexAtlas' }
 
-export type Section = { id: string; title: string; blocks: Block[] }
+export type Section = { id: string; title: string; blocks: Block[]; railTitle?: string }
 
 export type Chapter = {
   slug: string          // URL + tracking identifier (e.g. 'introduction', 'chapter-5')
