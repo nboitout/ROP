@@ -255,7 +255,7 @@ export const chapter14Fr: Chapter = {
     },
   ],
   slides: {
-    url: '/chapter-14/Chap 14 -- slides de synthese - rework - FR.pdf',
+    url: '/chapter-14/Chapter14 Slides de synthese rework2 - FR.pdf',
     label: 'Diapositives',
     description: "Synthèse visuelle du chapitre — anatomie, physiologie et zones réflexes R.O.P. de l'intestin grêle.",
   },

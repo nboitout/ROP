@@ -15,8 +15,8 @@ export type SyncSlide = { src: string; title: string; orientation?: 'portrait' }
 // rendered just above the <h2> instead of inside a content block).
 export type SyncAnchor = { sectionId: string; blockIndex: number; slide: number; gapBefore?: 'half' }
 
-// French deck — re-rendered from the trimmed/reorganised synthese.pdf (16 pages,
-// slides 1–16), followed by the supplementary anatomical figure-slides (17–22).
+// French deck — re-rendered from the 21-page rework deck, followed by the
+// supplementary reflex-zone figure-slides.
 // Because the FR PDF was reorganised independently of EN/DE/ES/IT, the French
 // deck uses its own anchor table (chapter14SlideAnchorsFr); the other four
 // languages still share chapter14SlideAnchors until their PDFs are updated too.
@@ -26,27 +26,28 @@ export const chapter14Slides: SyncSlide[] = [
   { src: '/chapter-14/slides/fr-rework/slide-03.png', title: 'Le mésentère et sa mécanique de suspension' },
   { src: '/chapter-14/slides/fr-rework/slide-04.png', title: 'Suspension et mécanique intestinale' },
   { src: '/chapter-14/slides/fr-rework/slide-05.png', title: 'L’axe vasculaire et le système porte' },
-  { src: '/chapter-14/slides/fr-rework/slide-06.png', title: 'L’axe de l’irrigation et du drainage : tronc mésentérique supérieur' },
-  { src: '/chapter-14/slides/fr-rework/slide-07.png', title: 'Le réseau lymphatique et immunitaire' },
+  { src: '/chapter-14/slides/fr-rework/slide-07.png', title: 'L’axe de l’irrigation et du drainage : tronc mésentérique supérieur' },
+  { src: '/chapter-14/slides/fr-rework/slide-06.png', title: 'Le réseau lymphatique et immunitaire' },
   { src: '/chapter-14/slides/fr-rework/slide-08.png', title: 'La double réalité neurologique du péritoine' },
-  { src: '/chapter-14/slides/fr-rework/slide-08b.png', title: 'Le câblage électrique : les nerfs phréniques' },
   { src: '/chapter-14/slides/fr-rework/slide-09.png', title: 'Le deuxième cerveau : autonomie du système nerveux entérique (SNE)' },
   { src: '/chapter-14/slides/fr-rework/slide-10.png', title: 'Le deuxième cerveau : système nerveux entérique' },
   { src: '/chapter-14/slides/fr-rework/slide-11.png', title: 'L’écosystème intestinal : frontière biologique' },
   { src: '/chapter-14/slides/fr-rework/slide-12.png', title: 'La double voie d’absorption micronutritionnelle' },
-  { src: '/chapter-14/slides/fr-rework/slide-13.png', title: 'La spirale : dysbiose et hyperperméabilité' },
-  { src: '/chapter-14/slides/fr-rework/slide-14.png', title: 'Déséquilibre : hyperperméabilité et dysbiose' },
-  { src: '/chapter-14/slides/fr-rework/slide-15.png', title: 'Les conséquences systémiques du terrain inflammatoire' },
-  { src: '/chapter-14/slides/fr-rework/slide-16.png', title: 'Signes d’alerte et diagnostic d’exclusion' },
-  { src: '/chapter-14/slides/fr-rework/slide-17.png', title: 'Protocole ROP : ordre de traitement' },
+  { src: '/chapter-14/slides/fr-rework/slide-13.png', title: 'Micro-anatomie : la barrière intestinale' },
+  { src: '/chapter-14/slides/fr-rework/slide-14.png', title: 'La spirale : dysbiose et hyperperméabilité' },
+  { src: '/chapter-14/slides/fr-rework/slide-15.png', title: 'Hyperperméabilité intestinale et dysbiose' },
+  { src: '/chapter-14/slides/fr-rework/slide-16.png', title: 'Cartographie des répercussions systémiques' },
+  { src: '/chapter-14/slides/fr-rework/slide-17.png', title: 'Matrice de triage : indications vs exclusions' },
+  { src: '/chapter-14/slides/fr-rework/slide-18.png', title: 'Maladie de Crohn' },
+  { src: '/chapter-14/slides/fr-rework/slide-19.png', title: 'Maladies inflammatoires chroniques de l’intestin' },
+  { src: '/chapter-14/slides/fr-rework/slide-20.png', title: 'Protocole ROP : ordre de traitement' },
   { src: '/chapter-14/figure-14-15.png', title: 'Territoire crânien et cervical du nerf vague' },
   { src: '/chapter-14/figure-14-16.png', title: 'Territoire abdominal gauche du nerf vague et plexus cœliaque (solaire)' },
   { src: '/chapter-14/Chapter14 Fig19 FR.png', title: 'Système sympathique (origine médullaire)' },
   { src: '/chapter-14/Chapter14 Fig21 FR.png', title: 'Plexus cœliaque (solaire)' },
   { src: '/chapter-14/figure-14-25.png', title: 'Jéjunum (zone réflexe podale)' },
   { src: '/chapter-14/figure-14-27.png', title: 'Iléum et racine du mésentère (zone réflexe podale)' },
-  { src: '/chapter-14/slides/fr-rework/slide-18.png', title: 'Synthèse d’intervention ROP : protocole intestin grêle' },
-  { src: '/chapter-14/slides/fr-rework/slide-19.png', title: 'Profil viscéro-émotionnel : la personne intestin' },
+  { src: '/chapter-14/slides/fr-rework/slide-21.png', title: 'Profil viscéro-émotionnel : la personne intestin' },
 ]
 
 // English deck — same slides, translated. The text↔slide anchors are shared
@@ -215,37 +216,30 @@ export const chapter14SlideAnchors: SyncAnchor[] = [
 // because it is the final slide encountered in the text.
 export const chapter14SlideAnchorsFr: SyncAnchor[] = [
   { sectionId: 'presentation',   blockIndex: 0,  slide: 1 },
-  // Slide 2 sits just above the "Ils s'étendent du pylore…" paragraph (presentation block 2).
   { sectionId: 'presentation',   blockIndex: 2,  slide: 2 },
   { sectionId: 'anatomie',       blockIndex: 2,  slide: 3 },
   { sectionId: 'anatomie',       blockIndex: 3,  slide: 4 },
   { sectionId: 'vascularisation', blockIndex: 2,  slide: 5 },
   { sectionId: 'vascularisation', blockIndex: 4,  slide: 6 },
-  // Half-page break after the "Veine mésentérique supérieure" paragraph (block 4).
   { sectionId: 'vascularisation', blockIndex: 5,  slide: 7, gapBefore: 'half' },
   { sectionId: 'innervation',    blockIndex: 2,  slide: 8 },
   { sectionId: 'innervation',    blockIndex: 5,  slide: 9 },
   { sectionId: 'innervation',    blockIndex: 6,  slide: 10 },
-  { sectionId: 'innervation',    blockIndex: 8,  slide: 11 },
-  { sectionId: 'physiologie',    blockIndex: 5,  slide: 12 },
+  { sectionId: 'physiologie',    blockIndex: 4,  slide: 11 },
+  { sectionId: 'physiologie',    blockIndex: 7,  slide: 12 },
   { sectionId: 'physiologie',    blockIndex: 8,  slide: 13 },
   { sectionId: 'pathologies',    blockIndex: 0,  slide: 14 },
   { sectionId: 'pathologies',    blockIndex: 1,  slide: 15 },
   { sectionId: 'pathologies',    blockIndex: 7,  slide: 16 },
   { sectionId: 'pathologies',    blockIndex: 11, slide: 17 },
-  // Protocole ROP (ordre de traitement) — overview, at the ROP section heading.
-  { sectionId: 'rop',            blockIndex: -1, slide: 18 },
-  // Figure-slides (cranial vagus, left-abdominal vagus, sympathetic system,
-  // celiac plexus, jejunum and ileum reflex zones) anchored in the ROP section.
-  { sectionId: 'rop',            blockIndex: 1,  slide: 19 },
-  { sectionId: 'rop',            blockIndex: 4,  slide: 20 },
-  { sectionId: 'rop',            blockIndex: 7,  slide: 21 },
-  // Plexus cœliaque slide; the marker appears just before the new plexique photo.
-  { sectionId: 'rop',            blockIndex: 8,  slide: 22, gapBefore: 'half' },
-  { sectionId: 'rop',            blockIndex: 12, slide: 23 },
-  { sectionId: 'rop',            blockIndex: 18, slide: 24 },
-  // Synthèse d'intervention ROP — after the reflex-zone slides, at the limbic step.
-  { sectionId: 'rop',            blockIndex: 20, slide: 25 },
-  // Profil viscéro-émotionnel — at "Relations viscéro-émotionnelles".
-  { sectionId: 'relations',      blockIndex: 2,  slide: 26 },
+  { sectionId: 'pathologies',    blockIndex: 13, slide: 18 },
+  { sectionId: 'pathologies',    blockIndex: 15, slide: 19 },
+  { sectionId: 'rop',            blockIndex: -1, slide: 20 },
+  { sectionId: 'rop',            blockIndex: 1,  slide: 21 },
+  { sectionId: 'rop',            blockIndex: 4,  slide: 22 },
+  { sectionId: 'rop',            blockIndex: 7,  slide: 23 },
+  { sectionId: 'rop',            blockIndex: 8,  slide: 24, gapBefore: 'half' },
+  { sectionId: 'rop',            blockIndex: 12, slide: 25 },
+  { sectionId: 'rop',            blockIndex: 18, slide: 26 },
+  { sectionId: 'relations',      blockIndex: 2,  slide: 27 },
 ]
