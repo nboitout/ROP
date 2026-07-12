@@ -186,8 +186,8 @@ export const chapter14En: Chapter = {
           'Oesophageal hiatus (right and left vagus nerves) and cardia.',
           'Lesser curvature of the stomach, rich in vagal fibres.',
         ]},
-        { type: 'figure', src: '/chapter-14/en/figure-14-17.png', caption: 'Oesophageal hiatus (right and left vagus nerves) and cardia', alt: 'Oesophageal hiatus and vagus nerves', orientation: 'landscape' },
-        { type: 'figure', src: '/chapter-14/en/figure-14-18.png', caption: 'Lesser curvature of the stomach, rich in vagal fibres', alt: 'Lesser curvature of the stomach and vagal fibres', orientation: 'landscape' },
+        { type: 'figure', src: '/chapter-14/en/figure-14-17.png', caption: 'Oesophageal hiatus (right and left vagus nerves) and cardia', alt: 'Oesophageal hiatus and vagus nerves', orientation: 'portrait' },
+        { type: 'figure', src: '/chapter-14/en/figure-14-18.png', caption: 'Lesser curvature of the stomach, rich in vagal fibres', alt: 'Lesser curvature of the stomach and vagal fibres', orientation: 'portrait' },
 
         { type: 'sub', text: '2. Sympathetic system' },
         { type: 'bullets', items: [
@@ -217,7 +217,7 @@ export const chapter14En: Chapter = {
           'Lateral limit: extending to the lateral border of the left foot.',
           'Respect the orientation of the loops: horizontal for the jejunum.',
         ]},
-        { type: 'figure', src: '/chapter-14/en/figure-14-24.png', caption: 'Jejunum (upper and lower limits)', alt: 'Limits of the jejunum reflex zone on the left foot', orientation: 'landscape' },
+        { type: 'figure', src: '/chapter-14/en/figure-14-24.png', caption: 'Jejunum (upper and lower limits)', alt: 'Limits of the jejunum reflex zone on the left foot', orientation: 'portrait' },
 
         { type: 'sub', text: 'Podal reflex zones — Ileum (right foot)' },
         { type: 'bullets', items: [
@@ -226,11 +226,11 @@ export const chapter14En: Chapter = {
           'Lateral limit: aligned with the fourth toe of the right foot.',
           'Respect the orientation of the loops: vertical for the ileum.',
         ]},
-        { type: 'figure', src: '/chapter-14/en/figure-14-26.png', caption: 'Ileum (upper and lower limits)', alt: 'Limits of the ileum reflex zone on the right foot', orientation: 'landscape' },
+        { type: 'figure', src: '/chapter-14/en/figure-14-26.png', caption: 'Ileum (upper and lower limits)', alt: 'Limits of the ileum reflex zone on the right foot', orientation: 'portrait' },
 
         { type: 'sub', text: '3. Limbic system' },
         { type: 'lead', label: 'Limbic brain — small intestine balance', text: 'listening-induction: one thumb on the small intestine, the other thumb on the limbic brain.' },
-        { type: 'figure', src: '/chapter-14/en/figure-14-28.png', caption: 'Viscero-emotional balance technique — small intestine', alt: 'Viscero-emotional balance — small intestine and limbic brain', orientation: 'landscape' },
+        { type: 'figure', src: '/chapter-14/en/figure-14-28.png', caption: 'Viscero-emotional balance technique — small intestine', alt: 'Viscero-emotional balance — small intestine and limbic brain', orientation: 'portrait' },
       ],
     },
     {

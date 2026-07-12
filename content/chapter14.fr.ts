@@ -186,8 +186,8 @@ export const chapter14Fr: Chapter = {
           'Hiatus œsophagien (nerfs vagues droit et gauche) et cardia.',
           'Petite courbure de l’estomac, riche en fibres vagales.',
         ]},
-        { type: 'figure', src: '/chapter-14/figure-14-17.png', caption: 'Hiatus œsophagien (nerfs vagues droit et gauche) et cardia', alt: 'Hiatus œsophagien et nerfs vagues', orientation: 'landscape' },
-        { type: 'figure', src: '/chapter-14/figure-14-18.png', caption: 'Petite courbure de l’estomac, riche en fibres vagales', alt: 'Petite courbure de l’estomac et fibres vagales', orientation: 'landscape' },
+        { type: 'figure', src: '/chapter-14/figure-14-17.png', caption: 'Hiatus œsophagien (nerfs vagues droit et gauche) et cardia', alt: 'Hiatus œsophagien et nerfs vagues', orientation: 'portrait' },
+        { type: 'figure', src: '/chapter-14/figure-14-18.png', caption: 'Petite courbure de l’estomac, riche en fibres vagales', alt: 'Petite courbure de l’estomac et fibres vagales', orientation: 'portrait' },
 
         { type: 'sub', text: '2. Système sympathique' },
         { type: 'bullets', items: [
@@ -217,7 +217,7 @@ export const chapter14Fr: Chapter = {
           'Limite latérale : jusqu’au bord latéral du pied gauche.',
           'Respecter l’orientation des anses : horizontales pour le jéjunum.',
         ]},
-        { type: 'figure', src: '/chapter-14/figure-14-24.png', caption: 'Jéjunum (limites supérieure et inférieure)', alt: 'Limites de la zone réflexe du jéjunum sur le pied gauche', orientation: 'landscape' },
+        { type: 'figure', src: '/chapter-14/figure-14-24.png', caption: 'Jéjunum (limites supérieure et inférieure)', alt: 'Limites de la zone réflexe du jéjunum sur le pied gauche', orientation: 'portrait' },
 
         { type: 'sub', text: 'Zones réflexes podales — Iléum (pied droit)' },
         { type: 'bullets', items: [
@@ -226,11 +226,11 @@ export const chapter14Fr: Chapter = {
           'Limite latérale : à l’aplomb du 4ème orteil du pied droit.',
           'Respecter l’orientation des anses : verticales pour l’iléum.',
         ]},
-        { type: 'figure', src: '/chapter-14/figure-14-26.png', caption: 'Iléum (limites supérieure et inférieure)', alt: 'Limites de la zone réflexe de l’iléum sur le pied droit', orientation: 'landscape' },
+        { type: 'figure', src: '/chapter-14/figure-14-26.png', caption: 'Iléum (limites supérieure et inférieure)', alt: 'Limites de la zone réflexe de l’iléum sur le pied droit', orientation: 'portrait' },
 
         { type: 'sub', text: '3. Système limbique' },
         { type: 'lead', label: 'Balance cerveau limbique — intestin grêle', text: 'écoute-induction : un pouce sur l’intestin grêle, l’autre pouce sur le cerveau limbique.' },
-        { type: 'figure', src: '/chapter-14/figure-14-28.png', caption: 'Technique balance viscéro-émotionnelle — intestin grêle', alt: 'Balance viscéro-émotionnelle intestin grêle et cerveau limbique', orientation: 'landscape' },
+        { type: 'figure', src: '/chapter-14/figure-14-28.png', caption: 'Technique balance viscéro-émotionnelle — intestin grêle', alt: 'Balance viscéro-émotionnelle intestin grêle et cerveau limbique', orientation: 'portrait' },
       ],
     },
     {
