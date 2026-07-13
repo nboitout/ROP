@@ -571,7 +571,12 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
   function openResource(name: string, img: { src: string; alt: string; caption: string }) {
     resourceOpenedAt.current = Date.now()
     resourceNameRef.current = name
-    setLightbox({ ...img, orientation: 'landscape', kind: name === 'clinical_case' ? 'clinical_case' : 'figure', alignY: 'top' })
+    setLightbox({
+      ...img,
+      orientation: name === 'clinical_case' ? 'portrait' : 'landscape',
+      kind: name === 'clinical_case' ? 'clinical_case' : 'figure',
+      alignY: 'top',
+    })
     track('resource_open', { resource: name })
   }
 
