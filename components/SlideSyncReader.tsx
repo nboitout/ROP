@@ -1053,6 +1053,17 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
 
       <div className="cr-topbar">
         <Link href={backHref} className="cr-home">{t.reader.back}</Link>
+        {showClinicalCaseResource && chapter.clinicalCase && (
+          <button
+            type="button"
+            className="cr-topbar-case"
+            onClick={() => openResource('clinical_case', chapter.clinicalCase!)}
+            aria-label={t.reader.clinicalCase}
+            title={t.reader.clinicalCase}
+          >
+            {t.reader.clinicalCase}
+          </button>
+        )}
         <div className="cr-topbar-title">
           <span className="cr-chap">{t.reader.chapterPrefix} {chapter.number}</span>
           <span className="cr-sep">·</span>

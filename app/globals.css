@@ -376,6 +376,7 @@ footer > div > p { font-size:.95rem; color:rgba(245,240,232,.84); line-height:1.
 .cr-chap { font-style:italic; color:var(--sage); }
 .cr-sep { margin:0 8px; opacity:.4; }
 .cr-bookname { font-style:italic; }
+.cr-topbar-case { display:none; }
 .cr-toc-toggle { background:none; border:none; cursor:pointer; padding:8px; display:flex; flex-direction:column; gap:4px; flex-shrink:0; }
 .cr-toc-toggle span { width:22px; height:1.5px; background:var(--ink); display:block; }
 
@@ -666,7 +667,12 @@ footer > div > p { font-size:.95rem; color:rgba(245,240,232,.84); line-height:1.
 }
 
 @media (max-width:760px){
-  .cr-topbar { padding:0 16px; gap:12px; }
+  .cr-topbar { padding:0 12px; gap:8px; }
+  .cr-topbar-case { display:inline-flex; align-items:center; justify-content:center; flex-shrink:0;
+    padding:5px 8px; border:1px solid rgba(160,124,58,.26); border-radius:999px;
+    background:rgba(251,248,241,.72); color:var(--sage); cursor:pointer;
+    font-size:.55rem; font-weight:700; letter-spacing:.12em; text-transform:uppercase; white-space:nowrap; }
+  .cr-topbar-case:hover { color:var(--gold); border-color:rgba(160,124,58,.5); }
   .cr-xref-return { top:70px; max-width:calc(100vw - 28px); justify-content:center; white-space:nowrap;
     overflow:hidden; text-overflow:ellipsis; padding:8px 12px; font-size:.68rem; }
   .cr-topbar-title .cr-bookname { display:none; }
@@ -1031,6 +1037,7 @@ a.ss-switch-opt:hover { color:var(--gold); }
     border-radius:50%; background:rgba(251,248,241,.9); box-shadow:0 4px 14px rgba(26,26,24,.14); }
   .ss-reflex-jump-text, .ss-reflex-jump-arrow { position:absolute; width:1px; height:1px; padding:0; margin:-1px;
     overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
+  .ss-stage .ss-case-chip { display:none; }
   .ss-case-chip { position:static; width:fit-content; height:auto; margin:7px auto 0; padding:5px 9px;
     border-radius:999px; background:rgba(251,248,241,.76); box-shadow:none; }
   .ss-case-chip-label { position:static; width:auto; height:auto; padding:0; margin:0;
