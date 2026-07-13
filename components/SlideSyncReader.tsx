@@ -915,7 +915,7 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
   }
 
   const rotateLandscapeLightbox = lightbox?.orientation === 'landscape' && isPhonePortrait
-  const lightboxRotation = rotateLandscapeLightbox ? (lightbox?.kind === 'clinical_case' ? -90 : 90) : 0
+  const lightboxRotation = rotateLandscapeLightbox ? 90 : 0
 
   useEffect(() => {
     alignLightboxViewport()
