@@ -702,7 +702,7 @@ export const chapter8Fr: Chapter = {
     },
     {
       "id": "pathologies-courantes-diagnostic-d-exclusion-indications-troubles-fonctionnels",
-      "title": "Pathologies courantes (diagnostic d’exclusion ; indications : troubles fonctionnels)",
+      "title": "Pathologies courantes",
       "blocks": [
         {
           "type": "sub",

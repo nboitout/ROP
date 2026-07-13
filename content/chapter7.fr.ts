@@ -764,7 +764,7 @@ export const chapter7Fr: Chapter = {
     },
     {
       "id": "pathologie",
-      "title": "Pathologie",
+      "title": "Pathologies courantes",
       "blocks": [
         {
           "type": "para",
