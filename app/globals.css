@@ -779,6 +779,35 @@ a.ss-switch-opt:hover { color:var(--gold); }
    the fixed top bar when reached via the switch's hash. */
 [data-pos-anchor] { scroll-margin-top:96px; }
 
+/* Search/deep-link landing cue: when an admin search result or cross-reference
+   opens a block/section hash, briefly mark the exact destination. */
+[data-pos-anchor]:target,
+.ss-anchor:target {
+  border-radius:6px;
+  animation:reader-target-highlight 3.2s ease-out 1 both;
+}
+
+.cr-section:target > .cr-h2,
+.cr-section:target > .ss-anchor-heading + .cr-h2 {
+  border-radius:6px;
+  animation:reader-target-highlight 3.2s ease-out 1 both;
+}
+
+@keyframes reader-target-highlight {
+  0% {
+    background:rgba(201,163,94,.26);
+    box-shadow:0 0 0 10px rgba(201,163,94,.22), 0 12px 32px rgba(160,124,58,.16);
+  }
+  62% {
+    background:rgba(201,163,94,.14);
+    box-shadow:0 0 0 7px rgba(201,163,94,.12), 0 8px 22px rgba(160,124,58,.1);
+  }
+  100% {
+    background:transparent;
+    box-shadow:0 0 0 0 rgba(201,163,94,0), 0 0 0 rgba(160,124,58,0);
+  }
+}
+
 /* align-items:stretch (the grid default) lets the slide column grow to the
    full article height, giving the sticky stage room to stay pinned the whole
    way down. align-items:start would shrink it to content height and the slide
