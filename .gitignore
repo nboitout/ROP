@@ -5,6 +5,7 @@ node_modules/
 .next/
 out/
 build/
+output/
 
 # environment variables — never commit these
 .env
