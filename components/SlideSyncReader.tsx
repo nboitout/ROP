@@ -1089,6 +1089,7 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
                 <path d="M6 9l6 6 6-6" />
               </svg>
             </button>
+            {clinicalCaseButton}
             {reflexSection && (
               <button
                 type="button"
@@ -1104,7 +1105,6 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
                 <span className="ss-reflex-jump-arrow" aria-hidden>↓</span>
               </button>
             )}
-            {clinicalCaseButton}
             </>
             ) : (
             <>
@@ -1189,6 +1189,7 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
             )}
               </div>
             </div>
+            {clinicalCaseButton}
             {reflexSection && (
               <button
                 type="button"
@@ -1204,7 +1205,6 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
                 <span className="ss-reflex-jump-arrow" aria-hidden>↓</span>
               </button>
             )}
-            {clinicalCaseButton}
             </>
             )}
           </div>
