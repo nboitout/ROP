@@ -768,9 +768,14 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
 
   function jumpToReflexSection() {
     if (!reflexSection) return
-    animateTo(() => {
-      return document.getElementById(`sec-${reflexSection.id}`)
-    })
+    const stageBottom = document.querySelector<HTMLElement>('.ss-stagecol')?.getBoundingClientRect().bottom ?? 0
+    const offset = window.matchMedia('(max-width: 980px)').matches
+      ? Math.max(96, stageBottom + 12)
+      : 96
+    animateTo(
+      () => document.getElementById(`anchor-${reflexSection.id}-heading`) ?? document.getElementById(`sec-${reflexSection.id}`),
+      offset
+    )
   }
 
   function goToSection(sectionId: string) {
@@ -1259,7 +1264,7 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
             <section id={`sec-${section.id}`} className="cr-section">
               {renderEndSentinel(section.id, -1)}
               {!hasPageBreak && headingSlides.length > 0 && (
-                <div className="ss-anchor ss-anchor-heading">
+                <div id={`anchor-${section.id}-heading`} className="ss-anchor ss-anchor-heading">
                   {headingSlides.map((slide) => (
                     <div key={slide} data-slide-anchor={slide}>
                       <button
