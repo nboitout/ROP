@@ -744,15 +744,8 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
 
   function slideForReflexTarget() {
     if (!reflexSection) return null
-    if (reflexBlockIndex !== null) {
-      const exactSlide = asSlideList(anchorBySlide.get(`${reflexSection.id}:${reflexBlockIndex}`)?.slide)[0]
-      if (exactSlide) return exactSlide
-      const laterAnchor = anchors.find((anchor) =>
-        anchor.sectionId === reflexSection.id && anchor.blockIndex >= reflexBlockIndex
-      )
-      const laterSlide = asSlideList(laterAnchor?.slide)[0]
-      if (laterSlide) return laterSlide
-    }
+    const headingSlide = asSlideList(anchorBySlide.get(`${reflexSection.id}:-1`)?.slide)[0]
+    if (headingSlide) return headingSlide
     return slideForSection(reflexSection.id)
   }
 
@@ -776,12 +769,7 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
   function jumpToReflexSection() {
     if (!reflexSection) return
     animateTo(() => {
-      if (PAGE_BREAK_BEFORE.has(reflexSection.id)) {
-        return document.getElementById(`sec-${reflexSection.id}`)
-      }
-      return reflexBlockIndex !== null
-        ? document.getElementById(`p-${reflexSection.id}-${reflexBlockIndex}`)
-        : document.getElementById(`sec-${reflexSection.id}`)
+      return document.getElementById(`sec-${reflexSection.id}`)
     })
   }
 

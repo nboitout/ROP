@@ -57,6 +57,7 @@ export default async function Chapitre14SyncPage({
       anchors={ANCHORS[lang]}
       backHref="/chapitres-gratuits"
       restrictPaidXrefs={restrictPaidXrefs}
+      showClinicalCaseResource
     />
   )
 }
