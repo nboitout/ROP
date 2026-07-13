@@ -953,11 +953,11 @@ a.ss-switch-opt:hover { color:var(--gold); }
 }
 
 .ss-case-chip { display:flex; align-items:center; justify-content:center; gap:7px;
-  width:100%; max-width:520px; margin:12px auto 0; padding:10px 13px;
-  border:1px solid rgba(160,124,58,.28); border-radius:6px;
-  background:rgba(251,248,241,.82); color:var(--sage); cursor:pointer;
+  width:fit-content; max-width:520px; margin:10px auto 0; padding:6px 10px;
+  border:1px solid rgba(160,124,58,.22); border-radius:999px;
+  background:rgba(251,248,241,.58); color:var(--sage); cursor:pointer;
   font-size:.58rem; font-weight:700; letter-spacing:.14em; text-transform:uppercase;
-  box-shadow:0 4px 16px rgba(26,26,24,.08);
+  box-shadow:none;
   transition:border-color .18s, color .18s, background .18s, transform .12s; }
 .ss-case-chip:hover { border-color:rgba(160,124,58,.58); color:var(--gold); background:#fbf8f1; }
 .ss-case-chip:active { transform:translateY(1px); }
