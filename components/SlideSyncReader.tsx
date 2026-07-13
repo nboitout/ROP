@@ -27,7 +27,7 @@ type LightboxItem = {
   alt: string
   caption: string
   orientation?: 'portrait' | 'landscape'
-  kind?: 'slide' | 'figure'
+  kind?: 'slide' | 'figure' | 'clinical_case'
 }
 type LightboxState = LightboxItem & {
   gallery?: LightboxItem[]
@@ -571,7 +571,7 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
   function openResource(name: string, img: { src: string; alt: string; caption: string }) {
     resourceOpenedAt.current = Date.now()
     resourceNameRef.current = name
-    setLightbox({ ...img, orientation: 'landscape', kind: 'figure', alignY: 'top' })
+    setLightbox({ ...img, orientation: 'landscape', kind: name === 'clinical_case' ? 'clinical_case' : 'figure', alignY: 'top' })
     track('resource_open', { resource: name })
   }
 
@@ -910,11 +910,12 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
   }
 
   const rotateLandscapeLightbox = lightbox?.orientation === 'landscape' && isPhonePortrait
+  const lightboxRotation = rotateLandscapeLightbox ? (lightbox?.kind === 'clinical_case' ? -90 : 90) : 0
 
   useEffect(() => {
     alignLightboxViewport()
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [lightbox?.src, lightboxZoom, rotateLandscapeLightbox])
+  }, [lightbox?.src, lightboxZoom, rotateLandscapeLightbox, lightboxRotation])
 
   // Warm the neighbours of the current lightbox item so swiping through the
   // deck shows the next slide instantly.
@@ -1415,7 +1416,7 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
                 alt={lightbox.alt}
                 onLoad={alignLightboxViewport}
                 style={{
-                  transform: `${rotateLandscapeLightbox ? 'rotate(90deg) ' : ''}scale(${lightboxZoom})`,
+                  transform: `${rotateLandscapeLightbox ? `rotate(${lightboxRotation}deg) ` : ''}scale(${lightboxZoom})`,
                   transformOrigin: rotateLandscapeLightbox ? 'center center' : 'top center',
                 }}
               />
