@@ -997,6 +997,27 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
     )
   }
 
+  const clinicalCaseButton = showClinicalCaseResource && chapter.clinicalCase ? (
+    <button
+      type="button"
+      className="ss-case-chip"
+      onClick={() => openResource('clinical_case', chapter.clinicalCase!)}
+      aria-label={t.reader.clinicalCase}
+      title={t.reader.clinicalCase}
+    >
+      <span className="ss-case-chip-icon" aria-hidden>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M8 4h8" />
+          <path d="M9 2h6a1 1 0 0 1 1 1v2H8V3a1 1 0 0 1 1-1Z" />
+          <path d="M6 5h12a2 2 0 0 1 2 2v13a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2Z" />
+          <path d="M8 11h8" />
+          <path d="M8 15h5" />
+        </svg>
+      </span>
+      <span className="ss-case-chip-label">{t.reader.clinicalCase}</span>
+    </button>
+  ) : null
+
   return (
     <div className="cr-root">
       <div className="cr-progress" aria-hidden><div className="cr-progress-bar" style={{ transform: `scaleX(${progress})` }} /></div>
@@ -1083,6 +1104,7 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
                 <span className="ss-reflex-jump-arrow" aria-hidden>↓</span>
               </button>
             )}
+            {clinicalCaseButton}
             </>
             ) : (
             <>
@@ -1182,26 +1204,7 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
                 <span className="ss-reflex-jump-arrow" aria-hidden>↓</span>
               </button>
             )}
-            {showClinicalCaseResource && chapter.clinicalCase && (
-              <button
-                type="button"
-                className="ss-case-chip"
-                onClick={() => openResource('clinical_case', chapter.clinicalCase!)}
-                aria-label={t.reader.clinicalCase}
-                title={t.reader.clinicalCase}
-              >
-                <span className="ss-case-chip-icon" aria-hidden>
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M8 4h8" />
-                    <path d="M9 2h6a1 1 0 0 1 1 1v2H8V3a1 1 0 0 1 1-1Z" />
-                    <path d="M6 5h12a2 2 0 0 1 2 2v13a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2Z" />
-                    <path d="M8 11h8" />
-                    <path d="M8 15h5" />
-                  </svg>
-                </span>
-                <span className="ss-case-chip-label">{t.reader.clinicalCase}</span>
-              </button>
-            )}
+            {clinicalCaseButton}
             </>
             )}
           </div>
