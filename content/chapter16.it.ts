@@ -449,7 +449,13 @@ export const chapter16It: Chapter = {
             "Secondo grado: rene “addomino-genitale” o “cutaneo femorale”.",
             "Sintomi: l’irritazione dei nervi ileoipogastrico, ileoinguinale e cutaneo femorale laterale del plesso lombare si irradia al basso addome, allo scroto o alle grandi labbra e alla faccia laterale della coscia. Il rene è in rotazione esterna. La trazione sul peduncolo vascolare può contribuire all’ipertensione arteriosa.",
             "Terzo grado: rene “femorale” o “pelvico”: il rene è dislocato perché ha perso il contatto con il fegato e il diaframma. È in rotazione mediale e bloccato contro lo psoas.",
-            "Sintomi: dolore al ginocchio, senza storia di trauma, dovuto a irritazione del nervo femorale; spasmo dello psoas; infezioni urinarie; litiasi, poiché l’angolazione dell’uretere altera la dinamica urinaria e favorisce quindi litiasi e infezioni urinarie; e irritazione colica o uterina. Un’infezione urinaria inspiegata deve far pensare a una ptosi renale.",
+            "Sintomi:",
+            "• Dolore al ginocchio, senza storia di trauma, dovuto a irritazione del nervo femorale.",
+            "• Spasmo dello psoas.",
+            "• Infezioni urinarie.",
+            "• Litiasi, poiché l’angolazione dell’uretere altera la dinamica urinaria e favorisce quindi litiasi e infezioni urinarie.",
+            "• Irritazione colica o uterina.",
+            "Un’infezione urinaria inspiegata deve far pensare a una ptosi renale.",
             "Lombalgia gravidica: nelle donne in gravidanza, questo dolore è solo eccezionalmente di origine osteoarticolare."
           ]
         },

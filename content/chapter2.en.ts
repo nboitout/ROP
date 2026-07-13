@@ -32,9 +32,10 @@ export const chapter2En: Chapter = {
           "it has a rich somatotopic organization in the brain;",
           "it has an analgesic action: it modulates pain transmitted by the extralemniscal system. This analgesic property is explained by the gate control theory: nerve impulses travelling through the lemniscal system reach the dorsal horn of the spinal cord more rapidly and help close the gate to slower pain impulses.",
         ]},
-        { type: "sub", text: "Relevance in ROP" },
-        { type: "para", text: "Forceful pressure and tissue grinding during reflex treatment must be avoided. The harder one presses, the more one feels one's own fingers, the less one perceives the bony landmarks that guide the search for reflex zones, and the more difficult it becomes to read those zones." },
-        { type: "para", text: "The aim of restoring good tissue quality reflects the respect we give to the organism. The objective is not to force the organism, but to gently engage it. Even a well-conducted treatment is a stressor — positive, certainly — but one that must take into account the individual's capacity for self-correction." },
+        { type: "rop", body: [
+          "Forceful pressure and tissue grinding during reflex treatment must be avoided. The harder one presses, the more one feels one's own fingers, the less one perceives the bony landmarks that guide the search for reflex zones, and the more difficult it becomes to read those zones.",
+          "The aim of restoring good tissue quality reflects the respect we give to the organism. The objective is not to force the organism, but to gently engage it. Even a well-conducted treatment is a stressor — positive, certainly — but one that must take into account the individual's capacity for self-correction.",
+        ]},
         { type: "sub", text: "The three phases of manual treatment" },
         { type: "leadBullets", items: [
           { label: "1. Textural diagnostic phase", text: "This phase consists of searching for reflex zones characterized by a modification in the texture of the occipital and plantar skin: roughness, densification, loss of glide, or a sensation of crystals. These findings must confirm the diagnosis obtained at the end of the clinical examination." },

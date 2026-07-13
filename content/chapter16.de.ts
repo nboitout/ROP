@@ -449,7 +449,13 @@ export const chapter16De: Chapter = {
             "Zweiter Grad: „abdominogenitale“ oder „femorokutane“ Niere.",
             "Symptome: Eine Reizung des Nervus iliohypogastricus, Nervus ilioinguinalis und Nervus cutaneus femoris lateralis des Plexus lumbalis strahlt in den Unterbauch, in den Hodensack oder die großen Schamlippen sowie an die laterale Oberschenkelseite aus. Die Niere befindet sich in Außenrotation. Zug am Gefäßstiel kann zu arterieller Hypertonie beitragen.",
             "Dritter Grad: „femorale“ oder „pelvine“ Niere: Die Niere ist verlagert, weil sie den Kontakt zu Leber und Zwerchfell verloren hat. Sie befindet sich in Innenrotation und ist gegen den Psoas blockiert.",
-            "Symptome: Knieschmerz ohne Trauma, bedingt durch Reizung des Nervus femoralis; Psoasspasmus; Harnwegsinfektionen; Lithiasis, da ein Abknicken des Ureters die Harnflussdynamik beeinträchtigt und dadurch Lithiasis und Harnwegsinfektionen begünstigt; außerdem kolische oder uterine Reizung. Eine Harnwegsinfektion ohne erkennbare Ursache sollte an eine Nierenptose denken lassen.",
+            "Symptome:",
+            "• Knieschmerz ohne Trauma, bedingt durch Reizung des Nervus femoralis.",
+            "• Psoasspasmus.",
+            "• Harnwegsinfektionen.",
+            "• Lithiasis, da ein Abknicken des Ureters die Harnflussdynamik beeinträchtigt und dadurch Lithiasis und Harnwegsinfektionen begünstigt.",
+            "• Kolische oder uterine Reizung.",
+            "Eine Harnwegsinfektion ohne erkennbare Ursache sollte an eine Nierenptose denken lassen.",
             "Schwangerschaftsbedingter Kreuzschmerz: Bei Schwangeren ist dieser Schmerz nur ausnahmsweise osteoartikulären Ursprungs."
           ]
         },

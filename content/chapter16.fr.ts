@@ -446,7 +446,13 @@ export const chapter16Fr: Chapter = {
             "2ème degré: rein « abdomino-génital » ou « cutané fémoral »",
             "Symptômes: l’irritation des nerfs iliohypogastrique, ilioinguinal et cutané fémoral du plexus lombaire irradie dans la région abdominale inférieure, les bourses ou les grandes lèvres, la face externe de la cuisse. Le rein est en rotation externe. La traction sur le pédicule vasculaire crée une hypertension artérielle.",
             "3ème degré: « rein fémoral » ou « pelvien »: le rein est luxé par perte de contact avec le foie et le diaphragme. Il est en rotation médiale, bloqué contre le psoas.",
-            "Symptômes: gonalgie, sans notion de traumatisme par irritation du nerf fémoral, spasme du psoas, infections urinaires, lithiases: l’uretère se coude, la dynamique de l’urine baisse, ce qui favorise les lithiases et les infections urinaires, irritation colique ou utérine. Une infection urinaire sans cause doit faire penser à une ptose rénale.",
+            "Symptômes:",
+            "• Gonalgie, sans notion de traumatisme par irritation du nerf fémoral.",
+            "• Spasme du psoas.",
+            "• Infections urinaires.",
+            "• Lithiases: l’uretère se coude, la dynamique de l’urine baisse, ce qui favorise les lithiases et les infections urinaires.",
+            "• Irritation colique ou utérine.",
+            "Une infection urinaire sans cause doit faire penser à une ptose rénale.",
             "Lombalgies gravidiques: elles sont exceptionnellement ostéo-articulaires chez la parturiente."
           ]
         },

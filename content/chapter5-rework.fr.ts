@@ -582,7 +582,13 @@ export const chapter5ReworkFr = {
         {
           "type": "bullets",
           "items": [
-            "Repères ROP : zones occipitales ; occiput-C1-C2 ; tronc cérébral ; foramen magnum ; foramen jugulaire ; nerfs IX, X, XI et XII ; zones attribuées au système limbique, au diencéphale et à l’hypophyse.",
+            "Repères ROP : zones occipitales.",
+            "Occiput-C1-C2.",
+            "Tronc cérébral.",
+            "Foramen magnum.",
+            "Foramen jugulaire.",
+            "Nerfs IX, X, XI et XII.",
+            "Zones attribuées au système limbique, au diencéphale et à l’hypophyse.",
             "Objectif clinique : réduire la vigilance tissulaire et offrir des signaux tactiles compatibles avec la sécurité.",
             "Limite : la ROP ne traite pas directement l’amygdale, l’hypothalamus ou le cortex comme des structures accessibles à la palpation."
           ]
@@ -598,7 +604,11 @@ export const chapter5ReworkFr = {
         {
           "type": "bullets",
           "items": [
-            "Repères ROP : chaîne sympathique cervico-thoracique ; charnière C7-T1 et première côte ; colonne thoracique ; zones surrénaliennes ; relations avec les axes SAM et HHS.",
+            "Repères ROP : chaîne sympathique cervico-thoracique.",
+            "Charnière C7-T1 et première côte.",
+            "Colonne thoracique.",
+            "Zones surrénaliennes.",
+            "Relations avec les axes SAM et HHS.",
             "Objectif clinique : favoriser la baisse du tonus de défense et le retour vers une ligne de base plus souple.",
             "Limite : une séance ne permet pas de conclure à une normalisation du cortisol ou de l’axe HHS sans mesures biologiques."
           ]
@@ -614,7 +624,12 @@ export const chapter5ReworkFr = {
         {
           "type": "bullets",
           "items": [
-            "Repères ROP : nerf phrénique C3-C5 ; diaphragme ; piliers ; hiatus œsophagien ; plexus cardio-pulmonaires ; trajet thoracique du nerf vague.",
+            "Repères ROP : nerf phrénique C3-C5.",
+            "Diaphragme.",
+            "Piliers.",
+            "Hiatus œsophagien.",
+            "Plexus cardio-pulmonaires.",
+            "Trajet thoracique du nerf vague.",
             "Objectif clinique : rendre la respiration moins coûteuse et plus disponible, sans imposer une amplitude excessive.",
             "Appui scientifique indirect : les interventions respiratoires diaphragmatiques peuvent réduire certains marqueurs physiologiques et subjectifs de stress, avec une qualité de preuve encore variable [10]."
           ]
@@ -630,7 +645,13 @@ export const chapter5ReworkFr = {
         {
           "type": "bullets",
           "items": [
-            "Repères ROP : nerf vague abdominal ; plexus cœliaque ; chaîne prévertébrale ; nerfs splanchniques ; intestin ; plexus hypogastriques ; parasympathique pelvien S2-S4.",
+            "Repères ROP : nerf vague abdominal.",
+            "Plexus cœliaque.",
+            "Chaîne prévertébrale.",
+            "Nerfs splanchniques.",
+            "Intestin.",
+            "Plexus hypogastriques.",
+            "Parasympathique pelvien S2-S4.",
             "Objectif clinique : créer un contexte autonome plus favorable à la motricité digestive, au repos et aux fonctions de maintenance.",
             "Limite : les troubles digestifs persistants, les pertes de poids, les saignements, la fièvre ou les douleurs inhabituelles nécessitent une évaluation médicale."
           ]

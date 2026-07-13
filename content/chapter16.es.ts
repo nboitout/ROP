@@ -449,7 +449,13 @@ export const chapter16Es: Chapter = {
             "Segundo grado: riñón “abdominogenital” o “cutáneo femoral”.",
             "Síntomas: la irritación de los nervios iliohipogástrico, ilioinguinal y cutáneo femoral lateral del plexo lumbar irradia hacia la región abdominal inferior, el escroto o los labios mayores, y la cara lateral del muslo. El riñón se encuentra en rotación externa. La tracción sobre el pedículo vascular puede contribuir a la hipertensión arterial.",
             "Tercer grado: riñón “femoral” o “pélvico”: el riñón está desplazado porque ha perdido contacto con el hígado y el diafragma. Se encuentra en rotación medial y bloqueado contra el psoas.",
-            "Síntomas: dolor de rodilla sin antecedente traumático, por irritación del nervio femoral; espasmo del psoas; infecciones urinarias; litiasis, ya que la angulación del uréter altera la dinámica urinaria y favorece así la litiasis y las infecciones urinarias; e irritación colónica o uterina. Una infección urinaria inexplicada debe hacer pensar en una ptosis renal.",
+            "Síntomas:",
+            "• Dolor de rodilla sin antecedente traumático, por irritación del nervio femoral.",
+            "• Espasmo del psoas.",
+            "• Infecciones urinarias.",
+            "• Litiasis, ya que la angulación del uréter altera la dinámica urinaria y favorece así la litiasis y las infecciones urinarias.",
+            "• Irritación colónica o uterina.",
+            "Una infección urinaria inexplicada debe hacer pensar en una ptosis renal.",
             "Dolor lumbar relacionado con el embarazo: en la mujer embarazada, este dolor solo excepcionalmente es de origen osteoarticular."
           ]
         },

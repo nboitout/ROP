@@ -163,7 +163,13 @@ export const chapter14En: Chapter = {
 
         { type: 'lead', label: 'Diagnosis of exclusion', text: 'certain symptoms should prompt patients to seek medical advice: fever, red or black blood in the stool, significant dehydration, significant unexplained weight loss, alternating constipation and diarrhoea, vomiting, colicky pain in the umbilical region, meteorism, bowel obstruction (mechanical or paralytic ileus), irreducible strangulated inguinal hernia, Troisier\'s node (suspected cancer), sign of intra-abdominal effusion.' },
 
-        { type: 'lead', label: 'Indications in ROP', text: 'dysbioses, sequelae of gastroenteritis, enteroptosis (abnormal tension in the small intestine associated with vasoconstriction, venous and lymphatic stasis, and spasms caused by irritation of the perivascular nerve plexuses; may also have an unfavourable effect on the liver via portal pressure), paralytic ileus (inhibition of intestinal motility and secretions caused by irritation of the predominantly sympathetic peritoneum).' },
+        { type: 'rop', body: [
+          'Indications:',
+          '• Dysbioses.',
+          '• Sequelae of gastroenteritis.',
+          '• Enteroptosis: abnormal tension in the small intestine associated with vasoconstriction, venous and lymphatic stasis, and spasms caused by irritation of the perivascular nerve plexuses; may also have an unfavourable effect on the liver via portal pressure.',
+          '• Paralytic ileus: inhibition of intestinal motility and secretions caused by irritation of the predominantly sympathetic peritoneum.',
+        ]},
 
         { type: 'sub', text: 'Crohn\'s disease' },
         { type: 'para', text: 'Crohn\'s disease mainly affects the ileum and colon. Several factors are associated with it: genetic, dysbiosis, environmental, and emotional factors, which may modulate the lived experience of the disease and, in some cases, flare-ups.' },

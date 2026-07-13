@@ -449,7 +449,13 @@ export const chapter16En: Chapter = {
             "Second degree: “abdominogenital” or “femoral cutaneous” kidney.",
             "Symptoms: irritation of the iliohypogastric, ilioinguinal and lateral femoral cutaneous nerves of the lumbar plexus radiates to the lower abdominal region, the scrotum or labia majora, and the lateral aspect of the thigh. The kidney is in external rotation. Traction on the vascular pedicle creates arterial hypertension.",
             "Third degree: “femoral” or “pelvic” kidney: the kidney is displaced because it has lost contact with the liver and diaphragm. It is in medial rotation and is blocked against the psoas.",
-            "Symptoms: knee pain, without any history of trauma, due to irritation of the femoral nerve; psoas spasm; urinary tract infections; lithiasis: the ureter kinks, urinary dynamics decrease, thereby favouring lithiasis and urinary infections; and colonic or uterine irritation. An unexplained urinary infection should suggest renal ptosis.",
+            "Symptoms:",
+            "• Knee pain, without any history of trauma, due to irritation of the femoral nerve.",
+            "• Psoas spasm.",
+            "• Urinary tract infections.",
+            "• Lithiasis: the ureter kinks, urinary dynamics decrease, thereby favouring lithiasis and urinary infections.",
+            "• Colonic or uterine irritation.",
+            "An unexplained urinary infection should suggest renal ptosis.",
             "Pregnancy-related low back pain: in the parturient woman, it is only exceptionally osteoarticular."
           ]
         },
