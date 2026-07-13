@@ -59,13 +59,13 @@ export default async function AcheterLivrePage({
       <main className="buy-main">
         <section className="buy-panel">
           <p className="buy-eyebrow">Renvoi réservé au livre complet</p>
-          <h1>Continuez avec l’ouvrage intégral</h1>
+          <h1>Le livre complet est en préparation</h1>
           <p className="buy-lead">
-            Ce lien approfondit le chapitre gratuit avec une section réservée aux lecteurs du livre complet.
+            Ce renvoi approfondit le chapitre gratuit avec une section qui sera disponible dans l’ouvrage intégral.
             {chapterTitle ? ` Il pointe vers : ${chapterTitle}.` : ''}
           </p>
           <div className="buy-actions">
-            <Link href="/#acheter" className="btn b-gold">Voir les options d’achat</Link>
+            <Link href="/#acheter" className="btn b-gold">Être averti de la parution</Link>
             <Link href={returnHref} className="btn b-out">Retour à la lecture</Link>
           </div>
         </section>
