@@ -71,7 +71,6 @@ export const chapter5Fr: Chapter = {
         { type: 'para', text: 'Les trois cerveaux — reptilien, limbique et cortex — sont ici décrits dans le cadre du modèle utilisé dans cet ouvrage.' },
         { type: 'lead', label: 'L’amygdale', text: 'alertée par une menace, un danger réel ou imaginaire, elle active l’hypothalamus qui met en place le mécanisme de stress selon deux axes : en premier l’axe neurologique, puis l’axe hormonal.' },
         { type: 'para', text: 'En même temps, l’hippocampe et les circuits corticaux participent à la modulation de la réponse émotionnelle, avant que l’information n’atteigne le cortex préfrontal, où elle est analysée et rendue consciente.' },
-        { type: 'figure', src: '/chapter-5/figure-5-4.jpeg', alt: 'Schéma des axes neurologique SAM et hormonal HHS', caption: 'Figure 5.4 — Axes neurologique SAM et hormonal HHS', orientation: 'landscape' },
         { type: 'lead', label: 'Axe neurologique', text: 'dans l’urgence, la réponse sympathique prime. Elle est immédiate. Elle passe par l’activation hypothalamique qui active le locus coeruleus situé dans le pont du tronc cérébral. Celui-ci libère la noradrénaline qui, à son tour, active la médullosurrénale, laquelle sécrète l’hormone de l’urgence : l’adrénaline. C’est l’axe sympathico-adrénalo-surrénalien (SAM). Le sympathique, présent dans tout le corps, induit une réponse globale afin de réagir à une menace ou un danger.' },
         { type: 'para', text: 'L’axe SAM accélère les rythmes cardiaque et respiratoire, augmente le métabolisme et la pression artérielle pour favoriser l’apport sanguin dans les muscles striés afin de permettre la réponse immédiate la mieux adaptée à la survie : fuir, combattre ou se figer.' },
         { type: 'para', text: 'Le sympathique stimule en même temps les activités sensorielles — visuelle, auditive, olfactive — face au danger. L’activation du sympathique entraîne, de facto, une mise en second plan des activités immédiates non vitales pour la survie, notamment les gonades et le système digestif. Cette phase neurologique d’urgence est de courte durée.' },
@@ -158,7 +157,7 @@ export const chapter5Fr: Chapter = {
     },
     {
       id: 'rop-stress',
-      title: 'ROP du Mécanisme de stress',
+      title: 'Zones réflexes podales',
       blocks: [
         { type: 'sub', text: 'Zones occipitales' },
         { type: 'lead', label: `Syndrome général d’adaptation SGA`, text: '' },
@@ -174,24 +173,16 @@ export const chapter5Fr: Chapter = {
           { label: '1ʳᵉ phase — irritation', text: 'irritation locale par emprisonnement d’un nerf (ex. : compression traumatique du ganglion cervical inférieur par blocage C7/D1/1ʳᵉ côte). Conséquence : facilitation sympathique du territoire d’influence du ganglion cervical inférieur.' },
           { label: '2ᵉ phase — inhibition', text: 'si la compression n’est pas levée, le nerf comprimé est considéré comme inhibé. Le système nerveux compensateur est alors libéré, d’où, dans l’exemple, un syndrome parasympathique par inhibition du système sympathique.' },
         ]},
-        { type: 'figure', src: '/chapter-5/figure-5-14.png', alt: 'Nerf vague X dans la moelle allongée — pouce droit sur l’interphalangienne du gros orteil', caption: 'Figure 5.14 — Nerf vague X dans la moelle allongée (pouce droit sur l’interphalangienne du gros orteil)', orientation: 'portrait' },
-        { type: 'figure', src: '/chapter-5/figure-5-15.png', alt: 'Nerf vague X dans le foramen jugulaire — pouce gauche sur l’interphalangienne proximale des 4ᵉᵐᵉ et 5ᵉᵐᵉ orteils', caption: 'Figure 5.15 — Nerf vague X dans le foramen jugulaire (pouce gauche sur l’interphalangienne proximale des 4ᵉᵐᵉ et 5ᵉᵐᵉ orteils)', orientation: 'portrait' },
-        { type: 'figure', src: '/chapter-5/figure-5-17.png', alt: 'Hiatus œsophagien et cardia', caption: 'Figure 5.17 — Hiatus œsophagien et cardia', orientation: 'portrait' },
       ],
     },
   ],
-  revisionSheet: {
-    src: '/chapter-5/fiche-revision.png',
-    alt: 'Fiche de révision — Chapitre 5, Mécanisme de stress',
-    caption: 'Fiche de révision — Chapitre 5 · Mécanisme de stress',
-  },
   clinicalCase: {
     src: '/chapter-5/cas-clinique.png',
     alt: 'Cas clinique — Fibromyalgie · Chapitre 5',
     caption: 'Cas clinique · Fibromyalgie — Chapitre 5',
   },
   slides: {
-    url: '/chapter-5/synthese.pdf',
+    url: '/chapter-5/Chapter5 Slides FR.pdf',
     label: 'Diapositives',
     description: 'Synthèse visuelle du chapitre — mécanisme de stress, SGA et interventions R.O.P.',
   },

@@ -184,11 +184,6 @@ export const chapter5En: Chapter = {
       ],
     },
   ],
-  revisionSheet: {
-    src: "/chapter-5/fiche-revision.png",
-    alt: "Revision sheet — Chapter 5, Stress mechanism",
-    caption: "Revision sheet — Chapter 5 · Stress mechanism",
-  },
   clinicalCase: {
     src: "/chapter-5/cas-clinique.png",
     alt: "Clinical case — Fibromyalgia · Chapter 5",

@@ -9,12 +9,18 @@ import { translations } from '@/app/i18n/translations'
 import type { Lang } from '@/app/i18n/translations'
 import {
   chapter5Slides, chapter5SlidesEn, chapter5SlidesDe, chapter5SlidesEs, chapter5SlidesIt,
-  chapter5SlideAnchors,
+  chapter5SlideAnchors, chapter5SlideAnchorsLegacy,
 } from '@/content/chapter5.slidesync'
 
 // Synthesis deck per language (all five available for chapter 5).
 const DECKS: Record<Lang, typeof chapter5Slides> = {
   fr: chapter5Slides, en: chapter5SlidesEn, de: chapter5SlidesDe, es: chapter5SlidesEs, it: chapter5SlidesIt, th: chapter5SlidesEn,
+}
+
+const ANCHORS: Record<Lang, typeof chapter5SlideAnchors> = {
+  fr: chapter5SlideAnchors,
+  en: chapter5SlideAnchorsLegacy, de: chapter5SlideAnchorsLegacy,
+  es: chapter5SlideAnchorsLegacy, it: chapter5SlideAnchorsLegacy, th: chapter5SlideAnchorsLegacy,
 }
 
 export const metadata: Metadata = {
@@ -43,7 +49,7 @@ export default async function Chapitre5SyncPage({
       chapter={chapter}
       bookTitle={translations[lang].reader.bookTitle}
       slides={DECKS[lang]}
-      anchors={chapter5SlideAnchors}
+      anchors={ANCHORS[lang]}
       backHref="/"
     />
   )
