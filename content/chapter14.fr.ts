@@ -269,7 +269,7 @@ export const chapter14Fr: Chapter = {
     caption: 'Fiche de révision — Chapitre 14 · Intestin grêle',
   },
   clinicalCase: {
-    src: '/chapter-14/figure-14-29.jpg',
+    src: '/chapter-14/Chapter14 Cas Clinique.jpg',
     caption: 'Cas clinique — Chapitre 14',
     alt: 'Cas clinique intestin grêle en R.O.P.',
   },
