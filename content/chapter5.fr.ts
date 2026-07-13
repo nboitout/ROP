@@ -91,9 +91,16 @@ export const chapter5Fr: Chapter = {
         { type: 'rop', body: [
           'Cette vulnérabilité passagère se rencontre souvent après une première séance de ROP. Les réactions sont interprétées comme salutaires, voire positives. Il est important d’avertir le patient de ces réactions afin qu’il ne s’inquiète pas.',
           'Ces réactions sont interprétées, dans cette approche, à la lumière de la loi de Hering qui s’énonce ainsi : les symptômes d’une maladie évoluent vers la guérison quand ils vont :',
-          '— Du haut vers le bas • Du dedans vers le dehors • Du chronique vers l’aigu • En repassant par des phases antérieures de la maladie.',
+          '• Du haut vers le bas.',
+          '• Du dedans vers le dehors.',
+          '• Du chronique vers l’aigu.',
+          '• En repassant par des phases antérieures de la maladie.',
           'Cela sous-entend que la vitalité soit suffisante pour réagir dans le sens de la loi de Hering. C’est pourquoi tout traitement doit être dosé, ni trop long, ni trop intense, ni trop fréquent, afin de laisser à l’organisme la possibilité de restaurer ses capacités d’adaptation. Des traitements espacés de trois à quatre semaines constituent dans la majorité des cas une bonne fréquence.',
-          'Notre technique de massage en ROP, qu’on peut décomposer en trois temps — 1. diagnostic tissulaire, 2. sollicitation de la zone, 3. temps du « rien faire et laisser-faire » — est conforme à cette règle déjà énoncée par le fondateur de l’ostéopathie, le Dr A. T. Still : « sens-le, touche-le et laisse faire ».',
+          'Notre technique de massage en ROP peut se décomposer en trois temps :',
+          '• Diagnostic tissulaire.',
+          '• Sollicitation de la zone.',
+          '• Temps du « rien faire et laisser-faire ».',
+          'Elle est conforme à cette règle déjà énoncée par le fondateur de l’ostéopathie, le Dr A. T. Still : « sens-le, touche-le et laisse faire ».',
         ]},
 
         { type: 'sub', text: 'Phase d’adaptation-résistance' },

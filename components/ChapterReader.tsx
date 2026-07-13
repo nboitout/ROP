@@ -616,7 +616,10 @@ function BlockView({
       return (
         <aside {...anchor} className="cr-rop">
           <p className="cr-rop-title">{t.reader.ropTitle}</p>
-          {block.body.map((p, i) => <p key={i} className="cr-rop-p">{p}</p>)}
+          {block.body.map((p, i) => {
+            const isBullet = p.startsWith('• ')
+            return <p key={i} className={`cr-rop-p${isBullet ? ' cr-rop-bullet' : ''}`}>{isBullet ? p.slice(2) : p}</p>
+          })}
         </aside>
       )
     case 'reflexAtlas':

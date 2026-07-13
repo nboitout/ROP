@@ -1595,12 +1595,15 @@ function BlockView({
       return (
         <aside className="cr-rop">
           <p className="cr-rop-title">{t.reader.ropTitle}</p>
-          {block.body.map((p, i) => (
-            <Fragment key={i}>
-              {renderSlideAnchorsForItem?.(i)}
-              <p className="cr-rop-p">{p}</p>
-            </Fragment>
-          ))}
+          {block.body.map((p, i) => {
+            const isBullet = p.startsWith('• ')
+            return (
+              <Fragment key={i}>
+                {renderSlideAnchorsForItem?.(i)}
+                <p className={`cr-rop-p${isBullet ? ' cr-rop-bullet' : ''}`}>{isBullet ? p.slice(2) : p}</p>
+              </Fragment>
+            )
+          })}
           {renderSlideAnchorsForItem?.(block.body.length)}
         </aside>
       )
