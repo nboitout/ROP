@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import AdminRagPanel from '@/components/admin/AdminRagPanel'
 import type { Lang } from '@/app/i18n/translations'
 import {
   getBookTextSearchStats,
@@ -209,6 +210,13 @@ export default async function AdminBookSearchPage({
           <button type="submit" className="adm-search-submit">Search</button>
         </form>
       </section>
+
+      <AdminRagPanel
+        key={`${query}:${lang}`}
+        initialQuestion={query}
+        initialLang={lang}
+        langOptions={LANG_OPTIONS}
+      />
 
       <div className="adm-search-summary">
         {hasQuery ? (
