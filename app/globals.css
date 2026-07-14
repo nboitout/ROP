@@ -452,6 +452,10 @@ footer > div > p { font-size:.95rem; color:rgba(245,240,232,.84); line-height:1.
 .cr-fig-narrow .cr-fig-btn { aspect-ratio:2/3; }
 .cr-fig-portrait .cr-fig-btn img,
 .cr-fig-narrow .cr-fig-btn img { height:100%; object-fit:cover; object-position:center; }
+/* Chapter 3 reflex-zone photos include labels inside the image. Preserve the
+   source proportion so the portrait frame never crops the label at either side. */
+.cr-fig--native-ratio .cr-fig-btn { aspect-ratio:auto; }
+.cr-fig--native-ratio .cr-fig-btn img { height:auto; object-fit:initial; }
 .cr-fig-zoom { position:absolute; bottom:12px; right:12px; width:36px; height:36px; border-radius:50%;
   background:rgba(26,26,24,.78); color:var(--cream); font-size:1.05rem; display:flex; align-items:center; justify-content:center;
   opacity:0; transition:opacity .2s; pointer-events:none; }
