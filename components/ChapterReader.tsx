@@ -588,9 +588,8 @@ function BlockView({
         </figure>
       )
     case 'figure':
-      const preserveNativeFigureRatio = block.src.startsWith('/chapter-3/figures/')
       return (
-        <figure {...anchor} className={`cr-fig cr-fig-${block.orientation}${preserveNativeFigureRatio ? ' cr-fig--native-ratio' : ''}`}>
+        <figure {...anchor} className={`cr-fig cr-fig-${block.orientation}`}>
           <button
             type="button"
             className="cr-fig-btn"

@@ -448,14 +448,8 @@ footer > div > p { font-size:.95rem; color:rgba(245,240,232,.84); line-height:1.
 .cr-fig-btn { display:block; width:100%; background:none; border:none; padding:0; cursor:zoom-in; position:relative; line-height:0; border-radius:4px; overflow:hidden; transition:box-shadow .25s; }
 .cr-fig-btn:hover { box-shadow:0 12px 36px rgba(26,26,24,.18); }
 .cr-fig-btn img { width:100%; height:auto; display:block; background:#fff; }
-.cr-fig-portrait .cr-fig-btn,
-.cr-fig-narrow .cr-fig-btn { aspect-ratio:2/3; }
-.cr-fig-portrait .cr-fig-btn img,
-.cr-fig-narrow .cr-fig-btn img { height:100%; object-fit:cover; object-position:center; }
-/* Chapter 3 reflex-zone photos include labels inside the image. Preserve the
-   source proportion so the portrait frame never crops the label at either side. */
-.cr-fig--native-ratio .cr-fig-btn { aspect-ratio:auto; }
-.cr-fig--native-ratio .cr-fig-btn img { height:auto; object-fit:initial; }
+/* Keep portrait and narrow figures at their source proportion. A fixed 2:3
+   frame crops wider source photos and can truncate labels embedded in them. */
 .cr-fig-zoom { position:absolute; bottom:12px; right:12px; width:36px; height:36px; border-radius:50%;
   background:rgba(26,26,24,.78); color:var(--cream); font-size:1.05rem; display:flex; align-items:center; justify-content:center;
   opacity:0; transition:opacity .2s; pointer-events:none; }
