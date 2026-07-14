@@ -5,11 +5,11 @@ import type { Chapter } from './types'
 
 export const introductionEs: Chapter = {
   slug: 'introduction',
-  title: "Introducci?n",
+  title: "Introducción",
   sections: [
     {
       id: "avant-propos",
-      title: "Presentaci?n",
+      title: "Presentación",
       blocks: [
         { type: 'para', text: "Este tercer volumen sobre Réflexothérapie Occipito-Podale (ROP) constituye la continuación natural de los dos volúmenes anteriores. Tras el sistema osteomusculoarticular en el Volumen 1 y el sistema neuromeníngeo en el Volumen 2, abordamos ahora el campo de las vísceras abdominopélvicas, del sistema nervioso autónomo y de los mecanismos del estrés." },
         { type: 'para', text: "El propósito sigue siendo el mismo: proponer una cartografía coherente, alineada con la anatomía y la fisiología, concebida de forma tridimensional, con el cuerpo representado como un lactante en posición fetal dentro del pie y articulada con las zonas reflejas occipitales. En conjunto, las zonas reflejas occipitales y plantares constituyen las zonas reflejas ROP." },

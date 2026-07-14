@@ -13,7 +13,7 @@ export type SyncSlide = { src: string; title: string; orientation?: 'portrait' }
 // blockIndex refers to the position in chapter14Fr sections[].blocks[].
 // blockIndex -1 anchors a slide to the section heading itself (the marker is
 // rendered just above the <h2> instead of inside a content block).
-export type SyncAnchor = { sectionId: string; blockIndex: number; slide: number; gapBefore?: 'half' }
+export type SyncAnchor = { sectionId: string; blockIndex: number; slide: number; gapBefore?: 'half'; end?: { sectionId: string; blockIndex: number } }
 
 // French deck — re-rendered from the 21-page rework deck, followed by the
 // supplementary reflex-zone figure-slides.
@@ -244,6 +244,6 @@ export const chapter14SlideAnchorsFr: SyncAnchor[] = [
   { sectionId: 'rop',            blockIndex: 9,  slide: 25 },
   { sectionId: 'rop',            blockIndex: 10, slide: 26 },
   { sectionId: 'rop',            blockIndex: 14, slide: 27 },
-  { sectionId: 'rop',            blockIndex: 16, slide: 28 },
+  { sectionId: 'rop',            blockIndex: 15, slide: 28, end: { sectionId: 'rop', blockIndex: 16 } },
   { sectionId: 'relations',      blockIndex: 2,  slide: 29 },
 ]
