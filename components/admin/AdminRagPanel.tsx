@@ -1,6 +1,6 @@
 'use client'
 
-import { FormEvent, useState } from 'react'
+import { Fragment, type FormEvent, type ReactNode, useState } from 'react'
 import type { BookSearchLangFilter } from '@/lib/searchIndex'
 
 type LangOption = {
@@ -32,6 +32,97 @@ type AdminRagPanelProps = {
   initialQuestion: string
   initialLang: BookSearchLangFilter
   langOptions: LangOption[]
+}
+
+function renderInlineAnswer(text: string, citationIds: Set<number>): ReactNode[] {
+  const nodes: ReactNode[] = []
+  const pattern = /(\*\*[^*]+?\*\*|\[\d+\])/g
+  let cursor = 0
+  let match: RegExpExecArray | null
+
+  while ((match = pattern.exec(text)) !== null) {
+    if (match.index > cursor) {
+      nodes.push(text.slice(cursor, match.index))
+    }
+
+    const token = match[0]
+    const citation = token.match(/^\[(\d+)\]$/)
+
+    if (citation) {
+      const citationId = Number.parseInt(citation[1], 10)
+      nodes.push(
+        citationIds.has(citationId) ? (
+          <a
+            key={`cite-${match.index}-${citationId}`}
+            href={`#adm-rag-citation-${citationId}`}
+            className="adm-rag-inline-cite"
+            aria-label={`Jump to citation ${citationId}`}
+          >
+            [{citationId}]
+          </a>
+        ) : (
+          token
+        )
+      )
+    } else {
+      nodes.push(
+        <strong key={`strong-${match.index}`}>
+          {token.slice(2, -2)}
+        </strong>
+      )
+    }
+
+    cursor = match.index + token.length
+  }
+
+  if (cursor < text.length) {
+    nodes.push(text.slice(cursor))
+  }
+
+  return nodes
+}
+
+function renderAnswerBlock(block: string, blockIndex: number, citationIds: Set<number>) {
+  const lines = block.split('\n').map((line) => line.trim()).filter(Boolean)
+  const isBulletList = lines.length > 0 && lines.every((line) => /^[-*]\s+/.test(line))
+
+  if (isBulletList) {
+    return (
+      <ul key={`block-${blockIndex}`} className="adm-rag-answer-list">
+        {lines.map((line, lineIndex) => (
+          <li key={`block-${blockIndex}-line-${lineIndex}`}>
+            {renderInlineAnswer(line.replace(/^[-*]\s+/, ''), citationIds)}
+          </li>
+        ))}
+      </ul>
+    )
+  }
+
+  return (
+    <p key={`block-${blockIndex}`}>
+      {lines.map((line, lineIndex) => (
+        <Fragment key={`block-${blockIndex}-line-${lineIndex}`}>
+          {lineIndex > 0 && <br />}
+          {renderInlineAnswer(line, citationIds)}
+        </Fragment>
+      ))}
+    </p>
+  )
+}
+
+function RagAnswerText({ answer, citations }: { answer: string; citations: RagCitation[] }) {
+  const citationIds = new Set(citations.map((citation) => citation.citationId))
+  const blocks = answer
+    .trim()
+    .split(/\n{2,}/)
+    .map((block) => block.trim())
+    .filter(Boolean)
+
+  return (
+    <div className="adm-rag-answer-text">
+      {blocks.map((block, blockIndex) => renderAnswerBlock(block, blockIndex, citationIds))}
+    </div>
+  )
 }
 
 export default function AdminRagPanel({
@@ -130,7 +221,7 @@ export default function AdminRagPanel({
             <div className="adm-rag-answer-meta">
               <span>{answer.retrievalCount.toLocaleString()} retrieved passage{answer.retrievalCount === 1 ? '' : 's'}</span>
             </div>
-            <p>{answer.answer}</p>
+            <RagAnswerText answer={answer.answer} citations={answer.citations} />
           </article>
 
           {answer.citations.length > 0 && (
@@ -138,7 +229,7 @@ export default function AdminRagPanel({
               <h3>Citations</h3>
               <ol className="adm-rag-citations">
                 {answer.citations.map((citation) => (
-                  <li key={`${citation.citationId}:${citation.href}`}>
+                  <li id={`adm-rag-citation-${citation.citationId}`} key={`${citation.citationId}:${citation.href}`}>
                     <div className="adm-rag-citation-head">
                       <span>[{citation.citationId}]</span>
                       <a href={citation.href} target="_blank" rel="noopener noreferrer">
