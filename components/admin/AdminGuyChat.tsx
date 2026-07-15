@@ -29,6 +29,9 @@ type GuyChatCitation = {
   href: string
   slideNumber?: number
   imageSrc?: string
+  pairId?: string
+  cartographyImageSrc?: string
+  photoImageSrc?: string
   access?: string
 }
 
@@ -40,6 +43,7 @@ type GuyChatApiAnswer = {
 }
 
 type ChatRole = 'user' | 'assistant'
+type CitationTab = 'sources' | 'visuals'
 
 type ChatMessage = {
   id: string
@@ -65,7 +69,12 @@ function createId(prefix: string): string {
   return `${prefix}-${Date.now()}-${Math.random().toString(36).slice(2)}`
 }
 
-function renderInlineAnswer(text: string, citationIds: Set<number>, citationAnchorPrefix: string): ReactNode[] {
+function renderInlineAnswer(
+  text: string,
+  citationIds: Set<number>,
+  citationAnchorPrefix: string,
+  onCitationActivate?: (citationId: number) => void,
+): ReactNode[] {
   const nodes: ReactNode[] = []
   const pattern = /(\*\*[^*]+?\*\*|\[\d+\])/g
   let cursor = 0
@@ -88,6 +97,11 @@ function renderInlineAnswer(text: string, citationIds: Set<number>, citationAnch
             href={`#${citationAnchorPrefix}-${citationId}`}
             className="adm-rag-inline-cite"
             aria-label={`Jump to citation ${citationId}`}
+            onClick={(event) => {
+              if (!onCitationActivate) return
+              event.preventDefault()
+              onCitationActivate(citationId)
+            }}
           >
             [{citationId}]
           </a>
@@ -118,6 +132,7 @@ function renderAnswerBlock(
   blockIndex: number,
   citationIds: Set<number>,
   citationAnchorPrefix: string,
+  onCitationActivate?: (citationId: number) => void,
 ) {
   const lines = block.split('\n').map((line) => line.trim()).filter(Boolean)
   const heading = lines.length === 1 ? lines[0].match(/^(#{2,4})\s+(.+)$/) : null
@@ -126,7 +141,7 @@ function renderAnswerBlock(
   if (heading) {
     return (
       <h3 key={`block-${blockIndex}`} className="adm-guy-chat-answer-heading">
-        {renderInlineAnswer(heading[2], citationIds, citationAnchorPrefix)}
+        {renderInlineAnswer(heading[2], citationIds, citationAnchorPrefix, onCitationActivate)}
       </h3>
     )
   }
@@ -136,7 +151,7 @@ function renderAnswerBlock(
       <ul key={`block-${blockIndex}`} className="adm-rag-answer-list">
         {lines.map((line, lineIndex) => (
           <li key={`block-${blockIndex}-line-${lineIndex}`}>
-            {renderInlineAnswer(line.replace(/^[-*]\s+/, ''), citationIds, citationAnchorPrefix)}
+            {renderInlineAnswer(line.replace(/^[-*]\s+/, ''), citationIds, citationAnchorPrefix, onCitationActivate)}
           </li>
         ))}
       </ul>
@@ -148,7 +163,7 @@ function renderAnswerBlock(
       {lines.map((line, lineIndex) => (
         <Fragment key={`block-${blockIndex}-line-${lineIndex}`}>
           {lineIndex > 0 && <br />}
-          {renderInlineAnswer(line, citationIds, citationAnchorPrefix)}
+          {renderInlineAnswer(line, citationIds, citationAnchorPrefix, onCitationActivate)}
         </Fragment>
       ))}
     </p>
@@ -159,10 +174,12 @@ function ChatAnswerText({
   answer,
   messageId,
   citations = [],
+  onCitationActivate,
 }: {
   answer: string
   messageId: string
   citations?: GuyChatCitation[]
+  onCitationActivate?: (citationId: number) => void
 }) {
   const citationIds = new Set(citations.map((citation) => citation.citationId))
   const citationAnchorPrefix = `adm-guy-citation-${messageId}`
@@ -174,16 +191,18 @@ function ChatAnswerText({
 
   return (
     <div className="adm-rag-answer-text">
-      {blocks.map((block, blockIndex) => renderAnswerBlock(block, blockIndex, citationIds, citationAnchorPrefix))}
+      {blocks.map((block, blockIndex) => (
+        renderAnswerBlock(block, blockIndex, citationIds, citationAnchorPrefix, onCitationActivate)
+      ))}
     </div>
   )
 }
 
 function sourceLabel(citation: GuyChatCitation): string {
   if (citation.kind === 'slide') {
-    return citation.slideNumber ? `Slide ${citation.slideNumber}` : 'Slide'
+    return citation.slideNumber ? `Diapositive ${citation.slideNumber}` : 'Diapositive'
   }
-  return citation.kind === 'text' ? 'Book passage' : citation.kind
+  return citation.kind === 'text' ? 'Passage du livre' : citation.kind
 }
 
 function CitationCard({
@@ -220,7 +239,7 @@ function CitationCard({
             <span>{sourceLabel(citation)}</span>
           </div>
           <a className="adm-guy-source-open" href={citation.href} target="_blank" rel="noopener noreferrer">
-            Open
+            Ouvrir
           </a>
         </div>
         <a className="adm-guy-source-title" href={citation.href} target="_blank" rel="noopener noreferrer">
@@ -233,71 +252,240 @@ function CitationCard({
   )
 }
 
+function VisualPairCard({
+  citation,
+  messageId,
+}: {
+  citation: GuyChatCitation
+  messageId: string
+}) {
+  const [isOpen, setIsOpen] = useState(false)
+  const domId = `adm-guy-citation-${messageId}-${citation.citationId}`
+  const hasPhoto = !!citation.photoImageSrc
+
+  useEffect(() => {
+    if (!isOpen) return
+
+    const previousOverflow = document.body.style.overflow
+    const handleKeyDown = (event: globalThis.KeyboardEvent) => {
+      if (event.key === 'Escape') setIsOpen(false)
+    }
+
+    document.body.style.overflow = 'hidden'
+    window.addEventListener('keydown', handleKeyDown)
+    return () => {
+      document.body.style.overflow = previousOverflow
+      window.removeEventListener('keydown', handleKeyDown)
+    }
+  }, [isOpen])
+
+  return (
+    <li id={domId} className="adm-guy-visual-card">
+      <div className="adm-guy-source-top">
+        <div className="adm-guy-source-meta">
+          <span className="adm-guy-source-number">[{citation.citationId}]</span>
+          <span>{citation.lang.toUpperCase()}</span>
+          {citation.access && <span className={`adm-row-badge ${citation.access}`}>{citation.access}</span>}
+          <span>{hasPhoto ? 'Cartographie + photo' : 'Cartographie'}</span>
+        </div>
+        <a className="adm-guy-source-open" href={citation.href} target="_blank" rel="noopener noreferrer">
+          Ouvrir
+        </a>
+      </div>
+
+      <button type="button" className="adm-guy-visual-title" onClick={() => setIsOpen(true)}>
+        {citation.title}
+      </button>
+      <p className="adm-guy-source-section">{citation.sectionTitle || citation.chapterTitle}</p>
+
+      <div className={`adm-guy-visual-media${hasPhoto ? '' : ' single'}`}>
+        {citation.cartographyImageSrc && (
+          <button type="button" className="adm-guy-visual-thumb" onClick={() => setIsOpen(true)}>
+            <span>Cartographie</span>
+            <Image src={citation.cartographyImageSrc} alt="" width={640} height={480} sizes="190px" unoptimized />
+          </button>
+        )}
+        {citation.photoImageSrc && (
+          <button type="button" className="adm-guy-visual-thumb" onClick={() => setIsOpen(true)}>
+            <span>Photo du geste</span>
+            <Image src={citation.photoImageSrc} alt="" width={640} height={480} sizes="190px" unoptimized />
+          </button>
+        )}
+      </div>
+
+      <p className="adm-guy-source-snippet">{citation.snippet}</p>
+
+      {isOpen && (
+        <div className="adm-guy-visual-modal" role="dialog" aria-modal="true" aria-label={citation.title}>
+          <button
+            type="button"
+            className="adm-guy-visual-modal-backdrop"
+            aria-label="Fermer"
+            onClick={() => setIsOpen(false)}
+          />
+          <div className="adm-guy-visual-modal-content">
+            <div className="adm-guy-visual-modal-head">
+              <div>
+                <span>Cartographie et geste</span>
+                <strong>{citation.title}</strong>
+              </div>
+              <button type="button" onClick={() => setIsOpen(false)} aria-label="Fermer" title="Fermer">
+                ×
+              </button>
+            </div>
+            <div className={`adm-guy-visual-modal-grid${hasPhoto ? '' : ' single'}`}>
+              {citation.cartographyImageSrc && (
+                <figure>
+                  <Image src={citation.cartographyImageSrc} alt="Cartographie" width={1200} height={900} sizes="45vw" unoptimized />
+                  <figcaption>Cartographie</figcaption>
+                </figure>
+              )}
+              {citation.photoImageSrc && (
+                <figure>
+                  <Image src={citation.photoImageSrc} alt="Photo du geste" width={1200} height={900} sizes="45vw" unoptimized />
+                  <figcaption>Photo du geste</figcaption>
+                </figure>
+              )}
+            </div>
+            <a href={citation.href} target="_blank" rel="noopener noreferrer">
+              Ouvrir dans le chapitre
+            </a>
+          </div>
+        </div>
+      )}
+    </li>
+  )
+}
+
 function CitationPanel({
   messages,
   activeMessageId,
   onActiveMessageChange,
+  activeTab,
+  onActiveTabChange,
 }: {
   messages: ChatMessage[]
   activeMessageId: string | null
   onActiveMessageChange: (messageId: string) => void
+  activeTab: CitationTab
+  onActiveTabChange: (tab: CitationTab) => void
 }) {
   const citedMessages = messages.filter(
     (message) => message.role === 'assistant' && message.citations && message.citations.length > 0,
   )
   const activeMessage = citedMessages.find((message) => message.id === activeMessageId) ?? citedMessages.at(-1)
   const activeMessageIndex = activeMessage ? citedMessages.findIndex((message) => message.id === activeMessage.id) : -1
+  const citations = activeMessage?.citations ?? []
+  const visualCitations = citations.filter((citation) => citation.kind === 'reflex_pair')
+  const sourceCitations = citations.filter((citation) => citation.kind !== 'reflex_pair')
+  const selectedTab = activeTab === 'visuals' && visualCitations.length === 0
+    ? 'sources'
+    : activeTab === 'sources' && sourceCitations.length === 0 && visualCitations.length > 0
+      ? 'visuals'
+      : activeTab
+
+  function selectAnswer(index: number) {
+    const message = citedMessages[index]
+    if (!message) return
+    onActiveMessageChange(message.id)
+
+    const nextCitations = message.citations ?? []
+    const nextHasVisuals = nextCitations.some((citation) => citation.kind === 'reflex_pair')
+    const nextHasSources = nextCitations.some((citation) => citation.kind !== 'reflex_pair')
+    if (activeTab === 'visuals' && !nextHasVisuals && nextHasSources) onActiveTabChange('sources')
+    if (activeTab === 'sources' && !nextHasSources && nextHasVisuals) onActiveTabChange('visuals')
+  }
 
   return (
     <aside className="adm-guy-chat-evidence" aria-label="RAG citations">
       <div className="adm-guy-chat-evidence-head">
-        <p className="adm-page-eyebrow">RAG citations</p>
-        <h2>Sources</h2>
-        <p>Book and slide passages retrieved for the selected answer.</p>
+        <p className="adm-page-eyebrow">Références RAG</p>
+        <h2>Sources de la réponse</h2>
+        <p>Passages, diapositives et repères visuels utilisés par l&apos;assistant.</p>
       </div>
 
       {citedMessages.length === 0 ? (
         <div className="adm-guy-chat-evidence-empty">
-          <span>No citations yet</span>
-          <p>Ask a question to populate the evidence panel.</p>
+          <span>Aucune source</span>
+          <p>Posez une question pour afficher les références de la réponse.</p>
         </div>
       ) : (
         <>
-          {citedMessages.length > 1 && (
-            <div className="adm-guy-answer-switcher" role="tablist" aria-label="Answers with citations">
-              {citedMessages.map((message, messageIndex) => (
-                <button
-                  key={message.id}
-                  type="button"
-                  className={message.id === activeMessage?.id ? 'active' : ''}
-                  onClick={() => onActiveMessageChange(message.id)}
-                  aria-selected={message.id === activeMessage?.id}
-                  role="tab"
-                >
-                  <span>Answer {messageIndex + 1}</span>
-                  <em>{message.citations?.length ?? 0}</em>
-                </button>
-              ))}
+          {citedMessages.length > 1 && activeMessage && (
+            <div className="adm-guy-answer-stepper" aria-label="Réponse affichée">
+              <button
+                type="button"
+                onClick={() => selectAnswer(activeMessageIndex - 1)}
+                disabled={activeMessageIndex <= 0}
+                aria-label="Réponse précédente"
+                title="Réponse précédente"
+              >
+                ‹
+              </button>
+              <div>
+                <strong>Réponse {activeMessageIndex + 1} sur {citedMessages.length}</strong>
+                <span>{citations.length} source{citations.length === 1 ? '' : 's'}</span>
+              </div>
+              <button
+                type="button"
+                onClick={() => selectAnswer(activeMessageIndex + 1)}
+                disabled={activeMessageIndex >= citedMessages.length - 1}
+                aria-label="Réponse suivante"
+                title="Réponse suivante"
+              >
+                ›
+              </button>
             </div>
           )}
 
           {activeMessage && (
-            <div className={`adm-guy-chat-evidence-group${citedMessages.length === 1 ? ' single' : ''}`}>
-              {citedMessages.length > 1 && (
-                <div className="adm-guy-chat-evidence-group-head">
-                  <strong>Answer {activeMessageIndex + 1}</strong>
-                  <span>{activeMessage.citations?.length ?? 0} source{activeMessage.citations?.length === 1 ? '' : 's'}</span>
-                </div>
+            <div className="adm-guy-chat-evidence-group">
+              <div className="adm-guy-source-tabs" role="tablist" aria-label="Types de sources">
+                <button
+                  type="button"
+                  className={selectedTab === 'sources' ? 'active' : ''}
+                  onClick={() => onActiveTabChange('sources')}
+                  role="tab"
+                  aria-selected={selectedTab === 'sources'}
+                  disabled={sourceCitations.length === 0}
+                >
+                  <span>Livre &amp; diapositives</span>
+                  <em>{sourceCitations.length}</em>
+                </button>
+                <button
+                  type="button"
+                  className={selectedTab === 'visuals' ? 'active' : ''}
+                  onClick={() => onActiveTabChange('visuals')}
+                  role="tab"
+                  aria-selected={selectedTab === 'visuals'}
+                  disabled={visualCitations.length === 0}
+                >
+                  <span>Cartographies &amp; photos</span>
+                  <em>{visualCitations.length}</em>
+                </button>
+              </div>
+
+              {selectedTab === 'sources' ? (
+                <ol className="adm-guy-chat-citations">
+                  {sourceCitations.map((citation) => (
+                    <CitationCard
+                      key={`${activeMessage.id}:${citation.citationId}:${citation.href}`}
+                      citation={citation}
+                      messageId={activeMessage.id}
+                    />
+                  ))}
+                </ol>
+              ) : (
+                <ol className="adm-guy-visual-citations">
+                  {visualCitations.map((citation) => (
+                    <VisualPairCard
+                      key={`${activeMessage.id}:${citation.citationId}:${citation.pairId ?? citation.href}`}
+                      citation={citation}
+                      messageId={activeMessage.id}
+                    />
+                  ))}
+                </ol>
               )}
-              <ol className="adm-guy-chat-citations">
-                {activeMessage.citations?.map((citation) => (
-                  <CitationCard
-                    key={`${activeMessage.id}:${citation.citationId}:${citation.href}`}
-                    citation={citation}
-                    messageId={activeMessage.id}
-                  />
-                ))}
-              </ol>
             </div>
           )}
         </>
@@ -316,6 +504,7 @@ export default function AdminGuyChat({
   const [error, setError] = useState<string | null>(null)
   const [isLoading, setIsLoading] = useState(false)
   const [activeCitationMessageId, setActiveCitationMessageId] = useState<string | null>(null)
+  const [activeCitationTab, setActiveCitationTab] = useState<CitationTab>('sources')
   const threadRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
@@ -372,11 +561,31 @@ export default function AdminGuyChat({
         },
       ])
       setActiveCitationMessageId(assistantMessageId)
+      setActiveCitationTab(answer.citations.some((citation) => citation.kind !== 'reflex_pair') ? 'sources' : 'visuals')
     } catch (requestError) {
       setError(requestError instanceof Error ? requestError.message : 'Chat request failed')
     } finally {
       setIsLoading(false)
     }
+  }
+
+  function activateCitation(messageId: string, citationId: number) {
+    const message = messages.find((candidate) => candidate.id === messageId)
+    const citation = message?.citations?.find((candidate) => candidate.citationId === citationId)
+    if (!citation) return
+
+    setActiveCitationMessageId(messageId)
+    setActiveCitationTab(citation.kind === 'reflex_pair' ? 'visuals' : 'sources')
+    window.requestAnimationFrame(() => {
+      window.requestAnimationFrame(() => {
+        const citationElementId = `adm-guy-citation-${messageId}-${citationId}`
+        window.history.replaceState(null, '', `${window.location.pathname}${window.location.search}#${citationElementId}`)
+        document.getElementById(citationElementId)?.scrollIntoView({
+          behavior: 'smooth',
+          block: 'center',
+        })
+      })
+    })
   }
 
   function handleSubmit(event: FormEvent<HTMLFormElement>) {
@@ -404,6 +613,8 @@ export default function AdminGuyChat({
           messages={messages}
           activeMessageId={activeCitationMessageId}
           onActiveMessageChange={setActiveCitationMessageId}
+          activeTab={activeCitationTab}
+          onActiveTabChange={setActiveCitationTab}
         />
 
         <div className="adm-guy-chat-conversation">
@@ -428,7 +639,12 @@ export default function AdminGuyChat({
                     <em>{message.retrievalCount} source{message.retrievalCount === 1 ? '' : 's'}</em>
                   )}
                 </div>
-                <ChatAnswerText answer={message.content} messageId={message.id} citations={message.citations} />
+                <ChatAnswerText
+                  answer={message.content}
+                  messageId={message.id}
+                  citations={message.citations}
+                  onCitationActivate={(citationId) => activateCitation(message.id, citationId)}
+                />
                 {message.role === 'assistant' && message.model && (
                   <p className="adm-guy-chat-model">{message.model}</p>
                 )}

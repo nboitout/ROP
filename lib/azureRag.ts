@@ -1,3 +1,5 @@
+import { resolveReflexMediaPair } from '@/lib/reflexMediaPairs'
+
 export const AZURE_SEARCH_API_VERSION = '2026-04-01'
 export const AZURE_OPENAI_EMBEDDINGS_API_VERSION = '2023-05-15'
 
@@ -62,6 +64,9 @@ export type AzureBookSearchResult = {
   snippet: string
   href: string
   imageSrc?: string
+  pairId?: string
+  cartographyImageSrc?: string
+  photoImageSrc?: string
   sourcePath?: string
   access?: string
 }
@@ -349,7 +354,7 @@ function truncateText(value: string, maxLength: number): string {
 function toBookSearchResult(hit: AzureSearchHit): AzureBookSearchResult | null {
   if (!hit.id || !hit.content || !hit.href) return null
 
-  return {
+  const result: AzureBookSearchResult = {
     id: hit.id,
     score: hit['@search.score'] ?? 0,
     kind: hit.kind ?? 'text',
@@ -370,6 +375,15 @@ function toBookSearchResult(hit: AzureSearchHit): AzureBookSearchResult | null {
     sourcePath: hit.sourcePath,
     access: hit.access,
   }
+
+  const reflexPair = resolveReflexMediaPair(result)
+  if (!reflexPair) return result
+
+  return {
+    ...result,
+    ...reflexPair,
+    kind: 'reflex_pair',
+  }
 }
 
 function buildRagContext(citations: AzureRagCitation[]): string {
@@ -380,9 +394,12 @@ function buildRagContext(citations: AzureRagCitation[]): string {
       `Chapter: ${citation.chapterTitle}`,
       `Section: ${citation.sectionTitle}`,
       citation.kind === 'slide' && citation.slideNumber ? `Slide: ${citation.slideNumber}` : '',
+      citation.kind === 'reflex_pair' ? 'Visual evidence: paired reflex cartography and treatment photo' : '',
       `Language: ${citation.lang}`,
       `URL: ${citation.href}`,
       citation.kind === 'slide' && citation.imageSrc ? `Image: ${citation.imageSrc}` : '',
+      citation.cartographyImageSrc ? `Cartography: ${citation.cartographyImageSrc}` : '',
+      citation.photoImageSrc ? `Treatment photo: ${citation.photoImageSrc}` : '',
       `Content: ${truncateText(citation.content, 1100)}`,
     ].filter(Boolean)
 
@@ -509,7 +526,7 @@ export async function answerAzureBookQuestion({
         model: config.openAiChatDeployment,
         instructions: [
           'You answer questions about the indexed book corpus.',
-          'Retrieved context can contain chapter text passages and OCR-extracted slide text.',
+          'Retrieved context can contain chapter text passages, OCR-extracted slide text, and paired reflex cartographies with treatment photos.',
           'Use only the retrieved context.',
           'Cite the sources you use with bracketed citation numbers like [1] or [2].',
           'If the context is insufficient, say so plainly and list the closest cited passages.',

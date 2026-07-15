@@ -7,6 +7,7 @@ import {
 
 const AZURE_OPENAI_RESPONSES_API_PATH = '/openai/v1/responses'
 const DEFAULT_CHAT_TOP = 10
+const MAX_VISUAL_PAIRS = 3
 const MAX_CONTEXT_CHARS = 1150
 const MAX_HISTORY_MESSAGES = 8
 
@@ -87,9 +88,12 @@ function buildChatContext(citations: AzureRagCitation[]): string {
       `Chapter: ${citation.chapterTitle}`,
       `Section: ${citation.sectionTitle}`,
       citation.kind === 'slide' && citation.slideNumber ? `Slide: ${citation.slideNumber}` : '',
+      citation.kind === 'reflex_pair' ? 'Visual evidence: paired reflex cartography and treatment photo' : '',
       `Language: ${citation.lang}`,
       `URL: ${citation.href}`,
       citation.kind === 'slide' && citation.imageSrc ? `Image: ${citation.imageSrc}` : '',
+      citation.cartographyImageSrc ? `Cartography: ${citation.cartographyImageSrc}` : '',
+      citation.photoImageSrc ? `Treatment photo: ${citation.photoImageSrc}` : '',
       `Content: ${truncateText(citation.content, MAX_CONTEXT_CHARS)}`,
     ].filter(Boolean)
 
@@ -177,7 +181,18 @@ export async function answerGuyChat({
 
   const config = getAzureRagConfig({ requireSearchQueryKey: true, requireChatDeployment: true })
   const retrievalQuery = buildRetrievalQuery(messages)
-  const sources = await searchAzureBook({ query: retrievalQuery, lang, top })
+  const candidateSources = await searchAzureBook({
+    query: retrievalQuery,
+    lang,
+    top: Math.max(top * 3, 30),
+  })
+  const visualSources = candidateSources
+    .filter((source) => source.kind === 'reflex_pair')
+    .slice(0, Math.min(MAX_VISUAL_PAIRS, top))
+  const standardSources = candidateSources
+    .filter((source) => source.kind !== 'reflex_pair')
+    .slice(0, Math.max(0, top - visualSources.length))
+  const sources = [...standardSources, ...visualSources]
   const citations = sources.map((source, index) => ({
     ...source,
     citationId: index + 1,
