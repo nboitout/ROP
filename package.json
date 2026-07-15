@@ -4,11 +4,15 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "cp node_modules/pdfjs-dist/build/pdf.worker.min.mjs public/pdf.worker.min.mjs && next build",
+    "build": "node -e \"require('node:fs').copyFileSync('node_modules/pdfjs-dist/build/pdf.worker.min.mjs','public/pdf.worker.min.mjs')\" && next build",
     "start": "next start",
     "lint": "eslint",
     "azure:sync-book": "tsx scripts/sync-azure-search-index.ts",
-    "azure:sync-book:dry": "tsx scripts/sync-azure-search-index.ts --dry-run --limit=5"
+    "azure:sync-book:dry": "tsx scripts/sync-azure-search-index.ts --dry-run --limit=5",
+    "azure:ocr-slides": "tsx scripts/ocr-slides.ts",
+    "azure:ocr-slides:dry": "tsx scripts/ocr-slides.ts --dry-run --limit=10",
+    "azure:sync-slides": "tsx scripts/sync-azure-slide-index.ts",
+    "azure:sync-slides:dry": "tsx scripts/sync-azure-slide-index.ts --dry-run --limit=10"
   },
   "dependencies": {
     "next": "16.2.6",

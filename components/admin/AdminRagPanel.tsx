@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image'
 import { Fragment, type FormEvent, type ReactNode, useState } from 'react'
 import type { BookSearchLangFilter } from '@/lib/searchIndex'
 
@@ -18,6 +19,8 @@ type RagCitation = {
   title: string
   snippet: string
   href: string
+  slideNumber?: number
+  imageSrc?: string
   access?: string
 }
 
@@ -125,6 +128,13 @@ function RagAnswerText({ answer, citations }: { answer: string; citations: RagCi
   )
 }
 
+function sourceLabel(citation: RagCitation): string {
+  if (citation.kind === 'slide') {
+    return citation.slideNumber ? `Slide ${citation.slideNumber}` : 'Slide'
+  }
+  return citation.kind
+}
+
 export default function AdminRagPanel({
   initialQuestion,
   initialLang,
@@ -219,7 +229,7 @@ export default function AdminRagPanel({
         <div className="adm-rag-output">
           <article className="adm-rag-answer">
             <div className="adm-rag-answer-meta">
-              <span>{answer.retrievalCount.toLocaleString()} retrieved passage{answer.retrievalCount === 1 ? '' : 's'}</span>
+              <span>{answer.retrievalCount.toLocaleString()} retrieved source{answer.retrievalCount === 1 ? '' : 's'}</span>
             </div>
             <RagAnswerText answer={answer.answer} citations={answer.citations} />
           </article>
@@ -239,11 +249,26 @@ export default function AdminRagPanel({
                     <p className="adm-search-result-kicker">
                       <span>{citation.lang.toUpperCase()}</span>
                       {citation.access && <span className={`adm-row-badge ${citation.access}`}>{citation.access}</span>}
-                      <span>{citation.kind}</span>
+                      <span>{sourceLabel(citation)}</span>
                       <span>{Math.round(citation.score * 100) / 100}</span>
                     </p>
-                    <p className="adm-rag-citation-section">{citation.sectionTitle || citation.chapterTitle}</p>
-                    <p className="adm-rag-citation-snippet">{citation.snippet}</p>
+                    <div className="adm-rag-citation-body">
+                      {citation.kind === 'slide' && citation.imageSrc && (
+                        <a
+                          className="adm-rag-citation-thumb"
+                          href={citation.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label={`Open slide citation ${citation.citationId}`}
+                        >
+                          <Image src={citation.imageSrc} alt="" width={104} height={59} sizes="104px" />
+                        </a>
+                      )}
+                      <div>
+                        <p className="adm-rag-citation-section">{citation.sectionTitle || citation.chapterTitle}</p>
+                        <p className="adm-rag-citation-snippet">{citation.snippet}</p>
+                      </div>
+                    </div>
                   </li>
                 ))}
               </ol>

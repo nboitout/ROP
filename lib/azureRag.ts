@@ -332,7 +332,8 @@ export async function uploadAzureSearchDocuments(
 }
 
 function filterForLang(lang: AzureSearchLangFilter): string {
-  return lang === 'all' ? "kind eq 'text'" : `kind eq 'text' and lang eq '${lang}'`
+  const kindFilter = "(kind eq 'text' or kind eq 'slide')"
+  return lang === 'all' ? kindFilter : `${kindFilter} and lang eq '${lang}'`
 }
 
 function compactText(value: string): string {
@@ -373,14 +374,19 @@ function toBookSearchResult(hit: AzureSearchHit): AzureBookSearchResult | null {
 
 function buildRagContext(citations: AzureRagCitation[]): string {
   return citations.map((citation) => {
-    return [
+    const lines = [
       `[${citation.citationId}] ${citation.title}`,
+      `Source type: ${citation.kind}`,
       `Chapter: ${citation.chapterTitle}`,
       `Section: ${citation.sectionTitle}`,
+      citation.kind === 'slide' && citation.slideNumber ? `Slide: ${citation.slideNumber}` : '',
       `Language: ${citation.lang}`,
       `URL: ${citation.href}`,
+      citation.kind === 'slide' && citation.imageSrc ? `Image: ${citation.imageSrc}` : '',
       `Content: ${truncateText(citation.content, 1100)}`,
-    ].join('\n')
+    ].filter(Boolean)
+
+    return lines.join('\n')
   }).join('\n\n')
 }
 
@@ -503,6 +509,7 @@ export async function answerAzureBookQuestion({
         model: config.openAiChatDeployment,
         instructions: [
           'You answer questions about the indexed book corpus.',
+          'Retrieved context can contain chapter text passages and OCR-extracted slide text.',
           'Use only the retrieved context.',
           'Cite the sources you use with bracketed citation numbers like [1] or [2].',
           'If the context is insufficient, say so plainly and list the closest cited passages.',

@@ -59,10 +59,34 @@ function resultHeading(result: BookSearchResult): string {
 }
 
 function resultTypeLabel(result: BookSearchResult): string {
-  if (result.blockType === 'section') return 'Section'
-  if (result.blockType === 'rop') return 'R.O.P. block'
-  if (result.blockType === 'leadBullets') return 'Lead bullets'
-  return result.blockType
+  switch (result.blockType) {
+    case 'section':
+      return 'Section heading'
+    case 'para':
+      return 'Book paragraph'
+    case 'lead':
+      return 'Lead paragraph'
+    case 'sub':
+      return 'Subheading'
+    case 'bullets':
+      return 'Bullet list'
+    case 'numbered':
+      return 'Numbered list'
+    case 'leadBullets':
+      return 'Lead bullet list'
+    case 'table':
+      return 'Table text'
+    case 'xref':
+      return 'Cross-reference'
+    case 'rop':
+      return 'R.O.P. protocol'
+    case 'figure':
+      return 'Figure caption'
+    case 'reflexAtlas':
+      return 'Reflex atlas'
+    default:
+      return result.blockType
+  }
 }
 
 type SearchResultGroup = {

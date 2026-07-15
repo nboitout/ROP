@@ -1103,6 +1103,31 @@
   color: var(--adm-sage);
 }
 
+.adm-rag-citation-body {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 12px;
+  align-items: start;
+}
+
+.adm-rag-citation-thumb {
+  display: block;
+  width: 104px;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border: 1px solid var(--adm-i08);
+  border-radius: 3px;
+  background: rgba(245,240,232,.55);
+  box-shadow: 0 1px 6px rgba(26,26,24,.08);
+}
+
+.adm-rag-citation-thumb img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .adm-rag-citation-section {
   margin: 0;
   color: var(--adm-sage);
@@ -1425,6 +1450,14 @@
 
   .adm-rag-submit {
     width: 100%;
+  }
+
+  .adm-rag-citation-body {
+    grid-template-columns: 1fr;
+  }
+
+  .adm-rag-citation-thumb {
+    width: min(100%, 220px);
   }
 }
 
