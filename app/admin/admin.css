@@ -1179,12 +1179,14 @@
   overflow-y: auto;
   border: 1px solid var(--adm-i08);
   border-radius: 3px;
-  background: rgba(245,240,232,.34);
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.94), rgba(245,240,232,.58)),
+    #fff;
   padding: 16px;
 }
 
 .adm-guy-chat-evidence-head {
-  padding-bottom: 13px;
+  padding: 2px 2px 13px;
   border-bottom: 1px solid var(--adm-i08);
 }
 
@@ -1233,6 +1235,69 @@
 .adm-guy-chat-evidence-groups {
   display: grid;
   gap: 16px;
+}
+
+.adm-guy-answer-switcher {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 6px;
+  padding: 4px;
+  border: 1px solid var(--adm-i08);
+  border-radius: 3px;
+  background: rgba(245,240,232,.7);
+}
+
+.adm-guy-answer-switcher button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 0;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  background: transparent;
+  color: var(--adm-i50);
+  cursor: pointer;
+  font-family: inherit;
+  padding: 8px 9px;
+  transition: background .15s, border-color .15s, color .15s, box-shadow .15s;
+}
+
+.adm-guy-answer-switcher button:hover {
+  color: var(--adm-ink);
+  background: rgba(255,255,255,.72);
+}
+
+.adm-guy-answer-switcher button.active {
+  border-color: rgba(74,107,90,.24);
+  background: #fff;
+  color: var(--adm-sage);
+  box-shadow: 0 1px 6px rgba(26,26,24,.06);
+}
+
+.adm-guy-answer-switcher span,
+.adm-guy-answer-switcher em {
+  overflow: hidden;
+  font-size: .62rem;
+  font-style: normal;
+  font-weight: 800;
+  letter-spacing: .08em;
+  line-height: 1.2;
+  text-overflow: ellipsis;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.adm-guy-answer-switcher em {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 22px;
+  height: 20px;
+  margin-left: 6px;
+  border-radius: 2px;
+  background: rgba(74,107,90,.1);
+  color: var(--adm-sage);
+  font-size: .6rem;
 }
 
 .adm-guy-chat-evidence-group {
@@ -1357,22 +1422,114 @@
   text-transform: uppercase;
 }
 
+.adm-guy-chat-answer-heading {
+  margin: 3px 0 0;
+  color: var(--adm-sage);
+  font-size: .88rem;
+  font-weight: 850;
+  line-height: 1.35;
+}
+
 .adm-guy-chat-citations {
-  gap: 9px;
-}
-
-.adm-guy-chat-citations li {
-  box-shadow: none;
-  padding: 12px;
-}
-
-.adm-guy-chat-evidence .adm-rag-citation-body {
-  grid-template-columns: 1fr;
   gap: 10px;
 }
 
-.adm-guy-chat-evidence .adm-rag-citation-thumb {
-  width: min(100%, 220px);
+.adm-guy-chat-source-card {
+  display: grid;
+  gap: 9px;
+  border-left-color: rgba(160,124,58,.58);
+  background: rgba(255,255,255,.92);
+  box-shadow: 0 1px 8px rgba(26,26,24,.045);
+  padding: 13px;
+}
+
+.adm-guy-chat-source-card:target {
+  animation: adm-search-target-highlight 2.6s ease-out 1 both;
+}
+
+.adm-guy-chat-source-card.slide {
+  border-left-color: rgba(73,98,123,.52);
+}
+
+.adm-guy-source-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  color: var(--adm-i30);
+  font-size: .58rem;
+  font-weight: 800;
+  letter-spacing: .1em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.adm-guy-source-number {
+  color: var(--adm-gold);
+  font-size: .68rem;
+}
+
+.adm-guy-source-thumb {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border: 1px solid var(--adm-i08);
+  border-radius: 3px;
+  background: rgba(245,240,232,.55);
+}
+
+.adm-guy-source-thumb img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.adm-guy-source-title {
+  color: var(--adm-ink);
+  font-size: .83rem;
+  font-weight: 850;
+  line-height: 1.28;
+  text-decoration: none;
+}
+
+.adm-guy-source-title:hover {
+  color: var(--adm-sage);
+}
+
+.adm-guy-source-section {
+  margin: -2px 0 0;
+  color: var(--adm-sage);
+  font-size: .7rem;
+  font-weight: 800;
+  line-height: 1.35;
+}
+
+.adm-guy-source-snippet {
+  overflow: hidden;
+  margin: 0;
+  color: var(--adm-i50);
+  display: -webkit-box;
+  font-size: .74rem;
+  line-height: 1.5;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+}
+
+.adm-guy-source-open {
+  justify-self: start;
+  margin-top: 2px;
+  color: var(--adm-gold);
+  font-size: .61rem;
+  font-weight: 850;
+  letter-spacing: .1em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.adm-guy-source-open:hover {
+  color: var(--adm-sage);
 }
 
 .adm-guy-chat-error {

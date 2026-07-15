@@ -120,7 +120,16 @@ function renderAnswerBlock(
   citationAnchorPrefix: string,
 ) {
   const lines = block.split('\n').map((line) => line.trim()).filter(Boolean)
+  const heading = lines.length === 1 ? lines[0].match(/^(#{2,4})\s+(.+)$/) : null
   const isBulletList = lines.length > 0 && lines.every((line) => /^[-*]\s+/.test(line))
+
+  if (heading) {
+    return (
+      <h3 key={`block-${blockIndex}`} className="adm-guy-chat-answer-heading">
+        {renderInlineAnswer(heading[2], citationIds, citationAnchorPrefix)}
+      </h3>
+    )
+  }
 
   if (isBulletList) {
     return (
@@ -177,17 +186,69 @@ function sourceLabel(citation: GuyChatCitation): string {
   return citation.kind === 'text' ? 'Book passage' : citation.kind
 }
 
-function CitationPanel({ messages }: { messages: ChatMessage[] }) {
+function CitationCard({
+  citation,
+  messageId,
+}: {
+  citation: GuyChatCitation
+  messageId: string
+}) {
+  const domId = `adm-guy-citation-${messageId}-${citation.citationId}`
+
+  return (
+    <li id={domId} className={`adm-guy-chat-source-card ${citation.kind === 'slide' ? 'slide' : 'text'}`}>
+      <div className="adm-guy-source-meta">
+        <span className="adm-guy-source-number">[{citation.citationId}]</span>
+        <span>{citation.lang.toUpperCase()}</span>
+        {citation.access && <span className={`adm-row-badge ${citation.access}`}>{citation.access}</span>}
+        <span>{sourceLabel(citation)}</span>
+      </div>
+
+      {citation.kind === 'slide' && citation.imageSrc && (
+        <a
+          className="adm-guy-source-thumb"
+          href={citation.href}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={`Open slide citation ${citation.citationId}`}
+        >
+          <Image src={citation.imageSrc} alt="" width={320} height={180} sizes="(max-width: 900px) 100vw, 320px" />
+        </a>
+      )}
+
+      <a className="adm-guy-source-title" href={citation.href} target="_blank" rel="noopener noreferrer">
+        {citation.title}
+      </a>
+      <p className="adm-guy-source-section">{citation.sectionTitle || citation.chapterTitle}</p>
+      <p className="adm-guy-source-snippet">{citation.snippet}</p>
+      <a className="adm-guy-source-open" href={citation.href} target="_blank" rel="noopener noreferrer">
+        Open source
+      </a>
+    </li>
+  )
+}
+
+function CitationPanel({
+  messages,
+  activeMessageId,
+  onActiveMessageChange,
+}: {
+  messages: ChatMessage[]
+  activeMessageId: string | null
+  onActiveMessageChange: (messageId: string) => void
+}) {
   const citedMessages = messages.filter(
     (message) => message.role === 'assistant' && message.citations && message.citations.length > 0,
   )
+  const activeMessage = citedMessages.find((message) => message.id === activeMessageId) ?? citedMessages.at(-1)
+  const activeMessageIndex = activeMessage ? citedMessages.findIndex((message) => message.id === activeMessage.id) : -1
 
   return (
     <aside className="adm-guy-chat-evidence" aria-label="RAG citations">
       <div className="adm-guy-chat-evidence-head">
         <p className="adm-page-eyebrow">RAG citations</p>
         <h2>Sources</h2>
-        <p>Book and slide passages retrieved for Guy&apos;s answers.</p>
+        <p>Book and slide passages retrieved for the selected answer.</p>
       </div>
 
       {citedMessages.length === 0 ? (
@@ -196,54 +257,41 @@ function CitationPanel({ messages }: { messages: ChatMessage[] }) {
           <p>Ask a question to populate the evidence panel.</p>
         </div>
       ) : (
-        <div className="adm-guy-chat-evidence-groups">
-          {citedMessages.map((message, messageIndex) => (
-            <section key={message.id} className="adm-guy-chat-evidence-group">
+        <>
+          <div className="adm-guy-answer-switcher" role="tablist" aria-label="Answers with citations">
+            {citedMessages.map((message, messageIndex) => (
+              <button
+                key={message.id}
+                type="button"
+                className={message.id === activeMessage?.id ? 'active' : ''}
+                onClick={() => onActiveMessageChange(message.id)}
+                aria-selected={message.id === activeMessage?.id}
+                role="tab"
+              >
+                <span>Answer {messageIndex + 1}</span>
+                <em>{message.citations?.length ?? 0}</em>
+              </button>
+            ))}
+          </div>
+
+          {activeMessage && (
+            <section className="adm-guy-chat-evidence-group">
               <div className="adm-guy-chat-evidence-group-head">
-                <strong>Answer {messageIndex + 1}</strong>
-                <span>{message.citations?.length ?? 0} source{message.citations?.length === 1 ? '' : 's'}</span>
+                <strong>Answer {activeMessageIndex + 1}</strong>
+                <span>{activeMessage.citations?.length ?? 0} source{activeMessage.citations?.length === 1 ? '' : 's'}</span>
               </div>
               <ol className="adm-rag-citations adm-guy-chat-citations">
-                {message.citations?.map((citation) => {
-                  const domId = `adm-guy-citation-${message.id}-${citation.citationId}`
-                  return (
-                    <li id={domId} key={`${message.id}:${citation.citationId}:${citation.href}`}>
-                      <div className="adm-rag-citation-head">
-                        <span>[{citation.citationId}]</span>
-                        <a href={citation.href} target="_blank" rel="noopener noreferrer">
-                          {citation.title}
-                        </a>
-                      </div>
-                      <p className="adm-search-result-kicker">
-                        <span>{citation.lang.toUpperCase()}</span>
-                        {citation.access && <span className={`adm-row-badge ${citation.access}`}>{citation.access}</span>}
-                        <span>{sourceLabel(citation)}</span>
-                        <span>{Math.round(citation.score * 100) / 100}</span>
-                      </p>
-                      <div className="adm-rag-citation-body">
-                        {citation.kind === 'slide' && citation.imageSrc && (
-                          <a
-                            className="adm-rag-citation-thumb"
-                            href={citation.href}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            aria-label={`Open slide citation ${citation.citationId}`}
-                          >
-                            <Image src={citation.imageSrc} alt="" width={104} height={59} sizes="104px" />
-                          </a>
-                        )}
-                        <div>
-                          <p className="adm-rag-citation-section">{citation.sectionTitle || citation.chapterTitle}</p>
-                          <p className="adm-rag-citation-snippet">{citation.snippet}</p>
-                        </div>
-                      </div>
-                    </li>
-                  )
-                })}
+                {activeMessage.citations?.map((citation) => (
+                  <CitationCard
+                    key={`${activeMessage.id}:${citation.citationId}:${citation.href}`}
+                    citation={citation}
+                    messageId={activeMessage.id}
+                  />
+                ))}
               </ol>
             </section>
-          ))}
-        </div>
+          )}
+        </>
       )}
     </aside>
   )
@@ -258,6 +306,7 @@ export default function AdminGuyChat({
   const [lang, setLang] = useState<BookSearchLangFilter>(initialLang)
   const [error, setError] = useState<string | null>(null)
   const [isLoading, setIsLoading] = useState(false)
+  const [activeCitationMessageId, setActiveCitationMessageId] = useState<string | null>(null)
   const threadRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
@@ -301,10 +350,11 @@ export default function AdminGuyChat({
       }
 
       const answer = data as GuyChatApiAnswer
+      const assistantMessageId = createId('assistant')
       setMessages((currentMessages) => [
         ...currentMessages,
         {
-          id: createId('assistant'),
+          id: assistantMessageId,
           role: 'assistant',
           content: answer.answer,
           citations: answer.citations,
@@ -312,6 +362,7 @@ export default function AdminGuyChat({
           model: answer.model,
         },
       ])
+      setActiveCitationMessageId(assistantMessageId)
     } catch (requestError) {
       setError(requestError instanceof Error ? requestError.message : 'Chat request failed')
     } finally {
@@ -334,7 +385,11 @@ export default function AdminGuyChat({
   return (
     <section className="adm-guy-chat-shell" aria-labelledby="adm-guy-chat-title">
       <div className="adm-guy-chat-main">
-        <CitationPanel messages={messages} />
+        <CitationPanel
+          messages={messages}
+          activeMessageId={activeCitationMessageId}
+          onActiveMessageChange={setActiveCitationMessageId}
+        />
 
         <div className="adm-guy-chat-conversation">
           <div className="adm-guy-chat-thread" ref={threadRef}>
