@@ -1,0 +1,394 @@
+'use client'
+
+import Image from 'next/image'
+import {
+  Fragment,
+  type FormEvent,
+  type KeyboardEvent,
+  type ReactNode,
+  useEffect,
+  useRef,
+  useState,
+} from 'react'
+import type { BookSearchLangFilter } from '@/lib/searchIndex'
+
+type LangOption = {
+  value: BookSearchLangFilter
+  label: string
+}
+
+type GuyChatCitation = {
+  citationId: number
+  score: number
+  kind: string
+  lang: string
+  chapterTitle: string
+  sectionTitle: string
+  title: string
+  snippet: string
+  href: string
+  slideNumber?: number
+  imageSrc?: string
+  access?: string
+}
+
+type GuyChatApiAnswer = {
+  answer: string
+  citations: GuyChatCitation[]
+  retrievalCount: number
+  model: string
+}
+
+type ChatRole = 'user' | 'assistant'
+
+type ChatMessage = {
+  id: string
+  role: ChatRole
+  content: string
+  citations?: GuyChatCitation[]
+  retrievalCount?: number
+  model?: string
+}
+
+type AdminGuyChatProps = {
+  initialLang: BookSearchLangFilter
+  langOptions: LangOption[]
+}
+
+const MAX_API_MESSAGES = 14
+
+function createId(prefix: string): string {
+  if (typeof crypto !== 'undefined' && 'randomUUID' in crypto) {
+    return `${prefix}-${crypto.randomUUID()}`
+  }
+
+  return `${prefix}-${Date.now()}-${Math.random().toString(36).slice(2)}`
+}
+
+function renderInlineAnswer(text: string, citationIds: Set<number>, citationAnchorPrefix: string): ReactNode[] {
+  const nodes: ReactNode[] = []
+  const pattern = /(\*\*[^*]+?\*\*|\[\d+\])/g
+  let cursor = 0
+  let match: RegExpExecArray | null
+
+  while ((match = pattern.exec(text)) !== null) {
+    if (match.index > cursor) {
+      nodes.push(text.slice(cursor, match.index))
+    }
+
+    const token = match[0]
+    const citation = token.match(/^\[(\d+)\]$/)
+
+    if (citation) {
+      const citationId = Number.parseInt(citation[1], 10)
+      nodes.push(
+        citationIds.has(citationId) ? (
+          <a
+            key={`cite-${match.index}-${citationId}`}
+            href={`#${citationAnchorPrefix}-${citationId}`}
+            className="adm-rag-inline-cite"
+            aria-label={`Jump to citation ${citationId}`}
+          >
+            [{citationId}]
+          </a>
+        ) : (
+          token
+        ),
+      )
+    } else {
+      nodes.push(
+        <strong key={`strong-${match.index}`}>
+          {token.slice(2, -2)}
+        </strong>,
+      )
+    }
+
+    cursor = match.index + token.length
+  }
+
+  if (cursor < text.length) {
+    nodes.push(text.slice(cursor))
+  }
+
+  return nodes
+}
+
+function renderAnswerBlock(
+  block: string,
+  blockIndex: number,
+  citationIds: Set<number>,
+  citationAnchorPrefix: string,
+) {
+  const lines = block.split('\n').map((line) => line.trim()).filter(Boolean)
+  const isBulletList = lines.length > 0 && lines.every((line) => /^[-*]\s+/.test(line))
+
+  if (isBulletList) {
+    return (
+      <ul key={`block-${blockIndex}`} className="adm-rag-answer-list">
+        {lines.map((line, lineIndex) => (
+          <li key={`block-${blockIndex}-line-${lineIndex}`}>
+            {renderInlineAnswer(line.replace(/^[-*]\s+/, ''), citationIds, citationAnchorPrefix)}
+          </li>
+        ))}
+      </ul>
+    )
+  }
+
+  return (
+    <p key={`block-${blockIndex}`}>
+      {lines.map((line, lineIndex) => (
+        <Fragment key={`block-${blockIndex}-line-${lineIndex}`}>
+          {lineIndex > 0 && <br />}
+          {renderInlineAnswer(line, citationIds, citationAnchorPrefix)}
+        </Fragment>
+      ))}
+    </p>
+  )
+}
+
+function ChatAnswerText({
+  answer,
+  messageId,
+  citations = [],
+}: {
+  answer: string
+  messageId: string
+  citations?: GuyChatCitation[]
+}) {
+  const citationIds = new Set(citations.map((citation) => citation.citationId))
+  const citationAnchorPrefix = `adm-guy-citation-${messageId}`
+  const blocks = answer
+    .trim()
+    .split(/\n{2,}/)
+    .map((block) => block.trim())
+    .filter(Boolean)
+
+  return (
+    <div className="adm-rag-answer-text">
+      {blocks.map((block, blockIndex) => renderAnswerBlock(block, blockIndex, citationIds, citationAnchorPrefix))}
+    </div>
+  )
+}
+
+function sourceLabel(citation: GuyChatCitation): string {
+  if (citation.kind === 'slide') {
+    return citation.slideNumber ? `Slide ${citation.slideNumber}` : 'Slide'
+  }
+  return citation.kind === 'text' ? 'Book passage' : citation.kind
+}
+
+function CitationList({
+  citations,
+  messageId,
+}: {
+  citations: GuyChatCitation[]
+  messageId: string
+}) {
+  if (citations.length === 0) return null
+
+  return (
+    <details className="adm-guy-chat-citation-details" open>
+      <summary>Citations ({citations.length})</summary>
+      <ol className="adm-rag-citations adm-guy-chat-citations">
+        {citations.map((citation) => {
+          const domId = `adm-guy-citation-${messageId}-${citation.citationId}`
+          return (
+            <li id={domId} key={`${messageId}:${citation.citationId}:${citation.href}`}>
+              <div className="adm-rag-citation-head">
+                <span>[{citation.citationId}]</span>
+                <a href={citation.href} target="_blank" rel="noopener noreferrer">
+                  {citation.title}
+                </a>
+              </div>
+              <p className="adm-search-result-kicker">
+                <span>{citation.lang.toUpperCase()}</span>
+                {citation.access && <span className={`adm-row-badge ${citation.access}`}>{citation.access}</span>}
+                <span>{sourceLabel(citation)}</span>
+                <span>{Math.round(citation.score * 100) / 100}</span>
+              </p>
+              <div className="adm-rag-citation-body">
+                {citation.kind === 'slide' && citation.imageSrc && (
+                  <a
+                    className="adm-rag-citation-thumb"
+                    href={citation.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`Open slide citation ${citation.citationId}`}
+                  >
+                    <Image src={citation.imageSrc} alt="" width={104} height={59} sizes="104px" />
+                  </a>
+                )}
+                <div>
+                  <p className="adm-rag-citation-section">{citation.sectionTitle || citation.chapterTitle}</p>
+                  <p className="adm-rag-citation-snippet">{citation.snippet}</p>
+                </div>
+              </div>
+            </li>
+          )
+        })}
+      </ol>
+    </details>
+  )
+}
+
+export default function AdminGuyChat({
+  initialLang,
+  langOptions,
+}: AdminGuyChatProps) {
+  const [messages, setMessages] = useState<ChatMessage[]>([])
+  const [draft, setDraft] = useState('')
+  const [lang, setLang] = useState<BookSearchLangFilter>(initialLang)
+  const [error, setError] = useState<string | null>(null)
+  const [isLoading, setIsLoading] = useState(false)
+  const threadRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    threadRef.current?.scrollTo({
+      top: threadRef.current.scrollHeight,
+      behavior: 'smooth',
+    })
+  }, [messages, isLoading])
+
+  async function submitQuestion() {
+    const trimmedDraft = draft.trim()
+    if (!trimmedDraft || isLoading) return
+
+    const userMessage: ChatMessage = {
+      id: createId('user'),
+      role: 'user',
+      content: trimmedDraft,
+    }
+    const nextMessages = [...messages, userMessage]
+
+    setMessages(nextMessages)
+    setDraft('')
+    setError(null)
+    setIsLoading(true)
+
+    try {
+      const response = await fetch('/api/admin/chat', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          lang,
+          messages: nextMessages
+            .slice(-MAX_API_MESSAGES)
+            .map(({ role, content }) => ({ role, content })),
+        }),
+      })
+      const data = await response.json()
+
+      if (!response.ok) {
+        throw new Error(data.error ?? 'Chat request failed')
+      }
+
+      const answer = data as GuyChatApiAnswer
+      setMessages((currentMessages) => [
+        ...currentMessages,
+        {
+          id: createId('assistant'),
+          role: 'assistant',
+          content: answer.answer,
+          citations: answer.citations,
+          retrievalCount: answer.retrievalCount,
+          model: answer.model,
+        },
+      ])
+    } catch (requestError) {
+      setError(requestError instanceof Error ? requestError.message : 'Chat request failed')
+    } finally {
+      setIsLoading(false)
+    }
+  }
+
+  function handleSubmit(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault()
+    void submitQuestion()
+  }
+
+  function handleKeyDown(event: KeyboardEvent<HTMLTextAreaElement>) {
+    if ((event.metaKey || event.ctrlKey) && event.key === 'Enter') {
+      event.preventDefault()
+      void submitQuestion()
+    }
+  }
+
+  return (
+    <section className="adm-guy-chat-shell" aria-labelledby="adm-guy-chat-title">
+      <div className="adm-guy-chat-main">
+        <div className="adm-guy-chat-thread" ref={threadRef}>
+          {messages.length === 0 && (
+            <div className="adm-guy-chat-empty">
+              <p className="adm-page-eyebrow">Guy chatbot</p>
+              <h2 id="adm-guy-chat-title">Ask about the R.O.P. book</h2>
+              <p>Anatomy and physiology can be answered as background; R.O.P. reasoning is grounded in the indexed book and slides.</p>
+            </div>
+          )}
+
+          {messages.map((message) => (
+            <article key={message.id} className={`adm-guy-chat-message ${message.role}`}>
+              <div className="adm-guy-chat-message-head">
+                <span>{message.role === 'user' ? 'You' : 'Guy bot'}</span>
+                {message.role === 'assistant' && message.retrievalCount !== undefined && (
+                  <em>{message.retrievalCount} source{message.retrievalCount === 1 ? '' : 's'}</em>
+                )}
+              </div>
+              <ChatAnswerText answer={message.content} messageId={message.id} citations={message.citations} />
+              {message.role === 'assistant' && message.model && (
+                <p className="adm-guy-chat-model">{message.model}</p>
+              )}
+              {message.citations && (
+                <CitationList citations={message.citations} messageId={message.id} />
+              )}
+            </article>
+          ))}
+
+          {isLoading && (
+            <div className="adm-guy-chat-loading" aria-live="polite">
+              <span />
+              <span />
+              <span />
+            </div>
+          )}
+        </div>
+
+        {error && (
+          <div className="adm-rag-error adm-guy-chat-error" role="alert">
+            {error}
+          </div>
+        )}
+
+        <form className="adm-guy-chat-composer" onSubmit={handleSubmit}>
+          <label className="adm-rag-question">
+            <span>Message</span>
+            <textarea
+              value={draft}
+              onChange={(event) => setDraft(event.target.value)}
+              onKeyDown={handleKeyDown}
+              placeholder="Question for Guy..."
+              rows={4}
+            />
+          </label>
+          <div className="adm-guy-chat-controls">
+            <label className="adm-search-select-field">
+              <span>Language</span>
+              <select
+                value={lang}
+                onChange={(event) => setLang(event.target.value as BookSearchLangFilter)}
+              >
+                {langOptions.map((option) => (
+                  <option key={option.value} value={option.value}>
+                    {option.label}
+                  </option>
+                ))}
+              </select>
+            </label>
+            <button type="submit" className="adm-rag-submit" disabled={isLoading || draft.trim().length === 0}>
+              {isLoading ? 'Asking...' : 'Send'}
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+  )
+}

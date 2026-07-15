@@ -17,6 +17,7 @@ export default async function AdminLayout({
           <div className="adm-nav-links">
             <AdminNavLink href="/admin/chapitres">Chapters</AdminNavLink>
             <AdminNavLink href="/admin/search">Search</AdminNavLink>
+            <AdminNavLink href="/admin/chat">Chatbot</AdminNavLink>
             <span className="adm-nav-sep" aria-hidden="true" />
             <AdminNavLink href="/admin">Overview</AdminNavLink>
             <AdminNavLink href="/admin/visits">Visits</AdminNavLink>
