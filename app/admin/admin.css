@@ -1173,8 +1173,8 @@
 .adm-guy-chat-evidence {
   position: sticky;
   top: 78px;
-  display: grid;
-  align-content: start;
+  display: flex;
+  flex-direction: column;
   align-items: stretch;
   gap: 8px;
   min-width: 0;
@@ -1304,8 +1304,11 @@
 }
 
 .adm-guy-chat-evidence-group {
-  display: grid;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
   gap: 7px;
+  width: 100%;
   min-width: 0;
 }
 
@@ -1447,22 +1450,24 @@
 }
 
 .adm-guy-chat-citations {
-  display: grid;
-  align-items: stretch;
+  display: flex;
+  flex-direction: column;
   gap: 6px;
-  justify-items: stretch;
   list-style: none;
   margin: 0;
   padding: 0;
   width: 100%;
+  min-width: 0;
 }
 
 .adm-guy-chat-citations .adm-guy-chat-source-card {
   box-sizing: border-box;
   display: grid;
+  flex: 0 0 auto;
   gap: 0;
-  justify-self: stretch;
   width: 100%;
+  max-width: none;
+  min-width: 0;
   border: 1px solid rgba(26,26,24,.09);
   border-left: 2px solid rgba(160,124,58,.58);
   background: rgba(255,255,255,.9);
@@ -1533,6 +1538,7 @@
 }
 
 .adm-guy-source-title {
+  min-width: 0;
   color: var(--adm-ink);
   font-size: .78rem;
   font-weight: 850;
@@ -1545,6 +1551,7 @@
 }
 
 .adm-guy-source-section {
+  min-width: 0;
   margin: 0;
   color: var(--adm-sage);
   font-size: .66rem;
@@ -1554,6 +1561,7 @@
 
 .adm-guy-source-snippet {
   overflow: hidden;
+  min-width: 0;
   margin: 0;
   color: var(--adm-i50);
   display: -webkit-box;
