@@ -274,6 +274,7 @@ function preloadSlideImage(src: string | undefined) {
   slidePreloadCache.add(src)
   const img = new Image()
   img.decoding = 'async'
+  img.fetchPriority = 'low'
   img.src = src
 }
 
@@ -402,48 +403,6 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
     try { localStorage.setItem('rop_slides_hidden', visible ? '0' : '1') } catch {}
     track(visible ? 'sync_slides_shown' : 'sync_slides_hidden', { slide: active })
   }
-
-  useEffect(() => {
-    const activeIndex = (active ?? 1) - 1
-    for (let index = activeIndex - 3; index <= activeIndex + 6; index += 1) {
-      preloadSlideImage(slides[index]?.src)
-    }
-  }, [active, slides])
-
-  useEffect(() => {
-    if (typeof window === 'undefined') return
-    let cancelled = false
-    let index = 0
-    let handle: { type: 'idle' | 'timer'; id: number } | undefined
-    const schedule = (callback: () => void) => {
-      if (typeof window.requestIdleCallback === 'function') {
-        return { type: 'idle' as const, id: window.requestIdleCallback(callback, { timeout: 1500 }) }
-      }
-      return { type: 'timer' as const, id: window.setTimeout(callback, 400) }
-    }
-    const cancel = (pending: { type: 'idle' | 'timer'; id: number }) => {
-      if (pending.type === 'idle' && typeof window.cancelIdleCallback === 'function') {
-        window.cancelIdleCallback(pending.id)
-      } else {
-        window.clearTimeout(pending.id)
-      }
-    }
-    const warmNextBatch = () => {
-      if (cancelled) return
-      let warmed = 0
-      while (index < slides.length && warmed < 2) {
-        preloadSlideImage(slides[index]?.src)
-        index += 1
-        warmed += 1
-      }
-      if (index < slides.length) handle = schedule(warmNextBatch)
-    }
-    handle = schedule(warmNextBatch)
-    return () => {
-      cancelled = true
-      if (handle) cancel(handle)
-    }
-  }, [slides])
 
   // Restore reading position on return.
   useEffect(() => {
@@ -943,15 +902,15 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
   const activeSlideIsPortrait = activeSlide?.orientation === 'portrait'
   const hideReflexJumpOnDesktop = chapter.slug === 'chapter-15' && activeSectionId === reflexSection?.id
   const reflexJumpClassName = `ss-reflex-jump${hideReflexJumpOnDesktop ? ' ss-reflex-jump--desktop-hidden' : ''}`
-  const renderedSlideIndexes = useMemo(() => {
-    if (!active) return []
-    const indexes = new Set([active - 3, active - 2, active - 1, active, active + 1])
-    return Array.from(indexes)
-      .filter((index) => index >= 0 && index < slides.length)
-      .sort((a, b) => a - b)
-  }, [active, slides.length])
   const lightboxGalleryCount = lightbox?.gallery?.length ?? 0
   const lightboxGalleryIndex = lightbox?.galleryIndex ?? 0
+
+  function warmSlideNeighbours(slideNumber: number) {
+    const activeIndex = slideNumber - 1
+    for (const delta of [1, -1, 2]) {
+      preloadSlideImage(slides[activeIndex + delta]?.src)
+    }
+  }
 
   function slidesAtPoint(sectionId: string, blockIndex: number, itemIndex?: number) {
     return slidesFromAnchors(anchorsByPoint.get(pointKey(sectionId, blockIndex, itemIndex)))
@@ -1151,21 +1110,16 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
                   onClick={() => { if (active) openSlideLightbox(active) }}
                   aria-label={active ? ui.enlarge(active, activeSlide.title) : ui.slides}
                 >
-                  {renderedSlideIndexes.map((i) => {
-                    const s = slides[i]
-                    return (
-                      <img
-                        key={s.src}
-                        src={s.src}
-                        alt={s.title}
-                        className={`ss-slide${i + 1 === activeSlideNumber ? ' is-active' : ''}`}
-                        loading={Math.abs(i + 1 - activeSlideNumber) <= 1 ? 'eager' : 'lazy'}
-                        fetchPriority={i + 1 === activeSlideNumber ? 'high' : 'low'}
-                        decoding="async"
-                        aria-hidden={i + 1 !== activeSlideNumber}
-                      />
-                    )
-                  })}
+                  <img
+                    key={activeSlide.src}
+                    src={activeSlide.src}
+                    alt={activeSlide.title}
+                    className="ss-slide is-active"
+                    loading="eager"
+                    fetchPriority="high"
+                    decoding="async"
+                    onLoad={() => warmSlideNeighbours(activeSlideNumber)}
+                  />
                   <span className="cr-fig-zoom ss-frame-zoom" aria-hidden>
                     <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                       <path d="M15 3h6v6" />
@@ -1424,6 +1378,9 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
               <img
                 src={lightbox.src}
                 alt={lightbox.alt}
+                loading="eager"
+                fetchPriority="high"
+                decoding="async"
                 onLoad={alignLightboxViewport}
                 style={{
                   transform: `${rotateLandscapeLightbox ? `rotate(${lightboxRotation}deg) ` : ''}scale(${lightboxZoom})`,
