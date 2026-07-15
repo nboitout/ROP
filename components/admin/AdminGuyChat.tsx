@@ -282,7 +282,7 @@ function CitationPanel({
           )}
 
           {activeMessage && (
-            <section className={`adm-guy-chat-evidence-group${citedMessages.length === 1 ? ' single' : ''}`}>
+            <div className={`adm-guy-chat-evidence-group${citedMessages.length === 1 ? ' single' : ''}`}>
               {citedMessages.length > 1 && (
                 <div className="adm-guy-chat-evidence-group-head">
                   <strong>Answer {activeMessageIndex + 1}</strong>
@@ -298,7 +298,7 @@ function CitationPanel({
                   />
                 ))}
               </ol>
-            </section>
+            </div>
           )}
         </>
       )}
