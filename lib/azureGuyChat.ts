@@ -78,6 +78,15 @@ function buildConversation(messages: GuyChatMessageInput[]): string {
     .join('\n\n')
 }
 
+function mergeUniqueSources<T extends { id: string }>(...sourceGroups: T[][]): T[] {
+  const seen = new Set<string>()
+  return sourceGroups.flatMap((sources) => sources.filter((source) => {
+    if (seen.has(source.id)) return false
+    seen.add(source.id)
+    return true
+  }))
+}
+
 function buildChatContext(citations: AzureRagCitation[]): string {
   if (citations.length === 0) return 'No book or slide source was retrieved.'
 
@@ -180,12 +189,18 @@ export async function answerGuyChat({
   }
 
   const config = getAzureRagConfig({ requireSearchQueryKey: true, requireChatDeployment: true })
+  const latestQuery = latestUserMessage(messages)
   const retrievalQuery = buildRetrievalQuery(messages)
-  const candidateSources = await searchAzureBook({
-    query: retrievalQuery,
-    lang,
-    top: Math.max(top * 3, 30),
-  })
+  const candidateTop = Math.max(top * 3, 30)
+
+  // Preserve the newest topic even when earlier assistant answers make the contextual query much longer.
+  const [latestSources, contextualSources] = await Promise.all([
+    searchAzureBook({ query: latestQuery, lang, top: candidateTop }),
+    messages.length > 1
+      ? searchAzureBook({ query: retrievalQuery, lang, top: candidateTop })
+      : Promise.resolve([]),
+  ])
+  const candidateSources = mergeUniqueSources(latestSources, contextualSources)
   const visualSources = candidateSources
     .filter((source) => source.kind === 'reflex_pair')
     .slice(0, Math.min(MAX_VISUAL_PAIRS, top))
