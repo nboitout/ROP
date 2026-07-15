@@ -177,57 +177,75 @@ function sourceLabel(citation: GuyChatCitation): string {
   return citation.kind === 'text' ? 'Book passage' : citation.kind
 }
 
-function CitationList({
-  citations,
-  messageId,
-}: {
-  citations: GuyChatCitation[]
-  messageId: string
-}) {
-  if (citations.length === 0) return null
+function CitationPanel({ messages }: { messages: ChatMessage[] }) {
+  const citedMessages = messages.filter(
+    (message) => message.role === 'assistant' && message.citations && message.citations.length > 0,
+  )
 
   return (
-    <details className="adm-guy-chat-citation-details" open>
-      <summary>Citations ({citations.length})</summary>
-      <ol className="adm-rag-citations adm-guy-chat-citations">
-        {citations.map((citation) => {
-          const domId = `adm-guy-citation-${messageId}-${citation.citationId}`
-          return (
-            <li id={domId} key={`${messageId}:${citation.citationId}:${citation.href}`}>
-              <div className="adm-rag-citation-head">
-                <span>[{citation.citationId}]</span>
-                <a href={citation.href} target="_blank" rel="noopener noreferrer">
-                  {citation.title}
-                </a>
+    <aside className="adm-guy-chat-evidence" aria-label="RAG citations">
+      <div className="adm-guy-chat-evidence-head">
+        <p className="adm-page-eyebrow">RAG citations</p>
+        <h2>Sources</h2>
+        <p>Book and slide passages retrieved for Guy&apos;s answers.</p>
+      </div>
+
+      {citedMessages.length === 0 ? (
+        <div className="adm-guy-chat-evidence-empty">
+          <span>No citations yet</span>
+          <p>Ask a question to populate the evidence panel.</p>
+        </div>
+      ) : (
+        <div className="adm-guy-chat-evidence-groups">
+          {citedMessages.map((message, messageIndex) => (
+            <section key={message.id} className="adm-guy-chat-evidence-group">
+              <div className="adm-guy-chat-evidence-group-head">
+                <strong>Answer {messageIndex + 1}</strong>
+                <span>{message.citations?.length ?? 0} source{message.citations?.length === 1 ? '' : 's'}</span>
               </div>
-              <p className="adm-search-result-kicker">
-                <span>{citation.lang.toUpperCase()}</span>
-                {citation.access && <span className={`adm-row-badge ${citation.access}`}>{citation.access}</span>}
-                <span>{sourceLabel(citation)}</span>
-                <span>{Math.round(citation.score * 100) / 100}</span>
-              </p>
-              <div className="adm-rag-citation-body">
-                {citation.kind === 'slide' && citation.imageSrc && (
-                  <a
-                    className="adm-rag-citation-thumb"
-                    href={citation.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label={`Open slide citation ${citation.citationId}`}
-                  >
-                    <Image src={citation.imageSrc} alt="" width={104} height={59} sizes="104px" />
-                  </a>
-                )}
-                <div>
-                  <p className="adm-rag-citation-section">{citation.sectionTitle || citation.chapterTitle}</p>
-                  <p className="adm-rag-citation-snippet">{citation.snippet}</p>
-                </div>
-              </div>
-            </li>
-          )
-        })}
-      </ol>
-    </details>
+              <ol className="adm-rag-citations adm-guy-chat-citations">
+                {message.citations?.map((citation) => {
+                  const domId = `adm-guy-citation-${message.id}-${citation.citationId}`
+                  return (
+                    <li id={domId} key={`${message.id}:${citation.citationId}:${citation.href}`}>
+                      <div className="adm-rag-citation-head">
+                        <span>[{citation.citationId}]</span>
+                        <a href={citation.href} target="_blank" rel="noopener noreferrer">
+                          {citation.title}
+                        </a>
+                      </div>
+                      <p className="adm-search-result-kicker">
+                        <span>{citation.lang.toUpperCase()}</span>
+                        {citation.access && <span className={`adm-row-badge ${citation.access}`}>{citation.access}</span>}
+                        <span>{sourceLabel(citation)}</span>
+                        <span>{Math.round(citation.score * 100) / 100}</span>
+                      </p>
+                      <div className="adm-rag-citation-body">
+                        {citation.kind === 'slide' && citation.imageSrc && (
+                          <a
+                            className="adm-rag-citation-thumb"
+                            href={citation.href}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label={`Open slide citation ${citation.citationId}`}
+                          >
+                            <Image src={citation.imageSrc} alt="" width={104} height={59} sizes="104px" />
+                          </a>
+                        )}
+                        <div>
+                          <p className="adm-rag-citation-section">{citation.sectionTitle || citation.chapterTitle}</p>
+                          <p className="adm-rag-citation-snippet">{citation.snippet}</p>
+                        </div>
+                      </div>
+                    </li>
+                  )
+                })}
+              </ol>
+            </section>
+          ))}
+        </div>
+      )}
+    </aside>
   )
 }
 
@@ -316,78 +334,79 @@ export default function AdminGuyChat({
   return (
     <section className="adm-guy-chat-shell" aria-labelledby="adm-guy-chat-title">
       <div className="adm-guy-chat-main">
-        <div className="adm-guy-chat-thread" ref={threadRef}>
-          {messages.length === 0 && (
-            <div className="adm-guy-chat-empty">
-              <p className="adm-page-eyebrow">Guy chatbot</p>
-              <h2 id="adm-guy-chat-title">Ask about the R.O.P. book</h2>
-              <p>Anatomy and physiology can be answered as background; R.O.P. reasoning is grounded in the indexed book and slides.</p>
-            </div>
-          )}
+        <CitationPanel messages={messages} />
 
-          {messages.map((message) => (
-            <article key={message.id} className={`adm-guy-chat-message ${message.role}`}>
-              <div className="adm-guy-chat-message-head">
-                <span>{message.role === 'user' ? 'You' : 'Guy bot'}</span>
-                {message.role === 'assistant' && message.retrievalCount !== undefined && (
-                  <em>{message.retrievalCount} source{message.retrievalCount === 1 ? '' : 's'}</em>
-                )}
+        <div className="adm-guy-chat-conversation">
+          <div className="adm-guy-chat-thread" ref={threadRef}>
+            {messages.length === 0 && (
+              <div className="adm-guy-chat-empty">
+                <p className="adm-page-eyebrow">Guy chatbot</p>
+                <h2 id="adm-guy-chat-title">Ask about the R.O.P. book</h2>
+                <p>Anatomy and physiology can be answered as background; R.O.P. reasoning is grounded in the indexed book and slides.</p>
               </div>
-              <ChatAnswerText answer={message.content} messageId={message.id} citations={message.citations} />
-              {message.role === 'assistant' && message.model && (
-                <p className="adm-guy-chat-model">{message.model}</p>
-              )}
-              {message.citations && (
-                <CitationList citations={message.citations} messageId={message.id} />
-              )}
-            </article>
-          ))}
+            )}
 
-          {isLoading && (
-            <div className="adm-guy-chat-loading" aria-live="polite">
-              <span />
-              <span />
-              <span />
+            {messages.map((message) => (
+              <article key={message.id} className={`adm-guy-chat-message ${message.role}`}>
+                <div className="adm-guy-chat-message-head">
+                  <span>{message.role === 'user' ? 'You' : 'Guy bot'}</span>
+                  {message.role === 'assistant' && message.retrievalCount !== undefined && (
+                    <em>{message.retrievalCount} source{message.retrievalCount === 1 ? '' : 's'}</em>
+                  )}
+                </div>
+                <ChatAnswerText answer={message.content} messageId={message.id} citations={message.citations} />
+                {message.role === 'assistant' && message.model && (
+                  <p className="adm-guy-chat-model">{message.model}</p>
+                )}
+              </article>
+            ))}
+
+            {isLoading && (
+              <div className="adm-guy-chat-loading" aria-live="polite">
+                <span />
+                <span />
+                <span />
+              </div>
+            )}
+          </div>
+
+          {error && (
+            <div className="adm-rag-error adm-guy-chat-error" role="alert">
+              {error}
             </div>
           )}
-        </div>
 
-        {error && (
-          <div className="adm-rag-error adm-guy-chat-error" role="alert">
-            {error}
-          </div>
-        )}
-
-        <form className="adm-guy-chat-composer" onSubmit={handleSubmit}>
-          <label className="adm-rag-question">
-            <span>Message</span>
-            <textarea
-              value={draft}
-              onChange={(event) => setDraft(event.target.value)}
-              onKeyDown={handleKeyDown}
-              placeholder="Question for Guy..."
-              rows={4}
-            />
-          </label>
-          <div className="adm-guy-chat-controls">
-            <label className="adm-search-select-field">
-              <span>Language</span>
-              <select
-                value={lang}
-                onChange={(event) => setLang(event.target.value as BookSearchLangFilter)}
-              >
-                {langOptions.map((option) => (
-                  <option key={option.value} value={option.value}>
-                    {option.label}
-                  </option>
-                ))}
-              </select>
+          <form className="adm-guy-chat-composer" onSubmit={handleSubmit}>
+            <label className="adm-rag-question">
+              <span>Message</span>
+              <textarea
+                value={draft}
+                onChange={(event) => setDraft(event.target.value)}
+                onKeyDown={handleKeyDown}
+                placeholder="Question for Guy..."
+                rows={4}
+              />
             </label>
-            <button type="submit" className="adm-rag-submit" disabled={isLoading || draft.trim().length === 0}>
-              {isLoading ? 'Asking...' : 'Send'}
-            </button>
-          </div>
-        </form>
+            <div className="adm-guy-chat-controls">
+              <label className="adm-search-select-field">
+                <span>Language</span>
+                <select
+                  value={lang}
+                  onChange={(event) => setLang(event.target.value as BookSearchLangFilter)}
+                >
+                  {langOptions.map((option) => (
+                    <option key={option.value} value={option.value}>
+                      {option.label}
+                    </option>
+                  ))}
+                </select>
+              </label>
+              <button type="submit" className="adm-rag-submit" disabled={isLoading || draft.trim().length === 0}>
+                {isLoading ? 'Asking...' : 'Send'}
+              </button>
+            </div>
+          </form>
+        </div>
       </div>
     </section>
   )
