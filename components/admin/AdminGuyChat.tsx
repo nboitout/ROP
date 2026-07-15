@@ -376,7 +376,13 @@ export default function AdminGuyChat({
   }
 
   function handleKeyDown(event: KeyboardEvent<HTMLTextAreaElement>) {
-    if ((event.metaKey || event.ctrlKey) && event.key === 'Enter') {
+    const nativeEvent = event.nativeEvent as globalThis.KeyboardEvent
+
+    if (nativeEvent.isComposing) {
+      return
+    }
+
+    if (event.key === 'Enter' && !event.shiftKey) {
       event.preventDefault()
       void submitQuestion()
     }
@@ -395,16 +401,16 @@ export default function AdminGuyChat({
           <div className="adm-guy-chat-thread" ref={threadRef}>
             {messages.length === 0 && (
               <div className="adm-guy-chat-empty">
-                <p className="adm-page-eyebrow">Guy chatbot</p>
-                <h2 id="adm-guy-chat-title">Ask about the R.O.P. book</h2>
-                <p>Anatomy and physiology can be answered as background; R.O.P. reasoning is grounded in the indexed book and slides.</p>
+                <p className="adm-page-eyebrow">Assistant de Guy</p>
+                <h2 id="adm-guy-chat-title">Posez votre question</h2>
+                <p>Vous pouvez me poser des questions sur la pratique R.O.P. telle qu&apos;elle est définie dans le 3e livre.</p>
               </div>
             )}
 
             {messages.map((message) => (
               <article key={message.id} className={`adm-guy-chat-message ${message.role}`}>
                 <div className="adm-guy-chat-message-head">
-                  <span>{message.role === 'user' ? 'You' : 'Guy bot'}</span>
+                  <span>{message.role === 'user' ? 'Vous' : 'Assistant de Guy'}</span>
                   {message.role === 'assistant' && message.retrievalCount !== undefined && (
                     <em>{message.retrievalCount} source{message.retrievalCount === 1 ? '' : 's'}</em>
                   )}
@@ -438,7 +444,7 @@ export default function AdminGuyChat({
                 value={draft}
                 onChange={(event) => setDraft(event.target.value)}
                 onKeyDown={handleKeyDown}
-                placeholder="Question for Guy..."
+                placeholder="Votre question..."
                 rows={4}
               />
             </label>
@@ -457,7 +463,7 @@ export default function AdminGuyChat({
                 </select>
               </label>
               <button type="submit" className="adm-rag-submit" disabled={isLoading || draft.trim().length === 0}>
-                {isLoading ? 'Asking...' : 'Send'}
+                {isLoading ? 'Recherche...' : 'Envoyer'}
               </button>
             </div>
           </form>

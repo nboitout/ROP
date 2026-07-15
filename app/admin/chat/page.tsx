@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import AdminGuyChat from '@/components/admin/AdminGuyChat'
 import type { BookSearchLangFilter } from '@/lib/searchIndex'
 
-export const metadata: Metadata = { title: 'Guy Chatbot - Admin R.O.P.' }
+export const metadata: Metadata = { title: 'Assistant de Guy - Admin R.O.P.' }
 export const dynamic = 'force-dynamic'
 
 const LANG_OPTIONS: Array<{ value: BookSearchLangFilter; label: string }> = [
@@ -20,10 +20,10 @@ export default function AdminGuyChatPage() {
     <main className="adm-page adm-guy-chat-page">
       <div className="adm-page-header">
         <div>
-          <p className="adm-page-eyebrow">RAG chatbot</p>
-          <h1 className="adm-page-title">Guy chatbot</h1>
+          <p className="adm-page-eyebrow">Assistant R.O.P.</p>
+          <h1 className="adm-page-title">Assistant de Guy</h1>
           <p className="adm-page-sub">
-            Dual-mode answers for anatomy/physiology background and corpus-cited R.O.P. reasoning.
+            Vous pouvez me poser des questions sur la pratique R.O.P. telle qu&apos;elle est définie dans le 3e livre.
           </p>
         </div>
       </div>
