@@ -289,7 +289,7 @@ function CitationPanel({
                   <span>{activeMessage.citations?.length ?? 0} source{activeMessage.citations?.length === 1 ? '' : 's'}</span>
                 </div>
               )}
-              <ol className="adm-rag-citations adm-guy-chat-citations">
+              <ol className="adm-guy-chat-citations">
                 {activeMessage.citations?.map((citation) => (
                   <CitationCard
                     key={`${activeMessage.id}:${citation.citationId}:${citation.href}`}
@@ -411,8 +411,12 @@ export default function AdminGuyChat({
             {messages.length === 0 && (
               <div className="adm-guy-chat-empty">
                 <p className="adm-page-eyebrow">Assistant de Guy</p>
-                <h2 id="adm-guy-chat-title">Posez votre question</h2>
-                <p>Vous pouvez me poser des questions sur la pratique R.O.P. telle qu&apos;elle est définie dans le 3e livre.</p>
+                <h2 id="adm-guy-chat-title">Bonjour !</h2>
+                <p>
+                  Je peux vous aider à explorer le contenu du livre de R.O.P. : anatomie, physiologie,
+                  relations viscéro-somatiques ou chapitres spécifiques, comme l&apos;estomac, le duodénum,
+                  la rate ou la vessie. Que souhaitez-vous aborder ?
+                </p>
               </div>
             )}
 
