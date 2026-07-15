@@ -258,21 +258,23 @@ function CitationPanel({
         </div>
       ) : (
         <>
-          <div className="adm-guy-answer-switcher" role="tablist" aria-label="Answers with citations">
-            {citedMessages.map((message, messageIndex) => (
-              <button
-                key={message.id}
-                type="button"
-                className={message.id === activeMessage?.id ? 'active' : ''}
-                onClick={() => onActiveMessageChange(message.id)}
-                aria-selected={message.id === activeMessage?.id}
-                role="tab"
-              >
-                <span>Answer {messageIndex + 1}</span>
-                <em>{message.citations?.length ?? 0}</em>
-              </button>
-            ))}
-          </div>
+          {citedMessages.length > 1 && (
+            <div className="adm-guy-answer-switcher" role="tablist" aria-label="Answers with citations">
+              {citedMessages.map((message, messageIndex) => (
+                <button
+                  key={message.id}
+                  type="button"
+                  className={message.id === activeMessage?.id ? 'active' : ''}
+                  onClick={() => onActiveMessageChange(message.id)}
+                  aria-selected={message.id === activeMessage?.id}
+                  role="tab"
+                >
+                  <span>Answer {messageIndex + 1}</span>
+                  <em>{message.citations?.length ?? 0}</em>
+                </button>
+              ))}
+            </div>
+          )}
 
           {activeMessage && (
             <section className="adm-guy-chat-evidence-group">
