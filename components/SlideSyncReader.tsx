@@ -1130,6 +1130,21 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
             </>
             ) : (
             <>
+            {reflexSection && (
+              <button
+                type="button"
+                className={reflexJumpClassName}
+                onClick={goToReflexZones}
+                title={ui.jumpTitle(reflexSection.title)}
+              >
+                <span className="ss-reflex-jump-icon" aria-hidden>⌖</span>
+                <span className="ss-reflex-jump-text">
+                  <span className="ss-reflex-jump-label">{ui.jumpLabel}</span>
+                  <span className="ss-reflex-jump-section">{reflexSection.title}</span>
+                </span>
+                <span className="ss-reflex-jump-arrow" aria-hidden>↓</span>
+              </button>
+            )}
             <div className="ss-stage-row">
               <div className="ss-dots" role="tablist" aria-label={ui.slides}>
                 {slides.map((s, i) => hiddenDotSlideSet.has(i + 1) ? null : (
@@ -1212,21 +1227,6 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
               </div>
             </div>
             {clinicalCaseButton}
-            {reflexSection && (
-              <button
-                type="button"
-                className={reflexJumpClassName}
-                onClick={goToReflexZones}
-                title={ui.jumpTitle(reflexSection.title)}
-              >
-                <span className="ss-reflex-jump-icon" aria-hidden>⌖</span>
-                <span className="ss-reflex-jump-text">
-                  <span className="ss-reflex-jump-label">{ui.jumpLabel}</span>
-                  <span className="ss-reflex-jump-section">{reflexSection.title}</span>
-                </span>
-                <span className="ss-reflex-jump-arrow" aria-hidden>↓</span>
-              </button>
-            )}
             </>
             )}
           </div>
