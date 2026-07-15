@@ -194,17 +194,12 @@ function CitationCard({
   messageId: string
 }) {
   const domId = `adm-guy-citation-${messageId}-${citation.citationId}`
+  const thumbnailSrc = citation.kind === 'slide' ? citation.imageSrc : undefined
+  const hasThumbnail = !!thumbnailSrc
 
   return (
-    <li id={domId} className={`adm-guy-chat-source-card ${citation.kind === 'slide' ? 'slide' : 'text'}`}>
-      <div className="adm-guy-source-meta">
-        <span className="adm-guy-source-number">[{citation.citationId}]</span>
-        <span>{citation.lang.toUpperCase()}</span>
-        {citation.access && <span className={`adm-row-badge ${citation.access}`}>{citation.access}</span>}
-        <span>{sourceLabel(citation)}</span>
-      </div>
-
-      {citation.kind === 'slide' && citation.imageSrc && (
+    <li id={domId} className={`adm-guy-chat-source-card ${hasThumbnail ? 'slide' : 'text'}`}>
+      {hasThumbnail && (
         <a
           className="adm-guy-source-thumb"
           href={citation.href}
@@ -212,18 +207,28 @@ function CitationCard({
           rel="noopener noreferrer"
           aria-label={`Open slide citation ${citation.citationId}`}
         >
-          <Image src={citation.imageSrc} alt="" width={320} height={180} sizes="(max-width: 900px) 100vw, 320px" />
+          <Image src={thumbnailSrc} alt="" width={320} height={180} sizes="84px" />
         </a>
       )}
 
-      <a className="adm-guy-source-title" href={citation.href} target="_blank" rel="noopener noreferrer">
-        {citation.title}
-      </a>
-      <p className="adm-guy-source-section">{citation.sectionTitle || citation.chapterTitle}</p>
-      <p className="adm-guy-source-snippet">{citation.snippet}</p>
-      <a className="adm-guy-source-open" href={citation.href} target="_blank" rel="noopener noreferrer">
-        Open source
-      </a>
+      <div className="adm-guy-source-body">
+        <div className="adm-guy-source-top">
+          <div className="adm-guy-source-meta">
+            <span className="adm-guy-source-number">[{citation.citationId}]</span>
+            <span>{citation.lang.toUpperCase()}</span>
+            {citation.access && <span className={`adm-row-badge ${citation.access}`}>{citation.access}</span>}
+            <span>{sourceLabel(citation)}</span>
+          </div>
+          <a className="adm-guy-source-open" href={citation.href} target="_blank" rel="noopener noreferrer">
+            Open
+          </a>
+        </div>
+        <a className="adm-guy-source-title" href={citation.href} target="_blank" rel="noopener noreferrer">
+          {citation.title}
+        </a>
+        <p className="adm-guy-source-section">{citation.sectionTitle || citation.chapterTitle}</p>
+        <p className="adm-guy-source-snippet">{citation.snippet}</p>
+      </div>
     </li>
   )
 }
@@ -277,11 +282,13 @@ function CitationPanel({
           )}
 
           {activeMessage && (
-            <section className="adm-guy-chat-evidence-group">
-              <div className="adm-guy-chat-evidence-group-head">
-                <strong>Answer {activeMessageIndex + 1}</strong>
-                <span>{activeMessage.citations?.length ?? 0} source{activeMessage.citations?.length === 1 ? '' : 's'}</span>
-              </div>
+            <section className={`adm-guy-chat-evidence-group${citedMessages.length === 1 ? ' single' : ''}`}>
+              {citedMessages.length > 1 && (
+                <div className="adm-guy-chat-evidence-group-head">
+                  <strong>Answer {activeMessageIndex + 1}</strong>
+                  <span>{activeMessage.citations?.length ?? 0} source{activeMessage.citations?.length === 1 ? '' : 's'}</span>
+                </div>
+              )}
               <ol className="adm-rag-citations adm-guy-chat-citations">
                 {activeMessage.citations?.map((citation) => (
                   <CitationCard
