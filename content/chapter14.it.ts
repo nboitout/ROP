@@ -259,11 +259,6 @@ export const chapter14It: Chapter = {
     label: 'Diapositive',
     description: 'Sintesi visiva del capitolo — anatomia, fisiologia e zone riflesse R.O.P. dell\'intestino tenue.',
   },
-  revisionSheet: {
-    src: '/chapter-14/Chapter14 Fiche de Revision IT.png',
-    alt: 'Scheda di revisione — Capitolo 14, Intestino tenue',
-    caption: 'Scheda di revisione — Capitolo 14 · Intestino tenue',
-  },
   clinicalCase: {
     src: '/chapter-14/Chapter14 Cas Clinique IT.png',
     caption: 'Caso clinico — Capitolo 14',

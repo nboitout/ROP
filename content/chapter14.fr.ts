@@ -211,7 +211,6 @@ export const chapter14Fr: Chapter = {
           'Racine du mésentère : une ligne de la jonction duodéno-jéjunale à l’ombilic, à hauteur de L3-L4 (face plantaire du pied gauche).',
           'Racine du mésentère : une ligne de la valvule iléo-caecale à l’ombilic (face plantaire du pied droit).',
         ]},
-        { type: 'figure', src: '/chapter-14/cartographie/figure-14-14.png', caption: 'Photo : Racine du mésentère entre la jonction duodéno-jéjunale et l’ombilic', alt: 'Repère podal de la racine du mésentère côté jéjunum', orientation: 'landscape' },
         { type: 'figure', src: '/chapter-14/cartographie/figure-14-16.png', caption: 'Photo : Racine du mésentère entre la valvule iléo-caecale et l’ombilic', alt: 'Repère podal de la racine du mésentère côté iléum', orientation: 'portrait' },
 
         { type: 'sub', text: 'Zones réflexes podales — Jéjunum (pied gauche)' },
@@ -221,7 +220,7 @@ export const chapter14Fr: Chapter = {
           'Limite latérale : jusqu’au bord latéral du pied gauche.',
           'Respecter l’orientation des anses : horizontales pour le jéjunum.',
         ]},
-        { type: 'figure', src: '/chapter-14/cartographie/figure-14-17.png', caption: 'Photo : Jéjunum (limites supérieure et inférieure)', alt: 'Repère podal du jéjunum sur le pied gauche', orientation: 'landscape' },
+        { type: 'figure', src: '/chapter-14/cartographie/figure-14-17.png', caption: 'Photo : Jéjunum (limites supérieure et inférieure)', alt: 'Repère podal du jéjunum sur le pied gauche', orientation: 'portrait' },
 
         { type: 'sub', text: 'Zones réflexes podales — Iléum (pied droit)' },
         { type: 'bullets', items: [
@@ -258,11 +257,6 @@ export const chapter14Fr: Chapter = {
       ],
     },
   ],
-  slides: {
-    url: '/chapter-14/Chapter14 Slides de synthese rework2 - FR.pdf',
-    label: 'Diapositives',
-    description: "Synthèse visuelle du chapitre — anatomie, physiologie et zones réflexes R.O.P. de l'intestin grêle.",
-  },
   revisionSheet: {
     src: '/chapter-14/fiche-de-revision.png',
     alt: 'Fiche de révision — Chapitre 14, Intestin grêle',

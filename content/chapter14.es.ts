@@ -259,11 +259,6 @@ export const chapter14Es: Chapter = {
     label: 'Diapositivas',
     description: 'Resumen visual del capítulo — anatomía, fisiología y zonas reflejas R.O.P. del intestino delgado.',
   },
-  revisionSheet: {
-    src: '/chapter-14/Chapter14 Fiche de Revision ES.png',
-    alt: 'Ficha de revisión — Capítulo 14, Intestino delgado',
-    caption: 'Ficha de revisión — Capítulo 14 · Intestino delgado',
-  },
   clinicalCase: {
     src: '/chapter-14/Chapter14 Cas Clinique ES.png',
     caption: 'Caso clínico — Capítulo 14',

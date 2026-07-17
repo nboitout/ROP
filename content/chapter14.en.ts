@@ -265,11 +265,6 @@ export const chapter14En: Chapter = {
     label: 'Slides',
     description: 'Visual summary of the chapter — anatomy, physiology and R.O.P. reflex zones of the small intestine.',
   },
-  revisionSheet: {
-    src: '/chapter-14/Chapter14 Fiche de Revision EN.png',
-    alt: 'Revision sheet — Chapter 14, Small Intestine',
-    caption: 'Revision sheet — Chapter 14 · Small Intestine',
-  },
   clinicalCase: {
     src: '/chapter-14/Chapter14 Cas Clinique EN.png',
     caption: 'Clinical case — Chapter 14',

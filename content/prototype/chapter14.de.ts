@@ -243,11 +243,6 @@ export const chapter14De: Chapter = {
     label: 'Folien',
     description: 'Visuelle Zusammenfassung des Kapitels — Anatomie, Physiologie und R.O.P.-Reflexzonen des Dünndarms.',
   },
-  revisionSheet: {
-    src: '/chapter-14/Chapter14 Fiche de Revision GE.png',
-    alt: 'Lernblatt — Kapitel 14, Dünndarm',
-    caption: 'Lernblatt — Kapitel 14 · Dünndarm',
-  },
   clinicalCase: {
     src: '/chapter-14/Chapter14 Cas Clinique GE.png',
     caption: 'Fallstudie — Kapitel 14',
