@@ -25,7 +25,7 @@ export const chapter14Slides: SyncSlide[] = [
   { src: '/chapter-14/slides/fr-rework/slide-02.png', title: 'Topographie : l’intestin grêle au sein du cadre colique' },
   { src: '/chapter-14/slides/fr-rework/slide-03.png', title: 'Le mésentère et sa mécanique de suspension' },
   { src: '/chapter-14/slides/fr-rework/slide-05.png', title: 'L’axe vasculaire et le système porte' },
-  { src: '/chapter-14/slides/fr-rework/slide-07.png', title: 'L’axe de l’irrigation et du drainage : tronc mésentérique supérieur' },
+  { src: '/chapter-14/slides/slide-04.png', title: 'L’axe de l’irrigation et du drainage : tronc mésentérique supérieur' },
   { src: '/chapter-14/slides/fr-rework/slide-06.png', title: 'Le réseau lymphatique et immunitaire' },
   { src: '/chapter-14/slides/fr-rework/slide-08.png', title: 'La double réalité neurologique du péritoine' },
   { src: '/chapter-14/slides/fr-rework/slide-09.png', title: 'Le deuxième cerveau : autonomie du système nerveux entérique (SNE)' },
