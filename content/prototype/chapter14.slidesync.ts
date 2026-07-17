@@ -37,7 +37,6 @@ export const chapter14Slides: SyncSlide[] = [
   { src: '/chapter-14/slides/fr-rework/slide-13.png', title: 'La spirale : dysbiose et hyperperméabilité' },
   { src: '/chapter-14/slides/fr-rework/slide-14.png', title: 'Déséquilibre : hyperperméabilité et dysbiose' },
   { src: '/chapter-14/slides/fr-rework/slide-15.png', title: 'Les conséquences systémiques du terrain inflammatoire' },
-  { src: '/chapter-14/slides/fr-rework/slide-16.png', title: 'Signes d’alerte et diagnostic d’exclusion' },
   { src: '/chapter-14/slides/fr-rework/slide-17.png', title: 'Protocole ROP : ordre de traitement' },
   { src: '/chapter-14/figure-14-15.png', title: 'Territoire crânien et cervical du nerf vague' },
   { src: '/chapter-14/figure-14-16.png', title: 'Territoire abdominal gauche du nerf vague et plexus cœliaque (solaire)' },
@@ -230,22 +229,22 @@ export const chapter14SlideAnchorsFr: SyncAnchor[] = [
   { sectionId: 'pathologies',    blockIndex: 0,  slide: 14 },
   { sectionId: 'pathologies',    blockIndex: 1,  slide: 15 },
   { sectionId: 'pathologies',    blockIndex: 7,  slide: 16 },
-  { sectionId: 'pathologies',    blockIndex: 11, slide: 17 },
+  { sectionId: 'pathologies',    blockIndex: 11, slide: 16 },
   // Protocole ROP (ordre de traitement) — overview, at the ROP section heading.
-  { sectionId: 'rop',            blockIndex: -1, slide: 18 },
+  { sectionId: 'rop',            blockIndex: -1, slide: 17 },
   // Figure-slides (cranial vagus, left-abdominal vagus, sympathetic system,
   // celiac plexus, jejunum and ileum reflex zones) anchored in the ROP section.
-  { sectionId: 'rop',            blockIndex: 1,  slide: 19 },
-  { sectionId: 'rop',            blockIndex: 4,  slide: 20 },
-  { sectionId: 'rop',            blockIndex: 7,  slide: 21 },
+  { sectionId: 'rop',            blockIndex: 1,  slide: 18 },
+  { sectionId: 'rop',            blockIndex: 4,  slide: 19 },
+  { sectionId: 'rop',            blockIndex: 7,  slide: 20 },
   // Plexus cœliaque slide; the marker appears just before the new plexique photo.
-  { sectionId: 'rop',            blockIndex: 8,  slide: 22, gapBefore: 'half' },
-  { sectionId: 'rop',            blockIndex: 12, slide: 23 },
+  { sectionId: 'rop',            blockIndex: 8,  slide: 21, gapBefore: 'half' },
+  { sectionId: 'rop',            blockIndex: 12, slide: 22 },
   // Jéjunum + iléum cartography now sit together on the interactive atlas
   // block (rop block 14).
-  { sectionId: 'rop',            blockIndex: 14, slide: [23, 24] },
+  { sectionId: 'rop',            blockIndex: 14, slide: [22, 23] },
   // Synthèse d'intervention ROP — after the reflex-zone atlas, at the limbic step.
-  { sectionId: 'rop',            blockIndex: 15, slide: 25 },
+  { sectionId: 'rop',            blockIndex: 15, slide: 24 },
   // Profil viscéro-émotionnel — at "Relations viscéro-émotionnelles".
-  { sectionId: 'relations',      blockIndex: 2,  slide: 26 },
+  { sectionId: 'relations',      blockIndex: 2,  slide: 25 },
 ]
