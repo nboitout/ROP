@@ -4,5 +4,5 @@ export const chapterMetaSnapshot: Record<string, { readingMinutes: number; figur
   'introduction': { readingMinutes: 3, figureCount: 0 },
   'chapter-2': { readingMinutes: 15, figureCount: 0 },
   'chapter-5': { readingMinutes: 19, figureCount: 0 },
-  'chapter-14': { readingMinutes: 19, figureCount: 15 },
+  'chapter-14': { readingMinutes: 19, figureCount: 14 },
 }
