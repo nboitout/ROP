@@ -99,6 +99,16 @@ export interface VisitRow {
   referer: string
 }
 
+export interface OutlierVisitDay {
+  key: string
+  readerId: string
+  day: string
+  totalSeconds: number
+  maxSingleLeaveSeconds: number
+  leaveCount: number
+  reason: string
+}
+
 // ---- In-memory cache ----
 
 interface CacheEntry {
@@ -265,6 +275,18 @@ function isoDate(timestamp: string): string {
   return timestamp.slice(0, 10)
 }
 
+const PARIS_TZ = 'Europe/Paris'
+function parisDate(timestamp: string): string {
+  const d = new Date(timestamp)
+  if (isNaN(d.getTime())) return ''
+  return new Intl.DateTimeFormat('en-CA', {
+    timeZone: PARIS_TZ,
+    year: 'numeric',
+    month: '2-digit',
+    day: '2-digit',
+  }).format(d)
+}
+
 function hasLeadIdentity(readerId: string, leadReaderIds: Set<string>): boolean {
   return leadReaderIds.has(readerId.toLowerCase())
 }
@@ -342,10 +364,20 @@ async function fetchSheetSafe(sheetName: string): Promise<{ rows: string[][], er
   }
 }
 
-export async function fetchAllSheets(): Promise<{
+export function fetchAllSheets(): Promise<{
   leads: LeadRow[]
   events: EventRow[]
   visits: VisitRow[]
+  outlierVisitDays: OutlierVisitDay[]
+  errors: Record<string, string>
+}>
+export async function fetchAllSheets(options?: {
+  includeOutlierVisitDays?: boolean
+}): Promise<{
+  leads: LeadRow[]
+  events: EventRow[]
+  visits: VisitRow[]
+  outlierVisitDays: OutlierVisitDay[]
   errors: Record<string, string>
 }> {
   const [leadsResult, oldLeadsResult, eventsResult, visitsResult] = await Promise.all([
@@ -484,10 +516,74 @@ export async function fetchAllSheets(): Promise<{
   const filteredVisits = cleanVisits.filter((v) => keepConnection(v))
   const filteredEvents = cleanEvents.filter((e) => keepConnection(e))
 
+  // --- Suspiciously long reader-day outliers ------------------------------
+  // Keep these visible in the Visits inspector, but exclude them from the
+  // broader dashboards by default so open-tab / delayed-flush artefacts do not
+  // distort average dwell and visitor metrics.
+  const OUTLIER_DAILY_DWELL_SECONDS = 200 * 60
+  const OUTLIER_SINGLE_LEAVE_SECONDS = 90 * 60
+  const visitDayStats = new Map<string, {
+    readerId: string
+    day: string
+    totalSeconds: number
+    maxSingleLeaveSeconds: number
+    leaveCount: number
+  }>()
+  filteredVisits
+    .filter((v) => v.event === 'page_leave' && v.readerId)
+    .forEach((v) => {
+      const n = parseFloat(v.duration_seconds)
+      if (isNaN(n) || n <= 0) return
+      const day = parisDate(v.timestamp)
+      const key = `${v.readerId.toLowerCase()}|${day}`
+      const current = visitDayStats.get(key) ?? {
+        readerId: v.readerId,
+        day,
+        totalSeconds: 0,
+        maxSingleLeaveSeconds: 0,
+        leaveCount: 0,
+      }
+      current.totalSeconds += n
+      current.leaveCount += 1
+      current.maxSingleLeaveSeconds = Math.max(current.maxSingleLeaveSeconds, n)
+      visitDayStats.set(key, current)
+    })
+
+  const outlierVisitDays: OutlierVisitDay[] = [...visitDayStats.entries()]
+    .filter(([, stats]) =>
+      stats.totalSeconds >= OUTLIER_DAILY_DWELL_SECONDS
+      || stats.maxSingleLeaveSeconds >= OUTLIER_SINGLE_LEAVE_SECONDS
+    )
+    .map(([key, stats]) => {
+      const reason = stats.totalSeconds >= OUTLIER_DAILY_DWELL_SECONDS
+        ? `daily dwell ${Math.round(stats.totalSeconds / 60)} min`
+        : `single leave ${Math.round(stats.maxSingleLeaveSeconds / 60)} min`
+      return {
+        key,
+        readerId: stats.readerId,
+        day: stats.day,
+        totalSeconds: stats.totalSeconds,
+        maxSingleLeaveSeconds: stats.maxSingleLeaveSeconds,
+        leaveCount: stats.leaveCount,
+        reason,
+      }
+    })
+    .sort((a, b) => b.totalSeconds - a.totalSeconds)
+
+  const outlierVisitDayKeys = new Set(outlierVisitDays.map((item) => item.key))
+  const includeOutlierVisitDays = !!options?.includeOutlierVisitDays
+  const finalVisits = includeOutlierVisitDays
+    ? filteredVisits
+    : filteredVisits.filter((v) => !outlierVisitDayKeys.has(`${v.readerId.toLowerCase()}|${parisDate(v.timestamp)}`))
+  const finalEvents = includeOutlierVisitDays
+    ? filteredEvents
+    : filteredEvents.filter((e) => !outlierVisitDayKeys.has(`${e.readerId.toLowerCase()}|${parisDate(e.timestamp)}`))
+
   return {
     leads:  cleanLeads,
-    events: filteredEvents,
-    visits: filteredVisits,
+    events: finalEvents,
+    visits: finalVisits,
+    outlierVisitDays,
     errors,
   }
 }

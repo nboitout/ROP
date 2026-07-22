@@ -17,7 +17,7 @@ function countryLabel(code: string): string {
 // Coarse device class from a user-agent string (laptop vs desktop is
 // indistinguishable from UA, so both report as "Desktop").
 function deviceType(ua: string): string {
-  if (!ua) return '—'
+  if (!ua) return '-'
   if (/iPad|Tablet|PlayBook|Silk|Kindle|Nexus 7|Nexus 10|(?:Android(?!.*Mobile))/i.test(ua)) return 'Tablet'
   if (/Mobi|iPhone|iPod|Android|Windows Phone|BlackBerry|IEMobile|Opera Mini/i.test(ua)) return 'Mobile'
   return 'Desktop'
@@ -38,7 +38,7 @@ interface Visit {
   day: string
   firstTs: string
   lastTs: string
-  pages: string[] // journey in chronological order, consecutive repeats collapsed
+  pages: string[]
   pageviews: number
   country: string
   userAgent: string
@@ -57,12 +57,9 @@ export default async function VisitsPage({
   searchParams: Promise<{ country?: string }>
 }) {
   const { country } = await searchParams
-  const { visits, leads } = await fetchAllSheets()
+  const { visits, leads, outlierVisitDays } = await fetchAllSheets({ includeOutlierVisitDays: true })
+  const outlierByVisitDay = new Map(outlierVisitDays.map((item) => [item.key, item]))
 
-  // Reader identity from the Leads sheet: anyone who submitted the email gate
-  // is known by name/email; everyone else stays an anonymous cookie ID. A
-  // reader may have submitted several forms - keep the first entry that has a
-  // name, otherwise the first with an email.
   const identity = new Map<string, { name: string; email: string }>()
   leads.forEach((l) => {
     if (!l.readerId) return
@@ -73,7 +70,6 @@ export default async function VisitsPage({
     identity.set(key, { name, email: l.email.trim() })
   })
 
-  // Per-reader dwell per Paris day (shown on each visit row).
   const dayDwell = new Map<string, number>()
   visits
     .filter((v) => v.event === 'page_leave' && v.readerId)
@@ -86,10 +82,6 @@ export default async function VisitsPage({
 
   const pageVisits = visits.filter((v) => v.event === 'page_visit' && isGuyBoitoutReferer(v.referer))
 
-  // Earliest day each reader was ever seen. We use this for a genuine
-  // cross-day return, because the raw isReturning flag only means "a reader_id
-  // cookie already existed" - which is true from the 2nd pageview onward, even
-  // within the first session, so it over-reports returns.
   const firstSeen = new Map<string, string>()
   pageVisits.forEach((v) => {
     if (!v.readerId) return
@@ -98,17 +90,11 @@ export default async function VisitsPage({
     if (!cur || day < cur) firstSeen.set(v.readerId, day)
   })
 
-  // Group pageviews into visits: one per reader per Paris day. The raw
-  // page_visit stream has one row per page navigation (and re-fires on a
-  // language switch), so listing it directly shows a single visitor as many
-  // lines. Here each line is one visitor's whole day, with the journey inline.
   const groups = new Map<string, Visit>()
   ;[...pageVisits]
     .sort((a, b) => new Date(a.timestamp).getTime() - new Date(b.timestamp).getTime())
     .forEach((v) => {
       const day = parisDate(v.timestamp)
-      // Cookie-less pageviews have no readerId; fall back to UA+country so they
-      // at least don't all merge into one anonymous mega-visit.
       const id = v.readerId || `anon:${v.userAgent}:${v.country}`
       const key = `${id}|${day}`
       const page = v.page.replace(/^https?:\/\/[^/]+/, '') || '/'
@@ -136,7 +122,6 @@ export default async function VisitsPage({
     })
   const allVisits = [...groups.values()]
 
-  // Optional country filter (?country=KR or ?country=South Korea).
   const filter = (country ?? '').trim().toLowerCase()
   const filtered = filter
     ? allVisits.filter((g) => {
@@ -149,7 +134,6 @@ export default async function VisitsPage({
     .sort((a, b) => new Date(b.lastTs).getTime() - new Date(a.lastTs).getTime())
     .slice(0, 250)
 
-  // Country tallies for the quick-filter chips - visits, not pageviews.
   const byCountry = new Map<string, number>()
   allVisits.forEach((g) => {
     const c = countryLabel(g.country)
@@ -170,6 +154,9 @@ export default async function VisitsPage({
             first (max 250). Readers who signed up via the email gate appear by name; the rest show
             their anonymous cookie ID. Only live-site traffic with a <code>www.guy-boitout.com</code>{' '}
             referrer is listed here.
+          </p>
+          <p className="adm-page-sub">
+            Suspiciously long visit-days stay visible here and are flagged, but they are excluded from the broader dashboard metrics.
           </p>
           <p className="adm-page-sub">
             {uniqueReaders.toLocaleString()} unique visitor{uniqueReaders === 1 ? '' : 's'} ·{' '}
@@ -215,6 +202,7 @@ export default async function VisitsPage({
               <th>Device</th>
               <th>Pages viewed</th>
               <th>Dwell (day)</th>
+              <th>Flag</th>
               <th>Ret.</th>
               <th>Referer</th>
               <th>UTM</th>
@@ -223,8 +211,8 @@ export default async function VisitsPage({
           <tbody>
             {rows.map((g, i) => {
               const dwellToday = dayDwell.get(`${g.readerId}|${g.day}`) ?? 0
+              const outlier = outlierByVisitDay.get(`${g.readerId.toLowerCase()}|${g.day}`)
               const ref = (g.referer || '').replace(/^https?:\/\//, '').replace(/\/$/, '')
-              // Genuine return = this reader was seen on an earlier day than this visit.
               const isReturn = (firstSeen.get(g.readerId) ?? g.day) < g.day
               const sameMinute = fmtParis(g.firstTs) === fmtParis(g.lastTs)
               const who = identity.get(g.readerId.toLowerCase())
@@ -244,7 +232,7 @@ export default async function VisitsPage({
                       </>
                     ) : (
                       <span className="muted" style={{ fontFamily: 'monospace', fontSize: '.72rem' }}>
-                        {(g.readerId || '').slice(0, 8) || '—'}
+                        {(g.readerId || '').slice(0, 8) || '-'}
                       </span>
                     )}
                   </td>
@@ -257,17 +245,29 @@ export default async function VisitsPage({
                     </span>
                   </td>
                   <td className="muted" style={{ whiteSpace: 'nowrap' }}>
-                    {dwellToday > 0 ? fmtDuration(dwellToday) : '—'}
+                    {dwellToday > 0 ? fmtDuration(dwellToday) : '-'}
                   </td>
-                  <td>{isReturn ? 'yes' : '—'}</td>
-                  <td className="muted" style={{ maxWidth: 140, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{ref || '—'}</td>
-                  <td className="muted">{g.utm_source || '—'}</td>
+                  <td>
+                    {outlier ? (
+                      <>
+                        <span className="adm-quality-flag warning">Excluded</span>
+                        <span className="muted" style={{ display: 'block', fontSize: '.72rem', lineHeight: 1.4 }}>
+                          {outlier.reason}
+                        </span>
+                      </>
+                    ) : (
+                      <span className="muted">-</span>
+                    )}
+                  </td>
+                  <td>{isReturn ? 'yes' : '-'}</td>
+                  <td className="muted" style={{ maxWidth: 140, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{ref || '-'}</td>
+                  <td className="muted">{g.utm_source || '-'}</td>
                 </tr>
               )
             })}
             {rows.length === 0 && (
               <tr>
-                <td colSpan={9} className="muted">No matching visits</td>
+                <td colSpan={10} className="muted">No matching visits</td>
               </tr>
             )}
           </tbody>
