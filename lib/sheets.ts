@@ -364,16 +364,9 @@ async function fetchSheetSafe(sheetName: string): Promise<{ rows: string[][], er
   }
 }
 
-export function fetchAllSheets(): Promise<{
-  leads: LeadRow[]
-  events: EventRow[]
-  visits: VisitRow[]
-  outlierVisitDays: OutlierVisitDay[]
-  errors: Record<string, string>
-}>
-export async function fetchAllSheets(options?: {
+export async function fetchAllSheets(options: {
   includeOutlierVisitDays?: boolean
-}): Promise<{
+} = {}): Promise<{
   leads: LeadRow[]
   events: EventRow[]
   visits: VisitRow[]
