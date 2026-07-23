@@ -27,6 +27,7 @@ export default async function AdminLayout({
             <span className="adm-nav-sep" aria-hidden="true" />
             <AdminNavLink href="/admin/sales-plan" className="sales">Sales Plan</AdminNavLink>
             <span className="adm-nav-sep" aria-hidden="true" />
+            <AdminNavLink href="/admin/observatoire">Observatoire</AdminNavLink>
             <AdminResearchMenu />
           </div>
         </div>
