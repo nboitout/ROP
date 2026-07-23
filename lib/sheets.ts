@@ -1,4 +1,5 @@
 import { createPrivateKey, createSign } from 'node:crypto'
+import { listOutlierOverrides, type OutlierOverrideDecision } from '@/lib/outlierOverrides'
 
 // Visitors always hidden from the admin dashboard (site owner's own devices),
 // in addition to anything set via EXCLUDED_READER_IDS in the environment.
@@ -107,6 +108,8 @@ export interface OutlierVisitDay {
   maxSingleLeaveSeconds: number
   leaveCount: number
   reason: string
+  decision: 'auto' | OutlierOverrideDecision
+  isExcluded: boolean
 }
 
 // ---- In-memory cache ----
@@ -559,11 +562,28 @@ export async function fetchAllSheets(options: {
         maxSingleLeaveSeconds: stats.maxSingleLeaveSeconds,
         leaveCount: stats.leaveCount,
         reason,
+        decision: 'auto' as const,
+        isExcluded: true,
       }
     })
     .sort((a, b) => b.totalSeconds - a.totalSeconds)
 
-  const outlierVisitDayKeys = new Set(outlierVisitDays.map((item) => item.key))
+  const overrideByKey = new Map(
+    (await listOutlierOverrides()).map((item) => [item.key, item])
+  )
+
+  outlierVisitDays.forEach((item) => {
+    const override = overrideByKey.get(item.key)
+    if (!override) return
+    item.decision = override.decision
+    item.isExcluded = override.decision === 'exclude'
+  })
+
+  const outlierVisitDayKeys = new Set(
+    outlierVisitDays
+      .filter((item) => item.isExcluded)
+      .map((item) => item.key)
+  )
   const includeOutlierVisitDays = !!options?.includeOutlierVisitDays
   const finalVisits = includeOutlierVisitDays
     ? filteredVisits

@@ -1,5 +1,6 @@
 import { fetchAllSheets } from '@/lib/sheets'
 import { fmtParis, parisDate, fmtDuration } from '@/lib/adminFormat'
+import { OutlierDecisionButtons } from '@/components/admin/OutlierDecisionButtons'
 
 export const dynamic = 'force-dynamic'
 
@@ -156,7 +157,8 @@ export default async function VisitsPage({
             referrer is listed here.
           </p>
           <p className="adm-page-sub">
-            Suspiciously long visit-days stay visible here and are flagged, but they are excluded from the broader dashboard metrics.
+            Suspiciously long visit-days stay visible here and are flagged. You can leave them on
+            auto, keep them in the metrics, or exclude them manually from this table.
           </p>
           <p className="adm-page-sub">
             {uniqueReaders.toLocaleString()} unique visitor{uniqueReaders === 1 ? '' : 's'} ·{' '}
@@ -250,10 +252,22 @@ export default async function VisitsPage({
                   <td>
                     {outlier ? (
                       <>
-                        <span className="adm-quality-flag warning">Excluded</span>
+                        <span className={`adm-quality-flag ${outlier.isExcluded ? 'warning' : ''}`}>
+                          {outlier.decision === 'keep'
+                            ? 'Kept'
+                            : outlier.decision === 'exclude'
+                              ? 'Excluded'
+                              : 'Excluded (auto)'}
+                        </span>
                         <span className="muted" style={{ display: 'block', fontSize: '.72rem', lineHeight: 1.4 }}>
                           {outlier.reason}
                         </span>
+                        <OutlierDecisionButtons
+                          visitDayKey={outlier.key}
+                          readerId={outlier.readerId}
+                          day={outlier.day}
+                          decision={outlier.decision}
+                        />
                       </>
                     ) : (
                       <span className="muted">-</span>
