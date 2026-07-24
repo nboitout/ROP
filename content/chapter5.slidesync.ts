@@ -132,7 +132,7 @@ export const chapter5SlideAnchorsFr: SyncAnchor[] = [
   { sectionId: 'sga',          blockIndex: 33, slide: 14, end: { sectionId: 'sga', blockIndex: 40 } },
   { sectionId: 'sga',          blockIndex: 40, slide: 15, end: { sectionId: 'rop-stress', blockIndex: -1 } },
   { sectionId: 'rop-stress',   blockIndex: -1, slide: 16, end: { sectionId: 'rop-stress', blockIndex: 0 } },
-  { sectionId: 'rop-stress',   blockIndex: 0,  slide: 17, end: { sectionId: 'rop-stress', blockIndex: 4 } },
+  { sectionId: 'rop-stress',   blockIndex: 4,  slide: 17, gapBefore: 'half', end: { sectionId: 'rop-stress', blockIndex: 5 } },
   { sectionId: 'rop-stress',   blockIndex: 5,  slide: 18, end: { sectionId: 'rop-stress', blockIndex: 7 } },
   { sectionId: 'rop-stress',   blockIndex: 7,  slide: 19, end: { sectionId: 'rop-stress', blockIndex: 8 } },
   { sectionId: 'rop-stress',   blockIndex: 8,  slide: 20, end: { sectionId: 'rop-stress', blockIndex: 9 } },
