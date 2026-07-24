@@ -14,18 +14,21 @@ export type SyncAnchorPoint = { sectionId: string; blockIndex: number; itemIndex
 export type SyncAnchor = SyncAnchorPoint & { slide: number; gapBefore?: 'half'; end?: SyncAnchorPoint }
 
 export const chapter5Slides: SyncSlide[] = [
-  { src: '/chapter-5/slides/slide-01.jpg', title: 'L’équilibre vital : homéostasie et allostasie' },
-  { src: '/chapter-5/slides/slide-02.jpg', title: 'Le mécanisme de stress : stabilité dans le changement' },
-  { src: '/chapter-5/slides/slide-03.jpg', title: 'Dualité du stress : distress vs eustress' },
-  { src: '/chapter-5/slides/slide-04.jpg', title: 'La trilogie des stresseurs et l’effet cumulatif' },
-  { src: '/chapter-5/slides/slide-05.jpg', title: 'Le syndrome général d’adaptation (SGA)' },
-  { src: '/chapter-5/slides/slide-06.jpg', title: 'Phase d’alarme : matrice de réponse physiologique' },
-  { src: '/chapter-5/slides/slide-07.jpg', title: 'Le point de bascule : cerveau limbique et hypothalamus' },
-  { src: '/chapter-5/slides/slide-08.jpg', title: 'Mécanisme de stress : axes neurologique (SAM) et hormonal (HHS)' },
-  { src: '/chapter-5/slides/slide-09.jpg', title: 'Phase 2 : recouvrement et vulnérabilité' },
-  { src: '/chapter-5/slides/slide-10.jpg', title: 'Phase 3 : adaptation-résistance' },
-  { src: '/chapter-5/slides/slide-11.jpg', title: 'L’épuisement : du dysfonctionnement à la chronicité' },
-  { src: '/chapter-5/slides/slide-12.jpg', title: '« Nous sommes malades parce que nous perdons la santé, et non l’inverse. »' },
+  { src: '/chapter-5/slides/slide-01.png', title: 'Mécanisme de stress' },
+  { src: '/chapter-5/slides/slide-02.png', title: 'L’équilibre vital : homéostasie et allostasie' },
+  { src: '/chapter-5/slides/slide-03.png', title: 'Le mécanisme de stress : stabilité dans le changement' },
+  { src: '/chapter-5/slides/slide-04.png', title: 'Dualité du stress : distress vs eustress' },
+  { src: '/chapter-5/slides/slide-05.png', title: 'La trilogie des stresseurs et l’effet cumulatif' },
+  { src: '/chapter-5/slides/slide-06.png', title: 'Le syndrome général d’adaptation (SGA)' },
+  { src: '/chapter-5/slides/slide-07.png', title: 'Le point de bascule : cerveau limbique et hypothalamus' },
+  { src: '/chapter-5/slides/slide-08.png', title: 'Mécanisme de stress : axes neurologique (SAM) et hormonal (HHS)' },
+  { src: '/chapter-5/slides/slide-09.png', title: 'Mécanisme de stress : axe neurologique (SAM)' },
+  { src: '/chapter-5/slides/slide-10.png', title: 'Mécanisme de stress : axe hormonal (HHS)' },
+  { src: '/chapter-5/slides/slide-11.png', title: 'Phase 2 du SGA : récupération et vulnérabilité' },
+  { src: '/chapter-5/slides/slide-12.png', title: 'Phase 3 du SGA : adaptation-résistance' },
+  { src: '/chapter-5/slides/slide-13.png', title: 'Phase d’adaptation-résistance' },
+  { src: '/chapter-5/slides/slide-14.png', title: 'Phase 4 du SGA : épuisement et chronicisation' },
+  { src: '/chapter-5/slides/slide-15.png', title: '« Nous sommes malades parce que nous perdons la santé, et non l’inverse. »' },
 ]
 
 // English deck — same slides, translated. The text↔slide anchors are shared
@@ -102,18 +105,21 @@ export const chapter5SlidesIt: SyncSlide[] = [
 // blockIndex -1 anchors a slide to the section heading itself: the marker is
 // rendered just above the <h2> instead of inside a content block.
 export const chapter5SlideAnchorsFr: SyncAnchor[] = [
-  { sectionId: 'definitions', blockIndex: 0,  slide: 1 },
-  { sectionId: 'definitions', blockIndex: 2,  slide: 2 },
-  { sectionId: 'stresseurs',  blockIndex: 2,  slide: 3 },
-  { sectionId: 'stresseurs',  blockIndex: 6,  slide: 4 },
-  { sectionId: 'sga',         blockIndex: 0,  slide: 5 },
-  { sectionId: 'sga',         blockIndex: 1,  slide: 6,  end: { sectionId: 'sga', blockIndex: 4 } },
-  { sectionId: 'sga',         blockIndex: 4,  slide: 7,  end: { sectionId: 'sga', blockIndex: 6 } },
-  { sectionId: 'sga',         blockIndex: 6,  slide: 8,  end: { sectionId: 'sga', blockIndex: 13 } },
-  { sectionId: 'sga',         blockIndex: 13, slide: 9,  end: { sectionId: 'sga', blockIndex: 18 } },
-  { sectionId: 'sga',         blockIndex: 18, slide: 10, end: { sectionId: 'sga', blockIndex: 33 } },
-  { sectionId: 'sga',         blockIndex: 33, slide: 11, end: { sectionId: 'rop-stress', blockIndex: -1 } },
-  { sectionId: 'rop-stress',  blockIndex: -1, slide: 12 },
+  { sectionId: 'presentation', blockIndex: 0,  slide: 1,  end: { sectionId: 'definitions', blockIndex: 0 } },
+  { sectionId: 'definitions',  blockIndex: 0,  slide: 2,  end: { sectionId: 'definitions', blockIndex: 2 } },
+  { sectionId: 'definitions',  blockIndex: 2,  slide: 3,  end: { sectionId: 'stresseurs', blockIndex: 2 } },
+  { sectionId: 'stresseurs',   blockIndex: 2,  slide: 4,  end: { sectionId: 'stresseurs', blockIndex: 5 } },
+  { sectionId: 'stresseurs',   blockIndex: 5,  slide: 5,  end: { sectionId: 'sga', blockIndex: 0 } },
+  { sectionId: 'sga',          blockIndex: 0,  slide: 6,  end: { sectionId: 'sga', blockIndex: 3 } },
+  { sectionId: 'sga',          blockIndex: 3,  slide: 7,  end: { sectionId: 'sga', blockIndex: 6 } },
+  { sectionId: 'sga',          blockIndex: 6,  slide: 8,  end: { sectionId: 'sga', blockIndex: 7 } },
+  { sectionId: 'sga',          blockIndex: 7,  slide: 9,  end: { sectionId: 'sga', blockIndex: 10 } },
+  { sectionId: 'sga',          blockIndex: 10, slide: 10, end: { sectionId: 'sga', blockIndex: 13 } },
+  { sectionId: 'sga',          blockIndex: 13, slide: 11, end: { sectionId: 'sga', blockIndex: 18 } },
+  { sectionId: 'sga',          blockIndex: 18, slide: 12, end: { sectionId: 'sga', blockIndex: 20 } },
+  { sectionId: 'sga',          blockIndex: 20, slide: 13, end: { sectionId: 'sga', blockIndex: 33 } },
+  { sectionId: 'sga',          blockIndex: 33, slide: 14, end: { sectionId: 'sga', blockIndex: 40 } },
+  { sectionId: 'sga',          blockIndex: 40, slide: 15, end: { sectionId: 'rop-stress', blockIndex: -1 } },
 ]
 
 export const chapter5SlideAnchorsLegacy: SyncAnchor[] = [
