@@ -120,7 +120,7 @@ export const chapter16Fr: Chapter = {
           "type": "xref",
           "label": "Voir la référence dans le chapitre 1",
           "text": "Généralités",
-          "href": "/lecture/chapitre-1?xrefBack=%2Flecture%2Fchapitre-16%23p-anatomie-8&xrefBackLabel=Retour%20au%20chapitre%2016#p-articulations-viscerales-3"
+          "href": "/lecture/chapitre-1?lang=fr&xrefBack=%2Flecture%2Fchapitre-16%3Flang%3Dfr%23p-anatomie-8&xrefBackLabel=Retour%20au%20chapitre%2016#p-articulations-viscerales-3"
         },
         {
           "type": "sub",
@@ -261,7 +261,7 @@ export const chapter16Fr: Chapter = {
           "type": "xref",
           "label": "Voir la référence dans le chapitre 10",
           "text": "Duodénum",
-          "href": "/lecture/chapitre-10?xrefBack=%2Flecture%2Fchapitre-16%23p-vascularisation-5&xrefBackLabel=Retour%20au%20chapitre%2016#p-anatomie-figure-10-1-16"
+          "href": "/lecture/chapitre-10?lang=fr&xrefBack=%2Flecture%2Fchapitre-16%3Flang%3Dfr%23p-vascularisation-5&xrefBackLabel=Retour%20au%20chapitre%2016#p-anatomie-figure-10-1-16"
         },
         {
           "type": "rop",
@@ -460,13 +460,13 @@ export const chapter16Fr: Chapter = {
           "type": "xref",
           "label": "Voir la référence dans le chapitre 19",
           "text": "Organes génitaux féminins",
-          "href": "/lecture/chapitre-19?xrefBack=%2Flecture%2Fchapitre-16%23p-pathologies-courantes-5&xrefBackLabel=Retour%20au%20chapitre%2016#p-ovaires-trompes-presentation-0"
+          "href": "/lecture/chapitre-19?lang=fr&xrefBack=%2Flecture%2Fchapitre-16%3Flang%3Dfr%23p-pathologies-courantes-5&xrefBackLabel=Retour%20au%20chapitre%2016#p-ovaires-trompes-presentation-0"
         },
         {
           "type": "xref",
           "label": "Voir la référence dans le chapitre 20",
           "text": "Organes génitaux masculins",
-          "href": "/lecture/chapitre-20?xrefBack=%2Flecture%2Fchapitre-16%23p-pathologies-courantes-5&xrefBackLabel=Retour%20au%20chapitre%2016#p-presentation-0"
+          "href": "/lecture/chapitre-20?lang=fr&xrefBack=%2Flecture%2Fchapitre-16%3Flang%3Dfr%23p-pathologies-courantes-5&xrefBackLabel=Retour%20au%20chapitre%2016#p-presentation-0"
         },
         {
           "type": "sub",

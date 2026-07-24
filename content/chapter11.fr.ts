@@ -37,7 +37,7 @@ export const chapter11Fr: Chapter = {
           "type": "xref",
           "label": "Voir la référence dans le chapitre 1",
           "text": "Effet turgor et pressions intracavitaires",
-          "href": "/lecture/chapitre-1?xrefBack=%2Flecture%2Fchapitre-11%23p-presentation-6&xrefBackLabel=Retour%20au%20chapitre%2011#p-articulations-viscerales-3"
+          "href": "/lecture/chapitre-1?lang=fr&xrefBack=%2Flecture%2Fchapitre-11%3Flang%3Dfr%23p-presentation-6&xrefBackLabel=Retour%20au%20chapitre%2011#p-articulations-viscerales-3"
         },
         {
           "type": "para",
@@ -232,7 +232,7 @@ export const chapter11Fr: Chapter = {
           "type": "xref",
           "label": "Voir la référence dans le chapitre 1",
           "text": "Séreuses : glissement et pressions",
-          "href": "/lecture/chapitre-1?xrefBack=%2Flecture%2Fchapitre-11%23p-interet-en-rop-2-0&xrefBackLabel=Retour%20au%20chapitre%2011#p-articulations-viscerales-3"
+          "href": "/lecture/chapitre-1?lang=fr&xrefBack=%2Flecture%2Fchapitre-11%3Flang%3Dfr%23p-interet-en-rop-2-0&xrefBackLabel=Retour%20au%20chapitre%2011#p-articulations-viscerales-3"
         }
       ]
     },
@@ -998,7 +998,7 @@ export const chapter11Fr: Chapter = {
           "type": "xref",
           "label": "Voir la référence dans le chapitre 2",
           "text": "Zones réflexes occipitales et podales",
-          "href": "/lecture/traitement-rop?xrefBack=%2Flecture%2Fchapitre-11%23p-zones-reflexes-podales-du-foie-et-des-voies-biliaires-1&xrefBackLabel=Retour%20au%20chapitre%2011#p-hierarchisation-3"
+          "href": "/lecture/traitement-rop?lang=fr&xrefBack=%2Flecture%2Fchapitre-11%3Flang%3Dfr%23p-zones-reflexes-podales-du-foie-et-des-voies-biliaires-1&xrefBackLabel=Retour%20au%20chapitre%2011#p-hierarchisation-3"
         },
         {
           "type": "para",
@@ -1021,7 +1021,7 @@ export const chapter11Fr: Chapter = {
           "type": "xref",
           "label": "Voir la référence dans le chapitre 2",
           "text": "Zones réflexes occipitales et podales",
-          "href": "/lecture/traitement-rop?xrefBack=%2Flecture%2Fchapitre-11%23p-zones-reflexes-podales-du-foie-et-des-voies-biliaires-6&xrefBackLabel=Retour%20au%20chapitre%2011#p-hierarchisation-4"
+          "href": "/lecture/traitement-rop?lang=fr&xrefBack=%2Flecture%2Fchapitre-11%3Flang%3Dfr%23p-zones-reflexes-podales-du-foie-et-des-voies-biliaires-6&xrefBackLabel=Retour%20au%20chapitre%2011#p-hierarchisation-4"
         },
         {
           "type": "sub",
@@ -1079,7 +1079,7 @@ export const chapter11Fr: Chapter = {
           "type": "xref",
           "label": "Voir la référence dans le chapitre 2",
           "text": "Zones réflexes occipitales et podales",
-          "href": "/lecture/traitement-rop?xrefBack=%2Flecture%2Fchapitre-11%23p-systeme-limbique-0&xrefBackLabel=Retour%20au%20chapitre%2011#p-hierarchisation-5"
+          "href": "/lecture/traitement-rop?lang=fr&xrefBack=%2Flecture%2Fchapitre-11%3Flang%3Dfr%23p-systeme-limbique-0&xrefBackLabel=Retour%20au%20chapitre%2011#p-hierarchisation-5"
         },
         {
           "type": "lead",

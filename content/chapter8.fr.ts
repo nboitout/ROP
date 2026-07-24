@@ -458,7 +458,7 @@ export const chapter8Fr: Chapter = {
           "type": "xref",
           "label": "Voir la référence dans le chapitre 11",
           "text": "Foie",
-          "href": "/lecture/chapitre-11?xrefBack=%2Flecture%2Fchapitre-8%23p-vascularisation-13&xrefBackLabel=Retour%20au%20chapitre%208#p-vascularisation-13"
+          "href": "/lecture/chapitre-11?lang=fr&xrefBack=%2Flecture%2Fchapitre-8%3Flang%3Dfr%23p-vascularisation-13&xrefBackLabel=Retour%20au%20chapitre%208#p-vascularisation-13"
         }
       ]
     },
@@ -571,7 +571,7 @@ export const chapter8Fr: Chapter = {
           "type": "xref",
           "label": "Voir la référence dans le chapitre 1",
           "text": "Généralités",
-          "href": "/lecture/chapitre-1?xrefBack=%2Flecture%2Fchapitre-8%23p-physiologie-0&xrefBackLabel=Retour%20au%20chapitre%208#p-mobilite-viscerale-12"
+          "href": "/lecture/chapitre-1?lang=fr&xrefBack=%2Flecture%2Fchapitre-8%3Flang%3Dfr%23p-physiologie-0&xrefBackLabel=Retour%20au%20chapitre%208#p-mobilite-viscerale-12"
         },
         {
           "type": "lead",
@@ -606,7 +606,7 @@ export const chapter8Fr: Chapter = {
           "type": "xref",
           "label": "Voir la référence dans le chapitre 1",
           "text": "Généralités",
-          "href": "/lecture/chapitre-1?xrefBack=%2Flecture%2Fchapitre-8%23p-physiologie-7&xrefBackLabel=Retour%20au%20chapitre%208#p-articulations-viscerales-4"
+          "href": "/lecture/chapitre-1?lang=fr&xrefBack=%2Flecture%2Fchapitre-8%3Flang%3Dfr%23p-physiologie-7&xrefBackLabel=Retour%20au%20chapitre%208#p-articulations-viscerales-4"
         },
         {
           "type": "para",
@@ -616,7 +616,7 @@ export const chapter8Fr: Chapter = {
           "type": "xref",
           "label": "Voir la référence dans le chapitre 18",
           "text": "Vessie",
-          "href": "/lecture/chapitre-18?xrefBack=%2Flecture%2Fchapitre-8%23p-physiologie-8&xrefBackLabel=Retour%20au%20chapitre%208#p-physiologie-19"
+          "href": "/lecture/chapitre-18?lang=fr&xrefBack=%2Flecture%2Fchapitre-8%3Flang%3Dfr%23p-physiologie-8&xrefBackLabel=Retour%20au%20chapitre%208#p-physiologie-19"
         },
         {
           "type": "lead",
@@ -736,7 +736,7 @@ export const chapter8Fr: Chapter = {
           "type": "xref",
           "label": "Voir la référence dans le chapitre 9",
           "text": "Estomac",
-          "href": "/lecture/chapitre-9?xrefBack=%2Flecture%2Fchapitre-8%23p-pathologies-courantes-diagnostic-d-exclusion-indications-troubles-fonctionnels-6&xrefBackLabel=Retour%20au%20chapitre%208#p-anatomie-10"
+          "href": "/lecture/chapitre-9?lang=fr&xrefBack=%2Flecture%2Fchapitre-8%3Flang%3Dfr%23p-pathologies-courantes-diagnostic-d-exclusion-indications-troubles-fonctionnels-6&xrefBackLabel=Retour%20au%20chapitre%208#p-anatomie-10"
         },
         {
           "type": "para",
@@ -768,7 +768,7 @@ export const chapter8Fr: Chapter = {
           "type": "xref",
           "label": "Voir la référence dans le chapitre 9",
           "text": "Estomac",
-          "href": "/lecture/chapitre-9?xrefBack=%2Flecture%2Fchapitre-8%23p-pathologies-courantes-diagnostic-d-exclusion-indications-troubles-fonctionnels-12&xrefBackLabel=Retour%20au%20chapitre%208#p-pathologies-courantes-15"
+          "href": "/lecture/chapitre-9?lang=fr&xrefBack=%2Flecture%2Fchapitre-8%3Flang%3Dfr%23p-pathologies-courantes-diagnostic-d-exclusion-indications-troubles-fonctionnels-12&xrefBackLabel=Retour%20au%20chapitre%208#p-pathologies-courantes-15"
         },
         {
           "type": "para",
@@ -898,7 +898,7 @@ export const chapter8Fr: Chapter = {
           "type": "xref",
           "label": "Voir la référence dans le chapitre 16",
           "text": "Reins",
-          "href": "/lecture/chapitre-16?xrefBack=%2Flecture%2Fchapitre-8%23p-relations-viscero-somatiques-10&xrefBackLabel=Retour%20au%20chapitre%208#p-rapports-4"
+          "href": "/lecture/chapitre-16?lang=fr&xrefBack=%2Flecture%2Fchapitre-8%3Flang%3Dfr%23p-relations-viscero-somatiques-10&xrefBackLabel=Retour%20au%20chapitre%208#p-rapports-4"
         }
       ]
     },

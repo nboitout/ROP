@@ -25,7 +25,7 @@ export const chapter4Fr: Chapter = {
           "type": "xref",
           "label": "Voir la référence dans le chapitre 1",
           "text": "Mobilité viscérale : définitions et moteurs",
-          "href": "/lecture/chapitre-1?xrefBack=%2Flecture%2Fchapitre-4%23p-presentation-1&xrefBackLabel=Retour%20au%20chapitre%204#sec-mobilite-viscerale"
+          "href": "/lecture/chapitre-1?lang=fr&xrefBack=%2Flecture%2Fchapitre-4%3Flang%3Dfr%23p-presentation-1&xrefBackLabel=Retour%20au%20chapitre%204#sec-mobilite-viscerale"
         },
         {
           "type": "para",
@@ -64,7 +64,7 @@ export const chapter4Fr: Chapter = {
           "type": "xref",
           "label": "Voir la référence dans le chapitre 5",
           "text": "Mécanisme de stress, homéostasie et allostasie",
-          "href": "/lecture/chapitre-5?xrefBack=%2Flecture%2Fchapitre-4%23p-presentation-8&xrefBackLabel=Retour%20au%20chapitre%204#p-definitions-2"
+          "href": "/lecture/chapitre-5?lang=fr&xrefBack=%2Flecture%2Fchapitre-4%3Flang%3Dfr%23p-presentation-8&xrefBackLabel=Retour%20au%20chapitre%204#p-definitions-2"
         },
         {
           "type": "sub",
@@ -111,19 +111,19 @@ export const chapter4Fr: Chapter = {
           "type": "xref",
           "label": "Voir la référence dans le chapitre 4",
           "text": "Glomus carotidiens : chémorécepteur O2 / CO2 et équilibre acido-basique",
-          "href": "/lecture/chapitre-4?xrefBack=%2Flecture%2Fchapitre-4%23p-presentation-11&xrefBackLabel=Retour%20au%20chapitre%204#p-parasympathique-visceromoteur-8"
+          "href": "/lecture/chapitre-4?lang=fr&xrefBack=%2Flecture%2Fchapitre-4%3Flang%3Dfr%23p-presentation-11&xrefBackLabel=Retour%20au%20chapitre%204#p-parasympathique-visceromoteur-8"
         },
         {
           "type": "xref",
           "label": "Voir la référence dans le chapitre 21",
           "text": "Système érectile masculin et féminin",
-          "href": "/lecture/chapitre-21?xrefBack=%2Flecture%2Fchapitre-4%23p-presentation-11&xrefBackLabel=Retour%20au%20chapitre%204#sec-presentation"
+          "href": "/lecture/chapitre-21?lang=fr&xrefBack=%2Flecture%2Fchapitre-4%3Flang%3Dfr%23p-presentation-11&xrefBackLabel=Retour%20au%20chapitre%204#sec-presentation"
         },
         {
           "type": "xref",
           "label": "Voir la référence dans le chapitre 5",
           "text": "Mécanisme de stress",
-          "href": "/lecture/chapitre-5?xrefBack=%2Flecture%2Fchapitre-4%23p-presentation-11&xrefBackLabel=Retour%20au%20chapitre%204#p-presentation-0"
+          "href": "/lecture/chapitre-5?lang=fr&xrefBack=%2Flecture%2Fchapitre-4%3Flang%3Dfr%23p-presentation-11&xrefBackLabel=Retour%20au%20chapitre%204#p-presentation-0"
         },
         {
           "type": "sub",
@@ -149,7 +149,7 @@ export const chapter4Fr: Chapter = {
           "type": "xref",
           "label": "Voir la référence dans le chapitre 5",
           "text": "Mécanisme de stress",
-          "href": "/lecture/chapitre-5?xrefBack=%2Flecture%2Fchapitre-4%23p-presentation-19&xrefBackLabel=Retour%20au%20chapitre%204#p-definitions-2"
+          "href": "/lecture/chapitre-5?lang=fr&xrefBack=%2Flecture%2Fchapitre-4%3Flang%3Dfr%23p-presentation-19&xrefBackLabel=Retour%20au%20chapitre%204#p-definitions-2"
         },
         {
           "type": "bullets",
@@ -196,7 +196,7 @@ export const chapter4Fr: Chapter = {
           "type": "xref",
           "label": "Voir la référence dans le chapitre 3",
           "text": "Système nerveux central : cellules gliales et régulation cérébrale",
-          "href": "/lecture/chapitre-3?xrefBack=%2Flecture%2Fchapitre-4%23p-presentation-28&xrefBackLabel=Retour%20au%20chapitre%204#p-section-3-organisation-anatomique-84"
+          "href": "/lecture/chapitre-3?lang=fr&xrefBack=%2Flecture%2Fchapitre-4%3Flang%3Dfr%23p-presentation-28&xrefBackLabel=Retour%20au%20chapitre%204#p-section-3-organisation-anatomique-84"
         },
         {
           "type": "para",
@@ -237,7 +237,7 @@ export const chapter4Fr: Chapter = {
           "type": "xref",
           "label": "Voir la référence dans le chapitre 14",
           "text": "Système nerveux entérique de l’intestin grêle",
-          "href": "/lecture/chapitre-14?xrefBack=%2Flecture%2Fchapitre-4%23p-organisation-2&xrefBackLabel=Retour%20au%20chapitre%204#p-innervation-8"
+          "href": "/lecture/chapitre-14?lang=fr&xrefBack=%2Flecture%2Fchapitre-4%3Flang%3Dfr%23p-organisation-2&xrefBackLabel=Retour%20au%20chapitre%204#p-innervation-8"
         }
       ]
     },
@@ -330,7 +330,7 @@ export const chapter4Fr: Chapter = {
           "type": "xref",
           "label": "Voir la référence dans le chapitre 6",
           "text": "Théorie polyvagale : branche ventrale, noyau ambigu et variabilité du rythme cardiaque",
-          "href": "/lecture/chapitre-6?xrefBack=%2Flecture%2Fchapitre-4%23p-parasympathique-visceromoteur-5&xrefBackLabel=Retour%20au%20chapitre%204#p-theorie-polyvagale-12"
+          "href": "/lecture/chapitre-6?lang=fr&xrefBack=%2Flecture%2Fchapitre-4%3Flang%3Dfr%23p-parasympathique-visceromoteur-5&xrefBackLabel=Retour%20au%20chapitre%204#p-theorie-polyvagale-12"
         },
         {
           "type": "sub",
@@ -386,7 +386,7 @@ export const chapter4Fr: Chapter = {
           "type": "xref",
           "label": "Voir la référence dans le chapitre 6",
           "text": "Théorie polyvagale : malaise vagal",
-          "href": "/lecture/chapitre-6?xrefBack=%2Flecture%2Fchapitre-4%23p-parasympathique-visceromoteur-9&xrefBackLabel=Retour%20au%20chapitre%204#p-theorie-polyvagale-6"
+          "href": "/lecture/chapitre-6?lang=fr&xrefBack=%2Flecture%2Fchapitre-4%3Flang%3Dfr%23p-parasympathique-visceromoteur-9&xrefBackLabel=Retour%20au%20chapitre%204#p-theorie-polyvagale-6"
         },
         {
           "type": "para",
@@ -459,7 +459,7 @@ export const chapter4Fr: Chapter = {
           "type": "xref",
           "label": "Voir la référence dans le chapitre 15",
           "text": "Côlon transverse et cadre colique",
-          "href": "/lecture/chapitre-15?xrefBack=%2Flecture%2Fchapitre-4%23p-parasympathique-visceromoteur-14&xrefBackLabel=Retour%20au%20chapitre%204#p-situation-1"
+          "href": "/lecture/chapitre-15?lang=fr&xrefBack=%2Flecture%2Fchapitre-4%3Flang%3Dfr%23p-parasympathique-visceromoteur-14&xrefBackLabel=Retour%20au%20chapitre%204#p-situation-1"
         },
         {
           "type": "para",
@@ -533,7 +533,7 @@ export const chapter4Fr: Chapter = {
           "type": "xref",
           "label": "Voir la référence dans le chapitre 14",
           "text": "Système nerveux entérique et microbiote intestinal",
-          "href": "/lecture/chapitre-14?xrefBack=%2Flecture%2Fchapitre-4%23p-nerf-vague-sensitif-0&xrefBackLabel=Retour%20au%20chapitre%204#p-innervation-8"
+          "href": "/lecture/chapitre-14?lang=fr&xrefBack=%2Flecture%2Fchapitre-4%3Flang%3Dfr%23p-nerf-vague-sensitif-0&xrefBackLabel=Retour%20au%20chapitre%204#p-innervation-8"
         }
       ]
     },
@@ -719,7 +719,7 @@ export const chapter4Fr: Chapter = {
           "type": "xref",
           "label": "Voir la référence dans ce chapitre",
           "text": "Intérêt clinique : myélomères et relations viscérales",
-          "href": "/lecture/chapitre-4?xrefBack=%2Flecture%2Fchapitre-4%23p-sympathique-sensitif-3&xrefBackLabel=Retour%20au%20chapitre%204#p-sympathique-visceromoteur-2"
+          "href": "/lecture/chapitre-4?lang=fr&xrefBack=%2Flecture%2Fchapitre-4%3Flang%3Dfr%23p-sympathique-sensitif-3&xrefBackLabel=Retour%20au%20chapitre%204#p-sympathique-visceromoteur-2"
         },
         {
           "type": "para",
@@ -862,7 +862,7 @@ export const chapter4Fr: Chapter = {
           "type": "xref",
           "label": "Voir la référence dans le chapitre 5",
           "text": "Syndrome général d’adaptation : phase d’alarme et adrénaline",
-          "href": "/lecture/chapitre-5?xrefBack=%2Flecture%2Fchapitre-4%23p-glandes-surrenales-1&xrefBackLabel=Retour%20au%20chapitre%204#p-sga-7"
+          "href": "/lecture/chapitre-5?lang=fr&xrefBack=%2Flecture%2Fchapitre-4%3Flang%3Dfr%23p-glandes-surrenales-1&xrefBackLabel=Retour%20au%20chapitre%204#p-sga-7"
         }
       ]
     },
@@ -1012,7 +1012,7 @@ export const chapter4Fr: Chapter = {
           "type": "xref",
           "label": "Voir la référence dans le chapitre 8",
           "text": "Zones réflexes podales du diaphragme : coupoles diaphragmatiques",
-          "href": "/lecture/chapitre-8?xrefBack=%2Flecture%2Fchapitre-4%23p-zones-reflexes-podales-22&xrefBackLabel=Retour%20au%20chapitre%204#p-zones-reflexes-podales-5"
+          "href": "/lecture/chapitre-8?lang=fr&xrefBack=%2Flecture%2Fchapitre-4%3Flang%3Dfr%23p-zones-reflexes-podales-22&xrefBackLabel=Retour%20au%20chapitre%204#p-zones-reflexes-podales-5"
         },
         {
           "type": "sub",
@@ -1238,7 +1238,7 @@ export const chapter4Fr: Chapter = {
           "type": "xref",
           "label": "Voir les zones réflexes dans le chapitre 14",
           "text": "Intestin grêle — zones réflexes podales",
-          "href": "/lecture/chapitre-14?xrefBack=%2Flecture%2Fchapitre-4%23p-zones-reflexes-podales-53&xrefBackLabel=Retour%20au%20chapitre%204#p-rop-14"
+          "href": "/lecture/chapitre-14?lang=fr&xrefBack=%2Flecture%2Fchapitre-4%3Flang%3Dfr%23p-zones-reflexes-podales-53&xrefBackLabel=Retour%20au%20chapitre%204#p-rop-14"
         },
         {
           "type": "sub",
@@ -1253,7 +1253,7 @@ export const chapter4Fr: Chapter = {
           "type": "xref",
           "label": "Voir les zones réflexes dans le chapitre 16",
           "text": "Reins — zones réflexes podales",
-          "href": "/lecture/chapitre-16?xrefBack=%2Flecture%2Fchapitre-4%23p-zones-reflexes-podales-56&xrefBackLabel=Retour%20au%20chapitre%204#sec-zones-reflexes-podales"
+          "href": "/lecture/chapitre-16?lang=fr&xrefBack=%2Flecture%2Fchapitre-4%3Flang%3Dfr%23p-zones-reflexes-podales-56&xrefBackLabel=Retour%20au%20chapitre%204#sec-zones-reflexes-podales"
         }
       ]
     }

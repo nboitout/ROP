@@ -195,7 +195,7 @@ export const chapter12Fr: Chapter = {
           "type": "xref",
           "label": "Voir la référence dans le chapitre 1",
           "text": "Sereuses : glissement et pressions",
-          "href": "/lecture/chapitre-1?xrefBack=%2Flecture%2Fchapitre-12%23p-moyens-de-fixite-8&xrefBackLabel=Retour%20au%20chapitre%2012#p-articulations-viscerales-3"
+          "href": "/lecture/chapitre-1?lang=fr&xrefBack=%2Flecture%2Fchapitre-12%3Flang%3Dfr%23p-moyens-de-fixite-8&xrefBackLabel=Retour%20au%20chapitre%2012#p-articulations-viscerales-3"
         }
       ]
     },
@@ -437,13 +437,13 @@ export const chapter12Fr: Chapter = {
           "type": "xref",
           "label": "Voir la référence dans le chapitre 5",
           "text": "Mécanisme de stress : axe HHS, adrénaline et cortisol",
-          "href": "/lecture/chapitre-5?xrefBack=%2Flecture%2Fchapitre-12%23p-interet-en-rop-2-0&xrefBackLabel=Retour%20au%20chapitre%2012#p-sga-7"
+          "href": "/lecture/chapitre-5?lang=fr&xrefBack=%2Flecture%2Fchapitre-12%3Flang%3Dfr%23p-interet-en-rop-2-0&xrefBackLabel=Retour%20au%20chapitre%2012#p-sga-7"
         },
         {
           "type": "xref",
           "label": "Voir la référence dans le chapitre 14",
           "text": "Intestin grêle : dysbioses",
-          "href": "/lecture/chapitre-14?xrefBack=%2Flecture%2Fchapitre-12%23p-interet-en-rop-2-0&xrefBackLabel=Retour%20au%20chapitre%2012#p-pathologies-7"
+          "href": "/lecture/chapitre-14?lang=fr&xrefBack=%2Flecture%2Fchapitre-12%3Flang%3Dfr%23p-interet-en-rop-2-0&xrefBackLabel=Retour%20au%20chapitre%2012#p-pathologies-7"
         }
       ]
     },
@@ -752,7 +752,7 @@ export const chapter12Fr: Chapter = {
           "type": "xref",
           "label": "Voir la référence dans le chapitre 5",
           "text": "Mécanisme de stress",
-          "href": "/lecture/chapitre-5?xrefBack=%2Flecture%2Fchapitre-12%23p-indications-1&xrefBackLabel=Retour%20au%20chapitre%2012#p-sga-7"
+          "href": "/lecture/chapitre-5?lang=fr&xrefBack=%2Flecture%2Fchapitre-12%3Flang%3Dfr%23p-indications-1&xrefBackLabel=Retour%20au%20chapitre%2012#p-sga-7"
         }
       ]
     },
@@ -776,7 +776,7 @@ export const chapter12Fr: Chapter = {
           "type": "xref",
           "label": "Voir la référence dans le chapitre 2",
           "text": "Zones réflexes occipitales et podales",
-          "href": "/lecture/traitement-rop?xrefBack=%2Flecture%2Fchapitre-12%23p-zones-reflexes-podales-1&xrefBackLabel=Retour%20au%20chapitre%2012#p-hierarchisation-3"
+          "href": "/lecture/traitement-rop?lang=fr&xrefBack=%2Flecture%2Fchapitre-12%3Flang%3Dfr%23p-zones-reflexes-podales-1&xrefBackLabel=Retour%20au%20chapitre%2012#p-hierarchisation-3"
         },
         {
           "type": "sub",
@@ -786,7 +786,7 @@ export const chapter12Fr: Chapter = {
           "type": "xref",
           "label": "Voir la référence dans le chapitre 2",
           "text": "Zones réflexes occipitales et podales",
-          "href": "/lecture/traitement-rop?xrefBack=%2Flecture%2Fchapitre-12%23p-zones-reflexes-podales-4&xrefBackLabel=Retour%20au%20chapitre%2012#p-hierarchisation-4"
+          "href": "/lecture/traitement-rop?lang=fr&xrefBack=%2Flecture%2Fchapitre-12%3Flang%3Dfr%23p-zones-reflexes-podales-4&xrefBackLabel=Retour%20au%20chapitre%2012#p-hierarchisation-4"
         },
         {
           "type": "sub",

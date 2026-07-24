@@ -51,6 +51,7 @@ export default async function Chapitre5SyncPage({
       slides={DECKS[lang]}
       anchors={ANCHORS[lang]}
       backHref="/"
+      showClinicalCaseResource={lang === 'fr'}
     />
   )
 }

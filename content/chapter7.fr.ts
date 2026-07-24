@@ -65,7 +65,7 @@ export const chapter7Fr: Chapter = {
           "type": "xref",
           "label": "Voir la référence dans le chapitre 8",
           "text": "Diaphragme",
-          "href": "/lecture/chapitre-8?xrefBack=%2Flecture%2Fchapitre-7%23p-situation-2&xrefBackLabel=Retour%20au%20chapitre%207#p-situation-0"
+          "href": "/lecture/chapitre-8?lang=fr&xrefBack=%2Flecture%2Fchapitre-7%3Flang%3Dfr%23p-situation-2&xrefBackLabel=Retour%20au%20chapitre%207#p-situation-0"
         },
         {
           "type": "para",
@@ -237,7 +237,7 @@ export const chapter7Fr: Chapter = {
           "type": "xref",
           "label": "Voir la référence dans le chapitre 1",
           "text": "Effet turgor et pressions intracavitaires",
-          "href": "/lecture/chapitre-1?xrefBack=%2Flecture%2Fchapitre-7%23p-anatomie-19&xrefBackLabel=Retour%20au%20chapitre%207#p-articulations-viscerales-3"
+          "href": "/lecture/chapitre-1?lang=fr&xrefBack=%2Flecture%2Fchapitre-7%3Flang%3Dfr%23p-anatomie-19&xrefBackLabel=Retour%20au%20chapitre%207#p-articulations-viscerales-3"
         },
         {
           "type": "sub",
@@ -507,7 +507,7 @@ export const chapter7Fr: Chapter = {
           "type": "xref",
           "label": "Voir la référence dans le chapitre 14",
           "text": "Intestin grêle : vascularisation",
-          "href": "/lecture/chapitre-14?xrefBack=%2Flecture%2Fchapitre-7%23p-vascularisation-28&xrefBackLabel=Retour%20au%20chapitre%207#p-vascularisation-2"
+          "href": "/lecture/chapitre-14?lang=fr&xrefBack=%2Flecture%2Fchapitre-7%3Flang%3Dfr%23p-vascularisation-28&xrefBackLabel=Retour%20au%20chapitre%207#p-vascularisation-2"
         },
         {
           "type": "para",
@@ -533,7 +533,7 @@ export const chapter7Fr: Chapter = {
           "type": "xref",
           "label": "Voir la référence dans le chapitre 15",
           "text": "Côlon, Vascularisation",
-          "href": "/lecture/chapitre-15?xrefBack=%2Flecture%2Fchapitre-7%23p-vascularisation-34&xrefBackLabel=Retour%20au%20chapitre%207#p-vascularisation-2"
+          "href": "/lecture/chapitre-15?lang=fr&xrefBack=%2Flecture%2Fchapitre-7%3Flang%3Dfr%23p-vascularisation-34&xrefBackLabel=Retour%20au%20chapitre%207#p-vascularisation-2"
         },
         {
           "type": "para",
@@ -559,7 +559,7 @@ export const chapter7Fr: Chapter = {
           "type": "xref",
           "label": "Voir la référence dans le chapitre 11",
           "text": "Foie : système porte",
-          "href": "/lecture/chapitre-11?xrefBack=%2Flecture%2Fchapitre-7%23p-vascularisation-39&xrefBackLabel=Retour%20au%20chapitre%207#p-vascularisation-6"
+          "href": "/lecture/chapitre-11?lang=fr&xrefBack=%2Flecture%2Fchapitre-7%3Flang%3Dfr%23p-vascularisation-39&xrefBackLabel=Retour%20au%20chapitre%207#p-vascularisation-6"
         },
         {
           "type": "sub",
@@ -710,7 +710,7 @@ export const chapter7Fr: Chapter = {
           "type": "xref",
           "label": "Voir la référence dans le chapitre 1",
           "text": "Mobilité viscérale",
-          "href": "/lecture/chapitre-1?xrefBack=%2Flecture%2Fchapitre-7%23p-physiologie-7&xrefBackLabel=Retour%20au%20chapitre%207#p-mobilite-viscerale-1"
+          "href": "/lecture/chapitre-1?lang=fr&xrefBack=%2Flecture%2Fchapitre-7%3Flang%3Dfr%23p-physiologie-7&xrefBackLabel=Retour%20au%20chapitre%207#p-mobilite-viscerale-1"
         },
         {
           "type": "sub",
