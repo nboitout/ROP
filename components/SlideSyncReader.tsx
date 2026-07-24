@@ -960,7 +960,7 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
     return (
       <>
         {slideList.map((slide) => (
-          <div key={slide} className="ss-anchor" data-slide-anchor={slide}>
+          <div key={slide} className={`ss-anchor ${slideMarkerSideClass(slide)}`} data-slide-anchor={slide}>
             <button
               type="button"
               className="ss-marker"
@@ -974,6 +974,13 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
         ))}
       </>
     )
+  }
+
+  function slideMarkerSideClass(slideNumber: number) {
+    const title = slides[slideNumber - 1]?.title ?? ''
+    return /\s—\s(?:photo|repère)$/i.test(title)
+      ? 'ss-slide-anchor--photo'
+      : 'ss-slide-anchor--cartography'
   }
 
   const clinicalCaseButton = showClinicalCaseResource && chapter.clinicalCase ? (
@@ -1223,7 +1230,7 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
                 {headingSlides.length > 0 && (
                   <div className="ss-anchor ss-anchor-pagebreak">
                     {headingSlides.map((slide) => (
-                      <div key={slide} data-slide-anchor={slide}>
+                      <div key={slide} className={slideMarkerSideClass(slide)} data-slide-anchor={slide}>
                         <button
                           type="button"
                           className="ss-marker"
@@ -1244,7 +1251,7 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
               {!hasPageBreak && headingSlides.length > 0 && (
                 <div id={`anchor-${section.id}-heading`} className="ss-anchor ss-anchor-heading">
                   {headingSlides.map((slide) => (
-                    <div key={slide} data-slide-anchor={slide}>
+                    <div key={slide} className={slideMarkerSideClass(slide)} data-slide-anchor={slide}>
                       <button
                         type="button"
                         className="ss-marker"
@@ -1297,7 +1304,7 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
                   >
                     {endSentinel}
                     {slideList.map((slide) => (
-                      <div key={slide} data-slide-anchor={slide}>
+                      <div key={slide} className={slideMarkerSideClass(slide)} data-slide-anchor={slide}>
                         <button
                           type="button"
                           className="ss-marker"
@@ -1326,7 +1333,7 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
                   >
                     {endSentinel}
                     {slideList.map((slide) => (
-                      <div key={slide} data-slide-anchor={slide}>
+                      <div key={slide} className={slideMarkerSideClass(slide)} data-slide-anchor={slide}>
                         <button
                           type="button"
                           className="ss-marker"
