@@ -7,7 +7,7 @@ export const chapter5ReworkFr = {
   "sections": [
     {
       "id": "le-stress-une-reponse-d-adaptation",
-      "title": "1. Le stress : une réponse d’adaptation",
+      "title": "1. Le stress : une réponse d’adaptation",
       "blocks": [
         {
           "type": "para",
@@ -34,19 +34,19 @@ export const chapter5ReworkFr = {
       "blocks": [
         {
           "type": "sub",
-          "text": "2.1. Homéostasie : maintenir des variables compatibles avec la vie"
+          "text": "2.1. Homéostasie : maintenir des variables compatibles avec la vie"
         },
         {
           "type": "para",
-          "text": "L’homéostasie désigne la capacité de l’organisme à maintenir certaines variables internes dans des limites compatibles avec la vie : température, pH, glycémie, pression artérielle, équilibre hydrominéral, oxygénation, etc. Elle ne correspond pas à une immobilité biologique. Elle repose au contraire sur des ajustements continus, souvent invisibles, qui compensent les variations internes et externes."
+          "text": "L’homéostasie désigne la capacité de l’organisme à maintenir certaines variables internes dans des limites compatibles avec la vie : température, pH, glycémie, pression artérielle, équilibre hydrominéral, oxygénation, etc. Elle ne correspond pas à une immobilité biologique. Elle repose au contraire sur des ajustements continus, souvent invisibles, qui compensent les variations internes et externes."
         },
         {
           "type": "sub",
-          "text": "2.2. Allostasie : préserver la stabilité en changeant de fonctionnement"
+          "text": "2.2. Allostasie : préserver la stabilité en changeant de fonctionnement"
         },
         {
           "type": "para",
-          "text": "L’allostasie décrit la capacité à obtenir la stabilité par le changement. Face à un effort, un danger, une infection, un conflit ou un manque de sommeil, l’organisme modifie temporairement ses paramètres : il augmente ou réduit certaines fonctions, redistribue les flux sanguins, mobilise des réserves et adapte son comportement. La valeur physiologique recherchée n’est pas toujours un retour immédiat à une norme fixe, mais une réponse appropriée au contexte."
+          "text": "L’allostasie décrit la capacité à obtenir la stabilité par le changement. Face à un effort, un danger, une infection, un conflit ou un manque de sommeil, l’organisme modifie temporairement ses paramètres : il augmente ou réduit certaines fonctions, redistribue les flux sanguins, mobilise des réserves et adapte son comportement. La valeur physiologique recherchée n’est pas toujours un retour immédiat à une norme fixe, mais une réponse appropriée au contexte."
         },
         {
           "type": "para",
@@ -54,7 +54,7 @@ export const chapter5ReworkFr = {
         },
         {
           "type": "sub",
-          "text": "2.3. Charge allostatique : le prix cumulé de l’adaptation"
+          "text": "2.3. Charge allostatique : le prix cumulé de l’adaptation"
         },
         {
           "type": "para",
@@ -67,7 +67,7 @@ export const chapter5ReworkFr = {
         {
           "type": "lead",
           "label": "DONNÉES ÉTABLIES",
-          "text": "Les hormones et médiateurs du stress protègent l’organisme à court terme. Leur activation répétée ou mal régulée peut toutefois contribuer à une charge allostatique touchant plusieurs systèmes : cardiovasculaire, métabolique, immunitaire, cérébral et comportemental [1, 2]."
+          "text": "Les hormones et médiateurs du stress protègent l’organisme à court terme. Leur activation répétée ou mal régulée peut toutefois contribuer à une charge allostatique touchant plusieurs systèmes : cardiovasculaire, métabolique, immunitaire, cérébral et comportemental [1, 2]."
         }
       ]
     },
@@ -77,7 +77,7 @@ export const chapter5ReworkFr = {
       "blocks": [
         {
           "type": "para",
-          "text": "Dans la lecture proposée par cet ouvrage, trois familles de stresseurs interagissent : les stresseurs physiques, émotionnels et biochimiques. Cette trilogie évite de réduire le stress à la seule inquiétude psychologique."
+          "text": "Dans la lecture proposée par cet ouvrage, trois familles de stresseurs interagissent : les stresseurs physiques, émotionnels et biochimiques. Cette trilogie évite de réduire le stress à la seule inquiétude psychologique."
         },
         {
           "type": "sub",
@@ -109,22 +109,22 @@ export const chapter5ReworkFr = {
         },
         {
           "type": "para",
-          "text": "Ces stresseurs ne s’additionnent pas de manière purement comptable. Ils se renforcent mutuellement. La douleur perturbe le sommeil ; le manque de sommeil augmente la sensibilité à la douleur ; l’inquiétude modifie la respiration et le transit ; les troubles digestifs alimentent l’inconfort et l’hypervigilance. La charge allostatique correspond précisément à cette accumulation de contraintes et de réponses croisées."
+          "text": "Ces stresseurs ne s’additionnent pas de manière purement comptable. Ils se renforcent mutuellement. La douleur perturbe le sommeil ; le manque de sommeil augmente la sensibilité à la douleur ; l’inquiétude modifie la respiration et le transit ; les troubles digestifs alimentent l’inconfort et l’hypervigilance. La charge allostatique correspond précisément à cette accumulation de contraintes et de réponses croisées."
         },
         {
           "type": "lead",
           "label": "LECTURE ROP",
-          "text": "Un symptôme local ne doit pas être isolé de son contexte. La lecture tissulaire et réflexe gagne à être replacée dans l’histoire globale du patient : traumatismes, douleur, sommeil, contexte émotionnel, digestion, traitements et capacité de récupération."
+          "text": "Un symptôme local ne doit pas être isolé de son contexte. La lecture tissulaire et réflexe gagne à être replacée dans l’histoire globale du patient : traumatismes, douleur, sommeil, contexte émotionnel, digestion, traitements et capacité de récupération."
         }
       ]
     },
     {
       "id": "le-stress-n-est-pas-seulement-l-evenement-c-est-la-reponse",
-      "title": "4. Le stress n’est pas seulement l’événement : c’est la réponse",
+      "title": "4. Le stress n’est pas seulement l’événement : c’est la réponse",
       "blocks": [
         {
           "type": "para",
-          "text": "Deux personnes exposées à un même événement peuvent développer des réponses très différentes. Le cerveau ne réagit pas uniquement à la nature objective du stresseur. Il évalue sa signification : menace-t-il l’intégrité physique, le statut social, la sécurité économique, l’attachement ou l’image de soi ? Cette évaluation repose sur l’expérience passée, les apprentissages, le contexte présent et les ressources perçues."
+          "text": "Deux personnes exposées à un même événement peuvent développer des réponses très différentes. Le cerveau ne réagit pas uniquement à la nature objective du stresseur. Il évalue sa signification : menace-t-il l’intégrité physique, le statut social, la sécurité économique, l’attachement ou l’image de soi ? Cette évaluation repose sur l’expérience passée, les apprentissages, le contexte présent et les ressources perçues."
         },
         {
           "type": "sub",
@@ -144,7 +144,7 @@ export const chapter5ReworkFr = {
         },
         {
           "type": "sub",
-          "text": "4.3. Le retour du corps vers le cerveau : l’interoception"
+          "text": "4.3. Le retour du corps vers le cerveau : l’interoception"
         },
         {
           "type": "para",
@@ -163,11 +163,11 @@ export const chapter5ReworkFr = {
     },
     {
       "id": "la-double-reponse-au-stresseur-urgence-et-soutien",
-      "title": "5. La double réponse au stresseur : urgence et soutien",
+      "title": "5. La double réponse au stresseur : urgence et soutien",
       "blocks": [
         {
           "type": "sub",
-          "text": "5.1. Axe SAM : la réponse neurologique immédiate"
+          "text": "5.1. Axe SAM : la réponse neurologique immédiate"
         },
         {
           "type": "para",
@@ -175,11 +175,11 @@ export const chapter5ReworkFr = {
         },
         {
           "type": "para",
-          "text": "Cette réponse sympathico-adrénalo-médullaire, souvent désignée par l’acronyme SAM, est particulièrement adaptée aux situations qui exigent une action rapide : fuir, combattre, s’immobiliser ou résoudre un problème urgent."
+          "text": "Cette réponse sympathico-adrénalo-médullaire, souvent désignée par l’acronyme SAM, est particulièrement adaptée aux situations qui exigent une action rapide : fuir, combattre, s’immobiliser ou résoudre un problème urgent."
         },
         {
           "type": "sub",
-          "text": "5.2. Axe HHS : la réponse hormonale plus lente"
+          "text": "5.2. Axe HHS : la réponse hormonale plus lente"
         },
         {
           "type": "para",
@@ -236,7 +236,7 @@ export const chapter5ReworkFr = {
     },
     {
       "id": "le-syndrome-general-d-adaptation-un-modele-pedagogique",
-      "title": "6. Le syndrome général d’adaptation : un modèle pédagogique",
+      "title": "6. Le syndrome général d’adaptation : un modèle pédagogique",
       "blocks": [
         {
           "type": "para",
@@ -272,7 +272,7 @@ export const chapter5ReworkFr = {
         },
         {
           "type": "para",
-          "text": "Cette phase peut s’accompagner de troubles fonctionnels : sommeil fragmenté, fatigue, troubles digestifs, douleurs, irritabilité, baisse de concentration, variations tensionnelles ou perturbations métaboliques. Ces manifestations ne traduisent pas nécessairement une lésion irréversible ; elles signalent souvent une réduction de la marge d’adaptation."
+          "text": "Cette phase peut s’accompagner de troubles fonctionnels : sommeil fragmenté, fatigue, troubles digestifs, douleurs, irritabilité, baisse de concentration, variations tensionnelles ou perturbations métaboliques. Ces manifestations ne traduisent pas nécessairement une lésion irréversible ; elles signalent souvent une réduction de la marge d’adaptation."
         },
         {
           "type": "sub",
@@ -280,7 +280,7 @@ export const chapter5ReworkFr = {
         },
         {
           "type": "para",
-          "text": "L’épuisement ne signifie pas que les surrénales cessent simplement de fonctionner. La notion populaire de « fatigue surrénalienne » ne correspond pas à un diagnostic médical reconnu. En revanche, une exposition chronique au stress peut être associée à une dysrégulation des rythmes autonomes et hormonaux, à des troubles métaboliques, à une inflammation persistante et à une vulnérabilité accrue aux maladies chez les sujets prédisposés."
+          "text": "L’épuisement ne signifie pas que les surrénales cessent simplement de fonctionner. La notion populaire de « fatigue surrénalienne » ne correspond pas à un diagnostic médical reconnu. En revanche, une exposition chronique au stress peut être associée à une dysrégulation des rythmes autonomes et hormonaux, à des troubles métaboliques, à une inflammation persistante et à une vulnérabilité accrue aux maladies chez les sujets prédisposés."
         },
         {
           "type": "para",
@@ -295,7 +295,7 @@ export const chapter5ReworkFr = {
     },
     {
       "id": "le-veritable-cout-du-stress-l-absence-de-recuperation",
-      "title": "7. Le véritable coût du stress : l’absence de récupération",
+      "title": "7. Le véritable coût du stress : l’absence de récupération",
       "blocks": [
         {
           "type": "para",
@@ -307,7 +307,7 @@ export const chapter5ReworkFr = {
         },
         {
           "type": "para",
-          "text": "La rumination maintient mentalement la menace présente. Le sujet rejoue la scène, anticipe ses conséquences ou tente sans cesse de résoudre un problème qui ne peut pas l’être immédiatement. Chaque réactivation peut relancer une partie de la réponse autonome : accélération cardiaque, tension de la mâchoire et des épaules, modification respiratoire, inconfort abdominal ou vigilance accrue."
+          "text": "La rumination maintient mentalement la menace présente. Le sujet rejoue la scène, anticipe ses conséquences ou tente sans cesse de résoudre un problème qui ne peut pas l’être immédiatement. Chaque réactivation peut relancer une partie de la réponse autonome : accélération cardiaque, tension de la mâchoire et des épaules, modification respiratoire, inconfort abdominal ou vigilance accrue."
         },
         {
           "type": "sub",
@@ -315,7 +315,7 @@ export const chapter5ReworkFr = {
         },
         {
           "type": "para",
-          "text": "Le sommeil participe à la récupération neuroendocrinienne, métabolique et cognitive. Une mauvaise nuit augmente la réactivité émotionnelle et réduit la tolérance à la douleur ; le stress de la journée suivante perturbe à son tour le sommeil. Cette boucle contribue fortement à la charge allostatique."
+          "text": "Le sommeil participe à la récupération neuroendocrinienne, métabolique et cognitive. Une mauvaise nuit augmente la réactivité émotionnelle et réduit la tolérance à la douleur ; le stress de la journée suivante perturbe à son tour le sommeil. Cette boucle contribue fortement à la charge allostatique."
         },
         {
           "type": "sub",
@@ -324,23 +324,23 @@ export const chapter5ReworkFr = {
         {
           "type": "bullets",
           "items": [
-            "Myocarde : maintien prolongé d’une activation cardiovasculaire et d’une vigilance circulatoire.",
-            "Musculature : tonus défensif persistant, notamment au niveau de la mâchoire, des épaules, du diaphragme et du plancher pelvien.",
-            "Respiration : rythme plus rapide ou plus haut, apnées de tension, recrutement accru des muscles accessoires.",
-            "Système digestif : motricité, sécrétions et perception viscérale modifiées.",
-            "Système immunitaire : modulation répétée des réponses inflammatoires et de surveillance."
+            "Myocarde : maintien prolongé d’une activation cardiovasculaire et d’une vigilance circulatoire.",
+            "Musculature : tonus défensif persistant, notamment au niveau de la mâchoire, des épaules, du diaphragme et du plancher pelvien.",
+            "Respiration : rythme plus rapide ou plus haut, apnées de tension, recrutement accru des muscles accessoires.",
+            "Système digestif : motricité, sécrétions et perception viscérale modifiées.",
+            "Système immunitaire : modulation répétée des réponses inflammatoires et de surveillance."
           ]
         },
         {
           "type": "lead",
           "label": "THÈSE CENTRALE",
-          "text": "La pathologie n’est pas la réaction initiale, mais la difficulté à clore le cycle : mobilisation, action ou adaptation, puis récupération et retour à l’état de base."
+          "text": "La pathologie n’est pas la réaction initiale, mais la difficulté à clore le cycle : mobilisation, action ou adaptation, puis récupération et retour à l’état de base."
         }
       ]
     },
     {
       "id": "le-cout-de-regulation-une-mobilisation-active-pas-une-batterie-qui-se-vide",
-      "title": "8. Le coût de régulation : une mobilisation active, pas une batterie qui se vide",
+      "title": "8. Le coût de régulation : une mobilisation active, pas une batterie qui se vide",
       "blocks": [
         {
           "type": "para",
@@ -357,13 +357,13 @@ export const chapter5ReworkFr = {
         {
           "type": "lead",
           "label": "FORMULATION RIGOUREUSE",
-          "text": "Le stress chronique ne « vide » pas nécessairement l’organisme. Il impose des transformations métaboliques et réglementaires répétées, qui peuvent devenir coûteuses si elles ne sont pas suivies de récupération."
+          "text": "Le stress chronique ne « vide » pas nécessairement l’organisme. Il impose des transformations métaboliques et réglementaires répétées, qui peuvent devenir coûteuses si elles ne sont pas suivies de récupération."
         }
       ]
     },
     {
       "id": "a-l-echelle-cellulaire-mitochondries-et-hypermetabolisme-sous-contrainte",
-      "title": "9. À l’échelle cellulaire : mitochondries et hypermétabolisme sous contrainte",
+      "title": "9. À l’échelle cellulaire : mitochondries et hypermétabolisme sous contrainte",
       "blocks": [
         {
           "type": "sub",
@@ -371,7 +371,7 @@ export const chapter5ReworkFr = {
         },
         {
           "type": "para",
-          "text": "Les mitochondries transforment l’énergie des nutriments en formes utilisables par les cellules. Elles participent également à la signalisation, à la production d’espèces réactives de l’oxygène, à l’immunité et à la mort cellulaire programmée. Elles ne sont donc pas de simples « batteries », mais des organites adaptatifs sensibles à l’environnement hormonal et métabolique."
+          "text": "Les mitochondries transforment l’énergie des nutriments en formes utilisables par les cellules. Elles participent également à la signalisation, à la production d’espèces réactives de l’oxygène, à l’immunité et à la mort cellulaire programmée. Elles ne sont donc pas de simples « batteries », mais des organites adaptatifs sensibles à l’environnement hormonal et métabolique."
         },
         {
           "type": "sub",
@@ -383,7 +383,7 @@ export const chapter5ReworkFr = {
         },
         {
           "type": "para",
-          "text": "Ce résultat ne signifie pas qu’une personne stressée dépense 60 % d’énergie supplémentaire. Il s’agit de cellules cultivées, soumises à une exposition expérimentale prolongée. L’intérêt de l’étude est conceptuel : une cellule sous contrainte peut dépenser davantage pour maintenir son fonctionnement, et cette compensation peut elle-même devenir coûteuse."
+          "text": "Ce résultat ne signifie pas qu’une personne stressée dépense 60 % d’énergie supplémentaire. Il s’agit de cellules cultivées, soumises à une exposition expérimentale prolongée. L’intérêt de l’étude est conceptuel : une cellule sous contrainte peut dépenser davantage pour maintenir son fonctionnement, et cette compensation peut elle-même devenir coûteuse."
         },
         {
           "type": "sub",
@@ -391,7 +391,7 @@ export const chapter5ReworkFr = {
         },
         {
           "type": "para",
-          "text": "Le vieillissement n’est pas toujours synonyme de ralentissement simple. Une cellule fragilisée peut augmenter certains processus de compensation : renouvellement protéique, défense antioxydante, production mitochondriale ou réparation. Elle « fait plus » pour obtenir un résultat moindre. Cette mobilisation accrue peut masquer temporairement la perte d’efficacité, mais elle réduit la marge disponible face à une nouvelle contrainte."
+          "text": "Le vieillissement n’est pas toujours synonyme de ralentissement simple. Une cellule fragilisée peut augmenter certains processus de compensation : renouvellement protéique, défense antioxydante, production mitochondriale ou réparation. Elle « fait plus » pour obtenir un résultat moindre. Cette mobilisation accrue peut masquer temporairement la perte d’efficacité, mais elle réduit la marge disponible face à une nouvelle contrainte."
         },
         {
           "type": "sub",
@@ -399,7 +399,7 @@ export const chapter5ReworkFr = {
         },
         {
           "type": "para",
-          "text": "Le principe de résistance énergétique proposé par Picard et Murugan décrit la relation entre la demande imposée à un système et sa capacité à transformer le flux énergétique en travail utile [6]. Une certaine résistance est nécessaire à la transformation de l’énergie ; une résistance excessive pourrait favoriser chaleur, stress oxydatif, inflammation et dommages moléculaires."
+          "text": "Le principe de résistance énergétique proposé par Picard et Murugan décrit la relation entre la demande imposée à un système et sa capacité à transformer le flux énergétique en travail utile [6]. Une certaine résistance est nécessaire à la transformation de l’énergie ; une résistance excessive pourrait favoriser chaleur, stress oxydatif, inflammation et dommages moléculaires."
         },
         {
           "type": "para",
@@ -434,7 +434,7 @@ export const chapter5ReworkFr = {
         },
         {
           "type": "para",
-          "text": "La tige pilaire visible est un tissu kératinisé sans mitochondries actives. Il est donc incorrect d’affirmer que le cheveu blanc « contient davantage de mitochondries ». Il conserve plutôt la signature moléculaire d’un follicule qui, au moment de sa production, présentait un remodelage métabolique."
+          "text": "La tige pilaire visible est un tissu kératinisé sans mitochondries actives. Il est donc incorrect d’affirmer que le cheveu blanc « contient davantage de mitochondries ». Il conserve plutôt la signature moléculaire d’un follicule qui, au moment de sa production, présentait un remodelage métabolique."
         },
         {
           "type": "sub",
@@ -450,45 +450,45 @@ export const chapter5ReworkFr = {
         },
         {
           "type": "para",
-          "text": "Les chercheurs ont proposé un modèle dans lequel chaque follicule accumule progressivement un facteur de vieillissement. Un follicule proche d’un seuil critique peut franchir temporairement ce seuil sous l’effet d’une contrainte, puis revenir en dessous si l’environnement biologique s’améliore. Un follicule très éloigné du seuil ne changerait pas ; un follicule ayant subi une perte structurelle importante ne pourrait plus revenir en arrière."
+          "text": "Les chercheurs ont proposé un modèle dans lequel chaque follicule accumule progressivement un facteur de vieillissement. Un follicule proche d’un seuil critique peut franchir temporairement ce seuil sous l’effet d’une contrainte, puis revenir en dessous si l’environnement biologique s’améliore. Un follicule très éloigné du seuil ne changerait pas ; un follicule ayant subi une perte structurelle importante ne pourrait plus revenir en arrière."
         },
         {
           "type": "lead",
           "label": "PORTÉE CLINIQUE",
-          "text": "L’intérêt du cheveu n’est pas de prétendre que la ROP peut inverser les cheveux gris. Il illustre une idée plus générale : certaines manifestations précoces du vieillissement sont dynamiques et potentiellement réversibles, tandis que les pertes structurelles avancées le sont beaucoup moins."
+          "text": "L’intérêt du cheveu n’est pas de prétendre que la ROP peut inverser les cheveux gris. Il illustre une idée plus générale : certaines manifestations précoces du vieillissement sont dynamiques et potentiellement réversibles, tandis que les pertes structurelles avancées le sont beaucoup moins."
         }
       ]
     },
     {
       "id": "le-modele-du-seuil-trouble-fonctionnel-et-alteration-structurelle",
-      "title": "11. Le modèle du seuil : trouble fonctionnel et altération structurelle",
+      "title": "11. Le modèle du seuil : trouble fonctionnel et altération structurelle",
       "blocks": [
         {
           "type": "para",
-          "text": "Le modèle du seuil permet de distinguer trois situations cliniques. La première est l’adaptation aiguë : le stress est géré et l’organisme revient spontanément à l’équilibre. La deuxième correspond au trouble fonctionnel : le signal d’alarme persiste, la récupération est incomplète, mais l’intégrité anatomique reste globalement préservée. La troisième correspond à l’altération structurelle : des lésions, une perte cellulaire ou une maladie installée limitent la réversibilité."
+          "text": "Le modèle du seuil permet de distinguer trois situations cliniques. La première est l’adaptation aiguë : le stress est géré et l’organisme revient spontanément à l’équilibre. La deuxième correspond au trouble fonctionnel : le signal d’alarme persiste, la récupération est incomplète, mais l’intégrité anatomique reste globalement préservée. La troisième correspond à l’altération structurelle : des lésions, une perte cellulaire ou une maladie installée limitent la réversibilité."
         },
         {
           "type": "para",
-          "text": "Cette distinction est compatible avec la place traditionnelle de la ROP : son champ le plus cohérent est celui des dysfonctions fonctionnelles et des capacités d’adaptation encore mobilisables. Lorsque la pathologie est structurelle, la ROP ne remplace ni le diagnostic médical ni les traitements nécessaires. Elle peut éventuellement contribuer au confort, à la régulation et à l’accompagnement."
+          "text": "Cette distinction est compatible avec la place traditionnelle de la ROP : son champ le plus cohérent est celui des dysfonctions fonctionnelles et des capacités d’adaptation encore mobilisables. Lorsque la pathologie est structurelle, la ROP ne remplace ni le diagnostic médical ni les traitements nécessaires. Elle peut éventuellement contribuer au confort, à la régulation et à l’accompagnement."
         },
         {
           "type": "lead",
           "label": "FENÊTRE D’ACTION ROP",
-          "text": "La pertinence maximale de la ROP se situe dans la marge fonctionnelle de réversibilité : avant que la dysrégulation ne se fixe, ou en accompagnement d’une pathologie chronique sans revendiquer d’action curative propre."
+          "text": "La pertinence maximale de la ROP se situe dans la marge fonctionnelle de réversibilité : avant que la dysrégulation ne se fixe, ou en accompagnement d’une pathologie chronique sans revendiquer d’action curative propre."
         }
       ]
     },
     {
       "id": "la-cible-autonome-la-flexibilite-non-la-domination-vagale",
-      "title": "12. La cible autonome : la flexibilité, non la domination vagale",
+      "title": "12. La cible autonome : la flexibilité, non la domination vagale",
       "blocks": [
         {
           "type": "para",
-          "text": "Un organisme sain n’est pas un organisme constamment détendu. Il doit pouvoir se mobiliser rapidement, soutenir un effort, défendre son intégrité, puis revenir vers la récupération. Le sympathique est vital pour l’action ; le parasympathique est vital pour la restauration. La santé repose sur la capacité à circuler entre ces états."
+          "text": "Un organisme sain n’est pas un organisme constamment détendu. Il doit pouvoir se mobiliser rapidement, soutenir un effort, défendre son intégrité, puis revenir vers la récupération. Le sympathique est vital pour l’action ; le parasympathique est vital pour la restauration. La santé repose sur la capacité à circuler entre ces états."
         },
         {
           "type": "para",
-          "text": "L’objectif thérapeutique ne doit donc pas être d’éteindre le sympathique ni de maximiser le tonus vagal. Une activation vagale excessive ou inappropriée peut s’accompagner de nausées, de bradycardie, d’hypotension ou de syncope. La cible est la flexibilité autonome : mobiliser quand cela est nécessaire, puis ne pas rester bloqué une fois le danger écarté."
+          "text": "L’objectif thérapeutique ne doit donc pas être d’éteindre le sympathique ni de maximiser le tonus vagal. Une activation vagale excessive ou inappropriée peut s’accompagner de nausées, de bradycardie, d’hypotension ou de syncope. La cible est la flexibilité autonome : mobiliser quand cela est nécessaire, puis ne pas rester bloqué une fois le danger écarté."
         },
         {
           "type": "para",
@@ -503,11 +503,11 @@ export const chapter5ReworkFr = {
     },
     {
       "id": "le-pont-avec-la-rop-agir-sur-la-reponse-non-sur-l-existence-du-stresseur",
-      "title": "13. Le pont avec la ROP : agir sur la réponse, non sur l’existence du stresseur",
+      "title": "13. Le pont avec la ROP : agir sur la réponse, non sur l’existence du stresseur",
       "blocks": [
         {
           "type": "para",
-          "text": "La ROP ne supprime pas le conflit professionnel, le deuil, la douleur inflammatoire ou le manque de sommeil. Elle ne modifie pas directement l’événement extérieur. Son point d’intervention potentiel se situe dans les boucles corporelles qui prolongent la réponse : tension, respiration, vigilance, douleur, activité viscérale et signaux intéroceptifs."
+          "text": "La ROP ne supprime pas le conflit professionnel, le deuil, la douleur inflammatoire ou le manque de sommeil. Elle ne modifie pas directement l’événement extérieur. Son point d’intervention potentiel se situe dans les boucles corporelles qui prolongent la réponse : tension, respiration, vigilance, douleur, activité viscérale et signaux intéroceptifs."
         },
         {
           "type": "para",
@@ -515,7 +515,7 @@ export const chapter5ReworkFr = {
         },
         {
           "type": "para",
-          "text": "Cette étude soutient l’idée d’un effet réel du toucher et du contexte thérapeutique, mais elle ne prouve pas la spécificité des zones réflexes. La voie la plus défendable est donc une hypothèse ascendante, dite bottom-up : le toucher modifie les informations corporelles ; ces informations influencent l’interoception et les réseaux de régulation ; l’organisme peut alors réduire une partie de son tonus défensif."
+          "text": "Cette étude soutient l’idée d’un effet réel du toucher et du contexte thérapeutique, mais elle ne prouve pas la spécificité des zones réflexes. La voie la plus défendable est donc une hypothèse ascendante, dite bottom-up : le toucher modifie les informations corporelles ; ces informations influencent l’interoception et les réseaux de régulation ; l’organisme peut alors réduire une partie de son tonus défensif."
         },
         {
           "type": "lead",
@@ -534,7 +534,7 @@ export const chapter5ReworkFr = {
         },
         {
           "type": "sub",
-          "text": "14.1. Premier temps : diagnostic tissulaire"
+          "text": "14.1. Premier temps : diagnostic tissulaire"
         },
         {
           "type": "para",
@@ -542,7 +542,7 @@ export const chapter5ReworkFr = {
         },
         {
           "type": "sub",
-          "text": "14.2. Deuxième temps : sollicitation"
+          "text": "14.2. Deuxième temps : sollicitation"
         },
         {
           "type": "para",
@@ -550,11 +550,11 @@ export const chapter5ReworkFr = {
         },
         {
           "type": "sub",
-          "text": "14.3. Troisième temps : ne rien faire et laisser faire"
+          "text": "14.3. Troisième temps : ne rien faire et laisser faire"
         },
         {
           "type": "para",
-          "text": "Le temps d’arrêt permet d’observer la réponse : respiration, tonus, chaleur, détente, agitation, fatigue, inconfort ou absence de modification. Il favorise également l’intégration autonome. Dans cette logique, le traitement n’est pas achevé lorsque le praticien cesse de stimuler ; il se poursuit dans la capacité du patient à récupérer."
+          "text": "Le temps d’arrêt permet d’observer la réponse : respiration, tonus, chaleur, détente, agitation, fatigue, inconfort ou absence de modification. Il favorise également l’intégration autonome. Dans cette logique, le traitement n’est pas achevé lorsque le praticien cesse de stimuler ; il se poursuit dans la capacité du patient à récupérer."
         },
         {
           "type": "lead",
@@ -569,11 +569,11 @@ export const chapter5ReworkFr = {
       "blocks": [
         {
           "type": "para",
-          "text": "Les diapositives proposent une séquence de haut en bas : crânien, sympathique, diaphragmatique, puis viscéral. Cette organisation ne prétend pas décrire une causalité anatomique directe. Elle constitue une cartographie clinique destinée à respecter la logique de la réponse au stress : perception de la menace, mobilisation, respiration, puis retour des fonctions de maintenance."
+          "text": "Les diapositives proposent une séquence de haut en bas : crânien, sympathique, diaphragmatique, puis viscéral. Cette organisation ne prétend pas décrire une causalité anatomique directe. Elle constitue une cartographie clinique destinée à respecter la logique de la réponse au stress : perception de la menace, mobilisation, respiration, puis retour des fonctions de maintenance."
         },
         {
           "type": "sub",
-          "text": "15.1. Niveau 1 : diminuer la persistance du signal"
+          "text": "15.1. Niveau 1 : diminuer la persistance du signal"
         },
         {
           "type": "para",
@@ -582,40 +582,40 @@ export const chapter5ReworkFr = {
         {
           "type": "bullets",
           "items": [
-            "Repères ROP : zones occipitales.",
+            "Repères ROP : zones occipitales.",
             "Occiput-C1-C2.",
             "Tronc cérébral.",
             "Foramen magnum.",
             "Foramen jugulaire.",
             "Nerfs IX, X, XI et XII.",
             "Zones attribuées au système limbique, au diencéphale et à l’hypophyse.",
-            "Objectif clinique : réduire la vigilance tissulaire et offrir des signaux tactiles compatibles avec la sécurité.",
-            "Limite : la ROP ne traite pas directement l’amygdale, l’hypothalamus ou le cortex comme des structures accessibles à la palpation."
+            "Objectif clinique : réduire la vigilance tissulaire et offrir des signaux tactiles compatibles avec la sécurité.",
+            "Limite : la ROP ne traite pas directement l’amygdale, l’hypothalamus ou le cortex comme des structures accessibles à la palpation."
           ]
         },
         {
           "type": "sub",
-          "text": "15.2. Niveau 2 : réduire la mobilisation devenue inutile"
+          "text": "15.2. Niveau 2 : réduire la mobilisation devenue inutile"
         },
         {
           "type": "para",
-          "text": "Le deuxième niveau concerne l’expression sympathique de la réponse : tonus musculaire défensif, accélération cardiorespiratoire, vigilance excessive et soutien hormonal prolongé. Le but n’est pas d’inhiber le sympathique, mais d’accompagner la diminution d’une mobilisation qui n’est plus requise."
+          "text": "Le deuxième niveau concerne l’expression sympathique de la réponse : tonus musculaire défensif, accélération cardiorespiratoire, vigilance excessive et soutien hormonal prolongé. Le but n’est pas d’inhiber le sympathique, mais d’accompagner la diminution d’une mobilisation qui n’est plus requise."
         },
         {
           "type": "bullets",
           "items": [
-            "Repères ROP : chaîne sympathique cervico-thoracique.",
+            "Repères ROP : chaîne sympathique cervico-thoracique.",
             "Charnière C7-T1 et première côte.",
             "Colonne thoracique.",
             "Zones surrénaliennes.",
             "Relations avec les axes SAM et HHS.",
-            "Objectif clinique : favoriser la baisse du tonus de défense et le retour vers une ligne de base plus souple.",
-            "Limite : une séance ne permet pas de conclure à une normalisation du cortisol ou de l’axe HHS sans mesures biologiques."
+            "Objectif clinique : favoriser la baisse du tonus de défense et le retour vers une ligne de base plus souple.",
+            "Limite : une séance ne permet pas de conclure à une normalisation du cortisol ou de l’axe HHS sans mesures biologiques."
           ]
         },
         {
           "type": "sub",
-          "text": "15.3. Niveau 3 : restaurer la disponibilité respiratoire"
+          "text": "15.3. Niveau 3 : restaurer la disponibilité respiratoire"
         },
         {
           "type": "para",
@@ -624,19 +624,19 @@ export const chapter5ReworkFr = {
         {
           "type": "bullets",
           "items": [
-            "Repères ROP : nerf phrénique C3-C5.",
+            "Repères ROP : nerf phrénique C3-C5.",
             "Diaphragme.",
             "Piliers.",
             "Hiatus œsophagien.",
             "Plexus cardio-pulmonaires.",
             "Trajet thoracique du nerf vague.",
-            "Objectif clinique : rendre la respiration moins coûteuse et plus disponible, sans imposer une amplitude excessive.",
-            "Appui scientifique indirect : les interventions respiratoires diaphragmatiques peuvent réduire certains marqueurs physiologiques et subjectifs de stress, avec une qualité de preuve encore variable [10]."
+            "Objectif clinique : rendre la respiration moins coûteuse et plus disponible, sans imposer une amplitude excessive.",
+            "Appui scientifique indirect : les interventions respiratoires diaphragmatiques peuvent réduire certains marqueurs physiologiques et subjectifs de stress, avec une qualité de preuve encore variable [10]."
           ]
         },
         {
           "type": "sub",
-          "text": "15.4. Niveau 4 : permettre le retour des fonctions viscérales"
+          "text": "15.4. Niveau 4 : permettre le retour des fonctions viscérales"
         },
         {
           "type": "para",
@@ -645,15 +645,15 @@ export const chapter5ReworkFr = {
         {
           "type": "bullets",
           "items": [
-            "Repères ROP : nerf vague abdominal.",
+            "Repères ROP : nerf vague abdominal.",
             "Plexus cœliaque.",
             "Chaîne prévertébrale.",
             "Nerfs splanchniques.",
             "Intestin.",
             "Plexus hypogastriques.",
             "Parasympathique pelvien S2-S4.",
-            "Objectif clinique : créer un contexte autonome plus favorable à la motricité digestive, au repos et aux fonctions de maintenance.",
-            "Limite : les troubles digestifs persistants, les pertes de poids, les saignements, la fièvre ou les douleurs inhabituelles nécessitent une évaluation médicale."
+            "Objectif clinique : créer un contexte autonome plus favorable à la motricité digestive, au repos et aux fonctions de maintenance.",
+            "Limite : les troubles digestifs persistants, les pertes de poids, les saignements, la fièvre ou les douleurs inhabituelles nécessitent une évaluation médicale."
           ]
         },
         {
@@ -673,7 +673,7 @@ export const chapter5ReworkFr = {
         },
         {
           "type": "para",
-          "text": "La loi de Hering, souvent résumée par une évolution des symptômes « du haut vers le bas, du dedans vers le dehors et du chronique vers l’aigu », appartient à l’histoire de l’homéopathie et n’est pas reconnue comme une loi générale de guérison par la médecine fondée sur les preuves. Elle peut être conservée comme repère historique de la méthode, mais ne doit pas servir à interpréter automatiquement toute aggravation comme positive."
+          "text": "La loi de Hering, souvent résumée par une évolution des symptômes « du haut vers le bas, du dedans vers le dehors et du chronique vers l’aigu », appartient à l’histoire de l’homéopathie et n’est pas reconnue comme une loi générale de guérison par la médecine fondée sur les preuves. Elle peut être conservée comme repère historique de la méthode, mais ne doit pas servir à interpréter automatiquement toute aggravation comme positive."
         },
         {
           "type": "para",
@@ -701,12 +701,12 @@ export const chapter5ReworkFr = {
             [
               "Adaptation aiguë",
               "Réponse proportionnée, retour spontané à l’équilibre",
-              "Soutien du confort et de la récupération ; intervention parfois inutile si le système se régule seul"
+              "Soutien du confort et de la récupération ; intervention parfois inutile si le système se régule seul"
             ],
             [
               "Trouble fonctionnel",
               "Alarme persistante, symptômes réversibles, intégrité anatomique globalement préservée",
-              "Champ d’intervention privilégié : dosage, flexibilité autonome, respiration, confort viscéral"
+              "Champ d’intervention privilégié : dosage, flexibilité autonome, respiration, confort viscéral"
             ],
             [
               "Pathologie chronique structurée",
@@ -716,19 +716,19 @@ export const chapter5ReworkFr = {
             [
               "État instable ou urgence",
               "Signes graves, décompensation, douleur aiguë inhabituelle",
-              "ROP non prioritaire ; évaluation médicale ou urgence"
+              "ROP non prioritaire ; évaluation médicale ou urgence"
             ]
           ]
         },
         {
           "type": "para",
-          "text": "Cette gradation évite deux erreurs opposées : renoncer à toute intervention dès qu’une maladie chronique existe, ou promettre une action curative sur des lésions fixées. La ROP peut conserver une place d’accompagnement, notamment sur la douleur, la détente, la perception corporelle ou la qualité de vie, sans se substituer aux traitements nécessaires."
+          "text": "Cette gradation évite deux erreurs opposées : renoncer à toute intervention dès qu’une maladie chronique existe, ou promettre une action curative sur des lésions fixées. La ROP peut conserver une place d’accompagnement, notamment sur la douleur, la détente, la perception corporelle ou la qualité de vie, sans se substituer aux traitements nécessaires."
         }
       ]
     },
     {
       "id": "illustration-clinique-fibromyalgie-et-charge-allostatique",
-      "title": "18. Illustration clinique : fibromyalgie et charge allostatique",
+      "title": "18. Illustration clinique : fibromyalgie et charge allostatique",
       "blocks": [
         {
           "type": "para",
@@ -736,11 +736,11 @@ export const chapter5ReworkFr = {
         },
         {
           "type": "para",
-          "text": "Dans une lecture allostatique, le stress chronique, la douleur et l’insomnie peuvent former une boucle : la douleur perturbe le sommeil ; le manque de sommeil augmente la sensibilité douloureuse ; l’inquiétude et l’évitement renforcent la vigilance ; les tensions musculaires et respiratoires entretiennent les signaux corporels d’alarme."
+          "text": "Dans une lecture allostatique, le stress chronique, la douleur et l’insomnie peuvent former une boucle : la douleur perturbe le sommeil ; le manque de sommeil augmente la sensibilité douloureuse ; l’inquiétude et l’évitement renforcent la vigilance ; les tensions musculaires et respiratoires entretiennent les signaux corporels d’alarme."
         },
         {
           "type": "para",
-          "text": "L’intérêt potentiel de la ROP se situe alors dans une intervention douce, progressive et intégrative : réduire l’hypervigilance corporelle, favoriser une respiration plus disponible, soutenir le repos et éviter la surstimulation. Les objectifs doivent être fonctionnels et mesurables : qualité du sommeil, fatigue, tolérance à l’activité, intensité de la douleur, récupération après effort et qualité de vie."
+          "text": "L’intérêt potentiel de la ROP se situe alors dans une intervention douce, progressive et intégrative : réduire l’hypervigilance corporelle, favoriser une respiration plus disponible, soutenir le repos et éviter la surstimulation. Les objectifs doivent être fonctionnels et mesurables : qualité du sommeil, fatigue, tolérance à l’activité, intensité de la douleur, récupération après effort et qualité de vie."
         },
         {
           "type": "lead",
@@ -755,7 +755,7 @@ export const chapter5ReworkFr = {
       "blocks": [
         {
           "type": "para",
-          "text": "L’hypothèse la plus rigoureuse n’est pas que la ROP « augmente l’énergie » ou « stimule les mitochondries ». Elle est qu’une séance standardisée pourrait améliorer la récupération autonome après un stresseur, en réduisant la durée de la réponse physiologique et subjective."
+          "text": "L’hypothèse la plus rigoureuse n’est pas que la ROP « augmente l’énergie » ou « stimule les mitochondries ». Elle est qu’une séance standardisée pourrait améliorer la récupération autonome après un stresseur, en réduisant la durée de la réponse physiologique et subjective."
         },
         {
           "type": "sub",
@@ -773,9 +773,9 @@ export const chapter5ReworkFr = {
         {
           "type": "numbered",
           "items": [
-            "Groupe ROP : séquence standardisée respectant les quatre niveaux cliniques.",
-            "Groupe contrôle tactile : toucher occipital et podal de même durée, sans cartographie ni ordre ROP.",
-            "Groupe repos : position et durée identiques, sans toucher."
+            "Groupe ROP : séquence standardisée respectant les quatre niveaux cliniques.",
+            "Groupe contrôle tactile : toucher occipital et podal de même durée, sans cartographie ni ordre ROP.",
+            "Groupe repos : position et durée identiques, sans toucher."
           ]
         },
         {
@@ -795,7 +795,7 @@ export const chapter5ReworkFr = {
             "Cinétique du cortisol et de l’alpha-amylase salivaires, en tenant compte des rythmes circadiens.",
             "Tension corporelle, stress perçu, rumination et sentiment de sécurité.",
             "Qualité du sommeil et fatigue dans les jours suivants.",
-            "Résultats spécifiques au patient : douleur, transit, activité et qualité de vie."
+            "Résultats spécifiques au patient : douleur, transit, activité et qualité de vie."
           ]
         },
         {
@@ -835,7 +835,7 @@ export const chapter5ReworkFr = {
             "Le stress est d’abord une réponse protectrice, et non une pathologie.",
             "La charge allostatique est le coût cumulé de l’adaptation répétée ou prolongée.",
             "La santé dépend de la capacité à déclencher une réponse appropriée puis à revenir à l’état de base.",
-            "Le corps ne fonctionne pas comme une batterie fixe ; il réorganise continuellement ses flux et ses priorités.",
+            "Le corps ne fonctionne pas comme une batterie fixe ; il réorganise continuellement ses flux et ses priorités.",
             "L’hypermétabolisme cellulaire observé in vitro ne peut pas être transposé directement à la dépense énergétique d’une personne.",
             "Certaines dysfonctions restent réversibles tant que l’intégrité structurelle et les réserves adaptatives sont préservées.",
             "La cible autonome n’est pas la domination vagale, mais la flexibilité entre mobilisation et récupération.",

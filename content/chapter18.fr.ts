@@ -578,7 +578,7 @@ export const chapter18Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "Elle marche à petits pas et en société, occupe mal son territoire. La culpabilité remontant à l’apprentissage de la propreté se perpétue à l’âge adulte avec le sentiment du « je sais que c’est de ma faute » quand les enfants « tournent mal » à l’adolescence. Les contrariétés que cette culpabilité engendre sont sources de cystites sans raison infectieuse mais par tension émotionnelle responsable de spasme de la vessie."
+          "text": "Elle marche à petits pas et en société, occupe mal son territoire. La culpabilité remontant à l’apprentissage de la propreté se perpétue à l’âge adulte avec le sentiment du « je sais que c’est de ma faute » quand les enfants « tournent mal » à l’adolescence. Les contrariétés que cette culpabilité engendre sont sources de cystites sans raison infectieuse mais par tension émotionnelle responsable de spasme de la vessie."
         }
       ]
     },

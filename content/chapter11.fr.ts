@@ -204,10 +204,10 @@ export const chapter11Fr: Chapter = {
           "type": "rop",
           "body": [
             "Le ligament hépato-rénal souligne, dans cette lecture clinique, le rapport étroit entre le foie et le rein droit.",
-            "Dans certaines écoles cliniques, le rein droit est qualifié de « rein digestif », par opposition au rein gauche dit « génital ».",
+            "Dans certaines écoles cliniques, le rein droit est qualifié de « rein digestif », par opposition au rein gauche dit « génital ».",
             "Dans le cadre ROP, une perte de soutien diaphragmatique peut s’accompagner d’une majoration de la contrainte descendante sur le foie.",
             "Cette contrainte peut alors se réperçuter sur le rein droit.",
-            "Veine cave inférieure : elle est située à la face postérieure du foie, auquel elle est intimement liée par du tissu conjonctif.",
+            "Veine cave inférieure : elle est située à la face postérieure du foie, auquel elle est intimement liée par du tissu conjonctif.",
             "Elle adhère également au diaphragme dans sa traversée de l’orifice du même nom.",
             "La veine cave inférieure et le ligament coronaire constituent les attaches les plus solides du foie.",
             "Effet Turgor et pressions intracavitaires",
@@ -217,21 +217,21 @@ export const chapter11Fr: Chapter = {
             "Face supérieure ou diaphragmatique",
             "Elle est lisse et en forme de dôme.",
             "Elle présente deux parties.",
-            "Versant antérieur : du côté droit, il est complètement masqué par l’hémi-thorax droit.",
+            "Versant antérieur : du côté droit, il est complètement masqué par l’hémi-thorax droit.",
             "Au niveau de l’épigastre, il est contre la paroi abdominale antérieure.",
             "À gauche, il est masqué par l’hémi-thorax gauche.",
-            "Versant supérieur : il est caché par la coupole diaphragmatique.",
+            "Versant supérieur : il est caché par la coupole diaphragmatique.",
             "La face supérieure est divisée en deux lobes par le ligament falciforme.",
-            "Face supérieure du lobe droit : elle correspond au point culminant du diaphragme, à hauteur du 5ème espace intercostal.",
+            "Face supérieure du lobe droit : elle correspond au point culminant du diaphragme, à hauteur du 5ème espace intercostal.",
             "Sa voussure convexe s’adapte à la concavité de l’hémi-coupole diaphragmatique droite et aux folioles droite et antérieure du centre phrénique.",
-            "Face supérieure du lobe gauche : elle s’aplatit jusqu’à devenir concave au niveau de la foliole gauche du centre phrénique, sur lequel reposent le péricarde et la face inférieure du cœur.",
+            "Face supérieure du lobe gauche : elle s’aplatit jusqu’à devenir concave au niveau de la foliole gauche du centre phrénique, sur lequel reposent le péricarde et la face inférieure du cœur.",
             "Elle est plus basse que l’hémi-coupole droite, à hauteur du 6ème espace intercostal."
           ]
         },
         {
           "type": "xref",
           "label": "Voir la référence dans le chapitre 1",
-          "text": "Séreuses : glissement et pressions",
+          "text": "Séreuses : glissement et pressions",
           "href": "/lecture/chapitre-1?xrefBack=%2Flecture%2Fchapitre-11%23p-interet-en-rop-2-0&xrefBackLabel=Retour%20au%20chapitre%2011#p-articulations-viscerales-3"
         }
       ]
@@ -253,28 +253,28 @@ export const chapter11Fr: Chapter = {
             "Sillons",
             "La face viscérale est parcourue par deux sillons sagittaux reliés par un sillon transversal.",
             "L’ensemble des trois sillons forme un H majuscule.",
-            "Sillon sagittal droit : il contient, ventralement, la vésicule biliaire et, dorsalement, la veine cave inférieure.",
-            "Sillon sagittal gauche : proche de la ligne médiale, il contient les vestiges des vaisseaux ombilicaux, ventralement le ligament rond et dorsalement le ligament veineux.",
+            "Sillon sagittal droit : il contient, ventralement, la vésicule biliaire et, dorsalement, la veine cave inférieure.",
+            "Sillon sagittal gauche : proche de la ligne médiale, il contient les vestiges des vaisseaux ombilicaux, ventralement le ligament rond et dorsalement le ligament veineux.",
             "Il est en continuité avec le ligament falciforme et, comme lui, il sépare le foie en deux lobes droit et gauche.",
-            "Sillon transversal : il correspond au hile du foie.",
+            "Sillon transversal : il correspond au hile du foie.",
             "Il constitue la porte d’entrée dans le foie de l’artère hépatique propre et de la veine porte, et la porte de sortie des canaux biliaires.",
             "Le hile contient aussi des filets nerveux végétatifs et des vaisseaux lymphatiques.",
-            "Le sillon transversal délimite deux lobes accessoires : le lobe carré ventralement et le lobe caudé dorsalement.",
+            "Le sillon transversal délimite deux lobes accessoires : le lobe carré ventralement et le lobe caudé dorsalement.",
             "Rapports de la face viscérale",
             "Elle s’articule avec les viscères avoisinants.",
             "Lobe droit: il présente trois facettes articulées avec",
-            "Ventralement : l’angle hépatique du côlon.",
-            "Au centre : la vésicule biliaire et le premier duodénum.",
-            "Dorsalement : le rein et la surrénale droits.",
-            "Lobe gauche : il s’articule avec l’estomac et l’œsophage abdominal.",
+            "Ventralement : l’angle hépatique du côlon.",
+            "Au centre : la vésicule biliaire et le premier duodénum.",
+            "Dorsalement : le rein et la surrénale droits.",
+            "Lobe gauche : il s’articule avec l’estomac et l’œsophage abdominal.",
             "Voies biliaires",
             "La bile, synthétisée par les hépatocytes, est composée majoritairement d’eau, avec des électrolytes, du mucus, des sels biliaires et de la bilirubine.",
             "La bile est transportée par des canalicules biliaires intra-hépatiques, puis acheminée par les canaux hépatiques droit et gauche.",
-            "Canal hépatique commun : situé à la face viscérale, dans le hile du foie, il résulte de la réunion des canaux hépatiques.",
+            "Canal hépatique commun : situé à la face viscérale, dans le hile du foie, il résulte de la réunion des canaux hépatiques.",
             "Long d’environ 4 à 5 cm, il se dirige caudalement et à gauche dans le petit omentum pour rejoindre le cholédoque à hauteur du premier duodénum.",
-            "Cholédoque : long d’environ 5 cm, il résulte de la réunion du canal hépatique commun et du canal cystique.",
+            "Cholédoque : long d’environ 5 cm, il résulte de la réunion du canal hépatique commun et du canal cystique.",
             "Il se dirige caudalement, en arrière du col du pancréas et à gauche, pour déboucher dans la papille duodénale majeure du deuxième duodénum.",
-            "Vésicule biliaire : c’est un réservoir de bile en forme de poire, situé à la face viscérale du foie, dans une fosse entre le lobe droit et le lobe carré.",
+            "Vésicule biliaire : c’est un réservoir de bile en forme de poire, situé à la face viscérale du foie, dans une fosse entre le lobe droit et le lobe carré.",
             "Longue d’environ 10 cm et d’une capacité de 40 à 60 cm3, elle est orientée céphaliquement, dorsalement et à gauche.",
             "Elle présente trois parties.",
             "L’extrémité, ou fond, est orientée ventralement et en bas.",
@@ -282,9 +282,9 @@ export const chapter11Fr: Chapter = {
             "Le col est coudé et orienté ventralement, caudalement et à gauche.",
             "Il se continue par le canal cystique qui rejoint le cholédoque à hauteur du premier duodénum.",
             "Repère des voies biliaires",
-            "Vésicule biliaire : elle se projette sur la ligne ombilico-médio-claviculaire droite, au point de rencontre du muscle grand droit avec la 9ème côte droite.",
-            "Cholédoque : il est dorsal et médial à cette même ligne.",
-            "Sphincter d’Oddi : il est situé à deux travers de doigt de l’ombilic sur cette même ligne, à l’union des 1/3 moyen et caudal du 2ème duodénum, à hauteur de la vertèbre L2."
+            "Vésicule biliaire : elle se projette sur la ligne ombilico-médio-claviculaire droite, au point de rencontre du muscle grand droit avec la 9ème côte droite.",
+            "Cholédoque : il est dorsal et médial à cette même ligne.",
+            "Sphincter d’Oddi : il est situé à deux travers de doigt de l’ombilic sur cette même ligne, à l’union des 1/3 moyen et caudal du 2ème duodénum, à hauteur de la vertèbre L2."
           ]
         }
       ]
@@ -304,12 +304,12 @@ export const chapter11Fr: Chapter = {
             "Rapports",
             "Sous-diaphragmatique, le foie occupe la partie supérieure de la cavité abdominale.",
             "En avant",
-            "Céphaliquement : le foie se projette à droite à hauteur du 5ème espace intercostal.",
+            "Céphaliquement : le foie se projette à droite à hauteur du 5ème espace intercostal.",
             "À gauche, il se projette à hauteur du 6ème espace intercostal.",
-            "Ventralement et caudalement : la limite inférieure du foie ne doit pas déborder le rebord costal inférieur à l’examen habituel.",
+            "Ventralement et caudalement : la limite inférieure du foie ne doit pas déborder le rebord costal inférieur à l’examen habituel.",
             "Elle se projette sur une ligne allant de la 9ème ou 10ème fausse côte droite à la 6ème ou 7ème fausse côte gauche, en passant un travers de doigt sous le processus xiphoïde.",
-            "Dorsalement et céphaliquement : le foie se projette à hauteur de Th8-Th9 jusqu’à la 8ème côte droite.",
-            "Dorsalement et caudalement : le foie se projette à hauteur de Th12 jusqu’à la 11ème côte droite."
+            "Dorsalement et céphaliquement : le foie se projette à hauteur de Th8-Th9 jusqu’à la 8ème côte droite.",
+            "Dorsalement et caudalement : le foie se projette à hauteur de Th12 jusqu’à la 11ème côte droite."
           ]
         }
       ]
@@ -420,7 +420,7 @@ export const chapter11Fr: Chapter = {
           "items": [
             "Varices œsophagiennes;",
             "Hémorroïdes anorectales;",
-            "Circulation veineuse para-ombilicale en « tête de méduse »;",
+            "Circulation veineuse para-ombilicale en « tête de méduse »;",
             "Congestion veineuse collatérale du réseau rachidien et azygos."
           ]
         }
@@ -530,7 +530,7 @@ export const chapter11Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "Cette propriété est parfois désignée ici sous le terme de « prolifération hépatique »."
+          "text": "Cette propriété est parfois désignée ici sous le terme de « prolifération hépatique »."
         },
         {
           "type": "para",
@@ -558,22 +558,22 @@ export const chapter11Fr: Chapter = {
           "type": "rop",
           "body": [
             "Dans notre pratique de la ROP, nous pouvons différencier le foie en quatre segments selon les troubles fonctionnels.",
-            "Zone 1 : vésicule et voies biliaires.",
+            "Zone 1 : vésicule et voies biliaires.",
             "La sensibilité du cartilage de la 9ème côte peut orienter cliniquement vers un trouble vésiculaire, notamment dans un contexte d’hygiène alimentaire défavorable, d’excès de cholestérol ou de triglycérides.",
             "La viscosité de la bile peut varier selon le contexte hormonal, notamment au cours du cycle menstruel.",
             "Dans le cadre ROP, cette zone est associée à des douleurs cervicales gauches C4-C5, puis droites si le trouble devient chronique.",
-            "Zone 2 : foie métabolique.",
+            "Zone 2 : foie métabolique.",
             "La partie épigastrique du foie est rattachée, dans ce modèle, à des troubles métaboliques: difficulté d’élimination, avitaminose, états inflammatoires divers, douleurs cervico-dorsales et troubles cutanés tels que prurit, acné, ictère ou peau grasse.",
             "Le foie est hormono-dépendant au sens fonctionnel.",
             "Un excès d’œstrogènes peut s’accompagner d’une moindre fluidité biliaire et d’une moindre aisance d’excrétion hépatobiliaire.",
             "Cela peut contribuer, parmi d’autres facteurs, aux nausées ou vomissements pendant la grossesse.",
             "Les contraceptifs oraux peuvent s’accompagner d’effets indésirables hépato-biliaires chez certaines patientes.",
             "L’excès de protéines et de graisses peut être mal toléré par les personnes cliniquement sensibles sur le plan hépatique.",
-            "Zone 3 : foie infectieux et immunitaire.",
+            "Zone 3 : foie infectieux et immunitaire.",
             "La partie droite du lobe droit est considérée, dans cette lecture clinique, comme plus souvent concernée lors d’atteintes infectieuses du foie, notamment les hépatites.",
             "Le foie participe à la réponse immunitaire et à l’épuration de certaines charges circulantes.",
             "Après une gastro-entérite, une fatigue persistante peut être interprétée, dans ce modèle, comme le reflet d’une surcharge d’épuration.",
-            "Zone 4 : foie mécanique.",
+            "Zone 4 : foie mécanique.",
             "Le lobe gauche et le ligament triangulaire gauche sont décrits comme plus fréquemment concernés par certains traumatismes, les forces collisionnelles pouvant se transmettre préférentiellement vers cette zone, ainsi que vers la rate et le rein gauche.",
             "Dans le cadre ROP, cette zone est aussi associée à des douleurs costo-vertébrales Th7, Th8, Th9 et à une sciatalgie droite."
           ]
@@ -1164,7 +1164,7 @@ export const chapter11Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "La personne « foie », prisonnière de la routine, ressasse et regarde le passé sans se remettre en question, d’où le doute, l’incertitude et une moindre confiance en l’avenir."
+          "text": "La personne « foie », prisonnière de la routine, ressasse et regarde le passé sans se remettre en question, d’où le doute, l’incertitude et une moindre confiance en l’avenir."
         },
         {
           "type": "para",
@@ -1172,15 +1172,15 @@ export const chapter11Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "A contrario, la personne « estomac », organe plutôt masculin dans ce système symbolique, serait plus en conflit avec le père et davantage tournée vers l’avenir."
+          "text": "A contrario, la personne « estomac », organe plutôt masculin dans ce système symbolique, serait plus en conflit avec le père et davantage tournée vers l’avenir."
         },
         {
           "type": "para",
-          "text": "D’une grande susceptibilité, la personne « foie » réagit vivement à de petites remarques et se met en colère par peur et insécurité, colère qui la soulage en s’exprimant."
+          "text": "D’une grande susceptibilité, la personne « foie » réagit vivement à de petites remarques et se met en colère par peur et insécurité, colère qui la soulage en s’exprimant."
         },
         {
           "type": "para",
-          "text": "Claustrophobie et agoraphobie sont décrites ici comme pouvant être renforcées lorsque le foie « fonctionne mal »."
+          "text": "Claustrophobie et agoraphobie sont décrites ici comme pouvant être renforcées lorsque le foie « fonctionne mal »."
         },
         {
           "type": "para",
@@ -1192,7 +1192,7 @@ export const chapter11Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "La personne se lève fatiguée et se couche fatiguée, se sent déprimée, vidée, malheureuse de ne pas être à : la hauteur et mal aimée."
+          "text": "La personne se lève fatiguée et se couche fatiguée, se sent déprimée, vidée, malheureuse de ne pas être à : la hauteur et mal aimée."
         },
         {
           "type": "para",
@@ -1210,7 +1210,7 @@ export const chapter11Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "La personne « vésicule » se préoccupe facilement pour des motifs matériels."
+          "text": "La personne « vésicule » se préoccupe facilement pour des motifs matériels."
         },
         {
           "type": "para",
@@ -1222,7 +1222,7 @@ export const chapter11Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "La personne « vésicule » a « les nerfs à fleur de peau »."
+          "text": "La personne « vésicule » a « les nerfs à fleur de peau »."
         },
         {
           "type": "para",
@@ -1234,7 +1234,7 @@ export const chapter11Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "Elle n’aime pas les changements d’habitudes, comme les voyages, et a besoin de son « petit monde »."
+          "text": "Elle n’aime pas les changements d’habitudes, comme les voyages, et a besoin de son « petit monde »."
         },
         {
           "type": "para",
@@ -1280,7 +1280,7 @@ export const chapter11Fr: Chapter = {
   "slides": {
     "url": "/chapter-11/Chapter11 Slides de synthese - FR.pdf",
     "label": "Diaporama de synthèse",
-    "description": "Repères visuels du chapitre 11 : foie, voies biliaires, vascularisation, lymphatique, zones réflexes et profils cliniques."
+    "description": "Repères visuels du chapitre 11 : foie, voies biliaires, vascularisation, lymphatique, zones réflexes et profils cliniques."
   }
 }
 
@@ -1295,7 +1295,7 @@ const reflexFigure = (
 ): ChapterBlock => ({
   type: "figure",
   src: `/chapter-11/cartographie/figure-11-${n}.png`,
-  caption: `${kind} : ${title}`,
+  caption: `${kind} : ${title}`,
   alt,
   orientation,
 })

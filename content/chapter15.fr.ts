@@ -118,7 +118,7 @@ export const chapter15Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "« Sa situation est des plus variables. Ses variations sont dues à l’angle splénique qui est plus mobile que l’angle hépatique » (J.P. Barral, ostéopathe D.O. Manipulations viscérales, tome 1, Editions Elsevier-Masson):"
+          "text": "« Sa situation est des plus variables. Ses variations sont dues à l’angle splénique qui est plus mobile que l’angle hépatique » (J.P. Barral, ostéopathe D.O. Manipulations viscérales, tome 1, Editions Elsevier-Masson):"
         },
         {
           "type": "bullets",
@@ -395,7 +395,7 @@ export const chapter15Fr: Chapter = {
           "items": [
             "Sphincter interne: il est constitué de fibres musculaires lisses. Quand le rectum est vide, le sphincter interne est fermé sous l’action du Sympathique qui assure la continence anale. Cette contraction est inconsciente. La pression intra-rectale est inférieure à celle du sphincter lisse. Elle permet de stocker les matières fécales dans l’ampoule rectale, sans sentir le besoin d’aller immédiatement à la selle.",
             "Quand la pression intra-rectale atteint un certain seuil, les mécanorécepteurs rectaux, stimulés par la dilatation de l’ampoule rectale et ceux des muscles du périnée (releveur de l’anus) provoquent l’envie d’aller à la selle. Le thalamus et les cortex insulaire, cingulaire et orbito-frontal, sont informés, d’une part, par les nerfs afférents neuro-végétatifs du rectum, et d’autre part, par les nerfs pudendaux, informant par leurs fibres afférentes, le cortex pariétal ascendant.",
-            "Sphincter externe: il est le dernier obstacle avant l’exonération des selles. Il est innervé par le nerf pudendal. Son contrôle est volontaire. L’éducation à la propreté apprend l’enfant à contrôler son sphincter externe. Et plus tard, les personnes choisissent d’aller immédiatement à la selle ou « se retenir ». La commande centrale est la circonvolution frontale ascendante (faisceau pyramidal)."
+            "Sphincter externe: il est le dernier obstacle avant l’exonération des selles. Il est innervé par le nerf pudendal. Son contrôle est volontaire. L’éducation à la propreté apprend l’enfant à contrôler son sphincter externe. Et plus tard, les personnes choisissent d’aller immédiatement à la selle ou « se retenir ». La commande centrale est la circonvolution frontale ascendante (faisceau pyramidal)."
           ]
         },
         {
@@ -695,14 +695,14 @@ export const chapter15Fr: Chapter = {
         {
           "type": "figure",
           "src": "/chapter-15/cartographie/figure-15-02.png",
-          "caption": "Photo : Nerf vague X dans la moelle allongée",
+          "caption": "Photo : Nerf vague X dans la moelle allongée",
           "alt": "Repère podal du nerf vague X dans la moelle allongée",
           "orientation": "portrait"
         },
         {
           "type": "figure",
           "src": "/chapter-15/cartographie/figure-15-04.png",
-          "caption": "Photo : Nerf vague X dans le foramen jugulaire",
+          "caption": "Photo : Nerf vague X dans le foramen jugulaire",
           "alt": "Repère podal du nerf vague X dans le foramen jugulaire",
           "orientation": "portrait"
         },
@@ -715,7 +715,7 @@ export const chapter15Fr: Chapter = {
         {
           "type": "figure",
           "src": "/chapter-15/cartographie/figure-15-06.png",
-          "caption": "Cartographie : Origine médullaire du Parasympathique pelvien ou sacré",
+          "caption": "Cartographie : Origine médullaire du Parasympathique pelvien ou sacré",
           "alt": "Titre cartographique de l'origine médullaire du Parasympathique pelvien ou sacré",
           "orientation": "landscape"
         },
@@ -728,14 +728,14 @@ export const chapter15Fr: Chapter = {
         {
           "type": "figure",
           "src": "/chapter-15/cartographie/figure-15-08.png",
-          "caption": "Cartographie : Origine médullaire du Sympathique",
+          "caption": "Cartographie : Origine médullaire du Sympathique",
           "alt": "Titre cartographique de l'origine médullaire du Sympathique",
           "orientation": "landscape"
         },
         {
           "type": "figure",
           "src": "/chapter-15/cartographie/figure-15-10.png",
-          "caption": "Photo : Chaîne ganglionnaire latéro-vertébrale thoracique",
+          "caption": "Photo : Chaîne ganglionnaire latéro-vertébrale thoracique",
           "alt": "Repère podal de la chaîne ganglionnaire latéro-vertébrale thoracique",
           "orientation": "landscape"
         },
@@ -760,21 +760,21 @@ export const chapter15Fr: Chapter = {
         {
           "type": "figure",
           "src": "/chapter-15/cartographie/figure-15-15.png",
-          "caption": "Cartographie : Valvule iléocaecale",
+          "caption": "Cartographie : Valvule iléocaecale",
           "alt": "Titre cartographique de la valvule iléocaecale",
           "orientation": "landscape"
         },
         {
           "type": "figure",
           "src": "/chapter-15/cartographie/figure-15-16.png",
-          "caption": "Photo : Valvule iléocaecale",
+          "caption": "Photo : Valvule iléocaecale",
           "alt": "Repère podal de la valvule iléocaecale sur le pied gauche",
           "orientation": "portrait"
         },
         {
           "type": "figure",
           "src": "/chapter-15/cartographie/figure-15-12.png",
-          "caption": "Cartographie : Côlon ascendant et côlon transverse",
+          "caption": "Cartographie : Côlon ascendant et côlon transverse",
           "alt": "Titre cartographique du côlon ascendant et du côlon transverse",
           "orientation": "landscape"
         },
@@ -790,35 +790,35 @@ export const chapter15Fr: Chapter = {
         {
           "type": "figure",
           "src": "/chapter-15/cartographie/figure-15-17.png",
-          "caption": "Cartographie : Racine du mésocôlon transverse entre le 2ème duodénum et L2",
+          "caption": "Cartographie : Racine du mésocôlon transverse entre le 2ème duodénum et L2",
           "alt": "Titre cartographique de la racine du mésocôlon transverse entre le 2ème duodénum et L2",
           "orientation": "landscape"
         },
         {
           "type": "figure",
           "src": "/chapter-15/cartographie/figure-15-18.png",
-          "caption": "Photo : Racine du mésocôlon transverse",
+          "caption": "Photo : Racine du mésocôlon transverse",
           "alt": "Repère podal de la racine du mésocôlon transverse",
           "orientation": "portrait"
         },
         {
           "type": "figure",
           "src": "/chapter-15/cartographie/figure-15-19.png",
-          "caption": "Cartographie : Racine du mésocôlon transverse entre L2 et le corps du pancréas",
+          "caption": "Cartographie : Racine du mésocôlon transverse entre L2 et le corps du pancréas",
           "alt": "Titre cartographique de la racine du mésocôlon transverse entre L2 et le corps du pancréas",
           "orientation": "landscape"
         },
         {
           "type": "figure",
           "src": "/chapter-15/cartographie/figure-15-20.png",
-          "caption": "Photo : Racine du mésocôlon transverse entre les deux corps du pancréas",
+          "caption": "Photo : Racine du mésocôlon transverse entre les deux corps du pancréas",
           "alt": "Repère podal de la racine du mésocôlon transverse entre les deux corps du pancréas",
           "orientation": "landscape"
         },
         {
           "type": "figure",
           "src": "/chapter-15/cartographie/figure-15-14.png",
-          "caption": "Cartographie : Côlon transverse et côlon descendant",
+          "caption": "Cartographie : Côlon transverse et côlon descendant",
           "alt": "Titre cartographique du côlon transverse et du côlon descendant",
           "orientation": "landscape"
         },
@@ -838,7 +838,7 @@ export const chapter15Fr: Chapter = {
         {
           "type": "figure",
           "src": "/chapter-15/cartographie/figure-15-22.png",
-          "caption": "Cartographie : Rectum, anus, mésosigmoïde",
+          "caption": "Cartographie : Rectum, anus, mésosigmoïde",
           "alt": "Titre cartographique du rectum, de l'anus et du mésosigmoïde",
           "orientation": "landscape"
         },

@@ -49,16 +49,16 @@ export const chapter7Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "Schématiquement, la cavité abdominale est un demi-cylindre creux vertical dont les parois sont :"
+          "text": "Schématiquement, la cavité abdominale est un demi-cylindre creux vertical dont les parois sont :"
         },
         {
           "type": "bullets",
           "items": [
-            "Céphaliquement : le diaphragme ;",
-            "Dorsalement : un mur ostéo-musculaire solide, formé des muscles carrés des lombes et grand psoas de part et d’autre de la colonne thoraco-lombaire ;",
-            "Latéralement : les muscles abdominaux : transverse de l’abdomen, obliques internes et externes ;",
-            "Ventralement : les muscles grands droits de l’abdomen ;",
-            "Caudalement : les fosses iliaques internes droite et gauche des os coxaux circonscrivant l’ouverture supérieure de la cavité pelvienne."
+            "Céphaliquement : le diaphragme ;",
+            "Dorsalement : un mur ostéo-musculaire solide, formé des muscles carrés des lombes et grand psoas de part et d’autre de la colonne thoraco-lombaire ;",
+            "Latéralement : les muscles abdominaux : transverse de l’abdomen, obliques internes et externes ;",
+            "Ventralement : les muscles grands droits de l’abdomen ;",
+            "Caudalement : les fosses iliaques internes droite et gauche des os coxaux circonscrivant l’ouverture supérieure de la cavité pelvienne."
           ]
         },
         {
@@ -69,7 +69,7 @@ export const chapter7Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "Le péritoine est séparé des plans musculaires par des fascias interposés : fascia thoraco-abdominal, fascia transversalis, aponévroses des muscles de la colonne vertébrale et de la hanche."
+          "text": "Le péritoine est séparé des plans musculaires par des fascias interposés : fascia thoraco-abdominal, fascia transversalis, aponévroses des muscles de la colonne vertébrale et de la hanche."
         },
         {
           "type": "para",
@@ -85,7 +85,7 @@ export const chapter7Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "Ces mouvements délimitent plusieurs espaces anatomiques :"
+          "text": "Ces mouvements délimitent plusieurs espaces anatomiques :"
         },
         {
           "type": "sub",
@@ -163,7 +163,7 @@ export const chapter7Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "Il est constitué de deux feuillets :"
+          "text": "Il est constitué de deux feuillets :"
         },
         {
           "type": "sub",
@@ -285,11 +285,11 @@ export const chapter7Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "Les mésos prennent le nom du viscère qu’ils rejoignent : mésogastre, mésentère, mésocôlon transverse, mésosigmoïde."
+          "text": "Les mésos prennent le nom du viscère qu’ils rejoignent : mésogastre, mésentère, mésocôlon transverse, mésosigmoïde."
         },
         {
           "type": "para",
-          "text": "Le mésocôlon transverse et sa racine divisent l’espace intra-péritonéal en deux compartiments :"
+          "text": "Le mésocôlon transverse et sa racine divisent l’espace intra-péritonéal en deux compartiments :"
         },
         {
           "type": "bullets",
@@ -316,15 +316,15 @@ export const chapter7Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "Ils prennent le nom des viscères qu’ils réunissent :"
+          "text": "Ils prennent le nom des viscères qu’ils réunissent :"
         },
         {
           "type": "bullets",
           "items": [
-            "grand omentum ou omentum gastro-colique ;",
-            "petit omentum ou omentum gastro-hépatique ;",
-            "omentum gastro-splénique : il relie l’estomac à la rate",
-            "omentum pancréatico-splénique : il relie le pancréas à la rate"
+            "grand omentum ou omentum gastro-colique ;",
+            "petit omentum ou omentum gastro-hépatique ;",
+            "omentum gastro-splénique : il relie l’estomac à la rate",
+            "omentum pancréatico-splénique : il relie le pancréas à la rate"
           ]
         },
         {
@@ -345,7 +345,7 @@ export const chapter7Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "La cavité péritonéale est fermée chez l’homme ; chez la femme, elle communique indirectement avec l’extérieur par l’intermédiaire des trompes utérines."
+          "text": "La cavité péritonéale est fermée chez l’homme ; chez la femme, elle communique indirectement avec l’extérieur par l’intermédiaire des trompes utérines."
         },
         {
           "type": "para",
@@ -353,14 +353,14 @@ export const chapter7Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "Les orifices et hiatus sont des zones de relative faiblesse situées à des carrefours entre deux cavités :"
+          "text": "Les orifices et hiatus sont des zones de relative faiblesse situées à des carrefours entre deux cavités :"
         },
         {
           "type": "bullets",
           "items": [
-            "Jonction avec la cavité thoracique : hiatus œsophagien, impliqué dans certaines hernies hiatales",
-            "Jonction avec la cavité pelvienne : canal inguinal, siège des hernies inguinales,",
-            "Jonction avec la cuisse : à travers l’anneau fémoral, au-dessous du ligament inguinal, siège des hernies fémorales."
+            "Jonction avec la cavité thoracique : hiatus œsophagien, impliqué dans certaines hernies hiatales",
+            "Jonction avec la cavité pelvienne : canal inguinal, siège des hernies inguinales,",
+            "Jonction avec la cuisse : à travers l’anneau fémoral, au-dessous du ligament inguinal, siège des hernies fémorales."
           ]
         }
       ]
@@ -405,11 +405,11 @@ export const chapter7Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "Anévrisme : il est important, dans l’examen clinique, d’apprécier le calibre aortique et le caractère expansif de la pulsation en raison du risque d’anévrisme."
+          "text": "Anévrisme : il est important, dans l’examen clinique, d’apprécier le calibre aortique et le caractère expansif de la pulsation en raison du risque d’anévrisme."
         },
         {
           "type": "para",
-          "text": "Test : l’aorte abdominale est plus facilement palpable entre le bord caudal du pancréas et l’ombilic."
+          "text": "Test : l’aorte abdominale est plus facilement palpable entre le bord caudal du pancréas et l’ombilic."
         },
         {
           "type": "para",
@@ -429,7 +429,7 @@ export const chapter7Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "Les symptômes peuvent être absents ou peu spécifiques : dorsalgie, lombalgie, douleurs abdominales sourdes, plutôt centrales ou latéralisées à gauche ; plus rarement, signes compressifs."
+          "text": "Les symptômes peuvent être absents ou peu spécifiques : dorsalgie, lombalgie, douleurs abdominales sourdes, plutôt centrales ou latéralisées à gauche ; plus rarement, signes compressifs."
         },
         {
           "type": "sub",
@@ -437,11 +437,11 @@ export const chapter7Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "Les trois branches de l’aorte abdominale destinées au système digestif sont :"
+          "text": "Les trois branches de l’aorte abdominale destinées au système digestif sont :"
         },
         {
           "type": "para",
-          "text": "Tronc cœliaque : il naît à hauteur de L1."
+          "text": "Tronc cœliaque : il naît à hauteur de L1."
         },
         {
           "type": "para",
@@ -457,11 +457,11 @@ export const chapter7Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "Il donne trois branches :"
+          "text": "Il donne trois branches :"
         },
         {
           "type": "para",
-          "text": "Artère gastrique gauche : elle naît du tronc cœliaque et suit la petite courbure de l’estomac jusqu’au pylore, où elle s’anastomose avec l’artère gastrique droite, issue de l’artère hépatique propre."
+          "text": "Artère gastrique gauche : elle naît du tronc cœliaque et suit la petite courbure de l’estomac jusqu’au pylore, où elle s’anastomose avec l’artère gastrique droite, issue de l’artère hépatique propre."
         },
         {
           "type": "sub",
@@ -477,11 +477,11 @@ export const chapter7Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "Artère hépatique commune : elle naît du tronc cœliaque, chemine vers le foie et participe à la vascularisation hépatique via l’artère hépatique propre, tout en donnant l’artère gastro-duodénale."
+          "text": "Artère hépatique commune : elle naît du tronc cœliaque, chemine vers le foie et participe à la vascularisation hépatique via l’artère hépatique propre, tout en donnant l’artère gastro-duodénale."
         },
         {
           "type": "para",
-          "text": "Artère splénique : elle naît du tronc cœliaque et suit un trajet tortueux le long du bord supérieur du pancréas."
+          "text": "Artère splénique : elle naît du tronc cœliaque et suit un trajet tortueux le long du bord supérieur du pancréas."
         },
         {
           "type": "para",
@@ -506,7 +506,7 @@ export const chapter7Fr: Chapter = {
         {
           "type": "xref",
           "label": "Voir la référence dans le chapitre 14",
-          "text": "Intestin grêle : vascularisation",
+          "text": "Intestin grêle : vascularisation",
           "href": "/lecture/chapitre-14?xrefBack=%2Flecture%2Fchapitre-7%23p-vascularisation-28&xrefBackLabel=Retour%20au%20chapitre%207#p-vascularisation-2"
         },
         {
@@ -558,7 +558,7 @@ export const chapter7Fr: Chapter = {
         {
           "type": "xref",
           "label": "Voir la référence dans le chapitre 11",
-          "text": "Foie : système porte",
+          "text": "Foie : système porte",
           "href": "/lecture/chapitre-11?xrefBack=%2Flecture%2Fchapitre-7%23p-vascularisation-39&xrefBackLabel=Retour%20au%20chapitre%207#p-vascularisation-6"
         },
         {
@@ -567,7 +567,7 @@ export const chapter7Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "Le péritoine ne dispose pas d’un système vasculaire autonome individualisé comparable à celui d’un organe plein ; sa vascularisation provient des territoires adjacents et des pédicules empruntant les mésos."
+          "text": "Le péritoine ne dispose pas d’un système vasculaire autonome individualisé comparable à celui d’un organe plein ; sa vascularisation provient des territoires adjacents et des pédicules empruntant les mésos."
         },
         {
           "type": "para",
@@ -614,7 +614,7 @@ export const chapter7Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "Les nerfs du péritoine pariétal sont :"
+          "text": "Les nerfs du péritoine pariétal sont :"
         },
         {
           "type": "sub",
@@ -626,7 +626,7 @@ export const chapter7Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "La douleur pariétale antérieure se projette localement sur le revêtement cutané en regard du territoire concerné ; ceci peut être rapproché, en clinique réflexe, des dermalgies décrites par Jarricot."
+          "text": "La douleur pariétale antérieure se projette localement sur le revêtement cutané en regard du territoire concerné ; ceci peut être rapproché, en clinique réflexe, des dermalgies décrites par Jarricot."
         },
         {
           "type": "sub",
@@ -666,7 +666,7 @@ export const chapter7Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "Sa sensibilité est peu discriminative ; il réagit surtout à l’étirement, à la distension et aux irritants chimiques."
+          "text": "Sa sensibilité est peu discriminative ; il réagit surtout à l’étirement, à la distension et aux irritants chimiques."
         }
       ]
     },
@@ -776,29 +776,29 @@ export const chapter7Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "L’inflammation péritonéale, souvent infectieuse, peut survenir par :"
+          "text": "L’inflammation péritonéale, souvent infectieuse, peut survenir par :"
         },
         {
           "type": "bullets",
           "items": [
-            "Traumatisme de l’abdomen avec effraction viscérale ;",
-            "Ulcère perforé gastro-duodénal ;",
-            "Septicémie par voie sanguine ;",
-            "Appendicite non traitée avec perforation ;",
+            "Traumatisme de l’abdomen avec effraction viscérale ;",
+            "Ulcère perforé gastro-duodénal ;",
+            "Septicémie par voie sanguine ;",
+            "Appendicite non traitée avec perforation ;",
             "Grossesse extra-utérine compliquée de rupture et d’hémorragie interne."
           ]
         },
         {
           "type": "para",
-          "text": "Symptômes : douleur, vomissements, altération de l’état général."
+          "text": "Symptômes : douleur, vomissements, altération de l’état général."
         },
         {
           "type": "para",
-          "text": "Examen clinique : contracture abdominale, \"ventre de bois\"."
+          "text": "Examen clinique : contracture abdominale, \"ventre de bois\"."
         },
         {
           "type": "para",
-          "text": "Métastases : dans certains cancers, notamment coliques ou ovariens, des cellules tumorales peuvent diffuser dans l’ensemble de l’abdomen."
+          "text": "Métastases : dans certains cancers, notamment coliques ou ovariens, des cellules tumorales peuvent diffuser dans l’ensemble de l’abdomen."
         },
         {
           "type": "para",
@@ -806,7 +806,7 @@ export const chapter7Fr: Chapter = {
         },
         {
           "type": "sub",
-          "text": "Indications : pathologies fonctionnelles"
+          "text": "Indications : pathologies fonctionnelles"
         },
         {
           "type": "para",
@@ -819,16 +819,16 @@ export const chapter7Fr: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Douleurs ;",
-            "Déficiences hiatales et inguinales : après une chirurgie abdomino-pelvienne, les cicatrices peuvent modifier la répartition des contraintes de la paroi et du péritoine, et favoriser des zones de faiblesse pariétale.",
-            "Reflux gastro-œsophagien et hernie hiatale au niveau de la jonction œsophago-cardio-tuberositaire ;",
+            "Douleurs ;",
+            "Déficiences hiatales et inguinales : après une chirurgie abdomino-pelvienne, les cicatrices peuvent modifier la répartition des contraintes de la paroi et du péritoine, et favoriser des zones de faiblesse pariétale.",
+            "Reflux gastro-œsophagien et hernie hiatale au niveau de la jonction œsophago-cardio-tuberositaire ;",
             "Hernie inguinale réductible par béance de l’orifice profond du canal inguinal.",
             "Tiraillement des mésos avec conséquences neuro-vasculaires et douloureuses, et, au sens clinique, participation possible à certaines ptoses viscérales."
           ]
         },
         {
           "type": "para",
-          "text": "Infertilité par séquelle d’appendicectomie : des adhérences post-opératoires du pelvis droit peuvent réduire la mobilité tubo-ovarienne et altérer la captation ovocytaire."
+          "text": "Infertilité par séquelle d’appendicectomie : des adhérences post-opératoires du pelvis droit peuvent réduire la mobilité tubo-ovarienne et altérer la captation ovocytaire."
         },
         {
           "type": "para",
@@ -850,7 +850,7 @@ export const chapter7Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "Si nous traçons une ligne horizontale passant par l’ombilic et une ligne verticale passant par la ligne xypho-ombilicale, nous délimitons quatre quadrants :"
+          "text": "Si nous traçons une ligne horizontale passant par l’ombilic et une ligne verticale passant par la ligne xypho-ombilicale, nous délimitons quatre quadrants :"
         },
         {
           "type": "para",
@@ -862,15 +862,15 @@ export const chapter7Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "Les exemples cliniques rapportés sont nombreux :"
+          "text": "Les exemples cliniques rapportés sont nombreux :"
         },
         {
           "type": "bullets",
           "items": [
-            "cruralgie et dysfonction rénale homolatérales ;",
-            "sciatalgie et dysfonction uro-génitale homolatérales ;",
-            "douleur du pied d’origine rénale ou colique homolatérale ;",
-            "scapulalgie et PSH droite d’origine hépatique ou pulmonaire droite ;",
+            "cruralgie et dysfonction rénale homolatérales ;",
+            "sciatalgie et dysfonction uro-génitale homolatérales ;",
+            "douleur du pied d’origine rénale ou colique homolatérale ;",
+            "scapulalgie et PSH droite d’origine hépatique ou pulmonaire droite ;",
             "scapulalgie et PSH gauche d’origine pulmonaire gauche, cardiaque ou stomacale."
           ]
         }
@@ -887,52 +887,52 @@ export const chapter7Fr: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Racine du mésentère : entre la jonction duodéno-jéjunale et l’ombilic ;"
+            "Racine du mésentère : entre la jonction duodéno-jéjunale et l’ombilic ;"
           ]
         },
         {
           "type": "figure",
           "src": "/chapter-7/cartographie/figure-7-02.png",
-          "caption": "Photo : Racine du mésentère entre la jonction duodéno-jéjunale et l’ombilic",
+          "caption": "Photo : Racine du mésentère entre la jonction duodéno-jéjunale et l’ombilic",
           "alt": "Repère podal de la racine du mésentère entre la jonction duodéno-jéjunale et l’ombilic",
           "orientation": "portrait"
         },
         {
           "type": "bullets",
           "items": [
-            "Racine du mésentère : entre l’ombilic et la valvule iléo-caecale ;"
+            "Racine du mésentère : entre l’ombilic et la valvule iléo-caecale ;"
           ]
         },
         {
           "type": "figure",
           "src": "/chapter-7/cartographie/figure-7-04.png",
-          "caption": "Photo : Racine du mésentère entre l’ombilic et la valvule iléocaecale",
+          "caption": "Photo : Racine du mésentère entre l’ombilic et la valvule iléocaecale",
           "alt": "Repère podal de la racine du mésentère entre l’ombilic et la valvule iléocaecale",
           "orientation": "portrait"
         },
         {
           "type": "bullets",
           "items": [
-            "Racine du mésocôlon transverse : entre le 2ème duodénum et L2 ;"
+            "Racine du mésocôlon transverse : entre le 2ème duodénum et L2 ;"
           ]
         },
         {
           "type": "figure",
           "src": "/chapter-7/cartographie/figure-7-06.png",
-          "caption": "Photo : Racine du mésocôlon transverse entre le 2ème duodénum et L2",
+          "caption": "Photo : Racine du mésocôlon transverse entre le 2ème duodénum et L2",
           "alt": "Repère podal de la racine du mésocôlon transverse entre le 2ème duodénum et L2",
           "orientation": "portrait"
         },
         {
           "type": "bullets",
           "items": [
-            "Racine du mésocôlon transverse : entre L2 et le corps du pancréas ;"
+            "Racine du mésocôlon transverse : entre L2 et le corps du pancréas ;"
           ]
         },
         {
           "type": "figure",
           "src": "/chapter-7/cartographie/figure-7-08.png",
-          "caption": "Photo : Racine du mésocôlon transverse entre L2 et le corps du pancréas",
+          "caption": "Photo : Racine du mésocôlon transverse entre L2 et le corps du pancréas",
           "alt": "Repère podal de la racine du mésocôlon transverse entre L2 et le corps du pancréas",
           "orientation": "landscape"
         },
@@ -945,7 +945,7 @@ export const chapter7Fr: Chapter = {
         {
           "type": "figure",
           "src": "/chapter-7/cartographie/figure-7-10.png",
-          "caption": "Photo : Racines du mésosigmoïde",
+          "caption": "Photo : Racines du mésosigmoïde",
           "alt": "Repère podal des racines du mésosigmoïde entre les deux index",
           "orientation": "landscape"
         }

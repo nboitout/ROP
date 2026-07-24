@@ -14,7 +14,7 @@ export const chapter20Fr: Chapter = {
           "items": [
             "Vers la soixantaine, la prostate grossit par déséquilibre hormonal et exerce plus de pression sur l’urètre et la vessie. C’est alors que beaucoup d’hommes commencent à avoir des ennuis urinaires dont les réperçussions atteignent aussi leur vie sexuelle et psycho-émotionnelle.",
             "La prostate fournit aussi son lot de troubles de la statique pelvienne, lombo-sciatalgies ou périnéalgies qui peuvent cacher une dysfonction vésico-prostatique et qui sont accentués par la sédentarité, l’obésité et une mauvaise hygiène de vie.",
-            "Plus que les femmes, parler de « ces choses-là » pour la plupart des hommes est encore souvent difficile. La chirurgie et les traitements médicamenteux ne sont pas sans risques car ils entraînent des effets secondaires mal vécus: impuissance, incontinence et éjaculation rétrograde.",
+            "Plus que les femmes, parler de « ces choses-là » pour la plupart des hommes est encore souvent difficile. La chirurgie et les traitements médicamenteux ne sont pas sans risques car ils entraînent des effets secondaires mal vécus: impuissance, incontinence et éjaculation rétrograde.",
             "La ROP peut contribuer à diminuer les conséquences des problèmes prostatiques à condition que le patient associé une bonne hygiène de vie. La ROP est sans effets iatrogènes et préserve la pudeur des hommes par notre action à distance."
           ]
         },
@@ -247,7 +247,7 @@ export const chapter20Fr: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "médial, il est parcouru par l’urètre prostatique qui présente une fente l’utricule prostatique. Celui-ci est le vestige atrophié des trompes, de l’utérus et du vagin chez la femme. Les anciens l’appelaient le «vagin mâle ».",
+            "médial, il est parcouru par l’urètre prostatique qui présente une fente l’utricule prostatique. Celui-ci est le vestige atrophié des trompes, de l’utérus et du vagin chez la femme. Les anciens l’appelaient le «vagin mâle ».",
             "Œstrogéno-dépendant, le lobe moyen s’hypertrophie à l’andropause par déséquilibre hormonal entre androgènes et testostérone. Son augmentation de volume comprime l’urètre, rendant la miction difficile et les éjaculations ont un trajet rétrograde vers la vessie."
           ]
         },

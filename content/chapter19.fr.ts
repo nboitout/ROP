@@ -155,7 +155,7 @@ export const chapter19Fr: Chapter = {
           "type": "rop",
           "body": [
             "La région cervico-isthmique est la partie la plus importante de l’utérus sur le plan statique et dynamique. Elle est riche en mécanorécepteurs, sensibles aux étirements. Priorité est donnée à sa zone réflexe.",
-            "Les ligaments sont eux-mêmes doués d’une certaine capacité de contractilité grâce à des fibres musculaires au sein des fibres élastiques. Ils assurent donc une fixation « intelligente » des organes pelviens."
+            "Les ligaments sont eux-mêmes doués d’une certaine capacité de contractilité grâce à des fibres musculaires au sein des fibres élastiques. Ils assurent donc une fixation « intelligente » des organes pelviens."
           ]
         },
         {
@@ -606,7 +606,7 @@ export const chapter19Fr: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "il « flirte » avec l’appendice vermiculaire avec lequel il est relié par le ligament appendico-ovarien, cause de fausses appendicites. L’appendicectomie peut entraver la bonne mobilité de l’ovaire et de la trompe."
+            "il « flirte » avec l’appendice vermiculaire avec lequel il est relié par le ligament appendico-ovarien, cause de fausses appendicites. L’appendicectomie peut entraver la bonne mobilité de l’ovaire et de la trompe."
           ]
         },
         {
@@ -776,7 +776,7 @@ export const chapter19Fr: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "la production hormonale se fait sous le contrôle hypothalamo-hypophysaire, régulation par biofeedback. Ces hormones sexuelles sont d’origine stéroïdienne: le cholestérol, synthétisé par le foie, est la substance de base de ces hormones. Leur dégradation se fait dans le foie puis elles sont éliminées par l’urine et la bile. Nous voyons, une fois de plus, l’importance du foie sur le système génital. Les symptômes digestifs au moment des règles – constipation, nausées, ballonnements, migraines, jambes lourdes - témoignent de son rôle sur la sphère uro-génitale. Il n’est pas exagéré de dire que, d’une certaine manière, le foie « gouverne » l’utérus."
+            "la production hormonale se fait sous le contrôle hypothalamo-hypophysaire, régulation par biofeedback. Ces hormones sexuelles sont d’origine stéroïdienne: le cholestérol, synthétisé par le foie, est la substance de base de ces hormones. Leur dégradation se fait dans le foie puis elles sont éliminées par l’urine et la bile. Nous voyons, une fois de plus, l’importance du foie sur le système génital. Les symptômes digestifs au moment des règles – constipation, nausées, ballonnements, migraines, jambes lourdes - témoignent de son rôle sur la sphère uro-génitale. Il n’est pas exagéré de dire que, d’une certaine manière, le foie « gouverne » l’utérus."
           ]
         }
       ]
@@ -1008,7 +1008,7 @@ export const chapter19Fr: Chapter = {
           "type": "bullets",
           "items": [
             "Femme en âge de procréer;",
-            "Retard de règles: pertes un peu marron, dites « sépia »;",
+            "Retard de règles: pertes un peu marron, dites « sépia »;",
             "Douleur dans la fosse iliaque droite ou gauche (les douleurs de règles normales sont centrales);",
             "Défense à la palpation;",
             "Parfois, les douleurs du début sont une lombalgie, d’où méfiance et ne pas se jétér sur le symptôme: toujours demander chez toute femme la date des dernières règles."
@@ -1124,7 +1124,7 @@ export const chapter19Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "La personne «génitale » femme a besoin de maternité, de recevoir, de donner et d’abriter. Elle a peur de l’abandon, de couper le cordon ombilical. À la ménopause, les modifications physiques sont vécues comme une perte de sa féminité et de son pouvoir de séduction."
+          "text": "La personne «génitale » femme a besoin de maternité, de recevoir, de donner et d’abriter. Elle a peur de l’abandon, de couper le cordon ombilical. À la ménopause, les modifications physiques sont vécues comme une perte de sa féminité et de son pouvoir de séduction."
         },
         {
           "type": "para",
@@ -1136,7 +1136,7 @@ export const chapter19Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "La personne « sein » à un désir inassouvi de maternité, surtout quand elle atteint un certain âge, quand elle ne pourra plus avoir d’enfants. Elle éprouve alors des difficultés à trouver sa place. Elle désire ressembler à une icône et se fait une représentation idéalisée de la superwoman envoûtante et dominatrice. Elle affiche une sérénité de façade pour masquer son besoin de sécurité."
+          "text": "La personne « sein » à un désir inassouvi de maternité, surtout quand elle atteint un certain âge, quand elle ne pourra plus avoir d’enfants. Elle éprouve alors des difficultés à trouver sa place. Elle désire ressembler à une icône et se fait une représentation idéalisée de la superwoman envoûtante et dominatrice. Elle affiche une sérénité de façade pour masquer son besoin de sécurité."
         }
       ]
     },

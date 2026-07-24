@@ -37,7 +37,7 @@ export const chapter10Fr: Chapter = {
         },
         {
           type: "para",
-          text: "Il joue un rôle majeur dans la poursuite de la digestion, en recevant la bile et les sécrétions pancréatiques ; il participe aussi à la neutralisation de l’acidité gastrique en sortie d’estomac."
+          text: "Il joue un rôle majeur dans la poursuite de la digestion, en recevant la bile et les sécrétions pancréatiques ; il participe aussi à la neutralisation de l’acidité gastrique en sortie d’estomac."
         }
       ]
     },
@@ -276,7 +276,7 @@ export const chapter10Fr: Chapter = {
         {
           type: "lead",
           label: "Sécrétion",
-          text: "il reçoit sur 24 heures un volume important de contenu digestif et de sécrétions gastriques, biliaires et pancréatiques ; les ordres de grandeur varient selon les sources."
+          text: "il reçoit sur 24 heures un volume important de contenu digestif et de sécrétions gastriques, biliaires et pancréatiques ; les ordres de grandeur varient selon les sources."
         },
         {
           type: "para",
@@ -310,7 +310,7 @@ export const chapter10Fr: Chapter = {
         {
           type: "lead",
           label: "Absorption",
-          text: "le duodénum contribue notamment à l’absorption du fer, du calcium et de certains micronutriments ; cette absorption se poursuit ensuite dans le reste de l’intestin grêle."
+          text: "le duodénum contribue notamment à l’absorption du fer, du calcium et de certains micronutriments ; cette absorption se poursuit ensuite dans le reste de l’intestin grêle."
         }
       ]
     },
@@ -384,7 +384,7 @@ export const chapter10Fr: Chapter = {
         },
         {
           type: "sub",
-          text: "Indications : troubles fonctionnels"
+          text: "Indications : troubles fonctionnels"
         },
         {
           type: "para",
@@ -447,7 +447,7 @@ export const chapter10Fr: Chapter = {
         },
         {
           type: "para",
-          text: "Le traitement du duodénum est alors associé à celui des viscères avec lesquels chaque segment est en rapport : D1 avec l’estomac ; D2 avec le pancréas, le foie et la vésicule biliaire ; D3 et D4 avec l’intestin grêle et la racine du mésentère."
+          text: "Le traitement du duodénum est alors associé à celui des viscères avec lesquels chaque segment est en rapport : D1 avec l’estomac ; D2 avec le pancréas, le foie et la vésicule biliaire ; D3 et D4 avec l’intestin grêle et la racine du mésentère."
         }
       ]
     },
@@ -463,10 +463,10 @@ export const chapter10Fr: Chapter = {
           type: "para",
           text: "Nerf vague, colonne vertébrale, articulations costo-transversaires, chaîne ganglionnaire latéro-vertébrale thoracique droite et plexus prévertébraux."
         },
-        { type: "figure", src: "/chapter-10/figure-10-vague-moelle-allongee.png", caption: "Photo : Nerf vague X dans la moelle allongée", alt: "Repère podal du nerf vague X dans la moelle allongée", orientation: "landscape" },
-        { type: "figure", src: "/chapter-10/figure-10-vague-foramen-jugulaire.png", caption: "Photo : Nerf vague X dans le foramen jugulaire", alt: "Repère podal du nerf vague X dans le foramen jugulaire", orientation: "landscape" },
-        { type: "figure", src: "/chapter-10/figure-10-hiatus-vagues.png", caption: "Photo : Hiatus œsophagien et nerfs vagues droit et gauche", alt: "Repère podal du hiatus œsophagien avec les nerfs vagues droit et gauche", orientation: "landscape" },
-        { type: "figure", src: "/chapter-10/figure-10-articulations-costo-vertebrales.png", caption: "Photo : Articulations costo-vertébrales", alt: "Repère podal des articulations costo-vertébrales entre les deux pouces", orientation: "landscape" },
+        { type: "figure", src: "/chapter-10/figure-10-vague-moelle-allongee.png", caption: "Photo : Nerf vague X dans la moelle allongée", alt: "Repère podal du nerf vague X dans la moelle allongée", orientation: "landscape" },
+        { type: "figure", src: "/chapter-10/figure-10-vague-foramen-jugulaire.png", caption: "Photo : Nerf vague X dans le foramen jugulaire", alt: "Repère podal du nerf vague X dans le foramen jugulaire", orientation: "landscape" },
+        { type: "figure", src: "/chapter-10/figure-10-hiatus-vagues.png", caption: "Photo : Hiatus œsophagien et nerfs vagues droit et gauche", alt: "Repère podal du hiatus œsophagien avec les nerfs vagues droit et gauche", orientation: "landscape" },
+        { type: "figure", src: "/chapter-10/figure-10-articulations-costo-vertebrales.png", caption: "Photo : Articulations costo-vertébrales", alt: "Repère podal des articulations costo-vertébrales entre les deux pouces", orientation: "landscape" },
         {
           type: "sub",
           text: "Syndrome loco-régional"
@@ -478,17 +478,17 @@ export const chapter10Fr: Chapter = {
         {
           type: "lead",
           label: "Face plantaire du pied droit",
-          text: "D1 est projeté horizontalement à hauteur de L1 ; D2 verticalement de L1 à L4 ; le sphincter d’Oddi à l’union du tiers moyen et du tiers inférieur de D2, vers L2 ; D3 horizontalement à hauteur du tubercule du naviculaire."
+          text: "D1 est projeté horizontalement à hauteur de L1 ; D2 verticalement de L1 à L4 ; le sphincter d’Oddi à l’union du tiers moyen et du tiers inférieur de D2, vers L2 ; D3 horizontalement à hauteur du tubercule du naviculaire."
         },
-        { type: "figure", src: "/chapter-10/figure-10-cartographie-duodenum-d1-d3.png", caption: "Cartographie : Duodénum D1, D2, D3", alt: "Cartographie podale du duodénum D1, D2 et D3 avec les repères associés", orientation: "landscape" },
-        { type: "figure", src: "/chapter-10/figure-10-sphincter-oddi.png", caption: "Photo : Sphincter d’Oddi", alt: "Repère podal du sphincter d’Oddi", orientation: "landscape" },
+        { type: "figure", src: "/chapter-10/figure-10-cartographie-duodenum-d1-d3.png", caption: "Cartographie : Duodénum D1, D2, D3", alt: "Cartographie podale du duodénum D1, D2 et D3 avec les repères associés", orientation: "landscape" },
+        { type: "figure", src: "/chapter-10/figure-10-sphincter-oddi.png", caption: "Photo : Sphincter d’Oddi", alt: "Repère podal du sphincter d’Oddi", orientation: "landscape" },
         {
           type: "lead",
           label: "Face plantaire du pied gauche",
           text: "D4 est projeté selon une ligne oblique crânio-latérale, et la jonction duodéno-jéjunale est décrite comme symétrique du sphincter d’Oddi, vers L2."
         },
-        { type: "figure", src: "/chapter-10/figure-10-cartographie-duodenum-d4-hiatus-oesophagien.png", caption: "Cartographie : Duodénum D4, hiatus œsophagien et cardia", alt: "Cartographie podale du duodénum D4 avec repères du hiatus œsophagien, du cardia et de la jonction duodéno-jéjunale", orientation: "landscape" },
-        { type: "figure", src: "/chapter-10/figure-10-jonction-duodeno-jejunale.png", caption: "Photo : Jonction duodéno-jéjunale", alt: "Repère podal de la jonction duodéno-jéjunale", orientation: "landscape" },
+        { type: "figure", src: "/chapter-10/figure-10-cartographie-duodenum-d4-hiatus-oesophagien.png", caption: "Cartographie : Duodénum D4, hiatus œsophagien et cardia", alt: "Cartographie podale du duodénum D4 avec repères du hiatus œsophagien, du cardia et de la jonction duodéno-jéjunale", orientation: "landscape" },
+        { type: "figure", src: "/chapter-10/figure-10-jonction-duodeno-jejunale.png", caption: "Photo : Jonction duodéno-jéjunale", alt: "Repère podal de la jonction duodéno-jéjunale", orientation: "landscape" },
         {
           type: "para",
           text: "Sur les deux pieds, le pylore est repéré sur le bord médial de la peau plantaire, en général plus marqué à droite."

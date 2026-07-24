@@ -113,7 +113,7 @@ export const chapter16Fr: Chapter = {
             "la tonicité des muscles de l’abdomen;",
             "accessoirement le pédicule vasculaire;",
             "du volume de graisse périrénale et pararénale.",
-            "À la partie inférieure de la loge rénale, les deux fascias prérénal et rétrorénal ne se rejoignent pas. La loge rénale est donc ouverte en bas, ce qui constitue un véritable entonnoir dans lequel le rein peut s’engouffrer lors de sa descente. Leurs positions dépendent uniquement de leur environnement. Or le volume de la graisse est fonction de l’état nutritionnel et général de la personne. Une diminution du volume de la graisse, par amaigrissement important, la fait « fondre ». Le rein devient flottant et tend à glisser vers le bas en suivant le bord externe du psoas. La défaillance de ces moyens de fixité prédispose à la ptose rénale."
+            "À la partie inférieure de la loge rénale, les deux fascias prérénal et rétrorénal ne se rejoignent pas. La loge rénale est donc ouverte en bas, ce qui constitue un véritable entonnoir dans lequel le rein peut s’engouffrer lors de sa descente. Leurs positions dépendent uniquement de leur environnement. Or le volume de la graisse est fonction de l’état nutritionnel et général de la personne. Une diminution du volume de la graisse, par amaigrissement important, la fait « fondre ». Le rein devient flottant et tend à glisser vers le bas en suivant le bord externe du psoas. La défaillance de ces moyens de fixité prédispose à la ptose rénale."
           ]
         },
         {
@@ -272,8 +272,8 @@ export const chapter16Fr: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Rein droit: on pourrait l’appeler le « rein digestif » par sa proximité avec le foie et le côlon ascendant. Sa tendance à migrer vers le bas accentue les problèmes digestifs par les spasmes créés par sa descente, pouvant être tentés d’être attribués à une appendicite.",
-            "Rein gauche: on pourrait l’appeler le « rein génital ». Sa fixation affecte peu le système digestif en dehors d’un spasme de l’angle duodéno-jéjunal, ressenti comme une gastralgie. Par sa relation veineuse avec la sphère uro-génitale, le syndrome de la pince aorto-mésentérique et la fixation du rein gauche peuvent créer des problèmes veineux du testicule gauche (varicocèle) ou de la grande lèvre gauche. Des problèmes sexuels peuvent être attribués à la fixation du rein gauche: pesanteur pelvienne en période prémenstruelle chez la femme, et diminution de la virilité et de la libido, chez l’homme. Une lombo-sciatalgie gauche, même après traumatisme, doit nous conduire à vérifier le rein gauche. La femme enceinte souffre de lombairegie gravidique liée à la compression de la pince aorto-mésentérique par le développement du bébé."
+            "Rein droit: on pourrait l’appeler le « rein digestif » par sa proximité avec le foie et le côlon ascendant. Sa tendance à migrer vers le bas accentue les problèmes digestifs par les spasmes créés par sa descente, pouvant être tentés d’être attribués à une appendicite.",
+            "Rein gauche: on pourrait l’appeler le « rein génital ». Sa fixation affecte peu le système digestif en dehors d’un spasme de l’angle duodéno-jéjunal, ressenti comme une gastralgie. Par sa relation veineuse avec la sphère uro-génitale, le syndrome de la pince aorto-mésentérique et la fixation du rein gauche peuvent créer des problèmes veineux du testicule gauche (varicocèle) ou de la grande lèvre gauche. Des problèmes sexuels peuvent être attribués à la fixation du rein gauche: pesanteur pelvienne en période prémenstruelle chez la femme, et diminution de la virilité et de la libido, chez l’homme. Une lombo-sciatalgie gauche, même après traumatisme, doit nous conduire à vérifier le rein gauche. La femme enceinte souffre de lombairegie gravidique liée à la compression de la pince aorto-mésentérique par le développement du bébé."
           ]
         }
       ]
@@ -310,7 +310,7 @@ export const chapter16Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "L’amplitude de ce mouvement et de 3 à 4cm. Ce mouvement est répété 20 000 fois par jour. La motilité se fait dans la même direction, mais plus lentement, à raison de 7 fois par minute: dans l’ « inspir », le rein descend, dans l’ « expir », il remonte."
+          "text": "L’amplitude de ce mouvement et de 3 à 4cm. Ce mouvement est répété 20 000 fois par jour. La motilité se fait dans la même direction, mais plus lentement, à raison de 7 fois par minute: dans l’ « inspir », le rein descend, dans l’ « expir », il remonte."
         },
         {
           "type": "sub",
@@ -410,10 +410,10 @@ export const chapter16Fr: Chapter = {
           "type": "bullets",
           "items": [
             "pathologies fonctionnelles",
-            "lombairegies au « chant du coq à 4 ou 5 heures du matin);",
+            "lombairegies au « chant du coq à 4 ou 5 heures du matin);",
             "soif du matin;",
             "fatigue dite essentielle profonde du matin;",
-            "yeux congestionnés avec « poche » sous les yeux;",
+            "yeux congestionnés avec « poche » sous les yeux;",
             "hypertension artérielle;",
             "suite de chute sur le dos, le coccyx, les talons, le ventre;",
             "microlithiases (calculs inférieurs à 5mm);",
@@ -422,7 +422,7 @@ export const chapter16Fr: Chapter = {
             "infertilité;",
             "baisse de la libido;",
             "douleurs articulaires par excès d’acide urique;",
-            "infection urinaire à « urine claire » (ou apyrétique);",
+            "infection urinaire à « urine claire » (ou apyrétique);",
             "lombairegie gravidique;",
             "hypertrophie bénigne de la prostate;",
             "dépression nerveuse post-traumatique",
@@ -441,11 +441,11 @@ export const chapter16Fr: Chapter = {
             "problème de psoas (psoïtis)",
             "Fixations antérieures: le rein droit est plus sujet aux fixations antérieures et aux ptoses. Mais que le rein soit ptosé ou fixé, il a perdu sa mobilité normale.",
             "Les femmes sont plus concernées par les ptoses en raison de la grossesse, de l’accouchement, d’une rétroversion utérine, et de la ménopause. On distingue trois degrés de ptose:",
-            "1er degré: rein « intercostal », l’irritation du 12ème nerf intercostal irradie vers le grand trochanter.",
+            "1er degré: rein « intercostal », l’irritation du 12ème nerf intercostal irradie vers le grand trochanter.",
             "Symptômes: la personne se tient le flanc, respiration à fond difficile, supporte mal toux et éternuement",
-            "2ème degré: rein « abdomino-génital » ou « cutané fémoral »",
+            "2ème degré: rein « abdomino-génital » ou « cutané fémoral »",
             "Symptômes: l’irritation des nerfs iliohypogastrique, ilioinguinal et cutané fémoral du plexus lombaire irradie dans la région abdominale inférieure, les bourses ou les grandes lèvres, la face externe de la cuisse. Le rein est en rotation externe. La traction sur le pédicule vasculaire crée une hypertension artérielle.",
-            "3ème degré: « rein fémoral » ou « pelvien »: le rein est luxé par perte de contact avec le foie et le diaphragme. Il est en rotation médiale, bloqué contre le psoas.",
+            "3ème degré: « rein fémoral » ou « pelvien »: le rein est luxé par perte de contact avec le foie et le diaphragme. Il est en rotation médiale, bloqué contre le psoas.",
             "Symptômes:",
             "• Gonalgie, sans notion de traumatisme par irritation du nerf fémoral.",
             "• Spasme du psoas.",
@@ -485,7 +485,7 @@ export const chapter16Fr: Chapter = {
         {
           "type": "rop",
           "body": [
-            "La finalité de notre action réflexe n’est pas de « remonter » le rein ptosé mais de le libérer des contraintes mécaniques ostéo-musculo-articulaires ou viscérales qui s’exercent sur lui."
+            "La finalité de notre action réflexe n’est pas de « remonter » le rein ptosé mais de le libérer des contraintes mécaniques ostéo-musculo-articulaires ou viscérales qui s’exercent sur lui."
           ]
         },
         {
@@ -498,7 +498,7 @@ export const chapter16Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "Les spasmes musculaires des muscles para-vertébraux, du psoas et du carré des lombes sont responsables de lumbago, survenant lors d’un effort anodin. Le patient pense que le « faux mouvement » est la cause de son blocage. C’est juste que le problème rénal sous-jacent était sur le point de décompenser. Les fixations rénales traumatiques affectent plus les hommes."
+          "text": "Les spasmes musculaires des muscles para-vertébraux, du psoas et du carré des lombes sont responsables de lumbago, survenant lors d’un effort anodin. Le patient pense que le « faux mouvement » est la cause de son blocage. C’est juste que le problème rénal sous-jacent était sur le point de décompenser. Les fixations rénales traumatiques affectent plus les hommes."
         },
         {
           "type": "rop",
@@ -535,8 +535,8 @@ export const chapter16Fr: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Rein droit ou « rein digestif »: il sert de trop-plein émotionnel au foie. Il est l’organe de la colère intense refoulée, remontant à la petite enfance, en totale fusion avec la mère ou, au contraire, en totale opposition, empêchant l’enfant de développer sa propre identité. Le rein droit est l’expression de celui qui veut dominer mais qui a peur de dominer.",
-            "Rein gauche ou « rein génital »: il est l’organe du « moi génétique », de la génitalité qui nous relie à ceux qui nous ont donné la vie, à nos racines, au potentiel sexuel à transmettre la vie qu’on a reçue. Cela ne signifie pas l’impuissance ou la frigidité mais la peur de donner la vie.",
+            "Rein droit ou « rein digestif »: il sert de trop-plein émotionnel au foie. Il est l’organe de la colère intense refoulée, remontant à la petite enfance, en totale fusion avec la mère ou, au contraire, en totale opposition, empêchant l’enfant de développer sa propre identité. Le rein droit est l’expression de celui qui veut dominer mais qui a peur de dominer.",
+            "Rein gauche ou « rein génital »: il est l’organe du « moi génétique », de la génitalité qui nous relie à ceux qui nous ont donné la vie, à nos racines, au potentiel sexuel à transmettre la vie qu’on a reçue. Cela ne signifie pas l’impuissance ou la frigidité mais la peur de donner la vie.",
             "Le rein gauche est l’organe de la peur profonde, essentielle, au fond de soi, peur de la violence, de l’abandon, d’être tué, différente de la peur superficielle. Le rein gauche est lié à un refoulement important et à une inhibition du développement personnel. C’est aussi l’organe qui exprime la puissance profonde de l’être, d’où parfois la violence exprimée par une pulsion et au besoin de domination sur les autres."
           ]
         }
@@ -579,14 +579,14 @@ export const chapter16Fr: Chapter = {
         {
           "type": "figure",
           "src": "/chapter-16/cartographie/figure-16-02.png",
-          "caption": "Photo : Nerf vague X dans la moelle allongée",
+          "caption": "Photo : Nerf vague X dans la moelle allongée",
           "alt": "Repère podal du nerf vague X dans la moelle allongée",
           "orientation": "portrait"
         },
         {
           "type": "figure",
           "src": "/chapter-16/cartographie/figure-16-04.png",
-          "caption": "Photo : Nerf vague X dans le foramen jugulaire",
+          "caption": "Photo : Nerf vague X dans le foramen jugulaire",
           "alt": "Repère podal du nerf vague X dans le foramen jugulaire",
           "orientation": "portrait"
         },
@@ -599,7 +599,7 @@ export const chapter16Fr: Chapter = {
         {
           "type": "figure",
           "src": "/chapter-16/cartographie/figure-16-06.png",
-          "caption": "Photo : Chaîne ganglionnaire latéro-vertébrale thoracique",
+          "caption": "Photo : Chaîne ganglionnaire latéro-vertébrale thoracique",
           "alt": "Repère podal de la chaîne ganglionnaire latéro-vertébrale thoracique",
           "orientation": "landscape"
         },
@@ -619,7 +619,7 @@ export const chapter16Fr: Chapter = {
         {
           "type": "figure",
           "src": "/chapter-16/cartographie/figure-16-08.png",
-          "caption": "Photo : Chaîne ganglionnaire lombaire et piliers du diaphragme",
+          "caption": "Photo : Chaîne ganglionnaire lombaire et piliers du diaphragme",
           "alt": "Repère podal de la chaîne ganglionnaire lombaire et des piliers du diaphragme",
           "orientation": "landscape"
         },
@@ -638,7 +638,7 @@ export const chapter16Fr: Chapter = {
         {
           "type": "figure",
           "src": "/chapter-16/cartographie/figure-16-10.png",
-          "caption": "Cartographie : Rein et surrénale droits",
+          "caption": "Cartographie : Rein et surrénale droits",
           "alt": "Titre cartographique du rein et de la surrénale droits",
           "orientation": "landscape"
         },
@@ -655,14 +655,14 @@ export const chapter16Fr: Chapter = {
         {
           "type": "figure",
           "src": "/chapter-16/cartographie/figure-16-12.png",
-          "caption": "Photo : Rein gauche",
+          "caption": "Photo : Rein gauche",
           "alt": "Repère podal du rein gauche",
           "orientation": "portrait"
         },
         {
           "type": "figure",
           "src": "/chapter-16/cartographie/figure-16-14.png",
-          "caption": "Photo : Surrénale gauche",
+          "caption": "Photo : Surrénale gauche",
           "alt": "Repère podal de la surrénale gauche",
           "orientation": "portrait"
         },
@@ -679,7 +679,7 @@ export const chapter16Fr: Chapter = {
         {
           "type": "figure",
           "src": "/chapter-16/cartographie/figure-16-18.png",
-          "caption": "Photo : Plexus lombal, triangle de Jean-Louis Petit et quadrilatère de Grynfelt",
+          "caption": "Photo : Plexus lombal, triangle de Jean-Louis Petit et quadrilatère de Grynfelt",
           "alt": "Repère podal du plexus lombal, du triangle de Jean-Louis Petit et du quadrilatère de Grynfelt",
           "orientation": "landscape"
         },
@@ -702,7 +702,7 @@ export const chapter16Fr: Chapter = {
         {
           "type": "figure",
           "src": "/chapter-16/cartographie/figure-16-16.png",
-          "caption": "Photo : Manœuvre combinée du rein",
+          "caption": "Photo : Manœuvre combinée du rein",
           "alt": "Repère podal de la manœuvre combinée du rein par voies postérieure et antérieure",
           "orientation": "portrait"
         },

@@ -24,7 +24,7 @@ export const chapter4Fr: Chapter = {
         {
           "type": "xref",
           "label": "Voir la référence dans le chapitre 1",
-          "text": "Mobilité viscérale : définitions et moteurs",
+          "text": "Mobilité viscérale : définitions et moteurs",
           "href": "/lecture/chapitre-1?xrefBack=%2Flecture%2Fchapitre-4%23p-presentation-1&xrefBackLabel=Retour%20au%20chapitre%204#sec-mobilite-viscerale"
         },
         {
@@ -79,7 +79,7 @@ export const chapter4Fr: Chapter = {
             },
             {
               "label": "Sympathique",
-              "text": "il est dit ergotrophique: il prépare l’individu à l’action. Il réagit surtout aux situations nouvelles et urgentes, aux dangers, aux situations de stress, d’émotions négatives et de douleurs. Il prédomine le jour et dans les états de veille. Il est dit catabolique. C’est le système pour combattre ou fuir, le fameux « fight or flight » des anglo-saxons."
+              "text": "il est dit ergotrophique: il prépare l’individu à l’action. Il réagit surtout aux situations nouvelles et urgentes, aux dangers, aux situations de stress, d’émotions négatives et de douleurs. Il prédomine le jour et dans les états de veille. Il est dit catabolique. C’est le système pour combattre ou fuir, le fameux « fight or flight » des anglo-saxons."
             },
             {
               "label": "Viscères",
@@ -110,7 +110,7 @@ export const chapter4Fr: Chapter = {
         {
           "type": "xref",
           "label": "Voir la référence dans le chapitre 4",
-          "text": "Glomus carotidiens : chémorécepteur O2 / CO2 et équilibre acido-basique",
+          "text": "Glomus carotidiens : chémorécepteur O2 / CO2 et équilibre acido-basique",
           "href": "/lecture/chapitre-4?xrefBack=%2Flecture%2Fchapitre-4%23p-presentation-11&xrefBackLabel=Retour%20au%20chapitre%204#p-parasympathique-visceromoteur-8"
         },
         {
@@ -143,7 +143,7 @@ export const chapter4Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "Le SNA est une des clés de notre action. Fidèles à notre principe « priorité au nerf », c’est d’abord en portant notre action sur le SNA que nous restituons les fonctions viscéro-glandulaires. Les déséquilibres du SNA sont, le plus souvent, en amont des dysfonctions viscéro-glandulaires. Celles-ci ne sont que les conséquences d’un état de stress où le SNA n’a pas pu mettre en route les mécanismes d’adaptation-compensation nécessaires au retour à l’équilibre."
+          "text": "Le SNA est une des clés de notre action. Fidèles à notre principe « priorité au nerf », c’est d’abord en portant notre action sur le SNA que nous restituons les fonctions viscéro-glandulaires. Les déséquilibres du SNA sont, le plus souvent, en amont des dysfonctions viscéro-glandulaires. Celles-ci ne sont que les conséquences d’un état de stress où le SNA n’a pas pu mettre en route les mécanismes d’adaptation-compensation nécessaires au retour à l’équilibre."
         },
         {
           "type": "xref",
@@ -195,7 +195,7 @@ export const chapter4Fr: Chapter = {
         {
           "type": "xref",
           "label": "Voir la référence dans le chapitre 3",
-          "text": "Système nerveux central : cellules gliales et régulation cérébrale",
+          "text": "Système nerveux central : cellules gliales et régulation cérébrale",
           "href": "/lecture/chapitre-3?xrefBack=%2Flecture%2Fchapitre-4%23p-presentation-28&xrefBackLabel=Retour%20au%20chapitre%204#p-section-3-organisation-anatomique-84"
         },
         {
@@ -329,7 +329,7 @@ export const chapter4Fr: Chapter = {
         {
           "type": "xref",
           "label": "Voir la référence dans le chapitre 6",
-          "text": "Théorie polyvagale : branche ventrale, noyau ambigu et variabilité du rythme cardiaque",
+          "text": "Théorie polyvagale : branche ventrale, noyau ambigu et variabilité du rythme cardiaque",
           "href": "/lecture/chapitre-6?xrefBack=%2Flecture%2Fchapitre-4%23p-parasympathique-visceromoteur-5&xrefBackLabel=Retour%20au%20chapitre%204#p-theorie-polyvagale-12"
         },
         {
@@ -385,7 +385,7 @@ export const chapter4Fr: Chapter = {
         {
           "type": "xref",
           "label": "Voir la référence dans le chapitre 6",
-          "text": "Théorie polyvagale : malaise vagal",
+          "text": "Théorie polyvagale : malaise vagal",
           "href": "/lecture/chapitre-6?xrefBack=%2Flecture%2Fchapitre-4%23p-parasympathique-visceromoteur-9&xrefBackLabel=Retour%20au%20chapitre%204#p-theorie-polyvagale-6"
         },
         {
@@ -515,7 +515,7 @@ export const chapter4Fr: Chapter = {
             "Intéroception: la sensibilité viscérale, appelée intéroception, est le plus souvent inconsciente. Elle donne le sentiment vague de l’existence viscérale appelée cénesthésie.",
             "Les récepteurs viscéraux sont appelés intérocepteurs. Ils sont variés: mécanorécepteurs, thermorécepteurs, baro et chémorécepteurs.",
             "Les intérocepteurs parasympathiques: ils sont localisés dans les couches musculaires et la muqueuse des viscères.",
-            "Les intérocepteurs sympathiques: ils sont dans la séreuse viscérale. « Lorsque la sensibilité viscérale devient consciente, voire douloureuse, c’est qu’elle exprime une atteinte viscérale ou un trouble fonctionnel » (Dr. Guy Lazorthes). Les douleurs viscérales, à la différence des douleurs somatiques, sont vagues, imprécises, diffuses, souvent angoissantes. Elles sont véhiculées par le Sympathique.",
+            "Les intérocepteurs sympathiques: ils sont dans la séreuse viscérale. « Lorsque la sensibilité viscérale devient consciente, voire douloureuse, c’est qu’elle exprime une atteinte viscérale ou un trouble fonctionnel » (Dr. Guy Lazorthes). Les douleurs viscérales, à la différence des douleurs somatiques, sont vagues, imprécises, diffuses, souvent angoissantes. Elles sont véhiculées par le Sympathique.",
             "Voies du nerf vague viscéro-sensitif: les neurones, qui transportent la sensibilité des viscères, ont leurs corps cellulaires dans le ganglion inférieur du nerf vague, juste au-dessous du foramen jugulaire. Ils sont connectés à la formation réticulaire du tronc cérébral, à l’hypothalamus et au cerveau limbique qui élaborent la réponse motrice destinée aux noyaux moteurs dorsal et ambigu.",
             "Les fibres sensitives du nerf vague transitent depuis les viscères et le plexus cœliaque en sens inverse des fibres motrices, jusqu’au ganglion inférieur à la sortie du foramen jugulaire.",
             "Fonctions: Le nerf vague est impliqué dans de nombreuses fonctions:",
@@ -610,7 +610,7 @@ export const chapter4Fr: Chapter = {
           "type": "bullets",
           "items": [
             "Pathologies:",
-            "Traumatismes: les « coups du lapin », les traumatismes cervicaux, de la ceinture scapulaire et du membre supérieur, peuvent affecter le GCI.",
+            "Traumatismes: les « coups du lapin », les traumatismes cervicaux, de la ceinture scapulaire et du membre supérieur, peuvent affecter le GCI.",
             "La vascularisation de l’artère vertébrale est gravement compromise par la cervicarthose et les traumatismes crânio-cervicaux: vertige et instabilité, acouphènes et hypoacousie.",
             "La compression de CGI peut affecter aussi la vasomotricité de l’artère subclavière. Les conséquences sont: paresthésie du membre supérieur, syndrome du canal carpien, capsulite de l’épaule, tendinites récidivantes (épicondylite)",
             "Spasmes coronariens, précordialgies fonctionnelles, associées à des fixations de la 1ère côte gauche.",
@@ -636,7 +636,7 @@ export const chapter4Fr: Chapter = {
           "type": "bullets",
           "items": [
             "Pathologies:",
-            "Traumatismes: les « coups du lapin » affectent les muscles suboccipitaux, les attaches dure-mériennes et les artères vertébrales entourées par la dure-mère. Les conséquences sont: vertiges, syndrome post-traumatique, acouphènes céphalées, etc.",
+            "Traumatismes: les « coups du lapin » affectent les muscles suboccipitaux, les attaches dure-mériennes et les artères vertébrales entourées par la dure-mère. Les conséquences sont: vertiges, syndrome post-traumatique, acouphènes céphalées, etc.",
             "Là encore les anastomoses avec les nerfs crâniens IX, X, XI et XII et le parasympathique, rendent difficile la part à donner aux symptômes d’origine crânienne ou cervicale. Son riche territoire d’influence rend son traitement important pour la charnière crânio-cervicale.",
             "Chaîne ganglionnaire lombale: elle prolonge caudalement la chaîne ganglionnaire thoracique. Elle compte quatre ganglions.",
             "Elle passe entre les piliers du diaphragme et en avant du psoas sur la face antéro-latérale des corps vertébraux lombaires. Elle donne les nerfs splanchniques pour les plexus pré-vertébraux (plexus cœliaque et hypogastrique supérieur)."
@@ -713,12 +713,12 @@ export const chapter4Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "« Les interrelations médullaires entre les voies de la sensibilité viscérale et les voies de la sensibilité somatique sont à l’origine des douleurs rapportées et de contractures réflexes » (Pr Guy Lazortes). C’est ainsi qu’une douleur viscérale ne se projette pas toujours en regard du viscère atteint. Elle se projette sur un territoire cutané, appelé dermatome, correspondant au segment médullaire auquel aboutissent les voies sensitives du viscère."
+          "text": "« Les interrelations médullaires entre les voies de la sensibilité viscérale et les voies de la sensibilité somatique sont à l’origine des douleurs rapportées et de contractures réflexes » (Pr Guy Lazortes). C’est ainsi qu’une douleur viscérale ne se projette pas toujours en regard du viscère atteint. Elle se projette sur un territoire cutané, appelé dermatome, correspondant au segment médullaire auquel aboutissent les voies sensitives du viscère."
         },
         {
           "type": "xref",
           "label": "Voir la référence dans ce chapitre",
-          "text": "Intérêt clinique : myélomères et relations viscérales",
+          "text": "Intérêt clinique : myélomères et relations viscérales",
           "href": "/lecture/chapitre-4?xrefBack=%2Flecture%2Fchapitre-4%23p-sympathique-sensitif-3&xrefBackLabel=Retour%20au%20chapitre%204#p-sympathique-visceromoteur-2"
         },
         {
@@ -824,10 +824,10 @@ export const chapter4Fr: Chapter = {
             "Plexus de Meissner ou sous--muqueux: il est situé entre les muscles et la muqueuse intestinale. Il contrôle les sécrétions intestinales;",
             "Cellules de Caja: elles sont situées entre les couches musculaires longitudinales et circulaires de la paroi intestinale. Elles exercent un rôle de pace maker pour permettre une bonne coordination des ondes péristaltiques.",
             "Fonction",
-            "Le SNE est fait pour fonctionner de la façon la plus autonome possible, indépendamment des ordres du cerveau et de la moelle spinale. Ceux-ci délèguent et n’interviennent pas tant que les conditions physiologiques restent dans la normalité. Ils « reprennent la main » seulement en fonction des besoins ou dans des conditions anormales de stress ou dans les états émotionnels.",
+            "Le SNE est fait pour fonctionner de la façon la plus autonome possible, indépendamment des ordres du cerveau et de la moelle spinale. Ceux-ci délèguent et n’interviennent pas tant que les conditions physiologiques restent dans la normalité. Ils « reprennent la main » seulement en fonction des besoins ou dans des conditions anormales de stress ou dans les états émotionnels.",
             "L’intestin produit des neurotransmetteurs communs avec le cerveau: sérotonine, acétylcholine, noradrénaline, GABA.",
             "L’intestin produit 80% des cellules immunitaires.",
-            "Le SNE mérite bien son qualificatif de deuxième cerveau. Cette indépendance relative du SNE aurait permis de libérer l’encéphale de tâches qui l’accapareraient et qui l’empêcheraient d’exercer d’autres fonctions plus nobles. « Ce serait un des paramètres qui aurait permis le développement de l’intelligence » (Eric Marlien)."
+            "Le SNE mérite bien son qualificatif de deuxième cerveau. Cette indépendance relative du SNE aurait permis de libérer l’encéphale de tâches qui l’accapareraient et qui l’empêcheraient d’exercer d’autres fonctions plus nobles. « Ce serait un des paramètres qui aurait permis le développement de l’intelligence » (Eric Marlien)."
           ]
         }
       ]
@@ -861,7 +861,7 @@ export const chapter4Fr: Chapter = {
         {
           "type": "xref",
           "label": "Voir la référence dans le chapitre 5",
-          "text": "Syndrome général d’adaptation : phase d’alarme et adrénaline",
+          "text": "Syndrome général d’adaptation : phase d’alarme et adrénaline",
           "href": "/lecture/chapitre-5?xrefBack=%2Flecture%2Fchapitre-4%23p-glandes-surrenales-1&xrefBackLabel=Retour%20au%20chapitre%204#p-sga-7"
         }
       ]
@@ -1011,7 +1011,7 @@ export const chapter4Fr: Chapter = {
         {
           "type": "xref",
           "label": "Voir la référence dans le chapitre 8",
-          "text": "Zones réflexes podales du diaphragme : coupoles diaphragmatiques",
+          "text": "Zones réflexes podales du diaphragme : coupoles diaphragmatiques",
           "href": "/lecture/chapitre-8?xrefBack=%2Flecture%2Fchapitre-4%23p-zones-reflexes-podales-22&xrefBackLabel=Retour%20au%20chapitre%204#p-zones-reflexes-podales-5"
         },
         {
@@ -1271,7 +1271,7 @@ const reflexFigure = (
 ): ChapterBlock => ({
   type: "figure",
   src: `/chapter-4/cartographie/figure-4-${n}.png`,
-  caption: `${kind} : ${title}`,
+  caption: `${kind} : ${title}`,
   alt,
   orientation,
 })

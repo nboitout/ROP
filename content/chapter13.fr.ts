@@ -19,15 +19,15 @@ export const chapter13Fr: Chapter = {
         },
         {
           type: "para",
-          text: "La rate fait partie du système réticulo-histiocytaire, anciennement appelé système réticulo-endothélial. Elle participe principalement à :"
+          text: "La rate fait partie du système réticulo-histiocytaire, anciennement appelé système réticulo-endothélial. Elle participe principalement à :"
         },
         {
           type: "bullets",
           items: [
-            "la phagocytose et l’épuration des cellules sanguines usées et des particules étrangères ;",
-            "la défense contre les infections, par son rôle immunitaire ;",
-            "la réserve et la filtration sanguines, notamment au niveau de la pulpe rouge ;",
-            "l’hématopoïèse pendant la vie fœtale ; chez l’adulte, cette fonction ne relève plus du fonctionnement courant et ne réapparaît que dans certains contextes pathologiques d’hématopoïèse extra-médullaire."
+            "la phagocytose et l’épuration des cellules sanguines usées et des particules étrangères ;",
+            "la défense contre les infections, par son rôle immunitaire ;",
+            "la réserve et la filtration sanguines, notamment au niveau de la pulpe rouge ;",
+            "l’hématopoïèse pendant la vie fœtale ; chez l’adulte, cette fonction ne relève plus du fonctionnement courant et ne réapparaît que dans certains contextes pathologiques d’hématopoïèse extra-médullaire."
           ]
         }
       ]
@@ -61,14 +61,14 @@ export const chapter13Fr: Chapter = {
         {
           type: "bullets",
           items: [
-            "Face latérale ou diaphragmatique : convexe, elle est moulée sur le diaphragme.",
-            "Face médiale ou viscérale : concave, elle contient le hile et présente deux versants.",
-            "Versant antérieur : il est en rapport avec la grande courbure de l’estomac.",
-            "Versant postérieur : il est en rapport avec le rein gauche.",
-            "Bord antérieur : il est crénelé par plusieurs échancrures.",
-            "Bord médial : il sépare la face médiale en ses deux versants.",
-            "Pôle supérieur : il est en rapport avec la jonction œsophago-cardio-tubérositaire de l’estomac.",
-            "Pôle inférieur : il est en rapport avec l’angle splénique du côlon."
+            "Face latérale ou diaphragmatique : convexe, elle est moulée sur le diaphragme.",
+            "Face médiale ou viscérale : concave, elle contient le hile et présente deux versants.",
+            "Versant antérieur : il est en rapport avec la grande courbure de l’estomac.",
+            "Versant postérieur : il est en rapport avec le rein gauche.",
+            "Bord antérieur : il est crénelé par plusieurs échancrures.",
+            "Bord médial : il sépare la face médiale en ses deux versants.",
+            "Pôle supérieur : il est en rapport avec la jonction œsophago-cardio-tubérositaire de l’estomac.",
+            "Pôle inférieur : il est en rapport avec l’angle splénique du côlon."
           ]
         },
         {
@@ -83,8 +83,8 @@ export const chapter13Fr: Chapter = {
         {
           type: "bullets",
           items: [
-            "Pulpe blanche : elle est composée de tissu lymphoïde et participe à l’immunité.",
-            "Pulpe rouge : elle est impliquée dans la destruction des hématies usées ou malformées et des plaquettes détériorées."
+            "Pulpe blanche : elle est composée de tissu lymphoïde et participe à l’immunité.",
+            "Pulpe rouge : elle est impliquée dans la destruction des hématies usées ou malformées et des plaquettes détériorées."
           ]
         },
         {
@@ -93,16 +93,16 @@ export const chapter13Fr: Chapter = {
         },
         {
           type: "para",
-          text: "La rate est peu fixée par des replis péritonéaux, ce qui lui permet de suivre les mouvements du diaphragme. Ces replis la relient :"
+          text: "La rate est peu fixée par des replis péritonéaux, ce qui lui permet de suivre les mouvements du diaphragme. Ces replis la relient :"
         },
         {
           type: "bullets",
           items: [
-            "à l’estomac, par le ligament gastrosplénique, antérieur au hile de la rate ;",
-            "au pancréas, par le ligament pancréaticosplénique, postérieur au hile de la rate ; la queue du pancréas se situe entre ces deux ligaments ;",
-            "au côlon, par le ligament phrénocolique, qui sert de plancher à la rate ;",
-            "au diaphragme, par le ligament phrénosplénique ou ligament suspenseur de la rate, qui s’opposé au glissement de la rate vers le bas ;",
-            "au rein gauche, par le ligament splénorénal ;",
+            "à l’estomac, par le ligament gastrosplénique, antérieur au hile de la rate ;",
+            "au pancréas, par le ligament pancréaticosplénique, postérieur au hile de la rate ; la queue du pancréas se situe entre ces deux ligaments ;",
+            "au côlon, par le ligament phrénocolique, qui sert de plancher à la rate ;",
+            "au diaphragme, par le ligament phrénosplénique ou ligament suspenseur de la rate, qui s’opposé au glissement de la rate vers le bas ;",
+            "au rein gauche, par le ligament splénorénal ;",
             "au pédicule vasculaire de la rate, qui participe également à son attache."
           ]
         }
@@ -115,11 +115,11 @@ export const chapter13Fr: Chapter = {
         {
           type: "bullets",
           items: [
-            "Dorsalement : le diaphragme.",
-            "Ventralement : l’estomac.",
-            "Caudalement : l’angle splénique gauche.",
-            "Médialement : le rein gauche.",
-            "Au niveau du hile : la queue du pancréas."
+            "Dorsalement : le diaphragme.",
+            "Ventralement : l’estomac.",
+            "Caudalement : l’angle splénique gauche.",
+            "Médialement : le rein gauche.",
+            "Au niveau du hile : la queue du pancréas."
           ]
         }
       ]
@@ -160,7 +160,7 @@ export const chapter13Fr: Chapter = {
         },
         {
           type: "para",
-          text: "Dans la lecture clinique ROP, l’intérêt pratique est de ne pas isoler la rate de son étage neuro-végétatif : dernières vertèbres thoraciques, articulations costo-transversaires, plexus cœliaque, diaphragme gauche et pédicule splénique forment une même zone d’écoute. La composante vagale est décrite de façon plus indirecte selon les sources ; en pratique, le plexus cœliaque reste le repère central."
+          text: "Dans la lecture clinique ROP, l’intérêt pratique est de ne pas isoler la rate de son étage neuro-végétatif : dernières vertèbres thoraciques, articulations costo-transversaires, plexus cœliaque, diaphragme gauche et pédicule splénique forment une même zone d’écoute. La composante vagale est décrite de façon plus indirecte selon les sources ; en pratique, le plexus cœliaque reste le repère central."
         }
       ]
     },
@@ -175,21 +175,21 @@ export const chapter13Fr: Chapter = {
         {
           type: "bullets",
           items: [
-            "Pulpe blanche : elle est composée de cellules lymphoïdes impliquées dans la lutte contre les infections, notamment les lymphocytes T et B, ainsi que les macrophages, qui phagocytent les débris cellulaires et les agents pathogènes.",
-            "Pulpe rouge : elle récupère le fer, qui sera dirigé vers le foie puis réutilisé par la moelle osseuse pour la fabrication de l’hémoglobine. Elle participe à la filtration du sang et à l’élimination des hématies âgées ou altérées."
+            "Pulpe blanche : elle est composée de cellules lymphoïdes impliquées dans la lutte contre les infections, notamment les lymphocytes T et B, ainsi que les macrophages, qui phagocytent les débris cellulaires et les agents pathogènes.",
+            "Pulpe rouge : elle récupère le fer, qui sera dirigé vers le foie puis réutilisé par la moelle osseuse pour la fabrication de l’hémoglobine. Elle participe à la filtration du sang et à l’élimination des hématies âgées ou altérées."
           ]
         },
         {
           type: "para",
-          text: "La rate est impliquée dans plusieurs grandes fonctions :"
+          text: "La rate est impliquée dans plusieurs grandes fonctions :"
         },
         {
           type: "bullets",
           items: [
-            "immunité et phagocytose des agents pathogènes ;",
-            "hémolyse physiologique par filtration et élimination des débris cellulaires, des hématies usées, des corps étrangers et des toxines ;",
-            "réserve et régulation d’une partie des éléments figurés du sang, notamment des plaquettes ;",
-            "hématopoïèse pendant la vie fœtale ; chez l’adulte, cette fonction ne constitue pas une fonction splénique normale de premier plan."
+            "immunité et phagocytose des agents pathogènes ;",
+            "hémolyse physiologique par filtration et élimination des débris cellulaires, des hématies usées, des corps étrangers et des toxines ;",
+            "réserve et régulation d’une partie des éléments figurés du sang, notamment des plaquettes ;",
+            "hématopoïèse pendant la vie fœtale ; chez l’adulte, cette fonction ne constitue pas une fonction splénique normale de premier plan."
           ]
         }
       ]
@@ -212,30 +212,30 @@ export const chapter13Fr: Chapter = {
         },
         {
           type: "para",
-          text: "Les principales causes ou situations associées à une splénomégalie peuvent être regroupées en plusieurs familles :"
+          text: "Les principales causes ou situations associées à une splénomégalie peuvent être regroupées en plusieurs familles :"
         },
         {
           type: "bullets",
           items: [
-            "causes infectieuses : mononucléose à virus d’Epstein-Barr, hépatites virales, parasitoses ;",
-            "causes hépatiques et portales : maladie hépatique chronique, hypertension portale, alcoolisme lorsqu’il s’intègre dans une atteinte hépatique ;",
-            "causes hématologiques : anémies hémolytiques, leucémies, lymphomes, dont certains lymphomes de l’adolescent ;",
-            "causes inflammatoires, immunitaires ou infiltratives, selon le contexte clinique ;",
+            "causes infectieuses : mononucléose à virus d’Epstein-Barr, hépatites virales, parasitoses ;",
+            "causes hépatiques et portales : maladie hépatique chronique, hypertension portale, alcoolisme lorsqu’il s’intègre dans une atteinte hépatique ;",
+            "causes hématologiques : anémies hémolytiques, leucémies, lymphomes, dont certains lymphomes de l’adolescent ;",
+            "causes inflammatoires, immunitaires ou infiltratives, selon le contexte clinique ;",
             "hépatomégalie ou atteinte du système porte associée."
           ]
         },
         {
           type: "para",
-          text: "Plusieurs signes d’alerte doivent renforcer l’orientation médicale :"
+          text: "Plusieurs signes d’alerte doivent renforcer l’orientation médicale :"
         },
         {
           type: "bullets",
           items: [
-            "ganglions rétro-claviculaires ou latéro-claviculaires douloureux ;",
-            "pâleur intense, lèvres décolorées, fatigue inhabituelle ;",
-            "sueurs nocturnes non digestives ;",
-            "pétéchies ou signes de saignement ;",
-            "douleurs spontanées costales ou dorsales chez l’enfant ou l’adolescent après des efforts bénins ;",
+            "ganglions rétro-claviculaires ou latéro-claviculaires douloureux ;",
+            "pâleur intense, lèvres décolorées, fatigue inhabituelle ;",
+            "sueurs nocturnes non digestives ;",
+            "pétéchies ou signes de saignement ;",
+            "douleurs spontanées costales ou dorsales chez l’enfant ou l’adolescent après des efforts bénins ;",
             "cervicalgies de l’enfant ou de l’adolescent associées à un contexte infectieux ou à des signes généraux."
           ]
         },
@@ -254,8 +254,8 @@ export const chapter13Fr: Chapter = {
         {
           type: "bullets",
           items: [
-            "Traumatismes directs : fractures costales inférieures gauches ; choc abdominal par coup de poing, guidon de vélo ou de moto, ou volant de voiture.",
-            "Traumatismes indirects : accidents de voiture, chutes, mécanismes de décélération ou forces collisionnelles peuvent entraîner une lésion ou une rupture splénique, même en l’absence de plaie apparente ou de choc très localisé."
+            "Traumatismes directs : fractures costales inférieures gauches ; choc abdominal par coup de poing, guidon de vélo ou de moto, ou volant de voiture.",
+            "Traumatismes indirects : accidents de voiture, chutes, mécanismes de décélération ou forces collisionnelles peuvent entraîner une lésion ou une rupture splénique, même en l’absence de plaie apparente ou de choc très localisé."
           ]
         },
         {
@@ -268,20 +268,20 @@ export const chapter13Fr: Chapter = {
         },
         {
           type: "para",
-          text: "La mononucléose, parfois appelée « maladie du baiser » parce qu’elle peut être transmise par la salive, est provoquée par le virus d’Epstein-Barr, de la même famille que le virus de l’herpès. Elle touche particulièrement les adolescents et les jeunes adultes."
+          text: "La mononucléose, parfois appelée « maladie du baiser » parce qu’elle peut être transmise par la salive, est provoquée par le virus d’Epstein-Barr, de la même famille que le virus de l’herpès. Elle touche particulièrement les adolescents et les jeunes adultes."
         },
         {
           type: "para",
-          text: "Les symptômes peuvent comprendre :"
+          text: "Les symptômes peuvent comprendre :"
         },
         {
           type: "bullets",
           items: [
-            "maux de gorge et amygdalite ;",
-            "fatigue intense ;",
-            "hypotension systolique ;",
-            "présence ganglionnaire ;",
-            "dorsalgies provoquées sans activité particulière, y compris la nuit ;",
+            "maux de gorge et amygdalite ;",
+            "fatigue intense ;",
+            "hypotension systolique ;",
+            "présence ganglionnaire ;",
+            "dorsalgies provoquées sans activité particulière, y compris la nuit ;",
             "douleur à la compression des côtes inférieures gauches et points de côté gauches à l’effort."
           ]
         },
@@ -291,22 +291,22 @@ export const chapter13Fr: Chapter = {
         },
         {
           type: "sub",
-          text: "Indications : troubles fonctionnels"
+          text: "Indications : troubles fonctionnels"
         },
         {
           type: "para",
-          text: "La prudence s’impose, mais l’action à distance permet d’éviter une intervention agressive sur un organe fragile. Les indications fonctionnelles évoquées dans le cadre ROP comprennent :"
+          text: "La prudence s’impose, mais l’action à distance permet d’éviter une intervention agressive sur un organe fragile. Les indications fonctionnelles évoquées dans le cadre ROP comprennent :"
         },
         {
           type: "bullets",
           items: [
-            "déficit immunitaire avec infections à répétition de la sphère ORL, en particulier chez les adolescents ;",
-            "grande fatigue ;",
-            "suites d’hépatite ;",
-            "diarrhée ;",
-            "suites de mononucléose chez les adolescents ;",
-            "séquelles de traumatisme thoraco-abdominal, de fractures costales gauches inférieures ou de whiplash ;",
-            "faiblesse musculaire avec risque d’entorse, membres lourds, surtout au niveau des jambes ;",
+            "déficit immunitaire avec infections à répétition de la sphère ORL, en particulier chez les adolescents ;",
+            "grande fatigue ;",
+            "suites d’hépatite ;",
+            "diarrhée ;",
+            "suites de mononucléose chez les adolescents ;",
+            "séquelles de traumatisme thoraco-abdominal, de fractures costales gauches inférieures ou de whiplash ;",
+            "faiblesse musculaire avec risque d’entorse, membres lourds, surtout au niveau des jambes ;",
             "point de côté gauche déclenché par une activité physique chez les adolescents."
           ]
         }
@@ -322,7 +322,7 @@ export const chapter13Fr: Chapter = {
         },
         {
           type: "para",
-          text: "La rate est suspendue sous la coupole diaphragmatique gauche et suit les mouvements respiratoires. Dans une lecture clinique ROP, ses tensions peuvent donc être recherchées dans le thorax postéro-inférieur gauche, le diaphragme gauche, l’angle splénique du côlon et la charnière costo-vertébrale basse. Cette relation ne constitue pas un diagnostic d’organe ; elle sert surtout de fil conducteur lorsque des douleurs costales gauches, une fatigue post-infectieuse ou un point de côté gauche apparaissent sans cause mécanique évidente."
+          text: "La rate est suspendue sous la coupole diaphragmatique gauche et suit les mouvements respiratoires. Dans une lecture clinique ROP, ses tensions peuvent donc être recherchées dans le thorax postéro-inférieur gauche, le diaphragme gauche, l’angle splénique du côlon et la charnière costo-vertébrale basse. Cette relation ne constitue pas un diagnostic d’organe ; elle sert surtout de fil conducteur lorsque des douleurs costales gauches, une fatigue post-infectieuse ou un point de côté gauche apparaissent sans cause mécanique évidente."
         }
       ]
     },
@@ -337,7 +337,7 @@ export const chapter13Fr: Chapter = {
         {
           type: "xref",
           label: "Voir la référence dans le chapitre 12",
-          text: "Pancréas : relations viscéro-émotionnelles",
+          text: "Pancréas : relations viscéro-émotionnelles",
           href: "/lecture/chapitre-12?xrefBack=%2Flecture%2Fchapitre-13%23p-relations-viscero-emotionnelles-0&xrefBackLabel=Retour%20au%20chapitre%2013#p-relations-viscero-emotionnelles-0"
         },
         {
@@ -346,7 +346,7 @@ export const chapter13Fr: Chapter = {
         },
         {
           type: "para",
-          text: "Cette description ne doit pas être lue comme un diagnostic psychologique. Elle indique plutôt une qualité d’écoute : fatigue profonde, repli, chagrin ancien, remords ou sentiment de porter une charge excessive. Dans ce cadre, le travail ROP cherche à accompagner la personne avec prudence, sans réduire son histoire à une typologie viscérale."
+          text: "Cette description ne doit pas être lue comme un diagnostic psychologique. Elle indique plutôt une qualité d’écoute : fatigue profonde, repli, chagrin ancien, remords ou sentiment de porter une charge excessive. Dans ce cadre, le travail ROP cherche à accompagner la personne avec prudence, sans réduire son histoire à une typologie viscérale."
         }
       ]
     },
@@ -387,20 +387,20 @@ export const chapter13Fr: Chapter = {
         {
           type: "bullets",
           items: [
-            "Organes reliés à la rate par des ligaments : estomac, pancréas, rein gauche et racine du méso-côlon transverse.",
-            "Rate : repérer d’abord l’angle splénique du côlon, plus haut que l’angle hépatique du côlon, médial et supérieur à la styloïde du 5e métatarse gauche. La zone réflexe est posée sur l’angle splénique, sous l’extrémité gauche de l’hémi-coupole diaphragmatique gauche.",
-            "Foie : travailler le lobe gauche et l’ensemble du foie afin d’agir sur le système porte et d’améliorer la circulation de la veine splénique.",
-            "Thorax postéro-inférieur gauche : diaphragme, angle splénique du côlon, 9e, 10e et 11e côtes."
+            "Organes reliés à la rate par des ligaments : estomac, pancréas, rein gauche et racine du méso-côlon transverse.",
+            "Rate : repérer d’abord l’angle splénique du côlon, plus haut que l’angle hépatique du côlon, médial et supérieur à la styloïde du 5e métatarse gauche. La zone réflexe est posée sur l’angle splénique, sous l’extrémité gauche de l’hémi-coupole diaphragmatique gauche.",
+            "Foie : travailler le lobe gauche et l’ensemble du foie afin d’agir sur le système porte et d’améliorer la circulation de la veine splénique.",
+            "Thorax postéro-inférieur gauche : diaphragme, angle splénique du côlon, 9e, 10e et 11e côtes."
           ]
         },
         {
           type: "sub",
-          text: "Complément ROP : système limbique"
+          text: "Complément ROP : système limbique"
         },
         {
           type: "bullets",
           items: [
-            "Balance cerveau limbique-rate : écoute-induction, un pouce sur la rate, l’autre pouce sur le cerveau limbique."
+            "Balance cerveau limbique-rate : écoute-induction, un pouce sur la rate, l’autre pouce sur le cerveau limbique."
           ]
         }
       ]
@@ -423,7 +423,7 @@ const reflexFigure = (
 ): ChapterBlock => ({
   type: "figure",
   src: `/chapter-13/cartographie/figure-13-${n}.png`,
-  caption: `Photo : ${title}`,
+  caption: `Photo : ${title}`,
   alt,
   orientation,
 })

@@ -11,13 +11,13 @@ export const chapter2Fr: Chapter = {
       "blocks": [
         {
           "type": "para",
-          "text": "Voici quelques principes qui guident un traitement par la ROP :"
+          "text": "Voici quelques principes qui guident un traitement par la ROP :"
         },
         {
           "type": "bullets",
           "items": [
             "Exclusivement manuelle avec la pulpe du pouce ou l’inter-phalangienne proximale de l’index, sans adjonction d’huile ou crème.",
-            "Pression : elle est exercée au niveau des zones réflexes, a pour but de solliciter les mécanocepteurs de la couche épidermo-dermique des zones occipitales et podales."
+            "Pression : elle est exercée au niveau des zones réflexes, a pour but de solliciter les mécanocepteurs de la couche épidermo-dermique des zones occipitales et podales."
           ]
         },
         {
@@ -26,7 +26,7 @@ export const chapter2Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "Ces mécanocepteurs sont les suivants :"
+          "text": "Ces mécanocepteurs sont les suivants :"
         },
         {
           "type": "leadBullets",
@@ -48,15 +48,15 @@ export const chapter2Fr: Chapter = {
         {
           "type": "lead",
           "label": "Système lemniscal",
-          "text": "C’est un faisceau de fibres afférentes de la moelle épinière. Il est volontairement choisi dans notre technique en raison de ses propriétés :"
+          "text": "C’est un faisceau de fibres afférentes de la moelle épinière. Il est volontairement choisi dans notre technique en raison de ses propriétés :"
         },
         {
           "type": "bullets",
           "items": [
-            "Il véhicule la sensibilité fine et non douloureuse ;",
-            "La rapidité et la précision de la transmission des influx nerveux qu’il véhicule ;",
-            "Sa riche somatotopie au niveau du cerveau ;",
-            "Son action antalgique : il exerce un contrôle de la douleur véhiculée par le système extra-lemniscal. Cette propriété antalgique est expliquée par la théorie du gate control : la propagation des influx nerveux du système lemniscal parvient plus rapidement à la corne postérieure médullaire et ferme la porte aux influx de la douleur plus lents."
+            "Il véhicule la sensibilité fine et non douloureuse ;",
+            "La rapidité et la précision de la transmission des influx nerveux qu’il véhicule ;",
+            "Sa riche somatotopie au niveau du cerveau ;",
+            "Son action antalgique : il exerce un contrôle de la douleur véhiculée par le système extra-lemniscal. Cette propriété antalgique est expliquée par la théorie du gate control : la propagation des influx nerveux du système lemniscal parvient plus rapidement à la corne postérieure médullaire et ferme la porte aux influx de la douleur plus lents."
           ]
         },
         {
@@ -75,7 +75,7 @@ export const chapter2Fr: Chapter = {
           "items": [
             {
               "label": "Temps du diagnostic textural",
-              "text": "C’est la recherche des zones réflexes caractérisées par une modification de la texture de la peau occipitale et podale : rugosité, densification, perte de glissement, sensation de cristaux. Elles doivent confirmer le diagnostic obtenu à l’issue de l’examen clinique."
+              "text": "C’est la recherche des zones réflexes caractérisées par une modification de la texture de la peau occipitale et podale : rugosité, densification, perte de glissement, sensation de cristaux. Elles doivent confirmer le diagnostic obtenu à l’issue de l’examen clinique."
             },
             {
               "label": "Temps thérapeutique",
@@ -130,7 +130,7 @@ export const chapter2Fr: Chapter = {
       "blocks": [
         {
           "type": "para",
-          "text": "Il n’existe pas de protocole immuable : cela va à l’encontre du concept holistique. Ce sont les tests qui donnent la priorité. Voici les grandes lignes d’un plan de traitement, qui ne doivent pas servir à enfermer le patient dans un protocole loin de la réalité :"
+          "text": "Il n’existe pas de protocole immuable : cela va à l’encontre du concept holistique. Ce sont les tests qui donnent la priorité. Voici les grandes lignes d’un plan de traitement, qui ne doivent pas servir à enfermer le patient dans un protocole loin de la réalité :"
         },
         {
           "type": "leadBullets",
@@ -161,11 +161,11 @@ export const chapter2Fr: Chapter = {
           "type": "rop",
           "body": [
             "Zones réflexes occipitales",
-            "1. Syndrome général d’adaptation — soutenir la régulation neuro-végétative et l’adaptation générale avant de traiter le local :",
-            "· MRP : occiput-C1-C2, nerfs trijumeau V, vague X et hypoglosse XII, faux du cerveau et du cervelet, 2e vertèbre sacrée S2, base et voûte crâniennes",
-            "· Circulation du liquide cérébro-spinal : système veineux (foramen jugulaire, respiration profonde), compression du IVe ventricule, synchronisation SSB-S2",
+            "1. Syndrome général d’adaptation — soutenir la régulation neuro-végétative et l’adaptation générale avant de traiter le local :",
+            "· MRP : occiput-C1-C2, nerfs trijumeau V, vague X et hypoglosse XII, faux du cerveau et du cervelet, 2e vertèbre sacrée S2, base et voûte crâniennes",
+            "· Circulation du liquide cérébro-spinal : système veineux (foramen jugulaire, respiration profonde), compression du IVe ventricule, synchronisation SSB-S2",
             "· Diencéphale, tronc cérébral, hypophyse",
-            "· Nerf vague (viscères du territoire cervico-thoraco-abdominal) : foramen magnum, foramen jugulaire, sinus carotidien, hiatus œsophagien",
+            "· Nerf vague (viscères du territoire cervico-thoraco-abdominal) : foramen magnum, foramen jugulaire, sinus carotidien, hiatus œsophagien",
             "· Parasympathique pelvien (viscères du territoire pelvien et partie distale du côlon)",
             "· Colonne vertébrale, articulations costo-transversaires, innervation sympathique (chaîne ganglionnaire latéro-vertébrale thoracique)",
             "· Plexus pré-vertébral"
@@ -174,7 +174,7 @@ export const chapter2Fr: Chapter = {
         {
           "type": "rop",
           "body": [
-            "2. Syndrome locorégional — traiter les boucles mécaniques et neuro-végétatives liées à la région symptomatique :",
+            "2. Syndrome locorégional — traiter les boucles mécaniques et neuro-végétatives liées à la région symptomatique :",
             "· Plexus et nerfs du système nerveux somatique (relations viscéro-somatiques)",
             "· Système viscéral",
             "· Cavité abdominale ou pelvienne selon le système viscéral"
@@ -183,9 +183,9 @@ export const chapter2Fr: Chapter = {
         {
           "type": "rop",
           "body": [
-            "3. Système limbique — intégrer la dimension stress / émotion / mémoire corporelle, susceptible d’entréténir des boucles végétatives et tissulaires :",
+            "3. Système limbique — intégrer la dimension stress / émotion / mémoire corporelle, susceptible d’entréténir des boucles végétatives et tissulaires :",
             "· Amygdale, hippocampe, insula",
-            "· Balance cerveau limbique–viscère en dysfonction : écoute-induction, un pouce sur le viscère en dysfonction dominante, l’autre pouce sur le cerveau limbique"
+            "· Balance cerveau limbique–viscère en dysfonction : écoute-induction, un pouce sur le viscère en dysfonction dominante, l’autre pouce sur le cerveau limbique"
           ]
         }
       ]
@@ -205,11 +205,11 @@ export const chapter2Fr: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Aucun antécédent de traumatisme connu ;",
-            "Les douleurs lombo-sciatiques sont majorées au moment des règles ;",
-            "Une insuffisance urinaire d’effort est révélée lors de l’anamnèse ;",
-            "L’accouchement a été long (unipare) ;",
-            "L’examen gynécologique ne révèle rien. La radiographie montre un léger pincement L5-S1 ne refoulant pas la racine S1 ;",
+            "Aucun antécédent de traumatisme connu ;",
+            "Les douleurs lombo-sciatiques sont majorées au moment des règles ;",
+            "Une insuffisance urinaire d’effort est révélée lors de l’anamnèse ;",
+            "L’accouchement a été long (unipare) ;",
+            "L’examen gynécologique ne révèle rien. La radiographie montre un léger pincement L5-S1 ne refoulant pas la racine S1 ;",
             "La douleur l’affecte moralement car elle exerce une profession indépendante qu’elle voudrait reprendre rapidement."
           ]
         },
@@ -234,14 +234,14 @@ export const chapter2Fr: Chapter = {
         {
           "type": "lead",
           "label": "Syndrome locorégional",
-          "text": "La sciatalgie gauche est en relation avec une malposition de l’utérus dévié à gauche par tension du ligament utéro-sacré gauche. En conséquence :"
+          "text": "La sciatalgie gauche est en relation avec une malposition de l’utérus dévié à gauche par tension du ligament utéro-sacré gauche. En conséquence :"
         },
         {
           "type": "bullets",
           "items": [
-            "Fixation partielle de l’articulation sacro-iliaque gauche ;",
-            "Fibrose du muscle piriforme gauche gênant le nerf sciatique ;",
-            "L’utérus dévié entraîne avec lui la vessie et le sacrum ;",
+            "Fixation partielle de l’articulation sacro-iliaque gauche ;",
+            "Fibrose du muscle piriforme gauche gênant le nerf sciatique ;",
+            "L’utérus dévié entraîne avec lui la vessie et le sacrum ;",
             "La fixation sacro-coccygienne fait perdre les qualités d’élasticité et de contractilité du plancher périnéal."
           ]
         },
@@ -268,9 +268,9 @@ export const chapter2Fr: Chapter = {
           "type": "bullets",
           "items": [
             "1. Zones réflexes occipitales",
-            "2. Syndrome général d’adaptation : MRP, diencéphale, tronc cérébral, hypophyse, surrénales, colonne vertébrale, foie, rein gauche",
-            "3. Syndrome locorégional : région cervico-isthmique de l’utérus, muscle piriforme, ligaments sacro-tubéral et sacro-spinal, nerf pudendal, articulations sacro-coccygienne et sacro-iliaque, plexus sacré et sciatique gauches",
-            "4. Système limbique : amygdale, hippocampe, insula"
+            "2. Syndrome général d’adaptation : MRP, diencéphale, tronc cérébral, hypophyse, surrénales, colonne vertébrale, foie, rein gauche",
+            "3. Syndrome locorégional : région cervico-isthmique de l’utérus, muscle piriforme, ligaments sacro-tubéral et sacro-spinal, nerf pudendal, articulations sacro-coccygienne et sacro-iliaque, plexus sacré et sciatique gauches",
+            "4. Système limbique : amygdale, hippocampe, insula"
           ]
         }
       ]
@@ -289,20 +289,20 @@ export const chapter2Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "Nous détaillerons les contre-indications pour chaque viscère, mais voici déjà les symptômes qui doivent éveiller nos soupçons :"
+          "text": "Nous détaillerons les contre-indications pour chaque viscère, mais voici déjà les symptômes qui doivent éveiller nos soupçons :"
         },
         {
           "type": "bullets",
           "items": [
-            "Douleurs non mécaniques, aggravées en première partie de nuit ;",
-            "Douleur thoracique atypique, dyspnée, malaise ;",
-            "Sang dans les urines / selles ;",
-            "Fièvre, maladies infectieuses ;",
-            "Amaigrissement inexpliqué ;",
-            "Risque de migration d’un thrombus ;",
-            "Pâleur et fatigue importante ;",
-            "Déficit neurologique : troubles sphinctériens, troubles sensitifs progressifs ;",
-            "Angoisse, peur de mourir ;",
+            "Douleurs non mécaniques, aggravées en première partie de nuit ;",
+            "Douleur thoracique atypique, dyspnée, malaise ;",
+            "Sang dans les urines / selles ;",
+            "Fièvre, maladies infectieuses ;",
+            "Amaigrissement inexpliqué ;",
+            "Risque de migration d’un thrombus ;",
+            "Pâleur et fatigue importante ;",
+            "Déficit neurologique : troubles sphinctériens, troubles sensitifs progressifs ;",
+            "Angoisse, peur de mourir ;",
             "Aveu d’impuissance face à un cas clinique qu’on ne comprend pas."
           ]
         },
@@ -316,7 +316,7 @@ export const chapter2Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "Exemple : après une chirurgie abdominale, notre action réflexe diminue les spasmes des muscles lisses des viscères, restaure le transit intestinal, diminue les médicaments de confort. En agissant à distance par voie réflexe, loin du viscère dysfonctionnel, les effets iatrogènes sont limités : c’est une sécurité pour le patient et pour le praticien."
+          "text": "Exemple : après une chirurgie abdominale, notre action réflexe diminue les spasmes des muscles lisses des viscères, restaure le transit intestinal, diminue les médicaments de confort. En agissant à distance par voie réflexe, loin du viscère dysfonctionnel, les effets iatrogènes sont limités : c’est une sécurité pour le patient et pour le praticien."
         }
       ]
     },
@@ -338,17 +338,17 @@ export const chapter2Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "Nous détaillerons les symptômes fonctionnels pour chaque viscère. Les types de symptômes fonctionnels les plus fréquents rencontrés sont :"
+          "text": "Nous détaillerons les symptômes fonctionnels pour chaque viscère. Les types de symptômes fonctionnels les plus fréquents rencontrés sont :"
         },
         {
           "type": "bullets",
           "items": [
-            "Douleurs musculo-squelettiques ;",
-            "Séquelles de traumatismes ostéo-musculo-articulaires ;",
-            "Séquelles de traumatismes de nerfs spinaux et crâniens ;",
-            "Dysfonctions viscérales liées à des fixations tissulaires et des boucles neuro-végétatives ;",
-            "Troubles viscéro-somatiques et somato-viscéraux ;",
-            "Régulation neuro-végétative ;",
+            "Douleurs musculo-squelettiques ;",
+            "Séquelles de traumatismes ostéo-musculo-articulaires ;",
+            "Séquelles de traumatismes de nerfs spinaux et crâniens ;",
+            "Dysfonctions viscérales liées à des fixations tissulaires et des boucles neuro-végétatives ;",
+            "Troubles viscéro-somatiques et somato-viscéraux ;",
+            "Régulation neuro-végétative ;",
             "Stress émotionnel, anxiété."
           ]
         }
@@ -360,14 +360,14 @@ export const chapter2Fr: Chapter = {
       "blocks": [
         {
           "type": "para",
-          "text": "Nous souffrons de constater des résultats cliniques sans pouvoir les objectiver. Notre action à des effets locaux et généraux :"
+          "text": "Nous souffrons de constater des résultats cliniques sans pouvoir les objectiver. Notre action à des effets locaux et généraux :"
         },
         {
           "type": "bullets",
           "items": [
-            "Action antalgique ;",
-            "Rééquilibrage neuro-végétatif : bascule vers des signes parasympathiques (calme, bâillement, somnolence, détente marquée, besoin de repos) ;",
-            "Amélioration du transit, de la diurèse et des sensations viscérales ;",
+            "Action antalgique ;",
+            "Rééquilibrage neuro-végétatif : bascule vers des signes parasympathiques (calme, bâillement, somnolence, détente marquée, besoin de repos) ;",
+            "Amélioration du transit, de la diurèse et des sensations viscérales ;",
             "Réduction des fixations vertébrales à l’étage métamérique du viscère (relation viscéro-somatique)."
           ]
         }
@@ -386,7 +386,7 @@ export const chapter2Fr: Chapter = {
             },
             {
               "label": "24 à 48 heures",
-              "text": "Courbatures ou fatigabilité légère ; rêves, remontée de souvenirs."
+              "text": "Courbatures ou fatigabilité légère ; rêves, remontée de souvenirs."
             },
             {
               "label": "Dans les semaines suivantes",
@@ -400,7 +400,7 @@ export const chapter2Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "Si les réactions sont intenses, durent au-delà de 72 h, ou s’accompagnent de signes inquiétants : réévaluer et orienter."
+          "text": "Si les réactions sont intenses, durent au-delà de 72 h, ou s’accompagnent de signes inquiétants : réévaluer et orienter."
         },
         {
           "type": "para",
@@ -422,19 +422,19 @@ export const chapter2Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "Ces conseils font le plus souvent appel à du bon sens :"
+          "text": "Ces conseils font le plus souvent appel à du bon sens :"
         },
         {
           "type": "bullets",
           "items": [
-            "Repos relatif (éviter les surcharges physiques le jour même) ;",
-            "Alimentation saine ;",
-            "Bien s’hydrater ;",
-            "Activité physique régulière ;",
-            "Être acteur de sa santé ;",
-            "Avoir des pensées positives ;",
-            "Avoir une vie sociale épanouie dans sa vie personnelle et professionnelle ;",
-            "Noter l’évolution : douleur (0–10), sommeil, transit, énergie ;",
+            "Repos relatif (éviter les surcharges physiques le jour même) ;",
+            "Alimentation saine ;",
+            "Bien s’hydrater ;",
+            "Activité physique régulière ;",
+            "Être acteur de sa santé ;",
+            "Avoir des pensées positives ;",
+            "Avoir une vie sociale épanouie dans sa vie personnelle et professionnelle ;",
+            "Noter l’évolution : douleur (0–10), sommeil, transit, énergie ;",
             "Revenir avec ces éléments pour objectiver l’effet et ajuster la hiérarchisation."
           ]
         }

@@ -325,7 +325,7 @@ export const chapter8Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "« Toute fixation de ce muscle n’est pas seulement problématique pour les membres inférieurs mais l’est aussi pour les piliers et les attaches costales du diaphragme » (Jean-Pierre Barral)."
+          "text": "« Toute fixation de ce muscle n’est pas seulement problématique pour les membres inférieurs mais l’est aussi pour les piliers et les attaches costales du diaphragme » (Jean-Pierre Barral)."
         },
         {
           "type": "para",

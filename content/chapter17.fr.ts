@@ -109,7 +109,7 @@ export const chapter17Fr: Chapter = {
           "items": [
             "Foramen obturé: formé par la jonction des branches ilio et ischio-pubiennes, il est obstrué par la membrane obturatrice.",
             "Membrane obturatrice: elle est recouverte du côté endo-pelvien par le muscle obturateur interne et, du côté exopelvien, par le muscle obturateur externe, deux muscles pelvi-trochantérieurs rotateurs externes de la hanche. Elle est renforcée par la bandelette sub-pubienne qui s’insère sur la capsule articulaire de la hanche.. La vessie repose sur les deux membranes obturatrices.",
-            "Relation vessie-hanche: la membrane obturatrice, dépressive comme un tympan, constitue un mécanisme de délestage et de transfert des pressions des organes intra-pelviens lors de la marche: l’alternance des tractions et relâchements des tensions ligamentaires et de la bandelette sub-pubienne lors des mouvements de la hanche permet d’évacuer une partie des forces compressives s’exerçant sur les organes intra-pelviens, soit vers les membres inférieurs, soit vers la symphyse pubienne et les sacro-iliaques. Il se produit, en même temps, une sorte « d’aspiration » endo-pelvienne des vaisseaux sanguins traversant la membrane obturatrice. Ce pompage favorise les échanges circulatoires intra-pelviens."
+            "Relation vessie-hanche: la membrane obturatrice, dépressive comme un tympan, constitue un mécanisme de délestage et de transfert des pressions des organes intra-pelviens lors de la marche: l’alternance des tractions et relâchements des tensions ligamentaires et de la bandelette sub-pubienne lors des mouvements de la hanche permet d’évacuer une partie des forces compressives s’exerçant sur les organes intra-pelviens, soit vers les membres inférieurs, soit vers la symphyse pubienne et les sacro-iliaques. Il se produit, en même temps, une sorte « d’aspiration » endo-pelvienne des vaisseaux sanguins traversant la membrane obturatrice. Ce pompage favorise les échanges circulatoires intra-pelviens."
           ]
         },
         {
@@ -345,7 +345,7 @@ export const chapter17Fr: Chapter = {
             "< 0 à l’étage sous-diaphragmatique sus-mésocolique;",
             "+5 à +10 cm d’eau à l’étage sous-mésocolique.",
             "Dans les conditions physiologiques, les organes de la cavité pelvienne sont relativement bien protégés des pressions de la colonne viscérale venant des cavités thoracique et abdominale grâce au délestage-absorption des pressions intra-cavitaires par:",
-            "Aspiration thoracique et aimantation thoraco-diaphragmatique: les organes sous-diaphragmatiques subissent l’aspiration thoracique et ce d’autant plus qu’ils sont proches du diaphragme. Inversement. « Plus l’on s’éloigne du diaphragme vers le bas, moins les organes profitent de l’aspiration thoracique et de l’aimantation diaphragmatique. Ils exercent donc une force gravitaire sur les organes pelviens, d’autant plus grande qu’ils sont loin du diaphragme » (Manipulations uro-génitales, Jean-Pierre Barral, Elsevier).",
+            "Aspiration thoracique et aimantation thoraco-diaphragmatique: les organes sous-diaphragmatiques subissent l’aspiration thoracique et ce d’autant plus qu’ils sont proches du diaphragme. Inversement. « Plus l’on s’éloigne du diaphragme vers le bas, moins les organes profitent de l’aspiration thoracique et de l’aimantation diaphragmatique. Ils exercent donc une force gravitaire sur les organes pelviens, d’autant plus grande qu’ils sont loin du diaphragme » (Manipulations uro-génitales, Jean-Pierre Barral, Elsevier).",
             "Orientation de la cavité pelvienne: grâce à l’orientation caudale et ventrale de la cavité pelvienne, les forces gravitaires se répartissent sur le pourtour osseux du détroit inférieur",
             "Forme de dôme des viscères pelviens: le corps de l’utérus situé au centre de la cavité pelvienne, renforce encore cette répartition des forces gravitaires sur le pourtour du détroit inférieur, soulageant encore d’autant la pression sur les organes pelviens.",
             "Contractilité et l’élasticité des muscles du périnée: les muscles du périnée renvoient vers le haut et horizontalement vers le pourtour du détroit inférieur les forces gravitaires résiduelles.",
@@ -385,7 +385,7 @@ export const chapter17Fr: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "au cours de l’accouchement, elles surviennent chez la multipare ou la primipare quand l’enfant est « arraché » à la ventouse ou aux forceps, sans tenir compte des contractions utérines de la mère et sur une large épisiotomie.",
+            "au cours de l’accouchement, elles surviennent chez la multipare ou la primipare quand l’enfant est « arraché » à la ventouse ou aux forceps, sans tenir compte des contractions utérines de la mère et sur une large épisiotomie.",
             "Les autres causes de ptoses sont la vieillesse, les dépressions, les ptoses viscérales hautes (intestin grêle), les antéversions utérines, les constipations basses, les fixations de la symphyse pubienne et du coccyx."
           ]
         },

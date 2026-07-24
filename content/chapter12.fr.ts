@@ -79,7 +79,7 @@ export const chapter12Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "Sa partie inférieure, situee à droite des vaisseaux mésentériques supérieurs, forme un crochet : le processus uncinatus."
+          "text": "Sa partie inférieure, situee à droite des vaisseaux mésentériques supérieurs, forme un crochet : le processus uncinatus."
         },
         {
           "type": "sub",
@@ -194,7 +194,7 @@ export const chapter12Fr: Chapter = {
         {
           "type": "xref",
           "label": "Voir la référence dans le chapitre 1",
-          "text": "Sereuses : glissement et pressions",
+          "text": "Sereuses : glissement et pressions",
           "href": "/lecture/chapitre-1?xrefBack=%2Flecture%2Fchapitre-12%23p-moyens-de-fixite-8&xrefBackLabel=Retour%20au%20chapitre%2012#p-articulations-viscerales-3"
         }
       ]
@@ -217,7 +217,7 @@ export const chapter12Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "Dorsalement, avec le cholédoque, la veine cave inférieure, l'aorte abdominale et les vaisseaux rénaux droits ; ventralement, avec le pylore."
+          "text": "Dorsalement, avec le cholédoque, la veine cave inférieure, l'aorte abdominale et les vaisseaux rénaux droits ; ventralement, avec le pylore."
         },
         {
           "type": "sub",
@@ -369,9 +369,9 @@ export const chapter12Fr: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Amylase : digestion de l'amidon.",
-            "Chymotrypsine : digestion des protéines.",
-            "Lipase : digestion des lipides en glycérol, monoglycérides et acides gras."
+            "Amylase : digestion de l'amidon.",
+            "Chymotrypsine : digestion des protéines.",
+            "Lipase : digestion des lipides en glycérol, monoglycérides et acides gras."
           ]
         },
         {
@@ -380,14 +380,14 @@ export const chapter12Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "La sécrétion du suc pancréatique est déclenchée par :"
+          "text": "La sécrétion du suc pancréatique est déclenchée par :"
         },
         {
           "type": "bullets",
           "items": [
-            "Le remplissage de l'estomac ;",
-            "L'activité du nerf vague ;",
-            "La neutralisation de l'acidité gastrique par la sécrétine dans le duodénum ;",
+            "Le remplissage de l'estomac ;",
+            "L'activité du nerf vague ;",
+            "La neutralisation de l'acidité gastrique par la sécrétine dans le duodénum ;",
             "L'action de la cholécystokinine et d'autres régulations neuro-hormonales locales."
           ]
         }
@@ -416,7 +416,7 @@ export const chapter12Fr: Chapter = {
             "L'insuline a un effet hypoglycémiant et le glucagon un effet hyperglycémiant.",
             "Foie",
             "Il stocke le glucose sous forme de glycogene par la glycogenese et libere du glucose dans le sang selon les besoins par glycogenolyse.",
-            "Le foie peut aussi synthétiser du glucose à partir d'éléments non glucidiques, notamment des acides aminés, du glycérol et du lactate : c'est la néoglucogenèse.",
+            "Le foie peut aussi synthétiser du glucose à partir d'éléments non glucidiques, notamment des acides aminés, du glycérol et du lactate : c'est la néoglucogenèse.",
             "Reins",
             "Ils participent à l'homéostasie glucidique, notamment par la réabsorption tubulaire du glucose filtré et, dans certains contextes, par la néoglucogenèse.",
             "En cas d'hyperglycémie depassant les capacités de réabsorption, une glycosurie peut apparaître.",
@@ -436,13 +436,13 @@ export const chapter12Fr: Chapter = {
         {
           "type": "xref",
           "label": "Voir la référence dans le chapitre 5",
-          "text": "Mécanisme de stress : axe HHS, adrénaline et cortisol",
+          "text": "Mécanisme de stress : axe HHS, adrénaline et cortisol",
           "href": "/lecture/chapitre-5?xrefBack=%2Flecture%2Fchapitre-12%23p-interet-en-rop-2-0&xrefBackLabel=Retour%20au%20chapitre%2012#p-sga-7"
         },
         {
           "type": "xref",
           "label": "Voir la référence dans le chapitre 14",
-          "text": "Intestin grêle : dysbioses",
+          "text": "Intestin grêle : dysbioses",
           "href": "/lecture/chapitre-14?xrefBack=%2Flecture%2Fchapitre-12%23p-interet-en-rop-2-0&xrefBackLabel=Retour%20au%20chapitre%2012#p-pathologies-7"
         }
       ]
@@ -456,14 +456,14 @@ export const chapter12Fr: Chapter = {
           "body": [
             "Segmentation du pancréas",
             "Dans notre pratique de ROP, nous pouvons différencier trois segments du pancréas.",
-            "Zone 1 : la tête du pancréas",
+            "Zone 1 : la tête du pancréas",
             "Elle correspond surtout au pancréas exocrine.",
-            "Sa fonction est étroitement liee, dans ce cadre, au foie et à la deuxième portion du duodénum : l'ampoule de Vater reçoit le cholédoque et le canal de Wirsung.",
-            "Son lien métamérique est présente comme proche de celui du foie : Th7 a Th9 droits.",
-            "Zone 2 : le corps du pancréas",
+            "Sa fonction est étroitement liee, dans ce cadre, au foie et à la deuxième portion du duodénum : l'ampoule de Vater reçoit le cholédoque et le canal de Wirsung.",
+            "Son lien métamérique est présente comme proche de celui du foie : Th7 a Th9 droits.",
+            "Zone 2 : le corps du pancréas",
             "Il est à la fois exocrine et endocrine.",
             "Il constitue la partie la plus exposée à certains traumatismes abdominaux antérieurs ou postérieurs, notamment lors des accidents de la voie publique ou des chutes sur le dos, en raison de ses rapports avec le plan vertébral autour de L2.",
-            "Zone 3 : la queue du pancréas",
+            "Zone 3 : la queue du pancréas",
             "Elle est surtout associée, dans ce modèle, à la fonction endocrine.",
             "Elle est en contact avec le rein gauche.",
             "Son lien métamérique est rapporté à T9-Th10 gauches."
@@ -493,20 +493,20 @@ export const chapter12Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "Les symptômes qui doivent nous alerter sur une possible gravité sont :"
+          "text": "Les symptômes qui doivent nous alerter sur une possible gravité sont :"
         },
         {
           "type": "bullets",
           "items": [
-            "Amaigrissement important, involontaire ;",
-            "Prurit ;",
-            "Polyurie ;",
-            "Soif intense ;",
-            "Douleur épigastrique vive, transfixiante et surtout nocturne ;",
-            "Douleurs dorsales basses, ou lombaires supérieures, surtout nocturnes ;",
-            "Hepatomegalie ;",
-            "Fatigue intense au moindre effort ;",
-            "Selles de couleur mastic, flottantes, grasses et luisantes ;",
+            "Amaigrissement important, involontaire ;",
+            "Prurit ;",
+            "Polyurie ;",
+            "Soif intense ;",
+            "Douleur épigastrique vive, transfixiante et surtout nocturne ;",
+            "Douleurs dorsales basses, ou lombaires supérieures, surtout nocturnes ;",
+            "Hepatomegalie ;",
+            "Fatigue intense au moindre effort ;",
+            "Selles de couleur mastic, flottantes, grasses et luisantes ;",
             "Satiété après le repas puis, une heure après, fringale avec envie de viande rouge, d'aliments gras et sucres."
           ]
         },
@@ -524,13 +524,13 @@ export const chapter12Fr: Chapter = {
         },
         {
           "type": "sub",
-          "text": "Diabète sucre : 2 types"
+          "text": "Diabète sucre : 2 types"
         },
         {
           "type": "bullets",
           "items": [
-            "Diabète insulino-dependant de type 1 : il s'agit d'une maladie auto-immune apparaissant le plus souvent dans l'enfance ou l'adolescence, sur un terrain génétique de susceptibilité.",
-            "Diabète insulino-résistant de type 2 de l'adulte : il est associé à l'obésité, à la sédentarité et à divers facteurs alimentaires et métaboliques."
+            "Diabète insulino-dependant de type 1 : il s'agit d'une maladie auto-immune apparaissant le plus souvent dans l'enfance ou l'adolescence, sur un terrain génétique de susceptibilité.",
+            "Diabète insulino-résistant de type 2 de l'adulte : il est associé à l'obésité, à la sédentarité et à divers facteurs alimentaires et métaboliques."
           ]
         },
         {
@@ -567,7 +567,7 @@ export const chapter12Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "Risque accru de macrosomie et de certaines complications néonatales ; certaines malformations peuvent être associées à des déséquilibres glycémiques maternels précoces."
+          "text": "Risque accru de macrosomie et de certaines complications néonatales ; certaines malformations peuvent être associées à des déséquilibres glycémiques maternels précoces."
         },
         {
           "type": "sub",
@@ -599,13 +599,13 @@ export const chapter12Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "Les signes associés sont :"
+          "text": "Les signes associés sont :"
         },
         {
           "type": "bullets",
           "items": [
-            "Hypoesthesie ;",
-            "Peau seche ;",
+            "Hypoesthesie ;",
+            "Peau seche ;",
             "Impatiences des membres inférieurs."
           ]
         },
@@ -663,13 +663,13 @@ export const chapter12Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "Les causes les plus fréquentes sont :"
+          "text": "Les causes les plus fréquentes sont :"
         },
         {
           "type": "bullets",
           "items": [
-            "Lithiase biliaire : un calcul se bloque dans l'ampoule de Vater, ce qui peut obstruer secondairement les voies biliaires et pancréatiques ;",
-            "L'alcool ;",
+            "Lithiase biliaire : un calcul se bloque dans l'ampoule de Vater, ce qui peut obstruer secondairement les voies biliaires et pancréatiques ;",
+            "L'alcool ;",
             "Plus rarement, une complication de la chirurgie biliaire principale ou un traumatisme abdominal."
           ]
         },
@@ -695,7 +695,7 @@ export const chapter12Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "Le tabac est un facteur de risque établi ; l'alcool, certains contextes métaboliques et d'autres facteurs sont discutés selon les situations."
+          "text": "Le tabac est un facteur de risque établi ; l'alcool, certains contextes métaboliques et d'autres facteurs sont discutés selon les situations."
         },
         {
           "type": "para",
@@ -721,13 +721,13 @@ export const chapter12Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "Les personnes « pancréas » ou « rate » sont décrites ici comme tristes, pessimistes et sans énergie face aux agressions physiques ou psycho-émotionnelles."
+          "text": "Les personnes « pancréas » ou « rate » sont décrites ici comme tristes, pessimistes et sans énergie face aux agressions physiques ou psycho-émotionnelles."
         }
       ]
     },
     {
       "id": "indications",
-      "title": "Indications : troubles fonctionnels",
+      "title": "Indications : troubles fonctionnels",
       "blocks": [
         {
           "type": "para",
@@ -744,7 +744,7 @@ export const chapter12Fr: Chapter = {
             "Douleur scapulaire gauche.",
             "Dorsalgie basse ou lombaire haute après avoir ecarte tout signe de gravité.",
             "Asthme, eczema, psoriasis, en associant le foie.",
-            "Apporter un certain confort en agissant sur les organes avec lesquels le pancréas partage une vascularisation et une innervation communes : estomac, foie, vésicule biliaire, duodénum et rate.",
+            "Apporter un certain confort en agissant sur les organes avec lesquels le pancréas partage une vascularisation et une innervation communes : estomac, foie, vésicule biliaire, duodénum et rate.",
             "N.B. la ROP ne peut éviter la prise d'insuline chez un patient diabétique."
           ]
         },
@@ -795,11 +795,11 @@ export const chapter12Fr: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Tête du pancréas : face plantaire du pied droit, dans le cadre duodénal, avec repérage de la grande caroncule et du sphincter d'Oddi à la jonction des 2/3 supérieurs et du 1/3 inférieur du 2ème duodénum, et de la petite caroncule au 1/3 supérieur.",
-            "Queue du pancréas : face plantaire du pied gauche ; repérer d'abord la styloïde du 5ème métatarse, puis l'angle splénique du côlon situe médialement et légèrement au-dessus de la styloïde.",
-            "La rate est décrite ici comme « posee » sur l'angle splénique du côlon, sous l'hemi-coupole diaphragmatique.",
+            "Tête du pancréas : face plantaire du pied droit, dans le cadre duodénal, avec repérage de la grande caroncule et du sphincter d'Oddi à la jonction des 2/3 supérieurs et du 1/3 inférieur du 2ème duodénum, et de la petite caroncule au 1/3 supérieur.",
+            "Queue du pancréas : face plantaire du pied gauche ; repérer d'abord la styloïde du 5ème métatarse, puis l'angle splénique du côlon situe médialement et légèrement au-dessus de la styloïde.",
+            "La rate est décrite ici comme « posee » sur l'angle splénique du côlon, sous l'hemi-coupole diaphragmatique.",
             "La queue du pancréas est médiale à la rate.",
-            "Corps du pancréas : partant de la rate, un sillon cutané oblique médialement, caudalement et à droite rejoint le bord médial du pied gauche à hauteur des vertèbres L2-L3."
+            "Corps du pancréas : partant de la rate, un sillon cutané oblique médialement, caudalement et à droite rejoint le bord médial du pied gauche à hauteur des vertèbres L2-L3."
           ]
         },
         {
@@ -809,7 +809,7 @@ export const chapter12Fr: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Balance cerveau limbique-pancréas : écoute-induction, un pouce sur le pancréas, l'autre pouce sur le cerveau limbique.",
+            "Balance cerveau limbique-pancréas : écoute-induction, un pouce sur le pancréas, l'autre pouce sur le cerveau limbique.",
           ]
         }
       ]
@@ -821,9 +821,9 @@ export const chapter12Fr: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Th8 et Th9 gauches ;",
-            "L1 et L2 ;",
-            "Epaule gauche ;",
+            "Th8 et Th9 gauches ;",
+            "L1 et L2 ;",
+            "Epaule gauche ;",
             "Pieds chez les diabétiques."
           ]
         }
@@ -842,7 +842,7 @@ const reflexFigure = (
 ): ChapterBlock => ({
   type: "figure",
   src: `/chapter-12/cartographie/figure-12-${n}.png`,
-  caption: `Photo : ${title}`,
+  caption: `Photo : ${title}`,
   alt,
   orientation,
 })
