@@ -1548,6 +1548,19 @@ function BlockView({
           </Link>
         </p>
       )
+    case 'note':
+      return (
+        <aside className="cr-note">
+          <p className="cr-note-title">{block.label}</p>
+          {block.body.map((paragraph, i) => (
+            <Fragment key={i}>
+              {renderSlideAnchorsForItem?.(i)}
+              <p className="cr-note-p">{paragraph}</p>
+            </Fragment>
+          ))}
+          {renderSlideAnchorsForItem?.(block.body.length)}
+        </aside>
+      )
     case 'rop':
       return (
         <aside className="cr-rop">

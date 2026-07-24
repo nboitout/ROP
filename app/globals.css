@@ -466,6 +466,10 @@ footer > div > p { font-size:.95rem; color:rgba(245,240,232,.84); line-height:1.
 .cr-rop-p:not(.cr-rop-bullet) + .cr-rop-bullet { margin-top:-2px; }
 .cr-rop-bullet + .cr-rop-p:not(.cr-rop-bullet) { margin-top:14px; }
 .cr-rop-p:last-child { margin-bottom:0; }
+.cr-note { background:rgba(184,146,68,.08); border-left:3px solid var(--gold); padding:18px 24px; margin:24px 0; border-radius:0 3px 3px 0; }
+.cr-note-title { font-size:.7rem; letter-spacing:.16em; text-transform:uppercase; color:#7a5b20; font-weight:700; margin:0 0 10px; }
+.cr-note-p { font-size:1rem; line-height:1.65; color:#2b2924; margin:0 0 10px; }
+.cr-note-p:last-child { margin-bottom:0; }
 
 .cr-end { margin-top:80px; padding-top:48px; border-top:1px solid rgba(26,26,24,.1); }
 .cr-end-card { background:linear-gradient(180deg, #f3ecd9 0%, #ece4d0 100%); padding:48px 40px; border-radius:4px; text-align:center; box-shadow:0 4px 22px rgba(160,124,58,.12); }

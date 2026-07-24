@@ -109,6 +109,8 @@ function wordsInBlock(block: Block): number {
       return block.headers.reduce((n, s) => n + countWords(s), 0)
         + block.rows.flat().reduce((n, s) => n + countWords(s), 0)
         + countWords(block.caption ?? '')
+    case 'note':
+      return countWords(block.label) + block.body.reduce((n, s) => n + countWords(s), 0)
     case 'rop':
       return block.body.reduce((n, s) => n + countWords(s), 0)
     case 'xref':
@@ -137,6 +139,8 @@ function blockParagraphTexts(block: Block): string[] {
         ...block.rows.flat(),
         block.caption ?? '',
       ].filter(Boolean)
+    case 'note':
+      return [block.label, ...block.body]
     case 'rop':
       return block.body
     case 'xref':

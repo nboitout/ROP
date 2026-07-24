@@ -9,8 +9,9 @@ export const chapter3Fr: Chapter = {
       id: 'section-1-presentation-generale',
       title: '1. Présentation générale',
       blocks: [
-        { type: 'para', text: 'Version restructurée : anatomie et physiologie dans le corps du chapitre ; zones réflexes regroupées en fin de chapitre.' },
-        { type: 'para', text: 'Le système nerveux autonome (SNA) comprend deux grands versants : le parasympathique et le sympathique. Le parasympathique à une origine crânio-sacrale, tandis que le sympathique à une origine thoracique. Malgré ces origines différentes, ils partagent des centres d’intégration dans le système nerveux central, afin de permettre à l’organisme de s’adapter en permanence aux modulations provenant de l’environnement et aux besoins des différents territoires corporels.' },
+        { type: 'para', text: 'Le système nerveux autonome (SNA) comprend deux grands versants : le parasympathique et le sympathique.' },
+        { type: 'para', text: 'Le parasympathique a une origine crânio-sacrale, tandis que le sympathique a une origine thoracique.' },
+        { type: 'para', text: 'Malgré ces origines différentes, ils partagent des centres d’intégration dans le système nerveux central, afin de permettre à l’organisme de s’adapter en permanence aux modulations provenant de l’environnement et aux besoins des différents territoires corporels.' },
         { type: 'para', text: 'Dans ce chapitre, les centres du SNC sont présentés selon une logique anatomique et fonctionnelle :' },
         { type: 'bullets', items: [
           'Tronc cérébral et cervelet : dans la fosse cérébrale postérieure.',
@@ -18,7 +19,8 @@ export const chapter3Fr: Chapter = {
           'Cortex ou télencéphale : au-dessus de la tente du cervelet, en position supra-tentorielle.',
         ]},
         { type: 'para', text: 'Les fosses cérébrales postérieure et moyenne sont subtentorielles, c’est-à-dire situées au-dessous de la tente du cervelet. Le cortex, lui, est supra-tentoriel.' },
-        { type: 'para', text: 'Sur le plan phylogénétique, le cerveau a évolué par complexification progressive afin de répondre aux contraintes de l’environnement. Sur le plan ontogénétique, le développement du cerveau humain rappelle certains jalons de cette évolution, ce qui permet de comprendre la persistance de réponses archaïques, automatiques et émotionnelles au sein du fonctionnement humain.' },
+        { type: 'para', text: 'Sur le plan phylogénétique, le cerveau a évolué par complexification progressive afin de répondre aux contraintes de l’environnement.' },
+        { type: 'para', text: 'Sur le plan ontogénétique, le développement du cerveau humain rappelle certains jalons de cette évolution, ce qui permet de comprendre la persistance de réponses archaïques, automatiques et émotionnelles au sein du fonctionnement humain.' },
       ],
     },
     {
@@ -26,6 +28,13 @@ export const chapter3Fr: Chapter = {
       title: '2. Cadre terminologique : cerveau limbique, système limbique, réseaux limbiques',
       blocks: [
         { type: 'para', text: 'La théorie des trois cerveaux, proposée par Paul D. MacLean au milieu du XXe siècle, distingue classiquement un cerveau reptilien, un cerveau limbique ou émotionnel et un néocortex. Cette théorie est aujourd’hui dépassée comme modèle scientifique strict, car le cerveau ne fonctionne pas par strates indépendantes. Elle conserve cependant un intérêt pédagogique pour expliquer les niveaux d’intégration entre survie, émotion et cognition.' },
+        {
+          type: 'note',
+          label: 'Note terminologique',
+          body: [
+            'Dans une terminologie plus actuelle, il est préférable de parler de « système limbique » ou, plus précisément encore, de « réseaux limbiques ». Le système limbique désigne un ensemble de structures corticales et sous-corticales interconnectées, impliquées dans les émotions, la mémoire, l’olfaction, la motivation, la récompense, l’attachement et certaines réponses neurovégétatives.',
+          ],
+        },
         { type: 'para', text: 'Cette clarification est importante pour éviter de présenter le système limbique comme un cerveau autonome. Les émotions, la mémoire affective et les comportements d’adaptation émergent de circuits distribués, en interaction constante avec le cortex préfrontal, l’hypothalamus, le tronc cérébral, le système nerveux autonome, les voies olfactives et les informations viscérales.' },
       ],
     },
@@ -60,7 +69,6 @@ export const chapter3Fr: Chapter = {
         { type: 'para', text: 'Il reçoit des informations de la moelle spinale, du tronc cérébral et du cerveau pour contrôler et réguler l’activité motrice et posturale. Il reçoit également des informations de l’appareil vestibulaire concernant la position et le déplacement de la tête.' },
         { type: 'para', text: 'Pathologie : la destruction du cervelet ne produit pas de paralysie, mais des troubles de l’équilibre et de la coordination des mouvements appelés ataxie. Parmi les signes possibles : adiadococinésie, hypermétrie au test doigt-nez, dyschronométrie par difficulté à commencer ou à arrêter un mouvement.' },
         { type: 'sub', text: '3.3. Système limbique et réseaux émotionnels' },
-        { type: 'para', text: 'Dans le modèle historique des trois cerveaux, cette partie était appelée « cerveau limbique » ou « cerveau émotionnel ». Dans la terminologie réténue pour ce chapitre, il est préférable de parler de système limbique et de réseaux limbiques.' },
         { type: 'para', text: 'Le terme limbique signifie « en bordure de », car plusieurs structures concernées occupent une position profonde ou médiale, en relation avec la face interne du cortex. Le système limbique n’est pas une entité anatomique parfaitement délimitée : il s’agit plutôt d’un ensemble de structures et de circuits impliqués dans les émotions, la mémoire, les pulsions, les comportements affectifs, la motivation et les réponses neurovégétatives.' },
         { type: 'para', text: 'Les principales structures associées aux réseaux limbiques comprennent notamment l’amygdale, l’hippocampe, le cortex cingulaire, l’insula, le noyau accumbens, les corps mamillaires, le fornix et les voies olfactives. Certaines de ces structures sont des noyaux, d’autres des régions corticales ou des faisceaux de connexion ; il est donc plus rigoureux de parler de structures ou de circuits limbiques plutôt que de « noyaux limbiques » au sens strict.' },
         { type: 'sub', text: '3.3.1. Amygdale' },
@@ -77,7 +85,7 @@ export const chapter3Fr: Chapter = {
         { type: 'para', text: 'Physiologie : il participe aux circuits de la mémoire. Il doit être présenté comme un faisceau de connexion, et non comme un noyau limbique.' },
         { type: 'sub', text: '3.3.4. Insula' },
         { type: 'para', text: 'Anatomie : l’insula est une région corticale profonde, longtemps peu étudiée en raison de sa position médiale, recouverte par les lobes frontal, pariétal et temporal. Elle est située en regard de la partie antérieure de la suture pariéto-squameuse, latérale aux ganglions de la base et à l’amygdale. Elle est connectée à l’amygdale, au cortex cingulaire, aux centres supérieurs du SNA, au thalamus et au cortex somato-sensoriel.' },
-        { type: 'para', text: 'Physiologie : l’insula recueille des informations venant des viscères, de leur activité et de leurs dysfonctions, notamment viau nerf vague. Elle participe à la conscience intéroceptive des émotions et des réactions viscérales qui les accompagnent. Elle intervient dans la peur, la colère, la tristesse, la joie, les addictions et la conscience de soi.' },
+        { type: 'para', text: 'Physiologie : l’insula recueille des informations venant des viscères, de leur activité et de leurs dysfonctions, notamment via le nerf vague. Elle participe à la conscience intéroceptive des émotions et des réactions viscérales qui les accompagnent. Elle intervient dans la peur, la colère, la tristesse, la joie, les addictions et la conscience de soi.' },
         { type: 'para', text: 'Pathologie : l’insula est impliquée dans certaines douleurs chroniques, la fibromyalgie, la dépression et les difficultés à ressentir les tensions internes ou les déséquilibres neurovégétatifs.' },
         { type: 'sub', text: '3.3.5. Cortex cingulaire' },
         { type: 'para', text: 'Anatomie : le cortex cingulaire est situé à la face médiale des hémisphères cérébraux, au-dessus du corps calleux. Il fait partie des régions corticales les plus proches des autres structures limbiques.' },
@@ -103,7 +111,7 @@ export const chapter3Fr: Chapter = {
         { type: 'para', text: 'Le diencéphale est une région médiane qui relie le tronc cérébral aux deux hémisphères cérébraux. Les ganglions de la base lui sont latéraux. Il ne fait pas partie du système limbique au sens strict, mais plusieurs de ses structures sont étroitement connectées aux réseaux limbiques, notamment le thalamus, l’hypothalamus, l’épithalamus et le subthalamus.' },
         { type: 'sub', text: '3.4.1. Thalamus' },
         { type: 'para', text: 'Anatomie : le thalamus est une structure paire située entre les deux hémisphères cérébraux. Il occupe une grande partie du diencéphale et comporte de nombreux noyaux connectés au cortex, aux autres structures du diencéphale, au tronc cérébral et aux circuits limbiques. Entre les deux thalamus se trouve le troisième ventricule.' },
-        { type: 'para', text: 'Physiologie : le thalamus est un relais majeur des informations sensitives, sensorielles, limbiques et des ganglions de la base vers le cortex cérébral. Il relaie également la douleur provenant de la moelle spinale. Il agit comme un filtré, triant et sélectionnant les informations qui parviennent au cerveau, notamment pendant le sommeil.' },
+        { type: 'para', text: 'Physiologie : le thalamus est un relais majeur des informations sensitives, sensorielles, limbiques et des ganglions de la base vers le cortex cérébral. Il relaie également la douleur provenant de la moelle spinale. Il agit comme un filtre, triant et sélectionnant les informations qui parviennent au cerveau, notamment pendant le sommeil.' },
         { type: 'para', text: 'Pathologie : très vascularisé, le thalamus peut être atteint lors d’AVC, de traumatismes crâniens, de maladies neurodégénératives ou de tumeurs. Les symptômes peuvent être moteurs, sensitifs, douloureux, cognitifs ou langagiers.' },
         { type: 'sub', text: '3.4.2. Hypothalamus' },
         { type: 'para', text: 'Anatomie : l’hypothalamus est situé sous le thalamus et au-dessus de l’hypophyse. Malgré sa petite taille, il possède une fonction centrale. Il est connecté à la post-hypophyse par la tige pituitaire, au cortex et aux réseaux limbiques.' },
@@ -152,7 +160,7 @@ export const chapter3Fr: Chapter = {
         ]},
         { type: 'sub', text: '4.2. Système limbique et réseaux émotionnels' },
         { type: 'bullets', items: [
-          'Structures limbiques principales : amygdale, hippocampe, fornix, noyau accumbens et corps mamillaires sont recherchés latéralement aux ganglions de la base, au niveau de la diaphyse de la phalange distale du gros orteil. À la palpation, recherchér les zones les plus endurées.',
+          'Structures limbiques principales : amygdale, hippocampe, fornix, noyau accumbens et corps mamillaires sont recherchés latéralement aux ganglions de la base, au niveau de la diaphyse de la phalange distale du gros orteil. À la palpation, rechercher les zones les plus indurées.',
           'Insula : latérale aux structures limbiques principales.',
           'Bulbe olfactif : tête médiale plantaire de la phalange distale du gros orteil.',
           'Cortex cingulaire et corps calleux : bord médial plantaire de la phalange distale du gros orteil.',

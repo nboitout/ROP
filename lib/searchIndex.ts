@@ -104,6 +104,8 @@ function blockText(block: Block): string {
       ].join(' ')
     case 'xref':
       return `${block.label} ${block.text ?? ''}`.trim()
+    case 'note':
+      return `${block.label} ${block.body.join(' ')}`.trim()
     case 'rop':
       return block.body.join(' ')
     case 'figure':

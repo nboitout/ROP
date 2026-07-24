@@ -612,6 +612,15 @@ function BlockView({
           </Link>
         </p>
       )
+    case 'note':
+      return (
+        <aside {...anchor} className="cr-note">
+          <p className="cr-note-title">{block.label}</p>
+          {block.body.map((paragraph, i) => (
+            <p key={i} className="cr-note-p">{paragraph}</p>
+          ))}
+        </aside>
+      )
     case 'rop':
       return (
         <aside {...anchor} className="cr-rop">

@@ -8,6 +8,7 @@ export type Block =
   | { type: 'table'; headers: string[]; rows: string[][]; caption?: string }
   | { type: 'figure'; src: string; caption: string; alt: string; orientation: 'landscape' | 'portrait' | 'medium' | 'narrow'; syncHide?: true }
   | { type: 'xref'; label: string; href: string; text?: string }
+  | { type: 'note'; label: string; body: string[] }
   | { type: 'rop'; body: string[] }
   | { type: 'reflexAtlas' }
 
