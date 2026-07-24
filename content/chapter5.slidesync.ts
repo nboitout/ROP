@@ -11,7 +11,7 @@ export type SyncSlide = { src: string; title: string; orientation?: 'portrait' }
 
 // blockIndex refers to the position in chapter5Fr sections[].blocks[].
 export type SyncAnchorPoint = { sectionId: string; blockIndex: number; itemIndex?: number }
-export type SyncAnchor = SyncAnchorPoint & { slide: number; gapBefore?: 'half'; end?: SyncAnchorPoint }
+export type SyncAnchor = SyncAnchorPoint & { slide: number | number[]; gapBefore?: 'half'; end?: SyncAnchorPoint }
 
 export const chapter5Slides: SyncSlide[] = [
   { src: '/chapter-5/slides/slide-01.png', title: 'Mécanisme de stress' },
@@ -29,6 +29,26 @@ export const chapter5Slides: SyncSlide[] = [
   { src: '/chapter-5/slides/slide-13.png', title: 'Phase d’adaptation-résistance' },
   { src: '/chapter-5/slides/slide-14.png', title: 'Phase 4 du SGA : épuisement et chronicisation' },
   { src: '/chapter-5/slides/slide-15.png', title: '« Nous sommes malades parce que nous perdons la santé, et non l’inverse. »' },
+  { src: '/chapter-5/slides/cartographie-fr/slide-01.png', title: 'Cartographie ROP — zones occipitales' },
+  { src: '/chapter-5/slides/cartographie-fr/slide-02.png', title: 'Base exocrânienne — face plantaire des orteils' },
+  { src: '/chapter-5/slides/cartographie-fr/slide-03.png', title: 'Système limbique et tronc cérébral — cartographie' },
+  { src: '/chapter-5/slides/cartographie-fr/slide-04.png', title: 'Tronc cérébral — photo' },
+  { src: '/chapter-5/slides/cartographie-fr/slide-05.png', title: 'Système limbique — cartographie' },
+  { src: '/chapter-5/slides/cartographie-fr/slide-06.png', title: 'Amygdale du cerveau limbique — photo' },
+  { src: '/chapter-5/slides/cartographie-fr/slide-07.png', title: 'Diencéphale et hypophyse — cartographie' },
+  { src: '/chapter-5/slides/cartographie-fr/slide-08.png', title: 'Diencéphale — photo' },
+  { src: '/chapter-5/slides/cartographie-fr/slide-09.png', title: 'Sinus et glomus carotidien — cartographie' },
+  { src: '/chapter-5/slides/cartographie-fr/slide-10.png', title: 'Sinus et glomus carotidien — photo' },
+  { src: '/chapter-5/slides/cartographie-fr/slide-11.png', title: 'Nerf vague X dans le foramen jugulaire — cartographie' },
+  { src: '/chapter-5/slides/cartographie-fr/slide-12.png', title: 'Nerf vague X dans le foramen jugulaire — photo' },
+  { src: '/chapter-5/slides/cartographie-fr/slide-13.png', title: 'Nerfs vagues au hiatus œsophagien — cartographie' },
+  { src: '/chapter-5/slides/cartographie-fr/slide-14.png', title: 'Nerfs vagues au hiatus œsophagien — photo' },
+  { src: '/chapter-5/slides/cartographie-fr/slide-15.png', title: 'Parasympathique pelvien ou sacré — cartographie' },
+  { src: '/chapter-5/slides/cartographie-fr/slide-16.png', title: 'Parasympathique pelvien ou sacré — repère' },
+  { src: '/chapter-5/slides/cartographie-fr/slide-17.png', title: 'Nerf phrénique (C3-C4-C5) — cartographie' },
+  { src: '/chapter-5/slides/cartographie-fr/slide-18.png', title: 'Nerf phrénique (C3-C4-C5) — photo' },
+  { src: '/chapter-5/slides/cartographie-fr/slide-19.png', title: 'Nerf phrénique (triangle de Sédillot) — cartographie' },
+  { src: '/chapter-5/slides/cartographie-fr/slide-20.png', title: 'Nerf phrénique (triangle de Sédillot) — photo' },
 ]
 
 // English deck — same slides, translated. The text↔slide anchors are shared
@@ -120,6 +140,17 @@ export const chapter5SlideAnchorsFr: SyncAnchor[] = [
   { sectionId: 'sga',          blockIndex: 20, slide: 13, end: { sectionId: 'sga', blockIndex: 33 } },
   { sectionId: 'sga',          blockIndex: 33, slide: 14, end: { sectionId: 'sga', blockIndex: 40 } },
   { sectionId: 'sga',          blockIndex: 40, slide: 15, end: { sectionId: 'rop-stress', blockIndex: -1 } },
+  { sectionId: 'rop-stress',   blockIndex: -1, slide: 16, end: { sectionId: 'rop-stress', blockIndex: 0 } },
+  { sectionId: 'rop-stress',   blockIndex: 0,  slide: 17, end: { sectionId: 'rop-stress', blockIndex: 4 } },
+  { sectionId: 'rop-stress',   blockIndex: 4,  slide: [18, 19], end: { sectionId: 'rop-stress', blockIndex: 5, itemIndex: 0 } },
+  { sectionId: 'rop-stress',   blockIndex: 5,  itemIndex: 0, slide: [20, 21] },
+  { sectionId: 'rop-stress',   blockIndex: 5,  itemIndex: 0, slide: [22, 23], end: { sectionId: 'rop-stress', blockIndex: 5, itemIndex: 1 } },
+  { sectionId: 'rop-stress',   blockIndex: 5,  itemIndex: 1, slide: [24, 25], end: { sectionId: 'rop-stress', blockIndex: 5, itemIndex: 2 } },
+  { sectionId: 'rop-stress',   blockIndex: 5,  itemIndex: 2, slide: [26, 27] },
+  { sectionId: 'rop-stress',   blockIndex: 5,  itemIndex: 2, slide: [28, 29], end: { sectionId: 'rop-stress', blockIndex: 5, itemIndex: 3 } },
+  { sectionId: 'rop-stress',   blockIndex: 5,  itemIndex: 3, slide: [30, 31], end: { sectionId: 'rop-stress', blockIndex: 5, itemIndex: 4 } },
+  { sectionId: 'rop-stress',   blockIndex: 5,  itemIndex: 4, slide: [32, 33] },
+  { sectionId: 'rop-stress',   blockIndex: 5,  itemIndex: 4, slide: [34, 35], end: { sectionId: 'rop-stress', blockIndex: 6 } },
 ]
 
 export const chapter5SlideAnchorsLegacy: SyncAnchor[] = [

@@ -167,6 +167,9 @@ export const chapter5Fr: Chapter = {
       title: 'Zones réflexes podales',
       blocks: [
         { type: 'sub', text: 'Zones occipitales' },
+        { type: 'para', text: 'Dans la pratique ROP, la sollicitation douce des zones occipitales vise d’abord à apaiser le système avant un travail plus ciblé. Par l’intermédiaire des afférences cutanées, myofasciales et proprioceptives de la région C2-C3, elle peut contribuer à réduire l’hypervigilance, les tensions de protection, la surcharge nociceptive et l’agitation respiratoire ou émotionnelle.' },
+        { type: 'para', text: 'Les trois bandes — parasympathique, orthosympathique et structurelle — restent des repères cliniques dont les qualités de palpation peuvent varier selon le niveau de stress et l’état d’adaptation du patient.' },
+        { type: 'para', text: 'L’objectif n’est pas de commander directement le système autonome, mais d’introduire une information sensorielle apaisante afin de rendre le patient plus disponible pour la suite du traitement, notamment le travail podal.' },
         { type: 'lead', label: `Syndrome général d’adaptation SGA`, text: '' },
         { type: 'bullets', items: [
           'Système limbique, diencéphale, tronc cérébral, hypophyse, surrénales (axe HHS).',
