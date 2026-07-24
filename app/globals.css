@@ -1039,6 +1039,7 @@ a.ss-switch-opt:hover { color:var(--gold); }
 .ss-article .cr-fig-portrait { margin:36px auto; max-width:380px; }
 .ss-article .cr-fig-medium { margin:36px auto; max-width:460px; }
 .ss-article .cr-fig-narrow { margin:36px auto; max-width:320px; }
+.ss-article[data-chapter="chapter-5"] #sec-rop-stress .cr-fig-portrait { max-width:520px; }
 .ss-article #sec-zones-reflexes-podales .cr-fig-landscape {
   width:calc(100% + (var(--ss-article-pad-x) * 2));
   max-width:none;
