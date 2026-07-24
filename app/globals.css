@@ -921,6 +921,8 @@ a.ss-switch-opt:hover { color:var(--gold); }
   border-radius:6px; overflow:hidden; background:#f4efe3; cursor:zoom-in;
   box-shadow:0 10px 34px rgba(26,26,24,.12); transition:box-shadow .25s; }
 .ss-frame:hover { box-shadow:0 16px 44px rgba(26,26,24,.2); }
+.ss-frame-spread { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:8px; }
+.ss-frame--spread-item { min-width:0; }
 .ss-frame:disabled { cursor:default; }
 .ss-frame:disabled:hover { box-shadow:0 10px 34px rgba(26,26,24,.12); }
 .ss-frame--empty { display:flex; align-items:center; justify-content:center;
@@ -1061,6 +1063,8 @@ a.ss-switch-opt:hover { color:var(--gold); }
   .ss-stage--portrait { position:relative; top:auto; }
   .ss-stage-eyebrow { display:none; }
   .ss-frame { max-width:520px; margin:0 auto; border-radius:4px; box-shadow:0 6px 20px rgba(26,26,24,.12); }
+  .ss-frame-spread { max-width:520px; margin:0 auto; gap:5px; }
+  .ss-frame-spread .ss-frame { width:100%; }
   .ss-frame--portrait { aspect-ratio:3/4; width:min(260px,70vw); height:auto; max-width:100%; }
   .ss-stage--portrait .ss-frame--portrait { width:min(260px,70vw); height:auto; }
   .ss-stage-bar { max-width:520px; margin:8px auto 0; gap:8px; }
