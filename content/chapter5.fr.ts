@@ -175,7 +175,7 @@ export const chapter5Fr: Chapter = {
         { type: 'figure', src: '/chapter-5/slides/cartographie-fr/slide-04.png', caption: 'Photo : Tronc cérébral', alt: 'Repère podal du tronc cérébral', orientation: 'landscape' },
         { type: 'figure', src: '/chapter-5/slides/cartographie-fr/slide-06.png', caption: 'Photo : Amygdale du cerveau limbique', alt: 'Repère podal de l’amygdale du cerveau limbique', orientation: 'landscape' },
         { type: 'figure', src: '/chapter-5/slides/cartographie-fr/slide-08.png', caption: 'Photo : Diencéphale', alt: 'Repère podal du diencéphale', orientation: 'landscape' },
-        { type: 'para', text: 'Nerfs crâniens : Jumeau V, Vague X, Hypoglosse XI, C2 et C3.' },
+        { type: 'para', text: 'Nerfs crâniens : Jumeau V, Vague X, Hypoglosse XII, C2 et C3.' },
         { type: 'figure', src: '/chapter-5/slides/cartographie-fr/slide-10.png', caption: 'Photo : Sinus et glomus carotidien', alt: 'Repère podal du sinus et du glomus carotidien', orientation: 'landscape' },
         { type: 'para', text: 'Nerf vague X : foramen magnum, foramen jugulaire, loge viscérale du cou, plexus cardio-pulmonaire, hiatus œsophagien, plexus cœliaque.' },
         { type: 'figure', src: '/chapter-5/slides/cartographie-fr/slide-12.png', caption: 'Photo : Nerf vague X dans le foramen jugulaire', alt: 'Repère podal du nerf vague X dans le foramen jugulaire', orientation: 'landscape' },
