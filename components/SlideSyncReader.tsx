@@ -183,7 +183,9 @@ function normalizeSectionLabel(value: string) {
 
 function isReflexZoneSectionId(value: string) {
   const normalized = normalizeSectionLabel(value)
-  return normalized === 'rop' || (normalized.includes('zone') && normalized.includes('reflex'))
+  return normalized === 'rop' ||
+    normalized === 'rop-stress' ||
+    (normalized.includes('zone') && normalized.includes('reflex'))
 }
 
 function isRopShortcutLabel(value: string) {
@@ -897,18 +899,9 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
     }
   }, [lightbox])
 
+  const activeSlideNumber = active ?? 0
   const activeSlide = active ? slides[active - 1] : undefined
-  const activeAnchor = active ? anchorForSlide(active) : null
-  const activeSpreadNumbers = activeAnchor &&
-    isReflexZoneSectionId(activeAnchor.sectionId) &&
-    asSlideList(activeAnchor.slide).length === 2
-    ? asSlideList(activeAnchor.slide)
-    : active ? [active] : []
-  const activeSpread = activeSpreadNumbers
-    .map((slideNumber) => ({ slideNumber, slide: slides[slideNumber - 1] }))
-    .filter((item): item is { slideNumber: number; slide: SyncSlide } => !!item.slide)
-  const activeSlideIsPortrait = activeSpread.length === 1 && activeSlide?.orientation === 'portrait'
-  const activeSpreadIsPair = activeSpread.length === 2
+  const activeSlideIsPortrait = activeSlide?.orientation === 'portrait'
   const hideReflexJumpOnDesktop = chapter.slug === 'chapter-15' && activeSectionId === reflexSection?.id
   const reflexJumpClassName = `ss-reflex-jump${hideReflexJumpOnDesktop ? ' ss-reflex-jump--desktop-hidden' : ''}`
   const lightboxGalleryCount = lightbox?.gallery?.length ?? 0
@@ -960,7 +953,7 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
     return (
       <>
         {slideList.map((slide) => (
-          <div key={slide} className={`ss-anchor ${slideMarkerSideClass(slide)}`} data-slide-anchor={slide}>
+          <div key={slide} className="ss-anchor" data-slide-anchor={slide}>
             <button
               type="button"
               className="ss-marker"
@@ -974,13 +967,6 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
         ))}
       </>
     )
-  }
-
-  function slideMarkerSideClass(slideNumber: number) {
-    const title = slides[slideNumber - 1]?.title ?? ''
-    return /\s—\s(?:photo|repère)$/i.test(title)
-      ? 'ss-slide-anchor--photo'
-      : 'ss-slide-anchor--cartography'
   }
 
   const clinicalCaseButton = showClinicalCaseResource && chapter.clinicalCase ? (
@@ -1120,35 +1106,31 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
               <div className="ss-stage-main">
             {activeSlide && (
               <>
-                <div className={activeSpreadIsPair ? 'ss-frame-spread' : undefined}>
-                  {activeSpread.map(({ slideNumber, slide }) => (
-                    <button
-                      key={slide.src}
-                      type="button"
-                      className={`ss-frame${activeSlideIsPortrait ? ' ss-frame--portrait' : ''}${activeSpreadIsPair ? ' ss-frame--spread-item' : ''}`}
-                      onClick={() => openSlideLightbox(slideNumber)}
-                      aria-label={ui.enlarge(slideNumber, slide.title)}
-                    >
-                      <img
-                        src={slide.src}
-                        alt={slide.title}
-                        className="ss-slide is-active"
-                        loading="eager"
-                        fetchPriority="high"
-                        decoding="async"
-                        onLoad={() => warmSlideNeighbours(slideNumber)}
-                      />
-                      <span className="cr-fig-zoom ss-frame-zoom" aria-hidden>
-                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                          <path d="M15 3h6v6" />
-                          <path d="M21 3l-7 7" />
-                          <path d="M9 21H3v-6" />
-                          <path d="M3 21l7-7" />
-                        </svg>
-                      </span>
-                    </button>
-                  ))}
-                </div>
+                <button
+                  type="button"
+                  className={`ss-frame${activeSlideIsPortrait ? ' ss-frame--portrait' : ''}`}
+                  onClick={() => { if (active) openSlideLightbox(active) }}
+                  aria-label={active ? ui.enlarge(active, activeSlide.title) : ui.slides}
+                >
+                  <img
+                    key={activeSlide.src}
+                    src={activeSlide.src}
+                    alt={activeSlide.title}
+                    className="ss-slide is-active"
+                    loading="eager"
+                    fetchPriority="high"
+                    decoding="async"
+                    onLoad={() => warmSlideNeighbours(activeSlideNumber)}
+                  />
+                  <span className="cr-fig-zoom ss-frame-zoom" aria-hidden>
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M15 3h6v6" />
+                      <path d="M21 3l-7 7" />
+                      <path d="M9 21H3v-6" />
+                      <path d="M3 21l7-7" />
+                    </svg>
+                  </span>
+                </button>
                 <div className="ss-stage-bar">
                   <button
                     className="cr-viewer-nav-btn"
@@ -1157,14 +1139,8 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
                     aria-label={ui.prev}
                   >‹</button>
                   <div className="ss-stage-meta">
-                    <span className="ss-stage-count">
-                      {activeSpreadIsPair ? `${activeSpreadNumbers[0]}–${activeSpreadNumbers[1]}` : active} / {slides.length}
-                    </span>
-                    <span className="ss-stage-title">
-                      {activeSpreadIsPair
-                        ? activeSpread.map(({ slide }) => slide.title.replace(/\s+—\s+(cartographie|photo|repère)$/i, '')).filter((title, index, titles) => titles.indexOf(title) === index).join(' · ')
-                        : activeSlide.title}
-                    </span>
+                    <span className="ss-stage-count">{active} / {slides.length}</span>
+                    <span className="ss-stage-title">{activeSlide.title}</span>
                   </div>
                   <button
                     className="cr-viewer-nav-btn"
@@ -1230,7 +1206,7 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
                 {headingSlides.length > 0 && (
                   <div className="ss-anchor ss-anchor-pagebreak">
                     {headingSlides.map((slide) => (
-                      <div key={slide} className={slideMarkerSideClass(slide)} data-slide-anchor={slide}>
+                      <div key={slide} data-slide-anchor={slide}>
                         <button
                           type="button"
                           className="ss-marker"
@@ -1251,7 +1227,7 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
               {!hasPageBreak && headingSlides.length > 0 && (
                 <div id={`anchor-${section.id}-heading`} className="ss-anchor ss-anchor-heading">
                   {headingSlides.map((slide) => (
-                    <div key={slide} className={slideMarkerSideClass(slide)} data-slide-anchor={slide}>
+                    <div key={slide} data-slide-anchor={slide}>
                       <button
                         type="button"
                         className="ss-marker"
@@ -1304,7 +1280,7 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
                   >
                     {endSentinel}
                     {slideList.map((slide) => (
-                      <div key={slide} className={slideMarkerSideClass(slide)} data-slide-anchor={slide}>
+                      <div key={slide} data-slide-anchor={slide}>
                         <button
                           type="button"
                           className="ss-marker"
@@ -1333,7 +1309,7 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
                   >
                     {endSentinel}
                     {slideList.map((slide) => (
-                      <div key={slide} className={slideMarkerSideClass(slide)} data-slide-anchor={slide}>
+                      <div key={slide} data-slide-anchor={slide}>
                         <button
                           type="button"
                           className="ss-marker"
