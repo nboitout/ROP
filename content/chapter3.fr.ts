@@ -53,8 +53,8 @@ export const chapter3Fr: Chapter = {
         {
           type: 'xref',
           label: 'Voir la référence dans le chapitre 5',
-          text: 'Mécanisme de stress',
-          href: '/lecture/chapitre-5?xrefBack=%2Flecture%2Fchapitre-3%23p-section-3-organisation-anatomique-7&xrefBackLabel=Retour%20au%20chapitre%203#p-presentation-0',
+          text: 'Axe neurologique (SAM)',
+          href: '/lecture/chapitre-5?lang=fr&xrefBack=%2Flecture%2Fchapitre-3%23p-section-3-organisation-anatomique-7&xrefBackLabel=Retour%20au%20chapitre%203#p-sga-6',
         },
         { type: 'sub', text: '3.1.3. Mésencéphale' },
         { type: 'para', text: 'Le mésencéphale est situé à hauteur de la grande scissure de la tente du cervelet, à l’extrémité antérieure du sinus droit. Sa face antérieure se trouve en arrière et au-dessus de la selle turcique du sphénoïde, où loge l’hypophyse. Sa face postérieure est en avant de l’épiphyse. Il contient l’origine des nerfs oculomoteur III et trochléaire IV.' },
@@ -120,8 +120,8 @@ export const chapter3Fr: Chapter = {
         {
           type: 'xref',
           label: 'Voir la référence dans le chapitre 5',
-          text: 'Mécanisme de stress',
-          href: '/lecture/chapitre-5?xrefBack=%2Flecture%2Fchapitre-3%23p-section-3-organisation-anatomique-70&xrefBackLabel=Retour%20au%20chapitre%203#p-presentation-0',
+          text: 'Axe neurologique (SAM)',
+          href: '/lecture/chapitre-5?lang=fr&xrefBack=%2Flecture%2Fchapitre-3%23p-section-3-organisation-anatomique-70&xrefBackLabel=Retour%20au%20chapitre%203#p-sga-6',
         },
         { type: 'sub', text: '3.4.3. Hypophyse' },
         { type: 'para', text: 'L’hypophyse ne fait pas partie du diencéphale au sens strict, mais sa fonction et son origine embryologique sont indissociables de l’hypothalamus. Elle est logée dans la selle turcique du sphénoïde, au centre du crâne, et entourée par la dure-mère. Elle est formée de deux lobes : la post-hypophyse ou neurohypophyse, et l’antéhypophyse ou adénohypophyse.' },

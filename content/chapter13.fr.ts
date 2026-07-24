@@ -338,7 +338,7 @@ export const chapter13Fr: Chapter = {
           type: "xref",
           label: "Voir la référence dans le chapitre 12",
           text: "Pancréas : relations viscéro-émotionnelles",
-          href: "/lecture/chapitre-12?xrefBack=%2Flecture%2Fchapitre-13%23p-relations-viscero-emotionnelles-0&xrefBackLabel=Retour%20au%20chapitre%2013#p-relations-viscero-emotionnelles-0"
+          href: "/lecture/chapitre-12?lang=fr&xrefBack=%2Flecture%2Fchapitre-13%23p-relations-viscero-emotionnelles-0&xrefBackLabel=Retour%20au%20chapitre%2013#p-relations-viscero-emotionnelles-0"
         },
         {
           type: "para",
