@@ -1,50 +1,39 @@
 // Chapter 18 - slide <-> text synchronisation map for the combined reading
 // experience (/lecture/chapitre-18).
 //
-// Slides are pre-rendered from:
-// public/chapter-18/Chapter18 Slides de synthese - FR.pdf
+// Slides are supplied as pre-rendered PNGs in public/chapter-18/slides.
 
 export type SyncSlide = { src: string; title: string; orientation?: 'portrait' }
 export type SyncAnchor = { sectionId: string; blockIndex: number; slide: number | number[]; gapBefore?: 'half' }
 
-const chapter18SlidesBySource: SyncSlide[] = [
+export const chapter18Slides: SyncSlide[] = [
   { src: '/chapter-18/slides/slide-01.png', title: 'La vessie : anatomie, physiologie et ROP' },
   { src: '/chapter-18/slides/slide-02.png', title: 'Le panorama clinique' },
-  { src: '/chapter-18/slides/slide-03.png', title: 'Situation anatomique dans la cavite pelvienne (femme)' },
-  { src: '/chapter-18/slides/slide-04.png', title: 'Situation anatomique dans la cavite pelvienne (homme)' },
-  { src: '/chapter-18/slides/slide-05.png', title: 'Morphologie et dynamique volumetrique' },
-  { src: '/chapter-18/slides/slide-06.png', title: 'Architecture interne : le detrusor et le trigone' },
+  { src: '/chapter-18/slides/slide-03.png', title: 'Situation anatomique dans la cavité pelvienne — femme' },
+  { src: '/chapter-18/slides/slide-04.png', title: 'Situation anatomique dans la cavité pelvienne — homme' },
+  { src: '/chapter-18/slides/slide-05.png', title: 'Quand la vessie se remplit' },
+  { src: '/chapter-18/slides/slide-06.png', title: 'Architecture interne : les trois parois de la vessie' },
   { src: '/chapter-18/slides/slide-07.png', title: 'Morphologie interne : le trigone de Lieutaud' },
   { src: '/chapter-18/slides/slide-08.png', title: 'Le système de suspension mécanique' },
-  { src: '/chapter-18/slides/slide-09.png', title: 'Amarrage et soutenement pelvien' },
-  { src: '/chapter-18/slides/slide-10.png', title: 'Câblage neurologique : contrôle autonome et somatique' },
-  { src: '/chapter-18/slides/slide-11.png', title: 'Physiologie : le cycle de la miction' },
-  { src: '/chapter-18/slides/slide-12.png', title: 'Biomécanique : l enceinte manométrique pelvienne' },
-  { src: '/chapter-18/slides/slide-13.png', title: 'Mecanismes pathologiques et dysfonctions' },
-  { src: '/chapter-18/slides/slide-14.png', title: 'Biomécanique : l enceinte manométrique pelvienne' },
-  { src: '/chapter-18/slides/slide-15.png', title: 'Pathologie : incontinence urinaire d effort (IUE)' },
-  { src: '/chapter-18/slides/slide-16.png', title: 'Diagnostics differentiels : cystites et imperiosites' },
-  { src: '/chapter-18/slides/slide-17.png', title: 'Le profil viscéro-émotionnel' },
-  { src: '/chapter-18/slides/slide-18.png', title: 'Conseils pratiques : gymnastique périnéale hypopressive' },
-  { src: '/chapter-18/slides/slide-19.png', title: 'Conseils pratiques et gymnastique périnéale' },
-  { src: '/chapter-18/slides/slide-20.png', title: 'L approche thérapeutique ROP : cartographie d intervention' },
-  { src: '/chapter-18/slides/slide-21.png', title: 'L approche ROP : cartographie des zones podales' },
-  { src: '/chapter-18/slides/slide-22.png', title: 'Application ROP : zones réflexes podales' },
+  { src: '/chapter-18/slides/slide-09.png', title: 'La vessie suspendue : péritoine et ligaments' },
+  { src: '/chapter-18/slides/slide-10.png', title: 'Le système de soutènement de la vessie' },
+  { src: '/chapter-18/slides/slide-11.png', title: 'Innervation de la vessie' },
+  { src: '/chapter-18/slides/slide-12.png', title: 'Physiologie : le cycle de la miction' },
+  { src: '/chapter-18/slides/slide-13.png', title: 'Biomécanique : l’enceinte manométrique pelvienne' },
+  { src: '/chapter-18/slides/slide-14.png', title: 'Biomécanique : l’enceinte manométrique pelvienne' },
+  { src: '/chapter-18/slides/slide-15.png', title: 'Mécanismes pathologiques et dysfonctions' },
+  { src: '/chapter-18/slides/slide-16.png', title: 'Pathologie : incontinence urinaire d’effort (IUE)' },
+  { src: '/chapter-18/slides/slide-17.png', title: 'Diagnostics différentiels : cystites et impériosités' },
+  { src: '/chapter-18/slides/slide-18.png', title: 'Le profil viscéro-émotionnel' },
+  { src: '/chapter-18/slides/slide-19.png', title: 'Conseils pratiques : gymnastique périnéale hypopressive' },
+  { src: '/chapter-18/slides/slide-20.png', title: 'Conseils pratiques et gymnastique périnéale' },
+  { src: '/chapter-18/slides/slide-21.png', title: 'L’approche thérapeutique ROP : cartographie d’intervention' },
+  { src: '/chapter-18/slides/slide-22.png', title: 'L’approche ROP : cartographie des zones podales' },
+  { src: '/chapter-18/slides/slide-23.png', title: 'Application ROP : zones réflexes podales' },
 ]
 
-const chapter18ReadingOrder = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 14, 13, 15, 16, 17, 18, 19, 20, 21, 22]
-const chapter18SlideNumberByReadingOrder = new Map(chapter18ReadingOrder.map((sourceSlide, index) => [sourceSlide, index + 1]))
-
-function remapChapter18Slide(slide: number | number[]) {
-  if (Array.isArray(slide)) return slide.map((n) => chapter18SlideNumberByReadingOrder.get(n) ?? n)
-  return chapter18SlideNumberByReadingOrder.get(slide) ?? slide
-}
-
-export const chapter18Slides: SyncSlide[] = chapter18ReadingOrder.map((slideNumber) => chapter18SlidesBySource[slideNumber - 1])
-
 function withChapter18Titles(titles: string[]): SyncSlide[] {
-  const orderedTitles = chapter18ReadingOrder.map((slideNumber) => titles[slideNumber - 1])
-  return chapter18Slides.map((slide, index) => ({ ...slide, title: orderedTitles[index] ?? slide.title }))
+  return chapter18Slides.map((slide, index) => ({ ...slide, title: titles[index] ?? slide.title }))
 }
 
 export const chapter18SlidesEn = withChapter18Titles([
@@ -52,16 +41,17 @@ export const chapter18SlidesEn = withChapter18Titles([
   'The clinical overview',
   'Anatomical position in the pelvic cavity (female)',
   'Anatomical position in the pelvic cavity (male)',
-  'Morphology and volumetric dynamics',
-  'Internal architecture: the detrusor and trigone',
+  'When the bladder fills',
+  'Internal architecture: the three walls of the bladder',
   'Internal morphology: Lieutaud trigone',
   'The mechanical suspension system',
-  'Anchoring and pelvic support',
-  'Neurological wiring: autonomic and somatic control',
+  'The suspended bladder: peritoneum and ligaments',
+  'The bladder support system',
+  'Innervation of the bladder',
   'Physiology: the micturition cycle',
   'Biomechanics: the pelvic pressure chamber',
-  'Pathological mechanisms and dysfunctions',
   'Biomechanics: the pelvic pressure chamber',
+  'Pathological mechanisms and dysfunctions',
   'Pathology: stress urinary incontinence (SUI)',
   'Differential diagnoses: cystitis and urgency',
   'The viscero-emotional profile',
@@ -77,16 +67,17 @@ export const chapter18SlidesDe = withChapter18Titles([
   'Der klinische Ueberblick',
   'Anatomische Lage in der Beckenhoehle (Frau)',
   'Anatomische Lage in der Beckenhoehle (Mann)',
-  'Morphologie und Volumendynamik',
-  'Innere Architektur: Detrusor und Trigonum',
+  'Wenn sich die Blase fuellt',
+  'Innere Architektur: die drei Waende der Blase',
   'Innere Morphologie: Trigonum nach Lieutaud',
   'Das mechanische Aufhaengesystem',
-  'Verankerung und pelvine Stuetzung',
-  'Neurologische Verschaltung: autonome und somatische Kontrolle',
+  'Die aufgehaengte Blase: Peritoneum und Baender',
+  'Das Stuetzsystem der Blase',
+  'Innervation der Blase',
   'Physiologie: der Miktionszyklus',
   'Biomechanik: die pelvine Druckkammer',
-  'Pathologische Mechanismen und Dysfunktionen',
   'Biomechanik: die pelvine Druckkammer',
+  'Pathologische Mechanismen und Dysfunktionen',
   'Pathologie: Belastungsinkontinenz',
   'Differenzialdiagnosen: Zystitiden und Harndrang',
   'Das viszero-emotionale Profil',
@@ -102,16 +93,17 @@ export const chapter18SlidesEs = withChapter18Titles([
   'El panorama clinico',
   'Situacion anatomica en la cavidad pelvica (mujer)',
   'Situacion anatomica en la cavidad pelvica (hombre)',
-  'Morfologia y dinamica volumetrica',
-  'Arquitectura interna: detrusor y trigono',
+  'Cuando se llena la vejiga',
+  'Arquitectura interna: las tres paredes de la vejiga',
   'Morfologia interna: trigono de Lieutaud',
   'El sistema mecanico de suspension',
-  'Anclaje y sosten pelvico',
-  'Cableado neurologico: control autonomo y somatico',
+  'La vejiga suspendida: peritoneo y ligamentos',
+  'El sistema de sosten de la vejiga',
+  'Inervacion de la vejiga',
   'Fisiologia: el ciclo de la miccion',
   'Biomecanica: la camara manometrica pelvica',
-  'Mecanismos patologicos y disfunciones',
   'Biomecanica: la camara manometrica pelvica',
+  'Mecanismos patologicos y disfunciones',
   'Patologia: incontinencia urinaria de esfuerzo',
   'Diagnosticos diferenciales: cistitis e imperiosidad',
   'El perfil visceroemocional',
@@ -127,16 +119,17 @@ export const chapter18SlidesIt = withChapter18Titles([
   'Il panorama clinico',
   'Situazione anatomica nella cavita pelvica (donna)',
   'Situazione anatomica nella cavita pelvica (uomo)',
-  'Morfologia e dinamica volumetrica',
-  'Architettura interna: detrusore e trigono',
+  'Quando la vescica si riempie',
+  'Architettura interna: le tre pareti della vescica',
   'Morfologia interna: trigono di Lieutaud',
   'Il sistema meccanico di sospensione',
-  'Ancoraggio e sostegno pelvico',
-  'Cablaggio neurologico: controllo autonomo e somatico',
+  'La vescica sospesa: peritoneo e legamenti',
+  'Il sistema di sostegno della vescica',
+  'Innervazione della vescica',
   'Fisiologia: il ciclo della minzione',
   'Biomeccanica: la camera manometrica pelvica',
-  'Meccanismi patologici e disfunzioni',
   'Biomeccanica: la camera manometrica pelvica',
+  'Meccanismi patologici e disfunzioni',
   'Patologia: incontinenza urinaria da sforzo',
   'Diagnosi differenziali: cistiti e urgenza',
   'Il profilo viscero-emozionale',
@@ -147,7 +140,7 @@ export const chapter18SlidesIt = withChapter18Titles([
   'Applicazione ROP: zone riflesse podaliche',
 ])
 
-const chapter18SlideAnchorsBySource: SyncAnchor[] = [
+export const chapter18SlideAnchors: SyncAnchor[] = [
   { sectionId: 'presentation', blockIndex: -1, slide: 1 },
   { sectionId: 'presentation', blockIndex: 0, slide: 2 },
   { sectionId: 'situation', blockIndex: 1, slide: 3 },
@@ -156,23 +149,19 @@ const chapter18SlideAnchorsBySource: SyncAnchor[] = [
   { sectionId: 'anatomie', blockIndex: 2, slide: 6 },
   { sectionId: 'anatomie', blockIndex: 6, slide: 7 },
   { sectionId: 'anatomie', blockIndex: 13, slide: 8 },
-  { sectionId: 'anatomie', blockIndex: 19, slide: 9 },
-  { sectionId: 'innervation', blockIndex: 0, slide: 10 },
-  { sectionId: 'physiologie', blockIndex: 0, slide: 11 },
-  { sectionId: 'physiologie', blockIndex: 19, slide: 12 },
-  { sectionId: 'pathologies-courantes', blockIndex: 0, slide: 13 },
+  { sectionId: 'anatomie', blockIndex: 15, slide: 9 },
+  { sectionId: 'anatomie', blockIndex: 19, slide: 10 },
+  { sectionId: 'innervation', blockIndex: 0, slide: 11 },
+  { sectionId: 'physiologie', blockIndex: 0, slide: 12 },
+  { sectionId: 'physiologie', blockIndex: 19, slide: 13 },
   { sectionId: 'physiologie', blockIndex: 22, slide: 14 },
-  { sectionId: 'pathologies-courantes', blockIndex: 2, slide: 15 },
-  { sectionId: 'pathologies-courantes', blockIndex: 7, slide: 16 },
-  { sectionId: 'relations-viscero-emotionnelles', blockIndex: 0, slide: 17 },
-  { sectionId: 'conseils', blockIndex: 0, slide: 18 },
-  { sectionId: 'conseils', blockIndex: 1, slide: 19 },
-  { sectionId: 'zones-reflexes-podales', blockIndex: -1, slide: 20 },
-  { sectionId: 'zones-reflexes-podales', blockIndex: 0, slide: 21 },
-  { sectionId: 'zones-reflexes-podales', blockIndex: 2, slide: 22 },
+  { sectionId: 'pathologies-courantes', blockIndex: 0, slide: 15 },
+  { sectionId: 'pathologies-courantes', blockIndex: 2, slide: 16 },
+  { sectionId: 'pathologies-courantes', blockIndex: 7, slide: 17 },
+  { sectionId: 'relations-viscero-emotionnelles', blockIndex: 0, slide: 18 },
+  { sectionId: 'conseils', blockIndex: 0, slide: 19 },
+  { sectionId: 'conseils', blockIndex: 1, slide: 20 },
+  { sectionId: 'zones-reflexes-podales', blockIndex: -1, slide: 21 },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 0, slide: 22 },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 2, slide: 23 },
 ]
-
-export const chapter18SlideAnchors: SyncAnchor[] = chapter18SlideAnchorsBySource.map((anchor) => ({
-  ...anchor,
-  slide: remapChapter18Slide(anchor.slide),
-}))
