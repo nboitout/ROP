@@ -9,6 +9,7 @@ import { useState, useRef, useEffect } from 'react'
 type Item = { href: string; label: string }
 
 const ITEMS: Item[] = [
+  { href: '/lecture/chapitre-5-rework', label: 'Chapter 5 rework →' },
   { href: '/prototype-pied', label: '3D Prototype →' },
   { href: '/prototype-chapitre-14', label: 'Interactive reflex zones →' },
   {
