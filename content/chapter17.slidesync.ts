@@ -134,7 +134,7 @@ export const chapter17SlideAnchors: SyncAnchor[] = [
   { sectionId: 'anatomie', blockIndex: 0, slide: 6 },
   { sectionId: 'anatomie', blockIndex: 10, slide: 7 },
   { sectionId: 'anatomie', blockIndex: 13, slide: 8 },
-  { sectionId: 'anatomie', blockIndex: 14, slide: 9 },
+  { sectionId: 'anatomie', blockIndex: 14, itemIndex: 8, slide: 9 },
   { sectionId: 'vascularisation', blockIndex: 0, slide: 10 },
   { sectionId: 'innervation', blockIndex: 0, slide: 11 },
   { sectionId: 'innervation', blockIndex: 1, itemIndex: 6, slide: 12 },
