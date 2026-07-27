@@ -40,6 +40,7 @@ type Props = {
   bookTitle: string
   slides: SyncSlide[]
   anchors: SyncAnchor[]
+  halfBreaks?: SyncAnchorPoint[]
   // "Tous les chapitres" link target (the free-chapters list).
   backHref?: string
   sectionRail?: boolean
@@ -280,7 +281,7 @@ function preloadSlideImage(src: string | undefined) {
   img.src = src
 }
 
-export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, backHref = '/chapitres-gratuits', sectionRail = true, showClinicalCaseResource = false, restrictPaidXrefs = false, hiddenDotSlides = [] }: Props) {
+export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, halfBreaks = [], backHref = '/chapitres-gratuits', sectionRail = true, showClinicalCaseResource = false, restrictPaidXrefs = false, hiddenDotSlides = [] }: Props) {
   const { lang, t } = useLanguage()
   const searchParams = useSearchParams()
   const ui = SS_UI[lang] ?? SS_UI.fr
@@ -345,6 +346,10 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
     }
     return m
   }, [anchors])
+  const halfBreakPoints = useMemo(
+    () => new Set(halfBreaks.map(anchorPointKey)),
+    [halfBreaks],
+  )
 
   const endSlidesByPoint = useMemo(() => {
     const m = new Map<string, number[]>()
@@ -918,8 +923,9 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
     return slidesFromAnchors(anchorsByPoint.get(pointKey(sectionId, blockIndex, itemIndex)))
   }
 
-  function hasHalfGapBefore(sectionId: string, blockIndex: number) {
-    return (anchorsByPoint.get(pointKey(sectionId, blockIndex)) ?? [])
+  function hasHalfGapBefore(sectionId: string, blockIndex: number, itemIndex?: number) {
+    const key = pointKey(sectionId, blockIndex, itemIndex)
+    return halfBreakPoints.has(key) || (anchorsByPoint.get(key) ?? [])
       .some((anchor) => anchor.gapBefore === 'half')
   }
 
@@ -1254,6 +1260,7 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
                     eagerImage={eagerFigurePoints.has(pointKey(section.id, i))}
                     renderSlideAnchorsForItem={(itemIndex) => renderSlideAnchors(section.id, i, itemIndex)}
                     renderEndSentinelForItem={(itemIndex) => renderEndSentinel(section.id, i, itemIndex)}
+                    hasHalfGapBeforeItem={(itemIndex) => hasHalfGapBefore(section.id, i, itemIndex)}
                     sourceChapterKey={chapter.slug}
                     restrictPaidXrefs={restrictPaidXrefs}
                   />
@@ -1265,6 +1272,7 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, b
                       key={i}
                       id={posId}
                       data-pos-anchor=""
+                      className={hasHalfGapBefore(section.id, i) ? 'ss-anchor-halfbreak' : undefined}
                     >
                       {endSentinel}
                       {view}
@@ -1423,6 +1431,7 @@ function BlockView({
   eagerImage = false,
   renderSlideAnchorsForItem,
   renderEndSentinelForItem,
+  hasHalfGapBeforeItem,
   sourceChapterKey,
   restrictPaidXrefs,
 }: {
@@ -1432,6 +1441,7 @@ function BlockView({
   eagerImage?: boolean
   renderSlideAnchorsForItem?: (itemIndex: number) => ReactNode
   renderEndSentinelForItem?: (itemIndex: number) => ReactNode
+  hasHalfGapBeforeItem?: (itemIndex: number) => boolean
   sourceChapterKey: string
   restrictPaidXrefs: boolean
 }) {
@@ -1452,7 +1462,7 @@ function BlockView({
       return (
         <ul className="cr-ul">
           {block.items.map((it, i) => (
-            <li key={i}>
+            <li key={i} className={hasHalfGapBeforeItem?.(i) ? 'ss-anchor-halfbreak' : undefined}>
               {renderSlideAnchorsForItem?.(i)}
               {it}
             </li>
@@ -1463,7 +1473,7 @@ function BlockView({
       return (
         <ol className="cr-ol">
           {block.items.map((it, i) => (
-            <li key={i}>
+            <li key={i} className={hasHalfGapBeforeItem?.(i) ? 'ss-anchor-halfbreak' : undefined}>
               {renderSlideAnchorsForItem?.(i)}
               {it}
             </li>

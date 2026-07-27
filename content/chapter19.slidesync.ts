@@ -5,6 +5,7 @@
 
 export type SyncSlide = { src: string; title: string; orientation?: 'portrait' }
 export type SyncAnchor = { sectionId: string; blockIndex: number; slide: number | number[]; gapBefore?: 'half' }
+export type SyncBreakPoint = { sectionId: string; blockIndex: number; itemIndex?: number }
 
 export const chapter19Slides: SyncSlide[] = [
   { src: '/chapter-19/slides/slide-01.png', title: 'Chapitre 19 : appareil génital féminin' },
@@ -58,20 +59,29 @@ export const chapter19SlideAnchors: SyncAnchor[] = [
   { sectionId: 'ovaires-trompes-physiologie', blockIndex: 6, slide: 14 },
   { sectionId: 'ovaires-trompes-pathologies-courantes', blockIndex: 0, slide: 15 },
   { sectionId: 'ovaires-trompes-pathologies-courantes', blockIndex: 3, slide: 16 },
-  { sectionId: 'ovaires-trompes-pathologies-courantes', blockIndex: 5, slide: 17 },
-  { sectionId: 'ovaires-trompes-pathologies-courantes', blockIndex: 10, slide: 18 },
+  { sectionId: 'ovaires-trompes-pathologies-courantes', blockIndex: 6, slide: 17 },
+  { sectionId: 'ovaires-trompes-pathologies-courantes', blockIndex: 11, slide: 18 },
   { sectionId: 'ovaires-trompes-pathologies-courantes', blockIndex: 12, slide: 19 },
   { sectionId: 'ovaires-trompes-pathologies-courantes', blockIndex: 20, slide: 20 },
   { sectionId: 'ovaires-trompes-pathologies-courantes', blockIndex: 22, slide: 21 },
   { sectionId: 'ovaires-trompes-pathologies-courantes', blockIndex: 28, slide: 22 },
   { sectionId: 'ovaires-trompes-pathologies-courantes', blockIndex: 34, slide: 23 },
-  { sectionId: 'ovaires-trompes-pathologies-courantes', blockIndex: 38, slide: 24 },
+  { sectionId: 'ovaires-trompes-pathologies-courantes', blockIndex: 39, slide: 24 },
   { sectionId: 'ovaires-trompes-pathologies-courantes', blockIndex: 42, slide: 25 },
-  { sectionId: 'ovaires-trompes-pathologies-courantes', blockIndex: 44, slide: 26 },
-  { sectionId: 'ovaires-trompes-pathologies-courantes', blockIndex: 48, slide: 27 },
-  { sectionId: 'ovaires-trompes-pathologies-courantes', blockIndex: 50, slide: 28 },
+  { sectionId: 'ovaires-trompes-pathologies-courantes', blockIndex: 45, slide: 26 },
+  { sectionId: 'ovaires-trompes-pathologies-courantes', blockIndex: 49, slide: 27 },
+  { sectionId: 'ovaires-trompes-pathologies-courantes', blockIndex: 51, slide: 28 },
   { sectionId: 'ovaires-trompes-pathologies-courantes', blockIndex: 52, slide: 29 },
   { sectionId: 'ovaires-trompes-pathologies-courantes', blockIndex: 53, slide: 30 },
   { sectionId: 'ovaires-trompes-relations-viscero-emotionnelles', blockIndex: 4, slide: 31 },
   { sectionId: 'zones-reflexes-podales', blockIndex: -1, slide: 32 },
+]
+
+export const chapter19HalfBreaks: SyncBreakPoint[] = [
+  { sectionId: 'ovaires-trompes-pathologies-courantes', blockIndex: 1 },
+  { sectionId: 'ovaires-trompes-pathologies-courantes', blockIndex: 5 },
+  { sectionId: 'ovaires-trompes-pathologies-courantes', blockIndex: 10 },
+  { sectionId: 'ovaires-trompes-pathologies-courantes', blockIndex: 36 },
+  { sectionId: 'ovaires-trompes-pathologies-courantes', blockIndex: 42 },
+  { sectionId: 'ovaires-trompes-pathologies-courantes', blockIndex: 51, itemIndex: 1 },
 ]
