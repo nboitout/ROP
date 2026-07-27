@@ -1,6 +1,6 @@
 import type { Chapter } from './types'
 
-export const chapter19Fr: Chapter = {
+const chapter19FrBase: Chapter = {
   "slug": "chapter-19",
   "number": "19",
   "title": "Organes génitaux féminins",
@@ -1243,4 +1243,157 @@ export const chapter19Fr: Chapter = {
       ]
     }
   ]
+}
+
+const preservedSectionIds = new Set([
+  'uterus-presentation',
+  'uterus-situation',
+  'uterus-anatomie',
+  'uterus-rapports',
+  'uterus-vascularisation',
+  'uterus-innervation',
+  'uterus-physiologie',
+  'ovaires-trompes-presentation',
+  'ovaires-trompes-situation',
+  'ovaires-trompes-anatomie',
+  'ovaires-trompes-rapports',
+  'ovaires-trompes-innervation',
+  'ovaires-trompes-physiologie',
+])
+
+const clinicalApproachSection: Chapter['sections'][number] = {
+  id: 'approche-clinique-commune',
+  title: 'Approche clinique commune',
+  blocks: [
+    {
+      type: 'para',
+      text: 'Cette section regroupe les principaux motifs gynécologiques, les signes d’alerte nécessitant une orientation médicale et les situations fonctionnelles envisagées dans le modèle ROP. La réflexothérapie ne remplace ni le diagnostic médical ni la prise en charge gynécologique.',
+    },
+    { type: 'sub', text: 'Motifs gynécologiques fréquents' },
+    { type: 'sub', text: 'Douleurs pelviennes' },
+    {
+      type: 'para',
+      text: 'L’interrogatoire distingue les douleurs cycliques, rythmées par le cycle menstruel, des douleurs non cycliques. Les douleurs peuvent être pelviennes, lombaires ou sacro-coccygiennes et avoir une origine gynécologique, urinaire, digestive, musculo-squelettique ou plurifactorielle.',
+    },
+    {
+      type: 'bullets',
+      items: [
+        'Douleurs cycliques : douleurs ovulatoires, prémenstruelles ou menstruelles. Les dysménorrhées peuvent notamment être associées aux contractions utérines, aux prostaglandines, à l’endométriose, à l’adénomyose, à une infection ou à une anomalie anatomique.',
+        'Douleurs non cycliques : rechercher notamment une cause urinaire, digestive, musculo-squelettique, infectieuse, adhérentielle ou gynécologique.',
+        'Dyspareunies : elles peuvent être superficielles ou profondes et relever de causes multiples, notamment trouble du plancher pelvien, endométriose, adhérences, infection, sécheresse vaginale ou facteurs psycho-émotionnels.',
+      ],
+    },
+    { type: 'sub', text: 'Hémorragies génitales' },
+    {
+      type: 'para',
+      text: 'Une métrorragie est un saignement survenant en dehors des règles. Une ménorragie correspond à des règles trop abondantes ou trop longues. Toute hémorragie inhabituelle doit être évaluée selon l’âge, le contexte contraceptif, la possibilité d’une grossesse et le statut ménopausique.',
+    },
+    { type: 'sub', text: 'Aménorrhées' },
+    {
+      type: 'para',
+      text: 'En dehors de la grossesse, de l’allaitement et de la ménopause, une absence de règles peut avoir une origine constitutionnelle, endocrine, ovarienne, utérine, médicamenteuse, nutritionnelle, psychologique ou liée à une activité physique intense. Une évaluation médicale est nécessaire lorsque l’aménorrhée persiste.',
+    },
+    { type: 'sub', text: 'Leucorrhées' },
+    {
+      type: 'para',
+      text: 'Les pertes vaginales physiologiques varient au cours du cycle. Des pertes abondantes, malodorantes, colorées, irritantes ou accompagnées de douleurs, de fièvre ou de saignements peuvent évoquer une infection ou une autre affection gynécologique et justifient un examen médical.',
+    },
+    { type: 'sub', text: 'Signes d’alerte et diagnostic d’exclusion' },
+    {
+      type: 'para',
+      text: 'Une orientation médicale rapide ou urgente est nécessaire dans les situations suivantes :',
+    },
+    {
+      type: 'bullets',
+      items: [
+        'retard de règles ou grossesse possible associé à une douleur pelvienne, un saignement, une pâleur, un malaise ou une hypotension : suspicion de grossesse extra-utérine ou de fausse couche ;',
+        'douleur pelvienne aiguë, intense ou croissante, défense abdominale, vomissements, malaise ou altération de l’état général ;',
+        'fièvre, leucorrhées anormales, métrorragies ou douleur bilatérale évoquant une infection pelvienne ou une salpingite ;',
+        'métrorragie post-ménopausique, saignements récidivants, masse pelvienne, ballonnement persistant, ascite, amaigrissement ou fatigue inhabituelle ;',
+        'fibrome volumineux ou douloureux, suspicion de torsion ou de complication d’un kyste ovarien ;',
+        'anomalie du col ou dépistage non à jour : test HPV et/ou frottis cervico-utérin selon l’âge et les recommandations nationales.',
+      ],
+    },
+    {
+      type: 'para',
+      text: 'Chez toute femme en âge de procréer présentant une douleur pelvienne ou un saignement inhabituel, il faut demander la date des dernières règles et envisager une grossesse.',
+    },
+    { type: 'sub', text: 'Situations fonctionnelles abordées dans le modèle ROP' },
+    {
+      type: 'para',
+      text: 'Les situations suivantes peuvent être intégrées à une lecture fonctionnelle, après exclusion d’une pathologie nécessitant une prise en charge médicale :',
+    },
+    {
+      type: 'bullets',
+      items: [
+        'séquelles traumatiques, chirurgicales, infectieuses ou du post-partum pouvant s’accompagner d’adhérences et d’une diminution de la mobilité pelvienne ;',
+        'tensions des structures de soutien pouvant contribuer à certaines douleurs pelviennes ou lombo-sacrées ; ces enchaînements constituent des hypothèses cliniques et non des causalités systématiques ;',
+        'dysménorrhées et dyspareunies dans lesquelles des facteurs tissulaires, neurovégétatifs, hormonaux et psycho-émotionnels peuvent se combiner ;',
+        'suites d’hystérectomie : le travail ROP peut porter sur les zones réflexes de la vessie, du rectum, de l’intestin, des plexus lombaire et sacré et du cadre pelvien, en complément du suivi médical et de la rééducation indiquée.',
+      ],
+    },
+    {
+      type: 'para',
+      text: 'Les ligaments utérosacraux sont densément fournis en fibres sympathiques viscéro-sensibles. Dans le modèle présenté ici, leur fibrose peut irriter le plexus hypogastrique inférieur et générer de violentes dysménorrhées.',
+    },
+    { type: 'sub', text: 'Syndrome prémenstruel et règles douloureuses' },
+    {
+      type: 'para',
+      text: 'Le syndrome prémenstruel correspond à un ensemble de symptômes physiques, émotionnels et comportementaux apparaissant pendant la phase lutéale puis s’atténuant avec l’arrivée des règles. Il est actuellement compris comme une sensibilité individuelle aux fluctuations hormonales normales, avec participation des systèmes sérotoninergiques, neurovégétatifs et émotionnels.',
+    },
+    {
+      type: 'para',
+      text: 'Les manifestations possibles comprennent irritabilité, anxiété, fatigue, variations de l’humeur, tension mammaire, ballonnements, rétention hydrique, céphalées, troubles digestifs et modification de l’appétit.',
+    },
+    {
+      type: 'para',
+      text: 'Les règles douloureuses sont notamment liées aux contractions utérines et à l’action des prostaglandines. Une douleur intense, invalidante, tardive ou récemment apparue doit conduire à rechercher une cause secondaire, notamment une endométriose ou une adénomyose.',
+    },
+    { type: 'sub', text: 'Endométriose' },
+    {
+      type: 'para',
+      text: 'L’endométriose est une maladie inflammatoire chronique caractérisée par la présence de tissu semblable à l’endomètre en dehors de la cavité utérine. Les localisations fréquentes concernent le péritoine pelvien, les ovaires, les trompes, les ligaments utérosacraux, la vessie ou le tube digestif.',
+    },
+    {
+      type: 'para',
+      text: 'Elle peut s’accompagner de dysménorrhées, douleurs pelviennes et lombo-sacrées, dyspareunies, troubles digestifs et difficultés de fertilité. Le diagnostic et la prise en charge relèvent d’une évaluation médicale spécialisée.',
+    },
+    { type: 'sub', text: 'Relations viscéro-somatiques' },
+    {
+      type: 'para',
+      text: 'Dans la lecture ROP, les principaux repères associés sont les segments Th10 à L1, L5 et le sacrum, ainsi que le membre inférieur et le pied. Ces correspondances orientent le protocole réflexe sans se substituer à l’analyse anatomique et au diagnostic différentiel.',
+    },
+    { type: 'sub', text: 'Relations psycho-émotionnelles et vécu corporel' },
+    {
+      type: 'para',
+      text: 'Les organes génitaux et les seins s’inscrivent dans un ensemble neuroendocrinien sensible aux variations hormonales, au stress et au contexte psycho-émotionnel. Les émotions ne constituent pas, à elles seules, une cause organique démontrée, mais elles peuvent moduler le vécu corporel, l’intensité des symptômes et leur chronicisation.',
+    },
+    {
+      type: 'para',
+      text: 'Sur le plan symbolique, l’utérus et les ovaires peuvent être associés à la féminité, à la sexualité, à la maternité, au lien et à la protection. Certaines périodes de vie — conflits affectifs, peur de l’abandon, traumatisme psychique, difficultés relationnelles ou vécu difficile de la ménopause — peuvent s’accompagner de manifestations fonctionnelles telles que dysménorrhées, irrégularités du cycle, aménorrhée fonctionnelle, douleurs pelviennes, dyspareunie ou baisse du désir.',
+    },
+    {
+      type: 'para',
+      text: 'Le départ des enfants, les changements familiaux ou la modification de l’image corporelle peuvent également être vécus comme une perte de repères ou un vide affectif. Ces expériences peuvent influencer la manière dont une femme perçoit son corps et ses symptômes, sans permettre d’en déduire une lésion précise.',
+    },
+    {
+      type: 'para',
+      text: 'Les seins peuvent, dans certaines représentations personnelles ou culturelles, évoquer la féminité, la maternité, la nutrition, la protection et l’image de soi. Des bouleversements affectifs, un conflit familial, un sentiment d’insécurité ou un vécu difficile du départ des enfants peuvent être associés à une majoration de tensions mammaires, de douleurs fonctionnelles ou d’un inconfort corporel.',
+    },
+    {
+      type: 'para',
+      text: 'Toutefois, les symptômes gynécologiques ou mammaires doivent toujours faire l’objet d’une évaluation médicale adaptée. Les facteurs émotionnels peuvent contribuer à leur expression ou à leur persistance, mais ils ne doivent pas être considérés comme l’unique explication d’une pathologie organique.',
+    },
+  ],
+}
+
+const zonesSection = chapter19FrBase.sections.find((section) => section.id === 'zones-reflexes-podales')
+
+export const chapter19Fr: Chapter = {
+  ...chapter19FrBase,
+  sections: [
+    ...chapter19FrBase.sections.filter((section) => preservedSectionIds.has(section.id)),
+    clinicalApproachSection,
+    ...(zonesSection ? [zonesSection] : []),
+  ],
 }
