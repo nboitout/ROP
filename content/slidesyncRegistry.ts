@@ -50,6 +50,7 @@ import { chapter20Slides, chapter20SlideAnchors } from './chapter20.slidesync'
 import { chapter21Slides, chapter21SlideAnchors } from './chapter21.slidesync'
 import type { Lang } from '@/app/i18n/translations'
 import { FREE_CHAPTER_KEYS } from '@/lib/access'
+import { computeSlideVisuals, slideNumbers } from '@/lib/slideVisuals'
 import { getChapterTranslations } from './registry'
 import type { Chapter } from './types'
 
@@ -155,35 +156,6 @@ const slideSearchSources: Record<string, readonly SlideSearchSource[]> = {
 
 let cachedSlideSearchIndex: BookSlideSearchRecord[] | null = null
 
-function normalizeForSearch(value: string): string {
-  return value
-    .normalize('NFD')
-    .replace(/[\u0300-\u036f]/g, '')
-    .replace(/\u00df/g, 'ss')
-    .toLowerCase()
-}
-
-function isPodalReflexText(value: string): boolean {
-  const normalized = normalizeForSearch(value)
-  const hasReflex = /reflex|reflej|rifless/.test(normalized)
-  const hasPodal = /podal|plantar|plantaire|foot|feet|pied|fuss/.test(normalized)
-  return hasReflex && hasPodal
-}
-
-function isRopClinicalApplicationText(value: string): boolean {
-  const normalized = normalizeForSearch(value)
-  return /\brop\b/.test(normalized) && /(application clinique|approche clinique|clinical application|clinical approach)/.test(normalized)
-}
-
-function isPodalAnchorSection(sectionId: string): boolean {
-  const normalized = normalizeForSearch(sectionId)
-  return isPodalReflexText(sectionId) || normalized.includes('zones-reflexes') || isRopClinicalApplicationText(sectionId)
-}
-
-function slideNumbers(slide: number | number[]): number[] {
-  return Array.isArray(slide) ? slide : [slide]
-}
-
 function chapterBaseHref(chapterKey: string): string {
   if (chapterKey === 'introduction') return '/introduction'
   if (chapterKey === 'chapter-2') return '/lecture/traitement-rop'
@@ -274,25 +246,7 @@ function buildSlideRecordsForSource(
 }
 
 export function getChapterSlideVisuals(key: string): { slideCount: number; podalZoneSlideCount: number } {
-  const source = slideVisualSources[key]
-  if (!source) return { slideCount: 0, podalZoneSlideCount: 0 }
-
-  const podalSlides = new Set<number>()
-  source.anchors.forEach((anchor) => {
-    if (!isPodalAnchorSection(anchor.sectionId)) return
-    slideNumbers(anchor.slide).forEach((slide) => podalSlides.add(slide))
-  })
-
-  source.slides.forEach((slide, index) => {
-    if (isPodalReflexText(slide.title) || isRopClinicalApplicationText(slide.title)) {
-      podalSlides.add(index + 1)
-    }
-  })
-
-  return {
-    slideCount: source.slides.length,
-    podalZoneSlideCount: podalSlides.size,
-  }
+  return computeSlideVisuals(slideVisualSources[key])
 }
 
 export function getBookSlideSearchIndex(lang: Lang | 'all' = 'all'): BookSlideSearchRecord[] {

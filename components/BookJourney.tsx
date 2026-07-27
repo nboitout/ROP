@@ -3,15 +3,13 @@
 import { useState } from 'react'
 import { useLanguage } from '@/app/i18n/LanguageContext'
 import { getSessionId } from '@/lib/session'
-import { chapterMetaSnapshot } from '@/lib/chapterMetaSnapshot'
-import { snapshotMeta } from '@/lib/chapterStats'
+import { bookVisualTotals, chapterMetaSnapshot } from '@/lib/chapterMetaSnapshot'
 
 const ROMAN = ['I', 'II', 'III', 'IV', 'V']
 
-const CARD_SLUG: Record<string, string> = {
-  '00': 'introduction',
-  '02': 'chapter-2',
-  '14': 'chapter-14',
+/* Table-of-contents card number → key of the generated visual snapshot. */
+function snapshotKey(num: string): string {
+  return num === '00' ? 'introduction' : `chapter-${Number(num)}`
 }
 
 /* Chapter number → index of the corresponding part in t.architecture.flow */
@@ -57,6 +55,17 @@ export default function BookJourney() {
           <div className="jn-stats">
             {t.journey.stats.map((s) => <span key={s} className="jn-stat">{s}</span>)}
           </div>
+          <div className="jn-visuals">
+            <p className="jn-visuals-hd">
+              <span className="jn-visuals-n">{bookVisualTotals.visualCount}</span>
+              <span className="jn-visuals-lbl">{t.visuals.lbl}</span>
+            </p>
+            <div className="jn-visuals-parts">
+              <span className="jn-visuals-part">{t.visuals.photos(bookVisualTotals.photoCount)}</span>
+              <span className="jn-visuals-part">{t.visuals.slides(bookVisualTotals.slideCount)}</span>
+              <span className="jn-visuals-part">{t.visuals.maps(bookVisualTotals.cartographyCount)}</span>
+            </div>
+          </div>
           <p className="jn-hint">{t.journey.hint}</p>
         </div>
       </div>
@@ -79,8 +88,17 @@ export default function BookJourney() {
                 {rows.map((card) => {
                   const isFree = card.variant === 'free'
                   const isOpen = open === card.num
-                  const meta = isFree && CARD_SLUG[card.num] && chapterMetaSnapshot[CARD_SLUG[card.num]]
-                    ? snapshotMeta(chapterMetaSnapshot[CARD_SLUG[card.num]], lang)
+                  const visuals = chapterMetaSnapshot[snapshotKey(card.num)]
+                  const metrics = visuals
+                    ? [
+                      t.visuals.read(visuals.readingMinutes),
+                      visuals.photoCount > 0 ? t.visuals.photos(visuals.photoCount) : null,
+                      visuals.slideCount > 0 ? t.visuals.slides(visuals.slideCount) : null,
+                      visuals.cartographyCount > 0 ? t.visuals.maps(visuals.cartographyCount) : null,
+                    ].filter((m): m is string => !!m)
+                    : []
+                  const meta = metrics.length > 0
+                    ? null
                     : ('meta' in card ? (card as { meta?: string }).meta : undefined)
                   return (
                     <div key={card.num} className={`jn-row${isFree ? ' free' : ''}${isOpen ? ' open' : ''}`}>
@@ -96,6 +114,9 @@ export default function BookJourney() {
                           <span className="jn-row-lbl">{card.label}</span>
                           <span className="jn-row-title">{card.title}</span>
                         </span>
+                        {visuals && visuals.visualCount > 0 && (
+                          <span className="jn-row-vis">{t.visuals.chip(visuals.visualCount)}</span>
+                        )}
                         {isFree && <span className="jn-free-b">{t.chapters.freeBadge}</span>}
                         <span className="jn-x" aria-hidden="true" />
                       </button>
@@ -107,6 +128,13 @@ export default function BookJourney() {
                               {card.tags.map((tag) => <span key={tag} className="jn-tag">{tag}</span>)}
                             </div>
                             <div className="jn-body-ft">
+                              {metrics.length > 0 && (
+                                <div className="jn-metrics">
+                                  {metrics.map((metric) => (
+                                    <span key={metric} className="jn-metric">{metric}</span>
+                                  ))}
+                                </div>
+                              )}
                               {meta && <span className="jn-meta">{meta}</span>}
                               {isFree && (
                                 <a href="/chapitres-gratuits" className="jn-read" onClick={() => track(`toc_read_${card.num}`)}>

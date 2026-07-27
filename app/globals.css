@@ -112,9 +112,11 @@ h1 em { font-style:italic; color:var(--gold-l); }
 
 /* STATS */
 #stats { background:var(--parch); padding:34px 72px; }
-.stats-row { display:grid; grid-template-columns:repeat(3,1fr); gap:2px; }
+.stats-row { display:grid; grid-template-columns:repeat(auto-fit,minmax(190px,1fr)); gap:2px; }
 .stat { background:white; padding:22px 24px; text-align:center; }
 .stat:first-child { border-left:3px solid var(--sage); }
+.stat-visuals { background:linear-gradient(180deg,#fff 0%,rgba(160,124,58,.07) 100%); border-right:3px solid var(--gold); }
+.stat-visuals .stat-n { color:var(--gold); }
 .stat-n { font-family:'Cormorant Garamond',serif; font-size:3rem; font-weight:300; color:var(--sage); line-height:1; margin-bottom:6px; }
 .stat-l { font-size:.72rem; letter-spacing:.08em; text-transform:uppercase; color:var(--i30); line-height:1.4; }
 
@@ -125,6 +127,13 @@ h1 em { font-style:italic; color:var(--gold-l); }
 .jn-stats { display:flex; flex-wrap:wrap; gap:6px; margin-top:10px; }
 .jn-stat { font-size:.64rem; font-weight:500; letter-spacing:.12em; text-transform:uppercase; color:var(--sage); background:rgba(74,107,90,.07); border:1px solid rgba(74,107,90,.18); padding:6px 13px; border-radius:20px; }
 .jn-hint { font-family:'Cormorant Garamond',serif; font-size:.92rem; font-style:italic; color:var(--i30); margin-top:8px; }
+.jn-visuals { margin-top:12px; padding:12px 15px; background:rgba(160,124,58,.05); border:1px solid rgba(160,124,58,.22); border-radius:3px; }
+.jn-visuals-hd { display:flex; align-items:baseline; gap:10px; }
+.jn-visuals-n { font-family:'Cormorant Garamond',serif; font-size:2rem; font-weight:300; line-height:1; color:var(--gold); }
+.jn-visuals-lbl { font-size:.62rem; font-weight:500; letter-spacing:.18em; text-transform:uppercase; color:var(--i50); }
+.jn-visuals-parts { display:flex; flex-wrap:wrap; gap:4px 16px; margin-top:8px; }
+.jn-visuals-part { position:relative; font-size:.73rem; line-height:1.5; color:var(--i50); padding-left:12px; }
+.jn-visuals-part::before { content:''; position:absolute; left:0; top:.62em; width:5px; height:5px; border-radius:50%; background:var(--gold); opacity:.6; }
 
 .jn-flow { position:relative; }
 .jn-flow::before { content:''; position:absolute; left:25px; top:14px; bottom:14px; width:1px; background:linear-gradient(180deg, rgba(74,107,90,.32) 0%, rgba(160,124,58,.38) 100%); }
@@ -150,6 +159,7 @@ h1 em { font-style:italic; color:var(--gold-l); }
 .jn-row-lbl { font-size:.6rem; letter-spacing:.16em; text-transform:uppercase; color:var(--i30); }
 .jn-row-title { font-family:'Cormorant Garamond',serif; font-size:1.1rem; font-weight:400; line-height:1.15; color:var(--ink); }
 .jn-free-b { flex-shrink:0; font-size:.57rem; font-weight:600; letter-spacing:.13em; text-transform:uppercase; color:var(--sage); background:rgba(74,107,90,.1); padding:4px 9px; border-radius:2px; }
+.jn-row-vis { flex-shrink:0; font-size:.57rem; font-weight:600; letter-spacing:.12em; text-transform:uppercase; color:var(--gold); background:rgba(160,124,58,.09); border:1px solid rgba(160,124,58,.24); padding:3px 9px; border-radius:2px; white-space:nowrap; }
 .jn-x { position:relative; width:22px; height:22px; flex-shrink:0; opacity:.55; transition:transform .32s, opacity .2s; }
 .jn-x::before, .jn-x::after { content:''; position:absolute; top:50%; left:50%; background:var(--sage); }
 .jn-x::before { width:13px; height:1.5px; transform:translate(-50%,-50%); }
@@ -166,6 +176,9 @@ h1 em { font-style:italic; color:var(--gold-l); }
 .jn-body-ft { display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap; margin-top:12px; }
 .jn-body-ft:empty { display:none; }
 .jn-meta { font-size:.71rem; color:var(--i30); letter-spacing:.04em; }
+.jn-metrics { display:flex; flex-wrap:wrap; gap:6px; }
+.jn-metric { font-size:.68rem; letter-spacing:.03em; color:var(--i50); background:rgba(160,124,58,.07); border:1px solid rgba(160,124,58,.2); padding:4px 11px; border-radius:20px; }
+.jn-metric:first-child { color:var(--i30); background:none; border-color:var(--i08); }
 .jn-read { display:inline-block; font-size:.72rem; font-weight:600; letter-spacing:.08em; text-transform:uppercase; color:var(--cream); background:var(--sage); padding:10px 18px; border-radius:3px; box-shadow:0 4px 14px rgba(74,107,90,.28); transition:background .2s, transform .2s, box-shadow .2s; }
 .jn-read:hover { background:#3a5a4a; transform:translateY(-2px); box-shadow:0 6px 18px rgba(74,107,90,.36); }
 .jn-foot { display:flex; justify-content:center; gap:12px; flex-wrap:wrap; margin-top:30px; }
@@ -327,6 +340,8 @@ footer > div > p { font-size:.95rem; color:rgba(245,240,232,.84); line-height:1.
   .jn-num { width:26px; font-size:1.28rem; }
   .jn-row-title { font-size:1.05rem; }
   .jn-free-b { font-size:.53rem; padding:3px 7px; letter-spacing:.1em; }
+  .jn-row-vis { font-size:.53rem; padding:3px 7px; letter-spacing:.08em; }
+  .jn-visuals-n { font-size:1.7rem; }
   .jn-body-ct { padding:0 12px 12px 44px; }
   header { padding:0 22px; }
   nav { display:none; }
@@ -343,6 +358,9 @@ footer > div > p { font-size:.95rem; color:rgba(245,240,232,.84); line-height:1.
 }
 
 @media(max-width:520px){
+  /* Free rows already carry the "accès libre" badge — one badge is enough at
+     this width, the visual counts stay visible in the opened panel. */
+  .jn-row.free .jn-row-vis { display:none; }
   header { height:58px; padding:0 12px; gap:8px; }
   .h-logo { font-size:.83rem; letter-spacing:.07em; white-space:nowrap; }
   .h-right { gap:7px; min-width:0; }

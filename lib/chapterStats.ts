@@ -334,11 +334,3 @@ export function chapterMeta(chapter: Chapter, lang: Lang = 'fr'): string {
   return figureCount > 0 ? `${perMin(readingMinutes)} · ${perFig(figureCount)}` : perMin(readingMinutes)
 }
 
-export function snapshotMeta(
-  snapshot: { readingMinutes: number; figureCount: number },
-  lang: Lang = 'fr',
-): string {
-  const { readingMinutes, figureCount } = snapshot
-  const { perMin, perFig } = META_LABELS[lang]
-  return figureCount > 0 ? `${perMin(readingMinutes)} · ${perFig(figureCount)}` : perMin(readingMinutes)
-}

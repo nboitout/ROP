@@ -12,6 +12,7 @@ import FreeChapterForm from '@/components/FreeChapterForm'
 import BookNotifyForm from '@/components/BookNotifyForm'
 import LanguageToggle from '@/components/LanguageToggle'
 import { useLanguage } from '@/app/i18n/LanguageContext'
+import { bookVisualTotals } from '@/lib/chapterMetaSnapshot'
 import { getSessionId } from '@/lib/session'
 
 // Gated chapter pages redirect to /?gate=free#acces-libre. The native anchor
@@ -210,6 +211,12 @@ export default function HomePage() {
               </div>
             </div>
           ))}
+          <div className="stat stat-visuals">
+            <div className="stat-n">{bookVisualTotals.visualCount}</div>
+            <div className="stat-l">
+              <span>{t.visuals.statLabel[0]}</span><br /><span>{t.visuals.statLabel[1]}</span>
+            </div>
+          </div>
         </div>
       </section>
 
