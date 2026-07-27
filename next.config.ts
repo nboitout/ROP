@@ -14,7 +14,11 @@ const securityHeaders = [
     key: 'Strict-Transport-Security',
     value: 'max-age=63072000; includeSubDomains; preload',
   },
-  // TODO: tighten CSP once Stripe.js and analytics are added
+  // Checkout is Stripe-hosted: the buyer is redirected to checkout.stripe.com
+  // and comes back to /merci, so no Stripe.js runs here and the CSP needs no
+  // stripe.com origins. Keep it that way — an embedded/Elements checkout would
+  // require script-src, frame-src and connect-src exceptions.
+  // TODO: revisit when analytics scripts are added.
   {
     key: 'Content-Security-Policy',
     value: [

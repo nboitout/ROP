@@ -316,6 +316,29 @@ h1 em { font-style:italic; color:var(--gold-l); }
 .pc.star .pc-l li::before { color:var(--gold-l); }
 #acheter .cr-end-card { padding:30px 32px; }
 #acheter .cr-end-body { margin-bottom:18px; }
+/* Buy / notify call to action inside a pricing card — same box whether it is a
+   link (waitlist) or a button (Stripe checkout). */
+.pc-cta { width:100%; text-align:center; display:block; border:none; cursor:pointer;
+  font-family:'DM Sans',sans-serif; }
+.pc-cta:disabled { opacity:.65; cursor:progress; }
+.checkout-error { margin-top:10px; font-size:.75rem; line-height:1.45; color:#a33; text-align:center; }
+.pc.star .checkout-error { color:#f0b8b0; }
+
+/* ACCESS RECOVERY (merci page) */
+.access-recover { margin:32px auto 0; max-width:520px; padding-top:24px; border-top:1px solid rgba(26,26,24,.1); text-align:center; }
+.access-recover-title { margin:0 0 6px; font-family:'Cormorant Garamond',serif; font-size:1.25rem; color:var(--ink); }
+.access-recover-body { margin:0 0 16px; font-size:.85rem; line-height:1.6; color:rgba(26,26,24,.66); }
+.access-recover-form { display:flex; gap:8px; flex-wrap:wrap; justify-content:center; }
+.access-recover-form input { flex:1; min-width:220px; padding:12px 14px; font-size:16px;
+  font-family:'DM Sans',sans-serif; color:var(--ink); background:#fff;
+  border:1px solid rgba(26,26,24,.18); border-radius:3px; }
+.access-recover-form input:focus { outline:none; border-color:var(--sage); }
+.access-recover-form input[aria-invalid='true'] { border-color:#a33; }
+.access-recover-form .btn { flex-shrink:0; cursor:pointer; border:none; font-family:'DM Sans',sans-serif; }
+.access-recover-done { margin:0; font-size:.88rem; color:var(--sage); }
+.access-recover-error { margin:10px 0 0; font-size:.75rem; color:#a33; }
+.sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden;
+  clip:rect(0,0,0,0); white-space:nowrap; border:0; }
 
 /* FOOTER */
 footer { background:var(--ink); padding:48px 72px 42px; display:block; text-align:center; }

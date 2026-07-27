@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 
 export default async function EstrobolomeDeckPage() {
   const cookieStore = await cookies()
-  if (!canReadPaidChapter(cookieStore)) {
+  if (!(await canReadPaidChapter(cookieStore))) {
     redirect('/#acheter')
   }
 

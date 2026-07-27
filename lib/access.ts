@@ -1,3 +1,7 @@
+import { verifyReaderSession } from '@/lib/authSession'
+
+type CookieValue = { value?: string } | undefined | null
+
 type CookieReader = {
   get(name: string): unknown
 }
@@ -5,6 +9,15 @@ type CookieReader = {
 export const FREE_CHAPTER_ACCESS_COOKIE = 'free_chapters_access'
 export const PAID_ACCESS_COOKIE = 'paid_access'
 export const ADMIN_SESSION_COOKIE = 'admin_session'
+
+/** The paid product sold on the site — the enriched online book. */
+export const ONLINE_BOOK_PRODUCT = 'online_book'
+
+function cookieValue(cookieStore: CookieReader, name: string): string | undefined {
+  const entry = cookieStore.get(name) as CookieValue
+  if (typeof entry === 'string') return entry
+  return entry?.value
+}
 
 export const FREE_CHAPTER_KEYS = new Set(['introduction', 'chapter-2', 'chapter-14'])
 
@@ -41,8 +54,16 @@ export function canReadFreeChapter(cookieStore: CookieReader): boolean {
   return !!cookieStore.get(ADMIN_SESSION_COOKIE) || !!cookieStore.get(FREE_CHAPTER_ACCESS_COOKIE)
 }
 
-export function canReadPaidChapter(cookieStore: CookieReader): boolean {
-  return !!cookieStore.get(ADMIN_SESSION_COOKIE) || !!cookieStore.get(PAID_ACCESS_COOKIE)
+/**
+ * Paid access requires a signed reader session naming the online book — the
+ * cookie's presence alone means nothing.  Async because signature checking
+ * goes through Web Crypto (see lib/authSession.ts).
+ */
+export async function canReadPaidChapter(cookieStore: CookieReader): Promise<boolean> {
+  if (cookieValue(cookieStore, ADMIN_SESSION_COOKIE)) return true
+
+  const session = await verifyReaderSession(cookieValue(cookieStore, PAID_ACCESS_COOKIE))
+  return !!session?.products.includes(ONLINE_BOOK_PRODUCT)
 }
 
 export function canReadDraftChapter(cookieStore: CookieReader): boolean {

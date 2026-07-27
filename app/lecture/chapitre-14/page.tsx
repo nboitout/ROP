@@ -42,7 +42,7 @@ export default async function Chapitre14SyncPage({
   if (!canReadFreeChapter(cookieStore)) {
     redirect('/?gate=free#acces-libre')
   }
-  const restrictPaidXrefs = !canReadPaidChapter(cookieStore)
+  const restrictPaidXrefs = !(await canReadPaidChapter(cookieStore))
 
   // The synthesis deck exists in all five languages for chapter 14; serve the
   // reader's language.

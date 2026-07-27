@@ -16,7 +16,7 @@ export default async function Chapitre13Page({
   searchParams: Promise<{ lang?: string }>
 }) {
   const cookieStore = await cookies()
-  if (!canReadPaidChapter(cookieStore)) {
+  if (!(await canReadPaidChapter(cookieStore))) {
     redirect('/#acheter')
   }
 

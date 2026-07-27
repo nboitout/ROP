@@ -14,7 +14,7 @@ function isSourceDocument(pathname: string): boolean {
   return /^\/assets\/.+\.(docx|pdf)$/i.test(pathname)
 }
 
-export function proxy(req: NextRequest) {
+export async function proxy(req: NextRequest) {
   const { pathname } = req.nextUrl
 
   if (pathname.startsWith('/admin')) {
@@ -42,13 +42,13 @@ export function proxy(req: NextRequest) {
         : NextResponse.redirect(new URL('/?gate=free#acces-libre', req.url))
     }
 
-    return canReadPaidChapter(req.cookies)
+    return (await canReadPaidChapter(req.cookies))
       ? NextResponse.next()
       : NextResponse.redirect(new URL('/#acheter', req.url))
   }
 
   if (isSourceDocument(pathname)) {
-    return canReadPaidChapter(req.cookies)
+    return (await canReadPaidChapter(req.cookies))
       ? NextResponse.next()
       : NextResponse.redirect(new URL('/#acheter', req.url))
   }

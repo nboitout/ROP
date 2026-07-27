@@ -33,7 +33,7 @@ export default async function Chapitre17LecturePage({
   searchParams: Promise<{ lang?: string }>
 }) {
   const cookieStore = await cookies()
-  if (!canReadPaidChapter(cookieStore)) {
+  if (!(await canReadPaidChapter(cookieStore))) {
     redirect('/#acheter')
   }
 

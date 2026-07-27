@@ -10,6 +10,7 @@ import BookJourney from '@/components/BookJourney'
 import QuoteSlider from '@/components/QuoteSlider'
 import FreeChapterForm from '@/components/FreeChapterForm'
 import BookNotifyForm from '@/components/BookNotifyForm'
+import BuyOnlineBookButton from '@/components/BuyOnlineBookButton'
 import LanguageToggle from '@/components/LanguageToggle'
 import { useLanguage } from '@/app/i18n/LanguageContext'
 import { bookVisualTotals } from '@/lib/chapterMetaSnapshot'
@@ -371,7 +372,8 @@ export default function HomePage() {
             <ul className="pc-l">
               {t.pricing.plan2.features.map((f) => <li key={f}>{f}</li>)}
             </ul>
-            <a href="#notify" className="btn b-out" style={{ width: '100%', textAlign: 'center' }} onClick={() => trackCta('pricing_notify')}>{t.pricing.plan2.cta}</a>
+            {/* The only plan sold here: the printed edition ships from the publisher. */}
+            <BuyOnlineBookButton className="btn b-gold pc-cta" />
           </div>
           <div className="pc">
             <div className="pc-n">{t.pricing.plan3.name}</div>

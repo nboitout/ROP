@@ -22,7 +22,7 @@ export default async function IntroductionPage({
   if (!canReadFreeChapter(cookieStore)) {
     redirect('/?gate=free#acces-libre')
   }
-  const restrictPaidXrefs = !canReadPaidChapter(cookieStore)
+  const restrictPaidXrefs = !(await canReadPaidChapter(cookieStore))
 
   const { lang: langParam } = await searchParams
   const lang = await getServerLang(langParam)
