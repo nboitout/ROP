@@ -38,7 +38,7 @@ export const chapter7SlideAnchors: SyncAnchor[] = [
   { sectionId: 'physiologie', blockIndex: 0, slide: 10 },
   { sectionId: 'physiologie', blockIndex: 12, slide: 11 },
   { sectionId: 'pathologie', blockIndex: 0, slide: 12 },
-  { sectionId: 'relations-peritoneo-somatiques', blockIndex: 5, slide: 13 },
+  { sectionId: 'relations-peritoneo-somatiques', blockIndex: 0, slide: 13 },
   { sectionId: 'zones-reflexes-podales', blockIndex: -1, slide: 14 },
   { sectionId: 'zones-reflexes-podales', blockIndex: 2, slide: 15 },
   { sectionId: 'zones-reflexes-podales', blockIndex: 4, slide: 16 },
