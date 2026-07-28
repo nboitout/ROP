@@ -529,16 +529,75 @@ export const chapter16Fr: Chapter = {
       "title": "Relations viscéro-émotionnelles",
       "blocks": [
         {
+          "type": "sub",
+          "text": "Reins: une lecture symbolique et émotionnelle"
+        },
+        {
           "type": "para",
-          "text": "Les reins expriment des sentiments de désir refoulé, de tristesse existentielle profonde de fin de vie, de mort. Ils reflètent souvent les conflits existant avec les parents ou entre les parents. Il faut distinguer le rein droit du rein gauche:"
+          "text": "La lecture viscéro-émotionnelle proposée en ROP constitue une grille symbolique d’exploration clinique non validée scientifiquement. Elle ne décrit pas des relations anatomiques ou physiologiques démontrées et ne permet pas d’établir un diagnostic psychologique."
+        },
+        {
+          "type": "para",
+          "text": "Elle peut cependant ouvrir un espace de dialogue autour de certains vécus exprimés spontanément par la personne: peur profonde, insécurité, perte, filiation, difficulté à s’affirmer ou à se projeter dans l’avenir. Ces pistes doivent rester ouvertes, être formulées avec prudence et ne jamais être imposées au patient."
+        },
+        {
+          "type": "sub",
+          "text": "Rein droit ou « rein digestif »"
+        },
+        {
+          "type": "para",
+          "text": "En raison de ses rapports anatomiques avec le foie et le côlon ascendant, le rein droit peut être associé, dans la lecture symbolique ROP, à la manière dont une personne « assimile » certaines expériences."
+        },
+        {
+          "type": "para",
+          "text": "Le praticien peut notamment explorer, lorsque cela fait sens pour la personne:"
         },
         {
           "type": "bullets",
           "items": [
-            "Rein droit ou « rein digestif »: il sert de trop-plein émotionnel au foie. Il est l’organe de la colère intense refoulée, remontant à la petite enfance, en totale fusion avec la mère ou, au contraire, en totale opposition, empêchant l’enfant de développer sa propre identité. Le rein droit est l’expression de celui qui veut dominer mais qui a peur de dominer.",
-            "Rein gauche ou « rein génital »: il est l’organe du « moi génétique », de la génitalité qui nous relie à ceux qui nous ont donné la vie, à nos racines, au potentiel sexuel à transmettre la vie qu’on a reçue. Cela ne signifie pas l’impuissance ou la frigidité mais la peur de donner la vie.",
-            "Le rein gauche est l’organe de la peur profonde, essentielle, au fond de soi, peur de la violence, de l’abandon, d’être tué, différente de la peur superficielle. Le rein gauche est lié à un refoulement important et à une inhibition du développement personnel. C’est aussi l’organe qui exprime la puissance profonde de l’être, d’où parfois la violence exprimée par une pulsion et au besoin de domination sur les autres."
+            "une colère contenue ou difficile à exprimer;",
+            "une tension entre affirmation de soi et crainte du conflit;",
+            "un besoin de contrôle ou de domination masquant une insécurité;",
+            "certaines difficultés anciennes liées à l’autonomie ou aux relations familiales."
           ]
+        },
+        {
+          "type": "para",
+          "text": "Ces thèmes ne doivent pas être déduits automatiquement d’une tension rénale droite. Ils constituent uniquement des hypothèses de dialogue."
+        },
+        {
+          "type": "sub",
+          "text": "Rein gauche ou « rein génital »"
+        },
+        {
+          "type": "para",
+          "text": "En raison de ses rapports vasculaires avec la sphère uro-génitale, le rein gauche peut être associé, dans la lecture symbolique ROP, aux thèmes des racines, de la filiation, de la transmission et de l’intimité."
+        },
+        {
+          "type": "para",
+          "text": "Le praticien peut explorer avec prudence:"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "un sentiment d’insécurité ou de peur profonde;",
+            "la peur de l’abandon, de la séparation ou de la perte;",
+            "des interrogations relatives à la transmission de la vie;",
+            "le rapport à l’intimité, à la sexualité ou à l’identité personnelle;",
+            "une difficulté à exprimer sa puissance intérieure ou à prendre sa place."
+          ]
+        },
+        {
+          "type": "para",
+          "text": "Il ne s’agit pas d’associer automatiquement le rein gauche à l’impuissance, à la frigidité ou à un conflit familial particulier. L’écoute doit toujours partir du vécu réel de la personne, sans chercher à confirmer une interprétation prédéterminée."
+        },
+        {
+          "type": "sub",
+          "text": "Intérêt en ROP"
+        },
+        {
+          "type": "para",
+          "text": "Cette lecture symbolique vise avant tout à favoriser une écoute globale du patient. Elle complète éventuellement l’exploration corporelle, mais ne remplace ni l’évaluation médicale ni, lorsqu’il est nécessaire, l’accompagnement d’un professionnel de la santé mentale."
         }
       ]
     },
