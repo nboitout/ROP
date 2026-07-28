@@ -53,6 +53,7 @@ that trade is worth it.
 | `STRIPE_WEBHOOK_SECRET` | Signing secret of the webhook endpoint (`whsec_…`) |
 | `STRIPE_PRICE_ONLINE_BOOK` | Price id of the online book (`price_…`) — the amount lives in Stripe, never in the request |
 | `NEXT_PUBLIC_PAYMENTS_ENABLED` | Master switch. Anything but `"true"` keeps the waitlist link and makes `/api/checkout` answer 503 |
+| `STRIPE_AUTOMATIC_TAX` | `"true"` turns on Stripe Tax. Leave it off until the dashboard has an origin address and your VAT registrations, otherwise Stripe refuses the session |
 | `AUTH_SECRET` | HMAC secret for reader sessions and magic links |
 | `DATABASE_URL` | Neon Postgres — customers, orders, entitlements, tokens |
 | `RESEND_API_KEY`, `EMAIL_FROM` | Delivery of the access email. Without the key the link is logged to the server console instead |
@@ -67,9 +68,12 @@ requires a redeploy.
 2. **Stripe product** — create a product "Livre en ligne" with a €70 recurring-free
    one-off price. Prices are **tax-inclusive**: the French display price is TTC.
    Copy the price id into `STRIPE_PRICE_ONLINE_BOOK`.
-3. **Stripe Tax** — enable it in the dashboard (Settings → Tax) and register the
-   EU VAT obligations that apply; `automatic_tax` is already switched on for the
-   session, and digital goods are taxed in the buyer's country.
+3. **Stripe Tax** (can wait) — first tests work with `STRIPE_AUTOMATIC_TAX=false`.
+   To turn VAT on, set the origin address and the registrations in the dashboard
+   (Settings → Tax), then set `STRIPE_AUTOMATIC_TAX=true`. France applies a
+   reduced VAT rate to books including digital ones — confirm the rate and
+   whether the association is liable at all with your accountant before
+   switching it on.
 4. **Webhook** — add an endpoint at `https://<site>/api/stripe/webhook` subscribed to
    `checkout.session.completed`, `checkout.session.async_payment_succeeded` and
    `charge.refunded`. Copy its signing secret into `STRIPE_WEBHOOK_SECRET`.

@@ -31,8 +31,11 @@ export async function POST(req: NextRequest) {
       // The amount lives in the Stripe Price, never in the request body.
       line_items: [{ price: product.priceId, quantity: 1 }],
       locale: SUPPORTED_LOCALES[lang],
-      // EU VAT on a digital product: Stripe computes it from the buyer's country.
-      automatic_tax: { enabled: true },
+      // EU VAT on a digital product: Stripe computes it from the buyer's
+      // country. Opt-in, because Stripe rejects the session while Stripe Tax
+      // has no origin address and no registration — which is the state of a
+      // brand-new account.
+      automatic_tax: { enabled: process.env.STRIPE_AUTOMATIC_TAX === 'true' },
       allow_promotion_codes: true,
       // The receipt address is also the address the access link is sent to.
       customer_creation: 'always',
