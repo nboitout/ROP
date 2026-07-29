@@ -23,13 +23,13 @@ export const chapter21Slides: SyncSlide[] = [
 export const chapter21SlideAnchors: SyncAnchor[] = [
   { sectionId: 'presentation', blockIndex: -1, slide: 1 },
   { sectionId: 'situation', blockIndex: -1, slide: 2 },
-  { sectionId: 'anatomie', blockIndex: -1, slide: 3 },
-  { sectionId: 'anatomie', blockIndex: 0, slide: 4 },
+  { sectionId: 'anatomie', blockIndex: 0, slide: 3 },
+  { sectionId: 'anatomie', blockIndex: 1, slide: 4 },
   { sectionId: 'vascularisation', blockIndex: 0, slide: 5 },
   { sectionId: 'innervation', blockIndex: -1, slide: 6 },
   { sectionId: 'physiologie', blockIndex: -1, slide: 7 },
   { sectionId: 'pathologies-courantes', blockIndex: -1, slide: 8 },
-  { sectionId: 'relations-viscero-somatiques', blockIndex: 0, slide: 9, gapBefore: 'half' },
-  { sectionId: 'relations-viscero-emotionnelles', blockIndex: -1, slide: 10 },
-  { sectionId: 'zones-reflexes-podales', blockIndex: -1, slide: 11 },
+  { sectionId: 'relations-viscero-somatiques', blockIndex: 0, slide: 9 },
+  { sectionId: 'relations-viscero-emotionnelles', blockIndex: 0, slide: 10 },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 0, slide: 11 },
 ]
