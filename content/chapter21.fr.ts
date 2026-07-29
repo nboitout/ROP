@@ -43,7 +43,12 @@ export const chapter21Fr: Chapter = {
             "Muscles bulbospongieux : pairs, ils s’insèrent sur le périnée, le bulbe du vestibule chez la femme, et le corps spongieux chez l’homme, En se contractant, ils chassent le sang vers le pénis et le clitoris. Chez l’homme, ils facilitent la vidange de l’urètre après la miction et l’éjaculation du sperme par leurs contractions réflexes.",
             "Ligaments du pénis : le pénis est attaché par deux ligaments :",
             "Ligament suspenseur : il est attaché en haut à la symphyse pubienne et à la ligne blanche de la paroi abdominale antérieure ;",
-            "Ligament fundiforme : il est attaché à la ligne blanche.",
+            "Ligament fundiforme : il est attaché à la ligne blanche."
+          ]
+        },
+        {
+          "type": "bullets",
+          "items": [
             "Glandes vestibulaires de Bartholin : chez la femme, elles sont situées dans le périnée, en arrière des bulbes vestibulaires. Elles participent à la lubrification de l’entrée du vagin. La lubrification vaginale dépend aussi de la transsudation vasculaire à travers la paroi vaginale lors de l’excitation sexuelle.",
             "Glandes bulbo-urétrales de Cowper : chez l’homme, elles sont situées dans le bulbe du périnée. Elles sécrètent un liquide alcalin qui protège les spermatozoïdes dans la traversée de l’urètre et du vagin durant l’excitation sexuelle."
           ]
