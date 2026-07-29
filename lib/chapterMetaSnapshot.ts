@@ -22,7 +22,7 @@ export const chapterMetaSnapshot: Record<string, ChapterMetaSnapshot> = {
   'chapter-4': { readingMinutes: 48, photoCount: 17, slideCount: 26, cartographyCount: 17, visualCount: 60 },
   'chapter-5': { readingMinutes: 20, photoCount: 9, slideCount: 26, cartographyCount: 0, visualCount: 35 },
   'chapter-6': { readingMinutes: 9, photoCount: 0, slideCount: 18, cartographyCount: 0, visualCount: 18 },
-  'chapter-7': { readingMinutes: 19, photoCount: 5, slideCount: 16, cartographyCount: 7, visualCount: 28 },
+  'chapter-7': { readingMinutes: 19, photoCount: 5, slideCount: 13, cartographyCount: 6, visualCount: 24 },
   'chapter-8': { readingMinutes: 24, photoCount: 8, slideCount: 16, cartographyCount: 11, visualCount: 35 },
   'chapter-9': { readingMinutes: 16, photoCount: 3, slideCount: 19, cartographyCount: 6, visualCount: 28 },
   'chapter-10': { readingMinutes: 11, photoCount: 8, slideCount: 13, cartographyCount: 8, visualCount: 29 },
@@ -31,7 +31,7 @@ export const chapterMetaSnapshot: Record<string, ChapterMetaSnapshot> = {
   'chapter-13': { readingMinutes: 13, photoCount: 2, slideCount: 18, cartographyCount: 5, visualCount: 25 },
   'chapter-14': { readingMinutes: 19, photoCount: 14, slideCount: 27, cartographyCount: 0, visualCount: 41 },
   'chapter-15': { readingMinutes: 34, photoCount: 14, slideCount: 26, cartographyCount: 8, visualCount: 48 },
-  'chapter-16': { readingMinutes: 28, photoCount: 9, slideCount: 20, cartographyCount: 12, visualCount: 41 },
+  'chapter-16': { readingMinutes: 29, photoCount: 9, slideCount: 21, cartographyCount: 9, visualCount: 39 },
   'chapter-17': { readingMinutes: 23, photoCount: 0, slideCount: 19, cartographyCount: 1, visualCount: 20 },
   'chapter-18': { readingMinutes: 19, photoCount: 0, slideCount: 19, cartographyCount: 1, visualCount: 20 },
   'chapter-19': { readingMinutes: 28, photoCount: 0, slideCount: 33, cartographyCount: 1, visualCount: 34 },
@@ -41,9 +41,9 @@ export const chapterMetaSnapshot: Record<string, ChapterMetaSnapshot> = {
 
 export const bookVisualTotals = {
   chapterCount: 22,
-  readingMinutes: 446,
+  readingMinutes: 447,
   photoCount: 112,
-  slideCount: 396,
-  cartographyCount: 112,
-  visualCount: 620,
+  slideCount: 394,
+  cartographyCount: 108,
+  visualCount: 614,
 }
