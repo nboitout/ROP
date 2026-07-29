@@ -1230,8 +1230,11 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, h
             )}
             <section id={`sec-${section.id}`} className="cr-section">
               {renderEndSentinel(section.id, -1)}
-              {!hasPageBreak && headingSlides.length > 0 && (
-                <div id={`anchor-${section.id}-heading`} className="ss-anchor ss-anchor-heading">
+              {!hasPageBreak && (headingSlides.length > 0 || hasHalfGapBefore(section.id, -1)) && (
+                <div
+                  id={`anchor-${section.id}-heading`}
+                  className={`ss-anchor ss-anchor-heading${hasHalfGapBefore(section.id, -1) ? ' ss-anchor-halfbreak' : ''}`}
+                >
                   {headingSlides.map((slide) => (
                     <div key={slide} data-slide-anchor={slide}>
                       <button

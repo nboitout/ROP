@@ -5,6 +5,7 @@
 
 export type SyncSlide = { src: string; title: string; orientation?: 'portrait' }
 export type SyncAnchor = { sectionId: string; blockIndex: number; slide: number | number[]; gapBefore?: 'half' }
+export type SyncBreakPoint = { sectionId: string; blockIndex: number; itemIndex?: number }
 
 export const chapter21Slides: SyncSlide[] = [
   { src: '/chapter-21/slides/slide-01.png', title: 'Chapitre 21 : système érectile masculin et féminin' },
@@ -32,4 +33,10 @@ export const chapter21SlideAnchors: SyncAnchor[] = [
   { sectionId: 'relations-viscero-somatiques', blockIndex: 0, slide: 9 },
   { sectionId: 'relations-viscero-emotionnelles', blockIndex: 0, slide: 10 },
   { sectionId: 'zones-reflexes-podales', blockIndex: 0, slide: 11 },
+]
+
+export const chapter21HalfBreaks: SyncBreakPoint[] = [
+  { sectionId: 'innervation', blockIndex: -1 },
+  { sectionId: 'physiologie', blockIndex: -1 },
+  { sectionId: 'relations-viscero-emotionnelles', blockIndex: -1 },
 ]
