@@ -15,30 +15,31 @@ export type SyncSlide = { src: string; title: string; orientation?: 'portrait' }
 // rendered just above the <h2> instead of inside a content block).
 export type SyncAnchor = { sectionId: string; blockIndex: number; slide: number; gapBefore?: 'half'; end?: { sectionId: string; blockIndex: number } }
 
-// French deck — re-rendered from the 21-page rework deck, followed by the
-// supplementary reflex-zone figure-slides.
+// French deck — rebuilt from the 13-page synthesis deck. The existing
+// pathology slides remain in place until their dedicated update, followed by
+// the supplementary reflex-zone figure-slides.
 // Because the FR PDF was reorganised independently of EN/DE/ES/IT, the French
 // deck uses its own anchor table (chapter14SlideAnchorsFr); the other four
 // languages still share chapter14SlideAnchors until their PDFs are updated too.
 export const chapter14Slides: SyncSlide[] = [
   { src: '/chapter-14/slides/fr-rework/slide-01.png', title: 'L’intestin grêle' },
-  { src: '/chapter-14/slides/fr-rework/slide-02.png', title: 'Topographie : l’intestin grêle au sein du cadre colique' },
-  { src: '/chapter-14/slides/fr-rework/slide-03.png', title: 'Le mésentère et sa mécanique de suspension' },
-  { src: '/chapter-14/slides/fr-rework/slide-05.png', title: 'L’axe vasculaire et le système porte' },
-  { src: '/chapter-14/slides/fr-rework/slide-07.png', title: 'L’axe de l’irrigation et du drainage : tronc mésentérique supérieur' },
-  { src: '/chapter-14/slides/fr-rework/slide-06.png', title: 'Le réseau lymphatique et immunitaire' },
-  { src: '/chapter-14/slides/fr-rework/slide-08.png', title: 'La double réalité neurologique du péritoine' },
-  { src: '/chapter-14/slides/fr-rework/slide-09.png', title: 'Le deuxième cerveau : autonomie du système nerveux entérique (SNE)' },
-  { src: '/chapter-14/slides/fr-rework/slide-10.png', title: 'Le deuxième cerveau : système nerveux entérique' },
-  { src: '/chapter-14/slides/fr-rework/slide-11.png', title: 'L’écosystème intestinal : frontière biologique' },
-  { src: '/chapter-14/slides/fr-rework/slide-12.png', title: 'La double voie d’absorption micronutritionnelle' },
-  { src: '/chapter-14/slides/fr-rework/slide-13.png', title: 'Micro-anatomie : la barrière intestinale' },
+  { src: '/chapter-14/slides/fr-rework/slide-02.png', title: 'Le jéjunum-iléum dans le cadre colique' },
+  { src: '/chapter-14/slides/fr-rework/slide-03.png', title: 'Le mésentère : racine et mécanique de suspension' },
+  { src: '/chapter-14/slides/fr-rework/slide-04.png', title: 'Vascularisation de l’intestin grêle' },
+  { src: '/chapter-14/slides/fr-rework/slide-05.png', title: 'Le réseau lymphatique de l’intestin grêle' },
+  { src: '/chapter-14/slides/fr-rework/slide-06.png', title: 'La double innervation du péritoine' },
+  { src: '/chapter-14/slides/fr-rework/slide-07.png', title: 'Nerf vague et système sympathique' },
+  { src: '/chapter-14/slides/fr-rework/slide-08.png', title: 'Le deuxième cerveau : système nerveux entérique (SNE)' },
+  { src: '/chapter-14/slides/fr-rework/slide-09.png', title: 'L’écosystème intestinal : frontière biologique' },
+  { src: '/chapter-14/slides/fr-rework/slide-10.png', title: 'La double voie d’absorption micronutritionnelle' },
+  { src: '/chapter-14/slides/fr-rework/slide-11.png', title: 'Micro-anatomie : la barrière intestinale' },
+  // Existing "pathologies courantes" slides — intentionally unchanged.
   { src: '/chapter-14/slides/fr-rework/slide-14.png', title: 'La spirale : dysbiose et hyperperméabilité' },
   { src: '/chapter-14/slides/fr-rework/slide-15.png', title: 'Hyperperméabilité intestinale et dysbiose' },
   { src: '/chapter-14/slides/fr-rework/slide-17.png', title: 'Matrice de triage : indications vs exclusions' },
   { src: '/chapter-14/slides/fr-rework/slide-18.png', title: 'Maladie de Crohn' },
   { src: '/chapter-14/slides/fr-rework/slide-19.png', title: 'Maladies inflammatoires chroniques de l’intestin' },
-  { src: '/chapter-14/slides/fr-rework/slide-20.png', title: 'Protocole ROP : ordre de traitement' },
+  { src: '/chapter-14/slides/fr-rework/slide-12.png', title: 'Protocole ROP : ordre de traitement' },
   { src: '/chapter-14/cartographie/figure-14-01.png', title: 'Cartographie : Nerf vague X - moelle allongée' },
   { src: '/chapter-14/cartographie/figure-14-03.png', title: 'Cartographie : Nerf vague X - foramen jugulaire' },
   { src: '/chapter-14/cartographie/figure-14-05.png', title: 'Cartographie : Hiatus œsophagien et nerfs vagues' },
@@ -47,7 +48,7 @@ export const chapter14Slides: SyncSlide[] = [
   { src: '/chapter-14/cartographie/figure-14-11.png', title: 'Cartographie : Chaîne plexique prévertébrale' },
   { src: '/chapter-14/cartographie/figure-14-13.png', title: 'Cartographie : Racine du mésentère - jonction duodéno-jéjunale' },
   { src: '/chapter-14/cartographie/figure-14-15.png', title: 'Cartographie : Racine du mésentère - valvule iléo-caecale' },
-  { src: '/chapter-14/slides/fr-rework/slide-21.png', title: 'Profil viscéro-émotionnel : la personne intestin' },
+  { src: '/chapter-14/slides/fr-rework/slide-13.png', title: 'Relations viscéro-émotionnelles' },
 ]
 
 // English deck — same slides, translated. The text↔slide anchors are shared
@@ -205,35 +206,35 @@ export const chapter14SlideAnchors: SyncAnchor[] = [
   { sectionId: 'relations',      blockIndex: 2,  slide: 23 },
 ]
 
-// French anchor table — for the re-rendered 21-page deck (FR only). The Crohn
-// case is shown before the ROP sequence; the emotional-profile slide is last
-// because it is the final slide encountered in the text.
+// French anchor table — for the rebuilt synthesis deck (FR only). The retained
+// pathology slides stay before the ROP sequence; the relations slide remains
+// last because it is the final slide encountered in the text.
 export const chapter14SlideAnchorsFr: SyncAnchor[] = [
   { sectionId: 'presentation',   blockIndex: 0,  slide: 1 },
   { sectionId: 'presentation',   blockIndex: 2,  slide: 2 },
   { sectionId: 'anatomie',       blockIndex: 2,  slide: 3, end: { sectionId: 'anatomie', blockIndex: 10 } },
   { sectionId: 'vascularisation', blockIndex: 2,  slide: 4 },
-  { sectionId: 'vascularisation', blockIndex: 4,  slide: 5 },
-  { sectionId: 'vascularisation', blockIndex: 5,  slide: 6, gapBefore: 'half' },
-  { sectionId: 'innervation',    blockIndex: 2,  slide: 7 },
-  { sectionId: 'innervation',    blockIndex: 5,  slide: 8 },
-  { sectionId: 'innervation',    blockIndex: 6,  slide: 9 },
-  { sectionId: 'physiologie',    blockIndex: 4,  slide: 10 },
-  { sectionId: 'physiologie',    blockIndex: 7,  slide: 11 },
+  { sectionId: 'vascularisation', blockIndex: 5,  slide: 5, gapBefore: 'half' },
+  { sectionId: 'innervation',    blockIndex: 2,  slide: 6 },
+  { sectionId: 'innervation',    blockIndex: 5,  slide: 7 },
+  { sectionId: 'innervation',    blockIndex: 6,  slide: 8 },
+  { sectionId: 'physiologie',    blockIndex: 4,  slide: 9 },
+  { sectionId: 'physiologie',    blockIndex: 7,  slide: 10 },
+  { sectionId: 'physiologie',    blockIndex: 8,  slide: 11 },
   { sectionId: 'physiologie',    blockIndex: 8,  slide: 12 },
   { sectionId: 'pathologies',    blockIndex: 0,  slide: 13 },
   { sectionId: 'pathologies',    blockIndex: 1,  slide: 14, gapBefore: 'half' },
   { sectionId: 'pathologies',    blockIndex: 11, slide: 15 },
   { sectionId: 'pathologies',    blockIndex: 13, slide: 16 },
   { sectionId: 'pathologies',    blockIndex: 16, slide: 17, gapBefore: 'half' },
-  { sectionId: 'rop',            blockIndex: -1, slide: 18 },
-  { sectionId: 'rop',            blockIndex: 1,  slide: 19, gapBefore: 'half' },
-  { sectionId: 'rop',            blockIndex: 4,  slide: 20 },
-  { sectionId: 'rop',            blockIndex: 5,  slide: 21 },
-  { sectionId: 'rop',            blockIndex: 6,  slide: 22 },
-  { sectionId: 'rop',            blockIndex: 9,  slide: 23 },
-  { sectionId: 'rop',            blockIndex: 10, slide: 24 },
-  { sectionId: 'rop',            blockIndex: 14, slide: 25 },
-  { sectionId: 'rop',            blockIndex: 15, slide: 26, end: { sectionId: 'rop', blockIndex: 16 } },
-  { sectionId: 'relations',      blockIndex: 2,  slide: 27 },
+  { sectionId: 'rop',            blockIndex: -1, slide: 17 },
+  { sectionId: 'rop',            blockIndex: 1,  slide: 18, gapBefore: 'half' },
+  { sectionId: 'rop',            blockIndex: 4,  slide: 19 },
+  { sectionId: 'rop',            blockIndex: 5,  slide: 20 },
+  { sectionId: 'rop',            blockIndex: 6,  slide: 21 },
+  { sectionId: 'rop',            blockIndex: 9,  slide: 22 },
+  { sectionId: 'rop',            blockIndex: 10, slide: 23 },
+  { sectionId: 'rop',            blockIndex: 14, slide: 24 },
+  { sectionId: 'rop',            blockIndex: 15, slide: 25, end: { sectionId: 'rop', blockIndex: 16 } },
+  { sectionId: 'relations',      blockIndex: 2,  slide: 26 },
 ]
