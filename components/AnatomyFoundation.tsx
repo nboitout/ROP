@@ -135,21 +135,26 @@ export default function AnatomyFoundation() {
 
   return (
     <section id="anatomie" aria-labelledby="anatomie-title">
-      <div className="anat-head">
-        <div className="lbl c">{a.lbl}</div>
-        <h2 id="anatomie-title" className="on-dk">{a.h2.before}<em>{a.h2.em}</em>{a.h2.after}</h2>
-        <p className="anat-intro">{a.p1}</p>
-        <p className="anat-intro">{a.p2}</p>
-      </div>
+      {/* Copy on the left, the four-step chain as a compact rail on the right:
+          the steps are short enough that a full-width band wasted a row. */}
+      <div className="anat-top">
+        <div className="anat-head">
+          <div className="lbl c">{a.lbl}</div>
+          <h2 id="anatomie-title" className="on-dk">{a.h2.before}<em>{a.h2.em}</em>{a.h2.after}</h2>
+          <p className="anat-intro">{a.p1}</p>
+          <p className="anat-intro">{a.p2}</p>
+        </div>
 
-      <div className="anat-chain">
-        {a.chain.map((step, i) => (
-          <div key={step.t} className="anat-step">
-            <div className="anat-step-n">{i + 1}</div>
-            <div className="anat-step-t">{step.t}</div>
-            <p className="anat-step-d">{step.d}</p>
-          </div>
-        ))}
+        <div className="anat-chain">
+          <div className="anat-chain-t">{a.chainTitle}</div>
+          {a.chain.map((step, i) => (
+            <div key={step.t} className="anat-step">
+              <div className="anat-step-n">{i + 1}</div>
+              <div className="anat-step-t">{step.t}</div>
+              <p className="anat-step-d">{step.d}</p>
+            </div>
+          ))}
+        </div>
       </div>
 
       <div className="anat-bridges">

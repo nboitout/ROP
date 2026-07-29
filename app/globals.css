@@ -211,13 +211,20 @@ h1 em { font-style:italic; color:var(--gold-l); }
 
 /* ANATOMIE — fondements neuro-anatomiques */
 #anatomie { background:var(--ink); padding:60px 72px; }
-.anat-head { max-width:940px; }
-.anat-intro { font-size:.95rem; line-height:1.62; color:rgba(245,240,232,.84); max-width:940px; margin-top:10px; }
-.anat-chain { display:grid; grid-template-columns:repeat(4,1fr); gap:14px; margin:30px 0 4px; }
-.anat-step { background:rgba(245,240,232,.05); border:1px solid rgba(245,240,232,.1); border-radius:3px; padding:18px; }
-.anat-step-n { width:34px; height:34px; border-radius:50%; background:rgba(74,107,90,.25); border:1px solid rgba(74,107,90,.45); display:flex; align-items:center; justify-content:center; font-family:'Cormorant Garamond',serif; font-size:1.05rem; color:var(--sage-pale); margin-bottom:10px; }
-.anat-step-t { font-family:'Cormorant Garamond',serif; font-size:1.1rem; color:var(--gold-l); margin-bottom:6px; }
-.anat-step-d { font-size:.85rem; line-height:1.5; color:rgba(245,240,232,.8); }
+.anat-top { display:grid; grid-template-columns:minmax(0,1.12fr) minmax(360px,.88fr); gap:46px; align-items:start; }
+.anat-head { max-width:760px; }
+.anat-intro { font-size:.95rem; line-height:1.62; color:rgba(245,240,232,.84); margin-top:10px; }
+/* The chain reads as a vertical trajectory: numbers linked by a hairline,
+   title and text stacked beside each marker. */
+.anat-chain { background:rgba(245,240,232,.04); border:1px solid rgba(245,240,232,.1); border-radius:3px; padding:20px 22px; }
+.anat-chain-t { font-size:.62rem; font-weight:600; letter-spacing:.16em; text-transform:uppercase; color:var(--gold-l); margin-bottom:15px; }
+.anat-step { position:relative; display:grid; grid-template-columns:30px 1fr; gap:13px; padding-bottom:13px; }
+.anat-step:last-child { padding-bottom:0; }
+.anat-step::before { content:''; position:absolute; left:14px; top:34px; bottom:2px; width:1px; background:rgba(201,163,94,.22); }
+.anat-step:last-child::before { display:none; }
+.anat-step-n { width:30px; height:30px; border-radius:50%; background:rgba(74,107,90,.25); border:1px solid rgba(74,107,90,.45); display:flex; align-items:center; justify-content:center; font-family:'Cormorant Garamond',serif; font-size:.95rem; color:var(--sage-pale); }
+.anat-step-t { font-family:'Cormorant Garamond',serif; font-size:1.05rem; line-height:1.25; color:var(--gold-l); padding-top:4px; }
+.anat-step-d { grid-column:2; font-size:.81rem; line-height:1.45; color:rgba(245,240,232,.8); margin-top:2px; }
 
 .anat-fig { max-width:1040px; margin:26px auto 0; }
 .anat-fig-btn { display:block; width:100%; padding:0; position:relative; background:none; border:1px solid rgba(245,240,232,.12); border-radius:4px; overflow:hidden; cursor:zoom-in; transition:border-color .2s; }
@@ -420,7 +427,8 @@ footer > div > p { font-size:.95rem; color:rgba(245,240,232,.84); line-height:1.
 #protocole, #pedagogie, #stats { padding:42px 20px !important; }
   .ped-grid, .qt-row, .stats-row, .hier-row { grid-template-columns:1fr !important; }
   #anatomie { padding:42px 20px !important; }
-  .anat-chain, .anat-levels, .anat-fig-pair, .anat-plate-grid { grid-template-columns:1fr !important; }
+  .anat-top, .anat-levels, .anat-fig-pair, .anat-plate-grid { grid-template-columns:1fr !important; }
+  .anat-top { gap:26px !important; }
   /* The lead plate stops spanning once the gallery is a single column. */
   .anat-plate--lead { grid-column:auto !important; }
   .anat-toggle { font-size:.68rem; letter-spacing:.08em; padding:14px 16px; }

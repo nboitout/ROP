@@ -73,6 +73,7 @@ const fr = {
     h2: { before: "Le pied est une ", em: "porte d’entrée sensorielle", after: " vers le système nerveux." },
     p1: "La R.O.P. ne suppose pas qu’un organe soit matériellement représenté dans un point du pied. Elle part d’une proposition plus simple et plus anatomique. La pression déforme la peau et les tissus, réveille des récepteurs, et le message part vers la moelle épinière puis vers le cerveau.",
     p2: "À chaque étage de ce trajet, ce message peut croiser des circuits qui commandent les muscles, les vaisseaux et les viscères. Nous appelons pont neuro-anatomique chacune de ces rencontres possibles. Plus une zone du pied réunit de ponts concordants, plus son action sur une région du corps devient plausible.",
+    chainTitle: "Le trajet du signal",
     chain: [
       { t: "La porte sensorielle", d: "La pression déforme la peau glabre et les tissus de la plante : les mécanorécepteurs cutanés s’activent." },
       { t: "La transmission", d: "Le signal emprunte le nerf qui correspond à la zone touchée — nerfs plantaires, rameaux calcanéens, nerf tibial." },
@@ -578,6 +579,7 @@ const en: typeof fr = {
     h2: { before: "The foot is a ", em: "sensory entry point", after: " to the nervous system." },
     p1: "R.O.P. does not assume that an organ is materially represented in a point of the foot. It starts from a simpler, more anatomical proposition. Pressure deforms the skin and the underlying tissue, wakes up receptors, and the message travels to the spinal cord and on to the brain.",
     p2: "At every stage of that journey, the message can meet circuits that govern muscles, blood vessels and viscera. We call each of these possible meeting points a neuro-anatomical bridge. The more concordant bridges a zone of the foot brings together, the more plausible its action on a region of the body becomes.",
+    chainTitle: "The path of the signal",
     chain: [
       { t: "The sensory gateway", d: "Pressure deforms the glabrous skin and the tissues of the sole: the cutaneous mechanoreceptors fire." },
       { t: "Peripheral transmission", d: "The signal travels along the nerve serving that zone — plantar nerves, calcaneal branches, tibial nerve." },
@@ -1084,6 +1086,7 @@ const th: typeof fr = {
     h2: { before: "เท้าคือ", em: "ประตูรับความรู้สึก", after: "สู่ระบบประสาท" },
     p1: "R.O.P. ไม่ได้ตั้งสมมติฐานว่ามีอวัยวะถูกแทนไว้จริงในจุดใดจุดหนึ่งของเท้า แต่เริ่มจากข้อเสนอที่เรียบง่ายและอิงกายวิภาคมากกว่า แรงกดทำให้ผิวหนังและเนื้อเยื่อเปลี่ยนรูป ปลุกตัวรับความรู้สึกให้ทำงาน แล้วสัญญาณจึงเดินทางไปยังไขสันหลังและสมอง",
     p2: "ในทุกระดับของเส้นทางนี้ สัญญาณอาจไปพบกับวงจรที่ควบคุมกล้ามเนื้อ หลอดเลือด และอวัยวะภายใน เราเรียกจุดบรรจบที่เป็นไปได้แต่ละจุดว่า สะพานทางประสาทกายวิภาค ยิ่งบริเวณหนึ่งของเท้ามีสะพานที่สอดคล้องกันมากเท่าใด ความเป็นไปได้ที่จะส่งผลต่อบริเวณนั้นของร่างกายก็ยิ่งมากขึ้นเท่านั้น",
+    chainTitle: "เส้นทางของสัญญาณ",
     chain: [
       { t: "ประตูรับความรู้สึก", d: "แรงกดทำให้ผิวหนังเกลี้ยงและเนื้อเยื่อฝ่าเท้าเปลี่ยนรูป ตัวรับแรงกลที่ผิวหนังจึงเริ่มทำงาน" },
       { t: "การนำสัญญาณ", d: "สัญญาณเดินทางไปตามเส้นประสาทที่ตรงกับบริเวณที่สัมผัส ได้แก่ เส้นประสาทฝ่าเท้า แขนงส้นเท้า และเส้นประสาททิเบียล" },
@@ -1537,6 +1540,7 @@ const de: typeof fr = {
     h2: { before: "Der Fuß ist eine ", em: "sensorische Eingangspforte", after: " zum Nervensystem." },
     p1: "Die R.O.P. setzt nicht voraus, dass ein Organ in einem Punkt des Fußes materiell abgebildet ist. Sie geht von einer einfacheren, stärker anatomischen Annahme aus. Der Druck verformt Haut und Gewebe, weckt Rezeptoren, und die Botschaft wandert zum Rückenmark und weiter zum Gehirn.",
     p2: "Auf jeder Etage dieses Weges kann diese Botschaft auf Schaltkreise treffen, die Muskeln, Gefäße und Eingeweide steuern. Jede dieser möglichen Begegnungen nennen wir eine neuroanatomische Brücke. Je mehr übereinstimmende Brücken eine Fußzone vereint, desto plausibler wird ihre Wirkung auf eine Körperregion.",
+    chainTitle: "Der Weg des Signals",
     chain: [
       { t: "Die sensorische Pforte", d: "Der Druck verformt die unbehaarte Haut und das Gewebe der Fußsohle: Die kutanen Mechanorezeptoren werden aktiviert." },
       { t: "Die Weiterleitung", d: "Das Signal folgt dem Nerv, der zur berührten Zone gehört — Plantarnerven, Kalkaneusäste, Nervus tibialis." },
@@ -2042,6 +2046,7 @@ const es: typeof fr = {
     h2: { before: "El pie es una ", em: "puerta de entrada sensorial", after: " al sistema nervioso." },
     p1: "La R.O.P. no supone que un órgano esté materialmente representado en un punto del pie. Parte de una propuesta más sencilla y más anatómica. La presión deforma la piel y los tejidos, despierta receptores, y el mensaje viaja hacia la médula espinal y después hacia el cerebro.",
     p2: "En cada nivel de ese trayecto, ese mensaje puede cruzarse con circuitos que gobiernan los músculos, los vasos y las vísceras. Llamamos puente neuroanatómico a cada uno de esos encuentros posibles. Cuantos más puentes concordantes reúne una zona del pie, más plausible resulta su acción sobre una región del cuerpo.",
+    chainTitle: "El recorrido de la señal",
     chain: [
       { t: "La puerta sensorial", d: "La presión deforma la piel glabra y los tejidos de la planta: los mecanorreceptores cutáneos se activan." },
       { t: "La transmisión", d: "La señal recorre el nervio que corresponde a la zona tocada — nervios plantares, ramos calcáneos, nervio tibial." },
@@ -2547,6 +2552,7 @@ const it: typeof fr = {
     h2: { before: "Il piede è una ", em: "porta d’ingresso sensoriale", after: " al sistema nervoso." },
     p1: "La R.O.P. non presuppone che un organo sia materialmente rappresentato in un punto del piede. Parte da una proposta più semplice e più anatomica. La pressione deforma la pelle e i tessuti, risveglia i recettori, e il messaggio viaggia verso il midollo spinale e poi verso il cervello.",
     p2: "A ogni livello di questo percorso, il messaggio può incrociare circuiti che governano muscoli, vasi e visceri. Chiamiamo ponte neuroanatomico ciascuno di questi incontri possibili. Più una zona del piede riunisce ponti concordanti, più la sua azione su una regione del corpo diventa plausibile.",
+    chainTitle: "Il percorso del segnale",
     chain: [
       { t: "La porta sensoriale", d: "La pressione deforma la cute glabra e i tessuti della pianta: i meccanocettori cutanei si attivano." },
       { t: "La trasmissione", d: "Il segnale percorre il nervo corrispondente alla zona toccata — nervi plantari, rami calcaneari, nervo tibiale." },
