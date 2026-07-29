@@ -209,6 +209,61 @@ h1 em { font-style:italic; color:var(--gold-l); }
 .hier-step-t { font-family:'Cormorant Garamond',serif; font-size:.9rem; color:var(--cream); }
 .hier-arr { color:rgba(201,163,94,.4); font-size:.8rem; }
 
+/* ANATOMIE — fondements neuro-anatomiques */
+#anatomie { background:var(--ink); padding:60px 72px; }
+.anat-head { max-width:940px; }
+.anat-intro { font-size:.95rem; line-height:1.62; color:rgba(245,240,232,.84); max-width:940px; margin-top:10px; }
+.anat-chain { display:grid; grid-template-columns:repeat(4,1fr); gap:14px; margin:30px 0 4px; }
+.anat-step { background:rgba(245,240,232,.05); border:1px solid rgba(245,240,232,.1); border-radius:3px; padding:18px; }
+.anat-step-n { width:34px; height:34px; border-radius:50%; background:rgba(74,107,90,.25); border:1px solid rgba(74,107,90,.45); display:flex; align-items:center; justify-content:center; font-family:'Cormorant Garamond',serif; font-size:1.05rem; color:var(--sage-pale); margin-bottom:10px; }
+.anat-step-t { font-family:'Cormorant Garamond',serif; font-size:1.1rem; color:var(--gold-l); margin-bottom:6px; }
+.anat-step-d { font-size:.85rem; line-height:1.5; color:rgba(245,240,232,.8); }
+
+.anat-fig { max-width:1040px; margin:26px auto 0; }
+.anat-fig-btn { display:block; width:100%; padding:0; position:relative; background:none; border:1px solid rgba(245,240,232,.12); border-radius:4px; overflow:hidden; cursor:zoom-in; transition:border-color .2s; }
+.anat-fig-btn:hover { border-color:rgba(201,163,94,.5); }
+.anat-fig-btn img, .anat-bridge-thumb img { display:block; width:100%; height:auto; }
+.anat-fig-zoom { position:absolute; right:10px; bottom:10px; width:30px; height:30px; border-radius:50%; background:rgba(26,26,24,.62); border:1px solid rgba(201,163,94,.5); color:var(--gold-l); display:flex; align-items:center; justify-content:center; font-size:.95rem; }
+.anat-fig figcaption { font-size:.76rem; line-height:1.5; color:rgba(245,240,232,.66); text-align:center; margin-top:8px; }
+
+.anat-h3 { font-family:'Cormorant Garamond',serif; font-size:clamp(1.4rem,2.2vw,1.75rem); font-weight:300; color:var(--cream); margin:40px 0 8px; }
+.anat-bridges-intro { font-size:.92rem; line-height:1.6; color:rgba(245,240,232,.8); max-width:900px; margin-bottom:20px; }
+.anat-bridge-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(215px,1fr)); gap:14px; }
+.anat-bridge { display:flex; flex-direction:column; background:rgba(245,240,232,.04); border:1px solid rgba(245,240,232,.1); border-radius:3px; padding:12px; }
+.anat-bridge-thumb { position:relative; display:block; width:100%; padding:0; margin-bottom:11px; background:none; border:none; border-radius:2px; overflow:hidden; cursor:zoom-in; }
+.anat-bridge-n { font-size:.6rem; font-weight:600; letter-spacing:.16em; text-transform:uppercase; color:var(--gold-l); margin-bottom:5px; }
+.anat-bridge-t { font-family:'Cormorant Garamond',serif; font-size:1.06rem; font-weight:400; line-height:1.22; color:var(--cream); margin-bottom:7px; }
+.anat-bridge-d { font-size:.8rem; line-height:1.5; color:rgba(245,240,232,.78); }
+
+.anat-toggle { display:flex; align-items:center; justify-content:space-between; gap:16px; width:100%; margin-top:34px; padding:16px 22px; text-align:left; background:rgba(245,240,232,.05); border:1px solid rgba(201,163,94,.32); border-radius:3px; color:var(--gold-l); font-family:'DM Sans',sans-serif; font-size:.74rem; font-weight:600; letter-spacing:.11em; text-transform:uppercase; cursor:pointer; transition:background .2s, border-color .2s; }
+.anat-toggle:hover { background:rgba(201,163,94,.12); border-color:var(--gold-l); }
+.anat-toggle-ico { font-size:1.25rem; line-height:1; }
+
+.anat-deep-intro, .anat-deep-p { font-size:.92rem; line-height:1.62; color:rgba(245,240,232,.82); max-width:940px; margin-bottom:12px; }
+.anat-levels { display:grid; grid-template-columns:1fr 1fr; gap:12px; margin:22px 0 4px; }
+.anat-level { display:grid; grid-template-columns:44px 1fr; gap:14px; align-items:start; background:rgba(245,240,232,.04); border:1px solid rgba(245,240,232,.1); border-left:3px solid rgba(245,240,232,.2); border-radius:3px; padding:16px 18px; }
+.anat-level-n { width:44px; height:44px; border-radius:50%; border:1px solid; display:flex; align-items:center; justify-content:center; font-family:'Cormorant Garamond',serif; font-size:1.35rem; }
+/* Level colours follow the gradient scale printed in the book's plates. */
+.anat-level-3 { border-left-color:#4e9a7d; } .anat-level-3 .anat-level-n { color:#7fc2a6; border-color:rgba(78,154,125,.55); background:rgba(78,154,125,.14); }
+.anat-level-2 { border-left-color:#4a7fb5; } .anat-level-2 .anat-level-n { color:#8ab4dd; border-color:rgba(74,127,181,.55); background:rgba(74,127,181,.14); }
+.anat-level-1 { border-left-color:var(--gold); } .anat-level-1 .anat-level-n { color:var(--gold-l); border-color:rgba(201,163,94,.55); background:rgba(201,163,94,.12); }
+.anat-level-0 { border-left-color:rgba(245,240,232,.3); } .anat-level-0 .anat-level-n { color:rgba(245,240,232,.62); border-color:rgba(245,240,232,.28); background:rgba(245,240,232,.06); }
+.anat-level-t { font-family:'Cormorant Garamond',serif; font-size:1.12rem; color:var(--cream); margin-bottom:4px; }
+.anat-level-d { font-size:.83rem; line-height:1.5; color:rgba(245,240,232,.78); }
+
+.anat-fig-pair { display:grid; grid-template-columns:1fr 1fr; gap:18px; }
+.anat-fig-pair .anat-fig { max-width:none; }
+.anat-note { margin-top:28px; background:rgba(160,124,58,.1); border:1px solid rgba(201,163,94,.3); border-radius:3px; padding:20px 24px; }
+.anat-note-body { font-size:.9rem; line-height:1.6; color:rgba(245,240,232,.86); }
+.anat-note-refs { font-size:.78rem; line-height:1.55; color:rgba(245,240,232,.66); margin-top:10px; }
+
+.anat-lb { position:fixed; inset:0; z-index:400; display:flex; align-items:center; justify-content:center; padding:36px 24px; background:rgba(10,10,9,.97); cursor:zoom-out; }
+.anat-lb-fig { max-width:96vw; cursor:default; }
+.anat-lb-fig img { display:block; width:100%; height:auto; max-height:82vh; object-fit:contain; border-radius:3px; }
+.anat-lb-fig figcaption { font-size:.8rem; line-height:1.5; color:rgba(245,240,232,.74); text-align:center; margin-top:10px; }
+.anat-lb-close { position:absolute; top:18px; right:22px; width:42px; height:42px; border-radius:50%; background:rgba(245,240,232,.08); border:1px solid rgba(245,240,232,.28); color:var(--cream); font-size:1.5rem; line-height:1; cursor:pointer; }
+.anat-lb-close:hover { background:rgba(201,163,94,.18); border-color:var(--gold-l); }
+
 /* PEDAGOGIE */
 #pedagogie { background:var(--parch); padding:56px 72px; }
 .ped-grid { display:grid; grid-template-columns:1fr 1fr 1fr; gap:18px; margin-top:26px; }
@@ -353,6 +408,11 @@ footer > div > p { font-size:.95rem; color:rgba(245,240,232,.84); line-height:1.
   section { padding:42px 20px !important; }
 #protocole, #pedagogie, #stats { padding:42px 20px !important; }
   .ped-grid, .qt-row, .stats-row, .hier-row { grid-template-columns:1fr !important; }
+  #anatomie { padding:42px 20px !important; }
+  .anat-chain, .anat-levels, .anat-fig-pair { grid-template-columns:1fr !important; }
+  .anat-toggle { font-size:.68rem; letter-spacing:.08em; padding:14px 16px; }
+  .anat-lb { padding:56px 12px 24px; }
+  .anat-lb-close { top:10px; right:12px; }
   .jn-hd { grid-template-columns:1fr; gap:14px; margin-bottom:24px; }
   .jn-flow::before { display:none; }
   .jn-part { grid-template-columns:1fr; gap:12px; padding:16px 0; }

@@ -7,6 +7,7 @@ import { useSearchParams } from 'next/navigation'
 import HeroCarousel from '@/components/HeroCarousel'
 import HomepageVisualShowcase from '@/components/HomepageVisualShowcase'
 import BookJourney from '@/components/BookJourney'
+import AnatomyFoundation from '@/components/AnatomyFoundation'
 import QuoteSlider from '@/components/QuoteSlider'
 import FreeChapterForm from '@/components/FreeChapterForm'
 import BookNotifyForm from '@/components/BookNotifyForm'
@@ -56,6 +57,7 @@ export default function HomePage() {
         <div className="h-right">
           <nav>
             <a href="#genese">{t.nav.genese}</a>
+            <a href="#anatomie">{t.nav.anatomie}</a>
             <a href="#chapitres">{t.nav.sommaire}</a>
             <a href="#protocole">{t.nav.protocole}</a>
             <a href="#acheter">{t.nav.commander}</a>
@@ -220,6 +222,9 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* FONDEMENTS NEURO-ANATOMIQUES */}
+      <AnatomyFoundation />
 
       {/* SOMMAIRE — FIL CONDUCTEUR */}
       <BookJourney />
