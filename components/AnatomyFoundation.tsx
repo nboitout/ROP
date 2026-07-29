@@ -58,6 +58,42 @@ function Figure({ plate, zoomLabel, onOpen, priority = false }: {
   )
 }
 
+// One card for every plate in the gallery — the opening principle and each of
+// the five bridges. `lead` only changes the accent, never the layout.
+function PlateCard({ plate, eyebrow, title, body, zoomLabel, onOpen, lead = false }: {
+  plate: Plate
+  eyebrow: string
+  title: string
+  body: string
+  zoomLabel: string
+  onOpen: (plate: Plate) => void
+  lead?: boolean
+}) {
+  return (
+    <article className={`anat-plate${lead ? ' anat-plate--lead' : ''}`}>
+      <button
+        type="button"
+        className="anat-plate-thumb"
+        onClick={() => onOpen(plate)}
+        aria-label={`${plate.caption} — ${zoomLabel}`}
+      >
+        <Image
+          src={plate.src}
+          alt={plate.alt}
+          width={FIG_W}
+          height={FIG_H}
+          sizes="(max-width:960px) 92vw, (max-width:1280px) 44vw, 420px"
+          loading="lazy"
+        />
+        <span className="anat-fig-zoom" aria-hidden>⌕</span>
+      </button>
+      <div className="anat-plate-n">{eyebrow}</div>
+      <h4 className="anat-plate-t">{title}</h4>
+      <p className="anat-plate-d">{body}</p>
+    </article>
+  )
+}
+
 export default function AnatomyFoundation() {
   const { t, lang } = useLanguage()
   const a = t.anatomie
@@ -116,38 +152,33 @@ export default function AnatomyFoundation() {
         ))}
       </div>
 
-      <Figure plate={plate(FIGURES.chain, a.figure1.caption, a.figure1.alt)} zoomLabel={a.zoom} onOpen={setLightbox} />
-
       <div className="anat-bridges">
         <h3 className="anat-h3">{a.bridges.title}</h3>
         <p className="anat-bridges-intro">{a.bridges.intro}</p>
-        <div className="anat-bridge-grid">
-          {a.bridges.items.map((item, i) => {
-            const bridgePlate = plate(FIGURES.bridges[i], item.caption, item.alt)
-            return (
-            <article key={item.t} className="anat-bridge">
-              <button
-                type="button"
-                className="anat-bridge-thumb"
-                onClick={() => setLightbox(bridgePlate)}
-                aria-label={`${item.caption} — ${a.zoom}`}
-              >
-                <Image
-                  src={bridgePlate.src}
-                  alt={item.alt}
-                  width={FIG_W}
-                  height={FIG_H}
-                  sizes="(max-width:960px) 92vw, 320px"
-                  loading="lazy"
-                />
-                <span className="anat-fig-zoom" aria-hidden>⌕</span>
-              </button>
-              <div className="anat-bridge-n">{a.bridges.label} {i + 1}</div>
-              <h4 className="anat-bridge-t">{item.t}</h4>
-              <p className="anat-bridge-d">{item.d}</p>
-            </article>
-            )
-          })}
+        {/* The principle plate opens the same grid as the five bridges: one
+            card grammar for all six, rather than a full-width slab that
+            repeats the four steps stated just above it. */}
+        <div className="anat-plate-grid">
+          <PlateCard
+            plate={plate(FIGURES.chain, a.figure1.caption, a.figure1.alt)}
+            eyebrow={a.bridges.principleLabel}
+            title={a.figure1.t}
+            body={a.figure1.d}
+            zoomLabel={a.zoom}
+            onOpen={setLightbox}
+            lead
+          />
+          {a.bridges.items.map((item, i) => (
+            <PlateCard
+              key={item.t}
+              plate={plate(FIGURES.bridges[i], item.caption, item.alt)}
+              eyebrow={`${a.bridges.label} ${i + 1}`}
+              title={item.t}
+              body={item.d}
+              zoomLabel={a.zoom}
+              onOpen={setLightbox}
+            />
+          ))}
         </div>
       </div>
 

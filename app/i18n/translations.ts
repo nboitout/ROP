@@ -80,13 +80,16 @@ const fr = {
       { t: "L’étage cérébral", d: "Le cerveau intègre la sensation, le contexte et l’état émotionnel, puis module en retour les commandes descendantes." },
     ],
     figure1: {
+      t: "Qu’est-ce qu’un pont neuro-anatomique ?",
+      d: "Un relais ou une voie de convergence permettant à une stimulation podale de rejoindre et de moduler un réseau spinal ou supraspinal impliqué dans une région ou une fonction.",
       caption: "Du stimulus podal à la modulation du réseau : les quatre étapes d’un pont neuro-anatomique.",
       alt: "Schéma en quatre étapes : porte d’entrée sensorielle dans la peau du pied, transmission par les nerfs plantaires et le nerf tibial, intégration dans la moelle épinière, puis intégration cérébrale et modulation descendante.",
     },
     zoom: "Cliquer pour agrandir",
     close: "Fermer",
     bridges: {
-      title: "Les cinq ponts",
+      title: "Le principe et les cinq ponts",
+      principleLabel: "Le principe",
       intro: "Un pont n’est pas un câble direct entre un point du pied et un organe : c’est un maillon identifiable d’un réseau fonctionnel. L’anatomie en distingue cinq, du nerf périphérique jusqu’au cerveau.",
       label: "Pont",
       items: [
@@ -582,13 +585,16 @@ const en: typeof fr = {
       { t: "The cerebral level", d: "The brain integrates the sensation, the context and the emotional state, then modulates the descending commands in return." },
     ],
     figure1: {
+      t: "What is a neuro-anatomical bridge?",
+      d: "A relay or convergence pathway that lets a podal stimulus reach and modulate a spinal or supraspinal network involved in a region or a function.",
       caption: "From the podal stimulus to network modulation: the four stages of a neuro-anatomical bridge.",
       alt: "Four-stage diagram: sensory entry point in the skin of the foot, transmission along the plantar and tibial nerves, integration in the spinal cord, then cerebral integration and descending modulation.",
     },
     zoom: "Click to enlarge",
     close: "Close",
     bridges: {
-      title: "The five bridges",
+      title: "The principle and the five bridges",
+      principleLabel: "The principle",
       intro: "A bridge is not a direct cable between a point of the foot and an organ: it is an identifiable link in a functional network. Anatomy distinguishes five of them, from the peripheral nerve to the brain.",
       label: "Bridge",
       items: [
@@ -1085,13 +1091,16 @@ const th: typeof fr = {
       { t: "ระดับสมอง", d: "สมองบูรณาการความรู้สึก บริบท และสภาวะอารมณ์ แล้วปรับคำสั่งขาลงกลับมาอีกครั้ง" },
     ],
     figure1: {
+      t: "สะพานทางประสาทกายวิภาคคืออะไร",
+      d: "สถานีถ่ายทอดหรือวิถีบรรจบที่ทำให้แรงกระตุ้นจากเท้าไปถึงและปรับเครือข่ายในไขสันหลังหรือเหนือไขสันหลังซึ่งเกี่ยวข้องกับบริเวณหรือหน้าที่หนึ่ง ๆ",
       caption: "จากแรงกระตุ้นที่เท้าสู่การปรับเครือข่ายประสาท: สี่ขั้นตอนของสะพานทางประสาทกายวิภาค",
       alt: "แผนภาพสี่ขั้นตอน ได้แก่ ประตูรับความรู้สึกที่ผิวหนังของเท้า การนำสัญญาณผ่านเส้นประสาทฝ่าเท้าและเส้นประสาททิเบียล การบูรณาการในไขสันหลัง จากนั้นการบูรณาการในสมองและการปรับคำสั่งขาลง",
     },
     zoom: "คลิกเพื่อขยาย",
     close: "ปิด",
     bridges: {
-      title: "สะพานทั้งห้า",
+      title: "หลักการและสะพานทั้งห้า",
+      principleLabel: "หลักการ",
       intro: "สะพานไม่ใช่สายตรงระหว่างจุดหนึ่งบนเท้ากับอวัยวะหนึ่ง แต่เป็นข้อต่อที่ระบุได้ของเครือข่ายเชิงหน้าที่ กายวิภาคจำแนกสะพานไว้ห้าแบบ ตั้งแต่เส้นประสาทส่วนปลายไปจนถึงสมอง",
       label: "สะพานที่",
       items: [
@@ -1535,13 +1544,16 @@ const de: typeof fr = {
       { t: "Die zerebrale Ebene", d: "Das Gehirn integriert Empfindung, Kontext und emotionalen Zustand und moduliert im Gegenzug die absteigenden Befehle." },
     ],
     figure1: {
+      t: "Was ist eine neuroanatomische Brücke?",
+      d: "Ein Relais oder Konvergenzweg, über den ein podaler Reiz ein spinales oder supraspinales Netzwerk erreicht und moduliert, das an einer Region oder Funktion beteiligt ist.",
       caption: "Vom podalen Reiz zur Modulation des Netzwerks: die vier Etappen einer neuroanatomischen Brücke.",
       alt: "Schema in vier Etappen: sensorische Eingangspforte in der Haut des Fußes, Weiterleitung über die Plantarnerven und den Nervus tibialis, Integration im Rückenmark, dann zerebrale Integration und absteigende Modulation.",
     },
     zoom: "Zum Vergrößern klicken",
     close: "Schließen",
     bridges: {
-      title: "Die fünf Brücken",
+      title: "Das Prinzip und die fünf Brücken",
+      principleLabel: "Das Prinzip",
       intro: "Eine Brücke ist kein direktes Kabel zwischen einem Punkt des Fußes und einem Organ: Sie ist ein identifizierbares Glied eines funktionellen Netzwerks. Die Anatomie unterscheidet fünf davon, vom peripheren Nerv bis zum Gehirn.",
       label: "Brücke",
       items: [
@@ -2037,13 +2049,16 @@ const es: typeof fr = {
       { t: "El nivel cerebral", d: "El cerebro integra la sensación, el contexto y el estado emocional, y modula a su vez las órdenes descendentes." },
     ],
     figure1: {
+      t: "¿Qué es un puente neuroanatómico?",
+      d: "Un relevo o una vía de convergencia que permite a un estímulo podal alcanzar y modular una red espinal o supraespinal implicada en una región o una función.",
       caption: "Del estímulo podal a la modulación de la red: las cuatro etapas de un puente neuroanatómico.",
       alt: "Esquema en cuatro etapas: puerta de entrada sensorial en la piel del pie, transmisión por los nervios plantares y el nervio tibial, integración en la médula espinal, y después integración cerebral y modulación descendente.",
     },
     zoom: "Clic para ampliar",
     close: "Cerrar",
     bridges: {
-      title: "Los cinco puentes",
+      title: "El principio y los cinco puentes",
+      principleLabel: "El principio",
       intro: "Un puente no es un cable directo entre un punto del pie y un órgano: es un eslabón identificable de una red funcional. La anatomía distingue cinco, del nervio periférico hasta el cerebro.",
       label: "Puente",
       items: [
@@ -2539,13 +2554,16 @@ const it: typeof fr = {
       { t: "Il livello cerebrale", d: "Il cervello integra la sensazione, il contesto e lo stato emotivo, e modula a sua volta i comandi discendenti." },
     ],
     figure1: {
+      t: "Che cos’è un ponte neuroanatomico?",
+      d: "Un relè o una via di convergenza che consente a uno stimolo podalico di raggiungere e modulare una rete spinale o sopraspinale coinvolta in una regione o in una funzione.",
       caption: "Dallo stimolo podalico alla modulazione della rete: le quattro tappe di un ponte neuroanatomico.",
       alt: "Schema in quattro tappe: porta d’ingresso sensoriale nella pelle del piede, trasmissione attraverso i nervi plantari e il nervo tibiale, integrazione nel midollo spinale, quindi integrazione cerebrale e modulazione discendente.",
     },
     zoom: "Clicca per ingrandire",
     close: "Chiudi",
     bridges: {
-      title: "I cinque ponti",
+      title: "Il principio e i cinque ponti",
+      principleLabel: "Il principio",
       intro: "Un ponte non è un cavo diretto tra un punto del piede e un organo: è un anello identificabile di una rete funzionale. L’anatomia ne distingue cinque, dal nervo periferico fino al cervello.",
       label: "Ponte",
       items: [
