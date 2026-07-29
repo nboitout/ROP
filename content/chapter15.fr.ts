@@ -95,18 +95,28 @@ export const chapter15Fr: Chapter = {
           ]
         },
         {
-          "type": "para",
-          "text": "Intérêt en ROP"
+          "type": "rop",
+          "body": [
+            "Toute adhérence du caecum, à la suite d’appendicectomie, de colopathie fonctionnelle, de côlon irritable ou spasmodique, fait perdre au caecum sa mobilité et entraîne un réflexe caeco-iléal, une fixation de la sacro-iliaque droite et des douleurs projetées au membre inférieur droit.",
+            "A la suite d’appendicectomie, l’ovaire droit peut perdre sa mobilité et être source de difficultés de procréation. Il faut vérifier la zone réflexe du caecum et de l’ovaire après une appendicectomie.",
+            "Toute lombo-sciatalgie droite, surtout s’il n’y a pas de notion de traumatisme ou sursollicitation vertébrale, doit nous conduire à vérifier la zone réflexe du caecum."
+          ]
         },
         {
           "type": "bullets",
           "items": [
-            "Toute adhérence du caecum, à la suite d’appendicectomie, de colopathie fonctionnelle, de côlon irritable ou spasmodique, fait perdre au caecum sa mobilité et entraîne un réflexe caeco-iléal, une fixation de la sacro-iliaque droite et des douleurs projetées au membre inférieur droit.",
-            "A la suite d’appendicectomie, l’ovaire droit peut perdre sa mobilité et être source de difficultés de procréation. Il faut vérifier la zone réflexe du caecum et de l’ovaire après une appendicectomie.",
-            "Toute lombo-sciatalgie droite, surtout s’il n’y a pas de notion de traumatisme ou sursollicitation vertébrale, doit nous conduire à vérifier la zone réflexe du caecum.",
             "Côlon ascendant: il est oblique, céphaliquement et dorsalement, superficiel, relié à la paroi abdominale antérieure, et non recouvert par l’iléum. Il est rétro-péritonéal et relié à la paroi abdominale postérieure par le fascia de Toldt.",
-            "Intérêt en ROP",
-            "Les dysfonctions du côlon ascendant et ses rapports avec le psoas et le plexus lombaire expliquent les douleurs lombaires et sacro-iliaques droites.",
+          ]
+        },
+        {
+          "type": "rop",
+          "body": [
+            "Les dysfonctions du côlon ascendant et ses rapports avec le psoas et le plexus lombaire expliquent les douleurs lombaires et sacro-iliaques droites."
+          ]
+        },
+        {
+          "type": "bullets",
+          "items": [
             "Angle colique droit (ou angle hépatique)",
             "Il mesure 70 à 80mm. Il est situé, dans un plan frontal, sous le lobe droit du foie, à hauteur de la 8ème côte droite. Il est relié, par des ligaments péritonéaux, au foie, à la vésicule biliaire, au diaphragme et au rein droit.",
             "Côlon transverse: Il occupe successivement l’hypochondre droit, l’épigastre et l’hypochondre gauche de l’abdomen. Il est oblique crânialement et à gauche. Il est plus proche de la paroi abdominale antérieure dans sa partie moyenne que les angles coliques droit et gauche plus profondément situés.",
@@ -132,9 +142,14 @@ export const chapter15Fr: Chapter = {
           "text": "Le mésocôlon transverse apporte au côlon sa vascularisation et son innervation."
         },
         {
+          "type": "rop",
+          "body": [
+            "Le riche réseau neuro-vasculaire du mésocôlon transverse est hautement réflexogène, d’où l’intérêt de solliciter sa zone réflexe pour faciliter le côlon."
+          ]
+        },
+        {
           "type": "bullets",
           "items": [
-            "Intérêt en ROP: le riche réseau neuro-vasculaire du mésocôlon transverse est hautement réflexogène, d’où l’intérêt de solliciter sa zone réflexe pour faciliter le côlon.",
             "Angle colique gauche (ou angle splénique): il est plus aigu, en moyenne 50°, situé dans un plan sagittal."
           ]
         },
@@ -143,12 +158,10 @@ export const chapter15Fr: Chapter = {
           "text": "Il est situé plus haut que l’angle hépatique, à hauteur de la 8ème côte gauche et de la vertèbre Th11. Il sert de berceau à la rate. Il est rattaché à l’estomac, à la queue du pancréas, au ligament triangulaire gauche du foie, au rein gauche et au diaphragme dont le ligament phrénico-colique soutient la rate."
         },
         {
-          "type": "para",
-          "text": "Intérêt en ROP"
-        },
-        {
-          "type": "para",
-          "text": "Il faut associer l’angle splénique du côlon au diaphragme et à la rate."
+          "type": "rop",
+          "body": [
+            "Il faut associer l’angle splénique du côlon au diaphragme et à la rate."
+          ]
         },
         {
           "type": "bullets",
@@ -158,12 +171,10 @@ export const chapter15Fr: Chapter = {
           ]
         },
         {
-          "type": "para",
-          "text": "Intérêt en ROP"
-        },
-        {
-          "type": "para",
-          "text": "Les adhérences du côlon descendant avec le psoas et le plexus lombaire expliquent les douleurs lombaires et sacro-iliaques gauches."
+          "type": "rop",
+          "body": [
+            "Les adhérences du côlon descendant avec le psoas et le plexus lombaire expliquent les douleurs lombaires et sacro-iliaques gauches."
+          ]
         },
         {
           "type": "bullets",
@@ -173,9 +184,18 @@ export const chapter15Fr: Chapter = {
             "Dans son trajet, il croise le grand psoas gauche. Il présente peu d’haustrations (bosselures) et seulement deux bandelettes longitudinales. Sa caractéristique est sa très grande mobilité grâce à son mésosigmoïde.",
             "Mésosigmoïde: c’est un repli du péritoine en forme de V inversé dont le sommet est près de la division de l’artère iliaque commune gauche en artères iliaques interne et externe, à hauteur de la sacro-iliaque gauche. Il relie le côlon sigmoïde à la paroi abdominale postérieure par l’intermédiaire de ses deux racines: (figure 15.7)",
             "Racine principale: verticale, elle longe latéralement les trous sacrés antérieurs pour se terminer en avant de la 3ème vertèbre sacrée. Elle contient les vaisseaux rectaux supérieurs et le plexus hypogastrique supérieur.",
-            "Racine secondaire: oblique caudalement et à gauche, elle longe le bord médial du muscle psoas et le bord latéral du sacrum. Elle contient l’artère mésentérique inférieure.",
-            "Intérêt en ROP:",
-            "Le riche réseau neuro-vasculaire du mésosigmoïde est hautement réflexogène, d’où l’intérêt de solliciter sa zone réflexe.",
+            "Racine secondaire: oblique caudalement et à gauche, elle longe le bord médial du muscle psoas et le bord latéral du sacrum. Elle contient l’artère mésentérique inférieure."
+          ]
+        },
+        {
+          "type": "rop",
+          "body": [
+            "Le riche réseau neuro-vasculaire du mésosigmoïde est hautement réflexogène, d’où l’intérêt de solliciter sa zone réflexe."
+          ]
+        },
+        {
+          "type": "bullets",
+          "items": [
             "Rectum (qui veut dire droit):"
           ]
         },
@@ -289,12 +309,10 @@ export const chapter15Fr: Chapter = {
           ]
         },
         {
-          "type": "para",
-          "text": "Intérêt en ROP"
-        },
-        {
-          "type": "para",
-          "text": "Pour toute lombo-sciatalgie gauche, il est important de vérifier les zones réflexes de la région recto-sigmoïdienne, le foie, le rein gauche et la veine rénale gauche où aboutit la veine lombale gauche qui draine le sang veineux lombal. (Cf. Chapitre 16 Rein)"
+          "type": "rop",
+          "body": [
+            "Pour toute lombo-sciatalgie gauche, il est important de vérifier les zones réflexes de la région recto-sigmoïdienne, le foie, le rein gauche et la veine rénale gauche où aboutit la veine lombale gauche qui draine le sang veineux lombal. (Cf. Chapitre 16 Rein)"
+          ]
         }
       ]
     },
@@ -327,12 +345,10 @@ export const chapter15Fr: Chapter = {
           ]
         },
         {
-          "type": "para",
-          "text": "Intérêt en ROP"
-        },
-        {
-          "type": "para",
-          "text": "La zone réflexe de la zone de Cannon-Böhm est importante à vérifier dans les problèmes de l’intestin grêle et du côlon."
+          "type": "rop",
+          "body": [
+            "La zone réflexe de la zone de Cannon-Böhm est importante à vérifier dans les problèmes de l’intestin grêle et du côlon."
+          ]
         },
         {
           "type": "bullets",
