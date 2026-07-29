@@ -70,8 +70,8 @@ const fr = {
   ],
   anatomie: {
     lbl: "Fondements neuro-anatomiques",
-    h2: { before: "Le pied ne contient pas vos organes. Il contient des ", em: "portes d’entrée", after: "." },
-    p1: "La R.O.P. ne suppose pas qu’un organe soit matériellement représenté dans un point du pied. Elle part d’une proposition plus simple et plus anatomique : une zone du pied est une porte d’entrée sensorielle. La pression déforme la peau et les tissus, réveille des récepteurs, et le message part vers la moelle épinière puis vers le cerveau.",
+    h2: { before: "Le pied est une ", em: "porte d’entrée sensorielle", after: " vers le système nerveux." },
+    p1: "La R.O.P. ne suppose pas qu’un organe soit matériellement représenté dans un point du pied. Elle part d’une proposition plus simple et plus anatomique. La pression déforme la peau et les tissus, réveille des récepteurs, et le message part vers la moelle épinière puis vers le cerveau.",
     p2: "À chaque étage de ce trajet, ce message peut croiser des circuits qui commandent les muscles, les vaisseaux et les viscères. Nous appelons pont neuro-anatomique chacune de ces rencontres possibles. Plus une zone du pied réunit de ponts concordants, plus son action sur une région du corps devient plausible.",
     chain: [
       { t: "La porte sensorielle", d: "La pression déforme la peau glabre et les tissus de la plante : les mécanorécepteurs cutanés s’activent." },
@@ -572,8 +572,8 @@ const en: typeof fr = {
   ],
   anatomie: {
     lbl: "Neuro-anatomical foundations",
-    h2: { before: "The foot does not contain your organs. It contains ", em: "entry points", after: "." },
-    p1: "R.O.P. does not assume that an organ is materially represented in a point of the foot. It starts from a simpler, more anatomical proposition: a zone of the foot is a sensory entry point. Pressure deforms the skin and the underlying tissue, wakes up receptors, and the message travels to the spinal cord and on to the brain.",
+    h2: { before: "The foot is a ", em: "sensory entry point", after: " to the nervous system." },
+    p1: "R.O.P. does not assume that an organ is materially represented in a point of the foot. It starts from a simpler, more anatomical proposition. Pressure deforms the skin and the underlying tissue, wakes up receptors, and the message travels to the spinal cord and on to the brain.",
     p2: "At every stage of that journey, the message can meet circuits that govern muscles, blood vessels and viscera. We call each of these possible meeting points a neuro-anatomical bridge. The more concordant bridges a zone of the foot brings together, the more plausible its action on a region of the body becomes.",
     chain: [
       { t: "The sensory gateway", d: "Pressure deforms the glabrous skin and the tissues of the sole: the cutaneous mechanoreceptors fire." },
@@ -1075,8 +1075,8 @@ const th: typeof fr = {
   ],
   anatomie: {
     lbl: "รากฐานทางประสาทกายวิภาค",
-    h2: { before: "เท้าไม่ได้บรรจุอวัยวะของคุณไว้ แต่บรรจุ", em: "ประตูรับความรู้สึก", after: " เอาไว้" },
-    p1: "R.O.P. ไม่ได้ตั้งสมมติฐานว่ามีอวัยวะถูกแทนไว้จริงในจุดใดจุดหนึ่งของเท้า แต่เริ่มจากข้อเสนอที่เรียบง่ายและอิงกายวิภาคมากกว่า นั่นคือ บริเวณหนึ่งของเท้าคือประตูรับความรู้สึก แรงกดทำให้ผิวหนังและเนื้อเยื่อเปลี่ยนรูป ปลุกตัวรับความรู้สึกให้ทำงาน แล้วสัญญาณจึงเดินทางไปยังไขสันหลังและสมอง",
+    h2: { before: "เท้าคือ", em: "ประตูรับความรู้สึก", after: "สู่ระบบประสาท" },
+    p1: "R.O.P. ไม่ได้ตั้งสมมติฐานว่ามีอวัยวะถูกแทนไว้จริงในจุดใดจุดหนึ่งของเท้า แต่เริ่มจากข้อเสนอที่เรียบง่ายและอิงกายวิภาคมากกว่า แรงกดทำให้ผิวหนังและเนื้อเยื่อเปลี่ยนรูป ปลุกตัวรับความรู้สึกให้ทำงาน แล้วสัญญาณจึงเดินทางไปยังไขสันหลังและสมอง",
     p2: "ในทุกระดับของเส้นทางนี้ สัญญาณอาจไปพบกับวงจรที่ควบคุมกล้ามเนื้อ หลอดเลือด และอวัยวะภายใน เราเรียกจุดบรรจบที่เป็นไปได้แต่ละจุดว่า สะพานทางประสาทกายวิภาค ยิ่งบริเวณหนึ่งของเท้ามีสะพานที่สอดคล้องกันมากเท่าใด ความเป็นไปได้ที่จะส่งผลต่อบริเวณนั้นของร่างกายก็ยิ่งมากขึ้นเท่านั้น",
     chain: [
       { t: "ประตูรับความรู้สึก", d: "แรงกดทำให้ผิวหนังเกลี้ยงและเนื้อเยื่อฝ่าเท้าเปลี่ยนรูป ตัวรับแรงกลที่ผิวหนังจึงเริ่มทำงาน" },
@@ -1525,8 +1525,8 @@ const de: typeof fr = {
   ],
   anatomie: {
     lbl: "Neuroanatomische Grundlagen",
-    h2: { before: "Der Fuß enthält nicht Ihre Organe. Er enthält ", em: "Eingangspforten", after: "." },
-    p1: "Die R.O.P. setzt nicht voraus, dass ein Organ in einem Punkt des Fußes materiell abgebildet ist. Sie geht von einer einfacheren, stärker anatomischen Annahme aus: Eine Zone des Fußes ist eine sensorische Eingangspforte. Der Druck verformt Haut und Gewebe, weckt Rezeptoren, und die Botschaft wandert zum Rückenmark und weiter zum Gehirn.",
+    h2: { before: "Der Fuß ist eine ", em: "sensorische Eingangspforte", after: " zum Nervensystem." },
+    p1: "Die R.O.P. setzt nicht voraus, dass ein Organ in einem Punkt des Fußes materiell abgebildet ist. Sie geht von einer einfacheren, stärker anatomischen Annahme aus. Der Druck verformt Haut und Gewebe, weckt Rezeptoren, und die Botschaft wandert zum Rückenmark und weiter zum Gehirn.",
     p2: "Auf jeder Etage dieses Weges kann diese Botschaft auf Schaltkreise treffen, die Muskeln, Gefäße und Eingeweide steuern. Jede dieser möglichen Begegnungen nennen wir eine neuroanatomische Brücke. Je mehr übereinstimmende Brücken eine Fußzone vereint, desto plausibler wird ihre Wirkung auf eine Körperregion.",
     chain: [
       { t: "Die sensorische Pforte", d: "Der Druck verformt die unbehaarte Haut und das Gewebe der Fußsohle: Die kutanen Mechanorezeptoren werden aktiviert." },
@@ -2027,8 +2027,8 @@ const es: typeof fr = {
   ],
   anatomie: {
     lbl: "Fundamentos neuroanatómicos",
-    h2: { before: "El pie no contiene sus órganos. Contiene ", em: "puertas de entrada", after: "." },
-    p1: "La R.O.P. no supone que un órgano esté materialmente representado en un punto del pie. Parte de una propuesta más sencilla y más anatómica: una zona del pie es una puerta de entrada sensorial. La presión deforma la piel y los tejidos, despierta receptores, y el mensaje viaja hacia la médula espinal y después hacia el cerebro.",
+    h2: { before: "El pie es una ", em: "puerta de entrada sensorial", after: " al sistema nervioso." },
+    p1: "La R.O.P. no supone que un órgano esté materialmente representado en un punto del pie. Parte de una propuesta más sencilla y más anatómica. La presión deforma la piel y los tejidos, despierta receptores, y el mensaje viaja hacia la médula espinal y después hacia el cerebro.",
     p2: "En cada nivel de ese trayecto, ese mensaje puede cruzarse con circuitos que gobiernan los músculos, los vasos y las vísceras. Llamamos puente neuroanatómico a cada uno de esos encuentros posibles. Cuantos más puentes concordantes reúne una zona del pie, más plausible resulta su acción sobre una región del cuerpo.",
     chain: [
       { t: "La puerta sensorial", d: "La presión deforma la piel glabra y los tejidos de la planta: los mecanorreceptores cutáneos se activan." },
@@ -2529,8 +2529,8 @@ const it: typeof fr = {
   ],
   anatomie: {
     lbl: "Fondamenti neuroanatomici",
-    h2: { before: "Il piede non contiene i vostri organi. Contiene ", em: "porte d’ingresso", after: "." },
-    p1: "La R.O.P. non presuppone che un organo sia materialmente rappresentato in un punto del piede. Parte da una proposta più semplice e più anatomica: una zona del piede è una porta d’ingresso sensoriale. La pressione deforma la pelle e i tessuti, risveglia i recettori, e il messaggio viaggia verso il midollo spinale e poi verso il cervello.",
+    h2: { before: "Il piede è una ", em: "porta d’ingresso sensoriale", after: " al sistema nervoso." },
+    p1: "La R.O.P. non presuppone che un organo sia materialmente rappresentato in un punto del piede. Parte da una proposta più semplice e più anatomica. La pressione deforma la pelle e i tessuti, risveglia i recettori, e il messaggio viaggia verso il midollo spinale e poi verso il cervello.",
     p2: "A ogni livello di questo percorso, il messaggio può incrociare circuiti che governano muscoli, vasi e visceri. Chiamiamo ponte neuroanatomico ciascuno di questi incontri possibili. Più una zona del piede riunisce ponti concordanti, più la sua azione su una regione del corpo diventa plausibile.",
     chain: [
       { t: "La porta sensoriale", d: "La pressione deforma la cute glabra e i tessuti della pianta: i meccanocettori cutanei si attivano." },
