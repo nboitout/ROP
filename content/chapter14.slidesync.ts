@@ -24,7 +24,7 @@ export type SyncAnchor = { sectionId: string; blockIndex: number; slide: number;
 export const chapter14Slides: SyncSlide[] = [
   { src: '/chapter-14/slides/fr-rework/slide-01.png', title: 'L’intestin grêle' },
   { src: '/chapter-14/slides/fr-rework/slide-02.png', title: 'Le jéjunum-iléum dans le cadre colique' },
-  { src: '/chapter-14/slides/fr-rework/slide-03.png', title: 'Le mésentère : racine et mécanique de suspension' },
+  { src: '/chapter-14/slides/fr-rework/slide-03.png', title: 'Le mésentère : racine et suspension de l’intestin grêle' },
   { src: '/chapter-14/slides/fr-rework/slide-04.png', title: 'Vascularisation de l’intestin grêle' },
   { src: '/chapter-14/slides/fr-rework/slide-05.png', title: 'Le réseau lymphatique de l’intestin grêle' },
   { src: '/chapter-14/slides/fr-rework/slide-06.png', title: 'La double innervation du péritoine' },
