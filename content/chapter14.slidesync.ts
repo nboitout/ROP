@@ -228,7 +228,7 @@ export const chapter14SlideAnchorsFr: SyncAnchor[] = [
   { sectionId: 'pathologies',    blockIndex: 11, slide: 14 },
   { sectionId: 'pathologies',    blockIndex: 13, slide: 15 },
   { sectionId: 'pathologies',    blockIndex: 16, slide: 16, gapBefore: 'half', end: { sectionId: 'pathologies', blockIndex: 18 } },
-  { sectionId: 'rop',            blockIndex: -1, slide: 17 },
+  { sectionId: 'rop',            blockIndex: -1, slide: 17, gapBefore: 'half' },
   { sectionId: 'rop',            blockIndex: 1,  slide: 18 },
   { sectionId: 'rop',            blockIndex: 4,  slide: 19 },
   { sectionId: 'rop',            blockIndex: 5,  slide: 20 },
