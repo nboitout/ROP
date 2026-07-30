@@ -13,7 +13,8 @@ export type SyncSlide = { src: string; title: string; orientation?: 'portrait' }
 // blockIndex refers to the position in chapter14Fr sections[].blocks[].
 // blockIndex -1 anchors a slide to the section heading itself (the marker is
 // rendered just above the <h2> instead of inside a content block).
-export type SyncAnchor = { sectionId: string; blockIndex: number; slide: number; gapBefore?: 'half'; end?: { sectionId: string; blockIndex: number } }
+export type SyncAnchorPoint = { sectionId: string; blockIndex: number; itemIndex?: number }
+export type SyncAnchor = SyncAnchorPoint & { slide: number; gapBefore?: 'half'; end?: SyncAnchorPoint }
 
 // French deck — rebuilt from the 13-page synthesis deck. The existing
 // pathology slides remain in place until their dedicated update, followed by
@@ -213,21 +214,22 @@ export const chapter14SlideAnchorsFr: SyncAnchor[] = [
   { sectionId: 'presentation',   blockIndex: 0,  slide: 1 },
   { sectionId: 'presentation',   blockIndex: 2,  slide: 2 },
   { sectionId: 'anatomie',       blockIndex: 2,  slide: 3, end: { sectionId: 'anatomie', blockIndex: 10 } },
-  { sectionId: 'vascularisation', blockIndex: 2,  slide: 4 },
+  { sectionId: 'vascularisation', blockIndex: 2,  slide: 4, end: { sectionId: 'vascularisation', blockIndex: 5 } },
   { sectionId: 'vascularisation', blockIndex: 5,  slide: 5, gapBefore: 'half', end: { sectionId: 'vascularisation', blockIndex: 6 } },
   { sectionId: 'innervation',    blockIndex: 2,  slide: 6 },
   { sectionId: 'innervation',    blockIndex: 5,  slide: 7 },
   { sectionId: 'innervation',    blockIndex: 6,  slide: 8, end: { sectionId: 'innervation', blockIndex: 9 } },
   { sectionId: 'physiologie',    blockIndex: 4,  slide: 9 },
   { sectionId: 'physiologie',    blockIndex: 7,  slide: 10 },
-  { sectionId: 'physiologie',    blockIndex: 8,  slide: 11, end: { sectionId: 'physiologie', blockIndex: 13 } },
+  { sectionId: 'physiologie',    blockIndex: 8,  slide: 11, end: { sectionId: 'physiologie', blockIndex: 9, itemIndex: 1 } },
+  { sectionId: 'physiologie',    blockIndex: 10, itemIndex: 2, slide: 9 },
   { sectionId: 'pathologies',    blockIndex: 0,  slide: 12 },
   { sectionId: 'pathologies',    blockIndex: 1,  slide: 13, gapBefore: 'half' },
   { sectionId: 'pathologies',    blockIndex: 11, slide: 14 },
   { sectionId: 'pathologies',    blockIndex: 13, slide: 15 },
   { sectionId: 'pathologies',    blockIndex: 16, slide: 16, gapBefore: 'half', end: { sectionId: 'pathologies', blockIndex: 18 } },
   { sectionId: 'rop',            blockIndex: -1, slide: 17 },
-  { sectionId: 'rop',            blockIndex: 1,  slide: 18, gapBefore: 'half' },
+  { sectionId: 'rop',            blockIndex: 1,  slide: 18 },
   { sectionId: 'rop',            blockIndex: 4,  slide: 19 },
   { sectionId: 'rop',            blockIndex: 5,  slide: 20 },
   { sectionId: 'rop',            blockIndex: 6,  slide: 21 },

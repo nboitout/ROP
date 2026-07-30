@@ -25,6 +25,11 @@ const ANCHORS: Record<Lang, typeof chapter14SlideAnchors> = {
   es: chapter14SlideAnchors, it: chapter14SlideAnchors, th: chapter14SlideAnchors,
 }
 
+const HALF_BREAKS_FR = [
+  { sectionId: 'innervation', blockIndex: -1 },
+  { sectionId: 'rop', blockIndex: -1 },
+]
+
 export const metadata: Metadata = {
   title: 'Chapitre 14 — Lecture synchronisée · R.O.P. · Guy Boitout',
   description: 'Prototype de lecture combinée : le texte du chapitre 14 (intestin grêle) et les diapositives de synthèse affichés ensemble, synchronisés au fil de la lecture.',
@@ -55,6 +60,7 @@ export default async function Chapitre14SyncPage({
       bookTitle={translations[lang].reader.bookTitle}
       slides={DECKS[lang]}
       anchors={ANCHORS[lang]}
+      halfBreaks={lang === 'fr' ? HALF_BREAKS_FR : []}
       backHref="/chapitres-gratuits"
       restrictPaidXrefs={restrictPaidXrefs}
       showClinicalCaseResource
