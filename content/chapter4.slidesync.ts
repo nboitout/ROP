@@ -67,8 +67,12 @@ export const chapter4Slides: SyncSlide[] = [
 
 export const chapter4SlideAnchors: SyncAnchor[] = [
   { sectionId: 'presentation', blockIndex: 0, slide: 1 },
-  { sectionId: 'presentation', blockIndex: 9, itemIndex: 0, slide: [2, 3, 4, 5], ...endAt('presentation', 9, 7) },
-  { sectionId: 'presentation', blockIndex: 16, slide: [6, 7] },
+  { sectionId: 'presentation', blockIndex: 1, slide: 2 },
+  { sectionId: 'presentation', blockIndex: 4, slide: 3 },
+  { sectionId: 'presentation', blockIndex: 8, slide: 4 },
+  { sectionId: 'presentation', blockIndex: 11, slide: 5 },
+  { sectionId: 'presentation', blockIndex: 16, slide: 6 },
+  { sectionId: 'presentation', blockIndex: 18, slide: 7 },
   { sectionId: 'presentation', blockIndex: 20, slide: 8 },
   { sectionId: 'presentation', blockIndex: 25, slide: 9, ...endAt('organisation', -1) },
   { sectionId: 'organisation', blockIndex: 0, slide: 10, ...endAt('parasympathique-visceromoteur', -1) },
