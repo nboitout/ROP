@@ -1,5 +1,5 @@
 // Chapter 4 content - French synchronized reading stream
-// Source: public/chapter-4/Chapter4  Système nerveux autonome Reorganized FR.docx
+// Source: public/chapter-4/Chapter4_SNA_revise_FR_final.docx
 // Generated for SlideSyncReader; the bottom reflex-zone section includes selected hands-on figures.
 
 import type { Chapter } from './types'
@@ -245,11 +245,11 @@ export const chapter4Fr: Chapter = {
       "blocks": [
         {
           "type": "para",
-          "text": "On distingue le parasympathique crânien et le Parasympathique pelvien (ou sacral)."
+          "text": "Parasympathique pelvien (ou sacral)"
         },
         {
           "type": "sub",
-          "text": "Parasympathique crânien: Il gouverne deux territoires: le territoire céphalique et le territoire cervico-thoraco-abdominal"
+          "text": "Parasympathique crânien: il gouverne deux territoires, le territoire céphalique et le territoire cervico-thoraco-abdominal."
         },
         {
           "type": "leadBullets",
@@ -501,11 +501,11 @@ export const chapter4Fr: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Rôle majeur du nerf vague: les fibres sensitives représentent 70 à 80% des fibres du nerf vague. Elles informent, en permanence, le cerveau de l’état de l’intérieur du corps. Le Dr Donatini, spécialiste du microbiote intestinal, est convaincu que des maladies neuro-dégénératives, telles que la maladie de Parkinson, la sclérose en plaques et la maladie d’Alzheimer, sont en relation avec le système nerveux entérique par le nerf vague qui envoie des informations au cerveau sur l’état du microbiote.",
+            "Rôle majeur du nerf vague: les fibres sensitives représentent 70 à 80 % des fibres du nerf vague. Elles informent en permanence le cerveau de l’état des viscères et du milieu intérieur. Le Dr Bruno Donatini, spécialiste du microbiote intestinal, propose l’hypothèse que certaines maladies neurologiques ou neurodégénératives, notamment la maladie de Parkinson, la maladie d’Alzheimer et la sclérose en plaques, pourraient être influencées par les interactions entre le microbiote, le système nerveux entérique et le cerveau, auxquelles participe le nerf vague (cf. section 9, « Système nerveux entérique »). Cette hypothèse s’inscrit dans les recherches sur l’axe microbiote–intestin–cerveau; elle ne constitue pas, à ce jour, un lien causal démontré pour ces pathologies.",
             "Intéroception: la sensibilité viscérale, appelée intéroception, est le plus souvent inconsciente. Elle donne le sentiment vague de l’existence viscérale appelée cénesthésie.",
             "Les récepteurs viscéraux sont appelés intérocepteurs. Ils sont variés: mécanorécepteurs, thermorécepteurs, baro et chémorécepteurs.",
             "Les intérocepteurs parasympathiques: ils sont localisés dans les couches musculaires et la muqueuse des viscères.",
-            "Les intérocepteurs sympathiques: ils sont dans la séreuse viscérale. « Lorsque la sensibilité viscérale devient consciente, voire douloureuse, c’est qu’elle exprime une atteinte viscérale ou un trouble fonctionnel » (Dr. Guy Lazorthes). Les douleurs viscérales, à la différence des douleurs somatiques, sont vagues, imprécises, diffuses, souvent angoissantes. Elles sont véhiculées par le Sympathique.",
+            "Les intérocepteurs sympathiques: ils sont dans la séreuse viscérale. « Lorsque la sensibilité viscérale devient consciente, voire douloureuse, c’est qu’elle exprime une atteinte viscérale ou un trouble fonctionnel » (Pr Guy Lazorthes). Les douleurs viscérales, à la différence des douleurs somatiques, sont vagues, imprécises, diffuses, souvent angoissantes. Elles sont véhiculées par le Sympathique.",
             "Voies du nerf vague viscéro-sensitif: les neurones, qui transportent la sensibilité des viscères, ont leurs corps cellulaires dans le ganglion inférieur du nerf vague, juste au-dessous du foramen jugulaire. Ils sont connectés à la formation réticulaire du tronc cérébral, à l’hypothalamus et au cerveau limbique qui élaborent la réponse motrice destinée aux noyaux moteurs dorsal et ambigu.",
             "Les fibres sensitives du nerf vague transitent depuis les viscères et le plexus cœliaque en sens inverse des fibres motrices, jusqu’au ganglion inférieur à la sortie du foramen jugulaire.",
             "Fonctions: Le nerf vague est impliqué dans de nombreuses fonctions:",
@@ -681,14 +681,14 @@ export const chapter4Fr: Chapter = {
             },
             {
               "label": "Contingent vasculaire",
-              "text": "les neurones sensitifs nociceptifs ne parviennent pas tous à la corne latérale médullaire. La troisième voie sympathique est péri-artérielle et péri-aortique. Elle gagne la moelle spinale à distance de l’étage d’origine, selon le Pr Guy Lazortes. Elle pourrait expliquer la persistance de réponses réflexes viscérales chez les paraplégiques."
+              "text": "les neurones sensitifs nociceptifs ne parviennent pas tous à la corne latérale médullaire. La troisième voie sympathique est péri-artérielle et péri-aortique. Elle gagne la moelle spinale à distance de l’étage d’origine, selon le Pr Guy Lazorthes. Elle pourrait expliquer la persistance de réponses réflexes viscérales chez les paraplégiques."
             }
           ]
         },
         {
           "type": "rop",
           "body": [
-            "« Les interrelations médullaires entre les voies de la sensibilité viscérale et les voies de la sensibilité somatique sont à l’origine des douleurs rapportées et de contractures réflexes » (Pr Guy Lazortes). C’est ainsi qu’une douleur viscérale ne se projette pas toujours en regard du viscère atteint. Elle se projette sur un territoire cutané, appelé dermatome, correspondant au segment médullaire auquel aboutissent les voies sensitives du viscère."
+            "« Les interrelations médullaires entre les voies de la sensibilité viscérale et les voies de la sensibilité somatique sont à l’origine des douleurs rapportées et de contractures réflexes » (Pr Guy Lazorthes). C’est ainsi qu’une douleur viscérale ne se projette pas toujours en regard du viscère atteint. Elle se projette sur un territoire cutané, appelé dermatome, correspondant au segment médullaire auquel aboutissent les voies sensitives du viscère."
           ]
         },
         {
@@ -699,13 +699,13 @@ export const chapter4Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "On doit au Dr Jarricot la description des dermalgies réflexes, si utile dans le diagnostic des troubles fonctionnels viscéraux."
+          "text": "On doit au Dr Henri Jarricot la description des dermalgies réflexes, si utiles dans le diagnostic des troubles fonctionnels viscéraux."
         }
       ]
     },
     {
       "id": "chaine-plexique-prevertebrale",
-      "title": "Chaîne plexique pré-vertébrale (ou pré aortique)",
+      "title": "Chaîne plexique prévertébrale (ou pré-aortique)",
       "blocks": [
         {
           "type": "leadBullets",
@@ -736,7 +736,7 @@ export const chapter4Fr: Chapter = {
             },
             {
               "label": "Plexus hypogastrique supérieur",
-              "text": "situé à la hauteur de la bifurcation aortique, au niveau de la vertèbre L4, il reçoit les fibres issues du plexus mésentérique inférieur et du 3ème ganglion sympathique lombal. Il apporte l’innervation sympathique au plexus hypogastrique inférieur, plexus pré viscéral des organes pelviens."
+              "text": "situé à la hauteur de la bifurcation aortique, au niveau de la vertèbre L4, il reçoit les fibres issues du plexus mésentérique inférieur et du 3ème ganglion sympathique lombal. Il apporte l’innervation sympathique au plexus hypogastrique inférieur, plexus préviscéral des organes pelviens."
             },
             {
               "label": "Fonction",
@@ -762,7 +762,7 @@ export const chapter4Fr: Chapter = {
     },
     {
       "id": "plexus-pelvien",
-      "title": "Plexus pré viscéral pelvien",
+      "title": "Plexus préviscéral pelvien",
       "blocks": [
         {
           "type": "bullets",
