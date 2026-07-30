@@ -138,12 +138,10 @@ export const chapter4Fr: Chapter = {
           "text": "Il est parfois difficile de différencier les symptômes venant de l’un ou de l’autre, tant ces deux systèmes sont enchevêtrés et interdépendants."
         },
         {
-          "type": "sub",
-          "text": "Intérêt en R.O.P."
-        },
-        {
-          "type": "para",
-          "text": "Le SNA est une des clés de notre action. Fidèles à notre principe « priorité au nerf », c’est d’abord en portant notre action sur le SNA que nous restituons les fonctions viscéro-glandulaires. Les déséquilibres du SNA sont, le plus souvent, en amont des dysfonctions viscéro-glandulaires. Celles-ci ne sont que les conséquences d’un état de stress où le SNA n’a pas pu mettre en route les mécanismes d’adaptation-compensation nécessaires au retour à l’équilibre."
+          "type": "rop",
+          "body": [
+            "Le SNA est une des clés de notre action. Fidèles à notre principe « priorité au nerf », c’est d’abord en portant notre action sur le SNA que nous restituons les fonctions viscéro-glandulaires. Les déséquilibres du SNA sont, le plus souvent, en amont des dysfonctions viscéro-glandulaires. Celles-ci ne sont que les conséquences d’un état de stress où le SNA n’a pas pu mettre en route les mécanismes d’adaptation-compensation nécessaires au retour à l’équilibre."
+          ]
         },
         {
           "type": "xref",
@@ -333,16 +331,12 @@ export const chapter4Fr: Chapter = {
           "href": "/lecture/chapitre-6?lang=fr&xrefBack=%2Flecture%2Fchapitre-4%3Flang%3Dfr%23p-parasympathique-visceromoteur-5&xrefBackLabel=Retour%20au%20chapitre%204#p-theorie-polyvagale-12"
         },
         {
-          "type": "sub",
-          "text": "Intérêt en R.O.P."
-        },
-        {
-          "type": "bullets",
-          "items": [
-            "L‘hyperactivité vagale des neurones issus du noyau dorsal est responsable d’ulcères gastroduodénaux, de colites, de crise d’asthme, d’apnée et de bradycardie.",
-            "Trajet crânien: foramen jugulaire: le nerf vague sort du crâne par le foramen jugulaire en compagnie des nerfs glosso-pharyngien IX et accessoire XI, de la veine jugulaire interne et de l’artère méningée postérieure.",
-            "A ce niveau, il présente deux ganglions: le ganglion supérieur dans le foramen jugulaire et le ganglion inférieur ou plexiforme immédiatement au-dessous du foramen jugulaire. Les corps cellulaires des neurones sensitifs du nerf vague ont leur origine dans le ganglion inférieur.",
-            "Etage cervical: dans le cou, le nerf vague descend dans la gaine carotidienne. puis, il s’anastomose avec les ganglions sympathiques cervicaux supérieur et inférieur."
+          "type": "rop",
+          "body": [
+            "• L‘hyperactivité vagale des neurones issus du noyau dorsal est responsable d’ulcères gastroduodénaux, de colites, de crise d’asthme, d’apnée et de bradycardie.",
+            "• Trajet crânien: foramen jugulaire: le nerf vague sort du crâne par le foramen jugulaire en compagnie des nerfs glosso-pharyngien IX et accessoire XI, de la veine jugulaire interne et de l’artère méningée postérieure.",
+            "• A ce niveau, il présente deux ganglions: le ganglion supérieur dans le foramen jugulaire et le ganglion inférieur ou plexiforme immédiatement au-dessous du foramen jugulaire. Les corps cellulaires des neurones sensitifs du nerf vague ont leur origine dans le ganglion inférieur.",
+            "• Etage cervical: dans le cou, le nerf vague descend dans la gaine carotidienne. puis, il s’anastomose avec les ganglions sympathiques cervicaux supérieur et inférieur."
           ]
         },
         {
@@ -370,16 +364,12 @@ export const chapter4Fr: Chapter = {
           ]
         },
         {
-          "type": "sub",
-          "text": "Intérêt en R.O.P."
-        },
-        {
-          "type": "bullets",
-          "items": [
-            "Contre-indications: plaques d’athérome.",
-            "Indications: tachycardie, dysrythmie cardiaque, hypertension, syndrome vagal.",
-            "Syndrome vagal: c’est une vagotonie, par hyperstimulation vagale. Les symptômes sont: drop-attack, vertige, hypotension, petite absence, évanouissement.",
-            "Après un repas trop copieux, la congestion jugulo-carotidienne comprime le nerf vague et l’irrite dans la gaine carotidienne."
+          "type": "rop",
+          "body": [
+            "• Contre-indications: plaques d’athérome.",
+            "• Indications: tachycardie, dysrythmie cardiaque, hypertension, syndrome vagal.",
+            "• Syndrome vagal: c’est une vagotonie, par hyperstimulation vagale. Les symptômes sont: drop-attack, vertige, hypotension, petite absence, évanouissement.",
+            "• Après un repas trop copieux, la congestion jugulo-carotidienne comprime le nerf vague et l’irrite dans la gaine carotidienne."
           ]
         },
         {
@@ -578,20 +568,16 @@ export const chapter4Fr: Chapter = {
           ]
         },
         {
-          "type": "sub",
-          "text": "Intérêt en R.O.P."
-        },
-        {
-          "type": "bullets",
-          "items": [
-            "Le système digestif est directement innervé par la corne latérale médullaire thoracique de Th5 ou Th6 à Th11 ou Th12 puisqu’il n’a pas de synapse au niveau du ganglion de la chaîne ganglionnaire.latéro-vertébrale",
-            "A chaque étage vertébral, la méninge spinale est innervée par un rameau méningé récurrent. Toute irritation du nerf spinal à sa sortie du foramen intervertébral est responsable d’irritation de la méninge d’où répercussion sur la dynamique crânio-sacrée.",
-            "Chaîne ganglionnaire cervicale: elle prolonge en direction céphalique la chaîne ganglionnaire thoracique. Elle compte trois ganglions situés en avant des processus transverses des vertèbres cervicales, de la 1ère articulation cost-vertébrale à la base du crâne:",
-            "Ganglion cervical inférieur (GCI) ou stellaire: en forme de haricot, il est situé en avant du processus transverse de C7 et du col de la 1ère côte, dans la fossette rétro-pleurale ou fossette de Sédillot. Il présente de nombreuses branches:",
-            "Nerf intertransversaire (ou nerf de François Franck): il innerve l’artère vertébrale, branche de l’artère subclavière dans les foramens inter-transversaires de C6 à C1. Les deux artères vertébrales s’unissent dans le foramen magnum pour constituer le tronc basilaire le long du tronc cérébral. Il vascularise la partie postérieure du cerveau, le cervelet et l’oreille interne.",
-            "Des rameaux pour le dôme pleural et la trachée;",
-            "Le nerf cardiaque inférieur;",
-            "Des rameaux communicants gris (RCG) pour le plexus brachial de C5 à T1"
+          "type": "rop",
+          "body": [
+            "• Le système digestif est directement innervé par la corne latérale médullaire thoracique de Th5 ou Th6 à Th11 ou Th12 puisqu’il n’a pas de synapse au niveau du ganglion de la chaîne ganglionnaire.latéro-vertébrale",
+            "• A chaque étage vertébral, la méninge spinale est innervée par un rameau méningé récurrent. Toute irritation du nerf spinal à sa sortie du foramen intervertébral est responsable d’irritation de la méninge d’où répercussion sur la dynamique crânio-sacrée.",
+            "• Chaîne ganglionnaire cervicale: elle prolonge en direction céphalique la chaîne ganglionnaire thoracique. Elle compte trois ganglions situés en avant des processus transverses des vertèbres cervicales, de la 1ère articulation cost-vertébrale à la base du crâne:",
+            "• Ganglion cervical inférieur (GCI) ou stellaire: en forme de haricot, il est situé en avant du processus transverse de C7 et du col de la 1ère côte, dans la fossette rétro-pleurale ou fossette de Sédillot. Il présente de nombreuses branches:",
+            "• Nerf intertransversaire (ou nerf de François Franck): il innerve l’artère vertébrale, branche de l’artère subclavière dans les foramens inter-transversaires de C6 à C1. Les deux artères vertébrales s’unissent dans le foramen magnum pour constituer le tronc basilaire le long du tronc cérébral. Il vascularise la partie postérieure du cerveau, le cervelet et l’oreille interne.",
+            "• Des rameaux pour le dôme pleural et la trachée;",
+            "• Le nerf cardiaque inférieur;",
+            "• Des rameaux communicants gris (RCG) pour le plexus brachial de C5 à T1"
           ]
         },
         {
@@ -599,12 +585,10 @@ export const chapter4Fr: Chapter = {
           "text": "Le GCI a des anastomoses avec les nerfs vague X, phrénique et laryngé récurrent."
         },
         {
-          "type": "sub",
-          "text": "Intérêt en R.O.P."
-        },
-        {
-          "type": "para",
-          "text": "Le GCI est situé à un carrefour hautement stratégique, entre la colonne cervicale, le thorax et le membre supérieur,"
+          "type": "rop",
+          "body": [
+            "Le GCI est situé à un carrefour hautement stratégique, entre la colonne cervicale, le thorax et le membre supérieur,"
+          ]
         },
         {
           "type": "bullets",
@@ -625,12 +609,10 @@ export const chapter4Fr: Chapter = {
           ]
         },
         {
-          "type": "sub",
-          "text": "Intérêt en R.O.P."
-        },
-        {
-          "type": "para",
-          "text": "Le GCS est un autre carrefour hautement stratégique. La colonne crânio-cervicale est soumise aux nombreux traumatismes."
+          "type": "rop",
+          "body": [
+            "Le GCS est un autre carrefour hautement stratégique. La colonne crânio-cervicale est soumise aux nombreux traumatismes."
+          ]
         },
         {
           "type": "bullets",
@@ -643,12 +625,10 @@ export const chapter4Fr: Chapter = {
           ]
         },
         {
-          "type": "sub",
-          "text": "Intérêt en R.O.P."
-        },
-        {
-          "type": "para",
-          "text": "Toute tension du diaphragme et du muscle psoas affecte les ganglions sympathiques lombaires et les viscères abdomino-pelviens."
+          "type": "rop",
+          "body": [
+            "Toute tension du diaphragme et du muscle psoas affecte les ganglions sympathiques lombaires et les viscères abdomino-pelviens."
+          ]
         },
         {
           "type": "lead",
@@ -656,12 +636,10 @@ export const chapter4Fr: Chapter = {
           "text": "elle prolonge caudalement la chaîne ganglionnaire lombale. Elle compte quatre ganglions sacraux qui longent la berge médiale des trous sacraux antérieurs, et un ganglion impair à la réunion des deux chaînes ganglionnaires à la face antérieure du coccyx. Elle apporte l’innervation sympathique aux organes uro-génitaux, au sigmoïde, au rectum et à l’anus."
         },
         {
-          "type": "sub",
-          "text": "Intérêt en R.O.P."
-        },
-        {
-          "type": "para",
-          "text": "Tout traumatisme du coccyx (chute, suite d’accouchement) affecte le ganglion impair avec répercussion sur l’ensemble de la chaîne ganglionnaire latéro-vertébrale. Cela affecte aussi la dure-mère qui s’attache sur la 2ème vertèbre sacrale et sur le coccyx par le ligament duro-coccygien."
+          "type": "rop",
+          "body": [
+            "Tout traumatisme du coccyx (chute, suite d’accouchement) affecte le ganglion impair avec répercussion sur l’ensemble de la chaîne ganglionnaire latéro-vertébrale. Cela affecte aussi la dure-mère qui s’attache sur la 2ème vertèbre sacrale et sur le coccyx par le ligament duro-coccygien."
+          ]
         },
         {
           "type": "lead",
@@ -708,12 +686,10 @@ export const chapter4Fr: Chapter = {
           ]
         },
         {
-          "type": "sub",
-          "text": "Intérêt en R.O.P."
-        },
-        {
-          "type": "para",
-          "text": "« Les interrelations médullaires entre les voies de la sensibilité viscérale et les voies de la sensibilité somatique sont à l’origine des douleurs rapportées et de contractures réflexes » (Pr Guy Lazortes). C’est ainsi qu’une douleur viscérale ne se projette pas toujours en regard du viscère atteint. Elle se projette sur un territoire cutané, appelé dermatome, correspondant au segment médullaire auquel aboutissent les voies sensitives du viscère."
+          "type": "rop",
+          "body": [
+            "« Les interrelations médullaires entre les voies de la sensibilité viscérale et les voies de la sensibilité somatique sont à l’origine des douleurs rapportées et de contractures réflexes » (Pr Guy Lazortes). C’est ainsi qu’une douleur viscérale ne se projette pas toujours en regard du viscère atteint. Elle se projette sur un territoire cutané, appelé dermatome, correspondant au segment médullaire auquel aboutissent les voies sensitives du viscère."
+          ]
         },
         {
           "type": "xref",
@@ -777,13 +753,9 @@ export const chapter4Fr: Chapter = {
           ]
         },
         {
-          "type": "sub",
-          "text": "Intérêt en R.O.P."
-        },
-        {
-          "type": "bullets",
-          "items": [
-            "Les nerfs splanchniques proviennent directement de la corne latérale de la moelle épinière, sans faire synapse dans leur traversée des ganglions latéro-vertébraux. Notre action réflexe, au niveau médullaire et au niveau de la chaîne plexique pré vertébrale, est donc puissante pour équilibrer l’innervation neuro-végétative des viscères de la cavité abdominale. Là aussi, il est vain d’avoir une action franche et isolée sur le Parasympathique ou le Sympathique, tant leurs fibres sont liées et enchevêtrées."
+          "type": "rop",
+          "body": [
+            "• Les nerfs splanchniques proviennent directement de la corne latérale de la moelle épinière, sans faire synapse dans leur traversée des ganglions latéro-vertébraux. Notre action réflexe, au niveau médullaire et au niveau de la chaîne plexique pré vertébrale, est donc puissante pour équilibrer l’innervation neuro-végétative des viscères de la cavité abdominale. Là aussi, il est vain d’avoir une action franche et isolée sur le Parasympathique ou le Sympathique, tant leurs fibres sont liées et enchevêtrées."
           ]
         }
       ]
