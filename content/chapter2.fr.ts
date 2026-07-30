@@ -155,37 +155,48 @@ export const chapter2Fr: Chapter = {
         },
         {
           "type": "sub",
-          "text": "Zones réflexes occipitales et podales"
+          "text": "Zones réflexes ROP"
         },
         {
-          "type": "rop",
-          "body": [
-            "Zones réflexes occipitales",
-            "1. Syndrome général d’adaptation — soutenir la régulation neuro-végétative et l’adaptation générale avant de traiter le local :",
-            "· MRP : occiput-C1-C2, nerfs trijumeau V, vague X et hypoglosse XII, faux du cerveau et du cervelet, 2e vertèbre sacrée S2, base et voûte crâniennes",
-            "· Circulation du liquide cérébro-spinal : système veineux (foramen jugulaire, respiration profonde), compression du IVe ventricule, synchronisation SSB-S2",
-            "· Diencéphale, tronc cérébral, hypophyse",
-            "· Nerf vague (viscères du territoire cervico-thoraco-abdominal) : foramen magnum, foramen jugulaire, sinus carotidien, hiatus œsophagien",
-            "· Parasympathique pelvien (viscères du territoire pelvien et partie distale du côlon)",
-            "· Colonne vertébrale, articulations costo-transversaires, innervation sympathique (chaîne ganglionnaire latéro-vertébrale thoracique)",
-            "· Plexus pré-vertébral"
+          "type": "lead",
+          "label": "Syndrome général d’adaptation",
+          "text": "L’objectif est de soutenir la régulation neuro-végétative et l’adaptation générale avant de traiter le local :"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "MRP : occiput-C1-C2, nerfs trijumeau V, vague X et hypoglosse XII, faux du cerveau et du cervelet, 2e vertèbre sacrée S2, base et voûte crâniennes ;",
+            "Circulation du liquide cérébro-spinal : système veineux (foramen jugulaire, respiration profonde), compression du IVe ventricule et synchronisation SSB-S2. Se reporter à l’ouvrage Réflexothérapie occipito-podale et système neuro-méningé, Elsevier Masson, pages 96 et 97 ;",
+            "Diencéphale, tronc cérébral, hypophyse ;",
+            "Nerf vague (viscères du territoire cervico-thoraco-abdominal) : foramen magnum, foramen jugulaire, sinus carotidien, hiatus œsophagien ;",
+            "Parasympathique pelvien (viscères du territoire pelvien et partie distale du côlon) ;",
+            "Colonne vertébrale, articulations costo-transversaires, innervation sympathique (chaîne ganglionnaire latéro-vertébrale thoracique) ;",
+            "Plexus prévertébral."
           ]
         },
         {
-          "type": "rop",
-          "body": [
-            "2. Syndrome locorégional — traiter les boucles mécaniques et neuro-végétatives liées à la région symptomatique :",
-            "· Plexus et nerfs du système nerveux somatique (relations viscéro-somatiques)",
-            "· Système viscéral",
-            "· Cavité abdominale ou pelvienne selon le système viscéral"
+          "type": "lead",
+          "label": "Syndrome locorégional",
+          "text": "L’objectif est de traiter les boucles mécaniques et neuro-végétatives liées à la région symptomatique :"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "Plexus et nerfs du système nerveux somatique (relations viscéro-somatiques) ;",
+            "Système viscéral ;",
+            "Cavité abdominale ou pelvienne selon le système viscéral."
           ]
         },
         {
-          "type": "rop",
-          "body": [
-            "3. Système limbique — intégrer la dimension stress / émotion / mémoire corporelle, susceptible d’entréténir des boucles végétatives et tissulaires :",
-            "· Amygdale, hippocampe, insula",
-            "· Balance cerveau limbique–viscère en dysfonction : écoute-induction, un pouce sur le viscère en dysfonction dominante, l’autre pouce sur le cerveau limbique"
+          "type": "lead",
+          "label": "Système limbique",
+          "text": "L’objectif est d’intégrer la dimension stress / émotion / mémoire corporelle, susceptible d’entretenir des boucles végétatives et tissulaires :"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "Amygdale, hippocampe, insula ;",
+            "Balance cerveau limbique–viscère en dysfonction : écoute-induction, un pouce sur le viscère en dysfonction dominante, l’autre pouce sur le cerveau limbique."
           ]
         }
       ]
@@ -267,10 +278,10 @@ export const chapter2Fr: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "1. Zones réflexes occipitales",
-            "2. Syndrome général d’adaptation : MRP, diencéphale, tronc cérébral, hypophyse, surrénales, colonne vertébrale, foie, rein gauche",
-            "3. Syndrome locorégional : région cervico-isthmique de l’utérus, muscle piriforme, ligaments sacro-tubéral et sacro-spinal, nerf pudendal, articulations sacro-coccygienne et sacro-iliaque, plexus sacré et sciatique gauches",
-            "4. Système limbique : amygdale, hippocampe, insula"
+            "Zones réflexes occipitales ;",
+            "Syndrome général d’adaptation : MRP, diencéphale, tronc cérébral, hypophyse, surrénales, colonne vertébrale, foie, rein gauche ;",
+            "Syndrome locorégional : région cervico-isthmique de l’utérus, muscle piriforme, ligaments sacro-tubéral et sacro-spinal, nerf pudendal, articulations sacro-coccygienne et sacro-iliaque, plexus sacré et sciatique gauches ;",
+            "Système limbique : amygdale, hippocampe, insula."
           ]
         }
       ]
@@ -360,7 +371,11 @@ export const chapter2Fr: Chapter = {
       "blocks": [
         {
           "type": "para",
-          "text": "Nous souffrons de constater des résultats cliniques sans pouvoir les objectiver. Notre action à des effets locaux et généraux :"
+          "text": "Déjà exprimé dans l’introduction, nous souffrons de constater des résultats cliniques sans pouvoir les objectiver."
+        },
+        {
+          "type": "para",
+          "text": "Notre action a des effets locaux et généraux :"
         },
         {
           "type": "bullets",
