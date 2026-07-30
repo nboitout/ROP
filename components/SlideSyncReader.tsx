@@ -1499,7 +1499,8 @@ function BlockView({
             {visibleItems.map((it, i) => {
               const itemIndex = hasReflexZoneIntro ? i + 1 : i
               return (
-                <li key={itemIndex}>
+                <li key={itemIndex} className={hasHalfGapBeforeItem?.(itemIndex) ? 'ss-anchor-halfbreak' : undefined}>
+                  {renderSlideAnchorsForItem?.(itemIndex)}
                   <strong className="cr-lead-label">{it.label}{it.text ? ' —' : ''}</strong>
                   {it.text ? ' ' + it.text : ''}
                   {renderEndSentinelForItem?.(itemIndex)}
