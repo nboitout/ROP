@@ -1,469 +1,521 @@
+// Chapter 2 content — French synchronized reading stream
+// Source: public/chapter-2/Chapter2_ROP_version_revisee.docx
+
 import type { Chapter } from './types'
 
 export const chapter2Fr: Chapter = {
-  "slug": "chapter-2",
-  "number": "2",
-  "title": "Traitement par la Réflexothérapie Occipito-Podale",
-  "sections": [
+  slug: 'chapter-2',
+  number: '2',
+  title: 'Traitement par la Réflexothérapie Occipito-Podale',
+  sections: [
     {
-      "id": "technique",
-      "title": "Technique",
-      "blocks": [
+      id: 'presentation',
+      title: 'Présentation',
+      blocks: [
         {
-          "type": "para",
-          "text": "Voici quelques principes qui guident un traitement par la ROP :"
+          type: 'para',
+          text: 'La Réflexothérapie Occipito-Podale (ROP) s’inscrit dans une démarche de soin fonctionnel et intégratif. Le traitement est guidé par l’anamnèse, l’examen clinique, les tests d’écoute et la lecture des zones réflexes. Il vise à solliciter les capacités de régulation et d’adaptation du patient, sans se substituer au diagnostic médical ni à un traitement médical indiqué.',
         },
-        {
-          "type": "bullets",
-          "items": [
-            "Exclusivement manuelle avec la pulpe du pouce ou l’inter-phalangienne proximale de l’index, sans adjonction d’huile ou crème.",
-            "Pression : elle est exercée au niveau des zones réflexes, a pour but de solliciter les mécanocepteurs de la couche épidermo-dermique des zones occipitales et podales."
-          ]
-        },
-        {
-          "type": "sub",
-          "text": "Les mécanocepteurs"
-        },
-        {
-          "type": "para",
-          "text": "Ces mécanocepteurs sont les suivants :"
-        },
-        {
-          "type": "leadBullets",
-          "items": [
-            {
-              "label": "Corpuscules de Meissner",
-              "text": "Ils sont enchâssés dans les papilles dermiques, c’est-à-dire les avancées du derme, repoussant l’épiderme. Ils sont sensibles à une pression fine ou épicritique sans aller jusqu’à la douleur. Ils se trouvent préférentiellement au niveau de la peau glabre de la plante des pieds, de la paume des mains, des lèvres et des organes génitaux."
-            },
-            {
-              "label": "Disques de Merkel",
-              "text": "Ils sont situés à la base de l’épiderme, juste au-dessus du derme. Ils sont sensibles à une pression douce de la peau."
-            }
-          ]
-        },
-        {
-          "type": "para",
-          "text": "Dès que la pression du massage déforme la couche épidermo-dermique, repérée par la sensation de peau de tambour qui repousse le doigt, les corpuscules de Meissner et les disques de Merkel déclenchent des potentiels d’action, parcourant les voies sensitives du système lemniscal."
-        },
-        {
-          "type": "lead",
-          "label": "Système lemniscal",
-          "text": "C’est un faisceau de fibres afférentes de la moelle épinière. Il est volontairement choisi dans notre technique en raison de ses propriétés :"
-        },
-        {
-          "type": "bullets",
-          "items": [
-            "Il véhicule la sensibilité fine et non douloureuse ;",
-            "La rapidité et la précision de la transmission des influx nerveux qu’il véhicule ;",
-            "Sa riche somatotopie au niveau du cerveau ;",
-            "Son action antalgique : il exerce un contrôle de la douleur véhiculée par le système extra-lemniscal. Cette propriété antalgique est expliquée par la théorie du gate control : la propagation des influx nerveux du système lemniscal parvient plus rapidement à la corne postérieure médullaire et ferme la porte aux influx de la douleur plus lents."
-          ]
-        },
-        {
-          "type": "rop",
-          "body": [
-            "La force et la trituration du massage réflexe doivent être proscrites. Plus on appuie, plus on sent ses doigts, moins on sent les repères osseux qui nous guident dans la recherche des zones réflexes, et moins la lecture des zones réflexes est aisée.",
-            "Dans le but de restaurer une bonne qualité des tissus, apparaît le respect que nous accordons à l’organisme. Solliciter, c’est bien le mot qui convient. Même un traitement bien conduit est un stress, certes positif, mais qui doit tenir compte des capacités d’autocorrection de l’individu."
-          ]
-        },
-        {
-          "type": "sub",
-          "text": "Les trois temps du massage"
-        },
-        {
-          "type": "leadBullets",
-          "items": [
-            {
-              "label": "Temps du diagnostic textural",
-              "text": "C’est la recherche des zones réflexes caractérisées par une modification de la texture de la peau occipitale et podale : rugosité, densification, perte de glissement, sensation de cristaux. Elles doivent confirmer le diagnostic obtenu à l’issue de l’examen clinique."
-            },
-            {
-              "label": "Temps thérapeutique",
-              "text": "La pression est fine, épicritique, sans douleur vive synonyme de surdosage. La manœuvre de massage consiste à mobiliser la couche épidermo-dermique de façon à solliciter les mécanocepteurs au départ du système lemniscal, et à réinformer les centres nerveux supérieurs chargés d’apporter les ordres correcteurs aux régions du corps en dysfonctions."
-            },
-            {
-              "label": "Temps du « laisser faire » et du « ne rien faire »",
-              "text": "Après la stimulation, l’organisme a besoin de temps pour intégrer et stabiliser les adaptations neuro-végétatives, vasculaires, tissulaires."
-            }
-          ]
-        },
-        {
-          "type": "para",
-          "text": "Ce n’est pas la sollicitation en soi des zones réflexes qui est curative, mais la réponse de l’organisme. Cette réponse se traduit au niveau des zones réflexes par une amélioration de la texture de la peau (souplesse, glissement) et une baisse de la sensibilité."
-        },
-        {
-          "type": "para",
-          "text": "Ce temps de latence de quelques secondes est le temps nécessaire à l’organisme de mettre en route la boucle réflexe thérapeutique chargée de déstructurer la boucle réflexe pathologique responsable de la dysfonction."
-        },
-        {
-          "type": "para",
-          "text": "La capacité et la qualité de la réponse de l’organisme dépendent de sa vitalité, de ses capacités d’adaptation-compensation en rapport avec la phase du syndrome général d’adaptation dans laquelle évolue la maladie — alarme, adaptation, résistance, épuisement."
-        }
-      ]
+      ],
     },
     {
-      "id": "modalites",
-      "title": "Modalités du traitement",
-      "blocks": [
+      id: 'technique',
+      title: 'Technique',
+      blocks: [
         {
-          "type": "leadBullets",
-          "items": [
+          type: 'sub',
+          text: 'Contact manuel et pression',
+        },
+        {
+          type: 'para',
+          text: 'La technique est exclusivement manuelle. Le praticien utilise la pulpe du pouce ou l’interphalangienne proximale de l’index, sans huile ni crème.',
+        },
+        {
+          type: 'para',
+          text: 'La pression est fine, progressive et non douloureuse. Elle mobilise la couche épidermo-dermique des zones réflexes occipitales et podales, tout en conservant la perception des repères osseux et de la texture cutanée.',
+        },
+        {
+          type: 'para',
+          text: 'Une douleur vive, une force excessive ou une trituration appuyée traduisent un surdosage de la stimulation et doivent être évitées.',
+        },
+        {
+          type: 'sub',
+          text: 'Mécanoréception et information tactile',
+        },
+        {
+          type: 'para',
+          text: 'La stimulation cutanée sollicite notamment des mécanorécepteurs à bas seuil présents dans la peau glabre, parmi lesquels :',
+        },
+        {
+          type: 'leadBullets',
+          items: [
             {
-              "label": "Durée",
-              "text": "L’efficacité d’un traitement n’est pas liée à la durée de la séance."
+              label: 'Corpuscules de Meissner',
+              text: 'sensibles au toucher léger et aux variations fines de pression.',
             },
             {
-              "label": "Fréquence",
-              "text": "Un intervalle de trois semaines entre chaque séance est le temps nécessaire à l’organisme pour « assimiler » le traitement. Des soins trop rapprochés ne laissent pas le temps aux processus neuro-vasculaires et structurels, qui ont amené aux désordres fonctionnels, de ramèner la physiologie dans les viscères et les structures en dysfonctions."
-            }
-          ]
+              label: 'Disques de Merkel',
+              text: 'sensibles à une pression douce et maintenue ainsi qu’aux caractéristiques de forme et de texture.',
+            },
+          ],
         },
         {
-          "type": "para",
-          "text": "Dans la majorité des indications, trois séances sont suffisantes pour obtenir une amélioration satisfaisante. Quitte à revoir le patient six mois après si nécessaire. Si, après trois séances, aucune amélioration notoire n’est observée, il faut reconsidérer le diagnostic et si besoin réorienter le patient vers son médecin. Les affections chroniques nécessitent un suivi plus régulier."
-        }
-      ]
+          type: 'para',
+          text: 'Lorsque la couche épidermo-dermique se déforme sous le doigt, ces récepteurs génèrent des influx afférents transmis par les voies de la sensibilité tactile fine. Dans le modèle de la ROP, cette information sensorielle est utilisée comme une sollicitation susceptible de moduler la perception, le tonus neuro-végétatif et la réponse du patient. La théorie du gate control peut contribuer à expliquer une partie de l’effet antalgique immédiat d’une stimulation tactile non douloureuse.',
+        },
+        {
+          type: 'sub',
+          text: 'Les trois temps du massage',
+        },
+        {
+          type: 'numbered',
+          items: [
+            'Temps du diagnostic textural. Recherche des zones réflexes caractérisées par une modification de la texture de la peau occipitale ou podale : rugosité, densification, perte de glissement ou sensation de « cristaux ». Ces éléments complètent l’anamnèse, l’examen clinique et les tests ; ils ne se substituent pas à eux.',
+            'Temps thérapeutique. La pression reste fine, épicritique et non douloureuse. La manœuvre mobilise la couche épidermo-dermique afin de solliciter les mécanorécepteurs et d’apporter une information sensorielle au système nerveux.',
+            'Temps du « laisser faire » et du « ne rien faire ». Après la stimulation, le praticien maintient un bref temps d’observation. La réponse est appréciée par l’évolution de la sensibilité, du glissement et de la souplesse de la zone réflexe, ainsi que par les signes généraux de détente.',
+          ],
+        },
+        {
+          type: 'para',
+          text: 'La qualité de la réponse dépend de l’état général du patient, de sa vitalité et de ses capacités d’adaptation-compensation, en lien avec la phase du syndrome général d’adaptation dans laquelle il évolue : alarme, adaptation, résistance ou épuisement.',
+        },
+        {
+          type: 'xref',
+          label: 'Voir la référence dans le chapitre 5',
+          text: 'Mécanisme de stress',
+          href: '/lecture/chapitre-5?lang=fr#p-definitions-2',
+        },
+      ],
     },
     {
-      "id": "hierarchisation",
-      "title": "Hiérarchisation des traitements",
-      "blocks": [
+      id: 'modalites',
+      title: 'Modalités du traitement',
+      blocks: [
         {
-          "type": "para",
-          "text": "Il n’existe pas de protocole immuable : cela va à l’encontre du concept holistique. Ce sont les tests qui donnent la priorité. Voici les grandes lignes d’un plan de traitement, qui ne doivent pas servir à enfermer le patient dans un protocole loin de la réalité :"
+          type: 'sub',
+          text: 'Durée de la séance',
         },
         {
-          "type": "leadBullets",
-          "items": [
+          type: 'para',
+          text: 'L’efficacité du traitement n’est pas proportionnelle à la durée de la séance. Elle dépend surtout de la qualité de l’examen, de la hiérarchisation des priorités et de la précision de la stimulation. La séance doit rester adaptée aux capacités de réponse du patient, sans multiplier inutilement les zones traitées.',
+        },
+        {
+          type: 'sub',
+          text: 'Fréquence et cycle initial',
+        },
+        {
+          type: 'para',
+          text: 'La fréquence des séances ne repose pas sur un délai fixe. Elle est déterminée par l’évolution clinique observée après la première séance :',
+        },
+        {
+          type: 'leadBullets',
+          items: [
             {
-              "label": "Suites de traumatisme, chirurgie, infection",
-              "text": "Les symptômes rapportés spontanément par le patient et apparus après un traumatisme, une chirurgie ou une infection, coïncident en principe avec l’examen clinique. Les symptômes gardent leur caractère prioritaire."
+              label: 'Immédiatement après le traitement',
+              text: 'une détente, un besoin de repos ou certaines réactions végétatives peuvent apparaître.',
             },
             {
-              "label": "Anamnèse et tests d’écoute globale et locale",
-              "text": "En l’absence de traumatisme spontanément évoqué, d’antécédent chirurgical ou infectieux, c’est l’anamnèse, l’examen clinique et les tests d’écoute globale et locale qui nous amènent à la fixation dominante qui, par les mécanismes d’adaptation-compensation puis de décompensation, a abouti à des symptômes parfois éloignés de la fixation."
+              label: 'Dans les 24 à 48 heures',
+              text: 'des réactions transitoires sont possibles.',
             },
             {
-              "label": "Écoute émotionnelle",
-              "text": "Il faut éventuellement rechercher les traumatismes physiques ou psycho-émotionnels anciens, oubliés, refoulés dans certaines couches de notre inconscient. L’écoute tissulaire puis émotionnelle peut aider à mettre en évidence les évènements importants et négatifs mémorisés dans l’amygdale et l’hippocampe du système limbique."
+              label: 'À J3-J4',
+              text: 'l’évolution permet généralement de décider si l’amélioration est suffisante ou si une deuxième séance est indiquée.',
+            },
+          ],
+        },
+        {
+          type: 'para',
+          text: 'Lorsque le symptôme principal a disparu ou nettement régressé et que le patient a retrouvé son fonctionnement habituel, aucune nouvelle séance n’est nécessaire à court terme. Lorsque la récupération reste incomplète, une deuxième séance peut être proposée à J3-J4. Une troisième séance peut être envisagée quelques jours plus tard si l’évolution le justifie.',
+        },
+        {
+          type: 'note',
+          label: 'Fenêtre d’adaptation après la première séance',
+          body: [
+            'La courbe présentée dans les diapositives représente un modèle issu de l’expérience clinique. Elle doit être progressivement documentée par des mesures standardisées et ne constitue pas une mesure physiologique directe.',
+          ],
+        },
+        {
+          type: 'para',
+          text: 'Dans la majorité des indications fonctionnelles, un cycle initial d’une à trois séances permet d’apprécier la réponse du patient. En l’absence d’amélioration notable après trois séances, le diagnostic fonctionnel, la hiérarchisation et l’indication de la ROP doivent être reconsidérés. Si nécessaire, le patient est orienté vers son médecin. Les affections chroniques peuvent nécessiter un suivi plus prolongé, dont le rythme reste individualisé.',
+        },
+      ],
+    },
+    {
+      id: 'hierarchisation',
+      title: 'Hiérarchisation du traitement',
+      blocks: [
+        {
+          type: 'para',
+          text: 'Il n’existe pas de protocole immuable. Une séquence identique appliquée à tous les patients serait contraire à l’approche globale de la ROP. Les tests, l’histoire clinique et la réponse observée déterminent la priorité. Les repères suivants structurent néanmoins le raisonnement :',
+        },
+        {
+          type: 'leadBullets',
+          items: [
+            {
+              label: 'Suites de traumatisme, de chirurgie ou d’infection',
+              text: 'Lorsque les symptômes sont apparus après un événement clairement identifié, ils gardent un caractère prioritaire. L’anamnèse et l’examen clinique doivent vérifier la cohérence temporelle et fonctionnelle de cette relation.',
             },
             {
-              "label": "Mécanisme de stress",
-              "text": "Il faut toujours resituer une fixation tissulaire locale (ou syndrome locorégional) dans son contexte général (ou syndrome général d’adaptation), qui est en fait l’histoire de l’individu."
-            }
-          ]
-        },
-        {
-          "type": "sub",
-          "text": "Zones réflexes ROP"
-        },
-        {
-          "type": "lead",
-          "label": "Syndrome général d’adaptation",
-          "text": "L’objectif est de soutenir la régulation neuro-végétative et l’adaptation générale avant de traiter le local :"
-        },
-        {
-          "type": "bullets",
-          "items": [
-            "MRP : occiput-C1-C2, nerfs trijumeau V, vague X et hypoglosse XII, faux du cerveau et du cervelet, 2e vertèbre sacrée S2, base et voûte crâniennes ;",
-            "Circulation du liquide cérébro-spinal : système veineux (foramen jugulaire, respiration profonde), compression du IVe ventricule et synchronisation SSB-S2. Se reporter à l’ouvrage Réflexothérapie occipito-podale et système neuro-méningé, Elsevier Masson, pages 96 et 97 ;",
-            "Diencéphale, tronc cérébral, hypophyse ;",
-            "Nerf vague (viscères du territoire cervico-thoraco-abdominal) : foramen magnum, foramen jugulaire, sinus carotidien, hiatus œsophagien ;",
-            "Parasympathique pelvien (viscères du territoire pelvien et partie distale du côlon) ;",
-            "Colonne vertébrale, articulations costo-transversaires, innervation sympathique (chaîne ganglionnaire latéro-vertébrale thoracique) ;",
-            "Plexus prévertébral."
-          ]
-        },
-        {
-          "type": "lead",
-          "label": "Syndrome locorégional",
-          "text": "L’objectif est de traiter les boucles mécaniques et neuro-végétatives liées à la région symptomatique :"
-        },
-        {
-          "type": "bullets",
-          "items": [
-            "Plexus et nerfs du système nerveux somatique (relations viscéro-somatiques) ;",
-            "Système viscéral ;",
-            "Cavité abdominale ou pelvienne selon le système viscéral."
-          ]
-        },
-        {
-          "type": "lead",
-          "label": "Système limbique",
-          "text": "L’objectif est d’intégrer la dimension stress / émotion / mémoire corporelle, susceptible d’entretenir des boucles végétatives et tissulaires :"
-        },
-        {
-          "type": "bullets",
-          "items": [
-            "Amygdale, hippocampe, insula ;",
-            "Balance cerveau limbique–viscère en dysfonction : écoute-induction, un pouce sur le viscère en dysfonction dominante, l’autre pouce sur le cerveau limbique."
-          ]
-        }
-      ]
-    },
-    {
-      "id": "exemple-clinique",
-      "title": "Exemple clinique",
-      "blocks": [
-        {
-          "type": "para",
-          "text": "Lombo-sciatalgie gauche survenue quelques mois après un accouchement chez Madame X, la trentaine."
-        },
-        {
-          "type": "sub",
-          "text": "Anamnèse"
-        },
-        {
-          "type": "bullets",
-          "items": [
-            "Aucun antécédent de traumatisme connu ;",
-            "Les douleurs lombo-sciatiques sont majorées au moment des règles ;",
-            "Une insuffisance urinaire d’effort est révélée lors de l’anamnèse ;",
-            "L’accouchement a été long (unipare) ;",
-            "L’examen gynécologique ne révèle rien. La radiographie montre un léger pincement L5-S1 ne refoulant pas la racine S1 ;",
-            "La douleur l’affecte moralement car elle exerce une profession indépendante qu’elle voudrait reprendre rapidement."
-          ]
-        },
-        {
-          "type": "sub",
-          "text": "Tests"
-        },
-        {
-          "type": "bullets",
-          "items": [
-            "Les tests d’écoute globale debout et assis montrent une flexion antérieure du tronc et une flexion latérale gauche bas situées.",
-            "Les tests vertébraux montrent une petite perte de mobilité gauche des étages vertébraux L2-L3 et L5-S1 gauches et une fixation gauche de la sacro-iliaque et du coccyx.",
-            "Les tests d’écoute locale en décubitus montrent un Lasègue complété amélioré quand la main en écoute sur la symphyse pubienne est attirée légèrement à gauche et en profondeur vers la région cervico-isthmique de l’utérus.",
-            "En décubitus latéral du côté gauche, les doigts du praticien, dans la région abdominale inférieure, ressentent une résistance à la mobilité de l’utérus.",
-            "Le test de la hanche gauche montre une perte de rotation médiale."
-          ]
-        },
-        {
-          "type": "sub",
-          "text": "Mécanisme anatomo-physio-pathologique"
-        },
-        {
-          "type": "lead",
-          "label": "Syndrome locorégional",
-          "text": "La sciatalgie gauche est en relation avec une malposition de l’utérus dévié à gauche par tension du ligament utéro-sacré gauche. En conséquence :"
-        },
-        {
-          "type": "bullets",
-          "items": [
-            "Fixation partielle de l’articulation sacro-iliaque gauche ;",
-            "Fibrose du muscle piriforme gauche gênant le nerf sciatique ;",
-            "L’utérus dévié entraîne avec lui la vessie et le sacrum ;",
-            "La fixation sacro-coccygienne fait perdre les qualités d’élasticité et de contractilité du plancher périnéal."
-          ]
-        },
-        {
-          "type": "lead",
-          "label": "Syndrome général",
-          "text": ""
-        },
-        {
-          "type": "bullets",
-          "items": [
-            "Le cycle menstruel est sous la dépendance hormonale et neuro-végétative des centres du diencéphale.",
-            "La fixation sacro-coccygienne met en tension la dure-mère spinale et, par elle, le Mécanisme Respiratoire Primaire (MRP).",
-            "Le système porte draine le sang veineux pelvien. Toute fixation hépatique freine le retour veineux du petit bassin.",
-            "Le rein gauche participe aussi au retour veineux du petit bassin.",
-            "Dans sa nouvelle vie de mère, le système limbique est activé par l’anxiété, par la sciatalgie et la reprise de l’activité professionnelle."
-          ]
-        },
-        {
-          "type": "sub",
-          "text": "Traitement par la ROP"
-        },
-        {
-          "type": "bullets",
-          "items": [
-            "Zones réflexes occipitales ;",
-            "Syndrome général d’adaptation : MRP, diencéphale, tronc cérébral, hypophyse, surrénales, colonne vertébrale, foie, rein gauche ;",
-            "Syndrome locorégional : région cervico-isthmique de l’utérus, muscle piriforme, ligaments sacro-tubéral et sacro-spinal, nerf pudendal, articulations sacro-coccygienne et sacro-iliaque, plexus sacré et sciatique gauches ;",
-            "Système limbique : amygdale, hippocampe, insula."
-          ]
-        }
-      ]
-    },
-    {
-      "id": "contre-indications",
-      "title": "Contre-indications",
-      "blocks": [
-        {
-          "type": "para",
-          "text": "La ROP s’inscrit dans une logique de soin fonctionnel. Toute suspicion de pathologie organique ou de signe d’alarme impose un avis médical."
-        },
-        {
-          "type": "para",
-          "text": "Sous des symptômes parfois anodins peut se cacher une maladie grave. À nous de savoir reconnaître les signes qui nous incitent à ne pas intervenir, en application du principe « primum non nocere »."
-        },
-        {
-          "type": "para",
-          "text": "Nous détaillerons les contre-indications pour chaque viscère, mais voici déjà les symptômes qui doivent éveiller nos soupçons :"
-        },
-        {
-          "type": "bullets",
-          "items": [
-            "Douleurs non mécaniques, aggravées en première partie de nuit ;",
-            "Douleur thoracique atypique, dyspnée, malaise ;",
-            "Sang dans les urines / selles ;",
-            "Fièvre, maladies infectieuses ;",
-            "Amaigrissement inexpliqué ;",
-            "Risque de migration d’un thrombus ;",
-            "Pâleur et fatigue importante ;",
-            "Déficit neurologique : troubles sphinctériens, troubles sensitifs progressifs ;",
-            "Angoisse, peur de mourir ;",
-            "Aveu d’impuissance face à un cas clinique qu’on ne comprend pas."
-          ]
-        },
-        {
-          "type": "para",
-          "text": "Il est important d’être sensibilisé aux différentes maladies graves, au risque de retarder un diagnostic médical, surtout si les patients nous consultent en première intention, sans être passés par le filtre médical."
-        },
-        {
-          "type": "para",
-          "text": "La ROP ne doit pas se substituer à un traitement médical mieux adapté. Elle conserve toutefois sa place en tant que thérapie intégrative à côté de la médecine conventionnelle pour atténuer les conséquences fonctionnelles de la maladie ou les effets indésirables des traitements chimiques lourds, notamment en oncologie, ou simplement pour accompagner les patients dans leur bien-être."
-        },
-        {
-          "type": "para",
-          "text": "Exemple : après une chirurgie abdominale, notre action réflexe diminue les spasmes des muscles lisses des viscères, restaure le transit intestinal, diminue les médicaments de confort. En agissant à distance par voie réflexe, loin du viscère dysfonctionnel, les effets iatrogènes sont limités : c’est une sécurité pour le patient et pour le praticien."
-        }
-      ]
-    },
-    {
-      "id": "indications",
-      "title": "Indications",
-      "blocks": [
-        {
-          "type": "para",
-          "text": "Elles reposent sur l’anamnèse, les tests, la cohérence des zones réflexes, et la hiérarchisation du terrain."
-        },
-        {
-          "type": "para",
-          "text": "Les pathologies fonctionnelles sont le grand domaine des thérapies dites intégratives. Elles sont la conséquence d’un déséquilibre du système vasculo-nerveux apparu en amont de la maladie. Leur particularité est qu’elles sont réversibles, extracellulaires, peu ou pas objectivables par radiographie, scanner ou IRM car l’altération anatomique n’est pas encore entamée."
-        },
-        {
-          "type": "para",
-          "text": "Tant que la vitalité de l’organisme est capable d’adaptation-compensation, la santé est préservée. Notre rôle est d’aider le patient à améliorer sa vitalité pour restaurer l’équilibre physiologique."
-        },
-        {
-          "type": "para",
-          "text": "Nous détaillerons les symptômes fonctionnels pour chaque viscère. Les types de symptômes fonctionnels les plus fréquents rencontrés sont :"
-        },
-        {
-          "type": "bullets",
-          "items": [
-            "Douleurs musculo-squelettiques ;",
-            "Séquelles de traumatismes ostéo-musculo-articulaires ;",
-            "Séquelles de traumatismes de nerfs spinaux et crâniens ;",
-            "Dysfonctions viscérales liées à des fixations tissulaires et des boucles neuro-végétatives ;",
-            "Troubles viscéro-somatiques et somato-viscéraux ;",
-            "Régulation neuro-végétative ;",
-            "Stress émotionnel, anxiété."
-          ]
-        }
-      ]
-    },
-    {
-      "id": "actions",
-      "title": "Actions du traitement réflexothérapique",
-      "blocks": [
-        {
-          "type": "para",
-          "text": "Déjà exprimé dans l’introduction, nous souffrons de constater des résultats cliniques sans pouvoir les objectiver."
-        },
-        {
-          "type": "para",
-          "text": "Notre action a des effets locaux et généraux :"
-        },
-        {
-          "type": "bullets",
-          "items": [
-            "Action antalgique ;",
-            "Rééquilibrage neuro-végétatif : bascule vers des signes parasympathiques (calme, bâillement, somnolence, détente marquée, besoin de repos) ;",
-            "Amélioration du transit, de la diurèse et des sensations viscérales ;",
-            "Réduction des fixations vertébrales à l’étage métamérique du viscère (relation viscéro-somatique)."
-          ]
-        }
-      ]
-    },
-    {
-      "id": "reactions",
-      "title": "Réactions au traitement",
-      "blocks": [
-        {
-          "type": "leadBullets",
-          "items": [
-            {
-              "label": "Immédiates",
-              "text": "Détente."
+              label: 'Anamnèse et tests d’écoute globale et locale',
+              text: 'En l’absence d’événement déclencheur évident, l’anamnèse, l’examen clinique et les tests orientent vers la fixation dominante et les adaptations susceptibles d’entretenir les symptômes.',
             },
             {
-              "label": "24 à 48 heures",
-              "text": "Courbatures ou fatigabilité légère ; rêves, remontée de souvenirs."
+              label: 'Dimension psycho-émotionnelle',
+              text: 'Certains événements physiques ou émotionnels peuvent influencer le vécu corporel, la perception douloureuse et l’état neuro-végétatif. Cette dimension est recherchée avec prudence, sans interprétation imposée au patient.',
             },
             {
-              "label": "Dans les semaines suivantes",
-              "text": "La remontée de la vitalité va agir non seulement sur le plan local viscéro-glandulaire, mais aussi sur la production hormonale et chimique, sur l’immunité locale et générale et sur le psychisme."
-            }
-          ]
+              label: 'Mécanisme de stress',
+              text: 'Toute fixation locale doit être replacée dans le contexte général du patient, de ses contraintes et de ses capacités d’adaptation.',
+            },
+          ],
         },
         {
-          "type": "para",
-          "text": "Ces réactions passagères sont salutaires et même souhaitables, propres à chaque individu. Elles témoignent d’un travail d’élimination des toxines qui « asphyxiaient » l’organisme."
+          type: 'xref',
+          label: 'Voir la référence dans le chapitre 5',
+          text: 'Mécanisme de stress',
+          href: '/lecture/chapitre-5?lang=fr#p-definitions-2',
         },
-        {
-          "type": "para",
-          "text": "Si les réactions sont intenses, durent au-delà de 72 h, ou s’accompagnent de signes inquiétants : réévaluer et orienter."
-        },
-        {
-          "type": "para",
-          "text": "Le délai de trois à quatre semaines est à respecter pour permettre à l’organisme d’assimiler les changements avant d’entreprendre la séance suivante."
-        }
-      ]
+      ],
     },
     {
-      "id": "conseils",
-      "title": "Conseils",
-      "blocks": [
+      id: 'zones-reflexes',
+      title: 'Zones réflexes occipitales et podales',
+      blocks: [
         {
-          "type": "para",
-          "text": "« Avant de chercher à guérir quelqu’un, demandez-lui s’il est prêt à renoncer aux choses qui l’ont rendu malade. » (Hippocrate)"
+          type: 'sub',
+          text: 'Zones réflexes occipitales',
         },
         {
-          "type": "para",
-          "text": "Le meilleur des traitements ne peut pas suffire pour garantir une amélioration notoire et durable, s’il n’est pas accompagné de quelques conseils indispensables pour prolonger l’effet du traitement."
+          type: 'para',
+          text: 'Les zones occipitales constituent un point d’entrée fréquent du traitement. Leur lecture et leur stimulation sont décrites dans les figures correspondantes.',
         },
         {
-          "type": "para",
-          "text": "Ces conseils font le plus souvent appel à du bon sens :"
+          type: 'sub',
+          text: 'Syndrome général d’adaptation',
         },
         {
-          "type": "bullets",
-          "items": [
-            "Repos relatif (éviter les surcharges physiques le jour même) ;",
-            "Alimentation saine ;",
-            "Bien s’hydrater ;",
-            "Activité physique régulière ;",
-            "Être acteur de sa santé ;",
-            "Avoir des pensées positives ;",
-            "Avoir une vie sociale épanouie dans sa vie personnelle et professionnelle ;",
-            "Noter l’évolution : douleur (0–10), sommeil, transit, énergie ;",
-            "Revenir avec ces éléments pour objectiver l’effet et ajuster la hiérarchisation."
-          ]
-        }
-      ]
-    }
+          type: 'para',
+          text: 'L’objectif est de soutenir la régulation neuro-végétative et l’adaptation générale avant de traiter le local. Selon les tests et la situation clinique, les zones suivantes peuvent être intégrées :',
+        },
+        {
+          type: 'leadBullets',
+          items: [
+            {
+              label: 'MRP',
+              text: 'occiput-C1-C2, nerfs trijumeau V, vague X et hypoglosse XII, faux du cerveau et du cervelet, deuxième vertèbre sacrée S2, base et voûte crâniennes.',
+            },
+            {
+              label: 'Circulation du liquide cérébro-spinal dans le modèle ROP',
+              text: 'système veineux, foramen jugulaire, respiration profonde, compression du quatrième ventricule et synchronisation SSB-S2.',
+            },
+            {
+              label: 'Centres supérieurs',
+              text: 'diencéphale, tronc cérébral et hypophyse.',
+            },
+            {
+              label: 'Nerf vague',
+              text: 'pour le territoire cervico-thoraco-abdominal : foramen magnum, foramen jugulaire, sinus carotidien et hiatus œsophagien.',
+            },
+            {
+              label: 'Parasympathique pelvien',
+              text: 'pour le territoire pelvien et la partie distale du côlon.',
+            },
+            {
+              label: 'Axe sympathique thoracique',
+              text: 'colonne vertébrale, articulations costo-transversaires et chaîne ganglionnaire latéro-vertébrale thoracique.',
+            },
+            {
+              label: 'Plexus prévertébraux',
+              text: '',
+            },
+          ],
+        },
+        {
+          type: 'sub',
+          text: 'Syndrome locorégional',
+        },
+        {
+          type: 'para',
+          text: 'L’objectif est de traiter les boucles mécaniques et neuro-végétatives en relation avec la région symptomatique :',
+        },
+        {
+          type: 'bullets',
+          items: [
+            'Plexus et nerfs du système nerveux somatique impliqués dans les relations viscéro-somatiques ;',
+            'Viscère ou système viscéral concerné ;',
+            'Cavité abdominale ou pelvienne selon le territoire ;',
+            'Structures musculo-squelettiques et fasciales associées.',
+          ],
+        },
+        {
+          type: 'sub',
+          text: 'Système limbique',
+        },
+        {
+          type: 'para',
+          text: 'L’objectif est d’intégrer, lorsque cela est pertinent, la dimension stress, émotion et mémoire corporelle susceptible d’entretenir certaines réponses végétatives ou tissulaires :',
+        },
+        {
+          type: 'bullets',
+          items: [
+            'Amygdale, hippocampe et insula ;',
+            'Balance cerveau limbique–viscère en dysfonction : écoute-induction, un pouce sur le viscère dominant et l’autre sur la zone réflexe du cerveau limbique.',
+          ],
+        },
+      ],
+    },
+    {
+      id: 'exemple-clinique',
+      title: 'Exemple clinique : lombo-sciatalgie gauche après un accouchement',
+      blocks: [
+        {
+          type: 'para',
+          text: 'Madame X, âgée d’une trentaine d’années, consulte pour une lombo-sciatalgie gauche apparue quelques mois après un accouchement.',
+        },
+        {
+          type: 'sub',
+          text: 'Anamnèse',
+        },
+        {
+          type: 'bullets',
+          items: [
+            'Aucun antécédent traumatique connu ;',
+            'Douleurs lombo-sciatiques majorées au moment des règles ;',
+            'Incontinence urinaire d’effort révélée lors de l’entretien ;',
+            'Accouchement long chez une primipare ;',
+            'Examen gynécologique sans anomalie identifiée ; radiographie montrant un léger pincement L5-S1 sans conflit radiculaire objectivé ;',
+            'Retentissement moral important, la patiente souhaitant reprendre rapidement son activité professionnelle indépendante.',
+          ],
+        },
+        {
+          type: 'sub',
+          text: 'Tests',
+        },
+        {
+          type: 'bullets',
+          items: [
+            'Les tests d’écoute globale debout et assis montrent une flexion antérieure du tronc et une flexion latérale gauche, basses ;',
+            'Les tests vertébraux mettent en évidence une diminution modérée de mobilité à gauche aux étages L2-L3 et L5-S1, ainsi qu’une fixation de la sacro-iliaque gauche et du coccyx ;',
+            'En décubitus, le Lasègue complété est amélioré lorsque la main placée sur la symphyse pubienne est attirée légèrement à gauche et en profondeur vers la région cervico-isthmique de l’utérus ;',
+            'En décubitus latéral gauche, l’écoute de la région abdominale inférieure retrouve une résistance à la mobilité de l’utérus ;',
+            'La hanche gauche présente une diminution de rotation médiale.',
+          ],
+        },
+        {
+          type: 'sub',
+          text: 'Interprétation fonctionnelle proposée en ROP',
+        },
+        {
+          type: 'para',
+          text: 'Les éléments recueillis orientent vers une contribution possible de la région utérine et pelvienne au syndrome locorégional. Dans cette hypothèse de travail :',
+        },
+        {
+          type: 'bullets',
+          items: [
+            'Une tension prédominante du ligament utéro-sacré gauche pourrait contribuer à la déviation fonctionnelle de l’utérus et à la fixation sacro-iliaque gauche ;',
+            'Une modification du tonus du muscle piriforme gauche pourrait participer à l’irritation mécanique du trajet sciatique ;',
+            'Les relations entre utérus, vessie, sacrum et plancher pelvien pourraient contribuer à l’incontinence urinaire d’effort et à la perte de souplesse du complexe sacro-coccygien ;',
+            'Le cycle menstruel et la régulation neuro-végétative sont pris en compte dans l’évaluation du syndrome général ;',
+            'Dans le modèle ROP, la fixation sacro-coccygienne est également envisagée dans ses relations avec les enveloppes méningées et le MRP ;',
+            'Le contexte émotionnel et l’anxiété liée à la douleur, à la maternité récente et à la reprise professionnelle peuvent entretenir le vécu symptomatique.',
+          ],
+        },
+        {
+          type: 'sub',
+          text: 'Traitement par la ROP',
+        },
+        {
+          type: 'numbered',
+          items: [
+            'Zones réflexes occipitales.',
+            'Syndrome général d’adaptation : MRP, diencéphale, tronc cérébral, hypophyse, surrénales, colonne vertébrale, foie et rein gauche.',
+            'Syndrome locorégional : région cervico-isthmique de l’utérus, muscle piriforme, ligaments sacro-tubéral et sacro-épineux, nerf pudendal, articulations sacro-coccygienne et sacro-iliaque, plexus sacré et trajet sciatique gauches.',
+            'Système limbique : amygdale, hippocampe et insula.',
+          ],
+        },
+        {
+          type: 'para',
+          text: 'L’évolution du symptôme principal, de la mobilité, de l’incontinence d’effort, du sommeil et de la vitalité doit être notée après la séance afin de confirmer ou de remettre en question cette hiérarchisation.',
+        },
+      ],
+    },
+    {
+      id: 'contre-indications',
+      title: 'Contre-indications et signes d’alarme',
+      blocks: [
+        {
+          type: 'para',
+          text: 'La ROP s’inscrit dans une logique de soin fonctionnel. Toute suspicion de pathologie organique, de complication ou de signe d’alarme impose un avis médical. Des symptômes apparemment anodins peuvent révéler une affection grave ; le praticien doit savoir reconnaître les situations dans lesquelles il ne doit pas intervenir, conformément au principe de prudence.',
+        },
+        {
+          type: 'para',
+          text: 'Les signes suivants doivent notamment conduire à réévaluer la situation et, selon le contexte, à orienter le patient :',
+        },
+        {
+          type: 'bullets',
+          items: [
+            'Douleurs non mécaniques, persistantes ou aggravées en première partie de nuit ;',
+            'Douleur thoracique atypique, dyspnée, malaise ;',
+            'Sang dans les urines ou les selles ;',
+            'Fièvre ou suspicion de maladie infectieuse ;',
+            'Amaigrissement inexpliqué ;',
+            'Risque connu de migration d’un thrombus ;',
+            'Pâleur associée à une fatigue importante ;',
+            'Déficit neurologique, troubles sphinctériens nouveaux ou troubles sensitifs progressifs ;',
+            'Angoisse aiguë, peur de mourir ou altération inhabituelle de l’état général ;',
+            'Situation clinique incomprise ou dépassant le champ de compétence du praticien.',
+          ],
+        },
+        {
+          type: 'para',
+          text: 'La ROP ne doit jamais retarder un diagnostic médical ni se substituer à un traitement médical mieux adapté. Elle peut trouver une place complémentaire dans une démarche intégrative, notamment pour accompagner certains symptômes fonctionnels ou le bien-être du patient, avec l’accord de l’équipe médicale lorsque la situation l’exige.',
+        },
+      ],
+    },
+    {
+      id: 'indications',
+      title: 'Indications',
+      blocks: [
+        {
+          type: 'para',
+          text: 'Les indications reposent sur l’anamnèse, l’examen clinique, les tests, la cohérence des zones réflexes et la hiérarchisation du terrain. La ROP s’adresse en priorité à des troubles fonctionnels, après exclusion d’une pathologie organique nécessitant une prise en charge médicale spécifique.',
+        },
+        {
+          type: 'para',
+          text: 'Les situations fréquemment rencontrées comprennent :',
+        },
+        {
+          type: 'bullets',
+          items: [
+            'Douleurs musculo-squelettiques à composante fonctionnelle ;',
+            'Séquelles de traumatismes ostéo-musculo-articulaires ;',
+            'Séquelles fonctionnelles de traumatismes de nerfs spinaux ou crâniens ;',
+            'Dysfonctions viscérales associées à des fixations tissulaires et à des boucles neuro-végétatives dans le modèle de la ROP ;',
+            'Troubles viscéro-somatiques et somato-viscéraux ;',
+            'Déséquilibres neuro-végétatifs fonctionnels ;',
+            'Stress émotionnel et anxiété, en complément d’une prise en charge adaptée.',
+          ],
+        },
+      ],
+    },
+    {
+      id: 'actions',
+      title: 'Effets recherchés et observés',
+      blocks: [
+        {
+          type: 'para',
+          text: 'Les résultats cliniques de la ROP sont souvent rapportés par les patients et observés au cours des tests, mais restent parfois difficiles à objectiver. Les effets recherchés ou fréquemment décrits sont :',
+        },
+        {
+          type: 'bullets',
+          items: [
+            'Une diminution de la douleur ou de la gêne ;',
+            'Des signes de détente et de bascule neuro-végétative : calme, bâillements, somnolence, relâchement marqué ou besoin de repos ;',
+            'Une évolution du transit, de la diurèse ou des sensations viscérales ;',
+            'Une modification de la mobilité testée à l’étage métamérique associé au viscère ;',
+            'Une amélioration du sommeil, de l’énergie et des capacités fonctionnelles.',
+          ],
+        },
+        {
+          type: 'para',
+          text: 'Ces effets doivent être appréciés à partir d’indicateurs définis avant la séance : symptôme principal, douleur ou gêne, mobilité, sommeil, transit, énergie et capacité à reprendre les activités. L’objectif n’est pas seulement de recueillir une impression générale, mais de comparer l’évolution à un état initial clairement décrit.',
+        },
+      ],
+    },
+    {
+      id: 'reactions',
+      title: 'Réactions au traitement et réévaluation',
+      blocks: [
+        {
+          type: 'sub',
+          text: 'Réactions immédiates',
+        },
+        {
+          type: 'para',
+          text: 'Le patient ressent le plus souvent une détente. Une somnolence, un besoin de repos, une envie d’uriner ou d’aller à la selle peuvent également apparaître. Une baisse transitoire du niveau d’énergie peut être ressentie juste après la séance.',
+        },
+        {
+          type: 'sub',
+          text: 'Dans les 24 à 48 heures',
+        },
+        {
+          type: 'para',
+          text: 'Certains patients peuvent présenter des courbatures, une fatigabilité légère, un sommeil modifié, des rêves plus marqués ou une remontée de souvenirs. Ces réactions sont passagères, variables selon les individus et non systématiques. Leur absence ne signifie pas que le traitement est inefficace.',
+        },
+        {
+          type: 'sub',
+          text: 'Dans les jours suivants',
+        },
+        {
+          type: 'para',
+          text: 'La vitalité remonte progressivement vers le niveau physiologique habituel du patient. Cette évolution peut s’accompagner d’une diminution du symptôme principal, d’une amélioration du sommeil, du transit, de l’énergie ou des capacités fonctionnelles.',
+        },
+        {
+          type: 'sub',
+          text: 'Point de décision à J3-J4',
+        },
+        {
+          type: 'para',
+          text: 'À J3-J4, le praticien et le patient réévaluent l’évolution :',
+        },
+        {
+          type: 'bullets',
+          items: [
+            'Si le symptôme principal a disparu ou nettement régressé et que le fonctionnement habituel est retrouvé, la rémission clinique est considérée comme acquise à ce stade ;',
+            'Si l’amélioration demeure incomplète, une deuxième séance peut être proposée ;',
+            'Si la réponse est absente, atypique ou défavorable, la hiérarchisation et l’indication doivent être reconsidérées.',
+          ],
+        },
+        {
+          type: 'note',
+          label: 'Terminologie',
+          body: [
+            'Dans ce chapitre, le terme « rémission » décrit l’évolution du motif fonctionnel suivi ; il ne signifie pas la guérison d’une éventuelle maladie organique sous-jacente.',
+          ],
+        },
+        {
+          type: 'sub',
+          text: 'Réactions inhabituelles',
+        },
+        {
+          type: 'para',
+          text: 'Si les réactions sont intenses, persistent au-delà de 72 heures ou s’accompagnent de signes inhabituels ou inquiétants, la situation doit être réévaluée. Le patient est orienté vers son médecin lorsque le contexte le justifie.',
+        },
+      ],
+    },
+    {
+      id: 'conseils',
+      title: 'Conseils au patient',
+      blocks: [
+        {
+          type: 'para',
+          text: 'Le meilleur traitement ne peut garantir une amélioration durable s’il n’est pas accompagné d’une participation active du patient et de mesures simples adaptées à sa situation. Les conseils relèvent le plus souvent du bon sens :',
+        },
+        {
+          type: 'bullets',
+          items: [
+            'Prévoir un repos relatif et éviter les surcharges physiques le jour de la séance ;',
+            'Maintenir une hydratation suffisante ;',
+            'Adopter une alimentation équilibrée ;',
+            'Conserver une activité physique régulière adaptée aux capacités du moment ;',
+            'Favoriser le sommeil, la récupération et un environnement social soutenant ;',
+            'Rester acteur de sa santé et consulter lorsque des signes nouveaux ou inquiétants apparaissent ;',
+            'Noter l’évolution du symptôme principal, de la douleur, du sommeil, du transit, de la vitalité et des capacités fonctionnelles ;',
+            'Rapporter ces éléments au praticien afin d’objectiver l’effet de la séance et d’ajuster la suite du traitement.',
+          ],
+        },
+        {
+          type: 'lead',
+          label: 'Principe de suivi',
+          text: 'La réponse du patient guide le rythme du traitement : observer, mesurer, réévaluer.',
+        },
+      ],
+    },
   ],
-  "slides": {
-    "url": "/chapter-2/Chapter2 - Slides de synthese.pdf?v=c5f6540",
-    "label": "Diapositives",
-    "description": "Synthèse visuelle du chapitre — technique, modalités, hiérarchisation et indications du traitement par la R.O.P."
+  revisionSheet: {
+    src: '/chapter-2/Chap2 - Fiche de revision.png',
+    alt: 'Fiche de révision — Chapitre 2, Traitement par la R.O.P.',
+    caption: 'Fiche de révision — Chapitre 2 · Traitement par la R.O.P.',
   },
-  "revisionSheet": {
-    "src": "/chapter-2/Chap2 - Fiche de revision.png",
-    "alt": "Fiche de révision — Chapitre 2, Traitement par la R.O.P.",
-    "caption": "Fiche de révision — Chapitre 2 · Traitement par la R.O.P."
-  }
 }
