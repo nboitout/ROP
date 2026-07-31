@@ -16,6 +16,16 @@ export const chapter2Fr: Chapter = {
           type: 'para',
           text: 'La Réflexothérapie Occipito-Podale (ROP) s’inscrit dans une démarche de soin fonctionnel et intégratif. Le traitement est guidé par l’anamnèse, l’examen clinique, les tests d’écoute et la lecture des zones réflexes. Il vise à solliciter les capacités de régulation et d’adaptation du patient, sans se substituer au diagnostic médical ni à un traitement médical indiqué.',
         },
+        {
+          type: 'note',
+          label: 'Principes directeurs',
+          body: [
+            'Solliciter plutôt que forcer. La pression est fine, précise et non douloureuse.',
+            'Hiérarchiser plutôt qu’appliquer un protocole fixe. Les tests et la situation clinique déterminent les priorités.',
+            'Observer plutôt que présumer. La réponse du patient est suivie dans les heures et les jours qui suivent la séance.',
+            'Réorienter lorsque nécessaire. Toute suspicion de pathologie organique ou de signe d’alarme impose un avis médical.',
+          ],
+        },
       ],
     },
     {
@@ -62,6 +72,13 @@ export const chapter2Fr: Chapter = {
         {
           type: 'para',
           text: 'Lorsque la couche épidermo-dermique se déforme sous le doigt, ces récepteurs génèrent des influx afférents transmis par les voies de la sensibilité tactile fine. Dans le modèle de la ROP, cette information sensorielle est utilisée comme une sollicitation susceptible de moduler la perception, le tonus neuro-végétatif et la réponse du patient. La théorie du gate control peut contribuer à expliquer une partie de l’effet antalgique immédiat d’une stimulation tactile non douloureuse.',
+        },
+        {
+          type: 'rop',
+          body: [
+            'La force et la trituration du massage réflexe doivent être proscrites. Plus la pression est forte, plus le praticien perçoit ses propres doigts au détriment des repères osseux et des modifications de texture qui guident la recherche des zones réflexes.',
+            'Même bien conduite, une séance constitue une sollicitation pour l’organisme. Elle doit tenir compte de la vitalité du patient et de ses capacités d’adaptation.',
+          ],
         },
         {
           type: 'sub',
@@ -133,6 +150,14 @@ export const chapter2Fr: Chapter = {
           label: 'Fenêtre d’adaptation après la première séance',
           body: [
             'La courbe présentée dans les diapositives représente un modèle issu de l’expérience clinique. Elle doit être progressivement documentée par des mesures standardisées et ne constitue pas une mesure physiologique directe.',
+          ],
+        },
+        {
+          type: 'note',
+          label: 'Comment interpréter le terme « vitalité » ?',
+          body: [
+            'Dans ce chapitre, la vitalité désigne une appréciation clinique et fonctionnelle : niveau d’énergie, fatigabilité, qualité du sommeil, capacité à reprendre les activités, évolution du symptôme principal et ressenti global.',
+            'Elle ne correspond pas à une variable biologique unique. Pour être utile, elle doit être comparée au niveau initial du patient et suivie à l’aide de questions simples et reproductibles.',
           ],
         },
         {
@@ -482,6 +507,15 @@ export const chapter2Fr: Chapter = {
           type: 'para',
           text: 'Si les réactions sont intenses, persistent au-delà de 72 heures ou s’accompagnent de signes inhabituels ou inquiétants, la situation doit être réévaluée. Le patient est orienté vers son médecin lorsque le contexte le justifie.',
         },
+        {
+          type: 'note',
+          label: 'Participez au retour d’expérience en ROP avec SuiviPatient',
+          body: [
+            'La chronologie décrite dans ce chapitre repose sur l’expérience clinique des praticiens. Pour mieux l’objectiver, de courts questionnaires peuvent être proposés à intervalles réguliers après la séance, notamment à 24-48 heures puis à J3-J4, en comparaison avec l’état initial.',
+            'Les questionnaires portent sur le symptôme principal, la douleur ou la gêne, la vitalité, le sommeil, les fonctions viscérales, les capacités fonctionnelles et les éventuelles réactions post-traitement.',
+            'Les praticiens lecteurs qui souhaitent rejoindre la communauté ROP et utiliser gratuitement l’application SuiviPatient avec leur patientèle sont invités à nous contacter. Cette démarche doit respecter le consentement du patient et la confidentialité des informations recueillies.',
+          ],
+        },
       ],
     },
     {
@@ -503,6 +537,17 @@ export const chapter2Fr: Chapter = {
             'Rester acteur de sa santé et consulter lorsque des signes nouveaux ou inquiétants apparaissent ;',
             'Noter l’évolution du symptôme principal, de la douleur, du sommeil, du transit, de la vitalité et des capacités fonctionnelles ;',
             'Rapporter ces éléments au praticien afin d’objectiver l’effet de la séance et d’ajuster la suite du traitement.',
+          ],
+        },
+        {
+          type: 'note',
+          label: 'Synthèse pratique',
+          body: [
+            'Avant la séance : définir le symptôme principal et recueillir un niveau initial simple.',
+            'Immédiatement après : observer la détente et les éventuelles réactions végétatives.',
+            'À 24-48 heures : documenter les réactions transitoires et le début de récupération.',
+            'À J3-J4 : confirmer la rémission ou proposer une deuxième séance si l’amélioration reste incomplète.',
+            'Après trois séances sans amélioration : reconsidérer le diagnostic fonctionnel, la hiérarchisation et l’orientation médicale.',
           ],
         },
         {
