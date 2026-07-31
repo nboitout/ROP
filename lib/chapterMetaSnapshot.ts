@@ -17,9 +17,9 @@ export type ChapterMetaSnapshot = {
 export const chapterMetaSnapshot: Record<string, ChapterMetaSnapshot> = {
   'introduction': { readingMinutes: 3, photoCount: 0, slideCount: 0, cartographyCount: 0, visualCount: 0 },
   'chapter-1': { readingMinutes: 13, photoCount: 0, slideCount: 18, cartographyCount: 1, visualCount: 19 },
-  'chapter-2': { readingMinutes: 15, photoCount: 0, slideCount: 17, cartographyCount: 1, visualCount: 18 },
+  'chapter-2': { readingMinutes: 16, photoCount: 0, slideCount: 10, cartographyCount: 4, visualCount: 14 },
   'chapter-3': { readingMinutes: 23, photoCount: 7, slideCount: 15, cartographyCount: 10, visualCount: 32 },
-  'chapter-4': { readingMinutes: 47, photoCount: 17, slideCount: 26, cartographyCount: 17, visualCount: 60 },
+  'chapter-4': { readingMinutes: 47, photoCount: 17, slideCount: 27, cartographyCount: 18, visualCount: 62 },
   'chapter-5': { readingMinutes: 20, photoCount: 9, slideCount: 26, cartographyCount: 0, visualCount: 35 },
   'chapter-6': { readingMinutes: 9, photoCount: 0, slideCount: 18, cartographyCount: 0, visualCount: 18 },
   'chapter-7': { readingMinutes: 19, photoCount: 5, slideCount: 13, cartographyCount: 6, visualCount: 24 },
@@ -29,7 +29,7 @@ export const chapterMetaSnapshot: Record<string, ChapterMetaSnapshot> = {
   'chapter-11': { readingMinutes: 33, photoCount: 11, slideCount: 15, cartographyCount: 11, visualCount: 37 },
   'chapter-12': { readingMinutes: 18, photoCount: 5, slideCount: 12, cartographyCount: 6, visualCount: 23 },
   'chapter-13': { readingMinutes: 13, photoCount: 2, slideCount: 18, cartographyCount: 4, visualCount: 24 },
-  'chapter-14': { readingMinutes: 19, photoCount: 14, slideCount: 26, cartographyCount: 0, visualCount: 40 },
+  'chapter-14': { readingMinutes: 19, photoCount: 14, slideCount: 27, cartographyCount: 0, visualCount: 41 },
   'chapter-15': { readingMinutes: 34, photoCount: 14, slideCount: 28, cartographyCount: 8, visualCount: 50 },
   'chapter-16': { readingMinutes: 29, photoCount: 9, slideCount: 21, cartographyCount: 9, visualCount: 39 },
   'chapter-17': { readingMinutes: 23, photoCount: 0, slideCount: 19, cartographyCount: 1, visualCount: 20 },
@@ -41,9 +41,9 @@ export const chapterMetaSnapshot: Record<string, ChapterMetaSnapshot> = {
 
 export const bookVisualTotals = {
   chapterCount: 22,
-  readingMinutes: 446,
+  readingMinutes: 447,
   photoCount: 112,
-  slideCount: 395,
-  cartographyCount: 105,
-  visualCount: 612,
+  slideCount: 390,
+  cartographyCount: 109,
+  visualCount: 611,
 }
