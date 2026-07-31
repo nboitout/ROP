@@ -1,7 +1,12 @@
 import { cookies } from 'next/headers'
 import { redirect } from 'next/navigation'
-import { canReadDraftChapter } from '@/lib/access'
+import { canReadPaidChapter } from '@/lib/access'
 import type { Metadata } from 'next'
+import ChapterReader from '@/components/ChapterReader'
+import ClassicModeGuard from '@/components/ClassicModeGuard'
+import { getChapter } from '@/content/registry'
+import { getServerLang } from '@/app/i18n/serverLang'
+import { translations } from '@/app/i18n/translations'
 
 export const metadata: Metadata = {
   title: 'Chapitre 4 — Système nerveux autonome · R.O.P. · Guy Boitout',
@@ -9,28 +14,32 @@ export const metadata: Metadata = {
   robots: { index: false, follow: false },
 }
 
-function searchParamsToQuery(params: Record<string, string | string[] | undefined>) {
-  const query = new URLSearchParams()
-  for (const [key, value] of Object.entries(params)) {
-    if (typeof value === 'string') query.set(key, value)
-    else if (Array.isArray(value)) value.forEach((item) => query.append(key, item))
-  }
-  const encoded = query.toString()
-  return encoded ? `?${encoded}` : ''
-}
-
-// Draft chapter compatibility route. Chapter 4 now opens in synchronized
-// reading mode; keep this URL as a redirect for old admin links and xrefs.
-export default async function Chapitre4Page({
+// Classic single-column reading. The synchronized reader at /lecture/chapitre-4 is
+// the default entry; this route is reachable from its large-screen mode switch.
+export default async function Chapitre4ClassicPage({
   searchParams,
 }: {
-  searchParams: Promise<Record<string, string | string[] | undefined>>
+  searchParams: Promise<{ lang?: string }>
 }) {
   const cookieStore = await cookies()
-  if (!canReadDraftChapter(cookieStore)) {
-    redirect('/admin/login')
+  if (!(await canReadPaidChapter(cookieStore))) {
+    redirect('/#acheter')
   }
 
-  const params = await searchParams
-  redirect(`/lecture/chapitre-4${searchParamsToQuery(params)}`)
+  const { lang: langParam } = await searchParams
+  const lang = await getServerLang(langParam)
+  const { chapter, contentLang } = getChapter('chapter-4', 'fr')
+  const syncHref = `/lecture/chapitre-4?lang=${lang}`
+
+  return (
+    <>
+      <ClassicModeGuard syncHref={syncHref} />
+      <ChapterReader
+        chapter={chapter}
+        bookTitle={translations[lang].reader.bookTitle}
+        contentLang={contentLang}
+        syncHref={syncHref}
+      />
+    </>
+  )
 }

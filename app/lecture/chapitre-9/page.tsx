@@ -35,6 +35,7 @@ export default async function Chapitre9SyncPage({
       slides={chapter9Slides}
       anchors={chapter9SlideAnchors}
       backHref="/chapitres-gratuits"
+      classicHref={`/chapitre-9?lang=${lang}`}
     />
   )
 }
