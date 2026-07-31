@@ -47,6 +47,9 @@ type Props = {
   showClinicalCaseResource?: boolean
   restrictPaidXrefs?: boolean
   hiddenDotSlides?: number[]
+  /** Classic single-column route for this chapter. Omit to hide the mode
+   *  switch. The switch is desktop-only (see .cr-mode-switch). */
+  classicHref?: string
 }
 
 type XrefReturn = { href: string; label: string } | null
@@ -281,7 +284,7 @@ function preloadSlideImage(src: string | undefined) {
   img.src = src
 }
 
-export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, halfBreaks = [], backHref = '/chapitres-gratuits', sectionRail = true, showClinicalCaseResource = false, restrictPaidXrefs = false, hiddenDotSlides = [] }: Props) {
+export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, halfBreaks = [], backHref = '/chapitres-gratuits', sectionRail = true, showClinicalCaseResource = false, restrictPaidXrefs = false, hiddenDotSlides = [], classicHref }: Props) {
   const { lang, t } = useLanguage()
   const searchParams = useSearchParams()
   const ui = SS_UI[lang] ?? SS_UI.fr
@@ -1048,6 +1051,15 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, h
           <span className="cr-sep">·</span>
           <span className="cr-bookname">{bookTitle}</span>
         </div>
+        {classicHref && (
+          <Link
+            href={classicHref}
+            className="cr-mode-switch"
+            onClick={() => track('reader_mode_switch', { to: 'classic' })}
+          >
+            {t.reader.classicMode}
+          </Link>
+        )}
       </div>
 
       {xrefReturn && (

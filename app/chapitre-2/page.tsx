@@ -1,8 +1,12 @@
 import { cookies } from 'next/headers'
 import { redirect } from 'next/navigation'
-import { canReadFreeChapter } from '@/lib/access'
+import { canReadFreeChapter, canReadPaidChapter } from '@/lib/access'
 import type { Metadata } from 'next'
+import ChapterReader from '@/components/ChapterReader'
+import ClassicModeGuard from '@/components/ClassicModeGuard'
+import { getChapter } from '@/content/registry'
 import { getServerLang } from '@/app/i18n/serverLang'
+import { translations } from '@/app/i18n/translations'
 
 export const metadata: Metadata = {
   title: 'Chapitre 2 — Traitement par la R.O.P. · Guy Boitout',
@@ -10,7 +14,9 @@ export const metadata: Metadata = {
   robots: { index: false, follow: false },
 }
 
-export default async function Chapitre2Page({
+// Classic single-column reading. The synchronized reader at /lecture/traitement-rop is
+// the default entry; this route is reachable from its large-screen mode switch.
+export default async function Chapitre2ClassicPage({
   searchParams,
 }: {
   searchParams: Promise<{ lang?: string }>
@@ -19,8 +25,23 @@ export default async function Chapitre2Page({
   if (!canReadFreeChapter(cookieStore)) {
     redirect('/?gate=free#acces-libre')
   }
+  const restrictPaidXrefs = !(await canReadPaidChapter(cookieStore))
 
   const { lang: langParam } = await searchParams
   const lang = await getServerLang(langParam)
-  redirect(`/lecture/traitement-rop${lang ? `?lang=${lang}` : ''}`)
+  const { chapter, contentLang } = getChapter('chapter-2', lang)
+  const syncHref = `/lecture/traitement-rop?lang=${lang}`
+
+  return (
+    <>
+      <ClassicModeGuard syncHref={syncHref} />
+      <ChapterReader
+        chapter={chapter}
+        bookTitle={translations[lang].reader.bookTitle}
+        contentLang={contentLang}
+        restrictPaidXrefs={restrictPaidXrefs}
+        syncHref={syncHref}
+      />
+    </>
+  )
 }

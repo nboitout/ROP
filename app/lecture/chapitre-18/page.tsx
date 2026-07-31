@@ -48,6 +48,7 @@ export default async function Chapitre18LecturePage({
       slides={DECKS[lang]}
       anchors={chapter18SlideAnchors}
       backHref="/chapitres-gratuits"
+      classicHref={`/chapitre-18?lang=${lang}`}
     />
   )
 }

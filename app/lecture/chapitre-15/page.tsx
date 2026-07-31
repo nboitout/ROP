@@ -69,6 +69,7 @@ export default async function Chapitre15LecturePage({
       slides={DECKS[lang]}
       anchors={ANCHORS[lang]}
       backHref="/chapitres-gratuits"
+      classicHref={`/chapitre-15?lang=${lang}`}
       hiddenDotSlides={HIDDEN_DOT_SLIDES[lang]}
     />
   )

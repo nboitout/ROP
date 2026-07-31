@@ -21,6 +21,9 @@ type Props = {
   backHref?: string
   contentLang?: Lang
   restrictPaidXrefs?: boolean
+  /** Synchronized-reading route for this chapter. Omit to hide the mode
+   *  switch — /introduction has no deck, so it stays classic-only. */
+  syncHref?: string
 }
 
 type XrefReturn = { href: string; label: string } | null
@@ -40,7 +43,7 @@ function getSafeXrefReturn(params: { get(name: string): string | null } | null):
   }
 }
 
-export default function ChapterReader({ chapter, bookTitle, backHref = '/chapitres-gratuits', contentLang = 'fr', restrictPaidXrefs = false }: Props) {
+export default function ChapterReader({ chapter, bookTitle, backHref = '/chapitres-gratuits', contentLang = 'fr', restrictPaidXrefs = false, syncHref }: Props) {
   const { lang, t } = useLanguage()
   const searchParams = useSearchParams()
   const showFallbackNotice = lang !== contentLang
@@ -291,6 +294,15 @@ export default function ChapterReader({ chapter, bookTitle, backHref = '/chapitr
           <span className="cr-sep">·</span>
           <span className="cr-bookname">{bookTitle}</span>
         </div>
+        {syncHref && (
+          <Link
+            href={syncHref}
+            className="cr-mode-switch"
+            onClick={() => track('reader_mode_switch', { to: 'sync' })}
+          >
+            {t.reader.syncMode}
+          </Link>
+        )}
         <button className="cr-toc-toggle" onClick={() => setTocOpen((v) => !v)} aria-label={t.reader.toc}>
           <span /><span /><span />
         </button>

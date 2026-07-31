@@ -418,6 +418,18 @@ footer > div > p { font-size:.95rem; color:rgba(245,240,232,.84); line-height:1.
 .cr-sep { margin:0 8px; opacity:.4; }
 .cr-bookname { font-style:italic; }
 .cr-topbar-case { display:none; }
+/* Reading-mode switch: large screens only. Below 981px the synchronized
+   reader collapses to a single column, so the two modes look alike and the
+   choice is noise — see the .ss-layout breakpoint. */
+.cr-mode-switch { display:none; }
+@media (min-width:981px){
+  .cr-mode-switch { display:inline-flex; align-items:center; flex-shrink:0;
+    padding:6px 13px; border:1px solid rgba(74,107,90,.28); border-radius:999px;
+    background:rgba(251,248,241,.7); color:var(--sage); text-decoration:none;
+    font-size:.68rem; font-weight:600; letter-spacing:.09em; text-transform:uppercase;
+    transition:color .2s, border-color .2s, background .2s; }
+  .cr-mode-switch:hover { color:var(--gold); border-color:rgba(160,124,58,.5); background:rgba(160,124,58,.08); }
+}
 .cr-toc-toggle { background:none; border:none; cursor:pointer; padding:8px; display:flex; flex-direction:column; gap:4px; flex-shrink:0; }
 .cr-toc-toggle span { width:22px; height:1.5px; background:var(--ink); display:block; }
 

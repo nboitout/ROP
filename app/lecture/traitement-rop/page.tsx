@@ -58,6 +58,7 @@ export default async function TraitementRopPage({
       slides={DECKS[lang]}
       anchors={ANCHORS[lang]}
       backHref="/chapitres-gratuits"
+      classicHref={`/chapitre-2?lang=${lang}`}
       restrictPaidXrefs={restrictPaidXrefs}
     />
   )

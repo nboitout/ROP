@@ -62,6 +62,7 @@ export default async function Chapitre14SyncPage({
       anchors={ANCHORS[lang]}
       halfBreaks={lang === 'fr' ? HALF_BREAKS_FR : []}
       backHref="/chapitres-gratuits"
+      classicHref={`/chapitre-14?lang=${lang}`}
       restrictPaidXrefs={restrictPaidXrefs}
       showClinicalCaseResource
     />

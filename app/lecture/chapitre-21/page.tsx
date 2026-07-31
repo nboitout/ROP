@@ -46,6 +46,7 @@ export default async function Chapitre21LecturePage({
       anchors={chapter21SlideAnchors}
       halfBreaks={chapter21HalfBreaks}
       backHref="/chapitres-gratuits"
+      classicHref={`/chapitre-21?lang=${lang}`}
     />
   )
 }
