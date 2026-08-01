@@ -1,9 +1,16 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { canReadDraftChapter, canReadFreeChapter, canReadPaidChapter } from '@/lib/access'
+import { canReadDraft, canReadDraftChapter, canReadFreeChapter, canReadPaidChapter } from '@/lib/access'
 
 const COOKIE_NAME = 'admin_session'
 const FREE_PUBLIC_CHAPTER_ASSETS = new Set(['0', '2', '14'])
 const DRAFT_PUBLIC_CHAPTER_ASSETS = new Set(['4'])
+
+// Draft asset folders whose name is not /chapter-<n>/, keyed by grant key.
+// Without this entry /chapter-5-rework/... fell outside chapterAssetNumber()
+// and was served to anyone who knew the path.
+const DRAFT_ASSET_PREFIXES: Record<string, string> = {
+  '/chapter-5-rework': 'chapter-5-rework',
+}
 
 function chapterAssetNumber(pathname: string): string | null {
   const match = pathname.match(/^\/chapter-(\d+)(?:\/|$)/)
@@ -26,6 +33,14 @@ export async function proxy(req: NextRequest) {
     }
 
     return NextResponse.next()
+  }
+
+  const draftAssetEntry = Object.entries(DRAFT_ASSET_PREFIXES)
+    .find(([prefix]) => pathname === prefix || pathname.startsWith(`${prefix}/`))
+  if (draftAssetEntry) {
+    return (await canReadDraft(req.cookies, draftAssetEntry[1]))
+      ? NextResponse.next()
+      : NextResponse.redirect(new URL('/admin/login', req.url))
   }
 
   const chapterNumber = chapterAssetNumber(pathname)
@@ -65,6 +80,7 @@ export const config = {
     '/chapter-3/:path*',
     '/chapter-4/:path*',
     '/chapter-5/:path*',
+    '/chapter-5-rework/:path*',
     '/chapter-6/:path*',
     '/chapter-7/:path*',
     '/chapter-8/:path*',

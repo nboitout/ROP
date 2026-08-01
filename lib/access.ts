@@ -69,3 +69,28 @@ export async function canReadPaidChapter(cookieStore: CookieReader): Promise<boo
 export function canReadDraftChapter(cookieStore: CookieReader): boolean {
   return !!cookieStore.get(ADMIN_SESSION_COOKIE)
 }
+
+/**
+ * Per-person access to a single draft page.
+ *
+ * The grant rides on the same signed reader session as a purchase, but carries
+ * `draft:<key>` instead of ONLINE_BOOK_PRODUCT — so canReadPaidChapter() stays
+ * false and the holder sees that one draft and nothing else of the book.
+ * The session's customerId is the grant label, which is what gets logged when
+ * the page is opened.
+ */
+export function draftGrantProduct(draftKey: string): string {
+  return `draft:${draftKey}`
+}
+
+/** Grant label if this reader holds a valid grant for `draftKey`, else null. */
+export async function readDraftGrant(cookieStore: CookieReader, draftKey: string): Promise<string | null> {
+  const session = await verifyReaderSession(cookieValue(cookieStore, PAID_ACCESS_COOKIE))
+  if (!session?.products.includes(draftGrantProduct(draftKey))) return null
+  return session.customerId
+}
+
+/** Admin, or the holder of a grant for this specific draft. */
+export async function canReadDraft(cookieStore: CookieReader, draftKey: string): Promise<boolean> {
+  return canReadDraftChapter(cookieStore) || !!(await readDraftGrant(cookieStore, draftKey))
+}
