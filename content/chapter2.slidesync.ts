@@ -126,7 +126,7 @@ export const chapter2SlideAnchorsFr: SyncAnchor[] = [
   { sectionId: 'technique', blockIndex: 7, slide: 4, ...endAt('technique', 8) },
   { sectionId: 'technique', blockIndex: 9, slide: 5, ...endAt('technique', 10) },
   { sectionId: 'technique', blockIndex: 10, slide: 6, ...endAt('modalites', -1) },
-  { sectionId: 'modalites', blockIndex: 4, slide: 7, ...endAt('hierarchisation', -1) },
+  { sectionId: 'modalites', blockIndex: 1, slide: 7, ...endAt('hierarchisation', -1) },
   { sectionId: 'reactions', blockIndex: 0, slide: 7, ...endAt('conseils', -1) },
   { sectionId: 'hierarchisation', blockIndex: -1, slide: 8, ...endAt('zones-reflexes', -1) },
   { sectionId: 'zones-reflexes', blockIndex: 3, slide: 9, ...endAt('zones-reflexes', 5) },
