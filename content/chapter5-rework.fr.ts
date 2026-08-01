@@ -7,8 +7,8 @@ export const chapter5ReworkFr = {
   "title": "Mécanisme de stress - Physiologie de l’adaptation, coût allostatique et approche ROP",
   "sections": [
     {
-      "id": "note-methodologique",
-      "title": "Note méthodologique",
+      "id": "le-stress-une-reponse-d-adaptation",
+      "title": "1. Le stress : une réponse d’adaptation",
       "blocks": [
         {
           "type": "para",
@@ -21,20 +21,6 @@ export const chapter5ReworkFr = {
             "En clinique, la question n’est pas de savoir si le patient réagit au stress, mais s’il peut terminer sa réaction. Le stress mobilise et protège. Il devient coûteux lorsqu’il persiste, se répète ou ne se clôt pas. La ROP ne supprime pas le stresseur ; elle cherche, par un toucher mesuré, à soutenir la flexibilité autonome et la récupération, dans les limites des données disponibles."
           ]
         },
-        {
-          "type": "para",
-          "text": "Pour guider le lecteur, nous distinguerons clairement trois niveaux. Le premier correspond à la physiologie établie : système nerveux autonome, axes du stress, allostasie, récupération et interoception. Le deuxième présente des modèles récents encore en discussion, notamment l’hypermétabolisme cellulaire et le principe de résistance énergétique. Le troisième correspond à notre lecture clinique en ROP. Elle constitue une hypothèse de travail cohérente avec la physiologie, mais elle ne doit pas être présentée comme un mécanisme d’action déjà démontré."
-        },
-        {
-          "type": "para",
-          "text": "Cette distinction est importante. Elle permet de conserver l’identité clinique de la ROP sans tomber dans trois raccourcis fréquents : faire du cortisol l’unique responsable du stress, décrire l’organisme comme une batterie qui se vide, ou attribuer à la ROP une action directe prouvée sur les mitochondries, les hormones ou le vieillissement."
-        }
-      ]
-    },
-    {
-      "id": "le-stress-une-reponse-d-adaptation",
-      "title": "1. Le stress : une réponse d’adaptation",
-      "blocks": [
         {
           "type": "para",
           "text": "Dans le langage courant, nous appelons stress à la fois la contrainte, le ressenti et les réactions du corps. Pour raisonner clairement, il faut pourtant distinguer le stresseur de la réponse de stress. Le stresseur est ce qui met l’organisme à l’épreuve : une douleur, un conflit, une infection, un effort ou un manque de sommeil. Le stress est la réponse mobilisée pour y faire face."
@@ -394,20 +380,28 @@ export const chapter5ReworkFr = {
         },
         {
           "type": "note",
-          "label": "FORMULATION RIGOUREUSE",
+          "label": "À RETENIR",
           "body": [
             "Le stress chronique ne vide pas une batterie. Il oblige l’organisme à réorganiser sans cesse ses priorités. Cette régulation répétée devient coûteuse lorsqu’elle n’est pas suivie d’une récupération suffisante."
           ]
+        },
+        {
+          "type": "para",
+          "text": "Ce coût de régulation ne se joue pas seulement à l’échelle des organes et des grandes fonctions. Il se retrouve aussi au niveau des cellules. Lorsqu’elles sont exposées durablement à un environnement hormonal et métabolique contraignant, elles doivent elles aussi ajuster leur fonctionnement pour maintenir l’équilibre. Cette compensation peut être efficace à court terme, mais elle devient coûteuse lorsqu’elle se prolonge."
         }
       ]
     },
     {
-      "id": "a-l-echelle-cellulaire-le-cout-de-la-compensation",
-      "title": "9. À l’échelle cellulaire : le coût de la compensation",
+      "id": "a-l-echelle-cellulaire-le-prix-de-la-compensation",
+      "title": "9. À l’échelle cellulaire : le prix de la compensation",
       "blocks": [
         {
           "type": "sub",
           "text": "9.1. Les mitochondries au cœur de l’adaptation"
+        },
+        {
+          "type": "para",
+          "text": "Plongeons maintenant à l’échelle cellulaire pour essayer de comprendre ce prix de la compensation."
         },
         {
           "type": "para",
@@ -443,14 +437,7 @@ export const chapter5ReworkFr = {
         },
         {
           "type": "para",
-          "text": "Ce cadre est récent. Il constitue une hypothèse théorique stimulante, mais ne doit pas encore être utilisé comme une mesure clinique directe ni comme une preuve du mécanisme d’action de la ROP."
-        },
-        {
-          "type": "note",
-          "label": "POINT DE VIGILANCE",
-          "body": [
-            "Aucune donnée ne démontre aujourd’hui qu’une séance de ROP modifie directement le nombre de mitochondries, la production d’ATP ou le principe de résistance énergétique chez l’être humain."
-          ]
+          "text": "Ce cadre est récent. Il constitue une hypothèse théorique stimulante."
         }
       ]
     },
@@ -493,7 +480,7 @@ export const chapter5ReworkFr = {
         },
         {
           "type": "note",
-          "label": "FORMULE CLINIQUE",
+          "label": "À RETENIR",
           "body": [
             "Pouvoir agir quand il le faut, puis revenir naturellement vers le lien, la digestion, le repos et la récupération."
           ]
@@ -567,8 +554,8 @@ export const chapter5ReworkFr = {
       ]
     },
     {
-      "id": "proposition-de-sequence-clinique-rop-en-quatre-niveaux",
-      "title": "14. Proposition de séquence clinique ROP en quatre niveaux",
+      "id": "quatre-niveaux-de-progressions-durant-la-seance-rop",
+      "title": "14. Quatre niveaux de progressions durant la séance ROP",
       "blocks": [
         {
           "type": "para",
@@ -648,16 +635,12 @@ export const chapter5ReworkFr = {
       ]
     },
     {
-      "id": "reactions-apres-seance-recuperation-et-loi-de-hering",
-      "title": "15. Réactions après séance, récupération et loi de Hering",
+      "id": "reactions-apres-seance-recuperation",
+      "title": "15. Réactions après séance, récupération",
       "blocks": [
         {
           "type": "para",
-          "text": "Après une séance, certains patients rapportent fatigue, douleurs transitoirement plus présentes, modification du transit, rêves ou émotions. Ces manifestations ont plusieurs explications possibles : changement de tonus, relaxation, attention accrue portée au corps, contexte relationnel ou stimulation trop forte. Elles ne doivent jamais être interprétées automatiquement comme une guérison en cours."
-        },
-        {
-          "type": "para",
-          "text": "La loi de Hering, souvent résumée par une évolution des symptômes « du haut vers le bas, du dedans vers le dehors et du chronique vers l’aigu », appartient à l’histoire de l’homéopathie et n’est pas reconnue comme une loi générale de guérison par la médecine fondée sur les preuves. Elle peut être conservée comme repère historique de la méthode, mais ne doit pas servir à interpréter automatiquement toute aggravation comme positive."
+          "text": "Après une séance, certains patients rapportent fatigue, douleurs transitoirement plus présentes, modification du transit, rêves ou émotions. Ces manifestations ont plusieurs explications possibles : changement de tonus, relaxation, attention accrue portée au corps, contexte relationnel ou stimulation trop forte."
         },
         {
           "type": "para",
@@ -743,7 +726,7 @@ export const chapter5ReworkFr = {
       "blocks": [
         {
           "type": "para",
-          "text": "Si nous voulons tester scientifiquement ce que nous observons en clinique, la bonne question n’est pas : « La ROP augmente-t-elle l’énergie ou stimule-t-elle les mitochondries ? » La question utile est : une séance standardisée permet-elle au patient de récupérer plus vite après un stresseur, sur les plans physiologique et subjectif ?"
+          "text": "Si nous voulons tester scientifiquement ce que nous observons en clinique, la question utile est : une séance standardisée permet-elle au patient de récupérer plus vite après un stresseur, sur les plans physiologique et subjectif ?"
         },
         {
           "type": "sub",
@@ -767,10 +750,6 @@ export const chapter5ReworkFr = {
             "Groupe contrôle tactile : toucher occipital et podal de même durée, sans cartographie ni ordre ROP.",
             "Groupe repos : position et durée identiques, sans toucher."
           ]
-        },
-        {
-          "type": "para",
-          "text": "Le protocole devrait être préenregistré, inclure une allocation randomisée, des évaluateurs aveugles lorsque cela est possible et un suivi des effets indésirables. La comparaison avec un toucher non spécifique est indispensable pour distinguer l’effet relationnel et sensoriel général de l’éventuel effet propre à la séquence ROP."
         },
         {
           "type": "sub",
@@ -876,6 +855,62 @@ export const chapter5ReworkFr = {
         {
           "type": "para",
           "text": "10. Selye H. The Stress of Life. New York: McGraw-Hill; 1956."
+        }
+      ]
+    },
+    {
+      "id": "annexe-1",
+      "title": "Annexe 1",
+      "blocks": [
+        {
+          "type": "para",
+          "text": "La réponse SAM constitue le versant rapide du mécanisme de stress. L’hypothalamus et le tronc cérébral recrutent en quelques secondes les voies sympathiques et les circuits noradrénergiques. La médullosurrénale libère de l’adrénaline et de la noradrénaline : le cœur, la respiration, la pression artérielle et la disponibilité du glucose s’ajustent pour préparer l’action. Si la contrainte cesse, l’activation se retire progressivement ; si elle persiste, l’axe HHS complète et prolonge l’adaptation."
+        }
+      ]
+    },
+    {
+      "id": "annexe-2",
+      "title": "Annexe 2",
+      "blocks": [
+        {
+          "type": "para",
+          "text": "L’axe HHS constitue le versant hormonal, plus lent et plus durable, de la réponse au stress. Lorsque la contrainte persiste, l’hypothalamus libère la CRH, qui stimule l’antéhypophyse ; celle-ci sécrète l’ACTH, laquelle active le cortex surrénalien et favorise la libération de cortisol. Le cortisol soutient l’adaptation dans la durée en maintenant la disponibilité énergétique et en modulant les réponses immunitaires et inflammatoires. Lorsque l’équilibre revient, des mécanismes de rétrocontrôle freinent progressivement la réponse ; si la contrainte persiste, l’axe HHS complète et prolonge la réponse SAM."
+        }
+      ]
+    },
+    {
+      "id": "tableau-synthetique-de-la-progression-clinique",
+      "title": "Tableau synthétique de la progression clinique",
+      "blocks": [
+        {
+          "type": "table",
+          "headers": [
+            "Niveau",
+            "Intention clinique",
+            "Principaux repères ROP"
+          ],
+          "rows": [
+            [
+              "1. Persistance du signal",
+              "Réduire la vigilance tissulaire et offrir une expérience tactile stable et prévisible.",
+              "Zones occipitales ; occiput–C1–C2 ; tronc cérébral ; foramens magnum et jugulaire ; nerfs V, IX, X, XI et XII ; repères du système limbique, du diencéphale et de l’hypophyse."
+            ],
+            [
+              "2. Mobilisation devenue inutile",
+              "Accompagner le retrait d’un tonus défensif qui n’est plus nécessaire et favoriser une ligne de base plus souple.",
+              "Chaîne sympathique cervico-thoracique ; ganglions cervicaux ; C7–T1 ; première côte ; colonne thoracique ; repères thoraco-lombaires ; zones surrénaliennes."
+            ],
+            [
+              "3. Disponibilité respiratoire",
+              "Rendre la respiration moins contrainte, moins coûteuse et plus adaptable.",
+              "Nerf phrénique C3–C5 ; triangle de Sédillot ; diaphragme et piliers ; hiatus œsophagien ; plexus cardio-pulmonaires ; trajet thoracique du vague."
+            ],
+            [
+              "4. Fonctions viscérales et restauratrices",
+              "Favoriser un contexte autonome compatible avec la digestion, le repos, l’élimination et la récupération.",
+              "Vague abdominal ; plexus cœliaque ; chaîne prévertébrale ; nerfs splanchniques ; système nerveux entérique ; intestin ; plexus hypogastriques ; parasympathique pelvien S2–S4."
+            ]
+          ]
         }
       ]
     }
