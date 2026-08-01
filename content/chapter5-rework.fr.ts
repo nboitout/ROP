@@ -15,9 +15,11 @@ export const chapter5ReworkFr = {
           "text": "La santé ne se mesure pas à l’absence de réaction, mais à la capacité de l’organisme à se mobiliser puis à récupérer."
         },
         {
-          "type": "lead",
+          "type": "note",
           "label": "FIL DIRECTEUR DU CHAPITRE",
-          "text": "En clinique, la question n’est pas de savoir si le patient réagit au stress, mais s’il peut terminer sa réaction. Le stress mobilise et protège. Il devient coûteux lorsqu’il persiste, se répète ou ne se clôt pas. La ROP ne supprime pas le stresseur ; elle cherche, par un toucher mesuré, à soutenir la flexibilité autonome et la récupération, dans les limites des données disponibles."
+          "body": [
+            "En clinique, la question n’est pas de savoir si le patient réagit au stress, mais s’il peut terminer sa réaction. Le stress mobilise et protège. Il devient coûteux lorsqu’il persiste, se répète ou ne se clôt pas. La ROP ne supprime pas le stresseur ; elle cherche, par un toucher mesuré, à soutenir la flexibilité autonome et la récupération, dans les limites des données disponibles."
+          ]
         },
         {
           "type": "para",
@@ -46,9 +48,11 @@ export const chapter5ReworkFr = {
           "text": "En clinique, la question n’est donc pas seulement : « Quel est le stresseur ? » Il faut aussi demander : depuis combien de temps agit-il, à quelle fréquence revient-il, le patient peut-il agir sur la situation et, surtout, récupère-t-il lorsque l’événement est terminé ?"
         },
         {
-          "type": "lead",
+          "type": "note",
           "label": "IDÉE-CLÉ",
-          "text": "Le stress aigu n’est pas l’ennemi. Le coût pathologique apparaît surtout lorsque la mobilisation défensive devient disproportionnée, répétée ou insuffisamment suivie de récupération."
+          "body": [
+            "Le stress aigu n’est pas l’ennemi. Le coût pathologique apparaît surtout lorsque la mobilisation défensive devient disproportionnée, répétée ou insuffisamment suivie de récupération."
+          ]
         }
       ]
     },
@@ -89,9 +93,11 @@ export const chapter5ReworkFr = {
           "text": "Tant que les capacités d’adaptation restent suffisantes, l’organisme absorbe la contrainte et retrouve un fonctionnement stable. Mais lorsque les stress s’accumulent plus vite que la récupération, la marge se réduit. C’est souvent à ce moment que nous voyons apparaître fatigue, troubles du sommeil, douleurs, tensions ou manifestations digestives, parfois avant toute lésion anatomique identifiable."
         },
         {
-          "type": "lead",
+          "type": "note",
           "label": "DONNÉES ÉTABLIES",
-          "text": "Les hormones et médiateurs du stress protègent l’organisme à court terme. Leur activation répétée ou mal régulée peut toutefois contribuer à une charge allostatique touchant plusieurs systèmes : cardiovasculaire, métabolique, immunitaire, cérébral et comportemental [1, 2]."
+          "body": [
+            "Les hormones et médiateurs du stress protègent l’organisme à court terme. Leur activation répétée ou mal régulée peut toutefois contribuer à une charge allostatique touchant plusieurs systèmes : cardiovasculaire, métabolique, immunitaire, cérébral et comportemental [1, 2]."
+          ]
         }
       ]
     },
@@ -136,9 +142,11 @@ export const chapter5ReworkFr = {
           "text": "Ces stresseurs ne s’additionnent pas comme des chiffres sur une feuille : ils se renforcent. La douleur perturbe le sommeil ; le manque de sommeil augmente la sensibilité douloureuse ; l’inquiétude modifie la respiration et le transit ; l’inconfort digestif entretient à son tour l’hypervigilance. C’est cette boucle, plus que chaque facteur pris isolément, qui alourdit la charge allostatique."
         },
         {
-          "type": "lead",
+          "type": "note",
           "label": "LECTURE ROP",
-          "text": "Quand nous trouvons une zone douloureuse ou dense, nous ne l’isolons pas du reste du patient. Nous la replaçons dans son histoire : traumatismes, sommeil, douleurs, contexte émotionnel, digestion, traitements et qualité de récupération."
+          "body": [
+            "Quand nous trouvons une zone douloureuse ou dense, nous ne l’isolons pas du reste du patient. Nous la replaçons dans son histoire : traumatismes, sommeil, douleurs, contexte émotionnel, digestion, traitements et qualité de récupération."
+          ]
         }
       ]
     },
@@ -179,9 +187,11 @@ export const chapter5ReworkFr = {
           "text": "Une respiration courte, une oppression thoracique ou un abdomen contracté peuvent alors devenir eux-mêmes de nouveaux signaux d’alarme. Le corps n’est plus seulement le lieu où le stress s’exprime : il peut devenir une source d’informations qui entretient la réponse. Cette boucle corps-cerveau est essentielle pour comprendre l’intérêt potentiel des approches tactiles et corporelles."
         },
         {
-          "type": "lead",
+          "type": "note",
           "label": "CHAÎNE PHYSIOLOGIQUE",
-          "text": "Stresseur → perception et interprétation → réseaux émotionnels → hypothalamus → réponses autonome et hormonale → modifications corporelles → signaux intéroceptifs → apaisement ou réactivation de l’alarme."
+          "body": [
+            "Stresseur → perception et interprétation → réseaux émotionnels → hypothalamus → réponses autonome et hormonale → modifications corporelles → signaux intéroceptifs → apaisement ou réactivation de l’alarme."
+          ]
         }
       ]
     },
@@ -311,9 +321,11 @@ export const chapter5ReworkFr = {
           "text": "La progression vers la chronicité n’est ni automatique ni causée par le seul stress. Elle résulte de l’interaction entre susceptibilité génétique, âge, comportements, conditions sociales, maladies préexistantes, sommeil, activité physique, alimentation, traitements et accès aux soins."
         },
         {
-          "type": "lead",
+          "type": "note",
           "label": "POINT DE VIGILANCE",
-          "text": "Le modèle de Selye est une carte pédagogique, non une loi déterministe. Il ne permet pas d’attribuer directement une hypothyroïdie, un diabète, une maladie auto-immune ou une maladie neurodégénérative à une seule séquence de stress."
+          "body": [
+            "Le modèle de Selye est une carte pédagogique, non une loi déterministe. Il ne permet pas d’attribuer directement une hypothyroïdie, un diabète, une maladie auto-immune ou une maladie neurodégénérative à une seule séquence de stress."
+          ]
         }
       ]
     },
@@ -356,9 +368,11 @@ export const chapter5ReworkFr = {
           ]
         },
         {
-          "type": "lead",
+          "type": "note",
           "label": "THÈSE CENTRALE",
-          "text": "Ce qui devient coûteux n’est pas la mobilisation initiale, mais l’impossibilité de terminer le cycle : mobilisation, action ou adaptation, puis récupération et retour à une ligne de base souple."
+          "body": [
+            "Ce qui devient coûteux n’est pas la mobilisation initiale, mais l’impossibilité de terminer le cycle : mobilisation, action ou adaptation, puis récupération et retour à une ligne de base souple."
+          ]
         }
       ]
     },
@@ -379,9 +393,11 @@ export const chapter5ReworkFr = {
           "text": "La charge allostatique représente donc moins une fuite d’énergie qu’une mobilisation réglementaire coûteuse. Le prix est payé lorsque l’état défensif reste durablement élevé au détriment de la maintenance, de la récupération et de la flexibilité."
         },
         {
-          "type": "lead",
+          "type": "note",
           "label": "FORMULATION RIGOUREUSE",
-          "text": "Le stress chronique ne vide pas une batterie. Il oblige l’organisme à réorganiser sans cesse ses priorités. Cette régulation répétée devient coûteuse lorsqu’elle n’est pas suivie d’une récupération suffisante."
+          "body": [
+            "Le stress chronique ne vide pas une batterie. Il oblige l’organisme à réorganiser sans cesse ses priorités. Cette régulation répétée devient coûteuse lorsqu’elle n’est pas suivie d’une récupération suffisante."
+          ]
         }
       ]
     },
@@ -430,9 +446,11 @@ export const chapter5ReworkFr = {
           "text": "Ce cadre est récent. Il constitue une hypothèse théorique stimulante, mais ne doit pas encore être utilisé comme une mesure clinique directe ni comme une preuve du mécanisme d’action de la ROP."
         },
         {
-          "type": "lead",
+          "type": "note",
           "label": "POINT DE VIGILANCE",
-          "text": "Aucune donnée ne démontre aujourd’hui qu’une séance de ROP modifie directement le nombre de mitochondries, la production d’ATP ou le principe de résistance énergétique chez l’être humain."
+          "body": [
+            "Aucune donnée ne démontre aujourd’hui qu’une séance de ROP modifie directement le nombre de mitochondries, la production d’ATP ou le principe de résistance énergétique chez l’être humain."
+          ]
         }
       ]
     },
@@ -449,9 +467,11 @@ export const chapter5ReworkFr = {
           "text": "C’est dans la marge fonctionnelle que la ROP trouve sa place la plus cohérente : lorsque les capacités d’adaptation sont encore mobilisables. Lorsque la pathologie est structurelle, la ROP ne remplace ni le diagnostic médical ni les traitements nécessaires. Elle peut conserver une place d’accompagnement sur le confort, la douleur, le repos ou la perception corporelle."
         },
         {
-          "type": "lead",
+          "type": "note",
           "label": "FENÊTRE D’ACTION ROP",
-          "text": "La ROP trouve sa place la plus cohérente dans la marge fonctionnelle : lorsque l’organisme peut encore modifier sa réponse. Dans les pathologies structurées, elle reste une approche d’accompagnement et ne revendique pas d’action curative propre."
+          "body": [
+            "La ROP trouve sa place la plus cohérente dans la marge fonctionnelle : lorsque l’organisme peut encore modifier sa réponse. Dans les pathologies structurées, elle reste une approche d’accompagnement et ne revendique pas d’action curative propre."
+          ]
         }
       ]
     },
@@ -472,9 +492,11 @@ export const chapter5ReworkFr = {
           "text": "La théorie polyvagale propose une lecture hiérarchisée entre engagement social, mobilisation sympathique et immobilisation défensive. Elle peut enrichir la pédagogie clinique, mais elle reste un cadre théorique discuté et ne doit pas être présentée comme la démonstration du mécanisme de la ROP."
         },
         {
-          "type": "lead",
+          "type": "note",
           "label": "FORMULE CLINIQUE",
-          "text": "Pouvoir agir quand il le faut, puis revenir naturellement vers le lien, la digestion, le repos et la récupération."
+          "body": [
+            "Pouvoir agir quand il le faut, puis revenir naturellement vers le lien, la digestion, le repos et la récupération."
+          ]
         }
       ]
     },
@@ -495,9 +517,11 @@ export const chapter5ReworkFr = {
           "text": "Cette étude montre que le toucher et le contexte thérapeutique produisent des effets mesurables, mais elle ne démontre pas la spécificité des zones réflexes. L’hypothèse la plus prudente est donc ascendante, ou bottom-up : le toucher apporte une information corporelle nouvelle ; cette information modifie l’interoception et les réseaux de régulation ; l’organisme peut alors diminuer une partie de son tonus défensif."
         },
         {
-          "type": "lead",
+          "type": "note",
           "label": "HYPOTHÈSE ROP",
-          "text": "Toucher mesuré et contexte prévisible → information corporelle nouvelle → intégration intéroceptive → modulation possible de la réponse autonome → meilleures conditions de récupération."
+          "body": [
+            "Toucher mesuré et contexte prévisible → information corporelle nouvelle → intégration intéroceptive → modulation possible de la réponse autonome → meilleures conditions de récupération."
+          ]
         }
       ]
     },
@@ -534,9 +558,11 @@ export const chapter5ReworkFr = {
           "text": "Vient ensuite le temps du « ne rien faire et laisser faire ». Le praticien observe la respiration, le tonus, la chaleur, la détente, l’agitation, la fatigue, l’inconfort ou l’absence de modification. Ce silence tactile fait partie du traitement : la séance ne s’arrête pas avec la dernière sollicitation, elle se prolonge dans la manière dont le patient intègre et récupère."
         },
         {
-          "type": "lead",
+          "type": "note",
           "label": "PRINCIPE DE DOSAGE",
-          "text": "Le meilleur stimulus n’est pas le plus fort. C’est celui que le patient peut intégrer sans ajouter de charge à son système."
+          "body": [
+            "Le meilleur stimulus n’est pas le plus fort. C’est celui que le patient peut intégrer sans ajouter de charge à son système."
+          ]
         }
       ]
     },
@@ -613,9 +639,11 @@ export const chapter5ReworkFr = {
           ]
         },
         {
-          "type": "lead",
+          "type": "note",
           "label": "SÉQUENCE SYNTHÉTIQUE",
-          "text": "1. Diminuer la persistance du signal → 2. Réduire la mobilisation devenue inutile → 3. Restaurer la disponibilité respiratoire → 4. Permettre le retour des fonctions viscérales et restauratrices."
+          "body": [
+            "1. Diminuer la persistance du signal → 2. Réduire la mobilisation devenue inutile → 3. Restaurer la disponibilité respiratoire → 4. Permettre le retour des fonctions viscérales et restauratrices."
+          ]
         }
       ]
     },
@@ -636,9 +664,11 @@ export const chapter5ReworkFr = {
           "text": "La règle clinique est simple : une réaction légère, brève et sans retentissement important peut être surveillée. Si elle est intense, prolongée, répétée ou associée à des signes neurologiques, cardiorespiratoires, infectieux ou digestifs inhabituels, le protocole doit être interrompu et le patient orienté de façon adaptée."
         },
         {
-          "type": "lead",
+          "type": "note",
           "label": "RÈGLE DE SÉCURITÉ",
-          "text": "Une réaction après séance n’est jamais, à elle seule, une preuve de guérison. Nous l’évaluons selon son intensité, sa durée, son retentissement et le contexte médical du patient."
+          "body": [
+            "Une réaction après séance n’est jamais, à elle seule, une preuve de guérison. Nous l’évaluons selon son intensité, sa durée, son retentissement et le contexte médical du patient."
+          ]
         }
       ]
     },
@@ -699,9 +729,11 @@ export const chapter5ReworkFr = {
           "text": "Chez ces patients, la première règle est de ne pas ajouter de charge. La ROP doit rester douce, progressive et réévaluée : chercher moins d’hypervigilance corporelle, une respiration plus disponible, un meilleur repos et une récupération plus régulière. Les objectifs doivent rester concrets : sommeil, fatigue, tolérance à l’activité, douleur, récupération après effort et qualité de vie."
         },
         {
-          "type": "lead",
+          "type": "note",
           "label": "PRUDENCE CLINIQUE",
-          "text": "Chez un patient hypersensible, stimuler davantage ne signifie pas traiter davantage. La progression doit être lente, et la réponse réévaluée dans les heures et les jours qui suivent."
+          "body": [
+            "Chez un patient hypersensible, stimuler davantage ne signifie pas traiter davantage. La progression doit être lente, et la réponse réévaluée dans les heures et les jours qui suivent."
+          ]
         }
       ]
     },
@@ -718,9 +750,11 @@ export const chapter5ReworkFr = {
           "text": "18.1. Hypothèse principale"
         },
         {
-          "type": "lead",
+          "type": "note",
           "label": "HYPOTHÈSE TESTABLE",
-          "text": "Après un stress contrôlé, une séquence ROP standardisée accélère-t-elle le retour vers l’état autonome de base, comparativement au repos seul et à un toucher non spécifique de même durée ?"
+          "body": [
+            "Après un stress contrôlé, une séquence ROP standardisée accélère-t-elle le retour vers l’état autonome de base, comparativement au repos seul et à un toucher non spécifique de même durée ?"
+          ]
         },
         {
           "type": "sub",
