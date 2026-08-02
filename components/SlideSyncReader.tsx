@@ -75,7 +75,7 @@ const SS_UI: Record<string, {
   eyebrow: string; slides: string; prev: string; next: string
   enlarge: (n: number, t: string) => string; goTo: (n: number, t: string) => string
   enlargeShort: string; marker: (n: number, t: string) => string
-  caption: (n: number, t: string) => string; jumpLabel: string
+  caption: (n: number, t: string) => string; jumpLabel: string; jumpLabelPlain: string
   jumpTitle: (s: string) => string; enlargeFigure: (c: string) => string
   endMarker: (slides: number[]) => string
   rotateHint: string
@@ -92,6 +92,7 @@ const SS_UI: Record<string, {
     marker: (n: number, title: string) => `Diapositive ${n} · ${title}`,
     caption: (n: number, title: string) => `Diapositive ${n} — ${title}`,
     jumpLabel: 'Accès direct — zones réflexes',
+    jumpLabelPlain: 'Accès direct',
     jumpTitle: (s: string) => `Aller directement à : ${s}`,
     enlargeFigure: (caption: string) => `Agrandir : ${caption}`,
     endMarker: (slides: number[]) => slides.length > 1 ? `Fin diapos ${slides.join(', ')}` : `Fin diapo ${slides[0]}`,
@@ -110,6 +111,7 @@ const SS_UI: Record<string, {
     marker: (n: number, title: string) => `Slide ${n} · ${title}`,
     caption: (n: number, title: string) => `Slide ${n} — ${title}`,
     jumpLabel: 'Direct access — reflex zones',
+    jumpLabelPlain: 'Direct access',
     jumpTitle: (s: string) => `Go directly to: ${s}`,
     enlargeFigure: (caption: string) => `Enlarge: ${caption}`,
     endMarker: (slides: number[]) => slides.length > 1 ? `End slides ${slides.join(', ')}` : `End slide ${slides[0]}`,
@@ -128,6 +130,7 @@ const SS_UI: Record<string, {
     marker: (n: number, title: string) => `Folie ${n} · ${title}`,
     caption: (n: number, title: string) => `Folie ${n} — ${title}`,
     jumpLabel: 'Direktzugang — Reflexzonen',
+    jumpLabelPlain: 'Direktzugang',
     jumpTitle: (s: string) => `Direkt springen zu: ${s}`,
     enlargeFigure: (caption: string) => `Vergrößern: ${caption}`,
     endMarker: (slides: number[]) => slides.length > 1 ? `Ende Folien ${slides.join(', ')}` : `Ende Folie ${slides[0]}`,
@@ -146,6 +149,7 @@ const SS_UI: Record<string, {
     marker: (n: number, title: string) => `Diapositiva ${n} · ${title}`,
     caption: (n: number, title: string) => `Diapositiva ${n} — ${title}`,
     jumpLabel: 'Acceso directo — zonas reflejas',
+    jumpLabelPlain: 'Acceso directo',
     jumpTitle: (s: string) => `Ir directamente a: ${s}`,
     enlargeFigure: (caption: string) => `Ampliar: ${caption}`,
     endMarker: (slides: number[]) => slides.length > 1 ? `Fin diapositivas ${slides.join(', ')}` : `Fin diapositiva ${slides[0]}`,
@@ -164,6 +168,7 @@ const SS_UI: Record<string, {
     marker: (n: number, title: string) => `Diapositiva ${n} · ${title}`,
     caption: (n: number, title: string) => `Diapositiva ${n} — ${title}`,
     jumpLabel: 'Accesso diretto — zone riflesse',
+    jumpLabelPlain: 'Accesso diretto',
     jumpTitle: (s: string) => `Vai direttamente a: ${s}`,
     enlargeFigure: (caption: string) => `Ingrandisci: ${caption}`,
     endMarker: (slides: number[]) => slides.length > 1 ? `Fine diapositive ${slides.join(', ')}` : `Fine diapositiva ${slides[0]}`,
@@ -218,15 +223,6 @@ function blockShortcutText(block: Block) {
   if (block.type === 'xref') return `${block.label} ${block.text ?? ''}`
   if (block.type === 'rop') return block.body.join(' ')
   return ''
-}
-
-function reflexShortcutBlockIndex(section: Section) {
-  const atlasIndex = section.blocks.findIndex((block) => block.type === 'reflexAtlas')
-  if (atlasIndex >= 0) return atlasIndex
-  const ropIndex = section.blocks.findIndex((block) => block.type === 'rop')
-  if (ropIndex >= 0) return ropIndex
-  const zoneTextIndex = section.blocks.findIndex((block) => isRopShortcutLabel(blockShortcutText(block)))
-  return zoneTextIndex >= 0 ? zoneTextIndex : null
 }
 
 function hasReflexShortcutBlock(section: Section) {
@@ -384,10 +380,6 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, h
       chapter.sections.find((section) => isRopShortcutLabel(section.id) || isRopShortcutLabel(section.title)) ??
       null,
     [chapter.sections]
-  )
-  const reflexBlockIndex = useMemo(
-    () => reflexSection ? reflexShortcutBlockIndex(reflexSection) : null,
-    [reflexSection]
   )
   const hiddenDotSlideSet = useMemo(() => new Set(hiddenDotSlides), [hiddenDotSlides])
 
@@ -746,8 +738,15 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, h
     const offset = window.matchMedia('(max-width: 980px)').matches
       ? Math.max(96, stageBottom + 12)
       : 96
+    // The section element starts above any half-page break, so aim at its
+    // heading: the reader lands on the title, not on the gap before it.
     animateTo(
-      () => document.getElementById(`anchor-${reflexSection.id}-heading`) ?? document.getElementById(`sec-${reflexSection.id}`),
+      () => {
+        const section = document.getElementById(`sec-${reflexSection.id}`)
+        return section?.querySelector('h2')
+          ?? document.getElementById(`anchor-${reflexSection.id}-heading`)
+          ?? section
+      },
       offset
     )
   }
@@ -910,8 +909,6 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, h
   const activeSlideNumber = active ?? 0
   const activeSlide = active ? slides[active - 1] : undefined
   const activeSlideIsPortrait = activeSlide?.orientation === 'portrait'
-  const hideReflexJumpOnDesktop = chapter.slug === 'chapter-15' && activeSectionId === reflexSection?.id
-  const reflexJumpClassName = `ss-reflex-jump${hideReflexJumpOnDesktop ? ' ss-reflex-jump--desktop-hidden' : ''}`
   const lightboxGalleryCount = lightbox?.gallery?.length ?? 0
   const lightboxGalleryIndex = lightbox?.galleryIndex ?? 0
 
@@ -978,6 +975,30 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, h
       </>
     )
   }
+
+  // Jumps to the top of the chapter's reflex-zone section. Always rendered
+  // when the chapter has one — no per-chapter exceptions.
+  const reflexTargetIsZoneSection = !!reflexSection && (
+    isZoneReflexLabel(reflexSection.id) ||
+    isZoneReflexLabel(reflexSection.title) ||
+    reflexSection.blocks.some((block) => block.type === 'reflexAtlas')
+  )
+
+  const reflexJumpButton = reflexSection ? (
+    <button
+      type="button"
+      className="ss-reflex-jump"
+      onClick={goToReflexZones}
+      title={ui.jumpTitle(reflexSection.title)}
+    >
+      <span className="ss-reflex-jump-icon" aria-hidden>⌖</span>
+      <span className="ss-reflex-jump-text">
+        <span className="ss-reflex-jump-label">{reflexTargetIsZoneSection ? ui.jumpLabel : ui.jumpLabelPlain}</span>
+        <span className="ss-reflex-jump-section">{reflexSection.title}</span>
+      </span>
+      <span className="ss-reflex-jump-arrow" aria-hidden>↓</span>
+    </button>
+  ) : null
 
   const clinicalCaseButton = showClinicalCaseResource && chapter.clinicalCase ? (
     <button
@@ -1072,6 +1093,11 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, h
       <div className="ss-layout">
         <div className="ss-stagecol">
           <div className={`ss-stage${activeSlideIsPortrait ? ' ss-stage--portrait' : ''}`}>
+            {/* First child on purpose: the shortcut is the one control that
+                must survive any deck length, and the pinned column is anchored
+                by its top edge. Rendered once, outside the hidden/shown
+                branches, so both states offer it. */}
+            {reflexJumpButton}
             {slidesHidden ? (
             <>
             <button
@@ -1091,22 +1117,6 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, h
                 <path d="M6 9l6 6 6-6" />
               </svg>
             </button>
-            {clinicalCaseButton}
-            {reflexSection && (
-              <button
-                type="button"
-                className={reflexJumpClassName}
-                onClick={goToReflexZones}
-                title={ui.jumpTitle(reflexSection.title)}
-              >
-                <span className="ss-reflex-jump-icon" aria-hidden>⌖</span>
-                <span className="ss-reflex-jump-text">
-                  <span className="ss-reflex-jump-label">{ui.jumpLabel}</span>
-                  <span className="ss-reflex-jump-section">{reflexSection.title}</span>
-                </span>
-                <span className="ss-reflex-jump-arrow" aria-hidden>↓</span>
-              </button>
-            )}
             </>
             ) : (
             <>
@@ -1186,24 +1196,9 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, h
             )}
               </div>
             </div>
-            {clinicalCaseButton}
-            {reflexSection && (
-              <button
-                type="button"
-                className={reflexJumpClassName}
-                onClick={goToReflexZones}
-                title={ui.jumpTitle(reflexSection.title)}
-              >
-                <span className="ss-reflex-jump-icon" aria-hidden>⌖</span>
-                <span className="ss-reflex-jump-text">
-                  <span className="ss-reflex-jump-label">{ui.jumpLabel}</span>
-                  <span className="ss-reflex-jump-section">{reflexSection.title}</span>
-                </span>
-                <span className="ss-reflex-jump-arrow" aria-hidden>↓</span>
-              </button>
-            )}
             </>
             )}
+            {clinicalCaseButton}
           </div>
         </div>
 
