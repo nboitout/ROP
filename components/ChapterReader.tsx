@@ -71,8 +71,9 @@ export default function ChapterReader({ chapter, bookTitle, backHref = '/chapitr
   const [slideZoom, setSlideZoom] = useState(0.75)
   const xrefReturn = getSafeXrefReturn(searchParams)
   const viewerBodyRef = useRef<HTMLDivElement | null>(null)
-  const [lightbox, setLightbox] = useState<{ src: string; alt: string; caption: string } | null>(null)
+  const [lightbox, setLightbox] = useState<{ src: string; alt: string; caption: string; orientation?: 'portrait' | 'landscape' } | null>(null)
   const [lightboxZoom, setLightboxZoom] = useState(1)
+  const [isPhonePortrait, setIsPhonePortrait] = useState(false)
   const slidesOpenedAt = useRef<number | null>(null)
   const resourceOpenedAt = useRef<number | null>(null)
   const resourceNameRef = useRef<string | null>(null)
@@ -223,6 +224,20 @@ export default function ChapterReader({ chapter, bookTitle, backHref = '/chapitr
       document.body.style.overflow = prev
     }
   }, [lightbox])
+
+  useEffect(() => {
+    const query = window.matchMedia('(max-width: 760px) and (orientation: portrait)')
+    const update = () => setIsPhonePortrait(query.matches)
+    update()
+    query.addEventListener('change', update)
+    window.addEventListener('orientationchange', update)
+    return () => {
+      query.removeEventListener('change', update)
+      window.removeEventListener('orientationchange', update)
+    }
+  }, [])
+
+  const rotateLandscapeLightbox = lightbox?.orientation === 'landscape' && isPhonePortrait
 
   // Peek: briefly open the slides panel on first load to hint at its existence
   useEffect(() => {
@@ -501,7 +516,12 @@ export default function ChapterReader({ chapter, bookTitle, backHref = '/chapitr
       )}
 
       {lightbox && (
-        <div className="cr-lightbox" onClick={closeLightbox} role="dialog" aria-modal="true">
+        <div
+          className={`cr-lightbox${lightbox.orientation ? ` cr-lightbox--${lightbox.orientation}` : ''}${rotateLandscapeLightbox ? ' cr-lightbox--auto-rotated' : ''}`}
+          onClick={closeLightbox}
+          role="dialog"
+          aria-modal="true"
+        >
           <div className="cr-lightbox-bar" onClick={(e) => e.stopPropagation()}>
             <span className="cr-lightbox-caption">{lightbox.caption}</span>
             <div className="cr-lightbox-controls">
@@ -513,7 +533,14 @@ export default function ChapterReader({ chapter, bookTitle, backHref = '/chapitr
           </div>
           <div className="cr-lightbox-scroll" onClick={(e) => e.stopPropagation()}>
             <figure className="cr-lightbox-fig">
-              <img src={lightbox.src} alt={lightbox.alt} style={{ transform: `scale(${lightboxZoom})`, transformOrigin: 'top center' }} />
+              <img
+                src={lightbox.src}
+                alt={lightbox.alt}
+                style={{
+                  transform: `${rotateLandscapeLightbox ? 'rotate(90deg) ' : ''}scale(${lightboxZoom})`,
+                  transformOrigin: rotateLandscapeLightbox ? 'center center' : 'top center',
+                }}
+              />
               <figcaption>{lightbox.caption}</figcaption>
             </figure>
           </div>
@@ -531,7 +558,7 @@ function BlockView({
   restrictPaidXrefs,
 }: {
   block: Block
-  onOpenImage: (b: { src: string; alt: string; caption: string }) => void
+  onOpenImage: (b: { src: string; alt: string; caption: string; orientation?: 'portrait' | 'landscape' }) => void
   anchorId?: string
   sourceChapterKey: string
   restrictPaidXrefs: boolean
@@ -605,7 +632,12 @@ function BlockView({
           <button
             type="button"
             className="cr-fig-btn"
-            onClick={() => onOpenImage({ src: block.src, alt: block.alt, caption: block.caption })}
+            onClick={() => onOpenImage({
+              src: block.src,
+              alt: block.alt,
+              caption: block.caption,
+              orientation: block.src === '/chapter-0/figure-0-1.png' ? 'landscape' : undefined,
+            })}
             aria-label={`Agrandir : ${block.caption}`}
           >
             <img src={block.src} alt={block.alt} loading="lazy" />
