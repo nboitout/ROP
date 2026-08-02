@@ -375,7 +375,7 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, h
   }, [anchors])
 
   const reflexSection = useMemo(
-    () => chapter.slug === 'chapter-2' ? null : chapter.sections.find((section) =>
+    () => chapter.sections.find((section) =>
       isZoneReflexLabel(section.id) ||
       isZoneReflexLabel(section.title) ||
       section.blocks.some((block) => block.type === 'reflexAtlas')
@@ -383,7 +383,7 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, h
       chapter.sections.find(hasReflexShortcutBlock) ??
       chapter.sections.find((section) => isRopShortcutLabel(section.id) || isRopShortcutLabel(section.title)) ??
       null,
-    [chapter.sections, chapter.slug]
+    [chapter.sections]
   )
   const reflexBlockIndex = useMemo(
     () => reflexSection ? reflexShortcutBlockIndex(reflexSection) : null,
