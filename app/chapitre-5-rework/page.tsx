@@ -3,20 +3,22 @@ import { redirect } from 'next/navigation'
 import { canReadDraftChapter, readDraftGrant } from '@/lib/access'
 import { recordServerEvent } from '@/lib/serverEvents'
 import type { Metadata } from 'next'
-import SlideSyncReader from '@/components/SlideSyncReader'
+import ChapterReader from '@/components/ChapterReader'
+import ClassicModeGuard from '@/components/ClassicModeGuard'
 import { getServerLang } from '@/app/i18n/serverLang'
 import { translations } from '@/app/i18n/translations'
 import { chapter5ReworkFr } from '@/content/chapter5-rework.fr'
-import { chapter5ReworkSlides, chapter5ReworkSlideAnchors } from '@/content/chapter5-rework.slidesync'
-import { DRAFT_KEY, draftBackHref } from './access'
+import { DRAFT_KEY, draftBackHref } from '@/app/lecture/chapitre-5-rework/access'
 
 export const metadata: Metadata = {
-  title: 'Chapitre 5 rework - Lecture synchronisee - R.O.P.',
+  title: 'Chapitre 5 rework - Lecture classique - R.O.P.',
   description: 'Page de relecture dediee au rework du chapitre 5 : mecanisme de stress, allostasie et approche ROP.',
   robots: { index: false, follow: false },
 }
 
-export default async function Chapitre5ReworkPage({
+// Classic single-column reading of the rework draft. Same gate as the
+// synchronized route; reachable from its large-screen mode switch.
+export default async function Chapitre5ReworkClassicPage({
   searchParams,
 }: {
   searchParams: Promise<{ lang?: string }>
@@ -30,27 +32,28 @@ export default async function Chapitre5ReworkPage({
 
   const { lang: langParam } = await searchParams
   const lang = await getServerLang(langParam)
+  const syncHref = `/lecture/chapitre-5-rework?lang=${lang}`
 
-  // One row per open, for grant holders only — admin reviews stay out of the
-  // sheet the same way admin traffic does everywhere else.
   if (grant) {
     recordServerEvent({
       chapter: DRAFT_KEY,
       event: 'draft_grant_open',
-      data: { grant, mode: 'sync' },
+      data: { grant, mode: 'classic' },
       lang,
       headers: await headers(),
     })
   }
 
   return (
-    <SlideSyncReader
-      chapter={chapter5ReworkFr}
-      bookTitle={translations[lang].reader.bookTitle}
-      slides={chapter5ReworkSlides}
-      anchors={chapter5ReworkSlideAnchors}
-      backHref={draftBackHref(isAdmin)}
-      classicHref={`/chapitre-5-rework?lang=${lang}`}
-    />
+    <>
+      <ClassicModeGuard syncHref={syncHref} />
+      <ChapterReader
+        chapter={chapter5ReworkFr}
+        bookTitle={translations[lang].reader.bookTitle}
+        contentLang="fr"
+        backHref={draftBackHref(isAdmin)}
+        syncHref={syncHref}
+      />
+    </>
   )
 }
