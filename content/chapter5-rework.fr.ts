@@ -813,6 +813,134 @@ export const chapter5ReworkFr = {
       ]
     },
     {
+      "id": "zones-reflexes-podales",
+      "title": "Zones réflexes podales",
+      "blocks": [
+        {
+          "type": "sub",
+          "text": "Zones occipitales"
+        },
+        {
+          "type": "para",
+          "text": "Dans la pratique ROP, la sollicitation douce des zones occipitales vise d’abord à apaiser le système avant un travail plus ciblé. Par l’intermédiaire des afférences cutanées, myofasciales et proprioceptives de la région C2-C3, elle peut contribuer à réduire l’hypervigilance, les tensions de protection, la surcharge nociceptive et l’agitation respiratoire ou émotionnelle."
+        },
+        {
+          "type": "para",
+          "text": "Les trois bandes — parasympathique, orthosympathique et structurelle — restent des repères cliniques dont les qualités de palpation peuvent varier selon le niveau de stress et l’état d’adaptation du patient."
+        },
+        {
+          "type": "para",
+          "text": "L’objectif n’est pas de commander directement le système autonome, mais d’introduire une information sensorielle apaisante afin de rendre le patient plus disponible pour la suite du traitement, notamment le travail podal."
+        },
+        {
+          "type": "lead",
+          "label": "Syndrome général d’adaptation SGA",
+          "text": ""
+        },
+        {
+          "type": "para",
+          "text": "Système limbique, diencéphale, tronc cérébral, hypophyse, surrénales (axe HHS)."
+        },
+        {
+          "type": "figure",
+          "src": "/chapter-5-rework/slides/cartographie-fr/slide-04.png",
+          "caption": "Photo : Tronc cérébral",
+          "alt": "Repère podal du tronc cérébral",
+          "orientation": "landscape"
+        },
+        {
+          "type": "figure",
+          "src": "/chapter-5-rework/slides/cartographie-fr/slide-06.png",
+          "caption": "Photo : Amygdale du cerveau limbique",
+          "alt": "Repère podal de l’amygdale du cerveau limbique",
+          "orientation": "landscape"
+        },
+        {
+          "type": "figure",
+          "src": "/chapter-5-rework/slides/cartographie-fr/slide-08.png",
+          "caption": "Photo : Diencéphale",
+          "alt": "Repère podal du diencéphale",
+          "orientation": "landscape"
+        },
+        {
+          "type": "para",
+          "text": "Nerfs crâniens : Jumeau V, Vague X, Hypoglosse XII, C2 et C3."
+        },
+        {
+          "type": "figure",
+          "src": "/chapter-5-rework/slides/cartographie-fr/slide-10.png",
+          "caption": "Photo : Sinus et glomus carotidien",
+          "alt": "Repère podal du sinus et du glomus carotidien",
+          "orientation": "landscape"
+        },
+        {
+          "type": "para",
+          "text": "Nerf vague X : foramen magnum, foramen jugulaire, loge viscérale du cou, plexus cardio-pulmonaire, hiatus œsophagien, plexus cœliaque."
+        },
+        {
+          "type": "figure",
+          "src": "/chapter-5-rework/slides/cartographie-fr/slide-12.png",
+          "caption": "Photo : Nerf vague X dans le foramen jugulaire",
+          "alt": "Repère podal du nerf vague X dans le foramen jugulaire",
+          "orientation": "landscape"
+        },
+        {
+          "type": "figure",
+          "src": "/chapter-5-rework/slides/cartographie-fr/slide-14.png",
+          "caption": "Photo : Nerfs vagues au hiatus œsophagien",
+          "alt": "Repère podal des nerfs vagues au hiatus œsophagien",
+          "orientation": "landscape"
+        },
+        {
+          "type": "para",
+          "text": "Colonne vertébrale : systèmes sympathique C8 à L2 et parasympathique pelvien S2 à S4."
+        },
+        {
+          "type": "figure",
+          "src": "/chapter-5-rework/slides/cartographie-fr/slide-16.png",
+          "caption": "Photo : Parasympathique pelvien ou sacré",
+          "alt": "Repère podal du parasympathique pelvien ou sacré",
+          "orientation": "landscape"
+        },
+        {
+          "type": "para",
+          "text": "Nerf phrénique : C3-C4-C5 et triangle de Sédillot."
+        },
+        {
+          "type": "figure",
+          "src": "/chapter-5-rework/slides/cartographie-fr/slide-18.png",
+          "caption": "Photo : Nerf phrénique (C3-C4-C5)",
+          "alt": "Repère podal du nerf phrénique C3-C4-C5",
+          "orientation": "landscape"
+        },
+        {
+          "type": "figure",
+          "src": "/chapter-5-rework/slides/cartographie-fr/slide-20.png",
+          "caption": "Photo : Nerf phrénique (triangle de Sédillot)",
+          "alt": "Repère podal du nerf phrénique au triangle de Sédillot",
+          "orientation": "landscape"
+        },
+        {
+          "type": "lead",
+          "label": "Syndrome locorégional",
+          "text": "c’est une compression mécanique locale du système nerveux somatique ou autonome avec retentissement secondaire général."
+        },
+        {
+          "type": "leadBullets",
+          "items": [
+            {
+              "label": "1ʳᵉ phase — irritation",
+              "text": "irritation locale par emprisonnement d’un nerf (ex. : compression traumatique du ganglion cervical inférieur par blocage C7/D1/1ʳᵉ côte). Conséquence : facilitation sympathique du territoire d’influence du ganglion cervical inférieur."
+            },
+            {
+              "label": "2ᵉ phase — inhibition",
+              "text": "si la compression n’est pas levée, le nerf comprimé est considéré comme inhibé. Le système nerveux compensateur est alors libéré, d’où, dans l’exemple, un syndrome parasympathique par inhibition du système sympathique."
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "reperes-bibliographiques",
       "title": "Repères bibliographiques",
       "blocks": [

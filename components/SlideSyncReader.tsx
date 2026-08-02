@@ -375,7 +375,7 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, h
   }, [anchors])
 
   const reflexSection = useMemo(
-    () => chapter.slug === 'chapter-2' || chapter.slug === 'chapter-5-rework' ? null : chapter.sections.find((section) =>
+    () => chapter.slug === 'chapter-2' ? null : chapter.sections.find((section) =>
       isZoneReflexLabel(section.id) ||
       isZoneReflexLabel(section.title) ||
       section.blocks.some((block) => block.type === 'reflexAtlas')
