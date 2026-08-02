@@ -50,6 +50,7 @@ export const introductionFr: Chapter = {
         { type: 'para', text: "Le quatrième niveau concerne l’organe ou la fonction qui constitue la cible clinique spécifique. Les chapitres d’organes développent leur anatomie, leur physiologie, leurs rapports, leur cartographie réflexe et leurs applications cliniques." },
         { type: 'bullets', items: ["Estomac et duodénum", "Foie et voies biliaires", "Pancréas et rate", "Intestin grêle, côlon et rectum", "Reins et vessie", "Organes génitaux", "Système érectile"] },
         { type: 'para', text: "Le quatrième niveau ne signifie pas que la ROP traite directement une maladie organique. Il désigne la cible fonctionnelle ou symptomatique autour de laquelle le traitement est individualisé : douleur, gêne, transit, miction, mobilité, fatigue, sommeil ou capacités fonctionnelles." },
+        { type: 'figure', src: "/chapter-0/figure-0-1.png", caption: "Protocole clinique ROP : quatre niveaux unifiés", alt: "Schéma du protocole clinique ROP en quatre niveaux : régulation centrale, régulation neuro-végétative, interfaces loco-régionales et cible viscérale spécifique.", orientation: 'landscape' },
         { type: 'quote', text: "Comprendre la régulation centrale, suivre les voies neuro-végétatives, examiner les interfaces régionales, puis cibler l’expression viscérale ou fonctionnelle du trouble." },
       ],
     },
