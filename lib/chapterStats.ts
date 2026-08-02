@@ -97,6 +97,7 @@ function wordsInBlock(block: Block): number {
   switch (block.type) {
     case 'para':
     case 'sub':
+    case 'quote':
       return countWords(block.text)
     case 'lead':
       return countWords(block.label) + countWords(block.text)
@@ -125,6 +126,7 @@ function blockParagraphTexts(block: Block): string[] {
   switch (block.type) {
     case 'para':
     case 'sub':
+    case 'quote':
       return [block.text]
     case 'lead':
       return [`${block.label} ${block.text}`.trim()]

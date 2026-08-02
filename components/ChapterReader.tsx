@@ -633,6 +633,8 @@ function BlockView({
           ))}
         </aside>
       )
+    case 'quote':
+      return <blockquote {...anchor} className="cr-message">{block.text}</blockquote>
     case 'rop':
       return (
         <aside {...anchor} className="cr-rop">

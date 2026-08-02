@@ -88,6 +88,7 @@ function blockText(block: Block): string {
   switch (block.type) {
     case 'para':
     case 'sub':
+    case 'quote':
       return block.text
     case 'lead':
       return `${block.label} ${block.text}`.trim()

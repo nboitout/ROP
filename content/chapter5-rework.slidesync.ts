@@ -66,7 +66,7 @@ export const chapter5ReworkSlideAnchors: SyncAnchor[] = [
   { sectionId: 'quatre-niveaux-de-progressions-durant-la-seance-rop', blockIndex: 7, slide: 24, ...endAt('quatre-niveaux-de-progressions-durant-la-seance-rop', 10) },
   { sectionId: 'quatre-niveaux-de-progressions-durant-la-seance-rop', blockIndex: 10, slide: 25, ...endAt('reactions-apres-seance-recuperation', -1) },
   { sectionId: 'illustration-clinique-fibromyalgie-et-charge-allostatique', blockIndex: -1, slide: 26, ...endAt('vers-une-recherche-sur-la-cinetique-de-recuperation', -1) },
-  { sectionId: 'vers-une-recherche-sur-la-cinetique-de-recuperation', blockIndex: -1, slide: 27, ...endAt('annexe-1', -1) },
+  { sectionId: 'vers-une-recherche-sur-la-cinetique-de-recuperation', blockIndex: -1, slide: 27, ...endAt('conclusion', -1) },
   { sectionId: 'annexe-1', blockIndex: -1, slide: 28, ...endAt('annexe-2', -1) },
   { sectionId: 'annexe-2', blockIndex: -1, slide: 29, ...endAt('tableau-synthetique-de-la-progression-clinique', -1) },
 ]

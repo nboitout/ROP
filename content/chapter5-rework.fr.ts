@@ -11,14 +11,14 @@ export const chapter5ReworkFr = {
       "title": "1. Le stress : une réponse d’adaptation",
       "blocks": [
         {
-          "type": "para",
+          "type": "quote",
           "text": "La santé ne se mesure pas à l’absence de réaction, mais à la capacité de l’organisme à se mobiliser puis à récupérer."
         },
         {
           "type": "note",
           "label": "FIL DIRECTEUR DU CHAPITRE",
           "body": [
-            "En clinique, la question n’est pas de savoir si le patient réagit au stress, mais s’il peut terminer sa réaction. Le stress mobilise et protège. Il devient coûteux lorsqu’il persiste, se répète ou ne se clôt pas. La ROP ne supprime pas le stresseur ; elle cherche, par un toucher mesuré, à soutenir la flexibilité autonome et la récupération, dans les limites des données disponibles."
+            "En clinique, la question n’est pas de savoir si le patient réagit au stress, mais s’il peut terminer sa réaction. Le stress mobilise et protège. Il devient coûteux lorsqu’il persiste, se répète ou ne se clôt pas. La ROP ne supprime pas le stresseur ; elle cherche, par un toucher mesuré, à soutenir la flexibilité autonome et la récupération."
           ]
         },
         {
@@ -697,7 +697,7 @@ export const chapter5ReworkFr = {
     },
     {
       "id": "illustration-clinique-fibromyalgie-et-charge-allostatique",
-      "title": "17. Illustration clinique : fibromyalgie et charge allostatique",
+      "title": "17. Cas clinique : fibromyalgie et charge allostatique",
       "blocks": [
         {
           "type": "para",
@@ -790,7 +790,7 @@ export const chapter5ReworkFr = {
           "text": "Le pont le plus crédible avec la ROP reste la régulation de la réponse et de la récupération. Par une évaluation tissulaire, un toucher mesuré et une progression adaptée du niveau crânien au niveau viscéral, nous cherchons à apporter au système nerveux une information corporelle nouvelle, à diminuer une mobilisation devenue inutile et à favoriser le retour des fonctions respiratoires, digestives et restauratrices."
         },
         {
-          "type": "para",
+          "type": "quote",
           "text": "En ROP, nous ne cherchons pas à empêcher l’organisme de réagir. Nous cherchons à l’aider à ne pas rester bloqué dans sa réaction."
         },
         {
@@ -804,10 +804,10 @@ export const chapter5ReworkFr = {
             "La charge allostatique est le coût cumulé de l’adaptation répétée ou prolongée.",
             "La santé dépend de la capacité à déclencher une réponse appropriée puis à revenir à l’état de base.",
             "Le corps ne fonctionne pas comme une batterie fixe ; il réorganise continuellement ses flux et ses priorités.",
-            "L’hypermétabolisme cellulaire observé in vitro ne peut pas être transposé directement à la dépense énergétique d’une personne.",
+            "L’hypermétabolisme cellulaire observé in vitro pourrait permettre de comprendre la réallocation de la dépense énergétique d’une personne, lors d’un épisode de stress.",
             "Certaines dysfonctions restent réversibles tant que l’intégrité structurelle et les réserves adaptatives sont préservées.",
             "La cible autonome n’est pas la domination vagale, mais la flexibilité entre mobilisation et récupération.",
-            "La ROP est surtout pertinente comme approche fonctionnelle et intégrative, dont les effets spécifiques restent à tester par des protocoles comparatifs."
+            "La ROP est surtout pertinente comme approche fonctionnelle et intégrative. Les effets spécifiques observés en clinique doivent maintenant être mesurés scientifiquement via des protocoles comparatifs."
           ]
         }
       ]
@@ -818,43 +818,43 @@ export const chapter5ReworkFr = {
       "blocks": [
         {
           "type": "para",
-          "text": "1. McEwen BS. Physiology and neurobiology of stress and adaptation: central role of the brain. Physiological Reviews. 2007;87(3):873-904. doi:10.1152/physrev.00041.2006."
+          "text": "McEwen BS. Physiology and neurobiology of stress and adaptation: central role of the brain. Physiological Reviews. 2007;87(3):873–904. doi:10.1152/physrev.00041.2006."
         },
         {
           "type": "para",
-          "text": "2. Bobba-Alves N, Juster RP, Picard M. The energetic cost of allostasis and allostatic load. Psychoneuroendocrinology. 2022;146:105951. doi:10.1016/j.psyneuen.2022.105951."
+          "text": "Bobba-Alves N, Juster RP, Picard M. The energetic cost of allostasis and allostatic load. Psychoneuroendocrinology. 2022;146:105951. doi:10.1016/j.psyneuen.2022.105951."
         },
         {
           "type": "para",
-          "text": "3. Bobba-Alves N, et al. Cellular allostatic load is linked to increased energy expenditure and accelerated biological aging. Psychoneuroendocrinology. 2023;155:106322. doi:10.1016/j.psyneuen.2023.106322."
+          "text": "Bobba-Alves N, Sturm G, Lin J, Ware SA, Karan KR, Monzel AS, et al. Cellular allostatic load is linked to increased energy expenditure and accelerated biological aging. Psychoneuroendocrinology. 2023;155:106322. doi:10.1016/j.psyneuen.2023.106322."
         },
         {
           "type": "para",
-          "text": "4. Picard M, Murugan NJ. The energy resistance principle. Cell Metabolism. 2025;37. doi:10.1016/j.cmet.2025.09.002."
+          "text": "Picard M, Murugan NJ. The energy resistance principle. Cell Metabolism. 2025;37(11):2107–2127. doi:10.1016/j.cmet.2025.09.002."
         },
         {
           "type": "para",
-          "text": "5. Descamps E, Boussac M, Joineau K, et al. Changes of cerebral functional connectivity induced by foot reflexology in a randomized controlled trial. Scientific Reports. 2023;13:17139. doi:10.1038/s41598-023-44325-x."
+          "text": "Descamps E, Boussac M, Joineau K, Payoux P. Changes of cerebral functional connectivity induced by foot reflexology in a RCT. Scientific Reports. 2023;13(1):17139. doi:10.1038/s41598-023-44325-x."
         },
         {
           "type": "para",
-          "text": "6. Khalsa SS, et al. Interoception and mental health: a roadmap. Biological Psychiatry: Cognitive Neuroscience and Neuroimaging. 2018;3(6):501-513. doi:10.1016/j.bpsc.2017.12.004."
+          "text": "Khalsa SS, Adolphs R, Cameron OG, Critchley HD, Davenport PW, Feinstein JS, et al. Interoception and mental health: a roadmap. Biological Psychiatry: Cognitive Neuroscience and Neuroimaging. 2018;3(6):501–513. doi:10.1016/j.bpsc.2017.12.004."
         },
         {
           "type": "para",
-          "text": "7. Chen WG, et al. The emerging science of interoception: sensing, integrating, interpreting, and regulating signals within the self. Trends in Neurosciences. 2021;44(1):3-16. doi:10.1016/j.tins.2020.10.007."
+          "text": "Chen WG, Schloesser D, Arensdorf AM, Simmons JM, Cui C, Valentino R, et al. The emerging science of interoception: sensing, integrating, interpreting, and regulating signals within the self. Trends in Neurosciences. 2021;44(1):3–16. doi:10.1016/j.tins.2020.10.007."
         },
         {
           "type": "para",
-          "text": "8. Hopper SI, et al. Effectiveness of diaphragmatic breathing for reducing physiological and psychological stress in adults: a quantitative systematic review. JBI Database of Systematic Reviews and Implementation Reports. 2019;17(9):1855-1876. doi:10.11124/JBISRIR-2017-003848."
+          "text": "Hopper SI, Murray SL, Ferrara LR, Singleton JK. Effectiveness of diaphragmatic breathing for reducing physiological and psychological stress in adults: a quantitative systematic review. JBI Database of Systematic Reviews and Implementation Reports. 2019;17(9):1855–1876. doi:10.11124/JBISRIR-2017-003848."
         },
         {
           "type": "para",
-          "text": "9. Cannon WB. The Wisdom of the Body. New York: W.W. Norton; 1932."
+          "text": "Cannon WB. The Wisdom of the Body. New York: W.W. Norton & Company; 1932."
         },
         {
           "type": "para",
-          "text": "10. Selye H. The Stress of Life. New York: McGraw-Hill; 1956."
+          "text": "Selye H. The Stress of Life. New York: McGraw-Hill; 1956."
         }
       ]
     },

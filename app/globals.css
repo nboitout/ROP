@@ -523,6 +523,8 @@ footer > div > p { font-size:.95rem; color:rgba(245,240,232,.84); line-height:1.
 .cr-note-title { font-size:.7rem; letter-spacing:.16em; text-transform:uppercase; color:#7a5b20; font-weight:700; margin:0 0 10px; }
 .cr-note-p { font-size:1rem; line-height:1.65; color:#2b2924; margin:0 0 10px; }
 .cr-note-p:last-child { margin-bottom:0; }
+.cr-message { position:relative; margin:30px 0; padding:24px 30px 24px 34px; border-left:3px solid var(--sage); background:linear-gradient(135deg, rgba(74,107,90,.09), rgba(184,146,68,.07)); color:#252b27; font-family:'Cormorant Garamond',serif; font-size:1.38rem; font-weight:500; font-style:italic; line-height:1.5; }
+.cr-message::before { content:'“'; position:absolute; top:5px; left:10px; color:rgba(74,107,90,.3); font-family:'Cormorant Garamond',serif; font-size:3.2rem; line-height:1; }
 
 .cr-end { margin-top:80px; padding-top:48px; border-top:1px solid rgba(26,26,24,.1); }
 .cr-end-card { background:linear-gradient(180deg, #f3ecd9 0%, #ece4d0 100%); padding:48px 40px; border-radius:4px; text-align:center; box-shadow:0 4px 22px rgba(160,124,58,.12); }
