@@ -846,21 +846,21 @@ export const chapter5ReworkFr = {
           "src": "/chapter-5-rework/slides/cartographie-fr/slide-04.png",
           "caption": "Photo : Tronc cérébral",
           "alt": "Repère podal du tronc cérébral",
-          "orientation": "landscape"
+          "orientation": "portrait"
         },
         {
           "type": "figure",
           "src": "/chapter-5-rework/slides/cartographie-fr/slide-06.png",
           "caption": "Photo : Amygdale du cerveau limbique",
           "alt": "Repère podal de l’amygdale du cerveau limbique",
-          "orientation": "landscape"
+          "orientation": "portrait"
         },
         {
           "type": "figure",
           "src": "/chapter-5-rework/slides/cartographie-fr/slide-08.png",
           "caption": "Photo : Diencéphale",
           "alt": "Repère podal du diencéphale",
-          "orientation": "landscape"
+          "orientation": "portrait"
         },
         {
           "type": "para",
@@ -882,14 +882,14 @@ export const chapter5ReworkFr = {
           "src": "/chapter-5-rework/slides/cartographie-fr/slide-12.png",
           "caption": "Photo : Nerf vague X dans le foramen jugulaire",
           "alt": "Repère podal du nerf vague X dans le foramen jugulaire",
-          "orientation": "landscape"
+          "orientation": "portrait"
         },
         {
           "type": "figure",
           "src": "/chapter-5-rework/slides/cartographie-fr/slide-14.png",
           "caption": "Photo : Nerfs vagues au hiatus œsophagien",
           "alt": "Repère podal des nerfs vagues au hiatus œsophagien",
-          "orientation": "landscape"
+          "orientation": "portrait"
         },
         {
           "type": "para",

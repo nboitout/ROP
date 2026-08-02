@@ -1481,6 +1481,7 @@ function BlockView({
             <li key={i} className={hasHalfGapBeforeItem?.(i) ? 'ss-anchor-halfbreak' : undefined}>
               {renderSlideAnchorsForItem?.(i)}
               {it}
+              {renderEndSentinelForItem?.(i)}
             </li>
           ))}
         </ul>
@@ -1492,6 +1493,7 @@ function BlockView({
             <li key={i} className={hasHalfGapBeforeItem?.(i) ? 'ss-anchor-halfbreak' : undefined}>
               {renderSlideAnchorsForItem?.(i)}
               {it}
+              {renderEndSentinelForItem?.(i)}
             </li>
           ))}
         </ol>

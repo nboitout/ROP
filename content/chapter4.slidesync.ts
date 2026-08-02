@@ -82,7 +82,7 @@ export const chapter4SlideAnchors: SyncAnchor[] = [
   { sectionId: 'parasympathique-visceromoteur', blockIndex: 7, slide: 14 },
   { sectionId: 'parasympathique-visceromoteur', blockIndex: 14, itemIndex: 1, slide: 15 },
   { sectionId: 'parasympathique-visceromoteur', blockIndex: 19, slide: 16, ...endAt('nerf-vague-sensitif', -1) },
-  { sectionId: 'nerf-vague-sensitif', blockIndex: 0, slide: 17, ...endAt('sympathique-sensitif', -1) },
+  { sectionId: 'nerf-vague-sensitif', blockIndex: 0, slide: 17, ...endAt('nerf-vague-sensitif', 0, 15) },
   { sectionId: 'sympathique-sensitif', blockIndex: 0, slide: 18, ...endAt('sympathique-sensitif', 0, 6) },
   { sectionId: 'sympathique-sensitif', blockIndex: 1, slide: 19, ...endAt('sympathique-sensitif', 3) },
   { sectionId: 'chaine-plexique-prevertebrale', blockIndex: 0, slide: 20 },
