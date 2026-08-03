@@ -1096,7 +1096,6 @@ a.ss-switch-opt:hover { color:var(--gold); }
 .ss-article[data-chapter="chapter-6"] .cr-section:last-of-type { padding-bottom:56vh; }
 .ss-article[data-chapter="chapter-18"] [data-slide-anchor="20"] { margin-bottom:36vh; }
 .ss-article[data-chapter="chapter-18"] .cr-section:last-of-type { padding-bottom:56vh; }
-.ss-article[data-chapter="chapter-5-rework"] [data-slide-anchor="28"] { margin-bottom:36vh; }
 
 /* inline figures stay within the narrower text column */
 .ss-article .cr-fig { margin:36px auto; }
