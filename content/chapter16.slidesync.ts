@@ -5,7 +5,8 @@
 // to the deck and are anchored inside the reflex-zone section.
 
 export type SyncSlide = { src: string; title: string; orientation?: 'portrait' }
-export type SyncAnchor = { sectionId: string; blockIndex: number; slide: number | number[]; gapBefore?: 'half' }
+export type SyncAnchorPoint = { sectionId: string; blockIndex: number; itemIndex?: number }
+export type SyncAnchor = SyncAnchorPoint & { slide: number | number[]; gapBefore?: 'half'; end?: SyncAnchorPoint }
 
 const chapter16SlidesBySource: SyncSlide[] = [
   { src: '/chapter-16/slides/slide-01.png', title: 'Chapitre 16 : les reins' },
@@ -161,7 +162,7 @@ export const chapter16SlideAnchors: SyncAnchor[] = [
   { sectionId: 'pathologies-courantes', blockIndex: 5, slide: [16, 17, 18] },
   { sectionId: 'pathologies-courantes', blockIndex: 9, slide: 19 },
   { sectionId: 'relations-viscero-emotionnelles', blockIndex: 0, slide: 20 },
-  { sectionId: 'conseils', blockIndex: 0, slide: 21 },
+  { sectionId: 'conseils', blockIndex: 0, slide: 21, end: { sectionId: 'conseils', blockIndex: 0, itemIndex: 4 } },
   { sectionId: 'zones-reflexes-podales', blockIndex: 3, slide: 22 },
   { sectionId: 'zones-reflexes-podales', blockIndex: 4, slide: 23 },
   { sectionId: 'zones-reflexes-podales', blockIndex: 6, slide: 24 },
