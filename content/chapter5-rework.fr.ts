@@ -872,49 +872,6 @@ export const chapter5ReworkFr = {
           "type": "para",
           "text": "L’objectif n’est pas de commander directement le système autonome, mais d’introduire une information sensorielle apaisante afin de rendre le patient plus disponible pour la suite du traitement, notamment le travail podal."
         },
-        {
-          "type": "lead",
-          "label": "Syndrome général d’adaptation SGA",
-          "text": ""
-        },
-        {
-          "type": "para",
-          "text": "Système limbique, diencéphale, tronc cérébral, hypophyse, surrénales (axe HHS)."
-        },
-        {
-          "type": "para",
-          "text": "Nerfs crâniens : Jumeau V, Vague X, Hypoglosse XII, C2 et C3."
-        },
-        {
-          "type": "para",
-          "text": "Nerf vague X : foramen magnum, foramen jugulaire, loge viscérale du cou, plexus cardio-pulmonaire, hiatus œsophagien, plexus cœliaque."
-        },
-        {
-          "type": "para",
-          "text": "Colonne vertébrale : systèmes sympathique C8 à L2 et parasympathique pelvien S2 à S4."
-        },
-        {
-          "type": "para",
-          "text": "Nerf phrénique : C3-C4-C5 et triangle de Sédillot."
-        },
-        {
-          "type": "lead",
-          "label": "Syndrome locorégional",
-          "text": "c’est une compression mécanique locale du système nerveux somatique ou autonome avec retentissement secondaire général."
-        },
-        {
-          "type": "leadBullets",
-          "items": [
-            {
-              "label": "1ʳᵉ phase — irritation",
-              "text": "irritation locale par emprisonnement d’un nerf (ex. : compression traumatique du ganglion cervical inférieur par blocage C7/D1/1ʳᵉ côte). Conséquence : facilitation sympathique du territoire d’influence du ganglion cervical inférieur."
-            },
-            {
-              "label": "2ᵉ phase — inhibition",
-              "text": "si la compression n’est pas levée, le nerf comprimé est considéré comme inhibé. Le système nerveux compensateur est alors libéré, d’où, dans l’exemple, un syndrome parasympathique par inhibition du système sympathique."
-            }
-          ]
-        }
       ]
     },
     {
