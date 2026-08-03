@@ -4,7 +4,14 @@
 // Slides are supplied as pre-rendered PNGs in public/chapter-18/slides.
 
 export type SyncSlide = { src: string; title: string; orientation?: 'portrait' }
-export type SyncAnchor = { sectionId: string; blockIndex: number; slide: number | number[]; gapBefore?: 'half' }
+export type SyncAnchor = {
+  sectionId: string
+  blockIndex: number
+  itemIndex?: number
+  slide: number | number[]
+  gapBefore?: 'half'
+  end?: { sectionId: string; blockIndex: number; itemIndex?: number }
+}
 
 export const chapter18Slides: SyncSlide[] = [
   { src: '/chapter-18/slides/slide-01.png', title: 'La vessie : anatomie, physiologie et ROP' },
@@ -127,10 +134,10 @@ export const chapter18SlidesIt = withChapter18Titles([
 
 export const chapter18SlideAnchors: SyncAnchor[] = [
   { sectionId: 'presentation', blockIndex: -1, slide: 1 },
-  { sectionId: 'presentation', blockIndex: 0, slide: 2 },
+  { sectionId: 'presentation', blockIndex: 0, slide: 2, end: { sectionId: 'presentation', blockIndex: 3 } },
   { sectionId: 'situation', blockIndex: 1, slide: 3 },
-  { sectionId: 'situation', blockIndex: 3, slide: 4 },
-  { sectionId: 'situation', blockIndex: 4, slide: 5 },
+  { sectionId: 'situation', blockIndex: 4, slide: 4 },
+  { sectionId: 'situation', blockIndex: 4, itemIndex: 5, slide: 5 },
   { sectionId: 'anatomie', blockIndex: 2, slide: 6 },
   { sectionId: 'anatomie', blockIndex: 6, slide: 7 },
   { sectionId: 'anatomie', blockIndex: 13, slide: 8 },
