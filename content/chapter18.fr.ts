@@ -630,6 +630,20 @@ export const chapter18Fr: Chapter = {
           ]
         },
         {
+          "type": "figure",
+          "src": "/chapter-18/cartographie/figure-18-02.png",
+          "caption": "Photo : chaîne ganglionnaire latéro-vertébrale thoracique",
+          "alt": "Repère podal de la chaîne ganglionnaire latéro-vertébrale thoracique",
+          "orientation": "landscape"
+        },
+        {
+          "type": "figure",
+          "src": "/chapter-18/cartographie/figure-18-04.png",
+          "caption": "Photo : chaîne ganglionnaire lombaire et piliers du diaphragme",
+          "alt": "Repère podal de la chaîne ganglionnaire lombaire et des piliers du diaphragme",
+          "orientation": "landscape"
+        },
+        {
           "type": "sub",
           "text": "Syndrome loco-régional"
         },
@@ -643,6 +657,55 @@ export const chapter18Fr: Chapter = {
             "Vessie et corps de l’utérus: zone légèrement bombée antérieure au trigone;",
             "Fente uro-génitale, noyau fibreux central du périnée, urètre et sphincter externe de la vessie: bord inférieur du calcanéum en avant du coccyx."
           ]
+        },
+        {
+          "type": "figure",
+          "src": "/chapter-18/cartographie/figure-18-06.png",
+          "caption": "Photo : grand foramen ischiatique, muscle piriforme, plexus sacré et nerf pudendal",
+          "alt": "Repère podal du grand foramen ischiatique, du muscle piriforme, du plexus sacré et du nerf pudendal",
+          "orientation": "landscape"
+        },
+        {
+          "type": "figure",
+          "src": "/chapter-18/cartographie/figure-18-08.png",
+          "caption": "Photo : petit foramen ischiatique, muscles obturateurs et jumeaux",
+          "alt": "Repère podal du petit foramen ischiatique et des muscles obturateurs et jumeaux",
+          "orientation": "landscape"
+        },
+        {
+          "type": "figure",
+          "src": "/chapter-18/cartographie/figure-18-11.png",
+          "caption": "Photo : fosse obturée et muscles obturateurs",
+          "alt": "Repère podal de la fosse obturée et des muscles obturateurs",
+          "orientation": "portrait"
+        },
+        {
+          "type": "figure",
+          "src": "/chapter-18/cartographie/figure-18-13.png",
+          "caption": "Photo : ligaments sacro-tubéral et sacro-épineux",
+          "alt": "Repère podal des ligaments sacro-tubéral et sacro-épineux",
+          "orientation": "landscape"
+        },
+        {
+          "type": "figure",
+          "src": "/chapter-18/cartographie/figure-18-15.png",
+          "caption": "Photo : ligament pubo-vésical",
+          "alt": "Repère podal du ligament pubo-vésical",
+          "orientation": "landscape"
+        },
+        {
+          "type": "figure",
+          "src": "/chapter-18/cartographie/figure-18-17.png",
+          "caption": "Photo : trigone de la vessie et plexus hypogastrique",
+          "alt": "Repère podal du trigone de la vessie et du plexus hypogastrique",
+          "orientation": "landscape"
+        },
+        {
+          "type": "figure",
+          "src": "/chapter-18/cartographie/figure-18-19.png",
+          "caption": "Photo : noyau fibreux central du périnée et fente uro-génitale",
+          "alt": "Repère podal du noyau fibreux central du périnée et de la fente uro-génitale",
+          "orientation": "landscape"
         },
         {
           "type": "sub",
