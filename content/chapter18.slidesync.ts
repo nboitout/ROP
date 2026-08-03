@@ -167,7 +167,7 @@ export const chapter18SlideAnchors: SyncAnchor[] = [
   { sectionId: 'pathologies-courantes', blockIndex: 9, slide: 17 },
   { sectionId: 'relations-viscero-emotionnelles', blockIndex: 0, slide: 18 },
   { sectionId: 'conseils', blockIndex: 0, slide: 19 },
-  { sectionId: 'zones-reflexes-podales', blockIndex: -1, slide: [20, 21] },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 0, slide: 20, gapBefore: 'half' },
   { sectionId: 'zones-reflexes-podales', blockIndex: 2, slide: 22 },
   { sectionId: 'zones-reflexes-podales', blockIndex: 3, slide: 23 },
   { sectionId: 'zones-reflexes-podales', blockIndex: 6, slide: 24 },
@@ -177,4 +177,5 @@ export const chapter18SlideAnchors: SyncAnchor[] = [
   { sectionId: 'zones-reflexes-podales', blockIndex: 10, slide: 29 },
   { sectionId: 'zones-reflexes-podales', blockIndex: 11, slide: 30 },
   { sectionId: 'zones-reflexes-podales', blockIndex: 12, slide: 31 },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 15, slide: 21 },
 ]
