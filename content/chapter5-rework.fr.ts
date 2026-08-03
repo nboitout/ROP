@@ -1,4 +1,4 @@
-// Source: public/Chapter-5 Rework/Chapter_5_REWORK_Mecanisme_de_stress_version_clinique_Guy.docx
+// Source: public/Chapter-5 Rework/Chapitre_5_REWORK_section_14_alignee_4_niveaux.docx
 import type { Chapter } from './types'
 
 export const chapter5ReworkFr = {
@@ -555,81 +555,121 @@ export const chapter5ReworkFr = {
     },
     {
       "id": "quatre-niveaux-de-progressions-durant-la-seance-rop",
-      "title": "14. Quatre niveaux de progressions durant la séance ROP",
+      "title": "14. La progression clinique ROP en quatre niveaux",
       "blocks": [
         {
           "type": "para",
-          "text": "Nous proposons une progression de haut en bas : niveau crânien, expression sympathique, respiration diaphragmatique, puis fonctions viscérales. Cet ordre n’est ni obligatoire ni la description d’une causalité anatomique directe. Il constitue une trame clinique, à adapter au motif, à l’examen et à la tolérance du patient."
-        },
-        {
-          "type": "sub",
-          "text": "14.1. Niveau 1 : diminuer la persistance du signal"
+          "text": "La séance ROP peut être organisée selon une progression anatomique et fonctionnelle en quatre niveaux : régulation centrale ; préparation du terrain d’adaptation ; interfaces loco-régionales ; cible viscérale ou fonctionnelle spécifique."
         },
         {
           "type": "para",
-          "text": "Le premier niveau cherche à diminuer la persistance du signal d’alarme. Il concerne les zones occipitales, la charnière crânio-cervicale, le tronc cérébral, certains nerfs crâniens et les repères attribués au diencéphale et aux réseaux émotionnels. L’objectif n’est pas de « traiter le cerveau », mais d’offrir une expérience tactile stable et prévisible."
+          "text": "Cette progression ne décrit ni une causalité anatomique directe ni un ordre obligatoire. Elle constitue une trame clinique adaptable au motif de consultation, à l’anamnèse, aux tests, au stade d’adaptation et à la tolérance du patient."
+        },
+        {
+          "type": "para",
+          "text": "L’intérêt de cette organisation est de relier deux lectures complémentaires : où intervient le praticien — centres de régulation, voies autonomes, interfaces régionales, organe ou fonction cible — et ce qu’il cherche à favoriser — diminuer la persistance du signal, accompagner le retrait d’une mobilisation devenue inutile, réduire les contraintes qui entretiennent ce signal, puis permettre le retour de la fonction concernée."
+        },
+        {
+          "type": "para",
+          "text": "La séance ne consiste donc pas à multiplier les zones. Elle cherche à sélectionner le niveau prioritaire, à apporter une information sensorielle dosée, puis à laisser au patient le temps de l’intégrer."
+        },
+        {
+          "type": "sub",
+          "text": "14.1. Niveau 1 — Régulation centrale : diminuer la persistance du signal d’alarme"
+        },
+        {
+          "type": "para",
+          "text": "Le premier niveau concerne les structures de régulation centrale et leur environnement neuro-méningé. Dans le modèle clinique ROP, il comprend notamment les zones occipitales, la charnière crânio-cervicale, le tronc cérébral, certains nerfs crâniens ainsi que les repères attribués au diencéphale et aux réseaux émotionnels."
+        },
+        {
+          "type": "para",
+          "text": "L’objectif n’est pas de « traiter le cerveau » ni de prétendre agir directement sur une structure cérébrale déterminée. Il est d’offrir une expérience tactile stable, prévisible et suffisamment mesurée pour ne pas renforcer la vigilance corporelle."
         },
         {
           "type": "bullets",
           "items": [
-            "Repères ROP : zones occipitales ; occiput-C1-C2 ; tronc cérébral ; foramen magnum ; foramen jugulaire ; nerfs IX, X, XI et XII ; zones attribuées au système limbique, au diencéphale et à l’hypophyse.",
-            "Objectif clinique : réduire la vigilance tissulaire et offrir des signaux tactiles compatibles avec la sécurité.",
-            "Limite : la ROP ne traite pas directement l’amygdale, l’hypothalamus ou le cortex comme des structures accessibles à la palpation."
+            "Repères ROP possibles : zones occipitales ; occiput–C1–C2 ; tronc cérébral ; foramen magnum ; foramen jugulaire ; nerfs V, IX, X, XI et XII ; repères attribués au système limbique, au diencéphale et à l’hypophyse ; environnement neuro-méningé associé.",
+            "Objectif clinique : réduire la vigilance tissulaire et offrir des signaux tactiles compatibles avec un cadre de sécurité.",
+            "Lecture anatomique : ce niveau correspond au système nerveux central, premier étage du raisonnement clinique développé dans l’ouvrage.",
+            "Limite : la ROP ne traite pas directement l’amygdale, l’hypothalamus ou le cortex comme des structures accessibles à la palpation."
           ]
         },
         {
           "type": "sub",
-          "text": "14.2. Niveau 2 : réduire la mobilisation devenue inutile"
+          "text": "14.2. Niveau 2 — Préparation du terrain d’adaptation : réduire la mobilisation devenue inutile"
         },
         {
           "type": "para",
-          "text": "Le deuxième niveau s’adresse à ce que le praticien peut reconnaître comme une mobilisation devenue inutile : tonus musculaire défensif, respiration haute, vigilance excessive ou maintien d’une tension globale. Il ne s’agit pas d’inhiber le sympathique, mais d’accompagner son retrait lorsque l’action n’est plus nécessaire."
+          "text": "Le deuxième niveau concerne les voies neuro-végétatives et les structures systémiques qui participent à la mobilisation et à la récupération. Le praticien peut reconnaître une mobilisation devenue inutile à travers un tonus musculaire défensif, une respiration haute ou peu adaptable, une vigilance excessive ou le maintien d’une tension corporelle globale."
+        },
+        {
+          "type": "para",
+          "text": "L’objectif n’est pas d’inhiber le sympathique ni de rechercher une domination parasympathique. Le sympathique est indispensable à l’action et le parasympathique à la restauration ; la cible clinique reste la flexibilité entre ces deux dynamiques."
         },
         {
           "type": "bullets",
           "items": [
-            "Repères ROP : chaîne sympathique cervico-thoracique ; charnière C7-T1 et première côte ; colonne thoracique ; zones surrénaliennes ; relations avec les axes SAM et HHS.",
-            "Objectif clinique : favoriser la baisse du tonus de défense et le retour vers une ligne de base plus souple.",
-            "Limite : une séance ne permet pas de conclure à une normalisation du cortisol ou de l’axe HHS sans mesures biologiques."
+            "Régulation neuro-végétative — Repères ROP possibles : chaîne sympathique cervicale et cervico-thoracique ; ganglions cervicaux ; charnière C7–T1 ; première côte ; colonne thoracique et thoraco-lombaire ; voies sympathiques viscérales ; voies parasympathiques crâniennes et sacrées ; plexus autonomes ; zones surrénaliennes ; relations avec les axes SAM et HHS.",
+            "Soutien systémique selon les tests : glandes surrénales ; foie ; reins ; intestins ou autres structures métaboliques et homéostatiques pertinentes. Ces cibles ne constituent pas un passage obligatoire.",
+            "Objectif clinique : accompagner le retrait d’un tonus de défense devenu inutile et favoriser le retour vers une ligne de base autonome plus souple.",
+            "Lecture anatomique : ce niveau correspond principalement au système nerveux autonome, complété si nécessaire par des soutiens neuro-endocriniens ou métaboliques.",
+            "Limite : une séance ne permet pas de conclure à une normalisation du cortisol, de l’axe HHS, des catécholamines ou d’une fonction métabolique sans mesures spécifiques."
           ]
         },
         {
           "type": "sub",
-          "text": "14.3. Niveau 3 : restaurer la disponibilité respiratoire"
+          "text": "14.3. Niveau 3 — Interfaces loco-régionales : libérer les contraintes qui entretiennent le signal"
         },
         {
           "type": "para",
-          "text": "La respiration est un bon témoin de l’état autonome. Sous stress, elle devient souvent haute, rapide, irrégulière ou momentanément bloquée. Les tensions du diaphragme, des muscles inspirateurs accessoires et du hiatus œsophagien peuvent entretenir les sensations d’oppression et renvoyer au cerveau un nouveau message d’alarme."
+          "text": "Le troisième niveau concerne les structures régionales susceptibles de continuer à transmettre au système nerveux des informations de tension, de restriction ou d’inconfort. Ces interfaces peuvent être mécaniques, fasciales, ligamentaires, musculaires, séreuses, neurovasculaires, viscéro-pariétales ou respiratoires. Elles peuvent se situer dans les régions crânio-cervicale, thoracique, diaphragmatique, abdominale, pelvienne ou périnéale."
+        },
+        {
+          "type": "para",
+          "text": "Le niveau 3 est donc plus large que la seule respiration. La disponibilité respiratoire en constitue néanmoins un exemple clinique majeur dans le chapitre sur le stress."
+        },
+        {
+          "type": "para",
+          "text": "Sous stress, la respiration peut devenir haute, rapide, irrégulière ou momentanément bloquée. Les tensions du diaphragme, des muscles inspirateurs accessoires et du hiatus œsophagien peuvent entretenir les sensations d’oppression et renvoyer au système nerveux un nouveau message d’alarme."
         },
         {
           "type": "bullets",
           "items": [
-            "Repères ROP : nerf phrénique C3-C5 ; diaphragme ; piliers ; hiatus œsophagien ; plexus cardio-pulmonaires ; trajet thoracique du nerf vague.",
-            "Objectif clinique : rendre la respiration moins coûteuse et plus disponible, sans imposer une amplitude excessive.",
-            "Appui scientifique indirect : les interventions respiratoires diaphragmatiques peuvent réduire certains marqueurs physiologiques et subjectifs de stress, avec une qualité de preuve encore variable [8]."
+            "Repères ROP respiratoires possibles : nerf phrénique C3–C5 ; triangle de Sédillot ; diaphragme ; coupoles et piliers ; hiatus œsophagien ; plexus cardio-pulmonaires ; trajet thoracique du nerf vague.",
+            "Autres interfaces possibles selon la région : péritoine ; mésos et ligaments viscéraux ; fascias ; muscles et chaînes myofasciales ; articulations costovertébrales ; foramens et hiatus ; plexus abdominaux ; plexus hypogastriques ; cavité pelvienne ; périnée ; passages neurovasculaires régionaux.",
+            "Objectif clinique : diminuer les contraintes régionales susceptibles d’entretenir le tonus défensif et restaurer une meilleure disponibilité mécanique, respiratoire et viscérale.",
+            "Application respiratoire : rendre la respiration moins coûteuse et plus adaptable, sans imposer une amplitude excessive.",
+            "Lecture anatomique : ce niveau correspond aux interfaces loco-régionales développées dans les chapitres sur les cavités, le diaphragme, le péritoine et les régions pelviennes.",
+            "Appui scientifique indirect : les interventions respiratoires diaphragmatiques peuvent réduire certains marqueurs physiologiques et subjectifs du stress, avec une qualité de preuve encore variable [8].",
+            "Limite : une amélioration de la respiration, de la mobilité ou du confort ne démontre pas qu’une structure nerveuse, fasciale ou viscérale précise a été directement « libérée » ou normalisée."
           ]
         },
         {
           "type": "sub",
-          "text": "14.4. Niveau 4 : permettre le retour des fonctions viscérales"
+          "text": "14.4. Niveau 4 — Cible viscérale ou fonctionnelle spécifique : permettre le retour de la fonction concernée"
         },
         {
           "type": "para",
-          "text": "Lorsque l’urgence diminue, l’organisme peut de nouveau investir la digestion, l’assimilation, l’élimination, le sommeil et la réparation. Le niveau viscéral s’intéresse à cette reprise des fonctions de maintenance, autour des voies vagales et sympathiques, du plexus cœliaque, des nerfs splanchniques, du système nerveux entérique et des plexus pelviens."
+          "text": "Le quatrième niveau correspond à l’expression spécifique du trouble chez le patient. Lorsque la mobilisation défensive diminue et que les interfaces régionales retrouvent davantage de disponibilité, l’organisme peut de nouveau investir certaines fonctions temporairement mises au second plan : digestion, assimilation, élimination, miction, sommeil, récupération, sexualité, respiration, mobilité fonctionnelle ou confort viscéral."
+        },
+        {
+          "type": "para",
+          "text": "Dans le chapitre sur le stress, la cible n’est donc pas nécessairement un organe unique. Elle peut être une fonction ou un symptôme clairement identifié avant la séance."
         },
         {
           "type": "bullets",
           "items": [
-            "Repères ROP : nerf vague abdominal ; plexus cœliaque ; chaîne prévertébrale ; nerfs splanchniques ; intestin ; plexus hypogastriques ; parasympathique pelvien S2-S4.",
-            "Objectif clinique : créer un contexte autonome plus favorable à la motricité digestive, au repos et aux fonctions de maintenance.",
-            "Limite : les troubles digestifs persistants, les pertes de poids, les saignements, la fièvre ou les douleurs inhabituelles nécessitent une évaluation médicale."
+            "Repères ROP possibles, variables selon la cible : voies vagales ou sympathiques du territoire concerné ; plexus cœliaque ; chaîne prévertébrale ; nerfs splanchniques ; système nerveux entérique ; plexus hypogastriques ; parasympathique pelvien S2–S4 ; zones réflexes propres à l’organe ou à la fonction ciblée.",
+            "Objectif clinique : créer un contexte autonome et régional plus favorable au retour de la fonction concernée.",
+            "Lecture anatomique : ce niveau correspond aux chapitres d’organes et à la cible viscérale ou fonctionnelle individualisée.",
+            "Limite : les symptômes persistants, inhabituels ou associés à des signes d’alerte nécessitent une évaluation médicale."
           ]
         },
         {
           "type": "note",
           "label": "SÉQUENCE SYNTHÉTIQUE",
           "body": [
-            "1. Diminuer la persistance du signal → 2. Réduire la mobilisation devenue inutile → 3. Restaurer la disponibilité respiratoire → 4. Permettre le retour des fonctions viscérales et restauratrices."
+            "1. Régulation centrale : diminuer la persistance du signal d’alarme → 2. Préparation du terrain d’adaptation : réduire la mobilisation devenue inutile → 3. Interfaces loco-régionales : libérer les contraintes qui entretiennent le signal → 4. Cible viscérale ou fonctionnelle spécifique : permettre le retour de la fonction concernée."
           ]
         }
       ]
