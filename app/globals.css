@@ -579,9 +579,9 @@ footer > div > p { font-size:.95rem; color:rgba(245,240,232,.84); line-height:1.
   .cr-lightbox--landscape .cr-lightbox-rotate-hint { display:block; }
   .cr-lightbox--landscape .cr-lightbox-fig img { max-width:96vw; max-height:calc(100dvh - 132px); width:auto; height:auto; }
   .cr-lightbox--auto-rotated .cr-lightbox-scroll { justify-content:center; align-items:center; overflow:hidden; padding:8px 6px; }
-  .cr-lightbox--auto-rotated .cr-lightbox-fig { width:calc(100vw - 12px); height:calc(100dvh - 64px); justify-content:center; }
+  .cr-lightbox--auto-rotated .cr-lightbox-fig { width:100%; max-width:100%; height:calc(100dvh - 64px); margin:0; box-sizing:border-box; justify-content:center; }
   .cr-lightbox--auto-rotated .cr-lightbox-rotate-hint { display:none; }
-  .cr-lightbox--auto-rotated .cr-lightbox-fig img { max-width:calc(100dvh - 84px); max-height:calc(100vw - 18px); }
+  .cr-lightbox--auto-rotated .cr-lightbox-fig img { max-width:calc(100dvh - 84px); max-height:calc(100vw - 32px); }
   /* Compact corner control (YouTube-Music style) — an icon in the bottom
      right returns to the half-screen reading view without eating into the
      slide's real estate. */
