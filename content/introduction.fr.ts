@@ -135,6 +135,7 @@ export const introductionFr: Chapter = {
       blocks: [
         { type: 'para', text: "Dans un souci de clarté et de cohérence anatomique, nous adopterons les termes suivants :" },
         { type: 'bullets', items: ["dorsalement, à la place de « postérieurement » lorsque l’orientation corporelle le justifie ;", "ventralement, à la place de « antérieurement » ;", "latéralement, à la place de « extérieurement » ;", "médialement, à la place de « intérieurement » ;", "céphaliquement, à la place de « vers le haut » ;", "caudalement, à la place de « vers le bas » ;", "frontalement, pour décrire une orientation dans le plan frontal ;", "sagittalement, pour décrire une orientation dans le plan sagittal."] },
+        { type: 'figure', src: "/chapter-0/figure-0-3.png", caption: "Terminologie spatiale de l’Atlas", alt: "Schéma des orientations anatomiques céphalique, caudale, dorsale, ventrale, médiale et latérale appliquées au pied.", orientation: 'landscape' },
       ],
     },
     {

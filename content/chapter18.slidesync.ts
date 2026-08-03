@@ -34,6 +34,7 @@ export const chapter18Slides: SyncSlide[] = [
   { src: '/chapter-18/slides/slide-18.png', title: 'Le profil viscéro-émotionnel' },
   { src: '/chapter-18/slides/slide-19.png', title: 'Conseils pratiques : gymnastique périnéale hypopressive' },
   { src: '/chapter-18/slides/slide-20.png', title: 'Zones réflexes ROP : vessie, pelvis et régulation neuro-végétative' },
+  { src: '/chapter-18/slides/slide-21.png', title: 'Centres supérieurs du contrôle neurovégétatif' },
 ]
 
 function withChapter18Titles(titles: string[]): SyncSlide[] {
@@ -61,6 +62,7 @@ export const chapter18SlidesEn = withChapter18Titles([
   'The viscero-emotional profile',
   'Practical advice: hypopressive perineal gymnastics',
   'ROP reflex zones: bladder, pelvis and neurovegetative regulation',
+  'Higher centres of neurovegetative control',
 ])
 
 export const chapter18SlidesDe = withChapter18Titles([
@@ -84,6 +86,7 @@ export const chapter18SlidesDe = withChapter18Titles([
   'Das viszero-emotionale Profil',
   'Praktische Ratschlaege: hypopressive Beckenbodengymnastik',
   'ROP-Reflexzonen: Blase, Becken und neurovegetative Regulation',
+  'Hoehere Zentren der neurovegetativen Kontrolle',
 ])
 
 export const chapter18SlidesEs = withChapter18Titles([
@@ -107,6 +110,7 @@ export const chapter18SlidesEs = withChapter18Titles([
   'El perfil visceroemocional',
   'Consejos practicos: gimnasia perineal hipopresiva',
   'Zonas reflejas ROP: vejiga, pelvis y regulacion neurovegetativa',
+  'Centros superiores del control neurovegetativo',
 ])
 
 export const chapter18SlidesIt = withChapter18Titles([
@@ -130,6 +134,7 @@ export const chapter18SlidesIt = withChapter18Titles([
   'Il profilo viscero-emozionale',
   'Consigli pratici: ginnastica perineale ipopressiva',
   'Zone riflesse ROP: vescica, pelvi e regolazione neurovegetativa',
+  'Centri superiori del controllo neurovegetativo',
 ])
 
 export const chapter18SlideAnchors: SyncAnchor[] = [
@@ -152,5 +157,5 @@ export const chapter18SlideAnchors: SyncAnchor[] = [
   { sectionId: 'pathologies-courantes', blockIndex: 9, slide: 17 },
   { sectionId: 'relations-viscero-emotionnelles', blockIndex: 0, slide: 18 },
   { sectionId: 'conseils', blockIndex: 0, slide: 19 },
-  { sectionId: 'zones-reflexes-podales', blockIndex: -1, slide: 20 },
+  { sectionId: 'zones-reflexes-podales', blockIndex: -1, slide: [20, 21] },
 ]
