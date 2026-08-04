@@ -1,7 +1,7 @@
 // Chapter 13 - slide <-> text synchronisation map for the combined reading
 // experience (/lecture/chapitre-13).
 //
-// Slides 1-20 come from the current synthesis deck. Slides 21-22 retain the
+// Slides 1-19 come from the current synthesis deck. Slides 20-21 retain the
 // existing cartography assets and their established positions in the text.
 
 export type SyncSlide = { src: string; title: string; orientation?: 'portrait' }
@@ -31,7 +31,6 @@ export const chapter13Slides: SyncSlide[] = [
   { src: '/chapter-13/slides/slide-16.png', title: 'Indications fonctionnelles en ROP — principe de prudence' },
   { src: '/chapter-13/slides/slide-17.png', title: 'Relations viscéro-somatiques de la rate' },
   { src: '/chapter-13/slides/slide-18.png', title: 'Relations viscéro-émotionnelles' },
-  { src: '/chapter-13/slides/slide-19.png', title: 'Zones réflexes ROP de la rate' },
   { src: '/chapter-13/slides/slide-20.png', title: 'Synthèse ROP : écoute de la rate' },
   { src: '/chapter-13/cartographie/figure-13-01.png', title: 'Cartographie : articulations costo-vertébrales' },
   { src: '/chapter-13/cartographie/figure-13-03.png', title: 'Cartographie : rate' },
@@ -61,8 +60,7 @@ export const chapter13SlideAnchors: SyncAnchor[] = [
     slide: 18,
     end: { sectionId: 'relations-viscero-emotionnelles', blockIndex: 2 },
   },
-  { sectionId: 'zones-reflexes-podales', blockIndex: 0, slide: 19 },
-  { sectionId: 'zones-reflexes-podales', blockIndex: 1, slide: 20 },
-  { sectionId: 'zones-reflexes-podales', blockIndex: 2, slide: 21 },
-  { sectionId: 'zones-reflexes-podales', blockIndex: 5, slide: 22 },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 1, slide: 19 },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 2, slide: 20 },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 5, slide: 21 },
 ]

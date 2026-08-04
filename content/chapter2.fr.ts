@@ -1,5 +1,5 @@
 // Chapter 2 content — French synchronized reading stream
-// Source: public/chapter-2/Chapter2_ROP_version_revisee.docx
+// Source: public/chapter-2/Chapitre_2_Traitement_ROP_version_publiable_final.docx
 
 import type { Chapter } from './types'
 
@@ -16,25 +16,15 @@ export const chapter2Fr: Chapter = {
           type: 'para',
           text: 'La Réflexothérapie Occipito-Podale (ROP) s’inscrit dans une démarche de soin fonctionnel et intégratif. Le traitement est guidé par l’anamnèse, l’examen clinique, les tests d’écoute et la lecture des zones réflexes. Il vise à solliciter les capacités de régulation et d’adaptation du patient, sans se substituer au diagnostic médical ni à un traitement médical indiqué.',
         },
-        {
-          type: 'note',
-          label: 'Principes directeurs',
-          body: [
-            'Solliciter plutôt que forcer. La pression est fine, précise et non douloureuse.',
-            'Hiérarchiser plutôt qu’appliquer un protocole fixe. Les tests et la situation clinique déterminent les priorités.',
-            'Observer plutôt que présumer. La réponse du patient est suivie dans les heures et les jours qui suivent la séance.',
-            'Réorienter lorsque nécessaire. Toute suspicion de pathologie organique ou de signe d’alarme impose un avis médical.',
-          ],
-        },
       ],
     },
     {
       id: 'technique',
-      title: 'Technique',
+      title: '1. Technique',
       blocks: [
         {
           type: 'sub',
-          text: 'Contact manuel et pression',
+          text: '1.1. Contact manuel et pression',
         },
         {
           type: 'para',
@@ -50,7 +40,7 @@ export const chapter2Fr: Chapter = {
         },
         {
           type: 'sub',
-          text: 'Mécanoréception et information tactile',
+          text: '1.2. Mécanoréception et information tactile',
         },
         {
           type: 'para',
@@ -71,18 +61,11 @@ export const chapter2Fr: Chapter = {
         },
         {
           type: 'para',
-          text: 'Lorsque la couche épidermo-dermique se déforme sous le doigt, ces récepteurs génèrent des influx afférents transmis par les voies de la sensibilité tactile fine. Dans le modèle de la ROP, cette information sensorielle est utilisée comme une sollicitation susceptible de moduler la perception, le tonus neuro-végétatif et la réponse du patient. La théorie du gate control peut contribuer à expliquer une partie de l’effet antalgique immédiat d’une stimulation tactile non douloureuse.',
-        },
-        {
-          type: 'rop',
-          body: [
-            'La force et la trituration du massage réflexe doivent être proscrites. Plus la pression est forte, plus le praticien perçoit ses propres doigts au détriment des repères osseux et des modifications de texture qui guident la recherche des zones réflexes.',
-            'Même bien conduite, une séance constitue une sollicitation pour l’organisme. Elle doit tenir compte de la vitalité du patient et de ses capacités d’adaptation.',
-          ],
+          text: 'Lorsque la couche épidermo-dermique se déforme sous le doigt, ces récepteurs génèrent des influx afférents transmis par les voies de la sensibilité tactile fine. Dans le modèle de la ROP, cette information sensorielle est utilisée comme une sollicitation susceptible de moduler la perception, le tonus neuro-végétatif et la réponse du patient. La théorie du gate control peut contribuer à expliquer une partie de l’effet antalgique immédiat d’une stimulation tactile non douloureuse. (Cf. Réflexothérapie occipito-podale, Elsevier Masson, page à préciser.)',
         },
         {
           type: 'sub',
-          text: 'Les trois temps du massage',
+          text: '1.3. Les trois temps du massage',
         },
         {
           type: 'numbered',
@@ -94,23 +77,17 @@ export const chapter2Fr: Chapter = {
         },
         {
           type: 'para',
-          text: 'La qualité de la réponse dépend de l’état général du patient, de sa vitalité et de ses capacités d’adaptation-compensation, en lien avec la phase du syndrome général d’adaptation dans laquelle il évolue : alarme, adaptation, résistance ou épuisement.',
-        },
-        {
-          type: 'xref',
-          label: 'Voir la référence dans le chapitre 5',
-          text: 'Mécanisme de stress',
-          href: '/lecture/chapitre-5?lang=fr#p-definitions-2',
+          text: 'La qualité de la réponse dépend de l’état général du patient, de sa vitalité et de ses capacités d’adaptation-compensation, en lien avec la phase du syndrome général d’adaptation dans laquelle il évolue : alarme, adaptation, résistance ou épuisement. (Cf. Chapitre 5, Mécanisme de stress.)',
         },
       ],
     },
     {
       id: 'modalites',
-      title: 'Modalités du traitement',
+      title: '2. Modalités du traitement',
       blocks: [
         {
           type: 'sub',
-          text: 'Durée de la séance',
+          text: '2.1. Durée de la séance',
         },
         {
           type: 'para',
@@ -118,57 +95,25 @@ export const chapter2Fr: Chapter = {
         },
         {
           type: 'sub',
-          text: 'Fréquence et cycle initial',
+          text: '2.2. Fréquence et cycle initial',
         },
         {
           type: 'para',
-          text: 'La fréquence des séances ne repose pas sur un délai fixe. Elle est déterminée par l’évolution clinique observée après la première séance :',
-        },
-        {
-          type: 'leadBullets',
-          items: [
-            {
-              label: 'Immédiatement après le traitement',
-              text: 'une détente, un besoin de repos ou certaines réactions végétatives peuvent apparaître.',
-            },
-            {
-              label: 'Dans les 24 à 48 heures',
-              text: 'des réactions transitoires sont possibles.',
-            },
-            {
-              label: 'À J3-J4',
-              text: 'l’évolution permet généralement de décider si l’amélioration est suffisante ou si une deuxième séance est indiquée.',
-            },
-          ],
+          text: 'La fréquence des séances n’obéit pas à un délai fixe. Elle dépend de l’évolution du symptôme principal, du fonctionnement du patient et de sa capacité de récupération après la première séance.',
         },
         {
           type: 'para',
-          text: 'Lorsque le symptôme principal a disparu ou nettement régressé et que le patient a retrouvé son fonctionnement habituel, aucune nouvelle séance n’est nécessaire à court terme. Lorsque la récupération reste incomplète, une deuxième séance peut être proposée à J3-J4. Une troisième séance peut être envisagée quelques jours plus tard si l’évolution le justifie.',
-        },
-        {
-          type: 'note',
-          label: 'Fenêtre d’adaptation après la première séance',
-          body: [
-            'La courbe présentée dans les diapositives représente un modèle issu de l’expérience clinique. Elle doit être progressivement documentée par des mesures standardisées et ne constitue pas une mesure physiologique directe.',
-          ],
-        },
-        {
-          type: 'note',
-          label: 'Comment interpréter le terme « vitalité » ?',
-          body: [
-            'Dans ce chapitre, la vitalité désigne une appréciation clinique et fonctionnelle : niveau d’énergie, fatigabilité, qualité du sommeil, capacité à reprendre les activités, évolution du symptôme principal et ressenti global.',
-            'Elle ne correspond pas à une variable biologique unique. Pour être utile, elle doit être comparée au niveau initial du patient et suivie à l’aide de questions simples et reproductibles.',
-          ],
+          text: 'Une réévaluation est généralement réalisée à J3-J4. Si l’amélioration est suffisante et que le fonctionnement habituel est retrouvé, aucune nouvelle séance n’est nécessaire à court terme. Si la récupération reste incomplète, une deuxième séance peut être proposée.',
         },
         {
           type: 'para',
-          text: 'Dans la majorité des indications fonctionnelles, un cycle initial d’une à trois séances permet d’apprécier la réponse du patient. En l’absence d’amélioration notable après trois séances, le diagnostic fonctionnel, la hiérarchisation et l’indication de la ROP doivent être reconsidérés. Si nécessaire, le patient est orienté vers son médecin. Les affections chroniques peuvent nécessiter un suivi plus prolongé, dont le rythme reste individualisé.',
+          text: 'Dans la majorité des indications fonctionnelles, un cycle initial d’une à trois séances permet d’apprécier la réponse du patient. En l’absence d’amélioration notable après trois séances, le diagnostic fonctionnel, la hiérarchisation et l’indication de la ROP doivent être reconsidérés. Si nécessaire, le patient est orienté vers son médecin. Les affections chroniques peuvent nécessiter un suivi plus prolongé, dont le rythme reste individualisé. Les réactions post-traitement et les critères détaillés de réévaluation sont présentés à la section 9.',
         },
       ],
     },
     {
       id: 'hierarchisation',
-      title: 'Hiérarchisation du traitement',
+      title: '3. Hiérarchisation du traitement',
       blocks: [
         {
           type: 'para',
@@ -178,46 +123,40 @@ export const chapter2Fr: Chapter = {
           type: 'leadBullets',
           items: [
             {
-              label: 'Suites de traumatisme, de chirurgie ou d’infection',
+              label: '1. Suites de traumatisme, de chirurgie ou d’infection.',
               text: 'Lorsque les symptômes sont apparus après un événement clairement identifié, ils gardent un caractère prioritaire. L’anamnèse et l’examen clinique doivent vérifier la cohérence temporelle et fonctionnelle de cette relation.',
             },
             {
-              label: 'Anamnèse et tests d’écoute globale et locale',
+              label: '2. Anamnèse et tests d’écoute globale et locale.',
               text: 'En l’absence d’événement déclencheur évident, l’anamnèse, l’examen clinique et les tests orientent vers la fixation dominante et les adaptations susceptibles d’entretenir les symptômes.',
             },
             {
-              label: 'Dimension psycho-émotionnelle',
+              label: '3. Dimension psycho-émotionnelle.',
               text: 'Certains événements physiques ou émotionnels peuvent influencer le vécu corporel, la perception douloureuse et l’état neuro-végétatif. Cette dimension est recherchée avec prudence, sans interprétation imposée au patient.',
             },
             {
-              label: 'Mécanisme de stress',
-              text: 'Toute fixation locale doit être replacée dans le contexte général du patient, de ses contraintes et de ses capacités d’adaptation.',
+              label: '4. Mécanisme de stress.',
+              text: 'Toute fixation locale doit être replacée dans le contexte général du patient, de ses contraintes et de ses capacités d’adaptation. (Cf. Chapitre 5, Mécanisme de stress.)',
             },
           ],
-        },
-        {
-          type: 'xref',
-          label: 'Voir la référence dans le chapitre 5',
-          text: 'Mécanisme de stress',
-          href: '/lecture/chapitre-5?lang=fr#p-definitions-2',
         },
       ],
     },
     {
       id: 'zones-reflexes',
-      title: 'Zones réflexes occipitales et podales',
+      title: '4. Zones réflexes occipitales et podales',
       blocks: [
         {
           type: 'sub',
-          text: 'Zones réflexes occipitales',
+          text: '4.1. Zones réflexes occipitales',
         },
         {
           type: 'para',
-          text: 'Les zones occipitales constituent un point d’entrée fréquent du traitement. Leur lecture et leur stimulation sont décrites dans les figures correspondantes.',
+          text: 'Les zones occipitales constituent un point d’entrée fréquent du traitement. Leur lecture et leur stimulation sont décrites dans les figures correspondantes. (Figure 3.6.)',
         },
         {
           type: 'sub',
-          text: 'Syndrome général d’adaptation',
+          text: '4.2. Syndrome général d’adaptation',
         },
         {
           type: 'para',
@@ -228,37 +167,37 @@ export const chapter2Fr: Chapter = {
           items: [
             {
               label: 'MRP',
-              text: 'occiput-C1-C2, nerfs trijumeau V, vague X et hypoglosse XII, faux du cerveau et du cervelet, deuxième vertèbre sacrée S2, base et voûte crâniennes.',
+              text: 'occiput-C1-C2, nerfs trijumeau V, vague X et hypoglosse XII, faux du cerveau et du cervelet, deuxième vertèbre sacrée S2, base et voûte crâniennes. (Figure 4.3.)',
             },
             {
               label: 'Circulation du liquide cérébro-spinal dans le modèle ROP',
-              text: 'système veineux, foramen jugulaire, respiration profonde, compression du quatrième ventricule et synchronisation SSB-S2.',
+              text: 'système veineux, foramen jugulaire, respiration profonde, compression du quatrième ventricule et synchronisation SSB-S2. (Figures 3.18 et 3.19 ; se reporter à Réflexothérapie occipito-podale et système neuro-méningé, Elsevier Masson, pages 96-97.)',
             },
             {
               label: 'Centres supérieurs',
-              text: 'diencéphale, tronc cérébral et hypophyse.',
+              text: 'diencéphale, tronc cérébral et hypophyse. (Figures 3.7 et 3.8.)',
             },
             {
               label: 'Nerf vague',
-              text: 'pour le territoire cervico-thoraco-abdominal : foramen magnum, foramen jugulaire, sinus carotidien et hiatus œsophagien.',
+              text: 'pour le territoire cervico-thoraco-abdominal : foramen magnum, foramen jugulaire, sinus carotidien et hiatus œsophagien. (Figures 4.11 et 4.17.)',
             },
             {
               label: 'Parasympathique pelvien',
-              text: 'pour le territoire pelvien et la partie distale du côlon.',
+              text: 'pour le territoire pelvien et la partie distale du côlon. (Figure 4.23.)',
             },
             {
               label: 'Axe sympathique thoracique',
-              text: 'colonne vertébrale, articulations costo-transversaires et chaîne ganglionnaire latéro-vertébrale thoracique.',
+              text: 'colonne vertébrale, articulations costo-transversaires et chaîne ganglionnaire latéro-vertébrale thoracique. (Figures 4.23 et 4.32.)',
             },
             {
               label: 'Plexus prévertébraux',
-              text: '',
+              text: '(Figures 4.17 et 4.22.)',
             },
           ],
         },
         {
           type: 'sub',
-          text: 'Syndrome locorégional',
+          text: '4.3. Syndrome locorégional',
         },
         {
           type: 'para',
@@ -275,7 +214,7 @@ export const chapter2Fr: Chapter = {
         },
         {
           type: 'sub',
-          text: 'Système limbique',
+          text: '4.4. Système limbique',
         },
         {
           type: 'para',
@@ -285,14 +224,14 @@ export const chapter2Fr: Chapter = {
           type: 'bullets',
           items: [
             'Amygdale, hippocampe et insula ;',
-            'Balance cerveau limbique–viscère en dysfonction : écoute-induction, un pouce sur le viscère dominant et l’autre sur la zone réflexe du cerveau limbique.',
+            'Balance cerveau limbique–viscère en dysfonction : écoute-induction, un pouce sur le viscère dominant et l’autre sur la zone réflexe du cerveau limbique. (Figure 1.12.)',
           ],
         },
       ],
     },
     {
       id: 'exemple-clinique',
-      title: 'Exemple clinique : lombo-sciatalgie gauche après un accouchement',
+      title: '5. Exemple clinique : lombo-sciatalgie gauche après un accouchement',
       blocks: [
         {
           type: 'para',
@@ -300,7 +239,7 @@ export const chapter2Fr: Chapter = {
         },
         {
           type: 'sub',
-          text: 'Anamnèse',
+          text: '5.1. Anamnèse',
         },
         {
           type: 'bullets',
@@ -315,7 +254,7 @@ export const chapter2Fr: Chapter = {
         },
         {
           type: 'sub',
-          text: 'Tests',
+          text: '5.2. Tests',
         },
         {
           type: 'bullets',
@@ -329,7 +268,7 @@ export const chapter2Fr: Chapter = {
         },
         {
           type: 'sub',
-          text: 'Interprétation fonctionnelle proposée en ROP',
+          text: '5.3. Interprétation fonctionnelle proposée en ROP',
         },
         {
           type: 'para',
@@ -348,7 +287,7 @@ export const chapter2Fr: Chapter = {
         },
         {
           type: 'sub',
-          text: 'Traitement par la ROP',
+          text: '5.4. Traitement par la ROP',
         },
         {
           type: 'numbered',
@@ -367,7 +306,7 @@ export const chapter2Fr: Chapter = {
     },
     {
       id: 'contre-indications',
-      title: 'Contre-indications et signes d’alarme',
+      title: '6. Contre-indications et signes d’alarme',
       blocks: [
         {
           type: 'para',
@@ -400,7 +339,7 @@ export const chapter2Fr: Chapter = {
     },
     {
       id: 'indications',
-      title: 'Indications',
+      title: '7. Indications',
       blocks: [
         {
           type: 'para',
@@ -426,7 +365,7 @@ export const chapter2Fr: Chapter = {
     },
     {
       id: 'actions',
-      title: 'Effets recherchés et observés',
+      title: '8. Effets recherchés et observés',
       blocks: [
         {
           type: 'para',
@@ -450,11 +389,19 @@ export const chapter2Fr: Chapter = {
     },
     {
       id: 'reactions',
-      title: 'Réactions au traitement et réévaluation',
+      title: '9. Réactions post-traitement et réévaluation',
       blocks: [
         {
+          type: 'figure',
+          src: '/chapter-2/figure-2-1.png',
+          caption: 'Figure 2.1 — Fenêtre d’adaptation après la première séance. Cette courbe représente un modèle issu de l’expérience clinique ; elle doit être progressivement documentée par des mesures standardisées et ne constitue pas une mesure physiologique directe.',
+          alt: 'Fenêtre d’adaptation après la première séance de ROP',
+          orientation: 'landscape',
+          syncHide: true,
+        },
+        {
           type: 'sub',
-          text: 'Réactions immédiates',
+          text: '9.1. Réactions immédiates',
         },
         {
           type: 'para',
@@ -462,7 +409,7 @@ export const chapter2Fr: Chapter = {
         },
         {
           type: 'sub',
-          text: 'Dans les 24 à 48 heures',
+          text: '9.2. Dans les 24 à 48 heures',
         },
         {
           type: 'para',
@@ -470,7 +417,7 @@ export const chapter2Fr: Chapter = {
         },
         {
           type: 'sub',
-          text: 'Dans les jours suivants',
+          text: '9.3. Dans les jours suivants',
         },
         {
           type: 'para',
@@ -478,7 +425,7 @@ export const chapter2Fr: Chapter = {
         },
         {
           type: 'sub',
-          text: 'Point de décision à J3-J4',
+          text: '9.4. Point de décision à J3-J4',
         },
         {
           type: 'para',
@@ -487,40 +434,28 @@ export const chapter2Fr: Chapter = {
         {
           type: 'bullets',
           items: [
-            'Si le symptôme principal a disparu ou nettement régressé et que le fonctionnement habituel est retrouvé, la rémission clinique est considérée comme acquise à ce stade ;',
-            'Si l’amélioration demeure incomplète, une deuxième séance peut être proposée ;',
-            'Si la réponse est absente, atypique ou défavorable, la hiérarchisation et l’indication doivent être reconsidérées.',
+            'si le symptôme principal a disparu ou nettement régressé et que le fonctionnement habituel est retrouvé, la rémission clinique est considérée comme acquise à ce stade ;',
+            'si l’amélioration demeure incomplète, une deuxième séance peut être proposée ;',
+            'si la réponse est absente, atypique ou défavorable, la hiérarchisation et l’indication doivent être reconsidérées.',
           ],
         },
         {
-          type: 'note',
-          label: 'Terminologie',
-          body: [
-            'Dans ce chapitre, le terme « rémission » décrit l’évolution du motif fonctionnel suivi ; il ne signifie pas la guérison d’une éventuelle maladie organique sous-jacente.',
-          ],
+          type: 'para',
+          text: 'Dans ce chapitre, le terme « rémission » décrit l’évolution du motif fonctionnel suivi ; il ne signifie pas la guérison d’une éventuelle maladie organique sous-jacente.',
         },
         {
           type: 'sub',
-          text: 'Réactions inhabituelles',
+          text: '9.5. Réactions inhabituelles',
         },
         {
           type: 'para',
           text: 'Si les réactions sont intenses, persistent au-delà de 72 heures ou s’accompagnent de signes inhabituels ou inquiétants, la situation doit être réévaluée. Le patient est orienté vers son médecin lorsque le contexte le justifie.',
         },
-        {
-          type: 'note',
-          label: 'Participez au retour d’expérience en ROP avec SuiviPatient',
-          body: [
-            'La chronologie décrite dans ce chapitre repose sur l’expérience clinique des praticiens. Pour mieux l’objectiver, de courts questionnaires peuvent être proposés à intervalles réguliers après la séance, notamment à 24-48 heures puis à J3-J4, en comparaison avec l’état initial.',
-            'Les questionnaires portent sur le symptôme principal, la douleur ou la gêne, la vitalité, le sommeil, les fonctions viscérales, les capacités fonctionnelles et les éventuelles réactions post-traitement.',
-            'Les praticiens lecteurs qui souhaitent rejoindre la communauté ROP et utiliser gratuitement l’application SuiviPatient avec leur patientèle sont invités à nous contacter. Cette démarche doit respecter le consentement du patient et la confidentialité des informations recueillies.',
-          ],
-        },
       ],
     },
     {
       id: 'conseils',
-      title: 'Conseils au patient',
+      title: '10. Conseils au patient',
       blocks: [
         {
           type: 'para',
@@ -529,31 +464,19 @@ export const chapter2Fr: Chapter = {
         {
           type: 'bullets',
           items: [
-            'Prévoir un repos relatif et éviter les surcharges physiques le jour de la séance ;',
-            'Maintenir une hydratation suffisante ;',
-            'Adopter une alimentation équilibrée ;',
-            'Conserver une activité physique régulière adaptée aux capacités du moment ;',
-            'Favoriser le sommeil, la récupération et un environnement social soutenant ;',
-            'Rester acteur de sa santé et consulter lorsque des signes nouveaux ou inquiétants apparaissent ;',
-            'Noter l’évolution du symptôme principal, de la douleur, du sommeil, du transit, de la vitalité et des capacités fonctionnelles ;',
-            'Rapporter ces éléments au praticien afin d’objectiver l’effet de la séance et d’ajuster la suite du traitement.',
+            'prévoir un repos relatif et éviter les surcharges physiques le jour de la séance ;',
+            'maintenir une hydratation suffisante ;',
+            'adopter une alimentation équilibrée ;',
+            'conserver une activité physique régulière adaptée aux capacités du moment ;',
+            'favoriser le sommeil, la récupération et un environnement social soutenant ;',
+            'rester acteur de sa santé et consulter lorsque des signes nouveaux ou inquiétants apparaissent ;',
+            'noter l’évolution du symptôme principal, de la douleur, du sommeil, du transit, de la vitalité et des capacités fonctionnelles ;',
+            'rapporter ces éléments au praticien afin d’objectiver l’effet de la séance et d’ajuster la suite du traitement.',
           ],
         },
         {
-          type: 'note',
-          label: 'Synthèse pratique',
-          body: [
-            'Avant la séance : définir le symptôme principal et recueillir un niveau initial simple.',
-            'Immédiatement après : observer la détente et les éventuelles réactions végétatives.',
-            'À 24-48 heures : documenter les réactions transitoires et le début de récupération.',
-            'À J3-J4 : confirmer la rémission ou proposer une deuxième séance si l’amélioration reste incomplète.',
-            'Après trois séances sans amélioration : reconsidérer le diagnostic fonctionnel, la hiérarchisation et l’orientation médicale.',
-          ],
-        },
-        {
-          type: 'lead',
-          label: 'Principe de suivi',
-          text: 'La réponse du patient guide le rythme du traitement : observer, mesurer, réévaluer.',
+          type: 'para',
+          text: 'Principe directeur : observer, mesurer, réévaluer.',
         },
       ],
     },
