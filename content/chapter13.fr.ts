@@ -1,3 +1,4 @@
+// Source: public/chapter-13/Chapitre_13_Rate_version_publiable.docx
 import type { Chapter } from './types'
 
 export const chapter13Fr: Chapter = {
@@ -7,7 +8,7 @@ export const chapter13Fr: Chapter = {
   sections: [
     {
       id: "presentation",
-      title: "Présentation",
+      title: "1. Présentation",
       blocks: [
         {
           type: "para",
@@ -34,7 +35,7 @@ export const chapter13Fr: Chapter = {
     },
     {
       id: "situation",
-      title: "Situation",
+      title: "2. Situation",
       blocks: [
         {
           type: "para",
@@ -48,11 +49,11 @@ export const chapter13Fr: Chapter = {
     },
     {
       id: "anatomie",
-      title: "Anatomie",
+      title: "3. Anatomie",
       blocks: [
         {
           type: "sub",
-          text: "Morphologie externe"
+          text: "3.1. Morphologie externe"
         },
         {
           type: "para",
@@ -73,7 +74,7 @@ export const chapter13Fr: Chapter = {
         },
         {
           type: "sub",
-          text: "Structure du parenchyme splénique"
+          text: "3.2. Structure du parenchyme splénique"
         },
         {
           type: "lead",
@@ -89,7 +90,7 @@ export const chapter13Fr: Chapter = {
         },
         {
           type: "sub",
-          text: "Moyens de fixité"
+          text: "3.3. Moyens de fixité"
         },
         {
           type: "para",
@@ -110,7 +111,7 @@ export const chapter13Fr: Chapter = {
     },
     {
       id: "rapports",
-      title: "Rapports",
+      title: "4. Rapports",
       blocks: [
         {
           type: "bullets",
@@ -126,11 +127,11 @@ export const chapter13Fr: Chapter = {
     },
     {
       id: "vascularisation",
-      title: "Vascularisation",
+      title: "5. Vascularisation",
       blocks: [
         {
           type: "sub",
-          text: "Vascularisation artérielle"
+          text: "5.1. Vascularisation artérielle"
         },
         {
           type: "para",
@@ -142,7 +143,7 @@ export const chapter13Fr: Chapter = {
         },
         {
           type: "sub",
-          text: "Vascularisation veineuse"
+          text: "5.2. Vascularisation veineuse"
         },
         {
           type: "para",
@@ -152,7 +153,7 @@ export const chapter13Fr: Chapter = {
     },
     {
       id: "innervation",
-      title: "Innervation",
+      title: "6. Innervation",
       blocks: [
         {
           type: "para",
@@ -166,7 +167,7 @@ export const chapter13Fr: Chapter = {
     },
     {
       id: "physiologie",
-      title: "Physiologie",
+      title: "7. Physiologie",
       blocks: [
         {
           type: "para",
@@ -196,15 +197,15 @@ export const chapter13Fr: Chapter = {
     },
     {
       id: "pathologies-courantes",
-      title: "Pathologies courantes",
+      title: "8. Pathologies courantes",
       blocks: [
         {
           type: "sub",
-          text: "Diagnostic d’exclusion"
+          text: "8.1. Diagnostic d’exclusion"
         },
         {
           type: "sub",
-          text: "Splénomégalie"
+          text: "8.2. Splénomégalie"
         },
         {
           type: "para",
@@ -245,7 +246,7 @@ export const chapter13Fr: Chapter = {
         },
         {
           type: "sub",
-          text: "Traumatismes"
+          text: "8.3. Traumatismes"
         },
         {
           type: "para",
@@ -264,7 +265,7 @@ export const chapter13Fr: Chapter = {
         },
         {
           type: "sub",
-          text: "Mononucléose"
+          text: "8.4. Mononucléose"
         },
         {
           type: "para",
@@ -291,7 +292,7 @@ export const chapter13Fr: Chapter = {
         },
         {
           type: "sub",
-          text: "Indications : troubles fonctionnels"
+          text: "8.5. Indications : troubles fonctionnels"
         },
         {
           type: "para",
@@ -314,7 +315,7 @@ export const chapter13Fr: Chapter = {
     },
     {
       id: "relations-viscero-somatiques",
-      title: "Relations viscéro-somatiques",
+      title: "9. Relations viscéro-somatiques",
       blocks: [
         {
           type: "para",
@@ -328,7 +329,7 @@ export const chapter13Fr: Chapter = {
     },
     {
       id: "relations-viscero-emotionnelles",
-      title: "Relations viscéro-émotionnelles",
+      title: "10. Relations viscéro-émotionnelles",
       blocks: [
         {
           type: "para",
@@ -352,7 +353,7 @@ export const chapter13Fr: Chapter = {
     },
     {
       id: "conseils",
-      title: "Conseils",
+      title: "11. Conseils",
       blocks: [
         {
           type: "bullets",
@@ -367,11 +368,11 @@ export const chapter13Fr: Chapter = {
     },
     {
       id: "zones-reflexes-podales",
-      title: "Zones réflexes podales",
+      title: "12. Zones réflexes podales",
       blocks: [
         {
           type: "sub",
-          text: "Syndrome général d’adaptation"
+          text: "12.1. Syndrome général d’adaptation"
         },
         {
           type: "bullets",
@@ -382,7 +383,7 @@ export const chapter13Fr: Chapter = {
         },
         {
           type: "sub",
-          text: "Syndrome loco-régional"
+          text: "12.2. Syndrome loco-régional"
         },
         {
           type: "bullets",
@@ -395,7 +396,7 @@ export const chapter13Fr: Chapter = {
         },
         {
           type: "sub",
-          text: "Complément ROP : système limbique"
+          text: "12.3. Complément ROP : système limbique"
         },
         {
           type: "bullets",
