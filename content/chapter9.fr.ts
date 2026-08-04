@@ -1,5 +1,6 @@
 import type { Chapter } from './types'
 
+// Source: public/chapter-9/Chapitre_9_Estomac_version_publiable.docx
 export const chapter9Fr: Chapter = {
   slug: 'chapter-9',
   number: '9',
@@ -7,7 +8,7 @@ export const chapter9Fr: Chapter = {
   sections: [
     {
       id: 'presentation',
-      title: 'Présentation',
+      title: '1. Présentation',
       blocks: [
         { type: 'para', text: 'L\'estomac est le premier segment dilaté du tube digestif.' },
         { type: 'para', text: 'Il fait suite à l\'œsophage.' },
@@ -16,7 +17,7 @@ export const chapter9Fr: Chapter = {
     },
     {
       id: 'situation',
-      title: 'Situation',
+      title: '2. Situation',
       blocks: [
         { type: 'para', text: 'L\'estomac est localisé au niveau de l\'hypochondre gauche et de l\'épigastre, sous l\'hémi-coupole diaphragmatique gauche.' },
         { type: 'para', text: 'Il s\'étend globalement de Th11 à L2 dans l\'étage sus-mésocolique de l\'abdomen.' },
@@ -28,29 +29,29 @@ export const chapter9Fr: Chapter = {
     },
     {
       id: 'anatomie',
-      title: 'Anatomie',
+      title: '3. Anatomie',
       blocks: [
-        { type: 'para', text: 'Globalement, l\'estomac à la forme d\'un J et comprend quatre segments et deux zones sphinctériennes.' },
-        { type: 'sub', text: 'Sphincter inférieur œsophagien (SIO)' },
+        { type: 'para', text: 'Globalement, l\'estomac a la forme d\'un J et comprend quatre segments et deux zones sphinctériennes.' },
+        { type: 'sub', text: '3.1. Sphincter inférieur œsophagien (SIO)' },
         { type: 'para', text: 'Après la traversée du hiatus œsophagien du diaphragme, à hauteur de Th10, l\'œsophage abdominal présente une zone de haute pression fonctionnelle correspondant au SIO.' },
         { type: 'para', text: 'Le SIO n\'est pas une entité anatomique individualisable, mais une entité physiologique se comportant comme un sphincter.' },
         { type: 'para', text: 'Il contribue à la continence de la jonction œso-gastrique.' },
         { type: 'para', text: 'Sa projection est située en arrière et légèrement à gauche du processus xyphoïde.' },
-        { type: 'sub', text: 'Le cardia' },
+        { type: 'sub', text: '3.2. Cardia' },
         { type: 'para', text: 'Le cardia est l\'orifice de jonction entre l\'œsophage distal et l\'estomac.' },
         { type: 'para', text: 'Il est projeté à environ 2 à 4 cm à gauche du processus xyphoïde, en regard du 6e cartilage costal.' },
         { type: 'para', text: 'Il forme avec le fundus l\'incisure cardiale, ou angle de His.' },
-        { type: 'sub', text: 'Grosse tubérosité ou fundus' },
+        { type: 'sub', text: '3.3. Grosse tubérosité ou fundus' },
         { type: 'para', text: 'Le fundus correspond à la partie supérieure de l\'estomac.' },
         { type: 'para', text: 'Il est situé au-dessus du cardia et participe surtout à l\'accommodation gastrique.' },
         { type: 'para', text: 'En pratique radiologique, il contient fréquemment une poche à air visible sur les clichés sans préparation.' },
-        { type: 'sub', text: 'Corps gastrique' },
+        { type: 'sub', text: '3.4. Corps gastrique' },
         { type: 'para', text: 'Le corps gastrique prolonge le fundus vers le bas.' },
         { type: 'para', text: 'C\'est dans cette région que se déroulent l\'essentiel du brassage et du malaxage des aliments grâce à la musculature pariétale.' },
         { type: 'para', text: 'Il comporte deux courbures.' },
-        { type: 'sub', text: 'Grande courbure' },
+        { type: 'sub', text: '3.4.1. Grande courbure' },
         { type: 'para', text: 'La grande courbure suit une ligne latérale allant globalement des 9e et 10e cartilages costaux vers l\'ombilic, situé vers L3.' },
-        { type: 'sub', text: 'Petite courbure' },
+        { type: 'sub', text: '3.4.2. Petite courbure' },
         { type: 'para', text: 'La petite courbure est médiale, entre le cardia et la région antropylorique.' },
         { type: 'para', text: 'Elle est plus profonde que la grande courbure et plus proche du plan vertébral entre Th10 et L1.' },
         { type: 'para', text: 'Le petit omentum s\'y fixe.' },
@@ -60,31 +61,31 @@ export const chapter9Fr: Chapter = {
           'Dans le cadre ROP, une attention particulière est portée à la petite courbure en raison de sa riche innervation, de sa vascularisation et de sa place dans certaines fixations cliniques décrites de l\'estomac.',
           'Elle est aussi une zone classiquement concernée par les ulcérations.',
         ]},
-        { type: 'sub', text: 'Petite tubérosité (fond)' },
+        { type: 'sub', text: '3.5. Petite tubérosité (fond)' },
         { type: 'para', text: 'La petite tubérosité correspond à la partie caudale de l\'estomac.' },
         { type: 'para', text: 'Sa position varie selon le remplissage gastrique et la morphologie des individus.' },
         { type: 'para', text: 'Chez certains sujets longilignes et hypotoniques, sa projection peut être plus basse.' },
-        { type: 'sub', text: 'Antre pylorique' },
+        { type: 'sub', text: '3.6. Antre pylorique' },
         { type: 'para', text: 'L\'antre pylorique est situé entre la partie caudale de l\'estomac et le pylore.' },
         { type: 'para', text: 'Il joue un rôle majeur dans la préparation mécanique de la vidange gastrique et dans certaines régulations neuro-hormonales.' },
-        { type: 'sub', text: 'Pylore' },
+        { type: 'sub', text: '3.7. Pylore' },
         { type: 'para', text: 'Le pylore comprend deux parties.' },
-        { type: 'sub', text: 'Le canal pylorique' },
+        { type: 'sub', text: '3.7.1. Canal pylorique' },
         { type: 'para', text: 'Le canal pylorique est la portion rétrécie qui fait suite à l\'antre.' },
-        { type: 'sub', text: 'Le sphincter pylorique' },
+        { type: 'sub', text: '3.7.2. Sphincter pylorique' },
         { type: 'para', text: 'Le sphincter pylorique est projeté à mi-distance d\'une ligne joignant l\'incisure jugulaire au pubis, soit environ cinq travers de doigts au-dessus de l\'ombilic, vers L1.' },
         { type: 'para', text: 'Il régule la vidange de l\'estomac dans le duodénum.' },
         { type: 'para', text: 'Il alterne des phases d\'ouverture et de résistance au passage, avec un rôle de sélection des particules suffisamment fines et des liquides.' },
         { type: 'para', text: 'Dans le cadre clinique, sa projection peut paraître se déplacer de part et d\'autre de la ligne xypho-pubienne selon son activité.' },
         { type: 'para', text: 'Dans ce même cadre, elle peut sembler plus à droite chez certains sujets stressés.' },
-        { type: 'sub', text: 'L\'incisure angulaire' },
+        { type: 'sub', text: '3.8. Incisure angulaire' },
         { type: 'para', text: 'L\'incisure angulaire correspond à l\'angle formé par la petite courbure et l\'antre pylorique.' },
         { type: 'para', text: 'Elle est située plus crânialement que le pylore.' },
       ],
     },
     {
       id: 'rapports',
-      title: 'Rapports',
+      title: '4. Rapports',
       blocks: [
         { type: 'bullets', items: [
           'Céphaliquement : l\'estomac est en rapport avec le diaphragme, auquel il est relié notamment par le ligament phrénico-gastrique.',
@@ -98,30 +99,30 @@ export const chapter9Fr: Chapter = {
     },
     {
       id: 'vascularisation',
-      title: 'Vascularisation',
+      title: '5. Vascularisation',
       blocks: [
-        { type: 'sub', text: 'Artérielle' },
+        { type: 'sub', text: '5.1. Vascularisation artérielle' },
         { type: 'para', text: 'L\'estomac est vascularisé par des branches du tronc cœliaque, branche collatérale de l\'aorte abdominale située vers Th12.' },
         { type: 'para', text: 'Ces branches comprennent l\'artère splénique, l\'artère gastrique gauche et, via l\'artère hépatique propre issue de l\'artère hépatique commune, l\'artère gastrique droite.' },
         { type: 'para', text: 'Les branches collatérales de ces artères participent aux cercles artériels de la petite et de la grande courbure.' },
-        { type: 'sub', text: 'Veineuse' },
+        { type: 'sub', text: '5.2. Vascularisation veineuse' },
         { type: 'para', text: 'Les veines gastriques, globalement satellites des artères, se drainent vers le système porte.' },
       ],
     },
     {
       id: 'innervation',
-      title: 'Innervation',
+      title: '6. Innervation',
       blocks: [
-        { type: 'sub', text: 'Parasympathique' },
+        { type: 'sub', text: '6.1. Innervation parasympathique' },
         { type: 'para', text: 'Les nerfs vagues droit et gauche jouent un rôle majeur dans la fonction mécanique et sécrétoire de l\'estomac.' },
         { type: 'para', text: 'Ils stimulent notamment la sécrétion gastrique et participent à la régulation de la motricité gastrique.' },
-        { type: 'sub', text: 'Sympathique' },
+        { type: 'sub', text: '6.2. Innervation sympathique' },
         { type: 'para', text: 'L\'innervation sympathique provient notamment du grand nerf splanchnique issu des niveaux thoraciques moyens.' },
         { type: 'para', text: 'Elle a globalement une action antagoniste de l\'activité vagale sur la motricité et la sécrétion.' },
         { type: 'rop', body: [
           'Dans le cadre ROP, une dysfonction de l\'estomac peut s\'accompagner de tensions projetées dans la région thoracique haute, en particulier autour de Th6.',
         ]},
-        { type: 'sub', text: 'Pacemaker stomacal' },
+        { type: 'sub', text: '6.3. Pacemaker gastrique' },
         { type: 'para', text: 'L\'estomac possède une activité rythmique propre qui participe aux contractions de base.' },
         { type: 'para', text: 'Cette activité est en lien avec des cellules interstitielles spécialisées, souvent désignées comme cellules de Cajal, situées dans la région jonctionnelle entre fundus et corps, près de la grande courbure.' },
         { type: 'para', text: 'Les ondes lentes se propagent ensuite vers l\'antre pylorique et le pylore selon un rythme de l\'ordre de quelques dizaines de secondes.' },
@@ -130,39 +131,39 @@ export const chapter9Fr: Chapter = {
     },
     {
       id: 'physiologie',
-      title: 'Physiologie',
+      title: '7. Physiologie',
       blocks: [
         { type: 'para', text: 'L\'estomac assure des fonctions mécaniques et neuro-hormonales dans la digestion des aliments.' },
-        { type: 'sub', text: 'Fonction mécanique' },
+        { type: 'sub', text: '7.1. Fonction mécanique' },
         { type: 'para', text: 'Sous l\'action conjointe des voies vagales et de la distension induite par les aliments, la paroi gastrique se relâche activement pour le remplissage.' },
         { type: 'para', text: 'Puis, grâce à la tunique musculaire du corps gastrique, les aliments sont dissociés, brassés, malaxés et homogénéisés avant d\'être mélangés aux sucs gastriques.' },
-        { type: 'sub', text: 'Fonction neuro-hormonale' },
+        { type: 'sub', text: '7.2. Fonction sécrétoire et neuro-hormonale' },
         { type: 'para', text: 'La distension gastrique, la présence des aliments et les stimulations vagales déclenchent la production d\'un suc gastrique sécrété par la muqueuse, dans un ordre de grandeur d\'environ 1,5 litre par 24 heures.' },
-        { type: 'sub', text: 'Acide chlorhydrique (HCl)' },
+        { type: 'sub', text: '7.2.1. Acide chlorhydrique (HCl)' },
         { type: 'para', text: 'L\'acide chlorhydrique est sécrété par les cellules pariétales de la muqueuse gastrique.' },
         { type: 'para', text: 'Il contribue à l\'acidité intragastrique, à l\'effet antibactérien du contenu gastrique et à certaines étapes de l\'absorption du fer.' },
-        { type: 'sub', text: 'Pompe à protons gastrique' },
+        { type: 'sub', text: '7.2.2. Pompe à protons gastrique' },
         { type: 'para', text: 'La pompe à protons permet la sécrétion des ions H+ par l\'épithélium gastrique.' },
         { type: 'para', text: 'Elle est responsable du pH très bas du contenu gastrique, créant un milieu favorable à l\'activation de la pepsine pour la digestion des protéines.' },
-        { type: 'sub', text: 'Mucus' },
+        { type: 'sub', text: '7.2.3. Mucus' },
         { type: 'para', text: 'Le mucus protège la muqueuse gastrique contre l\'acidité luminale et facilite le glissement du bol alimentaire le long de la paroi.' },
-        { type: 'sub', text: 'Pepsinogène' },
+        { type: 'sub', text: '7.2.4. Pepsinogène' },
         { type: 'para', text: 'Le pepsinogène est le précurseur de la pepsine impliquée dans la digestion des protéines.' },
-        { type: 'sub', text: 'Enzymes' },
+        { type: 'sub', text: '7.2.5. Enzymes' },
         { type: 'para', text: 'Plusieurs enzymes sont sécrétées par la muqueuse gastrique.' },
-        { type: 'sub', text: 'Gastrine' },
+        { type: 'sub', text: '7.2.6. Gastrine' },
         { type: 'para', text: 'Les cellules G, concentrées dans la région antro-pylorique, sécrètent la gastrine sous l\'influence notamment des stimulations vagales.' },
         { type: 'para', text: 'La gastrine est libérée dans la circulation sanguine.' },
         { type: 'para', text: 'Elle stimule la sécrétion acide et participe à l\'augmentation de l\'activité contractile gastrique, notamment au niveau de l\'antre pylorique.' },
-        { type: 'sub', text: 'Vidange gastrique' },
+        { type: 'sub', text: '7.3. Vidange gastrique' },
         { type: 'para', text: 'La contraction antrique, combinée au relâchement pylorique, permet le passage fractionné du contenu gastrique vers le duodénum.' },
         { type: 'para', text: 'Cette vidange est régulée par plusieurs signaux duodénaux et hormonaux, notamment la sécrétine, qui contribue à freiner la vidange lorsque l\'acidité du contenu duodénal est élevée et favorise la sécrétion pancréatique de bicarbonates.' },
         { type: 'para', text: 'La régulation de la vidange dépend donc de la capacité de traitement du duodénum et de l\'intestin grêle.' },
-        { type: 'sub', text: 'Phase liquidienne' },
+        { type: 'sub', text: '7.3.1. Phase liquidienne' },
         { type: 'para', text: 'La phase liquidienne est généralement rapide, souvent en moins de 30 minutes.' },
-        { type: 'sub', text: 'Phase solide digestive' },
+        { type: 'sub', text: '7.3.2. Phase solide digestive' },
         { type: 'para', text: 'La phase solide digestive a une durée variable selon la nature des aliments ingérés.' },
-        { type: 'sub', text: 'Phase solide indigestive' },
+        { type: 'sub', text: '7.3.3. Phase solide indigestive' },
         { type: 'para', text: 'En période tardive, les particules plus difficiles à digérer sont davantage brassées jusqu\'à atteindre une taille compatible avec le passage pylorique.' },
         { type: 'rop', body: [
           'L\'action conjointe, mécanique et neuro-hormonale, conduit le cadre ROP à accorder une place prioritaire au nerf vague dans l\'action réflexe, selon le principe de « priorité au nerf ».',
@@ -171,7 +172,7 @@ export const chapter9Fr: Chapter = {
     },
     {
       id: 'pathologies-courantes',
-      title: 'Pathologies courantes',
+      title: '8. Pathologies courantes',
       blocks: [
         { type: 'para', text: 'Le terme « gastrite » recouvre des réalités cliniques différentes, allant d\'un trouble fonctionnel à une inflammation objectivable, et ne doit pas être utilisé sans précision.' },
         { type: 'para', text: 'Il n\'existe pas de corrélation simple entre l\'intensité de la douleur et la gravité d\'une atteinte gastrique.' },
@@ -182,7 +183,7 @@ export const chapter9Fr: Chapter = {
         { type: 'para', text: 'Un symptôme isolé ne fait pas le diagnostic.' },
         { type: 'para', text: 'Celui-ci repose sur l\'examen clinique et, si besoin, sur des examens complémentaires.' },
         { type: 'para', text: 'Il est indispensable de reconnaître les signes de gravité.' },
-        { type: 'sub', text: 'Diagnostic d\'exclusion' },
+        { type: 'sub', text: '8.1. Diagnostic d\'exclusion' },
         { type: 'bullets', items: [
           'Amaigrissement rapide non expliqué.',
           'Présence d\'un ganglion de Troisier rétro-claviculaire gauche.',
@@ -193,19 +194,19 @@ export const chapter9Fr: Chapter = {
           'Douleurs nocturnes ou matinales.',
         ]},
         { type: 'sub', text: 'Indications : troubles fonctionnels' },
-        { type: 'sub', text: 'Gastralgie simple' },
+        { type: 'sub', text: '9.1. Gastralgie simple' },
         { type: 'para', text: 'La gastralgie simple désigne une douleur stomacale souvent associée au stress.' },
         { type: 'para', text: 'Elle peut s\'accompagner de douleurs épigastriques, digestion difficile, lenteur digestive, ballonnements, aigreurs, renvois, dyspepsie ou dorsalgie.' },
-        { type: 'sub', text: 'Gastroparésie ou estomac atone' },
+        { type: 'sub', text: '9.2. Gastroparésie ou estomac atone' },
         { type: 'para', text: 'La gastroparésie correspond à un retard de vidange gastrique.' },
         { type: 'para', text: 'Dans certains cas, elle peut être liée à une atteinte de la commande vagale.' },
         { type: 'para', text: 'La stagnation prolongée des aliments peut favoriser une prolifération microbienne et une mauvaise tolérance digestive.' },
         { type: 'para', text: 'Elle peut être aggravée par certains médicaments, notamment anti-inflammatoires et antibiotiques.' },
         { type: 'para', text: 'Les symptômes ressemblent à ceux d\'une gastralgie simple avec sensation d\'estomac plein, pesanteur abdominale et mauvaise tolérance à la compression vestimentaire.' },
-        { type: 'sub', text: 'Gastrite' },
+        { type: 'sub', text: '9.3. Gastrite' },
         { type: 'para', text: 'La gastrite est une atteinte inflammatoire de la muqueuse gastrique.' },
         { type: 'para', text: 'Selon les cas, elle peut s\'accompagner d\'œdème, d\'altérations épithéliales et de modifications glandulaires.' },
-        { type: 'sub', text: 'Étiologie' },
+        { type: 'sub', text: '9.3.1. Étiologie' },
         { type: 'bullets', items: [
           'Éthylisme.',
           'Prise prolongée d\'anti-inflammatoires, y compris aspirine.',
@@ -215,14 +216,14 @@ export const chapter9Fr: Chapter = {
           'Maladies auto-immunes.',
           'Avitaminoses ou carences nutritionnelles.',
         ]},
-        { type: 'sub', text: 'Reflux gastro-œsophagien, hernie hiatale' },
+        { type: 'sub', text: '9.4. Reflux gastro-œsophagien et hernie hiatale' },
         {
           type: 'xref',
           label: 'Voir la référence dans le chapitre 8',
           text: 'Diaphragme : reflux gastro-œsophagien et hernie hiatale',
-          href: '/lecture/chapitre-8?lang=fr&xrefBack=%2Flecture%2Fchapitre-9%3Flang%3Dfr%23p-pathologies-courantes-27&xrefBackLabel=Retour%20au%20chapitre%209#p-pathologies-courantes-diagnostic-d-exclusion-indications-troubles-fonctionnels-0',
+          href: '/lecture/chapitre-8?lang=fr&xrefBack=%2Flecture%2Fchapitre-9%3Flang%3Dfr%23p-indications-troubles-fonctionnels-15&xrefBackLabel=Retour%20au%20chapitre%209#p-pathologies-courantes-diagnostic-d-exclusion-indications-troubles-fonctionnels-0',
         },
-        { type: 'sub', text: 'Carences martiales' },
+        { type: 'sub', text: '9.5. Carences martiales' },
         { type: 'para', text: 'Les carences martiales correspondent à une carence en fer.' },
         { type: 'para', text: 'L\'acidité gastrique favorise la mise en solution et l\'absorption du fer alimentaire.' },
         { type: 'para', text: 'Une hypochlorhydrie, parfois rencontrée dans certaines gastrites ou gastroparésies, peut compromettre cette assimilation.' },
@@ -239,7 +240,7 @@ export const chapter9Fr: Chapter = {
         { type: 'rop', body: [
           'En dehors des contre-indications, le traitement ROP de l\'anémie ferriprive vise notamment l\'estomac pour l\'assimilation du fer alimentaire, ainsi que le foie et la rate pour leur rôle dans le stockage et la gestion du fer.',
         ]},
-        { type: 'sub', text: 'Pylorospasme' },
+        { type: 'sub', text: '9.6. Pylorospasme' },
         { type: 'para', text: 'Le pylorospasme doit être distingué de la sténose du pylore, qui relève d\'une prise en charge chirurgicale.' },
         { type: 'para', text: 'Il correspond à une difficulté de relâchement fonctionnel du pylore, susceptible d\'entraver la vidange gastrique.' },
         { type: 'para', text: 'Chez le nourrisson, il peut s\'accompagner de vomissements ou régurgitations post-prandiales, d\'inconfort, de pleurs et d\'une faim persistante.' },
@@ -249,7 +250,7 @@ export const chapter9Fr: Chapter = {
     },
     {
       id: 'relations-viscero-somatiques',
-      title: 'Relations viscéro-somatiques',
+      title: '10. Relations viscéro-somatiques',
       blocks: [
         { type: 'bullets', items: [
           'Dorsalgie costo-vertébrale des 6e et 7e vertèbres thoraciques gauches.',
@@ -261,7 +262,7 @@ export const chapter9Fr: Chapter = {
     },
     {
       id: 'relations-viscero-emotionnelles',
-      title: 'Relations viscéro-émotionnelles',
+      title: '11. Relations viscéro-émotionnelles',
       blocks: [
         { type: 'para', text: 'Dans le cadre de la lecture viscéro-émotionnelle ROP, l\'estomac est associé au registre du « moi social », du paraître et de la place occupée dans le groupe, la famille, le travail ou la hiérarchie.' },
         { type: 'para', text: 'Cette lecture concerne notamment les enjeux de reconnaissance, de valorisation et de relation au père.' },
@@ -269,13 +270,13 @@ export const chapter9Fr: Chapter = {
         { type: 'para', text: 'Dans ce cadre symbolique, les troubles fonctionnels de l\'estomac sont interprétés comme la possible inscription tissulaire de conflits émotionnels répétés, sans que cela constitue un mécanisme démontré de l\'ulcération.' },
         { type: 'para', text: 'L\'hypervalorisation est décrite comme une surestimation de soi, avec sentiment de puissance, mauvaise tolérance à la critique, agressivité, colère impulsive, peur de l\'échec ou fuite en avant.' },
         { type: 'para', text: 'La personne « estomac » est alors décrite comme tournée vers la séduction, la réussite et la démonstration de puissance.' },
-        { type: 'para', text: 'L\'expression « Pour qui il se prend, celui-là : » résume cette polarité dans le langage du modèle.' },
+        { type: 'para', text: 'L\'expression « Pour qui il se prend, celui-là ? » résume cette polarité dans le langage du modèle.' },
         { type: 'para', text: 'L\'hypovalorisation se traduit, dans ce même cadre, par un manque de confiance en soi, la résignation, le repli, la dépréciation de soi, des frustrations difficilement verbalisées, des rancœurs non exprimées ou des situations répétées de subordination.' },
       ],
     },
     {
       id: 'conseils',
-      title: 'Conseils',
+      title: '12. Conseils',
       blocks: [
         { type: 'para', text: 'L\'acidité gastrique est nécessaire à la digestion.' },
         { type: 'para', text: 'L\'usage répété d\'aliments ou de boissons censés « calmer » les brûlures, comme le lait, peut donner un soulagement transitoire sans traiter la cause sous-jacente.' },
@@ -288,9 +289,9 @@ export const chapter9Fr: Chapter = {
     },
     {
       id: 'zones-reflexes-podales',
-      title: 'Zones réflexes podales',
+      title: '13. Zones réflexes podales',
       blocks: [
-        { type: 'sub', text: 'Syndrome général d\'adaptation' },
+        { type: 'sub', text: '13.1. Syndrome général d\'adaptation' },
         {
           type: 'xref',
           label: 'Voir la référence dans le chapitre 2',
@@ -303,7 +304,7 @@ export const chapter9Fr: Chapter = {
           'Plexus prévertébral.',
         ]},
         { type: 'figure', src: '/chapter-9/cartographie/figure-9-06.png', caption: 'Photo — Articulations costo-vertébrales', alt: 'Repère podal des articulations costo-vertébrales entre les deux pouces', orientation: 'landscape' },
-        { type: 'sub', text: 'Syndrome loco-régional' },
+        { type: 'sub', text: '13.2. Syndrome loco-régional' },
         {
           type: 'xref',
           label: 'Voir la référence dans le chapitre 2',
@@ -319,7 +320,7 @@ export const chapter9Fr: Chapter = {
         ]},
         { type: 'figure', src: '/chapter-9/cartographie/figure-9-04.png', caption: 'Photo — Hiatus œsophagien et nerfs vagues droit et gauche', alt: 'Repère podal du hiatus œsophagien avec les nerfs vagues droit et gauche', orientation: 'portrait' },
         { type: 'figure', src: '/chapter-9/cartographie/figure-9-08.png', caption: 'Photo — Petite courbure de l’estomac', alt: 'Repère podal de la petite courbure de l’estomac entre cardia et pylore', orientation: 'portrait' },
-        { type: 'sub', text: 'Système limbique' },
+        { type: 'sub', text: '13.3. Système limbique' },
         {
           type: 'xref',
           label: 'Voir la référence dans le chapitre 2',
@@ -335,4 +336,20 @@ export const chapter9Fr: Chapter = {
     label: 'Diapositives',
     description: 'Synthèse visuelle du chapitre 9.',
   },
+}
+
+const chapter9Pathologies = chapter9Fr.sections.find(
+  (section) => section.id === 'pathologies-courantes',
+)
+
+if (chapter9Pathologies) {
+  const indicationBlocks = chapter9Pathologies.blocks.splice(11)
+  if (indicationBlocks[0]?.type === 'sub') indicationBlocks.shift()
+
+  const pathologiesIndex = chapter9Fr.sections.indexOf(chapter9Pathologies)
+  chapter9Fr.sections.splice(pathologiesIndex + 1, 0, {
+    id: 'indications-troubles-fonctionnels',
+    title: '9. Indications : troubles fonctionnels',
+    blocks: indicationBlocks,
+  })
 }
