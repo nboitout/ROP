@@ -534,3 +534,126 @@ export const chapter17Fr: Chapter = {
     }
   ]
 }
+
+// Source: public/chapter-17/Chapitre_17_Cavite_pelvienne_version_publiable.docx
+// The publishable revision formalizes the chapter hierarchy. Keep the existing
+// content blocks intact so the carefully positioned slide anchors remain stable.
+const section = (id: string) => chapter17Fr.sections.find((entry) => entry.id === id)!
+const renameSubs = (sectionId: string, labels: Record<string, string>) => {
+  for (const block of section(sectionId).blocks) {
+    if (block.type === 'sub' && labels[block.text]) block.text = labels[block.text]
+  }
+}
+const prefixItems = (sectionId: string, labels: Record<string, string>) => {
+  for (const block of section(sectionId).blocks) {
+    if (block.type !== 'bullets') continue
+    block.items = block.items.map((item) => {
+      if (typeof item !== 'string') return item
+      const match = Object.keys(labels).find((label) => item.startsWith(label))
+      return match ? `${labels[match]}${item.slice(match.length)}` : item
+    })
+  }
+}
+
+chapter17Fr.sections.forEach((entry, index) => {
+  const number = index + 1
+  if (!entry.title.startsWith(`${number}. `)) entry.title = `${number}. ${entry.title}`
+})
+
+prefixItems('situation', {
+  'L’espace pelvi-sous-péritonéal:': '2.1. Espace pelvi-sous-péritonéal:',
+  'Il est divisé par des cloisons:': '2.2. Cloisons et loges pelviennes:',
+  'Le péritoine repose': '2.3. Culs-de-sac péritonéaux — le péritoine repose',
+  'Unité vertébro-coxo-pelvienne:': '2.4. Unité vertébro-coxo-pelvienne:',
+  'Orientation du pelvis:': '2.5. Orientation et délestage osseux du pelvis:',
+})
+
+renameSubs('anatomie', {
+  'Grand foramen ischiatique': '3.1. Grand foramen ischiatique',
+  'Muscle piriforme': '3.1.1. Muscle piriforme',
+  'Petit foramen ischiatique': '3.2. Petit foramen ischiatique',
+  Pathologie: '3.4.1. Conséquences possibles des rétractions',
+  Périnée: '3.5. Périnée',
+})
+prefixItems('anatomie', {
+  'Foramen obturé:': '3.3. Foramen obturé:',
+  'Membrane obturatrice:': '3.3.1. Membrane obturatrice:',
+  'Relation vessie-hanche:': '3.3.2. Relation vessie–hanche:',
+  'Canal obturateur:': '3.3.3. Canal obturateur:',
+  'Ligaments sacroépineux et sacrotubéral:': '3.4. Ligaments sacroépineux et sacrotubéral:',
+  'Triangle antérieur uro-génital:': '3.5.1. Triangle antérieur uro-génital:',
+  'Triangle postérieur anal:': '3.5.2. Triangle postérieur anal:',
+  'Muscles du périnée:': '3.5.3. Muscles du périnée:',
+  'Fonctions du périnée:': '3.5.4. Fonctions du périnée:',
+})
+
+renameSubs('vascularisation', {
+  Artérielle: '4.1. Vascularisation artérielle',
+  Veineuse: '4.2. Vascularisation veineuse',
+})
+
+renameSubs('innervation', {
+  'Innervation somatique': '5.1. Innervation somatique',
+  Symptômes: '5.1.5. Plexus coccygien — symptômes',
+  'Innervation autonome': '5.2. Innervation autonome',
+  'Centres supérieurs neuro-végétatifs sous corticaux': '5.3. Centres supérieurs neuro-végétatifs',
+})
+prefixItems('innervation', {
+  'Plexus sacré L5 à S3:': '5.1.1. Plexus sacré L5 à S3:',
+  'Gouttière ischio-trochantérienne:': '5.1.2. Gouttière ischio-trochantérienne:',
+  'Plexus pudendal S2-S3-S4:': '5.1.3. Plexus pudendal S2-S3-S4:',
+  'Nerf pudendal:': '5.1.4. Nerf pudendal:',
+  'Plexus coccygien S4-S5:': '5.1.5. Plexus coccygien S4-S5:',
+  'Sympathique:': '5.2.1. Sympathique:',
+  'Parasympathique pelvien:': '5.2.2. Parasympathique pelvien:',
+  'Plexus hypogastrique inférieur:': '5.2.3. Plexus hypogastrique inférieur:',
+})
+
+const innervation = section('innervation')
+const physiologyBlocks = innervation.blocks.splice(13)
+physiologyBlocks.shift()
+const physiology = {
+  id: 'physiologie',
+  title: '6. Physiologie : mécanisme de délestage et d’absorption des pressions',
+  blocks: physiologyBlocks,
+}
+chapter17Fr.sections.splice(chapter17Fr.sections.indexOf(innervation) + 1, 0, physiology)
+section('pathologies-courantes').title = '7. Pathologies courantes'
+section('zones-reflexes-podales').title = '8. Zones réflexes podales'
+renameSubs('physiologie', {
+  'Effet turgor et pressions intra-cavitaires': '6.1. Effet turgor et pressions intracavitaires',
+})
+prefixItems('physiologie', {
+  'Aspiration thoracique et aimantation thoraco-diaphragmatique:': '6.2. Aspiration thoracique et aimantation thoraco-diaphragmatique:',
+  'Orientation de la cavité pelvienne:': '6.3. Orientation de la cavité pelvienne:',
+  'Forme en dôme des viscères pelviens:': '6.4. Forme en dôme des viscères pelviens:',
+  'Contractilité et élasticité du périnée:': '6.5. Contractilité et élasticité du périnée:',
+  'L’équilibre des trois diaphragmes:': '6.6. Équilibre des trois diaphragmes:',
+})
+const examples = physiology.blocks.find((block) => block.type === 'para' && block.text.startsWith('Pour illustrer'))
+if (examples?.type === 'para') examples.text = '6.7. Exemples cliniques illustrant le rôle des pressions'
+
+renameSubs('pathologies-courantes', {
+  'Syndrome pudendal': '7.2. Syndrome pudendal',
+  Symptômes: '7.2.1. Symptômes',
+  Diagnostic: '7.2.3. Diagnostic',
+  Evolution: '7.2.4. Évolution',
+  Traitement: '7.2.5. Traitement médical',
+  'Traitement ROP': '7.2.6. Prise en charge en ROP',
+})
+let causes = 0
+for (const block of section('pathologies-courantes').blocks) {
+  if (block.type === 'sub' && block.text === 'Causes') block.text = ++causes === 1 ? '7.1.1. Causes' : '7.2.2. Causes'
+}
+prefixItems('pathologies-courantes', { 'Ptoses:': '7.1. Ptoses pelviennes:' })
+
+renameSubs('zones-reflexes-podales', {
+  'Syndrome général d’adaptation': '8.1. Syndrome général d’adaptation',
+  'Syndrome loco-régional': '8.2. Syndrome loco-régional',
+  'Cavité pelvienne': '8.2.1. Cavité pelvienne',
+  'Plexus coccygien': '8.2.2. Plexus coccygien',
+  'Dure-mère spinale': '8.2.4. Dure-mère spinale',
+})
+prefixItems('zones-reflexes-podales', {
+  'Ligaments sacrotubéral et sacroépineux;': '8.2.3. Ligaments sacrotubéral et sacroépineux;',
+})
