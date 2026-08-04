@@ -1,5 +1,6 @@
 import type { Chapter } from './types'
 
+// Source: public/chapter-15/Chapitre_15_Colon_et_rectum_version_publiable.docx
 export const chapter15Fr: Chapter = {
   "slug": "chapter-15",
   "number": "15",
@@ -875,4 +876,97 @@ export const chapter15Fr: Chapter = {
       ]
     }
   ]
+}
+
+const chapter15Section = (id: string) => chapter15Fr.sections.find((section) => section.id === id)
+
+const chapter15Titles: Record<string, string> = {
+  presentation: '1. Présentation',
+  situation: '2. Situation',
+  anatomie: '3. Anatomie',
+  rapports: '4. Rapports',
+  vascularisation: '5. Vascularisation',
+  innervation: '6. Innervation',
+  physiologie: '7. Physiologie',
+  'pathologies-courantes': '8. Pathologies courantes',
+  'relations-viscero-somatiques': '10. Relations viscéro-somatiques',
+  'relations-viscero-emotionnelles': '11. Relations viscéro-émotionnelles',
+  conseils: '12. Conseils',
+}
+
+for (const [id, title] of Object.entries(chapter15Titles)) {
+  const section = chapter15Section(id)
+  if (section) section.title = title
+}
+
+const chapter15Subtitles: Record<string, Record<string, string>> = {
+  anatomie: {
+    Caecum: '3.1. Cæcum',
+    'Jonction iléo-caecale': '3.1.1. Jonction iléo-cæcale',
+    'Appendice vermiforme: (vermis veut dire ver)': '3.1.2. Appendice vermiforme',
+  },
+  vascularisation: {
+    Artérielle: '5.1. Vascularisation artérielle',
+    Veineuse: '5.2. Vascularisation veineuse',
+    Conséquences: '5.3. Conséquences cliniques possibles',
+  },
+  innervation: {
+    Côlon: '6.1. Côlon',
+    'Rectum et anus': '6.2. Rectum et anus',
+  },
+  physiologie: {
+    Côlon: '7.1. Côlon',
+    'Rectum et anus': '7.2. Rectum et anus',
+  },
+  'pathologies-courantes': {
+    'Signes d’alerte: quand consulter sans attendre': '8.1. Signes d’alerte : quand consulter sans attendre',
+    'Pathologies organiques sévères': '8.2. Pathologies organiques sévères',
+  },
+}
+
+for (const [sectionId, replacements] of Object.entries(chapter15Subtitles)) {
+  const section = chapter15Section(sectionId)
+  if (!section) continue
+  for (const block of section.blocks) {
+    if (block.type === 'sub' && replacements[block.text]) block.text = replacements[block.text]
+  }
+}
+
+const chapter15Pathologies = chapter15Section('pathologies-courantes')
+
+if (chapter15Pathologies) {
+  const indicationBlocks = chapter15Pathologies.blocks.splice(5)
+  if (indicationBlocks[0]?.type === 'sub') indicationBlocks.shift()
+
+  const indicationSubtitles: Record<string, string> = {
+    'Étiologie environnementale': '9.1. Facteurs environnementaux',
+    'Quand le réflexe de défécation s’inhibe': '9.2. Inhibition du réflexe de défécation',
+    'Constipation proximale ou distale': '9.3. Constipation proximale ou distale',
+    'Constipation proximale: la partie droite du côlon': '9.3.1. Constipation proximale : partie droite du côlon',
+    'Gastroparésie et réflexe gastro-colique': '9.3.2. Gastroparésie et réflexe gastro-colique',
+    'Le contrôle systémique du transit': '9.3.3. Contrôle systémique du transit',
+    'Constipation distale: la partie gauche du côlon': '9.3.4. Constipation distale : partie gauche du côlon',
+    'Épreinte et ténesme: deux sensations différentes': '9.4. Épreinte et ténesme',
+    'Complications mécaniques possibles': '9.5. Complications mécaniques possibles',
+    'Distinguer les grands types de colopathies': '9.6. Principaux types de colopathies',
+    'Le cercle vicieux de la colopathie fonctionnelle': '9.7. Cercle vicieux de la colopathie fonctionnelle',
+  }
+
+  for (const block of indicationBlocks) {
+    if (block.type === 'sub' && indicationSubtitles[block.text]) block.text = indicationSubtitles[block.text]
+  }
+
+  const existingPathologiesIndex = chapter15Fr.sections.indexOf(chapter15Pathologies)
+  chapter15Fr.sections.splice(existingPathologiesIndex, 1)
+  const physiologyIndex = chapter15Fr.sections.findIndex((section) => section.id === 'physiologie')
+  chapter15Fr.sections.splice(
+    physiologyIndex + 1,
+    0,
+    chapter15Pathologies,
+    {
+      id: 'indications-troubles-fonctionnels',
+      title: '9. Indications : troubles fonctionnels',
+      blocks: indicationBlocks,
+    },
+  )
 }
