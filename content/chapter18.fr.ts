@@ -1,5 +1,7 @@
 import type { Chapter } from './types'
 
+// Source: public/chapter-18/Chapitre_18_Vessie_version_publiable.docx
+
 export const chapter18Fr: Chapter = {
   "slug": "chapter-18",
   "number": "18",
@@ -721,3 +723,99 @@ export const chapter18Fr: Chapter = {
     }
   ]
 }
+
+// The publishable revision formalizes the hierarchy while retaining the
+// established content blocks used by the synchronized slide deck.
+const chapter18Section = (id: string) => chapter18Fr.sections.find((entry) => entry.id === id)!
+const renameChapter18Subs = (sectionId: string, labels: Record<string, string>) => {
+  for (const block of chapter18Section(sectionId).blocks) {
+    if (block.type === 'sub' && labels[block.text]) block.text = labels[block.text]
+  }
+}
+
+chapter18Fr.sections.forEach((entry, index) => {
+  entry.title = `${index + 1}. ${entry.title}`
+})
+
+renameChapter18Subs('situation', {
+  'chez la femme': '2.1. Chez la femme',
+  'chez l’homme': '2.2. Chez l’homme',
+})
+
+renameChapter18Subs('anatomie', {
+  'Paroi externe': '3.1.1. Paroi externe',
+  'Paroi moyenne': '3.1.2. Paroi moyenne : muscle détrusor',
+  'Paroi interne': '3.1.3. Paroi interne',
+  'Trigone de Lieutaud': '3.2. Trigone de Lieutaud',
+  'Col de la vessie': '3.3. Col de la vessie',
+  'La région cervico-trigonale': '3.4. Région cervico-trigonale',
+  'Moyen de fixité': '3.5. Moyens de fixité',
+  'Système de suspenseur': '3.5.1. Système de suspension',
+  'Système de soutènement': '3.5.2. Système de soutènement',
+})
+chapter18Section('anatomie').blocks.unshift({ type: 'sub', text: '3.1. Parois de la vessie' })
+
+renameChapter18Subs('rapports', {
+  'Chez la femme': '4.1. Chez la femme',
+  'Chez l’homme': '4.2. Chez l’homme',
+})
+renameChapter18Subs('vascularisation', {
+  Artérielle: '5.1. Vascularisation artérielle',
+  Veineuse: '5.2. Vascularisation veineuse',
+})
+renameChapter18Subs('innervation', {
+  'Sphincter strié': '6.1. Innervation somatique : sphincter strié',
+  'Sphincter lisse du détrusor': '6.2. Innervation autonome : sphincter lisse et détrusor',
+  'Contrôle cortical du système nerveux somatique': '6.3. Contrôle cortical',
+  'Centres sous-corticaux': '6.4. Centres sous-corticaux',
+})
+renameChapter18Subs('physiologie', {
+  Remplissage: '7.1. Remplissage',
+  'Occlusion cervico-urétrale': '7.2. Occlusion cervico-urétrale',
+  'Sphincter lisse': '7.2.1. Sphincter lisse',
+  'Sphincter strié': '7.2.2. Sphincter strié',
+  'Phase prémictionnelle': '7.3. Phase prémictionnelle',
+  Miction: '7.4. Miction',
+  'Fin de la miction': '7.5. Fin de la miction',
+  'Mécanisme des pressions intra-cavitaires': '7.6. Mécanisme des pressions intra-cavitaires',
+  'Enceinte manométrique pelvienne': '7.7. Enceinte manométrique pelvienne',
+})
+
+renameChapter18Subs('pathologies-courantes', {
+  'Trouble de la miction': '8.1. Troubles de la miction',
+  'Mécanisme lésionnel': '8.1.2. Incontinence urinaire d’effort',
+  'Diagnostic d’exclusion': '8.2. Diagnostic d’exclusion',
+})
+const pathologyBlocks = chapter18Section('pathologies-courantes').blocks
+const urgency = pathologyBlocks[1]
+if (urgency?.type === 'bullets' && typeof urgency.items[0] === 'string') {
+  urgency.items[0] = `8.1.1. Fuite précédée d’un besoin : urgenturie et hyperactivité vésicale — ${urgency.items[0]}`
+}
+const effort = pathologyBlocks[3]
+if (effort?.type === 'bullets') {
+  effort.items.unshift('C’est une fuite urinaire qui survient lors d’un effort, de la toux, d’un éternuement, d’un port de charge ou d’une activité physique. Les contractions musculaires abdominales l’emportent alors sur les forces occlusales du sphincter vésical et du plancher pelvien.')
+}
+const neurological = pathologyBlocks[6]
+if (neurological?.type === 'bullets') {
+  const index = neurological.items.findIndex((item) => typeof item === 'string' && item.toLowerCase().startsWith('incontinence non précédée'))
+  if (index >= 0 && typeof neurological.items[index] === 'string') neurological.items[index] = `8.1.3. Vessies neurologiques — ${neurological.items[index]}`
+}
+
+const indicationsBlocks = pathologyBlocks.splice(11)
+const indicationsHeading = indicationsBlocks.shift()
+if (indicationsHeading?.type !== 'sub') throw new Error('Chapter 18 indications heading is missing')
+chapter18Fr.sections.splice(chapter18Fr.sections.indexOf(chapter18Section('pathologies-courantes')) + 1, 0, {
+  id: 'indications-troubles-fonctionnels',
+  title: '9. Indications : troubles fonctionnels',
+  blocks: indicationsBlocks,
+})
+
+chapter18Section('relations-viscero-somatiques').title = '10. Relations viscéro-somatiques'
+chapter18Section('relations-viscero-emotionnelles').title = '11. Relations viscéro-émotionnelles'
+chapter18Section('conseils').title = '12. Conseils'
+chapter18Section('zones-reflexes-podales').title = '13. Zones réflexes podales'
+renameChapter18Subs('zones-reflexes-podales', {
+  'Syndrome général d’adaptation': '13.1. Syndrome général d’adaptation',
+  'Syndrome loco-régional': '13.2. Syndrome loco-régional',
+  'Système limbique': '13.3. Système limbique',
+})
