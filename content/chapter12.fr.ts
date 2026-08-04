@@ -1,3 +1,4 @@
+// Source: public/chapter-12/Chapitre_12_Pancreas_version_publiable.docx
 import type { Chapter } from './types'
 
 export const chapter12Fr: Chapter = {
@@ -7,7 +8,7 @@ export const chapter12Fr: Chapter = {
   "sections": [
     {
       "id": "presentation",
-      "title": "Présentation",
+      "title": "1. Présentation",
       "blocks": [
         {
           "type": "para",
@@ -29,7 +30,7 @@ export const chapter12Fr: Chapter = {
     },
     {
       "id": "situation",
-      "title": "Situation",
+      "title": "2. Situation",
       "blocks": [
         {
           "type": "para",
@@ -59,11 +60,11 @@ export const chapter12Fr: Chapter = {
     },
     {
       "id": "anatomie",
-      "title": "Anatomie",
+      "title": "3. Anatomie",
       "blocks": [
         {
           "type": "sub",
-          "text": "Tête du pancréas"
+          "text": "3.1. Tête du pancréas"
         },
         {
           "type": "para",
@@ -83,7 +84,7 @@ export const chapter12Fr: Chapter = {
         },
         {
           "type": "sub",
-          "text": "Col du pancréas"
+          "text": "3.2. Col du pancréas"
         },
         {
           "type": "para",
@@ -99,7 +100,7 @@ export const chapter12Fr: Chapter = {
         },
         {
           "type": "sub",
-          "text": "Corps du pancréas"
+          "text": "3.3. Corps du pancréas"
         },
         {
           "type": "para",
@@ -115,7 +116,7 @@ export const chapter12Fr: Chapter = {
         },
         {
           "type": "sub",
-          "text": "Queue du pancréas"
+          "text": "3.4. Queue du pancréas"
         },
         {
           "type": "para",
@@ -127,7 +128,7 @@ export const chapter12Fr: Chapter = {
         },
         {
           "type": "sub",
-          "text": "Canal pancréatique principal (ou canal de Wirsung)"
+          "text": "3.5.1. Canal pancréatique principal (canal de Wirsung)"
         },
         {
           "type": "para",
@@ -147,7 +148,7 @@ export const chapter12Fr: Chapter = {
         },
         {
           "type": "sub",
-          "text": "Canal pancréatique accessoire de Santorini"
+          "text": "3.5.2. Canal pancréatique accessoire (canal de Santorini)"
         },
         {
           "type": "para",
@@ -157,11 +158,11 @@ export const chapter12Fr: Chapter = {
     },
     {
       "id": "moyens-de-fixite",
-      "title": "Moyens de fixité",
+      "title": "3.6. Moyens de fixité",
       "blocks": [
         {
           "type": "sub",
-          "text": "Face dorsale du pancréas"
+          "text": "3.6.1. Face dorsale du pancréas"
         },
         {
           "type": "para",
@@ -169,7 +170,7 @@ export const chapter12Fr: Chapter = {
         },
         {
           "type": "sub",
-          "text": "Face ventrale du pancréas"
+          "text": "3.6.2. Face ventrale du pancréas"
         },
         {
           "type": "para",
@@ -181,7 +182,7 @@ export const chapter12Fr: Chapter = {
         },
         {
           "type": "sub",
-          "text": "Tête du pancréas"
+          "text": "3.6.3. Tête du pancréas"
         },
         {
           "type": "para",
@@ -189,7 +190,7 @@ export const chapter12Fr: Chapter = {
         },
         {
           "type": "sub",
-          "text": "Effet turgor et pressions intracavitaires"
+          "text": "3.6.4. Effet turgor et pressions intracavitaires"
         },
         {
           "type": "xref",
@@ -201,11 +202,11 @@ export const chapter12Fr: Chapter = {
     },
     {
       "id": "rapports",
-      "title": "Rapports",
+      "title": "4. Rapports",
       "blocks": [
         {
           "type": "sub",
-          "text": "Tête du pancréas"
+          "text": "4.1. Tête du pancréas"
         },
         {
           "type": "para",
@@ -213,7 +214,7 @@ export const chapter12Fr: Chapter = {
         },
         {
           "type": "sub",
-          "text": "Col du pancréas"
+          "text": "4.2. Col du pancréas"
         },
         {
           "type": "para",
@@ -221,7 +222,7 @@ export const chapter12Fr: Chapter = {
         },
         {
           "type": "sub",
-          "text": "Corps du pancréas"
+          "text": "4.3. Corps du pancréas"
         },
         {
           "type": "para",
@@ -229,7 +230,7 @@ export const chapter12Fr: Chapter = {
         },
         {
           "type": "sub",
-          "text": "Queue du pancréas"
+          "text": "4.4. Queue du pancréas"
         },
         {
           "type": "para",
@@ -239,7 +240,7 @@ export const chapter12Fr: Chapter = {
     },
     {
       "id": "vascularisation",
-      "title": "Vascularisation",
+      "title": "5. Vascularisation",
       "blocks": [
         {
           "type": "para",
@@ -255,7 +256,7 @@ export const chapter12Fr: Chapter = {
         },
         {
           "type": "sub",
-          "text": "Artérielle"
+          "text": "5.1. Vascularisation artérielle"
         },
         {
           "type": "para",
@@ -267,7 +268,7 @@ export const chapter12Fr: Chapter = {
         },
         {
           "type": "sub",
-          "text": "Artère splénique"
+          "text": "5.1.1. Artère splénique"
         },
         {
           "type": "para",
@@ -283,7 +284,7 @@ export const chapter12Fr: Chapter = {
         },
         {
           "type": "sub",
-          "text": "Veineuse"
+          "text": "5.2. Vascularisation veineuse"
         },
         {
           "type": "para",
@@ -293,7 +294,7 @@ export const chapter12Fr: Chapter = {
     },
     {
       "id": "innervation",
-      "title": "Innervation",
+      "title": "6. Innervation",
       "blocks": [
         {
           "type": "para",
@@ -301,7 +302,7 @@ export const chapter12Fr: Chapter = {
         },
         {
           "type": "sub",
-          "text": "Nerf vague X"
+          "text": "6.1. Nerf vague X"
         },
         {
           "type": "para",
@@ -309,7 +310,7 @@ export const chapter12Fr: Chapter = {
         },
         {
           "type": "sub",
-          "text": "Système sympathique"
+          "text": "6.2. Système sympathique"
         },
         {
           "type": "para",
@@ -317,7 +318,7 @@ export const chapter12Fr: Chapter = {
         },
         {
           "type": "sub",
-          "text": "Plexus prévertébral"
+          "text": "6.3. Plexus prévertébral"
         },
         {
           "type": "para",
@@ -340,11 +341,11 @@ export const chapter12Fr: Chapter = {
     },
     {
       "id": "physiologie",
-      "title": "Physiologie",
+      "title": "7. Physiologie",
       "blocks": [
         {
           "type": "sub",
-          "text": "Pancréas exocrine"
+          "text": "7.1. Pancréas exocrine"
         },
         {
           "type": "para",
@@ -364,7 +365,7 @@ export const chapter12Fr: Chapter = {
         },
         {
           "type": "sub",
-          "text": "Enzymes principales"
+          "text": "7.1.1. Enzymes principales"
         },
         {
           "type": "bullets",
@@ -395,7 +396,7 @@ export const chapter12Fr: Chapter = {
     },
     {
       "id": "interet-en-rop-2",
-      "title": "Intérêt en R.O.P.",
+      "title": "7.2. Pancréas endocrine",
       "blocks": [
         {
           "type": "rop",
@@ -449,7 +450,7 @@ export const chapter12Fr: Chapter = {
     },
     {
       "id": "interet-en-rop-3",
-      "title": "Intérêt en R.O.P.",
+      "title": "8. Segmentation fonctionnelle du pancréas en ROP",
       "blocks": [
         {
           "type": "rop",
@@ -473,7 +474,7 @@ export const chapter12Fr: Chapter = {
     },
     {
       "id": "pathologies-courantes",
-      "title": "Pathologies courantes",
+      "title": "9. Pathologies courantes",
       "blocks": [
         {
           "type": "para",
@@ -489,7 +490,7 @@ export const chapter12Fr: Chapter = {
         },
         {
           "type": "sub",
-          "text": "Diagnostics d'exclusion"
+          "text": "9.1. Diagnostic d’exclusion"
         },
         {
           "type": "para",
@@ -512,7 +513,7 @@ export const chapter12Fr: Chapter = {
         },
         {
           "type": "sub",
-          "text": "Diabète"
+          "text": "9.2. Diabète"
         },
         {
           "type": "para",
@@ -524,7 +525,7 @@ export const chapter12Fr: Chapter = {
         },
         {
           "type": "sub",
-          "text": "Diabète sucre : 2 types"
+          "text": "9.2.1. Diabète sucré"
         },
         {
           "type": "bullets",
@@ -535,7 +536,7 @@ export const chapter12Fr: Chapter = {
         },
         {
           "type": "sub",
-          "text": "Diabète gestationnel"
+          "text": "9.2.2. Diabète gestationnel"
         },
         {
           "type": "para",
@@ -555,7 +556,7 @@ export const chapter12Fr: Chapter = {
         },
         {
           "type": "sub",
-          "text": "Symptômes de la mère"
+          "text": "9.2.2.1. Manifestations et risques maternels"
         },
         {
           "type": "para",
@@ -563,7 +564,7 @@ export const chapter12Fr: Chapter = {
         },
         {
           "type": "sub",
-          "text": "Symptômes du bébé"
+          "text": "9.2.2.2. Manifestations et risques fœtaux et néonatals"
         },
         {
           "type": "para",
@@ -571,7 +572,7 @@ export const chapter12Fr: Chapter = {
         },
         {
           "type": "sub",
-          "text": "Complications du diabète"
+          "text": "9.3. Complications du diabète"
         },
         {
           "type": "para",
@@ -579,7 +580,7 @@ export const chapter12Fr: Chapter = {
         },
         {
           "type": "sub",
-          "text": "Neuropathies diabétiques"
+          "text": "9.3.1. Neuropathies diabétiques"
         },
         {
           "type": "para",
@@ -611,7 +612,7 @@ export const chapter12Fr: Chapter = {
         },
         {
           "type": "sub",
-          "text": "Pathologies cardio-vasculaires"
+          "text": "9.3.2. Pathologies cardiovasculaires"
         },
         {
           "type": "para",
@@ -623,7 +624,7 @@ export const chapter12Fr: Chapter = {
         },
         {
           "type": "sub",
-          "text": "Retinopathie"
+          "text": "9.3.3. Rétinopathie"
         },
         {
           "type": "para",
@@ -631,7 +632,7 @@ export const chapter12Fr: Chapter = {
         },
         {
           "type": "sub",
-          "text": "Nephropathie"
+          "text": "9.3.4. Néphropathie"
         },
         {
           "type": "para",
@@ -639,7 +640,7 @@ export const chapter12Fr: Chapter = {
         },
         {
           "type": "sub",
-          "text": "Arthralgies"
+          "text": "9.3.5. Arthralgies"
         },
         {
           "type": "para",
@@ -655,7 +656,7 @@ export const chapter12Fr: Chapter = {
         },
         {
           "type": "sub",
-          "text": "Pancreatite"
+          "text": "9.4. Pancréatite"
         },
         {
           "type": "para",
@@ -675,7 +676,7 @@ export const chapter12Fr: Chapter = {
         },
         {
           "type": "sub",
-          "text": "Cancer"
+          "text": "9.5. Cancer"
         },
         {
           "type": "para",
@@ -705,7 +706,7 @@ export const chapter12Fr: Chapter = {
     },
     {
       "id": "relations-viscero-emotionnelles",
-      "title": "Relations viscéro-émotionnelles",
+      "title": "12. Relations viscéro-émotionnelles",
       "blocks": [
         {
           "type": "para",
@@ -727,7 +728,7 @@ export const chapter12Fr: Chapter = {
     },
     {
       "id": "indications",
-      "title": "Indications : troubles fonctionnels",
+      "title": "10. Indications : troubles fonctionnels",
       "blocks": [
         {
           "type": "para",
@@ -758,11 +759,11 @@ export const chapter12Fr: Chapter = {
     },
     {
       "id": "zones-reflexes-podales",
-      "title": "Zones réflexes podales",
+      "title": "13. Zones réflexes podales",
       "blocks": [
         {
           "type": "sub",
-          "text": "Syndrome général d'adaptation"
+          "text": "13.1. Syndrome général d’adaptation"
         },
         {
           "type": "bullets",
@@ -780,7 +781,7 @@ export const chapter12Fr: Chapter = {
         },
         {
           "type": "sub",
-          "text": "Syndrome loco-régional"
+          "text": "13.2. Syndrome locorégional"
         },
         {
           "type": "xref",
@@ -790,7 +791,7 @@ export const chapter12Fr: Chapter = {
         },
         {
           "type": "sub",
-          "text": "Pancréas"
+          "text": "13.2.1. Pancréas"
         },
         {
           "type": "bullets",
@@ -804,7 +805,7 @@ export const chapter12Fr: Chapter = {
         },
         {
           "type": "sub",
-          "text": "Système limbique"
+          "text": "13.3. Système limbique"
         },
         {
           "type": "bullets",
@@ -816,7 +817,7 @@ export const chapter12Fr: Chapter = {
     },
     {
       "id": "relations-viscero-somatiques",
-      "title": "Relations viscéro-somatiques",
+      "title": "11. Relations viscéro-somatiques",
       "blocks": [
         {
           "type": "bullets",
@@ -883,4 +884,27 @@ appendAfterBlock(
   "zones-reflexes-podales",
   (block) => block.type === "bullets" && block.items.some((item) => normalizedText(item).includes("tete du pancreas")),
   chapter12ReflexFigureGroups.pancreas,
+)
+
+const chapter12SectionOrder = [
+  "presentation",
+  "situation",
+  "anatomie",
+  "moyens-de-fixite",
+  "rapports",
+  "vascularisation",
+  "innervation",
+  "interet-en-rop",
+  "physiologie",
+  "interet-en-rop-2",
+  "interet-en-rop-3",
+  "pathologies-courantes",
+  "indications",
+  "relations-viscero-somatiques",
+  "relations-viscero-emotionnelles",
+  "zones-reflexes-podales",
+]
+
+chapter12Fr.sections.sort(
+  (left, right) => chapter12SectionOrder.indexOf(left.id) - chapter12SectionOrder.indexOf(right.id),
 )
