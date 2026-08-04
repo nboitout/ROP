@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { ADMIN_SESSION_COOKIE, markInternalTraffic } from '@/lib/internalTraffic'
 
-const ONE_DAY = 60 * 60 * 24
+const ONE_WEEK = 60 * 60 * 24 * 7
 
 export async function POST(req: NextRequest): Promise<NextResponse> {
   const body = (await req.json()) as { password?: string }
@@ -20,7 +20,7 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
     httpOnly: true,
     secure: process.env.NODE_ENV === 'production',
     sameSite: 'lax',
-    maxAge: ONE_DAY,
+    maxAge: ONE_WEEK,
     path: '/',
   })
   markInternalTraffic(response)
