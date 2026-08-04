@@ -5,7 +5,12 @@
 // existing cartography assets and their established positions in the text.
 
 export type SyncSlide = { src: string; title: string; orientation?: 'portrait' }
-export type SyncAnchor = { sectionId: string; blockIndex: number; slide: number | number[]; gapBefore?: 'half' }
+export type SyncAnchorPoint = { sectionId: string; blockIndex: number; itemIndex?: number }
+export type SyncAnchor = SyncAnchorPoint & {
+  slide: number | number[]
+  gapBefore?: 'half'
+  end?: SyncAnchorPoint
+}
 
 export const chapter13Slides: SyncSlide[] = [
   { src: '/chapter-13/slides/slide-01.png', title: 'Chapitre 13 : la rate' },
@@ -50,7 +55,12 @@ export const chapter13SlideAnchors: SyncAnchor[] = [
   { sectionId: 'pathologies-courantes', blockIndex: 12, slide: 15 },
   { sectionId: 'pathologies-courantes', blockIndex: 17, slide: 16 },
   { sectionId: 'relations-viscero-somatiques', blockIndex: 0, slide: 17 },
-  { sectionId: 'relations-viscero-emotionnelles', blockIndex: 0, slide: 18 },
+  {
+    sectionId: 'relations-viscero-emotionnelles',
+    blockIndex: 0,
+    slide: 18,
+    end: { sectionId: 'relations-viscero-emotionnelles', blockIndex: 2 },
+  },
   { sectionId: 'zones-reflexes-podales', blockIndex: 0, slide: 19 },
   { sectionId: 'zones-reflexes-podales', blockIndex: 1, slide: 20 },
   { sectionId: 'zones-reflexes-podales', blockIndex: 2, slide: 21 },

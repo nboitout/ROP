@@ -932,6 +932,7 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, h
   function hasSectionPageBreak(sectionId: string) {
     if (chapter.slug === 'chapter-15' && sectionId === 'anatomie') return false
     if (chapter.slug === 'chapter-14' && lang === 'fr' && sectionId === 'anatomie') return false
+    if (chapter.slug === 'chapter-13' && (sectionId === 'anatomie' || sectionId === 'zones-reflexes-podales')) return false
     if (chapter.slug === 'chapter-5-rework' && sectionId === 'zones-reflexes-podales') return false
     return PAGE_BREAK_BEFORE.has(sectionId)
   }
