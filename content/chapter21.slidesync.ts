@@ -23,8 +23,8 @@ export const chapter21Slides: SyncSlide[] = [
 export const chapter21SlideAnchors: SyncAnchor[] = [
   { sectionId: 'presentation', blockIndex: -1, slide: 1 },
   { sectionId: 'situation', blockIndex: -1, slide: 2 },
-  { sectionId: 'anatomie', blockIndex: 0, slide: 3 },
-  { sectionId: 'anatomie', blockIndex: 1, slide: 4 },
+  { sectionId: 'anatomie', blockIndex: -1, slide: 3 },
+  { sectionId: 'anatomie', blockIndex: 7, slide: 4 },
   { sectionId: 'vascularisation', blockIndex: 0, slide: 5 },
   { sectionId: 'innervation', blockIndex: -1, slide: 6 },
   { sectionId: 'physiologie', blockIndex: -1, slide: 7 },
