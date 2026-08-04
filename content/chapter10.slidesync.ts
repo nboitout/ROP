@@ -44,7 +44,7 @@ export const chapter10SlideAnchors: SyncAnchor[] = [
   { sectionId: 'physiologie', blockIndex: 0, slide: 9 },
   { sectionId: 'physiologie', blockIndex: 8, slide: 10 },
   { sectionId: 'pathologies-courantes', blockIndex: 0, slide: 11 },
-  { sectionId: 'pathologies-courantes', blockIndex: 18, slide: 12 },
+  { sectionId: 'indications-troubles-fonctionnels', blockIndex: 1, slide: 12 },
   { sectionId: 'relations-viscero-somatiques', blockIndex: 0, slide: 13 },
   { sectionId: 'conseils', blockIndex: 0, slide: 14 },
   { sectionId: 'zones-reflexes-podales', blockIndex: -1, slide: 13 },

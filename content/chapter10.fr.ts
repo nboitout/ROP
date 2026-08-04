@@ -1,3 +1,4 @@
+// Source: public/chapter-10/Chapitre_10_Duodenum_version_publiable.docx
 import type { Chapter } from './types'
 
 export const chapter10Fr: Chapter = {
@@ -7,7 +8,7 @@ export const chapter10Fr: Chapter = {
   sections: [
     {
       id: "presentation",
-      title: "Présentation",
+      title: "1. Présentation",
       blocks: [
         {
           type: "para",
@@ -21,7 +22,7 @@ export const chapter10Fr: Chapter = {
     },
     {
       id: "situation",
-      title: "Situation",
+      title: "2. Situation",
       blocks: [
         {
           type: "para",
@@ -43,7 +44,7 @@ export const chapter10Fr: Chapter = {
     },
     {
       id: "anatomie-figure-10-1",
-      title: "Anatomie",
+      title: "3. Anatomie",
       blocks: [
         {
           type: "para",
@@ -55,7 +56,7 @@ export const chapter10Fr: Chapter = {
         },
         {
           type: "sub",
-          text: "D1 ou duodénum bulbo-pylorique"
+          text: "3.1. D1 ou duodénum bulbo-pylorique"
         },
         {
           type: "para",
@@ -79,7 +80,7 @@ export const chapter10Fr: Chapter = {
         },
         {
           type: "sub",
-          text: "D2 ou duodénum pancréatico-biliaire"
+          text: "3.2. D2 ou duodénum pancréatico-biliaire"
         },
         {
           type: "para",
@@ -115,7 +116,7 @@ export const chapter10Fr: Chapter = {
         },
         {
           type: "sub",
-          text: "D3 ou duodénum vasculaire"
+          text: "3.3. D3 ou duodénum vasculaire"
         },
         {
           type: "para",
@@ -127,7 +128,7 @@ export const chapter10Fr: Chapter = {
         },
         {
           type: "sub",
-          text: "D4 ou duodénum jéjunal"
+          text: "3.4. D4 ou duodénum jéjunal"
         },
         {
           type: "para",
@@ -139,7 +140,7 @@ export const chapter10Fr: Chapter = {
         },
         {
           type: "sub",
-          text: "Jonction duodéno-jéjunale"
+          text: "3.5. Jonction duodéno-jéjunale"
         },
         {
           type: "para",
@@ -151,7 +152,7 @@ export const chapter10Fr: Chapter = {
         },
         {
           type: "sub",
-          text: "Muscle de Treitz"
+          text: "3.6. Muscle de Treitz"
         },
         {
           type: "para",
@@ -169,7 +170,7 @@ export const chapter10Fr: Chapter = {
     },
     {
       id: "rapports",
-      title: "Rapports",
+      title: "4. Rapports",
       blocks: [
         {
           type: "para",
@@ -201,7 +202,7 @@ export const chapter10Fr: Chapter = {
         },
         {
           type: "sub",
-          text: "Quadrilatère de Rogié"
+          text: "4.1. Quadrilatère de Rogié"
         },
         {
           type: "para",
@@ -223,7 +224,7 @@ export const chapter10Fr: Chapter = {
     },
     {
       id: "vascularisation",
-      title: "Vascularisation",
+      title: "5. Vascularisation",
       blocks: [
         {
           type: "lead",
@@ -239,7 +240,7 @@ export const chapter10Fr: Chapter = {
     },
     {
       id: "innervation",
-      title: "Innervation",
+      title: "6. Innervation",
       blocks: [
         {
           type: "para",
@@ -253,11 +254,11 @@ export const chapter10Fr: Chapter = {
     },
     {
       id: "physiologie",
-      title: "Physiologie",
+      title: "7. Physiologie",
       blocks: [
         {
           type: "lead",
-          label: "Fonction digestive",
+          label: "7.1. Fonction digestive et neutralisation",
           text: "le duodénum participe à la digestion et à l’absorption initiale de plusieurs nutriments."
         },
         {
@@ -270,12 +271,12 @@ export const chapter10Fr: Chapter = {
         },
         {
           type: "lead",
-          label: "Motricité",
+          label: "7.2. Motricité",
           text: "le duodénum présente une motricité régulière, coordonnée avec les phases digestives, permettant la progression et le brassage du chyme vers le jéjunum."
         },
         {
           type: "lead",
-          label: "Sécrétion",
+          label: "7.3. Sécrétions digestives et protection muqueuse",
           text: "il reçoit sur 24 heures un volume important de contenu digestif et de sécrétions gastriques, biliaires et pancréatiques ; les ordres de grandeur varient selon les sources."
         },
         {
@@ -300,7 +301,7 @@ export const chapter10Fr: Chapter = {
         },
         {
           type: "lead",
-          label: "Fonction hormonale",
+          label: "7.4. Régulation hormonale",
           text: "la sécrétine contribue à la régulation antiacide et stimule la sécrétion pancréatique bicarbonatée."
         },
         {
@@ -309,14 +310,14 @@ export const chapter10Fr: Chapter = {
         },
         {
           type: "lead",
-          label: "Absorption",
+          label: "7.5. Absorption",
           text: "le duodénum contribue notamment à l’absorption du fer, du calcium et de certains micronutriments ; cette absorption se poursuit ensuite dans le reste de l’intestin grêle."
         }
       ]
     },
     {
       id: "pathologies-courantes",
-      title: "Pathologies courantes",
+      title: "8. Pathologies courantes",
       blocks: [
         {
           type: "para",
@@ -328,7 +329,7 @@ export const chapter10Fr: Chapter = {
         },
         {
           type: "sub",
-          text: "Diagnostics d’exclusion"
+          text: "8.1. Diagnostic d’exclusion"
         },
         {
           type: "para",
@@ -364,7 +365,7 @@ export const chapter10Fr: Chapter = {
         },
         {
           type: "sub",
-          text: "Complications"
+          text: "8.2. Complications"
         },
         {
           type: "para",
@@ -410,7 +411,7 @@ export const chapter10Fr: Chapter = {
     },
     {
       id: "relations-viscero-somatiques",
-      title: "Relations viscéro-somatiques",
+      title: "10. Relations viscéro-somatiques",
       blocks: [
         {
           type: "para",
@@ -420,7 +421,7 @@ export const chapter10Fr: Chapter = {
     },
     {
       id: "relations-viscero-emotionnelles",
-      title: "Relations viscéro-émotionnelles",
+      title: "11. Relations viscéro-émotionnelles",
       blocks: [
         {
           type: "para",
@@ -435,7 +436,7 @@ export const chapter10Fr: Chapter = {
     },
     {
       id: "conseils",
-      title: "Conseils",
+      title: "12. Conseils",
       blocks: [
         {
           type: "para",
@@ -453,11 +454,11 @@ export const chapter10Fr: Chapter = {
     },
     {
       id: "zones-reflexes-podales",
-      title: "Zones réflexes podales",
+      title: "13. Zones réflexes podales",
       blocks: [
         {
           type: "sub",
-          text: "Syndrome général d’adaptation"
+          text: "13.1. Syndrome général d’adaptation"
         },
         {
           type: "para",
@@ -469,7 +470,7 @@ export const chapter10Fr: Chapter = {
         { type: "figure", src: "/chapter-10/figure-10-articulations-costo-vertebrales.png", caption: "Photo : Articulations costo-vertébrales", alt: "Repère podal des articulations costo-vertébrales entre les deux pouces", orientation: "landscape" },
         {
           type: "sub",
-          text: "Syndrome loco-régional"
+          text: "13.2. Syndrome locorégional"
         },
         {
           type: "para",
@@ -501,4 +502,20 @@ export const chapter10Fr: Chapter = {
     label: "Diapositives",
     description: "Synthèse visuelle du chapitre 10."
   }
+}
+
+const chapter10Pathologies = chapter10Fr.sections.find(
+  (section) => section.id === "pathologies-courantes",
+)
+
+if (chapter10Pathologies) {
+  const indicationBlocks = chapter10Pathologies.blocks.splice(16)
+  if (indicationBlocks[0]?.type === "sub") indicationBlocks.shift()
+
+  const pathologiesIndex = chapter10Fr.sections.indexOf(chapter10Pathologies)
+  chapter10Fr.sections.splice(pathologiesIndex + 1, 0, {
+    id: "indications-troubles-fonctionnels",
+    title: "9. Indications : troubles fonctionnels",
+    blocks: indicationBlocks,
+  })
 }
