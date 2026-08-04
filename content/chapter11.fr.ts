@@ -1,3 +1,4 @@
+// Source: public/chapter-11/Chapitre_11_Foie_et_voies_biliaires_version_publiable.docx
 import type { Chapter } from './types'
 
 export const chapter11Fr: Chapter = {
@@ -7,7 +8,7 @@ export const chapter11Fr: Chapter = {
   "sections": [
     {
       "id": "presentation",
-      "title": "Présentation",
+      "title": "1. Présentation",
       "blocks": [
         {
           "type": "para",
@@ -76,7 +77,7 @@ export const chapter11Fr: Chapter = {
     },
     {
       "id": "situation",
-      "title": "Situation",
+      "title": "2. Situation",
       "blocks": [
         {
           "type": "para",
@@ -94,11 +95,11 @@ export const chapter11Fr: Chapter = {
     },
     {
       "id": "anatomie",
-      "title": "Anatomie",
+      "title": "3. Anatomie",
       "blocks": [
         {
           "type": "sub",
-          "text": "Moyens de fixité"
+          "text": "3.1. Moyens de fixité"
         },
         {
           "type": "para",
@@ -198,7 +199,7 @@ export const chapter11Fr: Chapter = {
     },
     {
       "id": "interet-en-rop-2",
-      "title": "Intérêt en R.O.P.",
+      "title": "3.2–3.3. Effet turgor et faces du foie",
       "blocks": [
         {
           "type": "rop",
@@ -238,7 +239,7 @@ export const chapter11Fr: Chapter = {
     },
     {
       "id": "interet-en-rop-3",
-      "title": "Intérêt en R.O.P.",
+      "title": "3.3–3.4. Face viscérale et voies biliaires",
       "blocks": [
         {
           "type": "rop",
@@ -291,7 +292,7 @@ export const chapter11Fr: Chapter = {
     },
     {
       "id": "interet-en-rop-4",
-      "title": "Intérêt en R.O.P.",
+      "title": "3.5. Face postérieure et 4. Rapports",
       "blocks": [
         {
           "type": "rop",
@@ -316,7 +317,7 @@ export const chapter11Fr: Chapter = {
     },
     {
       "id": "vascularisation",
-      "title": "Vascularisation",
+      "title": "5. Vascularisation",
       "blocks": [
         {
           "type": "para",
@@ -332,7 +333,7 @@ export const chapter11Fr: Chapter = {
         },
         {
           "type": "sub",
-          "text": "Vaisseaux afférents"
+          "text": "5.1. Vaisseaux afférents"
         },
         {
           "type": "para",
@@ -366,7 +367,7 @@ export const chapter11Fr: Chapter = {
         },
         {
           "type": "sub",
-          "text": "Vaisseaux efférents"
+          "text": "5.2. Vaisseaux efférents"
         },
         {
           "type": "para",
@@ -374,7 +375,7 @@ export const chapter11Fr: Chapter = {
         },
         {
           "type": "sub",
-          "text": "Anastomose porto-cave"
+          "text": "5.3. Anastomoses porto-caves"
         },
         {
           "type": "para",
@@ -396,7 +397,7 @@ export const chapter11Fr: Chapter = {
         },
         {
           "type": "sub",
-          "text": "Hypertension portale"
+          "text": "5.4. Hypertension portale"
         },
         {
           "type": "para",
@@ -447,7 +448,7 @@ export const chapter11Fr: Chapter = {
     },
     {
       "id": "circulation-lymphatique",
-      "title": "Circulation lymphatique",
+      "title": "5.5. Circulation lymphatique",
       "blocks": [
         {
           "type": "para",
@@ -502,11 +503,11 @@ export const chapter11Fr: Chapter = {
     },
     {
       "id": "segmentation-hepatique",
-      "title": "Segmentation hépatique",
+      "title": "6. Segmentation hépatique",
       "blocks": [
         {
           "type": "sub",
-          "text": "Segmentation anatomique"
+          "text": "6.1. Segmentation anatomique"
         },
         {
           "type": "para",
@@ -514,7 +515,7 @@ export const chapter11Fr: Chapter = {
         },
         {
           "type": "sub",
-          "text": "Segmentation du Dr Claude Couinaud"
+          "text": "6.2. Segmentation de Couinaud"
         },
         {
           "type": "para",
@@ -552,7 +553,7 @@ export const chapter11Fr: Chapter = {
     },
     {
       "id": "interet-en-rop-6",
-      "title": "Intérêt en R.O.P.",
+      "title": "6.3. Segmentation fonctionnelle du foie en ROP",
       "blocks": [
         {
           "type": "rop",
@@ -582,7 +583,7 @@ export const chapter11Fr: Chapter = {
     },
     {
       "id": "innervation",
-      "title": "Innervation",
+      "title": "7. Innervation",
       "blocks": [
         {
           "type": "para",
@@ -590,7 +591,7 @@ export const chapter11Fr: Chapter = {
         },
         {
           "type": "sub",
-          "text": "Nerf phrénique droit"
+          "text": "7.1. Nerf phrénique droit"
         },
         {
           "type": "para",
@@ -610,7 +611,7 @@ export const chapter11Fr: Chapter = {
         },
         {
           "type": "sub",
-          "text": "Innervation autonome"
+          "text": "7.2. Innervation autonome"
         },
         {
           "type": "lead",
@@ -630,11 +631,11 @@ export const chapter11Fr: Chapter = {
     },
     {
       "id": "physiologie",
-      "title": "Physiologie",
+      "title": "8. Physiologie",
       "blocks": [
         {
           "type": "sub",
-          "text": "Fonctions du foie"
+          "text": "8.1. Fonctions du foie"
         },
         {
           "type": "para",
@@ -694,7 +695,7 @@ export const chapter11Fr: Chapter = {
         },
         {
           "type": "sub",
-          "text": "Pathologie"
+          "text": "8.2. Physiologie et pathologie biliaires"
         },
         {
           "type": "para",
@@ -722,7 +723,7 @@ export const chapter11Fr: Chapter = {
         },
         {
           "type": "sub",
-          "text": "Fonctions de la bile"
+          "text": "8.3. Fonctions de la bile"
         },
         {
           "type": "para",
@@ -770,11 +771,11 @@ export const chapter11Fr: Chapter = {
     },
     {
       "id": "pathologies-courantes",
-      "title": "Pathologies courantes",
+      "title": "9. Pathologies courantes",
       "blocks": [
         {
           "type": "sub",
-          "text": "Diagnostic d’exclusion"
+          "text": "9.1. Diagnostic d’exclusion"
         },
         {
           "type": "sub",
@@ -843,11 +844,11 @@ export const chapter11Fr: Chapter = {
     },
     {
       "id": "indications-troubles-fonctionnels",
-      "title": "Indications: troubles fonctionnels",
+      "title": "10. Indications : troubles fonctionnels",
       "blocks": [
         {
           "type": "sub",
-          "text": "Symptômes digestifs"
+          "text": "10.1. Symptômes digestifs"
         },
         {
           "type": "bullets",
@@ -864,7 +865,7 @@ export const chapter11Fr: Chapter = {
         },
         {
           "type": "sub",
-          "text": "Symptômes non digestifs"
+          "text": "10.2. Symptômes non digestifs"
         },
         {
           "type": "bullets",
@@ -885,7 +886,7 @@ export const chapter11Fr: Chapter = {
         },
         {
           "type": "sub",
-          "text": "Symptômes généraux"
+          "text": "10.3. Symptômes généraux"
         },
         {
           "type": "para",
@@ -893,7 +894,7 @@ export const chapter11Fr: Chapter = {
         },
         {
           "type": "sub",
-          "text": "Foie et grossesse"
+          "text": "10.4. Foie et grossesse"
         },
         {
           "type": "para",
@@ -906,7 +907,7 @@ export const chapter11Fr: Chapter = {
         },
         {
           "type": "sub",
-          "text": "Hyperœstrogénie"
+          "text": "10.5. Hyperœstrogénie"
         },
         {
           "type": "para",
@@ -926,7 +927,7 @@ export const chapter11Fr: Chapter = {
         },
         {
           "type": "sub",
-          "text": "Ménopause"
+          "text": "10.6. Ménopause"
         },
         {
           "type": "para",
@@ -988,11 +989,11 @@ export const chapter11Fr: Chapter = {
     },
     {
       "id": "zones-reflexes-podales-du-foie-et-des-voies-biliaires",
-      "title": "Zones réflexes podales du foie et des voies biliaires",
+      "title": "14. Zones réflexes podales du foie et des voies biliaires",
       "blocks": [
         {
           "type": "sub",
-          "text": "Syndrome général d’adaptation"
+          "text": "14.1. Syndrome général d’adaptation"
         },
         {
           "type": "xref",
@@ -1015,7 +1016,7 @@ export const chapter11Fr: Chapter = {
         },
         {
           "type": "sub",
-          "text": "2. Syndrome loco-régional"
+          "text": "14.2. Syndrome locorégional"
         },
         {
           "type": "xref",
@@ -1025,7 +1026,7 @@ export const chapter11Fr: Chapter = {
         },
         {
           "type": "sub",
-          "text": "Foie"
+          "text": "14.2.1. Foie"
         },
         {
           "type": "lead",
@@ -1073,7 +1074,7 @@ export const chapter11Fr: Chapter = {
     },
     {
       "id": "systeme-limbique",
-      "title": "Système limbique",
+      "title": "14.3. Système limbique",
       "blocks": [
         {
           "type": "xref",
@@ -1090,7 +1091,7 @@ export const chapter11Fr: Chapter = {
     },
     {
       "id": "relations-viscero-somatiques",
-      "title": "Relations viscéro-somatiques",
+      "title": "11. Relations viscéro-somatiques",
       "blocks": [
         {
           "type": "sub",
@@ -1144,7 +1145,7 @@ export const chapter11Fr: Chapter = {
     },
     {
       "id": "relations-viscero-emotionnelles",
-      "title": "Relations viscéro-émotionnelles",
+      "title": "12. Relations viscéro-émotionnelles",
       "blocks": [
         {
           "type": "para",
@@ -1252,11 +1253,11 @@ export const chapter11Fr: Chapter = {
     },
     {
       "id": "conseils",
-      "title": "Conseils",
+      "title": "13. Conseils",
       "blocks": [
         {
           "type": "sub",
-          "text": "Sont déconseillés"
+          "text": "13.1. Conseils alimentaires"
         },
         {
           "type": "para",
@@ -1377,4 +1378,34 @@ appendAfterBlock(
   "systeme-limbique",
   (block) => block.type === "lead" && normalizedLabel(block.label) === "balance cerveau limbique-foie/vesicule biliaire",
   chapter11ReflexFigureGroups.limbicBalance,
+)
+
+const chapter11SectionOrder = [
+  "presentation",
+  "interet-en-rop",
+  "situation",
+  "anatomie",
+  "interet-en-rop-2",
+  "interet-en-rop-3",
+  "interet-en-rop-4",
+  "vascularisation",
+  "interet-en-rop-5",
+  "circulation-lymphatique",
+  "segmentation-hepatique",
+  "interet-en-rop-6",
+  "innervation",
+  "physiologie",
+  "interet-en-rop-7",
+  "pathologies-courantes",
+  "indications-troubles-fonctionnels",
+  "interet-en-rop-8",
+  "relations-viscero-somatiques",
+  "relations-viscero-emotionnelles",
+  "conseils",
+  "zones-reflexes-podales-du-foie-et-des-voies-biliaires",
+  "systeme-limbique",
+]
+
+chapter11Fr.sections.sort(
+  (left, right) => chapter11SectionOrder.indexOf(left.id) - chapter11SectionOrder.indexOf(right.id),
 )
