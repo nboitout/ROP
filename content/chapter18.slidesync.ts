@@ -164,7 +164,12 @@ export const chapter18SlideAnchors: SyncAnchor[] = [
   { sectionId: 'pathologies-courantes', blockIndex: 0, slide: 14 },
   { sectionId: 'pathologies-courantes', blockIndex: 2, slide: 15 },
   { sectionId: 'pathologies-courantes', blockIndex: 7, slide: 16 },
-  { sectionId: 'pathologies-courantes', blockIndex: 9, slide: 17 },
+  {
+    sectionId: 'pathologies-courantes',
+    blockIndex: 9,
+    slide: 17,
+    end: { sectionId: 'pathologies-courantes', blockIndex: 12, itemIndex: 3 },
+  },
   { sectionId: 'relations-viscero-emotionnelles', blockIndex: 0, slide: 18 },
   { sectionId: 'conseils', blockIndex: 0, slide: 19, end: { sectionId: 'conseils', blockIndex: 1, itemIndex: 5 } },
   { sectionId: 'zones-reflexes-podales', blockIndex: 0, slide: 20 },
