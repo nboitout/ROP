@@ -1,5 +1,5 @@
 // Chapter 4 content - French synchronized reading stream
-// Source: public/chapter-4/Chapter4_SNA_revise_FR_final.docx
+// Source: public/chapter-4/Chapitre_4_SNA_version_publiable.docx
 // Generated for SlideSyncReader; the bottom reflex-zone section includes selected hands-on figures.
 
 import type { Chapter } from './types'
@@ -11,11 +11,11 @@ export const chapter4Fr: Chapter = {
   "sections": [
     {
       "id": "presentation",
-      "title": "Présentation",
+      "title": "1. Présentation",
       "blocks": [
         {
           "type": "sub",
-          "text": "Deux systèmes: Parasympathique et Sympathique"
+          "text": "1.1. Deux systèmes : parasympathique et sympathique"
         },
         {
           "type": "para",
@@ -45,7 +45,7 @@ export const chapter4Fr: Chapter = {
         },
         {
           "type": "sub",
-          "text": "Physiologie générale du SNA"
+          "text": "1.2. Physiologie générale du SNA"
         },
         {
           "type": "leadBullets",
@@ -68,7 +68,7 @@ export const chapter4Fr: Chapter = {
         },
         {
           "type": "sub",
-          "text": "Différences fonctionnelles"
+          "text": "1.3. Différences fonctionnelles"
         },
         {
           "type": "leadBullets",
@@ -127,7 +127,7 @@ export const chapter4Fr: Chapter = {
         },
         {
           "type": "sub",
-          "text": "Relation Parasympathique-Sympathique"
+          "text": "1.4. Relation parasympathique–sympathique"
         },
         {
           "type": "para",
@@ -152,14 +152,14 @@ export const chapter4Fr: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Relation SNA-système hormonal: le SNA est très connecté au système hormonal par l’hypothalamus et l’hypophyse qui sont des neuroglandes, combinant à la fois fonctions neurologique et hormonale.",
+            "1.5. Relation entre le SNA et le système hormonal : le SNA est très connecté au système hormonal par l’hypothalamus et l’hypophyse qui sont des neuroglandes, combinant à la fois fonctions neurologique et hormonale.",
             "Neuromédiateurs: Le neuromédiateur du Parasympathique est l’acétylcholine.",
             "Les neuromédiateurs du Sympathique sont l’acétylcholine pour les neurones pré-ganglionnaires et la noradrénaline pour les neurones post-ganglionnaires."
           ]
         },
         {
           "type": "sub",
-          "text": "Relation système nerveux autonome (SNA) - système nerveux somatique (SNS)"
+          "text": "1.6. Relation entre le système nerveux autonome (SNA) et le système nerveux somatique (SNS)"
         },
         {
           "type": "para",
@@ -176,7 +176,7 @@ export const chapter4Fr: Chapter = {
         },
         {
           "type": "sub",
-          "text": "Relation SNA-sommeil"
+          "text": "1.7. Relation entre le SNA et le sommeil"
         },
         {
           "type": "para",
@@ -204,7 +204,7 @@ export const chapter4Fr: Chapter = {
     },
     {
       "id": "organisation",
-      "title": "Organisation du SNA",
+      "title": "2. Organisation du SNA",
       "blocks": [
         {
           "type": "para",
@@ -218,15 +218,15 @@ export const chapter4Fr: Chapter = {
           "type": "leadBullets",
           "items": [
             {
-              "label": "Viscéro-motricité",
+              "label": "2.1. Viscéro-motricité",
               "text": "le Parasympathique et le Sympathique ont longtemps été présentés en mettant l’accent sur les effets antagonistes de leurs actions motrices sur de nombreux organes. Exemple: le Parasympathique ralentit le rythme cardiaque (bradycardie) alors que le Sympathique l’accélère (tachycardie). Le Parasympathique stimule la contraction des parois du tube digestif (péristaltisme) et la sécrétion des glandes muqueuses, alors que le Sympathique les inhibe. En réalité, ces deux systèmes sont complémentaires."
             },
             {
-              "label": "Viscéro-sensitivité",
+              "label": "2.2. Viscéro-sensitivité",
               "text": "la fonction du SNA ne se réduit pas à cette dualité motrice, son rôle sensitif est essentiel. Le nerf vague est composé de 70 à 80% de fibres sensitives informant, en permanence, le cerveau sur le fonctionnement de nos viscères et glandes Avant d’être un nerf viscéro-moteur, le nerf vague est un nerf viscéro-sensitif."
             },
             {
-              "label": "Système nerveux entérique (SNE)",
+              "label": "2.3. Système nerveux entérique (SNE)",
               "text": "aux deux composantes, parasympathique et sympathique, du SNA, il faut, en réalité ajouter une troisième composante, le système nerveux entérique (SNE) qui gouverne l’intestin d’une façon autonome. C’est notre fameux deuxième cerveau qui fonctionne en pilote automatique sans avoir recours au Parasympathique et au Sympathique dans les conditions physiologiques. Ceux-ci ne prennent le contrôle que quand apparaissent des dysfonctions de l’intestin."
             }
           ]
@@ -241,7 +241,7 @@ export const chapter4Fr: Chapter = {
     },
     {
       "id": "parasympathique-visceromoteur",
-      "title": "Parasympathique viscéro-moteur",
+      "title": "3. Parasympathique viscéro-moteur",
       "blocks": [
         {
           "type": "para",
@@ -249,7 +249,7 @@ export const chapter4Fr: Chapter = {
         },
         {
           "type": "sub",
-          "text": "Parasympathique crânien: il gouverne deux territoires, le territoire céphalique et le territoire cervico-thoraco-abdominal."
+          "text": "3.1. Parasympathique crânien : il gouverne deux territoires, le territoire céphalique et le territoire cervico-thoraco-abdominal."
         },
         {
           "type": "leadBullets",
@@ -474,7 +474,7 @@ export const chapter4Fr: Chapter = {
         },
         {
           "type": "sub",
-          "text": "Parasympathique pelvien (ou sacral)"
+          "text": "3.2. Parasympathique pelvien (ou sacral)"
         },
         {
           "type": "para",
@@ -496,7 +496,7 @@ export const chapter4Fr: Chapter = {
     },
     {
       "id": "nerf-vague-sensitif",
-      "title": "Nerf vague viscéro-sensitif",
+      "title": "4. Nerf vague viscéro-sensitif",
       "blocks": [
         {
           "type": "bullets",
@@ -529,7 +529,7 @@ export const chapter4Fr: Chapter = {
     },
     {
       "id": "sympathique-visceromoteur",
-      "title": "Sympathique viscéro-moteur",
+      "title": "5. Sympathique viscéro-moteur",
       "blocks": [
         {
           "type": "lead",
@@ -650,7 +650,7 @@ export const chapter4Fr: Chapter = {
     },
     {
       "id": "sympathique-sensitif",
-      "title": "Sympathique somato-viscéro-sensitif",
+      "title": "6. Sympathique somato-viscéro-sensitif",
       "blocks": [
         {
           "type": "leadBullets",
@@ -705,7 +705,7 @@ export const chapter4Fr: Chapter = {
     },
     {
       "id": "chaine-plexique-prevertebrale",
-      "title": "Chaîne plexique prévertébrale (ou pré-aortique)",
+      "title": "7. Chaîne plexique prévertébrale (ou pré-aortique)",
       "blocks": [
         {
           "type": "leadBullets",
@@ -762,7 +762,7 @@ export const chapter4Fr: Chapter = {
     },
     {
       "id": "plexus-pelvien",
-      "title": "Plexus préviscéral pelvien",
+      "title": "8. Plexus préviscéral pelvien",
       "blocks": [
         {
           "type": "bullets",
@@ -785,7 +785,7 @@ export const chapter4Fr: Chapter = {
     },
     {
       "id": "sne",
-      "title": "Système nerveux intrinsèque ou entérique (SNE)",
+      "title": "9. Système nerveux intrinsèque ou entérique (SNE)",
       "blocks": [
         {
           "type": "bullets",
@@ -806,7 +806,7 @@ export const chapter4Fr: Chapter = {
     },
     {
       "id": "glandes-surrenales",
-      "title": "Glandes surrénales",
+      "title": "10. Glandes surrénales",
       "blocks": [
         {
           "type": "leadBullets",
@@ -840,11 +840,11 @@ export const chapter4Fr: Chapter = {
     },
     {
       "id": "zones-reflexes-podales",
-      "title": "Zones réflexes podales",
+      "title": "11. Zones réflexes podales",
       "blocks": [
         {
           "type": "sub",
-          "text": "Parasympathique crânien - territoire céphalique"
+          "text": "11.1. Parasympathique crânien — territoire céphalique"
         },
         {
           "type": "leadBullets",
@@ -894,7 +894,7 @@ export const chapter4Fr: Chapter = {
 
         {
           "type": "sub",
-          "text": "Nerf vague X - trajet crânien / foramen jugulaire"
+          "text": "11.2. Nerf vague X — trajet crânien / foramen jugulaire"
         },
         {
           "type": "para",
@@ -917,7 +917,7 @@ export const chapter4Fr: Chapter = {
 
         {
           "type": "sub",
-          "text": "Nerf vague X - étage cervical"
+          "text": "11.3. Nerf vague X — étage cervical"
         },
         {
           "type": "para",
@@ -935,7 +935,7 @@ export const chapter4Fr: Chapter = {
 
         {
           "type": "sub",
-          "text": "Nerf vague X - étage thoracique / plexus cardiaque"
+          "text": "11.4. Nerf vague X — étage thoracique / plexus cardiaque"
         },
         {
           "type": "para",
@@ -961,7 +961,7 @@ export const chapter4Fr: Chapter = {
 
         {
           "type": "sub",
-          "text": "Nerf vague X - étage diaphragmatique / hiatus œsophagien"
+          "text": "11.5. Nerf vague X — étage diaphragmatique / hiatus œsophagien"
         },
         {
           "type": "para",
@@ -988,7 +988,7 @@ export const chapter4Fr: Chapter = {
         },
         {
           "type": "sub",
-          "text": "Nerf vague X - étage abdominal"
+          "text": "11.6. Nerf vague X — étage abdominal"
         },
         {
           "type": "para",
@@ -1019,7 +1019,7 @@ export const chapter4Fr: Chapter = {
 
         {
           "type": "sub",
-          "text": "Parasympathique pelvien (ou sacral)"
+          "text": "11.7. Parasympathique pelvien (ou sacral)"
         },
         {
           "type": "leadBullets",
@@ -1044,7 +1044,7 @@ export const chapter4Fr: Chapter = {
         },
         {
           "type": "sub",
-          "text": "Sympathique viscéro-moteur - origine médullaire"
+          "text": "11.8. Sympathique viscéro-moteur — origine médullaire"
         },
         {
           "type": "bullets",
@@ -1055,7 +1055,7 @@ export const chapter4Fr: Chapter = {
         },
         {
           "type": "sub",
-          "text": "Sympathique viscéro-moteur - chaîne ganglionnaire thoracique"
+          "text": "11.9. Sympathique viscéro-moteur — chaîne ganglionnaire thoracique"
         },
         {
           "type": "bullets",
@@ -1068,7 +1068,7 @@ export const chapter4Fr: Chapter = {
 
         {
           "type": "sub",
-          "text": "Sympathique viscéro-moteur - chaîne ganglionnaire cervicale"
+          "text": "11.10. Sympathique viscéro-moteur — chaîne ganglionnaire cervicale"
         },
         {
           "type": "para",
@@ -1098,7 +1098,7 @@ export const chapter4Fr: Chapter = {
 
         {
           "type": "sub",
-          "text": "Sympathique viscéro-moteur - chaîne ganglionnaire lombale"
+          "text": "11.11. Sympathique viscéro-moteur — chaîne ganglionnaire lombale"
         },
         {
           "type": "para",
@@ -1120,7 +1120,7 @@ export const chapter4Fr: Chapter = {
 
         {
           "type": "sub",
-          "text": "Sympathique viscéro-moteur - chaîne ganglionnaire sacrale et coccygienne"
+          "text": "11.12. Sympathique viscéro-moteur — chaîne ganglionnaire sacrale et coccygienne"
         },
         {
           "type": "para",
@@ -1145,7 +1145,7 @@ export const chapter4Fr: Chapter = {
         },
         {
           "type": "sub",
-          "text": "Sympathique somato-viscéro-sensitif"
+          "text": "11.13. Sympathique somato-viscéro-sensitif"
         },
         {
           "type": "para",
@@ -1159,7 +1159,7 @@ export const chapter4Fr: Chapter = {
         },
         {
           "type": "sub",
-          "text": "Chaîne plexique pré-vertébrale (ou pré-aortique)"
+          "text": "11.14. Chaîne plexique prévertébrale (ou pré-aortique)"
         },
         {
           "type": "para",
@@ -1172,7 +1172,7 @@ export const chapter4Fr: Chapter = {
         },
         {
           "type": "sub",
-          "text": "Plexus pré-viscéral pelvien"
+          "text": "11.15. Plexus préviscéral pelvien"
         },
         {
           "type": "leadBullets",
@@ -1199,7 +1199,7 @@ export const chapter4Fr: Chapter = {
 
         {
           "type": "sub",
-          "text": "Système nerveux intrinsèque ou entérique (SNE)"
+          "text": "11.16. Système nerveux intrinsèque ou entérique (SNE)"
         },
         {
           "type": "lead",
@@ -1214,7 +1214,7 @@ export const chapter4Fr: Chapter = {
         },
         {
           "type": "sub",
-          "text": "Glandes surrénales"
+          "text": "11.17. Glandes surrénales"
         },
         {
           "type": "lead",
