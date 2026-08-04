@@ -1,3 +1,4 @@
+// Source: public/chapter-3/Chapitre_3_SNC_version_publiable.docx
 import type { Chapter } from "./types";
 
 export const chapter3Fr: Chapter = {
@@ -114,8 +115,8 @@ export const chapter3Fr: Chapter = {
         },
         {
           type: "xref",
-          label: "Voir la référence dans le chapitre 5",
-          text: "Axe neurologique (SAM)",
+          label: "Voir le chapitre 5",
+          text: "Mécanisme de stress",
           href: "/lecture/chapitre-5?lang=fr&xrefBack=%2Flecture%2Fchapitre-3%3Flang%3Dfr%23p-section-3-organisation-anatomique-9&xrefBackLabel=Retour%20au%20chapitre%203#p-sga-6",
         },
         {
@@ -399,8 +400,8 @@ export const chapter3Fr: Chapter = {
         },
         {
           type: "xref",
-          label: "Voir la référence dans le chapitre 5",
-          text: "Axe neurologique (SAM)",
+          label: "Voir le chapitre 5",
+          text: "Mécanisme de stress",
           href: "/lecture/chapitre-5?lang=fr&xrefBack=%2Flecture%2Fchapitre-3%3Flang%3Dfr%23p-section-3-organisation-anatomique-76&xrefBackLabel=Retour%20au%20chapitre%203#p-sga-6",
         },
         {
@@ -548,7 +549,7 @@ export const chapter3Fr: Chapter = {
         },
         {
           type: "sub",
-          text: "Centres neuroendocriniens",
+          text: "4.3.1. Centres neuroendocriniens",
         },
         {
           type: "bullets",
@@ -566,7 +567,7 @@ export const chapter3Fr: Chapter = {
         },
         {
           type: "sub",
-          text: "Membranes intracrâniennes",
+          text: "4.3.2. Membranes intracrâniennes",
         },
         {
           type: "bullets",
@@ -578,7 +579,7 @@ export const chapter3Fr: Chapter = {
         },
         {
           type: "sub",
-          text: "Innervation et vascularisation",
+          text: "4.3.3. Innervation et vascularisation",
         },
         {
           type: "bullets",
@@ -639,7 +640,7 @@ export const chapter3Fr: Chapter = {
     {
       id: "annexe-manifestations",
       title:
-        "Annexe. Principales manifestations associées aux structures étudiées",
+        "Annexe 1. Principales manifestations associées aux structures étudiées",
       blocks: [
         {
           type: "para",
