@@ -1,3 +1,6 @@
+// Chapter 7 content - French synchronized reading stream
+// Source: public/chapter-7/Chapitre_7_Cavites_abdominale_et_peritoneale_version_publiable.docx
+
 import type { Chapter } from './types'
 
 export const chapter7Fr: Chapter = {
@@ -7,11 +10,11 @@ export const chapter7Fr: Chapter = {
   "sections": [
     {
       "id": "presentation",
-      "title": "Présentation",
+      "title": "1. Présentation",
       "blocks": [
         {
           "type": "sub",
-          "text": "Cavité abdominale"
+          "text": "1.1. Cavité abdominale"
         },
         {
           "type": "para",
@@ -27,7 +30,7 @@ export const chapter7Fr: Chapter = {
         },
         {
           "type": "sub",
-          "text": "Cavité péritonéale"
+          "text": "1.2. Cavité péritonéale"
         },
         {
           "type": "para",
@@ -41,11 +44,11 @@ export const chapter7Fr: Chapter = {
     },
     {
       "id": "situation",
-      "title": "Situation",
+      "title": "2. Situation",
       "blocks": [
         {
           "type": "sub",
-          "text": "Contenant"
+          "text": "2.1. Contenant"
         },
         {
           "type": "para",
@@ -77,7 +80,7 @@ export const chapter7Fr: Chapter = {
         },
         {
           "type": "sub",
-          "text": "Contenu"
+          "text": "2.2. Contenu"
         },
         {
           "type": "para",
@@ -89,7 +92,7 @@ export const chapter7Fr: Chapter = {
         },
         {
           "type": "sub",
-          "text": "Cavité intra-péritonéale"
+          "text": "2.3. Cavité intra-péritonéale"
         },
         {
           "type": "para",
@@ -105,7 +108,7 @@ export const chapter7Fr: Chapter = {
         },
         {
           "type": "sub",
-          "text": "Cavité rétro-péritonéale"
+          "text": "2.4. Cavité rétro-péritonéale"
         },
         {
           "type": "para",
@@ -133,7 +136,7 @@ export const chapter7Fr: Chapter = {
         },
         {
           "type": "sub",
-          "text": "Cavité sous-péritonéale"
+          "text": "2.5. Cavité sous-péritonéale"
         },
         {
           "type": "para",
@@ -151,11 +154,11 @@ export const chapter7Fr: Chapter = {
     },
     {
       "id": "anatomie",
-      "title": "Anatomie",
+      "title": "3. Anatomie",
       "blocks": [
         {
           "type": "sub",
-          "text": "Péritoine et feuillets"
+          "text": "3.1. Péritoine et feuillets"
         },
         {
           "type": "para",
@@ -167,7 +170,7 @@ export const chapter7Fr: Chapter = {
         },
         {
           "type": "sub",
-          "text": "Feuillet pariétal"
+          "text": "3.1.1. Feuillet pariétal"
         },
         {
           "type": "para",
@@ -179,7 +182,7 @@ export const chapter7Fr: Chapter = {
         },
         {
           "type": "sub",
-          "text": "Feuillet viscéral"
+          "text": "3.1.2. Feuillet viscéral"
         },
         {
           "type": "para",
@@ -187,7 +190,7 @@ export const chapter7Fr: Chapter = {
         },
         {
           "type": "sub",
-          "text": "Cavité et liquide péritonéal"
+          "text": "3.2. Cavité et liquide péritonéal"
         },
         {
           "type": "para",
@@ -211,7 +214,7 @@ export const chapter7Fr: Chapter = {
         },
         {
           "type": "sub",
-          "text": "Surfactant et mobilité interviscérale"
+          "text": "3.3. Surfactant et mobilité interviscérale"
         },
         {
           "type": "para",
@@ -241,7 +244,7 @@ export const chapter7Fr: Chapter = {
         },
         {
           "type": "sub",
-          "text": "Replis, ligaments et mésos"
+          "text": "3.4. Replis, ligaments et mésos"
         },
         {
           "type": "para",
@@ -273,7 +276,7 @@ export const chapter7Fr: Chapter = {
         },
         {
           "type": "sub",
-          "text": "Racines des mésos et compartiments"
+          "text": "3.5. Racines des mésos et compartiments"
         },
         {
           "type": "para",
@@ -300,7 +303,7 @@ export const chapter7Fr: Chapter = {
         },
         {
           "type": "sub",
-          "text": "Omentums"
+          "text": "3.6. Omentums"
         },
         {
           "type": "para",
@@ -329,7 +332,7 @@ export const chapter7Fr: Chapter = {
         },
         {
           "type": "sub",
-          "text": "Fascias"
+          "text": "3.7. Fascias"
         },
         {
           "type": "para",
@@ -341,7 +344,7 @@ export const chapter7Fr: Chapter = {
         },
         {
           "type": "sub",
-          "text": "Orifices et hiatus de la cavité abdominale"
+          "text": "3.8. Orifices et hiatus de la cavité abdominale"
         },
         {
           "type": "para",
@@ -362,17 +365,11 @@ export const chapter7Fr: Chapter = {
             "Jonction avec la cavité pelvienne : canal inguinal, siège des hernies inguinales,",
             "Jonction avec la cuisse : à travers l’anneau fémoral, au-dessous du ligament inguinal, siège des hernies fémorales."
           ]
-        }
-      ]
-    },
-    {
-      "id": "interet-rop-racines",
-      "title": "Intérêt en R.O.P.",
-      "blocks": [
+        },
         {
           "type": "rop",
           "body": [
-            "racines des mésos et zones de moindre résistance",
+            "Racines des mésos et zones de moindre résistance",
             "Dans le cadre ROP, les racines des mésos sont considérées comme des zones réflexes majeures.",
             "La sollicitation de leurs zones réflexes vise à accompagner la régulation fonctionnelle viscérale.",
             "La grande mobilité du côlon transverse et du côlon sigmoïde rend leurs positions variables.",
@@ -385,11 +382,11 @@ export const chapter7Fr: Chapter = {
     },
     {
       "id": "vascularisation",
-      "title": "Vascularisation",
+      "title": "4. Vascularisation",
       "blocks": [
         {
           "type": "sub",
-          "text": "Aorte abdominale"
+          "text": "4.1. Aorte abdominale"
         },
         {
           "type": "para",
@@ -397,7 +394,7 @@ export const chapter7Fr: Chapter = {
         },
         {
           "type": "sub",
-          "text": "Anévrisme et test de palpation aortique"
+          "text": "4.2. Anévrisme et test de palpation aortique"
         },
         {
           "type": "para",
@@ -425,7 +422,7 @@ export const chapter7Fr: Chapter = {
         },
         {
           "type": "sub",
-          "text": "Branches digestives de l’aorte abdominale"
+          "text": "4.3. Branches digestives de l’aorte abdominale"
         },
         {
           "type": "para",
@@ -433,7 +430,7 @@ export const chapter7Fr: Chapter = {
         },
         {
           "type": "sub",
-          "text": "Tronc cœliaque"
+          "text": "4.3.1. Tronc cœliaque"
         },
         {
           "type": "para",
@@ -453,7 +450,7 @@ export const chapter7Fr: Chapter = {
         },
         {
           "type": "sub",
-          "text": "Artère gastrique gauche"
+          "text": "4.3.2. Artère gastrique gauche"
         },
         {
           "type": "para",
@@ -465,7 +462,7 @@ export const chapter7Fr: Chapter = {
         },
         {
           "type": "sub",
-          "text": "Artère hépatique commune"
+          "text": "4.3.3. Artère hépatique commune"
         },
         {
           "type": "para",
@@ -473,7 +470,7 @@ export const chapter7Fr: Chapter = {
         },
         {
           "type": "sub",
-          "text": "Artère splénique"
+          "text": "4.3.4. Artère splénique"
         },
         {
           "type": "para",
@@ -497,7 +494,7 @@ export const chapter7Fr: Chapter = {
         },
         {
           "type": "sub",
-          "text": "Artère mésentérique supérieure"
+          "text": "4.3.5. Artère mésentérique supérieure"
         },
         {
           "type": "para",
@@ -523,7 +520,7 @@ export const chapter7Fr: Chapter = {
         },
         {
           "type": "sub",
-          "text": "Artère mésentérique inférieure"
+          "text": "4.3.6. Artère mésentérique inférieure"
         },
         {
           "type": "para",
@@ -549,7 +546,7 @@ export const chapter7Fr: Chapter = {
         },
         {
           "type": "sub",
-          "text": "Drainage veineux"
+          "text": "4.4. Drainage veineux"
         },
         {
           "type": "para",
@@ -563,7 +560,7 @@ export const chapter7Fr: Chapter = {
         },
         {
           "type": "sub",
-          "text": "Vascularisation du péritoine"
+          "text": "4.5. Vascularisation du péritoine"
         },
         {
           "type": "para",
@@ -576,17 +573,11 @@ export const chapter7Fr: Chapter = {
         {
           "type": "para",
           "text": "L’intestin constitue en outre un territoire majeur de circulation veineuse et lymphatique."
-        }
-      ]
-    },
-    {
-      "id": "interet-rop-vascularisation",
-      "title": "Intérêt en R.O.P.",
-      "blocks": [
+        },
         {
           "type": "rop",
           "body": [
-            "vascularisation et circulations",
+            "Vascularisation et circulations",
             "En ROP, le travail sur les mésos vise à accompagner les circulations sanguine et lymphatique ainsi que l’innervation péritonéale."
           ]
         }
@@ -594,11 +585,11 @@ export const chapter7Fr: Chapter = {
     },
     {
       "id": "innervation",
-      "title": "Innervation",
+      "title": "5. Innervation",
       "blocks": [
         {
           "type": "sub",
-          "text": "Péritoine pariétal"
+          "text": "5.1. Péritoine pariétal"
         },
         {
           "type": "para",
@@ -618,7 +609,7 @@ export const chapter7Fr: Chapter = {
         },
         {
           "type": "sub",
-          "text": "Six derniers nerfs intercostaux droit et gauche"
+          "text": "5.1.1. Six derniers nerfs intercostaux droit et gauche"
         },
         {
           "type": "para",
@@ -630,7 +621,7 @@ export const chapter7Fr: Chapter = {
         },
         {
           "type": "sub",
-          "text": "Nerfs phréniques"
+          "text": "5.1.2. Nerfs phréniques"
         },
         {
           "type": "para",
@@ -646,7 +637,7 @@ export const chapter7Fr: Chapter = {
         },
         {
           "type": "sub",
-          "text": "Plexus lombal (L1 à L4)"
+          "text": "5.1.3. Plexus lombal (L1 à L4)"
         },
         {
           "type": "para",
@@ -658,7 +649,7 @@ export const chapter7Fr: Chapter = {
         },
         {
           "type": "sub",
-          "text": "Péritoine viscéral"
+          "text": "5.2. Péritoine viscéral"
         },
         {
           "type": "para",
@@ -672,11 +663,11 @@ export const chapter7Fr: Chapter = {
     },
     {
       "id": "physiologie",
-      "title": "Physiologie",
+      "title": "6. Physiologie",
       "blocks": [
         {
           "type": "sub",
-          "text": "Protection et contention viscérale"
+          "text": "6.1. Protection et contention viscérale"
         },
         {
           "type": "para",
@@ -700,7 +691,7 @@ export const chapter7Fr: Chapter = {
         },
         {
           "type": "sub",
-          "text": "Mobilité"
+          "text": "6.2. Mobilité"
         },
         {
           "type": "para",
@@ -714,11 +705,11 @@ export const chapter7Fr: Chapter = {
         },
         {
           "type": "sub",
-          "text": "Propriétés du liquide péritonéal"
+          "text": "6.3. Propriétés du liquide péritonéal"
         },
         {
           "type": "sub",
-          "text": "Sécrétion"
+          "text": "6.3.1. Sécrétion"
         },
         {
           "type": "para",
@@ -730,7 +721,7 @@ export const chapter7Fr: Chapter = {
         },
         {
           "type": "sub",
-          "text": "Circulation"
+          "text": "6.3.2. Circulation"
         },
         {
           "type": "para",
@@ -750,7 +741,7 @@ export const chapter7Fr: Chapter = {
         },
         {
           "type": "sub",
-          "text": "Réabsorption et défense immunitaire"
+          "text": "6.3.3. Réabsorption et défense immunitaire"
         },
         {
           "type": "para",
@@ -764,7 +755,7 @@ export const chapter7Fr: Chapter = {
     },
     {
       "id": "pathologie",
-      "title": "Pathologies courantes",
+      "title": "7. Pathologie",
       "blocks": [
         {
           "type": "para",
@@ -772,7 +763,7 @@ export const chapter7Fr: Chapter = {
         },
         {
           "type": "sub",
-          "text": "Diagnostic d’exclusion"
+          "text": "7.1. Diagnostic d’exclusion"
         },
         {
           "type": "para",
@@ -806,7 +797,7 @@ export const chapter7Fr: Chapter = {
         },
         {
           "type": "sub",
-          "text": "Indications : pathologies fonctionnelles"
+          "text": "7.2. Indications : pathologies fonctionnelles"
         },
         {
           "type": "para",
@@ -838,7 +829,7 @@ export const chapter7Fr: Chapter = {
     },
     {
       "id": "relations-peritoneo-somatiques",
-      "title": "Relations péritonéo-somatiques",
+      "title": "8. Relations péritonéo-somatiques",
       "blocks": [
         {
           "type": "para",
@@ -846,7 +837,7 @@ export const chapter7Fr: Chapter = {
         },
         {
           "type": "sub",
-          "text": "Topographie abdominale à quatre quadrants"
+          "text": "8.1. Topographie abdominale à quatre quadrants"
         },
         {
           "type": "para",
@@ -878,7 +869,7 @@ export const chapter7Fr: Chapter = {
     },
     {
       "id": "zones-reflexes-podales",
-      "title": "Zones réflexes podales",
+      "title": "9. Zones réflexes podales",
       "blocks": [
         {
           "type": "para",
