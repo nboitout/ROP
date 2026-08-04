@@ -5,7 +5,7 @@
 // public/chapter-20/Chapter20 Slides de synthese - FR.pdf
 
 export type SyncSlide = { src: string; title: string; orientation?: 'portrait' }
-export type SyncAnchor = { sectionId: string; blockIndex: number; slide: number | number[]; gapBefore?: 'half' }
+export type SyncAnchor = { sectionId: string; blockIndex: number; itemIndex?: number; slide: number | number[]; gapBefore?: 'half' }
 
 export const chapter20Slides: SyncSlide[] = [
   { src: '/chapter-20/slides/slide-01.png', title: 'Appareil reproducteur masculin' },
@@ -28,17 +28,17 @@ export const chapter20Slides: SyncSlide[] = [
 
 export const chapter20SlideAnchors: SyncAnchor[] = [
   { sectionId: 'presentation', blockIndex: -1, slide: 1 },
-  { sectionId: 'presentation', blockIndex: 2, slide: 2 },
+  { sectionId: 'presentation', blockIndex: 0, itemIndex: 4, slide: 2 },
   { sectionId: 'situation', blockIndex: 0, slide: 3 },
   { sectionId: 'anatomie', blockIndex: 0, slide: 4 },
-  { sectionId: 'anatomie', blockIndex: 6, slide: 5 },
-  { sectionId: 'anatomie', blockIndex: 14, slide: 6 },
-  { sectionId: 'anatomie', blockIndex: 23, slide: 7 },
-  { sectionId: 'anatomie', blockIndex: 33, slide: 8 },
+  { sectionId: 'anatomie', blockIndex: 4, slide: 5 },
+  { sectionId: 'anatomie', blockIndex: 8, slide: 6 },
+  { sectionId: 'anatomie', blockIndex: 14, slide: 7 },
+  { sectionId: 'anatomie', blockIndex: 20, slide: 8 },
   { sectionId: 'vascularisation', blockIndex: 0, slide: 9 },
   { sectionId: 'innervation', blockIndex: 0, slide: 10 },
   { sectionId: 'pathologies-courantes', blockIndex: 0, slide: 11 },
-  { sectionId: 'pathologies-courantes', blockIndex: 25, slide: 12 },
+  { sectionId: 'pathologies-courantes', blockIndex: 14, slide: 12 },
   { sectionId: 'relations-viscero-emotionnelles', blockIndex: 0, slide: 13 },
   { sectionId: 'zones-reflexes-podales', blockIndex: -1, slide: 14 },
   { sectionId: 'zones-reflexes-podales', blockIndex: 0, slide: 15 },
