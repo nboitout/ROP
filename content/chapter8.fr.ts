@@ -1,5 +1,6 @@
 import type { Chapter } from './types'
 
+// Source: public/chapter-8/Chapitre_8_Diaphragme_version_publiable.docx
 export const chapter8Fr: Chapter = {
   "slug": "chapter-8",
   "number": "8",
@@ -7,7 +8,7 @@ export const chapter8Fr: Chapter = {
   "sections": [
     {
       "id": "presentation",
-      "title": "Présentation",
+      "title": "1. Présentation",
       "blocks": [
         {
           "type": "para",
@@ -22,7 +23,7 @@ export const chapter8Fr: Chapter = {
     },
     {
       "id": "situation",
-      "title": "Situation",
+      "title": "2. Situation",
       "blocks": [
         {
           "type": "lead",
@@ -47,7 +48,7 @@ export const chapter8Fr: Chapter = {
     },
     {
       "id": "anatomie",
-      "title": "Anatomie",
+      "title": "3. Anatomie",
       "blocks": [
         {
           "type": "lead",
@@ -72,7 +73,7 @@ export const chapter8Fr: Chapter = {
         },
         {
           "type": "sub",
-          "text": "Centre phrénique du diaphragme"
+          "text": "3.1. Centre phrénique du diaphragme"
         },
         {
           "type": "para",
@@ -95,7 +96,7 @@ export const chapter8Fr: Chapter = {
         },
         {
           "type": "sub",
-          "text": "Coupole diaphragmatique"
+          "text": "3.2. Coupole diaphragmatique"
         },
         {
           "type": "para",
@@ -111,7 +112,7 @@ export const chapter8Fr: Chapter = {
         },
         {
           "type": "sub",
-          "text": "Piliers du diaphragme"
+          "text": "3.3. Piliers du diaphragme"
         },
         {
           "type": "para",
@@ -119,7 +120,7 @@ export const chapter8Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "Piliers principaux:"
+          "text": "3.3.1. Piliers principaux"
         },
         {
           "type": "lead",
@@ -141,7 +142,7 @@ export const chapter8Fr: Chapter = {
         },
         {
           "type": "lead",
-          "label": "Piliers accessoires ou latéraux",
+          "label": "3.3.2. Piliers accessoires ou latéraux",
           "text": "on distingue:"
         },
         {
@@ -168,7 +169,7 @@ export const chapter8Fr: Chapter = {
         },
         {
           "type": "sub",
-          "text": "Orifices du diaphragme"
+          "text": "3.4. Orifices du diaphragme"
         },
         {
           "type": "para",
@@ -191,7 +192,7 @@ export const chapter8Fr: Chapter = {
         },
         {
           "type": "sub",
-          "text": "Hiatus aortique"
+          "text": "3.4.1. Hiatus aortique"
         },
         {
           "type": "para",
@@ -215,7 +216,7 @@ export const chapter8Fr: Chapter = {
         },
         {
           "type": "sub",
-          "text": "Orifice ou hiatus œsophagien"
+          "text": "3.4.2. Orifice ou hiatus œsophagien"
         },
         {
           "type": "para",
@@ -231,7 +232,7 @@ export const chapter8Fr: Chapter = {
         },
         {
           "type": "sub",
-          "text": "Hiatus de la veine cave inférieure"
+          "text": "3.4.3. Hiatus de la veine cave inférieure"
         },
         {
           "type": "para",
@@ -243,11 +244,11 @@ export const chapter8Fr: Chapter = {
         },
         {
           "type": "sub",
-          "text": "Orifices accessoires"
+          "text": "3.4.4. Orifices accessoires"
         },
         {
           "type": "sub",
-          "text": "Hiatus de Marfran et de Larrey"
+          "text": "3.4.4.1. Hiatus de Marfran et de Larrey"
         },
         {
           "type": "para",
@@ -275,7 +276,7 @@ export const chapter8Fr: Chapter = {
         },
         {
           "type": "sub",
-          "text": "Orifices entre les piliers accessoires"
+          "text": "3.4.4.2. Orifices entre les piliers accessoires"
         },
         {
           "type": "para",
@@ -287,7 +288,7 @@ export const chapter8Fr: Chapter = {
         },
         {
           "type": "sub",
-          "text": "Hiatus du ligament lombo-costal de Henlé"
+          "text": "3.4.4.3. Hiatus du ligament lombo-costal de Henlé"
         },
         {
           "type": "para",
@@ -305,11 +306,11 @@ export const chapter8Fr: Chapter = {
     },
     {
       "id": "rapports",
-      "title": "Rapports",
+      "title": "4. Rapports",
       "blocks": [
         {
           "type": "sub",
-          "text": "Connexions viscérales et ostéo-musculo-articulaires"
+          "text": "4.1. Connexions viscérales et ostéo-musculo-articulaires"
         },
         {
           "type": "para",
@@ -357,11 +358,11 @@ export const chapter8Fr: Chapter = {
         },
         {
           "type": "sub",
-          "text": "Rapports du hiatus œsophagien"
+          "text": "4.2. Rapports du hiatus œsophagien"
         },
         {
           "type": "sub",
-          "text": "Dysfonctions du hiatus œsophagien"
+          "text": "4.2.1. Dysfonctions du hiatus œsophagien"
         },
         {
           "type": "para",
@@ -391,11 +392,11 @@ export const chapter8Fr: Chapter = {
     },
     {
       "id": "vascularisation",
-      "title": "Vascularisation",
+      "title": "5. Vascularisation",
       "blocks": [
         {
           "type": "lead",
-          "label": "Artérielle",
+          "label": "5.1. Artérielle",
           "text": "le diaphragme reçoit le sang artériel par:"
         },
         {
@@ -414,7 +415,7 @@ export const chapter8Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "Veineux:"
+          "text": "5.2. Veineux"
         },
         {
           "type": "lead",
@@ -436,7 +437,7 @@ export const chapter8Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "La veine azygos et la veine hémi-azygos traversent le diaphragme près des piliers médians et latéraux du diaphragme; puis la veine hémi-azygos passe du côté droit pour se jétér dans la veine azygos, à hauteur de la vertèbre Th9."
+          "text": "La veine azygos et la veine hémi-azygos traversent le diaphragme près des piliers médians et latéraux du diaphragme; puis la veine hémi-azygos passe du côté droit pour se jeter dans la veine azygos, à hauteur de la vertèbre Th9."
         },
         {
           "type": "para",
@@ -444,7 +445,7 @@ export const chapter8Fr: Chapter = {
         },
         {
           "type": "sub",
-          "text": "Intérêt clinique"
+          "text": "5.3. Intérêt clinique"
         },
         {
           "type": "para",
@@ -464,7 +465,7 @@ export const chapter8Fr: Chapter = {
     },
     {
       "id": "innervation",
-      "title": "Innervation",
+      "title": "6. Innervation",
       "blocks": [
         {
           "type": "lead",
@@ -473,7 +474,7 @@ export const chapter8Fr: Chapter = {
         },
         {
           "type": "sub",
-          "text": "Nerfs phréniques"
+          "text": "6.1. Nerfs phréniques"
         },
         {
           "type": "para",
@@ -485,7 +486,7 @@ export const chapter8Fr: Chapter = {
         },
         {
           "type": "sub",
-          "text": "Trajet et terminaisons"
+          "text": "6.1.1. Trajet et terminaisons"
         },
         {
           "type": "lead",
@@ -531,7 +532,7 @@ export const chapter8Fr: Chapter = {
         },
         {
           "type": "sub",
-          "text": "Anastomoses"
+          "text": "6.1.2. Anastomoses"
         },
         {
           "type": "lead",
@@ -550,7 +551,7 @@ export const chapter8Fr: Chapter = {
         },
         {
           "type": "sub",
-          "text": "Les six derniers nerfs intercostaux"
+          "text": "6.2. Les six derniers nerfs intercostaux"
         },
         {
           "type": "para",
@@ -560,11 +561,11 @@ export const chapter8Fr: Chapter = {
     },
     {
       "id": "physiologie",
-      "title": "Physiologie",
+      "title": "7. Physiologie",
       "blocks": [
         {
           "type": "lead",
-          "label": "Fonction de cohésion et de mobilité viscérale",
+          "label": "7.1. Fonction de cohésion et de mobilité viscérale",
           "text": "l’alternance inspiration-expiration, à raison d’environ 16/min, soit un ordre de grandeur de plusieurs dizaines de milliers de cycles par 24 heures, participe au glissement relatif des viscères par l’intermédiaire des séreuses mobilisées par le diaphragme."
         },
         {
@@ -575,12 +576,12 @@ export const chapter8Fr: Chapter = {
         },
         {
           "type": "lead",
-          "label": "Fonction veino-lymphatique",
+          "label": "7.2. Fonction veino-lymphatique",
           "text": "l’alternance inspiration-expiration s’accompagne d’une alternance de pressions qui peut contribuer au retour veineux vers le cœur, ainsi qu’au retour de la circulation lymphatique vers le réseau veineux jugulo-subclavier."
         },
         {
           "type": "para",
-          "text": "Fonction barométrique:"
+          "text": "7.3. Fonction barométrique"
         },
         {
           "type": "para",
@@ -620,17 +621,17 @@ export const chapter8Fr: Chapter = {
         },
         {
           "type": "lead",
-          "label": "Fonction de tension membraneuse",
+          "label": "7.4. Fonction de tension membraneuse",
           "text": "par ses mouvements, le diaphragme mobilise les séreuses: plèvre, péricarde, péritoine."
         },
         {
           "type": "lead",
-          "label": "Fonction sur le système ostéo-musculo-articulaire",
+          "label": "7.5. Fonction sur le système ostéo-musculo-articulaire",
           "text": "par ses connexions vertébrales et costales avec les muscles intervertébraux, abdominaux, grand psoas et carré des lombes, les mouvements du diaphragme s’accompagnent de variations de tension au sein du système musculo-fascial du cou, du thorax et de l’abdomen."
         },
         {
           "type": "lead",
-          "label": "Fonction barométrique articulaire",
+          "label": "7.6. Fonction barométrique articulaire",
           "text": "la pression intra-capsulaire des articulations est infra-atmosphérique."
         },
         {
@@ -643,7 +644,7 @@ export const chapter8Fr: Chapter = {
         },
         {
           "type": "sub",
-          "text": "Jonction œsophago-cardio-tubérositaire (JOCT)"
+          "text": "7.7. Jonction œsophago-cardio-tubérositaire (JOCT)"
         },
         {
           "type": "para",
@@ -696,21 +697,21 @@ export const chapter8Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "Dans le cadre de cette présentation, cette continence est également reliée à la valvule de Gubaroff, qui s’opposé au reflux gastro-œsophagien."
+          "text": "Dans le cadre de cette présentation, cette continence est également reliée à la valvule de Gubaroff, qui s’oppose au reflux gastro-œsophagien."
         }
       ]
     },
     {
       "id": "pathologies-courantes-diagnostic-d-exclusion-indications-troubles-fonctionnels",
-      "title": "Pathologies courantes",
+      "title": "8. Pathologies courantes",
       "blocks": [
         {
           "type": "sub",
-          "text": "Reflux gastro-œsophagien et hernie hiatale"
+          "text": "8.1. Reflux gastro-œsophagien et hernie hiatale"
         },
         {
           "type": "sub",
-          "text": "Reflux gastro-œsophagien (RGO)"
+          "text": "8.1.1. Reflux gastro-œsophagien (RGO)"
         },
         {
           "type": "para",
@@ -726,7 +727,7 @@ export const chapter8Fr: Chapter = {
         },
         {
           "type": "sub",
-          "text": "Hernie hiatale"
+          "text": "8.1.2. Hernie hiatale"
         },
         {
           "type": "para",
@@ -758,7 +759,7 @@ export const chapter8Fr: Chapter = {
         },
         {
           "type": "sub",
-          "text": "Étiologie"
+          "text": "8.1.3. Étiologie"
         },
         {
           "type": "para",
@@ -801,7 +802,7 @@ export const chapter8Fr: Chapter = {
         },
         {
           "type": "sub",
-          "text": "Symptômes"
+          "text": "8.1.4. Symptômes"
         },
         {
           "type": "para",
@@ -833,7 +834,7 @@ export const chapter8Fr: Chapter = {
         },
         {
           "type": "sub",
-          "text": "RGO du nouveau-né"
+          "text": "8.2. RGO du nouveau-né"
         },
         {
           "type": "para",
@@ -847,11 +848,11 @@ export const chapter8Fr: Chapter = {
     },
     {
       "id": "relations-viscero-somatiques",
-      "title": "Relations viscéro-somatiques",
+      "title": "9. Relations viscéro-somatiques",
       "blocks": [
         {
           "type": "sub",
-          "text": "Chaînes mécaniques diaphragme — rachis — ceinture scapulaire"
+          "text": "9.1. Chaînes mécaniques diaphragme — rachis — ceinture scapulaire"
         },
         {
           "type": "para",
@@ -872,7 +873,7 @@ export const chapter8Fr: Chapter = {
         },
         {
           "type": "sub",
-          "text": "Références douloureuses phréniques"
+          "text": "9.2. Références douloureuses phréniques"
         },
         {
           "type": "para",
@@ -888,7 +889,7 @@ export const chapter8Fr: Chapter = {
         },
         {
           "type": "sub",
-          "text": "Charnière thoraco-lombaire et réténtissements associés"
+          "text": "9.3. Charnière thoraco-lombaire et retentissements associés"
         },
         {
           "type": "para",
@@ -904,7 +905,7 @@ export const chapter8Fr: Chapter = {
     },
     {
       "id": "relations-viscero-emotionnelles",
-      "title": "Relations viscéro-émotionnelles",
+      "title": "10. Relations viscéro-émotionnelles",
       "blocks": [
         {
           "type": "lead",
@@ -927,7 +928,7 @@ export const chapter8Fr: Chapter = {
     },
     {
       "id": "conseils",
-      "title": "Conseils",
+      "title": "11. Conseils",
       "blocks": [
         {
           "type": "para",
@@ -941,11 +942,11 @@ export const chapter8Fr: Chapter = {
     },
     {
       "id": "zones-reflexes-podales",
-      "title": "Zones réflexes podales",
+      "title": "12. Zones réflexes podales",
       "blocks": [
         {
           "type": "sub",
-          "text": "Repères anatomiques préalables au positionnement des zones"
+          "text": "12.1. Repères anatomiques préalables au positionnement des zones"
         },
         {
           "type": "para",
@@ -964,11 +965,11 @@ export const chapter8Fr: Chapter = {
         },
         {
           "type": "sub",
-          "text": "Syndrome général"
+          "text": "12.2. Syndrome général"
         },
         {
           "type": "sub",
-          "text": "Zones réflexes podales du diaphragme: face plantaire des deux pieds"
+          "text": "12.2.1. Zones réflexes podales du diaphragme: face plantaire des deux pieds"
         },
         {
           "type": "lead",
@@ -1003,7 +1004,7 @@ export const chapter8Fr: Chapter = {
         },
         {
           "type": "sub",
-          "text": "Zones réflexes podales des orifices"
+          "text": "12.2.2. Zones réflexes podales des orifices"
         },
         {
           "type": "lead",
@@ -1050,7 +1051,7 @@ export const chapter8Fr: Chapter = {
         },
         {
           "type": "sub",
-          "text": "Zones vasculaires associées"
+          "text": "12.2.3. Zones vasculaires associées"
         },
         {
           "type": "lead",
@@ -1066,7 +1067,7 @@ export const chapter8Fr: Chapter = {
         },
         {
           "type": "sub",
-          "text": "Zones réflexes podales du nerf phrénique"
+          "text": "12.2.4. Zones réflexes podales du nerf phrénique"
         },
         {
           "type": "para",
@@ -1098,7 +1099,7 @@ export const chapter8Fr: Chapter = {
         },
         {
           "type": "sub",
-          "text": "Zones réflexes des six nerfs intercostaux"
+          "text": "12.2.5. Zones réflexes des six nerfs intercostaux"
         },
         {
           "type": "para",
@@ -1121,6 +1122,39 @@ export const chapter8Fr: Chapter = {
           "caption": "Nerf intercostal brachial de Hyrtl",
           "alt": "Photo du repérage podal du nerf intercostal brachial de Hyrtl",
           "orientation": "landscape"
+        },
+        {
+          "type": "sub",
+          "text": "12.3. Syndrome loco-régional"
+        },
+        {
+          "type": "sub",
+          "text": "12.3.1. ROP du RGO et de la hernie hiatale"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "Colonne cervico-thoraco-abdominale, articulations costo-vertébrales.",
+            "Diaphragme, nerf phrénique, six derniers nerfs intercostaux.",
+            "Nerf vague.",
+            "Hiatus œsophagien.",
+            "Estomac.",
+            "Lobe gauche du foie."
+          ]
+        },
+        {
+          "type": "sub",
+          "text": "12.3.2. ROP du RGO du nouveau-né"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "MRP.",
+            "Parties condylaires de l’occiput.",
+            "Foramen magnum.",
+            "Foramen jugulaire.",
+            "Hiatus œsophagien."
+          ]
         }
       ]
     }
