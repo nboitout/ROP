@@ -1094,11 +1094,6 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, h
       <div className="ss-layout">
         <div className="ss-stagecol">
           <div className={`ss-stage${activeSlideIsPortrait ? ' ss-stage--portrait' : ''}`}>
-            {/* First child on purpose: the shortcut is the one control that
-                must survive any deck length, and the pinned column is anchored
-                by its top edge. Rendered once, outside the hidden/shown
-                branches, so both states offer it. */}
-            {reflexJumpButton}
             {slidesHidden ? (
             <>
             <button
@@ -1199,6 +1194,10 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, h
             </div>
             </>
             )}
+            {/* Sits under the deck, next to the other trailing controls.
+                Rendered once, outside the hidden/shown branches, so both
+                states offer it. */}
+            {reflexJumpButton}
             {clinicalCaseButton}
           </div>
         </div>
