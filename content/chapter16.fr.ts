@@ -1,5 +1,6 @@
 import type { Chapter } from './types'
 
+// Source: public/chapter-16/Chapitre_16_Reins_version_publiable.docx
 export const chapter16Fr: Chapter = {
   "slug": "chapter-16",
   "number": "16",
@@ -777,5 +778,106 @@ export const chapter16Fr: Chapter = {
         }
       ]
     }
+  ]
+}
+
+const chapter16Section = (id: string) => chapter16Fr.sections.find((section) => section.id === id)
+
+const chapter16Titles: Record<string, string> = {
+  presentation: '1. Présentation',
+  situation: '2. Situation',
+  anatomie: '3. Anatomie',
+  rapports: '4. Rapports',
+  vascularisation: '5. Vascularisation',
+  innervation: '6. Innervation',
+  physiologie: '7. Physiologie',
+  'pathologies-courantes': '8. Pathologies courantes',
+  'relations-viscero-somatiques': '10. Relations viscéro-somatiques',
+  'relations-viscero-emotionnelles': '11. Relations viscéro-émotionnelles',
+  conseils: '12. Conseils',
+  'zones-reflexes-podales': '13. Zones réflexes podales',
+}
+
+for (const [id, title] of Object.entries(chapter16Titles)) {
+  const section = chapter16Section(id)
+  if (section) section.title = title
+}
+
+const chapter16Subtitles: Record<string, Record<string, string>> = {
+  situation: {
+    Dorsalement: '2.1. Rapports dorsaux',
+    Ventralement: '2.2. Rapports ventraux',
+  },
+  anatomie: {
+    'Loge rénale': '3.1. Loge rénale',
+    'Le contenu: la graisse rénale:': '3.2. Graisses périrénale et pararénale',
+    'Structure interne des reins': '3.4. Structure interne des reins',
+  },
+  rapports: {
+    Dorsalement: '4.1. Rapports dorsaux',
+    Ventralement: '4.2. Rapports ventraux',
+  },
+  vascularisation: {
+    'Artère rénale': '5.1. Vascularisation artérielle',
+    'Veine rénale': '5.2. Vascularisation veineuse',
+  },
+  physiologie: {
+    Mobilité: '7.1. Mobilité rénale',
+    'Rôle des reins': '7.2. Fonctions rénales',
+  },
+  'pathologies-courantes': {
+    'Diagnostic d’exclusion': '8.1. Diagnostic d’exclusion',
+  },
+  'zones-reflexes-podales': {
+    'Syndrome général d’adaptation': '13.1. Syndrome général d’adaptation',
+    'Syndrome loco-régional': '13.2. Syndrome loco-régional',
+    'Système limbique': '13.3. Système limbique',
+  },
+}
+
+for (const [sectionId, replacements] of Object.entries(chapter16Subtitles)) {
+  const section = chapter16Section(sectionId)
+  if (!section) continue
+  for (const block of section.blocks) {
+    if (block.type === 'sub' && replacements[block.text]) block.text = replacements[block.text]
+  }
+}
+
+const chapter16Pathologies = chapter16Section('pathologies-courantes')
+
+if (chapter16Pathologies) {
+  const indicationBlocks = chapter16Pathologies.blocks.splice(4)
+  if (indicationBlocks[0]?.type === 'sub') indicationBlocks.shift()
+
+  for (const block of indicationBlocks) {
+    if (block.type !== 'sub') continue
+    if (block.text === 'Causes') block.text = '9.2. Lombalgies gravidiques — causes'
+    if (block.text.startsWith('Fixations postérieures:')) block.text = block.text.replace('Fixations postérieures:', '9.3. Fixations postérieures —')
+  }
+
+  const pathologiesIndex = chapter16Fr.sections.indexOf(chapter16Pathologies)
+  chapter16Fr.sections.splice(pathologiesIndex + 1, 0, {
+    id: 'indications-troubles-fonctionnels',
+    title: '9. Indications : troubles fonctionnels',
+    blocks: indicationBlocks,
+  })
+}
+
+const chapter16Emotional = chapter16Section('relations-viscero-emotionnelles')
+
+if (chapter16Emotional) {
+  chapter16Emotional.blocks = [
+    {
+      type: 'para',
+      text: 'Les reins expriment des sentiments de désir refoulé, de tristesse existentielle profonde de fin de vie, de mort. Ils reflètent souvent les conflits existant avec les parents ou entre les parents. Il faut distinguer le rein droit du rein gauche :',
+    },
+    {
+      type: 'bullets',
+      items: [
+        'Rein droit ou « rein digestif » : il sert de trop-plein émotionnel au foie. Il est l’organe de la colère intense refoulée, remontant à la petite enfance, en totale fusion avec la mère ou, au contraire, en totale opposition, empêchant l’enfant de développer sa propre identité. Le rein droit est l’expression de celui qui veut dominer mais qui a peur de dominer.',
+        'Rein gauche ou « rein génital » : il est l’organe du « moi génétique », de la génitalité qui nous relie à ceux qui nous ont donné la vie, à nos racines, au potentiel sexuel à transmettre la vie qu’on a reçue. Cela ne signifie pas l’impuissance ou la frigidité mais la peur de donner la vie.',
+        'Le rein gauche est l’organe de la peur profonde, essentielle, au fond de soi, peur de la violence, de l’abandon, d’être tué, différente de la peur superficielle. Le rein gauche est lié à un refoulement important et à une inhibition du développement personnel. C’est aussi l’organe qui exprime la puissance profonde de l’être, d’où parfois la violence exprimée par une pulsion et au besoin de domination sur les autres.',
+      ],
+    },
   ]
 }
