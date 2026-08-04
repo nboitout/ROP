@@ -1,5 +1,5 @@
 // Chapter 14 content — French
-// Source: public/Chapter-14/Chapitre 14 Intestin grêle - Parties 1a, 1b, 2, 3.docx (Guy Boitout)
+// Source: public/chapter-14/Chapitre_14_Intestin_grele_version_publiable.docx
 
 import type { Chapter } from './types'
 
@@ -12,7 +12,7 @@ export const chapter14Fr: Chapter = {
   sections: [
     {
       id: 'presentation',
-      title: 'Présentation',
+      title: '1. Présentation',
       blocks: [
         { type: 'para', text: 'L’intestin grêle (ou petit intestin) est le viscère abdominal le plus long du corps : sur le cadavre, sa longueur est autour de 6 à 7 mètres, alors que chez le vivant, elle est nettement moindre en raison de son tonus musculaire. Il est constitué de deux parties :' },
         { type: 'bullets', items: ['Le duodénum', 'Le jéjunum-iléum.'] },
@@ -36,19 +36,19 @@ export const chapter14Fr: Chapter = {
     },
     {
       id: 'situation',
-      title: 'Situation',
+      title: '2. Situation',
       blocks: [
         { type: 'para', text: 'Le jéjunum-iléum occupe une grande partie de la cavité abdominale, plus volontiers à gauche qu’à droite, à l’intérieur du cadre colique. Le jéjunum siège préférentiellement dans le quadrant supérieur gauche de l’abdomen. L’iléum siège préférentiellement dans le quadrant inférieur droit de l’abdomen.' },
       ],
     },
     {
       id: 'anatomie',
-      title: 'Anatomie',
+      title: '3. Anatomie',
       blocks: [
         { type: 'figure', src: '/chapter-14/figure-14-2.png', caption: 'Figure 14.2 — Mésos', alt: 'Les mésos du péritoine', orientation: 'portrait', syncHide: true },
-        { type: 'lead', label: 'Jéjunum-iléum', text: 'il comporte 15 à 16 anses intestinales en forme de U, disposées en deux groupes. Un groupe supérieur à gauche, le jéjunum, plus développé que l’iléum, dont les anses et le système vasculaire sont plutôt orientés horizontalement. Un groupe inférieur à droite, l’iléum, dont les anses et le système vasculaire sont plutôt orientés verticalement.' },
-        { type: 'lead', label: 'Mésentère', text: 'c’est un méso, c’est-à-dire une réflexion à double feuillet du péritoine. Il enveloppe le jéjunum-iléum et le relie à la paroi postérieure de l’abdomen par l’intermédiaire de la racine du mésentère.' },
-        { type: 'lead', label: 'Racine du mésentère', text: 'elle constitue la ligne d’attache du mésentère et contribue à la stabilité de l’intestin grêle par ailleurs très mobile. Elle mesure 16 à 18 cm. Elle s’étend de la jonction duodéno-jéjunale à la jonction iléo-caecale en croisant l’axe médian de l’abdomen au niveau de l’ombilic (à hauteur du disque L3-L4).' },
+        { type: 'lead', label: '3.1. Jéjunum-iléum', text: 'il comporte 15 à 16 anses intestinales en forme de U, disposées en deux groupes. Un groupe supérieur à gauche, le jéjunum, plus développé que l’iléum, dont les anses et le système vasculaire sont plutôt orientés horizontalement. Un groupe inférieur à droite, l’iléum, dont les anses et le système vasculaire sont plutôt orientés verticalement.' },
+        { type: 'lead', label: '3.2. Mésentère', text: 'c’est un méso, c’est-à-dire une réflexion à double feuillet du péritoine. Il enveloppe le jéjunum-iléum et le relie à la paroi postérieure de l’abdomen par l’intermédiaire de la racine du mésentère.' },
+        { type: 'lead', label: '3.3. Racine du mésentère', text: 'elle constitue la ligne d’attache du mésentère et contribue à la stabilité de l’intestin grêle par ailleurs très mobile. Elle mesure 16 à 18 cm. Elle s’étend de la jonction duodéno-jéjunale à la jonction iléo-caecale en croisant l’axe médian de l’abdomen au niveau de l’ombilic (à hauteur du disque L3-L4).' },
         { type: 'para', text: 'La jonction duodéno-jéjunale est maintenue par le muscle de Treitz dont les fibres lisses s’attachent sur le pilier droit du diaphragme.' },
         { type: 'figure', src: '/chapter-14/figure-14-3.png', caption: 'Figure 14.3 — Racine du mésentère', alt: 'Racine du mésentère et son trajet abdominal', orientation: 'landscape', syncHide: true },
         { type: 'lead', label: 'Muscle de Treitz', text: 'il participe au maintien de l’angle duodéno-jéjunal par sa contraction, en attirant la racine du mésentère en haut et à gauche.' },
@@ -61,25 +61,40 @@ export const chapter14Fr: Chapter = {
       ],
     },
     {
+      id: 'rapports',
+      title: '4. Rapports',
+      blocks: [
+        { type: 'bullets', items: [
+          'L’intestin grêle est intra-péritonéal.',
+          'À gauche, le jéjunum recouvre le côlon descendant.',
+          'À droite, l’iléum laisse libre le côlon ascendant.',
+          'Dorsalement, l’intestin grêle répond à la paroi abdominale postérieure et aux organes rétro-péritonéaux, notamment la partie sus-mésocolique du duodénum, les reins, les uretères et les côlons ascendant et descendant.',
+          'Ventralement : le grand omentum, anciennement grand épiploon.',
+          'Caudalement : les organes pelviens, surtout la vessie.',
+          'Céphaliquement : le mésocôlon transverse.',
+        ]},
+      ],
+    },
+    {
       id: 'vascularisation',
-      title: 'Vascularisation',
+      title: '5. Vascularisation',
       blocks: [
         { type: 'figure', src: '/chapter-14/figure-14-5.png', caption: 'Figure 14.5 — Artère mésentérique supérieure', alt: 'Artère mésentérique supérieure et ses branches', orientation: 'portrait', syncHide: true },
         { type: 'para', text: 'L’intestin grêle a besoin d’une importante irrigation vasculaire et lymphatique pour assurer ses fonctions de digestion, d’absorption et immunitaire.' },
-        { type: 'lead', label: 'Artère mésentérique supérieure', text: 'elle constitue l’axe artériel principal de l’intestin grêle. Elle est une branche de l’aorte abdominale. Son origine se situe 1 cm au-dessous du tronc cœliaque, en regard du disque intervertébral Th12-L1. D’abord rétro-pancréatique puis en avant de la 3ème portion du duodénum, elle chemine entre les deux feuillets du mésentère. Elle donne de nombreuses branches collatérales. Elle irrigue tout l’intestin grêle, le côlon ascendant et les 2/3 proximaux du côlon transverse.' },
+        { type: 'lead', label: '5.1. Vascularisation artérielle — artère mésentérique supérieure', text: 'elle constitue l’axe artériel principal de l’intestin grêle. Elle est une branche de l’aorte abdominale. Son origine se situe 1 cm au-dessous du tronc cœliaque, en regard du disque intervertébral Th12-L1. D’abord rétro-pancréatique puis en avant de la 3ème portion du duodénum, elle chemine entre les deux feuillets du mésentère. Elle donne de nombreuses branches collatérales. Elle irrigue tout l’intestin grêle, le côlon ascendant et les 2/3 proximaux du côlon transverse.' },
         { type: 'para', text: 'Son pouls, perceptible au niveau de la 3ème portion du duodénum, à droite de l’ombilic, peut constituer un repère clinique vasculaire, sans préjuger à lui seul du fonctionnement de l’intestin.' },
-        { type: 'lead', label: 'Veine mésentérique supérieure', text: 'située à droite de l’artère mésentérique supérieure, elle fait partie du système porte. Elle draine vers le foie le sang veineux chargé des nutriments absorbés dans l’intestin grêle.' },
-        { type: 'lead', label: 'Réseau lymphatique', text: 'l’intestin grêle possède un réseau lymphatique développé. Il participe au système immunitaire. Il prend en charge les molécules de lipides et de protéines à chaîne longue et les vitamines liposolubles A, D, E, K acheminées vers le carrefour jugulo-subclavier gauche, via la citerne de Pecquet et le canal thoracique.' },
+        { type: 'lead', label: '5.2. Drainage veineux — veine mésentérique supérieure', text: 'située à droite de l’artère mésentérique supérieure, elle fait partie du système porte. Elle draine vers le foie le sang veineux chargé des nutriments absorbés dans l’intestin grêle.' },
+        { type: 'lead', label: '5.3. Drainage lymphatique', text: 'l’intestin grêle possède un réseau lymphatique développé. Il participe au système immunitaire. Il prend en charge les molécules de lipides et de protéines à chaîne longue et les vitamines liposolubles A, D, E, K acheminées vers le carrefour jugulo-subclavier gauche, via la citerne de Pecquet et le canal thoracique.' },
       ],
     },
     {
       id: 'innervation',
-      title: 'Innervation',
+      title: '6. Innervation',
       blocks: [
-        { type: 'sub', text: 'Innervation du péritoine' },
+        { type: 'sub', text: '6.1. Innervation du péritoine' },
         { type: 'para', text: 'Le péritoine reçoit une double innervation, somatique et autonome.' },
-        { type: 'lead', label: 'Péritoine pariétal', text: 'il reçoit une innervation somatique commune avec la paroi abdominale via les nerfs phréniques, les six derniers nerfs intercostaux et les nerfs du plexus lombaire. Il comporte de nombreuses terminaisons sensibles à la température, à la pression et à la douleur. Cette innervation commune avec la paroi abdominale éclaire la projection des douleurs cervicales, scapulaires, abdominales, lombaires d’origines péritonéale et viscérale transmises au système ostéo-musculo-articulaire par les fibres somatiques du feuillet pariétal.' },
-        { type: 'lead', label: 'Péritoine viscéral', text: 'il reçoit une innervation autonome extrinsèque commune avec les viscères. Sympathique : ses racines proviennent de Th8 à Th11. Elles rejoignent les plexus pré-vertébraux cœliaque et mésentérique supérieur via les nerfs grands et petits splanchniques.' },
+        { type: 'lead', label: '6.1.1. Péritoine pariétal', text: 'il reçoit une innervation somatique commune avec la paroi abdominale via les nerfs phréniques, les six derniers nerfs intercostaux et les nerfs du plexus lombaire. Il comporte de nombreuses terminaisons sensibles à la température, à la pression et à la douleur. Cette innervation commune avec la paroi abdominale éclaire la projection des douleurs cervicales, scapulaires, abdominales, lombaires d’origines péritonéale et viscérale transmises au système ostéo-musculo-articulaire par les fibres somatiques du feuillet pariétal.' },
+        { type: 'lead', label: '6.1.2. Péritoine viscéral', text: 'il reçoit une innervation autonome extrinsèque commune avec les viscères. Sympathique : ses racines proviennent de Th8 à Th11. Elles rejoignent les plexus pré-vertébraux cœliaque et mésentérique supérieur via les nerfs grands et petits splanchniques.' },
 
         { type: 'sub', text: 'Nerf vague et système nerveux sympathique' },
         { type: 'leadBullets', items: [
@@ -89,7 +104,7 @@ export const chapter14Fr: Chapter = {
           { label: 'Nerf vague — sensibilité', text: 'le nerf vague contient 70 à 80 % de fibres sensitives qui renseignent en permanence le cerveau de l’état des viscères. Il est connecté au système nerveux intrinsèque.' },
         ]},
 
-        { type: 'sub', text: 'Système nerveux entérique (SNE)' },
+        { type: 'sub', text: '6.2. Système nerveux intrinsèque ou entérique (SNE)' },
         { type: 'para', text: 'Le système nerveux intrinsèque ou entérique (SNE) est souvent qualifié de 2ème cerveau ou cerveau abdominal. Il est constitué de plexus intramuraux situés dans la paroi même de l’intestin grêle : le plexus myoentérique d’Auerbach et le plexus sous-muqueux de Meissner.' },
         { type: 'bullets', items: [
           'Le SNE est sensible aux signaux neuro-hormonaux et à la composition chimique du contenu intestinal.',
@@ -101,9 +116,9 @@ export const chapter14Fr: Chapter = {
     },
     {
       id: 'physiologie',
-      title: 'Physiologie',
+      title: '7. Physiologie',
       blocks: [
-        { type: 'sub', text: 'Motricité' },
+        { type: 'sub', text: '7.1. Motricité' },
         { type: 'para', text: 'Elle est déclenchée par trois grands types de mécanismes :' },
         { type: 'bullets', items: [
           'Mécanique : par l’étirement de la paroi intestinale lors du passage du chyme.',
@@ -112,9 +127,9 @@ export const chapter14Fr: Chapter = {
         ]},
         { type: 'para', text: 'L’intestin grêle est animé de contractions rythmiques, de mouvements en va-et-vient et de segmentation assurant l’homogénéisation du chyme, et de péristaltismes permettant la progression du chyme.' },
 
-        { type: 'sub', text: 'Écosystème intestinal' },
+        { type: 'sub', text: '7.2. Écosystème intestinal' },
         { type: 'para', text: 'L’intestin grêle constitue un écosystème formé par la muqueuse intestinale, le système immunitaire et le microbiote intestinal.' },
-        { type: 'lead', label: 'Muqueuse intestinale', text: 'elle constitue l’interface entre le milieu intérieur de l’organisme et le contenu de la lumière digestive. Elle agit comme une barrière sélective afin de permettre la digestion et l’absorption.' },
+        { type: 'lead', label: '7.2.1. Muqueuse intestinale', text: 'elle constitue l’interface entre le milieu intérieur de l’organisme et le contenu de la lumière digestive. Elle agit comme une barrière sélective afin de permettre la digestion et l’absorption.' },
         { type: 'lead', label: 'Digestion', text: 'elle correspond à la transformation des aliments en molécules simples pouvant ensuite être absorbées. Les cellules caliciformes produisent un mucus protecteur. Les cellules de Lieberkühn participent à la sécrétion intestinale légèrement alcaline ainsi qu’à des fonctions enzymatiques et antimicrobiennes. Les entérocytes ou cellules absorbantes assurent une fonction de barrière sélective grâce à leur agencement intercellulaire (desmosomes), permettant l’absorption des micronutriments tout en limitant le passage de macromolécules insuffisamment dégradées.' },
         { type: 'lead', label: 'Absorption', text: 'la muqueuse intestinale est recouverte de villosités en forme d’expansions digitiformes dont l’axe central renferme des cellules musculaires lisses ainsi qu’un réseau sanguin et lymphatique. Les villosités sont elles-mêmes recouvertes de microvillosités formant une bordure en brosse, ce qui multiplie fortement la surface d’échange. L’intestin grêle étalé aurait une superficie équivalente à un court de tennis.' },
         { type: 'leadBullets', items: [
@@ -125,17 +140,17 @@ export const chapter14Fr: Chapter = {
           'L’action réflexe sur la motricité intestinale vise à soutenir la digestion et l’absorption.',
           'L’action réflexe sur le foie et le système lymphatique vise à soutenir la qualité de l’absorption et les fonctions immunitaires.',
         ]},
-        { type: 'lead', label: 'Système immunitaire', text: 'des récepteurs, situés à la surface de l’intestin, identifient certains agents pathogènes ou substances potentiellement nocives et les présentent aux cellules immunitaires intestinales : mastocytes (impliqués dans les réponses allergiques et inflammatoires), cellules de Paneth (libèrent des peptides antimicrobiens) et tissu lymphoïde associé au tube digestif (GALT), composé de lymphocytes isolés ou regroupés en plaques de Peyer.' },
+        { type: 'lead', label: '7.2.2. Système immunitaire intestinal', text: 'des récepteurs, situés à la surface de l’intestin, identifient certains agents pathogènes ou substances potentiellement nocives et les présentent aux cellules immunitaires intestinales : mastocytes (impliqués dans les réponses allergiques et inflammatoires), cellules de Paneth (libèrent des peptides antimicrobiens) et tissu lymphoïde associé au tube digestif (GALT), composé de lymphocytes isolés ou regroupés en plaques de Peyer.' },
         { type: 'lead', label: 'Microbiote intestinal', text: 'c’est un ensemble de bactéries, champignons, levures, virus et protozoaires vivant en interaction avec leur hôte. On estime leur nombre à environ 38 milliards de bactéries dans l’organisme humain. Chacun possède une signature propre du microbiote. Le microbiote constitue un déterminant important de notre bonne santé : il participe à l’immunité, à la digestion et à l’absorption, et interagit avec les fonctions cérébrales et émotionnelles via l’axe intestin-cerveau.' },
       ],
     },
     {
       id: 'pathologies',
-      title: 'Pathologies courantes',
+      title: '8. Pathologies courantes',
       blocks: [
         { type: 'para', text: 'L’hyperperméabilité intestinale et la dysbiose sont souvent décrites comme associées, l’une provoquant l’autre et réciproquement.' },
 
-        { type: 'lead', label: 'Hyperperméabilité intestinale', text: 'lorsque les jonctions intercellulaires entre entérocytes sont altérées, la perméabilité intestinale peut augmenter. Cela peut s’accompagner d’un passage accru de macromolécules luminales insuffisamment dégradées entraînant une activation immunitaire ou inflammatoire.' },
+        { type: 'lead', label: '8.1. Hyperperméabilité intestinale', text: 'lorsque les jonctions intercellulaires entre entérocytes sont altérées, la perméabilité intestinale peut augmenter. Cela peut s’accompagner d’un passage accru de macromolécules luminales insuffisamment dégradées entraînant une activation immunitaire ou inflammatoire.' },
         { type: 'sub', text: 'Causes' },
         { type: 'bullets', items: [
           'Agents infectieux : staphylocoques, streptocoques, colibacilles, salmonelle, candida albicans qui libèrent des toxines.',
@@ -155,19 +170,19 @@ export const chapter14Fr: Chapter = {
           'En présence de douleurs et de fixations ostéo-musculo-articulaires, surtout lorsque la notion de traumatisme ou de sur-sollicitation n’est pas évidente, la démarche de la ROP invite à rechercher un lien possible avec des dysfonctions viscérales.',
         ]},
 
-        { type: 'lead', label: 'Dysbiose', text: 'elle correspond à la perturbation du microbiote. Lorsque la composition du microbiote se modifie — avec baisse de diversité ou déséquilibre entre espèces commensales et espèces potentiellement pathogènes — la protection de la muqueuse peut être altérée.' },
+        { type: 'lead', label: '8.2. Dysbiose', text: 'elle correspond à la perturbation du microbiote. Lorsque la composition du microbiote se modifie — avec baisse de diversité ou déséquilibre entre espèces commensales et espèces potentiellement pathogènes — la protection de la muqueuse peut être altérée.' },
         { type: 'lead', label: 'Causes de dysbiose', text: 'le stress, l’inflammation, les infections, une mauvaise hygiène de vie ou un déséquilibre alimentaire (abus d’alcool, de sucre et de protéines ou une absence de fibres), une antibiothérapie, certaines expositions environnementales ainsi que des fixations vertébrales et des fibroses de l’intestin et de ses attaches.' },
         { type: 'para', text: 'La dysbiose est considérée comme facteur associé dans de nombreuses pathologies, notamment : rectocolite hémorragique, thyroïdite, asthme, sinusite, allergies, arthralgies (lombalgies), fibromyalgie, cystite, certaines formes dépressives. Certains auteurs avancent que des maladies neuro-dégénératives telles que Parkinson, la sclérose en plaque ou la maladie d’Alzheimer pourraient être en lien avec le système nerveux entérique via le nerf vague.' },
 
         { type: 'lead', label: 'Signes annonciateurs', text: 'mauvaise haleine, éructation, aérocolie, émission de gaz malodorants, constipation/diarrhée, pyrosis, attirance exagérée pour le sucre et la viande crue.' },
 
-        { type: 'lead', label: 'Diagnostic d’exclusion', text: 'certains symptômes doivent orienter les patients vers un médecin : fièvre, sang rouge ou noir dans les selles, déshydratation importante, perte de poids importante et inexpliquée, alternance constipation-diarrhée, vomissements, douleur colique de la région ombilicale, météorisme, occlusion (iléus mécanique ou paralytique), hernie inguinale étranglée, ganglion de Troisier (suspicion de cancer), signe de l’épanchement intra-abdominal.' },
+        { type: 'lead', label: '8.3. Diagnostic d’exclusion', text: 'certains symptômes doivent orienter les patients vers un médecin : fièvre, sang rouge ou noir dans les selles, déshydratation importante, perte de poids importante et inexpliquée, alternance constipation-diarrhée, vomissements, douleur colique de la région ombilicale, météorisme, occlusion (iléus mécanique ou paralytique), hernie inguinale étranglée, ganglion de Troisier (suspicion de cancer), signe de l’épanchement intra-abdominal.' },
 
         { type: 'rop', body: [
-          'Dysbioses, suites de gastro-entérites, entéroptoses (tension anormale de l’intestin grêle associée à des vasoconstrictions, stases veineuses et lymphatiques, et spasmes des plexus nerveux péri-vasculaires), iléus paralytique (inhibition de la motricité et des sécrétions intestinales par irritation du péritoine à dominante sympathique).',
+          '8.4. Indications : pathologies fonctionnelles — dysbioses, suites de gastro-entérites, entéroptoses (tension anormale de l’intestin grêle associée à des vasoconstrictions, stases veineuses et lymphatiques, et spasmes des plexus nerveux péri-vasculaires), iléus paralytique (inhibition de la motricité et des sécrétions intestinales par irritation du péritoine à dominante sympathique).',
         ]},
 
-        { type: 'sub', text: 'Maladie de Crohn' },
+        { type: 'sub', text: '8.4.3. Maladie de Crohn' },
         { type: 'para', text: 'Cette maladie touche essentiellement l’iléum et le côlon. Plusieurs facteurs y sont associés : génétique, dysbiose, environnement, et émotionnel comme facteur de modulation du vécu et parfois des poussées.' },
         { type: 'lead', label: 'Symptômes', text: 'diarrhée liée à l’inflammation de la paroi intestinale, douleurs abdomino-pelviennes, amaigrissement, asthénie, aphtes buccaux, lombalgie, érythèmes noueux des membres, atteinte pancréatique, syndrome dépressif.' },
         { type: 'lead', label: 'Évolution', text: 'chronicité, risque accru de cancer colorectal selon l’extension et l’ancienneté de la maladie. Ces patients sont souvent obligés d’adopter un régime strict comportant peu de fibres.' },
@@ -238,21 +253,21 @@ export const chapter14Fr: Chapter = {
     },
     {
       id: 'relations',
-      title: 'Relations viscéro-somatiques et émotionnelles',
+      title: '9–11. Relations et conseils',
       blocks: [
-        { type: 'sub', text: 'Relations viscéro-somatiques' },
+        { type: 'sub', text: '9. Relations viscéro-somatiques' },
         { type: 'bullets', items: [
           'Fixation vertébrale de Th10 à Th12 et leurs côtes.',
           'L1 et L2.',
         ]},
 
-        { type: 'sub', text: 'Relations viscéro-émotionnelles' },
+        { type: 'sub', text: '10. Relations viscéro-émotionnelles' },
         { type: 'para', text: 'Le ventre peut constituer un lieu d’expression somatique des tensions émotionnelles. Par l’intermédiaire de l’axe intestin-cerveau, le stress peut moduler la motricité, les sécrétions et la sensibilité viscérale. Une activation sympathique accrue, associée à une moindre régulation vagale, peut ainsi contribuer à l’apparition ou à l’aggravation de certains symptômes digestifs.' },
         { type: 'para', text: 'Sur le plan clinique, il est souvent difficile de distinguer nettement les manifestations fonctionnelles propres à l’intestin grêle de celles du côlon. La muqueuse, le système immunitaire intestinal et le système nerveux entérique forment une interface neuro-immuno-endocrine en communication permanente avec le cerveau.' },
         { type: 'para', text: 'Certaines personnes souffrant de troubles digestifs chroniques rapportent également fatigue, anxiété, irritabilité, troubles du sommeil ou hypersensibilité corporelle. Ces manifestations sont variables et non spécifiques. Elles ne définissent pas une personnalité propre à l’intestin et doivent être replacées dans le contexte médical, émotionnel et social de chaque personne.' },
         { type: 'para', text: 'Dans une approche ROP, l’exploration des tensions émotionnelles peut compléter l’évaluation fonctionnelle, sans attribuer automatiquement les symptômes digestifs à une origine psychologique et sans se substituer au diagnostic médical.' },
 
-        { type: 'sub', text: 'Conseils' },
+        { type: 'sub', text: '11. Conseils' },
         { type: 'para', text: 'L’intestin grêle reflète les tensions émotionnelles et psychiques. Les spasmes intestinaux fixent la colonne lombaire. Privilégier une alimentation variée et équilibrée sans excès d’hydrates de carbone et de protéines animales. Ne pas faire d’activité sportive pendant la digestion.' },
       ],
     },
