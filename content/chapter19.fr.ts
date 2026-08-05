@@ -23,7 +23,7 @@ export const chapter19Fr: Chapter = {
     },
     {
       "id": "uterus-situation",
-      "title": "1.2. Situation",
+      "title": "1.2. Situation de l’utérus",
       "blocks": [
         {
           "type": "para",
@@ -33,7 +33,7 @@ export const chapter19Fr: Chapter = {
     },
     {
       "id": "uterus-anatomie",
-      "title": "1.3. Anatomie",
+      "title": "1.3. Anatomie de l’utérus",
       "blocks": [
         {
           "type": "sub",
@@ -133,7 +133,7 @@ export const chapter19Fr: Chapter = {
     },
     {
       "id": "uterus-rapports",
-      "title": "1.4. Rapports",
+      "title": "1.4. Rapports de l’utérus",
       "blocks": [
         {
           "type": "bullets",
@@ -149,7 +149,7 @@ export const chapter19Fr: Chapter = {
     },
     {
       "id": "uterus-vascularisation",
-      "title": "1.5. Vascularisation",
+      "title": "1.5. Vascularisation de l’utérus",
       "blocks": [
         {
           "type": "bullets",
@@ -162,7 +162,7 @@ export const chapter19Fr: Chapter = {
     },
     {
       "id": "uterus-innervation",
-      "title": "1.6. Innervation",
+      "title": "1.6. Innervation de l’utérus",
       "blocks": [
         {
           "type": "bullets",
@@ -180,7 +180,7 @@ export const chapter19Fr: Chapter = {
     },
     {
       "id": "uterus-physiologie",
-      "title": "1.7. Physiologie",
+      "title": "1.7. Physiologie de l’utérus",
       "blocks": [
         {
           "type": "bullets",
@@ -238,7 +238,7 @@ export const chapter19Fr: Chapter = {
     },
     {
       "id": "uterus-pathologies-courantes",
-      "title": "1.8. Pathologies courantes",
+      "title": "1.8. Pathologies courantes de l’utérus",
       "blocks": [
         {
           "type": "sub",
@@ -288,7 +288,7 @@ export const chapter19Fr: Chapter = {
     },
     {
       "id": "uterus-relations-viscero-somatiques",
-      "title": "1.10. Relations viscéro-somatiques",
+      "title": "1.10. Relations viscéro-somatiques de l’utérus",
       "blocks": [
         {
           "type": "bullets",
@@ -302,7 +302,7 @@ export const chapter19Fr: Chapter = {
     },
     {
       "id": "uterus-relations-viscero-emotionnelles",
-      "title": "1.11. Relations viscéro-émotionnelles",
+      "title": "1.11. Relations viscéro-émotionnelles de l’utérus",
       "blocks": [
         {
           "type": "bullets",
@@ -314,7 +314,7 @@ export const chapter19Fr: Chapter = {
     },
     {
       "id": "ovaires-trompes-presentation",
-      "title": "2.1. Présentation",
+      "title": "2.1. Présentation des ovaires et trompes",
       "blocks": [
         {
           "type": "bullets",
@@ -342,7 +342,7 @@ export const chapter19Fr: Chapter = {
     },
     {
       "id": "ovaires-trompes-anatomie",
-      "title": "2.3. Anatomie",
+      "title": "2.3. Anatomie des ovaires et trompes",
       "blocks": [
         {
           "type": "sub",
@@ -396,7 +396,7 @@ export const chapter19Fr: Chapter = {
     },
     {
       "id": "ovaires-trompes-rapports",
-      "title": "2.4. Rapports",
+      "title": "2.4. Rapports des ovaires et trompes",
       "blocks": [
         {
           "type": "para",
@@ -424,7 +424,7 @@ export const chapter19Fr: Chapter = {
     },
     {
       "id": "ovaires-trompes-vascularisation",
-      "title": "2.5. Vascularisation",
+      "title": "2.5. Vascularisation des ovaires et trompes",
       "blocks": [
         {
           "type": "bullets",
@@ -444,7 +444,7 @@ export const chapter19Fr: Chapter = {
     },
     {
       "id": "ovaires-trompes-innervation",
-      "title": "2.6. Innervation",
+      "title": "2.6. Innervation des ovaires et trompes",
       "blocks": [
         {
           "type": "sub",
@@ -473,7 +473,7 @@ export const chapter19Fr: Chapter = {
     },
     {
       "id": "ovaires-trompes-physiologie",
-      "title": "2.7. Physiologie",
+      "title": "2.7. Physiologie des ovaires et trompes",
       "blocks": [
         {
           "type": "sub",
@@ -515,7 +515,7 @@ export const chapter19Fr: Chapter = {
     },
     {
       "id": "ovaires-trompes-pathologies-courantes",
-      "title": "2.8. Pathologies courantes",
+      "title": "2.8. Pathologies courantes des ovaires et trompes",
       "blocks": [
         {
           "type": "para",
