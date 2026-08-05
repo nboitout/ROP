@@ -12,9 +12,8 @@ import { getSessionId } from '@/lib/session'
 // /assets/anatomie/<lang>/ and add the entry here to switch that locale over.
 const figureFolders: Partial<Record<Lang, string>> = {}
 
-// PLACEHOLDER: seeded from the deck's plausibility matrix so the branch builds.
-// Replace public/assets/anatomie/gradient-impact-visceral.webp with the
-// "Gradient d'impact ROP viscérale" artwork — same path, no code change.
+// WebP conversion of "public/assets/Gradient d'impact ROP viscerale.png"
+// (1.9 MB PNG down to 178 KB); the source file stays in the repo unchanged.
 const FIGURE = 'gradient-impact-visceral'
 const FIG_W = 1672
 const FIG_H = 941
