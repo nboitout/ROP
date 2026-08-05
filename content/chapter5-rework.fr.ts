@@ -368,7 +368,7 @@ export const chapter5ReworkFr = {
       "blocks": [
         {
           "type": "para",
-          "text": "L’image de la batterie qui se vide est parlante, mais elle est inexacte si on la prend au pied de la lettre. L’organisme ne reçoit pas le matin une quantité fixe d’ATP qu’il consommerait jusqu’au soir. L’ATP est produit et renouvelé en permanence, selon les besoins."
+          "text": "L’image de la batterie qui se vide est parlante, mais elle est inexacte si on la prend au pied de la lettre. L’organisme ne reçoit pas le matin une quantité fixe d’ATP (ATP = énergie) qu’il consommerait jusqu’au soir. L’ATP est produit et renouvelé en permanence, selon les besoins."
         },
         {
           "type": "para",
@@ -433,7 +433,7 @@ export const chapter5ReworkFr = {
         },
         {
           "type": "para",
-          "text": "Le principe de résistance énergétique proposé par Picard et Murugan cherche à décrire la relation entre la demande imposée à un système et sa capacité à transformer le flux énergétique en travail utile [4]. Une certaine résistance est nécessaire ; lorsqu’elle devient excessive, elle pourrait favoriser chaleur, stress oxydatif, inflammation et dommages moléculaires."
+          "text": "Le principe de résistance énergétique proposé par Picard et Murugan [2025] cherche à décrire la relation entre la demande imposée à un système et sa capacité à transformer le flux énergétique en travail utile [4]. Une certaine résistance est nécessaire ; lorsqu’elle devient excessive, elle pourrait favoriser chaleur, stress oxydatif, inflammation et dommages moléculaires."
         },
         {
           "type": "para",
@@ -472,11 +472,15 @@ export const chapter5ReworkFr = {
         },
         {
           "type": "para",
-          "text": "En ROP, nous ne cherchons donc ni à éteindre le sympathique ni à « faire monter le vague » à tout prix. Une activation vagale excessive ou inappropriée peut s’accompagner de nausées, de bradycardie, d’hypotension ou de syncope. Notre cible clinique est la flexibilité autonome : pouvoir se mobiliser lorsque c’est nécessaire, puis ne pas rester bloqué lorsque le danger est passé."
+          "text": "En ROP, nous ne cherchons donc ni à éteindre le sympathique ni à « faire monter le vague » à tout prix."
         },
         {
           "type": "para",
-          "text": "La théorie polyvagale propose une lecture hiérarchisée entre engagement social, mobilisation sympathique et immobilisation défensive. Elle peut enrichir la pédagogie clinique, mais elle reste un cadre théorique discuté et ne doit pas être présentée comme la démonstration du mécanisme de la ROP."
+          "text": "Une activation vagale excessive ou inappropriée peut s’accompagner de nausées, de bradycardie, d’hypotension ou de syncope. Notre cible clinique est la flexibilité autonome : pouvoir se mobiliser lorsque c’est nécessaire, puis ne pas rester bloqué lorsque le danger est passé."
+        },
+        {
+          "type": "para",
+          "text": "La Théorie Polyvagale propose une lecture hiérarchisée entre engagement social, mobilisation sympathique et immobilisation défensive. Elle peut enrichir la pédagogie clinique pour nous permettre de mieux comprendre les mécanismes de la ROP."
         },
         {
           "type": "note",
@@ -640,8 +644,7 @@ export const chapter5ReworkFr = {
             "Objectif clinique : diminuer les contraintes régionales susceptibles d’entretenir le tonus défensif et restaurer une meilleure disponibilité mécanique, respiratoire et viscérale.",
             "Application respiratoire : rendre la respiration moins coûteuse et plus adaptable, sans imposer une amplitude excessive.",
             "Lecture anatomique : ce niveau correspond aux interfaces loco-régionales développées dans les chapitres sur les cavités, le diaphragme, le péritoine et les régions pelviennes.",
-            "Appui scientifique indirect : les interventions respiratoires diaphragmatiques peuvent réduire certains marqueurs physiologiques et subjectifs du stress, avec une qualité de preuve encore variable [8].",
-            "Limite : une amélioration de la respiration, de la mobilité ou du confort ne démontre pas qu’une structure nerveuse, fasciale ou viscérale précise a été directement « libérée » ou normalisée."
+            "Appui scientifique indirect : les interventions respiratoires diaphragmatiques peuvent réduire certains marqueurs physiologiques et subjectifs du stress, avec une qualité de preuve encore variable [8]."
           ]
         },
         {
@@ -866,11 +869,11 @@ export const chapter5ReworkFr = {
         },
         {
           "type": "para",
-          "text": "Les trois bandes — parasympathique, orthosympathique et structurelle — restent des repères cliniques dont les qualités de palpation peuvent varier selon le niveau de stress et l’état d’adaptation du patient."
+          "text": "Les trois bandes - parasympathique, orthosympathique et structurelle - restent des repères cliniques dont les qualités de palpation peuvent varier selon le niveau de stress et l’état d’adaptation du patient."
         },
         {
           "type": "para",
-          "text": "L’objectif n’est pas de commander directement le système autonome, mais d’introduire une information sensorielle apaisante afin de rendre le patient plus disponible pour la suite du traitement, notamment le travail podal."
+          "text": "L’objectif n’est pas de commander directement le système autonome, mais d’introduire une information sensorielle apaisante afin de rendre le patient plus disponible pour la suite du traitement."
         },
       ]
     },
