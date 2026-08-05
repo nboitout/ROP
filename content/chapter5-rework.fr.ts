@@ -72,6 +72,10 @@ export const chapter5ReworkFr = {
         },
         {
           "type": "para",
+          "text": "Les travaux de Bruce McEwen ont largement contribué à formaliser les notions d’allostasie et de charge allostatique. Là où le syndrome général d’adaptation de Hans Selye décrit les grandes phases de la réponse à une contrainte prolongée, le modèle de McEwen insiste sur le coût biologique cumulé des ajustements nécessaires pour maintenir l’adaptation [1, 2]."
+        },
+        {
+          "type": "para",
           "text": "La charge allostatique est le prix cumulé de ces ajustements. Elle ne dépend jamais d’un seul facteur. Elle se construit à partir de l’intensité et de la répétition des stresseurs, mais aussi de l’histoire du patient, de ses ressources, de son sommeil, de son activité physique, de ses maladies et de sa capacité à récupérer."
         },
         {
@@ -82,7 +86,7 @@ export const chapter5ReworkFr = {
           "type": "note",
           "label": "DONNÉES ÉTABLIES",
           "body": [
-            "Les hormones et médiateurs du stress protègent l’organisme à court terme. Leur activation répétée ou mal régulée peut toutefois contribuer à une charge allostatique touchant plusieurs systèmes : cardiovasculaire, métabolique, immunitaire, cérébral et comportemental [1, 2]."
+            "Dans le modèle de McEwen, les médiateurs de l’allostasie protègent l’organisme à court terme. Leur activation répétée, prolongée ou insuffisamment régulée peut toutefois contribuer à une charge allostatique touchant plusieurs systèmes : cardiovasculaire, métabolique, immunitaire, cérébral et comportemental [1, 2]."
           ]
         }
       ]
@@ -260,7 +264,7 @@ export const chapter5ReworkFr = {
       "blocks": [
         {
           "type": "para",
-          "text": "Hans Selye a proposé le syndrome général d’adaptation pour représenter la manière dont l’organisme répond à une contrainte durable. Ce modèle reste très utile pour enseigner et pour raisonner en clinique, à condition de ne pas en faire une chronologie rigide. Après l’alarme, deux voies sont possibles : si le stresseur cesse, l’organisme entre en récupération ; s’il persiste, il organise une adaptation-résistance. Dans la réalité, ces réponses se chevauchent et varient d’un patient à l’autre."
+          "text": "Hans Selye a proposé le syndrome général d’adaptation pour représenter la manière dont l’organisme répond à une contrainte durable. Les travaux ultérieurs de Bruce McEwen sur l’allostasie et la charge allostatique ont prolongé ce modèle en décrivant le coût cumulatif de cette adaptation. Ce modèle reste très utile pour enseigner et pour raisonner en clinique, à condition de ne pas en faire une chronologie rigide. Après l’alarme, deux voies sont possibles : si le stresseur cesse, l’organisme entre en récupération ; s’il persiste, il organise une adaptation-résistance. Dans la réalité, ces réponses se chevauchent et varient d’un patient à l’autre."
         },
         {
           "type": "sub",
