@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
-import Image from 'next/image'
 import Link from 'next/link'
+import NapFigure from '@/components/NapFigure'
 import { SITE_URL } from '@/lib/site'
 
 // Public, indexable, French only. The homepage carries a short version of this
@@ -133,15 +133,6 @@ const REFERENCES = [
   'Christianson JA, Liang R, Ustinova EE, Davis BM, Fraser MO, Pezzone MA. Convergence of bladder and colon sensory innervation occurs at the primary afferent level. Pain. 2007;128(3):235-243.',
 ]
 
-function Plate({ src, caption, alt }: { src: string; caption: string; alt: string }) {
-  return (
-    <figure className="nap-fig">
-      <Image src={src} alt={alt} width={1672} height={941} sizes="(max-width:900px) 92vw, 860px" />
-      <figcaption>{caption}</figcaption>
-    </figure>
-  )
-}
-
 export default function FondementsNeuroAnatomiquesPage() {
   return (
     <main className="nap-root">
@@ -183,7 +174,7 @@ export default function FondementsNeuroAnatomiquesPage() {
             plusieurs arguments de proximité avec une région du corps, d’autres n’y accèdent que par
             des relais plus larges et moins spécifiques.
           </p>
-          <Plate
+          <NapFigure
             src={`${PLATE}/pont-schema.webp`}
             caption="Du stimulus podal à la modulation du réseau : les quatre étapes d’un pont neuro-anatomique."
             alt="Schéma en quatre étapes : porte d’entrée sensorielle dans la peau du pied, transmission par les nerfs plantaires et le nerf tibial, intégration dans la moelle épinière, puis intégration cérébrale et modulation descendante."
@@ -231,7 +222,7 @@ export default function FondementsNeuroAnatomiquesPage() {
             pas être confondue avec les fibres autonomes efférentes qui quittent le système nerveux
             central pour commander muscles lisses, glandes et vaisseaux.
           </p>
-          <Plate
+          <NapFigure
             src={`${PLATE}/versant-visceral.webp`}
             caption="Le versant viscéral : comment les organes informent le système nerveux central."
             alt="Trois schémas comparant les afférences vagales vers le tronc cérébral, les afférences spinales thoraco-lombaires et les afférences pelviennes sacrées S2-S4."
@@ -252,7 +243,7 @@ export default function FondementsNeuroAnatomiquesPage() {
                 {bridge.title}
               </h3>
               {bridge.body.map((paragraph, i) => <p key={i}>{paragraph}</p>)}
-              <Plate src={bridge.src} caption={bridge.caption} alt={bridge.alt} />
+              <NapFigure src={bridge.src} caption={bridge.caption} alt={bridge.alt} />
             </div>
           ))}
         </section>
@@ -282,7 +273,7 @@ export default function FondementsNeuroAnatomiquesPage() {
             nerveux, la convergence spinale, le niveau de contrôle supraspinal et la reproductibilité
             des repères anatomiques.
           </p>
-          <Plate
+          <NapFigure
             src={`${PLATE}/matrice-gradient.webp`}
             caption="Application du gradient aux grandes régions viscérales : une hiérarchisation proposée, qui ne mesure pas l’efficacité clinique de la R.O.P."
             alt="Tableau classant le bas appareil urinaire et l’interface périnéo-sphinctérienne au degré 3, le côlon distal et le rectum au degré 2, les viscères abdominaux supérieurs ainsi que le cœur et les poumons au degré 1."
@@ -314,12 +305,12 @@ export default function FondementsNeuroAnatomiquesPage() {
             supraspinaux, mais son ciblage anatomique est plus faible.
           </p>
           <div className="nap-fig-pair">
-            <Plate
+            <NapFigure
               src={`${PLATE}/pelvis.webp`}
               caption="Le pelvis : le candidat viscéral le mieux étayé — une accumulation de ponts lombo-sacrés, sans connexion directe point-organe."
               alt="Vue sagittale de l’anatomie pelvienne avec les innervations parasympathique sacrée, sympathique thoracolombaire et somatique pudendale, et le chevauchement radiculaire S2-S3."
             />
-            <Plate
+            <NapFigure
               src={`${PLATE}/reseaux-pelviens.webp`}
               caption="Réseaux pelviens intégrés : convergence et sensibilisation croisée."
               alt="Schéma reliant vessie, côlon distal et rectum, périnée et plancher pelvien à trois niveaux de convergence : ganglions rachidiens, réseaux spinaux lombo-sacrés et centres supraspinaux."

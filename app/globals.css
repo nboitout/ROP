@@ -1573,7 +1573,27 @@ a.ss-switch-opt:hover { color:var(--gold); }
   padding-top:20px; margin-top:24px; }
 
 .nap-fig { margin:24px 0 8px; }
-.nap-fig img { display:block; width:100%; height:auto; border:1px solid rgba(26,26,24,.12); border-radius:5px; }
+.nap-fig-btn { display:block; width:100%; padding:0; position:relative; background:none; cursor:zoom-in;
+  border:1px solid rgba(26,26,24,.12); border-radius:5px; overflow:hidden;
+  transition:border-color .2s, box-shadow .2s; }
+.nap-fig-btn:hover { border-color:rgba(160,124,58,.5); box-shadow:0 10px 30px rgba(26,26,24,.14); }
+.nap-fig-btn img { display:block; width:100%; height:auto; }
+.nap-fig-zoom { position:absolute; right:10px; bottom:10px; width:30px; height:30px; border-radius:50%;
+  background:rgba(251,248,241,.9); border:1px solid rgba(160,124,58,.5); color:var(--gold);
+  display:flex; align-items:center; justify-content:center; font-size:.95rem; opacity:0; transition:opacity .2s; }
+.nap-fig-btn:hover .nap-fig-zoom { opacity:1; }
+/* No hover on touch: keep the affordance visible so the plate reads as openable. */
+@media (hover:none){ .nap-fig-zoom { opacity:.85; } }
+/* next/image emits width/height attributes; the reader's lightbox rule only
+   caps the width, so keep the aspect ratio explicit here. */
+.cr-lightbox-fig .nap-lb-img { height:auto; }
+/* The reader hides zoom on phones and relies on its rotate-to-fill system
+   instead. These plates are dense and landscape, so zooming and panning is
+   the only way to read them on a small screen — keep the controls. */
+@media (max-width:760px){
+  .nap-lb .cr-lightbox-zoom-controls { display:inline-flex; }
+  .nap-lb .cr-lightbox-caption { display:none; }
+}
 .nap-fig figcaption { font-size:.79rem; line-height:1.5; color:var(--i50); margin-top:9px; }
 .nap-fig-pair { display:grid; grid-template-columns:1fr 1fr; gap:18px; }
 
