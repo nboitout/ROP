@@ -110,28 +110,41 @@ const LEVELS = [
 ]
 
 const REFERENCES = [
-  'Standring S. Gray’s Anatomy: The Anatomical Basis of Clinical Practice. 42ᵉ éd. Elsevier, 2020.',
-  'Kennedy PM, Inglis JT. Distribution and behaviour of glabrous cutaneous receptors in the human foot sole. J Physiol. 2002;538(3):995-1002.',
-  'Strzalkowski NDJ, Peters RM, Inglis JT, Bent LR. Cutaneous afferent innervation of the human foot sole: what can we learn from single-unit recordings? J Neurophysiol. 2018;120(3):1233-1246.',
-  'Faleiros ATS, Resende LAL, Zanini MA, Castro HAL, Gabarra RC. L4-L5-S1 human dermatomes: clinical, electromyographical, imaging and surgical findings. Arq Neuropsiquiatr. 2009;67(2A):265-267.',
-  'Deniel C, et al. Anatomical study of the medial calcaneal nerve using high-resolution ultrasound. Eur Radiol. 2023;33:7640-7648.',
-  'Andreasen Struijk LNS, Birn H, Teglbjaerg PS, Haase J, Struijk JJ. Size and separability of the calcaneal and the medial and lateral plantar nerves in the distal tibial nerve. Anat Sci Int. 2010;85(1):13-22.',
-  'Fowler CJ, Griffiths D, de Groat WC. The neural control of micturition. Nat Rev Neurosci. 2008;9(6):453-466.',
-  'Shefchyk SJ. Spinal cord neural organization controlling the urinary bladder and striated sphincter. Prog Brain Res. 2002;137:71-82.',
-  'de Groat WC, Vizzard MA, Araki I, Roppolo JR. Spinal interneurons and preganglionic neurons in sacral autonomic reflex pathways. Prog Brain Res. 1996;107:97-111.',
-  'Yecies T, Li S, Zhang Y, et al. Spinal interneuronal mechanisms underlying pudendal and tibial neuromodulation of bladder function in cats. Exp Neurol. 2018;308:100-110.',
-  'Griffiths D. Neural control of micturition in humans: a working model. Nat Rev Urol. 2015;12(12):695-705.',
-  'de Rijk MM, et al. The periaqueductal gray and its role in the neural control of lower urinary tract function. Auton Neurosci. 2026;265:103413.',
-  'Krhut J, Tintěra J, Rejchrt M, et al. Differences between brain responses to peroneal electrical transcutaneous neuromodulation and transcutaneous tibial nerve stimulation. Neurourol Urodyn. 2023;42(6):1352-1361.',
-  'Strzalkowski NDJ, Incognito AV, Bent LR, Millar PJ. Cutaneous mechanoreceptor feedback from the hand and foot can modulate muscle sympathetic nerve activity. Front Neurosci. 2016;10:568.',
-  'Brierley SM, Hibberd TJ, Spencer NJ. Spinal afferent innervation of the colon and rectum. Front Cell Neurosci. 2018;12:467.',
-  'Li X, Li X, Liao L. Mechanism of action of tibial nerve stimulation in the treatment of lower urinary tract dysfunction. Neuromodulation. 2024;27(2):256-266.',
-  'Sato A, Sato Y, Schmidt RF. The impact of somatosensory input on autonomic functions. Rev Physiol Biochem Pharmacol. 1997;130:1-328.',
-  'Jänig W. Neurobiology of visceral afferent neurons: neuroanatomy, functions, organ regulations and sensations. Biol Psychol. 1996;42(1-2):29-51.',
-  'Panicker JN, Marcelissen T, von Gontard A, Vrijens D, Abrams P, Wyndaele M. Bladder-bowel interactions: do we understand pelvic organ cross-sensitization? Neurourol Urodyn. 2019;38 Suppl 5:S25-S34.',
-  'Malykhina AP. Neural mechanisms of pelvic organ cross-sensitization. Neuroscience. 2007;149(3):660-672.',
-  'Christianson JA, Liang R, Ustinova EE, Davis BM, Fraser MO, Pezzone MA. Convergence of bladder and colon sensory innervation occurs at the primary afferent level. Pain. 2007;128(3):235-243.',
+  'Standring S, ed. Gray’s Anatomy: The Anatomical Basis of Clinical Practice. 42nd ed. Elsevier; 2020.',
+  'Kennedy PM, Inglis JT. Distribution and behaviour of glabrous cutaneous receptors in the human foot sole. J Physiol. 2002;538(Pt 3):995–1002. doi:10.1113/jphysiol.2001.013087.',
+  'Strzalkowski NDJ, Peters RM, Inglis JT, Bent LR. Cutaneous afferent innervation of the human foot sole: what can we learn from single-unit recordings? J Neurophysiol. 2018;120(3):1233–1246. doi:10.1152/jn.00848.2017.',
+  'de Souza Faleiros AT, de Lima Resende LA, Zanini MA, de Lima Castro HA, Colichio Gabarra R. L4-L5-S1 human dermatomes: a clinical, electromyographical, imaging and surgical findings. Arq Neuropsiquiatr. 2009;67(2A):265–267. doi:10.1590/S0004-282X2009000200017.',
+  'Deniel C, Guenoun D, Guillin R, Moraux A, Champsaur P, Le Corroller T. Anatomical study of the medial calcaneal nerve using high-resolution ultrasound. Eur Radiol. 2023;33(10):7330–7337. doi:10.1007/s00330-023-09699-6.',
+  'Andreasen Struijk LNS, Birn H, Teglbjærg PS, Haase J, Struijk JJ. Size and separability of the calcaneal and the medial and lateral plantar nerves in the distal tibial nerve. Anat Sci Int. 2010;85(1):13–22. doi:10.1007/s12565-009-0045-y.',
+  'Fowler CJ, Griffiths D, de Groat WC. The neural control of micturition. Nat Rev Neurosci. 2008;9(6):453–466. doi:10.1038/nrn2401.',
+  'Shefchyk SJ. Spinal cord neural organization controlling the urinary bladder and striated sphincter. Prog Brain Res. 2002;137:71–82. doi:10.1016/S0079-6123(02)37008-0.',
+  'de Groat WC, Vizzard MA, Araki I, Roppolo J. Spinal interneurons and preganglionic neurons in sacral autonomic reflex pathways. Prog Brain Res. 1996;107:97–111. doi:10.1016/S0079-6123(08)61860-9.',
+  'Yecies T, Li S, Zhang Y, Cai H, Shen B, Wang J, et al. Spinal interneuronal mechanisms underlying pudendal and tibial neuromodulation of bladder function in cats. Exp Neurol. 2018;308:100–110. doi:10.1016/j.expneurol.2018.06.015.',
+  'Griffiths D. Neural control of micturition in humans: a working model. Nat Rev Urol. 2015;12(12):695–705. doi:10.1038/nrurol.2015.266.',
+  'de Rijk MM, Fernández Chadily S, Knops A, Schoutens Y, Verstegen AMJ. The periaqueductal gray and its role in the neural control of lower urinary tract function. Auton Neurosci. 2026;265:103413. doi:10.1016/j.autneu.2026.103413.',
+  'Krhut J, Tintěra J, Rejchrt M, Skugarevská B, Zachoval R, Zvara P, et al. Differences between brain responses to peroneal electrical transcutaneous neuromodulation and transcutaneous tibial nerve stimulation, two treatments for overactive bladder. Neurourol Urodyn. 2023;42(6):1352–1361. doi:10.1002/nau.25197.',
+  'Strzalkowski NDJ, Incognito AV, Bent LR, Millar PJ. Cutaneous mechanoreceptor feedback from the hand and foot can modulate muscle sympathetic nerve activity. Front Neurosci. 2016;10:568. doi:10.3389/fnins.2016.00568.',
+  'Brierley SM, Hibberd TJ, Spencer NJ. Spinal afferent innervation of the colon and rectum. Front Cell Neurosci. 2018;12:467. doi:10.3389/fncel.2018.00467.',
+  'Li X, Li X, Liao L. Mechanism of action of tibial nerve stimulation in the treatment of lower urinary tract dysfunction. Neuromodulation. 2024;27(2):256–266. doi:10.1016/j.neurom.2023.03.017.',
+  'Sato A, Sato Y, Schmidt RF. The impact of somatosensory input on autonomic functions. Rev Physiol Biochem Pharmacol. 1997;130:1–328. doi:10.1007/BFb0046598.',
+  'Jänig W. Neurobiology of visceral afferent neurons: neuroanatomy, functions, organ regulations and sensations. Biol Psychol. 1996;42(1–2):29–51. doi:10.1016/0301-0511(95)05145-7.',
+  'Panicker JN, Marcelissen T, von Gontard A, Vrijens D, Abrams P, Wyndaele M. Bladder-bowel interactions: do we understand pelvic organ cross-sensitization? International Consultation on Incontinence Research Society (ICI-RS) 2018. Neurourol Urodyn. 2019;38(Suppl 5):S25–S34. doi:10.1002/nau.24111.',
+  'Malykhina AP. Neural mechanisms of pelvic organ cross-sensitization. Neuroscience. 2007;149(3):660–672. doi:10.1016/j.neuroscience.2007.07.053.',
+  'Christianson JA, Liang R, Ustinova EE, Davis BM, Fraser MO, Pezzone MA. Convergence of bladder and colon sensory innervation occurs at the primary afferent level. Pain. 2007;128(3):235–243. doi:10.1016/j.pain.2006.09.023.',
 ]
+
+/** Renders a reference, turning its trailing "doi:10.…" into a resolver link. */
+function Reference({ text }: { text: string }) {
+  const match = text.match(/^(.*?)\s*doi:(10\.\S+?)\.?$/)
+  if (!match) return <>{text}</>
+  const [, citation, doi] = match
+  return (
+    <>
+      {citation}{' '}
+      <a href={`https://doi.org/${doi}`} target="_blank" rel="noopener noreferrer">doi:{doi}</a>.
+    </>
+  )
+}
 
 export default function FondementsNeuroAnatomiquesPage() {
   return (
@@ -357,7 +370,7 @@ export default function FondementsNeuroAnatomiquesPage() {
             pour objet de constituer une revue de l’efficacité clinique de la réflexothérapie.
           </p>
           <ol>
-            {REFERENCES.map((reference, i) => <li key={i}>{reference}</li>)}
+            {REFERENCES.map((reference, i) => <li key={i}><Reference text={reference} /></li>)}
           </ol>
         </section>
 
