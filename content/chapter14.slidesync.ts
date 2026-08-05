@@ -41,7 +41,7 @@ export const chapter14Slides: SyncSlide[] = [
   { src: '/chapter-14/slides/fr-rework/slide-16.png', title: 'Indications en ROP et critères d’orientation médicale' },
   { src: '/chapter-14/slides/fr-rework/slide-17.png', title: 'Maladie de Crohn' },
   { src: '/chapter-14/slides/fr-rework/slide-18.png', title: 'Intestin grêle — relations viscéro-somatiques' },
-  { src: '/chapter-14/slides/fr-rework/slide-19.png', title: 'Protocole ROP : ordre de traitement' },
+  { src: '/chapter-14/slides/fr-rework/slide-19.png', title: 'Protocole clinique ROP : les reins' },
   { src: '/chapter-14/cartographie/figure-14-01.png', title: 'Cartographie : Nerf vague X - moelle allongée' },
   { src: '/chapter-14/cartographie/figure-14-03.png', title: 'Cartographie : Nerf vague X - foramen jugulaire' },
   { src: '/chapter-14/cartographie/figure-14-05.png', title: 'Cartographie : Hiatus œsophagien et nerfs vagues' },
