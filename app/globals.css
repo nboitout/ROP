@@ -209,77 +209,32 @@ h1 em { font-style:italic; color:var(--gold-l); }
 .hier-step-t { font-family:'Cormorant Garamond',serif; font-size:.9rem; color:var(--cream); }
 .hier-arr { color:rgba(201,163,94,.4); font-size:.8rem; }
 
-/* ANATOMIE — fondements neuro-anatomiques */
+/* ANATOMIE — fondements neuro-anatomiques (teaser vers /fondements-neuro-anatomiques) */
 #anatomie { background:var(--ink); padding:60px 72px; }
-.anat-top { display:grid; grid-template-columns:minmax(0,1.12fr) minmax(360px,.88fr); gap:46px; align-items:start; }
-.anat-head { max-width:760px; }
-.anat-intro { font-size:.95rem; line-height:1.62; color:rgba(245,240,232,.84); margin-top:10px; }
-/* The chain reads as a vertical trajectory: numbers linked by a hairline,
-   title and text stacked beside each marker. */
-.anat-chain { background:rgba(245,240,232,.04); border:1px solid rgba(245,240,232,.1); border-radius:3px; padding:20px 22px; }
-.anat-chain-t { font-size:.62rem; font-weight:600; letter-spacing:.16em; text-transform:uppercase; color:var(--gold-l); margin-bottom:15px; }
-.anat-step { position:relative; display:grid; grid-template-columns:30px 1fr; gap:13px; padding-bottom:13px; }
-.anat-step:last-child { padding-bottom:0; }
-.anat-step::before { content:''; position:absolute; left:14px; top:34px; bottom:2px; width:1px; background:rgba(201,163,94,.22); }
-.anat-step:last-child::before { display:none; }
-.anat-step-n { width:30px; height:30px; border-radius:50%; background:rgba(74,107,90,.25); border:1px solid rgba(74,107,90,.45); display:flex; align-items:center; justify-content:center; font-family:'Cormorant Garamond',serif; font-size:.95rem; color:var(--sage-pale); }
-.anat-step-t { font-family:'Cormorant Garamond',serif; font-size:1.05rem; line-height:1.25; color:var(--gold-l); padding-top:4px; }
-.anat-step-d { grid-column:2; font-size:.81rem; line-height:1.45; color:rgba(245,240,232,.8); margin-top:2px; }
+.anat-top { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,600px); gap:54px; align-items:center; }
+.anat-head { max-width:660px; }
+.anat-intro { font-size:.97rem; line-height:1.64; color:rgba(245,240,232,.84); margin-top:12px; }
+.anat-cta { display:inline-block; margin-top:22px; }
 
-.anat-fig { max-width:1040px; margin:26px auto 0; }
-.anat-fig-btn { display:block; width:100%; padding:0; position:relative; background:none; border:1px solid rgba(245,240,232,.12); border-radius:4px; overflow:hidden; cursor:zoom-in; transition:border-color .2s; }
-.anat-fig-btn:hover { border-color:rgba(201,163,94,.5); }
-.anat-fig-btn img, .anat-bridge-thumb img { display:block; width:100%; height:auto; }
-.anat-fig-zoom { position:absolute; right:10px; bottom:10px; width:30px; height:30px; border-radius:50%; background:rgba(26,26,24,.62); border:1px solid rgba(201,163,94,.5); color:var(--gold-l); display:flex; align-items:center; justify-content:center; font-size:.95rem; }
-.anat-fig figcaption { font-size:.76rem; line-height:1.5; color:rgba(245,240,232,.66); text-align:center; margin-top:8px; }
+.anat-fig { margin:0; }
+.anat-fig-btn { display:block; width:100%; padding:0; position:relative; background:none;
+  border:1px solid rgba(245,240,232,.12); border-radius:5px; overflow:hidden; cursor:zoom-in;
+  transition:border-color .2s, box-shadow .2s; box-shadow:0 18px 44px rgba(0,0,0,.32); }
+.anat-fig-btn:hover { border-color:rgba(201,163,94,.5); box-shadow:0 22px 54px rgba(0,0,0,.42); }
+.anat-fig-btn img { display:block; width:100%; height:auto; }
+.anat-fig-zoom { position:absolute; right:10px; bottom:10px; width:30px; height:30px; border-radius:50%;
+  background:rgba(26,26,24,.62); border:1px solid rgba(201,163,94,.5); color:var(--gold-l);
+  display:flex; align-items:center; justify-content:center; font-size:.95rem; }
+.anat-fig figcaption { font-size:.76rem; line-height:1.5; color:rgba(245,240,232,.62); margin-top:10px; }
 
-.anat-h3 { font-family:'Cormorant Garamond',serif; font-size:clamp(1.4rem,2.2vw,1.75rem); font-weight:300; color:var(--cream); margin:40px 0 8px; }
-.anat-bridges-intro { font-size:.92rem; line-height:1.6; color:rgba(245,240,232,.8); max-width:900px; margin-bottom:20px; }
-/* Six plates — the principle plus the five bridges — share one grid so the
-   explainer reads as the first panel of the series, not as a slab above it. */
-/* Seven tracks: the principle plate takes two so it stays legible in place,
-   the five bridges run as a series beside it on the same row. */
-.anat-plate-grid { display:grid; grid-template-columns:repeat(7,1fr); gap:14px; }
-.anat-plate--lead { grid-column:span 2; }
-.anat-plate { display:flex; flex-direction:column; background:rgba(245,240,232,.04); border:1px solid rgba(245,240,232,.1); border-radius:3px; padding:14px; }
-.anat-plate--lead { background:rgba(201,163,94,.07); border-color:rgba(201,163,94,.28); padding:16px; }
-.anat-plate--lead .anat-plate-t { font-size:1.3rem; }
-.anat-plate--lead .anat-plate-d { font-size:.87rem; }
-.anat-plate-thumb { position:relative; display:block; width:100%; padding:0; margin-bottom:12px; background:none; border:none; border-radius:2px; overflow:hidden; cursor:zoom-in; }
-.anat-plate-thumb img { display:block; width:100%; height:auto; transition:transform .3s ease; }
-.anat-plate-thumb:hover img { transform:scale(1.02); }
-.anat-plate-n { font-size:.6rem; font-weight:600; letter-spacing:.16em; text-transform:uppercase; color:var(--gold-l); margin-bottom:5px; }
-.anat-plate-t { font-family:'Cormorant Garamond',serif; font-size:1.14rem; font-weight:400; line-height:1.22; color:var(--cream); margin-bottom:7px; }
-.anat-plate-d { font-size:.83rem; line-height:1.52; color:rgba(245,240,232,.78); }
-@media(max-width:1280px){ .anat-plate-grid { grid-template-columns:repeat(4,1fr); } }
-
-.anat-toggle { display:flex; align-items:center; justify-content:space-between; gap:16px; width:100%; margin-top:34px; padding:16px 22px; text-align:left; background:rgba(245,240,232,.05); border:1px solid rgba(201,163,94,.32); border-radius:3px; color:var(--gold-l); font-family:'DM Sans',sans-serif; font-size:.74rem; font-weight:600; letter-spacing:.11em; text-transform:uppercase; cursor:pointer; transition:background .2s, border-color .2s; }
-.anat-toggle:hover { background:rgba(201,163,94,.12); border-color:var(--gold-l); }
-.anat-toggle-ico { font-size:1.25rem; line-height:1; }
-
-.anat-deep-intro, .anat-deep-p { font-size:.92rem; line-height:1.62; color:rgba(245,240,232,.82); max-width:940px; margin-bottom:12px; }
-.anat-levels { display:grid; grid-template-columns:1fr 1fr; gap:12px; margin:22px 0 4px; }
-.anat-level { display:grid; grid-template-columns:44px 1fr; gap:14px; align-items:start; background:rgba(245,240,232,.04); border:1px solid rgba(245,240,232,.1); border-left:3px solid rgba(245,240,232,.2); border-radius:3px; padding:16px 18px; }
-.anat-level-n { width:44px; height:44px; border-radius:50%; border:1px solid; display:flex; align-items:center; justify-content:center; font-family:'Cormorant Garamond',serif; font-size:1.35rem; }
-/* Level colours follow the gradient scale printed in the book's plates. */
-.anat-level-3 { border-left-color:#4e9a7d; } .anat-level-3 .anat-level-n { color:#7fc2a6; border-color:rgba(78,154,125,.55); background:rgba(78,154,125,.14); }
-.anat-level-2 { border-left-color:#4a7fb5; } .anat-level-2 .anat-level-n { color:#8ab4dd; border-color:rgba(74,127,181,.55); background:rgba(74,127,181,.14); }
-.anat-level-1 { border-left-color:var(--gold); } .anat-level-1 .anat-level-n { color:var(--gold-l); border-color:rgba(201,163,94,.55); background:rgba(201,163,94,.12); }
-.anat-level-0 { border-left-color:rgba(245,240,232,.3); } .anat-level-0 .anat-level-n { color:rgba(245,240,232,.62); border-color:rgba(245,240,232,.28); background:rgba(245,240,232,.06); }
-.anat-level-t { font-family:'Cormorant Garamond',serif; font-size:1.12rem; color:var(--cream); margin-bottom:4px; }
-.anat-level-d { font-size:.83rem; line-height:1.5; color:rgba(245,240,232,.78); }
-
-.anat-fig-pair { display:grid; grid-template-columns:1fr 1fr; gap:18px; }
-.anat-fig-pair .anat-fig { max-width:none; }
-.anat-note { margin-top:28px; background:rgba(160,124,58,.1); border:1px solid rgba(201,163,94,.3); border-radius:3px; padding:20px 24px; }
-.anat-note-body { font-size:.9rem; line-height:1.6; color:rgba(245,240,232,.86); }
-.anat-note-refs { font-size:.78rem; line-height:1.55; color:rgba(245,240,232,.66); margin-top:10px; }
-
-.anat-lb { position:fixed; inset:0; z-index:400; display:flex; align-items:center; justify-content:center; padding:36px 24px; background:rgba(10,10,9,.97); cursor:zoom-out; }
+.anat-lb { position:fixed; inset:0; z-index:400; display:flex; align-items:center; justify-content:center;
+  padding:36px 24px; background:rgba(10,10,9,.97); cursor:zoom-out; }
 .anat-lb-fig { max-width:96vw; cursor:default; }
 .anat-lb-fig img { display:block; width:100%; height:auto; max-height:82vh; object-fit:contain; border-radius:3px; }
 .anat-lb-fig figcaption { font-size:.8rem; line-height:1.5; color:rgba(245,240,232,.74); text-align:center; margin-top:10px; }
-.anat-lb-close { position:absolute; top:18px; right:22px; width:42px; height:42px; border-radius:50%; background:rgba(245,240,232,.08); border:1px solid rgba(245,240,232,.28); color:var(--cream); font-size:1.5rem; line-height:1; cursor:pointer; }
+.anat-lb-close { position:absolute; top:18px; right:22px; width:42px; height:42px; border-radius:50%;
+  background:rgba(245,240,232,.08); border:1px solid rgba(245,240,232,.28); color:var(--cream);
+  font-size:1.5rem; line-height:1; cursor:pointer; }
 .anat-lb-close:hover { background:rgba(201,163,94,.18); border-color:var(--gold-l); }
 
 /* PEDAGOGIE */
@@ -427,11 +382,7 @@ footer > div > p { font-size:.95rem; color:rgba(245,240,232,.84); line-height:1.
 #protocole, #pedagogie, #stats { padding:42px 20px !important; }
   .ped-grid, .qt-row, .stats-row, .hier-row { grid-template-columns:1fr !important; }
   #anatomie { padding:42px 20px !important; }
-  .anat-top, .anat-levels, .anat-fig-pair, .anat-plate-grid { grid-template-columns:1fr !important; }
-  .anat-top { gap:26px !important; }
-  /* The lead plate stops spanning once the gallery is a single column. */
-  .anat-plate--lead { grid-column:auto !important; }
-  .anat-toggle { font-size:.68rem; letter-spacing:.08em; padding:14px 16px; }
+  .anat-top { grid-template-columns:1fr !important; gap:26px !important; }
   .anat-lb { padding:56px 12px 24px; }
   .anat-lb-close { top:10px; right:12px; }
   .jn-hd { grid-template-columns:1fr; gap:14px; margin-bottom:24px; }
@@ -1586,3 +1537,73 @@ a.ss-switch-opt:hover { color:var(--gold); }
 /* Gate arrivals are scrolled straight to the form card; keep it clear of the
    fixed header. */
 .fcard { scroll-margin-top:78px; }
+
+/* ========== FONDEMENTS NEURO-ANATOMIQUES (page publique, FR) ========== */
+.nap-root { background:#fbf8f1; color:var(--ink); min-height:100vh; font-family:'DM Sans',sans-serif; }
+/* This page is not the marketing layout: neutralise the global hero h1 (cream
+   on dark) and the global section padding meant for full-bleed bands. */
+.nap-root section { padding:0; }
+.nap-root h1 { color:inherit; max-width:none; margin-bottom:0; }
+.nap-top { padding:22px 32px 0; }
+.nap-home { font-size:.74rem; letter-spacing:.08em; text-transform:uppercase; text-decoration:none;
+  color:var(--sage); font-weight:600; }
+.nap-home:hover { color:var(--gold); }
+.nap-article { max-width:860px; margin:0 auto; padding:26px 24px 90px; }
+
+.nap-hero { padding-bottom:26px; border-bottom:1px solid rgba(26,26,24,.1); margin-bottom:10px; }
+.nap-eyebrow { font-size:.66rem; font-weight:600; letter-spacing:.2em; text-transform:uppercase; color:var(--sage); }
+.nap-hero h1 { font-family:'Cormorant Garamond',serif; font-size:clamp(2rem,5vw,3rem); font-weight:300;
+  line-height:1.1; margin:12px 0 16px; }
+.nap-standfirst { font-size:1.06rem; line-height:1.6; color:rgba(26,26,24,.78); max-width:44em; }
+.nap-meta { margin-top:14px; font-size:.76rem; letter-spacing:.08em; text-transform:uppercase; color:var(--i50); }
+
+.nap-sec { margin-top:44px; }
+.nap-sec h2 { font-family:'Cormorant Garamond',serif; font-size:clamp(1.5rem,3vw,2rem); font-weight:300;
+  line-height:1.2; margin-bottom:14px; }
+.nap-sec h3 { font-family:'Cormorant Garamond',serif; font-size:1.34rem; font-weight:400; line-height:1.25;
+  margin:0 0 12px; display:flex; flex-direction:column; gap:5px; }
+.nap-bridge-n { font-family:'DM Sans',sans-serif; font-size:.62rem; font-weight:700; letter-spacing:.18em;
+  text-transform:uppercase; color:var(--gold); }
+.nap-sec p { font-size:1rem; line-height:1.68; color:rgba(26,26,24,.82); margin-bottom:14px; }
+.nap-bridge { padding:26px 0 6px; border-top:1px solid rgba(26,26,24,.08); margin-top:26px; }
+.nap-note { border-left:2px solid rgba(160,124,58,.4); padding-left:16px; font-size:.94rem !important;
+  color:rgba(26,26,24,.7) !important; }
+.nap-closing { font-family:'Cormorant Garamond',serif; font-size:1.24rem !important; font-style:italic;
+  line-height:1.5 !important; color:rgba(26,26,24,.82) !important; border-top:1px solid rgba(26,26,24,.1);
+  padding-top:20px; margin-top:24px; }
+
+.nap-fig { margin:24px 0 8px; }
+.nap-fig img { display:block; width:100%; height:auto; border:1px solid rgba(26,26,24,.12); border-radius:5px; }
+.nap-fig figcaption { font-size:.79rem; line-height:1.5; color:var(--i50); margin-top:9px; }
+.nap-fig-pair { display:grid; grid-template-columns:1fr 1fr; gap:18px; }
+
+.nap-levels { display:grid; gap:11px; margin:22px 0 24px; }
+.nap-level { display:grid; grid-template-columns:44px 1fr; gap:15px; align-items:start;
+  border:1px solid rgba(26,26,24,.1); border-left:3px solid rgba(26,26,24,.2); border-radius:4px;
+  padding:16px 18px; background:#fff; }
+.nap-level-n { width:44px; height:44px; border-radius:50%; border:1px solid; display:flex;
+  align-items:center; justify-content:center; font-family:'Cormorant Garamond',serif; font-size:1.35rem; }
+.nap-level-3 { border-left-color:#2f7d5e; } .nap-level-3 .nap-level-n { color:#2f7d5e; border-color:rgba(47,125,94,.4); background:rgba(47,125,94,.08); }
+.nap-level-2 { border-left-color:#33689f; } .nap-level-2 .nap-level-n { color:#33689f; border-color:rgba(51,104,159,.4); background:rgba(51,104,159,.08); }
+.nap-level-1 { border-left-color:var(--gold); } .nap-level-1 .nap-level-n { color:var(--gold); border-color:rgba(160,124,58,.4); background:rgba(160,124,58,.08); }
+.nap-level-0 { border-left-color:rgba(26,26,24,.28); } .nap-level-0 .nap-level-n { color:var(--i50); border-color:rgba(26,26,24,.22); background:rgba(26,26,24,.04); }
+.nap-level-t { font-family:'Cormorant Garamond',serif; font-size:1.14rem; margin-bottom:4px; }
+.nap-level-d { font-size:.9rem !important; line-height:1.55 !important; margin:0 !important; color:rgba(26,26,24,.72) !important; }
+
+.nap-refs ol { padding-left:1.3em; display:flex; flex-direction:column; gap:9px; }
+.nap-refs li { font-size:.85rem; line-height:1.5; color:rgba(26,26,24,.7); }
+.nap-refs-note { font-size:.9rem !important; color:var(--i50) !important; }
+
+.nap-cta { margin-top:52px; padding:28px 30px; border:1px solid rgba(160,124,58,.3); border-radius:5px;
+  background:rgba(160,124,58,.07); }
+.nap-cta-eyebrow { font-size:.64rem; font-weight:700; letter-spacing:.18em; text-transform:uppercase;
+  color:var(--gold); margin-bottom:9px; }
+.nap-cta-body { font-size:.97rem; line-height:1.6; color:rgba(26,26,24,.8); margin-bottom:18px; }
+.nap-cta-row { display:flex; flex-wrap:wrap; gap:12px; }
+
+@media(max-width:760px){
+  .nap-top { padding:16px 20px 0; }
+  .nap-article { padding:20px 20px 70px; }
+  .nap-fig-pair { grid-template-columns:1fr; }
+  .nap-cta { padding:22px 20px; }
+}
