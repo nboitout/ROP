@@ -1629,3 +1629,13 @@ a.ss-switch-opt:hover { color:var(--gold); }
   .nap-fig-pair { grid-template-columns:1fr; }
   .nap-cta { padding:22px 20px; }
 }
+
+/* Research preview of the homepage anatomy section (/prototype-anatomie). */
+.anat-preview { background:var(--ink); min-height:100vh; }
+.anat-preview-bar { display:flex; align-items:center; gap:18px; flex-wrap:wrap;
+  padding:16px 72px; background:rgba(245,240,232,.05); border-bottom:1px solid rgba(245,240,232,.1); }
+.anat-preview-back { font-size:.72rem; font-weight:600; letter-spacing:.09em; text-transform:uppercase;
+  color:var(--gold-l); text-decoration:none; flex-shrink:0; }
+.anat-preview-back:hover { color:var(--cream); }
+.anat-preview-note { font-size:.8rem; line-height:1.5; color:rgba(245,240,232,.66); }
+@media(max-width:760px){ .anat-preview-bar { padding:14px 20px; gap:10px; } }
