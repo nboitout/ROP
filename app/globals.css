@@ -209,6 +209,34 @@ h1 em { font-style:italic; color:var(--gold-l); }
 .hier-step-t { font-family:'Cormorant Garamond',serif; font-size:.9rem; color:var(--cream); }
 .hier-arr { color:rgba(201,163,94,.4); font-size:.8rem; }
 
+/* ANATOMIE — fondements neuro-anatomiques (teaser vers /fondements-neuro-anatomiques) */
+#anatomie { background:var(--ink); padding:60px 72px; }
+.anat-top { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,600px); gap:54px; align-items:center; }
+.anat-head { max-width:660px; }
+.anat-intro { font-size:.97rem; line-height:1.64; color:rgba(245,240,232,.84); margin-top:12px; }
+.anat-cta { display:inline-block; margin-top:22px; }
+
+.anat-fig { margin:0; }
+.anat-fig-btn { display:block; width:100%; padding:0; position:relative; background:none;
+  border:1px solid rgba(245,240,232,.12); border-radius:5px; overflow:hidden; cursor:zoom-in;
+  transition:border-color .2s, box-shadow .2s; box-shadow:0 18px 44px rgba(0,0,0,.32); }
+.anat-fig-btn:hover { border-color:rgba(201,163,94,.5); box-shadow:0 22px 54px rgba(0,0,0,.42); }
+.anat-fig-btn img { display:block; width:100%; height:auto; }
+.anat-fig-zoom { position:absolute; right:10px; bottom:10px; width:30px; height:30px; border-radius:50%;
+  background:rgba(26,26,24,.62); border:1px solid rgba(201,163,94,.5); color:var(--gold-l);
+  display:flex; align-items:center; justify-content:center; font-size:.95rem; }
+.anat-fig figcaption { font-size:.76rem; line-height:1.5; color:rgba(245,240,232,.62); margin-top:10px; }
+
+.anat-lb { position:fixed; inset:0; z-index:400; display:flex; align-items:center; justify-content:center;
+  padding:36px 24px; background:rgba(10,10,9,.97); cursor:zoom-out; }
+.anat-lb-fig { max-width:96vw; cursor:default; }
+.anat-lb-fig img { display:block; width:100%; height:auto; max-height:82vh; object-fit:contain; border-radius:3px; }
+.anat-lb-fig figcaption { font-size:.8rem; line-height:1.5; color:rgba(245,240,232,.74); text-align:center; margin-top:10px; }
+.anat-lb-close { position:absolute; top:18px; right:22px; width:42px; height:42px; border-radius:50%;
+  background:rgba(245,240,232,.08); border:1px solid rgba(245,240,232,.28); color:var(--cream);
+  font-size:1.5rem; line-height:1; cursor:pointer; }
+.anat-lb-close:hover { background:rgba(201,163,94,.18); border-color:var(--gold-l); }
+
 /* PEDAGOGIE */
 #pedagogie { background:var(--parch); padding:56px 72px; }
 .ped-grid { display:grid; grid-template-columns:1fr 1fr 1fr; gap:18px; margin-top:26px; }
@@ -353,6 +381,10 @@ footer > div > p { font-size:.95rem; color:rgba(245,240,232,.84); line-height:1.
   section { padding:42px 20px !important; }
 #protocole, #pedagogie, #stats { padding:42px 20px !important; }
   .ped-grid, .qt-row, .stats-row, .hier-row { grid-template-columns:1fr !important; }
+  #anatomie { padding:42px 20px !important; }
+  .anat-top { grid-template-columns:1fr !important; gap:26px !important; }
+  .anat-lb { padding:56px 12px 24px; }
+  .anat-lb-close { top:10px; right:12px; }
   .jn-hd { grid-template-columns:1fr; gap:14px; margin-bottom:24px; }
   .jn-flow::before { display:none; }
   .jn-part { grid-template-columns:1fr; gap:12px; padding:16px 0; }
@@ -1505,3 +1537,105 @@ a.ss-switch-opt:hover { color:var(--gold); }
 /* Gate arrivals are scrolled straight to the form card; keep it clear of the
    fixed header. */
 .fcard { scroll-margin-top:78px; }
+
+/* ========== FONDEMENTS NEURO-ANATOMIQUES (page publique, FR) ========== */
+.nap-root { background:#fbf8f1; color:var(--ink); min-height:100vh; font-family:'DM Sans',sans-serif; }
+/* This page is not the marketing layout: neutralise the global hero h1 (cream
+   on dark) and the global section padding meant for full-bleed bands. */
+.nap-root section { padding:0; }
+.nap-root h1 { color:inherit; max-width:none; margin-bottom:0; }
+.nap-top { padding:22px 32px 0; }
+.nap-home { font-size:.74rem; letter-spacing:.08em; text-transform:uppercase; text-decoration:none;
+  color:var(--sage); font-weight:600; }
+.nap-home:hover { color:var(--gold); }
+.nap-article { max-width:860px; margin:0 auto; padding:26px 24px 90px; }
+
+.nap-hero { padding-bottom:26px; border-bottom:1px solid rgba(26,26,24,.1); margin-bottom:10px; }
+.nap-eyebrow { font-size:.66rem; font-weight:600; letter-spacing:.2em; text-transform:uppercase; color:var(--sage); }
+.nap-hero h1 { font-family:'Cormorant Garamond',serif; font-size:clamp(2rem,5vw,3rem); font-weight:300;
+  line-height:1.1; margin:12px 0 16px; }
+.nap-standfirst { font-size:1.06rem; line-height:1.6; color:rgba(26,26,24,.78); max-width:44em; }
+.nap-meta { margin-top:14px; font-size:.76rem; letter-spacing:.08em; text-transform:uppercase; color:var(--i50); }
+
+.nap-sec { margin-top:44px; }
+.nap-sec h2 { font-family:'Cormorant Garamond',serif; font-size:clamp(1.5rem,3vw,2rem); font-weight:300;
+  line-height:1.2; margin-bottom:14px; }
+.nap-sec h3 { font-family:'Cormorant Garamond',serif; font-size:1.34rem; font-weight:400; line-height:1.25;
+  margin:0 0 12px; display:flex; flex-direction:column; gap:5px; }
+.nap-bridge-n { font-family:'DM Sans',sans-serif; font-size:.62rem; font-weight:700; letter-spacing:.18em;
+  text-transform:uppercase; color:var(--gold); }
+.nap-sec p { font-size:1rem; line-height:1.68; color:rgba(26,26,24,.82); margin-bottom:14px; }
+.nap-bridge { padding:26px 0 6px; border-top:1px solid rgba(26,26,24,.08); margin-top:26px; }
+.nap-note { border-left:2px solid rgba(160,124,58,.4); padding-left:16px; font-size:.94rem !important;
+  color:rgba(26,26,24,.7) !important; }
+.nap-closing { font-family:'Cormorant Garamond',serif; font-size:1.24rem !important; font-style:italic;
+  line-height:1.5 !important; color:rgba(26,26,24,.82) !important; border-top:1px solid rgba(26,26,24,.1);
+  padding-top:20px; margin-top:24px; }
+
+.nap-fig { margin:24px 0 8px; }
+.nap-fig-btn { display:block; width:100%; padding:0; position:relative; background:none; cursor:zoom-in;
+  border:1px solid rgba(26,26,24,.12); border-radius:5px; overflow:hidden;
+  transition:border-color .2s, box-shadow .2s; }
+.nap-fig-btn:hover { border-color:rgba(160,124,58,.5); box-shadow:0 10px 30px rgba(26,26,24,.14); }
+.nap-fig-btn img { display:block; width:100%; height:auto; }
+.nap-fig-zoom { position:absolute; right:10px; bottom:10px; width:30px; height:30px; border-radius:50%;
+  background:rgba(251,248,241,.9); border:1px solid rgba(160,124,58,.5); color:var(--gold);
+  display:flex; align-items:center; justify-content:center; font-size:.95rem; opacity:0; transition:opacity .2s; }
+.nap-fig-btn:hover .nap-fig-zoom { opacity:1; }
+/* No hover on touch: keep the affordance visible so the plate reads as openable. */
+@media (hover:none){ .nap-fig-zoom { opacity:.85; } }
+/* next/image emits width/height attributes; the reader's lightbox rule only
+   caps the width, so keep the aspect ratio explicit here. */
+.cr-lightbox-fig .nap-lb-img { height:auto; }
+/* The reader hides zoom on phones and relies on its rotate-to-fill system
+   instead. These plates are dense and landscape, so zooming and panning is
+   the only way to read them on a small screen — keep the controls. */
+@media (max-width:760px){
+  .nap-lb .cr-lightbox-zoom-controls { display:inline-flex; }
+  .nap-lb .cr-lightbox-caption { display:none; }
+}
+.nap-fig figcaption { font-size:.79rem; line-height:1.5; color:var(--i50); margin-top:9px; }
+.nap-fig-pair { display:grid; grid-template-columns:1fr 1fr; gap:18px; }
+
+.nap-levels { display:grid; gap:11px; margin:22px 0 24px; }
+.nap-level { display:grid; grid-template-columns:44px 1fr; gap:15px; align-items:start;
+  border:1px solid rgba(26,26,24,.1); border-left:3px solid rgba(26,26,24,.2); border-radius:4px;
+  padding:16px 18px; background:#fff; }
+.nap-level-n { width:44px; height:44px; border-radius:50%; border:1px solid; display:flex;
+  align-items:center; justify-content:center; font-family:'Cormorant Garamond',serif; font-size:1.35rem; }
+.nap-level-3 { border-left-color:#2f7d5e; } .nap-level-3 .nap-level-n { color:#2f7d5e; border-color:rgba(47,125,94,.4); background:rgba(47,125,94,.08); }
+.nap-level-2 { border-left-color:#33689f; } .nap-level-2 .nap-level-n { color:#33689f; border-color:rgba(51,104,159,.4); background:rgba(51,104,159,.08); }
+.nap-level-1 { border-left-color:var(--gold); } .nap-level-1 .nap-level-n { color:var(--gold); border-color:rgba(160,124,58,.4); background:rgba(160,124,58,.08); }
+.nap-level-0 { border-left-color:rgba(26,26,24,.28); } .nap-level-0 .nap-level-n { color:var(--i50); border-color:rgba(26,26,24,.22); background:rgba(26,26,24,.04); }
+.nap-level-t { font-family:'Cormorant Garamond',serif; font-size:1.14rem; margin-bottom:4px; }
+.nap-level-d { font-size:.9rem !important; line-height:1.55 !important; margin:0 !important; color:rgba(26,26,24,.72) !important; }
+
+.nap-refs ol { padding-left:1.3em; display:flex; flex-direction:column; gap:9px; }
+.nap-refs li { font-size:.85rem; line-height:1.5; color:rgba(26,26,24,.7); }
+.nap-refs a { color:var(--sage); text-decoration:none; border-bottom:1px solid rgba(74,107,90,.3); }
+.nap-refs a:hover { color:var(--gold); border-color:rgba(160,124,58,.5); }
+.nap-refs-note { font-size:.9rem !important; color:var(--i50) !important; }
+
+.nap-cta { margin-top:52px; padding:28px 30px; border:1px solid rgba(160,124,58,.3); border-radius:5px;
+  background:rgba(160,124,58,.07); }
+.nap-cta-eyebrow { font-size:.64rem; font-weight:700; letter-spacing:.18em; text-transform:uppercase;
+  color:var(--gold); margin-bottom:9px; }
+.nap-cta-body { font-size:.97rem; line-height:1.6; color:rgba(26,26,24,.8); margin-bottom:18px; }
+.nap-cta-row { display:flex; flex-wrap:wrap; gap:12px; }
+
+@media(max-width:760px){
+  .nap-top { padding:16px 20px 0; }
+  .nap-article { padding:20px 20px 70px; }
+  .nap-fig-pair { grid-template-columns:1fr; }
+  .nap-cta { padding:22px 20px; }
+}
+
+/* Research preview of the homepage anatomy section (/prototype-anatomie). */
+.anat-preview { background:var(--ink); min-height:100vh; }
+.anat-preview-bar { display:flex; align-items:center; gap:18px; flex-wrap:wrap;
+  padding:16px 72px; background:rgba(245,240,232,.05); border-bottom:1px solid rgba(245,240,232,.1); }
+.anat-preview-back { font-size:.72rem; font-weight:600; letter-spacing:.09em; text-transform:uppercase;
+  color:var(--gold-l); text-decoration:none; flex-shrink:0; }
+.anat-preview-back:hover { color:var(--cream); }
+.anat-preview-note { font-size:.8rem; line-height:1.5; color:rgba(245,240,232,.66); }
+@media(max-width:760px){ .anat-preview-bar { padding:14px 20px; gap:10px; } }
