@@ -46,7 +46,7 @@ const BRIDGES: Bridge[] = [
     ],
     src: `${PLATE}/pont-2-plantaires.webp`,
     caption: 'Pont 2 — Les branches plantaires : plusieurs portes d’entrée sensorielles.',
-    alt: 'Plante du pied colorée en trois territoires nerveux : plantaire médial, plantaire latéral et calcanéen.',
+    alt: 'Vue plantaire du pied gauche, colorée en trois territoires cutanés : nerf plantaire médial, nerf plantaire latéral et territoire calcanéen, principalement tibial, à distribution variable.',
   },
   {
     n: '3',
@@ -82,7 +82,7 @@ const BRIDGES: Bridge[] = [
     ],
     src: `${PLATE}/pont-5-supraspinal.webp`,
     caption: 'Pont 5 — Les voies supraspinales : modulation contextuelle et descendante.',
-    alt: 'Coupe sagittale du cerveau montrant l’insula, le cortex cingulaire, le cortex préfrontal, la substance grise périaqueducale et le centre pontique de la miction.',
+    alt: 'Coupe sagittale du cerveau montrant le réseau insulo-cortical, le cortex cingulaire, le cortex préfrontal, la substance grise périaqueducale et le centre pontique de la miction.',
   },
 ]
 
@@ -321,7 +321,7 @@ export default function FondementsNeuroAnatomiquesPage() {
             <NapFigure
               src={`${PLATE}/pelvis.webp`}
               caption="Le pelvis : le candidat viscéral le mieux étayé — une accumulation de ponts lombo-sacrés, sans connexion directe point-organe."
-              alt="Vue sagittale de l’anatomie pelvienne avec les innervations parasympathique sacrée, sympathique thoracolombaire et somatique pudendale, et le chevauchement radiculaire S2-S3."
+              alt="Coupe sagittale simplifiée d’un pelvis féminin avec les innervations parasympathique sacrée, sympathique thoracolombaire et somatique pudendale, et le chevauchement radiculaire S2-S3."
             />
             <NapFigure
               src={`${PLATE}/reseaux-pelviens.webp`}

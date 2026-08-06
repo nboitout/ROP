@@ -12,8 +12,9 @@ import Image from 'next/image'
 // which is not enough to read a dense figure, so panning and zooming is what
 // actually makes the feature useful on a phone.
 
-const FIG_W = 1672
-const FIG_H = 941
+// Dimensions of the revised deck export.
+const FIG_W = 1707
+const FIG_H = 960
 const MIN_ZOOM = 0.5
 const MAX_ZOOM = 4
 const STEP = 0.25
