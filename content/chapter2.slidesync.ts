@@ -27,9 +27,11 @@ export const chapter2Slides: SyncSlide[] = [
   { src: '/chapter-2/slides/slide-06.png', title: 'Les trois temps du massage' },
   { src: '/chapter-2/slides/slide-07.png', title: 'Fenêtre d’adaptation après la séance' },
   { src: '/chapter-2/slides/slide-08.png', title: 'Hiérarchisation du plan de traitement' },
-  { src: '/chapter-2/slides/slide-09.png', title: 'Syndrome général d’adaptation' },
-  { src: '/chapter-2/slides/slide-10.png', title: 'Syndrome locorégional' },
-  { src: '/chapter-2/slides/slide-11.png', title: 'Zones ROP — système limbique' },
+  // One plate per level of section 4 ("Séquence clinique ROP : quatre niveaux").
+  { src: '/chapter-2/slides/slide-09.png', title: 'Niveau 1 — Régulation des centres supérieurs' },
+  { src: '/chapter-2/slides/slide-09b.png', title: 'Niveau 2 — Régulation neuro-végétative et adaptation' },
+  { src: '/chapter-2/slides/slide-10.png', title: 'Niveau 3 — Régulation viscérale loco-régionale' },
+  { src: '/chapter-2/slides/slide-11.png', title: 'Niveau 4 — Intégration viscéro-somatique et viscéro-émotionnelle' },
   { src: '/chapter-2/slides/slide-12.png', title: 'Cas clinique : lombo-sciatalgie gauche post-partum' },
   { src: '/chapter-2/slides/slide-14.png', title: 'Contre-indications et signes d’alarme en ROP' },
   { src: '/chapter-2/slides/slide-13.png', title: 'Indications de la ROP' },
@@ -129,12 +131,15 @@ export const chapter2SlideAnchorsFr: SyncAnchor[] = [
   { sectionId: 'modalites', blockIndex: 1, slide: 7, ...endAt('hierarchisation', -1) },
   { sectionId: 'reactions', blockIndex: 0, slide: 7, ...endAt('conseils', -1) },
   { sectionId: 'hierarchisation', blockIndex: -1, slide: 8, ...endAt('zones-reflexes', -1) },
-  { sectionId: 'zones-reflexes', blockIndex: 5, slide: 9, ...endAt('zones-reflexes', 9) },
-  { sectionId: 'zones-reflexes', blockIndex: 9, slide: 10, ...endAt('zones-reflexes', 13) },
-  { sectionId: 'zones-reflexes', blockIndex: 13, slide: 11, ...endAt('exemple-clinique', -1) },
-  { sectionId: 'exemple-clinique', blockIndex: -1, slide: 12, ...endAt('contre-indications', -1) },
-  { sectionId: 'contre-indications', blockIndex: -1, slide: 13, ...endAt('indications', -1) },
-  { sectionId: 'indications', blockIndex: -1, slide: 14, ...endAt('actions', -1) },
+  // Section 4 runs one plate per level; the sub headings sit at blocks 1, 5, 9
+  // and 13, so level 1 also carries the section intro.
+  { sectionId: 'zones-reflexes', blockIndex: -1, slide: 9, ...endAt('zones-reflexes', 5) },
+  { sectionId: 'zones-reflexes', blockIndex: 5, slide: 10, ...endAt('zones-reflexes', 9) },
+  { sectionId: 'zones-reflexes', blockIndex: 9, slide: 11, ...endAt('zones-reflexes', 13) },
+  { sectionId: 'zones-reflexes', blockIndex: 13, slide: 12, ...endAt('exemple-clinique', -1) },
+  { sectionId: 'exemple-clinique', blockIndex: -1, slide: 13, ...endAt('contre-indications', -1) },
+  { sectionId: 'contre-indications', blockIndex: -1, slide: 14, ...endAt('indications', -1) },
+  { sectionId: 'indications', blockIndex: -1, slide: 15, ...endAt('actions', -1) },
 ]
 
 export const chapter2SlideAnchors: SyncAnchor[] = [
