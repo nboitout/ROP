@@ -468,7 +468,12 @@ footer > div > p { font-size:.95rem; color:rgba(245,240,232,.84); line-height:1.
 .cr-layout { display:grid; grid-template-columns:1fr minmax(0,720px) minmax(96px,1fr) 280px 24px; gap:0; padding-top:62px; }
 
 .cr-toc { grid-column:4; grid-row:1; padding:28px 0 64px; }
-.cr-toc-inner { position:sticky; top:88px; }
+.cr-toc-inner { position:sticky; top:88px; max-height:calc(100vh - 112px); overflow-y:auto;
+  overscroll-behavior:contain; scrollbar-gutter:stable; scrollbar-width:thin;
+  scrollbar-color:rgba(74,107,90,.3) transparent; padding-right:8px; }
+.cr-toc-inner::-webkit-scrollbar { width:6px; }
+.cr-toc-inner::-webkit-scrollbar-thumb { background:rgba(74,107,90,.3); border-radius:999px; }
+.cr-toc-inner::-webkit-scrollbar-track { background:transparent; }
 .cr-toc-label { font-size:.66rem; font-weight:600; letter-spacing:.22em; text-transform:uppercase; color:var(--sage); margin-bottom:18px; padding-bottom:12px; border-bottom:1px solid rgba(74,107,90,.18); }
 .cr-toc nav { display:flex; flex-direction:column; gap:4px; }
 .cr-toc-item { display:flex; align-items:flex-start; gap:12px; text-align:left; background:none; border:none; cursor:pointer;
@@ -757,7 +762,7 @@ footer > div > p { font-size:.95rem; color:rgba(245,240,232,.84); line-height:1.
   .cr-toc { position:fixed; top:62px; right:0; bottom:0; width:300px; background:#fbf8f1; border-left:1px solid rgba(26,26,24,.1);
     padding:24px 24px 32px; z-index:240; transform:translateX(100%); transition:transform .25s; overflow-y:auto; }
   .cr-toc.is-open { transform:translateX(0); box-shadow:-8px 0 28px rgba(26,26,24,.12); }
-  .cr-toc-inner { position:static; }
+  .cr-toc-inner { position:static; max-height:none; overflow:visible; padding-right:0; scrollbar-gutter:auto; }
   .cr-toc-overlay { display:block; position:fixed; inset:62px 0 0; background:rgba(10,10,9,.4); z-index:235; }
 }
 
