@@ -235,6 +235,13 @@ export const introductionFr: Chapter = {
         "text": "Nous utilisons dans cet ouvrage le terme de « pont neuro-anatomique » pour désigner ces possibilités de convergence. Il ne s’agit pas d’un câble direct point-organe, mais d’un accès possible à un réseau."
       },
       {
+        "type": "figure",
+        "src": "/chapter-0/figure-0-4.png",
+        "caption": "Les fondements neuro-anatomiques, en quelques lignes",
+        "alt": "Schéma des quatre portes somatiques du pied et des convergences périphériques, spinales, intersegmentaires et supraspinales.",
+        "orientation": "landscape"
+      },
+      {
         "type": "para",
         "text": "Plusieurs portes peuvent donc produire un effet sans être équivalentes. Le recouvrement anatomique renforce surtout la plausibilité d’un ciblage régional ; son absence n’exclut pas une modulation plus générale."
       }
@@ -259,6 +266,13 @@ export const introductionFr: Chapter = {
       {
         "type": "para",
         "text": "Dans l’expérience clinique ROP, la région pelvienne fait partie des territoires où les réponses observées sont les plus intéressantes. Cette observation clinique n’est pas une preuve d’efficacité spécifique ; elle fournit cependant un terrain privilégié pour confronter la cartographie de la méthode aux mécanismes neuro-anatomiques connus."
+      },
+      {
+        "type": "figure",
+        "src": "/chapter-0/figure-0-5.png",
+        "caption": "Le pelvis : un territoire particulièrement intéressant",
+        "alt": "Schéma de l’entrée somatique plantaire et de la convergence lombo-sacrée vers les réseaux pelviens.",
+        "orientation": "landscape"
       }
     ]
   },
@@ -277,6 +291,13 @@ export const introductionFr: Chapter = {
       {
         "type": "para",
         "text": "Ces résultats soutiennent la plausibilité d’une modulation somato-autonome, mais ils ne permettent pas d’assimiler une stimulation électrique d’un nerf à la pression manuelle utilisée en ROP. Cette distinction sera rappelée tout au long du livre."
+      },
+      {
+        "type": "figure",
+        "src": "/chapter-0/figure-0-6.png",
+        "caption": "Au-delà du pelvis : une modulation à distance reste possible",
+        "alt": "Schéma des voies supraspinales et de la modulation somato-autonome possible à distance.",
+        "orientation": "landscape"
       }
     ]
   },
