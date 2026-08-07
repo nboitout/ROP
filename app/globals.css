@@ -1610,6 +1610,86 @@ a.ss-switch-opt:hover { color:var(--gold); }
 .nap-level-t { font-family:'Cormorant Garamond',serif; font-size:1.14rem; margin-bottom:4px; }
 .nap-level-d { font-size:.9rem !important; line-height:1.55 !important; margin:0 !important; color:rgba(26,26,24,.72) !important; }
 
+/* Numbered subsections (1.1, 8.2, …) need air above them; bridge headings sit
+   inside .nap-bridge, which already provides its own rule and separator. */
+.nap-sec > h3 { margin-top:30px; }
+.nap-sec[id] { scroll-margin-top:24px; }
+
+.nap-toc { margin:30px 0 4px; padding:20px 22px; border:1px solid rgba(26,26,24,.12);
+  border-radius:5px; background:#fff; }
+.nap-toc-t { font-size:.64rem !important; font-weight:700; letter-spacing:.18em; text-transform:uppercase;
+  color:var(--gold); margin-bottom:12px !important; }
+.nap-toc ol { list-style:none; padding:0; display:grid; gap:7px; }
+.nap-toc a { display:flex; gap:11px; align-items:baseline; font-size:.93rem; line-height:1.4;
+  color:rgba(26,26,24,.8); text-decoration:none; }
+.nap-toc a:hover { color:var(--gold); }
+.nap-toc-n { flex:0 0 34px; font-size:.7rem; font-weight:700; letter-spacing:.06em; color:var(--sage); }
+
+.nap-key { list-style:none; padding:0; display:grid; gap:12px; margin:20px 0 4px;
+  border-left:3px solid rgba(74,107,90,.35); padding-left:20px; }
+.nap-key li { font-size:.95rem; line-height:1.6; color:rgba(26,26,24,.8); }
+.nap-key strong { color:var(--ink); }
+
+.nap-gates { display:grid; grid-template-columns:1fr 1fr; gap:12px; margin:20px 0 22px; }
+.nap-gate { border:1px solid rgba(26,26,24,.1); border-top:3px solid rgba(26,26,24,.2);
+  border-radius:4px; padding:15px 17px; background:#fff; }
+.nap-gate-plantaire { border-top-color:#2f7d5e; }
+.nap-gate-surale { border-top-color:#33689f; }
+.nap-gate-fibulaire { border-top-color:var(--gold); }
+.nap-gate-saphene { border-top-color:rgba(26,26,24,.28); }
+.nap-gate-h { display:flex; align-items:baseline; justify-content:space-between; gap:10px; margin-bottom:9px; }
+.nap-gate-t { font-family:'Cormorant Garamond',serif; font-size:1.1rem; line-height:1.2; }
+.nap-gate-r { flex:none; font-size:.68rem; font-weight:700; letter-spacing:.09em; color:var(--sage);
+  border:1px solid rgba(74,107,90,.3); border-radius:3px; padding:2px 7px; }
+.nap-gate p { font-size:.86rem !important; line-height:1.5 !important; margin-bottom:7px !important; }
+.nap-gate-nerve { color:rgba(26,26,24,.66) !important; }
+.nap-gate-note { color:var(--gold) !important; margin-bottom:0 !important; }
+
+/* The functional chain of §1.3, wrapped as chevron-separated steps. */
+.nap-chain { list-style:none; padding:0; display:flex; flex-wrap:wrap; align-items:center; gap:8px;
+  margin:6px 0 20px; }
+.nap-chain li { position:relative; font-size:.82rem; line-height:1.35; color:rgba(26,26,24,.78);
+  background:#fff; border:1px solid rgba(26,26,24,.12); border-radius:3px; padding:6px 11px; }
+/* The arrow lives in the gap after each step, not inside the next box — trailing
+   it means a wrapped row never opens with a dangling arrow. */
+.nap-chain li:not(:last-child) { margin-right:17px; }
+.nap-chain li:not(:last-child)::after { content:'→'; position:absolute; right:-18px; top:50%;
+  transform:translateY(-50%); color:var(--gold); }
+
+.nap-callout { margin:22px 0; padding:18px 20px; border:1px solid rgba(160,124,58,.28);
+  border-radius:5px; background:rgba(160,124,58,.06); }
+.nap-callout-t { font-size:.63rem !important; font-weight:700; letter-spacing:.18em; text-transform:uppercase;
+  color:var(--gold); margin-bottom:9px !important; }
+.nap-callout-d { font-size:.94rem !important; line-height:1.6 !important; margin:0 !important;
+  color:rgba(26,26,24,.8) !important; }
+
+.nap-deflist { margin:18px 0 20px; display:grid; gap:13px; }
+.nap-deflist dt { font-family:'Cormorant Garamond',serif; font-size:1.08rem; line-height:1.3;
+  color:var(--ink); margin-bottom:3px; }
+.nap-deflist dd { margin:0; font-size:.92rem; line-height:1.6; color:rgba(26,26,24,.75);
+  padding-left:16px; border-left:2px solid rgba(74,107,90,.25); }
+
+.nap-bullets { padding-left:1.15em; display:grid; gap:9px; margin:14px 0 4px; }
+.nap-bullets li { font-size:.94rem; line-height:1.6; color:rgba(26,26,24,.8); }
+
+.nap-targets { display:grid; gap:11px; margin:20px 0 24px; }
+.nap-target { border:1px solid rgba(26,26,24,.1); border-left:3px solid rgba(26,26,24,.2);
+  border-radius:4px; padding:15px 18px; background:#fff; }
+.nap-target-h { display:flex; align-items:baseline; justify-content:space-between; gap:12px; margin-bottom:7px; }
+.nap-target-t { font-family:'Cormorant Garamond',serif; font-size:1.12rem; line-height:1.25; }
+.nap-target-lvl { flex:none; font-size:.66rem; font-weight:700; letter-spacing:.1em; text-transform:uppercase;
+  color:var(--i50); }
+.nap-target p { font-size:.9rem !important; line-height:1.6 !important; margin:0 !important;
+  color:rgba(26,26,24,.74) !important; }
+/* .nap-target's border-left shorthand is declared after the .nap-level-N colour
+   rules above, so re-apply the accent at a specificity that wins. */
+.nap-target.nap-level-3 { border-left-color:#2f7d5e; }
+.nap-target.nap-level-2 { border-left-color:#33689f; }
+.nap-target.nap-level-1 { border-left-color:var(--gold); }
+.nap-target.nap-level-3 .nap-target-lvl { color:#2f7d5e; }
+.nap-target.nap-level-2 .nap-target-lvl { color:#33689f; }
+.nap-target.nap-level-1 .nap-target-lvl { color:var(--gold); }
+
 .nap-refs ol { padding-left:1.3em; display:flex; flex-direction:column; gap:9px; }
 .nap-refs li { font-size:.85rem; line-height:1.5; color:rgba(26,26,24,.7); }
 .nap-refs a { color:var(--sage); text-decoration:none; border-bottom:1px solid rgba(74,107,90,.3); }
@@ -1627,6 +1707,8 @@ a.ss-switch-opt:hover { color:var(--gold); }
   .nap-top { padding:16px 20px 0; }
   .nap-article { padding:20px 20px 70px; }
   .nap-fig-pair { grid-template-columns:1fr; }
+  .nap-gates { grid-template-columns:1fr; }
+  .nap-toc { padding:16px 18px; }
   .nap-cta { padding:22px 20px; }
 }
 
