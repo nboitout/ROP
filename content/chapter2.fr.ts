@@ -1,5 +1,5 @@
 // Chapter 2 content — French synchronized reading stream
-// Source: public/chapter-2/Chapitre_2_Traitement_ROP_version_publiable_final.docx
+// Source: public/chapter-2/Chapitre_2_Traitement_ROP_version_alignee_chapitre_0.docx
 
 import type { Chapter } from './types'
 
@@ -14,7 +14,17 @@ export const chapter2Fr: Chapter = {
       blocks: [
         {
           type: 'para',
-          text: 'La Réflexothérapie Occipito-Podale (ROP) s’inscrit dans une démarche de soin fonctionnel et intégratif. Le traitement est guidé par l’anamnèse, l’examen clinique, les tests d’écoute et la lecture des zones réflexes. Il vise à solliciter les capacités de régulation et d’adaptation du patient, sans se substituer au diagnostic médical ni à un traitement médical indiqué.',
+          text: 'La Réflexothérapie Occipito-Podale (ROP) s’inscrit dans une démarche de soin fonctionnel et intégratif. Le traitement est guidé par l’anamnèse, l’examen clinique, les tests d’écoute, la lecture des zones réflexes et la réponse observée. Il applique la séquence clinique présentée au chapitre 0 tout en s’appuyant, lorsque cela est pertinent, sur les fondements neuro-anatomiques des portes d’entrée somatiques, des convergences spinales et des voies supraspinales. Il vise à solliciter les capacités de régulation et d’adaptation du patient, sans se substituer au diagnostic médical ni à un traitement médical indiqué.',
+        },
+        {
+          type: 'note',
+          label: 'Principes directeurs',
+          body: [
+            'Solliciter plutôt que forcer. La pression est fine, précise et non douloureuse.',
+            'Hiérarchiser plutôt qu’appliquer un protocole fixe. Les tests et la situation clinique déterminent les priorités.',
+            'Observer plutôt que présumer. La réponse du patient est suivie dans les heures et les jours qui suivent la séance.',
+            'Réorienter lorsque nécessaire. Toute suspicion de pathologie organique ou de signe d’alarme impose un avis médical.',
+          ],
         },
       ],
     },
@@ -61,7 +71,23 @@ export const chapter2Fr: Chapter = {
         },
         {
           type: 'para',
-          text: 'Lorsque la couche épidermo-dermique se déforme sous le doigt, ces récepteurs génèrent des influx afférents transmis par les voies de la sensibilité tactile fine. Dans le modèle de la ROP, cette information sensorielle est utilisée comme une sollicitation susceptible de moduler la perception, le tonus neuro-végétatif et la réponse du patient. La théorie du gate control peut contribuer à expliquer une partie de l’effet antalgique immédiat d’une stimulation tactile non douloureuse. (Cf. Réflexothérapie occipito-podale, Elsevier Masson, page à préciser.)',
+          text: 'Lorsque la couche épidermo-dermique se déforme sous le doigt, les mécanorécepteurs génèrent une activité afférente transmise par une branche périphérique, puis par un nerf vers la moelle épinière et les centres supérieurs. La chaîne de lecture proposée dans ce volume est simple : pression locale → mécanorécepteurs → branche périphérique → nerf → racines spinales → réseaux spinaux et supraspinaux. Dans le modèle de la ROP, cette information sensorielle constitue une porte d’entrée susceptible de modifier l’excitabilité de réseaux somatiques, autonomes ou viscéraux. La théorie du gate control peut contribuer à expliquer une partie de l’effet antalgique immédiat d’une stimulation tactile non douloureuse.',
+        },
+        {
+          type: 'para',
+          text: 'La plante du pied constitue la porte mécanique la mieux documentée, principalement par les branches du nerf tibial. Le bord latéral, le dos du pied et le versant médial constituent d’autres portes somatiques, respectivement surale, fibulaire et saphène. Ces territoires ne sont pas des cartes d’organes : ils correspondent à des entrées périphériques différentes que l’on peut comparer.',
+        },
+        {
+          type: 'para',
+          text: 'Précision méthodologique — Une pression manuelle ROP n’est pas équivalente à une stimulation électrique directe d’un nerf. Les travaux de neuromodulation apportent des modèles de circuits et des arguments de plausibilité ; ils ne démontrent pas automatiquement qu’une pression manuelle produit la même réponse.',
+        },
+        {
+          type: 'note',
+          label: 'Intérêt en ROP',
+          body: [
+            'La force et la trituration du massage réflexe doivent être proscrites. Plus la pression est forte, plus le praticien perçoit ses propres doigts au détriment des repères osseux et des modifications de texture qui guident la recherche des zones réflexes.',
+            'Même bien conduite, une séance constitue une sollicitation pour l’organisme. Elle doit tenir compte de la vitalité du patient et de ses capacités d’adaptation.',
+          ],
         },
         {
           type: 'sub',
@@ -70,7 +96,7 @@ export const chapter2Fr: Chapter = {
         {
           type: 'numbered',
           items: [
-            'Temps du diagnostic textural. Recherche des zones réflexes caractérisées par une modification de la texture de la peau occipitale ou podale : rugosité, densification, perte de glissement ou sensation de « cristaux ». Ces éléments complètent l’anamnèse, l’examen clinique et les tests ; ils ne se substituent pas à eux.',
+            'Temps du repérage textural. Recherche de zones présentant une modification de la texture de la peau occipitale ou podale : rugosité, densification, perte de glissement ou sensation granuleuse, parfois décrite comme des « cristaux » dans la terminologie palpatoire ROP. Ce terme ne suppose pas la présence de dépôts cristallins dans les tissus. Ces éléments complètent l’anamnèse, l’examen clinique et les tests ; ils ne constituent pas un diagnostic.',
             'Temps thérapeutique. La pression reste fine, épicritique et non douloureuse. La manœuvre mobilise la couche épidermo-dermique afin de solliciter les mécanorécepteurs et d’apporter une information sensorielle au système nerveux.',
             'Temps du « laisser faire » et du « ne rien faire ». Après la stimulation, le praticien maintient un bref temps d’observation. La réponse est appréciée par l’évolution de la sensibilité, du glissement et de la souplesse de la zone réflexe, ainsi que par les signes généraux de détente.',
           ],
@@ -106,8 +132,16 @@ export const chapter2Fr: Chapter = {
           text: 'Une réévaluation est généralement réalisée à J3-J4. Si l’amélioration est suffisante et que le fonctionnement habituel est retrouvé, aucune nouvelle séance n’est nécessaire à court terme. Si la récupération reste incomplète, une deuxième séance peut être proposée.',
         },
         {
+          type: 'note',
+          label: 'Comment interpréter le terme « vitalité » ?',
+          body: [
+            'Dans ce chapitre, la vitalité désigne une appréciation clinique et fonctionnelle : niveau d’énergie, fatigabilité, qualité du sommeil, capacité à reprendre les activités, évolution du symptôme principal et ressenti global.',
+            'Elle ne correspond pas à une variable biologique unique. Pour être utile, elle doit être comparée au niveau initial du patient et suivie à l’aide de questions simples et reproductibles.',
+          ],
+        },
+        {
           type: 'para',
-          text: 'Dans la majorité des indications fonctionnelles, un cycle initial d’une à trois séances permet d’apprécier la réponse du patient. En l’absence d’amélioration notable après trois séances, le diagnostic fonctionnel, la hiérarchisation et l’indication de la ROP doivent être reconsidérés. Si nécessaire, le patient est orienté vers son médecin. Les affections chroniques peuvent nécessiter un suivi plus prolongé, dont le rythme reste individualisé. Les réactions post-traitement et les critères détaillés de réévaluation sont présentés à la section 9.',
+          text: 'Dans la majorité des indications fonctionnelles, un cycle initial d’une à trois séances permet d’apprécier la réponse du patient. En l’absence d’amélioration notable après trois séances, l’hypothèse fonctionnelle, la hiérarchisation et l’indication de la ROP doivent être reconsidérées. Si nécessaire, le patient est orienté vers son médecin. Les affections chroniques peuvent nécessiter un suivi plus prolongé, dont le rythme reste individualisé. Les réactions post-traitement et les critères détaillés de réévaluation sont présentés à la section 9.',
         },
       ],
     },
@@ -117,26 +151,26 @@ export const chapter2Fr: Chapter = {
       blocks: [
         {
           type: 'para',
-          text: 'Il n’existe pas de protocole immuable. Une séquence identique appliquée à tous les patients serait contraire à l’approche globale de la ROP. Les tests, l’histoire clinique et la réponse observée déterminent la priorité. Les repères suivants structurent néanmoins le raisonnement :',
+          text: 'Il n’existe pas de protocole immuable. La séquence clinique en quatre niveaux présentée au chapitre 0 organise le raisonnement, mais ne fixe pas un ordre obligatoire. Les tests, l’histoire clinique et la réponse observée déterminent la priorité réelle. Les facteurs suivants peuvent conduire à commencer par un niveau plutôt qu’un autre :',
         },
         {
           type: 'leadBullets',
           items: [
             {
               label: '1. Suites de traumatisme, de chirurgie ou d’infection.',
-              text: 'Lorsque les symptômes sont apparus après un événement clairement identifié, ils gardent un caractère prioritaire. L’anamnèse et l’examen clinique doivent vérifier la cohérence temporelle et fonctionnelle de cette relation.',
+              text: 'Lorsqu’un symptôme apparaît après un événement clairement identifié, cette chronologie peut orienter la priorité. L’anamnèse et l’examen clinique doivent vérifier la cohérence de cette relation sans présumer d’une causalité automatique.',
             },
             {
               label: '2. Anamnèse et tests d’écoute globale et locale.',
-              text: 'En l’absence d’événement déclencheur évident, l’anamnèse, l’examen clinique et les tests orientent vers la fixation dominante et les adaptations susceptibles d’entretenir les symptômes.',
+              text: 'En l’absence d’événement déclencheur évident, ils orientent vers le niveau de régulation ou le territoire qui mérite d’être exploré en premier et fournissent des repères à réévaluer après stimulation.',
             },
             {
-              label: '3. Dimension psycho-émotionnelle.',
-              text: 'Certains événements physiques ou émotionnels peuvent influencer le vécu corporel, la perception douloureuse et l’état neuro-végétatif. Cette dimension est recherchée avec prudence, sans interprétation imposée au patient.',
+              label: '3. Contexte psycho-émotionnel.',
+              text: 'Certains événements physiques ou émotionnels peuvent influencer le vécu corporel, la perception douloureuse et l’état autonome. Cette dimension appartient à l’intégration viscéro-émotionnelle du niveau 4 et est explorée avec prudence, sans interprétation imposée au patient.',
             },
             {
-              label: '4. Mécanisme de stress.',
-              text: 'Toute fixation locale doit être replacée dans le contexte général du patient, de ses contraintes et de ses capacités d’adaptation. (Cf. Chapitre 5, Mécanisme de stress.)',
+              label: '4. Mécanisme de stress et capacités d’adaptation.',
+              text: 'Toute constatation locale doit être replacée dans le contexte général du patient, de ses contraintes, de son sommeil, de sa récupération et de ses capacités fonctionnelles. (Cf. Chapitre 5, Mécanisme de stress.)',
             },
           ],
         },
@@ -144,88 +178,97 @@ export const chapter2Fr: Chapter = {
     },
     {
       id: 'zones-reflexes',
-      title: '4. Zones réflexes occipitales et podales',
+      title: '4. Séquence clinique ROP : quatre niveaux',
       blocks: [
         {
-          type: 'sub',
-          text: '4.1. Zones réflexes occipitales',
-        },
-        {
           type: 'para',
-          text: 'Les zones occipitales constituent un point d’entrée fréquent du traitement. Leur lecture et leur stimulation sont décrites dans les figures correspondantes. (Figure 3.6.)',
+          text: 'La séquence clinique reprend les quatre niveaux définis au chapitre 0. Ils représentent des repères de hiérarchisation et non quatre étapes obligatoires. Une même séance peut mobiliser plusieurs niveaux selon l’anamnèse, les tests et la réponse du patient.',
         },
         {
           type: 'sub',
-          text: '4.2. Syndrome général d’adaptation',
+          text: '4.1. Niveau 1 — Régulation des centres supérieurs du système nerveux central',
         },
         {
           type: 'para',
-          text: 'L’objectif est de soutenir la régulation neuro-végétative et l’adaptation générale avant de traiter le local. Selon les tests et la situation clinique, les zones suivantes peuvent être intégrées :',
-        },
-        {
-          type: 'leadBullets',
-          items: [
-            {
-              label: 'MRP',
-              text: 'occiput-C1-C2, nerfs trijumeau V, vague X et hypoglosse XII, faux du cerveau et du cervelet, deuxième vertèbre sacrée S2, base et voûte crâniennes. (Figure 4.3.)',
-            },
-            {
-              label: 'Circulation du liquide cérébro-spinal dans le modèle ROP',
-              text: 'système veineux, foramen jugulaire, respiration profonde, compression du quatrième ventricule et synchronisation SSB-S2. (Figures 3.18 et 3.19 ; se reporter à Réflexothérapie occipito-podale et système neuro-méningé, Elsevier Masson, pages 96-97.)',
-            },
-            {
-              label: 'Centres supérieurs',
-              text: 'diencéphale, tronc cérébral et hypophyse. (Figures 3.7 et 3.8.)',
-            },
-            {
-              label: 'Nerf vague',
-              text: 'pour le territoire cervico-thoraco-abdominal : foramen magnum, foramen jugulaire, sinus carotidien et hiatus œsophagien. (Figures 4.11 et 4.17.)',
-            },
-            {
-              label: 'Parasympathique pelvien',
-              text: 'pour le territoire pelvien et la partie distale du côlon. (Figure 4.23.)',
-            },
-            {
-              label: 'Axe sympathique thoracique',
-              text: 'colonne vertébrale, articulations costo-transversaires et chaîne ganglionnaire latéro-vertébrale thoracique. (Figures 4.23 et 4.32.)',
-            },
-            {
-              label: 'Plexus prévertébraux',
-              text: '(Figures 4.17 et 4.22.)',
-            },
-          ],
-        },
-        {
-          type: 'sub',
-          text: '4.3. Syndrome locorégional',
-        },
-        {
-          type: 'para',
-          text: 'L’objectif est de traiter les boucles mécaniques et neuro-végétatives en relation avec la région symptomatique :',
+          text: 'Ce niveau concerne les zones réflexes occipitales et les repères ROP associés aux grands centres d’intégration et à l’environnement neuro-méningé. L’objectif clinique est d’aborder la régulation centrale avant ou parallèlement à une approche plus régionale.',
         },
         {
           type: 'bullets',
           items: [
-            'Plexus et nerfs du système nerveux somatique impliqués dans les relations viscéro-somatiques ;',
-            'Viscère ou système viscéral concerné ;',
-            'Cavité abdominale ou pelvienne selon le territoire ;',
-            'Structures musculo-squelettiques et fasciales associées.',
+            'Zones réflexes occipitales.',
+            'Environnement neuro-méningé crânio-spinal, MRP et circulation du liquide cérébrospinal dans le modèle clinique ROP : occiput–C1–C2, base et voûte crâniennes, faux du cerveau et du cervelet, repères S2 et techniques décrites dans les tomes précédents.',
+            'Axe crânio-sacré — terme clinique ROP utilisé comme repère de continuité crânio-spinale, et non comme système anatomique autonome.',
+            'Diencéphale, notamment hypothalamus, tronc cérébral et axe hypothalamo-hypophysaire.',
           ],
         },
         {
+          type: 'para',
+          text: 'Précision — Ces localisations appartiennent à la cartographie clinique de la ROP. Elles ne représentent pas une projection anatomique directe d’une structure cérébrale sur le pied ou l’occiput, ni la preuve d’une action sélective sur une aire déterminée.',
+        },
+        {
           type: 'sub',
-          text: '4.4. Système limbique',
+          text: '4.2. Niveau 2 — Régulation neuro-végétative et adaptation',
         },
         {
           type: 'para',
-          text: 'L’objectif est d’intégrer, lorsque cela est pertinent, la dimension stress, émotion et mémoire corporelle susceptible d’entretenir certaines réponses végétatives ou tissulaires :',
+          text: 'Ce niveau concerne les voies autonomes et les systèmes qui accompagnent la mobilisation, l’adaptation et la récupération. Il relie les centres supérieurs aux territoires viscéraux.',
         },
         {
           type: 'bullets',
           items: [
-            'Amygdale, hippocampe et insula ;',
-            'Balance cerveau limbique–viscère en dysfonction : écoute-induction, un pouce sur le viscère dominant et l’autre sur la zone réflexe du cerveau limbique. (Figure 1.12.)',
+            'Diaphragme, considéré ici comme interface respiratoire et fonctionnelle accompagnant la régulation autonome.',
+            'Systèmes sympathique et parasympathique ; chaîne ganglionnaire latéro-vertébrale.',
+            'Nerf vague pour le territoire cervico-thoraco-abdominal et voies parasympathiques sacrées pour le territoire pelvien et la partie distale du côlon.',
+            'Plexus prévertébraux et préviscéraux.',
+            'Glandes surrénales, notamment dans la réponse sympatho-surrénalienne.',
           ],
+        },
+        {
+          type: 'para',
+          text: 'Le diaphragme n’appartient pas anatomiquement au système nerveux autonome ; sa présence à ce niveau répond à la logique clinique de la ROP, où respiration, tonus et état neuro-végétatif sont observés ensemble. Les afférences viscérales sensitives doivent également être distinguées des commandes autonomes efférentes.',
+        },
+        {
+          type: 'sub',
+          text: '4.3. Niveau 3 — Régulation viscérale loco-régionale',
+        },
+        {
+          type: 'para',
+          text: 'Le troisième niveau recentre le traitement sur le viscère ou le territoire fonctionnel concerné et sur son environnement anatomique immédiat.',
+        },
+        {
+          type: 'bullets',
+          items: [
+            'Viscère ou système viscéral concerné.',
+            'Cavité abdominale ou pelvienne selon le territoire.',
+            'Péritoine et racines des mésos.',
+            'Mésos, ligaments viscéraux, fascias et principales interfaces loco-régionales.',
+            'Rapports neurovasculaires et plexus régionaux lorsqu’ils sont pertinents.',
+          ],
+        },
+        {
+          type: 'para',
+          text: 'Ce niveau ne suppose pas qu’une zone réflexe commande directement un organe. Il organise l’exploration d’un territoire viscéral et de ses interfaces, puis la réévaluation de la réponse après stimulation.',
+        },
+        {
+          type: 'sub',
+          text: '4.4. Niveau 4 — Intégration viscéro-somatique et viscéro-émotionnelle',
+        },
+        {
+          type: 'para',
+          text: 'Le quatrième niveau élargit la lecture du viscère à ses relations avec le système nerveux somatique et avec les réseaux cérébraux qui participent à la perception de l’état interne, à la salience, au contexte et à l’émotion.',
+        },
+        {
+          type: 'bullets',
+          items: [
+            'Nerfs somatiques et plexus lombaires ou sacrés impliqués dans les relations viscéro-somatiques.',
+            'Relations segmentaires, convergences spinales et territoires musculo-squelettiques associés.',
+            'Réseaux limbiques et cortico-limbiques : notamment insula et cortex cingulaire ; amygdale et hippocampe lorsque leur cartographie clinique ROP est utilisée.',
+            'Balance viscéro-émotionnelle dans le protocole ROP : écoute-induction, un contact sur le viscère dominant et l’autre sur la zone réflexe choisie.',
+          ],
+        },
+        {
+          type: 'para',
+          text: 'Cette dernière manœuvre appartient au protocole clinique ROP. Elle ne suppose pas l’existence démontrée d’une connexion anatomique directe entre la zone palpée et une structure limbique particulière. Les voies supraspinales rendent plausible une modulation contextuelle et descendante, mais apportent moins d’arguments pour une spécificité point-organe.',
         },
       ],
     },
@@ -277,10 +320,10 @@ export const chapter2Fr: Chapter = {
         {
           type: 'bullets',
           items: [
-            'Une tension prédominante du ligament utéro-sacré gauche pourrait contribuer à la déviation fonctionnelle de l’utérus et à la fixation sacro-iliaque gauche ;',
-            'Une modification du tonus du muscle piriforme gauche pourrait participer à l’irritation mécanique du trajet sciatique ;',
-            'Les relations entre utérus, vessie, sacrum et plancher pelvien pourraient contribuer à l’incontinence urinaire d’effort et à la perte de souplesse du complexe sacro-coccygien ;',
-            'Le cycle menstruel et la régulation neuro-végétative sont pris en compte dans l’évaluation du syndrome général ;',
+            'La coexistence d’une restriction perçue dans la région utéro-sacrée gauche et d’une diminution de mobilité sacro-iliaque gauche constitue une relation loco-régionale à explorer et à réévaluer après traitement ;',
+            'La modification du tonus du muscle piriforme gauche peut être retenue comme une composante somatique susceptible de participer au tableau douloureux ;',
+            'Les relations régionales entre utérus, vessie, sacrum et plancher pelvien sont intégrées à l’hypothèse de travail et confrontées à l’évolution de l’incontinence d’effort et de la mobilité sacro-coccygienne ;',
+            'Le cycle menstruel et l’état neuro-végétatif sont pris en compte dans l’évaluation du niveau 2 et de la réponse fonctionnelle globale ;',
             'Dans le modèle ROP, la fixation sacro-coccygienne est également envisagée dans ses relations avec les enveloppes méningées et le MRP ;',
             'Le contexte émotionnel et l’anxiété liée à la douleur, à la maternité récente et à la reprise professionnelle peuvent entretenir le vécu symptomatique.',
           ],
@@ -292,10 +335,10 @@ export const chapter2Fr: Chapter = {
         {
           type: 'numbered',
           items: [
-            'Zones réflexes occipitales.',
-            'Syndrome général d’adaptation : MRP, diencéphale, tronc cérébral, hypophyse, surrénales, colonne vertébrale, foie et rein gauche.',
-            'Syndrome locorégional : région cervico-isthmique de l’utérus, muscle piriforme, ligaments sacro-tubéral et sacro-épineux, nerf pudendal, articulations sacro-coccygienne et sacro-iliaque, plexus sacré et trajet sciatique gauches.',
-            'Système limbique : amygdale, hippocampe et insula.',
+            'Niveau 1 — Régulation centrale : zones réflexes occipitales, repères neuro-méningés ROP, diencéphale, tronc cérébral et axe hypothalamo-hypophysaire.',
+            'Niveau 2 — Régulation neuro-végétative et adaptation : diaphragme, voies sympathique et parasympathique, surrénales, voies pelviennes sacrées et plexus pelviens selon les tests.',
+            'Niveau 3 — Régulation viscérale loco-régionale : région cervico-isthmique de l’utérus, cavité pelvienne et rapports loco-régionaux, notamment les structures ligamentaires retenues à l’examen.',
+            'Niveau 4 — Intégration viscéro-somatique et viscéro-émotionnelle : nerf pudendal, plexus sacré, muscle piriforme, articulations sacro-coccygienne et sacro-iliaque, trajet sciatique gauche ; réseaux insulaires et limbiques si le contexte clinique le justifie.',
           ],
         },
         {
@@ -375,9 +418,9 @@ export const chapter2Fr: Chapter = {
           type: 'bullets',
           items: [
             'Une diminution de la douleur ou de la gêne ;',
-            'Des signes de détente et de bascule neuro-végétative : calme, bâillements, somnolence, relâchement marqué ou besoin de repos ;',
+            'Des signes compatibles avec une modification de l’état autonome : calme, bâillements, somnolence, relâchement marqué ou besoin de repos ;',
             'Une évolution du transit, de la diurèse ou des sensations viscérales ;',
-            'Une modification de la mobilité testée à l’étage métamérique associé au viscère ;',
+            'Une modification de la mobilité d’un territoire somatique ou loco-régional identifié avant la séance ;',
             'Une amélioration du sommeil, de l’énergie et des capacités fonctionnelles.',
           ],
         },
@@ -394,7 +437,7 @@ export const chapter2Fr: Chapter = {
         {
           type: 'figure',
           src: '/chapter-2/figure-2-1.png',
-          caption: 'Figure 2.1 — Fenêtre d’adaptation après la première séance. Cette courbe représente un modèle issu de l’expérience clinique ; elle doit être progressivement documentée par des mesures standardisées et ne constitue pas une mesure physiologique directe.',
+          caption: 'Figure 2.1 — Fenêtre d’adaptation après la première séance. Cette courbe représente un modèle issu de l’expérience clinique. L’axe vertical décrit un niveau fonctionnel clinique et non une variable physiologique mesurée ; la cinétique doit être progressivement documentée par des mesures standardisées.',
           alt: 'Fenêtre d’adaptation après la première séance de ROP',
           orientation: 'landscape',
           syncHide: true,
@@ -421,7 +464,7 @@ export const chapter2Fr: Chapter = {
         },
         {
           type: 'para',
-          text: 'La vitalité remonte progressivement vers le niveau physiologique habituel du patient. Cette évolution peut s’accompagner d’une diminution du symptôme principal, d’une amélioration du sommeil, du transit, de l’énergie ou des capacités fonctionnelles.',
+          text: 'Le niveau fonctionnel du patient peut remonter progressivement vers son niveau habituel. Cette évolution peut s’accompagner d’une diminution du symptôme principal, d’une amélioration du sommeil, du transit, de l’énergie ou des capacités fonctionnelles.',
         },
         {
           type: 'sub',
@@ -434,14 +477,14 @@ export const chapter2Fr: Chapter = {
         {
           type: 'bullets',
           items: [
-            'si le symptôme principal a disparu ou nettement régressé et que le fonctionnement habituel est retrouvé, la rémission clinique est considérée comme acquise à ce stade ;',
+            'si le symptôme principal a disparu ou nettement régressé et que le fonctionnement habituel est retrouvé, l’objectif fonctionnel est considéré comme atteint à ce stade et aucune nouvelle séance n’est nécessaire à court terme ;',
             'si l’amélioration demeure incomplète, une deuxième séance peut être proposée ;',
             'si la réponse est absente, atypique ou défavorable, la hiérarchisation et l’indication doivent être reconsidérées.',
           ],
         },
         {
           type: 'para',
-          text: 'Dans ce chapitre, le terme « rémission » décrit l’évolution du motif fonctionnel suivi ; il ne signifie pas la guérison d’une éventuelle maladie organique sous-jacente.',
+          text: 'L’objectif fonctionnel décrit l’évolution du motif suivi ; il ne signifie ni guérison d’une maladie organique sous-jacente ni validation d’un mécanisme causal particulier.',
         },
         {
           type: 'sub',
@@ -450,6 +493,14 @@ export const chapter2Fr: Chapter = {
         {
           type: 'para',
           text: 'Si les réactions sont intenses, persistent au-delà de 72 heures ou s’accompagnent de signes inhabituels ou inquiétants, la situation doit être réévaluée. Le patient est orienté vers son médecin lorsque le contexte le justifie.',
+        },
+        {
+          type: 'note',
+          label: 'Participez au retour d’expérience en ROP avec SuiviPatient',
+          body: [
+            'La chronologie et les réactions décrites dans ce chapitre reposent principalement sur l’expérience clinique des praticiens. Afin de mieux les documenter, l’application SuiviPatient permet de recueillir, à intervalles réguliers, des indicateurs simples comparés à l’état initial : symptôme principal, douleur ou gêne, vitalité, sommeil, fonctions viscérales, capacités fonctionnelles et réactions inhabituelles.',
+            'Les praticiens lecteurs qui souhaitent rejoindre la communauté ROP et utiliser gratuitement l’application SuiviPatient avec leur patientèle sont invités à nous contacter. Cette démarche doit respecter le consentement du patient et la confidentialité des informations recueillies.',
+          ],
         },
       ],
     },
@@ -472,6 +523,16 @@ export const chapter2Fr: Chapter = {
             'rester acteur de sa santé et consulter lorsque des signes nouveaux ou inquiétants apparaissent ;',
             'noter l’évolution du symptôme principal, de la douleur, du sommeil, du transit, de la vitalité et des capacités fonctionnelles ;',
             'rapporter ces éléments au praticien afin d’objectiver l’effet de la séance et d’ajuster la suite du traitement.',
+          ],
+        },
+        {
+          type: 'note',
+          label: 'Synthèse pratique',
+          body: [
+            'Avant la séance : définir le symptôme principal et son niveau initial.',
+            'Après la séance : observer les réactions et documenter l’évolution.',
+            'À J3-J4 : décider de l’arrêt, d’une nouvelle séance ou d’une réévaluation.',
+            'Après trois séances sans amélioration : reconsidérer l’indication et, si nécessaire, orienter le patient.',
           ],
         },
         {
