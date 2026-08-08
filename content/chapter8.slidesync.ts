@@ -108,16 +108,16 @@ export const chapter8Slides: SyncSlide[] = [
     title: "Cartographie podale : hiatus de Marfran et de Larrey"
   },
   {
-    src: "/chapter-8/cartographie/figure-8-09.png",
-    title: "Cartographie podale : jonction azygo-cave"
-  },
-  {
     src: "/chapter-8/cartographie/figure-8-12.png",
     title: "Cartographie podale : nerf phrénique"
   },
   {
     src: "/chapter-8/cartographie/figure-8-14.png",
     title: "Cartographie podale : articulations costo-vertébrales"
+  },
+  {
+    src: "/chapter-8/cartographie/figure-8-09.png",
+    title: "Cartographie podale : jonction azygo-cave"
   },
   {
     src: "/chapter-8/cartographie/figure-8-16.png",
@@ -133,7 +133,7 @@ export const chapter8SlideAnchors: SyncAnchor[] = [
   },
   {
     sectionId: "presentation",
-    blockIndex: 1,
+    blockIndex: 0,
     slide: 2
   },
   {
@@ -214,57 +214,57 @@ export const chapter8SlideAnchors: SyncAnchor[] = [
   },
   {
     sectionId: "zones-reflexes-podales",
-    blockIndex: 4,
+    blockIndex: 1,
     slide: 18
   },
   {
     sectionId: "zones-reflexes-podales",
-    blockIndex: 5,
+    blockIndex: 2,
     slide: 19
   },
   {
     sectionId: "zones-reflexes-podales",
-    blockIndex: 6,
+    blockIndex: 4,
     slide: 20
   },
   {
     sectionId: "zones-reflexes-podales",
-    blockIndex: 7,
+    blockIndex: 4,
     slide: 21
   },
   {
     sectionId: "zones-reflexes-podales",
-    blockIndex: 14,
+    blockIndex: 29,
     slide: 22
   },
   {
     sectionId: "zones-reflexes-podales",
-    blockIndex: 19,
+    blockIndex: 30,
     slide: 23
   },
   {
     sectionId: "zones-reflexes-podales",
-    blockIndex: 23,
+    blockIndex: 18,
     slide: 24
   },
   {
     sectionId: "zones-reflexes-podales",
-    blockIndex: 25,
+    blockIndex: 19,
     slide: 25
   },
   {
     sectionId: "zones-reflexes-podales",
-    blockIndex: 28,
+    blockIndex: 41,
     slide: 25
   },
   {
     sectionId: "zones-reflexes-podales",
-    blockIndex: 32,
+    blockIndex: 59,
     slide: 26
   },
   {
     sectionId: "zones-reflexes-podales",
-    blockIndex: 34,
+    blockIndex: 60,
     slide: 27
   }
 ]
