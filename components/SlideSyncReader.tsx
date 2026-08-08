@@ -1142,7 +1142,7 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, h
                     key={activeSlide.src}
                     src={activeSlide.src}
                     alt={activeSlide.title}
-                    className="ss-slide is-active"
+                    className={`ss-slide is-active${chapter.slug === 'chapter-4-rework' && activeSlide.src.startsWith('/chapter-4/cartographie/') ? ' ss-slide--cartography-expanded' : ''}`}
                     loading="eager"
                     fetchPriority="high"
                     decoding="async"
