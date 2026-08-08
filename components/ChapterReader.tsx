@@ -14,6 +14,7 @@ import { currentTopAnchorId, saveReadingPosition, loadReadingPosition, restoreTo
 import { useLanguage } from '@/app/i18n/LanguageContext'
 import { getSessionId } from '@/lib/session'
 import { readerXrefHref } from '@/lib/access'
+import { renderBookReferenceText } from '@/components/BookReferenceText'
 
 type Props = {
   chapter: Chapter
@@ -571,12 +572,12 @@ function BlockView({
   const anchor = anchorId ? { id: anchorId, 'data-pos-anchor': '' } : {}
   switch (block.type) {
     case 'para':
-      return <p {...anchor} className="cr-p">{block.text}</p>
+      return <p {...anchor} className="cr-p">{renderBookReferenceText(block.text)}</p>
     case 'lead':
       return (
         <p {...anchor} className="cr-p cr-lead">
           <strong className="cr-lead-label">{block.label}{block.text ? ' —' : ''}</strong>
-          {block.text ? ' ' + block.text : ''}
+          {block.text ? <> {renderBookReferenceText(block.text)}</> : ''}
         </p>
       )
     case 'sub':
@@ -584,13 +585,13 @@ function BlockView({
     case 'bullets':
       return (
         <ul {...anchor} className="cr-ul">
-          {block.items.map((it, i) => <li key={i}>{it}</li>)}
+          {block.items.map((it, i) => <li key={i}>{renderBookReferenceText(it)}</li>)}
         </ul>
       )
     case 'numbered':
       return (
         <ol {...anchor} className="cr-ol">
-          {block.items.map((it, i) => <li key={i}>{it}</li>)}
+          {block.items.map((it, i) => <li key={i}>{renderBookReferenceText(it)}</li>)}
         </ol>
       )
     case 'leadBullets':
@@ -599,7 +600,7 @@ function BlockView({
           {block.items.map((it, i) => (
             <li key={i}>
               <strong className="cr-lead-label">{it.label}{it.text ? ' —' : ''}</strong>
-              {it.text ? ' ' + it.text : ''}
+              {it.text ? <> {renderBookReferenceText(it.text)}</> : ''}
             </li>
           ))}
         </ul>
@@ -661,19 +662,19 @@ function BlockView({
         <aside {...anchor} className="cr-note">
           <p className="cr-note-title">{block.label}</p>
           {block.body.map((paragraph, i) => (
-            <p key={i} className="cr-note-p">{paragraph}</p>
+            <p key={i} className="cr-note-p">{renderBookReferenceText(paragraph)}</p>
           ))}
         </aside>
       )
     case 'quote':
-      return <blockquote {...anchor} className="cr-message">{block.text}</blockquote>
+      return <blockquote {...anchor} className="cr-message">{renderBookReferenceText(block.text)}</blockquote>
     case 'rop':
       return (
         <aside {...anchor} className="cr-rop">
           <p className="cr-rop-title">{t.reader.ropTitle}</p>
           {block.body.map((p, i) => {
             const isBullet = p.startsWith('• ')
-            return <p key={i} className={`cr-rop-p${isBullet ? ' cr-rop-bullet' : ''}`}>{isBullet ? p.slice(2) : p}</p>
+            return <p key={i} className={`cr-rop-p${isBullet ? ' cr-rop-bullet' : ''}`}>{renderBookReferenceText(isBullet ? p.slice(2) : p)}</p>
           })}
         </aside>
       )

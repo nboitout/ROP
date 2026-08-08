@@ -14,6 +14,7 @@ import { getSessionId } from '@/lib/session'
 import { currentTopAnchorId, saveReadingPosition, loadReadingPosition, restoreToAnchor } from '@/lib/readingPosition'
 import ReflexZoneAtlas from '@/components/ReflexZoneAtlas'
 import { readerXrefHref } from '@/lib/access'
+import { renderBookReferenceText } from '@/components/BookReferenceText'
 
 type SyncSlide = { src: string; title: string; orientation?: 'portrait' }
 type SyncAnchorPoint = { sectionId: string; blockIndex: number; itemIndex?: number }
@@ -1460,12 +1461,12 @@ function BlockView({
   const { t } = useLanguage()
   switch (block.type) {
     case 'para':
-      return <p className="cr-p">{block.text}</p>
+      return <p className="cr-p">{renderBookReferenceText(block.text)}</p>
     case 'lead':
       return (
         <p className="cr-p cr-lead">
           <strong className="cr-lead-label">{block.label}{block.text ? ' —' : ''}</strong>
-          {block.text ? ' ' + block.text : ''}
+          {block.text ? <> {renderBookReferenceText(block.text)}</> : ''}
         </p>
       )
     case 'sub':
@@ -1476,7 +1477,7 @@ function BlockView({
           {block.items.map((it, i) => (
             <li key={i} className={hasHalfGapBeforeItem?.(i) ? 'ss-anchor-halfbreak' : undefined}>
               {renderSlideAnchorsForItem?.(i)}
-              {it}
+              {renderBookReferenceText(it)}
               {renderEndSentinelForItem?.(i)}
             </li>
           ))}
@@ -1488,7 +1489,7 @@ function BlockView({
           {block.items.map((it, i) => (
             <li key={i} className={hasHalfGapBeforeItem?.(i) ? 'ss-anchor-halfbreak' : undefined}>
               {renderSlideAnchorsForItem?.(i)}
-              {it}
+              {renderBookReferenceText(it)}
               {renderEndSentinelForItem?.(i)}
             </li>
           ))}
@@ -1512,7 +1513,7 @@ function BlockView({
                 <li key={itemIndex} className={hasHalfGapBeforeItem?.(itemIndex) ? 'ss-anchor-halfbreak' : undefined}>
                   {renderSlideAnchorsForItem?.(itemIndex)}
                   <strong className="cr-lead-label">{it.label}{it.text ? ' —' : ''}</strong>
-                  {it.text ? ' ' + it.text : ''}
+                  {it.text ? <> {renderBookReferenceText(it.text)}</> : ''}
                   {renderEndSentinelForItem?.(itemIndex)}
                 </li>
               )
@@ -1582,14 +1583,14 @@ function BlockView({
           {block.body.map((paragraph, i) => (
             <Fragment key={i}>
               {renderSlideAnchorsForItem?.(i)}
-              <p className="cr-note-p">{paragraph}</p>
+              <p className="cr-note-p">{renderBookReferenceText(paragraph)}</p>
             </Fragment>
           ))}
           {renderSlideAnchorsForItem?.(block.body.length)}
         </aside>
       )
     case 'quote':
-      return <blockquote className="cr-message">{block.text}</blockquote>
+      return <blockquote className="cr-message">{renderBookReferenceText(block.text)}</blockquote>
     case 'rop':
       return (
         <aside className="cr-rop">
@@ -1599,7 +1600,7 @@ function BlockView({
             return (
               <Fragment key={i}>
                 {renderSlideAnchorsForItem?.(i)}
-                <p className={`cr-rop-p${isBullet ? ' cr-rop-bullet' : ''}`}>{isBullet ? p.slice(2) : p}</p>
+                <p className={`cr-rop-p${isBullet ? ' cr-rop-bullet' : ''}`}>{renderBookReferenceText(isBullet ? p.slice(2) : p)}</p>
               </Fragment>
             )
           })}

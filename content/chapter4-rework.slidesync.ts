@@ -5,18 +5,25 @@ import { chapter4Slides } from './chapter4.slidesync'
 
 const endAt = (sectionId: string, blockIndex: number) => ({ end: { sectionId, blockIndex } })
 
-export const chapter4ReworkSlides = chapter4Slides
+export const chapter4ReworkSlides = [
+  chapter4Slides[0],
+  {
+    src: '/chapter-4/slides/slide-private-02.png',
+    title: 'Niveau 2 — Régulation neuro-végétative et adaptation',
+  },
+  ...chapter4Slides.slice(1),
+]
 
-export const chapter4ReworkSlideAnchors = [
+const priorSlideAnchors = [
   { sectionId: 'presentation', blockIndex: -1, slide: 1 },
   { sectionId: 'presentation', blockIndex: 0, slide: 2, gapBefore: 'half' as const },
   { sectionId: 'presentation', blockIndex: 1, slide: 3 },
-  { sectionId: 'presentation', blockIndex: 3, slide: 4 },
-  { sectionId: 'presentation', blockIndex: 7, slide: 5 },
-  { sectionId: 'presentation', blockIndex: 10, slide: 6 },
-  { sectionId: 'presentation', blockIndex: 11, slide: 7 },
-  { sectionId: 'presentation', blockIndex: 14, slide: 8, ...endAt('presentation', 18) },
-  { sectionId: 'presentation', blockIndex: 25, slide: 9 },
+  { sectionId: 'presentation', blockIndex: 2, slide: 4 },
+  { sectionId: 'presentation', blockIndex: 6, slide: 5 },
+  { sectionId: 'presentation', blockIndex: 9, slide: 6, gapBefore: 'half' as const },
+  { sectionId: 'presentation', blockIndex: 10, slide: 7 },
+  { sectionId: 'presentation', blockIndex: 13, slide: 8, ...endAt('presentation', 17) },
+  { sectionId: 'presentation', blockIndex: 24, slide: 9 },
   { sectionId: 'organisation-du-sna', blockIndex: 0, slide: 10 },
   { sectionId: 'parasympathique-viscero-moteur', blockIndex: -1, slide: 11 },
   { sectionId: 'parasympathique-viscero-moteur', blockIndex: 1, slide: 12, gapBefore: 'half' as const },
@@ -53,4 +60,10 @@ export const chapter4ReworkSlideAnchors = [
   { sectionId: 'zones-reflexes-podales', blockIndex: 47, slide: 43, ...endAt('zones-reflexes-podales', 47) },
   { sectionId: 'zones-reflexes-podales', blockIndex: 56, slide: 44, ...endAt('zones-reflexes-podales', 56) },
   { sectionId: 'zones-reflexes-podales', blockIndex: 57, slide: 45, ...endAt('zones-reflexes-podales', 57) },
+]
+
+export const chapter4ReworkSlideAnchors = [
+  priorSlideAnchors[0],
+  { sectionId: 'presentation', blockIndex: -1, slide: 2 },
+  ...priorSlideAnchors.slice(1).map((anchor) => ({ ...anchor, slide: anchor.slide + 1 })),
 ]

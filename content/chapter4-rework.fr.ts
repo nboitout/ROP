@@ -8,11 +8,7 @@ import { chapter4Fr } from './chapter4.fr'
 const publishedReflexSection = chapter4Fr.sections.find((section) => section.id === 'zones-reflexes-podales')
 if (!publishedReflexSection) throw new Error('Published Chapter 4 reflex-zone section is missing')
 
-export const chapter4ReworkFr: Chapter = {
-  slug: 'chapter-4-rework',
-  number: '4',
-  title: 'Système nerveux autonome',
-  sections: [
+export const chapter4ReworkFr: Chapter = { slug: 'chapter-4-rework', number: '4', title: 'Système nerveux autonome', sections: [
   {
     "id": "presentation",
     "title": "1. Présentation",
@@ -20,10 +16,6 @@ export const chapter4ReworkFr: Chapter = {
       {
         "type": "sub",
         "text": "1.1. Deux systèmes : Parasympathique et Sympathique"
-      },
-      {
-        "type": "para",
-        "text": "Le système nerveux autonome (SNA) participe à l’ajustement permanent du fonctionnement des viscères, des glandes, des vaisseaux et de nombreuses fonctions internes. Dans la séquence clinique ROP, il correspond au Niveau 2 — Régulation neuro-végétative et adaptation."
       },
       {
         "type": "para",
@@ -244,7 +236,7 @@ export const chapter4ReworkFr: Chapter = {
       {
         "type": "rop",
         "body": [
-          "Dans la cartographie ROP, ces voies sont abordées par les repères de la base du crâne et des ganglions parasympathiques céphaliques. Les localisations podales restent des repères cliniques et non une projection anatomique directe."
+          "Dans la cartographie ROP, ces voies sont abordées par les repères de la base du crâne et des ganglions parasympathiques céphaliques."
         ]
       },
       {
@@ -262,7 +254,7 @@ export const chapter4ReworkFr: Chapter = {
       {
         "type": "rop",
         "body": [
-          "Le vague est une cible importante du Niveau 2 en raison de son rôle de modulation cardio-respiratoire et digestive, mais aussi de sa forte composante afférente. Une pression ROP ne doit pas être assimilée à une stimulation directe du nerf vague."
+          "Le vague est une cible importante du Niveau 2 en raison de son rôle de modulation cardio-respiratoire et digestive, mais aussi de sa forte composante afférente."
         ]
       },
       {
@@ -292,7 +284,7 @@ export const chapter4ReworkFr: Chapter = {
       {
         "type": "rop",
         "body": [
-          "Le sinus carotidien et le glomus carotidien sont des repères physiologiques importants. Ils ne doivent pas être utilisés comme cibles de manipulation directe. Tout malaise, syncope, douleur thoracique ou dyspnée impose d’interrompre le geste et d’orienter vers une évaluation médicale."
+          "Le sinus carotidien et le glomus carotidien sont des repères physiologiques importants. Tout malaise, syncope, douleur thoracique ou dyspnée impose d’interrompre le geste et d’orienter vers une évaluation médicale."
         ]
       },
       {
@@ -457,7 +449,7 @@ export const chapter4ReworkFr: Chapter = {
       {
         "type": "rop",
         "body": [
-          "Dans le Niveau 2, le vague est abordé comme une grande voie de communication bidirectionnelle. Les données de neuromodulation permettent d’identifier des circuits plausibles ; elles ne démontrent pas un effet équivalent d’une pression manuelle ROP."
+          "Dans le Niveau 2, le vague est abordé comme une grande voie de communication bidirectionnelle. Les données de neuromodulation permettent d’identifier des circuits plausibles."
         ]
       }
     ]
@@ -505,7 +497,7 @@ export const chapter4ReworkFr: Chapter = {
       {
         "type": "rop",
         "body": [
-          "La proximité entre nerfs spinaux, structures costo-vertébrales, rameaux méningés et chaîne sympathique constitue un carrefour régional intéressant. Une irritation vertébrale ne doit cependant pas être présentée comme entraînant automatiquement une perturbation de la dynamique crânio-sacrée."
+          "La proximité entre nerfs spinaux, structures costo-vertébrales, rameaux méningés et chaîne sympathique constitue un carrefour régional intéressant."
         ]
       },
       {
@@ -954,8 +946,7 @@ export const chapter4ReworkFr: Chapter = {
       }
     ]
   }
-],
-}
+] }
 
 const reflexInsertIndex = chapter4ReworkFr.sections.findIndex((section) => section.id === 'a-retenir')
 chapter4ReworkFr.sections.splice(reflexInsertIndex, 0, publishedReflexSection)

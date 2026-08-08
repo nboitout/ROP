@@ -499,6 +499,8 @@ footer > div > p { font-size:.95rem; color:rgba(245,240,232,.84); line-height:1.
 .cr-h3 { font-family:'Cormorant Garamond',serif; font-size:1.45rem; font-weight:500; font-style:italic; color:var(--sage); margin:36px 0 16px; }
 
 .cr-p { font-size:1.125rem; line-height:1.78; color:#22221f; margin:0 0 18px; font-weight:400; }
+.cr-book-reference { color:inherit; text-decoration-color:rgba(160,124,58,.62); text-decoration-thickness:1px; text-underline-offset:3px; }
+.cr-book-reference:hover { color:var(--gold); text-decoration-color:currentColor; }
 .cr-lead-label { font-weight:600; color:var(--ink); }
 .cr-xref { margin:18px 0 24px; }
 .cr-xref-link { display:flex; align-items:center; gap:16px; padding:16px 18px; border:1px solid rgba(74,107,90,.22);
