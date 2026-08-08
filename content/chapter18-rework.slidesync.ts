@@ -22,15 +22,24 @@ export const chapter18ReworkSlides: SyncSlide[] = [
   { src: '/chapter-18/slides/slide-18.png', title: 'Relations viscéro-émotionnelles' },
   { src: '/chapter-18/slides/slide-19.png', title: 'Conseils pratiques : rééducation abdomino-périnéale' },
   { src: '/chapter-18/cartographie/figure-18-01.png', title: 'Cartographie : chaîne ganglionnaire latéro-vertébrale thoracique' },
+  { src: '/chapter-18/cartographie/figure-18-02.png', title: 'Photo : chaîne ganglionnaire latéro-vertébrale thoracique' },
   { src: '/chapter-18/cartographie/figure-18-03.png', title: 'Cartographie : origine médullaire du parasympathique pelvien ou sacré' },
+  { src: '/chapter-18/cartographie/figure-18-04.png', title: 'Photo : chaîne ganglionnaire lombaire et piliers du diaphragme' },
   { src: '/chapter-18/cartographie/figure-18-05.png', title: 'Cartographie : foramens ischiatiques et muscles pelviens profonds' },
+  { src: '/chapter-18/cartographie/figure-18-06.png', title: 'Photo : grand foramen ischiatique' },
   { src: '/chapter-18/cartographie/figure-18-07.png', title: 'Cartographie : foramens ischiatiques et muscles pelviens profonds' },
+  { src: '/chapter-18/cartographie/figure-18-08.png', title: 'Photo : petit foramen ischiatique' },
   { src: '/chapter-18/cartographie/figure-18-09.png', title: 'Cartographie : foramens ischiatiques et muscles pelviens profonds' },
   { src: '/chapter-18/cartographie/figure-18-10.png', title: 'Cartographie : fosse obturée, muscles obturateurs et nerf pudendal' },
+  { src: '/chapter-18/cartographie/figure-18-11.png', title: 'Photo : fosse obturée et muscles obturateurs' },
   { src: '/chapter-18/cartographie/figure-18-12.png', title: 'Cartographie : ligaments sacro-tubéral et sacro-épineux, nerf pudendal' },
+  { src: '/chapter-18/cartographie/figure-18-13.png', title: 'Photo : ligaments sacro-tubéral et sacro-épineux' },
   { src: '/chapter-18/cartographie/figure-18-14.png', title: 'Cartographie : vessie, utérus ou prostate' },
+  { src: '/chapter-18/cartographie/figure-18-15.png', title: 'Photo : ligament pubo-vésical' },
   { src: '/chapter-18/cartographie/figure-18-16.png', title: 'Cartographie : vessie, utérus ou prostate' },
+  { src: '/chapter-18/cartographie/figure-18-17.png', title: 'Photo : trigone de la vessie et plexus hypogastrique' },
   { src: '/chapter-18/cartographie/figure-18-18.png', title: 'Cartographie : vessie, utérus ou prostate' },
+  { src: '/chapter-18/cartographie/figure-18-19.png', title: 'Photo : noyau fibreux central du périnée et fente uro-génitale' },
 ]
 
 export const chapter18ReworkSlideAnchors: SyncAnchor[] = [
@@ -49,12 +58,12 @@ export const chapter18ReworkSlideAnchors: SyncAnchor[] = [
   { sectionId: 'application-en-rop-la-vessie-selon-les-quatre-niveaux', blockIndex: -1, slide: 13 },
   { sectionId: 'relations-viscero-emotionnelles', blockIndex: -1, slide: 14 },
   { sectionId: 'conseils-et-reeducation-fonctionnelle', blockIndex: -1, slide: 15 },
-  { sectionId: 'zones-reflexes-podales', blockIndex: 2, itemIndex: 1, slide: 16 },
-  { sectionId: 'zones-reflexes-podales', blockIndex: 2, itemIndex: 0, slide: 17 },
-  { sectionId: 'zones-reflexes-podales', blockIndex: 4, itemIndex: 2, slide: [18, 19, 20] },
-  { sectionId: 'zones-reflexes-podales', blockIndex: 6, itemIndex: 0, slide: 21 },
-  { sectionId: 'zones-reflexes-podales', blockIndex: 6, itemIndex: 1, slide: 22 },
-  { sectionId: 'zones-reflexes-podales', blockIndex: 4, itemIndex: 1, slide: [23, 24, 25] },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 2, itemIndex: 1, slide: [16, 17] },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 2, itemIndex: 0, slide: [18, 19] },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 4, itemIndex: 2, slide: [20, 21, 22, 23, 24] },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 6, itemIndex: 0, slide: [25, 26] },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 6, itemIndex: 1, slide: [27, 28] },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 4, itemIndex: 1, slide: [29, 30, 31, 32, 33, 34] },
 ]
 
 export const chapter18ReworkSlidesSetAside = [
