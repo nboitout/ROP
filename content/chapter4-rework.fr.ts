@@ -2,11 +2,78 @@
 // Source: public/chapter-4/Chapter4_SNA_AI_Rework_v2.docx
 // Reflex-zone section: shared verbatim with the published Chapter 4.
 
-import type { Chapter } from './types'
+import type { Block, Chapter } from './types'
 import { chapter4Fr } from './chapter4.fr'
 
 const publishedReflexSection = chapter4Fr.sections.find((section) => section.id === 'zones-reflexes-podales')
 if (!publishedReflexSection) throw new Error('Published Chapter 4 reflex-zone section is missing')
+
+const privateReflexSection: Chapter['sections'][number] = {
+  ...publishedReflexSection,
+  blocks: publishedReflexSection.blocks.filter((block) => block.type !== 'figure'),
+}
+
+const privateReflexPhoto = (
+  slide: string,
+  caption: string,
+  orientation: 'landscape' | 'portrait' = 'landscape',
+): Block => ({
+  type: 'figure',
+  src: `/chapter-4/rework-reflex/slide-${slide}.png`,
+  caption: `Photo : ${caption}`,
+  alt: `Repère podal — ${caption}`,
+  orientation,
+})
+
+function appendPrivatePhotos(subtitle: string, photos: Block[]) {
+  const start = privateReflexSection.blocks.findIndex((block) => block.type === 'sub' && block.text === subtitle)
+  if (start < 0) throw new Error(`Private Chapter 4 reflex subsection missing: ${subtitle}`)
+  const next = privateReflexSection.blocks.findIndex((block, index) => index > start && block.type === 'sub')
+  privateReflexSection.blocks.splice(next < 0 ? privateReflexSection.blocks.length : next, 0, ...photos)
+}
+
+appendPrivatePhotos('11.1. Parasympathique crânien — territoire céphalique', [
+  privateReflexPhoto('03', 'tronc cérébral', 'portrait'),
+])
+appendPrivatePhotos('11.2. Nerf vague X — trajet crânien / foramen jugulaire', [
+  privateReflexPhoto('05', 'nerf vague X dans la moelle allongée', 'portrait'),
+  privateReflexPhoto('07', 'nerf vague X dans le foramen jugulaire', 'portrait'),
+])
+appendPrivatePhotos('11.3. Nerf vague X — étage cervical', [
+  privateReflexPhoto('09', 'sinus carotidien'),
+])
+appendPrivatePhotos('11.4. Nerf vague X — étage thoracique / plexus cardiaque', [
+  privateReflexPhoto('11', 'territoires cervical, thoracique et diaphragmatique gauches du nerf vague X', 'portrait'),
+  privateReflexPhoto('14', 'territoires cervical et thoracique droits du nerf vague X'),
+])
+appendPrivatePhotos('11.5. Nerf vague X — étage diaphragmatique / hiatus œsophagien', [
+  privateReflexPhoto('16', 'hiatus œsophagien et nerfs vagues droit et gauche', 'portrait'),
+])
+appendPrivatePhotos('11.6. Nerf vague X — étage abdominal', [
+  privateReflexPhoto('18', 'territoire abdominal droit du nerf vague X'),
+])
+appendPrivatePhotos('11.7. Parasympathique pelvien (ou sacral)', [
+  privateReflexPhoto('20', 'origine médullaire du parasympathique pelvien ou sacré'),
+])
+appendPrivatePhotos('11.8. Sympathique viscéro-moteur — origine médullaire', [
+  privateReflexPhoto('22', 'origine médullaire du sympathique'),
+])
+appendPrivatePhotos('11.9. Sympathique viscéro-moteur — chaîne ganglionnaire thoracique', [
+  privateReflexPhoto('24', 'chaîne ganglionnaire latéro-vertébrale thoracique'),
+])
+appendPrivatePhotos('11.10. Sympathique viscéro-moteur — chaîne ganglionnaire cervicale', [
+  privateReflexPhoto('26', 'ganglion cervical inférieur', 'portrait'),
+])
+appendPrivatePhotos('11.11. Sympathique viscéro-moteur — chaîne ganglionnaire lombale', [
+  privateReflexPhoto('28', 'chaîne ganglionnaire lombaire et piliers du diaphragme'),
+])
+appendPrivatePhotos('11.12. Sympathique viscéro-moteur — chaîne ganglionnaire sacrale et coccygienne', [
+  privateReflexPhoto('30', 'chaîne ganglionnaire latéro-vertébrale sacro-coccygienne'),
+])
+appendPrivatePhotos('11.15. Plexus préviscéral pelvien', [
+  privateReflexPhoto('32', 'plexus hypogastrique inférieur, fibres antérieures', 'portrait'),
+  privateReflexPhoto('34', 'plexus hypogastrique inférieur, fibres moyennes et postérieures'),
+])
 
 export const chapter4ReworkFr: Chapter = { slug: 'chapter-4-rework', number: '4', title: 'Système nerveux autonome', sections: [
   {
@@ -949,4 +1016,4 @@ export const chapter4ReworkFr: Chapter = { slug: 'chapter-4-rework', number: '4'
 ] }
 
 const reflexInsertIndex = chapter4ReworkFr.sections.findIndex((section) => section.id === 'a-retenir')
-chapter4ReworkFr.sections.splice(reflexInsertIndex, 0, publishedReflexSection)
+chapter4ReworkFr.sections.splice(reflexInsertIndex, 0, privateReflexSection)
