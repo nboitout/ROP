@@ -46,7 +46,7 @@ export default async function Chapitre5ReworkPage({
   return (
     <SlideSyncReader
       chapter={chapter5ReworkFr}
-      bookTitle={`${translations[lang].reader.bookTitle} · Nouvelle édition`}
+      bookTitle={translations[lang].reader.bookTitle}
       slides={chapter5ReworkSlides}
       anchors={chapter5ReworkSlideAnchors}
       backHref={draftBackHref(isAdmin)}

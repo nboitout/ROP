@@ -49,7 +49,7 @@ export default async function Chapitre5ReworkClassicPage({
       <ClassicModeGuard syncHref={syncHref} />
       <ChapterReader
         chapter={chapter5ReworkFr}
-        bookTitle={`${translations[lang].reader.bookTitle} · Nouvelle édition`}
+        bookTitle={translations[lang].reader.bookTitle}
         contentLang="fr"
         backHref={draftBackHref(isAdmin)}
         syncHref={syncHref}
