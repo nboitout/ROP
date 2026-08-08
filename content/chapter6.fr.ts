@@ -86,6 +86,7 @@ export const chapter6Fr: Chapter = {
     {
       id: 'consequences-cliniques',
       title: '7. Conséquences cliniques',
+      railHidden: true,
       blocks: [
         { type: 'lead', label: 'Conception classique du SNA', text: 'selon cette conception en deux systèmes, nous pensions que le Sympathique était seul responsable dans la réponse au mécanisme de stress, surtout dans les phases d’alarme et d’adaptation du SGA.' },
         { type: 'lead', label: 'Théorie polyvagale', text: 'elle inverse ce processus par l’influence de la branche ventrale du nerf vague sur le Sympathique et la branche dorsale du nerf vague.' },

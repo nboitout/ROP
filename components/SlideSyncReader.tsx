@@ -1036,7 +1036,7 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, h
           onMouseMove={handleSectionRailMove}
           onMouseLeave={() => setRailHoverIndex(null)}
         >
-          {chapter.sections.filter((section) => !isRopInterestSection(section)).map((section, index) => {
+          {chapter.sections.filter((section) => !isRopInterestSection(section) && !section.railHidden).map((section, index) => {
             const isActive = activeSectionId === section.id
             return (
               <button
