@@ -67,6 +67,21 @@ import { chapter21De } from './chapter21.de'
 import { chapter21Es } from './chapter21.es'
 import { chapter21It } from './chapter21.it'
 
+// These recently revised French chapters belong to the private-edition flow.
+// Keep their foundational cross-references inside that edition, including
+// references appended after the initial chapter object is declared.
+for (const chapter of [chapter8Fr, chapter18Fr, chapter19Fr, chapter20Fr, chapter21Fr]) {
+  for (const section of chapter.sections) {
+    for (const block of section.blocks) {
+      if (block.type !== 'xref') continue
+      block.href = block.href
+        .replace('/lecture/chapitre-3?', '/lecture/chapitre-3-rework?')
+        .replace('/lecture/chapitre-4?', '/lecture/chapitre-4-rework?')
+        .replace('/lecture/chapitre-5?', '/lecture/chapitre-5-rework?')
+    }
+  }
+}
+
 /**
  * Per-chapter, per-language content. French is the canonical fallback.
  *

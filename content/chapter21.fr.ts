@@ -308,3 +308,250 @@ export const chapter21Fr: Chapter = {
     }
   ]
 }
+
+// Revised four-level ROP protocol from the complete reflex-zone Word revision.
+const revisedReflexSection = chapter21Fr.sections.find((section) => section.id === 'zones-reflexes-podales')!
+revisedReflexSection.blocks = [
+  {
+    "type": "para",
+    "text": "Les localisations décrites ci-dessous appartiennent à la cartographie clinique de la ROP. Elles ne constituent pas une projection anatomique directe des organes érectiles, de leurs nerfs ou des centres de la réponse sexuelle sur le pied. Leur sélection dépend de l’anamnèse, des tests, des réactions palpatoires et du trouble fonctionnel concerné."
+  },
+  {
+    "type": "para",
+    "text": "Pour le système érectile, la lecture des zones réflexes peut être organisée selon les quatre niveaux du protocole ROP. La distinction entre voies autonomes, innervation somatique, structures érectiles et intégration centrale permet d’éviter de confondre des mécanismes de nature différente."
+  },
+  {
+    "type": "sub",
+    "text": "10.1. Repères podaux de base"
+  },
+  {
+    "type": "para",
+    "text": "Les repères historiques de la méthode sont conservés et redistribués dans les quatre niveaux du protocole."
+  },
+  {
+    "type": "bullets",
+    "items": [
+      "Nerf pudendal S2-S4 : face latérale du talon, en relation cartographique avec le plexus sacré et la région de l’épine ischiatique (figures 17.15 et 17.16).",
+      "Suite du trajet pudendal : face plantaire du talon puis bord médial de la branche ischiopubienne (figures 21.6 et 21.7).",
+      "Corps caverneux et muscles ischiocaverneux : bord médial des branches ischiopubiennes.",
+      "Organes érectiles : extrémité médiale de la branche iliopubienne, au bord antérieur du talon.",
+      "Ligaments sacrotubéral et sacroépineux : bord postérieur des talons (figure 17.21)."
+    ]
+  },
+  {
+    "type": "para",
+    "text": "Ces localisations constituent des repères cliniques ROP. Elles sont ensuite hiérarchisées selon le mécanisme dominant et le contexte clinique."
+  },
+  {
+    "type": "sub",
+    "text": "10.2. Niveau 1 — Régulation des centres supérieurs"
+  },
+  {
+    "type": "para",
+    "text": "Le Niveau 1 concerne l’intégration centrale de l’excitation sexuelle, de l’attention, de la motivation, des signaux sensoriels et du contexte émotionnel. Il n’est pas nécessairement prioritaire dans tout trouble sexuel, mais prend de l’importance lorsque le désir, l’anticipation, l’anxiété de performance ou le contexte émotionnel participent au tableau."
+  },
+  {
+    "type": "bullets",
+    "items": [
+      "Zones réflexes occipitales et centres supérieurs selon la cartographie ROP.",
+      "Diencéphale, notamment hypothalamus, dans la régulation neuroendocrine et autonome.",
+      "Réseaux centraux et cortico-limbiques impliqués dans la perception, la motivation et le contexte émotionnel.",
+      "Nerf olfactif I : repère sensoriel associé de la cartographie ROP, à utiliser lorsqu’il est pertinent dans la lecture clinique et non comme cible obligatoire."
+    ]
+  },
+  {
+    "type": "xref",
+    "label": "Cf. chapitre 3 — Système nerveux central, Niveau 1 : Régulation des centres supérieurs",
+    "href": "/lecture/chapitre-3-rework?lang=fr"
+  },
+  {
+    "type": "rop",
+    "body": [
+      "Le Niveau 1 replace la réponse sexuelle dans son intégration cérébrale et contextuelle. Il ne signifie pas qu’une zone podale stimule directement l’hypothalamus, les réseaux cortico-limbiques ou le nerf olfactif."
+    ]
+  },
+  {
+    "type": "sub",
+    "text": "10.3. Niveau 2 — Régulation neuro-végétative et adaptation"
+  },
+  {
+    "type": "para",
+    "text": "Le Niveau 2 est essentiel pour la fonction érectile, car l’érection et certaines phases de la réponse sexuelle dépendent d’une coordination entre voies parasympathiques et sympathiques."
+  },
+  {
+    "type": "bullets",
+    "items": [
+      "Parasympathique pelvien S2-S4 : associé à la vasodilatation et au remplissage des tissus érectiles.",
+      "Sympathique thoraco-lombaire : territoire décrit dans ce chapitre autour de L1-L3, impliqué notamment dans la phase d’émission de l’éjaculation.",
+      "Plexus hypogastrique inférieur et réseaux autonomes pelviens : carrefour fonctionnel entre les voies sympathiques et parasympathiques destinées aux organes pelviens.",
+      "Coordination autonome : privilégier une lecture fonctionnelle de la séquence excitation-érection-émission plutôt qu’une stimulation isolée du sympathique ou du parasympathique."
+    ]
+  },
+  {
+    "type": "xref",
+    "label": "Cf. chapitre 4 — Système nerveux autonome, notamment les sections consacrées au parasympathique pelvien, au sympathique thoraco-lombaire et au plexus préviscéral pelvien",
+    "href": "/lecture/chapitre-4-rework?lang=fr"
+  },
+  {
+    "type": "rop",
+    "body": [
+      "Le Niveau 2 vise à accompagner la coordination autonome de la réponse sexuelle. Il ne faut pas assimiler la ROP à une neuromodulation électrique ni supposer une action directe sur les nerfs autonomes."
+    ]
+  },
+  {
+    "type": "sub",
+    "text": "10.4. Niveau 3 — Régulation viscérale loco-régionale"
+  },
+  {
+    "type": "para",
+    "text": "Le Niveau 3 regroupe les structures érectiles et leur environnement pelvien immédiat. Il s’agit du niveau loco-régional propre au système érectile."
+  },
+  {
+    "type": "bullets",
+    "items": [
+      "Corps caverneux du pénis ou du clitoris.",
+      "Corps spongieux chez l’homme.",
+      "Bulbes du vestibule chez la femme.",
+      "Piliers des organes érectiles et branches ischiopubiennes.",
+      "Ligaments suspenseur et fundiforme du pénis lorsque le contexte masculin le justifie.",
+      "Glandes vestibulaires de Bartholin chez la femme et glandes bulbo-urétrales de Cowper chez l’homme.",
+      "Cavité pelvienne et périnée comme environnement loco-régional."
+    ]
+  },
+  {
+    "type": "xref",
+    "label": "Cf. chapitre 17 — Cavité pelvienne",
+    "href": "/lecture/chapitre-17?lang=fr"
+  },
+  {
+    "type": "xref",
+    "label": "cf. chapitre 19 — Organes génitaux féminins",
+    "href": "/lecture/chapitre-19?lang=fr"
+  },
+  {
+    "type": "xref",
+    "label": "cf. chapitre 20 — Organes génitaux masculins",
+    "href": "/lecture/chapitre-20?lang=fr"
+  },
+  {
+    "type": "rop",
+    "body": [
+      "Le Niveau 3 replace les tissus érectiles dans leur environnement anatomique et vasculaire régional. La sensibilité d’une zone réflexe ne permet pas de conclure à une lésion vasculaire, musculaire ou ligamentaire."
+    ]
+  },
+  {
+    "type": "sub",
+    "text": "10.5. Niveau 4 — Intégration viscéro-somatique et psycho-émotionnelle"
+  },
+  {
+    "type": "para",
+    "text": "Le système érectile comporte une composante somatique majeure par le nerf pudendal et les muscles périnéaux, ainsi qu’une forte intégration avec le vécu corporel, relationnel et émotionnel."
+  },
+  {
+    "type": "sub",
+    "text": "10.5.1. Versant somatique"
+  },
+  {
+    "type": "bullets",
+    "items": [
+      "Nerf pudendal S2-S4.",
+      "Muscles ischiocaverneux.",
+      "Muscles bulbospongieux.",
+      "Plancher pelvien.",
+      "Sacrum et coccyx.",
+      "Épine ischiatique et branches ischiopubiennes.",
+      "Ligaments sacrotubéral et sacroépineux."
+    ]
+  },
+  {
+    "type": "para",
+    "text": "Le nerf pudendal est une voie somatique distincte des voies autonomes pelviennes. Il assure la sensibilité des organes génitaux externes et participe à la commande des muscles striés périnéaux."
+  },
+  {
+    "type": "sub",
+    "text": "10.5.2. Versant psycho-émotionnel — Axe cerveau-fonction sexuelle"
+  },
+  {
+    "type": "para",
+    "text": "L’ancienne référence au « cerveau limbique » est remplacée par la notion plus large d’axe cerveau-fonction sexuelle. Cette formulation tient compte de l’intégration entre signaux corporels, attention, désir, émotions, relation de couple, vécu sexuel et contexte de sécurité."
+  },
+  {
+    "type": "para",
+    "text": "Anxiété de performance, stress, dépression, conflits relationnels ou antécédents de traumatisme peuvent moduler la fonction sexuelle, sans permettre d’attribuer automatiquement un trouble sexuel à une origine psychologique."
+  },
+  {
+    "type": "xref",
+    "label": "Cf. chapitre 3 — Système nerveux central pour les réseaux centraux et cortico-limbiques",
+    "href": "/lecture/chapitre-3-rework?lang=fr"
+  },
+  {
+    "type": "para",
+    "text": "cf. section 9 « Relations viscéro-émotionnelles » du présent chapitre."
+  },
+  {
+    "type": "rop",
+    "body": [
+      "Le Niveau 4 relie la fonction érectile aux convergences somatiques et au contexte émotionnel. Il remplace une lecture centrée sur un « cerveau limbique » isolé par une intégration plus large et plus prudente."
+    ]
+  },
+  {
+    "type": "sub",
+    "text": "10.6. Lecture clinique selon le trouble"
+  },
+  {
+    "type": "para",
+    "text": "La hiérarchie des niveaux varie selon le motif de consultation et ne doit pas être appliquée comme une séquence rigide."
+  },
+  {
+    "type": "bullets",
+    "items": [
+      "Trouble de l’érection : importance fréquente des Niveaux 2, 3 et 4, avec Niveau 1 lorsque désir, anticipation ou anxiété participent au tableau.",
+      "Troubles de l’excitation ou de la lubrification chez la femme : intégration des Niveaux 2 et 3, avec Niveau 4 lorsque douleurs, stress ou contexte relationnel sont associés.",
+      "Éjaculation rapide ou difficulté d’éjaculation : lecture combinant régulation autonome, innervation pudendale et contexte central ou émotionnel.",
+      "Anorgasmie ou difficultés orgasmiques : privilégier une lecture intégrée des composantes somatiques, autonomes, centrales et relationnelles, sans réduire l’orgasme à une seule branche du SNA.",
+      "Douleurs sexuelles ou périnéales : priorité à l’exclusion d’une cause organique, puis intégration du pelvis, du plancher pelvien, du pudendal et des structures génitales concernées."
+    ]
+  },
+  {
+    "type": "sub",
+    "text": "10.7. Soutiens associés et renvois selon les tests"
+  },
+  {
+    "type": "xref",
+    "label": "Chapitre 17 — Cavité pelvienne : périnée, plancher pelvien, repères osseux et plexus pelviens",
+    "href": "/lecture/chapitre-17?lang=fr"
+  },
+  {
+    "type": "xref",
+    "label": "Chapitre 18 — Vessie : lorsque les symptômes urinaires et sexuels sont associés",
+    "href": "/lecture/chapitre-18?lang=fr"
+  },
+  {
+    "type": "xref",
+    "label": "Chapitre 19 — Organes génitaux féminins : utérus, ovaires, trompes et environnement génital féminin",
+    "href": "/lecture/chapitre-19?lang=fr"
+  },
+  {
+    "type": "xref",
+    "label": "Chapitre 20 — Organes génitaux masculins : prostate, testicules, voies spermatiques et environnement génital masculin",
+    "href": "/lecture/chapitre-20?lang=fr"
+  },
+  {
+    "type": "xref",
+    "label": "Chapitre 5 — Mécanisme de stress : lorsque stress et adaptation générale participent au tableau",
+    "href": "/lecture/chapitre-5-rework?lang=fr"
+  },
+  {
+    "type": "rop",
+    "body": [
+      "Ces territoires sont sélectionnés selon le contexte clinique. Ils ne constituent pas une liste obligatoire pour tout trouble sexuel."
+    ]
+  },
+  {
+    "type": "note",
+    "label": "Principe de sécurité",
+    "body": [
+      "Un trouble de l’érection, de la lubrification, de l’éjaculation, de l’orgasme ou une douleur sexuelle peut avoir une origine vasculaire, neurologique, endocrinienne, médicamenteuse, gynécologique, urologique ou psychologique. La ROP ne remplace ni le diagnostic ni la prise en charge médicale ou sexologique lorsque celle-ci est indiquée."
+    ]
+  }
+]
