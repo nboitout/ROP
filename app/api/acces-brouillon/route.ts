@@ -11,6 +11,7 @@ const DRAFT_ENTRY: Record<string, string> = {
   'chapter-5-rework': '/lecture/chapitre-5-rework',
   'chapter-6-rework': '/lecture/chapitre-6-rework',
   'chapter-14-rework': '/lecture/chapitre-14-rework',
+  'chapter-18-rework': '/lecture/chapitre-18-rework',
 }
 
 /**

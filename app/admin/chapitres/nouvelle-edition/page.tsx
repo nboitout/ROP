@@ -1,10 +1,11 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { chapter14ReworkSlidesSetAside } from '@/content/chapter14-rework.slidesync'
+import { chapter18ReworkSlidesSetAside } from '@/content/chapter18-rework.slidesync'
 
 export const metadata: Metadata = { title: 'Nouvelle édition · Chapters · Admin R.O.P.' }
 
-const PENDING = ['01', '03', '04', '07', '08', '09', '10', '11', '12', '13', '15', '16', '17', '18', '19', '20', '21']
+const PENDING = ['01', '03', '04', '07', '08', '09', '10', '11', '12', '13', '15', '16', '17', '19', '20', '21']
 
 export default function NewEditionChaptersPage() {
   return (
@@ -68,6 +69,16 @@ export default function NewEditionChaptersPage() {
             <Link href="/chapitre-14-rework" target="_blank">Classic reading →</Link>
           </div>
         </article>
+
+        <article className="adm-edition-card test">
+          <p className="adm-edition-status">Rebuilt</p>
+          <h2>Chapter 18 · Bladder</h2>
+          <p>New private text, with the compatible existing slides reordered and independently anchored.</p>
+          <div className="adm-edition-actions">
+            <Link href="/lecture/chapitre-18-rework" target="_blank">Synchronized reading →</Link>
+            <Link href="/chapitre-18-rework" target="_blank">Classic reading →</Link>
+          </div>
+        </article>
       </section>
 
       <section className="adm-edition-review">
@@ -77,6 +88,21 @@ export default function NewEditionChaptersPage() {
         </div>
         <ul className="adm-edition-aside-list">
           {chapter14ReworkSlidesSetAside.map((slide) => (
+            <li key={slide.src}>
+              <strong>{slide.src.split('/').at(-1)}</strong>
+              <span>{slide.reason}</span>
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      <section className="adm-edition-review">
+        <div>
+          <p className="adm-section-title">Slides set aside for Chapter 18</p>
+          <p className="adm-page-sub">The source images remain available in the current edition but are excluded from this scientifically reframed version.</p>
+        </div>
+        <ul className="adm-edition-aside-list">
+          {chapter18ReworkSlidesSetAside.map((slide) => (
             <li key={slide.src}>
               <strong>{slide.src.split('/').at(-1)}</strong>
               <span>{slide.reason}</span>
