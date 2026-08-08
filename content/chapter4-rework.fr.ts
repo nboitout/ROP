@@ -81,6 +81,13 @@ export const chapter4ReworkFr: Chapter = { slug: 'chapter-4-rework', number: '4'
     "title": "1. Présentation",
     "blocks": [
       {
+        "type": "note",
+        "label": "INTRODUCTION",
+        "body": [
+          "Le système nerveux autonome (SNA) participe à l’ajustement permanent du fonctionnement des viscères, des glandes, des vaisseaux et de nombreuses fonctions internes. Dans la séquence clinique ROP, il correspond au Niveau 2 — Régulation neuro-végétative et adaptation."
+        ]
+      },
+      {
         "type": "sub",
         "text": "1.1. Deux systèmes : Parasympathique et Sympathique"
       },
