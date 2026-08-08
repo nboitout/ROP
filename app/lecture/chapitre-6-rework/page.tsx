@@ -1,22 +1,22 @@
 import { cookies, headers } from 'next/headers'
 import { redirect } from 'next/navigation'
+import type { Metadata } from 'next'
 import { canReadDraftChapter, readDraftGrant } from '@/lib/access'
 import { recordServerEvent } from '@/lib/serverEvents'
-import type { Metadata } from 'next'
 import SlideSyncReader from '@/components/SlideSyncReader'
 import { getServerLang } from '@/app/i18n/serverLang'
 import { translations } from '@/app/i18n/translations'
-import { chapter5ReworkFr } from '@/content/chapter5-rework.fr'
-import { chapter5ReworkSlides, chapter5ReworkSlideAnchors } from '@/content/chapter5-rework.slidesync'
+import { chapter6Fr } from '@/content/chapter6.fr'
+import { chapter6Slides, chapter6SlideAnchors } from '@/content/chapter6.slidesync'
 import { DRAFT_KEY, draftBackHref } from './access'
 
 export const metadata: Metadata = {
-  title: 'Chapitre 5 rework - Lecture synchronisee - R.O.P.',
-  description: 'Page de relecture dediee au rework du chapitre 5 : mecanisme de stress, allostasie et approche ROP.',
+  title: 'Chapitre 6 — Nouvelle édition — R.O.P.',
+  description: 'Version privée du chapitre 6 conservée dans la nouvelle édition.',
   robots: { index: false, follow: false },
 }
 
-export default async function Chapitre5ReworkPage({
+export default async function Chapter6ReworkPage({
   searchParams,
 }: {
   searchParams: Promise<{ lang?: string }>
@@ -24,15 +24,11 @@ export default async function Chapitre5ReworkPage({
   const cookieStore = await cookies()
   const grant = await readDraftGrant(cookieStore, DRAFT_KEY)
   const isAdmin = canReadDraftChapter(cookieStore)
-  if (!grant && !isAdmin) {
-    redirect('/admin/login')
-  }
+  if (!grant && !isAdmin) redirect('/admin/login')
 
   const { lang: langParam } = await searchParams
   const lang = await getServerLang(langParam)
 
-  // One row per open, for grant holders only — admin reviews stay out of the
-  // sheet the same way admin traffic does everywhere else.
   if (grant) {
     recordServerEvent({
       chapter: DRAFT_KEY,
@@ -45,12 +41,12 @@ export default async function Chapitre5ReworkPage({
 
   return (
     <SlideSyncReader
-      chapter={chapter5ReworkFr}
+      chapter={chapter6Fr}
       bookTitle={`${translations[lang].reader.bookTitle} · Nouvelle édition`}
-      slides={chapter5ReworkSlides}
-      anchors={chapter5ReworkSlideAnchors}
+      slides={chapter6Slides}
+      anchors={chapter6SlideAnchors}
       backHref={draftBackHref(isAdmin)}
-      classicHref={`/chapitre-5-rework?lang=${lang}`}
+      classicHref={`/chapitre-6-rework?lang=${lang}`}
     />
   )
 }

@@ -4,7 +4,7 @@ import { chapter14ReworkSlidesSetAside } from '@/content/chapter14-rework.slides
 
 export const metadata: Metadata = { title: 'Nouvelle édition · Chapters · Admin R.O.P.' }
 
-const PENDING = ['01', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12', '13', '15', '16', '17', '18', '19', '20', '21']
+const PENDING = ['01', '03', '04', '07', '08', '09', '10', '11', '12', '13', '15', '16', '17', '18', '19', '20', '21']
 
 export default function NewEditionChaptersPage() {
   return (
@@ -37,6 +37,26 @@ export default function NewEditionChaptersPage() {
           <h2>Chapter 2 · Treatment by ROP</h2>
           <p>Already aligned with Chapter 0 and retained as the treatment framework.</p>
           <Link href="/lecture/traitement-rop" target="_blank">Open current aligned chapter →</Link>
+        </article>
+
+        <article className="adm-edition-card test">
+          <p className="adm-edition-status">Rebuilt</p>
+          <h2>Chapter 5 · Stress mechanisms</h2>
+          <p>The existing Chapter 5 rework now belongs to the private new edition.</p>
+          <div className="adm-edition-actions">
+            <Link href="/lecture/chapitre-5-rework" target="_blank">Synchronized reading →</Link>
+            <Link href="/chapitre-5-rework" target="_blank">Classic reading →</Link>
+          </div>
+        </article>
+
+        <article className="adm-edition-card ready">
+          <p className="adm-edition-status">Retained as-is</p>
+          <h2>Chapter 6 · Polyvagal theory</h2>
+          <p>The current text, slides and anchors are reused through private edition routes.</p>
+          <div className="adm-edition-actions">
+            <Link href="/lecture/chapitre-6-rework" target="_blank">Synchronized reading →</Link>
+            <Link href="/chapitre-6-rework" target="_blank">Classic reading →</Link>
+          </div>
         </article>
 
         <article className="adm-edition-card test">

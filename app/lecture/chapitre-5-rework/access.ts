@@ -10,5 +10,5 @@ export const DRAFT_KEY = 'chapter-5-rework'
  * they get the homepage instead.
  */
 export function draftBackHref(isAdmin: boolean): string {
-  return isAdmin ? '/admin/chapitres' : '/'
+  return isAdmin ? '/admin/chapitres/nouvelle-edition' : '/'
 }
