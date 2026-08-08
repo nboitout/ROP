@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
 import { refresh, revalidatePath } from 'next/cache'
 import { translations, type Lang } from '@/app/i18n/translations'
 import { getChapterLangs, getChapterTranslations } from '@/content/registry'
@@ -329,6 +330,11 @@ export default async function AdminChapitresPage() {
           <p className="adm-refresh-note">Last calculated {formatGeneratedAt(generatedAt)}</p>
         </div>
       </div>
+
+      <nav className="adm-edition-tabs" aria-label="Book edition">
+        <Link href="/admin/chapitres" className="adm-edition-tab active">Current edition</Link>
+        <Link href="/admin/chapitres/nouvelle-edition" className="adm-edition-tab">Private edition</Link>
+      </nav>
 
       <p className="adm-section-title adm-section-title-first">Text availability</p>
       <p className="adm-page-sub adm-asset-intro">
