@@ -949,3 +949,78 @@ export const chapter7Fr: Chapter = {
     "description": "Synthèse visuelle du chapitre 7."
   }
 }
+
+// Revised regional abdominal and peritoneal protocol. Chapter 7 provides the
+// Level 3 regional foundation, completed selectively by a somatic Level 4.
+const chapter7Reflex = chapter7Fr.sections.find((section) => section.id === 'zones-reflexes-podales')!
+chapter7Reflex.title = '9. Zones réflexes podales — Socle régional abdominal et péritonéal'
+chapter7Reflex.blocks = [
+  {
+    type: 'note',
+    label: 'Précision méthodologique',
+    body: [
+      'Contrairement aux chapitres consacrés à un organe, le présent chapitre décrit une région anatomique et ses interfaces. La cartographie abdominale et péritonéale constitue donc, dans la ROP, un socle régional du Niveau 3.',
+      'Elle ne remplace pas la zone propre du viscère traité : elle la complète lorsque les tests orientent vers son environnement péritonéal, mésentérique, fascial ou pariétal.',
+    ],
+  },
+  {
+    type: 'note',
+    label: 'Principe clinique',
+    body: ['Zone spécifique du viscère + composante régionale sélectionnée selon les tests. La totalité de la cavité abdominale n’est donc pas travaillée systématiquement.'],
+  },
+  { type: 'sub', text: '9.1. Niveau 3 — Régulation viscérale loco-régionale' },
+  { type: 'para', text: 'Le Niveau 3 constitue le cœur de ce chapitre. Selon l’organe et le tableau clinique, la lecture régionale peut intégrer :' },
+  {
+    type: 'bullets',
+    items: [
+      'Péritoine et espaces régionaux : territoires intra-, rétro- et sous-péritonéaux.',
+      'Mésos et leurs racines : racine du mésentère, du mésocolon transverse et du mésosigmoïde.',
+      'Rapports interviscéraux et omentums.',
+      'Interfaces fasciales et pariétales, notamment fascia transversalis et plans postérieurs.',
+      'Interface supérieure avec le diaphragme et continuité inférieure vers la cavité pelvienne.',
+    ],
+  },
+  { type: 'para', text: 'Les racines des mésos restent des repères particulièrement importants dans la cartographie ROP, mais elles sont utilisées comme complément régional de la zone du viscère et non comme substitut de celle-ci.' },
+  { type: 'sub', text: 'Repères des racines des mésos' },
+  { type: 'bullets', items: ['Racine du mésentère : entre la jonction duodéno-jéjunale et l’ombilic.'] },
+  { type: 'figure', src: '/chapter-7/cartographie/figure-7-02.png', caption: 'Photo : Racine du mésentère entre la jonction duodéno-jéjunale et l’ombilic', alt: 'Repère podal de la racine du mésentère entre la jonction duodéno-jéjunale et l’ombilic', orientation: 'portrait' },
+  { type: 'bullets', items: ['Racine du mésentère : entre l’ombilic et la valvule iléo-cæcale.'] },
+  { type: 'figure', src: '/chapter-7/cartographie/figure-7-04.png', caption: 'Photo : Racine du mésentère entre l’ombilic et la valvule iléo-cæcale', alt: 'Repère podal de la racine du mésentère entre l’ombilic et la valvule iléo-cæcale', orientation: 'portrait' },
+  { type: 'bullets', items: ['Racine du mésocôlon transverse : entre le deuxième duodénum et L2.'] },
+  { type: 'figure', src: '/chapter-7/cartographie/figure-7-06.png', caption: 'Photo : Racine du mésocôlon transverse entre le deuxième duodénum et L2', alt: 'Repère podal de la racine du mésocôlon transverse entre le deuxième duodénum et L2', orientation: 'portrait' },
+  { type: 'bullets', items: ['Racine du mésocôlon transverse : entre L2 et le corps du pancréas.'] },
+  { type: 'figure', src: '/chapter-7/cartographie/figure-7-08.png', caption: 'Photo : Racine du mésocôlon transverse entre L2 et le corps du pancréas', alt: 'Repère podal de la racine du mésocôlon transverse entre L2 et le corps du pancréas', orientation: 'landscape' },
+  { type: 'bullets', items: ['Racine du mésosigmoïde.'] },
+  { type: 'figure', src: '/chapter-7/cartographie/figure-7-10.png', caption: 'Photo : Racines du mésosigmoïde', alt: 'Repère podal des racines du mésosigmoïde entre les deux index', orientation: 'landscape' },
+  { type: 'para', text: 'Exemples : intestin grêle + racine du mésentère si pertinente ; côlon transverse + racine du mésocôlon transverse ; sigmoïde + racine du mésosigmoïde.' },
+  { type: 'rop', body: ['Le Niveau 3 replace le viscère dans son environnement régional. Une réaction palpatoire ne permet pas à elle seule d’affirmer l’existence d’une adhérence ou d’une lésion anatomique précise.'] },
+  { type: 'sub', text: '9.2. Niveau 4 — Intégration péritonéo-somatique' },
+  { type: 'para', text: 'Le Niveau 4 est ici adapté à la nature régionale du chapitre. Selon le territoire, la lecture peut intégrer :' },
+  {
+    type: 'bullets',
+    items: [
+      'Paroi abdominale et derniers nerfs intercostaux.',
+      'Charnière thoraco-lombaire.',
+      'Psoas et carré des lombes.',
+      'Plexus lombaire L1-L4.',
+      'Diaphragme et projections phréniques.',
+      'Bassin et membres inférieurs lorsque le tableau clinique le justifie.',
+    ],
+  },
+  { type: 'para', text: 'La lecture en quatre quadrants abdominaux peut rester un outil clinique simple d’orientation des relations entre territoire abdominal et manifestations somatiques, sans attribuer automatiquement une douleur somatique à un viscère particulier.' },
+  { type: 'sub', text: '9.3. Renvois vers les autres niveaux' },
+  { type: 'para', text: 'Le chapitre 7 reste volontairement centré sur les Niveaux 3 et 4.' },
+  { type: 'xref', label: 'Niveau 1 — Voir le chapitre 3 « Système nerveux central »', href: '/lecture/chapitre-3-rework?lang=fr', text: 'Centres supérieurs.' },
+  { type: 'xref', label: 'Niveau 2 — Voir le chapitre 4 « Système nerveux autonome »', href: '/lecture/chapitre-4-rework?lang=fr', text: 'Régulation autonome et plexus prévertébraux.' },
+  { type: 'xref', label: 'Voir le chapitre 8 — Diaphragme', href: '/lecture/chapitre-8?lang=fr', text: 'Interface thoraco-abdominale.' },
+  { type: 'xref', label: 'Voir le chapitre 17 — Cavité pelvienne', href: '/lecture/chapitre-17?lang=fr', text: 'Continuité abdomino-pelvienne.' },
+  { type: 'sub', text: '9.4. Point-clé' },
+  {
+    type: 'note',
+    label: 'Socle régional abdominal',
+    body: [
+      'Le chapitre 7 constitue le socle régional du Niveau 3 abdominal et péritonéal. Il ne remplace pas les cartographies propres aux viscères.',
+      'Le protocole associe la zone spécifique de l’organe à une composante régionale sélectionnée selon les tests. Péritoine, racines des mésos, fascias et rapports interviscéraux sont donc des modules complémentaires, non des étapes systématiques.',
+    ],
+  },
+]
