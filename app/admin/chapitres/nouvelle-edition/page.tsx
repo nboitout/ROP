@@ -29,6 +29,16 @@ export default function NewEditionChaptersPage() {
             <Link href="/chapitre-3-rework" target="_blank">Classic reading →</Link>
           </div>
         </article>
+
+        <article className="adm-edition-card test">
+          <p className="adm-edition-status">Rebuilt</p>
+          <h2>Chapter 4 · Autonomic nervous system</h2>
+          <p>New private text, with the published slide deck and cartography/photo workflow retained.</p>
+          <div className="adm-edition-actions">
+            <Link href="/lecture/chapitre-4-rework" target="_blank">Synchronized reading →</Link>
+            <Link href="/chapitre-4-rework" target="_blank">Classic reading →</Link>
+          </div>
+        </article>
       </section>
     </main>
   )
