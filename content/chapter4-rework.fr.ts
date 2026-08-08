@@ -1,16 +1,16 @@
 // Chapter 4 — private reworked edition
-// Source: public/chapter-4/Chapter4_SNA_AI_Rework.docx
+// Source: public/chapter-4/Chapter4_SNA_AI_Rework_v2.docx
 
 import type { Chapter } from './types'
 
 export const chapter4ReworkFr: Chapter = {
   slug: 'chapter-4-rework',
   number: '4',
-  title: 'Système nerveux autonome (SNA)',
+  title: 'Système nerveux autonome',
   sections: [
   {
-    "id": "presentation-comment-les-centres-et-les-visceres-communiquent",
-    "title": "1. Présentation : comment les centres et les viscères communiquent",
+    "id": "presentation",
+    "title": "1. Présentation",
     "blocks": [
       {
         "type": "para",
@@ -18,211 +18,339 @@ export const chapter4ReworkFr: Chapter = {
       },
       {
         "type": "para",
-        "text": "Le chapitre 3 décrivait les principaux centres du système nerveux central qui reçoivent et intègrent les informations venant du corps. Le présent chapitre suit l’étape suivante : les grandes voies par lesquelles les centres nerveux communiquent avec les viscères, et celles par lesquelles les viscères renvoient des informations vers le cerveau et la moelle."
+        "text": "Le système nerveux autonome (SNA) participe à l’ajustement permanent du fonctionnement des viscères, des glandes, des vaisseaux et de nombreuses fonctions internes. Il contribue ainsi à l’adaptation de l’organisme et au maintien de l’homéostasie."
       },
       {
         "type": "para",
-        "text": "Le système nerveux autonome adapte en permanence l’activité des organes, des glandes, des vaisseaux et de nombreuses fonctions internes. Il participe notamment à la régulation cardiovasculaire, respiratoire, digestive, urinaire, génitale, métabolique et thermorégulatrice."
+        "text": "Dans la séquence clinique ROP, ce chapitre correspond au Niveau 2 — Régulation neuro-végétative et adaptation. Après les centres d’intégration étudiés au chapitre 3, il décrit les principales voies par lesquelles le cerveau et la moelle modulent l’activité viscérale, mais aussi les voies afférentes par lesquelles les viscères renseignent le système nerveux central."
       },
       {
         "type": "para",
-        "text": "Dans la séquence clinique ROP, il constitue le Niveau 2 — Régulation neuro-végétative et adaptation. L’objectif n’est pas de « stimuler le parasympathique » ou d’« inhiber le sympathique » de façon systématique, mais de soutenir une régulation autonome suffisamment souple pour s’adapter aux besoins du moment."
+        "text": "Le SNA comprend principalement deux grandes composantes efférentes : le parasympathique et le sympathique. Le tube digestif possède en outre son propre réseau intrinsèque, le système nerveux entérique, qui reste modulé par ces voies extrinsèques."
+      },
+      {
+        "type": "para",
+        "text": "Sympathique et parasympathique ont parfois des effets opposés, mais cette opposition ne résume pas leur fonctionnement. Leur activité est coordonnée et varie selon l’organe, le contexte, l’effort, le sommeil, la douleur, le stress et les besoins métaboliques."
       },
       {
         "type": "sub",
-        "text": "1.1. Les repères du Niveau 2 en ROP"
+        "text": "1.1. Fonctions générales"
       },
       {
         "type": "bullets",
         "items": [
-          "Nerf vague et voies parasympathiques.",
-          "Parasympathique sacré, principalement S2-S4.",
-          "Système sympathique thoraco-lombaire.",
-          "Nerfs splanchniques et plexus prévertébraux.",
-          "Plexus hypogastriques et réseaux autonomes pelviens.",
-          "Glandes surrénales.",
-          "Diaphragme comme interface respiratoire et fonctionnelle."
+          "Régulation cardiovasculaire : fréquence cardiaque, contractilité, vasomotricité et pression artérielle.",
+          "Régulation respiratoire : calibre bronchique, sécrétions et adaptation aux besoins ventilatoires.",
+          "Régulation digestive : motricité, sécrétions, sphincters et interactions avec le système nerveux entérique.",
+          "Régulation urinaire et génitale : stockage, vidange, continence et réponses sexuelles.",
+          "Régulation glandulaire et métabolique : sécrétions exocrines et participation aux réponses neuroendocrines."
         ]
       },
       {
+        "type": "sub",
+        "text": "1.2. Intérêt en ROP"
+      },
+      {
         "type": "para",
-        "text": "Le système nerveux entérique est évoqué dans ce chapitre uniquement pour situer sa relation avec les voies autonomes extrinsèques. Son organisation sera reprise dans le chapitre 14 consacré à l’intestin grêle."
+        "text": "Dans la logique « priorité au nerf », le Niveau 2 vise à prendre en compte les voies autonomes avant ou en complément du travail loco-régional sur le viscère. L’objectif n’est pas de « stimuler le parasympathique » ou « freiner le sympathique » de manière systématique, mais de favoriser une régulation adaptée au contexte clinique."
+      },
+      {
+        "type": "sub",
+        "text": "1.3. Relations avec les autres niveaux"
+      },
+      {
+        "type": "bullets",
+        "items": [
+          "Niveau 1 : centres supérieurs du SNC, tronc cérébral, hypothalamus et axe hypothalamo-hypophysaire.",
+          "Niveau 2 : voies autonomes, plexus, surrénales et interfaces de régulation.",
+          "Niveau 3 : viscères, péritoine, mésos, fascias et environnement loco-régional.",
+          "Niveau 4 : convergences viscéro-somatiques, réseaux somatiques et dimension viscéro-émotionnelle."
+        ]
       }
     ]
   },
   {
-    "id": "une-regulation-bidirectionnelle-des-commandes-qui-descendent-des-informations-qui-remontent",
-    "title": "2. Une régulation bidirectionnelle : des commandes qui descendent, des informations qui remontent",
+    "id": "organisation-du-sna",
+    "title": "2. Organisation du SNA",
     "blocks": [
       {
         "type": "para",
-        "text": "Le SNA est souvent présenté comme un système moteur qui commande involontairement les viscères. Cette vision est incomplète. La régulation autonome repose sur une circulation permanente de l’information dans les deux sens."
-      },
-      {
-        "type": "para",
-        "text": "Voies efférentes — centres vers viscères. Les neurones autonomes quittent le SNC et modifient l’activité des muscles lisses, du muscle cardiaque, des glandes et des vaisseaux."
-      },
-      {
-        "type": "para",
-        "text": "Voies afférentes — viscères vers centres. Des récepteurs renseignent en permanence le SNC sur la distension, la pression, l’état chimique du milieu, l’inflammation, la douleur et le fonctionnement des organes."
-      },
-      {
-        "type": "para",
-        "text": "Cette distinction est importante pour la ROP. Une fibre sensitive qui accompagne un nerf splanchnique ou un nerf pelvien reste une afférence sensitive ; elle ne doit pas être confondue avec une commande sympathique ou parasympathique qui circule en sens inverse."
-      },
-      {
-        "type": "lead",
-        "label": "Schéma de lecture",
-        "text": "centres supérieurs ⇄ moelle et tronc cérébral ⇄ voies autonomes et afférentes viscérales ⇄ plexus ⇄ viscères."
+        "text": "Comme le système nerveux somatique, le SNA comporte des voies efférentes et des voies afférentes. Cette distinction est essentielle : le fonctionnement autonome n’est pas une commande à sens unique, mais une boucle de régulation."
       },
       {
         "type": "sub",
-        "text": "2.1. Sympathique et parasympathique : complémentaires avant d’être antagonistes"
+        "text": "2.1. Viscéro-motricité : centres vers viscères"
       },
       {
         "type": "para",
-        "text": "Le sympathique et le parasympathique peuvent produire des effets opposés sur certaines fonctions, mais cette opposition ne résume pas leur physiologie. Ils agissent le plus souvent de manière coordonnée et leur importance relative varie selon l’organe, la fonction et le contexte."
+        "text": "Les voies efférentes sympathiques et parasympathiques modulent les muscles lisses, le muscle cardiaque, les glandes, les sphincters internes et certains territoires vasculaires. La plupart des voies autonomes efférentes comportent un neurone préganglionnaire puis un neurone postganglionnaire."
       },
       {
         "type": "para",
-        "text": "Parasympathique. Il participe notamment à la digestion, aux sécrétions, au ralentissement cardiaque, à certaines fonctions pelviennes et aux situations de repos ou de récupération."
+        "text": "Le parasympathique utilise l’acétylcholine au niveau ganglionnaire et postganglionnaire. Le sympathique utilise l’acétylcholine au niveau préganglionnaire ; la noradrénaline est le médiateur postganglionnaire principal, avec plusieurs exceptions fonctionnelles."
+      },
+      {
+        "type": "sub",
+        "text": "2.2. Viscéro-sensitivité : viscères vers centres"
       },
       {
         "type": "para",
-        "text": "Sympathique. Il participe notamment à l’adaptation cardiovasculaire, à la vasomotricité, à la thermorégulation, à la mobilisation énergétique et aux réponses à l’effort ou à la contrainte."
+        "text": "Les viscères possèdent des mécanorécepteurs, chémorécepteurs et nocicepteurs qui informent en permanence le SNC. Ces afférences peuvent emprunter le nerf vague ou des voies spinales accompagnant les nerfs splanchniques et pelviens."
       },
       {
         "type": "para",
-        "text": "Le but clinique n’est donc pas de rechercher une domination permanente de l’un sur l’autre, mais une capacité à mobiliser puis à récupérer de façon adaptée."
+        "text": "Une fibre sensitive qui chemine avec une voie sympathique ou parasympathique reste une afférence viscérale : elle ne doit pas être confondue avec la commande autonome motrice qui circule en sens inverse."
+      },
+      {
+        "type": "sub",
+        "text": "2.3. Système nerveux entérique"
+      },
+      {
+        "type": "para",
+        "text": "Le tube digestif possède un réseau intrinsèque très développé, le système nerveux entérique (SNE). Il peut organiser localement une grande partie de la motricité et des sécrétions digestives, tout en restant modulé par le vague et le sympathique."
+      },
+      {
+        "type": "para",
+        "text": "Le SNE est repris plus loin dans ce chapitre et développé dans le chapitre 14 consacré à l’intestin grêle."
       }
     ]
   },
   {
-    "id": "le-parasympathique-trois-grandes-portes-fonctionnelles",
-    "title": "3. Le parasympathique : trois grandes portes fonctionnelles",
+    "id": "parasympathique-viscero-moteur",
+    "title": "3. Parasympathique viscéro-moteur",
     "blocks": [
       {
         "type": "para",
-        "text": "Le parasympathique comprend des voies crâniennes et sacrées. Pour ce volume, trois ensembles sont particulièrement utiles : le parasympathique crânien céphalique, le nerf vague pour les territoires cervico-thoraco-abdominaux, et les nerfs splanchniques pelviens pour le petit bassin."
+        "text": "Le parasympathique possède des origines crâniennes et sacrées. Il participe notamment aux sécrétions, à la motricité digestive, au ralentissement cardiaque et aux fonctions pelviennes. Son action dépend du territoire et du contexte fonctionnel."
       },
       {
         "type": "sub",
-        "text": "3.1. Parasympathique crânien céphalique"
+        "text": "3.1. Parasympathique crânien — territoire céphalique"
       },
       {
         "type": "para",
-        "text": "Les fibres parasympathiques préganglionnaires destinées à la tête empruntent principalement les nerfs crâniens III, VII et IX. Elles font relais dans des ganglions périphériques, puis les fibres postganglionnaires gagnent leurs organes cibles, souvent en empruntant des branches du nerf trijumeau."
+        "text": "Les fibres parasympathiques destinées à la tête empruntent principalement les nerfs crâniens III, VII et IX. Elles font relais dans des ganglions périphériques avant de rejoindre leurs organes cibles."
       },
       {
         "type": "bullets",
         "items": [
           "Nerf oculomoteur III → ganglion ciliaire → myosis et accommodation.",
-          "Nerf facial VII → ganglion ptérygopalatin et ganglion submandibulaire → sécrétions lacrymales, nasales et salivaires.",
+          "Nerf facial VII → ganglions ptérygopalatin et submandibulaire → sécrétions lacrymales, nasales et salivaires.",
           "Nerf glossopharyngien IX → ganglion otique → sécrétion parotidienne."
         ]
       },
       {
         "type": "para",
-        "text": "Ces voies sont importantes pour la cartographie ROP crânienne, mais leur anatomie détaillée a déjà été développée dans le volume consacré au système neuro-méningé."
+        "text": "Les fibres postganglionnaires empruntent souvent des branches du nerf trijumeau pour atteindre les territoires céphaliques. Les détails de la base du crâne et de ces ganglions sont développés dans le volume consacré au système neuro-méningé."
       },
       {
         "type": "sub",
-        "text": "3.2. Nerf vague X : grande voie thoraco-abdominale et grande voie afférente"
+        "text": "3.2. Nerf vague X — territoire cervico-thoraco-abdominal"
       },
       {
         "type": "para",
-        "text": "Le nerf vague est la principale voie parasympathique des territoires thoraciques et d’une grande partie de l’abdomen. Il naît de plusieurs noyaux de la moelle allongée et quitte le crâne par le foramen jugulaire."
+        "text": "Le nerf vague constitue la grande voie parasympathique des organes cervicaux, thoraciques et d’une large partie de l’abdomen. Ses neurones efférents prennent notamment origine dans le noyau dorsal du vague et le noyau ambigu, situés dans la moelle allongée."
       },
       {
         "type": "para",
-        "text": "Sur le plan fonctionnel, il faut retenir deux rôles complémentaires. D’une part, ses fibres efférentes modulent notamment le cœur, les voies respiratoires, l’œsophage et le tube digestif. D’autre part, la majorité de ses fibres sont afférentes : elles transmettent vers le tronc cérébral des informations provenant des viscères."
-      },
-      {
-        "type": "para",
-        "text": "Ces afférences gagnent principalement le noyau du tractus solitaire, étudié au chapitre 3, puis communiquent avec d’autres réseaux du tronc cérébral, de l’hypothalamus et des régions corticales impliquées dans l’interoception."
-      },
-      {
-        "type": "para",
-        "text": "Dans le thorax, les deux nerfs vagues participent aux plexus cardiaques, pulmonaires et œsophagiens. Dans l’abdomen, leurs branches participent aux plexus péri-artériels et prévertébraux et modulent notamment l’estomac, le duodénum, l’intestin grêle et le côlon proximal."
-      },
-      {
-        "type": "para",
-        "text": "La frontière entre territoire vagal et territoire parasympathique pelvien ne doit pas être comprise comme une ligne millimétrique. Elle se situe classiquement vers le côlon transverse distal et la région de l’angle colique gauche, avec des recouvrements et une variabilité anatomique."
+        "text": "Il quitte le crâne par le foramen jugulaire, descend dans la gaine carotidienne, traverse le thorax au contact des organes médiastinaux puis accompagne l’œsophage à travers le diaphragme avant de se distribuer aux territoires abdominaux."
       },
       {
         "type": "sub",
-        "text": "3.3. Baroréflexe carotidien : repère physiologique, pas cible de manipulation"
+        "text": "3.2.1. Étage cervical"
       },
       {
         "type": "para",
-        "text": "Le sinus carotidien contient des barorécepteurs sensibles à l’étirement de la paroi artérielle. Les afférences du sinus carotidien cheminent principalement par le nerf glossopharyngien IX, tandis que les informations provenant de l’arc aortique empruntent principalement le nerf vague X."
+        "text": "Dans le cou, le vague chemine entre les grands axes vasculaires. Il donne notamment le nerf laryngé supérieur et participe aux réseaux pharyngés et laryngés. Les afférences baroréceptrices du sinus carotidien empruntent principalement le nerf glossopharyngien, tandis que le vague participe notamment aux afférences provenant de l’arc aortique."
       },
       {
         "type": "para",
-        "text": "Ces réflexes participent à l’ajustement rapide de la pression artérielle et de la fréquence cardiaque. Ils constituent un repère physiologique important, mais le sinus carotidien ne doit pas être utilisé comme zone de manipulation thérapeutique dans ce chapitre."
+        "text": "Le sinus carotidien est un repère physiologique important, mais ne doit pas être utilisé comme cible de manipulation thérapeutique directe."
       },
       {
         "type": "sub",
-        "text": "3.4. Parasympathique pelvien : S2-S4"
+        "text": "3.2.2. Étage thoracique"
       },
       {
         "type": "para",
-        "text": "Les nerfs splanchniques pelviens naissent des segments sacrés S2 à S4 et rejoignent le plexus hypogastrique inférieur. Ils participent à la régulation de la vessie, du rectum, du côlon distal, des organes génitaux internes et des tissus érectiles."
+        "text": "Dans le thorax, les nerfs vagues participent aux plexus cardiaques, pulmonaires et œsophagiens. Le vague contribue au ralentissement de la fréquence cardiaque, à la modulation de la conduction atrioventriculaire, à la bronchoconstriction et aux sécrétions bronchiques, ainsi qu’à la motricité œsophagienne."
+      },
+      {
+        "type": "para",
+        "text": "Le nerf laryngé récurrent droit contourne l’artère subclavière droite ; le gauche contourne la crosse aortique. Ces rapports anatomiques sont importants pour comprendre la proximité entre voies vagales, larynx, œsophage et médiastin."
+      },
+      {
+        "type": "sub",
+        "text": "3.2.3. Étage diaphragmatique"
+      },
+      {
+        "type": "para",
+        "text": "Les deux troncs vagaux accompagnent l’œsophage à travers le hiatus œsophagien. Le vague antérieur dérive principalement du vague gauche et le vague postérieur principalement du vague droit."
+      },
+      {
+        "type": "para",
+        "text": "Le diaphragme n’appartient pas au SNA, mais il constitue une interface fonctionnelle du Niveau 2 : respiration, variations de pression thoraco-abdominales, retour veineux et activité autonome interagissent en permanence."
+      },
+      {
+        "type": "sub",
+        "text": "3.2.4. Étage abdominal"
+      },
+      {
+        "type": "para",
+        "text": "Dans l’abdomen, les branches vagales rejoignent les plexus péri-artériels et prévertébraux et modulent notamment l’estomac, le duodénum, l’intestin grêle et le côlon proximal. La frontière avec le parasympathique pelvien se situe vers le côlon transverse distal, sans constituer une ligne anatomique rigide."
+      },
+      {
+        "type": "para",
+        "text": "Le vague favorise globalement la motricité et les sécrétions digestives, en interaction étroite avec le SNE."
+      },
+      {
+        "type": "sub",
+        "text": "3.3. Parasympathique pelvien (ou sacral)"
+      },
+      {
+        "type": "para",
+        "text": "Les nerfs splanchniques pelviens prennent origine principalement dans les segments sacrés S2 à S4. Ils rejoignent le plexus hypogastrique inférieur et participent à la régulation de la vessie, du rectum, du côlon distal et des organes génitaux."
       },
       {
         "type": "bullets",
         "items": [
-          "Miction : participation à la contraction du détrusor et à la coordination de la vidange.",
-          "Défécation : participation à la motricité rectale et à la coordination sphinctérienne.",
+          "Miction : participation à la contraction du détrusor et à la diminution coordonnée des résistances urétrales.",
+          "Défécation : participation à la motricité rectale et au relâchement du sphincter anal interne.",
           "Fonctions sexuelles : participation aux réponses vasculaires et réflexes pelviennes."
         ]
       },
       {
         "type": "para",
-        "text": "Les sphincters externes et une partie du plancher pelvien relèvent du système nerveux somatique, notamment du nerf pudendal. La fonction pelvienne dépend donc d’une coordination entre autonome et somatique."
+        "text": "Le parasympathique pelvien doit être distingué du nerf pudendal, voie somatique également issue de S2-S4 et impliquée dans les sphincters externes et le périnée."
       },
       {
         "type": "para",
-        "text": "Cette organisation S2-S4 explique pourquoi le pelvis constitue un territoire particulièrement intéressant pour étudier les convergences somato-viscérales et les ponts neuro-anatomiques décrits au chapitre 0."
+        "text": "Repère important pour la ROP : le chevauchement segmentaire S2-S4 entre voies autonomes pelviennes et voies somatiques constitue un terrain particulièrement intéressant pour l’étude des convergences régionales."
       }
     ]
   },
   {
-    "id": "le-sympathique-une-organisation-thoraco-lombaire",
-    "title": "4. Le sympathique : une organisation thoraco-lombaire",
+    "id": "nerf-vague-viscero-sensitif",
+    "title": "4. Nerf vague viscéro-sensitif",
     "blocks": [
       {
         "type": "para",
-        "text": "Les neurones sympathiques préganglionnaires sont principalement situés dans la colonne intermédio-latérale de la moelle entre T1 et L2. Leurs axones quittent la moelle par les racines ventrales, rejoignent les nerfs spinaux puis gagnent la chaîne sympathique par les rameaux communicants blancs."
-      },
-      {
-        "type": "para",
-        "text": "À partir de cette chaîne, trois grands trajets sont possibles : faire relais au même niveau, monter ou descendre dans la chaîne avant de faire relais, ou traverser la chaîne sans synapse pour former un nerf splanchnique destiné à un plexus prévertébral."
-      },
-      {
-        "type": "lead",
-        "label": "Schéma de lecture",
-        "text": "T1-L2 → chaîne sympathique paravertébrale → soit nerfs spinaux, soit nerfs splanchniques → plexus prévertébraux → viscères."
+        "text": "Le nerf vague est majoritairement afférent : une grande partie de ses fibres transmet des informations des viscères vers le tronc cérébral. Cette fonction sensitive est essentielle pour comprendre le dialogue permanent entre organes et centres supérieurs."
       },
       {
         "type": "sub",
-        "text": "4.1. Chaîne sympathique paravertébrale"
+        "text": "4.1. Intéroception vagale"
       },
       {
         "type": "para",
-        "text": "La chaîne sympathique longe la colonne vertébrale de la région cervicale au coccyx. Elle permet de distribuer l’activité sympathique à des niveaux situés au-dessus et au-dessous de l’origine médullaire T1-L2."
+        "text": "Les corps cellulaires de nombreuses afférences vagales se situent dans le ganglion inférieur du vague. Leurs prolongements centraux gagnent principalement le noyau du tractus solitaire (NTS), puis des réseaux du tronc cérébral, de l’hypothalamus et des régions corticales impliquées dans l’interoception."
       },
       {
         "type": "para",
-        "text": "Les rameaux communicants blancs ne se rencontrent qu’aux niveaux thoraco-lombaires où naissent les fibres préganglionnaires, alors que les rameaux communicants gris rejoignent les nerfs spinaux à de nombreux niveaux pour assurer notamment la vasomotricité cutanée, la sudation et la piloérection."
-      },
-      {
-        "type": "para",
-        "text": "La description détaillée de chaque ganglion cervical, thoracique, lombaire ou sacré n’est pas nécessaire pour comprendre la ROP viscérale. Il faut surtout retenir la continuité de la chaîne et ses relations avec les nerfs spinaux, les nerfs splanchniques et les plexus."
+        "text": "Les informations véhiculées concernent notamment la distension, l’état chimique du milieu, certaines réponses inflammatoires et de nombreux réflexes viscéraux."
       },
       {
         "type": "sub",
-        "text": "4.2. Nerfs splanchniques"
+        "text": "4.2. Fonctions réflexes et protectrices"
+      },
+      {
+        "type": "bullets",
+        "items": [
+          "Réflexes cardiovasculaires et respiratoires.",
+          "Régulation digestive et signaux de satiété.",
+          "Toux, déglutition, nausée et vomissement selon les territoires stimulés.",
+          "Participation au dialogue intestin-cerveau."
+        ]
+      },
+      {
+        "type": "para",
+        "text": "Le vague ne constitue pas à lui seul un « nerf anti-inflammatoire » simple : ses voies afférentes et efférentes participent à des boucles neuro-immunes complexes."
+      },
+      {
+        "type": "sub",
+        "text": "4.3. Intérêt en ROP"
+      },
+      {
+        "type": "para",
+        "text": "Dans le Niveau 2, le vague est abordé comme une grande voie de communication bidirectionnelle. La stimulation manuelle ROP n’est pas équivalente à une stimulation électrique directe du nerf ; les données de neuromodulation permettent surtout d’identifier des circuits plausibles."
+      }
+    ]
+  },
+  {
+    "id": "sympathique-viscero-moteur",
+    "title": "5. Sympathique viscéro-moteur",
+    "blocks": [
+      {
+        "type": "para",
+        "text": "Les neurones sympathiques préganglionnaires sont principalement situés dans la colonne intermédio-latérale de la moelle entre T1 et L2. Leurs axones quittent la moelle par les racines ventrales, rejoignent les nerfs spinaux puis la chaîne sympathique par les rameaux communicants blancs."
+      },
+      {
+        "type": "para",
+        "text": "À partir de la chaîne paravertébrale, les fibres peuvent faire relais au même niveau, monter ou descendre avant de faire relais, ou traverser la chaîne pour former des nerfs splanchniques destinés aux plexus prévertébraux."
+      },
+      {
+        "type": "sub",
+        "text": "5.1. Organisation métamérique"
+      },
+      {
+        "type": "para",
+        "text": "L’origine thoraco-lombaire du sympathique explique l’existence de territoires fonctionnels segmentaires. Les niveaux exacts varient selon les organes et les individus ; ils doivent être utilisés comme repères anatomiques et non comme correspondances absolues."
+      },
+      {
+        "type": "bullets",
+        "items": [
+          "Segments thoraciques supérieurs : tête, cou et une partie des fonctions cardio-pulmonaires.",
+          "Segments thoraciques moyens et inférieurs : viscères thoraciques et abdominaux.",
+          "Segments thoraco-lombaires inférieurs : côlon distal, organes uro-génitaux et territoires pelviens."
+        ]
+      },
+      {
+        "type": "sub",
+        "text": "5.2. Chaîne ganglionnaire thoracique"
+      },
+      {
+        "type": "para",
+        "text": "La chaîne sympathique thoracique longe les articulations costo-vertébrales. Les rameaux communicants blancs apportent les fibres préganglionnaires depuis les nerfs spinaux ; les rameaux communicants gris redistribuent des fibres postganglionnaires aux nerfs spinaux."
+      },
+      {
+        "type": "para",
+        "text": "Les fibres destinées aux viscères abdominaux peuvent traverser les ganglions thoraciques sans synapse et former les nerfs splanchniques."
+      },
+      {
+        "type": "sub",
+        "text": "5.3. Chaîne ganglionnaire cervicale"
+      },
+      {
+        "type": "para",
+        "text": "La chaîne cervicale comprend classiquement un ganglion cervical supérieur, un ganglion moyen inconstant et un ganglion cervical inférieur souvent associé au premier ganglion thoracique pour former le ganglion stellaire."
+      },
+      {
+        "type": "bullets",
+        "items": [
+          "Ganglion cervical supérieur : distribution sympathique vers la tête et le cou via les plexus péri-carotidiens.",
+          "Ganglion cervical moyen : relations notamment thyroïdiennes et cardiaques.",
+          "Ganglion cervical inférieur / stellaire : relations avec la région cervico-thoracique, l’artère subclavière et les voies cardiaques."
+        ]
+      },
+      {
+        "type": "para",
+        "text": "Ces ganglions sont des carrefours anatomiques importants, mais des symptômes comme vertiges, acouphènes, capsulite ou canal carpien ne doivent pas être attribués automatiquement à un ganglion sympathique."
+      },
+      {
+        "type": "sub",
+        "text": "5.4. Chaîne ganglionnaire lombale, sacrale et coccygienne"
+      },
+      {
+        "type": "para",
+        "text": "La chaîne sympathique se poursuit le long des corps vertébraux lombaires puis sur la face antérieure du sacrum. Elle contribue aux voies autonomes destinées aux territoires abdomino-pelviens et se termine caudalement au niveau du ganglion impair."
+      },
+      {
+        "type": "para",
+        "text": "Ses rapports avec le psoas, le diaphragme, le sacrum et le coccyx sont pertinents sur le plan régional ; ils ne permettent cependant pas d’établir qu’une tension musculaire ou ligamentaire entraîne nécessairement une dysfonction autonome d’organe."
+      },
+      {
+        "type": "sub",
+        "text": "5.5. Nerfs splanchniques"
       },
       {
         "type": "para",
@@ -230,229 +358,222 @@ export const chapter4ReworkFr: Chapter = {
       },
       {
         "type": "para",
-        "text": "Cette double circulation — commandes efférentes vers les viscères et informations afférentes vers la moelle — est essentielle pour comprendre les réflexes viscéro-somatiques et somato-viscéraux."
+        "text": "On distingue classiquement les grands, petits et moindres splanchniques thoraciques, puis les splanchniques lombaires. Leurs distributions exactes se chevauchent et présentent une variabilité anatomique."
       }
     ]
   },
   {
-    "id": "les-plexus-carrefours-autonomes-entre-les-voies-nerveuses-et-les-organes",
-    "title": "5. Les plexus : carrefours autonomes entre les voies nerveuses et les organes",
+    "id": "sympathique-somato-viscero-sensitif",
+    "title": "6. Sympathique somato-viscéro-sensitif",
     "blocks": [
       {
         "type": "para",
-        "text": "Les plexus autonomes ne sont pas de simples « câbles ». Ils constituent des réseaux où se croisent des fibres sympathiques, parasympathiques et afférentes viscérales avant leur distribution aux organes."
+        "text": "Cette section conserve la terminologie historique du chapitre, mais il est utile de préciser que les fibres sensitives viscérales ne sont pas des neurones sympathiques moteurs. Elles peuvent cheminer avec les nerfs sympathiques avant de rejoindre leurs corps cellulaires dans les ganglions spinaux."
+      },
+      {
+        "type": "sub",
+        "text": "6.1. Afférences viscérales spinales"
       },
       {
         "type": "para",
-        "text": "Pour la ROP viscérale, quelques plexus suffisent à organiser la lecture anatomique :"
+        "text": "Les afférences provenant des viscères rejoignent la moelle par les racines dorsales. Elles renseignent notamment sur la distension, l’ischémie, l’inflammation et la douleur."
+      },
+      {
+        "type": "sub",
+        "text": "6.2. Convergence somato-viscérale"
+      },
+      {
+        "type": "para",
+        "text": "Dans la corne dorsale, certains neurones reçoivent à la fois des informations viscérales et somatiques. Cette convergence contribue aux douleurs projetées et à certaines réponses réflexes musculaires ou cutanées."
+      },
+      {
+        "type": "para",
+        "text": "Une douleur viscérale peut donc être ressentie dans un territoire somatique partageant des niveaux spinaux voisins. Ces projections restent variables et ne constituent pas des tests diagnostiques spécifiques."
+      },
+      {
+        "type": "sub",
+        "text": "6.3. Intérêt en ROP"
+      },
+      {
+        "type": "para",
+        "text": "Le mécanisme de convergence fournit un cadre neuro-anatomique aux relations viscéro-somatiques. Le détail clinique de ces relations appartient toutefois au Niveau 4 et aux chapitres consacrés à chaque organe."
+      }
+    ]
+  },
+  {
+    "id": "chaine-plexique-prevertebrale-ou-pre-aortique",
+    "title": "7. Chaîne plexique prévertébrale (ou pré-aortique)",
+    "blocks": [
+      {
+        "type": "para",
+        "text": "Les plexus prévertébraux sont situés autour des grands axes artériels de l’abdomen. Ils réunissent des fibres sympathiques, des fibres parasympathiques et des afférences viscérales avant leur distribution aux organes."
+      },
+      {
+        "type": "sub",
+        "text": "7.1. Principaux plexus"
       },
       {
         "type": "bullets",
         "items": [
-          "Plexus cœliaque : région abdominale haute ; rapports avec estomac, foie, pancréas, rate et duodénum.",
+          "Plexus cœliaque : territoires abdominaux supérieurs, notamment estomac, foie, pancréas, rate et duodénum.",
           "Plexus mésentérique supérieur : intestin grêle et côlon proximal.",
-          "Plexus aortorénal : rein et territoires gonadiques.",
+          "Plexus aortorénal : rein, surrénale et voies gonadiques associées.",
           "Plexus mésentérique inférieur : côlon distal.",
-          "Plexus hypogastrique supérieur et nerfs hypogastriques : relais vers le pelvis.",
-          "Plexus hypogastrique inférieur : carrefour autonome des viscères pelviens."
+          "Plexus hypogastrique supérieur : transition vers les réseaux autonomes pelviens."
         ]
       },
       {
         "type": "sub",
-        "text": "5.1. Plexus hypogastrique inférieur : carrefour pelvien majeur"
+        "text": "7.2. Fonction"
       },
       {
         "type": "para",
-        "text": "Le plexus hypogastrique inférieur reçoit des fibres sympathiques descendant notamment par les nerfs hypogastriques et des fibres parasympathiques issues des nerfs splanchniques pelviens S2-S4. Ses branches gagnent la vessie, le rectum, les organes génitaux et les tissus érectiles."
+        "text": "Ces plexus constituent des carrefours de distribution. Les voies vagales favorisent globalement certaines fonctions digestives, tandis que l’activation sympathique peut diminuer la motricité digestive et redistribuer le débit sanguin selon le contexte."
+      },
+      {
+        "type": "sub",
+        "text": "7.3. Intérêt en ROP"
       },
       {
         "type": "para",
-        "text": "Cette organisation explique pourquoi les fonctions pelviennes ne peuvent pas être attribuées à une voie unique. Continence, vidange, sexualité et perception viscérale résultent de la coordination de plusieurs composantes autonomes et somatiques."
-      },
-      {
-        "type": "para",
-        "text": "Pour la ROP, le plexus hypogastrique inférieur représente un excellent exemple de « carrefour » : plusieurs voies y convergent avant de rejoindre des fonctions régionales intégrées."
+        "text": "Dans le modèle ROP, les zones réflexes des plexus prévertébraux sont utilisées comme repères de régulation régionale neuro-végétative. Leur stimulation ne doit pas être présentée comme une activation directe et sélective du plexus anatomique correspondant."
       }
     ]
   },
   {
-    "id": "les-visceres-parlent-au-cerveau-interoception-et-sensibilite-viscerale",
-    "title": "6. Les viscères parlent au cerveau : intéroception et sensibilité viscérale",
+    "id": "plexus-previsceral-pelvien",
+    "title": "8. Plexus préviscéral pelvien",
     "blocks": [
       {
-        "type": "para",
-        "text": "Le fonctionnement autonome ne repose pas seulement sur des commandes descendantes. Les viscères transmettent en permanence des informations au SNC."
+        "type": "sub",
+        "text": "8.1. Plexus hypogastrique inférieur"
       },
       {
         "type": "para",
-        "text": "Trois grands ensembles peuvent être distingués :"
+        "text": "Le plexus hypogastrique inférieur est un réseau pair situé sur les parois latérales du pelvis. Il reçoit des fibres sympathiques descendant notamment par les nerfs hypogastriques et des fibres parasympathiques issues des nerfs splanchniques pelviens S2-S4."
+      },
+      {
+        "type": "para",
+        "text": "Ses branches se distribuent à la vessie, au rectum, aux organes génitaux internes et aux tissus érectiles."
+      },
+      {
+        "type": "sub",
+        "text": "8.2. Fonctions pelviennes"
       },
       {
         "type": "bullets",
         "items": [
-          "Afférences vagales → ganglions vagaux → noyau du tractus solitaire dans le tronc cérébral.",
-          "Afférences spinales accompagnant les voies splanchniques thoraco-lombaires → ganglions spinaux → corne dorsale de la moelle.",
-          "Afférences pelviennes lombo-sacrées → ganglions spinaux sacrés → réseaux lombo-sacrés."
+          "Continence et miction : coordination entre voies autonomes et sphincters.",
+          "Défécation : modulation de la motricité rectale et des sphincters internes.",
+          "Fonctions sexuelles : réponses vasculaires, glandulaires et motrices selon les organes."
         ]
       },
       {
         "type": "para",
-        "text": "Ces informations renseignent notamment sur la distension, la tension, l’activité mécanique, l’état chimique du milieu et, dans certaines situations, la douleur ou l’inflammation."
-      },
-      {
-        "type": "para",
-        "text": "La perception consciente de l’état interne est appelée intéroception. Une grande partie de l’information viscérale reste cependant inconsciente et participe à des réflexes locaux, spinaux ou supraspinaux."
+        "text": "Le contrôle des sphincters externes et d’une partie du plancher pelvien relève du système somatique, notamment du nerf pudendal S2-S4."
       },
       {
         "type": "sub",
-        "text": "6.1. Convergence viscéro-somatique"
+        "text": "8.3. Intérêt en ROP"
       },
       {
         "type": "para",
-        "text": "Dans la corne dorsale de la moelle, des neurones peuvent recevoir des informations provenant à la fois de territoires somatiques et de viscères. Cette convergence contribue à la douleur projetée et à certaines réponses réflexes musculaires ou cutanées."
-      },
-      {
-        "type": "para",
-        "text": "Ce mécanisme explique pourquoi une douleur viscérale peut être perçue à distance de l’organe. Il constitue également l’un des fondements des relations viscéro-somatiques étudiées dans les chapitres d’organes."
-      },
-      {
-        "type": "para",
-        "text": "Le mécanisme nerveux est présenté ici ; son utilisation clinique appartient surtout au Niveau 4 — Intégration viscéro-somatique et viscéro-émotionnelle."
+        "text": "Le plexus hypogastrique inférieur constitue l’un des meilleurs exemples de carrefour autonome régional du Niveau 2. Il permet de comprendre pourquoi les fonctions pelviennes ne dépendent jamais d’une voie unique."
       }
     ]
   },
   {
-    "id": "glandes-surrenales-interface-entre-systeme-sympathique-et-reponse-hormonale",
-    "title": "7. Glandes surrénales : interface entre système sympathique et réponse hormonale",
+    "id": "systeme-nerveux-intrinseque-ou-enterique-sne",
+    "title": "9. Système nerveux intrinsèque ou entérique (SNE)",
     "blocks": [
       {
         "type": "para",
-        "text": "Les glandes surrénales appartiennent au Niveau 2 parce qu’elles illustrent la continuité entre régulation nerveuse et régulation hormonale."
+        "text": "Le système nerveux entérique est situé dans la paroi du tube digestif. Il possède ses propres neurones sensoriels, interneurones et motoneurones et peut organiser localement de nombreux réflexes digestifs."
       },
       {
         "type": "sub",
-        "text": "7.1. Médullosurrénale"
-      },
-      {
-        "type": "para",
-        "text": "La médullosurrénale est étroitement liée au système sympathique. Elle reçoit directement des fibres sympathiques préganglionnaires et libère dans le sang principalement de l’adrénaline et de la noradrénaline. Elle participe à la mobilisation cardiovasculaire et métabolique lors d’une réponse aiguë à la contrainte."
-      },
-      {
-        "type": "sub",
-        "text": "7.2. Corticosurrénale"
-      },
-      {
-        "type": "para",
-        "text": "La corticosurrénale produit plusieurs hormones stéroïdes. Le cortisol dépend de l’axe hypothalamo-hypophyso-surrénalien décrit dans le chapitre 5. L’aldostérone est régulée principalement par le système rénine-angiotensine et par la concentration extracellulaire de potassium."
-      },
-      {
-        "type": "para",
-        "text": "Il est donc utile de distinguer la réponse sympatho-médullosurrénalienne, rapide, de la réponse hormonale corticosurrénalienne, dont les mécanismes de régulation sont différents."
-      }
-    ]
-  },
-  {
-    "id": "le-diaphragme-une-interface-fonctionnelle-du-niveau-2",
-    "title": "8. Le diaphragme : une interface fonctionnelle du Niveau 2",
-    "blocks": [
-      {
-        "type": "para",
-        "text": "Le diaphragme n’appartient pas anatomiquement au système nerveux autonome. Il est inclus dans le Niveau 2 parce que la respiration, les variations de pression thoraco-abdominales, le retour veineux et l’état autonome interagissent étroitement."
-      },
-      {
-        "type": "para",
-        "text": "Le nerf vague traverse le diaphragme avec l’œsophage au niveau du hiatus œsophagien, tandis que les chaînes sympathiques et certains nerfs splanchniques passent à proximité des piliers. Ces rapports anatomiques justifient l’intérêt régional du diaphragme, sans supposer qu’une tension diaphragmatique « comprime » nécessairement un nerf ou provoque directement un trouble viscéral."
-      },
-      {
-        "type": "para",
-        "text": "Dans la pratique ROP, le diaphragme est donc considéré comme une interface respiratoire et fonctionnelle accompagnant la régulation autonome, et non comme un élément du SNA lui-même."
-      }
-    ]
-  },
-  {
-    "id": "et-le-systeme-nerveux-enterique",
-    "title": "9. Et le système nerveux entérique ?",
-    "blocks": [
-      {
-        "type": "para",
-        "text": "Le système nerveux entérique (SNE) est un réseau intrinsèque de la paroi digestive, organisé notamment autour des plexus myentérique et sous-muqueux. Il possède ses propres neurones sensoriels, interneurones et motoneurones et peut organiser localement une grande partie de la motricité et des sécrétions digestives."
-      },
-      {
-        "type": "para",
-        "text": "Cette autonomie est relative : le SNE reste modulé par les voies parasympathiques et sympathiques et échange des informations avec le SNC. Il ne faut donc pas l’imaginer comme un « deuxième cerveau » complètement indépendant."
-      },
-      {
-        "type": "para",
-        "text": "Dans ce chapitre, nous nous limitons à cette articulation avec le SNA. L’organisation entérique sera reprise dans le chapitre 14 consacré à l’intestin grêle."
-      }
-    ]
-  },
-  {
-    "id": "le-niveau-2-en-pratique-rop",
-    "title": "10. Le Niveau 2 en pratique ROP",
-    "blocks": [
-      {
-        "type": "para",
-        "text": "Le Niveau 2 n’est pas un protocole autonome à appliquer systématiquement. Il rassemble des cibles de régulation utilisées lorsque l’anamnèse, les tests et la réponse du patient suggèrent qu’un travail neuro-végétatif et adaptatif est pertinent."
-      },
-      {
-        "type": "para",
-        "text": "Les principales portes cliniques sont :"
+        "text": "9.1. Plexus entériques"
       },
       {
         "type": "bullets",
         "items": [
-          "diaphragme ;",
-          "nerf vague ;",
-          "parasympathique sacré S2-S4 ;",
-          "chaîne sympathique et nerfs splanchniques ;",
-          "plexus prévertébraux et hypogastriques ;",
-          "glandes surrénales."
+          "Plexus myentérique d’Auerbach : entre les couches musculaires ; rôle majeur dans la motricité.",
+          "Plexus sous-muqueux de Meissner : dans la sous-muqueuse ; rôle dans les sécrétions, les échanges locaux et la régulation de la muqueuse."
         ]
       },
       {
         "type": "para",
-        "text": "Dans la logique ROP, le principe « priorité au nerf » signifie que l’on cherche à comprendre les voies de régulation avant de cibler un organe. Il ne signifie pas qu’une pression sur une zone réflexe active sélectivement le nerf, le ganglion ou le plexus portant le même nom."
-      },
-      {
-        "type": "para",
-        "text": "La stimulation manuelle ROP n’est pas équivalente à une stimulation électrique directe d’un nerf. Les données de neuromodulation fournissent des modèles de plausibilité et de circuits, mais elles ne démontrent pas automatiquement le même effet avec une pression manuelle."
+        "text": "Les cellules interstitielles de Cajal ne sont pas des neurones : ce sont des cellules spécialisées qui participent à la génération et à la coordination des ondes lentes électriques."
       },
       {
         "type": "sub",
-        "text": "10.1. Comment hiérarchiser ce niveau ?"
+        "text": "9.2. Autonomie relative et interface SNA-SNE"
       },
       {
-        "type": "numbered",
-        "items": [
-          "Replacer le symptôme principal dans le contexte général : stress, sommeil, récupération, fonction viscérale, douleur et tolérance au toucher.",
-          "Choisir une ou quelques cibles autonomes cohérentes avec le territoire concerné plutôt que de travailler l’ensemble du SNA.",
-          "Observer les réactions pendant la séance : respiration, détente, signes végétatifs, évolution des tests.",
-          "Réévaluer dans les heures et les jours suivants : fonction suivie, symptômes, sommeil, transit, miction, fatigue et capacités fonctionnelles."
-        ]
+        "type": "para",
+        "text": "Le SNE peut fonctionner avec une importante autonomie locale, mais il reste modulé par les efférences parasympathiques et sympathiques. Il participe ainsi à une véritable interface SNA-SNE, particulièrement importante pour le tube digestif."
+      },
+      {
+        "type": "para",
+        "text": "Cette organisation est détaillée au chapitre 14 sur l’intestin grêle, où elle est mise en relation avec la motricité, l’immunité, le microbiote et l’axe cerveau-intestin."
       }
     ]
   },
   {
-    "id": "zones-reflexes-rop-du-niveau-2",
-    "title": "11. Zones réflexes ROP du Niveau 2",
+    "id": "glandes-surrenales",
+    "title": "10. Glandes surrénales",
     "blocks": [
       {
         "type": "para",
-        "text": "Les localisations suivantes appartiennent à la cartographie clinique de la ROP. Elles ne constituent pas une projection anatomique directe des nerfs ou des plexus sur le pied et ne démontrent pas qu’une pression active sélectivement la structure nommée."
+        "text": "Les glandes surrénales illustrent la continuité entre système nerveux autonome et régulation hormonale. Leur médulla et leur cortex répondent à des mécanismes de contrôle différents."
       },
       {
         "type": "sub",
-        "text": "11.1. Parasympathique crânien céphalique"
+        "text": "10.1. Médullosurrénale"
+      },
+      {
+        "type": "para",
+        "text": "La médullosurrénale reçoit directement des fibres sympathiques préganglionnaires. Les cellules chromaffines libèrent principalement adrénaline et noradrénaline dans la circulation, participant à la réponse sympatho-adrénale aiguë."
+      },
+      {
+        "type": "sub",
+        "text": "10.2. Corticosurrénale"
+      },
+      {
+        "type": "para",
+        "text": "La corticosurrénale produit notamment cortisol, aldostérone et androgènes surrénaliens. Le cortisol dépend de l’axe hypothalamo-hypophyso-surrénalien ; l’aldostérone est régulée surtout par le système rénine-angiotensine et la kaliémie."
+      },
+      {
+        "type": "sub",
+        "text": "10.3. Intérêt en ROP"
+      },
+      {
+        "type": "para",
+        "text": "Dans le Niveau 2, les surrénales sont considérées comme une interface neuroendocrine de l’adaptation. Leur cartographie ROP appartient au modèle clinique et ne doit pas être assimilée à une stimulation directe de la sécrétion hormonale."
+      }
+    ]
+  },
+  {
+    "id": "zones-reflexes-podales",
+    "title": "11. Zones réflexes podales",
+    "blocks": [
+      {
+        "type": "para",
+        "text": "Les localisations suivantes appartiennent à la cartographie clinique de la ROP. Elles ne constituent pas une projection anatomique directe des nerfs, ganglions, plexus ou organes sur le pied. Leur intérêt est de structurer l’examen et la séquence de traitement selon les tests et la réponse du patient."
+      },
+      {
+        "type": "sub",
+        "text": "11.1. Parasympathique crânien — territoire céphalique"
       },
       {
         "type": "bullets",
         "items": [
-          "Repères des nerfs III, VII et IX : face plantaire des orteils selon la cartographie de la base du crâne.",
-          "Ganglion ciliaire : zone médiale du deuxième orteil.",
+          "Tronc cérébral : bord médial de la phalange distale du gros orteil selon la cartographie ROP.",
+          "Nerfs III, VII et IX dans les foramens de la base du crâne : repères sur les phalanges des quatre derniers orteils.",
+          "Nerf III et ganglion ciliaire : repères médiaux du deuxième orteil.",
           "Ganglion ptérygopalatin : zone médiale de la phalange moyenne du deuxième orteil.",
-          "Ganglion submandibulaire : territoire rétro-capital des orteils selon la cartographie ROP.",
-          "Ganglion otique : zone médiale de la phalange moyenne du troisième orteil."
+          "Ganglion submandibulaire : territoire rétro-capital selon la cartographie de la cavité buccale.",
+          "Ganglion otique : repère médial de la phalange moyenne du troisième orteil."
         ]
       },
       {
@@ -464,16 +585,15 @@ export const chapter4ReworkFr: Chapter = {
       },
       {
         "type": "sub",
-        "text": "11.2. Nerf vague"
+        "text": "11.2. Nerf vague X — trajet crânien et cervical"
       },
       {
         "type": "bullets",
         "items": [
-          "Trajet crânien / foramen jugulaire : repères des quatrième et cinquième orteils.",
-          "Étage cervical : repères du gros orteil pour le larynx et la région carotidienne dans la cartographie ROP.",
-          "Étage thoracique : zones cardiaque, broncho-pulmonaire et œsophagienne selon les figures du chapitre.",
-          "Hiatus œsophagien : zone plantaire gauche en relation cartographique avec le diaphragme.",
-          "Étage abdominal : territoires gastriques et abdominaux et repères des plexus prévertébraux."
+          "Moelle allongée : face médiale de l’articulation interphalangienne du gros orteil.",
+          "Foramen jugulaire et ganglions vagaux : repères articulaires des quatrième et cinquième orteils.",
+          "Nerf laryngé supérieur : repère plantaire latéral de la phalange proximale du gros orteil.",
+          "Sinus et glomus carotidiens : repère podal cervical dans la cartographie ROP ; aucune manipulation directe du sinus carotidien au cou."
         ]
       },
       {
@@ -498,6 +618,18 @@ export const chapter4ReworkFr: Chapter = {
         "orientation": "landscape"
       },
       {
+        "type": "sub",
+        "text": "11.3. Nerf vague X — étage thoracique"
+      },
+      {
+        "type": "bullets",
+        "items": [
+          "Plexus cardiaque et atriums : zones métatarsiennes selon les figures du chapitre.",
+          "Territoires broncho-pulmonaires et œsophagiens : repères thoraciques de la cartographie ROP.",
+          "Hiatus œsophagien : territoire plantaire en relation cartographique avec le diaphragme."
+        ]
+      },
+      {
         "type": "figure",
         "src": "/chapter-4/cartographie/figure-4-10.png",
         "caption": "Photo : territoire gauche du nerf vague X",
@@ -510,6 +642,18 @@ export const chapter4ReworkFr: Chapter = {
         "caption": "Photo : territoire droit du nerf vague X",
         "alt": "Repere podal du territoire cervical et thoracique droit du nerf vague X",
         "orientation": "landscape"
+      },
+      {
+        "type": "sub",
+        "text": "11.4. Nerf vague X — étage abdominal"
+      },
+      {
+        "type": "bullets",
+        "items": [
+          "Cardia et petite courbure gastrique selon la cartographie du pied gauche.",
+          "Territoires vagaux digestifs : estomac, duodénum, intestin grêle et côlon proximal.",
+          "Plexus cœliaque et prévertébraux : repères centraux plantaires."
+        ]
       },
       {
         "type": "figure",
@@ -533,19 +677,15 @@ export const chapter4ReworkFr: Chapter = {
         "orientation": "landscape"
       },
       {
-        "type": "para",
-        "text": "Le repère carotidien est une zone réflexe podale dans la cartographie ROP ; il ne justifie pas une manipulation directe du sinus carotidien au cou."
-      },
-      {
         "type": "sub",
-        "text": "11.3. Parasympathique pelvien"
+        "text": "11.5. Parasympathique pelvien (ou sacral)"
       },
       {
         "type": "bullets",
         "items": [
-          "Repères S2-S4 et queue de cheval selon la cartographie médullaire ROP.",
-          "Zones pelviennes du talon et du bord médial du pied utilisées pour les nerfs splanchniques pelviens et le plexus hypogastrique inférieur.",
-          "La correspondance est clinique : une zone plantaire n’est pas un dermatome S2-S4."
+          "Repères S2-S4 selon la cartographie médullaire ROP.",
+          "Queue de cheval et sacrum selon les repères du bord médial du pied.",
+          "Nerfs splanchniques pelviens et plexus hypogastrique inférieur selon les zones pelviennes du talon."
         ]
       },
       {
@@ -556,16 +696,18 @@ export const chapter4ReworkFr: Chapter = {
         "orientation": "landscape"
       },
       {
+        "type": "para",
+        "text": "Une zone plantaire n’est pas un dermatome S2-S4 ; la correspondance appartient à la cartographie clinique ROP."
+      },
+      {
         "type": "sub",
-        "text": "11.4. Sympathique"
+        "text": "11.6. Sympathique viscéro-moteur — origine médullaire"
       },
       {
         "type": "bullets",
         "items": [
-          "Origine thoraco-lombaire : arche médiale du pied dans la cartographie de la moelle et de la colonne.",
-          "Chaîne thoracique : repères associés aux articulations costo-vertébrales dans la cartographie ROP.",
-          "Chaînes cervicale, lombaire et sacrale : repères spécifiques le long du gros orteil, de l’arche médiale et du talon selon les figures détaillées.",
-          "Nerfs splanchniques : abordés avec les repères des plexus prévertébraux."
+          "Canal vertébral, moelle thoraco-lombaire et racines sympathiques : arche médiale des deux pieds selon la cartographie ROP.",
+          "Les niveaux sont utilisés comme repères cliniques ; ils ne constituent pas une mesure directe de l’activité sympathique segmentaire."
         ]
       },
       {
@@ -576,6 +718,14 @@ export const chapter4ReworkFr: Chapter = {
         "orientation": "landscape"
       },
       {
+        "type": "sub",
+        "text": "11.7. Chaîne ganglionnaire thoracique"
+      },
+      {
+        "type": "para",
+        "text": "La chaîne sympathique thoracique n’est pas accessible directement. Dans la cartographie ROP, elle est abordée par les repères costo-vertébraux et médiaux du pied."
+      },
+      {
         "type": "figure",
         "src": "/chapter-4/cartographie/figure-4-24.png",
         "caption": "Photo : chaine ganglionnaire latero-vertebrale thoracique",
@@ -583,11 +733,35 @@ export const chapter4ReworkFr: Chapter = {
         "orientation": "landscape"
       },
       {
+        "type": "sub",
+        "text": "11.8. Chaîne ganglionnaire cervicale"
+      },
+      {
+        "type": "bullets",
+        "items": [
+          "Ganglion cervical inférieur / stellaire : repère de la jonction C7-T1 et de la première côte.",
+          "Ganglion cervical moyen : repère cervical moyen lorsqu’il est utilisé dans la cartographie.",
+          "Ganglion cervical supérieur : repères correspondant aux étages C1-C3."
+        ]
+      },
+      {
         "type": "figure",
         "src": "/chapter-4/cartographie/figure-4-26.png",
         "caption": "Photo : ganglion cervical inferieur",
         "alt": "Repere podal du ganglion cervical inferieur",
         "orientation": "portrait"
+      },
+      {
+        "type": "sub",
+        "text": "11.9. Chaîne ganglionnaire lombale, sacrale et coccygienne"
+      },
+      {
+        "type": "bullets",
+        "items": [
+          "Chaîne lombale : repères en relation avec les piliers du diaphragme et le territoire lombaire.",
+          "Chaîne sacrale : face médiale et antérieure du talon selon la cartographie ROP.",
+          "Ganglion impair : repère caudal du coccyx sur la cartographie du talon."
+        ]
       },
       {
         "type": "figure",
@@ -605,14 +779,29 @@ export const chapter4ReworkFr: Chapter = {
       },
       {
         "type": "sub",
-        "text": "11.5. Plexus et surrénales"
+        "text": "11.10. Sympathique somato-viscéro-sensitif"
+      },
+      {
+        "type": "para",
+        "text": "Les zones réflexes utilisées sont proches de celles du sympathique viscéro-moteur. Il convient cependant de garder la distinction physiologique entre commande efférente sympathique et afférences viscérales spinales."
+      },
+      {
+        "type": "sub",
+        "text": "11.11. Chaîne plexique prévertébrale (ou pré-aortique)"
+      },
+      {
+        "type": "para",
+        "text": "Dans la cartographie ROP, la chaîne plexique prévertébrale est recherchée sur la face plantaire dans un axe médian allant de la région diaphragmatique vers l’avant du talon."
+      },
+      {
+        "type": "sub",
+        "text": "11.12. Plexus préviscéral pelvien"
       },
       {
         "type": "bullets",
         "items": [
-          "Chaîne plexique prévertébrale : axe plantaire médian depuis la zone diaphragmatique vers l’avant du talon selon la cartographie ROP.",
-          "Plexus hypogastrique inférieur : zones médiales et antérieures du talon correspondant aux territoires pelviens dans la cartographie.",
-          "Glandes surrénales : se reporter au chapitre consacré aux reins et aux surrénales pour les repères détaillés."
+          "Plexus hypogastrique inférieur : zones plantaires et médiales du talon correspondant aux territoires pelviens dans la cartographie ROP.",
+          "Les repères antérieurs, moyens et postérieurs sont précisés dans les figures du chapitre."
         ]
       },
       {
@@ -628,43 +817,49 @@ export const chapter4ReworkFr: Chapter = {
         "caption": "Photo : plexus hypogastrique inferieur, fibres moyennes et posterieures",
         "alt": "Repere podal du plexus hypogastrique inferieur, fibres moyennes et posterieures",
         "orientation": "landscape"
-      }
-    ]
-  },
-  {
-    "id": "ce-que-ce-chapitre-permet-et-ce-quil-ne-permet-pas-daffirmer",
-    "title": "12. Ce que ce chapitre permet — et ce qu’il ne permet pas d’affirmer",
-    "blocks": [
+      },
       {
-        "type": "bullets",
-        "items": [
-          "Le SNA fournit une architecture plausible pour comprendre des interactions entre centres, voies autonomes, plexus et viscères.",
-          "Les afférences viscérales expliquent comment l’état des organes remonte vers la moelle et le cerveau.",
-          "La convergence somato-viscérale fournit un mécanisme reconnu pour les douleurs projetées et certaines réponses réflexes.",
-          "La proximité anatomique ou segmentaire peut renforcer la plausibilité d’un ciblage régional.",
-          "Une carte ROP reste une hypothèse clinique : elle ne prouve pas une connexion point-organe.",
-          "Une stimulation électrique d’un nerf et une pression manuelle ROP ne sont pas équivalentes.",
-          "Toute suspicion de pathologie organique, malaise, douleur thoracique, dyspnée, déficit neurologique ou signe inhabituel impose une évaluation médicale appropriée."
-        ]
+        "type": "sub",
+        "text": "11.13. Système nerveux intrinsèque ou entérique (SNE)"
+      },
+      {
+        "type": "para",
+        "text": "Les zones réflexes du SNE se confondent avec les territoires digestifs correspondants. Leur interprétation doit rester fonctionnelle et être reliée au viscère concerné."
+      },
+      {
+        "type": "sub",
+        "text": "11.14. Glandes surrénales"
+      },
+      {
+        "type": "para",
+        "text": "Les zones réflexes des surrénales sont précisées dans le chapitre consacré aux reins et aux surrénales. Elles sont utilisées dans le Niveau 2 comme repères d’adaptation neuroendocrine."
+      },
+      {
+        "type": "sub",
+        "text": "11.15. Principe de lecture des zones"
+      },
+      {
+        "type": "para",
+        "text": "Une zone réflexe sensible ou texturalement modifiée constitue un repère clinique ROP. Elle ne démontre ni une lésion de la structure correspondante, ni l’activation sélective du nerf ou du plexus nommé. La sélection des zones reste guidée par l’anamnèse, les tests et la réévaluation."
       }
     ]
   },
   {
     "id": "a-retenir",
-    "title": "13. À retenir",
+    "title": "À retenir",
     "blocks": [
       {
         "type": "bullets",
         "items": [
-          "Le chapitre 3 expliquait où l’information est intégrée ; le chapitre 4 explique comment centres et viscères communiquent.",
-          "La régulation autonome est bidirectionnelle : commandes efférentes vers les viscères et informations afférentes vers le SNC.",
-          "Le parasympathique comprend des voies crâniennes, le nerf vague et les voies sacrées S2-S4.",
-          "Le sympathique est principalement thoraco-lombaire, de T1 à L2, puis distribué par la chaîne sympathique, les nerfs splanchniques et les plexus.",
-          "Les plexus prévertébraux et hypogastriques sont des carrefours autonomes majeurs.",
-          "Le pelvis est particulièrement intéressant parce qu’il associe voies autonomes sacrées, voies sympathiques et contrôle somatique.",
-          "Les surrénales et le diaphragme appartiennent au Niveau 2 pour leur rôle dans l’adaptation et la régulation fonctionnelle.",
-          "Le SNE est un réseau intrinsèque digestif, modulé par les voies autonomes ; il sera repris au chapitre 14 consacré à l’intestin grêle.",
-          "En ROP, les zones réflexes servent à organiser la pratique ; elles ne constituent pas une anatomie directe du SNA sur le pied."
+          "Le chapitre 4 conserve son architecture historique tout en étant recentré sur le Niveau 2 : régulation neuro-végétative et adaptation.",
+          "Le SNA fonctionne dans les deux sens : commandes efférentes vers les viscères et informations afférentes vers les centres.",
+          "Le vague est une grande voie parasympathique thoraco-abdominale et une voie afférente majeure.",
+          "Le parasympathique pelvien S2-S4 est distinct du nerf pudendal somatique S2-S4.",
+          "Le sympathique est principalement thoraco-lombaire et distribué par la chaîne paravertébrale, les splanchniques et les plexus prévertébraux.",
+          "Les plexus prévertébraux et hypogastriques sont des carrefours régionaux importants du Niveau 2.",
+          "Le SNE est un réseau intrinsèque digestif en interface permanente avec le SNA.",
+          "Les surrénales illustrent la continuité entre régulation nerveuse et hormonale.",
+          "Les zones réflexes ROP sont des repères cliniques et non une anatomie directe du système autonome sur le pied."
         ]
       }
     ]
@@ -677,46 +872,16 @@ export const chapter4ReworkFr: Chapter = {
         "type": "numbered",
         "items": [
           "Standring S, ed. Gray’s Anatomy: The Anatomical Basis of Clinical Practice. 42nd ed. Elsevier; 2020.",
-          "Fowler CJ, Griffiths D, de Groat WC. The neural control of micturition. Nat Rev Neurosci. 2008;9(6):453-466. doi:10.1038/nrn2401.",
-          "Shefchyk SJ. Spinal cord neural organization controlling the urinary bladder and striated sphincter. Prog Brain Res. 2002;137:71-82. doi:10.1016/S0079-6123(02)37008-0.",
-          "de Groat WC, Vizzard MA, Araki I, Roppolo J. Spinal interneurons and preganglionic neurons in sacral autonomic reflex pathways. Prog Brain Res. 1996;107:97-111. doi:10.1016/S0079-6123(08)61860-9.",
-          "Jänig W. Neurobiology of visceral afferent neurons: neuroanatomy, functions, organ regulations and sensations. Biol Psychol. 1996;42(1-2):29-51. doi:10.1016/0301-0511(95)05145-7.",
-          "Sato A, Sato Y, Schmidt RF. The impact of somatosensory input on autonomic functions. Rev Physiol Biochem Pharmacol. 1997;130:1-328. doi:10.1007/BFb0046598.",
-          "Brierley SM, Hibberd TJ, Spencer NJ. Spinal afferent innervation of the colon and rectum. Front Cell Neurosci. 2018;12:467. doi:10.3389/fncel.2018.00467.",
-          "Li X, Li X, Liao L. Mechanism of action of tibial nerve stimulation in the treatment of lower urinary tract dysfunction. Neuromodulation. 2024;27(2):256-266. doi:10.1016/j.neurom.2023.03.017.",
-          "Panicker JN, Marcelissen T, von Gontard A, Vrijens D, Abrams P, Wyndaele M. Bladder-bowel interactions: do we understand pelvic organ cross-sensitization? Neurourol Urodyn. 2019;38(Suppl 5):S25-S34. doi:10.1002/nau.24111.",
-          "Malykhina AP. Neural mechanisms of pelvic organ cross-sensitization. Neuroscience. 2007;149(3):660-672. doi:10.1016/j.neuroscience.2007.07.053."
+          "Jänig W. Neurobiology of visceral afferent neurons: neuroanatomy, functions, organ regulations and sensations. Biol Psychol. 1996;42(1-2):29-51.",
+          "Sato A, Sato Y, Schmidt RF. The impact of somatosensory input on autonomic functions. Rev Physiol Biochem Pharmacol. 1997;130:1-328.",
+          "Fowler CJ, Griffiths D, de Groat WC. The neural control of micturition. Nat Rev Neurosci. 2008;9(6):453-466.",
+          "Shefchyk SJ. Spinal cord neural organization controlling the urinary bladder and striated sphincter. Prog Brain Res. 2002;137:71-82.",
+          "de Groat WC, Vizzard MA, Araki I, Roppolo JR. Spinal interneurons and preganglionic neurons in sacral autonomic reflex pathways. Prog Brain Res. 1996;107:97-111.",
+          "Brierley SM, Hibberd TJ, Spencer NJ. Spinal afferent innervation of the colon and rectum. Front Cell Neurosci. 2018;12:467.",
+          "Spencer NJ, Hu H. Enteric nervous system: sensory transduction, neural circuits and gastrointestinal motility. Nat Rev Gastroenterol Hepatol. 2020;17(6):338-351.",
+          "Hotta H, Watanabe N. The enteric nervous system. J Physiol Sci. 2023;73:1.",
+          "de Rijk MM, Fernández Chadily S, Knops A, Schoutens Y, Verstegen AMJ. The periaqueductal gray and its role in the neural control of lower urinary tract function. Auton Neurosci. 2026;265:103413."
         ]
-      }
-    ]
-  },
-  {
-    "id": "annexe-reperes-anatomiques-a-illustrer-dans-le-chapitre",
-    "title": "Annexe — Repères anatomiques à illustrer dans le chapitre",
-    "blocks": [
-      {
-        "type": "para",
-        "text": "Pour garder le chapitre pédagogique, les figures peuvent se concentrer sur quelques trajets et carrefours faciles à mémoriser :"
-      },
-      {
-        "type": "bullets",
-        "items": [
-          "Voies bidirectionnelles : une flèche descendante pour les commandes autonomes, une flèche ascendante pour les afférences viscérales.",
-          "Parasympathique crânien : III, VII et IX avec leurs ganglions périphériques, présenté de façon synthétique.",
-          "Nerf vague : moelle allongée → foramen jugulaire → thorax → hiatus œsophagien → abdomen, avec retour afférent vers le noyau du tractus solitaire.",
-          "Parasympathique pelvien : S2-S4 → nerfs splanchniques pelviens → plexus hypogastrique inférieur → vessie, rectum et organes génitaux.",
-          "Sympathique : T1-L2 → chaîne paravertébrale → nerfs splanchniques → plexus prévertébraux.",
-          "Rameaux communicants : blancs aux niveaux thoraco-lombaires, gris distribués aux nerfs spinaux à de nombreux étages.",
-          "Plexus prévertébraux : cœliaque, mésentérique supérieur, aortorénal, mésentérique inférieur et hypogastrique supérieur.",
-          "Plexus hypogastrique inférieur : convergence entre nerfs hypogastriques et splanchniques pelviens.",
-          "Glandes surrénales : médullosurrénale reliée au sympathique ; corticosurrénale reliée aux axes hormonaux.",
-          "Diaphragme : interface fonctionnelle au croisement des rapports vagaux, splanchniques et thoraco-abdominaux.",
-          "Système nerveux entérique : simple encadré de liaison avec le chapitre 14 sur l’intestin grêle."
-        ]
-      },
-      {
-        "type": "para",
-        "text": "Ces figures doivent illustrer des trajets et des réseaux. Elles ne doivent pas suggérer qu’une zone réflexe constitue une projection anatomique directe d’un nerf ou d’un organe sur le pied."
       }
     ]
   }
