@@ -831,3 +831,329 @@ export const chapter19Fr: Chapter = {
     }
   ]
 }
+
+
+// Revised four-level ROP protocol from the complete reflex-zone Word revision.
+const revisedReflexSection = chapter19Fr.sections.find((section) => section.id === 'zones-reflexes-podales')!
+revisedReflexSection.blocks = [
+  {
+    "type": "para",
+    "text": "Les localisations décrites ci-dessous appartiennent à la cartographie clinique de la ROP. Elles ne constituent pas une projection anatomique directe de l’utérus, des ovaires, des trompes ou de leurs voies nerveuses sur le pied. Leur sélection dépend de l’anamnèse, des tests, des réactions palpatoires et du tableau clinique."
+  },
+  {
+    "type": "para",
+    "text": "Pour les organes génitaux féminins, la lecture des zones réflexes peut être organisée selon les quatre niveaux du protocole ROP, tout en conservant la distinction pratique entre l’utérus, d’une part, et les ovaires et trompes, d’autre part."
+  },
+  {
+    "type": "sub",
+    "text": "3.1. Utérus"
+  },
+  {
+    "type": "sub",
+    "text": "3.1.1. Niveau 1 — Régulation des centres supérieurs"
+  },
+  {
+    "type": "para",
+    "text": "Le Niveau 1 prend une importance particulière dans la sphère génitale féminine en raison de l’intégration étroite entre fonctions nerveuses et endocrines. Le cycle menstruel dépend notamment de l’axe hypothalamus-hypophyse-ovaires, développé dans la physiologie de ce chapitre."
+  },
+  {
+    "type": "bullets",
+    "items": [
+      "Zones réflexes occipitales.",
+      "Tronc cérébral et centres d’intégration.",
+      "Diencéphale, notamment hypothalamus.",
+      "Hypophyse et axe hypothalamo-hypophysaire.",
+      "Environnement neuro-méningé dans le modèle ROP."
+    ]
+  },
+  {
+    "type": "xref",
+    "label": "Cf. chapitre 3 — Système nerveux central, Niveau 1 : Régulation des centres supérieurs.",
+    "href": "/lecture/chapitre-3?lang=fr",
+    "text": ""
+  },
+  {
+    "type": "rop",
+    "body": [
+      "Le Niveau 1 replace les fonctions génitales dans leur régulation centrale et neuroendocrine. Il ne signifie pas qu’une zone podale stimule directement l’hypothalamus, l’hypophyse ou la sécrétion hormonale."
+    ]
+  },
+  {
+    "type": "sub",
+    "text": "3.1.2. Niveau 2 — Régulation neuro-végétative et adaptation"
+  },
+  {
+    "type": "para",
+    "text": "Les voies autonomes de l’utérus empruntent principalement les réseaux hypogastriques et pelviens. Le plexus hypogastrique inférieur constitue un carrefour majeur de l’innervation autonome des organes génitaux internes."
+  },
+  {
+    "type": "bullets",
+    "items": [
+      "Sympathique thoraco-lombaire : territoire approximatif T10-L2 dans la lecture clinique.",
+      "Chaînes sympathiques lombaire et sacrale.",
+      "Plexus hypogastrique supérieur.",
+      "Nerfs hypogastriques.",
+      "Parasympathique pelvien S2-S4.",
+      "Plexus hypogastrique inférieur."
+    ]
+  },
+  {
+    "type": "xref",
+    "label": "Cf. chapitre 4 — Système nerveux autonome, sections « Parasympathique pelvien », « Sympathique viscéro-moteur » et « Plexus préviscéral pelvien ».",
+    "href": "/lecture/chapitre-4?lang=fr",
+    "text": ""
+  },
+  {
+    "type": "rop",
+    "body": [
+      "Le Niveau 2 vise à accompagner la régulation autonome de la sphère pelvienne, sans rechercher une stimulation isolée du sympathique ou du parasympathique."
+    ]
+  },
+  {
+    "type": "sub",
+    "text": "3.1.3. Niveau 3 — Régulation viscérale loco-régionale"
+  },
+  {
+    "type": "para",
+    "text": "Le Niveau 3 rassemble le cœur de la cartographie de l’utérus et de son environnement pelvien. La région cervico-isthmique reste, dans la cartographie ROP, un repère clinique prioritaire."
+  },
+  {
+    "type": "bullets",
+    "items": [
+      "Cavité pelvienne et périnée (figures 17.15, 17.16 et 17.17).",
+      "Utérus.",
+      "Région cervico-isthmique et plexus hypogastrique inférieur, partie moyenne : petite dépression en avant du repère sacro-coccygien.",
+      "Vagin : sillon allant du noyau fibreux central à la région cervico-isthmique.",
+      "Dôme et cornes de l’utérus : zone située au-dessus du bord antérieur du talon, dans sa partie médiale.",
+      "Ligaments larges, ronds et utérosacraux selon les tests et la cartographie de la méthode.",
+      "Canal inguinal et ligament rond : interligne tibio-tarsien antérieur."
+    ]
+  },
+  {
+    "type": "xref",
+    "label": "Cf. chapitre 17 — Cavité pelvienne, Niveau 3 : Régulation viscérale loco-régionale.",
+    "href": "/lecture/chapitre-17?lang=fr",
+    "text": ""
+  },
+  {
+    "type": "rop",
+    "body": [
+      "Le Niveau 3 replace l’utérus dans son environnement pelvien : péritoine, ligaments, vagin, vessie, rectum et plancher pelvien. Une sensibilité d’une zone réflexe reste un repère clinique et non la preuve d’une malposition ou d’une lésion ligamentaire."
+    ]
+  },
+  {
+    "type": "sub",
+    "text": "3.1.4. Niveau 4 — Intégration viscéro-somatique et viscéro-émotionnelle"
+  },
+  {
+    "type": "para",
+    "text": "Cette rubrique remplace l’ancienne « balance cerveau limbique-utérus ». La lecture associe désormais les convergences somatiques et l’axe cerveau-utérus, dans une approche prudente et non déterministe."
+  },
+  {
+    "type": "sub",
+    "text": "3.1.4.1. Versant viscéro-somatique"
+  },
+  {
+    "type": "bullets",
+    "items": [
+      "Sacrum et coccyx.",
+      "Plancher pelvien.",
+      "Nerf pudendal et territoires S2-S4 lorsque le tableau le justifie.",
+      "Charnière thoraco-lombaire et territoires lombosacrés associés.",
+      "Muscles et articulations douloureux associés."
+    ]
+  },
+  {
+    "type": "sub",
+    "text": "3.1.4.2. Versant viscéro-émotionnel — Axe cerveau-utérus"
+  },
+  {
+    "type": "para",
+    "text": "Les signaux génitaux, les fluctuations hormonales, la douleur, le stress et le contexte affectif peuvent interagir avec les réseaux cérébraux de l’interoception, de l’émotion et de la perception corporelle. Ces interactions ne définissent pas une « personnalité utérus »."
+  },
+  {
+    "type": "para",
+    "text": "Dans le modèle clinique ROP, l’écoute-induction peut conserver son principe — un repère sur la zone utérine et un repère central — mais elle est présentée comme une technique d’intégration fonctionnelle, et non comme une action directe sur un « cerveau limbique »."
+  },
+  {
+    "type": "xref",
+    "label": "Cf. chapitre 3 — Système nerveux central pour les réseaux centraux et cortico-limbiques ",
+    "href": "/lecture/chapitre-3?lang=fr",
+    "text": "cf. section 1.11 « Relations viscéro-émotionnelles de l’utérus » du présent chapitre."
+  },
+  {
+    "type": "rop",
+    "body": [
+      "Le Niveau 4 vise à relier le symptôme génital aux convergences somatiques et au contexte de perception, d’adaptation et de vécu émotionnel, sans attribuer automatiquement les symptômes à une origine psychologique."
+    ]
+  },
+  {
+    "type": "sub",
+    "text": "3.2. Ovaires et trompes"
+  },
+  {
+    "type": "sub",
+    "text": "3.2.1. Niveau 1 — Régulation des centres supérieurs"
+  },
+  {
+    "type": "para",
+    "text": "Le Niveau 1 est particulièrement pertinent pour les ovaires en raison de leur contrôle endocrinien par l’axe hypothalamo-hypophysaire."
+  },
+  {
+    "type": "bullets",
+    "items": [
+      "Hypothalamus.",
+      "Hypophyse.",
+      "Axe hypothalamo-hypophysaire.",
+      "Centres supérieurs selon le contexte clinique."
+    ]
+  },
+  {
+    "type": "xref",
+    "label": "Cf. chapitre 3 — Système nerveux central.",
+    "href": "/lecture/chapitre-3?lang=fr",
+    "text": ""
+  },
+  {
+    "type": "rop",
+    "body": [
+      "Les zones centrales sont ici des repères de régulation générale ; elles ne constituent pas une méthode de modification directe des concentrations hormonales."
+    ]
+  },
+  {
+    "type": "sub",
+    "text": "3.2.2. Niveau 2 — Régulation neuro-végétative et adaptation"
+  },
+  {
+    "type": "para",
+    "text": "Pour l’ovaire, l’organisation autonome ne doit pas être présentée comme identique à celle de l’utérus. La composante sympathique et les plexus accompagnant les vaisseaux ovariques occupent une place importante."
+  },
+  {
+    "type": "bullets",
+    "items": [
+      "Sympathique thoracique inférieur, principalement autour de T10-T12 dans la lecture du chapitre.",
+      "Plexus aortorénal.",
+      "Plexus ovarique accompagnant les vaisseaux ovariques.",
+      "Réseaux autonomes pelviens à considérer surtout pour la région utéro-tubaire et le contexte loco-régional, sans en faire une voie obligatoire et directe de l’ovaire."
+    ]
+  },
+  {
+    "type": "para",
+    "text": "Le parasympathique pelvien S2-S4 n’est donc plus présenté comme une étape systématique et directe de la cartographie ovarienne. Pour les trompes, les voies autonomes pelviennes peuvent être prises en compte dans le contexte régional, sans réduire leur physiologie à l’opposition « sympathique = contraction / parasympathique = sécrétion »."
+  },
+  {
+    "type": "xref",
+    "label": "Cf. chapitre 4 — Système nerveux autonome.",
+    "href": "/lecture/chapitre-4?lang=fr",
+    "text": ""
+  },
+  {
+    "type": "rop",
+    "body": [
+      "Le Niveau 2 vise ici surtout les voies autonomes et vasculo-nerveuses associées à l’ovaire et aux trompes, sans imposer une même organisation autonome à tous les organes génitaux féminins."
+    ]
+  },
+  {
+    "type": "sub",
+    "text": "3.2.3. Niveau 3 — Régulation viscérale loco-régionale"
+  },
+  {
+    "type": "para",
+    "text": "Le Niveau 3 prend une place majeure pour les ovaires et les trompes, qui entretiennent des rapports étroits avec le péritoine, l’utérus et les autres viscères pelviens."
+  },
+  {
+    "type": "bullets",
+    "items": [
+      "Cavité pelvienne.",
+      "Ovaire : bord antérieur du talon, à l’aplomb des quatrième et cinquième orteils.",
+      "Trompe : le long du bord antérieur du talon, depuis la zone réflexe de l’ovaire jusqu’à la jonction utéro-tubaire, située à l’aplomb des premier et deuxième orteils.",
+      "Jonction utéro-tubaire : correspond également, dans la cartographie ROP, à la partie antérieure du plexus hypogastrique inférieur.",
+      "Ligament suspenseur de l’ovaire.",
+      "Ligament utéro-ovarien.",
+      "Ligament tubo-ovarien.",
+      "Ligament large et mésosalpinx.",
+      "Rapports avec l’utérus, le péritoine, la vessie et le rectum."
+    ]
+  },
+  {
+    "type": "xref",
+    "label": "Cf. chapitre 17 — Cavité pelvienne.",
+    "href": "/lecture/chapitre-17?lang=fr",
+    "text": ""
+  },
+  {
+    "type": "rop",
+    "body": [
+      "Le Niveau 3 est particulièrement important car l’ovaire et surtout la trompe sont mobiles et étroitement dépendants de leur environnement péritonéal et pelvien."
+    ]
+  },
+  {
+    "type": "sub",
+    "text": "3.2.4. Niveau 4 — Intégration viscéro-somatique et viscéro-émotionnelle"
+  },
+  {
+    "type": "sub",
+    "text": "3.2.4.1. Versant viscéro-somatique"
+  },
+  {
+    "type": "bullets",
+    "items": [
+      "Charnière thoraco-lombaire.",
+      "Région lombo-sacrée.",
+      "Bassin et sacrum.",
+      "Plancher pelvien.",
+      "Muscles pelvi-trochantériens lorsque le tableau clinique le justifie.",
+      "Territoires douloureux associés : pelviens, lombaires, inguinaux ou membres inférieurs selon les convergences et le contexte."
+    ]
+  },
+  {
+    "type": "sub",
+    "text": "3.2.4.2. Versant viscéro-émotionnel — Axe cerveau-sphère génitale féminine"
+  },
+  {
+    "type": "para",
+    "text": "Stress, douleur chronique, sexualité, vécu corporel, fertilité, grossesse, post-partum ou ménopause peuvent modifier la perception des symptômes et interagir avec la régulation autonome et neuroendocrine. Ces facteurs ne permettent pas de définir un profil psychologique propre aux ovaires ou à l’utérus."
+  },
+  {
+    "type": "xref",
+    "label": "Cf. chapitre 3 — Système nerveux central pour les réseaux centraux ",
+    "href": "/lecture/chapitre-3?lang=fr",
+    "text": "cf. sections 1.11 et 2.11 « Relations viscéro-émotionnelles » pour l’application clinique."
+  },
+  {
+    "type": "rop",
+    "body": [
+      "Le Niveau 4 intègre les dimensions somatiques et émotionnelles comme modulateurs du vécu et de la fonction, sans en faire des causes uniques des symptômes gynécologiques."
+    ]
+  },
+  {
+    "type": "sub",
+    "text": "3.3. Soutiens associés selon les tests"
+  },
+  {
+    "type": "para",
+    "text": "Le foie et le rein gauche figuraient auparavant dans le « syndrome général d’adaptation » aussi bien pour l’utérus que pour les ovaires. Ils peuvent être conservés comme soutiens associés, mais ne doivent pas être considérés comme des étapes obligatoires du protocole."
+  },
+  {
+    "type": "bullets",
+    "items": [
+      "Foie : lorsque le contexte métabolique ou hormonal est retenu par l’anamnèse et les tests.",
+      "Rein gauche et axe veineux ovarien gauche : lorsque le contexte vasculaire ou régional le justifie.",
+      "Vessie, rectum et intestin : selon les rapports pelviens et les symptômes associés.",
+      "Diaphragme et cavité abdominale : lorsque la dynamique globale du tronc et des pressions est cliniquement pertinente."
+    ]
+  },
+  {
+    "type": "rop",
+    "body": [
+      "Ces soutiens complètent le protocole lorsqu’ils sont pertinents. Ils ne remplacent pas la lecture hiérarchisée des quatre niveaux propre à l’utérus, aux ovaires et aux trompes."
+    ]
+  },
+  {
+    "type": "note",
+    "label": "Principe de sécurité",
+    "body": [
+      "Une zone réflexe sensible ou une modification palpatoire n’est pas un test diagnostique de fibrome, endométriose, infection, grossesse extra-utérine, kyste, tumeur ou autre pathologie gynécologique. Toute douleur aiguë inhabituelle, métrorragie, retard de règles avec douleur, fièvre, altération de l’état général ou symptôme inexpliqué impose une évaluation médicale adaptée."
+    ]
+  }
+]

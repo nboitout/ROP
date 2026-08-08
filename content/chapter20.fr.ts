@@ -517,3 +517,333 @@ export const chapter20Fr: Chapter = {
     }
   ]
 }
+
+
+// Revised four-level ROP protocol from the complete reflex-zone Word revision.
+const revisedReflexSection = chapter20Fr.sections.find((section) => section.id === 'zones-reflexes-podales')!
+revisedReflexSection.blocks = [
+  {
+    "type": "para",
+    "text": "Les localisations décrites ci-dessous appartiennent à la cartographie clinique de la ROP. Elles ne constituent pas une projection anatomique directe des testicules, de la prostate, des vésicules séminales, des voies génitales ou de leurs nerfs sur le pied. Leur sélection dépend de l’anamnèse, des tests, des réactions palpatoires et du tableau fonctionnel."
+  },
+  {
+    "type": "para",
+    "text": "Pour les organes génitaux masculins, la lecture des zones réflexes est organisée selon les quatre niveaux du protocole ROP, en distinguant les testicules et les voies spermatiques de la prostate et des structures pelviennes associées."
+  },
+  {
+    "type": "sub",
+    "text": "11.1. Testicules et voies spermatiques"
+  },
+  {
+    "type": "sub",
+    "text": "11.1.1. Niveau 1 — Régulation des centres supérieurs"
+  },
+  {
+    "type": "para",
+    "text": "La fonction testiculaire s’inscrit dans une régulation neuroendocrine centrale, notamment par l’axe hypothalamo-hypophysaire-gonadique. Dans le protocole ROP, le Niveau 1 peut donc être envisagé lorsque le contexte général, endocrinien, de stress ou d’adaptation le justifie."
+  },
+  {
+    "type": "bullets",
+    "items": [
+      "Zones réflexes occipitales.",
+      "Tronc cérébral et centres d’intégration.",
+      "Diencéphale, notamment hypothalamus.",
+      "Hypophyse et axe hypothalamo-hypophysaire.",
+      "Environnement neuro-méningé dans le modèle ROP."
+    ]
+  },
+  {
+    "type": "xref",
+    "label": "Cf. chapitre 3 — Système nerveux central, Niveau 1 : Régulation des centres supérieurs.",
+    "href": "/lecture/chapitre-3?lang=fr",
+    "text": ""
+  },
+  {
+    "type": "rop",
+    "body": [
+      "Le Niveau 1 replace la fonction gonadique dans sa régulation centrale et neuroendocrine. Il ne signifie pas qu’une zone podale modifie directement la sécrétion de testostérone, de LH ou de FSH."
+    ]
+  },
+  {
+    "type": "sub",
+    "text": "11.1.2. Niveau 2 — Régulation neuro-végétative et adaptation"
+  },
+  {
+    "type": "para",
+    "text": "Pour le testicule, l’organisation autonome ne doit pas être calquée sur celle des organes pelviens. La composante sympathique et les plexus péri-vasculaires accompagnant les vaisseaux gonadiques occupent une place importante."
+  },
+  {
+    "type": "bullets",
+    "items": [
+      "Sympathique thoracique inférieur : territoire principalement T10-T12 dans la lecture du chapitre (figures 4.29 et 4.32).",
+      "Plexus aortorénal et réseaux péri-artériels gonadiques.",
+      "Voies autonomes associées au cordon spermatique et au conduit déférent selon le contexte clinique.",
+      "Réseaux pelviens autonomes à considérer surtout pour les voies génitales distales et les glandes accessoires, sans présenter S2-S4 comme une voie parasympathique directe et obligatoire du testicule."
+    ]
+  },
+  {
+    "type": "xref",
+    "label": "Cf. chapitre 4 — Système nerveux autonome, notamment les sections consacrées au sympathique thoraco-lombaire, aux nerfs splanchniques et aux plexus prévertébraux.",
+    "href": "/lecture/chapitre-4?lang=fr",
+    "text": ""
+  },
+  {
+    "type": "rop",
+    "body": [
+      "Le Niveau 2 vise ici les voies autonomes et vasculo-nerveuses associées aux gonades et aux voies spermatiques, sans réduire leur physiologie à une opposition simpliste entre sympathique et parasympathique."
+    ]
+  },
+  {
+    "type": "sub",
+    "text": "11.1.3. Niveau 3 — Régulation viscérale loco-régionale"
+  },
+  {
+    "type": "para",
+    "text": "Le Niveau 3 rassemble la cartographie des testicules, du cordon spermatique et du canal inguinal, ainsi que leurs rapports régionaux."
+  },
+  {
+    "type": "bullets",
+    "items": [
+      "Testicule : même zone réflexe que l’ovaire dans la cartographie ROP, au bord antérieur du talon, à l’aplomb des quatrième et cinquième orteils (figures 20.11 et 19.8).",
+      "Épididyme et conduit déférent : à intégrer dans la continuité du territoire testiculaire et du cordon spermatique selon les figures de la méthode.",
+      "Canal inguinal, cordon spermatique et muscle crémaster : interligne tibio-tarsien antérieur (figures 19.4 et 20.12).",
+      "Anneaux inguinaux profond et superficiel : repères associés lorsque la clinique oriente vers la région inguinale.",
+      "Rapports vasculaires, péritonéaux et abdomino-pelviens selon le contexte."
+    ]
+  },
+  {
+    "type": "xref",
+    "label": "Cf. chapitre 17 — Cavité pelvienne pour l’environnement régional ",
+    "href": "/lecture/chapitre-17?lang=fr",
+    "text": "cf. chapitre 19 pour le repère cartographique commun avec l’ovaire."
+  },
+  {
+    "type": "rop",
+    "body": [
+      "Le Niveau 3 conserve les repères historiques de la cartographie ROP tout en les replaçant dans leur environnement anatomique. Une sensibilité d’une zone réflexe ne constitue pas un diagnostic de varicocèle, hernie, torsion ou pathologie testiculaire."
+    ]
+  },
+  {
+    "type": "sub",
+    "text": "11.1.4. Niveau 4 — Intégration viscéro-somatique et viscéro-émotionnelle"
+  },
+  {
+    "type": "para",
+    "text": "Le Niveau 4 associe les convergences somatiques des territoires génitaux et l’intégration centrale de la sexualité, de la douleur et du vécu corporel."
+  },
+  {
+    "type": "sub",
+    "text": "Versant viscéro-somatique "
+  },
+  {
+    "type": "bullets",
+    "items": [
+      "Régions thoraco-lombaire et lombo-inguinale selon les afférences concernées.",
+      "Nerf génito-fémoral et territoire crémastérien lorsque pertinent.",
+      "Nerf ilio-inguinal et région inguino-scrotale selon le tableau clinique.",
+      "Périnée et nerf pudendal pour les territoires génitaux externes et sphinctériens.",
+      "Bassin, sacrum et chaînes musculaires associées lorsque des douleurs projetées ou des tensions régionales sont présentes."
+    ]
+  },
+  {
+    "type": "sub",
+    "text": "Versant viscéro-émotionnel — Axe cerveau-sphère génitale masculine "
+  },
+  {
+    "type": "para",
+    "text": "La sexualité, l’image corporelle, la fertilité, la douleur, le vieillissement, le stress et l’anxiété de performance peuvent modifier la perception des symptômes et interagir avec les réseaux autonomes, neuroendocriniens et émotionnels. Ces facteurs ne définissent pas une « personnalité génitale » masculine."
+  },
+  {
+    "type": "xref",
+    "label": "Cf. chapitre 3 — Système nerveux central pour les réseaux centraux et cortico-limbiques ",
+    "href": "/lecture/chapitre-3?lang=fr",
+    "text": "cf. section 10 « Relations viscéro-émotionnelles » du présent chapitre."
+  },
+  {
+    "type": "rop",
+    "body": [
+      "Le Niveau 4 permet d’intégrer le contexte somatique et émotionnel sans attribuer automatiquement un symptôme génital à une origine psychologique."
+    ]
+  },
+  {
+    "type": "sub",
+    "text": "11.2. Prostate, vésicules séminales et voies urinaires associées"
+  },
+  {
+    "type": "sub",
+    "text": "11.2.1. Niveau 1 — Régulation des centres supérieurs"
+  },
+  {
+    "type": "para",
+    "text": "La prostate est sensible au contexte hormonal et s’inscrit dans la régulation générale de l’axe hypothalamo-hypophysaire-gonadique. Le Niveau 1 peut être retenu lorsque le tableau associe stress, troubles du sommeil, anxiété, symptômes sexuels ou dysrégulation générale."
+  },
+  {
+    "type": "bullets",
+    "items": [
+      "Zones réflexes occipitales.",
+      "Tronc cérébral et centres d’intégration.",
+      "Diencéphale, notamment hypothalamus.",
+      "Hypophyse et axe hypothalamo-hypophysaire.",
+      "Environnement neuro-méningé dans le modèle ROP."
+    ]
+  },
+  {
+    "type": "xref",
+    "label": "Cf. chapitre 3 — Système nerveux central.",
+    "href": "/lecture/chapitre-3?lang=fr",
+    "text": ""
+  },
+  {
+    "type": "rop",
+    "body": [
+      "Le Niveau 1 accompagne la régulation générale et le contexte neuroendocrinien ; il ne constitue pas une action directe sur le volume prostatique ou les concentrations hormonales."
+    ]
+  },
+  {
+    "type": "sub",
+    "text": "11.2.2. Niveau 2 — Régulation neuro-végétative et adaptation"
+  },
+  {
+    "type": "para",
+    "text": "La prostate, les vésicules séminales, le col vésical et les voies génitales pelviennes dépendent d’un réseau autonome mixte organisé autour des plexus hypogastriques."
+  },
+  {
+    "type": "bullets",
+    "items": [
+      "Sympathique thoraco-lombaire : territoire approximatif T11-L2 dans la lecture clinique.",
+      "Plexus hypogastrique supérieur et nerfs hypogastriques.",
+      "Parasympathique pelvien S2-S4.",
+      "Plexus hypogastrique inférieur, carrefour autonome majeur de la cavité pelvienne.",
+      "Coordination avec la vessie, l’urètre et les fonctions sexuelles selon le symptôme."
+    ]
+  },
+  {
+    "type": "xref",
+    "label": "Cf. chapitre 4 — Système nerveux autonome, notamment les sections « Parasympathique pelvien », « Sympathique viscéro-moteur » et « Plexus préviscéral pelvien » ",
+    "href": "/lecture/chapitre-4?lang=fr",
+    "text": "cf. chapitre 18 — Vessie."
+  },
+  {
+    "type": "rop",
+    "body": [
+      "Le Niveau 2 vise à accompagner l’organisation autonome régionale sans chercher à stimuler isolément le sympathique ou le parasympathique."
+    ]
+  },
+  {
+    "type": "sub",
+    "text": "11.2.3. Niveau 3 — Régulation viscérale loco-régionale"
+  },
+  {
+    "type": "para",
+    "text": "Le Niveau 3 regroupe le cœur de la cartographie prostatique et son environnement pelvien immédiat."
+  },
+  {
+    "type": "bullets",
+    "items": [
+      "Cavité pelvienne et périnée (figures 17.15, 17.16 et 17.17).",
+      "Prostate, vésicules séminales et partie moyenne du plexus hypogastrique inférieur : petite dépression en avant de l’articulation sacro-coccygienne (figures 18.7 et 18.9).",
+      "Urètre prostatique et col vésical selon les repères de la cartographie pelvienne.",
+      "Vessie, notamment lorsque les symptômes mictionnels sont associés.",
+      "Plancher pelvien, symphyse pubienne et structures de soutien de la loge prostatique selon les tests.",
+      "Rectum et rapports postérieurs lorsqu’ils participent au tableau loco-régional."
+    ]
+  },
+  {
+    "type": "xref",
+    "label": "Cf. chapitre 17 — Cavité pelvienne, Niveau 3 : Régulation viscérale loco-régionale ",
+    "href": "/lecture/chapitre-17?lang=fr",
+    "text": "cf. chapitre 18 — Vessie."
+  },
+  {
+    "type": "rop",
+    "body": [
+      "Le Niveau 3 replace la prostate dans son environnement pelvien. Une zone réflexe sensible constitue un repère clinique et non la preuve d’une hypertrophie, d’une congestion ou d’une lésion prostatique."
+    ]
+  },
+  {
+    "type": "sub",
+    "text": "11.2.4. Niveau 4 — Intégration viscéro-somatique et viscéro-émotionnelle"
+  },
+  {
+    "type": "para",
+    "text": "Cette rubrique remplace l’ancienne « balance cerveau limbique-prostate ». Elle associe les convergences somatiques, le plancher pelvien et l’axe cerveau-sphère génitale masculine."
+  },
+  {
+    "type": "sub",
+    "text": "Versant viscéro-somatique "
+  },
+  {
+    "type": "bullets",
+    "items": [
+      "Nerf pudendal S2-S4 et territoires périnéaux.",
+      "Plancher pelvien et sphincter urétral externe.",
+      "Sacrum et coccyx.",
+      "Symphyse pubienne.",
+      "Territoires lombo-sacrés et pelviens douloureux associés."
+    ]
+  },
+  {
+    "type": "sub",
+    "text": "Versant viscéro-émotionnel — Axe cerveau-sphère génitale masculine "
+  },
+  {
+    "type": "para",
+    "text": "Les symptômes urinaires ou sexuels peuvent être modulés par le stress, l’anticipation, l’anxiété, la douleur, le contexte relationnel et le vécu du vieillissement. Dans le modèle clinique ROP, l’écoute-induction peut conserver son principe — un repère prostatique et un repère central — mais elle est présentée comme une technique d’intégration fonctionnelle, et non comme une action directe sur un « cerveau limbique »."
+  },
+  {
+    "type": "xref",
+    "label": "Cf. chapitre 3 — Système nerveux central pour les réseaux centraux et cortico-limbiques ",
+    "href": "/lecture/chapitre-3?lang=fr",
+    "text": "cf. section 10 « Relations viscéro-émotionnelles » du présent chapitre."
+  },
+  {
+    "type": "rop",
+    "body": [
+      "Le Niveau 4 relie le symptôme prostatique ou sexuel aux convergences somatiques et au contexte de perception et d’adaptation, sans définir de profil psychologique propre à la prostate."
+    ]
+  },
+  {
+    "type": "sub",
+    "text": "11.3. Soutiens associés selon les tests"
+  },
+  {
+    "type": "para",
+    "text": "Le foie et le rein gauche figuraient auparavant dans le « syndrome général d’adaptation ». Ils peuvent être conservés comme soutiens associés, mais ne doivent pas être considérés comme des étapes obligatoires du traitement des organes génitaux masculins."
+  },
+  {
+    "type": "bullets",
+    "items": [
+      "Rein gauche et axe veineux gonadique gauche : lorsque le contexte vasculaire ou une varicocèle justifie cette lecture régionale (figures 16.13 et 16.14).",
+      "Foie : uniquement lorsque le contexte métabolique ou systémique est retenu par l’anamnèse et les tests (figures 11.10 et 11.11).",
+      "Intestin et côlon : en présence de constipation, de troubles digestifs ou de contraintes pelviennes associées.",
+      "Vessie : en présence de symptômes mictionnels, notamment dans l’hypertrophie bénigne de la prostate ou les syndromes pelviens.",
+      "Diaphragme et cavité abdominale : lorsque la dynamique globale du tronc et des pressions est cliniquement pertinente."
+    ]
+  },
+  {
+    "type": "rop",
+    "body": [
+      "Ces soutiens complètent le protocole lorsqu’ils sont pertinents ; ils ne remplacent pas la lecture hiérarchisée des quatre niveaux propres aux testicules, aux voies spermatiques et à la prostate."
+    ]
+  },
+  {
+    "type": "sub",
+    "text": "11.4. Principe de sécurité"
+  },
+  {
+    "type": "note",
+    "label": "PRÉCAUTION",
+    "body": [
+      "Une zone réflexe sensible ou une modification palpatoire n’est pas un test diagnostique de torsion testiculaire, cancer, prostatite, hypertrophie bénigne de la prostate, infection, rétention urinaire ou autre pathologie uro-génitale. Toute douleur testiculaire aiguë, masse ou augmentation de volume, fièvre, hématurie, rétention urinaire, altération de l’état général ou symptôme inhabituel impose une évaluation médicale adaptée."
+    ]
+  }
+]
+
+// Keep every cross-chapter reference independently clickable.
+const revisedChapter20Blocks = revisedReflexSection.blocks
+if (revisedChapter20Blocks[40]?.type === 'xref') revisedChapter20Blocks[40].text = ''
+revisedChapter20Blocks.splice(41, 0, { type: 'xref', label: 'Cf. chapitre 18 — Vessie.', href: '/lecture/chapitre-18?lang=fr' })
+if (revisedChapter20Blocks[35]?.type === 'xref') revisedChapter20Blocks[35].text = ''
+revisedChapter20Blocks.splice(36, 0, { type: 'xref', label: 'Cf. chapitre 18 — Vessie.', href: '/lecture/chapitre-18?lang=fr' })
+if (revisedChapter20Blocks[16]?.type === 'xref') revisedChapter20Blocks[16].text = ''
+revisedChapter20Blocks.splice(17, 0, { type: 'xref', label: 'Cf. chapitre 19 — Organes génitaux féminins.', href: '/lecture/chapitre-19?lang=fr' })
