@@ -8,6 +8,7 @@ export const dynamic = 'force-dynamic'
 
 /** Draft pages a grant may unlock, and where the holder lands after redeeming. */
 const DRAFT_ENTRY: Record<string, string> = {
+  'chapter-3-rework': '/lecture/chapitre-3-rework',
   'chapter-4-rework': '/lecture/chapitre-4-rework',
   'chapter-5-rework': '/lecture/chapitre-5-rework',
 }
