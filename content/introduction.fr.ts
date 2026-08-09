@@ -116,6 +116,12 @@ export const introductionFr: Chapter = {
         "text": "Le diaphragme n’appartient pas anatomiquement au système nerveux autonome ; il est placé ici pour sa valeur fonctionnelle dans la respiration, le tonus et l’observation de l’état général du patient."
       },
       {
+        "type": "rop",
+        "body": [
+          "Dans le raisonnement clinique ROP, devant un trouble fonctionnel viscéral, la recherche porte prioritairement sur les facteurs susceptibles de relever des Niveaux 1 et/ou 2, avant d’envisager le viscère lui-même au Niveau 3. La méthode considère ainsi que l’origine du trouble est le plus souvent à rechercher en amont plutôt que comme strictement primaire dans le viscère ; une atteinte loco-régionale évidente, notamment après un traumatisme direct, constitue une situation particulière à rechercher à l’anamnèse. Cette hiérarchisation propre à la ROP ne se substitue pas au diagnostic médical et ne permet pas d’exclure une pathologie organique."
+        ]
+      },
+      {
         "type": "sub",
         "text": "2.3. Niveau 3 — Régulation viscérale loco-régionale"
       },
@@ -179,7 +185,7 @@ export const introductionFr: Chapter = {
       },
       {
         "type": "para",
-        "text": "L’ordre réel dépend de l’anamnèse, du symptôme principal, des antécédents médicaux, traumatiques ou chirurgicaux, des tests, de la tolérance au toucher et de la réponse observée. Une contrainte loco-régionale clairement identifiée peut être prioritaire ; un tableau diffus ou une forte réactivité neuro-végétative peut au contraire conduire à commencer par les niveaux 1 ou 2."
+        "text": "La recherche porte généralement d’abord sur les facteurs relevant des Niveaux 1 et/ou 2. L’ordre réel reste toutefois adapté à l’anamnèse, au symptôme principal, aux antécédents médicaux, traumatiques ou chirurgicaux, aux tests, à la tolérance au toucher et à la réponse observée. Une contrainte loco-régionale clairement identifiée peut notamment conduire à prioriser le Niveau 3."
       },
       {
         "type": "para",
@@ -649,6 +655,7 @@ export const introductionFr: Chapter = {
         "type": "bullets",
         "items": [
           "La séquence clinique comporte quatre niveaux complémentaires : centres supérieurs ; régulation neuro-végétative et adaptation ; régulation viscérale loco-régionale ; intégration viscéro-somatique et viscéro-émotionnelle.",
+          "Devant un trouble fonctionnel viscéral, le raisonnement ROP recherche généralement d’abord les facteurs relevant des Niveaux 1 et/ou 2 avant de recentrer l’examen sur le Niveau 3, sans transformer cette hiérarchisation en protocole rigide.",
           "La cartographie ROP reste un outil clinique, non une projection anatomique directe du corps dans le pied.",
           "Les fondements neuro-anatomiques reposent sur des portes sensorielles et sur des convergences périphériques, spinales et supraspinales possibles.",
           "Le pelvis constitue aujourd’hui le meilleur territoire pour confronter proximité neuro-anatomique, observations cliniques et recherche.",
