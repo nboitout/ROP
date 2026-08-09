@@ -1,5 +1,5 @@
 // Introduction - French
-// Source: public/chapter-0/Chapitre_0_Introduction_ROP_version_restructuree.docx
+// Source: public/chapter-0/Chapitre_0_Introduction_ROP_protocole_4_niveaux_aligne.docx
 
 import type { Chapter } from './types'
 
@@ -118,53 +118,53 @@ export const introductionFr: Chapter = {
       {
         "type": "rop",
         "body": [
-          "Dans le raisonnement clinique ROP, devant un trouble fonctionnel viscéral, la recherche porte prioritairement sur les facteurs susceptibles de relever des Niveaux 1 et/ou 2, avant d’envisager le viscère lui-même au Niveau 3. La méthode considère ainsi que l’origine du trouble est le plus souvent à rechercher en amont plutôt que comme strictement primaire dans le viscère ; une atteinte loco-régionale évidente, notamment après un traumatisme direct, constitue une situation particulière à rechercher à l’anamnèse. Cette hiérarchisation propre à la ROP ne se substitue pas au diagnostic médical et ne permet pas d’exclure une pathologie organique."
+          "Dans le raisonnement clinique ROP, devant un trouble fonctionnel viscéral, la recherche porte souvent d’abord sur les facteurs susceptibles de relever des Niveaux 1 et/ou 2. Selon l’anamnèse et les tests, le praticien peut ensuite préparer l’environnement loco-régional au Niveau 3, puis recentrer la séance sur la cible viscérale ou fonctionnelle au Niveau 4. Cette hiérarchisation est une grille clinique et non une causalité imposée : une contrainte régionale ou une cible clairement identifiée peut conduire à prioriser directement le Niveau 3 ou le Niveau 4. Elle ne se substitue pas au diagnostic médical et ne permet pas d’exclure une pathologie organique."
         ]
       },
       {
         "type": "sub",
-        "text": "2.3. Niveau 3 — Régulation viscérale loco-régionale"
+        "text": "2.3. Niveau 3 — Régulation loco-régionale"
       },
       {
         "type": "para",
-        "text": "Le troisième niveau recentre la séance sur le viscère ou le territoire viscéral concerné et sur son environnement anatomique immédiat."
+        "text": "Le troisième niveau concerne l’environnement anatomique et fonctionnel de la cible, avant le travail spécifique de l’organe ou de la fonction concernée."
       },
       {
         "type": "bullets",
         "items": [
-          "Viscère ou territoire viscéral concerné.",
           "Cavité abdominale ou pelvienne.",
-          "Péritoine.",
-          "Racines des mésos.",
-          "Mésos et ligaments viscéraux.",
-          "Fascias, rapports régionaux et passages neurovasculaires."
+          "Péritoine et autres interfaces séreuses.",
+          "Racines des mésos et mésos.",
+          "Fascias et ligaments viscéraux.",
+          "Rapports interviscéraux.",
+          "Hiatus, passages régionaux et interfaces mécaniques ou respiratoires pertinentes."
         ]
       },
       {
         "type": "para",
-        "text": "Ce niveau ne signifie pas que la ROP traite directement une maladie organique. Il organise l’examen d’un territoire fonctionnel et de ses contraintes loco-régionales, toujours en tenant compte du contexte médical."
+        "text": "Le Niveau 3 ne constitue pas une étape obligatoire. Il est utilisé lorsque l’anamnèse et les tests orientent vers une participation de l’environnement régional. Dans ce volume, le chapitre 7 constitue le socle régional abdominal et péritonéal, et le chapitre 17 le socle régional pelvien."
       },
       {
         "type": "sub",
-        "text": "2.4. Niveau 4 — Intégration viscéro-somatique et viscéro-émotionnelle"
+        "text": "2.4. Niveau 4 — Cible viscérale ou fonctionnelle et intégration"
       },
       {
         "type": "para",
-        "text": "Le quatrième niveau met le viscère en relation avec les territoires somatiques et avec les réseaux centraux qui participent à la perception de l’état interne, au contexte et à l’émotion."
+        "text": "Le quatrième niveau correspond à la cible clinique individualisée : organe, fonction ou symptôme principalement concerné. Dans les chapitres viscéraux, il associe la zone réflexe propre de l’organe à ses expressions somatiques et à son contexte viscéro-émotionnel."
       },
       {
         "type": "bullets",
         "items": [
-          "Nerfs somatiques et plexus lombaires ou sacrés.",
-          "Convergences segmentaires entre informations somatiques et viscérales.",
+          "Zone réflexe propre de l’organe ou de la fonction, avec ses éventuels sous-territoires.",
+          "Relations viscéro-somatiques : niveaux segmentaires, nerfs somatiques et convergences associées.",
           "Muscles, articulations et territoires douloureux associés.",
-          "Réseaux limbiques et cortico-limbiques, notamment insula et cortex cingulaire ; amygdale, hippocampe et réseaux préfrontaux selon le contexte clinique.",
-          "Dimension émotionnelle, étudiée avec prudence et sans interprétation imposée au patient."
+          "Relations viscéro-émotionnelles : interoception, contexte émotionnel, axe cerveau-organe ou Balance cerveau limbique-organe lorsque ce vocabulaire appartient à la pratique ROP.",
+          "Réseaux limbiques et cortico-limbiques, notamment insula et cortex cingulaire ; amygdale, hippocampe et réseaux préfrontaux selon le contexte clinique."
         ]
       },
       {
         "type": "para",
-        "text": "Il est préférable de parler de réseaux limbiques et cortico-limbiques plutôt que d’un « système limbique » unique et fermé. Cette lecture décrit des interactions possibles ; elle ne suppose pas une correspondance fixe entre une émotion, un organe et une zone réflexe."
+        "text": "Il est préférable de parler de réseaux limbiques et cortico-limbiques plutôt que d’un « système limbique » unique et fermé. La Balance cerveau limbique-organe appartient au vocabulaire clinique de la ROP lorsqu’elle est utilisée ; elle ne décrit pas une connexion anatomique directe. Cette lecture ne suppose ni une correspondance fixe entre une émotion et un organe, ni une causalité psychologique du symptôme."
       },
       {
         "type": "figure",
@@ -185,7 +185,7 @@ export const introductionFr: Chapter = {
       },
       {
         "type": "para",
-        "text": "La recherche porte généralement d’abord sur les facteurs relevant des Niveaux 1 et/ou 2. L’ordre réel reste toutefois adapté à l’anamnèse, au symptôme principal, aux antécédents médicaux, traumatiques ou chirurgicaux, aux tests, à la tolérance au toucher et à la réponse observée. Une contrainte loco-régionale clairement identifiée peut notamment conduire à prioriser le Niveau 3."
+        "text": "La recherche porte généralement d’abord sur les facteurs relevant des Niveaux 1 et/ou 2. L’ordre réel reste toutefois adapté à l’anamnèse, au symptôme principal, aux antécédents médicaux, traumatiques ou chirurgicaux, aux tests, à la tolérance au toucher et à la réponse observée. Une contrainte loco-régionale clairement identifiée peut conduire à prioriser le Niveau 3 ; lorsque la cible viscérale ou fonctionnelle est clairement identifiée, le Niveau 4 peut également être abordé directement ou précocement."
       },
       {
         "type": "para",
@@ -549,7 +549,7 @@ export const introductionFr: Chapter = {
       },
       {
         "type": "para",
-        "text": "Décrit la cartographie clinique ROP et, lorsque cela est possible, la met en regard des nerfs, branches, racines et ponts neuro-anatomiques candidats."
+        "text": "Décrit la cartographie clinique ROP, l’organise selon les quatre niveaux du protocole et, lorsque cela est possible, la met en regard des nerfs, branches, racines et ponts neuro-anatomiques candidats."
       },
       {
         "type": "sub",
@@ -557,7 +557,7 @@ export const introductionFr: Chapter = {
       },
       {
         "type": "para",
-        "text": "Décrit les convergences et projections possibles entre l’organe, les niveaux médullaires, les muscles, les articulations et les territoires douloureux associés."
+        "text": "Décrit les convergences et projections possibles entre l’organe, les niveaux médullaires, les nerfs somatiques, les muscles, les articulations et les territoires douloureux associés. Ces données alimentent notamment l’intégration viscéro-somatique du Niveau 4."
       },
       {
         "type": "sub",
@@ -565,7 +565,7 @@ export const introductionFr: Chapter = {
       },
       {
         "type": "para",
-        "text": "Propose une lecture prudente des relations entre les états émotionnels, la perception corporelle, la régulation autonome et les symptômes."
+        "text": "Propose une lecture prudente des relations entre les états émotionnels, la perception corporelle, la régulation autonome et les symptômes. Ces données alimentent notamment l’intégration viscéro-émotionnelle du Niveau 4, sans imposer d’interprétation au patient."
       },
       {
         "type": "sub",
@@ -654,8 +654,8 @@ export const introductionFr: Chapter = {
       {
         "type": "bullets",
         "items": [
-          "La séquence clinique comporte quatre niveaux complémentaires : centres supérieurs ; régulation neuro-végétative et adaptation ; régulation viscérale loco-régionale ; intégration viscéro-somatique et viscéro-émotionnelle.",
-          "Devant un trouble fonctionnel viscéral, le raisonnement ROP recherche généralement d’abord les facteurs relevant des Niveaux 1 et/ou 2 avant de recentrer l’examen sur le Niveau 3, sans transformer cette hiérarchisation en protocole rigide.",
+          "La séquence clinique comporte quatre niveaux complémentaires : régulation des centres supérieurs ; régulation neuro-végétative et adaptation ; régulation loco-régionale ; cible viscérale ou fonctionnelle et intégration.",
+          "Devant un trouble fonctionnel viscéral, le raisonnement ROP recherche généralement les facteurs de régulation centrale et autonome pertinents, évalue ensuite l’environnement loco-régional lorsque nécessaire, puis travaille la cible viscérale ou fonctionnelle en intégrant ses relations somatiques et émotionnelles. Cette progression n’est pas obligatoirement séquentielle.",
           "La cartographie ROP reste un outil clinique, non une projection anatomique directe du corps dans le pied.",
           "Les fondements neuro-anatomiques reposent sur des portes sensorielles et sur des convergences périphériques, spinales et supraspinales possibles.",
           "Le pelvis constitue aujourd’hui le meilleur territoire pour confronter proximité neuro-anatomique, observations cliniques et recherche.",
