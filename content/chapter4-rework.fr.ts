@@ -144,7 +144,7 @@ export const chapter4ReworkFr: Chapter = { slug: 'chapter-4-rework', number: '4'
       {
         "type": "rop",
         "body": [
-          "Le SNA est une des clés de l’approche ROP. Fidèle au principe « priorité au nerf », le Niveau 2 cherche à prendre en compte les voies autonomes avant ou en complément du travail loco-régional sur le viscère. Les symptômes ne sont toutefois pas interprétés comme la conséquence automatique d’un « déséquilibre sympathique/parasympathique »."
+          "Le SNA est une des clés de l’approche ROP. Fidèle au principe « priorité au nerf », le raisonnement clinique recherche en premier lieu, devant un trouble fonctionnel viscéral, une origine possible au Niveau 1 et/ou au Niveau 2, avant d’envisager un travail loco-régional sur le viscère lui-même. Dans le modèle ROP, l’origine d’un trouble fonctionnel est ainsi considérée comme plus souvent située en amont que primaire dans le viscère ; une atteinte directement liée au viscère, notamment après un traumatisme local, constitue une situation particulière à rechercher à l’anamnèse. Le Niveau 2 vise notamment à prendre en compte les voies autonomes participant à la régulation du viscère. Les symptômes ne sont toutefois pas interprétés comme la conséquence automatique d’un « déséquilibre sympathique/parasympathique », et toute cause organique ou pathologique relevant d’une évaluation médicale doit naturellement être exclue."
         ]
       },
       {
@@ -969,6 +969,7 @@ export const chapter4ReworkFr: Chapter = { slug: 'chapter-4-rework', number: '4'
         "type": "bullets",
         "items": [
           "Le chapitre 4 conserve l’architecture de la version originale tout en étant recentré sur le Niveau 2 : régulation neuro-végétative et adaptation.",
+          "Dans le raisonnement clinique ROP, un trouble fonctionnel viscéral conduit à rechercher prioritairement les facteurs relevant des Niveaux 1 et/ou 2 avant d’envisager le viscère comme origine primaire du trouble ; cette hiérarchisation ne se substitue pas à la recherche d’une pathologie organique.",
           "Les références entre chapitres sont conservées afin de maintenir la continuité de lecture du livre.",
           "Les encadrés « Intérêt en ROP » sont maintenus aux endroits où l’anatomie ou la physiologie est mise en relation avec la pratique clinique.",
           "Le SNA fonctionne dans les deux sens : commandes efférentes vers les viscères et informations afférentes vers les centres.",
