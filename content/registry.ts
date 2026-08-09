@@ -70,7 +70,7 @@ import { chapter21It } from './chapter21.it'
 // These recently revised French chapters belong to the private-edition flow.
 // Keep their foundational cross-references inside that edition, including
 // references appended after the initial chapter object is declared.
-for (const chapter of [chapter7Fr, chapter8Fr, chapter15Fr, chapter16Fr, chapter17Fr, chapter18Fr, chapter19Fr, chapter20Fr, chapter21Fr]) {
+for (const chapter of [chapter7Fr, chapter8Fr, chapter13Fr, chapter14Fr, chapter15Fr, chapter16Fr, chapter17Fr, chapter18Fr, chapter19Fr, chapter20Fr, chapter21Fr]) {
   for (const section of chapter.sections) {
     for (const block of section.blocks) {
       if (block.type !== 'xref') continue

@@ -463,3 +463,46 @@ appendAfterBlock(
   (block) => block.type === "bullets" && block.items.some((item) => normalizedText(item).startsWith("rate")),
   chapter13ReflexFigureGroups.spleen,
 )
+
+// Revised four-level protocol for the spleen. Retain the established spleen
+// and costo-vertebral photos at their relevant levels.
+const chapter13Reflex = chapter13Fr.sections.find((section) => section.id === 'zones-reflexes-podales')!
+chapter13Reflex.title = '12. Zones réflexes podales'
+chapter13Reflex.blocks = [
+  { type: 'note', label: 'Précision méthodologique', body: ['Les localisations décrites ci-dessous appartiennent à la cartographie clinique de la ROP. Elles ne constituent pas une projection anatomique directe de la rate, de ses vaisseaux ou de ses voies nerveuses sur le pied. Pour la rate, le protocole associe la zone spécifique de l’organe, la régulation neuro-végétative, l’environnement régional abdominal et l’intégration viscéro-somatique et neuro-immunitaire.'] },
+  { type: 'sub', text: '12.1. Repère propre à la rate' },
+  { type: 'para', text: 'Le repère podal spécifique de la rate est conservé. Dans la cartographie ROP, il est recherché à partir de l’angle splénique du côlon : celui-ci se situe médialement et au-dessus de la styloïde du 5e métatarsien gauche. La zone de la rate se place sur ce territoire, sous l’extrémité gauche de la zone de l’hémi-coupole diaphragmatique gauche.' },
+  { type: 'figure', src: '/chapter-13/cartographie/figure-13-04.png', caption: 'Photo : Rate', alt: 'Repère podal de la rate', orientation: 'portrait' },
+  { type: 'rop', body: ['La zone splénique constitue la cible spécifique de l’organe. Les structures voisines ne sont associées que si les tests et le contexte clinique le justifient.'] },
+  { type: 'sub', text: '12.2. Niveau 1 — Régulation des centres supérieurs' },
+  { type: 'para', text: 'Le Niveau 1 reste court et optionnel. Il peut être intégré dans certains tableaux de fatigue prolongée, récupération post-infectieuse, stress important ou trouble du sommeil lorsque le contexte général le justifie.' },
+  { type: 'bullets', items: ['Zones réflexes occipitales.', 'Tronc cérébral et centres d’intégration.', 'Hypothalamus et régulation générale de l’adaptation.'] },
+  { type: 'xref', label: 'Voir le chapitre 3 — Système nerveux central', href: '/lecture/chapitre-3-rework?lang=fr' },
+  { type: 'rop', body: ['Ce niveau correspond à une préparation générale lorsque le contexte neuro-immunitaire et adaptatif paraît pertinent. Il ne suppose pas l’existence d’une voie spécifique et directe « cerveau-rate ».'] },
+  { type: 'sub', text: '12.3. Niveau 2 — Régulation neuro-végétative et adaptation' },
+  { type: 'para', text: 'La rate reçoit une innervation autonome à dominante sympathique. Dans le chapitre, cette organisation est décrite autour des étages Th6-Th9, avec passage par le plexus cœliaque puis le pédicule splénique.' },
+  { type: 'bullets', items: ['Sympathique thoracique Th6-Th9.', 'Chaîne sympathique thoracique correspondante.', 'Plexus cœliaque.', 'Pédicule splénique comme interface régionale vasculo-nerveuse.'] },
+  { type: 'para', text: 'Le nerf vague n’est pas retenu dans la séquence standard de la rate. Selon le contexte, le foie et le système porte peuvent être associés comme soutiens fonctionnels, mais ils ne constituent pas une étape obligatoire.' },
+  { type: 'xref', label: 'Voir le chapitre 4 — Système nerveux autonome', href: '/lecture/chapitre-4-rework?lang=fr' },
+  { type: 'xref', label: 'Voir le chapitre 8 — Diaphragme', href: '/lecture/chapitre-8?lang=fr' },
+  { type: 'rop', body: ['Le Niveau 2 vise surtout la régulation sympathique et l’adaptation générale autour de la rate, sans supposer une action directe sur son innervation ou son débit sanguin.'] },
+  { type: 'sub', text: '12.4. Niveau 3 — Régulation viscérale loco-régionale' },
+  { type: 'para', text: 'Le Niveau 3 replace la rate dans son environnement sous-diaphragmatique gauche. La zone propre de la rate peut être complétée, selon les tests, par ses principaux rapports anatomiques.' },
+  { type: 'bullets', items: ['Diaphragme gauche.', 'Estomac.', 'Queue du pancréas.', 'Rein gauche.', 'Angle splénique du côlon.', 'Ligaments gastrosplénique, pancréaticosplénique, phrénocolique, phrénosplénique et splénorénal.', 'Racine du mésocôlon transverse uniquement si cette interface est cliniquement pertinente.'] },
+  { type: 'xref', label: 'Voir le chapitre 7 — Socle régional abdominal et péritonéal', href: '/lecture/chapitre-7?lang=fr' },
+  { type: 'rop', body: ['Le Niveau 3 ne conduit pas à traiter systématiquement estomac, pancréas, rein et côlon. Les rapports régionaux sont sélectionnés selon les tests et la cohérence du tableau clinique.'] },
+  { type: 'sub', text: '12.5. Niveau 4 — Intégration viscéro-somatique et neuro-immunitaire' },
+  { type: 'para', text: 'Versant viscéro-somatique. Les principaux repères sont Th9-Th11, les articulations costo-transversaires correspondantes, les 9e, 10e et 11e côtes gauches, le thorax postéro-inférieur gauche et le diaphragme gauche. Une manifestation scapulaire gauche peut être intégrée lorsque le contexte diaphragmatique le rend pertinent, sans en faire une correspondance systématique.' },
+  { type: 'figure', src: '/chapter-13/cartographie/figure-13-02.png', caption: 'Photo : Articulations costo-vertébrales', alt: 'Repères podaux des articulations costo-vertébrales', orientation: 'landscape' },
+  { type: 'para', text: 'Axe cerveau-immunité / rate. La notion de « balance cerveau limbique-rate » est remplacée par une lecture plus large. La rate participe aux fonctions immunitaires et la réponse immunitaire interagit avec les systèmes nerveux, endocrinien et comportemental. Fatigue, récupération post-infectieuse, stress et sommeil peuvent donc être intégrés dans une logique générale d’adaptation.' },
+  { type: 'para', text: 'L’écoute-induction peut conserver son principe — un repère splénique et un repère central — mais elle est présentée comme une technique d’intégration fonctionnelle, et non comme une action directe sur un « cerveau limbique ».' },
+  { type: 'xref', label: 'Voir le chapitre 3 — Système nerveux central', href: '/lecture/chapitre-3-rework?lang=fr' },
+  { type: 'xref', label: 'Voir le chapitre 5 — Mécanisme de stress', href: '/lecture/chapitre-5-rework?lang=fr' },
+  { type: 'rop', body: ['Le Niveau 4 associe les convergences somatiques et le contexte neuro-immunitaire sans attribuer à la rate une personnalité ou une émotion spécifique.'] },
+  { type: 'sub', text: '12.6. Soutiens associés selon les tests' },
+  { type: 'bullets', items: ['Foie et système porte : contexte portal ou hépatique.', 'Estomac : rapport gastrosplénique.', 'Pancréas : proximité du hile et de la queue pancréatique.', 'Rein gauche : rapport splénorénal.', 'Côlon gauche : angle splénique.', 'Diaphragme : interface majeure de la région.'] },
+  { type: 'para', text: 'Ces territoires sont des soutiens associés et non des étapes systématiques.' },
+  { type: 'sub', text: '12.7. Lecture clinique' },
+  { type: 'bullets', items: ['Fatigue post-infectieuse ou suites de mononucléose après suivi médical : Niveau 1 si pertinent + Niveau 2 + zone splénique, avec grande prudence.', 'Séquelles anciennes d’un traumatisme thoraco-abdominal après exclusion médicale : zone splénique + environnement régional du Niveau 3 + côtes et diaphragme au Niveau 4.', 'Point de côté ou gêne sous-costale gauche sans signe d’alerte : diaphragme + rate + angle splénique selon les tests.'] },
+  { type: 'note', label: 'Principe de sécurité', body: ['Toute suspicion de splénomégalie, douleur aiguë de l’hypochondre gauche après traumatisme, malaise, hypotension, douleur d’épaule gauche ou contexte de mononucléose avec douleur splénique impose une évaluation médicale. La rate est un organe fragile et très vascularisé.'] },
+]
