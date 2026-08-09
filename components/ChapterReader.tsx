@@ -564,7 +564,7 @@ function BlockView({
   sourceChapterKey: string
   restrictPaidXrefs: boolean
 }) {
-  const { t } = useLanguage()
+  const { t, lang } = useLanguage()
   // Shared position anchor (same id in the synchronized reader) so the
   // sync/classic switch can reopen the other version at the same passage.
   // Set directly on each block's root element — a wrapper div would break
@@ -650,7 +650,7 @@ function BlockView({
     case 'xref':
       return (
         <p {...anchor} className="cr-xref">
-          <Link href={readerXrefHref(block.href, sourceChapterKey, restrictPaidXrefs)} className="cr-xref-link">
+          <Link href={readerXrefHref(block.href, sourceChapterKey, restrictPaidXrefs, anchorId, lang)} className="cr-xref-link">
             <span className="cr-xref-kicker">{block.label}</span>
             {block.text && <span className="cr-xref-title">{block.text}</span>}
             <span className="cr-xref-arrow" aria-hidden>→</span>

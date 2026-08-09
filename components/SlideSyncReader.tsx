@@ -1275,6 +1275,7 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, h
                     renderEndSentinelForItem={(itemIndex) => renderEndSentinel(section.id, i, itemIndex)}
                     hasHalfGapBeforeItem={(itemIndex) => hasHalfGapBefore(section.id, i, itemIndex)}
                     sourceChapterKey={chapter.slug}
+                    sourceAnchorId={posId}
                     restrictPaidXrefs={restrictPaidXrefs}
                   />
                 )
@@ -1446,6 +1447,7 @@ function BlockView({
   renderEndSentinelForItem,
   hasHalfGapBeforeItem,
   sourceChapterKey,
+  sourceAnchorId,
   restrictPaidXrefs,
 }: {
   block: Block
@@ -1456,9 +1458,10 @@ function BlockView({
   renderEndSentinelForItem?: (itemIndex: number) => ReactNode
   hasHalfGapBeforeItem?: (itemIndex: number) => boolean
   sourceChapterKey: string
+  sourceAnchorId?: string
   restrictPaidXrefs: boolean
 }) {
-  const { t } = useLanguage()
+  const { t, lang } = useLanguage()
   switch (block.type) {
     case 'para':
       return <p className="cr-p">{renderBookReferenceText(block.text)}</p>
@@ -1569,7 +1572,7 @@ function BlockView({
     case 'xref':
       return (
         <p className="cr-xref">
-          <Link href={readerXrefHref(block.href, sourceChapterKey, restrictPaidXrefs)} className="cr-xref-link">
+          <Link href={readerXrefHref(block.href, sourceChapterKey, restrictPaidXrefs, sourceAnchorId, lang)} className="cr-xref-link">
             <span className="cr-xref-kicker">{block.label}</span>
             {block.text && <span className="cr-xref-title">{block.text}</span>}
             <span className="cr-xref-arrow" aria-hidden>→</span>

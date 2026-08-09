@@ -43,11 +43,38 @@ export function isFreeChapterHref(href: string): boolean {
   return !!key && isFreeChapterKey(key)
 }
 
-export function readerXrefHref(href: string, sourceChapterKey: string, restrictPaidXrefs = false): string {
-  if (!restrictPaidXrefs || !isFreeChapterKey(sourceChapterKey)) return href
-  const targetKey = chapterKeyFromHref(href)
-  if (!targetKey || isFreeChapterKey(targetKey)) return href
-  return `/acheter-livre?target=${encodeURIComponent(href)}`
+export function readerXrefHref(
+  href: string,
+  sourceChapterKey: string,
+  restrictPaidXrefs = false,
+  sourceAnchorId?: string,
+  lang = 'fr'
+): string {
+  let enrichedHref = href
+
+  // New references no longer need to hard-code their return route. Preserve
+  // legacy links that already carry one, and add it automatically otherwise.
+  if (sourceAnchorId && href.startsWith('/') && !href.startsWith('//')) {
+    const [beforeHash, hash = ''] = href.split('#', 2)
+    const [pathname, query = ''] = beforeHash.split('?', 2)
+    const params = new URLSearchParams(query)
+    if (!params.has('xrefBack')) {
+      const sourcePath = sourceChapterKey === 'introduction'
+        ? '/introduction'
+        : sourceChapterKey === 'chapter-2'
+          ? '/lecture/traitement-rop'
+          : `/lecture/${sourceChapterKey.replace(/^chapter-/, 'chapitre-')}`
+      params.set('xrefBack', `${sourcePath}?lang=${lang}#${sourceAnchorId}`)
+      const chapterNumber = sourceChapterKey.match(/^chapter-(\d+)/)?.[1]
+      params.set('xrefBackLabel', chapterNumber ? `Retour au chapitre ${chapterNumber}` : 'Retour à la référence')
+      enrichedHref = `${pathname}?${params.toString()}${hash ? `#${hash}` : ''}`
+    }
+  }
+
+  if (!restrictPaidXrefs || !isFreeChapterKey(sourceChapterKey)) return enrichedHref
+  const targetKey = chapterKeyFromHref(enrichedHref)
+  if (!targetKey || isFreeChapterKey(targetKey)) return enrichedHref
+  return `/acheter-livre?target=${encodeURIComponent(enrichedHref)}`
 }
 
 export function canReadFreeChapter(cookieStore: CookieReader): boolean {

@@ -6,7 +6,7 @@
 
 import assert from 'node:assert/strict'
 import { after, before, test } from 'node:test'
-import { canReadPaidChapter } from '@/lib/access'
+import { canReadPaidChapter, readerXrefHref } from '@/lib/access'
 import { createReaderSessionToken, verifyReaderSession } from '@/lib/authSession'
 
 const SECRET = 'test-secret-for-access-tests'
@@ -21,6 +21,28 @@ after(() => {
 function cookies(jar: Record<string, string>) {
   return { get: (name: string) => (name in jar ? { value: jar[name] } : undefined) }
 }
+
+test('a cross-chapter link carries a return route to its exact source passage', () => {
+  const href = readerXrefHref(
+    '/lecture/chapitre-4-rework?lang=fr#sec-innervation',
+    'chapter-17',
+    false,
+    'p-zones-reflexes-podales-36',
+    'fr'
+  )
+  const url = new URL(href, 'https://example.test')
+
+  assert.equal(url.pathname, '/lecture/chapitre-4-rework')
+  assert.equal(url.hash, '#sec-innervation')
+  assert.equal(url.searchParams.get('lang'), 'fr')
+  assert.equal(url.searchParams.get('xrefBack'), '/lecture/chapitre-17?lang=fr#p-zones-reflexes-podales-36')
+  assert.equal(url.searchParams.get('xrefBackLabel'), 'Retour au chapitre 17')
+})
+
+test('a legacy cross-chapter return route is preserved', () => {
+  const legacy = '/lecture/chapitre-4?lang=fr&xrefBack=%2Flecture%2Fchapitre-7%23p-old&xrefBackLabel=Retour%20au%20chapitre%207#sec-innervation'
+  assert.equal(readerXrefHref(legacy, 'chapter-8', false, 'p-new', 'fr'), legacy)
+})
 
 test('a signed session round-trips', async () => {
   const token = await createReaderSessionToken('customer-1', ['online_book'])
