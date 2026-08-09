@@ -11,7 +11,8 @@ export const chapter4ReworkSlides = [
     src: '/chapter-4/slides/slide-private-02.png',
     title: 'Niveau 2 — Régulation neuro-végétative et adaptation',
   },
-  ...chapter4Slides.slice(1, 28),
+  ...chapter4Slides.slice(1, 2),
+  ...chapter4Slides.slice(3, 28),
   { src: '/chapter-4/rework-reflex/slide-01.png', title: 'Cartographie ROP : territoire céphalique du parasympathique' },
   { src: '/chapter-4/rework-reflex/slide-02.png', title: 'Cartographie ROP : tronc cérébral' },
   { src: '/chapter-4/rework-reflex/slide-04.png', title: 'Cartographie ROP : nerf vague X dans la moelle allongée' },
@@ -82,5 +83,8 @@ const priorSlideAnchors = [
 export const chapter4ReworkSlideAnchors = [
   priorSlideAnchors[0],
   { sectionId: 'presentation', blockIndex: 0, slide: 2 },
-  ...priorSlideAnchors.slice(1).map((anchor) => ({ ...anchor, slide: anchor.slide + 1 })),
+  ...priorSlideAnchors
+    .slice(1)
+    .filter((anchor) => anchor.slide !== 3)
+    .map((anchor) => ({ ...anchor, slide: anchor.slide === 2 ? 3 : anchor.slide })),
 ]

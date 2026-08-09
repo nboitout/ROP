@@ -686,7 +686,7 @@ export const chapter4ReworkFr: Chapter = { slug: 'chapter-4-rework', number: '4'
     "blocks": [
       {
         "type": "para",
-        "text": "Cette section conserve la terminologie historique du chapitre. Les fibres sensitives viscérales ne sont cependant pas des neurones sympathiques moteurs : elles peuvent cheminer avec les voies sympathiques avant de rejoindre leurs corps cellulaires dans les ganglions spinaux."
+        "text": "Les fibres sensitives viscérales cheminent avec les voies sympathiques avant de rejoindre leurs corps cellulaires dans les ganglions spinaux."
       },
       {
         "type": "sub",
@@ -1024,3 +1024,14 @@ export const chapter4ReworkFr: Chapter = { slug: 'chapter-4-rework', number: '4'
 
 const reflexInsertIndex = chapter4ReworkFr.sections.findIndex((section) => section.id === 'a-retenir')
 chapter4ReworkFr.sections.splice(reflexInsertIndex, 0, privateReflexSection)
+
+// Keep every foundational reference inside the private reworked edition.
+for (const section of chapter4ReworkFr.sections) {
+  for (const block of section.blocks) {
+    if (block.type !== 'xref') continue
+    block.href = block.href
+      .replace('/lecture/chapitre-3?', '/lecture/chapitre-3-rework?')
+      .replace('/lecture/chapitre-4?', '/lecture/chapitre-4-rework?')
+      .replace('/lecture/chapitre-5?', '/lecture/chapitre-5-rework?')
+  }
+}
