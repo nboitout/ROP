@@ -1,7 +1,7 @@
 // Source: public/Chapter-5 Rework/Chapitre_5_REWORK_section_14_alignee_4_niveaux.docx
 import type { Chapter } from './types'
 
-export const chapter5ReworkFr = {
+export const chapter5ReworkFr: Chapter = {
   "slug": "chapter-5-rework",
   "number": "5",
   "title": "Mécanisme de stress - Physiologie de l’adaptation, coût allostatique et approche ROP",
@@ -989,4 +989,71 @@ export const chapter5ReworkFr = {
     "label": "Diapositives",
     "description": "Synthèse visuelle du chapitre 5 rework."
   }
-} satisfies Chapter
+}
+
+const fourLevelsSection = chapter5ReworkFr.sections.find(
+  (section) => section.id === 'quatre-niveaux-de-progressions-durant-la-seance-rop',
+)
+
+if (fourLevelsSection) fourLevelsSection.blocks = [
+  { type: 'para', text: 'La séance ROP peut être organisée selon quatre niveaux complémentaires : régulation des centres supérieurs, régulation neuro-végétative et adaptation, régulation loco-régionale, puis cible viscérale ou fonctionnelle et intégration. Ces quatre niveaux constituent une grille clinique et non quatre étapes obligatoires. Leur sélection, leur ordre et leur intensité dépendent du motif de consultation, de l’anamnèse, des tests, du stade d’adaptation et de la tolérance du patient.' },
+  { type: 'para', text: 'Cette organisation distingue ce qui relève de la régulation générale, de l’environnement régional et de la cible clinique proprement dite. Elle ne décrit ni une causalité anatomique directe, ni un trajet obligatoire entre une zone réflexe et une structure profonde.' },
+  { type: 'note', label: 'PRINCIPE DE SÉLECTION', body: ['La séance ne consiste pas à parcourir systématiquement les quatre niveaux. Le praticien sélectionne les niveaux pertinents, dose la sollicitation, puis laisse au patient le temps d’intégrer la réponse.'] },
+  { type: 'sub', text: '14.1. Niveau 1 — Régulation des centres supérieurs' },
+  { type: 'para', text: 'Intention clinique : diminuer la persistance du signal d’alarme et rendre le système plus disponible pour la suite du traitement.' },
+  { type: 'para', text: 'Le premier niveau concerne les structures de régulation centrale et leur environnement neuro-méningé. Dans le modèle clinique ROP, il peut comprendre les zones occipitales, la charnière crânio-cervicale, le tronc cérébral et les repères attribués au diencéphale et aux réseaux émotionnels.' },
+  { type: 'bullets', items: ['Repères ROP possibles : zones occipitales ; occiput-C1-C2 ; tronc cérébral ; foramen magnum et foramen jugulaire selon la cartographie ; diencéphale, notamment hypothalamus ; axe hypothalamo-hypophysaire ; environnement neuro-méningé associé.', 'Objectif clinique : réduire une vigilance corporelle devenue excessive et offrir une information tactile stable, prévisible et mesurée.', 'Lecture anatomique : ce niveau correspond principalement au système nerveux central et aux repères centraux décrits au chapitre 3.', 'Limite : la ROP ne permet pas de palper ou de traiter directement l’amygdale, l’hypothalamus, le cortex ou un noyau précis du tronc cérébral.'] },
+  { type: 'xref', label: 'Voir le chapitre 3 — Système nerveux central', href: '/lecture/chapitre-3-rework?lang=fr' },
+  { type: 'sub', text: '14.2. Niveau 2 — Régulation neuro-végétative et adaptation' },
+  { type: 'para', text: 'Intention clinique : accompagner le retrait d’une mobilisation devenue inutile et favoriser le retour vers une ligne de base autonome plus souple.' },
+  { type: 'para', text: 'Le deuxième niveau concerne les voies autonomes et les structures d’adaptation qui participent à la mobilisation, au maintien de l’effort et à la récupération. La cible n’est ni l’inhibition du sympathique ni la domination parasympathique, mais la flexibilité entre mobilisation et restauration.' },
+  { type: 'bullets', items: ['Repères ROP possibles : voies sympathiques cervicales, thoraciques et thoraco-lombaires ; voies parasympathiques crâniennes ; nerf vague ; parasympathique pelvien S2-S4 lorsque pertinent ; nerfs splanchniques ; plexus autonomes ; interface SNA-SNE pour les territoires digestifs ; zones surrénaliennes ; relations avec les axes SAM et HHS.', 'Sommeil et récupération : à intégrer lorsque la mauvaise clôture de la réponse au stress entretient la mobilisation.', 'Soutiens systémiques selon les tests : surrénales, foie, reins, intestin ou autres territoires métaboliques et homéostatiques pertinents. Ces cibles ne constituent pas un passage obligatoire.', 'Diaphragme : interface fonctionnelle de ce niveau lorsque respiration et mobilisation autonome dominent le tableau. Le nerf phrénique, de nature somatique, relève plutôt du Niveau 4 lorsqu’il est abordé comme convergence somatique.'] },
+  { type: 'xref', label: 'Voir le chapitre 4 — Système nerveux autonome', href: '/lecture/chapitre-4-rework?lang=fr' },
+  { type: 'xref', label: 'Voir le chapitre 8 — Diaphragme', href: '/lecture/chapitre-8?lang=fr' },
+  { type: 'sub', text: '14.3. Niveau 3 — Régulation loco-régionale' },
+  { type: 'para', text: 'Intention clinique : préparer l’environnement régional de la cible et réduire les contraintes susceptibles d’entretenir les signaux corporels.' },
+  { type: 'para', text: 'Le troisième niveau concerne l’environnement anatomique et fonctionnel de la cible, et non encore la cible viscérale elle-même. Il rassemble les structures régionales qui peuvent participer aux tensions, restrictions ou inconforts perçus par le patient.' },
+  { type: 'bullets', items: ['Repères possibles selon la région : cavités anatomiques ; péritoine et autres séreuses ; mésos et racines des mésos ; omentums ; fascias ; ligaments viscéraux ; rapports interviscéraux ; hiatus et espaces de passage ; interfaces mécaniques ou respiratoires directement liées à la région.', 'Socle régional abdominal : chapitre 7 — Cavités abdominale et péritonéale.', 'Socle régional pelvien : chapitre 17 — Cavité pelvienne.', 'Application au stress : lorsque la respiration est haute, rapide, irrégulière ou peu adaptable, le travail régional peut porter sur le diaphragme, ses piliers, les hiatus et les interfaces thoraco-abdominales avant de passer à la cible fonctionnelle.', 'Limite : les voies vagales, sympathiques, splanchniques et les plexus autonomes relèvent du Niveau 2 ; les nerfs somatiques, muscles, articulations et territoires projetés sont intégrés au Niveau 4 lorsqu’ils expriment la cible clinique.'] },
+  { type: 'xref', label: 'Voir le chapitre 7 — Cavités abdominale et péritonéale', href: '/lecture/chapitre-7?lang=fr' },
+  { type: 'xref', label: 'Voir le chapitre 17 — Cavité pelvienne', href: '/lecture/chapitre-17?lang=fr' },
+  { type: 'sub', text: '14.4. Niveau 4 — Cible viscérale ou fonctionnelle et intégration' },
+  { type: 'para', text: 'Intention clinique : travailler la fonction ou l’organe principalement concerné, en intégrant ses expressions viscéro-somatiques et viscéro-émotionnelles.' },
+  { type: 'para', text: 'Le quatrième niveau correspond à la cible clinique individualisée. Dans les chapitres viscéraux, il réunit la zone réflexe propre de l’organe et ses sous-territoires fonctionnels avec les relations somatiques et émotionnelles qui peuvent moduler son expression. Dans le chapitre sur le stress, la cible peut aussi être une fonction : sommeil, digestion, récupération, respiration, douleur, miction, sexualité ou confort viscéral.' },
+  { type: 'bullets', items: ['Cible propre : zone réflexe de l’organe ou de la fonction ; sous-territoires spécifiques de sa cartographie.', 'Intégration viscéro-somatique : convergences segmentaires ; nerfs somatiques ; muscles ; articulations ; territoires douloureux ou projetés associés à la cible.', 'Intégration viscéro-émotionnelle : axe cerveau-organe, contexte émotionnel et interoception ; Balance cerveau limbique-organe lorsque ce vocabulaire clinique propre à la ROP est utilisé dans le chapitre concerné.', 'Objectif clinique : créer un contexte central, autonome et régional plus favorable au retour de la fonction, puis traiter la cible sans la dissocier de son expression globale.', 'Limite : ces correspondances constituent une grille clinique ROP. Elles ne démontrent ni une projection anatomique directe de l’organe sur le pied ni une causalité psychologique du symptôme.'] },
+  { type: 'note', label: 'BALANCE CERVEAU LIMBIQUE-ORGANE', body: ['Dans le vocabulaire de la ROP, cette expression décrit une technique d’écoute-induction associant un repère viscéral et un repère central. Elle ne décrit pas une connexion anatomique directe entre le pied, les réseaux limbiques et l’organe.'] },
+  { type: 'sub', text: 'SÉQUENCE SYNTHÉTIQUE' },
+  { type: 'para', text: '1. Régulation des centres supérieurs → 2. Régulation neuro-végétative et adaptation → 3. Régulation loco-régionale → 4. Cible viscérale ou fonctionnelle et intégration.' },
+  { type: 'para', text: 'Cette progression n’est pas un ordre obligatoire. Un patient peut nécessiter surtout les Niveaux 2 et 4, un autre les Niveaux 1 et 3. La séance sélectionne les niveaux pertinents plutôt que de chercher à les parcourir systématiquement.' },
+]
+
+const researchSection = chapter5ReworkFr.sections.find((section) => section.id === 'vers-une-recherche-sur-la-cinetique-de-recuperation')
+const researchGroups = researchSection?.blocks.find((block) => block.type === 'numbered')
+if (researchGroups?.type === 'numbered') researchGroups.items[0] = 'Groupe ROP : séquence standardisée respectant la logique des quatre niveaux cliniques et un dosage défini, avec adaptation des zones à la cible retenue.'
+
+const conclusionSection = chapter5ReworkFr.sections.find((section) => section.id === 'conclusion')
+if (conclusionSection?.blocks[2]?.type === 'para') conclusionSection.blocks[2].text = 'Le pont le plus crédible avec la ROP reste la régulation de la réponse et de la récupération. Par une évaluation tissulaire, un toucher mesuré et une progression adaptée entre régulation centrale, régulation neuro-végétative, environnement loco-régional et cible clinique intégrée, nous cherchons à apporter au système nerveux une information corporelle nouvelle, à diminuer une mobilisation devenue inutile et à favoriser le retour des fonctions respiratoires, digestives et restauratrices.'
+
+const occipitalSection = chapter5ReworkFr.sections.find((section) => section.id === 'zones-reflexes-podales')
+if (occipitalSection) {
+  occipitalSection.title = 'Exemple d’entrée du Niveau 1 — Zones réflexes occipitales'
+  occipitalSection.blocks = [
+    { type: 'para', text: 'Dans la pratique ROP, la sollicitation douce des zones occipitales vise à réduire, lorsque cela est possible, une vigilance corporelle devenue excessive et à préparer l’intégration des étapes suivantes. Par l’intermédiaire des afférences cutanées, myofasciales et proprioceptives de la région C2-C3, elle peut contribuer à modifier l’attention portée au corps, les tensions de protection et l’agitation respiratoire ou émotionnelle.' },
+    { type: 'para', text: 'Les trois bandes - parasympathique, orthosympathique et structurelle - restent des repères cliniques propres à la ROP, dont les qualités de palpation peuvent varier selon le niveau de stress et l’état d’adaptation du patient.' },
+    { type: 'para', text: 'L’objectif n’est pas de commander directement le système autonome, mais d’introduire une information sensorielle mesurée afin de rendre le patient plus disponible pour la suite du traitement.' },
+  ]
+}
+
+const synthesisTableSection = chapter5ReworkFr.sections.find((section) => section.id === 'tableau-synthetique-de-la-progression-clinique')
+if (synthesisTableSection) {
+  synthesisTableSection.title = 'Tableau synthétique — protocole ROP à quatre niveaux'
+  synthesisTableSection.blocks = [{
+    type: 'table',
+    headers: ['Niveau', 'Intention clinique', 'Principaux repères ROP'],
+    rows: [
+      ['1. Régulation des centres supérieurs', 'Réduire la persistance du signal d’alarme et préparer l’intégration.', 'Zones occipitales ; tronc cérébral ; diencéphale/hypothalamus ; axe hypothalamo-hypophysaire ; environnement neuro-méningé.'],
+      ['2. Régulation neuro-végétative et adaptation', 'Favoriser la flexibilité entre mobilisation et récupération.', 'Sympathique ; parasympathique/vague ; splanchniques ; plexus autonomes ; interface SNA-SNE ; surrénales ; sommeil et soutiens systémiques selon les tests.'],
+      ['3. Régulation loco-régionale', 'Préparer l’environnement régional de la cible.', 'Cavités ; péritoine ; mésos et racines ; omentums ; fascias ; ligaments ; rapports interviscéraux ; socles régionaux abdominal et pelvien.'],
+      ['4. Cible viscérale ou fonctionnelle et intégration', 'Travailler la cible et intégrer son expression globale.', 'Zone de l’organe ou de la fonction ; sous-territoires spécifiques ; convergences viscéro-somatiques ; nerfs somatiques ; muscles/articulations ; axe cerveau-organe ou Balance cerveau limbique-organe selon le chapitre.'],
+    ],
+  }]
+}
