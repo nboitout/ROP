@@ -50,7 +50,7 @@ export const chapter3ReworkSlideAnchors = [
   { sectionId: 'reseaux-corticaux-et-cortico-limbiques', blockIndex: 11, slide: 15 },
   { sectionId: 'environnement-neuro-meninge', blockIndex: 2, slide: 16 },
   { sectionId: 'cervelet-et-ganglions-de-la-base', blockIndex: 3, slide: 17 },
-  { sectionId: 'niveau-1-logique-clinique', blockIndex: -1, slide: 18 },
+  { sectionId: 'niveau-1-logique-clinique', blockIndex: 3, slide: 18 },
   { sectionId: 'zones-reflexes-rop', blockIndex: 3, slide: 19, gapBefore: 'half' as const, ...endAt('zones-reflexes-rop', 3) },
   { sectionId: 'zones-reflexes-rop', blockIndex: 6, slide: 20, ...endAt('zones-reflexes-rop', 6) },
   { sectionId: 'zones-reflexes-rop', blockIndex: 10, slide: 21, ...endAt('zones-reflexes-rop', 10) },
