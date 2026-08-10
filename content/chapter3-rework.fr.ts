@@ -484,18 +484,17 @@ export const chapter3ReworkFr: Chapter = { slug: 'chapter-3-rework', number: '3'
     "blocks": [
       {
         "type": "para",
-        "text": "Les localisations suivantes appartiennent à la cartographie clinique de la ROP. Elles ne constituent pas une projection anatomique directe des structures cérébrales sur le pied ou l’occiput."
+        "text": "Les localisations suivantes appartiennent à la cartographie clinique de la ROP."
       },
       {
         "type": "sub",
-        "text": "9.1. Tronc cérébral, cervelet et ganglions de la base"
+        "text": "9.1. Tronc cérébral et ganglions de la base"
       },
       {
         "type": "bullets",
         "items": [
           "Tronc cérébral : face plantaire médiale de la phalange distale du gros orteil, de l’articulation interphalangienne à la jonction diaphyse-tête.",
-          "Cervelet : repère à la jonction diaphyse-tête médio-plantaire des deuxième et troisième orteils. Dans le modèle ROP, cette zone est historiquement mise en relation avec les voies vasculo-sympathiques vertébro-basilaires ; cette relation reste une hypothèse du modèle.",
-          "Ganglions de la base : repère situé à proximité de celui attribué au mésencéphale, latéralement à la jonction diaphyse-tête médiale. Cette proximité relève de la topographie ROP et non de la position anatomique réelle de ces noyaux."
+          "Ganglions de la base : repère situé à proximité de celui attribué au mésencéphale, latéralement à la jonction diaphyse-tête médiale."
         ]
       },
       {
@@ -510,10 +509,6 @@ export const chapter3ReworkFr: Chapter = { slug: 'chapter-3-rework', number: '3'
           "Bulbe olfactif : tête médiale plantaire de la phalange distale du gros orteil.",
           "Cortex cingulaire et corps calleux : bord médial plantaire de la phalange distale du gros orteil."
         ]
-      },
-      {
-        "type": "para",
-        "text": "Ces repères peuvent être conservés dans la cartographie clinique, mais ils ne démontrent pas qu’une pression sur la zone correspondante active sélectivement la structure cérébrale nommée."
       },
       {
         "type": "sub",
@@ -535,7 +530,7 @@ export const chapter3ReworkFr: Chapter = { slug: 'chapter-3-rework', number: '3'
         "items": [
           "Dure-mère, faux du cerveau, faux du cervelet et tente du cervelet : se reporter au livre Réflexothérapie occipito-podale et système neuro-méningé, Elsevier Masson, page 85, figure 7.8, et page 109, figure 8.12.",
           "Vascularisation : chaîne ganglionnaire cervicale et sinus carotidien dans la cartographie ROP.",
-          "Innervation : nerfs trijumeau V, vague X et hypoglosse XII selon les repères cliniques développés dans les volumes précédents."
+          "Innervation : nerfs trijumeau V, vague X et hypoglosse XII selon les repères cliniques développés dans les ouvrages précédents."
         ]
       },
       {
@@ -548,7 +543,7 @@ export const chapter3ReworkFr: Chapter = { slug: 'chapter-3-rework', number: '3'
       },
       {
         "type": "para",
-        "text": "Les techniques ROP associées au MRP, aux membranes intracrâniennes ou à la circulation liquidienne constituent un modèle clinique distinct. Leurs effets spécifiques sur le cortex ou sur la circulation intracrânienne ne sont pas directement établis."
+        "text": "Les techniques ROP associées au MRP, aux membranes intracrâniennes ou à la circulation liquidienne constituent un modèle clinique distinct."
       },
       {
         "type": "rop",
@@ -576,7 +571,6 @@ export const chapter3ReworkFr: Chapter = { slug: 'chapter-3-rework', number: '3'
           "Le chapitre 4 détaillera le système nerveux autonome ; ici, l’accent reste sur les centres qui reçoivent et modulent l’information.",
           "Les réseaux limbiques sont décrits ici comme structures du SNC, mais leur application clinique viscéro-émotionnelle appartient au Niveau 4.",
           "L’environnement neuro-méningé et le LCR doivent être distingués des concepts thérapeutiques ROP tels que MRP, axe crânio-sacré, compression du quatrième ventricule ou synchronisation SSB-S2.",
-          "Les zones réflexes ROP sont des repères cliniques et non une projection anatomique directe des structures cérébrales.",
           "Le principe central est celui d’une modulation de réseaux : une entrée somatique peut rejoindre la moelle, le tronc cérébral et les centres supérieurs, puis influencer des commandes descendantes. Cette logique sert de base au chapitre 4 (SNA) puis aux chapitres d’organes, où elle est appliquée aux Niveaux 2 à 4."
         ]
       }

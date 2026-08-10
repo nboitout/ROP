@@ -53,6 +53,6 @@ export const chapter3ReworkSlideAnchors = [
   { sectionId: 'niveau-1-logique-clinique', blockIndex: 3, slide: 18 },
   { sectionId: 'zones-reflexes-rop', blockIndex: 3, slide: 19, gapBefore: 'half' as const, ...endAt('zones-reflexes-rop', 3) },
   { sectionId: 'zones-reflexes-rop', blockIndex: 6, slide: 20, ...endAt('zones-reflexes-rop', 6) },
-  { sectionId: 'zones-reflexes-rop', blockIndex: 10, slide: 21, ...endAt('zones-reflexes-rop', 10) },
-  { sectionId: 'zones-reflexes-rop', blockIndex: 13, slide: 22, ...endAt('zones-reflexes-rop', 16) },
+  { sectionId: 'zones-reflexes-rop', blockIndex: 9, slide: 21, ...endAt('zones-reflexes-rop', 9) },
+  { sectionId: 'zones-reflexes-rop', blockIndex: 12, slide: 22, ...endAt('zones-reflexes-rop', 15) },
 ]
