@@ -41,7 +41,6 @@ appendPrivatePhotos('11.3. Nerf vague X — étage cervical', [
 ])
 appendPrivatePhotos('11.4. Nerf vague X — étage thoracique / plexus cardiaque', [
   privateReflexPhoto('11', 'territoires cervical, thoracique et diaphragmatique gauches du nerf vague X', 'portrait'),
-  privateReflexPhoto('14', 'territoires cervical et thoracique droits du nerf vague X'),
 ])
 appendPrivatePhotos('11.5. Nerf vague X — étage diaphragmatique / hiatus œsophagien', [
   privateReflexPhoto('16', 'hiatus œsophagien et nerfs vagues droit et gauche', 'portrait'),

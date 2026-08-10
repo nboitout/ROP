@@ -437,26 +437,6 @@ export const chapter3ReworkFr: Chapter = { slug: 'chapter-3-rework', number: '3'
         ]
       },
       {
-        "type": "sub",
-        "text": "Zones occipitales"
-      },
-      {
-        "type": "para",
-        "text": "Les zones occipitales constituent, en ROP, une porte d’entrée clinique du Niveau 1, consacré à la régulation des centres supérieurs. Elles sont réparties en trois bandes horizontales : une zone dite parasympathique, située dans la partie supérieure de l’occiput ; une zone dite orthosympathique, située dans la région moyenne ; et une zone structurelle, plus basse, au voisinage de la jonction cranio-cervicale."
-      },
-      {
-        "type": "para",
-        "text": "Les termes « parasympathique » et « orthosympathique » ne signifient donc pas que ces régions appartiennent au Niveau 2 du protocole consacré au système nerveux autonome. Les trois bandes appartiennent au Niveau 1. Leur distinction permet au praticien d’organiser l’exploration palpatoire de l’occiput selon la texture, la densité, la sensibilité, la mobilité tissulaire ou la réactivité rencontrées."
-      },
-      {
-        "type": "para",
-        "text": "Sur le plan neuro-anatomique, la stimulation de l’occiput sollicite principalement des afférences cutanées, myofasciales, cervicales et proprioceptives, notamment issues des territoires cervicaux supérieurs. Ces informations somatosensorielles peuvent rejoindre la moelle, le tronc cérébral puis des réseaux supraspinaux impliqués dans la douleur, le tonus, la vigilance et certaines réponses autonomes. Cette lecture est cohérente avec le principe général retenu dans ce chapitre : une stimulation occipitale ne « commande » pas directement un centre autonome déterminé ; elle constitue une entrée sensorielle susceptible de participer à la modulation de réseaux centraux et de l’état général d’activation."
-      },
-      {
-        "type": "para",
-        "text": "Dans la séquence ROP, l’exploration occipitale est ainsi utilisée en amont des approches plus régionales ou viscérales, avec l’objectif clinique de préparer le système, réduire le “bruit général” et apprécier son état d’adaptation avant de poursuivre le protocole. Cela s’inscrit dans la logique générale du Niveau 1, défini dans le chapitre comme une approche de régulation générale précédant l’exploration d’un territoire somatique ou viscéral plus spécifique."
-      },
-      {
         "type": "para",
         "text": "Le lien avec la ROP viscérale apparaît surtout dans la capacité du SNC à intégrer des informations somatiques et viscérales et à modifier ensuite les commandes descendantes. Cette logique complète les mécanismes spinaux et autonomes étudiés dans les chapitres suivants. (Cf. chapitre 0 pour la séquence clinique générale et chapitre 4 pour le Niveau 2 neuro-végétatif.)"
       },
@@ -485,6 +465,26 @@ export const chapter3ReworkFr: Chapter = { slug: 'chapter-3-rework', number: '3'
       {
         "type": "para",
         "text": "Les localisations suivantes appartiennent à la cartographie clinique de la ROP."
+      },
+      {
+        "type": "sub",
+        "text": "Zones occipitales"
+      },
+      {
+        "type": "para",
+        "text": "Les zones occipitales constituent, en ROP, une porte d’entrée clinique du Niveau 1, consacré à la régulation des centres supérieurs. Elles sont réparties en trois bandes horizontales : une zone dite parasympathique, située dans la partie supérieure de l’occiput ; une zone dite orthosympathique, située dans la région moyenne ; et une zone structurelle, plus basse, au voisinage de la jonction cranio-cervicale."
+      },
+      {
+        "type": "para",
+        "text": "Les termes « parasympathique » et « orthosympathique » ne signifient donc pas que ces régions appartiennent au Niveau 2 du protocole consacré au système nerveux autonome. Les trois bandes appartiennent au Niveau 1. Leur distinction permet au praticien d’organiser l’exploration palpatoire de l’occiput selon la texture, la densité, la sensibilité, la mobilité tissulaire ou la réactivité rencontrées."
+      },
+      {
+        "type": "para",
+        "text": "Sur le plan neuro-anatomique, la stimulation de l’occiput sollicite principalement des afférences cutanées, myofasciales, cervicales et proprioceptives, notamment issues des territoires cervicaux supérieurs. Ces informations somatosensorielles peuvent rejoindre la moelle, le tronc cérébral puis des réseaux supraspinaux impliqués dans la douleur, le tonus, la vigilance et certaines réponses autonomes. Cette lecture est cohérente avec le principe général retenu dans ce chapitre : une stimulation occipitale ne « commande » pas directement un centre autonome déterminé ; elle constitue une entrée sensorielle susceptible de participer à la modulation de réseaux centraux et de l’état général d’activation."
+      },
+      {
+        "type": "para",
+        "text": "Dans la séquence ROP, l’exploration occipitale est ainsi utilisée en amont des approches plus régionales ou viscérales, avec l’objectif clinique de préparer le système, réduire le “bruit général” et apprécier son état d’adaptation avant de poursuivre le protocole. Cela s’inscrit dans la logique générale du Niveau 1, défini dans le chapitre comme une approche de régulation générale précédant l’exploration d’un territoire somatique ou viscéral plus spécifique."
       },
       {
         "type": "sub",
