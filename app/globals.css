@@ -782,8 +782,17 @@ footer > div > p { font-size:.95rem; color:rgba(245,240,232,.84); line-height:1.
   .cr-article { padding:32px 22px 100px; --cr-article-pad-x:22px; }
   .cr-hero { padding:16px 0 36px; }
   .cr-section { padding:36px 0 8px; }
-  .cr-fig, .cr-fig-landscape { margin:32px -14px; }
-  .cr-fig-portrait, .cr-fig-medium, .cr-fig-narrow { margin:32px auto; max-width:none; }
+  /* Let inline photos use the complete mobile viewport. Keeping a residual
+     article margin here produced a visible cream/white strip on one side. */
+  .cr-fig,
+  .cr-fig-landscape,
+  .cr-fig-portrait,
+  .cr-fig-medium,
+  .cr-fig-narrow {
+    width:calc(100% + (var(--cr-article-pad-x) * 2));
+    max-width:none;
+    margin:32px calc(var(--cr-article-pad-x) * -1);
+  }
   .cr-end-card { padding:36px 24px; }
   .cr-toc { width:86%; }
   .cr-resources { right:10px; bottom:10px; padding:7px 8px 6px; }
@@ -1199,6 +1208,16 @@ a.ss-switch-opt:hover { color:var(--gold); }
     overflow:hidden;
   }
   .ss-article { padding:24px 20px 100px; max-width:none; margin:0 auto; --ss-article-pad-x:20px; }
+  .ss-article .cr-fig,
+  .ss-article .cr-fig-landscape,
+  .ss-article .cr-fig-portrait,
+  .ss-article .cr-fig-medium,
+  .ss-article .cr-fig-narrow {
+    width:calc(100% + (var(--ss-article-pad-x) * 2));
+    max-width:none;
+    margin-left:calc(var(--ss-article-pad-x) * -1);
+    margin-right:calc(var(--ss-article-pad-x) * -1);
+  }
   .ss-anchor,
   .ss-article [data-pos-anchor] { scroll-margin-top:calc(62px + 56vw); }
   .ss-switch-opt { padding:3px 8px; font-size:.56rem; letter-spacing:.1em; }
