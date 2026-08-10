@@ -15,7 +15,7 @@ export type ChapterMetaSnapshot = {
 }
 
 export const chapterMetaSnapshot: Record<string, ChapterMetaSnapshot> = {
-  'introduction': { readingMinutes: 24, photoCount: 6, slideCount: 0, cartographyCount: 0, visualCount: 6 },
+  'introduction': { readingMinutes: 26, photoCount: 6, slideCount: 0, cartographyCount: 0, visualCount: 6 },
   'chapter-1': { readingMinutes: 14, photoCount: 0, slideCount: 18, cartographyCount: 1, visualCount: 19 },
   'chapter-2': { readingMinutes: 22, photoCount: 1, slideCount: 10, cartographyCount: 5, visualCount: 16 },
   'chapter-3': { readingMinutes: 27, photoCount: 7, slideCount: 15, cartographyCount: 10, visualCount: 32 },
@@ -24,13 +24,13 @@ export const chapterMetaSnapshot: Record<string, ChapterMetaSnapshot> = {
   'chapter-6': { readingMinutes: 10, photoCount: 0, slideCount: 18, cartographyCount: 0, visualCount: 18 },
   'chapter-7': { readingMinutes: 23, photoCount: 5, slideCount: 13, cartographyCount: 6, visualCount: 24 },
   'chapter-8': { readingMinutes: 29, photoCount: 8, slideCount: 16, cartographyCount: 11, visualCount: 35 },
-  'chapter-9': { readingMinutes: 17, photoCount: 3, slideCount: 19, cartographyCount: 6, visualCount: 28 },
-  'chapter-10': { readingMinutes: 12, photoCount: 8, slideCount: 13, cartographyCount: 8, visualCount: 29 },
-  'chapter-11': { readingMinutes: 33, photoCount: 11, slideCount: 15, cartographyCount: 11, visualCount: 37 },
-  'chapter-12': { readingMinutes: 19, photoCount: 5, slideCount: 12, cartographyCount: 6, visualCount: 23 },
-  'chapter-13': { readingMinutes: 14, photoCount: 2, slideCount: 18, cartographyCount: 3, visualCount: 23 },
-  'chapter-14': { readingMinutes: 20, photoCount: 14, slideCount: 28, cartographyCount: 0, visualCount: 42 },
-  'chapter-15': { readingMinutes: 34, photoCount: 14, slideCount: 28, cartographyCount: 8, visualCount: 50 },
+  'chapter-9': { readingMinutes: 22, photoCount: 5, slideCount: 19, cartographyCount: 6, visualCount: 30 },
+  'chapter-10': { readingMinutes: 17, photoCount: 6, slideCount: 13, cartographyCount: 8, visualCount: 27 },
+  'chapter-11': { readingMinutes: 38, photoCount: 11, slideCount: 14, cartographyCount: 12, visualCount: 37 },
+  'chapter-12': { readingMinutes: 22, photoCount: 5, slideCount: 12, cartographyCount: 6, visualCount: 23 },
+  'chapter-13': { readingMinutes: 18, photoCount: 2, slideCount: 18, cartographyCount: 3, visualCount: 23 },
+  'chapter-14': { readingMinutes: 23, photoCount: 12, slideCount: 26, cartographyCount: 0, visualCount: 38 },
+  'chapter-15': { readingMinutes: 37, photoCount: 14, slideCount: 28, cartographyCount: 8, visualCount: 50 },
   'chapter-16': { readingMinutes: 35, photoCount: 7, slideCount: 21, cartographyCount: 10, visualCount: 38 },
   'chapter-17': { readingMinutes: 31, photoCount: 0, slideCount: 19, cartographyCount: 1, visualCount: 20 },
   'chapter-18': { readingMinutes: 26, photoCount: 9, slideCount: 19, cartographyCount: 12, visualCount: 40 },
@@ -41,9 +41,9 @@ export const chapterMetaSnapshot: Record<string, ChapterMetaSnapshot> = {
 
 export const bookVisualTotals = {
   chapterCount: 22,
-  readingMinutes: 535,
-  photoCount: 126,
-  slideCount: 391,
-  cartographyCount: 120,
-  visualCount: 637,
+  readingMinutes: 565,
+  photoCount: 124,
+  slideCount: 388,
+  cartographyCount: 121,
+  visualCount: 633,
 }
