@@ -544,6 +544,18 @@ footer > div > p { font-size:.95rem; color:rgba(245,240,232,.84); line-height:1.
 .cr-fig-narrow .cr-fig-btn { aspect-ratio:2/3; }
 .cr-fig-portrait .cr-fig-btn img,
 .cr-fig-narrow .cr-fig-btn img { height:100%; object-fit:cover; object-position:center; }
+/* Inline figures extend through the article's horizontal padding. Without
+   this, the cream page background reads as a white strip beside the image. */
+.cr-article .cr-fig,
+.cr-article .cr-fig-landscape,
+.cr-article .cr-fig-portrait,
+.cr-article .cr-fig-medium,
+.cr-article .cr-fig-narrow {
+  width:calc(100% + (var(--cr-article-pad-x) * 2));
+  max-width:none;
+  margin-left:calc(var(--cr-article-pad-x) * -1);
+  margin-right:calc(var(--cr-article-pad-x) * -1);
+}
 .cr-fig-zoom { position:absolute; bottom:12px; right:12px; width:36px; height:36px; border-radius:50%;
   background:rgba(26,26,24,.78); color:var(--cream); font-size:1.05rem; display:flex; align-items:center; justify-content:center;
   opacity:0; transition:opacity .2s; pointer-events:none; }
@@ -1151,6 +1163,16 @@ a.ss-switch-opt:hover { color:var(--gold); }
 .ss-article .cr-fig-portrait { margin:36px auto; max-width:380px; }
 .ss-article .cr-fig-medium { margin:36px auto; max-width:460px; }
 .ss-article .cr-fig-narrow { margin:36px auto; max-width:320px; }
+.ss-article .cr-fig,
+.ss-article .cr-fig-landscape,
+.ss-article .cr-fig-portrait,
+.ss-article .cr-fig-medium,
+.ss-article .cr-fig-narrow {
+  width:calc(100% + (var(--ss-article-pad-x) * 2));
+  max-width:none;
+  margin-left:calc(var(--ss-article-pad-x) * -1);
+  margin-right:calc(var(--ss-article-pad-x) * -1);
+}
 .ss-article[data-chapter="chapter-5"] #sec-rop-stress .cr-fig-landscape {
   width:calc(100% + (var(--ss-article-pad-x) * 2));
   max-width:none;
