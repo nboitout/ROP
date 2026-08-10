@@ -77,6 +77,7 @@ const priorSlideAnchors = [
   { sectionId: 'zones-reflexes-podales', blockIndex: 42, slide: 42, ...endAt('zones-reflexes-podales', 42) },
   { sectionId: 'zones-reflexes-podales', blockIndex: 46, slide: 43, ...endAt('zones-reflexes-podales', 46) },
   { sectionId: 'zones-reflexes-podales', blockIndex: 55, slide: 44, ...endAt('zones-reflexes-podales', 55) },
+  // Ends after the paired photo and before 11.16. Système nerveux intrinsèque ou entérique (SNE).
   { sectionId: 'zones-reflexes-podales', blockIndex: 56, slide: 45, ...endAt('zones-reflexes-podales', 56) },
 ]
 

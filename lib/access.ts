@@ -26,6 +26,53 @@ const CHAPTER_ROUTE_ALIASES: Record<string, string> = {
   '/lecture/traitement-rop': 'chapter-2',
 }
 
+const REFLEX_SECTION_BY_CHAPTER: Record<string, string> = {
+  'chapter-2': 'zones-reflexes',
+  'chapter-3': 'section-4-zones-reflexes',
+  'chapter-3-rework': 'zones-reflexes-rop',
+  'chapter-4': 'zones-reflexes-podales',
+  'chapter-4-rework': 'zones-reflexes-podales',
+  'chapter-5': 'rop-stress',
+  'chapter-5-rework': 'zones-reflexes-podales',
+  'chapter-7': 'zones-reflexes-podales',
+  'chapter-8': 'zones-reflexes-podales',
+  'chapter-9': 'zones-reflexes-podales',
+  'chapter-10': 'zones-reflexes-podales',
+  'chapter-11': 'zones-reflexes-podales-du-foie-et-des-voies-biliaires',
+  'chapter-12': 'zones-reflexes-podales',
+  'chapter-13': 'zones-reflexes-podales',
+  'chapter-14': 'rop',
+  'chapter-15': 'zones-reflexes-podales',
+  'chapter-16': 'zones-reflexes-podales',
+  'chapter-17': 'zones-reflexes-podales',
+  'chapter-18': 'zones-reflexes-podales',
+  'chapter-19': 'zones-reflexes-podales',
+  'chapter-20': 'zones-reflexes-podales',
+  'chapter-21': 'zones-reflexes-podales',
+}
+
+function chapterKeyIncludingReworkFromPath(pathname: string): string | null {
+  if (pathname === '/lecture/traitement-rop') return 'chapter-2'
+  const match = pathname.match(/^\/lecture\/chapitre-(\d+)(-rework)?$/)
+  return match ? `chapter-${Number(match[1])}${match[2] ?? ''}` : null
+}
+
+function retargetReflexCrossChapterLink(href: string, sourceChapterKey: string, sourceAnchorId?: string): string {
+  const sourceReflexId = REFLEX_SECTION_BY_CHAPTER[sourceChapterKey]
+  if (!sourceAnchorId || !sourceReflexId || !sourceAnchorId.includes(sourceReflexId)) return href
+  if (!href.startsWith('/') || href.startsWith('//')) return href
+
+  const [beforeHash] = href.split('#', 1)
+  const pathname = beforeHash.split('?', 1)[0]
+  const targetChapterKey = chapterKeyIncludingReworkFromPath(pathname)
+  const targetReflexId = targetChapterKey ? REFLEX_SECTION_BY_CHAPTER[targetChapterKey] : undefined
+  if (!targetReflexId) return href
+
+  const currentHash = href.includes('#') ? href.slice(href.indexOf('#') + 1) : ''
+  if (currentHash.includes(targetReflexId)) return href
+  return `${beforeHash}#sec-${targetReflexId}`
+}
+
 export function chapterKeyFromHref(href: string): string | null {
   if (!href.startsWith('/') || href.startsWith('//')) return null
   const path = href.split(/[?#]/, 1)[0]
@@ -50,12 +97,12 @@ export function readerXrefHref(
   sourceAnchorId?: string,
   lang = 'fr'
 ): string {
-  let enrichedHref = href
+  let enrichedHref = retargetReflexCrossChapterLink(href, sourceChapterKey, sourceAnchorId)
 
   // New references no longer need to hard-code their return route. Preserve
   // legacy links that already carry one, and add it automatically otherwise.
-  if (sourceAnchorId && href.startsWith('/') && !href.startsWith('//')) {
-    const [beforeHash, hash = ''] = href.split('#', 2)
+  if (sourceAnchorId && enrichedHref.startsWith('/') && !enrichedHref.startsWith('//')) {
+    const [beforeHash, hash = ''] = enrichedHref.split('#', 2)
     const [pathname, query = ''] = beforeHash.split('?', 2)
     const params = new URLSearchParams(query)
     if (!params.has('xrefBack')) {

@@ -33,10 +33,24 @@ test('a cross-chapter link carries a return route to its exact source passage', 
   const url = new URL(href, 'https://example.test')
 
   assert.equal(url.pathname, '/lecture/chapitre-4-rework')
-  assert.equal(url.hash, '#sec-innervation')
+  assert.equal(url.hash, '#sec-zones-reflexes-podales')
   assert.equal(url.searchParams.get('lang'), 'fr')
   assert.equal(url.searchParams.get('xrefBack'), '/lecture/chapitre-17?lang=fr#p-zones-reflexes-podales-36')
   assert.equal(url.searchParams.get('xrefBackLabel'), 'Retour au chapitre 17')
+})
+
+test('a reflex-zone cross-reference keeps an existing precise reflex destination', () => {
+  const href = readerXrefHref(
+    '/lecture/chapitre-11?lang=fr#p-zones-reflexes-podales-du-foie-et-des-voies-biliaires-6',
+    'chapter-4-rework',
+    false,
+    'p-zones-reflexes-podales-59',
+    'fr'
+  )
+  const url = new URL(href, 'https://example.test')
+
+  assert.equal(url.hash, '#p-zones-reflexes-podales-du-foie-et-des-voies-biliaires-6')
+  assert.equal(url.searchParams.get('xrefBack'), '/lecture/chapitre-4-rework?lang=fr#p-zones-reflexes-podales-59')
 })
 
 test('a legacy cross-chapter return route is preserved', () => {
