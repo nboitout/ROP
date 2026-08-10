@@ -1188,6 +1188,35 @@ a.ss-switch-opt:hover { color:var(--gold); }
 .ss-article[data-chapter="chapter-4"] #sec-zones-reflexes-podales .cr-fig-landscape .cr-fig-btn { aspect-ratio:3/2; }
 .ss-article[data-chapter="chapter-4"] #sec-zones-reflexes-podales .cr-fig-landscape .cr-fig-btn img { height:100%; object-fit:contain; }
 
+/* Desktop figures remain prominent without filling the entire reading
+   column. The equal auto margins keep the inset visually symmetrical. */
+@media (min-width:981px){
+  .cr-article .cr-fig,
+  .cr-article .cr-fig-landscape,
+  .cr-article #sec-zones-reflexes-podales .cr-fig-landscape {
+    width:calc(100% - 48px);
+    max-width:none;
+    margin-left:auto;
+    margin-right:auto;
+  }
+  .cr-article .cr-fig-portrait { max-width:560px; }
+  .cr-article .cr-fig-medium { max-width:460px; }
+  .cr-article .cr-fig-narrow { max-width:320px; }
+
+  .ss-article .cr-fig,
+  .ss-article .cr-fig-landscape,
+  .ss-article[data-chapter="chapter-5"] #sec-rop-stress .cr-fig-landscape,
+  .ss-article #sec-zones-reflexes-podales .cr-fig-landscape {
+    width:calc(100% - 40px);
+    max-width:none;
+    margin-left:auto;
+    margin-right:auto;
+  }
+  .ss-article .cr-fig-portrait { max-width:500px; }
+  .ss-article .cr-fig-medium { max-width:460px; }
+  .ss-article .cr-fig-narrow { max-width:320px; }
+}
+
 @media (max-width:1180px){
   .ss-layout { grid-template-columns:minmax(0,1fr) minmax(0,560px); }
   .ss-article { padding:20px 28px 120px; --ss-article-pad-x:28px; }
