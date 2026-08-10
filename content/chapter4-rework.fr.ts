@@ -32,9 +32,6 @@ function appendPrivatePhotos(subtitle: string, photos: Block[]) {
   privateReflexSection.blocks.splice(next < 0 ? privateReflexSection.blocks.length : next, 0, ...photos)
 }
 
-appendPrivatePhotos('11.1. Parasympathique crânien — territoire céphalique', [
-  privateReflexPhoto('03', 'tronc cérébral', 'portrait'),
-])
 appendPrivatePhotos('11.2. Nerf vague X — trajet crânien / foramen jugulaire', [
   privateReflexPhoto('05', 'nerf vague X dans la moelle allongée', 'portrait'),
   privateReflexPhoto('07', 'nerf vague X dans le foramen jugulaire', 'portrait'),
