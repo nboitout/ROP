@@ -1007,7 +1007,6 @@ chapter7Reflex.blocks = [
       'Bassin et membres inférieurs lorsque le tableau clinique le justifie.',
     ],
   },
-  { type: 'para', text: 'La lecture en quatre quadrants abdominaux peut rester un outil clinique simple d’orientation des relations entre territoire abdominal et manifestations somatiques, sans attribuer automatiquement une douleur somatique à un viscère particulier.' },
   { type: 'sub', text: '9.3. Renvois vers les autres niveaux' },
   { type: 'para', text: 'Le chapitre 7 reste volontairement centré sur les Niveaux 3 et 4.' },
   { type: 'xref', label: 'Niveau 1 — Voir le chapitre 3 « Système nerveux central »', href: '/lecture/chapitre-3-rework?lang=fr', text: 'Centres supérieurs.' },
