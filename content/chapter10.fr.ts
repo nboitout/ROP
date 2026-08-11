@@ -454,7 +454,7 @@ export const chapter10Fr: Chapter = {
     },
     {
       id: "zones-reflexes-podales",
-      title: "13. Zones réflexes podales",
+      title: "13. Zones réflexes ROP",
       blocks: [
         {
           type: "sub",
@@ -522,7 +522,6 @@ if (chapter10Pathologies) {
 
 const chapter10ReflexSection = chapter10Fr.sections.find((section) => section.id === "zones-reflexes-podales")
 if (chapter10ReflexSection) chapter10ReflexSection.blocks = [
-  { type: "note", label: "Précision méthodologique", body: ["Les localisations décrites ci-dessous appartiennent à la cartographie clinique de la ROP. Elles ne constituent pas une projection anatomique directe du duodénum, du sphincter d’Oddi ou de leurs voies nerveuses sur le pied. Le protocole associe la zone spécifique D1-D4, la régulation neuro-végétative digestive, l’environnement loco-régional abdominal, puis l’intégration viscéro-somatique et la Balance cerveau limbique–duodénum."] },
   { type: "sub", text: "13.1. Repères propres au duodénum" },
   { type: "para", text: "La cartographie actuelle D1-D4 est conservée, car elle permet de distinguer les différents segments duodénaux et leurs principaux carrefours fonctionnels." },
   { type: "para", text: "Pied droit. D1 est projeté horizontalement autour du repère L1 ; D2 verticalement de L1 à L4 ; le sphincter d’Oddi est repéré à l’union du tiers moyen et du tiers inférieur de D2, autour de L2 ; D3 est projeté horizontalement autour du tubercule du naviculaire." },
@@ -534,7 +533,7 @@ if (chapter10ReflexSection) chapter10ReflexSection.blocks = [
   { type: "para", text: "Le Niveau 1 reste court et optionnel. Il peut être intégré lorsque le tableau digestif s’accompagne de stress important, d’anxiété et d’hypervigilance digestive, de perturbations du sommeil ou d’une forte composante émotionnelle." },
   { type: "bullets", items: ["Zones réflexes occipitales.", "Tronc cérébral et centres d’intégration.", "Hypothalamus.", "Axe hypothalamo-hypophysaire."] },
   { type: "xref", label: "Voir le chapitre 3 — Système nerveux central", href: "/lecture/chapitre-3-rework?lang=fr" },
-  { type: "rop", body: ["Le Niveau 1 constitue une préparation générale lorsque le contexte central et adaptatif paraît pertinent. Il ne suppose pas une action directe sur un « centre duodénal » cérébral."] },
+  { type: "rop", body: ["Le Niveau 1 constitue une préparation générale lorsque le contexte central et adaptatif paraît pertinent."] },
   { type: "sub", text: "13.3. Niveau 2 — Régulation neuro-végétative et adaptation" },
   { type: "para", text: "Le Niveau 2 est important dans le protocole duodénal. Il associe les voies parasympathiques vagales, les voies sympathiques splanchniques et les plexus prévertébraux impliqués dans la motricité et les sécrétions digestives." },
   { type: "bullets", items: ["Nerf vague X.", "Sympathique thoracique.", "Nerfs splanchniques.", "Plexus cœliaque.", "Plexus mésentérique supérieur.", "Coordination autonome de la motricité duodénale et des sécrétions digestives."] },
@@ -542,7 +541,7 @@ if (chapter10ReflexSection) chapter10ReflexSection.blocks = [
   { type: "figure", src: "/chapter-10/figure-10-vague-foramen-jugulaire.png", caption: "Photo : Nerf vague X dans le foramen jugulaire", alt: "Repère podal du nerf vague X dans le foramen jugulaire", orientation: "portrait" },
   { type: "figure", src: "/chapter-10/figure-10-hiatus-vagues.png", caption: "Photo : Hiatus œsophagien et nerfs vagues droit et gauche", alt: "Repère podal du hiatus œsophagien avec les nerfs vagues droit et gauche", orientation: "portrait" },
   { type: "xref", label: "Voir le chapitre 4 — Système nerveux autonome", href: "/lecture/chapitre-4-rework?lang=fr" },
-  { type: "rop", body: ["Le Niveau 2 vise la coordination neuro-végétative de la motricité duodénale et de la séquence digestive, sans rechercher une stimulation isolée du vague ou du sympathique."] },
+  { type: "rop", body: ["Le Niveau 2 vise la coordination neuro-végétative de la motricité duodénale et de la séquence digestive."] },
   { type: "sub", text: "13.4. Niveau 3 — Régulation viscérale loco-régionale" },
   { type: "para", text: "Le Niveau 3 constitue le cœur anatomique du protocole. La sélection régionale varie selon le segment duodénal concerné." },
   { type: "para", text: "D1 — interface gastro-hépato-duodénale. Selon les tests : pylore, D1, estomac, foie, vésicule biliaire et ligament hépato-duodénal." },
