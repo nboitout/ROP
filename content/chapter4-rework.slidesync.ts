@@ -97,7 +97,7 @@ export const chapter4ReworkSlideAnchors = [
   { sectionId: 'systeme-nerveux-intrinseque-ou-enterique-sne', blockIndex: -1, slide: 31 },
   { sectionId: 'glandes-surrenales', blockIndex: -1, slide: 32 },
   { sectionId: 'glandes-surrenales', blockIndex: 6, slide: 33, ...endAt('glandes-surrenales', 8) },
-  { sectionId: 'zones-reflexes-podales', blockIndex: -1, slide: 34, gapBefore: 'half' as const },
+  { sectionId: 'zones-reflexes-podales', blockIndex: -1, slide: 34 },
   {
     sectionId: 'zones-reflexes-podales',
     blockIndex: 1,
@@ -113,8 +113,9 @@ export const chapter4ReworkSlideAnchors = [
     slide: 38,
     ...endAt('zones-reflexes-podales', 11),
   },
-  { sectionId: 'zones-reflexes-podales', blockIndex: 11, slide: 39, ...endAt('zones-reflexes-podales', 15) },
-  // The right-vagus cartography is intentionally solo after removal of its former companion.
+  // The left-vagus cartography remains solo until its correct companion photo is available.
+  { sectionId: 'zones-reflexes-podales', blockIndex: 11, slide: 39, ...endAt('zones-reflexes-podales', 14) },
+  // The updated slide-11 photo now accompanies the right-vagus cartography.
   { sectionId: 'zones-reflexes-podales', blockIndex: 14, slide: 40, ...endAt('zones-reflexes-podales', 15) },
   { sectionId: 'zones-reflexes-podales', blockIndex: 15, slide: 41, ...endAt('zones-reflexes-podales', 20) },
   { sectionId: 'zones-reflexes-podales', blockIndex: 20, slide: 42, ...endAt('zones-reflexes-podales', 24) },
@@ -127,4 +128,8 @@ export const chapter4ReworkSlideAnchors = [
   { sectionId: 'zones-reflexes-podales', blockIndex: 51, slide: 49, ...endAt('zones-reflexes-podales', 54) },
   // Ends after the paired photo and before 11.16. Système nerveux intrinsèque ou entérique (SNE).
   { sectionId: 'zones-reflexes-podales', blockIndex: 54, slide: 50, ...endAt('zones-reflexes-podales', 55) },
+]
+
+export const chapter4ReworkHalfBreaks = [
+  { sectionId: 'zones-reflexes-podales', blockIndex: 0 },
 ]
