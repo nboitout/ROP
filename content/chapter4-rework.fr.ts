@@ -988,10 +988,7 @@ export const chapter4ReworkFr: Chapter = { slug: 'chapter-4-rework', number: '4'
       {
         "type": "bullets",
         "items": [
-          "Le chapitre 4 conserve l’architecture de la version originale tout en étant recentré sur le Niveau 2 : régulation neuro-végétative et adaptation.",
           "Dans le raisonnement clinique ROP, un trouble fonctionnel viscéral conduit à rechercher prioritairement les facteurs relevant des Niveaux 1 et/ou 2 avant d’envisager le viscère comme origine primaire du trouble ; cette hiérarchisation ne se substitue pas à la recherche d’une pathologie organique.",
-          "Les références entre chapitres sont conservées afin de maintenir la continuité de lecture du livre.",
-          "Les encadrés « Intérêt en ROP » sont maintenus aux endroits où l’anatomie ou la physiologie est mise en relation avec la pratique clinique.",
           "Le SNA fonctionne dans les deux sens : commandes efférentes vers les viscères et informations afférentes vers les centres.",
           "Le parasympathique pelvien S2-S4 est distinct du nerf pudendal somatique S2-S4.",
           "Les zones réflexes ROP restent des repères cliniques et non une anatomie directe du système autonome sur le pied."
