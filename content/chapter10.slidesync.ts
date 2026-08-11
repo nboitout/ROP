@@ -23,10 +23,7 @@ export const chapter10Slides: SyncSlide[] = [
   { src: '/chapter-10/slides/slide-12.png', title: 'Conflit mécanique de D4' },
   { src: '/chapter-10/slides/slide-14.png', title: 'Duodénum — relations viscéro-somatiques' },
   { src: '/chapter-10/slides/slide-13.png', title: 'Objectifs thérapeutiques en ROP' },
-  { src: '/chapter-10/slides/slide-19.png', title: 'Cartographie : duodenum D1, D2, D3' },
-  { src: '/chapter-10/slides/slide-18.png', title: 'Cartographie : sphincter d Oddi' },
-  { src: '/chapter-10/slides/slide-20.png', title: 'Cartographie : duodenum D4' },
-  { src: '/chapter-10/slides/slide-21.png', title: 'Cartographie : jonction duodeno-jejunale' },
+  { src: '/chapter-10/articulations costo-vertebrales.png', title: 'Cartographie : articulations costo-vertébrales' },
 ]
 
 export const chapter10SlideAnchors: SyncAnchor[] = [
@@ -42,11 +39,8 @@ export const chapter10SlideAnchors: SyncAnchor[] = [
   { sectionId: 'physiologie', blockIndex: 8, slide: 10 },
   { sectionId: 'pathologies-courantes', blockIndex: 0, slide: 11 },
   { sectionId: 'indications-troubles-fonctionnels', blockIndex: 1, slide: 12 },
-  { sectionId: 'relations-viscero-somatiques', blockIndex: 0, slide: 13 },
-  { sectionId: 'conseils', blockIndex: 0, slide: 14 },
+  { sectionId: 'relations-viscero-somatiques', blockIndex: 0, slide: 13, end: { sectionId: 'conseils', blockIndex: -1 } },
+  { sectionId: 'conseils', blockIndex: -1, slide: 14, gapBefore: 'half' },
   { sectionId: 'zones-reflexes-podales', blockIndex: -1, slide: 13 },
-  { sectionId: 'zones-reflexes-podales', blockIndex: 19, slide: 15 },
-  { sectionId: 'zones-reflexes-podales', blockIndex: 21, slide: 16 },
-  { sectionId: 'zones-reflexes-podales', blockIndex: 22, slide: 17, gapBefore: 'half' },
-  { sectionId: 'zones-reflexes-podales', blockIndex: 23, slide: 18 },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 30, slide: 15, end: { sectionId: 'zones-reflexes-podales', blockIndex: 32 } },
 ]
