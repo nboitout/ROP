@@ -8,12 +8,7 @@
 // Slides 29+ retain the existing cartography/photo assets.
 
 export type SyncSlide = { src: string; title: string; orientation?: 'portrait' }
-export type SyncAnchorPoint = { sectionId: string; blockIndex: number; itemIndex?: number }
-export type SyncAnchor = SyncAnchorPoint & {
-  slide: number
-  gapBefore?: 'half'
-  end?: SyncAnchorPoint
-}
+export type SyncAnchor = { sectionId: string; blockIndex: number; slide: number; gapBefore?: 'half' }
 
 export const chapter15Slides: SyncSlide[] = [
   { src: '/chapter-15/slides/slide-01.png', title: 'Chapitre 15 : côlon et rectum' },
@@ -119,14 +114,14 @@ export const chapter15SlideAnchors: SyncAnchor[] = [
   { sectionId: 'indications-troubles-fonctionnels', blockIndex: 19, slide: 26 },
   { sectionId: 'indications-troubles-fonctionnels', blockIndex: 21, slide: 27 },
   { sectionId: 'relations-viscero-somatiques', blockIndex: 0, slide: 28 },
-  { sectionId: 'zones-reflexes-podales', blockIndex: 15, slide: 29, end: { sectionId: 'zones-reflexes-podales', blockIndex: 15 } },
-  { sectionId: 'zones-reflexes-podales', blockIndex: 16, slide: 30, end: { sectionId: 'zones-reflexes-podales', blockIndex: 16 } },
-  { sectionId: 'zones-reflexes-podales', blockIndex: 22, slide: 31, end: { sectionId: 'zones-reflexes-podales', blockIndex: 22 } },
-  { sectionId: 'zones-reflexes-podales', blockIndex: 17, slide: 32, end: { sectionId: 'zones-reflexes-podales', blockIndex: 17 } },
-  { sectionId: 'zones-reflexes-podales', blockIndex: 18, slide: 33, end: { sectionId: 'zones-reflexes-podales', blockIndex: 18 } },
-  { sectionId: 'zones-reflexes-podales', blockIndex: 33, slide: 34, end: { sectionId: 'zones-reflexes-podales', blockIndex: 33 } },
-  { sectionId: 'zones-reflexes-podales', blockIndex: 44, slide: 35, end: { sectionId: 'zones-reflexes-podales', blockIndex: 44 } },
-  { sectionId: 'zones-reflexes-podales', blockIndex: 48, slide: 36, end: { sectionId: 'zones-reflexes-podales', blockIndex: 48 } },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 15, slide: 29 },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 16, slide: 30 },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 22, slide: 31 },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 17, slide: 32 },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 18, slide: 33 },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 33, slide: 34 },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 44, slide: 35 },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 48, slide: 36 },
 ]
 
 const chapter15SlideAnchorsEnBySource: SyncAnchor[] = [
