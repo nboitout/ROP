@@ -264,14 +264,13 @@ export const chapter9Fr: Chapter = {
       id: 'relations-viscero-emotionnelles',
       title: '11. Relations viscéro-émotionnelles',
       blocks: [
-        { type: 'para', text: 'Dans le cadre de la lecture viscéro-émotionnelle ROP, l\'estomac est associé au registre du « moi social », du paraître et de la place occupée dans le groupe, la famille, le travail ou la hiérarchie.' },
-        { type: 'para', text: 'Cette lecture concerne notamment les enjeux de reconnaissance, de valorisation et de relation au père.' },
-        { type: 'para', text: 'L\'expression « avoir de l\'estomac » y renvoie à la détermination et au courage.' },
-        { type: 'para', text: 'Dans ce cadre symbolique, les troubles fonctionnels de l\'estomac sont interprétés comme la possible inscription tissulaire de conflits émotionnels répétés, sans que cela constitue un mécanisme démontré de l\'ulcération.' },
-        { type: 'para', text: 'L\'hypervalorisation est décrite comme une surestimation de soi, avec sentiment de puissance, mauvaise tolérance à la critique, agressivité, colère impulsive, peur de l\'échec ou fuite en avant.' },
-        { type: 'para', text: 'La personne « estomac » est alors décrite comme tournée vers la séduction, la réussite et la démonstration de puissance.' },
-        { type: 'para', text: 'L\'expression « Pour qui il se prend, celui-là ? » résume cette polarité dans le langage du modèle.' },
-        { type: 'para', text: 'L\'hypovalorisation se traduit, dans ce même cadre, par un manque de confiance en soi, la résignation, le repli, la dépréciation de soi, des frustrations difficilement verbalisées, des rancœurs non exprimées ou des situations répétées de subordination.' },
+        { type: 'para', text: 'Dans la lecture viscéro-émotionnelle propre à la ROP, l\'estomac est associé au registre du « moi social », du paraître et de la place occupée dans le groupe, la famille, le travail ou la hiérarchie.' },
+        { type: 'para', text: 'Dans cette grille de lecture, sont notamment explorés les enjeux de reconnaissance, de valorisation, de place sociale et, selon l\'histoire du patient, de relation à la figure paternelle. L\'expression « avoir de l\'estomac » renvoie symboliquement à la détermination et au courage.' },
+        { type: 'para', text: 'Ces associations constituent une grille d\'exploration clinique propre à la ROP. Elles ne signifient pas qu\'une émotion ou un conflit particulier provoque directement une pathologie gastrique.' },
+        { type: 'para', text: 'Deux polarités sont classiquement décrites dans ce modèle :' },
+        { type: 'para', text: 'Hypervalorisation. Elle peut s\'exprimer par une surestimation de soi, un besoin important de reconnaissance, une mauvaise tolérance à la critique, une attitude de démonstration ou de puissance, une colère impulsive ou une peur de l\'échec. Dans cette polarité, la recherche de réussite, de séduction ou de reconnaissance sociale peut occuper une place importante.' },
+        { type: 'para', text: 'Hypovalorisation. Elle peut au contraire être associée à un manque de confiance en soi, au repli, à la dépréciation de soi, à des frustrations difficilement exprimées, à des rancœurs non verbalisées ou à un vécu répété de subordination.' },
+        { type: 'para', text: 'Ces éléments ne constituent pas des profils psychologiques diagnostiques. Ils sont utilisés, lorsqu\'ils paraissent pertinents pour le patient, comme éléments complémentaires de la lecture clinique ROP.' },
       ],
     },
     {
@@ -356,7 +355,7 @@ if (chapter9Pathologies) {
 
 const chapter9ReflexSection = chapter9Fr.sections.find((section) => section.id === 'zones-reflexes-podales')
 if (chapter9ReflexSection) chapter9ReflexSection.blocks = [
-  { type: 'note', label: 'Précision méthodologique', body: ['Les localisations décrites ci-dessous appartiennent à la cartographie clinique de la ROP. Elles ne constituent pas une projection anatomique directe de l’estomac, du pylore, du sphincter inférieur de l’œsophage ou de leurs voies nerveuses sur le pied. Le protocole associe la zone spécifique de l’organe, la régulation neuro-végétative, l’environnement loco-régional abdominal, puis l’intégration viscéro-somatique et la Balance cerveau limbique–estomac.'] },
+  { type: 'note', label: 'Précision méthodologique', body: ['Pour l’estomac, le protocole associe la zone spécifique de l’organe, la régulation neuro-végétative, l’environnement loco-régional abdominal, puis l’intégration viscéro-somatique et la Balance cerveau limbique-estomac.'] },
   { type: 'sub', text: '13.1. Repères propres à l’estomac' },
   { type: 'para', text: 'La cartographie actuelle est conservée et précisée selon les principales régions fonctionnelles de l’estomac.' },
   { type: 'bullets', items: ['Estomac : zone générale de l’organe.', 'Sphincter inférieur de l’œsophage (SIO) : en relation avec la zone du hiatus œsophagien.', 'Petite courbure : ligne courbe allant du hiatus œsophagien au pylore.', 'Grande courbure : ligne courbe plus latérale, allant également du hiatus œsophagien au pylore.', 'Pylore : sur le bord médial plantaire des deux pieds, généralement plus marqué à droite.'] },
@@ -366,7 +365,7 @@ if (chapter9ReflexSection) chapter9ReflexSection.blocks = [
   { type: 'para', text: 'Le Niveau 1 reste court et optionnel. Il devient plus pertinent lorsque le tableau associe stress important, hypervigilance digestive, gastralgies fonctionnelles liées au contexte émotionnel, ou troubles du sommeil et de l’adaptation.' },
   { type: 'bullets', items: ['Zones réflexes occipitales.', 'Tronc cérébral et centres d’intégration.', 'Hypothalamus.', 'Axe hypothalamo-hypophysaire.'] },
   { type: 'xref', label: 'Voir le chapitre 3 — Système nerveux central', href: '/lecture/chapitre-3-rework?lang=fr' },
-  { type: 'rop', body: ['Le Niveau 1 constitue une préparation générale lorsque le contexte central et émotionnel paraît participer au tableau. Il ne signifie pas qu’une stimulation podale agit directement sur un centre cérébral de l’estomac.'] },
+  { type: 'rop', body: ['Le Niveau 1 constitue une préparation générale lorsque le contexte central et émotionnel paraît participer au tableau.'] },
   { type: 'sub', text: '13.3. Niveau 2 — Régulation neuro-végétative et adaptation' },
   { type: 'para', text: 'Le Niveau 2 constitue le niveau fonctionnel majeur de l’estomac. Il associe les voies vagales, le sympathique thoracique et les plexus prévertébraux impliqués dans l’accommodation, la motricité et la sécrétion gastriques.' },
   { type: 'bullets', items: ['Nerfs vagues droit et gauche.', 'Sympathique thoracique, autour de Th6-Th9 dans la lecture clinique du chapitre.', 'Grand nerf splanchnique.', 'Plexus cœliaque.', 'Coordination autonome de l’accommodation, de la motricité et de la sécrétion gastriques.'] },
@@ -399,5 +398,5 @@ if (chapter9ReflexSection) chapter9ReflexSection.blocks = [
   { type: 'para', text: 'Ces territoires sont des soutiens régionaux ou fonctionnels, et non une séquence systématique.' },
   { type: 'sub', text: '13.7. Lecture clinique' },
   { type: 'bullets', items: ['Gastralgie fonctionnelle ou stress : Niveau 2 + zone gastrique + Balance cerveau limbique–estomac selon les tests.', 'Gastroparésie ou lenteur de vidange : vague au Niveau 2 + corps/antre/pylore au Niveau 3 + duodénum selon les tests.', 'Reflux gastro-œsophagien ou inconfort de la jonction œso-gastrique : SIO + hiatus + diaphragme + estomac proximal ; voir le chapitre 8.', 'Pylorospasme fonctionnel après exclusion médicale : pylore + antre + duodénum proximal + régulation autonome.'] },
-  { type: 'note', label: 'Principe de sécurité', body: ['Hématémèse, méléna, amaigrissement inexpliqué, douleur nocturne persistante, vomissements répétés, fièvre ou douleur thoraco-abdominale profonde nécessitent une évaluation médicale. La ROP ne remplace pas le diagnostic ni la prise en charge d’une pathologie gastrique.'] },
+  { type: 'note', label: 'Principe de sécurité', body: ['Hématémèse, méléna, amaigrissement inexpliqué, douleur nocturne persistante, vomissements répétés, fièvre ou douleur thoraco-abdominale profonde nécessitent une évaluation médicale.'] },
 ]
