@@ -1,5 +1,5 @@
 // Chapter 4 — private reworked edition
-// Source: public/chapter-4/Chapter4_SNA_AI_Rework_v3_corrige.docx
+// Source: public/chapter-4/Chapitre_4_SNA_version_publiable_origine_medullaire.docx
 // Reflex-zone section: shared verbatim with the published Chapter 4.
 
 import type { Block, Chapter } from './types'
@@ -25,7 +25,7 @@ privateReflexSection.blocks.push(
   {
     type: 'rop',
     body: [
-      'Une zone réflexe sensible ou texturalement modifiée constitue un repère clinique ROP. Elle ne démontre ni une lésion de la structure correspondante. La sélection des zones reste guidée par l’anamnèse, les tests et la réévaluation.',
+      'Une zone réflexe sensible ou texturalement modifiée constitue un repère clinique ROP. Elle ne démontre pas une lésion de la structure correspondante. La sélection des zones reste guidée par l’anamnèse, les tests et la réévaluation.',
     ],
   },
 )
@@ -97,7 +97,9 @@ export const chapter4ReworkFr: Chapter = { slug: 'chapter-4-rework', number: '4'
         "type": "note",
         "label": "INTRODUCTION",
         "body": [
-          "Le système nerveux autonome (SNA) participe à l’ajustement permanent du fonctionnement des viscères, des glandes, des vaisseaux et de nombreuses fonctions internes. Dans la séquence clinique ROP, il correspond au Niveau 2 — Régulation neuro-végétative et adaptation."
+          "Le système nerveux autonome (SNA) assure l’ajustement permanent du fonctionnement des viscères, des glandes, des vaisseaux et de nombreuses fonctions internes. Dans le protocole ROP, il correspond au Niveau 2 — Régulation neuro-végétative et adaptation.",
+          "Ce chapitre en présente progressivement les grandes voies : parasympathique et sympathique, nerf vague, chaînes ganglionnaires, nerfs splanchniques, plexus prévertébraux et pelviens, système nerveux entérique et surrénales. Il faut garder à l’esprit que le SNA fonctionne dans les deux sens : il transmet des commandes vers les viscères, mais reçoit également en permanence des informations provenant de ceux-ci.",
+          "Le schéma de synthèse ci-dessous permet de visualiser ce fil conducteur anatomique et fonctionnel, avant d’aborder chacune de ces composantes et leur mise en relation avec les zones réflexes utilisées en ROP."
         ]
       },
       {
@@ -157,7 +159,8 @@ export const chapter4ReworkFr: Chapter = { slug: 'chapter-4-rework', number: '4'
       {
         "type": "rop",
         "body": [
-          "Le SNA est une des clés de l’approche ROP. Fidèle au principe « priorité au nerf », le raisonnement clinique recherche en premier lieu, devant un trouble fonctionnel viscéral, une origine possible au Niveau 1 et/ou au Niveau 2, avant d’envisager un travail loco-régional sur le viscère lui-même. Dans le modèle ROP, l’origine d’un trouble fonctionnel est ainsi considérée comme plus souvent située en amont que primaire dans le viscère ; une atteinte directement liée au viscère, notamment après un traumatisme local, constitue une situation particulière à rechercher à l’anamnèse. Le Niveau 2 vise notamment à prendre en compte les voies autonomes participant à la régulation du viscère. Les symptômes ne sont toutefois pas interprétés comme la conséquence automatique d’un « déséquilibre sympathique/parasympathique », et toute cause organique ou pathologique relevant d’une évaluation médicale doit naturellement être exclue."
+          "Le SNA est une des clés de l’approche ROP. Fidèle au principe « priorité au nerf », le raisonnement clinique recherche en premier lieu, devant un trouble fonctionnel viscéral, une origine possible au Niveau 1 et/ou au Niveau 2, avant d’envisager un travail loco-régional sur le viscère lui-même.",
+          "Dans le modèle ROP, l’origine d’un trouble fonctionnel est ainsi considérée comme plus souvent située en amont que primaire dans le viscère ; une atteinte directement liée au viscère, notamment après un traumatisme local, constitue une situation particulière à rechercher à l’anamnèse. Le Niveau 2 vise notamment à prendre en compte les voies autonomes participant à la régulation du viscère. Les symptômes ne sont toutefois pas interprétés comme la conséquence automatique d’un « déséquilibre sympathique/parasympathique », et toute cause organique ou pathologique relevant d’une évaluation médicale doit naturellement être exclue."
         ]
       },
       {
@@ -546,16 +549,20 @@ export const chapter4ReworkFr: Chapter = { slug: 'chapter-4-rework', number: '4'
     "title": "5. Sympathique viscéro-moteur",
     "blocks": [
       {
+        "type": "sub",
+        "text": "5.1. Origine médullaire du sympathique"
+      },
+      {
         "type": "para",
         "text": "Les neurones sympathiques préganglionnaires sont principalement situés dans la colonne intermédio-latérale de la moelle entre T1 et L2. Leurs axones quittent la moelle par les racines ventrales, rejoignent les nerfs spinaux puis la chaîne sympathique par les rameaux communicants blancs."
       },
       {
         "type": "para",
-        "text": "À partir de la chaîne paravertébrale, les fibres peuvent faire relais au même niveau, monter ou descendre avant de faire relais, ou traverser la chaîne pour former des nerfs splanchniques destinés aux plexus prévertébraux."
+        "text": "À partir de la chaîne paravertébrale, les fibres peuvent faire relais au même niveau, monter ou descendre avant de faire relais, ou traverser la chaîne sans synapse pour former des nerfs splanchniques destinés aux plexus prévertébraux. Cette organisation constitue le point de départ des voies sympathiques destinées aux territoires céphaliques, thoraciques, abdominaux et pelviens."
       },
       {
         "type": "sub",
-        "text": "5.1. Organisation métamérique"
+        "text": "5.2. Organisation métamérique"
       },
       {
         "type": "para",
@@ -563,7 +570,7 @@ export const chapter4ReworkFr: Chapter = { slug: 'chapter-4-rework', number: '4'
       },
       {
         "type": "sub",
-        "text": "5.2. Chaîne ganglionnaire thoracique"
+        "text": "5.3. Chaîne ganglionnaire thoracique"
       },
       {
         "type": "para",
@@ -575,7 +582,7 @@ export const chapter4ReworkFr: Chapter = { slug: 'chapter-4-rework', number: '4'
       },
       {
         "type": "sub",
-        "text": "5.2.1. Rameaux méningés récurrents"
+        "text": "5.3.1. Rameaux méningés récurrents"
       },
       {
         "type": "para",
@@ -593,7 +600,7 @@ export const chapter4ReworkFr: Chapter = { slug: 'chapter-4-rework', number: '4'
       },
       {
         "type": "sub",
-        "text": "5.3. Chaîne ganglionnaire cervicale"
+        "text": "5.4. Chaîne ganglionnaire cervicale"
       },
       {
         "type": "para",
@@ -601,7 +608,7 @@ export const chapter4ReworkFr: Chapter = { slug: 'chapter-4-rework', number: '4'
       },
       {
         "type": "sub",
-        "text": "5.3.1. Ganglion cervical inférieur ou stellaire"
+        "text": "5.4.1. Ganglion cervical inférieur ou stellaire"
       },
       {
         "type": "para",
@@ -615,7 +622,7 @@ export const chapter4ReworkFr: Chapter = { slug: 'chapter-4-rework', number: '4'
       },
       {
         "type": "sub",
-        "text": "5.3.2. Ganglion cervical moyen"
+        "text": "5.4.2. Ganglion cervical moyen"
       },
       {
         "type": "para",
@@ -623,7 +630,7 @@ export const chapter4ReworkFr: Chapter = { slug: 'chapter-4-rework', number: '4'
       },
       {
         "type": "sub",
-        "text": "5.3.3. Ganglion cervical supérieur"
+        "text": "5.4.3. Ganglion cervical supérieur"
       },
       {
         "type": "para",
@@ -641,7 +648,7 @@ export const chapter4ReworkFr: Chapter = { slug: 'chapter-4-rework', number: '4'
       },
       {
         "type": "sub",
-        "text": "5.4. Chaîne ganglionnaire lombale"
+        "text": "5.5. Chaîne ganglionnaire lombale"
       },
       {
         "type": "para",
@@ -661,7 +668,7 @@ export const chapter4ReworkFr: Chapter = { slug: 'chapter-4-rework', number: '4'
       },
       {
         "type": "sub",
-        "text": "5.5. Chaîne ganglionnaire sacrale et coccygienne"
+        "text": "5.6. Chaîne ganglionnaire sacrale et coccygienne"
       },
       {
         "type": "para",
@@ -681,7 +688,7 @@ export const chapter4ReworkFr: Chapter = { slug: 'chapter-4-rework', number: '4'
       },
       {
         "type": "sub",
-        "text": "5.6. Nerfs splanchniques"
+        "text": "5.7. Nerfs splanchniques"
       },
       {
         "type": "para",
