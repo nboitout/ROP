@@ -302,7 +302,6 @@ export const chapter9Fr: Chapter = {
           'Diaphragme et piliers.',
           'Plexus prévertébral.',
         ]},
-        { type: 'figure', src: '/chapter-9/cartographie/figure-9-06.png', caption: 'Photo — Articulations costo-vertébrales', alt: 'Repère podal des articulations costo-vertébrales entre les deux pouces', orientation: 'landscape' },
         { type: 'sub', text: '13.2. Syndrome loco-régional' },
         {
           type: 'xref',
@@ -387,7 +386,6 @@ if (chapter9ReflexSection) chapter9ReflexSection.blocks = [
   { type: 'rop', body: ['Le Niveau 3 permet d’adapter le traitement à la région fonctionnelle — jonction œso-gastrique, corps gastrique ou antre-pylore — plutôt que de considérer l’estomac comme une zone homogène.'] },
   { type: 'sub', text: '13.5. Niveau 4 — Intégration viscéro-somatique et Balance cerveau limbique–estomac' },
   { type: 'para', text: 'Versant viscéro-somatique. Selon les tests, la lecture peut intégrer Th6-Th9, surtout à gauche, les articulations costo-vertébrales correspondantes, la région interscapulaire gauche, les territoires cervico-brachiaux et l’épaule gauche lorsque le contexte clinique le rend pertinent. Le diaphragme gauche et la paroi thoraco-abdominale supérieure peuvent compléter cette lecture.' },
-  { type: 'figure', src: '/chapter-9/cartographie/figure-9-06.png', caption: 'Photo : Articulations costo-vertébrales', alt: 'Repère podal des articulations costo-vertébrales entre les deux pouces', orientation: 'landscape' },
   { type: 'para', text: 'Balance cerveau limbique–estomac. Dans le vocabulaire propre à la ROP, l’écoute-induction associe un pouce sur la zone de l’estomac et l’autre sur la zone du cerveau limbique.' },
   { type: 'para', text: 'Cette « balance » constitue une technique clinique d’intégration propre à la ROP. Elle ne décrit pas une connexion anatomique directe entre la zone podale, les réseaux limbiques et l’estomac.' },
   { type: 'xref', label: 'Voir le chapitre 3 — Système nerveux central', href: '/lecture/chapitre-3-rework?lang=fr' },
