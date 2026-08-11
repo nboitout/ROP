@@ -953,7 +953,7 @@ export const chapter7Fr: Chapter = {
 // Revised regional abdominal and peritoneal protocol. Chapter 7 provides the
 // Level 3 regional foundation, completed selectively by a somatic Level 4.
 const chapter7Reflex = chapter7Fr.sections.find((section) => section.id === 'zones-reflexes-podales')!
-chapter7Reflex.title = '9. Zones réflexes podales — Socle régional abdominal et péritonéal'
+chapter7Reflex.title = '9. Zones réflexes ROP — Socle régional abdominal et péritonéal'
 chapter7Reflex.blocks = [
   {
     type: 'note',

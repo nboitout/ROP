@@ -32,7 +32,7 @@ export const chapter9Slides: SyncSlide[] = [
   { src: '/chapter-9/slides/slide-15.png', title: 'Drapeaux rouges : diagnostics d exclusion' },
   { src: '/chapter-9/slides/slide-14.png', title: 'Matrice des pathologies fonctionnelles' },
   { src: '/chapter-9/slides/slide-18.png', title: 'Cascade pathologique : l hypochlorhydrie et le fer' },
-  { src: '/chapter-9/slides/slide-20.png', title: 'Le profil emotionnel : l organe du moi social' },
+  { src: '/chapter-9/slides/slide-20.png', title: 'Relations viscéro-émotionnelles — Estomac' },
   { src: '/chapter-9/slides/slide-21.png', title: 'Tableau de bord therapeutique ROP' },
   { src: '/chapter-9/slides/slide-19.png', title: 'Cartographie ROP : cibles reflexes' },
   { src: '/chapter-9/cartographie/figure-9-05.png', title: 'Cartographie : articulations costo-transversaires' },

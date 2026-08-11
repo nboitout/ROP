@@ -741,7 +741,7 @@ export const chapter8Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "On distingue deux types de hernies hiatales:"
+          "text": "On distingue deux types de hernies hiatales :"
         },
         {
           "type": "lead",
@@ -942,7 +942,7 @@ export const chapter8Fr: Chapter = {
     },
     {
       "id": "zones-reflexes-podales",
-      "title": "12. Zones réflexes podales",
+      "title": "12. Zones réflexes ROP",
       "blocks": [
         {
           "type": "sub",
@@ -1239,9 +1239,4 @@ chapter8Reflex.blocks = [
   { type: 'para', text: 'La cartographie clinique ROP peut être organisée ainsi :' },
   { type: 'bullets', items: ['Niveau 1 : environnement neuro-méningé, repères occipitaux et MRP dans le modèle ROP.', 'Niveau 2 : nerf vague, régulation autonome et diaphragme.', 'Niveau 3 : hiatus œsophagien, jonction gastro-œsophagienne et estomac.'] },
   { type: 'para', text: 'Chez le nourrisson, tout reflux important, vomissement persistant, mauvaise prise de poids, détresse respiratoire ou autre signe inhabituel nécessite une évaluation pédiatrique. La ROP ne se substitue pas au diagnostic ni au traitement médical.' },
-  { type: 'sub', text: '12.7. Repères secondaires à utiliser avec prudence' },
-  { type: 'para', text: 'Certains repères de l’ancienne cartographie peuvent être conservés comme éléments secondaires, mais ne doivent pas être présentés comme des cibles prioritaires du protocole diaphragmatique.' },
-  { type: 'bullets', items: ['Jonction azygo-cave : repère vasculaire anatomique, à utiliser uniquement si le contexte clinique le justifie.', 'Nerf intercostobrachial : le repère nerveux peut être conservé, mais les associations directes avec asthme, eczéma ou allergies ne doivent pas être présentées comme des correspondances causales.'] },
-  { type: 'figure', src: '/chapter-8/cartographie/figure-8-08.png', caption: 'Jonction azygo-cave', alt: 'Photo du repérage podal de la jonction azygo-cave', orientation: 'landscape' },
-  { type: 'figure', src: '/chapter-8/cartographie/figure-8-15.png', caption: 'Nerf intercostobrachial de Hyrtl', alt: 'Photo du repérage podal du nerf intercostobrachial', orientation: 'landscape' },
 ]
