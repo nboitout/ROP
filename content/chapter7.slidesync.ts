@@ -1,5 +1,10 @@
 export type SyncSlide = { src: string; title: string; orientation?: 'portrait' }
-export type SyncAnchor = { sectionId: string; blockIndex: number; slide: number | number[]; gapBefore?: 'half' }
+export type SyncAnchorPoint = { sectionId: string; blockIndex: number; itemIndex?: number }
+export type SyncAnchor = SyncAnchorPoint & {
+  slide: number | number[]
+  gapBefore?: 'half'
+  end?: SyncAnchorPoint
+}
 
 // The first 14 slides are the rebuilt synthesis deck.
 // Slides 15-19 reuse the cartography pages paired with the reflex-zone text.
@@ -39,10 +44,16 @@ export const chapter7SlideAnchors: SyncAnchor[] = [
   { sectionId: 'physiologie', blockIndex: 12, slide: 11 },
   { sectionId: 'pathologie', blockIndex: 0, slide: 12 },
   { sectionId: 'relations-peritoneo-somatiques', blockIndex: 0, slide: 13 },
-  { sectionId: 'zones-reflexes-podales', blockIndex: -1, slide: 14 },
-  { sectionId: 'zones-reflexes-podales', blockIndex: 2, slide: 15 },
-  { sectionId: 'zones-reflexes-podales', blockIndex: 4, slide: 16 },
-  { sectionId: 'zones-reflexes-podales', blockIndex: 6, slide: 17 },
-  { sectionId: 'zones-reflexes-podales', blockIndex: 8, slide: 18 },
-  { sectionId: 'zones-reflexes-podales', blockIndex: 10, slide: 19 },
+  {
+    sectionId: 'relations-peritoneo-somatiques',
+    blockIndex: 6,
+    itemIndex: 4,
+    slide: 14,
+    end: { sectionId: 'zones-reflexes-podales', blockIndex: -1 },
+  },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 7, slide: 15, end: { sectionId: 'zones-reflexes-podales', blockIndex: 8 } },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 9, slide: 16, end: { sectionId: 'zones-reflexes-podales', blockIndex: 10 } },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 11, slide: 17, end: { sectionId: 'zones-reflexes-podales', blockIndex: 12 } },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 13, slide: 18, end: { sectionId: 'zones-reflexes-podales', blockIndex: 14 } },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 15, slide: 19, end: { sectionId: 'zones-reflexes-podales', blockIndex: 16 } },
 ]
