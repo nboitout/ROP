@@ -21,7 +21,7 @@ export const chapter10Slides: SyncSlide[] = [
   { src: '/chapter-10/slides/slide-10.png', title: 'Régulation et hydrolyse' },
   { src: '/chapter-10/slides/slide-11.png', title: 'Grille de lecture pathologique' },
   { src: '/chapter-10/slides/slide-12.png', title: 'Conflit mécanique de D4' },
-  { src: '/chapter-10/slides/slide-14.png', title: 'Synthèse ROP : axe viscéro-somatique et limbique' },
+  { src: '/chapter-10/slides/slide-14.png', title: 'Duodénum — relations viscéro-somatiques' },
   { src: '/chapter-10/slides/slide-13.png', title: 'Objectifs thérapeutiques en ROP' },
   { src: '/chapter-10/slides/slide-19.png', title: 'Cartographie : duodenum D1, D2, D3' },
   { src: '/chapter-10/slides/slide-18.png', title: 'Cartographie : sphincter d Oddi' },
