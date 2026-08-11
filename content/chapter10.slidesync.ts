@@ -39,7 +39,7 @@ export const chapter10SlideAnchors: SyncAnchor[] = [
   { sectionId: 'physiologie', blockIndex: 8, slide: 10 },
   { sectionId: 'pathologies-courantes', blockIndex: 0, slide: 11 },
   { sectionId: 'indications-troubles-fonctionnels', blockIndex: 1, slide: 12 },
-  { sectionId: 'relations-viscero-somatiques', blockIndex: 0, slide: 13, end: { sectionId: 'conseils', blockIndex: -1 } },
+  { sectionId: 'relations-viscero-somatiques', blockIndex: 0, slide: 13 },
   { sectionId: 'conseils', blockIndex: -1, slide: 14, gapBefore: 'half' },
   { sectionId: 'zones-reflexes-podales', blockIndex: -1, slide: 13 },
   { sectionId: 'zones-reflexes-podales', blockIndex: 30, slide: 15, end: { sectionId: 'zones-reflexes-podales', blockIndex: 32 } },
