@@ -1,5 +1,5 @@
 // Chapter 4 — private reworked edition
-// Source: public/chapter-4/Chapter4_SNA_AI_Rework_v2.docx
+// Source: public/chapter-4/Chapter4_SNA_AI_Rework_v3_corrige.docx
 // Reflex-zone section: shared verbatim with the published Chapter 4.
 
 import type { Block, Chapter } from './types'
@@ -12,6 +12,23 @@ const privateReflexSection: Chapter['sections'][number] = {
   ...publishedReflexSection,
   blocks: publishedReflexSection.blocks.filter((block) => block.type !== 'figure'),
 }
+
+const cephalicTerritory = privateReflexSection.blocks.find(
+  (block) => block.type === 'leadBullets' && block.items.some((item) => item.label === 'Tronc cérébral'),
+)
+if (cephalicTerritory?.type === 'leadBullets') {
+  cephalicTerritory.items = cephalicTerritory.items.filter((item) => item.label !== 'Tronc cérébral')
+}
+
+privateReflexSection.blocks.push(
+  { type: 'sub', text: '11.18. Principe de lecture des zones' },
+  {
+    type: 'rop',
+    body: [
+      'Une zone réflexe sensible ou texturalement modifiée constitue un repère clinique ROP. Elle ne démontre ni une lésion de la structure correspondante. La sélection des zones reste guidée par l’anamnèse, les tests et la réévaluation.',
+    ],
+  },
+)
 
 const privateReflexPhoto = (
   slide: string,
@@ -703,7 +720,7 @@ export const chapter4ReworkFr: Chapter = { slug: 'chapter-4-rework', number: '4'
       {
         "type": "rop",
         "body": [
-          "Les relations médullaires entre afférences viscérales et somatiques fournissent un cadre neuro-anatomique aux douleurs projetées et aux relations viscéro-somatiques. Les correspondances cliniques restent variables et ne constituent pas un diagnostic spécifique."
+          "Les relations médullaires entre afférences viscérales et somatiques fournissent un cadre neuro-anatomique aux douleurs projetées et aux relations viscéro-somatiques."
         ]
       },
       {
@@ -751,7 +768,7 @@ export const chapter4ReworkFr: Chapter = { slug: 'chapter-4-rework', number: '4'
       {
         "type": "rop",
         "body": [
-          "Dans le modèle ROP, les zones réflexes des plexus prévertébraux sont utilisées comme repères de régulation régionale neuro-végétative. Leur stimulation ne doit pas être présentée comme une activation directe et sélective du plexus anatomique correspondant."
+          "Dans le modèle ROP, les zones réflexes des plexus prévertébraux sont utilisées comme repères de régulation régionale neuro-végétative."
         ]
       },
       {

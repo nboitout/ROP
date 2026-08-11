@@ -64,7 +64,7 @@ const priorSlideAnchors = [
     sectionId: 'zones-reflexes-podales',
     blockIndex: 1,
     slide: 29,
-    end: { sectionId: 'zones-reflexes-podales', blockIndex: 1, itemIndex: 9 },
+    end: { sectionId: 'zones-reflexes-podales', blockIndex: 1, itemIndex: 8 },
   },
   { sectionId: 'zones-reflexes-podales', blockIndex: 3, slide: 30, ...endAt('zones-reflexes-podales', 6) },
   { sectionId: 'zones-reflexes-podales', blockIndex: 6, slide: 31, ...endAt('zones-reflexes-podales', 7) },
