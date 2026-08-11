@@ -464,9 +464,6 @@ export const chapter10Fr: Chapter = {
           type: "para",
           text: "Nerf vague, colonne vertébrale, articulations costo-transversaires, chaîne ganglionnaire latéro-vertébrale thoracique droite et plexus prévertébraux."
         },
-        { type: "figure", src: "/chapter-10/figure-10-vague-moelle-allongee.png", caption: "Photo : Nerf vague X dans la moelle allongée", alt: "Repère podal du nerf vague X dans la moelle allongée", orientation: "landscape" },
-        { type: "figure", src: "/chapter-10/figure-10-vague-foramen-jugulaire.png", caption: "Photo : Nerf vague X dans le foramen jugulaire", alt: "Repère podal du nerf vague X dans le foramen jugulaire", orientation: "landscape" },
-        { type: "figure", src: "/chapter-10/figure-10-hiatus-vagues.png", caption: "Photo : Hiatus œsophagien et nerfs vagues droit et gauche", alt: "Repère podal du hiatus œsophagien avec les nerfs vagues droit et gauche", orientation: "landscape" },
         { type: "figure", src: "/chapter-10/figure-10-articulations-costo-vertebrales.png", caption: "Photo : Articulations costo-vertébrales", alt: "Repère podal des articulations costo-vertébrales entre les deux pouces", orientation: "landscape" },
         {
           type: "sub",
@@ -537,9 +534,6 @@ if (chapter10ReflexSection) chapter10ReflexSection.blocks = [
   { type: "sub", text: "13.3. Niveau 2 — Régulation neuro-végétative et adaptation" },
   { type: "para", text: "Le Niveau 2 est important dans le protocole duodénal. Il associe les voies parasympathiques vagales, les voies sympathiques splanchniques et les plexus prévertébraux impliqués dans la motricité et les sécrétions digestives." },
   { type: "bullets", items: ["Nerf vague X.", "Sympathique thoracique.", "Nerfs splanchniques.", "Plexus cœliaque.", "Plexus mésentérique supérieur.", "Coordination autonome de la motricité duodénale et des sécrétions digestives."] },
-  { type: "figure", src: "/chapter-10/figure-10-vague-moelle-allongee.png", caption: "Photo : Nerf vague X dans la moelle allongée", alt: "Repère podal du nerf vague X dans la moelle allongée", orientation: "portrait" },
-  { type: "figure", src: "/chapter-10/figure-10-vague-foramen-jugulaire.png", caption: "Photo : Nerf vague X dans le foramen jugulaire", alt: "Repère podal du nerf vague X dans le foramen jugulaire", orientation: "portrait" },
-  { type: "figure", src: "/chapter-10/figure-10-hiatus-vagues.png", caption: "Photo : Hiatus œsophagien et nerfs vagues droit et gauche", alt: "Repère podal du hiatus œsophagien avec les nerfs vagues droit et gauche", orientation: "portrait" },
   { type: "xref", label: "Voir le chapitre 4 — Système nerveux autonome", href: "/lecture/chapitre-4-rework?lang=fr" },
   { type: "rop", body: ["Le Niveau 2 vise la coordination neuro-végétative de la motricité duodénale et de la séquence digestive."] },
   { type: "sub", text: "13.4. Niveau 3 — Régulation viscérale loco-régionale" },
