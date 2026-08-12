@@ -1,4 +1,4 @@
-// Source: public/chapter-13/Chapitre_13_Rate_version_publiable.docx
+// Source: public/chapter-13/Chapitre_13_Rate_version_complete_zones_reflexes_revisees.docx
 import type { Chapter } from './types'
 
 export const chapter13Fr: Chapter = {
@@ -467,18 +467,16 @@ appendAfterBlock(
 // Revised four-level protocol for the spleen. Retain the established spleen
 // and costo-vertebral photos at their relevant levels.
 const chapter13Reflex = chapter13Fr.sections.find((section) => section.id === 'zones-reflexes-podales')!
-chapter13Reflex.title = '12. Zones réflexes podales'
+chapter13Reflex.title = '12. Zones réflexes ROP'
 chapter13Reflex.blocks = [
-  { type: 'note', label: 'Précision méthodologique', body: ['Les localisations décrites ci-dessous appartiennent à la cartographie clinique de la ROP. Elles ne constituent pas une projection anatomique directe de la rate, de ses vaisseaux ou de ses voies nerveuses sur le pied. Pour la rate, le protocole associe la zone spécifique de l’organe, la régulation neuro-végétative, l’environnement régional abdominal et l’intégration viscéro-somatique et neuro-immunitaire.'] },
   { type: 'sub', text: '12.1. Repère propre à la rate' },
   { type: 'para', text: 'Le repère podal spécifique de la rate est conservé. Dans la cartographie ROP, il est recherché à partir de l’angle splénique du côlon : celui-ci se situe médialement et au-dessus de la styloïde du 5e métatarsien gauche. La zone de la rate se place sur ce territoire, sous l’extrémité gauche de la zone de l’hémi-coupole diaphragmatique gauche.' },
   { type: 'figure', src: '/chapter-13/cartographie/figure-13-04.png', caption: 'Photo : Rate', alt: 'Repère podal de la rate', orientation: 'portrait' },
-  { type: 'rop', body: ['La zone splénique constitue la cible spécifique de l’organe. Les structures voisines ne sont associées que si les tests et le contexte clinique le justifient.'] },
   { type: 'sub', text: '12.2. Niveau 1 — Régulation des centres supérieurs' },
   { type: 'para', text: 'Le Niveau 1 reste court et optionnel. Il peut être intégré dans certains tableaux de fatigue prolongée, récupération post-infectieuse, stress important ou trouble du sommeil lorsque le contexte général le justifie.' },
   { type: 'bullets', items: ['Zones réflexes occipitales.', 'Tronc cérébral et centres d’intégration.', 'Hypothalamus et régulation générale de l’adaptation.'] },
   { type: 'xref', label: 'Voir le chapitre 3 — Système nerveux central', href: '/lecture/chapitre-3-rework?lang=fr' },
-  { type: 'rop', body: ['Ce niveau correspond à une préparation générale lorsque le contexte neuro-immunitaire et adaptatif paraît pertinent. Il ne suppose pas l’existence d’une voie spécifique et directe « cerveau-rate ».'] },
+  { type: 'rop', body: ['Ce niveau correspond à une préparation générale lorsque le contexte neuro-immunitaire et adaptatif paraît pertinent.'] },
   { type: 'sub', text: '12.3. Niveau 2 — Régulation neuro-végétative et adaptation' },
   { type: 'para', text: 'La rate reçoit une innervation autonome à dominante sympathique. Dans le chapitre, cette organisation est décrite autour des étages Th6-Th9, avec passage par le plexus cœliaque puis le pédicule splénique.' },
   { type: 'bullets', items: ['Sympathique thoracique Th6-Th9.', 'Chaîne sympathique thoracique correspondante.', 'Plexus cœliaque.', 'Pédicule splénique comme interface régionale vasculo-nerveuse.'] },
