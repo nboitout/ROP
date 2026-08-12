@@ -8,7 +8,7 @@
 // public/chapter-12/Chapter12 Cartographie et Photos.pdf
 
 export type SyncSlide = { src: string; title: string; orientation?: 'portrait' }
-export type SyncAnchor = { sectionId: string; blockIndex: number; slide: number; gapBefore?: 'half' }
+export type SyncAnchor = { sectionId: string; blockIndex: number; slide: number; gapBefore?: 'half'; end?: { sectionId: string; blockIndex: number } }
 
 export const chapter12Slides: SyncSlide[] = [
   { src: '/chapter-12/slides/slide-01.png', title: 'Le Pancréas' },
@@ -36,7 +36,7 @@ export const chapter12SlideAnchors: SyncAnchor[] = [
   { sectionId: 'presentation', blockIndex: 0, slide: 2 },
   { sectionId: 'situation', blockIndex: 0, slide: 3 },
   { sectionId: 'anatomie', blockIndex: 0, slide: 4 },
-  { sectionId: 'anatomie', blockIndex: 16, slide: 5 },
+  { sectionId: 'anatomie', blockIndex: 16, slide: 5, end: { sectionId: 'moyens-de-fixite', blockIndex: -1 } },
   { sectionId: 'vascularisation', blockIndex: 0, slide: 6 },
   { sectionId: 'innervation', blockIndex: 0, slide: 7 },
   { sectionId: 'physiologie', blockIndex: 0, slide: 8 },
