@@ -464,7 +464,6 @@ export const chapter10Fr: Chapter = {
           type: "para",
           text: "Nerf vague, colonne vertébrale, articulations costo-transversaires, chaîne ganglionnaire latéro-vertébrale thoracique droite et plexus prévertébraux."
         },
-        { type: "figure", src: "/chapter-10/figure-10-articulations-costo-vertebrales.png", caption: "Photo : Articulations costo-vertébrales", alt: "Repère podal des articulations costo-vertébrales entre les deux pouces", orientation: "landscape" },
         {
           type: "sub",
           text: "13.2. Syndrome locorégional"
@@ -550,7 +549,6 @@ if (chapter10ReflexSection) chapter10ReflexSection.blocks = [
   { type: "rop", body: ["Le Niveau 3 permet de choisir les interfaces correspondant au segment duodénal concerné. Il n’impose pas de traiter systématiquement estomac, foie, pancréas et intestin à chaque séance."] },
   { type: "sub", text: "13.5. Niveau 4 — Intégration viscéro-somatique et Balance cerveau limbique–duodénum" },
   { type: "para", text: "Versant viscéro-somatique. Selon les tests, la lecture peut intégrer Th7-Th9, L1-L2, les dernières côtes, la charnière thoraco-lombaire, les piliers du diaphragme, le psoas et la paroi abdominale postérieure." },
-  { type: "figure", src: "/chapter-10/figure-10-articulations-costo-vertebrales.png", caption: "Photo : Articulations costo-vertébrales", alt: "Repère podal des articulations costo-vertébrales entre les deux pouces", orientation: "landscape" },
   { type: "para", text: "Balance cerveau limbique–duodénum. Dans le vocabulaire propre à la ROP, l’écoute-induction associe un repère duodénal et un repère du cerveau limbique." },
   { type: "para", text: "Cette « balance » constitue une technique clinique d’intégration propre à la ROP. Elle ne décrit pas une connexion anatomique directe entre la zone podale, les réseaux limbiques et le duodénum." },
   { type: "xref", label: "Voir le chapitre 3 — Système nerveux central", href: "/lecture/chapitre-3-rework?lang=fr" },

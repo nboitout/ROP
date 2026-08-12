@@ -21,9 +21,8 @@ export const chapter10Slides: SyncSlide[] = [
   { src: '/chapter-10/slides/slide-10.png', title: 'Régulation et hydrolyse' },
   { src: '/chapter-10/slides/slide-11.png', title: 'Grille de lecture pathologique' },
   { src: '/chapter-10/slides/slide-12.png', title: 'Conflit mécanique de D4' },
-  { src: '/chapter-10/slides/slide-14.png', title: 'Duodénum — relations viscéro-somatiques' },
+  { src: '/chapter-10/slides/slide-14.png', title: 'Protocole clinique ROP en 4 niveaux — Duodénum' },
   { src: '/chapter-10/slides/slide-13.png', title: 'Objectifs thérapeutiques en ROP' },
-  { src: '/chapter-10/articulations costo-vertebrales.png', title: 'Cartographie : articulations costo-vertébrales' },
 ]
 
 export const chapter10SlideAnchors: SyncAnchor[] = [
@@ -39,8 +38,11 @@ export const chapter10SlideAnchors: SyncAnchor[] = [
   { sectionId: 'physiologie', blockIndex: 8, slide: 10 },
   { sectionId: 'pathologies-courantes', blockIndex: 0, slide: 11 },
   { sectionId: 'indications-troubles-fonctionnels', blockIndex: 1, slide: 12 },
-  { sectionId: 'relations-viscero-somatiques', blockIndex: 0, slide: 13 },
+  { sectionId: 'relations-viscero-somatiques', blockIndex: 0, slide: 13, end: { sectionId: 'relations-viscero-emotionnelles', blockIndex: -1 } },
   { sectionId: 'conseils', blockIndex: -1, slide: 14, gapBefore: 'half' },
   { sectionId: 'zones-reflexes-podales', blockIndex: -1, slide: 13 },
-  { sectionId: 'zones-reflexes-podales', blockIndex: 30, slide: 15, end: { sectionId: 'zones-reflexes-podales', blockIndex: 32 } },
+]
+
+export const chapter10HalfBreaks: SyncAnchorPoint[] = [
+  { sectionId: 'relations-viscero-emotionnelles', blockIndex: -1 },
 ]

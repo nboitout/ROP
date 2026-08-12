@@ -94,7 +94,7 @@ export const chapter4ReworkSlideAnchors = [
     slide: 26,
     ...endAt('chaine-plexique-prevertebrale-ou-pre-aortique', -1),
   },
-  { sectionId: 'chaine-plexique-prevertebrale-ou-pre-aortique', blockIndex: 3, slide: 27 },
+  { sectionId: 'chaine-plexique-prevertebrale-ou-pre-aortique', blockIndex: 1, slide: 27 },
   { sectionId: 'plexus-previsceral-pelvien', blockIndex: -1, slide: 28 },
   { sectionId: 'plexus-previsceral-pelvien', blockIndex: 2, slide: 29 },
   { sectionId: 'systeme-nerveux-intrinseque-ou-enterique-sne', blockIndex: -1, slide: 30 },
