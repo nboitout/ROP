@@ -1,5 +1,5 @@
 // Chapter 14 content — French
-// Source: public/chapter-14/Chapitre_14_Intestin_grele_version_publiable.docx
+// Source: public/chapter-14/Chapitre_14_Intestin_grele_version_complete_zones_reflexes_revisees.docx
 
 import type { Chapter } from './types'
 
@@ -287,19 +287,18 @@ export const chapter14Fr: Chapter = {
 // Revised four-level small-intestine protocol. The validated vagal,
 // prevertebral and intestinal photos remain paired with their cartographies.
 const chapter14Reflex = chapter14Fr.sections.find((section) => section.id === 'rop')!
-chapter14Reflex.title = '13. Zones réflexes podales'
+chapter14Reflex.title = '12. Zones réflexes ROP'
 chapter14Reflex.blocks = [
-  { type: 'note', label: 'Précision méthodologique', body: ['Les localisations décrites dans la cartographie ROP constituent des repères cliniques. Elles ne correspondent pas à une projection anatomique directe du jéjunum-iléum, du mésentère ou de leurs voies nerveuses sur le pied. Pour l’intestin grêle, le protocole associe la zone spécifique de l’intestin, la régulation neuro-végétative et entérique, le socle régional abdominal selon les tests, puis l’intégration viscéro-somatique et l’axe cerveau-intestin.'] },
-  { type: 'sub', text: '13.1. Repères propres à l’intestin grêle' },
+  { type: 'sub', text: '12.1. Repères propres à l’intestin grêle' },
   { type: 'para', text: 'La lecture locale porte principalement sur le jéjunum, l’iléum, la jonction iléo-cæcale, le mésentère et sa racine. La racine du mésentère constitue un repère régional particulièrement important : elle relie le jéjunum-iléum à la paroi postérieure de l’abdomen et porte une partie de ses éléments vasculo-nerveux et lymphatiques.' },
   { type: 'rop', body: ['La racine du mésentère complète la zone réflexe de l’intestin lorsque les tests l’indiquent ; elle ne se substitue pas à la zone propre de l’organe.'] },
   { type: 'xref', label: 'Voir le chapitre 7 — Socle régional abdominal et péritonéal', href: '/lecture/chapitre-7?lang=fr' },
-  { type: 'sub', text: '13.2. Niveau 1 — Régulation des centres supérieurs' },
+  { type: 'sub', text: '12.2. Niveau 1 — Régulation des centres supérieurs' },
   { type: 'para', text: 'Le Niveau 1 n’est pas systématique. Il prend davantage d’intérêt lorsque le tableau comporte stress chronique, hypersensibilité digestive, hypervigilance corporelle, troubles du sommeil ou forte interaction entre symptômes digestifs et contexte émotionnel.' },
   { type: 'bullets', items: ['Zones réflexes occipitales.', 'Tronc cérébral et centres d’intégration.', 'Diencéphale, notamment hypothalamus.', 'Axe hypothalamo-hypophysaire.', 'Environnement neuro-méningé dans le modèle ROP.'] },
   { type: 'xref', label: 'Voir le chapitre 3 — Système nerveux central', href: '/lecture/chapitre-3-rework?lang=fr' },
-  { type: 'rop', body: ['Le Niveau 1 replace les symptômes intestinaux dans leur intégration centrale. Il ne suppose pas qu’une zone podale agit directement sur une structure cérébrale précise.'] },
-  { type: 'sub', text: '13.3. Niveau 2 — Régulation neuro-végétative et adaptation' },
+  { type: 'rop', body: ['Le Niveau 1 replace les symptômes intestinaux dans leur intégration centrale.'] },
+  { type: 'sub', text: '12.3. Niveau 2 — Régulation neuro-végétative et adaptation' },
   { type: 'para', text: 'Le Niveau 2 est majeur pour l’intestin grêle. Il associe les voies autonomes extrinsèques au système nerveux entérique et aux interfaces fonctionnelles de la digestion.' },
   { type: 'bullets', items: ['Nerf vague.', 'Sympathique thoraco-lombaire et nerfs splanchniques.', 'Plexus cœliaque.', 'Plexus mésentérique supérieur.', 'Interface SNA-SNE : plexus d’Auerbach et de Meissner.', 'Diaphragme comme interface fonctionnelle.'] },
   { type: 'figure', src: '/chapter-14/cartographie/figure-14-02.png', caption: 'Photo : Nerf vague X dans la moelle allongée', alt: 'Repère podal du nerf vague dans la moelle allongée', orientation: 'portrait' },
@@ -311,7 +310,7 @@ chapter14Reflex.blocks = [
   { type: 'xref', label: 'Voir le chapitre 4 — Système nerveux autonome', href: '/lecture/chapitre-4-rework?lang=fr' },
   { type: 'xref', label: 'Voir le chapitre 8 — Diaphragme', href: '/lecture/chapitre-8?lang=fr' },
   { type: 'rop', body: ['Le Niveau 2 vise la coordination neuro-végétative et entérique de la motricité, des sécrétions et de l’adaptation digestive. Le travail du foie, du système porte ou du pancréas reste un soutien fonctionnel sélectionné selon le contexte clinique.'] },
-  { type: 'sub', text: '13.4. Niveau 3 — Régulation viscérale loco-régionale' },
+  { type: 'sub', text: '12.4. Niveau 3 — Régulation viscérale loco-régionale' },
   { type: 'para', text: 'Le Niveau 3 constitue le cœur anatomique du protocole intestinal. Il associe la zone propre de l’intestin aux seules composantes régionales pertinentes.' },
   { type: 'bullets', items: ['Anses jéjunales et iléales.', 'Mésentère.', 'Racine du mésentère.', 'Péritoine et glissement interviscéral.', 'Jonction duodéno-jéjunale.', 'Jonction iléo-cæcale.', 'Rapports avec le côlon, les reins, les uretères et, caudalement, les organes pelviens.', 'Vascularisation mésentérique lorsque le contexte régional le justifie.'] },
   { type: 'figure', src: '/chapter-14/cartographie/figure-14-17.png', caption: 'Photo : Jéjunum — limites supérieure et inférieure', alt: 'Repère podal du jéjunum sur le pied gauche', orientation: 'portrait' },
@@ -319,16 +318,16 @@ chapter14Reflex.blocks = [
   { type: 'figure', src: '/chapter-14/cartographie/figure-14-18.png', caption: 'Photo : Iléum — limites supérieure et inférieure', alt: 'Repère podal de l’iléum sur le pied droit', orientation: 'portrait' },
   { type: 'xref', label: 'Voir le chapitre 7 — Socle régional abdominal et péritonéal', href: '/lecture/chapitre-7?lang=fr' },
   { type: 'rop', body: ['Le Niveau 3 replace l’intestin dans son environnement mésentérique et péritonéal. Toute la cavité abdominale ou toute la racine du mésentère ne sont pas travaillées systématiquement.'] },
-  { type: 'sub', text: '13.5. Niveau 4 — Intégration viscéro-somatique et axe cerveau-intestin' },
+  { type: 'sub', text: '12.5. Niveau 4 — Intégration viscéro-somatique et axe cerveau-intestin' },
   { type: 'para', text: 'Versant viscéro-somatique. Selon les tests, la lecture peut intégrer la charnière thoraco-lombaire, les territoires segmentaires T9-T11 avec prédominance T10, la paroi abdominale, la région lombaire, le psoas, le carré des lombes et le bassin lorsque le tableau s’étend vers la région abdomino-pelvienne.' },
   { type: 'para', text: 'Axe cerveau-intestin. Stress, attention portée aux sensations digestives, hypersensibilité viscérale, motricité, sommeil et vécu émotionnel peuvent s’influencer mutuellement. Cette lecture remplace toute typologie de « personnalité intestin ».' },
   { type: 'xref', label: 'Voir le chapitre 3 — Système nerveux central', href: '/lecture/chapitre-3-rework?lang=fr' },
   { type: 'xref', label: 'Voir le chapitre 5 — Mécanisme de stress', href: '/lecture/chapitre-5-rework?lang=fr' },
   { type: 'rop', body: ['Le Niveau 4 intègre les convergences somatiques et le contexte émotionnel sans attribuer automatiquement un trouble digestif à une origine psychologique.'] },
-  { type: 'sub', text: '13.6. Soutiens associés selon les tests' },
+  { type: 'sub', text: '12.6. Soutiens associés selon les tests' },
   { type: 'bullets', items: ['Duodénum : continuité digestive proximale.', 'Foie et système porte : absorption et circulation porte.', 'Pancréas : participation à la digestion.', 'Côlon : continuité fonctionnelle et jonction iléo-cæcale.', 'Diaphragme : dynamique abdominale.', 'Pelvis : uniquement lorsque le tableau s’étend vers la sphère pelvienne.'] },
   { type: 'para', text: 'Ces territoires sont des soutiens associés et non une liste systématique.' },
-  { type: 'sub', text: '13.7. Lecture clinique' },
+  { type: 'sub', text: '12.7. Lecture clinique' },
   { type: 'bullets', items: ['Troubles fonctionnels du transit ou ballonnements : Niveau 2 + zone intestinale du Niveau 3 + axe cerveau-intestin selon le contexte.', 'Séquelles abdominales, adhérences ou perte de mobilité régionale après exclusion médicale : intestin + mésentère/racine + socle régional du chapitre 7 + Niveau 4 somatique si nécessaire.', 'Maladie de Crohn ou autre maladie inflammatoire diagnostiquée : intervention uniquement en accompagnement symptomatique, avec priorité au suivi médical et sélection prudente des niveaux selon les symptômes et le terrain.'] },
   { type: 'note', label: 'Principe de sécurité', body: ['Une zone réflexe sensible ou une modification palpatoire n’est pas un test diagnostique d’occlusion, d’infection, de maladie inflammatoire, de tumeur ou d’autre pathologie intestinale. Fièvre, sang dans les selles, vomissements persistants, amaigrissement inexpliqué, déshydratation, douleur importante ou arrêt des matières et des gaz imposent une évaluation médicale.'] },
 ]
