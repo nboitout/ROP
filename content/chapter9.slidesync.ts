@@ -39,7 +39,6 @@ export const chapter9Slides: SyncSlide[] = [
   { src: '/chapter-9/cartographie/figure-9-01.png', title: 'Cartographie : hiatus œsophagien et nerfs vagues droit et gauche' },
   { src: '/chapter-9/cartographie/figure-9-03.png', title: 'Cartographie plantaire : estomac' },
   { src: '/chapter-9/cartographie/figure-9-05.png', title: 'Cartographie : relation cerveau limbique-estomac' },
-  { src: '/chapter-9/slides/slide-13.png', title: 'La balance neuro-vegetative en ROP' },
 ]
 
 export const chapter9SlideAnchors: SyncAnchor[] = [
@@ -65,6 +64,5 @@ export const chapter9SlideAnchors: SyncAnchor[] = [
   { sectionId: 'zones-reflexes-podales', blockIndex: -1, slide: 20 },
   { sectionId: 'zones-reflexes-podales', blockIndex: 14, slide: 21, end: { sectionId: 'zones-reflexes-podales', blockIndex: 19 } },
   { sectionId: 'zones-reflexes-podales', blockIndex: 22, slide: 22, end: { sectionId: 'zones-reflexes-podales', blockIndex: 24 } },
-  { sectionId: 'zones-reflexes-podales', blockIndex: 30, slide: 23, gapBefore: 'half' },
-  { sectionId: 'zones-reflexes-podales', blockIndex: 38, slide: 24 },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 30, slide: 23, gapBefore: 'half', end: { sectionId: 'zones-reflexes-podales', blockIndex: 38 } },
 ]
