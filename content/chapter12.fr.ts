@@ -1,4 +1,4 @@
-// Source: public/chapter-12/Chapitre_12_Pancreas_version_publiable.docx
+// Source: public/chapter-12/Chapitre_12_Pancreas_version_scientifique.docx
 import type { Chapter } from './types'
 
 export const chapter12Fr: Chapter = {
@@ -710,19 +710,19 @@ export const chapter12Fr: Chapter = {
       "blocks": [
         {
           "type": "para",
-          "text": "Pancréas et rate sont ici présentées comme difficiles à différencier sur le plan émotionnel."
+          "text": "Dans le référentiel clinique de la ROP, les dimensions émotionnelles associées au pancréas et à la rate sont difficiles à différencier nettement."
         },
         {
           "type": "para",
-          "text": "Ils sont mis en relation, dans ce référentiel, avec des stress extrêmement difficiles à intégrer et à compenser par l'organisme."
+          "text": "Ces observations concernent principalement des contextes de stress intense ou prolongé, notamment lorsque la personne est confrontée à des événements vécus comme difficiles à intégrer ou à surmonter : rupture affective ou familiale, deuil, confrontation à la maladie ou à la mortalité, violence ou expériences traumatiques anciennes."
         },
         {
           "type": "para",
-          "text": "Ils réagiraient à l'injustice, aux ruptures familiales ou affectives, aux événements lourds, aux deuils non acceptés, comme la perte d'un enfant, à la confrontation à la mortalité, à une enfance meurtrie ou volée, ou encore à la violence."
+          "text": "Sur le plan physiologique, le stress et les émotions peuvent modifier les réponses autonomes, neuroendocriniennes et métaboliques de l'organisme. Ces mécanismes généraux sont établis ; en revanche, l'attribution d'une émotion particulière à un organe donné ne constitue pas une relation physiologique démontrée."
         },
         {
           "type": "para",
-          "text": "Les personnes « pancréas » ou « rate » sont décrites ici comme tristes, pessimistes et sans énergie face aux agressions physiques ou psycho-émotionnelles."
+          "text": "En ROP, ces correspondances sont donc utilisées comme des éléments de lecture clinique et non comme des relations causales. Elles peuvent orienter l'attention vers le contexte psycho-émotionnel lorsque celui-ci accompagne le tableau fonctionnel observé, sans permettre d'établir à lui seul une origine pancréatique ou splénique du trouble."
         }
       ]
     },
