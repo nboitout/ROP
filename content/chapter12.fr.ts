@@ -905,6 +905,38 @@ const chapter12SectionOrder = [
   "zones-reflexes-podales",
 ]
 
+// The Word `---` marker closes the ROP callout before section 7.2. Keep the
+// endocrine content in the normal text flow instead of rendering it inside
+// the callout container.
+const chapter12Endocrine = chapter12Fr.sections.find((section) => section.id === 'interet-en-rop-2')
+if (chapter12Endocrine) chapter12Endocrine.blocks = [
+  { type: 'rop', body: [
+    'Dans le cadre ROP, on cherche à solliciter le nerf vague, l’estomac, le foie, la vésicule biliaire et le duodénum, plus particulièrement sa 2ème portion, ainsi que le sphincter d’Oddi, afin d’accompagner la régulation de la sécrétion exocrine du pancréas.',
+    'Cette démarche insiste sur la nécessaire synchronisation des différents temps de la digestion.',
+  ] },
+  { type: 'para', text: 'La fonction endocrine du pancréas participe à la régulation de la glycémie.' },
+  { type: 'para', text: 'Le glucose est un substrat énergétique indispensable à l’organisme.' },
+  { type: 'para', text: 'Les besoins en glucose du cerveau représentent environ 20 % de la consommation totale de l’organisme.' },
+  { type: 'para', text: 'La glycémie fait partie des grandes constantes biologiques de l’homéostasie.' },
+  { type: 'para', text: 'Bien que nos besoins en glucose varient selon l’activité, la glycémie doit rester dans une fourchette compatible avec le fonctionnement normal, de l’ordre de 0,80 à 1,20 g/L dans les repères ici retenus.' },
+  { type: 'sub', text: '7.2.1. Régulation de la glycémie' },
+  { type: 'para', text: 'Elle met en jeu le pancréas, le foie, les reins, l’intestin et son microbiote, ainsi que l’axe hypothalamo-hypophyso-surrénalien, ou axe HHS, impliqué dans la réponse au stress.' },
+  { type: 'sub', text: '7.2.2. Pancréas' },
+  { type: 'para', text: 'Les îlots de Langerhans ne représentent qu’une faible proportion du tissu pancréatique. Ils produisent notamment l’insuline et le glucagon. L’insuline a un effet hypoglycémiant et le glucagon un effet hyperglycémiant.' },
+  { type: 'sub', text: '7.2.3. Foie' },
+  { type: 'para', text: 'Il stocke le glucose sous forme de glycogène par la glycogénèse et libère du glucose dans le sang selon les besoins par glycogénolyse. Le foie peut aussi synthétiser du glucose à partir d’éléments non glucidiques, notamment des acides aminés, du glycérol et du lactate : c’est la néoglucogenèse.' },
+  { type: 'sub', text: '7.2.4. Reins' },
+  { type: 'para', text: 'Ils participent à l’homéostasie glucidique, notamment par la réabsorption tubulaire du glucose filtré et, dans certains contextes, par la néoglucogenèse. En cas d’hyperglycémie dépassant les capacités de réabsorption, une glycosurie peut apparaître.' },
+  { type: 'sub', text: '7.2.5. Glandes surrénales' },
+  { type: 'para', text: 'Sous l’action de l’axe hypothalamo-hypophyso-surrénalien, l’adrénaline sécrétée par la médullo-surrénale contribue à l’élévation de la glycémie en situation de stress. Le cortisol sécrété par la cortico-surrénale participe également au maintien de la disponibilité du glucose en période de stress et d’activité.' },
+  { type: 'xref', label: 'Voir le chapitre 5 — Mécanisme de stress', href: '/lecture/chapitre-5-rework?lang=fr' },
+  { type: 'sub', text: '7.2.6. Intestin et microbiote' },
+  { type: 'para', text: 'Les bactéries qui peuplent l’intestin vivent normalement dans une relation de symbiose avec l’hôte. Le stress, l’inflammation et une altération de la barrière intestinale peuvent s’accompagner d’une dysbiose, c’est-à-dire d’une modification de la composition du microbiote au détriment de certains équilibres fonctionnels. Certaines dysbioses sont associées à l’insulino-résistance et au diabète de type 2. Dans ce contexte, la glycémie peut s’élever et le pancréas être davantage sollicité pour maintenir un taux glycémique compatible avec l’homéostasie.' },
+  { type: 'xref', label: 'Voir le chapitre 14 — Intestin grêle : dysbioses', href: '/lecture/chapitre-14?lang=fr' },
+  { type: 'sub', text: '7.2.7. Hormones gastro-intestinales' },
+  { type: 'para', text: 'En cas de glycémie post-prandiale, des hormones intestinales comme le GLP-1 participent au ralentissement de la vidange gastrique, à l’inhibition du glucagon et à la stimulation de la sécrétion d’insuline. La place exacte du GLP-2 dans cette description doit être interprétée avec prudence.' },
+]
+
 chapter12Fr.sections.sort(
   (left, right) => chapter12SectionOrder.indexOf(left.id) - chapter12SectionOrder.indexOf(right.id),
 )
@@ -912,7 +944,9 @@ chapter12Fr.sections.sort(
 // Revised four-level pancreatic protocol. Existing cartography/photo pairs are
 // retained in the order in which their territories are introduced.
 const chapter12ReflexSection = chapter12Fr.sections.find((section) => section.id === 'zones-reflexes-podales')
-if (chapter12ReflexSection) chapter12ReflexSection.blocks = [
+if (chapter12ReflexSection) {
+chapter12ReflexSection.title = '13. Zones réflexes ROP'
+chapter12ReflexSection.blocks = [
   { type: 'note', label: 'Principe de lecture', body: ['Les zones réflexes sont organisées selon quatre niveaux complémentaires. Leur sélection dépend des tests, du contexte clinique et des diagnostics d’exclusion ; elle ne constitue pas un protocole automatique.'] },
   { type: 'sub', text: '13.1. Représentations podales du pancréas' },
   { type: 'para', text: 'La lecture distingue les principaux territoires anatomiques du pancréas afin de conserver une représentation précise de cet organe profond.' },
@@ -957,3 +991,4 @@ if (chapter12ReflexSection) chapter12ReflexSection.blocks = [
   { type: 'bullets', items: ['Inconfort digestif fonctionnel : Niveau 2 + pancréas et carrefour duodéno-biliaire au Niveau 3 selon les tests.', 'Contexte glycémique connu et suivi médicalement : prudence podale, pancréas au Niveau 3 et régulation générale selon le contexte.', 'Douleur postérieure ou sous-costale après exclusion médicale : rapports régionaux, diaphragme et versant somatique selon les tests.', 'Fatigue durable ou récupération difficile : intégrer le Niveau 1 sans attribuer automatiquement les symptômes au pancréas.'] },
   { type: 'note', label: 'Principe de sécurité', body: ['Douleur abdominale aiguë ou transfixiante, vomissements persistants, ictère, fièvre, amaigrissement, altération de l’état général, trouble glycémique ou lésion du pied nécessitent une évaluation médicale. La ROP ne remplace ni le diagnostic ni le traitement d’une maladie pancréatique ou métabolique.'] },
 ]
+}
