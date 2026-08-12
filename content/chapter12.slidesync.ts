@@ -25,11 +25,8 @@ export const chapter12Slides: SyncSlide[] = [
   { src: '/chapter-12/slides/slide-12.png', title: 'Pathologies severes : pancreatites et tumeurs' },
   { src: '/chapter-12/slides/slide-14.png', title: 'Pancréas — relations viscéro-somatiques' },
   { src: '/chapter-12/slides/slide-13.png', title: 'Synthèse viscéro-émotionnelle' },
-  { src: '/chapter-12/cartographie/figure-12-01.png', title: 'Cartographie : Nerf vague X - moelle allongee' },
-  { src: '/chapter-12/cartographie/figure-12-03.png', title: 'Cartographie : Nerf vague X - foramen jugulaire' },
-  { src: '/chapter-12/cartographie/figure-12-05.png', title: 'Cartographie : Articulations costo-vertebrales' },
-  { src: '/chapter-12/cartographie/figure-12-07.png', title: 'Cartographie : Pancreas - tete et col' },
-  { src: '/chapter-12/cartographie/figure-12-09.png', title: 'Cartographie : Pancreas - corps et queue' },
+  { src: '/chapter-12/cartographie/figure-12-01.png', title: 'Cartographie : Pancréas — tête et col' },
+  { src: '/chapter-12/cartographie/figure-12-03.png', title: 'Cartographie : Pancréas — corps et queue' },
 ]
 
 export const chapter12SlideAnchors: SyncAnchor[] = [
@@ -48,9 +45,6 @@ export const chapter12SlideAnchors: SyncAnchor[] = [
   { sectionId: 'relations-viscero-somatiques', blockIndex: 0, slide: 13 },
   { sectionId: 'relations-viscero-emotionnelles', blockIndex: 0, slide: 14 },
   { sectionId: 'zones-reflexes-podales', blockIndex: -1, slide: 14 },
-  { sectionId: 'zones-reflexes-podales', blockIndex: 18, slide: 15 },
-  { sectionId: 'zones-reflexes-podales', blockIndex: 19, slide: 16 },
-  { sectionId: 'zones-reflexes-podales', blockIndex: 32, slide: 17 },
-  { sectionId: 'zones-reflexes-podales', blockIndex: 4, slide: 18 },
-  { sectionId: 'zones-reflexes-podales', blockIndex: 6, slide: 19 },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 3, slide: 15, end: { sectionId: 'zones-reflexes-podales', blockIndex: 4 } },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 5, slide: 16, end: { sectionId: 'zones-reflexes-podales', blockIndex: 6 } },
 ]

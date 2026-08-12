@@ -835,57 +835,6 @@ export const chapter12Fr: Chapter = {
 
 type ChapterBlock = Chapter["sections"][number]["blocks"][number]
 
-const reflexFigure = (
-  n: string,
-  title: string,
-  alt: string,
-  orientation: "landscape" | "portrait" = "landscape",
-): ChapterBlock => ({
-  type: "figure",
-  src: `/chapter-12/cartographie/figure-12-${n}.png`,
-  caption: `Photo : ${title}`,
-  alt,
-  orientation,
-})
-
-const chapter12ReflexFigureGroups = {
-  generalAdaptation: [
-    reflexFigure("02", "Nerf vague X - moelle allongee", "Repere podal du nerf vague X dans la moelle allongee", "portrait"),
-    reflexFigure("04", "Nerf vague X - foramen jugulaire", "Repere podal du nerf vague X dans le foramen jugulaire", "portrait"),
-    reflexFigure("06", "Articulations costo-vertebrales", "Repere podal des articulations costo-vertebrales"),
-  ],
-  pancreas: [
-    reflexFigure("08", "Pancreas - tete et col", "Repere podal de la tete et du col du pancreas", "portrait"),
-    reflexFigure("10", "Pancreas - corps et queue", "Repere podal du corps et de la queue du pancreas", "portrait"),
-  ],
-} satisfies Record<string, Chapter["sections"][number]["blocks"]>
-
-function appendAfterBlock(
-  sectionId: string,
-  match: (block: ChapterBlock) => boolean,
-  figures: Chapter["sections"][number]["blocks"],
-) {
-  const section = chapter12Fr.sections.find((candidate) => candidate.id === sectionId)
-  if (!section) return
-  const index = section.blocks.findIndex(match)
-  if (index >= 0) section.blocks.splice(index + 1, 0, ...figures)
-}
-
-function normalizedText(value: string) {
-  return value.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase()
-}
-
-appendAfterBlock(
-  "zones-reflexes-podales",
-  (block) => block.type === "bullets" && block.items.some((item) => item.includes("Nerfs vagues")),
-  chapter12ReflexFigureGroups.generalAdaptation,
-)
-appendAfterBlock(
-  "zones-reflexes-podales",
-  (block) => block.type === "bullets" && block.items.some((item) => normalizedText(item).includes("tete du pancreas")),
-  chapter12ReflexFigureGroups.pancreas,
-)
-
 const chapter12SectionOrder = [
   "presentation",
   "situation",
@@ -951,9 +900,9 @@ chapter12ReflexSection.blocks = [
   { type: 'sub', text: '13.1. Représentations podales du pancréas' },
   { type: 'para', text: 'La lecture distingue les principaux territoires anatomiques du pancréas afin de conserver une représentation précise de cet organe profond.' },
   { type: 'para', text: 'Tête et col du pancréas. Ils s’inscrivent dans le cadre duodénal et participent au carrefour hépato-pancréatico-duodénal.' },
-  { type: 'figure', src: '/chapter-12/cartographie/figure-12-08.png', caption: 'Photo : Pancréas — tête et col', alt: 'Repère podal de la tête et du col du pancréas', orientation: 'portrait' },
+  { type: 'figure', src: '/chapter-12/cartographie/figure-12-02.png', caption: 'Photo : Pancréas — tête et col', alt: 'Repère podal de la tête et du col du pancréas', orientation: 'landscape' },
   { type: 'para', text: 'Corps et queue du pancréas. Ils se prolongent transversalement vers la rate, en arrière de l’estomac.' },
-  { type: 'figure', src: '/chapter-12/cartographie/figure-12-10.png', caption: 'Photo : Pancréas — corps et queue', alt: 'Repère podal du corps et de la queue du pancréas', orientation: 'portrait' },
+  { type: 'figure', src: '/chapter-12/cartographie/figure-12-04.png', caption: 'Photo : Pancréas — corps et queue', alt: 'Repère podal du corps et de la queue du pancréas', orientation: 'landscape' },
   { type: 'para', text: 'La zone du corps assure la continuité entre ces deux territoires et peut être intégrée selon les tests.' },
   { type: 'rop', body: ['Dans la cartographie ROP, la tête peut être davantage utilisée comme repère de la fonction exocrine et la queue comme repère de la fonction endocrine.'] },
   { type: 'sub', text: '13.2. Niveau 1 — Régulation centrale et adaptation générale' },
@@ -965,8 +914,6 @@ chapter12ReflexSection.blocks = [
   { type: 'sub', text: '13.3. Niveau 2 — Régulation neuro-végétative' },
   { type: 'para', text: 'Le pancréas reçoit une innervation autonome parasympathique et sympathique intégrée aux plexus abdominaux.' },
   { type: 'bullets', items: ['Nerf vague X : composante parasympathique.', 'Système sympathique thoracique et nerfs splanchniques.', 'Plexus cœliaque et mésentérique supérieur.', 'Diaphragme et passage œsophagien selon les tests.'] },
-  { type: 'figure', src: '/chapter-12/cartographie/figure-12-02.png', caption: 'Photo : Nerf vague X — moelle allongée', alt: 'Repère podal du nerf vague X dans la moelle allongée', orientation: 'portrait' },
-  { type: 'figure', src: '/chapter-12/cartographie/figure-12-04.png', caption: 'Photo : Nerf vague X — foramen jugulaire', alt: 'Repère podal du nerf vague X dans le foramen jugulaire', orientation: 'portrait' },
   { type: 'para', text: 'Ces composantes sont abordées comme un ensemble coordonné. La zone réflexe n’est pas assimilée à une stimulation directe d’un nerf ou d’un plexus.' },
   { type: 'xref', label: 'Voir le chapitre 4 — Système nerveux autonome', href: '/lecture/chapitre-4-rework?lang=fr' },
   { type: 'rop', body: ['Le Niveau 2 vise la régulation autonome autour du pancréas et de son environnement digestif, sans chercher à stimuler isolément une branche nerveuse.'] },
@@ -979,7 +926,6 @@ chapter12ReflexSection.blocks = [
   { type: 'rop', body: ['Le Niveau 3 replace le pancréas dans le carrefour duodéno-bilio-pancréatique et ses rapports postérieurs. Les organes voisins ne sont pas travaillés automatiquement.'] },
   { type: 'sub', text: '13.5. Niveau 4 — Intégration viscéro-somatique et limbique' },
   { type: 'para', text: 'Le versant viscéro-somatique peut intégrer les étages thoraco-lombaires concernés, les articulations costo-vertébrales, le diaphragme et les projections somatiques associées selon les tests.' },
-  { type: 'figure', src: '/chapter-12/cartographie/figure-12-06.png', caption: 'Photo : Articulations costo-vertébrales', alt: 'Repères podaux des articulations costo-vertébrales', orientation: 'landscape' },
   { type: 'para', text: 'Chez la personne diabétique, l’examen des pieds et la prudence de pression sont indispensables en raison des risques de neuropathie, de troubles vasculaires et de lésions cutanées.' },
   { type: 'para', text: 'La Balance cerveau limbique–pancréas appartient au vocabulaire clinique de la ROP. Elle associe un repère viscéral et un repère central sans décrire une connexion anatomique directe.' },
   { type: 'xref', label: 'Voir le chapitre 3 — Système nerveux central', href: '/lecture/chapitre-3-rework?lang=fr' },
