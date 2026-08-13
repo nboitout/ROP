@@ -12,7 +12,7 @@ export const chapter15Fr: Chapter = {
       "blocks": [
         {
           "type": "para",
-          "text": "Le côlon, ou gros intestin, forme un cadre qui entoure l’intestin grêle. Il s’étend de la jonction iléo-caecale, au rectum et sa longueur est d’environ 1.50m chez l’adulte. (figure 15.1)"
+          "text": "Le côlon, ou gros intestin, forme un cadre qui entoure l’intestin grêle. Il s’étend de la jonction iléo-caecale, au rectum et sa longueur est d’environ 1.50m chez l’adulte."
         },
         {
           "type": "sub",
@@ -84,7 +84,7 @@ export const chapter15Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "Effectivement, il ressemble à un ver de 6 à 12cm de long pour un diamètre entre 5 à 8mm. Il est situé 2 à 3cm sous la jonction iléo-caecale. Il est majoritairement rétro-caecal, à la réunion des trois bandelettes longitudinales (ou taeniae coli). (figure15.1)"
+          "text": "Effectivement, il ressemble à un ver de 6 à 12cm de long pour un diamètre entre 5 à 8mm. Il est situé 2 à 3cm sous la jonction iléo-caecale. Il est majoritairement rétro-caecal, à la réunion des trois bandelettes longitudinales (ou taeniae coli)."
         },
         {
           "type": "bullets",
