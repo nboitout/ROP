@@ -568,19 +568,25 @@ export const chapter18Fr: Chapter = {
       "blocks": [
         {
           "type": "para",
-          "text": "La vessie est très liée à la pression éducative subie dans l’enfance: apprendre à contrôler sa vessie, éducation stricte à la propreté, surtout quand elle est accompagnée de chantage affectif qui s’approche d’une forme de dressage avec récompense/punition."
+          "text": "La fonction vésicale est étroitement intégrée aux mécanismes de perception, d’attention, de contrôle volontaire et d’adaptation au contexte. Le besoin urinaire n’est donc pas seulement déterminé par le remplissage de la vessie : sa perception et la capacité à différer la miction peuvent également être influencées par l’état émotionnel et le niveau de vigilance."
         },
         {
           "type": "para",
-          "text": "Cette pression éducative conduit à ne pas lâcher prise."
+          "text": "Le stress, l’anxiété, la peur de ne pas pouvoir accéder rapidement aux toilettes ou l’anticipation répétée du besoin peuvent, chez certaines personnes, majorer l’urgence mictionnelle, la pollakiurie ou l’inconfort vésical. Ces interactions s’inscrivent dans un axe cerveau–vessie, associant les informations viscérales aux réseaux impliqués dans l’interoception, l’attention, les émotions et le contrôle comportemental."
         },
         {
           "type": "para",
-          "text": "La vessie est un organe plutôt féminin où la personne «vessie» est réservée, effacée, timide, soumise. Elle a du mal à s’exprimer, connaissant plus ses devoirs que ses droits. L’excès de pudeur rend l’adolescente difficile à accepter les transformations dans son corps et plus tard, à accepter celui des autres."
+          "text": "L’apprentissage de la continence pendant l’enfance participe également à la construction des habitudes mictionnelles. Une éducation particulièrement contraignante, ou associée à la honte, à la peur ou à une forte pression autour de la propreté, peut constituer chez certains patients un élément de leur histoire fonctionnelle. Cette relation n’est toutefois ni constante ni spécifique d’un trouble vésical."
         },
         {
           "type": "para",
-          "text": "Elle marche à petits pas et en société, occupe mal son territoire. La culpabilité remontant à l’apprentissage de la propreté se perpétue à l’âge adulte avec le sentiment du « je sais que c’est de ma faute » quand les enfants « tournent mal » à l’adolescence. Les contrariétés que cette culpabilité engendre sont sources de cystites sans raison infectieuse mais par tension émotionnelle responsable de spasme de la vessie."
+          "text": "En pratique, le contexte émotionnel doit donc être considéré comme un facteur susceptible de moduler certains symptômes fonctionnels, et non comme leur cause unique. Une cystalgie, une urgenturie ou une pollakiurie peuvent être influencées par le stress et l’hypervigilance corporelle, tandis qu’une infection urinaire ou toute pathologie organique nécessite une évaluation et une prise en charge spécifiques."
+        },
+        {
+          "type": "rop",
+          "body": [
+            "Dans le modèle clinique ROP, le versant viscéro-émotionnel vise à prendre en compte cette interaction entre perception vésicale, régulation autonome, contexte émotionnel et contrôle central. Il complète le travail loco-régional sur la vessie sans attribuer à une émotion particulière une correspondance systématique avec l’organe."
+          ]
         }
       ]
     },
@@ -829,13 +835,10 @@ chapter18Section('zones-reflexes-podales').blocks = [
   { type: 'para', text: 'Le Niveau 1 n’est pas systématique pour tout trouble vésical. Il devient particulièrement pertinent lorsque l’urgence, la pollakiurie, l’énurésie, l’hypervigilance corporelle, le stress ou l’anticipation du besoin suggèrent une participation importante des mécanismes centraux.' },
   { type: 'bullets', items: ['Zones réflexes occipitales.', 'Tronc cérébral et centres d’intégration.', 'Diencéphale, notamment hypothalamus.', 'Axe hypothalamo-hypophysaire.', 'Environnement neuro-méningé et circulation du LCR dans le modèle ROP.'] },
   { type: 'xref', label: 'Voir le chapitre 3 — Système nerveux central', href: '/lecture/chapitre-3?lang=fr', text: 'Niveau 1 : Régulation des centres supérieurs.' },
-  { type: 'rop', body: ['Le Niveau 1 vise ici la régulation générale et la manière dont le besoin urinaire est intégré et contextualisé. Il ne signifie pas qu’une zone podale active directement une structure cérébrale précise.'] },
   { type: 'sub', text: '13.2. Niveau 2 — Régulation neuro-végétative et adaptation' },
   { type: 'para', text: 'C’est l’un des niveaux essentiels pour la vessie. Les principales portes sont le parasympathique pelvien S2-S4, les voies sympathiques thoraco-lombaires et le plexus hypogastrique inférieur.' },
   { type: 'bullets', items: ['Parasympathique pelvien : segments sacrés S2-S4 selon la cartographie médullaire ROP.', 'Voies sympathiques : territoire approximatif T11-L2 et chaînes sympathiques lombaires et sacrales.', 'Plexus hypogastrique inférieur : repères pelviens de la cartographie ROP.', 'Nerfs hypogastriques : à considérer comme voie de distribution sympathique régionale.', 'Coordination stockage-vidange : à privilégier comme logique fonctionnelle plutôt qu’une stimulation isolée du sympathique ou du parasympathique.'] },
   { type: 'xref', label: 'Voir le chapitre 4 — Système nerveux autonome', href: '/lecture/chapitre-4?lang=fr', text: 'Sections « Parasympathique pelvien », « Sympathique viscéro-moteur » et « Plexus préviscéral pelvien ».' },
-  { type: 'rop', body: ['Pour la vessie, le Niveau 2 vise moins à « stimuler le parasympathique » qu’à accompagner la coordination stockage – perception – vidange.'] },
-  { type: 'note', label: 'Pont neuro-anatomique candidat — nerf tibial et circuits vésicaux', body: ['La neuromodulation tibiale montre qu’une stimulation somatique périphérique peut modifier certains symptômes d’hyperactivité vésicale. Cela constitue un modèle de plausibilité pour une modulation somato-viscérale ; cela ne démontre pas qu’une pression manuelle ROP exerce le même effet.'] },
   { type: 'sub', text: '13.3. Niveau 3 — Régulation viscérale loco-régionale' },
   { type: 'para', text: 'Le Niveau 3 rassemble le cœur de la cartographie propre à l’organe : cavité pelvienne, vessie, région cervico-trigonale, urètre et environnement de soutien.' },
   { type: 'bullets', items: ['Cavité pelvienne et périnée.', 'Vessie et dôme vésical.', 'Trigone et région cervico-urétrale.', 'Urètre et sphincter externe.', 'Symphyse pubienne et structures pubovésicales.', 'Péritoine supérieur de la vessie et rapports avec les organes voisins.'] },
@@ -843,7 +846,6 @@ chapter18Section('zones-reflexes-podales').blocks = [
   { type: 'figure', src: '/chapter-18/cartographie/figure-18-12.png', caption: 'Photo : trigone de la vessie et plexus hypogastrique', alt: 'Repère podal du trigone de la vessie et du plexus hypogastrique', orientation: 'landscape' },
   { type: 'figure', src: '/chapter-18/cartographie/figure-18-14.png', caption: 'Photo : noyau fibreux central du périnée et fente uro-génitale', alt: 'Repère podal du noyau fibreux central du périnée et de la fente uro-génitale', orientation: 'landscape' },
   { type: 'xref', label: 'Voir le chapitre 17 — Cavité pelvienne', href: '/lecture/chapitre-17?lang=fr', text: 'Niveau 3 : Régulation viscérale loco-régionale.' },
-  { type: 'rop', body: ['Le Niveau 3 replace la vessie dans son environnement régional. Une sensibilité d’une zone réflexe ou une modification palpatoire constitue un repère clinique, non la preuve d’une tension anatomique précise du ligament ou de l’organe correspondant.'] },
   { type: 'sub', text: '13.4. Niveau 4 — Intégration viscéro-somatique et viscéro-émotionnelle' },
   { type: 'para', text: 'Cette partie remplace l’ancienne rubrique « Système limbique ». Elle relie le symptôme vésical aux convergences somatiques, au plancher pelvien et au contexte de perception et d’adaptation.' },
   { type: 'sub', text: '13.4.1. Versant viscéro-somatique' },
@@ -854,13 +856,11 @@ chapter18Section('zones-reflexes-podales').blocks = [
   { type: 'figure', src: '/chapter-18/cartographie/figure-18-08.png', caption: 'Photo : ligaments sacro-tubéral et sacro-épineux', alt: 'Repère podal des ligaments sacro-tubéral et sacro-épineux', orientation: 'landscape' },
   { type: 'para', text: 'Le nerf pudendal est une voie somatique distincte des nerfs splanchniques pelviens autonomes, même s’ils partagent une proximité segmentaire S2-S4.' },
   { type: 'sub', text: '13.4.2. Versant viscéro-émotionnel' },
-  { type: 'para', text: 'La terminologie « balance cerveau limbique-vessie » est remplacée par « axe cerveau-vessie ». Cette expression décrit l’intégration des signaux vésicaux avec les réseaux cérébraux impliqués dans l’interoception, l’attention, l’urgence, le contrôle contextuel et le vécu émotionnel.' },
-  { type: 'para', text: 'Dans le modèle clinique ROP, l’écoute-induction peut conserver son principe — un repère sur la zone vésicale et un repère central — mais elle doit être présentée comme une technique d’intégration fonctionnelle, et non comme une action directe sur un « cerveau limbique ».' },
+  { type: 'para', text: 'La « balance cerveau limbique-vessie » décrit l’intégration des signaux vésicaux avec les réseaux cérébraux impliqués dans l’interoception, l’attention, l’urgence, le contrôle contextuel et le vécu émotionnel.' },
   { type: 'xref', label: 'Voir le chapitre 3 — Système nerveux central', href: '/lecture/chapitre-3?lang=fr', text: 'Réseaux centraux et cortico-limbiques ; voir également la section 11 « Relations viscéro-émotionnelles » du présent chapitre.' },
-  { type: 'sub', text: '13.6. Soutiens associés selon les tests' },
-  { type: 'para', text: 'Les territoires foie, intestins et reins figuraient auparavant dans le « syndrome général d’adaptation ». Ils peuvent être conservés comme soutiens associés, mais ne doivent pas être considérés comme des étapes obligatoires du traitement de la vessie.' },
+  { type: 'sub', text: '13.5. Soutiens associés selon les tests' },
   { type: 'bullets', items: ['Reins et uretères : lorsque le contexte urinaire ou rénal le justifie.', 'Intestin et côlon : en présence de constipation, dysfonction digestive ou contexte pelvien associé.', 'Foie et autres territoires systémiques : uniquement lorsqu’ils sont retenus par l’anamnèse, les tests et la cohérence clinique.'] },
-  { type: 'sub', text: '13.7. Lecture clinique selon le symptôme' },
+  { type: 'sub', text: '13.6. Lecture clinique selon le symptôme' },
   { type: 'para', text: 'La hiérarchie des zones varie selon le trouble fonctionnel et ne doit pas être appliquée comme une séquence rigide.' },
   { type: 'bullets', items: ['Hyperactivité vésicale / urgenturie : importance possible des Niveaux 1, 2 et 4, en complément du travail direct sur la vessie au Niveau 3.', 'Incontinence urinaire d’effort : priorité fréquente au Niveau 3 et au versant somatique du Niveau 4 — urètre, pubis, plancher pelvien, pudendal — avec intégration du Niveau 2 selon les tests.', 'Pollakiurie ou énurésie fonctionnelle : prise en compte du contrôle central, des habitudes mictionnelles, de l’axe cerveau-vessie et de la régulation autonome.', 'Cystalgie non infectieuse : lecture associant vessie, régulation autonome, plancher pelvien et hypersensibilité, après exclusion d’une infection ou d’une pathologie organique.'] },
 ]
