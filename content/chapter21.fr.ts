@@ -555,3 +555,13 @@ revisedReflexSection.blocks = [
     ]
   }
 ]
+
+// Align the published chapter with the latest revised Word source.
+const chapter21Reflex = chapter21Fr.sections.find((section) => section.id === 'zones-reflexes-podales')
+if (chapter21Reflex) chapter21Reflex.title = '10. Zones réflexes ROP'
+
+const chapter21FigureRefs = /\s*\((?:figure|figures)\s+(?:21\.1|21\.2|17\.3|21\.3 et 21\.4|17\.15 et 17\.16|21\.6 et 21\.7|17\.21)\)/gi
+for (const section of chapter21Fr.sections) for (const block of section.blocks) {
+  if (block.type === 'para' || block.type === 'sub') block.text = block.text.replace(chapter21FigureRefs, '')
+  if (block.type === 'bullets') block.items = block.items.map((item) => item.replace(chapter21FigureRefs, ''))
+}

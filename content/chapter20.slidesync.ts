@@ -23,7 +23,6 @@ export const chapter20Slides: SyncSlide[] = [
   { src: '/chapter-20/slides/slide-13.png', title: 'Dimension psycho-émotionnelle' },
   { src: '/chapter-20/slides/slide-14.png', title: 'Synthèse thérapeutique ROP' },
   { src: '/chapter-20/slides/slide-15.png', title: 'Synthèse pratique ROP : cartographie du protocole' },
-  { src: '/chapter-20/slides/slide-16.png', title: 'Reflexologie occipito-podale et troubles prostatiques' },
 ]
 
 export const chapter20SlideAnchors: SyncAnchor[] = [
@@ -42,5 +41,4 @@ export const chapter20SlideAnchors: SyncAnchor[] = [
   { sectionId: 'relations-viscero-emotionnelles', blockIndex: 0, slide: 13 },
   { sectionId: 'zones-reflexes-podales', blockIndex: -1, slide: 14 },
   { sectionId: 'zones-reflexes-podales', blockIndex: 0, slide: 15 },
-  { sectionId: 'zones-reflexes-podales', blockIndex: 27, slide: 16 },
 ]

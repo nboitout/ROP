@@ -847,3 +847,30 @@ if (revisedChapter20Blocks[35]?.type === 'xref') revisedChapter20Blocks[35].text
 revisedChapter20Blocks.splice(36, 0, { type: 'xref', label: 'Cf. chapitre 18 — Vessie.', href: '/lecture/chapitre-18?lang=fr' })
 if (revisedChapter20Blocks[16]?.type === 'xref') revisedChapter20Blocks[16].text = ''
 revisedChapter20Blocks.splice(17, 0, { type: 'xref', label: 'Cf. chapitre 19 — Organes génitaux féminins.', href: '/lecture/chapitre-19?lang=fr' })
+
+// Align the published chapter with the latest revised Word source.
+const chapter20Emotional = chapter20Fr.sections.find((section) => section.id === 'relations-viscero-emotionnelles')
+if (chapter20Emotional) chapter20Emotional.blocks = [
+  { type: 'para', text: 'Les fonctions urinaires et sexuelles sont étroitement intégrées aux réseaux cérébraux impliqués dans l’interoception, les émotions, l’attention et la régulation autonome. Le stress ne constitue pas à lui seul une cause de dysfonction prostatique, mais il peut modifier le tonus neuro-végétatif, le sommeil, la perception corporelle et la fonction sexuelle, et ainsi majorer le retentissement de certains symptômes uro-génitaux.' },
+  { type: 'para', text: 'Avec l’âge, les modifications urinaires ou sexuelles peuvent également influencer l’image corporelle, la confiance en soi et la qualité de vie. La retraite, les changements de rôle social ou familial, les préoccupations liées au vieillissement ou la crainte d’une diminution des performances sexuelles peuvent constituer des facteurs de stress chez certains hommes. Leur importance varie cependant considérablement d’une personne à l’autre.' },
+  { type: 'para', text: 'La relation est bidirectionnelle : les troubles urinaires, les douleurs pelviennes ou les difficultés sexuelles peuvent générer anxiété, anticipation et évitement ; inversement, ces états peuvent amplifier la perception des symptômes et les réponses autonomes associées.' },
+  { type: 'para', text: 'Dans la ROP, cette dimension est abordée dans le cadre de l’axe cerveau–sphère génitale masculine. Elle complète l’évaluation anatomique, neuro-végétative et loco-régionale, sans définir une « personnalité prostate » et sans attribuer automatiquement les symptômes à une origine émotionnelle.' },
+]
+
+const chapter20Reflex = chapter20Fr.sections.find((section) => section.id === 'zones-reflexes-podales')
+if (chapter20Reflex) {
+  chapter20Reflex.title = '11. Zones réflexes ROP'
+  const removedCallouts = [
+    'Le Niveau 2 vise ici les voies autonomes',
+    'Le Niveau 3 conserve les repères historiques',
+    'Ces soutiens complètent le protocole lorsqu’ils sont pertinents',
+  ]
+  chapter20Reflex.blocks = chapter20Reflex.blocks.filter((block) =>
+    block.type !== 'rop' || removedCallouts.every((prefix) => !block.body[0]?.startsWith(prefix)))
+}
+
+const chapter20FigureRefs = /\s*\((?:figure|figures)\s+(?:20\.1|20\.3|20\.4|20\.9|20\.10|16\.10|11\.7|4\.26|17\.14|4\.29 et 4\.32|20\.11 et 19\.8|19\.4 et 20\.12|17\.15, 17\.16 et 17\.17|18\.7 et 18\.9|16\.13 et 16\.14|11\.10 et 11\.11)\)/gi
+for (const section of chapter20Fr.sections) for (const block of section.blocks) {
+  if (block.type === 'para' || block.type === 'sub') block.text = block.text.replace(chapter20FigureRefs, '')
+  if (block.type === 'bullets') block.items = block.items.map((item) => item.replace(chapter20FigureRefs, ''))
+}
