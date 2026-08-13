@@ -21,8 +21,6 @@ export const chapter20Slides: SyncSlide[] = [
   { src: '/chapter-20/slides/slide-11.png', title: 'Matrice diagnostique des pathologies' },
   { src: '/chapter-20/slides/slide-12.png', title: 'Dissonance mécanique : effet cascade de l HBP' },
   { src: '/chapter-20/slides/slide-13.png', title: 'Dimension psycho-émotionnelle' },
-  { src: '/chapter-20/slides/slide-14.png', title: 'Synthèse thérapeutique ROP' },
-  { src: '/chapter-20/slides/slide-15.png', title: 'Synthèse pratique ROP : cartographie du protocole' },
 ]
 
 export const chapter20SlideAnchors: SyncAnchor[] = [
@@ -39,6 +37,4 @@ export const chapter20SlideAnchors: SyncAnchor[] = [
   { sectionId: 'pathologies-courantes', blockIndex: 0, slide: 11 },
   { sectionId: 'pathologies-courantes', blockIndex: 14, slide: 12 },
   { sectionId: 'relations-viscero-emotionnelles', blockIndex: 0, slide: 13 },
-  { sectionId: 'zones-reflexes-podales', blockIndex: -1, slide: 14 },
-  { sectionId: 'zones-reflexes-podales', blockIndex: 0, slide: 15 },
 ]
