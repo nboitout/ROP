@@ -5,7 +5,7 @@
 // public/chapter-20/Chapter20 Slides de synthese - FR.pdf
 
 export type SyncSlide = { src: string; title: string; orientation?: 'portrait' }
-export type SyncAnchor = { sectionId: string; blockIndex: number; itemIndex?: number; slide: number | number[]; gapBefore?: 'half' }
+export type SyncAnchor = { sectionId: string; blockIndex: number; itemIndex?: number; slide: number | number[]; gapBefore?: 'half'; end?: { sectionId: string; blockIndex: number; itemIndex?: number } }
 
 export const chapter20Slides: SyncSlide[] = [
   { src: '/chapter-20/slides/slide-01.png', title: 'Appareil reproducteur masculin' },
@@ -21,6 +21,18 @@ export const chapter20Slides: SyncSlide[] = [
   { src: '/chapter-20/slides/slide-11.png', title: 'Matrice diagnostique des pathologies' },
   { src: '/chapter-20/slides/slide-12.png', title: 'Dissonance mécanique : effet cascade de l HBP' },
   { src: '/chapter-20/slides/slide-13.png', title: 'Dimension psycho-émotionnelle' },
+  { src: '/chapter-20/cartographie/figure-20-01.png', title: 'Cartographie ROP : organisation neurovégétative thoraco-lombaire' },
+  { src: '/chapter-20/cartographie/figure-20-02.png', title: 'Cartographie ROP : chaîne ganglionnaire lombaire et piliers du diaphragme' },
+  { src: '/chapter-20/cartographie/figure-20-04.png', title: 'Cartographie ROP : origine médullaire du parasympathique pelvien' },
+  { src: '/chapter-20/cartographie/figure-20-05.png', title: 'Cartographie ROP : rein gauche' },
+  { src: '/chapter-20/cartographie/figure-20-07.png', title: 'Cartographie ROP : surrénale gauche' },
+  { src: '/chapter-20/cartographie/figure-20-09.png', title: 'Cartographie ROP : grand foramen ischiatique' },
+  { src: '/chapter-20/cartographie/figure-20-11.png', title: 'Cartographie ROP : grand et petit foramens ischiatiques' },
+  { src: '/chapter-20/cartographie/figure-20-13.png', title: 'Cartographie ROP : fosse obturée et muscles obturateurs' },
+  { src: '/chapter-20/cartographie/figure-20-15.png', title: 'Cartographie ROP : ligaments sacro-tubéral et sacro-épineux' },
+  { src: '/chapter-20/cartographie/figure-20-17.png', title: 'Cartographie ROP : testicule' },
+  { src: '/chapter-20/cartographie/figure-20-19.png', title: 'Cartographie ROP : ligament et canal inguinaux' },
+  { src: '/chapter-20/cartographie/figure-20-21.png', title: 'Cartographie ROP : prostate et trigone vésical' },
 ]
 
 export const chapter20SlideAnchors: SyncAnchor[] = [
@@ -37,4 +49,16 @@ export const chapter20SlideAnchors: SyncAnchor[] = [
   { sectionId: 'pathologies-courantes', blockIndex: 0, slide: 11 },
   { sectionId: 'pathologies-courantes', blockIndex: 14, slide: 12 },
   { sectionId: 'relations-viscero-emotionnelles', blockIndex: 0, slide: 13 },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 8, slide: 14 },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 11, slide: 15, end: { sectionId: 'zones-reflexes-podales', blockIndex: 11 } },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 16, slide: 23, end: { sectionId: 'zones-reflexes-podales', blockIndex: 16 } },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 17, slide: 24, end: { sectionId: 'zones-reflexes-podales', blockIndex: 17 } },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 24, slide: 19, end: { sectionId: 'zones-reflexes-podales', blockIndex: 24 } },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 25, slide: 20, end: { sectionId: 'zones-reflexes-podales', blockIndex: 25 } },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 26, slide: 21, end: { sectionId: 'zones-reflexes-podales', blockIndex: 26 } },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 27, slide: 22, end: { sectionId: 'zones-reflexes-podales', blockIndex: 27 } },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 38, slide: 16 },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 47, slide: 25, end: { sectionId: 'zones-reflexes-podales', blockIndex: 47 } },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 62, slide: 17, end: { sectionId: 'zones-reflexes-podales', blockIndex: 62 } },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 63, slide: 18, end: { sectionId: 'zones-reflexes-podales', blockIndex: 63 } },
 ]

@@ -874,3 +874,34 @@ for (const section of chapter20Fr.sections) for (const block of section.blocks) 
   if (block.type === 'para' || block.type === 'sub') block.text = block.text.replace(chapter20FigureRefs, '')
   if (block.type === 'bullets') block.items = block.items.map((item) => item.replace(chapter20FigureRefs, ''))
 }
+
+// Cartography slides remain in the deck panel; their paired clinical photos
+// are inserted in the text flow at the corresponding protocol level.
+if (chapter20Reflex) {
+  const insertPhotosAfterBullets = (heading: string, photos: typeof chapter20Reflex.blocks) => {
+    const headingIndex = chapter20Reflex.blocks.findIndex((block) => block.type === 'sub' && block.text.startsWith(heading))
+    const bulletsIndex = chapter20Reflex.blocks.findIndex((block, index) => index > headingIndex && block.type === 'bullets')
+    if (headingIndex >= 0 && bulletsIndex >= 0) chapter20Reflex.blocks.splice(bulletsIndex + 1, 0, ...photos)
+  }
+
+  insertPhotosAfterBullets('11.3. Soutiens associés', [
+    { type: 'figure', src: '/chapter-20/cartographie/figure-20-06.png', caption: 'Photo : rein gauche', alt: 'Repère podal du rein gauche', orientation: 'portrait' },
+    { type: 'figure', src: '/chapter-20/cartographie/figure-20-08.png', caption: 'Photo : surrénale gauche', alt: 'Repère podal de la surrénale gauche', orientation: 'portrait' },
+  ])
+  insertPhotosAfterBullets('11.2.3. Niveau 3', [
+    { type: 'figure', src: '/chapter-20/cartographie/figure-20-22.png', caption: 'Photo : trigone de la vessie, prostate, vésicules séminales et plexus hypogastrique', alt: 'Repère podal du trigone, de la prostate, des vésicules séminales et du plexus hypogastrique', orientation: 'landscape' },
+  ])
+  insertPhotosAfterBullets('11.1.4. Niveau 4', [
+    { type: 'figure', src: '/chapter-20/cartographie/figure-20-10.png', caption: 'Photo : grand foramen ischiatique, muscle piriforme, plexus sacré et nerf pudendal', alt: 'Repère podal du grand foramen ischiatique', orientation: 'landscape' },
+    { type: 'figure', src: '/chapter-20/cartographie/figure-20-12.png', caption: 'Photo : petit foramen ischiatique, muscles obturateurs et jumeaux', alt: 'Repère podal du petit foramen ischiatique', orientation: 'landscape' },
+    { type: 'figure', src: '/chapter-20/cartographie/figure-20-14.png', caption: 'Photo : fosse obturée et muscles obturateurs', alt: 'Repère podal de la fosse obturée', orientation: 'portrait' },
+    { type: 'figure', src: '/chapter-20/cartographie/figure-20-16.png', caption: 'Photo : ligaments sacro-tubéral et sacro-épineux', alt: 'Repère podal des ligaments sacro-tubéral et sacro-épineux', orientation: 'landscape' },
+  ])
+  insertPhotosAfterBullets('11.1.3. Niveau 3', [
+    { type: 'figure', src: '/chapter-20/cartographie/figure-20-18.png', caption: 'Photo : testicule', alt: 'Repère podal du testicule', orientation: 'portrait' },
+    { type: 'figure', src: '/chapter-20/cartographie/figure-20-20.png', caption: 'Photo : ligament inguinal et canal inguinal', alt: 'Repère podal du ligament et du canal inguinaux', orientation: 'landscape' },
+  ])
+  insertPhotosAfterBullets('11.1.2. Niveau 2', [
+    { type: 'figure', src: '/chapter-20/cartographie/figure-20-03.png', caption: 'Photo : chaîne ganglionnaire lombaire et piliers du diaphragme', alt: 'Repère podal de la chaîne ganglionnaire lombaire et des piliers du diaphragme', orientation: 'landscape' },
+  ])
+}
