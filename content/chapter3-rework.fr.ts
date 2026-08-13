@@ -127,7 +127,7 @@ export const chapter3ReworkFr: Chapter = { slug: 'chapter-3-rework', number: '3'
       },
       {
         "type": "para",
-        "text": "Le noyau du tractus solitaire (NTS), situé dans la moelle allongée, constitue un relais majeur des informations viscérales arrivant notamment par les nerfs vague et glossopharyngien. Il participe à l’intégration de signaux cardiovasculaires, respiratoires et digestifs, puis communique avec d’autres centres autonomes du tronc cérébral et de l’hypothalamus."
+        "text": "Le noyau du tractus solitaire (NTS), situé dans la moelle allongée, constitue un relais majeur des informations viscérales arrivant notamment par les nerfs vague et glossopharyngien. Les barorécepteurs du sinus carotidien contribuent à ces afférences cardiovasculaires via le nerf glossopharyngien. Il participe à l’intégration de signaux cardiovasculaires, respiratoires et digestifs, puis communique avec d’autres centres autonomes du tronc cérébral et de l’hypothalamus."
       },
       {
         "type": "para",
