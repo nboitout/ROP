@@ -1,6 +1,6 @@
 import type { Chapter } from './types'
 
-// Source: public/chapter-15/Chapitre_15_Colon_et_rectum_version_publiable.docx
+// Source: public/chapter-15/Chapitre_15_Colon_et_rectum_version_complete_zones_reflexes_revisees.docx
 export const chapter15Fr: Chapter = {
   "slug": "chapter-15",
   "number": "15",
@@ -976,7 +976,7 @@ if (chapter15Pathologies) {
 const chapter15Reflex = chapter15Section('zones-reflexes-podales')!
 chapter15Reflex.title = '13. Zones réflexes podales'
 chapter15Reflex.blocks = [
-  { type: 'note', label: 'Précision méthodologique', body: ['Les localisations décrites dans la cartographie ROP constituent des repères cliniques. Elles ne correspondent pas à une projection anatomique directe du côlon, du rectum ou de leurs voies nerveuses sur le pied. Pour le côlon et le rectum, le protocole associe la zone spécifique du segment colorectal, la régulation neuro-végétative adaptée, le socle régional abdominal ou pelvien selon le territoire, puis l’intégration viscéro-somatique et l’axe cerveau-intestin.'] },
+  { type: 'note', label: 'Précision méthodologique', body: ['Les localisations décrites dans la cartographie ROP constituent des repères cliniques. Elles ne correspondent pas à une projection anatomique directe du côlon, du rectum ou de leurs voies nerveuses sur le pied.'] },
   { type: 'sub', text: '13.1. Repères propres au côlon et au rectum' },
   { type: 'para', text: 'La cartographie doit permettre de suivre le cadre colique dans sa continuité plutôt que de considérer le côlon comme une zone unique.' },
   { type: 'bullets', items: ['Cæcum et jonction iléo-cæcale.', 'Côlon ascendant.', 'Angle colique droit.', 'Côlon transverse.', 'Angle colique gauche.', 'Côlon descendant.', 'Sigmoïde.', 'Rectum et canal anal.'] },
@@ -985,7 +985,6 @@ chapter15Reflex.blocks = [
   { type: 'para', text: 'Pour le côlon, le Niveau 1 est optionnel mais pertinent lorsque le tableau comporte un stress important, une hypervigilance digestive, un syndrome de l’intestin irritable, des troubles fonctionnels entretenus par l’anxiété, ou une perturbation du réflexe de défécation et de la perception rectale.' },
   { type: 'bullets', items: ['Zones réflexes occipitales.', 'Tronc cérébral et centres d’intégration.', 'Diencéphale, notamment hypothalamus.', 'Réseaux centraux impliqués dans l’intéroception et la modulation descendante.'] },
   { type: 'xref', label: 'Voir le chapitre 3 — Système nerveux central', href: '/lecture/chapitre-3-rework?lang=fr' },
-  { type: 'rop', body: ['Le Niveau 1 prend surtout son intérêt dans les troubles fonctionnels dans lesquels perception digestive, stress et contrôle central interagissent. Il ne suppose pas une action podale directe sur une structure cérébrale déterminée.'] },
   { type: 'sub', text: '13.3. Niveau 2 — Régulation neuro-végétative et adaptation' },
   { type: 'para', text: 'Le côlon présente deux grands territoires parasympathiques. La lecture ROP doit donc distinguer le côlon proximal du côlon distal, du sigmoïde et du rectum.' },
   { type: 'sub', text: '13.3.1. Côlon proximal' },
@@ -1037,7 +1036,6 @@ chapter15Reflex.blocks = [
   { type: 'para', text: 'Stress, attention portée aux sensations digestives, motricité, hypersensibilité viscérale et vécu émotionnel peuvent s’influencer réciproquement. Dans les colopathies fonctionnelles, l’inconfort peut augmenter la vigilance portée aux sensations digestives, entretenir la tension et perturber le transit.' },
   { type: 'xref', label: 'Voir le chapitre 3 — Système nerveux central', href: '/lecture/chapitre-3-rework?lang=fr' },
   { type: 'xref', label: 'Voir le chapitre 5 — Mécanisme de stress', href: '/lecture/chapitre-5-rework?lang=fr' },
-  { type: 'rop', body: ['Le Niveau 4 vise à intégrer les convergences somatiques et l’axe cerveau-intestin, sans attribuer au côlon une personnalité ou une émotion spécifique.'] },
   { type: 'sub', text: '13.6. Soutiens associés selon les tests' },
   { type: 'para', text: 'Ces territoires sont des soutiens associés et non des étapes obligatoires du protocole :' },
   { type: 'bullets', items: ['Estomac : réflexe gastro-colique.', 'Intestin grêle : continuité iléo-cæcale et fonction digestive globale.', 'Foie, voies biliaires et pancréas : uniquement si le contexte digestif les rend pertinents.', 'Diaphragme : angles coliques et dynamique abdominale.', 'Reins : uniquement lorsque les rapports loco-régionaux le justifient.', 'Pelvis : sigmoïde, rectum et défécation.'] },
