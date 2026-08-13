@@ -41,7 +41,8 @@ export const chapter19Slides: SyncSlide[] = [
   { src: '/chapter-19/slides/slide-31.png', title: 'Règles douloureuses — rôle des prostaglandines' },
   { src: '/chapter-19/slides/slide-32.png', title: 'Endométriose : maladie inflammatoire chronique' },
   { src: '/chapter-19/slides/slide-33.png', title: 'Vécu émotionnel, stress et symptômes uro-génitaux ou mammaires' },
-  { src: '/chapter-19/slides/slide-34.png', title: 'Synthèse du protocole ROP — utérus, ovaires et trompes' },
+  { src: '/chapter-19/slides/slide-34.png', title: 'Protocole clinique ROP : l’utérus' },
+  { src: '/chapter-19/slides/slide-35.png', title: 'Protocole clinique ROP : ovaires et trompes' },
 ]
 
 export const chapter19SlideAnchors: SyncAnchor[] = [
@@ -75,7 +76,8 @@ export const chapter19SlideAnchors: SyncAnchor[] = [
   { sectionId: 'ovaires-trompes-indications', blockIndex: 2, slide: 31 },
   { sectionId: 'ovaires-trompes-indications', blockIndex: 9, slide: 32 },
   { sectionId: 'ovaires-trompes-relations-viscero-emotionnelles', blockIndex: 0, slide: 33 },
-  { sectionId: 'zones-reflexes-podales', blockIndex: -1, slide: 34 },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 0, slide: 34 },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 18, slide: 35 },
 ]
 
 export const chapter19HalfBreaks: SyncBreakPoint[] = [

@@ -1157,3 +1157,35 @@ revisedReflexSection.blocks = [
     ]
   }
 ]
+
+// Align the published reflex-zone section with the latest revised Word source.
+revisedReflexSection.title = '3. Zones réflexes ROP'
+revisedReflexSection.blocks = revisedReflexSection.blocks.filter((block) => {
+  if (block.type === 'para') {
+    return [
+      'Les localisations',
+      'Pour les organes',
+      'Le Niveau 3 rassemble',
+      'Cette rubrique remplace',
+      'Dans le mod',
+      'Le foie et le rein gauche',
+    ].every((prefix) => !block.text.startsWith(prefix))
+  }
+  if (block.type === 'rop') return false
+  return true
+})
+
+for (const block of revisedReflexSection.blocks) {
+  if (block.type === 'sub') {
+    block.text = block.text
+      .replace('3.1.4.1. Versant viscéro-somatique', 'Versant viscéro-somatique')
+      .replace('3.1.4.2. Versant viscéro-émotionnel', 'Versant viscéro-émotionnel')
+      .replace('3.2.4.1. Versant viscéro-somatique', 'Versant viscéro-somatique')
+      .replace('3.2.4.2. Versant viscéro-émotionnel', 'Versant viscéro-émotionnel')
+  }
+  if (block.type === 'bullets') {
+    block.items = block.items.map((item) => item
+      .replace('Cavité pelvienne et périnée (figures 17.15, 17.16 et 17.17).', 'Cavité pelvienne et périnée')
+      .replace(/^Utérus\.$/, 'Utérus'))
+  }
+}
