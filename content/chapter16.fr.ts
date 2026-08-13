@@ -1,6 +1,6 @@
 import type { Chapter } from './types'
 
-// Source: public/chapter-16/Chapitre_16_Reins_version_publiable.docx
+// Source: public/chapter-16/Chapitre_16_Reins_version_complete_publisable.docx
 export const chapter16Fr: Chapter = {
   "slug": "chapter-16",
   "number": "16",
@@ -866,18 +866,27 @@ if (chapter16Pathologies) {
 const chapter16Emotional = chapter16Section('relations-viscero-emotionnelles')
 
 if (chapter16Emotional) {
+  chapter16Emotional.title = '11. Relations viscéro-émotionnelles : lecture clinique et axe cerveau-rein'
   chapter16Emotional.blocks = [
     {
       type: 'para',
-      text: 'Les reins expriment des sentiments de désir refoulé, de tristesse existentielle profonde de fin de vie, de mort. Ils reflètent souvent les conflits existant avec les parents ou entre les parents. Il faut distinguer le rein droit du rein gauche :',
+      text: 'Le rein ne peut pas être associé scientifiquement à une émotion particulière. Il participe cependant à un ensemble de régulations physiologiques étroitement liées à l’adaptation de l’organisme : activité sympathique, pression artérielle, équilibre hydro-électrolytique et réponses neuroendocrines.',
     },
     {
-      type: 'bullets',
-      items: [
-        'Rein droit ou « rein digestif » : il sert de trop-plein émotionnel au foie. Il est l’organe de la colère intense refoulée, remontant à la petite enfance, en totale fusion avec la mère ou, au contraire, en totale opposition, empêchant l’enfant de développer sa propre identité. Le rein droit est l’expression de celui qui veut dominer mais qui a peur de dominer.',
-        'Rein gauche ou « rein génital » : il est l’organe du « moi génétique », de la génitalité qui nous relie à ceux qui nous ont donné la vie, à nos racines, au potentiel sexuel à transmettre la vie qu’on a reçue. Cela ne signifie pas l’impuissance ou la frigidité mais la peur de donner la vie.',
-        'Le rein gauche est l’organe de la peur profonde, essentielle, au fond de soi, peur de la violence, de l’abandon, d’être tué, différente de la peur superficielle. Le rein gauche est lié à un refoulement important et à une inhibition du développement personnel. C’est aussi l’organe qui exprime la puissance profonde de l’être, d’où parfois la violence exprimée par une pulsion et au besoin de domination sur les autres.',
-      ],
+      type: 'para',
+      text: 'Le stress prolongé, les troubles du sommeil, la fatigue et les états émotionnels intenses peuvent ainsi s’inscrire dans un axe cerveau–rein, au sein duquel les systèmes nerveux autonome, cardiovasculaire et neuroendocrinien interagissent. Cette relation est bidirectionnelle et ne permet pas d’établir une correspondance directe entre une émotion déterminée et un rein.',
+    },
+    {
+      type: 'para',
+      text: 'Dans le référentiel clinique historique de la ROP, certaines associations émotionnelles ont néanmoins été utilisées comme repères d’anamnèse : le rein droit, parfois qualifié de « rein digestif », a notamment été rapproché de situations de colère contenue ou de conflits relationnels anciens ; le rein gauche, parfois qualifié de « rein génital », a été associé à des vécus de peur profonde, d’insécurité, d’abandon ou à des problématiques touchant aux racines familiales et à la transmission.',
+    },
+    {
+      type: 'para',
+      text: 'Ces associations appartiennent au modèle clinique traditionnel de la ROP. Elles ne constituent ni des correspondances anatomiques ou neurophysiologiques établies, ni des critères diagnostiques. Une sensibilité d’une zone réflexe rénale ne permet donc pas de déduire l’existence d’un conflit émotionnel particulier.',
+    },
+    {
+      type: 'para',
+      text: 'En pratique, lorsqu’un contexte émotionnel ou de stress accompagne un tableau rénal ou lombaire, il peut être intégré à l’anamnèse et à la lecture globale du patient. L’objectif est de replacer le rein dans les mécanismes généraux d’adaptation de l’organisme, sans attribuer à cet organe une personnalité ou une émotion spécifique.',
     },
   ]
 }
