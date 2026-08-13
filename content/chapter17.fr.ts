@@ -1,5 +1,6 @@
 import type { Chapter } from './types'
 
+// Source: public/chapter-17/Chapitre_17_Cavite_pelvienne_socle_regional_niveaux_3_4.docx
 export const chapter17Fr: Chapter = {
   "slug": "chapter-17",
   "number": "17",
@@ -661,13 +662,10 @@ prefixItems('zones-reflexes-podales', {
 // Revised regional pelvic protocol: Chapter 17 is the Level 3 foundation,
 // completed by a selectively applied somatic Level 4.
 const chapter17Reflex = section('zones-reflexes-podales')
-chapter17Reflex.title = '8. Zones réflexes podales — Cartographie régionale de la cavité pelvienne'
+chapter17Reflex.title = '8. Zones réflexes ROP — Cartographie régionale de la cavité pelvienne'
 chapter17Reflex.blocks = [
-  { type: 'note', label: 'Précision méthodologique', body: ['Contrairement aux chapitres consacrés à un organe, le présent chapitre décrit une région anatomique. La « zone régionale pelvienne » ne correspond donc pas à la projection d’un organe unique sur le pied. Elle constitue, dans la cartographie clinique de la ROP, un ensemble de repères permettant d’explorer l’environnement osseux, ligamentaire, fascial, périnéal et neuro-somatique des viscères pelviens. Elle est utilisée comme socle régional du Niveau 3, en complément de la zone spécifique de l’organe concerné.'] },
   { type: 'sub', text: '8.1. Point-clé — Le chapitre 17 comme socle régional du Niveau 3' },
-  { type: 'para', text: 'Dans le protocole clinique ROP, le chapitre 17 ne doit pas être traité comme un chapitre d’organe supplémentaire. Il sert de référentiel régional auquel renvoient les chapitres consacrés à la vessie, aux organes génitaux féminins, aux organes génitaux masculins et au système érectile.' },
-  { type: 'note', label: 'Règle d’utilisation', body: ['La cartographie régionale pelvienne est un module du Niveau 3. Elle n’est pas systématiquement traitée dans son intégralité. Le praticien sélectionne, selon l’anamnèse, les tests et les réactions palpatoires, les composantes régionales pertinentes autour de l’organe ciblé. Le protocole associe donc une zone spécifique d’organe à un environnement régional choisi selon le contexte clinique.'] },
-  { type: 'para', text: 'Ainsi, une vessie, un utérus, une prostate ou un autre organe pelvien conserve sa propre cartographie. Le chapitre 17 apporte le cadre régional : contenant pelvien, espaces, péritoine, fascias, ligaments et rapports entre viscères.' },
+  { type: 'para', text: 'Le chapitre 17 ne doit pas être traité comme un chapitre d’organe supplémentaire. Il sert de référentiel régional auquel renvoient les chapitres consacrés à la vessie, aux organes génitaux féminins, aux organes génitaux masculins et au système érectile.' },
   { type: 'sub', text: '8.2. Niveau 3 — Régulation viscérale loco-régionale : le socle pelvien' },
   { type: 'para', text: 'Le Niveau 3 constitue le cœur de ce chapitre. Il ne vise pas un viscère isolé, mais l’environnement anatomique dans lequel les organes pelviens se déplacent, sont soutenus et entretiennent leurs rapports.' },
   { type: 'sub', text: '8.2.1. Le contenant pelvien' },
@@ -683,9 +681,14 @@ chapter17Reflex.blocks = [
   { type: 'xref', label: 'Voir le chapitre 19 — Organes génitaux féminins', href: '/lecture/chapitre-19?lang=fr' },
   { type: 'xref', label: 'Voir le chapitre 20 — Organes génitaux masculins', href: '/lecture/chapitre-20?lang=fr' },
   { type: 'xref', label: 'Voir le chapitre 21 — Système érectile', href: '/lecture/chapitre-21?lang=fr' },
-  { type: 'rop', body: ['Le Niveau 3 permet de replacer le symptôme viscéral dans son environnement pelvien. Une zone d’organe peut ainsi être complétée par les repères régionaux pertinents sans transformer la cavité pelvienne en une « zone réflexe » unique et obligatoire.'] },
   { type: 'sub', text: '8.3. Niveau 4 — Intégration somatique pelvienne' },
   { type: 'para', text: 'Dans ce chapitre régional, le Niveau 4 est volontairement adapté : il regroupe les structures somatiques qui bordent, traversent ou stabilisent le pelvis et qui peuvent participer aux convergences douloureuses ou fonctionnelles associées aux viscères pelviens.' },
+  { type: 'figure', src: '/chapter-17/cartographie/figure-17-02.png', caption: 'Photo : Grand foramen ischiatique, muscle piriforme, plexus sacré et nerf pudendal', alt: 'Repères podaux du grand foramen ischiatique, du piriforme, du plexus sacré et du nerf pudendal', orientation: 'landscape' },
+  { type: 'figure', src: '/chapter-17/cartographie/figure-17-04.png', caption: 'Photo : Petit foramen ischiatique, muscles obturateurs et jumeaux', alt: 'Repères podaux du petit foramen ischiatique et des muscles obturateurs et jumeaux', orientation: 'landscape' },
+  { type: 'figure', src: '/chapter-17/cartographie/figure-17-06.png', caption: 'Photo : Fosse obturée et muscles obturateurs', alt: 'Repères podaux de la fosse obturée et des muscles obturateurs', orientation: 'portrait' },
+  { type: 'figure', src: '/chapter-17/cartographie/figure-17-08.png', caption: 'Photo : Nerf pudendal', alt: 'Repère podal du nerf pudendal entre les deux pouces', orientation: 'portrait' },
+  { type: 'figure', src: '/chapter-17/cartographie/figure-17-10.png', caption: 'Photo : Ligaments sacrotubéral et sacroépineux', alt: 'Repères podaux des ligaments sacrotubéral et sacroépineux', orientation: 'landscape' },
+  { type: 'figure', src: '/chapter-17/cartographie/figure-17-12.png', caption: 'Photo : Technique de synchronisation sphéno-basilaire–S2', alt: 'Technique de synchronisation entre la synchondrose sphéno-basilaire et S2', orientation: 'portrait' },
   { type: 'sub', text: '8.3.1. Plexus sacré et nerf sciatique' },
   { type: 'bullets', items: ['Plexus sacré.', 'Grand foramen ischiatique.', 'Muscle piriforme.', 'Gouttière ischio-trochantérienne.', 'Nerf sciatique.'] },
   { type: 'para', text: 'Ces repères sont particulièrement utiles lorsqu’un tableau pelvien s’accompagne de douleurs lombo-sacrées, fessières ou sciatiques. Ils ne signifient pas qu’une douleur sciatique a nécessairement une origine viscérale.' },
@@ -698,14 +701,10 @@ chapter17Reflex.blocks = [
   { type: 'sub', text: '8.3.4. Plexus coccygien et région sacro-coccygienne' },
   { type: 'bullets', items: ['Plexus coccygien.', 'Articulation sacro-coccygienne.', 'Coccyx et attaches périnéales.'] },
   { type: 'para', text: 'Ces repères peuvent compléter le Niveau 4 lorsqu’une coccygodynie, une douleur périnéale ou un antécédent traumatique du coccyx participe au tableau.' },
-  { type: 'rop', body: ['Le Niveau 4 ne constitue pas une extension systématique du Niveau 3. Il est ajouté lorsque le tableau clinique comporte une composante somatique : douleur, tension musculaire, atteinte périnéale, gêne à la position assise, irradiation fessière ou lombo-sacrée.'] },
   { type: 'sub', text: '8.4. Renvois vers les Niveaux 1 et 2' },
-  { type: 'para', text: 'Le chapitre 17 reste centré sur les Niveaux 3 et 4. Les composantes centrales et autonomes ne sont donc pas redéveloppées ici ; elles sont utilisées par renvoi lorsque le tableau clinique le justifie.' },
   { type: 'xref', label: 'Niveau 1 — Voir le chapitre 3 « Système nerveux central »', href: '/lecture/chapitre-3-rework?lang=fr', text: 'Centres supérieurs et environnement neuro-méningé.' },
   { type: 'xref', label: 'Niveau 2 — Voir le chapitre 4 « Système nerveux autonome »', href: '/lecture/chapitre-4-rework?lang=fr', text: 'Sympathique thoraco-lombaire, parasympathique pelvien S2-S4, nerfs hypogastriques et plexus hypogastrique inférieur.' },
-  { type: 'para', text: 'La dure-mère spinale et les repères crânio-sacrés ne sont donc plus inclus dans la cartographie régionale du Niveau 3 ; lorsqu’ils sont retenus dans le modèle ROP, ils relèvent du Niveau 1.' },
   { type: 'sub', text: '8.5. Utilisation clinique du socle régional' },
   { type: 'para', text: 'La cartographie régionale ne se traite pas comme une séquence fixe. Son intérêt est de fournir un cadre commun aux différents organes pelviens.' },
   { type: 'bullets', items: ['Symptôme vésical : zone spécifique de la vessie + composantes régionales pelviennes sélectionnées selon les tests.', 'Symptôme utérin ou ovarien : zone de l’organe + péritoine, ligaments, parois ou périnée selon le contexte.', 'Symptôme prostatique ou génital masculin : zone spécifique + loge pelvienne, périnée et interfaces somatiques pertinentes.', 'Douleur périnéale ou syndrome pudendal : importance accrue du Niveau 4, en particulier pudendal, canal d’Alcock, muscles et ligaments voisins.', 'Douleur lombo-pelvienne ou sciatique associée : compléter, si les tests le justifient, par le plexus sacré, le piriforme, la gouttière ischio-trochantérienne et les articulations du bassin.'] },
-  { type: 'note', label: 'Point-clé du chapitre', body: ['Le chapitre 17 est le socle régional du Niveau 3 pelvien. Il ne remplace pas les cartographies d’organes des chapitres 18 à 21. Il fournit un module régional sélectionnable, auquel s’ajoute, lorsque nécessaire, un Niveau 4 somatique adapté au pelvis.'] },
 ]
