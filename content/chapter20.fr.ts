@@ -1,6 +1,6 @@
 import type { Chapter } from './types'
 
-// Source: public/chapter-20/Chapitre_20_Organes_genitaux_masculins_version_publiable.docx
+// Source: public/chapter-20/Chapitre_20_Organes_genitaux_masculins_version_publiable_complete.docx
 // Figure-number mentions are intentionally omitted from the web prose.
 export const chapter20Fr: Chapter = {
   "slug": "chapter-20",
@@ -516,6 +516,83 @@ export const chapter20Fr: Chapter = {
       ]
     }
   ]
+}
+
+// Publish the explanatory additions from
+// Chapitre_20_Organes_genitaux_masculins_version_publiable_complete.docx.
+// The document retains the established section hierarchy, so these additions
+// are inserted after their matching headings without disturbing slide anchors.
+const chapter20ParagraphsAfterHeadings: Array<[string, string]> = [
+  ['2.1. Migration embryonnaire des gonades', 'Les gonades se forment initialement près des reins. À partir du 3e mois de gestation, elles amorcent leur migration depuis la paroi abdominale postérieure, guidées notamment par le gubernaculum. Leur devenir diffère ensuite selon le sexe.'],
+  ['2.2. Testicules', 'Les testicules sont situés à l’extérieur de la cavité pelvienne, dans le scrotum, sous le périnée. Cette position permet de maintenir une température légèrement inférieure à celle de la cavité abdominale, condition nécessaire au déroulement normal de la spermatogenèse.'],
+  ['2.3. Prostate', 'La prostate est profondément située dans la cavité pelvienne, sous le col de la vessie et au-dessus du plancher périnéal. Elle se trouve environ 2 à 3 cm en arrière de la symphyse pubienne et en avant de l’ampoule rectale.'],
+  ['3.1. Testicules', 'Dans le scrotum, les testicules sont le siège de la production des spermatozoïdes et de la sécrétion de testostérone.'],
+  ['3.2. Épididyme', 'L’épididyme coiffe le testicule puis descend le long de son bord postérieur jusqu’au pôle inférieur, où il se poursuit par le conduit déférent. Il reçoit les spermatozoïdes issus du testicule et participe à leur maturation et à l’acquisition de leur mobilité.'],
+  ['3.3. Conduit déférent', 'Le conduit déférent, long d’environ 50 à 60 cm, transporte les spermatozoïdes depuis l’épididyme jusqu’aux conduits éjaculateurs. Il remonte dans le cordon spermatique, traverse le canal inguinal puis gagne la cavité pelvienne.'],
+  ['3.4. Canal inguinal', 'Le canal inguinal est un tunnel d’environ 4 cm traversant la paroi abdominale antérieure, juste au-dessus et parallèlement au ligament inguinal. Il présente un anneau profond et un anneau superficiel.'],
+  ['3.4.1. Anneau inguinal profond', 'L’anneau inguinal profond correspond à l’entrée du canal inguinal. Il se projette approximativement à mi-distance entre l’épine iliaque antéro-supérieure et la symphyse pubienne.'],
+  ['3.4.2. Anneau inguinal superficiel', 'L’anneau inguinal superficiel correspond à la sortie du canal inguinal. Il est situé au-dessus du tubercule du pubis.'],
+  ['3.4.3. Constitution du canal inguinal', 'Le canal inguinal est constitué par les différents plans de la paroi abdominale antérieure. Chez l’homme, il livre passage au cordon spermatique, qui contient notamment le conduit déférent, des vaisseaux et des éléments nerveux. La région est également en rapport avec les nerfs ilio-hypogastrique, ilio-inguinal et génito-fémoral, issus du plexus lombal. Ces territoires participent à l’innervation sensitive de la région pubienne et scrotale.'],
+  ['3.4.4. Hernies inguinales', 'Le canal inguinal constitue une zone de faiblesse de la paroi abdominale antérieure. Les hernies inguinales y sont particulièrement fréquentes chez l’homme.'],
+  ['3.4.5. Muscle crémaster', 'Le muscle crémaster accompagne le cordon spermatique. Son insertion proximale se situe au niveau du ligament inguinal et du pubis ; ses fibres descendent autour du cordon et des enveloppes testiculaires. Il est principalement innervé par la branche génitale du nerf génito-fémoral et participe à l’élévation du testicule.'],
+  ['3.5. Vésicules séminales', 'Les vésicules séminales sont des glandes sexuelles accessoires paires, situées en arrière de la vessie et au-dessus de la prostate, au voisinage du fascia de Denonvilliers qui les sépare du rectum.'],
+  ['3.6. Conduits éjaculateurs', 'Les conduits éjaculateurs résultent de l’union de l’ampoule du conduit déférent avec le conduit de la vésicule séminale. Ils traversent la prostate et s’abouchent dans l’urètre prostatique.'],
+  ['3.7.1. Constitution externe', 'La prostate est entourée d’une capsule fibro-musculaire. Des travées conjonctivo-musculaires se prolongent vers l’intérieur et participent à l’organisation du tissu prostatique.'],
+  ['3.7.3. Constitution interne', 'La prostate est constituée de nombreuses glandes tubulo-alvéolaires dont les sécrétions sont déversées dans l’urètre prostatique par de multiples petits canaux.'],
+  ['3.8. Urètre', 'Chez l’homme, l’urètre assure à la fois l’évacuation de l’urine et le passage du sperme. Dans le cadre de ce chapitre, l’attention porte principalement sur sa portion prostatique puis sur sa portion membraneuse.'],
+  ['3.8.1. Urètre prostatique', 'L’urètre prostatique traverse la prostate. Il reçoit les deux conduits éjaculateurs ainsi que de nombreux petits canaux par lesquels s’écoulent les sécrétions prostatiques.'],
+  ['3.8.2. Colliculus séminal ou veru montanum', 'Le colliculus séminal, ou veru montanum, est un relief de la paroi postérieure de l’urètre prostatique. Il constitue un repère anatomique au voisinage de l’abouchement des conduits éjaculateurs et de l’utricule prostatique.'],
+  ['3.8.3. Sphincters', 'Le sphincter urétral interne, constitué de fibres musculaires lisses, participe au contrôle involontaire du col vésical. Le sphincter urétral externe, strié et sous contrôle somatique via le nerf pudendal, participe au contrôle volontaire de la continence.'],
+  ['3.8.4. Urètre membraneux', 'L’urètre membraneux prolonge l’urètre prostatique à travers le plancher pelvien avant de se poursuivre par l’urètre spongieux dans le pénis.'],
+  ['4.1. Loge prostatique', 'La loge prostatique contient la prostate et ses enveloppes. Ses rapports anatomiques expliquent les liens étroits de la prostate avec la vessie, le plancher pelvien, le rectum, la symphyse pubienne et les réseaux vasculo-nerveux pelviens.'],
+  ['4.2. Vésicules séminales', 'Les vésicules séminales sont en rapport, en avant, avec la base de la vessie ; en bas, avec la prostate ; en arrière, avec le rectum ; et en haut, avec le péritoine du cul-de-sac recto-vésical.'],
+  ['5.1. Testicules', 'Du fait de leur origine embryologique abdominale et de leur migration secondaire, les testicules conservent un pédicule vasculaire d’origine haute, issu de la région aortique abdominale.'],
+  ['7.1. Testicules', 'Les testicules assurent deux fonctions principales : la spermatogenèse et la stéroïdogenèse. Ces fonctions sont intégrées à une régulation endocrinienne centrale et à un environnement local spécifique.'],
+  ['7.1.1. Spermatogenèse', 'La spermatogenèse correspond à la production des spermatozoïdes à partir des cellules germinales. Elle débute à la puberté et se déroule dans les tubes séminifères, selon un processus continu dont l’efficacité peut évoluer avec l’âge.'],
+  ['7.1.2. Stéroïdogenèse', 'La stéroïdogenèse testiculaire correspond principalement à la production de testostérone. Cette hormone intervient dans la différenciation sexuelle masculine, le développement des caractères sexuels, le maintien de la spermatogenèse et la fonction sexuelle.'],
+  ['7.1.3. Contribution des corticosurrénales', 'La zone réticulée des corticosurrénales, sous l’influence de l’ACTH, produit également des androgènes surrénaliens. Leur contribution est complémentaire de la production hormonale gonadique.'],
+  ['7.1.4. Régulation par les centres supérieurs', 'La fonction testiculaire est régulée par l’axe hypothalamo-hypophysaire-gonadique. L’hypothalamus contrôle la sécrétion hypophysaire de FSH et de LH, qui participent respectivement à la spermatogenèse et à la production de testostérone. Cette régulation endocrine s’intègre aux fonctions centrales impliquées dans la sexualité, le comportement et l’adaptation.'],
+  ['7.1.5. Immunité', 'Les cellules germinales apparaissant après la mise en place de la tolérance immunitaire nécessitent un environnement protecteur. Le testicule présente ainsi des mécanismes de barrière et de régulation immunitaire locale qui contribuent à protéger la spermatogenèse.'],
+  ['7.2.1. Rôle mécanique', 'Par sa position sous le col vésical et ses rapports avec les structures du plancher pelvien, la prostate participe à l’organisation mécanique de la région vésico-urétrale. Ses moyens de fixité et son environnement veineux contribuent à la stabilité de cette région.'],
+  ['7.2.2. Continence urinaire', 'La continence urinaire dépend de la coordination du col vésical, du sphincter urétral interne, du sphincter urétral externe et du plancher pelvien. La proximité anatomique de la prostate avec ces structures explique qu’une modification de son volume ou de sa consistance puisse retentir sur la miction.'],
+  ['7.2.3. Constitution du sperme', 'Le sperme associe les spermatozoïdes d’origine testiculaire aux sécrétions des voies génitales et des glandes sexuelles accessoires, notamment les vésicules séminales et la prostate. Ces sécrétions participent au volume de l’éjaculat, à son pH et aux conditions nécessaires à la mobilité et à la survie des spermatozoïdes.'],
+  ['7.2.5. Rôle des vésicules séminales', 'Les vésicules séminales produisent une part importante du liquide séminal. Leur sécrétion, notamment riche en fructose, contribue au volume de l’éjaculat et fournit des substrats utiles au métabolisme des spermatozoïdes.'],
+  ['8.1.1. Cancer du testicule', 'Le cancer du testicule concerne principalement l’homme jeune, avec une fréquence particulière entre l’adolescence tardive et le début de l’âge adulte. Toute masse ou augmentation persistante du volume testiculaire impose une évaluation médicale.'],
+  ['8.1.2. Torsion testiculaire', 'La torsion testiculaire correspond à une rotation du cordon spermatique compromettant brutalement la vascularisation du testicule. Le risque de souffrance puis de nécrose testiculaire augmente rapidement : il s’agit d’une urgence chirurgicale nécessitant une prise en charge immédiate.'],
+  ['8.1.3. Cancer de la prostate', 'Le cancer de la prostate est le plus souvent un adénocarcinome développé aux dépens du tissu glandulaire prostatique. Son évolution peut rester longtemps silencieuse, ce qui explique l’importance de l’évaluation médicale adaptée au contexte clinique et aux facteurs de risque.'],
+  ['8.1.4. Prostatite aiguë', 'La prostatite aiguë est un tableau infectieux et inflammatoire de la prostate. Elle peut associer fièvre, fatigue importante, brûlures mictionnelles, hématurie et douleurs génitales ou abdomino-pelviennes. Elle relève d’une évaluation médicale et, lorsqu’une origine bactérienne est retenue, d’un traitement antibiotique adapté.'],
+  ['8.2.1. Hypertrophie bénigne de la prostate', 'L’hypertrophie bénigne de la prostate (HBP), ou adénome prostatique, devient fréquente avec l’âge. Il s’agit d’une augmentation bénigne du volume prostatique pouvant comprimer l’urètre et provoquer des symptômes du bas appareil urinaire, sans constituer en elle-même un cancer.'],
+  ['8.2.2. Prostatite chronique', 'La prostatite chronique et les syndromes douloureux pelviens chroniques peuvent évoluer par poussées et s’accompagner de symptômes urinaires, pelviens, génitaux ou sexuels. Contrairement à la forme aiguë, la fièvre est généralement absente.'],
+]
+
+for (const [heading, text] of chapter20ParagraphsAfterHeadings) {
+  const section = chapter20Fr.sections.find((candidate) =>
+    candidate.title === heading || candidate.blocks.some((block) => block.type === 'sub' && block.text === heading),
+  )
+  if (!section) throw new Error(`Chapter 20 heading not found: ${heading}`)
+  const headingIndex = section.title === heading
+    ? -1
+    : section.blocks.findIndex((block) => block.type === 'sub' && block.text === heading)
+  section.blocks.splice(headingIndex + 1, 0, { type: 'para', text })
+}
+
+for (const section of chapter20Fr.sections) {
+  for (const block of section.blocks) {
+    if (block.type === 'para' || block.type === 'sub') {
+      block.text = block.text
+        .replace('disparait quand le lobe moyen', 'disparaît quand le lobe moyen')
+        .replace('présente une fente l’utricule prostatique', 'présente une fente, l’utricule prostatique')
+        .replace(/\. Prostate et vésicules séminales:$/, '.')
+        .replace('Le principal traitement est l’ablation du testicule (orchidectomie)', 'Le principal traitement est l’ablation du testicule (orchidectomie).')
+    }
+    if (block.type === 'bullets' || block.type === 'numbered') {
+      block.items = block.items.map((item) => item
+        .replace('disparait quand le lobe moyen', 'disparaît quand le lobe moyen')
+        .replace('présente une fente l’utricule prostatique', 'présente une fente, l’utricule prostatique')
+        .replace(/\. Prostate et vésicules séminales:$/, '.')
+        .replace('Le principal traitement est l’ablation du testicule (orchidectomie)', 'Le principal traitement est l’ablation du testicule (orchidectomie).'))
+    }
+  }
 }
 
 
