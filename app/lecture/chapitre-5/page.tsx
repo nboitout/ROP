@@ -8,9 +8,10 @@ import { getServerLang } from '@/app/i18n/serverLang'
 import { translations } from '@/app/i18n/translations'
 import type { Lang } from '@/app/i18n/translations'
 import {
-  chapter5Slides, chapter5SlidesEn, chapter5SlidesDe, chapter5SlidesEs, chapter5SlidesIt,
-  chapter5SlideAnchors, chapter5SlideAnchorsLegacy,
+  chapter5SlidesEn, chapter5SlidesDe, chapter5SlidesEs, chapter5SlidesIt,
+  chapter5SlideAnchorsLegacy,
 } from '@/content/chapter5.slidesync'
+import { chapter5ReworkSlides as chapter5Slides, chapter5ReworkSlideAnchors as chapter5SlideAnchors } from '@/content/chapter5-rework.slidesync'
 
 // Synthesis deck per language (all five available for chapter 5).
 const DECKS: Record<Lang, typeof chapter5Slides> = {

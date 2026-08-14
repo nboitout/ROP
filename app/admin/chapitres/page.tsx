@@ -331,11 +331,6 @@ export default async function AdminChapitresPage() {
         </div>
       </div>
 
-      <nav className="adm-edition-tabs" aria-label="Book edition">
-        <Link href="/admin/chapitres" className="adm-edition-tab active">Current edition</Link>
-        <Link href="/admin/chapitres/nouvelle-edition" className="adm-edition-tab">Private edition</Link>
-      </nav>
-
       <p className="adm-section-title adm-section-title-first">Text availability</p>
       <p className="adm-page-sub adm-asset-intro">
         These cards count chapter text only: live pages and translations. Slides, reflex-zone pictures, and clinical cases are tracked separately below.

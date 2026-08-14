@@ -28,12 +28,9 @@ const CHAPTER_ROUTE_ALIASES: Record<string, string> = {
 
 const REFLEX_SECTION_BY_CHAPTER: Record<string, string> = {
   'chapter-2': 'zones-reflexes',
-  'chapter-3': 'section-4-zones-reflexes',
-  'chapter-3-rework': 'zones-reflexes-rop',
+  'chapter-3': 'zones-reflexes-rop',
   'chapter-4': 'zones-reflexes-podales',
-  'chapter-4-rework': 'zones-reflexes-podales',
-  'chapter-5': 'rop-stress',
-  'chapter-5-rework': 'zones-reflexes-podales',
+  'chapter-5': 'zones-reflexes-podales',
   'chapter-7': 'zones-reflexes-podales',
   'chapter-8': 'zones-reflexes-podales',
   'chapter-9': 'zones-reflexes-podales',
@@ -53,8 +50,8 @@ const REFLEX_SECTION_BY_CHAPTER: Record<string, string> = {
 
 function chapterKeyIncludingReworkFromPath(pathname: string): string | null {
   if (pathname === '/lecture/traitement-rop') return 'chapter-2'
-  const match = pathname.match(/^\/lecture\/chapitre-(\d+)(-rework)?$/)
-  return match ? `chapter-${Number(match[1])}${match[2] ?? ''}` : null
+  const match = pathname.match(/^\/lecture\/chapitre-(\d+)(?:-rework)?$/)
+  return match ? `chapter-${Number(match[1])}` : null
 }
 
 function retargetReflexCrossChapterLink(href: string, sourceChapterKey: string, sourceAnchorId?: string): string {

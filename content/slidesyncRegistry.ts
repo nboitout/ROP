@@ -8,17 +8,16 @@ import {
   chapter2SlideAnchors,
   chapter2SlideAnchorsFr,
 } from './chapter2.slidesync'
-import { chapter3Slides, chapter3SlideAnchors } from './chapter3.slidesync'
-import { chapter4Slides, chapter4SlideAnchors } from './chapter4.slidesync'
+import { chapter3ReworkSlides as chapter3Slides, chapter3ReworkSlideAnchors as chapter3SlideAnchors } from './chapter3-rework.slidesync'
+import { chapter4ReworkSlides as chapter4Slides, chapter4ReworkSlideAnchors as chapter4SlideAnchors } from './chapter4-rework.slidesync'
 import {
-  chapter5Slides,
   chapter5SlidesDe,
   chapter5SlidesEn,
   chapter5SlidesEs,
   chapter5SlidesIt,
-  chapter5SlideAnchors,
   chapter5SlideAnchorsLegacy,
 } from './chapter5.slidesync'
+import { chapter5ReworkSlides as chapter5Slides, chapter5ReworkSlideAnchors as chapter5SlideAnchors } from './chapter5-rework.slidesync'
 import { chapter6Slides, chapter6SlideAnchors } from './chapter6.slidesync'
 import { chapter7Slides, chapter7SlideAnchors } from './chapter7.slidesync'
 import { chapter8Slides, chapter8SlideAnchors } from './chapter8.slidesync'

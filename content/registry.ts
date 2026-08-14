@@ -6,7 +6,7 @@ import { introductionDe } from './introduction.de'
 import { introductionEs } from './introduction.es'
 import { introductionIt } from './introduction.it'
 import { chapter1Fr } from './chapter1.fr'
-import { chapter3Fr } from './chapter3.fr'
+import { chapter3ReworkFr } from './chapter3-rework.fr'
 import { chapter6Fr } from './chapter6.fr'
 import { chapter7Fr } from './chapter7.fr'
 import { chapter2Fr } from './chapter2.fr'
@@ -14,8 +14,8 @@ import { chapter2En } from './chapter2.en'
 import { chapter2De } from './chapter2.de'
 import { chapter2Es } from './chapter2.es'
 import { chapter2It } from './chapter2.it'
-import { chapter4Fr } from './chapter4.fr'
-import { chapter5Fr } from './chapter5.fr'
+import { chapter4ReworkFr } from './chapter4-rework.fr'
+import { chapter5ReworkFr } from './chapter5-rework.fr'
 import { chapter5En } from './chapter5.en'
 import { chapter5De } from './chapter5.de'
 import { chapter5Es } from './chapter5.es'
@@ -67,17 +67,21 @@ import { chapter21De } from './chapter21.de'
 import { chapter21Es } from './chapter21.es'
 import { chapter21It } from './chapter21.it'
 
-// These recently revised French chapters belong to the private-edition flow.
-// Keep their foundational cross-references inside that edition, including
-// references appended after the initial chapter object is declared.
-for (const chapter of [chapter7Fr, chapter8Fr, chapter9Fr, chapter10Fr, chapter11Fr, chapter12Fr, chapter13Fr, chapter14Fr, chapter15Fr, chapter16Fr, chapter17Fr, chapter18Fr, chapter19Fr, chapter20Fr, chapter21Fr]) {
+// The former reworked editions are now the canonical French Chapters 3–5.
+chapter3ReworkFr.slug = 'chapter-3'
+chapter4ReworkFr.slug = 'chapter-4'
+chapter5ReworkFr.slug = 'chapter-5'
+
+// Normalize references created while Chapters 3–5 lived under private
+// /rework routes. Saved legacy URLs still redirect at the route level.
+for (const chapter of [chapter3ReworkFr, chapter4ReworkFr, chapter5ReworkFr, chapter7Fr, chapter8Fr, chapter9Fr, chapter10Fr, chapter11Fr, chapter12Fr, chapter13Fr, chapter14Fr, chapter15Fr, chapter16Fr, chapter17Fr, chapter18Fr, chapter19Fr, chapter20Fr, chapter21Fr]) {
   for (const section of chapter.sections) {
     for (const block of section.blocks) {
       if (block.type !== 'xref') continue
       block.href = block.href
-        .replace('/lecture/chapitre-3?', '/lecture/chapitre-3-rework?')
-        .replace('/lecture/chapitre-4?', '/lecture/chapitre-4-rework?')
-        .replace('/lecture/chapitre-5?', '/lecture/chapitre-5-rework?')
+        .replace('/lecture/chapitre-3-rework', '/lecture/chapitre-3')
+        .replace('/lecture/chapitre-4-rework', '/lecture/chapitre-4')
+        .replace('/lecture/chapitre-5-rework', '/lecture/chapitre-5')
     }
   }
 }
@@ -92,12 +96,12 @@ for (const chapter of [chapter7Fr, chapter8Fr, chapter9Fr, chapter10Fr, chapter1
 const registry: Record<string, Partial<Record<Lang, Chapter>>> = {
   introduction: { fr: introductionFr, en: introductionEn, de: introductionDe, es: introductionEs, it: introductionIt },
   'chapter-1': { fr: chapter1Fr },
-  'chapter-3': { fr: chapter3Fr },
+  'chapter-3': { fr: chapter3ReworkFr },
   'chapter-6': { fr: chapter6Fr },
   'chapter-7': { fr: chapter7Fr },
   'chapter-2': { fr: chapter2Fr, en: chapter2En, de: chapter2De, es: chapter2Es, it: chapter2It },
-  'chapter-4': { fr: chapter4Fr },
-  'chapter-5': { fr: chapter5Fr, en: chapter5En, de: chapter5De, es: chapter5Es, it: chapter5It },
+  'chapter-4': { fr: chapter4ReworkFr },
+  'chapter-5': { fr: chapter5ReworkFr, en: chapter5En, de: chapter5De, es: chapter5Es, it: chapter5It },
   'chapter-8': { fr: chapter8Fr },
   'chapter-9': { fr: chapter9Fr },
   'chapter-10': { fr: chapter10Fr },

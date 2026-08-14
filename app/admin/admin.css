@@ -2209,20 +2209,6 @@
   }
 }
 
-/* Private chapter-edition workspace */
-.adm-edition-tabs { display: inline-flex; gap: 4px; margin: 4px 0 30px; padding: 4px; border: 1px solid var(--adm-border); border-radius: 10px; background: rgba(255,255,255,.45); }
-.adm-edition-tab { padding: 9px 14px; border-radius: 7px; color: var(--adm-i50); font-size: .72rem; font-weight: 700; letter-spacing: .06em; text-decoration: none; text-transform: uppercase; }
-.adm-edition-tab:hover { color: var(--adm-ink); }
-.adm-edition-tab.active { background: var(--adm-ink); color: #fff; }
-.adm-edition-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
-.adm-edition-card { display: flex; min-height: 230px; flex-direction: column; padding: 22px; border: 1px solid var(--adm-border); border-radius: 14px; background: rgba(255,255,255,.62); }
-.adm-edition-card.test { border-top: 3px solid var(--adm-gold); }
-.adm-edition-card h2 { margin: 8px 0 10px; color: var(--adm-ink); font-size: 1.15rem; }
-.adm-edition-card > p:not(.adm-edition-status) { color: var(--adm-i50); font-size: .84rem; line-height: 1.55; }
-.adm-edition-status { margin: 0; color: var(--adm-sage); font-size: .62rem; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; }
-.adm-edition-actions { display: flex; flex-direction: column; gap: 8px; margin-top: auto; }
-.adm-edition-actions a { color: var(--adm-gold); font-size: .78rem; font-weight: 700; text-decoration: none; }
-@media (max-width: 900px) { .adm-edition-grid { grid-template-columns: 1fr; } .adm-edition-card { min-height: 190px; } }
 
 /* ---- Chapter preparation board ---- */
 .adm-board-num {

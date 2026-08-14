@@ -1,12 +1,12 @@
 import { cookies } from 'next/headers'
 import { redirect } from 'next/navigation'
-import { canReadDraftChapter } from '@/lib/access'
+import { canReadPaidChapter } from '@/lib/access'
 import type { Metadata } from 'next'
 import SlideSyncReader from '@/components/SlideSyncReader'
 import { getChapter } from '@/content/registry'
 import { getServerLang } from '@/app/i18n/serverLang'
 import { translations } from '@/app/i18n/translations'
-import { chapter4Slides, chapter4SlideAnchors } from '@/content/chapter4.slidesync'
+import { chapter4ReworkHalfBreaks, chapter4ReworkSlides as chapter4Slides, chapter4ReworkSlideAnchors as chapter4SlideAnchors } from '@/content/chapter4-rework.slidesync'
 
 export const metadata: Metadata = {
   title: 'Chapitre 4 - Lecture synchronisee · R.O.P. · Guy Boitout',
@@ -20,8 +20,8 @@ export default async function Chapitre4SyncPage({
   searchParams: Promise<{ lang?: string }>
 }) {
   const cookieStore = await cookies()
-  if (!canReadDraftChapter(cookieStore)) {
-    redirect('/admin/login')
+  if (!(await canReadPaidChapter(cookieStore))) {
+    redirect('/#acheter')
   }
 
   const { lang: langParam } = await searchParams
@@ -34,6 +34,7 @@ export default async function Chapitre4SyncPage({
       bookTitle={translations[lang].reader.bookTitle}
       slides={chapter4Slides}
       anchors={chapter4SlideAnchors}
+      halfBreaks={chapter4ReworkHalfBreaks}
       backHref="/admin/chapitres"
       classicHref={`/chapitre-4?lang=${lang}`}
     />

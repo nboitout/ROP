@@ -6,7 +6,7 @@ import SlideSyncReader from '@/components/SlideSyncReader'
 import { getChapter } from '@/content/registry'
 import { getServerLang } from '@/app/i18n/serverLang'
 import { translations } from '@/app/i18n/translations'
-import { chapter3Slides, chapter3SlideAnchors } from '@/content/chapter3.slidesync'
+import { chapter3ReworkSlides as chapter3Slides, chapter3ReworkSlideAnchors as chapter3SlideAnchors } from '@/content/chapter3-rework.slidesync'
 
 export const metadata: Metadata = {
   title: 'Chapitre 3 — Lecture synchronisée · R.O.P. · Guy Boitout',
