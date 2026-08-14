@@ -1217,3 +1217,22 @@ insertChapter19PhotosAfterBullets('3.1.3. Niveau 3', [
   { type: 'figure', src: '/chapter-19/cartographie/figure-19-16.png', caption: 'Photo : ligament inguinal et canal inguinal', alt: 'Repère podal du ligament et du canal inguinaux', orientation: 'landscape' },
   { type: 'figure', src: '/chapter-19/cartographie/figure-19-18.png', caption: 'Photo : noyau fibreux central du périnée et fente uro-génitale', alt: 'Repère podal du noyau fibreux central du périnée et de la fente uro-génitale', orientation: 'landscape' },
 ])
+
+// Keep the uterine viscerosomatic relations from the revised Word source as a
+// final publication override. Chapter 19 is rebuilt in several passes above;
+// declaring this block last prevents that short standalone section from being
+// left empty by a later transformation.
+const uterusViscerosomaticSection = chapter19Fr.sections.find(
+  (section) => section.id === 'uterus-relations-viscero-somatiques',
+)
+if (!uterusViscerosomaticSection) throw new Error('Chapter 19 uterine viscerosomatic section is missing')
+uterusViscerosomaticSection.blocks = [
+  {
+    type: 'bullets',
+    items: [
+      'Vertèbres Th12-L1, L5-Sacrum, C2 ;',
+      'Suture occipito-mastoïdienne ;',
+      'Membre inférieur, pied.',
+    ],
+  },
+]
