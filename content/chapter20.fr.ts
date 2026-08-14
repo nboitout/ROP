@@ -904,4 +904,43 @@ if (chapter20Reflex) {
   insertPhotosAfterBullets('11.1.2. Niveau 2', [
     { type: 'figure', src: '/chapter-20/cartographie/figure-20-02.png', caption: 'Photo : chaîne ganglionnaire lombaire et piliers du diaphragme', alt: 'Repère podal de la chaîne ganglionnaire lombaire et des piliers du diaphragme', orientation: 'landscape' },
   ])
+
+  const paragraphReplacements = new Map([
+    ['Les localisations décrites ci-dessous appartiennent à la cartographie clinique de la ROP.', 'Les localisations décrites ci-dessous appartiennent à la cartographie clinique de la ROP. Leur sélection dépend de l’anamnèse, des tests, des réactions palpatoires et du tableau fonctionnel.'],
+    ['La fonction testiculaire s’inscrit dans une régulation neuroendocrine centrale', 'La fonction testiculaire s’inscrit dans une régulation neuroendocrine centrale, notamment par l’axe hypothalamo-hypophysaire-gonadique.'],
+    ['La prostate est sensible au contexte hormonal', 'La prostate est sensible au contexte hormonal et s’inscrit dans la régulation générale de l’axe hypothalamo-hypophysaire-gonadique.'],
+  ])
+  for (const block of chapter20Reflex.blocks) if (block.type === 'para') {
+    const replacement = [...paragraphReplacements].find(([prefix]) => block.text.startsWith(prefix))
+    if (replacement) block.text = replacement[1]
+  }
+
+  const removedRopPrefixes = [
+    'Le Niveau 1 replace la fonction gonadique',
+    'Le Niveau 4 permet d’intégrer le contexte somatique',
+    'Le Niveau 1 accompagne la régulation générale',
+    'Le Niveau 2 vise à accompagner l’organisation autonome',
+    'Le Niveau 3 replace la prostate',
+    'Le Niveau 4 relie le symptôme prostatique',
+  ]
+  chapter20Reflex.blocks = chapter20Reflex.blocks.filter((block) => {
+    if (block.type === 'para' && block.text.startsWith('Cette rubrique remplace l’ancienne')) return false
+    if (block.type === 'rop') return removedRopPrefixes.every((prefix) => !block.body[0]?.startsWith(prefix))
+    return true
+  })
+
+  const prostateEmotionIndex = chapter20Reflex.blocks.findIndex((block) => block.type === 'para' && block.text.startsWith('Les symptômes urinaires ou sexuels peuvent être modulés'))
+  if (prostateEmotionIndex >= 0) chapter20Reflex.blocks.splice(prostateEmotionIndex, 1,
+    { type: 'para', text: 'Les symptômes urinaires ou sexuels peuvent être modulés par le stress, l’anticipation, l’anxiété, la douleur, le contexte relationnel et le vécu du vieillissement.' },
+    { type: 'para', text: 'Dans le modèle clinique ROP, l’écoute-induction : un repère prostatique et un repère central.' },
+  )
+
+  const supportsIndex = chapter20Reflex.blocks.findIndex((block) => block.type === 'sub' && block.text.startsWith('11.3. Soutiens associés'))
+  if (supportsIndex >= 0) {
+    const oldSupportsIndex = chapter20Reflex.blocks.findIndex((block, index) => index > supportsIndex && block.type === 'para' && block.text.startsWith('Le foie et le rein gauche figuraient'))
+    if (oldSupportsIndex >= 0) chapter20Reflex.blocks[oldSupportsIndex] = {
+      type: 'para',
+      text: 'Le foie et le rein gauche peuvent être conservés comme soutiens associés, mais ne doivent pas être considérés comme des étapes obligatoires du traitement des organes génitaux masculins.',
+    }
+  }
 }
