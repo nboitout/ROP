@@ -18,6 +18,7 @@ export const chapter21Slides: SyncSlide[] = [
   { src: '/chapter-21/slides/slide-08.png', title: 'Pathologies courantes et facteurs associés' },
   { src: '/chapter-21/slides/slide-09.png', title: 'Relations viscéro-somatiques' },
   { src: '/chapter-21/slides/slide-10.png', title: 'La dimension psycho-émotionnelle' },
+  { src: '/chapter-21/slides/slide-11.png', title: 'Protocole clinique ROP : système érectile masculin et féminin' },
 ]
 
 export const chapter21SlideAnchors: SyncAnchor[] = [
@@ -31,6 +32,7 @@ export const chapter21SlideAnchors: SyncAnchor[] = [
   { sectionId: 'pathologies-courantes', blockIndex: -1, slide: 8 },
   { sectionId: 'relations-viscero-somatiques', blockIndex: 0, slide: 9 },
   { sectionId: 'relations-viscero-emotionnelles', blockIndex: 0, slide: 10 },
+  { sectionId: 'zones-reflexes-podales', blockIndex: -1, slide: 11 },
 ]
 
 export const chapter21HalfBreaks: SyncBreakPoint[] = [
