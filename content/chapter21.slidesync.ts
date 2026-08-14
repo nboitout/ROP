@@ -4,7 +4,7 @@
 // Slides are pre-rendered from the current Chapter 21 synthesis deck.
 
 export type SyncSlide = { src: string; title: string; orientation?: 'portrait' }
-export type SyncAnchor = { sectionId: string; blockIndex: number; slide: number | number[]; gapBefore?: 'half' }
+export type SyncAnchor = { sectionId: string; blockIndex: number; slide: number | number[]; gapBefore?: 'half'; end?: { sectionId: string; blockIndex: number; itemIndex?: number } }
 export type SyncBreakPoint = { sectionId: string; blockIndex: number; itemIndex?: number }
 
 export const chapter21Slides: SyncSlide[] = [
@@ -19,6 +19,12 @@ export const chapter21Slides: SyncSlide[] = [
   { src: '/chapter-21/slides/slide-09.png', title: 'Relations viscéro-somatiques' },
   { src: '/chapter-21/slides/slide-10.png', title: 'La dimension psycho-émotionnelle' },
   { src: '/chapter-21/slides/slide-11.png', title: 'Protocole clinique ROP : système érectile masculin et féminin' },
+  { src: '/chapter-21/cartographie/figure-21-01.png', title: 'Cartographie ROP : grand foramen ischiatique' },
+  { src: '/chapter-21/cartographie/figure-21-03.png', title: 'Cartographie ROP : petit foramen ischiatique' },
+  { src: '/chapter-21/cartographie/figure-21-05.png', title: 'Cartographie ROP : ligaments sacro-tubéral et sacro-épineux' },
+  { src: '/chapter-21/cartographie/figure-21-07.png', title: 'Cartographie ROP : ligament et canal inguinaux' },
+  { src: '/chapter-21/cartographie/figure-21-09.png', title: 'Cartographie ROP : nerf pudendal et organes érectiles' },
+  { src: '/chapter-21/cartographie/figure-21-11.png', title: 'Cartographie ROP : nerf olfactif I' },
 ]
 
 export const chapter21SlideAnchors: SyncAnchor[] = [
@@ -33,6 +39,12 @@ export const chapter21SlideAnchors: SyncAnchor[] = [
   { sectionId: 'relations-viscero-somatiques', blockIndex: 0, slide: 9 },
   { sectionId: 'relations-viscero-emotionnelles', blockIndex: 0, slide: 10 },
   { sectionId: 'zones-reflexes-podales', blockIndex: -1, slide: 11 },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 8, slide: 17, end: { sectionId: 'zones-reflexes-podales', blockIndex: 8 } },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 19, slide: 15, end: { sectionId: 'zones-reflexes-podales', blockIndex: 19 } },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 28, slide: 12, end: { sectionId: 'zones-reflexes-podales', blockIndex: 28 } },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 29, slide: 13, end: { sectionId: 'zones-reflexes-podales', blockIndex: 29 } },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 30, slide: 14, end: { sectionId: 'zones-reflexes-podales', blockIndex: 30 } },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 31, slide: 16, end: { sectionId: 'zones-reflexes-podales', blockIndex: 31 } },
 ]
 
 export const chapter21HalfBreaks: SyncBreakPoint[] = [

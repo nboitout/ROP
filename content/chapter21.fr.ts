@@ -558,7 +558,25 @@ revisedReflexSection.blocks = [
 
 // Align the published chapter with the latest revised Word source.
 const chapter21Reflex = chapter21Fr.sections.find((section) => section.id === 'zones-reflexes-podales')
-if (chapter21Reflex) chapter21Reflex.title = '10. Zones réflexes ROP'
+if (chapter21Reflex) {
+  chapter21Reflex.title = '10. Zones réflexes ROP'
+
+  const insertPhotosAfterBullets = (heading: string, photos: typeof chapter21Reflex.blocks) => {
+    const headingIndex = chapter21Reflex.blocks.findIndex((block) => block.type === 'sub' && block.text.startsWith(heading))
+    const bulletsIndex = chapter21Reflex.blocks.findIndex((block, index) => index > headingIndex && block.type === 'bullets')
+    if (headingIndex >= 0 && bulletsIndex >= 0) chapter21Reflex.blocks.splice(bulletsIndex + 1, 0, ...photos)
+  }
+
+  insertPhotosAfterBullets('10.5.1. Versant somatique', [
+    { type: 'figure', src: '/chapter-21/cartographie/figure-21-02.png', caption: 'Photo : grand foramen ischiatique, muscle piriforme, plexus sacré et nerf pudendal', alt: 'Repère podal du grand foramen ischiatique', orientation: 'landscape' },
+    { type: 'figure', src: '/chapter-21/cartographie/figure-21-04.png', caption: 'Photo : petit foramen ischiatique, muscles obturateurs et jumeaux', alt: 'Repère podal du petit foramen ischiatique', orientation: 'landscape' },
+    { type: 'figure', src: '/chapter-21/cartographie/figure-21-06.png', caption: 'Photo : ligaments sacro-tubéral et sacro-épineux', alt: 'Repère podal des ligaments sacro-tubéral et sacro-épineux', orientation: 'landscape' },
+    { type: 'figure', src: '/chapter-21/cartographie/figure-21-10.png', caption: 'Photo : nerf pudendal', alt: 'Repère podal du nerf pudendal', orientation: 'portrait' },
+  ])
+  insertPhotosAfterBullets('10.4. Niveau 3', [
+    { type: 'figure', src: '/chapter-21/cartographie/figure-21-08.png', caption: 'Photo : ligament inguinal et canal inguinal', alt: 'Repère podal du ligament et du canal inguinaux', orientation: 'landscape' },
+  ])
+}
 
 const chapter21FigureRefs = /\s*\((?:figure|figures)\s+(?:21\.1|21\.2|17\.3|21\.3 et 21\.4|17\.15 et 17\.16|21\.6 et 21\.7|17\.21)\)/gi
 for (const section of chapter21Fr.sections) for (const block of section.blocks) {
