@@ -1,11 +1,11 @@
 import { NextRequest, NextResponse, after } from 'next/server'
-import { randomUUID } from 'crypto'
 import {
   hasInternalTrafficMarker,
   isAlwaysExcludedEmail,
   isDateScopedExcludedEmail,
   markInternalTraffic,
 } from '@/lib/internalTraffic'
+import { resolveReaderId, setReaderIdCookie } from '@/lib/readerId'
 
 export const maxDuration = 30
 
@@ -46,8 +46,7 @@ export async function POST(req: NextRequest) {
     isAlwaysExcludedEmail(body.email) ||
     isDateScopedExcludedEmail(body.email, nowIsoDate)
 
-  const existing = req.cookies.get('reader_id')?.value
-  const readerId = existing && /^[0-9a-f-]{36}$/i.test(existing) ? existing : randomUUID()
+  const { readerId, isReturning } = resolveReaderId(req, body.readerId)
 
   const source: string = typeof body.source === 'string' ? body.source : ''
   const sessionId: string = typeof body.sessionId === 'string' ? body.sessionId : ''
@@ -78,15 +77,7 @@ export async function POST(req: NextRequest) {
   if (isInternalLead) markInternalTraffic(res)
 
   // Make sure anonymous sign-ups still get a stable readerId.
-  if (!existing) {
-    res.cookies.set('reader_id', readerId, {
-      httpOnly: true,
-      sameSite: 'lax',
-      secure: process.env.NODE_ENV === 'production',
-      path: '/',
-      maxAge: 60 * 60 * 24 * 365,
-    })
-  }
+  if (!isReturning) setReaderIdCookie(res, readerId)
 
   // Unlock the free chapters for the free-chapter sign-up (not the book-launch
   // notify form, whose source contains "notify"). Without this cookie the gated

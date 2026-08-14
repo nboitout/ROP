@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse, after } from 'next/server'
-import { randomUUID } from 'crypto'
 import { hasInternalTrafficMarker, markInternalTraffic } from '@/lib/internalTraffic'
+import { resolveReaderId, setReaderIdCookie } from '@/lib/readerId'
 
 export const maxDuration = 30
 
@@ -39,8 +39,7 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: 'Bad payload' }, { status: 400 })
   }
 
-  const existing = req.cookies.get('reader_id')?.value
-  const readerId = existing && /^[0-9a-f-]{36}$/i.test(existing) ? existing : randomUUID()
+  const { readerId, isReturning } = resolveReaderId(req, body.readerId)
 
   const lang: string = typeof body.lang === 'string' ? body.lang : ''
   const sessionId: string = typeof body.sessionId === 'string' ? body.sessionId : ''
@@ -60,18 +59,10 @@ export async function POST(req: NextRequest) {
     referer: req.headers.get('referer') ?? '',
   }))
 
-  const res = NextResponse.json({ ok: true })
+  const res = NextResponse.json({ ok: true, readerId })
 
   // Make sure even anonymous visitors get a stable readerId for funnel analysis.
-  if (!existing) {
-    res.cookies.set('reader_id', readerId, {
-      httpOnly: true,
-      sameSite: 'lax',
-      secure: process.env.NODE_ENV === 'production',
-      path: '/',
-      maxAge: 60 * 60 * 24 * 365,
-    })
-  }
+  if (!isReturning) setReaderIdCookie(res, readerId)
 
   return res
 }

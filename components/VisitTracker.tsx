@@ -3,7 +3,7 @@
 import { useEffect, useRef } from 'react'
 import { usePathname } from 'next/navigation'
 import { useLanguage } from '@/app/i18n/LanguageContext'
-import { getSessionId, getSessionUtm } from '@/lib/session'
+import { ensureReaderId, getReaderIdSync, getSessionId, getSessionUtm, rememberReaderId } from '@/lib/session'
 
 // The email gate renders on the homepage at /?gate=free, but usePathname()
 // drops the query string so it would be indistinguishable from a plain
@@ -59,7 +59,7 @@ export default function VisitTracker() {
       fetch('/api/visit', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ event: 'page_leave', lang: langRef.current, page, duration_seconds: seconds, sessionId: getSessionId() }),
+        body: JSON.stringify({ event: 'page_leave', lang: langRef.current, page, duration_seconds: seconds, sessionId: getSessionId(), readerId: getReaderIdSync() }),
         keepalive: true,
       }).catch(() => {})
     }
@@ -93,21 +93,31 @@ export default function VisitTracker() {
       fetch('/api/visit', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ event: 'page_leave', lang: langRef.current, page: prev, duration_seconds: seconds, sessionId: getSessionId() }),
+        body: JSON.stringify({ event: 'page_leave', lang: langRef.current, page: prev, duration_seconds: seconds, sessionId: getSessionId(), readerId: getReaderIdSync() }),
         keepalive: true,
       }).catch(() => {})
     }
   }, [pathname])
 
-  // Fire page_visit on mount and when lang or page changes — skip admin pages
+  // Fire page_visit on mount and when lang or page changes — skip admin pages.
+  // The id is resolved first so that tabs opened simultaneously report the same
+  // reader rather than each being handed a new one by the server.
   useEffect(() => {
     if (pathname.startsWith('/admin')) return
-    fetch('/api/visit', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ lang, page: pageId(pathname), sessionId: getSessionId(), utm: getSessionUtm() }),
-      keepalive: true,
-    }).catch(() => {})
+    let cancelled = false
+    ensureReaderId().then((readerId) => {
+      if (cancelled) return
+      fetch('/api/visit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ lang, page: pageId(pathname), sessionId: getSessionId(), utm: getSessionUtm(), readerId }),
+        keepalive: true,
+      })
+        .then((res) => res.json())
+        .then((data) => { if (typeof data?.readerId === 'string') rememberReaderId(data.readerId) })
+        .catch(() => {})
+    })
+    return () => { cancelled = true }
   }, [lang, pathname])
 
   return null
