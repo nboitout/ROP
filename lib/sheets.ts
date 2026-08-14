@@ -40,6 +40,31 @@ const DATE_SCOPED_EXCLUSIONS = [
   },
 ]
 
+// Automated traffic that reached the sheets because it drives a real browser:
+// it runs the page's JavaScript, so the beacons fire, and its user-agent is an
+// ordinary Chrome string that BOT_UA below cannot match.
+//
+// 2026-08-12, 19:19:25 UTC — one Windows client on Chrome 142.0.7444.163 (eight
+// majors behind the 150 that real visitors were running that week) opened eight
+// tabs inside 1.55s: seven on / and one on /?gate=free, held ~48s, then closed
+// them all within 300ms. Each tab was handed its own reader_id because the
+// beacons raced the first Set-Cookie, so one client became eight visitors; the
+// five that reported dwell passed the quality filter below and reached the
+// dashboard. None of the eight has a lead or a read event against it.
+//
+// The race itself is fixed in lib/readerId.ts, so a repeat would now arrive as
+// a single reader — but these rows are already written and need listing.
+const BOT_READER_IDS = [
+  '20a591c2-d1dd-4f0a-9a0b-6e313183c17c',
+  '9d3b0906-1a3d-4a92-a813-41322d5351fc',
+  '8aa6a727-4b98-4f22-b10c-33c8a3ab7910',
+  'f549e849-2c21-4e0a-aa67-aafc11fd2a28',
+  '00301712-0047-4368-8c66-9a7f0fea1c58',
+  'eeff7261-a97b-4b3a-b953-98c1460808aa',
+  '210c126e-a19b-455b-96c2-1df8cb9332a9',
+  'e333f8b2-1240-4cae-a048-dd8718f2c13b',
+]
+
 // Narrow one-off QA exclusions when the exact reader_id is unavailable locally.
 // Keep these as specific as possible and remove them once the cookie id is known.
 const VISIT_SIGNATURE_EXCLUSIONS = [
@@ -402,6 +427,7 @@ export async function fetchAllSheets(options: {
   const excludedReaderIds = new Set(
     [
       ...ALWAYS_EXCLUDED_READER_IDS,
+      ...BOT_READER_IDS,
       ...(process.env.EXCLUDED_READER_IDS ?? '').split(','),
     ]
       .map((s) => s.trim().toLowerCase())
