@@ -1175,7 +1175,7 @@ chapter8Reflex.blocks = [
   { type: 'para', text: 'Pour le diaphragme, la lecture des zones réflexes s’intègre aux quatre niveaux du protocole ROP. Le diaphragme lui-même constitue principalement une interface fonctionnelle du Niveau 2, sans appartenir anatomiquement au système nerveux autonome.' },
   { type: 'sub', text: '12.1. Repères anatomiques préalables au positionnement des zones' },
   { type: 'para', text: 'En raison de l’obliquité caudale, ventrale et gauche du centre phrénique, la coupole diaphragmatique gauche se projette légèrement plus bas que la droite. Cette asymétrie doit être respectée dans la cartographie ROP.' },
-  { type: 'figure', src: '/chapter-8/cartographie/figure-8-01.png', caption: 'Obliquité du centre phrénique', alt: 'Obliquité du centre phrénique et projection podale asymétrique', orientation: 'landscape' },
+  { type: 'figure', src: '/chapter-8/cartographie/figure-8-01.png', caption: 'Obliquité du centre phrénique', alt: 'Obliquité du centre phrénique et projection podale asymétrique', orientation: 'portrait' },
   { type: 'bullets', items: [
     'Centre phrénique : sur les faces plantaires, sous la tête du premier métatarsien ; le repère gauche est situé légèrement plus bas que le droit.',
     'Coupoles diaphragmatiques : chaque coupole suit une ligne courbe allant du centre phrénique vers la région de la styloïde du cinquième métatarsien.',
@@ -1212,7 +1212,7 @@ chapter8Reflex.blocks = [
     'Hiatus de Marfran et de Larrey : repères xyphoïdiens.',
     'Hiatus du ligament de Henlé : région costo-transversaire inférieure, autour de T11-T12.',
   ] },
-  { type: 'figure', src: '/chapter-8/cartographie/figure-8-04.png', caption: 'Hiatus œsophagien et cardia', alt: 'Photo du repérage podal du hiatus œsophagien et du cardia', orientation: 'landscape' },
+  { type: 'figure', src: '/chapter-8/cartographie/figure-8-04.png', caption: 'Hiatus œsophagien et cardia', alt: 'Photo du repérage podal du hiatus œsophagien et du cardia', orientation: 'portrait' },
   { type: 'figure', src: '/chapter-8/cartographie/figure-8-06.png', caption: 'Hiatus de Marfran et de Larrey', alt: 'Photo du repérage podal des hiatus de Marfran et de Larrey', orientation: 'landscape' },
   { type: 'rop', body: ['Le Niveau 2 vise ici à accompagner la coordination entre respiration, activité autonome et adaptation générale, sans supposer qu’une pression podale modifie directement le calibre d’un hiatus ou l’activité d’un nerf.'] },
   { type: 'sub', text: '12.4. Niveau 3 — Régulation viscérale loco-régionale' },

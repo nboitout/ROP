@@ -1043,3 +1043,50 @@ chapter15Reflex.blocks = [
   { type: 'bullets', items: ['Constipation proximale : côlon droit + Niveau 2 proximal + module abdominal selon les tests.', 'Constipation distale : côlon gauche, sigmoïde ou rectum + parasympathique pelvien + module pelvien si nécessaire.', 'Syndrome de l’intestin irritable ou colopathie fonctionnelle : Niveau 1 + Niveau 2 + zones coliques symptomatiques + axe cerveau-intestin.', 'Trouble de l’exonération ou ténesme : rectum + Niveau 2 pelvien + plancher pelvien et pudendal au Niveau 4.'] },
   { type: 'note', label: 'Principe de sécurité', body: ['Tout saignement, modification récente et persistante du transit, amaigrissement, fièvre, anémie ou douleur inhabituelle impose une évaluation médicale adaptée.'] },
 ]
+
+// The refreshed Chapter 15 media set contains three cartographies (shown in
+// the synchronized slide panel) and three photos (kept alongside the text).
+// Remove references to the superseded set before inserting the usable photos.
+chapter15Reflex.blocks = chapter15Reflex.blocks.filter((block) => block.type !== 'figure')
+
+const colonDroitHeading = chapter15Reflex.blocks.findIndex(
+  (block) => block.type === 'sub' && block.text.startsWith('13.4.1. Côlon droit'),
+)
+const colonDroitBullets = chapter15Reflex.blocks.findIndex(
+  (block, index) => index > colonDroitHeading && block.type === 'bullets',
+)
+chapter15Reflex.blocks.splice(colonDroitBullets + 1, 0, {
+  type: 'figure',
+  src: '/chapter-15/cartographie/figure-15-06.png',
+  caption: 'Photo : Valvule iléo-cæcale',
+  alt: 'Repère podal de la valvule iléo-cæcale',
+  orientation: 'portrait',
+})
+
+const colonTransverseHeading = chapter15Reflex.blocks.findIndex(
+  (block) => block.type === 'sub' && block.text.startsWith('13.4.2. Côlon transverse'),
+)
+const mesocolonDescription = chapter15Reflex.blocks.findIndex(
+  (block, index) =>
+    index > colonTransverseHeading &&
+    block.type === 'para' &&
+    block.text.startsWith('La racine du mésocôlon transverse'),
+)
+chapter15Reflex.blocks.splice(
+  mesocolonDescription + 1,
+  0,
+  {
+    type: 'figure',
+    src: '/chapter-15/cartographie/figure-15-08.png',
+    caption: 'Photo : Racine du mésocôlon transverse — premier segment',
+    alt: 'Repère podal du premier segment de la racine du mésocôlon transverse',
+    orientation: 'portrait',
+  },
+  {
+    type: 'figure',
+    src: '/chapter-15/cartographie/figure-15-10.png',
+    caption: 'Photo : Racine du mésocôlon transverse — second segment',
+    alt: 'Repère podal du second segment de la racine du mésocôlon transverse',
+    orientation: 'landscape',
+  },
+)

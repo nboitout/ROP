@@ -5,10 +5,12 @@
 //
 // Slides 16-28 come from the current French "Pathologies courantes" deck.
 //
-// Slides 29+ retain the existing cartography/photo assets.
+// Slides 29+ use the refreshed cartography set. Related photos remain in the
+// text column rather than being duplicated in the slide panel.
 
 export type SyncSlide = { src: string; title: string; orientation?: 'portrait' }
-export type SyncAnchor = { sectionId: string; blockIndex: number; slide: number; gapBefore?: 'half' }
+export type SyncAnchorPoint = { sectionId: string; blockIndex: number; itemIndex?: number }
+export type SyncAnchor = SyncAnchorPoint & { slide: number; end?: SyncAnchorPoint; gapBefore?: 'half' }
 
 export const chapter15Slides: SyncSlide[] = [
   { src: '/chapter-15/slides/slide-01.png', title: 'Chapitre 15 : côlon et rectum' },
@@ -39,14 +41,9 @@ export const chapter15Slides: SyncSlide[] = [
   { src: '/chapter-15/slides/pathologies/slide-12.png', title: 'Distinguer les grands types de colopathies' },
   { src: '/chapter-15/slides/pathologies/slide-13.png', title: 'Le cercle vicieux de la colopathie fonctionnelle' },
   { src: '/chapter-15/slides/slide-15.png', title: 'Relations viscéro-somatiques du côlon' },
-  { src: '/chapter-15/cartographie/figure-15-01.png', title: 'Cartographie : nerf vague X — moelle allongée' },
-  { src: '/chapter-15/cartographie/figure-15-03.png', title: 'Cartographie : nerf vague X — foramen jugulaire' },
-  { src: '/chapter-15/cartographie/figure-15-05.png', title: 'Cartographie : parasympathique pelvien sacré' },
-  { src: '/chapter-15/cartographie/figure-15-07.png', title: 'Cartographie : origine médullaire du sympathique' },
-  { src: '/chapter-15/cartographie/figure-15-09.png', title: 'Cartographie : chaîne ganglionnaire latéro-vertébrale thoracique' },
-  { src: '/chapter-15/cartographie/figure-15-11.png', title: 'Cartographie : côlon ascendant et côlon transverse' },
-  { src: '/chapter-15/cartographie/figure-15-13.png', title: 'Cartographie : côlon transverse et côlon descendant' },
-  { src: '/chapter-15/cartographie/figure-15-21.png', title: 'Cartographie : rectum, anus et mésosigmoïde' },
+  { src: '/chapter-15/cartographie/figure-15-01.png', title: 'Cartographie : côlon ascendant et côlon transverse' },
+  { src: '/chapter-15/cartographie/figure-15-03.png', title: 'Cartographie : côlon transverse et côlon descendant' },
+  { src: '/chapter-15/cartographie/figure-15-11.png', title: 'Cartographie : rectum, anus et mésosigmoïde' },
 ]
 
 // English deck - rendered from the dedicated English synthesis slides
@@ -114,14 +111,11 @@ export const chapter15SlideAnchors: SyncAnchor[] = [
   { sectionId: 'indications-troubles-fonctionnels', blockIndex: 19, slide: 26 },
   { sectionId: 'indications-troubles-fonctionnels', blockIndex: 21, slide: 27 },
   { sectionId: 'relations-viscero-somatiques', blockIndex: 0, slide: 28 },
-  { sectionId: 'zones-reflexes-podales', blockIndex: 14, slide: 29 },
-  { sectionId: 'zones-reflexes-podales', blockIndex: 15, slide: 30 },
-  { sectionId: 'zones-reflexes-podales', blockIndex: 21, slide: 31 },
-  { sectionId: 'zones-reflexes-podales', blockIndex: 16, slide: 32 },
-  { sectionId: 'zones-reflexes-podales', blockIndex: 17, slide: 33 },
-  { sectionId: 'zones-reflexes-podales', blockIndex: 32, slide: 34 },
-  { sectionId: 'zones-reflexes-podales', blockIndex: 43, slide: 35 },
-  { sectionId: 'zones-reflexes-podales', blockIndex: 47, slide: 36 },
+  // Reflex-zone indices are updated below after the refreshed text media is
+  // inserted. Each standalone cartography receives a tight display interval.
+  { sectionId: 'zones-reflexes-podales', blockIndex: 24, slide: 29, end: { sectionId: 'zones-reflexes-podales', blockIndex: 25 } },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 33, slide: 30, end: { sectionId: 'zones-reflexes-podales', blockIndex: 34 } },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 36, slide: 31, end: { sectionId: 'zones-reflexes-podales', blockIndex: 37 } },
 ]
 
 const chapter15SlideAnchorsEnBySource: SyncAnchor[] = [
