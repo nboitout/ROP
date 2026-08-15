@@ -182,7 +182,9 @@ const SS_UI: Record<string, {
 // Section ids that get a "page break" — a tall blank gap the reader scrolls
 // through before the section heading, à la Word page break.
 const PAGE_BREAK_BEFORE = new Set<string>(['anatomie', 'zones-reflexes-podales'])
-const SHOW_SYNC_END_ANCHORS = process.env.NEXT_PUBLIC_SHOW_SLIDE_END_ANCHORS !== '0'
+// Synchronization anchors are structural only. They remain in the DOM so the
+// slide stage can follow the text, but reader-facing labels stay hidden.
+const SHOW_SYNC_END_ANCHORS = false
 
 function normalizeSectionLabel(value: string) {
   return value

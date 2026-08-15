@@ -1,5 +1,6 @@
 import type { Lang } from '@/app/i18n/translations'
 import type { Chapter } from './types'
+import { classicSlideDecks } from './classicSlideDecks'
 import { introductionFr } from './introduction.fr'
 import { introductionEn } from './introduction.en'
 import { introductionDe } from './introduction.de'
@@ -116,6 +117,18 @@ const registry: Record<string, Partial<Record<Lang, Chapter>>> = {
   'chapter-19': { fr: chapter19Fr, en: chapter19En, de: chapter19De, es: chapter19Es, it: chapter19It },
   'chapter-20': { fr: chapter20Fr, en: chapter20En, de: chapter20De, es: chapter20Es, it: chapter20It },
   'chapter-21': { fr: chapter21Fr, en: chapter21En, de: chapter21De, es: chapter21Es, it: chapter21It },
+}
+
+// Classic reading uses the same current image deck as synchronized reading.
+// Apply it to every available translation so every chapter exposes a deck and
+// no classic route depends on a stale or deleted PDF export.
+for (const [chapterKey, translations] of Object.entries(registry)) {
+  const slideDecks = classicSlideDecks[chapterKey]
+  if (!slideDecks) continue
+  for (const [lang, chapter] of Object.entries(translations)) {
+    const slideDeck = slideDecks[lang as Lang] ?? slideDecks.fr
+    if (chapter && slideDeck?.length) chapter.slideDeck = slideDeck
+  }
 }
 
 export type ChapterKey = keyof typeof registry

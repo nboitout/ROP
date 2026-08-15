@@ -23,4 +23,7 @@ export type Chapter = {
   revisionSheet?: { src: string; caption: string; alt: string }
   clinicalCase?: { src: string; caption: string; alt: string }
   slides?: { url: string; label: string; description: string }
+  /** Current image deck used by classic reading. It mirrors the synchronized
+   * reader so classic mode never falls back to an obsolete PDF. */
+  slideDeck?: { src: string; title: string; orientation?: 'portrait' }[]
 }

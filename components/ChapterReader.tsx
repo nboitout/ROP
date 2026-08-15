@@ -71,6 +71,11 @@ export default function ChapterReader({ chapter, bookTitle, backHref = '/chapitr
   const [slideWidth, setSlideWidth] = useState(800)
   const [slideZoom, setSlideZoom] = useState(0.75)
   const xrefReturn = getSafeXrefReturn(searchParams)
+  const imageSlideDeck = chapter.slideDeck ?? []
+  const hasImageSlideDeck = imageSlideDeck.length > 0
+  const hasSlides = hasImageSlideDeck || Boolean(chapter.slides)
+  const slidesLabel = chapter.slides?.label ?? 'Diapositives'
+  const slidesDescription = chapter.slides?.description ?? 'Diaporama de synthèse du chapitre.'
   const viewerBodyRef = useRef<HTMLDivElement | null>(null)
   const [lightbox, setLightbox] = useState<{ src: string; alt: string; caption: string; orientation?: 'portrait' | 'landscape' } | null>(null)
   const [lightboxZoom, setLightboxZoom] = useState(1)
@@ -242,7 +247,7 @@ export default function ChapterReader({ chapter, bookTitle, backHref = '/chapitr
 
   // Peek: briefly open the slides panel on first load to hint at its existence
   useEffect(() => {
-    if (!chapter.slides) return
+    if (!hasSlides) return
     const openTimer = setTimeout(() => {
       setSlidesOpen(true)
       peekCloseRef.current = setTimeout(() => setSlidesOpen(false), 3200)
@@ -251,7 +256,11 @@ export default function ChapterReader({ chapter, bookTitle, backHref = '/chapitr
       clearTimeout(openTimer)
       if (peekCloseRef.current) clearTimeout(peekCloseRef.current)
     }
-  }, [chapter.slides])
+  }, [hasSlides])
+
+  useEffect(() => {
+    if (hasImageSlideDeck) setSlideCount(imageSlideDeck.length)
+  }, [hasImageSlideDeck, imageSlideDeck.length])
 
   // Close slides viewer on Escape; navigate with arrow keys
   useEffect(() => {
@@ -401,7 +410,7 @@ export default function ChapterReader({ chapter, bookTitle, backHref = '/chapitr
         </article>
       </div>
 
-      {chapter.slides && (
+      {hasSlides && (
         <>
           <div className={`cr-slides${slidesOpen ? ' is-open' : ''}`}>
             <button
@@ -415,14 +424,14 @@ export default function ChapterReader({ chapter, bookTitle, backHref = '/chapitr
                   <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/>
                 </svg>
               </span>
-              <span className="cr-slides-tab-label">{chapter.slides.label}</span>
+              <span className="cr-slides-tab-label">{slidesLabel}</span>
               <span className="cr-slides-pulse" aria-hidden />
             </button>
             <div className="cr-slides-panel" aria-hidden={!slidesOpen}>
               <button className="cr-slides-close" onClick={() => setSlidesOpen(false)} aria-label="Fermer">×</button>
               <p className="cr-slides-eyebrow">{t.reader.chapterPrefix} {chapter.number}</p>
-              <p className="cr-slides-title">{chapter.slides.label}</p>
-              <p className="cr-slides-desc">{chapter.slides.description}</p>
+              <p className="cr-slides-title">{slidesLabel}</p>
+              <p className="cr-slides-desc">{slidesDescription}</p>
               <button
                 className="cr-slides-cta"
                 onClick={openSlidesViewer}
@@ -436,7 +445,7 @@ export default function ChapterReader({ chapter, bookTitle, backHref = '/chapitr
             <div className="cr-viewer" role="dialog" aria-modal="true" aria-label="Diapositives">
               <div className="cr-viewer-bar">
                 <span className="cr-viewer-title">
-                  {chapter.slides.label}
+                  {slidesLabel}
                   {chapter.number ? ` — ${t.reader.chapterPrefix} ${chapter.number}` : ''}
                 </span>
                 <div className="cr-viewer-nav">
@@ -474,12 +483,21 @@ export default function ChapterReader({ chapter, bookTitle, backHref = '/chapitr
                 <button className="cr-viewer-close" onClick={closeSlidesViewer} aria-label="Fermer">×</button>
               </div>
               <div className="cr-viewer-body" ref={viewerBodyRef}>
-                <PdfSlideViewer
-                  file={chapter.slides.url}
-                  pageNumber={slidePage}
-                  width={(slideWidth || 800) * slideZoom}
-                  onLoadSuccess={setSlideCount}
-                />
+                {hasImageSlideDeck ? (
+                  <img
+                    className={`cr-viewer-slide-image${imageSlideDeck[slidePage - 1]?.orientation === 'portrait' ? ' is-portrait' : ''}`}
+                    src={imageSlideDeck[slidePage - 1]?.src}
+                    alt={`${slidesLabel} ${slidePage} — ${imageSlideDeck[slidePage - 1]?.title ?? ''}`}
+                    style={{ width: `${(slideWidth || 800) * slideZoom}px` }}
+                  />
+                ) : chapter.slides ? (
+                  <PdfSlideViewer
+                    file={chapter.slides.url}
+                    pageNumber={slidePage}
+                    width={(slideWidth || 800) * slideZoom}
+                    onLoadSuccess={setSlideCount}
+                  />
+                ) : null}
               </div>
             </div>
           )}

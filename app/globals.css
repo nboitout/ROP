@@ -713,6 +713,8 @@ footer > div > p { font-size:.95rem; color:rgba(245,240,232,.84); line-height:1.
   justify-content:flex-start; padding:32px 24px; background:#2a2825; }
 .cr-viewer-body .react-pdf__Document { display:flex; flex-direction:column; align-items:center; }
 .cr-viewer-body .react-pdf__Page { box-shadow:0 8px 40px rgba(0,0,0,.5); }
+.cr-viewer-slide-image { display:block; height:auto; max-width:none; box-shadow:0 8px 40px rgba(0,0,0,.5); }
+.cr-viewer-slide-image.is-portrait { width:auto; max-height:none; }
 .cr-viewer-loading { color:rgba(255,255,255,.45); font-size:.9rem; padding:60px 0; }
 
 /* Dedicated research slide deck */
@@ -1144,7 +1146,7 @@ a.ss-switch-opt:hover { color:var(--gold); }
   background:rgba(251,248,241,.86); font-family:'DM Sans',sans-serif; font-size:.58rem; font-weight:700;
   letter-spacing:.14em; text-transform:uppercase; line-height:1.2; }
 .ss-anchor-halfbreak { padding-top:36vh; }
-.ss-marker { display:inline-flex; align-items:center; gap:8px; background:none; border:none; padding:0; margin:6px 0 10px;
+.ss-marker { display:none; align-items:center; gap:8px; background:none; border:none; padding:0; margin:6px 0 10px;
   cursor:zoom-in; font-family:'DM Sans',sans-serif; font-size:.68rem; font-weight:600; letter-spacing:.16em;
   text-transform:uppercase; color:var(--gold); transition:color .15s; }
 .ss-marker:hover { color:var(--sage); }
