@@ -1,6 +1,6 @@
 import type { Chapter } from './types'
 
-// Source: public/chapter-15/Chapitre_15_Colon_et_rectum_version_complete_zones_reflexes_revisees.docx
+// Source: public/chapter-15/Chapitre_15_Colon_et_rectum_version_complete_publisable.docx
 export const chapter15Fr: Chapter = {
   "slug": "chapter-15",
   "number": "15",
@@ -1090,3 +1090,52 @@ chapter15Reflex.blocks.splice(
     orientation: 'landscape',
   },
 )
+
+// Final publication revision.
+function chapter15InsertAfter(sectionId: string, heading: string, text: string) {
+  const section = chapter15Section(sectionId)
+  if (!section) return
+  const index = section.blocks.findIndex((block) => block.type === 'sub' && block.text === heading)
+  if (index >= 0 && !section.blocks.some((block) => block.type === 'para' && block.text === text)) {
+    section.blocks.splice(index + 1, 0, { type: 'para', text })
+  }
+}
+chapter15InsertAfter('anatomie', '3.2. Côlon ascendant', 'Le côlon ascendant est oblique, céphaliquement et dorsalement, superficiel, relié à la paroi abdominale antérieure et non recouvert par l’iléum. Il est rétropéritonéal et relié à la paroi abdominale postérieure par le fascia de Toldt.')
+chapter15InsertAfter('anatomie', '3.4. Côlon transverse', 'Le côlon transverse occupe successivement l’hypochondre droit, l’épigastre et l’hypochondre gauche de l’abdomen. Il est oblique crânialement et à gauche. Il est plus proche de la paroi abdominale antérieure dans sa partie moyenne que les angles coliques droit et gauche, plus profondément situés.')
+chapter15InsertAfter('anatomie', '3.4.1. Mésocôlon transverse', 'Le mésocôlon transverse est un repli du péritoine qui relie le côlon transverse à la paroi abdominale postérieure par l’intermédiaire de sa racine.')
+chapter15InsertAfter('anatomie', '3.5. Angle colique gauche (ou angle splénique)', 'L’angle colique gauche est plus aigu, en moyenne 50°, et situé dans un plan sagittal.')
+chapter15InsertAfter('anatomie', '3.7.1. Mésosigmoïde', 'Le mésosigmoïde est un repli du péritoine en forme de V inversé dont le sommet est près de la division de l’artère iliaque commune gauche en artères iliaques interne et externe, à hauteur de la sacro-iliaque gauche. Il relie le côlon sigmoïde à la paroi abdominale postérieure par l’intermédiaire de ses deux racines.')
+chapter15InsertAfter('anatomie', '3.8.1. Canal anal', 'Le rectum traverse le diaphragme pelvien pour se terminer à l’anus. Le canal anal mesure environ 4 cm et comprend deux sphincters.')
+chapter15InsertAfter('rapports', '4.7. Rectum', 'Le rectum occupe la partie la plus postérieure de la loge viscérale de la cavité pelvienne.')
+chapter15InsertAfter('innervation', '6.1.2. Zone de Cannon-Böhm', 'La zone de Cannon-Böhm n’est pas une zone anatomique au sens strict, mais un carrefour vasculo-nerveux constitué par :')
+chapter15InsertAfter('innervation', '6.1.3. Innervation intrinsèque', 'L’innervation intrinsèque correspond au système nerveux entérique. (Cf. chapitre 4 - Système nerveux autonome.)')
+chapter15InsertAfter('physiologie', '7.2.1. Sphincter interne', 'Le sphincter interne est constitué de fibres musculaires lisses. Quand le rectum est vide, il est fermé sous l’action du sympathique, qui contribue à la continence anale. Cette contraction est inconsciente. La pression intra-rectale est alors inférieure à celle du sphincter lisse, ce qui permet de stocker les matières fécales dans l’ampoule rectale sans ressentir immédiatement le besoin d’aller à la selle.')
+chapter15InsertAfter('physiologie', '7.2.2. Sphincter externe', 'Le sphincter externe constitue le dernier obstacle avant l’exonération des selles. Il est innervé par le nerf pudendal et son contrôle est volontaire. L’éducation à la propreté apprend à l’enfant à contrôler ce sphincter ; plus tard, la personne peut choisir de répondre immédiatement au besoin de déféquer ou de se retenir. La commande volontaire relève des voies motrices somatiques centrales.')
+chapter15InsertAfter('physiologie', '7.2.3. Défécation', 'L’exonération des selles est d’environ 150 g par jour. Les selles contiennent notamment du mucus, des graisses, des protéines et des bactéries. La défécation résulte de plusieurs mécanismes :')
+
+const chapter15Emotional = chapter15Section('relations-viscero-emotionnelles')
+if (chapter15Emotional) chapter15Emotional.blocks = [
+  { type: 'para', text: 'Il est difficile de différencier le côlon et l’intestin grêle sur le plan émotionnel dans le référentiel ROP.' },
+  { type: 'para', text: 'Le stress et un terrain anxieux peuvent cependant influencer la motricité digestive, la sensibilité viscérale et l’attention portée aux sensations, et contribuer à entretenir les symptômes de certaines colopathies fonctionnelles.' },
+]
+chapter15Reflex.title = '13. Zones réflexes ROP'
+chapter15Reflex.blocks = chapter15Reflex.blocks.filter((block) => block.type !== 'rop' && (block.type !== 'note' || block.label === 'Principe de sécurité'))
+chapter15Reflex.blocks = chapter15Reflex.blocks.filter((block) => block.type !== 'para' || ![
+  'Les coordonnées podales détaillées doivent reprendre la cartographie validée de la méthode lorsqu’elle est disponible ; elles ne sont pas redéfinies ici à partir de l’anatomie seule.',
+  'Pour le côlon, le Niveau 1 est optionnel mais pertinent lorsque le tableau comporte un stress important, une hypervigilance digestive, un syndrome de l’intestin irritable, des troubles fonctionnels entretenus par l’anxiété, ou une perturbation du réflexe de défécation et de la perception rectale.',
+  'Ces territoires sont des soutiens associés et non des étapes obligatoires du protocole :',
+].includes(block.text))
+for (const block of chapter15Reflex.blocks) {
+  if (block.type === 'sub') {
+    block.text = block.text
+      .replace('13.5. Niveau 4 — Intégration viscéro-somatique et axe cerveau-intestin', '13.5. Niveau 4 — Intégration viscéro-somatique et balance cerveau-intestin')
+      .replace('13.5.2. Axe cerveau-intestin', '13.5.2. Balance cerveau-colon')
+  }
+  if (block.type === 'para') {
+    block.text = block.text
+      .replace('Stress, attention portée aux sensations digestives, motricité, hypersensibilité viscérale et vécu émotionnel peuvent s’influencer réciproquement. Dans les colopathies fonctionnelles, l’inconfort peut augmenter la vigilance portée aux sensations digestives, entretenir la tension et perturber le transit.', 'Il est difficile de différencier le côlon et l’intestin grêle sur le plan émotionnel. Le stress, l’anxiété, l’attention portée aux sensations digestives, la motricité et l’hypersensibilité viscérale peuvent néanmoins s’influencer réciproquement ; dans les colopathies fonctionnelles, l’inconfort peut ainsi augmenter la vigilance portée aux sensations digestives, entretenir la tension et perturber le transit.')
+  }
+  if (block.type === 'bullets') {
+    block.items = block.items.map((item) => item.replace('l’intéroception', 'l’interoception'))
+  }
+}

@@ -113,9 +113,9 @@ export const chapter15SlideAnchors: SyncAnchor[] = [
   { sectionId: 'relations-viscero-somatiques', blockIndex: 0, slide: 28 },
   // Reflex-zone indices are updated below after the refreshed text media is
   // inserted. Each standalone cartography receives a tight display interval.
-  { sectionId: 'zones-reflexes-podales', blockIndex: 24, slide: 29, end: { sectionId: 'zones-reflexes-podales', blockIndex: 25 } },
-  { sectionId: 'zones-reflexes-podales', blockIndex: 33, slide: 30, end: { sectionId: 'zones-reflexes-podales', blockIndex: 34 } },
-  { sectionId: 'zones-reflexes-podales', blockIndex: 36, slide: 31, end: { sectionId: 'zones-reflexes-podales', blockIndex: 37 } },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 22, slide: 29, end: { sectionId: 'zones-reflexes-podales', blockIndex: 23 } },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 25, slide: 30, end: { sectionId: 'zones-reflexes-podales', blockIndex: 32 } },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 33, slide: 31, end: { sectionId: 'zones-reflexes-podales', blockIndex: 35 } },
 ]
 
 const chapter15SlideAnchorsEnBySource: SyncAnchor[] = [

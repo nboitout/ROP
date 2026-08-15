@@ -1,6 +1,6 @@
 import type { Chapter } from './types'
 
-// Source: public/chapter-9/Chapitre_9_Estomac_version_publiable.docx
+// Source: public/chapter-9/Chapitre_9_Estomac_version_finale_publiable.docx
 export const chapter9Fr: Chapter = {
   slug: 'chapter-9',
   number: '9',
@@ -396,3 +396,35 @@ if (chapter9ReflexSection) chapter9ReflexSection.blocks = [
   { type: 'bullets', items: ['Gastralgie fonctionnelle ou stress : Niveau 2 + zone gastrique + Balance cerveau limbique–estomac selon les tests.', 'Gastroparésie ou lenteur de vidange : vague au Niveau 2 + corps/antre/pylore au Niveau 3 + duodénum selon les tests.', 'Reflux gastro-œsophagien ou inconfort de la jonction œso-gastrique : SIO + hiatus + diaphragme + estomac proximal ; voir le chapitre 8.', 'Pylorospasme fonctionnel après exclusion médicale : pylore + antre + duodénum proximal + régulation autonome.'] },
   { type: 'note', label: 'Principe de sécurité', body: ['Hématémèse, méléna, amaigrissement inexpliqué, douleur nocturne persistante, vomissements répétés, fièvre ou douleur thoraco-abdominale profonde nécessitent une évaluation médicale.'] },
 ]
+
+// Final publication revision.
+const chapter9Situation = chapter9Fr.sections.find((section) => section.id === 'situation')
+if (chapter9Situation) {
+  for (const block of chapter9Situation.blocks) {
+    if (block.type === 'para') block.text = block.text.replace(' (figure 1.6)', '')
+  }
+}
+const chapter9Anatomy = chapter9Fr.sections.find((section) => section.id === 'anatomie')
+if (chapter9Anatomy) {
+  for (const block of chapter9Anatomy.blocks) {
+    if (block.type === 'para') block.text = block.text.replace(' (figure 8.1)', '')
+  }
+}
+const chapter9Emotional = chapter9Fr.sections.find((section) => section.id === 'relations-viscero-emotionnelles')
+if (chapter9Emotional) chapter9Emotional.blocks = [
+  { type: 'para', text: 'Dans la lecture viscéro-émotionnelle propre à la ROP, l’estomac est associé au registre du « moi social », du paraître et de la place occupée dans le groupe, la famille, le travail ou la hiérarchie.' },
+  { type: 'para', text: 'Dans cette grille de lecture symbolique, sont notamment explorés les enjeux de reconnaissance, de valorisation, de place sociale et, selon l’histoire du patient, de relation à la figure paternelle. L’expression « avoir de l’estomac » renvoie symboliquement à la détermination et au courage.' },
+  { type: 'para', text: 'Deux polarités sont classiquement décrites dans cette lecture :' },
+  { type: 'para', text: 'Hypervalorisation. Elle peut s’exprimer par une surestimation de soi, un besoin important de reconnaissance, une mauvaise tolérance à la critique, une attitude de démonstration ou de puissance, une colère impulsive ou une peur de l’échec. Dans cette polarité, la recherche de réussite, de séduction ou de reconnaissance sociale peut occuper une place importante.' },
+  { type: 'para', text: 'Hypovalorisation. Elle peut au contraire être associée à un manque de confiance en soi, au repli, à la dépréciation de soi, à des frustrations difficilement exprimées, à des rancœurs non verbalisées ou à un vécu répété de subordination.' },
+]
+if (chapter9ReflexSection) {
+  chapter9ReflexSection.title = '13. Zones réflexes ROP'
+  chapter9ReflexSection.blocks = chapter9ReflexSection.blocks.filter((block) => block.type !== 'rop' && (block.type !== 'note' || block.label === 'Principe de sécurité'))
+  chapter9ReflexSection.blocks.splice(4, 0, { type: 'para', text: 'La zone propre de l’estomac reste la cible principale ; SIO, courbures et pylore sont précisés selon le trouble fonctionnel dominant.' })
+  for (const block of chapter9ReflexSection.blocks) {
+    if (block.type !== 'para') continue
+    block.text = block.text
+      .replace('Le Niveau 3 constitue le cœur anatomique du protocole gastrique. Il permet d’adapter la lecture à la région fonctionnelle concernée.', 'Le Niveau 3 constitue le cœur anatomique du protocole gastrique.')
+  }
+}

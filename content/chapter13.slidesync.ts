@@ -61,6 +61,6 @@ export const chapter13SlideAnchors: SyncAnchor[] = [
     end: { sectionId: 'relations-viscero-emotionnelles', blockIndex: 2 },
   },
   { sectionId: 'zones-reflexes-podales', blockIndex: -1, slide: 19 },
-  { sectionId: 'zones-reflexes-podales', blockIndex: 22, slide: 20 },
-  { sectionId: 'zones-reflexes-podales', blockIndex: 1, slide: 21 },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 19, slide: 20, end: { sectionId: 'zones-reflexes-podales', blockIndex: 19 } },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 2, slide: 21, end: { sectionId: 'zones-reflexes-podales', blockIndex: 2 } },
 ]

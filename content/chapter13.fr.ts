@@ -1,4 +1,4 @@
-// Source: public/chapter-13/Chapitre_13_Rate_version_complete_zones_reflexes_revisees.docx
+// Source: public/chapter-13/Chapitre_13_Rate_version_publiable_A_master_Niveaux_3_4_B.docx
 import type { Chapter } from './types'
 
 export const chapter13Fr: Chapter = {
@@ -504,3 +504,42 @@ chapter13Reflex.blocks = [
   { type: 'bullets', items: ['Fatigue post-infectieuse ou suites de mononucléose après suivi médical : Niveau 1 si pertinent + Niveau 2 + zone splénique, avec grande prudence.', 'Séquelles anciennes d’un traumatisme thoraco-abdominal après exclusion médicale : zone splénique + environnement régional du Niveau 3 + côtes et diaphragme au Niveau 4.', 'Point de côté ou gêne sous-costale gauche sans signe d’alerte : diaphragme + rate + angle splénique selon les tests.'] },
   { type: 'note', label: 'Principe de sécurité', body: ['Toute suspicion de splénomégalie, douleur aiguë de l’hypochondre gauche après traumatisme, malaise, hypotension, douleur d’épaule gauche ou contexte de mononucléose avec douleur splénique impose une évaluation médicale. La rate est un organe fragile et très vascularisé.'] },
 ]
+
+// Final publication revision.
+const chapter13Emotional = chapter13Fr.sections.find((section) => section.id === 'relations-viscero-emotionnelles')
+if (chapter13Emotional) {
+  for (const block of chapter13Emotional.blocks) {
+    if (block.type === 'para') {
+      block.text = block.text.replace(
+        'Cette description ne doit pas être lue comme un diagnostic psychologique. Elle indique plutôt une qualité d’écoute : fatigue profonde, repli, chagrin ancien, remords ou sentiment de porter une charge excessive.',
+        'Cette description indique une fatigue profonde, repli, chagrin ancien, remords ou sentiment de porter une charge excessive.',
+      )
+    }
+  }
+}
+chapter13Reflex.title = '12. Zones réflexes podales'
+chapter13Reflex.blocks = chapter13Reflex.blocks.filter((block) => block.type !== 'rop')
+const chapter13Level3 = chapter13Reflex.blocks.findIndex((block) => block.type === 'sub' && block.text.startsWith('12.4.'))
+const chapter13Level4 = chapter13Reflex.blocks.findIndex((block) => block.type === 'sub' && block.text.startsWith('12.5.'))
+if (chapter13Level3 >= 0 && chapter13Level4 > chapter13Level3) {
+  chapter13Reflex.blocks.splice(chapter13Level3 + 1, chapter13Level4 - chapter13Level3 - 1,
+    { type: 'para', text: 'Le Niveau 3 replace la rate dans son environnement sous-diaphragmatique gauche. La zone propre de la rate peut être complétée, selon les tests, par ses principaux rapports anatomiques : diaphragme gauche, estomac, queue du pancréas, rein gauche, angle splénique du côlon et racine du mésocolon transverse.' },
+    { type: 'para', text: 'Repère propre à la rate. Le repère spécifique reste celui décrit en 12.1. Il constitue la cible propre de l’organe et s’intègre à ce niveau avec les rapports régionaux uniquement lorsque les tests et le contexte clinique le justifient.' },
+    { type: 'xref', label: 'Voir le chapitre 7 — Socle régional abdominal et péritonéal', href: '/lecture/chapitre-7?lang=fr' },
+  )
+}
+const chapter13NewLevel4 = chapter13Reflex.blocks.findIndex((block) => block.type === 'sub' && block.text.startsWith('12.5.'))
+const chapter13Supports = chapter13Reflex.blocks.findIndex((block) => block.type === 'sub' && block.text.startsWith('12.6.'))
+if (chapter13NewLevel4 >= 0 && chapter13Supports > chapter13NewLevel4) {
+  chapter13Reflex.blocks.splice(chapter13NewLevel4, chapter13Supports - chapter13NewLevel4,
+    { type: 'sub', text: '12.5. Niveau 4 — Intégration viscéro-somatique et viscéro-émotionnelle' },
+    { type: 'para', text: 'Intégration viscéro-somatique. Les principaux repères sont Th9-Th11, les articulations costo-transversaires correspondantes, les 9e, 10e et 11e côtes gauches, le thorax postéro-inférieur gauche et le diaphragme gauche. Une manifestation scapulaire gauche peut être intégrée lorsque le contexte diaphragmatique le rend pertinent, sans en faire une correspondance systématique.' },
+    { type: 'figure', src: '/chapter-13/cartographie/figure-13-02.png', caption: 'Photo : Articulations costo-vertébrales', alt: 'Repères podaux des articulations costo-vertébrales', orientation: 'landscape' },
+    { type: 'para', text: 'Intégration viscéro-émotionnelle. Dans la lecture clinique propre à la ROP, la rate et le pancréas peuvent être difficiles à différencier sur ce plan. Certains tableaux peuvent s’accompagner d’une fatigue profonde, d’une tendance à la rumination ou au repli, d’un chagrin ancien, de remords, d’une démotivation ou de troubles de l’endormissement. Ces éléments constituent des repères d’écoute et de contexte.' },
+    { type: 'para', text: 'Contexte adaptatif et neuro-immunitaire. La rate participe aux fonctions immunitaires et la réponse immunitaire interagit avec les systèmes nerveux, endocrinien et comportemental.' },
+    { type: 'para', text: 'Fatigue, récupération post-infectieuse, stress et sommeil peuvent ainsi être intégrés dans une lecture générale de l’adaptation, sans supposer une relation causale simple entre un état émotionnel et la rate.' },
+    { type: 'para', text: 'Balance cerveau limbique / rate : La rate et le pancréas sont difficiles à différencier sur le plan émotionnel' },
+    { type: 'xref', label: 'Voir le chapitre 3 — Système nerveux central', href: '/lecture/chapitre-3?lang=fr' },
+    { type: 'xref', label: 'Voir le chapitre 5 — Mécanisme de stress', href: '/lecture/chapitre-5?lang=fr' },
+  )
+}

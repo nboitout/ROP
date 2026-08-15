@@ -62,7 +62,7 @@ export const chapter9SlideAnchors: SyncAnchor[] = [
   { sectionId: 'relations-viscero-emotionnelles', blockIndex: 0, slide: 18 },
   { sectionId: 'conseils', blockIndex: 0, slide: 19 },
   { sectionId: 'zones-reflexes-podales', blockIndex: -1, slide: 20 },
-  { sectionId: 'zones-reflexes-podales', blockIndex: 14, slide: 21, end: { sectionId: 'zones-reflexes-podales', blockIndex: 19 } },
-  { sectionId: 'zones-reflexes-podales', blockIndex: 22, slide: 22, end: { sectionId: 'zones-reflexes-podales', blockIndex: 24 } },
-  { sectionId: 'zones-reflexes-podales', blockIndex: 30, slide: 23, gapBefore: 'half', end: { sectionId: 'zones-reflexes-podales', blockIndex: 38 } },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 12, slide: 21, end: { sectionId: 'zones-reflexes-podales', blockIndex: 12 } },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 20, slide: 22, end: { sectionId: 'zones-reflexes-podales', blockIndex: 20 } },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 26, slide: 23, gapBefore: 'half', end: { sectionId: 'zones-reflexes-podales', blockIndex: 29 } },
 ]

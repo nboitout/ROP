@@ -1,6 +1,6 @@
 import type { Chapter } from './types'
 
-// Source: public/chapter-16/Chapitre_16_Reins_version_complete_publisable.docx
+// Source: public/chapter-16/Chapitre_16_Reins_version_finale_publisable.docx
 export const chapter16Fr: Chapter = {
   "slug": "chapter-16",
   "number": "16",
@@ -975,3 +975,81 @@ chapter16Reflex.blocks = [
   { type: 'bullets', items: ['Douleur lombaire ou traumatisme ancien : Niveau 3 — loge rénale, fascia et face dorsale ; Niveau 4 — côtes, psoas, carré des lombes et plexus lombaire.', 'Suspicion clinique de ptose ou perte de mobilité régionale après exclusion médicale : Niveau 2 — diaphragme et adaptation ; Niveau 3 — rein, loge et rapports ; Niveau 4 — psoas, carré des lombes et charnière thoraco-lombaire.', 'Contexte tensionnel ou de stress : Niveau 2 — sympathique, plexus rénal et surrénales ; Niveau 1 et axe cerveau-rein selon les tests.', 'Contexte uro-génital gauche : rein gauche, rapports veineux et sphère pelvienne uniquement si l’anamnèse et les tests le justifient.'] },
   { type: 'note', label: 'Principe de sécurité', body: ['Une zone réflexe sensible ou une modification palpatoire n’est pas un test diagnostique de lithiase, infection, insuffisance rénale, hématurie, tumeur, syndrome vasculaire ou autre pathologie rénale. Toute hématurie, fièvre, douleur aiguë du flanc, traumatisme important, altération de l’état général ou symptôme inexpliqué impose une évaluation médicale adaptée.'] },
 ]
+
+// Final publication revision.
+if (chapter16Emotional) chapter16Emotional.blocks = [
+  { type: 'para', text: 'Le rein ne peut pas être associé scientifiquement à une émotion particulière. Il participe cependant à un ensemble de régulations physiologiques étroitement liées à l’adaptation de l’organisme : activité sympathique, pression artérielle, équilibre hydro-électrolytique et réponses neuroendocrines.' },
+  { type: 'para', text: 'Le stress prolongé, les troubles du sommeil, la fatigue et les états émotionnels intenses peuvent ainsi s’inscrire dans une balance cerveau–rein, au sein duquel les systèmes nerveux autonome, cardiovasculaire et neuroendocrinien interagissent. Cette relation est bidirectionnelle et ne permet pas d’établir une correspondance directe entre une émotion déterminée et un rein.' },
+  { type: 'para', text: 'Dans le référentiel clinique symbolique de la ROP, certaines associations émotionnelles ont néanmoins été utilisées comme repères d’anamnèse : le rein droit, parfois qualifié de « rein digestif », a notamment été rapproché de situations de colère contenue ou de conflits relationnels anciens ; le rein gauche, parfois qualifié de « rein génital », a été associé à des vécus de peur profonde, d’insécurité, d’abandon ou à des problématiques touchant aux racines familiales et à la transmission.' },
+  { type: 'para', text: 'En pratique, lorsqu’un contexte émotionnel ou de stress accompagne un tableau rénal ou lombaire, il peut être intégré à l’anamnèse et à la lecture globale du patient. L’objectif est de replacer le rein dans les mécanismes généraux d’adaptation de l’organisme.' },
+]
+
+const chapter16Between = (start: string, end: string) => {
+  const startIndex = chapter16Reflex.blocks.findIndex((block) => block.type === 'sub' && block.text.startsWith(start))
+  const endIndex = chapter16Reflex.blocks.findIndex((block) => block.type === 'sub' && block.text.startsWith(end))
+  return startIndex >= 0 && endIndex > startIndex ? chapter16Reflex.blocks.slice(startIndex, endIndex) : []
+}
+const chapter16Own = chapter16Between('13.1.', '13.2.')
+const chapter16Level1 = chapter16Between('13.2.', '13.3.')
+const chapter16Level2 = chapter16Between('13.3.', '13.4.')
+const chapter16Level3 = chapter16Between('13.4.', '13.5.')
+const chapter16Level4 = chapter16Between('13.5.', '13.6.')
+const chapter16SupportStart = chapter16Reflex.blocks.findIndex((block) => block.type === 'sub' && block.text.startsWith('13.6.'))
+const chapter16Tail = chapter16SupportStart >= 0 ? chapter16Reflex.blocks.slice(chapter16SupportStart) : []
+
+const cleanChapter16 = (blocks: typeof chapter16Reflex.blocks) => blocks.filter((block) => block.type !== 'rop' && (block.type !== 'note' || block.label === 'Principe de sécurité'))
+chapter16Reflex.blocks = cleanChapter16([
+  ...chapter16Level1,
+  ...chapter16Level2,
+  ...chapter16Own,
+  ...chapter16Level3,
+  ...chapter16Level4,
+  ...chapter16Tail,
+])
+chapter16Reflex.blocks = chapter16Reflex.blocks.filter((block) => block.type !== 'para' || ![
+  'Pour le rein, le Niveau 1 reste court et non systématique. Il peut être intégré lorsqu’un contexte de stress prolongé, de trouble du sommeil, d’adaptation générale, de régulation neuroendocrine ou de pression artérielle justifie une lecture centrale plus large.',
+  'La cartographie historique du rein est conservée. Le rein est décrit, dans la méthode, comme une zone relativement dense, distincte des territoires des organes creux voisins.',
+  'Le Niveau 3 constitue le cœur anatomique du protocole rénal. Il replace le rein dans sa loge, ses fascias et ses rapports régionaux.',
+].includes(block.text))
+for (const block of chapter16Reflex.blocks) {
+  if (block.type === 'sub') {
+    block.text = block.text
+      .replace(/^13\.2\./, '13.1.')
+      .replace(/^13\.3\./, '13.2.')
+      .replace(/^13\.1\.1\./, '13.3.1.1.')
+      .replace(/^13\.1\.2\./, '13.3.1.2.')
+      .replace(/^13\.1\.3\./, '13.3.1.3.')
+      .replace(/^13\.1\. Repères podaux propres au rein/, '13.3.1. Repères podaux propres au rein')
+      .replace(/^13\.4\./, '13.3.')
+      .replace(/^13\.5\./, '13.4.')
+      .replace(/^13\.6\./, '13.5.')
+      .replace(/^13\.7\./, '13.6.')
+      .replace('Axe cerveau-rein', 'Balance cerveau-rein')
+  }
+  if (block.type === 'para') {
+    block.text = block.text
+      .replace('L’ancienne « balance cerveau limbique-rein » est remplacée par la notion d’axe cerveau-rein. Stress, sommeil, perception de la fatigue, équilibre autonome, pression artérielle et régulation neuroendocrine interagissent avec la fonction rénale dans un système complexe.', 'Stress, sommeil, perception de la fatigue, équilibre autonome, pression artérielle et régulation neuroendocrine interagissent avec la fonction rénale dans un système complexe.')
+      .replace('Dans le modèle clinique ROP, l’écoute-induction peut conserver son principe — un repère sur la zone rénale et un repère central — mais elle est présentée comme une technique d’intégration fonctionnelle et non comme une action directe sur un « cerveau limbique ».', 'l’écoute-induction : un repère sur la zone rénale et un repère central.')
+      .replace('Les soutiens régionaux sont choisis selon l’anamnèse et les tests. Ils ne constituent pas une séquence obligatoire.', 'Les soutiens régionaux sont choisis selon l’anamnèse et les tests.')
+  }
+}
+
+const chapter16RepereHeading = chapter16Reflex.blocks.findIndex((block) => block.type === 'sub' && block.text === '13.3.1. Repères podaux propres au rein')
+if (chapter16RepereHeading >= 0) chapter16Reflex.blocks.splice(chapter16RepereHeading, 1)
+const chapter16Level3Heading = chapter16Reflex.blocks.findIndex((block) => block.type === 'sub' && block.text === '13.3. Niveau 3 — Régulation viscérale loco-régionale')
+const chapter16FacePlantaire = chapter16Reflex.blocks.findIndex((block) => block.type === 'sub' && block.text === '13.3.1.1. Face plantaire')
+if (chapter16Level3Heading > chapter16FacePlantaire && chapter16FacePlantaire >= 0) {
+  const [heading] = chapter16Reflex.blocks.splice(chapter16Level3Heading, 1)
+  chapter16Reflex.blocks.splice(chapter16FacePlantaire, 0, heading)
+}
+for (const block of chapter16Reflex.blocks) {
+  if (block.type !== 'sub') continue
+  const regionalHeadings: Record<string, string> = {
+    '13.3.1. Rein et loge rénale': '13.3.2. Rein et loge rénale',
+    '13.3.2. Interfaces postérieures': '13.3.3. Interfaces postérieures',
+    '13.3.3. Rapports viscéraux du rein droit': '13.3.4. Rapports viscéraux du rein droit',
+    '13.3.4. Rapports viscéraux du rein gauche': '13.3.5. Rapports viscéraux du rein gauche',
+    '13.3.5. Veine rénale gauche et contexte vasculo-génital': '13.3.6. Veine rénale gauche et contexte vasculo-génital',
+  }
+  if (regionalHeadings[block.text]) block.text = regionalHeadings[block.text]
+}
