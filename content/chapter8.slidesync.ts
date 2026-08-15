@@ -249,22 +249,17 @@ export const chapter8SlideAnchors: SyncAnchor[] = [
   },
   {
     sectionId: "zones-reflexes-podales",
-    blockIndex: 19,
+    blockIndex: 43,
     slide: 25
   },
   {
     sectionId: "zones-reflexes-podales",
-    blockIndex: 41,
-    slide: 25
-  },
-  {
-    sectionId: "zones-reflexes-podales",
-    blockIndex: 59,
+    blockIndex: 32,
     slide: 26
   },
   {
     sectionId: "zones-reflexes-podales",
-    blockIndex: 60,
+    blockIndex: 45,
     slide: 27
   }
 ]

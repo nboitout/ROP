@@ -1240,3 +1240,22 @@ chapter8Reflex.blocks = [
   { type: 'bullets', items: ['Niveau 1 : environnement neuro-méningé, repères occipitaux et MRP dans le modèle ROP.', 'Niveau 2 : nerf vague, régulation autonome et diaphragme.', 'Niveau 3 : hiatus œsophagien, jonction gastro-œsophagienne et estomac.'] },
   { type: 'para', text: 'Chez le nourrisson, tout reflux important, vomissement persistant, mauvaise prise de poids, détresse respiratoire ou autre signe inhabituel nécessite une évaluation pédiatrique. La ROP ne se substitue pas au diagnostic ni au traitement médical.' },
 ]
+
+// Keep each remaining cartography opposite its corresponding text-side photo.
+// These two photos belong respectively to the autonomic/vascular interface and
+// to the somatic integration level of the revised four-level protocol.
+const chapter8HiatusPhoto = chapter8Reflex.blocks.findIndex(
+  (block) => block.type === 'figure' && block.caption === 'Hiatus de Marfran et de Larrey',
+)
+if (chapter8HiatusPhoto >= 0) chapter8Reflex.blocks.splice(chapter8HiatusPhoto + 1, 0,
+  { type: 'para', text: 'Jonction azygo-cave : repère associé aux 2e et 3e articulations chondro-costales droites.' },
+  { type: 'figure', src: '/chapter-8/cartographie/figure-8-08.png', caption: 'Jonction azygo-cave', alt: 'Photo du repérage podal de la jonction azygo-cave', orientation: 'landscape' },
+)
+
+const chapter8CostoPhoto = chapter8Reflex.blocks.findIndex(
+  (block) => block.type === 'figure' && block.caption === 'Articulations costo-vertébrales',
+)
+if (chapter8CostoPhoto >= 0) chapter8Reflex.blocks.splice(chapter8CostoPhoto + 1, 0,
+  { type: 'para', text: 'Nerf intercostal brachial de Hyrtl : jonction entre la diaphyse et la tête latérale du 5e métatarsien.' },
+  { type: 'figure', src: '/chapter-8/cartographie/figure-8-15.png', caption: 'Nerf intercostal brachial de Hyrtl', alt: 'Photo du repérage podal du nerf intercostal brachial de Hyrtl', orientation: 'landscape' },
+)

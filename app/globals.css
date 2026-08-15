@@ -541,9 +541,9 @@ footer > div > p { font-size:.95rem; color:rgba(245,240,232,.84); line-height:1.
 .cr-fig-btn:hover { box-shadow:0 12px 36px rgba(26,26,24,.18); }
 .cr-fig-btn img { width:100%; height:auto; display:block; background:#fff; }
 .cr-fig-portrait .cr-fig-btn,
-.cr-fig-narrow .cr-fig-btn { aspect-ratio:2/3; }
+.cr-fig-narrow .cr-fig-btn { aspect-ratio:auto; }
 .cr-fig-portrait .cr-fig-btn img,
-.cr-fig-narrow .cr-fig-btn img { height:100%; object-fit:cover; object-position:center; }
+.cr-fig-narrow .cr-fig-btn img { height:auto; object-fit:contain; object-position:center; }
 /* Inline figures extend through the article's horizontal padding. Without
    this, the cream page background reads as a white strip beside the image. */
 .cr-article .cr-fig,
