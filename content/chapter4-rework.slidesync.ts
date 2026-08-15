@@ -100,30 +100,31 @@ export const chapter4ReworkSlideAnchors = [
     slide: 33,
     end: { sectionId: 'zones-reflexes-podales', blockIndex: 1, itemIndex: 8 },
   },
-  { sectionId: 'zones-reflexes-podales', blockIndex: 3, slide: 34, ...endAt('zones-reflexes-podales', 6) },
-  { sectionId: 'zones-reflexes-podales', blockIndex: 6, slide: 35, ...endAt('zones-reflexes-podales', 7) },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 3, slide: 34, ...endAt('zones-reflexes-podales', 5) },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 6, slide: 35, ...endAt('zones-reflexes-podales', 6) },
   {
     sectionId: 'zones-reflexes-podales',
     blockIndex: 9,
     itemIndex: 3,
     slide: 36,
-    ...endAt('zones-reflexes-podales', 11),
+    ...endAt('zones-reflexes-podales', 10),
   },
-  // The left-vagus cartography remains solo until its correct companion photo is available.
-  { sectionId: 'zones-reflexes-podales', blockIndex: 11, slide: 37, ...endAt('zones-reflexes-podales', 14) },
+  // The left-vagus cartography remains solo until its correct companion photo is available;
+  // stop before the right-vagus photo so the two are not presented as a pair.
+  { sectionId: 'zones-reflexes-podales', blockIndex: 11, slide: 37, ...endAt('zones-reflexes-podales', 13) },
   // The updated slide-11 photo now accompanies the right-vagus cartography.
-  { sectionId: 'zones-reflexes-podales', blockIndex: 14, slide: 38, ...endAt('zones-reflexes-podales', 15) },
-  { sectionId: 'zones-reflexes-podales', blockIndex: 15, slide: 39, ...endAt('zones-reflexes-podales', 20) },
-  { sectionId: 'zones-reflexes-podales', blockIndex: 20, slide: 40, ...endAt('zones-reflexes-podales', 24) },
-  { sectionId: 'zones-reflexes-podales', blockIndex: 24, slide: 41, ...endAt('zones-reflexes-podales', 27) },
-  { sectionId: 'zones-reflexes-podales', blockIndex: 27, slide: 42, ...endAt('zones-reflexes-podales', 30) },
-  { sectionId: 'zones-reflexes-podales', blockIndex: 30, slide: 43, ...endAt('zones-reflexes-podales', 33) },
-  { sectionId: 'zones-reflexes-podales', blockIndex: 33, slide: 44, ...endAt('zones-reflexes-podales', 37) },
-  { sectionId: 'zones-reflexes-podales', blockIndex: 37, slide: 45, ...endAt('zones-reflexes-podales', 41) },
-  { sectionId: 'zones-reflexes-podales', blockIndex: 41, slide: 46, ...endAt('zones-reflexes-podales', 45) },
-  { sectionId: 'zones-reflexes-podales', blockIndex: 51, slide: 47, ...endAt('zones-reflexes-podales', 54) },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 14, slide: 38, ...endAt('zones-reflexes-podales', 14) },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 15, slide: 39, ...endAt('zones-reflexes-podales', 19) },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 20, slide: 40, ...endAt('zones-reflexes-podales', 23) },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 24, slide: 41, ...endAt('zones-reflexes-podales', 26) },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 27, slide: 42, ...endAt('zones-reflexes-podales', 29) },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 30, slide: 43, ...endAt('zones-reflexes-podales', 32) },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 33, slide: 44, ...endAt('zones-reflexes-podales', 36) },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 37, slide: 45, ...endAt('zones-reflexes-podales', 40) },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 41, slide: 46, ...endAt('zones-reflexes-podales', 44) },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 51, slide: 47, ...endAt('zones-reflexes-podales', 53) },
   // Ends after the paired photo and before 11.16. Système nerveux intrinsèque ou entérique (SNE).
-  { sectionId: 'zones-reflexes-podales', blockIndex: 54, slide: 48, ...endAt('zones-reflexes-podales', 55) },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 54, slide: 48, ...endAt('zones-reflexes-podales', 54) },
 ]
 
 export const chapter4ReworkHalfBreaks = [
