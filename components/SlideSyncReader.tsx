@@ -1290,8 +1290,8 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, h
                       data-pos-anchor=""
                       className={hasHalfGapBefore(section.id, i) ? 'ss-anchor-halfbreak' : undefined}
                     >
-                      {endSentinel}
                       {view}
+                      {endSentinel}
                     </div>
                   )
                 }
@@ -1302,7 +1302,6 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, h
                     data-pos-anchor=""
                     className={`ss-anchor${hasHalfGapBefore(section.id, i) ? ' ss-anchor-halfbreak' : ''}`}
                   >
-                    {endSentinel}
                     {slideList.map((slide) => (
                       <div key={slide} data-slide-anchor={slide}>
                         <button
@@ -1317,6 +1316,7 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, h
                       </div>
                     ))}
                     {view}
+                    {endSentinel}
                   </div>
                 )
               })}
