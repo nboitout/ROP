@@ -12,7 +12,13 @@
 // page order.
 
 export type SyncSlide = { src: string; title: string; orientation?: 'portrait' }
-export type SyncAnchor = { sectionId: string; blockIndex: number; slide: number | number[]; gapBefore?: 'half' }
+export type SyncAnchor = {
+  sectionId: string
+  blockIndex: number
+  slide: number | number[]
+  gapBefore?: 'half'
+  end?: { sectionId: string; blockIndex: number }
+}
 
 export const chapter8Slides: SyncSlide[] = [
   {
@@ -198,41 +204,49 @@ export const chapter8SlideAnchors: SyncAnchor[] = [
   {
     sectionId: "zones-reflexes-podales",
     blockIndex: 4,
-    slide: 17
+    slide: 17,
+    end: { sectionId: "zones-reflexes-podales", blockIndex: 4 }
   },
   {
     sectionId: "zones-reflexes-podales",
     blockIndex: 4,
-    slide: 18
+    slide: 18,
+    end: { sectionId: "zones-reflexes-podales", blockIndex: 4 }
   },
   {
     sectionId: "zones-reflexes-podales",
     blockIndex: 29,
-    slide: 19
+    slide: 19,
+    end: { sectionId: "zones-reflexes-podales", blockIndex: 29 }
   },
   {
     sectionId: "zones-reflexes-podales",
     blockIndex: 30,
-    slide: 20
+    slide: 20,
+    end: { sectionId: "zones-reflexes-podales", blockIndex: 30 }
   },
   {
     sectionId: "zones-reflexes-podales",
     blockIndex: 18,
-    slide: 21
+    slide: 21,
+    end: { sectionId: "zones-reflexes-podales", blockIndex: 19 }
   },
   {
     sectionId: "zones-reflexes-podales",
     blockIndex: 43,
-    slide: 22
+    slide: 22,
+    end: { sectionId: "zones-reflexes-podales", blockIndex: 43 }
   },
   {
     sectionId: "zones-reflexes-podales",
     blockIndex: 32,
-    slide: 23
+    slide: 23,
+    end: { sectionId: "zones-reflexes-podales", blockIndex: 32 }
   },
   {
     sectionId: "zones-reflexes-podales",
     blockIndex: 45,
-    slide: 24
+    slide: 24,
+    end: { sectionId: "zones-reflexes-podales", blockIndex: 45 }
   }
 ]
