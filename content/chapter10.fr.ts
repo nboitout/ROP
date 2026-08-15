@@ -1,4 +1,4 @@
-// Source: public/chapter-10/Chapitre_10_Duodenum_version_publiable.docx
+// Source: public/chapter-10/Chapitre_10_Duodenum_version_finale_publiable.docx
 import type { Chapter } from './types'
 
 export const chapter10Fr: Chapter = {
@@ -91,24 +91,20 @@ export const chapter10Fr: Chapter = {
           text: "Il constitue un segment fonctionnellement central, du fait de l’abouchement bilio-pancréatique sur sa face postéro-médiale."
         },
         {
-          type: "lead",
-          label: "Deux reliefs muqueux y sont classiquement décrits",
-          text: "la papille duodénale majeure et la papille duodénale mineure."
+          type: "para",
+          text: "Deux reliefs muqueux y sont classiquement décrits : la papille duodénale majeure et la papille duodénale mineure."
         },
         {
-          type: "lead",
-          label: "Papille duodénale majeure",
-          text: "située vers l’union des tiers moyen et inférieur de D2, elle correspond à l’abouchement du canal cholédoque et du canal pancréatique principal dans l’ampoule hépato-pancréatique, dont l’ouverture est régulée par le sphincter d’Oddi."
+          type: "para",
+          text: "Papille duodénale majeure : située vers l’union des tiers moyen et inférieur de D2, elle correspond à l’abouchement du canal cholédoque et du canal pancréatique principal dans l’ampoule hépato-pancréatique, dont l’ouverture est régulée par le sphincter d’Oddi."
         },
         {
-          type: "lead",
-          label: "Son repère topographique pariétal est donné ici à titre clinique",
-          text: "sur la ligne ombilico-médio-claviculaire droite, à environ trois travers de doigt au-dessus de l’ombilic, vers L2."
+          type: "para",
+          text: "Son repère topographique pariétal est donné ici à titre clinique : sur la ligne ombilico-médio-claviculaire droite, à environ trois travers de doigt au-dessus de l’ombilic, vers L2."
         },
         {
-          type: "lead",
-          label: "Papille duodénale mineure",
-          text: "située plus haut, elle correspond à l’abouchement du canal pancréatique accessoire de Santorini lorsqu’il est présent et perméable."
+          type: "para",
+          text: "Papille duodénale mineure : située plus haut, elle correspond à l’abouchement du canal pancréatique accessoire de Santorini lorsqu’il est présent et perméable."
         },
         {
           type: "para",
@@ -198,7 +194,7 @@ export const chapter10Fr: Chapter = {
         },
         {
           type: "para",
-          text: "Un conflit aorto-mésentérique peut comprimer D4 et, dans certains cas, la veine rénale gauche, avec réténtissement sur la vidange duodénale et le drainage veineux gauche."
+          text: "Un conflit aorto-mésentérique peut comprimer D4 et, dans certains cas, la veine rénale gauche, avec retentissement sur la vidange duodénale et le drainage veineux gauche."
         },
         {
           type: "sub",
@@ -226,16 +222,10 @@ export const chapter10Fr: Chapter = {
       id: "vascularisation",
       title: "5. Vascularisation",
       blocks: [
-        {
-          type: "lead",
-          label: "Artérielle",
-          text: "la vascularisation duodénale dépend principalement des arcades pancréatico-duodénales, issues des territoires cœliaque et mésentérique supérieur, qui s’anastomosent entre elles."
-        },
-        {
-          type: "lead",
-          label: "Veineuse",
-          text: "les veines pancréatico-duodénales rejoignent la veine mésentérique supérieure, en continuité avec le système porte."
-        }
+        { type: "sub", text: "5.1. Vascularisation artérielle" },
+        { type: "para", text: "la vascularisation duodénale dépend principalement des arcades pancréatico-duodénales, issues des territoires cœliaque et mésentérique supérieur, qui s’anastomosent entre elles." },
+        { type: "sub", text: "5.2. Vascularisation veineuse" },
+        { type: "para", text: "les veines pancréatico-duodénales rejoignent la veine mésentérique supérieure, en continuité avec le système porte." }
       ]
     },
     {
@@ -256,11 +246,8 @@ export const chapter10Fr: Chapter = {
       id: "physiologie",
       title: "7. Physiologie",
       blocks: [
-        {
-          type: "lead",
-          label: "7.1. Fonction digestive et neutralisation",
-          text: "le duodénum participe à la digestion et à l’absorption initiale de plusieurs nutriments."
-        },
+        { type: "sub", text: "7.1. Fonction digestive et neutralisation" },
+        { type: "para", text: "le duodénum participe à la digestion et à l’absorption initiale de plusieurs nutriments." },
         {
           type: "para",
           text: "Il contribue à la neutralisation du contenu gastrique acide en sortie de pylore."
@@ -269,16 +256,10 @@ export const chapter10Fr: Chapter = {
           type: "para",
           text: "Son pH est globalement voisin de la neutralité, avec des variations selon les sécrétions et le moment digestif."
         },
-        {
-          type: "lead",
-          label: "7.2. Motricité",
-          text: "le duodénum présente une motricité régulière, coordonnée avec les phases digestives, permettant la progression et le brassage du chyme vers le jéjunum."
-        },
-        {
-          type: "lead",
-          label: "7.3. Sécrétions digestives et protection muqueuse",
-          text: "il reçoit sur 24 heures un volume important de contenu digestif et de sécrétions gastriques, biliaires et pancréatiques ; les ordres de grandeur varient selon les sources."
-        },
+        { type: "sub", text: "7.2. Motricité" },
+        { type: "para", text: "le duodénum présente une motricité régulière, coordonnée avec les phases digestives, permettant la progression et le brassage du chyme vers le jéjunum." },
+        { type: "sub", text: "7.3. Sécrétions digestives et protection muqueuse" },
+        { type: "para", text: "il reçoit sur 24 heures un volume important de contenu digestif et de sécrétions gastriques, biliaires et pancréatiques ; les ordres de grandeur varient selon les sources." },
         {
           type: "para",
           text: "Cette activité sécrétoire permet le mélange du chyme avec des enzymes pancréatiques, de la bile et des sécrétions protectrices muqueuses."
@@ -299,20 +280,14 @@ export const chapter10Fr: Chapter = {
           type: "para",
           text: "Le mucus et les glandes de Brunner contribuent à la protection de la muqueuse duodénale."
         },
-        {
-          type: "lead",
-          label: "7.4. Régulation hormonale",
-          text: "la sécrétine contribue à la régulation antiacide et stimule la sécrétion pancréatique bicarbonatée."
-        },
+        { type: "sub", text: "7.4. Régulation hormonale" },
+        { type: "para", text: "la sécrétine contribue à la régulation antiacide et stimule la sécrétion pancréatique bicarbonatée." },
         {
           type: "para",
           text: "La cholécystokinine participe à la contraction de la vésicule biliaire et à la régulation des sécrétions digestives en réponse au chyme."
         },
-        {
-          type: "lead",
-          label: "7.5. Absorption",
-          text: "le duodénum contribue notamment à l’absorption du fer, du calcium et de certains micronutriments ; cette absorption se poursuit ensuite dans le reste de l’intestin grêle."
-        }
+        { type: "sub", text: "7.5. Absorption" },
+        { type: "para", text: "le duodénum contribue notamment à l’absorption du fer, du calcium et de certains micronutriments ; cette absorption se poursuit ensuite dans le reste de l’intestin grêle." }
       ]
     },
     {
@@ -401,7 +376,7 @@ export const chapter10Fr: Chapter = {
         },
         {
           type: "para",
-          text: "Le syndrome de la pince aorto-mésentérique correspond à une compression de D4 entre l’aorte et l’artère mésentérique supérieure, avec possible réténtissement sur la veine rénale gauche."
+          text: "Le syndrome de la pince aorto-mésentérique correspond à une compression de D4 entre l’aorte et l’artère mésentérique supérieure, avec possible retentissement sur la veine rénale gauche."
         },
         {
           type: "para",
@@ -519,22 +494,18 @@ if (chapter10Pathologies) {
 const chapter10ReflexSection = chapter10Fr.sections.find((section) => section.id === "zones-reflexes-podales")
 if (chapter10ReflexSection) chapter10ReflexSection.blocks = [
   { type: "sub", text: "13.1. Repères propres au duodénum" },
-  { type: "para", text: "La cartographie actuelle D1-D4 est conservée, car elle permet de distinguer les différents segments duodénaux et leurs principaux carrefours fonctionnels." },
   { type: "para", text: "Pied droit. D1 est projeté horizontalement autour du repère L1 ; D2 verticalement de L1 à L4 ; le sphincter d’Oddi est repéré à l’union du tiers moyen et du tiers inférieur de D2, autour de L2 ; D3 est projeté horizontalement autour du tubercule du naviculaire." },
   { type: "para", text: "Pied gauche. D4 est projeté selon une ligne oblique crânio-latérale ; la jonction duodéno-jéjunale est décrite comme symétrique du sphincter d’Oddi, autour de L2." },
+  { type: "para", text: "Racine du mésentère : une ligne oblique allant de la valvule iléo-caecale à la jonction duodéno-jéjunale." },
   { type: "para", text: "Sur les deux pieds. Le pylore est repéré sur le bord médial de la peau plantaire, généralement plus marqué à droite." },
   { type: "para", text: "Le quadrilatère de Rogié peut être utilisé comme repère régional associé à D2 lorsque les tests le rendent pertinent. Il ne constitue pas une nouvelle zone d’organe, mais un carrefour clinique de structures solidaires du deuxième duodénum." },
-  { type: "rop", body: ["La cartographie D1-D4 constitue la cible propre du duodénum. Pylore, sphincter d’Oddi, quadrilatère de Rogié et jonction duodéno-jéjunale sont sélectionnés selon le segment et le tableau clinique."] },
   { type: "sub", text: "13.2. Niveau 1 — Régulation des centres supérieurs" },
-  { type: "para", text: "Le Niveau 1 reste court et optionnel. Il peut être intégré lorsque le tableau digestif s’accompagne de stress important, d’anxiété et d’hypervigilance digestive, de perturbations du sommeil ou d’une forte composante émotionnelle." },
   { type: "bullets", items: ["Zones réflexes occipitales.", "Tronc cérébral et centres d’intégration.", "Hypothalamus.", "Axe hypothalamo-hypophysaire."] },
   { type: "xref", label: "Voir le chapitre 3 — Système nerveux central", href: "/lecture/chapitre-3-rework?lang=fr" },
-  { type: "rop", body: ["Le Niveau 1 constitue une préparation générale lorsque le contexte central et adaptatif paraît pertinent."] },
   { type: "sub", text: "13.3. Niveau 2 — Régulation neuro-végétative et adaptation" },
-  { type: "para", text: "Le Niveau 2 est important dans le protocole duodénal. Il associe les voies parasympathiques vagales, les voies sympathiques splanchniques et les plexus prévertébraux impliqués dans la motricité et les sécrétions digestives." },
+  { type: "para", text: "Le Niveau 2 associe les voies parasympathiques vagales, les voies sympathiques splanchniques et les plexus prévertébraux impliqués dans la motricité et les sécrétions digestives." },
   { type: "bullets", items: ["Nerf vague X.", "Sympathique thoracique.", "Nerfs splanchniques.", "Plexus cœliaque.", "Plexus mésentérique supérieur.", "Coordination autonome de la motricité duodénale et des sécrétions digestives."] },
   { type: "xref", label: "Voir le chapitre 4 — Système nerveux autonome", href: "/lecture/chapitre-4-rework?lang=fr" },
-  { type: "rop", body: ["Le Niveau 2 vise la coordination neuro-végétative de la motricité duodénale et de la séquence digestive."] },
   { type: "sub", text: "13.4. Niveau 3 — Régulation viscérale loco-régionale" },
   { type: "para", text: "Le Niveau 3 constitue le cœur anatomique du protocole. La sélection régionale varie selon le segment duodénal concerné." },
   { type: "para", text: "D1 — interface gastro-hépato-duodénale. Selon les tests : pylore, D1, estomac, foie, vésicule biliaire et ligament hépato-duodénal." },
@@ -544,22 +515,18 @@ if (chapter10ReflexSection) chapter10ReflexSection.blocks = [
   { type: "xref", label: "Voir le chapitre 11 — Foie et voies biliaires", href: "/lecture/chapitre-11?lang=fr" },
   { type: "xref", label: "Voir le chapitre 12 — Pancréas", href: "/lecture/chapitre-12?lang=fr" },
   { type: "xref", label: "Voir le chapitre 14 — Intestin grêle", href: "/lecture/chapitre-14?lang=fr" },
-  { type: "rop", body: ["Le Niveau 3 permet de choisir les interfaces correspondant au segment duodénal concerné. Il n’impose pas de traiter systématiquement estomac, foie, pancréas et intestin à chaque séance."] },
   { type: "sub", text: "13.5. Niveau 4 — Intégration viscéro-somatique et Balance cerveau limbique–duodénum" },
   { type: "para", text: "Versant viscéro-somatique. Selon les tests, la lecture peut intégrer Th7-Th9, L1-L2, les dernières côtes, la charnière thoraco-lombaire, les piliers du diaphragme, le psoas et la paroi abdominale postérieure." },
   { type: "figure", src: "/chapter-10/figure-10-d2.png", caption: "Photo : Duodénum D2", alt: "Repère podal du deuxième duodénum", orientation: "portrait" },
   { type: "figure", src: "/chapter-10/figure-10-sphincter-oddi.png", caption: "Photo : Sphincter d’Oddi", alt: "Repère podal du sphincter d’Oddi", orientation: "portrait" },
   { type: "figure", src: "/chapter-10/figure-10-jonction-duodeno-jejunale.png", caption: "Photo : Duodénum D4", alt: "Repère podal du quatrième duodénum", orientation: "portrait" },
   { type: "figure", src: "/chapter-10/figure-10-jonction-duodeno-jejunale.png", caption: "Photo : Jonction duodéno-jéjunale", alt: "Repère podal de la jonction duodéno-jéjunale", orientation: "portrait" },
-  { type: "para", text: "Balance cerveau limbique–duodénum. Dans le vocabulaire propre à la ROP, l’écoute-induction associe un repère duodénal et un repère du cerveau limbique." },
-  { type: "para", text: "Cette « balance » constitue une technique clinique d’intégration propre à la ROP. Elle ne décrit pas une connexion anatomique directe entre la zone podale, les réseaux limbiques et le duodénum." },
+  { type: "para", text: "Balance cerveau limbique-duodénum. Dans le vocabulaire propre à la ROP, l’écoute-induction associe un pouce sur la zone du duodénum et l’autre sur la zone du cerveau limbique." },
   { type: "xref", label: "Voir le chapitre 3 — Système nerveux central", href: "/lecture/chapitre-3-rework?lang=fr" },
   { type: "xref", label: "Voir le chapitre 5 — Mécanisme de stress", href: "/lecture/chapitre-5-rework?lang=fr" },
-  { type: "rop", body: ["Le Niveau 4 associe les convergences somatiques et la dimension émotionnelle propre à la méthode, tout en distinguant clairement le vocabulaire clinique ROP des mécanismes anatomiques démontrés."] },
   { type: "sub", text: "13.6. Soutiens associés selon les tests" },
   { type: "bullets", items: ["Estomac : D1 et pylore.", "Foie, vésicule et voies biliaires : D1-D2 et sphincter d’Oddi.", "Pancréas : surtout D2.", "Intestin grêle et racine du mésentère : D3-D4 et jonction duodéno-jéjunale.", "Rein droit : rapport régional de D2.", "Diaphragme : lorsque les interfaces thoraco-abdominales sont pertinentes."] },
-  { type: "para", text: "Ces territoires sont des soutiens régionaux ou fonctionnels et non une séquence obligatoire." },
   { type: "sub", text: "13.7. Lecture clinique" },
   { type: "bullets", items: ["Digestion lente ou stase duodénale fonctionnelle : Niveau 2 + segment duodénal concerné au Niveau 3 + pylore ou jonction duodéno-jéjunale selon les tests.", "Contexte bilio-pancréatique fonctionnel : D2 + sphincter d’Oddi + foie/vésicule + pancréas.", "Contexte de tension autour de D3-D4 ou de l’angle de Treitz après exclusion médicale : D3-D4 + racine du mésentère + muscle de Treitz + socle régional du chapitre 7."] },
-  { type: "note", label: "Principe de sécurité", body: ["Douleur épigastrique intense ou persistante, hémorragie digestive, selles noires, vomissements répétés, amaigrissement inexpliqué ou douleur aiguë transfixiante nécessitent une évaluation médicale. La ROP ne remplace pas le diagnostic ni la prise en charge d’une pathologie duodénale."] },
+  { type: "note", label: "Principe de sécurité", body: ["Douleur épigastrique intense ou persistante, hémorragie digestive, selles noires, vomissements répétés, amaigrissement inexpliqué ou douleur aiguë transfixiante nécessitent une évaluation médicale."] },
 ]

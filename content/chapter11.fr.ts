@@ -1,4 +1,4 @@
-// Source: public/chapter-11/Chapitre_11_Foie_et_voies_biliaires_version_publiable.docx
+// Source: public/chapter-11/Chapitre_11_Foie_et_voies_biliaires_version_publiable_finale.docx
 import type { Chapter } from './types'
 
 export const chapter11Fr: Chapter = {
@@ -1463,3 +1463,90 @@ const chapter11SectionOrder = [
 chapter11Fr.sections.sort(
   (left, right) => chapter11SectionOrder.indexOf(left.id) - chapter11SectionOrder.indexOf(right.id),
 )
+
+// Final publication text from the revised Word source.
+for (const section of chapter11Fr.sections) {
+  for (const block of section.blocks) {
+    if (block.type === 'para') {
+      block.text = block.text
+        .replace('réperçuter', 'répercuter')
+        .replace('réperçussions', 'répercussions')
+    }
+    if (block.type === 'rop') block.body = block.body.map((text) => text.replace('réténus', 'retenus').replace('réperçuter', 'répercuter'))
+  }
+}
+
+const chapter11Segmentation = chapter11Fr.sections.find((section) => section.id === 'interet-en-rop-6')
+if (chapter11Segmentation) chapter11Segmentation.blocks = [
+  { type: 'para', text: 'Dans notre pratique de la ROP, nous pouvons différencier le foie en quatre segments selon les troubles fonctionnels (figure 11.9).' },
+  { type: 'sub', text: '6.3.1. Zone 1 : vésicule et voies biliaires' },
+  { type: 'para', text: 'La sensibilité du cartilage de la 9ème côte peut orienter cliniquement vers un trouble vésiculaire, notamment dans un contexte d’hygiène alimentaire défavorable, d’excès de cholestérol ou de triglycérides.' },
+  { type: 'para', text: 'La viscosité de la bile peut varier selon le contexte hormonal, notamment au cours du cycle menstruel.' },
+  { type: 'para', text: 'Dans le cadre ROP, cette zone est associée à des douleurs cervicales gauches C4-C5, puis droites si le trouble devient chronique.' },
+  { type: 'sub', text: '6.3.2. Zone 2 : foie métabolique' },
+  { type: 'para', text: 'La partie épigastrique du foie est rattachée, dans ce modèle, à des troubles métaboliques : difficulté d’élimination, avitaminose, états inflammatoires divers, douleurs cervico-dorsales et troubles cutanés tels que prurit, acné, ictère ou peau grasse.' },
+  { type: 'para', text: 'Le foie est hormono-dépendant au sens fonctionnel.' },
+  { type: 'para', text: 'Un excès d’œstrogènes peut s’accompagner d’une moindre fluidité biliaire et d’une moindre aisance d’excrétion hépatobiliaire.' },
+  { type: 'para', text: 'Cela peut contribuer, parmi d’autres facteurs, aux nausées ou vomissements pendant la grossesse.' },
+  { type: 'para', text: 'Les contraceptifs oraux peuvent s’accompagner d’effets indésirables hépato-biliaires chez certaines patientes.' },
+  { type: 'para', text: 'L’excès de protéines et de graisses peut être mal toléré par les personnes cliniquement sensibles sur le plan hépatique.' },
+  { type: 'sub', text: '6.3.3. Zone 3 : foie infectieux et immunitaire' },
+  { type: 'para', text: 'La partie droite du lobe droit est considérée, dans cette lecture clinique, comme plus souvent concernée lors d’atteintes infectieuses du foie, notamment les hépatites.' },
+  { type: 'para', text: 'Le foie participe à la réponse immunitaire et à l’épuration de certaines charges circulantes.' },
+  { type: 'para', text: 'Après une gastro-entérite, une fatigue persistante peut être interprétée, dans ce modèle, comme le reflet d’une surcharge d’épuration.' },
+  { type: 'sub', text: '6.3.4. Zone 4 : foie mécanique' },
+  { type: 'para', text: 'Le lobe gauche et le ligament triangulaire gauche sont décrits comme plus fréquemment concernés par certains traumatismes, les forces collisionnelles pouvant se transmettre préférentiellement vers cette zone, ainsi que vers la rate et le rein gauche.' },
+  { type: 'para', text: 'Dans le cadre ROP, cette zone est aussi associée à des douleurs costo-vertébrales Th7, Th8, Th9 et à une sciatalgie droite.' },
+]
+
+const chapter11Emotion = chapter11Fr.sections.find((section) => section.id === 'relations-viscero-emotionnelles')
+if (chapter11Emotion) chapter11Emotion.blocks = [
+  { type: 'para', text: 'Foie. Dans le référentiel viscéro-émotionnel de la ROP, le foie est associé aux stress profonds qui touchent l’identité, le rapport à soi et le sens donné à sa vie. Il est traditionnellement décrit comme un organe plutôt féminin, en relation avec la colère profonde, le ressentiment, certaines culpabilités familiales et une tendance à ressasser le passé. La personne dite « foie » peut être décrite comme sensible, facilement déstabilisée par les conflits, le doute ou l’insécurité, avec une tendance au pessimisme et à l’épuisement physique et psychique. À l’inverse, un meilleur équilibre est associé, dans cette lecture clinique, à davantage de calme, de recul et de capacité à intégrer les émotions. Certaines manifestations anxieuses ou phobiques peuvent également être prises en compte dans cette approche, sans qu’une relation causale directe avec le foie puisse être affirmée. Certains antidépresseurs peuvent par ailleurs, selon la molécule et le contexte, entraîner des effets indésirables hépatiques.' },
+  { type: 'para', text: 'Vésicule biliaire. Elle est traditionnellement associée aux contrariétés, aux frustrations répétées et aux insatisfactions du quotidien. La personne dite « vésicule » est décrite comme hypersensible, facilement préoccupée ou contrariée, attachée à ses repères, à ses habitudes et à une certaine stabilité. Dans cette lecture, l’anxiété et l’activation sympathique peuvent accompagner des tensions fonctionnelles de la sphère biliaire.' },
+]
+
+chapter11Reflex.blocks = [
+  { type: 'sub', text: '14.1. Niveau 1 — Régulation des centres supérieurs' },
+  { type: 'para', text: 'Le Niveau 1 reste court et optionnel. Il peut être intégré lorsque le tableau associe stress prolongé, troubles du sommeil et de l’adaptation, contexte neuroendocrinien ou hormonal, ou forte composante émotionnelle.' },
+  { type: 'bullets', items: ['Zones réflexes occipitales.', 'Tronc cérébral et centres d’intégration.', 'Hypothalamus.', 'Axe hypothalamo-hypophysaire.'] },
+  { type: 'xref', label: 'Voir le chapitre 3 — Système nerveux central', href: '/lecture/chapitre-3?lang=fr' },
+  { type: 'sub', text: '14.2. Niveau 2 — Régulation neuro-végétative et adaptation' },
+  { type: 'para', text: 'Le foie et les voies biliaires reçoivent une régulation autonome complexe. Dans le chapitre, cette organisation associe notamment les nerfs vagues, les voies sympathiques thoraciques et le plexus cœliaque.' },
+  { type: 'bullets', items: ['Nerfs vagues droit et gauche.', 'Sympathique thoracique moyen.', 'Nerfs splanchniques.', 'Plexus cœliaque.', 'Régulation autonome des fonctions digestives et biliaires.'] },
+  { type: 'para', text: 'Le diaphragme est intégré ici comme interface fonctionnelle : le foie suit ses mouvements et leur coordination participe à la dynamique thoraco-abdominale. Le nerf phrénique lui-même, de nature somatique, est placé au Niveau 4.' },
+  { type: 'xref', label: 'Voir le chapitre 4 — Système nerveux autonome', href: '/lecture/chapitre-4?lang=fr' },
+  { type: 'xref', label: 'Voir le chapitre 8 — Diaphragme', href: '/lecture/chapitre-8?lang=fr' },
+  { type: 'sub', text: '14.3. Niveau 3 — Régulation viscérale loco-régionale' },
+  { type: 'para', text: 'Le Niveau 3 constitue le cœur anatomique du protocole hépatobiliaire. Il associe la zone propre du foie et des voies biliaires aux seules composantes régionales pertinentes.' },
+  { type: 'sub', text: 'Repères propres au foie et aux voies biliaires' },
+  { type: 'para', text: 'Foie :' },
+  { type: 'bullets', items: [
+    'Face supérieure et son versant antérieur : elle suit la courbure diaphragmatique. Il faut tenir compte de la différence de hauteur entre les deux hémi-coupoles à la face plantaire des deux pieds.',
+    'Ligament triangulaire gauche : face plantaire du pied gauche, à l’aplomb du 3e orteil et à gauche du hiatus œsophagien, lui-même situé à l’aplomb des 1er et 2e orteils.',
+  ] },
+  { type: 'figure', src: '/chapter-11/cartographie/figure-11-08.png', caption: 'Photo : Foie — lobe gauche', alt: 'Repère podal du lobe gauche du foie', orientation: 'landscape' },
+  { type: 'bullets', items: [
+    'Face inférieure : elle est facile à distinguer à la palpation car elle est plus dense que les organes avoisinants creux. Le repère suit une ligne oblique allant de la base du 5e métatarsien droit au bord médial du pied droit à hauteur de Th12. La ligne se prolonge jusqu’à l’hémi-coupole diaphragmatique gauche, qu’elle rejoint à l’aplomb du 3e métatarsien gauche.',
+    'Faces antérieure et postérieure : elles correspondent à l’espace compris entre les lignes supérieure et inférieure.',
+  ] },
+  { type: 'figure', src: '/chapter-11/cartographie/figure-11-12.png', caption: 'Photo : Foie — face inférieure et lobe droit', alt: 'Repère podal de la face inférieure et du lobe droit du foie', orientation: 'portrait' },
+  { type: 'bullets', items: ['Vésicule biliaire : face inférieure du foie, à l’aplomb d’une ligne passant entre les 3e et 4e orteils droits.'] },
+  { type: 'figure', src: '/chapter-11/cartographie/figure-11-14.png', caption: 'Photo : Vésicule biliaire', alt: 'Repère podal de la vésicule biliaire sur le pouce gauche', orientation: 'portrait' },
+  { type: 'bullets', items: ['Voies biliaires : une ligne oblique allant de la vésicule biliaire au sphincter d’Oddi, situé au tiers inférieur du deuxième duodénum.'] },
+  { type: 'figure', src: '/chapter-11/cartographie/figure-11-16.png', caption: 'Photo : Voies biliaires', alt: 'Repère podal des voies biliaires entre les deux pouces', orientation: 'portrait' },
+  { type: 'xref', label: 'Voir le chapitre 7 — Socle régional abdominal et péritonéal', href: '/lecture/chapitre-7?lang=fr' },
+  { type: 'xref', label: 'Voir le chapitre 10 — Duodénum', href: '/lecture/chapitre-10?lang=fr' },
+  { type: 'sub', text: '14.4. Niveau 4 — Intégration viscéro-somatique et Balance cerveau limbique-foie/vésicule biliaire' },
+  { type: 'para', text: 'Versant viscéro-somatique. La lecture peut intégrer Th7-Th9, les 7e à 9e côtes, le nerf phrénique C3-C5, les territoires cervicaux et cervico-brachiaux associés, l’épaule droite, le diaphragme et la région thoracique inférieure droite. Pour la sphère hépatobiliaire, les projections phréniques sont décrites surtout à droite ; on évite une latéralisation trop catégorique.' },
+  { type: 'figure', src: '/chapter-11/cartographie/figure-11-18.png', caption: 'Photo : Nerf phrénique C3-C4-C5', alt: 'Repère podal du nerf phrénique C3 C4 C5', orientation: 'landscape' },
+  { type: 'figure', src: '/chapter-11/cartographie/figure-11-20.png', caption: 'Photo : Nerf phrénique — triangle de Sédillot', alt: 'Repère podal du nerf phrénique dans le triangle de Sédillot', orientation: 'landscape' },
+  { type: 'para', text: 'Balance cerveau limbique-foie/vésicule biliaire : pouce sur la zone foie/vésicule biliaire et l’autre sur la zone du cerveau limbique.' },
+  { type: 'figure', src: '/chapter-11/cartographie/figure-11-22.png', caption: 'Photo : Balance cerveau limbique — foie/vésicule biliaire', alt: 'Technique balance cerveau limbique foie-vésicule biliaire', orientation: 'portrait' },
+  { type: 'xref', label: 'Voir le chapitre 3 — Système nerveux central', href: '/lecture/chapitre-3?lang=fr' },
+  { type: 'xref', label: 'Voir le chapitre 5 — Mécanisme de stress', href: '/lecture/chapitre-5?lang=fr' },
+  { type: 'sub', text: '14.5. Soutiens associés selon les tests' },
+  { type: 'bullets', items: ['Diaphragme : interface majeure.', 'Duodénum et sphincter d’Oddi : voies biliaires.', 'Pancréas : carrefour hépato-pancréatico-duodénal.', 'Estomac : petit omentum et lobe gauche.', 'Côlon droit : angle hépatique.', 'Rein droit : ligament hépato-rénal.', 'Intestin : système porte.', 'Rate : circulation porte selon le contexte.'] },
+  { type: 'sub', text: '14.6. Lecture clinique' },
+  { type: 'bullets', items: ['Digestion lente ou inconfort biliaire fonctionnel : Niveau 2 + foie/vésicule/voies biliaires au Niveau 3 + duodénum et sphincter d’Oddi selon les tests.', 'Contexte métabolique ou hormonal : foie au Niveau 3 + Niveau 2 + Niveau 1 si le contexte général le justifie.', 'Séquelles anciennes d’un traumatisme abdominal après exclusion médicale : foie + ligaments/diaphragme au Niveau 3 + côtes et charnière thoracique au Niveau 4.', 'Douleur scapulaire droite associée à un contexte digestif, après exclusion médicale : foie/vésicule + diaphragme + nerf phrénique au Niveau 4.'] },
+  { type: 'note', label: 'Principe de sécurité', body: ['Ictère, douleur aiguë de l’hypochondre droit, fièvre, vomissements persistants, urines très foncées, selles décolorées, amaigrissement ou altération de l’état général nécessitent une évaluation médicale.'] },
+]

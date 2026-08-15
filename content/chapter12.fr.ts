@@ -1,4 +1,4 @@
-// Source: public/chapter-12/Chapitre_12_Pancreas_version_scientifique.docx
+// Source: public/chapter-12/Chapitre_12_Pancreas_version_finale_publiable.docx
 import type { Chapter } from './types'
 
 export const chapter12Fr: Chapter = {
@@ -938,3 +938,155 @@ chapter12ReflexSection.blocks = [
   { type: 'note', label: 'Principe de sécurité', body: ['Douleur abdominale aiguë ou transfixiante, vomissements persistants, ictère, fièvre, amaigrissement, altération de l’état général, trouble glycémique ou lésion du pied nécessitent une évaluation médicale. La ROP ne remplace ni le diagnostic ni le traitement d’une maladie pancréatique ou métabolique.'] },
 ]
 }
+
+// Final publication text from the revised Word source.
+const chapter12TextCorrections = new Map<string, string>([
+  ["De couleur jaune rose, le pancréas est un organe profond de la cavité abdominale, situe en arriere de l'estomac.", "De couleur jaune rosé, le pancréas est un organe profond de la cavité abdominale, situé en arrière de l’estomac."],
+  ["Sa partie inférieure, situee à droite des vaisseaux mésentériques supérieurs, forme un crochet : le processus uncinatus.", "Sa partie inférieure, située à droite des vaisseaux mésentériques supérieurs, forme un crochet : le processus uncinatus."],
+  ["Il est situe en avant de l'aorte et en rapport avec le plan vertébral autour de L2-L3.", "Il est situé en avant de l’aorte et en rapport avec le plan vertébral autour de L2-L3."],
+  ["Il se séparé du canal pancréatique principal au niveau de la tête du pancréas et s'ouvre dans le 1/3 supérieur du 2ème duodénum par la papille duodénale mineure.", "Il se sépare du canal pancréatique principal au niveau de la tête du pancréas et s’ouvre dans le 1/3 supérieur du 2ème duodénum par la papille duodénale mineure."],
+  ["Elle est en rapport avec la racine du mésocôlon transverse, qui relie le côlon transverse à la paroi postérieure de l'abdomen.", "Elle est en rapport avec la racine du mésocolon transverse, qui relie le côlon transverse à la paroi postérieure de l’abdomen."],
+  ["Le mésocôlon transverse est également en continuité avec le petit omentum.", "Le mésocolon transverse est également en continuité avec le petit omentum."],
+  ["Le pancréas est richement vascularise.", "Le pancréas est richement vascularisé."],
+  ["Cette organisation temoigne de liens physiologiques etroits entre ces organes.", "Cette organisation témoigne de liens physiologiques étroits entre ces organes."],
+  ["Elle depend de branches collaterales du tronc cœliaque, lui-même branche de l'aorte abdominale.", "Elle dépend de branches collatérales du tronc cœliaque, lui-même branche de l’aorte abdominale."],
+  ["Le retour veineux est assuré par le système porte, constitue notamment par la réunion de la veine mésentérique supérieure et de la veine splénique, cette dernière recevant le plus souvent la veine mésentérique inférieure.", "Le retour veineux est assuré par le système porte, constitué notamment par la réunion de la veine mésentérique supérieure et de la veine splénique, cette dernière recevant le plus souvent la veine mésentérique inférieure."],
+  ["La commande sympathique impliquée ici est classiquement rapportee aux etages medullaires thoraciques moyens, notamment Th8-Th10 gauches.", "La commande sympathique impliquée ici est classiquement rapportée aux étages médullaires thoraciques moyens, notamment Th8-Th10 gauches."],
+  ["Les patients porteurs d'une maladie grave ne consultent pas necessairement en première intention pour celle-ci.", "Les patients porteurs d’une maladie grave ne consultent pas nécessairement en première intention pour celle-ci."],
+  ["Hepatomegalie ;", "Hépatomégalie ;"],
+  ["Satiété après le repas puis, une heure après, fringale avec envie de viande rouge, d'aliments gras et sucres.", "Satiété après le repas puis, une heure après, fringale avec envie de viande rouge, d’aliments gras et sucrés."],
+  ["On distingue ici le diabète sucre et le diabète gestationnel.", "On distingue ici le diabète sucré et le diabète gestationnel."],
+  ["Diabète insulino-dependant de type 1 : il s'agit d'une maladie auto-immune apparaissant le plus souvent dans l'enfance ou l'adolescence, sur un terrain génétique de susceptibilité.", "Diabète insulino-dépendant de type 1 : il s’agit d’une maladie auto-immune apparaissant le plus souvent dans l’enfance ou l’adolescence, sur un terrain génétique de susceptibilité."],
+  ["Il apparait au cours de la grossesse, le plus souvent au 2ème ou au 3ème trimestre, dans un contexte de diminution de la sensibilité à l'insuline.", "Il apparaît au cours de la grossesse, le plus souvent au 2ème ou au 3ème trimestre, dans un contexte de diminution de la sensibilité à l’insuline."],
+  ["L'hyperglycémie chronique altere en premier lieu la microcirculation et les petites fibres nerveuses.", "L’hyperglycémie chronique altère en premier lieu la microcirculation et les petites fibres nerveuses."],
+  ["Hypoesthesie ;", "Hypoesthésie ;"],
+  ["Peau seche ;", "Peau sèche ;"],
+  ["Atteinte vasculaire avec risque de baisse visuelle severe, voire de cecite.", "Atteinte vasculaire avec risque de baisse visuelle sévère, voire de cécité."],
+  ["Dans la majorite des cas, il s'agit d'un adenocarcinome.", "Dans la majorité des cas, il s’agit d’un adénocarcinome."],
+  ["Les causes exactes sont incomplétément connues.", "Les causes exactes sont incomplètement connues."],
+  ["Hyperinsulinemie et hypoinsulinemie.", "Hyperinsulinémie et hypoinsulinémie."],
+  ["Dorsalgie basse ou lombaire haute après avoir ecarte tout signe de gravité.", "Dorsalgie basse ou lombaire haute après avoir écarté tout signe de gravité."],
+  ["Asthme, eczema, psoriasis, en associant le foie.", "Asthme, eczéma, psoriasis, en associant le foie."],
+  ["Epaule gauche ;", "Épaule gauche ;"],
+])
+
+for (const section of chapter12Fr.sections) {
+  for (const block of section.blocks) {
+    if ((block.type === 'para' || block.type === 'sub') && chapter12TextCorrections.has(block.text)) block.text = chapter12TextCorrections.get(block.text)!
+    if (block.type === 'bullets') block.items = block.items.map((item) => chapter12TextCorrections.get(item) ?? item)
+  }
+}
+
+const chapter12Anatomy = chapter12Fr.sections.find((section) => section.id === 'anatomie')
+if (chapter12Anatomy && !chapter12Anatomy.blocks.some((block) => block.type === 'sub' && block.text === '3.5. Canaux pancréatiques')) {
+  const canalIndex = chapter12Anatomy.blocks.findIndex((block) => block.type === 'sub' && block.text.startsWith('3.5.1.'))
+  if (canalIndex >= 0) chapter12Anatomy.blocks.splice(canalIndex, 0, { type: 'sub', text: '3.5. Canaux pancréatiques' })
+}
+
+const chapter12Physiology = chapter12Fr.sections.find((section) => section.id === 'physiologie')
+if (chapter12Physiology && !chapter12Physiology.blocks.some((block) => block.type === 'sub' && block.text === '7.1.2. Régulation de la sécrétion exocrine')) {
+  const regulationIndex = chapter12Physiology.blocks.findIndex((block) => block.type === 'para' && block.text.startsWith('La sécrétion du suc pancréatique'))
+  if (regulationIndex >= 0) chapter12Physiology.blocks.splice(regulationIndex, 0, { type: 'sub', text: '7.1.2. Régulation de la sécrétion exocrine' })
+}
+
+if (chapter12Endocrine) chapter12Endocrine.blocks = [
+  { type: 'rop', body: [
+    'Dans le cadre ROP, on cherche à solliciter le nerf vague, l’estomac, le foie, la vésicule biliaire et le duodénum, plus particulièrement sa 2ème portion, ainsi que le sphincter d’Oddi, afin d’accompagner la régulation de la sécrétion exocrine du pancréas.',
+    'Cette démarche insiste sur la nécessaire synchronisation des différents temps de la digestion.',
+  ] },
+  { type: 'sub', text: '7.2. Pancréas endocrine' },
+  { type: 'para', text: 'La fonction endocrine du pancréas participe à la régulation de la glycémie.' },
+  { type: 'para', text: 'Le glucose est un substrat énergétique indispensable à l’organisme.' },
+  { type: 'para', text: 'Les besoins en glucose du cerveau représentent environ 20 % de la consommation totale de l’organisme.' },
+  { type: 'para', text: 'La glycémie fait partie des grandes constantes biologiques de l’homéostasie.' },
+  { type: 'para', text: 'Bien que nos besoins en glucose varient selon l’activité, la glycémie doit rester dans une fourchette compatible avec le fonctionnement normal, de l’ordre de 0,80 à 1,20 g/L dans les repères ici retenus.' },
+  { type: 'sub', text: '7.2.1. Régulation de la glycémie' },
+  { type: 'para', text: 'Elle met en jeu le pancréas, le foie, les reins, l’intestin et son microbiote, ainsi que l’axe hypothalamo-hypophyso-surrénalien, ou axe HHS, impliqué dans la réponse au stress.' },
+  { type: 'sub', text: '7.2.2. Pancréas' },
+  { type: 'para', text: 'Les îlots de Langerhans ne représentent qu’une faible proportion du tissu pancréatique.' },
+  { type: 'para', text: 'Ils produisent notamment l’insuline et le glucagon.' },
+  { type: 'para', text: 'L’insuline a un effet hypoglycémiant et le glucagon un effet hyperglycémiant.' },
+  { type: 'sub', text: '7.2.3. Foie' },
+  { type: 'para', text: 'Il stocke le glucose sous forme de glycogène par la glycogénèse et libère du glucose dans le sang selon les besoins par glycogénolyse.' },
+  { type: 'para', text: 'Le foie peut aussi synthétiser du glucose à partir d’éléments non glucidiques, notamment des acides aminés, du glycérol et du lactate : c’est la néoglucogénèse.' },
+  { type: 'sub', text: '7.2.4. Reins' },
+  { type: 'para', text: 'Ils participent à l’homéostasie glucidique, notamment par la réabsorption tubulaire du glucose filtré et, dans certains contextes, par la néoglucogenèse.' },
+  { type: 'para', text: 'En cas d’hyperglycémie dépassant les capacités de réabsorption, une glycosurie peut apparaître.' },
+  { type: 'sub', text: '7.2.5. Glandes surrénales' },
+  { type: 'para', text: 'Sous l’action de l’axe hypothalamo-hypophyso-surrénalien, l’adrénaline sécrétée par la médullo-surrénale contribue à l’élévation de la glycémie en situation de stress.' },
+  { type: 'para', text: 'Le cortisol sécrété par la cortico-surrénale participe également au maintien de la disponibilité du glucose en période de stress et d’activité.' },
+  { type: 'xref', label: 'Voir le chapitre 5 — Mécanisme de stress', href: '/lecture/chapitre-5?lang=fr' },
+  { type: 'sub', text: '7.2.6. Intestin et microbiote' },
+  { type: 'para', text: 'Les bactéries qui peuplent l’intestin vivent normalement dans une relation de symbiose avec l’hôte.' },
+  { type: 'para', text: 'Le stress, l’inflammation et une altération de la barrière intestinale peuvent s’accompagner d’une dysbiose, c’est-à-dire d’une modification de la composition du microbiote au détriment de certains équilibres fonctionnels.' },
+  { type: 'para', text: 'Certaines dysbioses sont associées à l’insulino-résistance et au diabète de type 2.' },
+  { type: 'para', text: 'Dans ce contexte, la glycémie peut s’élever et le pancréas être davantage sollicité pour maintenir un taux glycémique compatible avec l’homéostasie.' },
+  { type: 'xref', label: 'Voir le chapitre 14 — Intestin grêle : dysbioses', href: '/lecture/chapitre-14?lang=fr' },
+  { type: 'sub', text: '7.2.7. Hormones gastro-intestinales' },
+  { type: 'para', text: 'En cas de glycémie post-prandiale, des hormones intestinales comme le GLP-1 participent au ralentissement de la vidange gastrique, à l’inhibition du glucagon et à la stimulation de la sécrétion d’insuline.' },
+  { type: 'para', text: 'La place exacte du GLP-2 dans cette description doit être interprétée avec prudence.' },
+]
+
+const chapter12Segmentation = chapter12Fr.sections.find((section) => section.id === 'interet-en-rop-3')
+if (chapter12Segmentation) chapter12Segmentation.blocks = [
+  { type: 'para', text: 'Dans notre pratique de ROP, nous pouvons différencier trois segments du pancréas.' },
+  { type: 'sub', text: '8.1. Zone 1 : tête du pancréas' },
+  { type: 'para', text: 'Elle correspond surtout au pancréas exocrine.' },
+  { type: 'para', text: 'Sa fonction est étroitement liée, dans ce cadre, au foie et à la deuxième portion du duodénum : l’ampoule de Vater reçoit le cholédoque et le canal de Wirsung.' },
+  { type: 'para', text: 'Son lien métamérique est présenté comme proche de celui du foie : Th7 à Th9 droits.' },
+  { type: 'sub', text: '8.2. Zone 2 : corps du pancréas' },
+  { type: 'para', text: 'Il est à la fois exocrine et endocrine.' },
+  { type: 'para', text: 'Il constitue la partie la plus exposée à certains traumatismes abdominaux antérieurs ou postérieurs, notamment lors des accidents de la voie publique ou des chutes sur le dos, en raison de ses rapports avec le plan vertébral autour de L2.' },
+  { type: 'sub', text: '8.3. Zone 3 : queue du pancréas' },
+  { type: 'para', text: 'Elle est surtout associée, dans ce modèle, à la fonction endocrine.' },
+  { type: 'para', text: 'Elle est en contact avec le rein gauche.' },
+  { type: 'para', text: 'Son lien métamérique est rapporté à T9-Th10 gauches.' },
+]
+
+const chapter12Emotion = chapter12Fr.sections.find((section) => section.id === 'relations-viscero-emotionnelles')
+if (chapter12Emotion) chapter12Emotion.blocks = chapter12Emotion.blocks.slice(0, 3)
+
+if (chapter12ReflexSection) chapter12ReflexSection.blocks = [
+  { type: 'note', label: 'Principe de lecture', body: ['Les zones réflexes sont organisées selon quatre niveaux complémentaires. Leur sélection dépend des tests, du contexte clinique et des diagnostics d’exclusion ; elle ne constitue pas un protocole automatique.'] },
+  { type: 'sub', text: '13.1. Niveau 1 — Régulation centrale et adaptation générale' },
+  { type: 'para', text: 'Le Niveau 1 est retenu lorsque le contexte général suggère une charge adaptative importante, une fatigue persistante ou une difficulté de récupération.' },
+  { type: 'bullets', items: ['Système nerveux central et centres supérieurs de régulation.', 'Axe hypothalamo-hypophysaire et réponse au stress.', 'Système limbique selon le contexte clinique.'] },
+  { type: 'xref', label: 'Voir le chapitre 3 — Système nerveux central', href: '/lecture/chapitre-3?lang=fr' },
+  { type: 'xref', label: 'Voir le chapitre 5 — Mécanisme de stress', href: '/lecture/chapitre-5?lang=fr' },
+  { type: 'sub', text: '13.2. Niveau 2 — Régulation neuro-végétative' },
+  { type: 'para', text: 'Le pancréas reçoit une innervation autonome parasympathique et sympathique intégrée aux plexus abdominaux.' },
+  { type: 'bullets', items: ['Nerf vague X : composante parasympathique.', 'Système sympathique thoracique et nerfs splanchniques.', 'Plexus cœliaque et mésentérique supérieur.', 'Diaphragme et passage œsophagien selon les tests.'] },
+  { type: 'xref', label: 'Voir le chapitre 4 — Système nerveux autonome', href: '/lecture/chapitre-4?lang=fr' },
+  { type: 'sub', text: '13.3. Niveau 3 — Régulation viscérale loco-régionale' },
+  { type: 'para', text: 'Le Niveau 3 constitue le cœur anatomique du protocole pancréatique. Il associe les zones propres du pancréas aux relations régionales pertinentes.' },
+  { type: 'para', text: 'La cartographie ROP distingue trois territoires — tête, corps et queue — qui constituent des repères pratiques et non une séparation anatomique stricte des fonctions pancréatiques.' },
+  { type: 'sub', text: 'Repères propres du pancréas' },
+  { type: 'bullets', items: [
+    'Tête du pancréas : face plantaire du pied droit, dans le territoire du cadre duodénal. La grande caroncule et le sphincter d’Oddi sont repérés à la jonction des deux tiers supérieurs et du tiers inférieur de la deuxième portion du duodénum ; la petite caroncule se situe dans son tiers supérieur.',
+    'Queue du pancréas : face plantaire du pied gauche. Repérer d’abord la styloïde du 5e métatarsien, puis l’angle splénique du côlon, situé médialement et légèrement au-dessus de la styloïde. La zone splénique se situe sur ce territoire sous l’hémi-coupole diaphragmatique gauche ; la queue du pancréas est repérée médialement à la rate.',
+    'Corps du pancréas : à partir de la région de la queue, un trajet oblique médialement, caudalement et vers la droite rejoint le bord médial du pied gauche autour des repères L2-L3.',
+  ] },
+  { type: 'figure', src: '/chapter-12/cartographie/figure-12-02.png', caption: 'Photo : Pancréas — tête et col', alt: 'Repère podal de la tête et du col du pancréas', orientation: 'portrait' },
+  { type: 'figure', src: '/chapter-12/cartographie/figure-12-04.png', caption: 'Photo : Pancréas — corps et queue', alt: 'Repère podal du corps et de la queue du pancréas', orientation: 'portrait' },
+  { type: 'rop', body: ['Dans la cartographie ROP, la tête peut être davantage utilisée comme repère de la fonction exocrine et la queue comme repère de la fonction endocrine. Cette distinction constitue un repère pratique de la méthode et non une séparation anatomique stricte des fonctions pancréatiques.'] },
+  { type: 'para', text: 'Le Niveau 3 replace le pancréas dans le carrefour duodéno-bilio-pancréatique et dans ses rapports avec les organes voisins : duodénum et sphincter d’Oddi, foie, voies biliaires, estomac, rate, racine du mésocolon transverse, côlon transverse et rein gauche selon le contexte.' },
+  { type: 'xref', label: 'Voir le chapitre 7 — Socle régional abdominal et péritonéal', href: '/lecture/chapitre-7?lang=fr' },
+  { type: 'xref', label: 'Voir le chapitre 10 — Duodénum', href: '/lecture/chapitre-10?lang=fr' },
+  { type: 'xref', label: 'Voir le chapitre 13 — Rate', href: '/lecture/chapitre-13?lang=fr' },
+  { type: 'sub', text: '13.4. Niveau 4 — Intégration viscéro-somatique et limbique' },
+  { type: 'para', text: 'Intégration viscéro-somatique. Selon les tests, la lecture peut intégrer Th7-Th9, L1-L2, les dernières côtes, la charnière thoraco-lombaire, les piliers du diaphragme, le psoas et la paroi abdominale postérieure. La région scapulaire gauche peut être intégrée lorsque le contexte thoraco-abdominal ou diaphragmatique le rend pertinent.' },
+  { type: 'para', text: 'Chez la personne diabétique, les atteintes des pieds ne sont pas classées ici comme des relations viscéro-somatiques : elles relèvent des complications neurologiques, vasculaires ou cutanées du diabète. L’examen des pieds et la prudence de pression sont donc indispensables.' },
+  { type: 'sub', text: 'Balance cerveau limbique–pancréas' },
+  { type: 'para', text: 'L’écoute-induction associe un repère sur la zone pancréatique et un repère sur la zone du cerveau limbique. Elle est utilisée comme technique d’intégration fonctionnelle dans le cadre de la méthode, notamment lorsque le stress, le vécu émotionnel, les comportements alimentaires ou le contexte métabolique participent au tableau.' },
+  { type: 'xref', label: 'Voir le chapitre 3 — Système nerveux central', href: '/lecture/chapitre-3?lang=fr' },
+  { type: 'xref', label: 'Voir le chapitre 5 — Mécanisme de stress', href: '/lecture/chapitre-5?lang=fr' },
+  { type: 'sub', text: '13.5. Lecture clinique' },
+  { type: 'bullets', items: [
+    'Inconfort digestif fonctionnel : Niveau 2 + pancréas et carrefour duodéno-biliaire au Niveau 3 selon les tests.',
+    'Contexte glycémique connu et suivi médicalement : prudence podale, pancréas au Niveau 3 et régulation générale selon le contexte, sans présenter la ROP comme un traitement du diabète.',
+    'Douleur postérieure ou sous-costale après exclusion médicale : rapports régionaux, diaphragme et versant somatique selon les tests.',
+    'Fatigue durable ou récupération difficile : intégrer le Niveau 1 lorsque le contexte le justifie, sans attribuer automatiquement les symptômes au pancréas.',
+    'Contexte de stress ou de vécu émotionnel associé : balance cerveau limbique–pancréas selon la lecture clinique ROP, sans établir de relation causale entre une émotion et l’organe.',
+  ] },
+  { type: 'note', label: 'Principe de sécurité', body: ['Toute douleur abdominale aiguë ou transfixiante, douleur nocturne inhabituelle, vomissements persistants, ictère, fièvre, amaigrissement inexpliqué, altération de l’état général, trouble glycémique ou lésion du pied nécessite une évaluation médicale.'] },
+]
