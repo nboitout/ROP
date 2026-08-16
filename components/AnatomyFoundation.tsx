@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-import Image from 'next/image'
+import { getImageProps } from 'next/image'
 import Link from 'next/link'
 import { useLanguage } from '@/app/i18n/LanguageContext'
 import type { Lang } from '@/app/i18n/translations'
@@ -12,11 +12,50 @@ import { getSessionId } from '@/lib/session'
 // /assets/anatomie/<lang>/ and add the entry here to switch that locale over.
 const figureFolders: Partial<Record<Lang, string>> = {}
 
-// WebP conversion of "public/assets/Gradient d'impact ROP viscerale.png"
-// (1.9 MB PNG down to 178 KB); the source file stays in the repo unchanged.
-const FIGURE = 'gradient-impact-visceral'
-const FIG_W = 1672
-const FIG_H = 941
+const DESKTOP_FIGURE = {
+  src: '/assets/Gradient -- version desktop.png',
+  width: 1672,
+  height: 941,
+}
+const MOBILE_FIGURE = {
+  src: '/assets/Gradient -- version mobile.png',
+  width: 1122,
+  height: 1402,
+}
+const MOBILE_FIGURE_MEDIA = '(max-width: 640px)'
+
+type ResponsiveFigureProps = {
+  alt: string
+  desktopSrc: string
+  mobileSrc: string
+  sizes: string
+}
+
+function ResponsiveFigure({ alt, desktopSrc, mobileSrc, sizes }: ResponsiveFigureProps) {
+  const { props: desktop } = getImageProps({
+    src: desktopSrc,
+    alt,
+    width: DESKTOP_FIGURE.width,
+    height: DESKTOP_FIGURE.height,
+    sizes,
+    loading: 'lazy',
+  })
+  const { props: mobile } = getImageProps({
+    src: mobileSrc,
+    alt,
+    width: MOBILE_FIGURE.width,
+    height: MOBILE_FIGURE.height,
+    sizes,
+    loading: 'lazy',
+  })
+
+  return (
+    <picture>
+      <source media={MOBILE_FIGURE_MEDIA} srcSet={mobile.srcSet} sizes={mobile.sizes} />
+      <img {...desktop} alt={alt} />
+    </picture>
+  )
+}
 
 /** Full argument, every bridge, the references — French only. */
 export const FOUNDATIONS_HREF = '/fondements-neuro-anatomiques'
@@ -26,7 +65,13 @@ export default function AnatomyFoundation() {
   const a = t.anatomie
   const [zoomed, setZoomed] = useState(false)
 
-  const src = `${figureFolders[lang] ?? '/assets/anatomie'}/${FIGURE}.webp`
+  const figureFolder = figureFolders[lang]
+  const desktopSrc = figureFolder
+    ? `${figureFolder}/gradient-impact-visceral.webp`
+    : DESKTOP_FIGURE.src
+  const mobileSrc = figureFolder
+    ? `${figureFolder}/gradient-impact-visceral.webp`
+    : MOBILE_FIGURE.src
 
   useEffect(() => {
     if (!zoomed) return
@@ -73,13 +118,11 @@ export default function AnatomyFoundation() {
             onClick={() => setZoomed(true)}
             aria-label={`${a.figure.caption} — ${a.zoom}`}
           >
-            <Image
-              src={src}
+            <ResponsiveFigure
               alt={a.figure.alt}
-              width={FIG_W}
-              height={FIG_H}
-              sizes="(max-width:960px) 92vw, 620px"
-              loading="lazy"
+              desktopSrc={desktopSrc}
+              mobileSrc={mobileSrc}
+              sizes="(max-width:640px) 92vw, (max-width:960px) 92vw, 620px"
             />
             <span className="anat-fig-zoom" aria-hidden>⌕</span>
           </button>
@@ -91,7 +134,12 @@ export default function AnatomyFoundation() {
         <div className="anat-lb" role="dialog" aria-modal="true" aria-label={a.figure.caption} onClick={() => setZoomed(false)}>
           <button type="button" className="anat-lb-close" onClick={() => setZoomed(false)} aria-label={a.close}>×</button>
           <figure className="anat-lb-fig" onClick={(e) => e.stopPropagation()}>
-            <Image src={src} alt={a.figure.alt} width={FIG_W} height={FIG_H} sizes="96vw" />
+            <ResponsiveFigure
+              alt={a.figure.alt}
+              desktopSrc={desktopSrc}
+              mobileSrc={mobileSrc}
+              sizes="96vw"
+            />
             <figcaption>{a.figure.caption}</figcaption>
           </figure>
         </div>
