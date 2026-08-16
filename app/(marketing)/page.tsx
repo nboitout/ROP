@@ -353,8 +353,8 @@ export default function HomePage() {
           <p className="pricing-readfirst-sub">{t.pricing.readFirst.sub}</p>
           <Link href="/chapitres-gratuits" className="btn b-gold" style={{ display: 'inline-block' }} onClick={() => trackCta('pricing_readfirst')}>{t.pricing.readFirst.cta}</Link>
         </div>
-        <div className="pg">
-          <div className="pc">
+        <div className="pg pg-2">
+          <div className="pc star" data-badge={t.pricing.recommended}>
             <div className="pc-n">{t.pricing.plan1.name}</div>
             <p className="pc-d">{t.pricing.plan1.desc}</p>
             <div className="pc-a"><span className="pc-c">€</span>{t.pricing.plan1.price}</div>
@@ -362,9 +362,10 @@ export default function HomePage() {
             <ul className="pc-l">
               {t.pricing.plan1.features.map((f) => <li key={f}>{f}</li>)}
             </ul>
-            <a href="#notify" className="btn b-out" style={{ width: '100%', textAlign: 'center' }} onClick={() => trackCta('pricing_notify')}>{t.pricing.plan1.cta}</a>
+            {/* The only plan sold here: the printed edition ships from the publisher. */}
+            <BuyOnlineBookButton className="btn b-gold pc-cta" />
           </div>
-          <div className="pc star" data-badge={t.pricing.recommended}>
+          <div className="pc">
             <div className="pc-n">{t.pricing.plan2.name}</div>
             <p className="pc-d">{t.pricing.plan2.desc}</p>
             <div className="pc-a"><span className="pc-c">€</span>{t.pricing.plan2.price}</div>
@@ -372,18 +373,7 @@ export default function HomePage() {
             <ul className="pc-l">
               {t.pricing.plan2.features.map((f) => <li key={f}>{f}</li>)}
             </ul>
-            {/* The only plan sold here: the printed edition ships from the publisher. */}
-            <BuyOnlineBookButton className="btn b-gold pc-cta" />
-          </div>
-          <div className="pc">
-            <div className="pc-n">{t.pricing.plan3.name}</div>
-            <p className="pc-d">{t.pricing.plan3.desc}</p>
-            <div className="pc-a"><span className="pc-c">€</span>{t.pricing.plan3.price}</div>
-            <div className="pc-s">{t.pricing.plan3.sub}</div>
-            <ul className="pc-l">
-              {t.pricing.plan3.features.map((f) => <li key={f}>{f}</li>)}
-            </ul>
-            <a href="#notify" className="btn b-out" style={{ width: '100%', textAlign: 'center' }} onClick={() => trackCta('pricing_notify')}>{t.pricing.plan3.cta}</a>
+            <a href="#notify" className="btn b-out" style={{ width: '100%', textAlign: 'center' }} onClick={() => trackCta('pricing_notify')}>{t.pricing.plan2.cta}</a>
           </div>
         </div>
 

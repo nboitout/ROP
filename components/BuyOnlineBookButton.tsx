@@ -30,7 +30,7 @@ export default function BuyOnlineBookButton({ className }: { className?: string 
   if (!enabled) {
     return (
       <a href="#notify" className={className} onClick={() => track('pricing_notify')}>
-        {t.pricing.plan2.cta}
+        {t.pricing.plan1.cta}
       </a>
     )
   }
