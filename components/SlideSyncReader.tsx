@@ -15,6 +15,7 @@ import { currentTopAnchorId, saveReadingPosition, loadReadingPosition, restoreTo
 import ReflexZoneAtlas from '@/components/ReflexZoneAtlas'
 import { readerXrefHref } from '@/lib/access'
 import { renderBookReferenceText } from '@/components/BookReferenceText'
+import { applyLocalizedTypography } from '@/lib/frenchTypography'
 
 type SyncSlide = { src: string; title: string; orientation?: 'portrait' }
 type SyncAnchorPoint = { sectionId: string; blockIndex: number; itemIndex?: number }
@@ -1051,7 +1052,7 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, h
                 <span className="ss-section-tick" style={{ width: `${sectionRailTickWidth(index, isActive)}px` }} aria-hidden />
                 <span className="ss-section-card">
                   <span className="ss-section-num">{String(index + 1).padStart(2, '0')}</span>
-                  <span className="ss-section-title">{section.railTitle ?? section.title}</span>
+                  <span className="ss-section-title">{applyLocalizedTypography(section.railTitle ?? section.title, lang)}</span>
                 </span>
               </button>
             )
@@ -1209,7 +1210,7 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, h
         <article ref={articleRef} className="ss-article" data-chapter={chapter.slug}>
           <div className="cr-hero">
             <p className="cr-hero-eyebrow">{t.reader.chapterPrefix} {chapter.number}</p>
-            <h1 className="cr-hero-title">{chapter.title}</h1>
+            <h1 className="cr-hero-title">{applyLocalizedTypography(chapter.title, lang)}</h1>
             <p className="cr-hero-book"><em>{bookTitle}</em></p>
             <p className="cr-hero-author">Guy Boitout</p>
           </div>
@@ -1262,7 +1263,7 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, h
                   ))}
                 </div>
               )}
-              {!isRopInterestSection(section) && <h2 className="cr-h2">{section.title}</h2>}
+              {!isRopInterestSection(section) && <h2 className="cr-h2">{applyLocalizedTypography(section.title, lang)}</h2>}
               {section.blocks.map((b, i) => {
                 const slideList = slidesAtPoint(section.id, i)
                 const endSentinel = renderEndSentinel(section.id, i)
@@ -1466,23 +1467,23 @@ function BlockView({
   const { t, lang } = useLanguage()
   switch (block.type) {
     case 'para':
-      return <p className="cr-p">{renderBookReferenceText(block.text)}</p>
+      return <p className="cr-p">{renderBookReferenceText(block.text, lang)}</p>
     case 'lead':
       return (
         <p className="cr-p cr-lead">
-          <strong className="cr-lead-label">{block.label}{block.text ? ' —' : ''}</strong>
-          {block.text ? <> {renderBookReferenceText(block.text)}</> : ''}
+          <strong className="cr-lead-label">{applyLocalizedTypography(block.label, lang)}{block.text ? ' —' : ''}</strong>
+          {block.text ? <> {renderBookReferenceText(block.text, lang)}</> : ''}
         </p>
       )
     case 'sub':
-      return <h3 className="cr-h3">{block.text}</h3>
+      return <h3 className="cr-h3">{applyLocalizedTypography(block.text, lang)}</h3>
     case 'bullets':
       return (
         <ul className="cr-ul">
           {block.items.map((it, i) => (
             <li key={i} className={hasHalfGapBeforeItem?.(i) ? 'ss-anchor-halfbreak' : undefined}>
               {renderSlideAnchorsForItem?.(i)}
-              {renderBookReferenceText(it)}
+              {renderBookReferenceText(it, lang)}
               {renderEndSentinelForItem?.(i)}
             </li>
           ))}
@@ -1494,7 +1495,7 @@ function BlockView({
           {block.items.map((it, i) => (
             <li key={i} className={hasHalfGapBeforeItem?.(i) ? 'ss-anchor-halfbreak' : undefined}>
               {renderSlideAnchorsForItem?.(i)}
-              {renderBookReferenceText(it)}
+              {renderBookReferenceText(it, lang)}
               {renderEndSentinelForItem?.(i)}
             </li>
           ))}
@@ -1517,8 +1518,8 @@ function BlockView({
               return (
                 <li key={itemIndex} className={hasHalfGapBeforeItem?.(itemIndex) ? 'ss-anchor-halfbreak' : undefined}>
                   {renderSlideAnchorsForItem?.(itemIndex)}
-                  <strong className="cr-lead-label">{it.label}{it.text ? ' —' : ''}</strong>
-                  {it.text ? <> {renderBookReferenceText(it.text)}</> : ''}
+                  <strong className="cr-lead-label">{applyLocalizedTypography(it.label, lang)}{it.text ? ' —' : ''}</strong>
+                  {it.text ? <> {renderBookReferenceText(it.text, lang)}</> : ''}
                   {renderEndSentinelForItem?.(itemIndex)}
                 </li>
               )
@@ -1534,19 +1535,19 @@ function BlockView({
             <table className="cr-table">
               <thead>
                 <tr>
-                  {block.headers.map((header, i) => <th key={i}>{header}</th>)}
+                  {block.headers.map((header, i) => <th key={i}>{applyLocalizedTypography(header, lang)}</th>)}
                 </tr>
               </thead>
               <tbody>
                 {block.rows.map((row, i) => (
                   <tr key={i}>
-                    {block.headers.map((_, j) => <td key={j}>{row[j] ?? ''}</td>)}
+                    {block.headers.map((_, j) => <td key={j}>{applyLocalizedTypography(row[j] ?? '', lang)}</td>)}
                   </tr>
                 ))}
               </tbody>
             </table>
           </div>
-          {block.caption && <figcaption>{block.caption}</figcaption>}
+          {block.caption && <figcaption>{applyLocalizedTypography(block.caption, lang)}</figcaption>}
         </figure>
       )
     case 'figure':
@@ -1568,15 +1569,15 @@ function BlockView({
             <img src={block.src} alt={block.alt} loading={eagerImage ? 'eager' : 'lazy'} />
             <span className="cr-fig-zoom" aria-hidden>⌕</span>
           </button>
-          <figcaption>{block.caption}</figcaption>
+          <figcaption>{applyLocalizedTypography(block.caption, lang)}</figcaption>
         </figure>
       )
     case 'xref':
       return (
         <p className="cr-xref">
           <Link href={readerXrefHref(block.href, sourceChapterKey, restrictPaidXrefs, sourceAnchorId, lang)} className="cr-xref-link">
-            <span className="cr-xref-kicker">{block.label}</span>
-            {block.text && <span className="cr-xref-title">{block.text}</span>}
+            <span className="cr-xref-kicker">{applyLocalizedTypography(block.label, lang)}</span>
+            {block.text && <span className="cr-xref-title">{applyLocalizedTypography(block.text, lang)}</span>}
             <span className="cr-xref-arrow" aria-hidden>→</span>
           </Link>
         </p>
@@ -1584,18 +1585,18 @@ function BlockView({
     case 'note':
       return (
         <aside className="cr-note">
-          <p className="cr-note-title">{block.label}</p>
+          <p className="cr-note-title">{applyLocalizedTypography(block.label, lang)}</p>
           {block.body.map((paragraph, i) => (
             <Fragment key={i}>
               {renderSlideAnchorsForItem?.(i)}
-              <p className="cr-note-p">{renderBookReferenceText(paragraph)}</p>
+              <p className="cr-note-p">{renderBookReferenceText(paragraph, lang)}</p>
             </Fragment>
           ))}
           {renderSlideAnchorsForItem?.(block.body.length)}
         </aside>
       )
     case 'quote':
-      return <blockquote className="cr-message">{renderBookReferenceText(block.text)}</blockquote>
+      return <blockquote className="cr-message">{renderBookReferenceText(block.text, lang)}</blockquote>
     case 'rop':
       return (
         <aside className="cr-rop">
@@ -1605,7 +1606,7 @@ function BlockView({
             return (
               <Fragment key={i}>
                 {renderSlideAnchorsForItem?.(i)}
-                <p className={`cr-rop-p${isBullet ? ' cr-rop-bullet' : ''}`}>{renderBookReferenceText(isBullet ? p.slice(2) : p)}</p>
+                <p className={`cr-rop-p${isBullet ? ' cr-rop-bullet' : ''}`}>{renderBookReferenceText(isBullet ? p.slice(2) : p, lang)}</p>
               </Fragment>
             )
           })}

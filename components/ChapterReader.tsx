@@ -15,6 +15,7 @@ import { useLanguage } from '@/app/i18n/LanguageContext'
 import { getSessionId } from '@/lib/session'
 import { readerXrefHref } from '@/lib/access'
 import { renderBookReferenceText } from '@/components/BookReferenceText'
+import { applyLocalizedTypography } from '@/lib/frenchTypography'
 
 type Props = {
   chapter: Chapter
@@ -315,7 +316,7 @@ export default function ChapterReader({ chapter, bookTitle, backHref = '/chapitr
       <div className="cr-topbar">
         <Link href={backHref} className="cr-home">{t.reader.back}</Link>
         <div className="cr-topbar-title">
-          <span className="cr-chap">{chapter.number ? `${t.reader.chapterPrefix} ${chapter.number}` : chapter.title}</span>
+          <span className="cr-chap">{chapter.number ? `${t.reader.chapterPrefix} ${chapter.number}` : applyLocalizedTypography(chapter.title, contentLang)}</span>
           <span className="cr-sep">·</span>
           <span className="cr-bookname">{bookTitle}</span>
         </div>
@@ -369,14 +370,14 @@ export default function ChapterReader({ chapter, bookTitle, backHref = '/chapitr
             <p className="cr-hero-eyebrow">
               {chapter.number ? `${t.reader.chapterPrefix} ${chapter.number} · ` : ''}{t.reader.chapterComplete}
             </p>
-            <h1 className="cr-hero-title">{chapter.title}</h1>
+            <h1 className="cr-hero-title">{applyLocalizedTypography(chapter.title, contentLang)}</h1>
             <p className="cr-hero-book"><em>{bookTitle}</em></p>
             <p className="cr-hero-author">Guy Boitout</p>
           </div>
 
           {chapter.sections.map((section) => (
             <section key={section.id} id={`sec-${section.id}`} data-section-id={section.id} className="cr-section">
-              {!isRopInterestSection(section) && <h2 className="cr-h2">{section.title}</h2>}
+              {!isRopInterestSection(section) && <h2 className="cr-h2">{applyLocalizedTypography(section.title, contentLang)}</h2>}
               {section.blocks.map((b, i) => (
                 <BlockView
                   key={i}
@@ -590,26 +591,26 @@ function BlockView({
   const anchor = anchorId ? { id: anchorId, 'data-pos-anchor': '' } : {}
   switch (block.type) {
     case 'para':
-      return <p {...anchor} className="cr-p">{renderBookReferenceText(block.text)}</p>
+      return <p {...anchor} className="cr-p">{renderBookReferenceText(block.text, lang)}</p>
     case 'lead':
       return (
         <p {...anchor} className="cr-p cr-lead">
-          <strong className="cr-lead-label">{block.label}{block.text ? ' —' : ''}</strong>
-          {block.text ? <> {renderBookReferenceText(block.text)}</> : ''}
+          <strong className="cr-lead-label">{applyLocalizedTypography(block.label, lang)}{block.text ? ' —' : ''}</strong>
+          {block.text ? <> {renderBookReferenceText(block.text, lang)}</> : ''}
         </p>
       )
     case 'sub':
-      return <h3 {...anchor} className="cr-h3">{block.text}</h3>
+      return <h3 {...anchor} className="cr-h3">{applyLocalizedTypography(block.text, lang)}</h3>
     case 'bullets':
       return (
         <ul {...anchor} className="cr-ul">
-          {block.items.map((it, i) => <li key={i}>{renderBookReferenceText(it)}</li>)}
+          {block.items.map((it, i) => <li key={i}>{renderBookReferenceText(it, lang)}</li>)}
         </ul>
       )
     case 'numbered':
       return (
         <ol {...anchor} className="cr-ol">
-          {block.items.map((it, i) => <li key={i}>{renderBookReferenceText(it)}</li>)}
+          {block.items.map((it, i) => <li key={i}>{renderBookReferenceText(it, lang)}</li>)}
         </ol>
       )
     case 'leadBullets':
@@ -617,8 +618,8 @@ function BlockView({
         <ul {...anchor} className="cr-ul cr-ul-lead">
           {block.items.map((it, i) => (
             <li key={i}>
-              <strong className="cr-lead-label">{it.label}{it.text ? ' —' : ''}</strong>
-              {it.text ? <> {renderBookReferenceText(it.text)}</> : ''}
+              <strong className="cr-lead-label">{applyLocalizedTypography(it.label, lang)}{it.text ? ' —' : ''}</strong>
+              {it.text ? <> {renderBookReferenceText(it.text, lang)}</> : ''}
             </li>
           ))}
         </ul>
@@ -630,19 +631,19 @@ function BlockView({
             <table className="cr-table">
               <thead>
                 <tr>
-                  {block.headers.map((header, i) => <th key={i}>{header}</th>)}
+                  {block.headers.map((header, i) => <th key={i}>{applyLocalizedTypography(header, lang)}</th>)}
                 </tr>
               </thead>
               <tbody>
                 {block.rows.map((row, i) => (
                   <tr key={i}>
-                    {block.headers.map((_, j) => <td key={j}>{row[j] ?? ''}</td>)}
+                    {block.headers.map((_, j) => <td key={j}>{applyLocalizedTypography(row[j] ?? '', lang)}</td>)}
                   </tr>
                 ))}
               </tbody>
             </table>
           </div>
-          {block.caption && <figcaption>{block.caption}</figcaption>}
+          {block.caption && <figcaption>{applyLocalizedTypography(block.caption, lang)}</figcaption>}
         </figure>
       )
     case 'figure':
@@ -662,15 +663,15 @@ function BlockView({
             <img src={block.src} alt={block.alt} loading="lazy" />
             <span className="cr-fig-zoom" aria-hidden>⌕</span>
           </button>
-          <figcaption>{block.caption}</figcaption>
+          <figcaption>{applyLocalizedTypography(block.caption, lang)}</figcaption>
         </figure>
       )
     case 'xref':
       return (
         <p {...anchor} className="cr-xref">
           <Link href={readerXrefHref(block.href, sourceChapterKey, restrictPaidXrefs, anchorId, lang)} className="cr-xref-link">
-            <span className="cr-xref-kicker">{block.label}</span>
-            {block.text && <span className="cr-xref-title">{block.text}</span>}
+            <span className="cr-xref-kicker">{applyLocalizedTypography(block.label, lang)}</span>
+            {block.text && <span className="cr-xref-title">{applyLocalizedTypography(block.text, lang)}</span>}
             <span className="cr-xref-arrow" aria-hidden>→</span>
           </Link>
         </p>
@@ -678,21 +679,21 @@ function BlockView({
     case 'note':
       return (
         <aside {...anchor} className="cr-note">
-          <p className="cr-note-title">{block.label}</p>
+          <p className="cr-note-title">{applyLocalizedTypography(block.label, lang)}</p>
           {block.body.map((paragraph, i) => (
-            <p key={i} className="cr-note-p">{renderBookReferenceText(paragraph)}</p>
+            <p key={i} className="cr-note-p">{renderBookReferenceText(paragraph, lang)}</p>
           ))}
         </aside>
       )
     case 'quote':
-      return <blockquote {...anchor} className="cr-message">{renderBookReferenceText(block.text)}</blockquote>
+      return <blockquote {...anchor} className="cr-message">{renderBookReferenceText(block.text, lang)}</blockquote>
     case 'rop':
       return (
         <aside {...anchor} className="cr-rop">
           <p className="cr-rop-title">{t.reader.ropTitle}</p>
           {block.body.map((p, i) => {
             const isBullet = p.startsWith('• ')
-            return <p key={i} className={`cr-rop-p${isBullet ? ' cr-rop-bullet' : ''}`}>{renderBookReferenceText(isBullet ? p.slice(2) : p)}</p>
+            return <p key={i} className={`cr-rop-p${isBullet ? ' cr-rop-bullet' : ''}`}>{renderBookReferenceText(isBullet ? p.slice(2) : p, lang)}</p>
           })}
         </aside>
       )
