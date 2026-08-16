@@ -3,6 +3,7 @@ export type Lang = 'fr' | 'en' | 'de' | 'es' | 'it' | 'th'
 const fr = {
   chapterFallbackNotice: 'Ce chapitre n’est pas encore disponible dans votre langue — la version française est affichée.',
   nav: {
+    equipe: "L'équipe",
     genese: 'Genèse',
     sommaire: 'Sommaire',
     protocole: 'Protocole',
@@ -419,6 +420,7 @@ const fr = {
 const en: typeof fr = {
   chapterFallbackNotice: 'This chapter is not yet available in your language — showing the French version.',
   nav: {
+    equipe: 'Team',
     genese: 'Genesis',
     sommaire: 'Contents',
     protocole: 'Protocol',
@@ -836,6 +838,7 @@ const th: typeof fr = {
   ...en,
   chapterFallbackNotice: 'บทนี้ยังไม่มีในภาษาของคุณ — กำลังแสดงฉบับภาษาฝรั่งเศส',
   nav: {
+    equipe: 'ทีมงาน',
     genese: 'จุดกำเนิด',
     sommaire: 'สารบัญ',
     protocole: 'โปรโตคอล',
@@ -1200,6 +1203,7 @@ const th: typeof fr = {
 const de: typeof fr = {
   chapterFallbackNotice: 'Dieses Kapitel ist noch nicht in Ihrer Sprache verfügbar — die französische Fassung wird angezeigt.',
   nav: {
+    equipe: 'Team',
     genese: 'Entstehung',
     sommaire: 'Inhalt',
     protocole: 'Protokoll',
@@ -1616,6 +1620,7 @@ const de: typeof fr = {
 const es: typeof fr = {
   chapterFallbackNotice: 'Este capítulo aún no está disponible en su idioma — se muestra la versión francesa.',
   nav: {
+    equipe: 'Equipo',
     genese: 'Génesis',
     sommaire: 'Contenido',
     protocole: 'Protocolo',
@@ -2032,6 +2037,7 @@ const es: typeof fr = {
 const it: typeof fr = {
   chapterFallbackNotice: 'Questo capitolo non è ancora disponibile nella tua lingua — viene mostrata la versione francese.',
   nav: {
+    equipe: 'Team',
     genese: 'Genesi',
     sommaire: 'Contenuti',
     protocole: 'Protocollo',
