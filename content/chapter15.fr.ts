@@ -1044,8 +1044,8 @@ chapter15Reflex.blocks = [
   { type: 'note', label: 'Principe de sécurité', body: ['Tout saignement, modification récente et persistante du transit, amaigrissement, fièvre, anémie ou douleur inhabituelle impose une évaluation médicale adaptée.'] },
 ]
 
-// The refreshed Chapter 15 media set contains three cartographies (shown in
-// the synchronized slide panel) and three photos (kept alongside the text).
+// The refreshed Chapter 15 media set contains five cartographies (shown in
+// the synchronized slide panel) and five paired photos (kept alongside the text).
 // Remove references to the superseded set before inserting the usable photos.
 chapter15Reflex.blocks = chapter15Reflex.blocks.filter((block) => block.type !== 'figure')
 
@@ -1055,13 +1055,24 @@ const colonDroitHeading = chapter15Reflex.blocks.findIndex(
 const colonDroitBullets = chapter15Reflex.blocks.findIndex(
   (block, index) => index > colonDroitHeading && block.type === 'bullets',
 )
-chapter15Reflex.blocks.splice(colonDroitBullets + 1, 0, {
-  type: 'figure',
-  src: '/chapter-15/cartographie/figure-15-06.png',
-  caption: 'Photo : Valvule iléo-cæcale',
-  alt: 'Repère podal de la valvule iléo-cæcale',
-  orientation: 'portrait',
-})
+chapter15Reflex.blocks.splice(
+  colonDroitBullets + 1,
+  0,
+  {
+    type: 'figure',
+    src: '/chapter-15/cartographie/figure-15-02.png',
+    caption: 'Photo : Côlon ascendant et côlon transverse',
+    alt: 'Geste podal pour le côlon ascendant et le côlon transverse',
+    orientation: 'portrait',
+  },
+  {
+    type: 'figure',
+    src: '/chapter-15/cartographie/figure-15-04.png',
+    caption: 'Photo : Valvule iléo-cæcale',
+    alt: 'Repère podal de la valvule iléo-cæcale',
+    orientation: 'portrait',
+  },
+)
 
 const colonTransverseHeading = chapter15Reflex.blocks.findIndex(
   (block) => block.type === 'sub' && block.text.startsWith('13.4.2. Côlon transverse'),
@@ -1077,19 +1088,33 @@ chapter15Reflex.blocks.splice(
   0,
   {
     type: 'figure',
-    src: '/chapter-15/cartographie/figure-15-08.png',
+    src: '/chapter-15/cartographie/figure-15-06.png',
     caption: 'Photo : Racine du mésocôlon transverse — premier segment',
     alt: 'Repère podal du premier segment de la racine du mésocôlon transverse',
     orientation: 'portrait',
   },
   {
     type: 'figure',
-    src: '/chapter-15/cartographie/figure-15-10.png',
+    src: '/chapter-15/cartographie/figure-15-08.png',
     caption: 'Photo : Racine du mésocôlon transverse — second segment',
     alt: 'Repère podal du second segment de la racine du mésocôlon transverse',
     orientation: 'landscape',
   },
 )
+
+const colonGaucheHeading = chapter15Reflex.blocks.findIndex(
+  (block) => block.type === 'sub' && block.text.startsWith('13.4.3. Côlon gauche'),
+)
+const colonGaucheBullets = chapter15Reflex.blocks.findIndex(
+  (block, index) => index > colonGaucheHeading && block.type === 'bullets',
+)
+chapter15Reflex.blocks.splice(colonGaucheBullets + 1, 0, {
+  type: 'figure',
+  src: '/chapter-15/cartographie/figure-15-10.png',
+  caption: 'Photo : Racines du mésosigmoïde',
+  alt: 'Repère podal des racines du mésosigmoïde entre les deux index',
+  orientation: 'landscape',
+})
 
 // Final publication revision.
 function chapter15InsertAfter(sectionId: string, heading: string, text: string) {

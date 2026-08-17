@@ -41,9 +41,11 @@ export const chapter15Slides: SyncSlide[] = [
   { src: '/chapter-15/slides/pathologies/slide-12.png', title: 'Distinguer les grands types de colopathies' },
   { src: '/chapter-15/slides/pathologies/slide-13.png', title: 'Le cercle vicieux de la colopathie fonctionnelle' },
   { src: '/chapter-15/slides/slide-15.png', title: 'Relations viscéro-somatiques du côlon' },
-  { src: '/chapter-15/cartographie/figure-15-01.png', title: 'Cartographie : côlon ascendant et côlon transverse' },
-  { src: '/chapter-15/cartographie/figure-15-03.png', title: 'Cartographie : côlon transverse et côlon descendant' },
-  { src: '/chapter-15/cartographie/figure-15-11.png', title: 'Cartographie : rectum, anus et mésosigmoïde' },
+  { src: '/chapter-15/cartographie/figure-15-03.png', title: 'Cartographie : côlon ascendant et côlon transverse' },
+  { src: '/chapter-15/cartographie/figure-15-05.png', title: 'Cartographie : racine du mésocôlon transverse — premier segment' },
+  { src: '/chapter-15/cartographie/figure-15-07.png', title: 'Cartographie : racine du mésocôlon transverse — second segment' },
+  { src: '/chapter-15/cartographie/figure-15-01.png', title: 'Cartographie : côlon transverse et côlon descendant' },
+  { src: '/chapter-15/cartographie/figure-15-09.png', title: 'Cartographie : rectum, anus et mésosigmoïde' },
 ]
 
 // English deck - rendered from the dedicated English synthesis slides
@@ -113,9 +115,11 @@ export const chapter15SlideAnchors: SyncAnchor[] = [
   { sectionId: 'relations-viscero-somatiques', blockIndex: 0, slide: 28 },
   // Reflex-zone indices are updated below after the refreshed text media is
   // inserted. Each standalone cartography receives a tight display interval.
-  { sectionId: 'zones-reflexes-podales', blockIndex: 22, slide: 29, end: { sectionId: 'zones-reflexes-podales', blockIndex: 23 } },
-  { sectionId: 'zones-reflexes-podales', blockIndex: 25, slide: 30, end: { sectionId: 'zones-reflexes-podales', blockIndex: 27 } },
-  { sectionId: 'zones-reflexes-podales', blockIndex: 33, slide: 31, end: { sectionId: 'zones-reflexes-podales', blockIndex: 35 } },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 19, slide: 29, end: { sectionId: 'zones-reflexes-podales', blockIndex: 24 } },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 24, slide: 30, end: { sectionId: 'zones-reflexes-podales', blockIndex: 27 } },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 27, slide: 31, end: { sectionId: 'zones-reflexes-podales', blockIndex: 29 } },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 29, slide: 32, end: { sectionId: 'zones-reflexes-podales', blockIndex: 33 } },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 33, slide: 33, end: { sectionId: 'zones-reflexes-podales', blockIndex: 36 } },
 ]
 
 const chapter15SlideAnchorsEnBySource: SyncAnchor[] = [
