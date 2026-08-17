@@ -1218,6 +1218,30 @@ insertChapter19PhotosAfterBullets('3.1.3. Niveau 3', [
   { type: 'figure', src: '/chapter-19/cartographie/figure-19-18.png', caption: 'Photo : noyau fibreux central du périnée et fente uro-génitale', alt: 'Repère podal du noyau fibreux central du périnée et de la fente uro-génitale', orientation: 'landscape' },
 ])
 
+const uterusLevel3HeadingIndex = revisedReflexSection.blocks.findIndex(
+  (block) => block.type === 'sub' && block.text.startsWith('3.1.3. Niveau 3'),
+)
+const uterusLevel3BulletsIndex = revisedReflexSection.blocks.findIndex(
+  (block, index) => index > uterusLevel3HeadingIndex && block.type === 'bullets',
+)
+if (uterusLevel3BulletsIndex >= 0) {
+  revisedReflexSection.blocks.splice(uterusLevel3BulletsIndex + 1, 0, {
+    type: 'figurePair',
+    figures: [
+      {
+        src: '/chapter-19/cartographie/Chapter19 Cartographie et Photos -1.png',
+        caption: 'Cartographie : trigone de la vessie, région cervico-isthmique de l’utérus et plexus hypogastrique inférieur',
+        alt: 'Vue sagittale médiale de la cartographie pelvienne et de ses repères podaux',
+      },
+      {
+        src: '/chapter-19/cartographie/Chapter19 Cartographie et Photos - 2.png',
+        caption: 'Photo : repère podal du trigone, de la région cervico-isthmique et du plexus hypogastrique inférieur',
+        alt: 'Technique podale pour le trigone, la région cervico-isthmique et le plexus hypogastrique inférieur',
+      },
+    ],
+  })
+}
+
 // Keep the uterine viscerosomatic relations from the revised Word source as a
 // final publication override. Chapter 19 is rebuilt in several passes above;
 // declaring this block last prevents that short standalone section from being

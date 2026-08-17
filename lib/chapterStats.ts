@@ -117,6 +117,7 @@ function wordsInBlock(block: Block): number {
     case 'xref':
       return countWords(block.label) + countWords(block.text ?? '')
     case 'figure':
+    case 'figurePair':
     case 'reflexAtlas':
       return 0
   }
@@ -148,6 +149,7 @@ function blockParagraphTexts(block: Block): string[] {
     case 'xref':
       return [`${block.label} ${block.text ?? ''}`.trim()]
     case 'figure':
+    case 'figurePair':
     case 'reflexAtlas':
       return []
   }
@@ -155,6 +157,7 @@ function blockParagraphTexts(block: Block): string[] {
 
 function blockSearchText(block: Block): string {
   if (block.type === 'figure') return `${block.caption} ${block.alt}`
+  if (block.type === 'figurePair') return block.figures.map((figure) => `${figure.caption} ${figure.alt}`).join(' ')
   if (block.type === 'reflexAtlas') return ''
   return blockParagraphTexts(block).join(' ')
 }
@@ -167,6 +170,7 @@ export function chapterStats(chapter: Chapter): { readingMinutes: number; figure
     wordCount += countWords(section.title)
     for (const block of section.blocks) {
       if (block.type === 'figure') figureCount++
+      else if (block.type === 'figurePair') figureCount += block.figures.length
       else wordCount += wordsInBlock(block)
     }
   }

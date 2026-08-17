@@ -7,6 +7,7 @@ export type Block =
   | { type: 'leadBullets'; items: { label: string; text: string }[] }
   | { type: 'table'; headers: string[]; rows: string[][]; caption?: string }
   | { type: 'figure'; src: string; caption: string; alt: string; orientation: 'landscape' | 'portrait' | 'medium' | 'narrow'; syncHide?: true }
+  | { type: 'figurePair'; figures: { src: string; caption: string; alt: string }[] }
   | { type: 'xref'; label: string; href: string; text?: string }
   | { type: 'note'; label: string; body: string[] }
   | { type: 'quote'; text: string }

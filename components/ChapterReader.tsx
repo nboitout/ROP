@@ -666,6 +666,25 @@ function BlockView({
           <figcaption>{applyLocalizedTypography(block.caption, lang)}</figcaption>
         </figure>
       )
+    case 'figurePair':
+      return (
+        <div {...anchor} className="cr-figure-pair">
+          {block.figures.map((figure) => (
+            <figure key={figure.src} className="cr-fig cr-fig-landscape">
+              <button
+                type="button"
+                className="cr-fig-btn"
+                onClick={() => onOpenImage({ src: figure.src, alt: figure.alt, caption: figure.caption, orientation: 'landscape' })}
+                aria-label={`Agrandir : ${figure.caption}`}
+              >
+                <img src={figure.src} alt={figure.alt} loading="lazy" />
+                <span className="cr-fig-zoom" aria-hidden>⌕</span>
+              </button>
+              <figcaption>{applyLocalizedTypography(figure.caption, lang)}</figcaption>
+            </figure>
+          ))}
+        </div>
+      )
     case 'xref':
       return (
         <p {...anchor} className="cr-xref">

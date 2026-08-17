@@ -224,6 +224,7 @@ function blockShortcutText(block: Block) {
   if (block.type === 'leadBullets') return block.items.map((item) => `${item.label} ${item.text}`).join(' ')
   if (block.type === 'table') return `${block.caption ?? ''} ${block.headers.join(' ')} ${block.rows.flat().join(' ')}`
   if (block.type === 'figure') return `${block.caption} ${block.alt}`
+  if (block.type === 'figurePair') return block.figures.map((figure) => `${figure.caption} ${figure.alt}`).join(' ')
   if (block.type === 'xref') return `${block.label} ${block.text ?? ''}`
   if (block.type === 'rop') return block.body.join(' ')
   return ''
@@ -1571,6 +1572,25 @@ function BlockView({
           </button>
           <figcaption>{applyLocalizedTypography(block.caption, lang)}</figcaption>
         </figure>
+      )
+    case 'figurePair':
+      return (
+        <div className="cr-figure-pair ss-figure-pair">
+          {block.figures.map((figure) => (
+            <figure key={figure.src} className="cr-fig cr-fig-landscape ss-fig">
+              <button
+                type="button"
+                className="cr-fig-btn"
+                onClick={() => onOpenImage({ src: figure.src, alt: figure.alt, caption: figure.caption, orientation: 'landscape', kind: 'figure' })}
+                aria-label={ui.enlargeFigure(figure.caption)}
+              >
+                <img src={figure.src} alt={figure.alt} loading={eagerImage ? 'eager' : 'lazy'} />
+                <span className="cr-fig-zoom" aria-hidden>⌕</span>
+              </button>
+              <figcaption>{applyLocalizedTypography(figure.caption, lang)}</figcaption>
+            </figure>
+          ))}
+        </div>
       )
     case 'xref':
       return (

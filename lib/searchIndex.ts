@@ -110,6 +110,7 @@ function blockText(block: Block): string {
     case 'rop':
       return block.body.join(' ')
     case 'figure':
+    case 'figurePair':
     case 'reflexAtlas':
       return ''
   }
