@@ -9,7 +9,7 @@ import { translations } from '@/app/i18n/translations'
 import type { Lang } from '@/app/i18n/translations'
 import {
   chapter15Slides, chapter15SlidesEn, chapter15SlidesDe, chapter15SlidesEs, chapter15SlidesIt,
-  chapter15SlideAnchors, chapter15SlideAnchorsEn,
+  chapter15HalfBreaks, chapter15SlideAnchors, chapter15SlideAnchorsEn,
 } from '@/content/chapter15.slidesync'
 
 const DECKS: Record<Lang, typeof chapter15Slides> = {
@@ -34,11 +34,11 @@ const ANCHORS: Record<Lang, typeof chapter15SlideAnchors> = {
 }
 
 const HIDDEN_DOT_SLIDES: Record<Lang, number[]> = {
-  fr: [29, 30, 31, 32, 33, 34, 35, 36],
+  fr: [29, 30, 31, 32, 33],
   en: [16, 17],
-  de: [29, 30, 31, 32, 33, 34, 35, 36],
-  es: [29, 30, 31, 32, 33, 34, 35, 36],
-  it: [29, 30, 31, 32, 33, 34, 35, 36],
+  de: [29, 30, 31, 32, 33],
+  es: [29, 30, 31, 32, 33],
+  it: [29, 30, 31, 32, 33],
   th: [16, 17],
 }
 
@@ -68,6 +68,7 @@ export default async function Chapitre15LecturePage({
       bookTitle={translations[lang].reader.bookTitle}
       slides={DECKS[lang]}
       anchors={ANCHORS[lang]}
+      halfBreaks={chapter15HalfBreaks}
       backHref="/chapitres-gratuits"
       classicHref={`/chapitre-15?lang=${lang}`}
       hiddenDotSlides={HIDDEN_DOT_SLIDES[lang]}

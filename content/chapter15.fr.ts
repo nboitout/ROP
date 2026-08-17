@@ -1044,9 +1044,9 @@ chapter15Reflex.blocks = [
   { type: 'note', label: 'Principe de sécurité', body: ['Tout saignement, modification récente et persistante du transit, amaigrissement, fièvre, anémie ou douleur inhabituelle impose une évaluation médicale adaptée.'] },
 ]
 
-// Keep every cartography immediately followed by its matching treatment photo.
-// These five inseparable pairs live in the reflex-zones text, not in the
-// synchronized slide panel.
+// Build the five source pairs at their relevant reflex-zone passages. The
+// cartographies are moved to the synchronized panel below; their matching
+// treatment photos remain in the text column at the same anchor points.
 chapter15Reflex.blocks = chapter15Reflex.blocks.filter((block) => block.type !== 'figure')
 
 const reperesHeading = chapter15Reflex.blocks.findIndex(
@@ -1165,6 +1165,14 @@ chapter15Reflex.blocks.splice(
     orientation: 'landscape',
   },
 )
+
+// Odd-numbered assets are cartographies rendered in the synchronized panel;
+// even-numbered assets are the paired photos retained in the text.
+chapter15Reflex.blocks = chapter15Reflex.blocks.filter((block) => {
+  if (block.type !== 'figure') return true
+  const match = block.src.match(/figure-15-(\d{2})\.png$/)
+  return !match || Number(match[1]) % 2 === 0
+})
 
 // Final publication revision.
 function chapter15InsertAfter(sectionId: string, heading: string, text: string) {
