@@ -1044,10 +1044,35 @@ chapter15Reflex.blocks = [
   { type: 'note', label: 'Principe de sécurité', body: ['Tout saignement, modification récente et persistante du transit, amaigrissement, fièvre, anémie ou douleur inhabituelle impose une évaluation médicale adaptée.'] },
 ]
 
-// The refreshed Chapter 15 media set contains five cartographies (shown in
-// the synchronized slide panel) and five paired photos (kept alongside the text).
-// Remove references to the superseded set before inserting the usable photos.
+// Keep every cartography immediately followed by its matching treatment photo.
+// These five inseparable pairs live in the reflex-zones text, not in the
+// synchronized slide panel.
 chapter15Reflex.blocks = chapter15Reflex.blocks.filter((block) => block.type !== 'figure')
+
+const reperesHeading = chapter15Reflex.blocks.findIndex(
+  (block) => block.type === 'sub' && block.text.startsWith('13.1. Repères propres'),
+)
+const reperesBullets = chapter15Reflex.blocks.findIndex(
+  (block, index) => index > reperesHeading && block.type === 'bullets',
+)
+chapter15Reflex.blocks.splice(
+  reperesBullets + 1,
+  0,
+  {
+    type: 'figure',
+    src: '/chapter-15/cartographie/figure-15-01.png',
+    caption: 'Cartographie : Côlon transverse et côlon descendant',
+    alt: 'Cartographie podale du côlon transverse et du côlon descendant',
+    orientation: 'landscape',
+  },
+  {
+    type: 'figure',
+    src: '/chapter-15/cartographie/figure-15-02.png',
+    caption: 'Photo : Côlon ascendant et côlon transverse',
+    alt: 'Geste podal pour le côlon ascendant et le côlon transverse',
+    orientation: 'portrait',
+  },
+)
 
 const colonDroitHeading = chapter15Reflex.blocks.findIndex(
   (block) => block.type === 'sub' && block.text.startsWith('13.4.1. Côlon droit'),
@@ -1060,10 +1085,10 @@ chapter15Reflex.blocks.splice(
   0,
   {
     type: 'figure',
-    src: '/chapter-15/cartographie/figure-15-02.png',
-    caption: 'Photo : Côlon ascendant et côlon transverse',
-    alt: 'Geste podal pour le côlon ascendant et le côlon transverse',
-    orientation: 'portrait',
+    src: '/chapter-15/cartographie/figure-15-03.png',
+    caption: 'Cartographie : Valvule iléo-cæcale, côlon ascendant et côlon transverse',
+    alt: 'Cartographie podale de la valvule iléo-cæcale, du côlon ascendant et du côlon transverse',
+    orientation: 'landscape',
   },
   {
     type: 'figure',
@@ -1088,10 +1113,24 @@ chapter15Reflex.blocks.splice(
   0,
   {
     type: 'figure',
+    src: '/chapter-15/cartographie/figure-15-05.png',
+    caption: 'Cartographie : Racine du mésocôlon transverse entre le deuxième duodénum et L2',
+    alt: 'Cartographie podale du premier segment de la racine du mésocôlon transverse',
+    orientation: 'landscape',
+  },
+  {
+    type: 'figure',
     src: '/chapter-15/cartographie/figure-15-06.png',
     caption: 'Photo : Racine du mésocôlon transverse — premier segment',
     alt: 'Repère podal du premier segment de la racine du mésocôlon transverse',
     orientation: 'portrait',
+  },
+  {
+    type: 'figure',
+    src: '/chapter-15/cartographie/figure-15-07.png',
+    caption: 'Cartographie : Racine du mésocôlon transverse entre L2 et le corps du pancréas',
+    alt: 'Cartographie podale du second segment de la racine du mésocôlon transverse',
+    orientation: 'landscape',
   },
   {
     type: 'figure',
@@ -1108,13 +1147,24 @@ const colonGaucheHeading = chapter15Reflex.blocks.findIndex(
 const colonGaucheBullets = chapter15Reflex.blocks.findIndex(
   (block, index) => index > colonGaucheHeading && block.type === 'bullets',
 )
-chapter15Reflex.blocks.splice(colonGaucheBullets + 1, 0, {
-  type: 'figure',
-  src: '/chapter-15/cartographie/figure-15-10.png',
-  caption: 'Photo : Racines du mésosigmoïde',
-  alt: 'Repère podal des racines du mésosigmoïde entre les deux index',
-  orientation: 'landscape',
-})
+chapter15Reflex.blocks.splice(
+  colonGaucheBullets + 1,
+  0,
+  {
+    type: 'figure',
+    src: '/chapter-15/cartographie/figure-15-09.png',
+    caption: 'Cartographie : Rectum, anus et mésosigmoïde',
+    alt: 'Cartographie podale du rectum, de l’anus et du mésosigmoïde',
+    orientation: 'landscape',
+  },
+  {
+    type: 'figure',
+    src: '/chapter-15/cartographie/figure-15-10.png',
+    caption: 'Photo : Racines du mésosigmoïde',
+    alt: 'Repère podal des racines du mésosigmoïde entre les deux index',
+    orientation: 'landscape',
+  },
+)
 
 // Final publication revision.
 function chapter15InsertAfter(sectionId: string, heading: string, text: string) {

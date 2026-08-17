@@ -30,7 +30,7 @@ export const chapterMetaSnapshot: Record<string, ChapterMetaSnapshot> = {
   'chapter-12': { readingMinutes: 23, photoCount: 2, slideCount: 13, cartographyCount: 3, visualCount: 18 },
   'chapter-13': { readingMinutes: 17, photoCount: 2, slideCount: 18, cartographyCount: 3, visualCount: 23 },
   'chapter-14': { readingMinutes: 23, photoCount: 9, slideCount: 23, cartographyCount: 0, visualCount: 32 },
-  'chapter-15': { readingMinutes: 36, photoCount: 5, slideCount: 28, cartographyCount: 5, visualCount: 38 },
+  'chapter-15': { readingMinutes: 36, photoCount: 10, slideCount: 28, cartographyCount: 0, visualCount: 38 },
   'chapter-16': { readingMinutes: 32, photoCount: 5, slideCount: 22, cartographyCount: 6, visualCount: 33 },
   'chapter-17': { readingMinutes: 29, photoCount: 6, slideCount: 18, cartographyCount: 7, visualCount: 31 },
   'chapter-18': { readingMinutes: 23, photoCount: 7, slideCount: 21, cartographyCount: 9, visualCount: 37 },
@@ -42,8 +42,8 @@ export const chapterMetaSnapshot: Record<string, ChapterMetaSnapshot> = {
 export const bookVisualTotals = {
   chapterCount: 22,
   readingMinutes: 552,
-  photoCount: 128,
+  photoCount: 133,
   slideCount: 391,
-  cartographyCount: 124,
+  cartographyCount: 119,
   visualCount: 643,
 }
