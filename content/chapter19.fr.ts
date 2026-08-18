@@ -1,6 +1,6 @@
 import type { Chapter } from './types'
 
-// Source: public/chapter-19/Chapitre_19_Organes_genitaux_feminins_version_publiable.docx
+// Source: public/chapter-19/Chapitre_19_Organes_genitaux_feminins_version_finale_publiable.docx
 // Figure-number mentions are intentionally omitted from the web prose.
 export const chapter19Fr: Chapter = {
   "slug": "chapter-19",
@@ -1259,4 +1259,124 @@ uterusViscerosomaticSection.blocks = [
       'Membre inférieur, pied.',
     ],
   },
+]
+
+// Final publication revisions from the latest Chapter 19 Word source.
+const chapter19UterusAnatomy = chapter19Fr.sections.find((section) => section.id === 'uterus-anatomie')!
+chapter19UterusAnatomy.blocks = chapter19UterusAnatomy.blocks.filter(
+  (block) => !(block.type === 'sub' && block.text === '1.3.6. Vagin'),
+)
+
+chapter19Fr.sections.find((section) => section.id === 'uterus-relations-viscero-emotionnelles')!.blocks = [
+  { type: 'para', text: 'La sphère génitale féminine s’inscrit dans une régulation complexe associant fonctions neuroendocrines, système nerveux autonome, perception corporelle, douleur et contexte émotionnel. Le stress, l’anxiété, les conflits affectifs ou les périodes de forte vulnérabilité peuvent, chez certaines femmes, modifier la perception des symptômes, la sexualité, le sommeil, le cycle ou le vécu de la douleur, sans constituer à eux seuls une cause spécifique d’un trouble gynécologique.' },
+  { type: 'para', text: 'Les antécédents de violences sexuelles, d’inceste ou d’attouchements peuvent avoir des conséquences psychotraumatiques durables et retentir sur le rapport au corps, la sexualité, la douleur pelvienne et la relation de soin. Leur prise en charge nécessite une écoute adaptée et, lorsque cela est indiqué, l’accompagnement de professionnels formés. La présence d’un symptôme gynécologique ne permet toutefois pas de déduire une histoire traumatique particulière.' },
+  { type: 'para', text: 'En pratique, dysménorrhées, aménorrhées, dyspareunies, difficultés sexuelles ou troubles de la fertilité doivent conserver une lecture médicale et multifactorielle. Le contexte émotionnel peut être pris en compte comme un facteur de modulation ou d’entretien possible des symptômes fonctionnels, jamais comme une explication unique ni comme un substitut au diagnostic médical.' },
+]
+
+const chapter19Physiology = chapter19Fr.sections.find((section) => section.id === 'ovaires-trompes-physiologie')!
+chapter19Physiology.blocks.splice(1, 2,
+  { type: 'bullets', items: [
+    'Des mouvements de l’utérus auquel l’ovaire est relié par le ligament large.',
+    'De facteurs digestifs : l’ovaire peut être perturbé dans sa mobilité par des facteurs spasmodiques, congestifs ou chirurgicaux des organes de l’abdomen.',
+  ] },
+  { type: 'sub', text: '2.7.2. Mobilité active' },
+  { type: 'bullets', items: ['De facteurs hormonaux en fonction du cycle menstruel ou du stress.'] },
+)
+
+const chapter19Indications = chapter19Fr.sections.find((section) => section.id === 'ovaires-trompes-indications')!
+const painfulPeriodsIndex = chapter19Indications.blocks.findIndex((block) => block.type === 'sub' && block.text.startsWith('2.9.2.'))
+chapter19Indications.blocks.splice(painfulPeriodsIndex + 1, 0, {
+  type: 'para',
+  text: 'Les dysménorrhées sont décrites à la section 2.8.1 « Douleurs pelviennes », qui distingue notamment les formes obstructives et congestives. La lecture ROP est adaptée au tableau clinique et aux quatre niveaux du protocole décrits dans la section 3.',
+})
+for (const block of chapter19Indications.blocks) if (block.type === 'bullets') {
+  block.items = block.items.map((item) => item.replace('foie rein gauche', 'foie, rein gauche'))
+}
+
+chapter19Fr.sections.find((section) => section.id === 'ovaires-trompes-relations-viscero-somatiques')!.blocks = [
+  { type: 'bullets', items: [
+    'Charnière thoraco-lombaire, avec un repère particulièrement retenu autour de Th10 dans la cartographie ROP.',
+    'Région lombo-sacrée, notamment L5 et le sacrum.',
+    'Bassin, plancher pelvien et muscles pelvi-trochantériens selon les tensions et les douleurs associées.',
+    'Territoires douloureux associés : région pelvienne, lombaire, inguinale ou membre inférieur selon le contexte clinique.',
+  ] },
+]
+
+chapter19Fr.sections.find((section) => section.id === 'ovaires-trompes-relations-viscero-emotionnelles')!.blocks = [
+  { type: 'para', text: 'Les fonctions génitales féminines sont intimement liées à la sexualité, à la fertilité, au vécu corporel et aux grandes étapes de la vie reproductive. Ces dimensions peuvent avoir une portée affective et symbolique importante.' },
+  { type: 'para', text: 'Le désir ou l’absence de désir de maternité, les difficultés de conception, la grossesse, le post-partum, la ménopause, les changements de l’image corporelle, la vie conjugale ou le départ des enfants peuvent modifier le bien-être émotionnel et la manière dont certains symptômes sont vécus.' },
+  { type: 'para', text: 'Concernant les seins, la féminité, l’image corporelle, la sexualité, la maternité, l’allaitement, la protection ou les relations affectives peuvent également revêtir une forte dimension symbolique pour certaines femmes. Ces thèmes peuvent être abordés dans l’anamnèse.' },
+  { type: 'para', text: 'En ROP, le contexte émotionnel peut compléter la lecture neurovégétative et somatique lorsqu’il est exprimé par la patiente ou pertinent dans son histoire. Il ne se substitue ni à l’évaluation médicale ni à la recherche des causes organiques, hormonales, infectieuses ou fonctionnelles d’un symptôme.' },
+]
+
+const chapter19FindAfterHeading = (heading: string, type: 'para' | 'bullets') => {
+  const headingIndex = revisedReflexSection.blocks.findIndex((block) => block.type === 'sub' && block.text.startsWith(heading))
+  return revisedReflexSection.blocks.findIndex((block, index) => index > headingIndex && block.type === type)
+}
+const uterusLevel2Bullets = revisedReflexSection.blocks[chapter19FindAfterHeading('3.1.2.', 'bullets')]
+if (uterusLevel2Bullets?.type === 'bullets') uterusLevel2Bullets.items = [
+  'Sympathique thoraco-lombaire : pour l’utérus, le présent chapitre retient principalement les segments médullaires Th12-L2 ; la lecture clinique ROP peut intégrer plus largement la charnière thoraco-lombaire selon les tests.',
+  'Colonne vertébrale et repères thoraco-lombaires correspondant à cette organisation segmentaire selon la cartographie ROP.',
+  'Chaînes sympathiques lombaire et sacrale.',
+  'Plexus hypogastrique supérieur.',
+  'Nerfs hypogastriques.',
+  'Parasympathique pelvien S2-S4 ; les repères vertébraux associés sont lus selon la cartographie médullaire ROP.',
+  'Plexus hypogastrique inférieur.',
+]
+const uterusLevel3Bullets = revisedReflexSection.blocks[chapter19FindAfterHeading('3.1.3.', 'bullets')]
+if (uterusLevel3Bullets?.type === 'bullets') uterusLevel3Bullets.items = [
+  'Cavité pelvienne et périnée.', 'Utérus.',
+  'Région cervico-isthmique et plexus hypogastrique inférieur, partie moyenne : petite dépression en avant du repère sacro-coccygien.',
+  'Vagin : sillon allant du noyau fibreux central à la région cervico-isthmique.',
+  'Dôme et cornes de l’utérus : zone située au-dessus du bord antérieur du talon, dans sa partie médiale.',
+  'Ligaments larges, ronds et utérosacraux selon les tests et la cartographie de la méthode.',
+  'Canal inguinal et ligament rond : interligne tibio-tarsien antérieur.',
+  'Ligament inguinal et structures inguinales : repères complémentaires selon la cartographie ROP.',
+  'Noyau fibreux central du périnée et fente uro-génitale : repères pelviens complémentaires selon la cartographie de la méthode.',
+]
+const uterusLevel4Bullets = revisedReflexSection.blocks[chapter19FindAfterHeading('3.1.4.', 'bullets')]
+if (uterusLevel4Bullets?.type === 'bullets') uterusLevel4Bullets.items = [
+  'Repères segmentaires retenus dans la cartographie ROP : Th12-L1, L5-sacrum et C2.',
+  'Suture occipito-mastoïdienne.', 'Sacrum et coccyx.', 'Plancher pelvien.',
+  'Nerf pudendal et territoires S2-S4 lorsque le tableau le justifie.', 'Membre inférieur et pied.',
+  'Grand foramen ischiatique, muscle piriforme et plexus sacré.',
+  'Petit foramen ischiatique, muscles obturateurs et muscles jumeaux.', 'Fosse obturée.',
+  'Ligaments sacro-tubéral et sacro-épineux.', 'Muscles et articulations douloureux associés selon les tests.',
+]
+const uterusEmotionPara = chapter19FindAfterHeading('Versant viscéro-émotionnel — Axe cerveau-utérus', 'para')
+revisedReflexSection.blocks.splice(uterusEmotionPara, 1,
+  { type: 'para', text: 'Dans la pratique ROP, la balance cerveau limbique-utérus est réalisée en écoute-induction, avec un pouce sur la zone réflexe de l’utérus et l’autre sur la zone réflexe du cerveau limbique.' },
+  { type: 'para', text: 'Les signaux génitaux, les fluctuations hormonales, la douleur, le stress et le contexte affectif peuvent interagir avec les réseaux cérébraux de l’interoception, de l’émotion et de la perception corporelle. Cette balance décrit un axe d’intégration clinique dans le modèle ROP.' },
+)
+const ovariesLevel2Bullets = revisedReflexSection.blocks[chapter19FindAfterHeading('3.2.2.', 'bullets')]
+if (ovariesLevel2Bullets?.type === 'bullets') ovariesLevel2Bullets.items = [
+  'Sympathique thoracique inférieur : repères principalement autour de Th10-T12 dans la lecture du chapitre.',
+  'Chaîne ganglionnaire latéro-vertébrale lombaire et sacrée selon la cartographie ROP.',
+  'Plexus aortorénal.', 'Plexus ovarique accompagnant les vaisseaux ovariques.',
+  'Réseaux autonomes pelviens à considérer surtout pour la région utéro-tubaire et le contexte loco-régional, sans en faire une voie obligatoire et directe de l’ovaire.',
+]
+const ovariesLevel2Heading = revisedReflexSection.blocks.findIndex((block) => block.type === 'sub' && block.text.startsWith('3.2.2.'))
+const ovariesLevel2Paragraphs = revisedReflexSection.blocks
+  .map((block, index) => ({ block, index }))
+  .filter(({ block, index }) => index > ovariesLevel2Heading && block.type === 'para')
+if (ovariesLevel2Paragraphs[1]?.block.type === 'para') ovariesLevel2Paragraphs[1].block.text = 'Le parasympathique pelvien S2-S4 peut être intégré comme repère régional dans la cartographie ROP, mais il n’est pas présenté ici comme une étape systématique et directe de l’innervation ovarienne. Pour les trompes, les voies autonomes pelviennes peuvent être prises en compte dans le contexte régional.'
+const ovariesLevel4Bullets = revisedReflexSection.blocks[chapter19FindAfterHeading('3.2.4.', 'bullets')]
+if (ovariesLevel4Bullets?.type === 'bullets') ovariesLevel4Bullets.items = [
+  'Repères ROP particulièrement retenus : Th10, L5 et sacrum.', 'Charnière thoraco-lombaire.',
+  'Région lombo-sacrée.', 'Bassin et sacrum.', 'Plancher pelvien.',
+  'Muscles pelvi-trochantériens lorsque le tableau clinique le justifie.',
+  'Territoires douloureux associés : pelviens, lombaires, inguinaux ou membres inférieurs selon les convergences et le contexte.',
+]
+const ovariesEmotionPara = chapter19FindAfterHeading('Versant viscéro-émotionnel — Axe cerveau-sphère génitale féminine', 'para')
+revisedReflexSection.blocks.splice(ovariesEmotionPara, 1,
+  { type: 'para', text: 'Dans la pratique ROP, la balance cerveau limbique-ovaire est réalisée en écoute-induction, avec un pouce sur la zone réflexe de l’ovaire et l’autre sur la zone réflexe du cerveau limbique.' },
+  { type: 'para', text: 'Stress, douleur chronique, sexualité, vécu corporel, fertilité, grossesse, post-partum ou ménopause peuvent modifier la perception des symptômes et interagir avec la régulation autonome et neuroendocrine.' },
+)
+const associatedSupports = revisedReflexSection.blocks[chapter19FindAfterHeading('3.3.', 'bullets')]
+if (associatedSupports?.type === 'bullets') associatedSupports.items = [
+  'Foie : lorsque le contexte métabolique ou hormonal est retenu par l’anamnèse et les tests.',
+  'Rein gauche et axe veineux ovarien gauche : lorsque le contexte vasculaire ou régional le justifie.',
+  'Surrénale gauche : soutien associé lorsque le contexte neuroendocrinien ou de stress est retenu par les tests de la méthode.',
+  'Vessie, rectum et intestin : selon les rapports pelviens et les symptômes associés.',
+  'Diaphragme et cavité abdominale : lorsque la dynamique globale du tronc et des pressions est cliniquement pertinente.',
 ]

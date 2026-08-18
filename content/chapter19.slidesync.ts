@@ -97,11 +97,11 @@ export const chapter19SlideAnchors: SyncAnchor[] = [
   { sectionId: 'zones-reflexes-podales', blockIndex: 20, slide: 41, end: { sectionId: 'zones-reflexes-podales', blockIndex: 20 } },
   { sectionId: 'zones-reflexes-podales', blockIndex: 21, slide: 42, end: { sectionId: 'zones-reflexes-podales', blockIndex: 21 } },
   { sectionId: 'zones-reflexes-podales', blockIndex: 22, slide: 46, end: { sectionId: 'zones-reflexes-podales', blockIndex: 22 } },
-  { sectionId: 'zones-reflexes-podales', blockIndex: 26, slide: 36 },
-  { sectionId: 'zones-reflexes-podales', blockIndex: 39, slide: 43, end: { sectionId: 'zones-reflexes-podales', blockIndex: 39 } },
-  { sectionId: 'zones-reflexes-podales', blockIndex: 40, slide: 47, end: { sectionId: 'zones-reflexes-podales', blockIndex: 40 } },
-  { sectionId: 'zones-reflexes-podales', blockIndex: 50, slide: 37, end: { sectionId: 'zones-reflexes-podales', blockIndex: 50 } },
-  { sectionId: 'zones-reflexes-podales', blockIndex: 51, slide: 38, end: { sectionId: 'zones-reflexes-podales', blockIndex: 51 } },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 27, slide: 36 },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 40, slide: 43, end: { sectionId: 'zones-reflexes-podales', blockIndex: 40 } },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 41, slide: 47, end: { sectionId: 'zones-reflexes-podales', blockIndex: 41 } },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 52, slide: 37, end: { sectionId: 'zones-reflexes-podales', blockIndex: 52 } },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 53, slide: 38, end: { sectionId: 'zones-reflexes-podales', blockIndex: 53 } },
 ]
 
 export const chapter19HalfBreaks: SyncBreakPoint[] = [
@@ -110,5 +110,5 @@ export const chapter19HalfBreaks: SyncBreakPoint[] = [
   { sectionId: 'ovaires-trompes-pathologies-courantes', blockIndex: 3, itemIndex: 13 },
   { sectionId: 'ovaires-trompes-pathologies-courantes', blockIndex: 13, itemIndex: 17 },
   { sectionId: 'ovaires-trompes-indications', blockIndex: -1 },
-  { sectionId: 'ovaires-trompes-indications', blockIndex: 10, itemIndex: 1 },
+  { sectionId: 'ovaires-trompes-indications', blockIndex: 11, itemIndex: 1 },
 ]

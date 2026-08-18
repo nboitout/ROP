@@ -1,6 +1,6 @@
 import type { Chapter } from './types'
 
-// Source: public/chapter-20/Chapitre_20_Organes_genitaux_masculins_version_publiable_complete.docx
+// Source: public/chapter-20/Chapitre_20_Organes_genitaux_masculins_version_finale_publiable.docx
 // Figure-number mentions are intentionally omitted from the web prose.
 export const chapter20Fr: Chapter = {
   "slug": "chapter-20",
@@ -1019,5 +1019,89 @@ if (chapter20Reflex) {
       type: 'para',
       text: 'Le foie et le rein gauche peuvent être conservés comme soutiens associés, mais ne doivent pas être considérés comme des étapes obligatoires du traitement des organes génitaux masculins.',
     }
+  }
+}
+
+// Final publication protocol from the latest Chapter 20 Word source.
+if (chapter20Reflex) {
+  const headingIndex = (heading: string) => chapter20Reflex.blocks.findIndex((block) => block.type === 'sub' && block.text.startsWith(heading))
+  const firstAfter = (heading: string, type: 'para' | 'bullets') => {
+    const start = headingIndex(heading)
+    return chapter20Reflex.blocks.findIndex((block, index) => index > start && block.type === type)
+  }
+
+  const testicleLevel2Para = firstAfter('11.1.2.', 'para')
+  if (testicleLevel2Para >= 0) chapter20Reflex.blocks.splice(testicleLevel2Para, 1)
+  const testicleLevel2Bullets = chapter20Reflex.blocks[firstAfter('11.1.2.', 'bullets')]
+  if (testicleLevel2Bullets?.type === 'bullets') testicleLevel2Bullets.items = [
+    'Colonne vertébrale : étage médullaire sympathique Th10-Th12.',
+    'L5, sacrum et coccyx.',
+    'Chaîne ganglionnaire latéro-vertébrale lombaire et sacrée.',
+    'Parasympathique pelvien (sacré) : moelle sacrée S2-S3-S4, avec repère vertébral L1-L2 dans la cartographie ROP.',
+    'Chaîne ganglionnaire lombaire et piliers du diaphragme : repères associés de la cartographie ROP.',
+  ]
+  const testicleLevel3Bullets = chapter20Reflex.blocks[firstAfter('11.1.3.', 'bullets')]
+  if (testicleLevel3Bullets?.type === 'bullets') testicleLevel3Bullets.items = [
+    'Foie.', 'Rein gauche.', 'Cavité pelvienne et périnée.',
+    'Testicule : même zone réflexe que l’ovaire dans la cartographie ROP, au bord antérieur du talon, à l’aplomb des quatrième et cinquième orteils.',
+    'Canal inguinal, cordon spermatique et muscle crémaster : interligne tibio-tarsien antérieur.',
+  ]
+  const testicleLevel4Bullets = chapter20Reflex.blocks[firstAfter('11.1.4.', 'bullets')]
+  if (testicleLevel4Bullets?.type === 'bullets') testicleLevel4Bullets.items = [
+    'Vertèbres Th12-L1, L5-sacrum et coccyx.', 'Membre inférieur et pied.', 'Nerfs du plexus lombal.',
+    'Périnée et nerf pudendal pour les territoires génitaux externes et sphinctériens.',
+    'Bassin et sacrum, avec les chaînes musculaires associées lorsque des douleurs projetées ou des tensions régionales sont présentes.',
+    'Grand foramen ischiatique, muscle piriforme, plexus sacré et nerf pudendal.',
+    'Petit foramen ischiatique, muscles obturateurs et jumeaux.', 'Fosse obturée et muscles obturateurs.',
+    'Ligaments sacro-tubéral et sacro-épineux.',
+  ]
+  const testicleEmotionHeading = headingIndex('Versant viscéro-émotionnel — Axe cerveau-sphère génitale masculine')
+  if (testicleEmotionHeading >= 0 && chapter20Reflex.blocks[testicleEmotionHeading]?.type === 'sub') {
+    chapter20Reflex.blocks[testicleEmotionHeading].text = 'Versant viscéro-émotionnel — Balance cerveau limbique–testicule'
+    const emotionPara = chapter20Reflex.blocks.findIndex((block, index) => index > testicleEmotionHeading && block.type === 'para')
+    chapter20Reflex.blocks.splice(emotionPara, 1,
+      { type: 'para', text: 'Dans la pratique ROP, l’écoute-induction est réalisée avec un pouce sur la zone réflexe du testicule et l’autre sur la zone réflexe du cerveau limbique.' },
+      { type: 'para', text: 'La sexualité, l’image corporelle, la fertilité, la douleur, le vieillissement, le stress et l’anxiété de performance peuvent modifier la perception des symptômes et interagir avec les réseaux autonomes, neuroendocriniens et émotionnels. Ces facteurs ne définissent pas une « personnalité génitale » masculine et ne permettent pas d’attribuer automatiquement un symptôme à une origine émotionnelle.' },
+    )
+  }
+
+  const prostateLevel2Bullets = chapter20Reflex.blocks[firstAfter('11.2.2.', 'bullets')]
+  if (prostateLevel2Bullets?.type === 'bullets') prostateLevel2Bullets.items = [
+    'Sympathique thoraco-lombaire : T11-L2.', 'Chaîne ganglionnaire latéro-vertébrale lombaire et sacrée.',
+    'Parasympathique pelvien (sacré) : moelle sacrée S2-S3-S4, avec repère vertébral L1-L2 dans la cartographie ROP.',
+  ]
+  const prostateLevel3Bullets = chapter20Reflex.blocks[firstAfter('11.2.3.', 'bullets')]
+  if (prostateLevel3Bullets?.type === 'bullets') prostateLevel3Bullets.items = [
+    'Prostate, vésicules séminales et partie moyenne du plexus hypogastrique inférieur : petite dépression en avant de l’articulation sacro-coccygienne.',
+    'Cavité pelvienne et périnée.', 'Plancher pelvien, symphyse pubienne et structures de soutien de la loge prostatique.',
+    'Vessie : en présence de symptômes mictionnels, notamment dans l’hypertrophie bénigne de la prostate ou les syndromes pelviens.',
+    'Diaphragme et cavité abdominale : lorsque la dynamique globale du tronc et des pressions est cliniquement pertinente.',
+  ]
+  const prostateLevel4Bullets = chapter20Reflex.blocks[firstAfter('11.2.4.', 'bullets')]
+  if (prostateLevel4Bullets?.type === 'bullets') prostateLevel4Bullets.items = [
+    'Vertèbres Th12-L1, L5-sacrum et coccyx.', 'Membre inférieur et pied.',
+    'Nerf pudendal S2-S4 et territoires périnéaux.', 'Plancher pelvien et sphincter urétral externe.', 'Symphyse pubienne.',
+  ]
+  const prostateEmotionHeading = headingIndex('Versant viscéro-émotionnel — Axe cerveau-sphère génitale masculine')
+  if (prostateEmotionHeading >= 0 && chapter20Reflex.blocks[prostateEmotionHeading]?.type === 'sub') {
+    chapter20Reflex.blocks[prostateEmotionHeading].text = 'Versant viscéro-émotionnel — Balance cerveau limbique–prostate'
+    const emotionParas = chapter20Reflex.blocks
+      .map((block, index) => ({ block, index }))
+      .filter(({ block, index }) => index > prostateEmotionHeading && block.type === 'para')
+    if (emotionParas[0]) chapter20Reflex.blocks.splice(emotionParas[0].index, Math.min(2, emotionParas.length),
+      { type: 'para', text: 'Dans la pratique ROP, l’écoute-induction est réalisée avec un pouce sur la zone réflexe de la prostate et l’autre sur la zone réflexe du cerveau limbique.' },
+      { type: 'para', text: 'Les symptômes urinaires ou sexuels peuvent être modulés par le stress, l’anticipation, l’anxiété, la douleur, le contexte relationnel et le vécu du vieillissement. Ces facteurs peuvent majorer le retentissement fonctionnel de certains symptômes, mais ne permettent pas de définir un profil psychologique propre à la prostate ni d’attribuer automatiquement une dysfonction prostatique à une origine émotionnelle.' },
+    )
+  }
+
+  const supportsHeading = headingIndex('11.3. Soutiens associés')
+  const safetyHeading = headingIndex('11.4. Principe de sécurité')
+  if (supportsHeading >= 0 && safetyHeading > supportsHeading) {
+    const retainedFigures = chapter20Reflex.blocks.slice(supportsHeading, safetyHeading).filter((block) => block.type === 'figure')
+    chapter20Reflex.blocks.splice(supportsHeading, safetyHeading - supportsHeading, ...retainedFigures)
+  }
+  const finalSafetyHeading = headingIndex('11.4. Principe de sécurité')
+  if (finalSafetyHeading >= 0 && chapter20Reflex.blocks[finalSafetyHeading]?.type === 'sub') {
+    chapter20Reflex.blocks[finalSafetyHeading].text = '11.3. Principe de sécurité'
   }
 }
