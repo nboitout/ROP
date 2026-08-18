@@ -1,6 +1,6 @@
 import type { Chapter } from './types'
 
-// Source: public/chapter-21/Chapitre_21_Systeme_erectile_version_publiable.docx
+// Source: public/chapter-21/Chapitre_21_Systeme_erectile_version_finale_publiable.docx
 // Figure-number mentions are intentionally omitted from the web prose.
 export const chapter21Fr: Chapter = {
   "slug": "chapter-21",
@@ -229,7 +229,7 @@ export const chapter21Fr: Chapter = {
         },
         {
           "type": "para",
-          "text": "Les facteurs psycho-émotionnels sont développés dans la section suivante."
+          "text": "Les facteurs psycho-émotionnels sont développés dans la section 9 « Relations viscéro-émotionnelles »."
         },
         {
           "type": "xref",
@@ -576,6 +576,80 @@ if (chapter21Reflex) {
   insertPhotosAfterBullets('10.4. Niveau 3', [
     { type: 'figure', src: '/chapter-21/cartographie/figure-21-08.png', caption: 'Photo : ligament inguinal et canal inguinal', alt: 'Repère podal du ligament et du canal inguinaux', orientation: 'landscape' },
   ])
+
+  // Final publication structure from the latest Word source.
+  chapter21Reflex.blocks = [
+    { type: 'para', text: 'Les localisations décrites ci-dessous appartiennent à la cartographie clinique de la ROP. Leur sélection dépend de l’anamnèse, des tests, des réactions palpatoires et du trouble fonctionnel concerné.' },
+    { type: 'para', text: 'Pour le système érectile, la lecture des zones réflexes peut être organisée selon les quatre niveaux du protocole ROP. La distinction entre voies autonomes, innervation somatique, structures érectiles et intégration centrale permet d’éviter de confondre des mécanismes de nature différente.' },
+    { type: 'sub', text: '10.1. Niveau 1 — Régulation des centres supérieurs' },
+    { type: 'bullets', items: [
+      'Zones réflexes occipitales.',
+      'Diencéphale, notamment hypothalamus, dans la régulation neuroendocrine et autonome.',
+      'Réseaux centraux et cortico-limbiques impliqués dans la perception, la motivation et le contexte émotionnel.',
+    ] },
+    { type: 'xref', label: 'Cf. chapitre 3 — Système nerveux central, Niveau 1 : Régulation des centres supérieurs', href: '/lecture/chapitre-3-rework?lang=fr' },
+    { type: 'sub', text: '10.2. Niveau 2 — Régulation neuro-végétative et adaptation' },
+    { type: 'para', text: 'Le Niveau 2 est essentiel pour la fonction érectile, car l’érection et certaines phases de la réponse sexuelle dépendent d’une coordination entre voies parasympathiques et sympathiques.' },
+    { type: 'bullets', items: [
+      'Parasympathique pelvien S2-S4 : associé à la vasodilatation et au remplissage des tissus érectiles.',
+      'Sympathique thoraco-lombaire : territoire décrit dans ce chapitre autour de L1-L3, impliqué notamment dans la phase de l’éjaculation.',
+      'Plexus hypogastrique inférieur et réseaux autonomes pelviens : carrefour fonctionnel entre les voies sympathiques et parasympathiques destinées aux organes pelviens.',
+      'Coordination autonome : privilégier une lecture fonctionnelle de la séquence excitation-érection-émission plutôt qu’une stimulation isolée du sympathique ou du parasympathique.',
+    ] },
+    { type: 'xref', label: 'Cf. chapitre 4 — Système nerveux autonome, notamment les sections consacrées au parasympathique pelvien, au sympathique thoraco-lombaire et au plexus préviscéral pelvien', href: '/lecture/chapitre-4-rework?lang=fr' },
+    { type: 'sub', text: '10.3. Niveau 3 — Régulation viscérale loco-régionale' },
+    { type: 'para', text: 'Le Niveau 3 regroupe les structures érectiles et leur environnement pelvien immédiat.' },
+    { type: 'sub', text: 'Repères podaux de base' },
+    { type: 'bullets', items: [
+      'Nerf pudendal S2-S4 : face latérale du talon, en relation cartographique avec le plexus sacré et la région de l’épine ischiatique.',
+      'Suite du trajet pudendal : face plantaire du talon, puis bord médial de la branche ischiopubienne.',
+      'Corps caverneux et muscles ischiocaverneux : bord médial des branches ischiopubiennes.',
+      'Organes érectiles : extrémité médiale de la branche iliopubienne, au bord antérieur du talon.',
+      'Ligaments sacrotubéral et sacroépineux : bord postérieur des talons.',
+    ] },
+    { type: 'para', text: 'Ces localisations constituent des repères cliniques ROP. Elles sont ensuite hiérarchisées selon le mécanisme dominant et le contexte clinique.' },
+    { type: 'para', text: 'Le nerf pudendal est une voie somatique distincte des voies autonomes pelviennes. Il assure la sensibilité des organes génitaux externes et participe à la commande des muscles striés périnéaux.' },
+    { type: 'bullets', items: ['Ligament inguinal et canal inguinal.'] },
+    { type: 'figure', src: '/chapter-21/cartographie/figure-21-08.png', caption: 'Photo : ligament inguinal et canal inguinal', alt: 'Repère podal du ligament et du canal inguinaux', orientation: 'landscape' },
+    { type: 'xref', label: 'Cf. chapitre 17 — Cavité pelvienne', href: '/lecture/chapitre-17?lang=fr' },
+    { type: 'xref', label: 'cf. chapitre 19 — Organes génitaux féminins', href: '/lecture/chapitre-19?lang=fr' },
+    { type: 'xref', label: 'cf. chapitre 20 — Organes génitaux masculins', href: '/lecture/chapitre-20?lang=fr' },
+    { type: 'sub', text: '10.4. Niveau 4 — Intégration viscéro-somatique et viscéro-émotionnelle' },
+    { type: 'para', text: 'Le système érectile comporte une composante somatique majeure par le nerf pudendal et les muscles périnéaux, ainsi qu’une forte intégration avec le vécu corporel, relationnel et émotionnel.' },
+    { type: 'sub', text: '10.4.1. Intégration viscéro-somatique' },
+    { type: 'bullets', items: [
+      'Plancher pelvien.',
+      'Sacrum et coccyx.',
+      'Épine ischiatique et branches ischiopubiennes.',
+      'Ligaments sacrotubéral et sacroépineux : bord postérieur des talons.',
+      'Grand foramen ischiatique, muscle piriforme, plexus sacré et nerf pudendal.',
+      'Petit foramen ischiatique, muscles obturateurs et jumeaux.',
+    ] },
+    { type: 'figure', src: '/chapter-21/cartographie/figure-21-02.png', caption: 'Photo : grand foramen ischiatique, muscle piriforme, plexus sacré et nerf pudendal', alt: 'Repère podal du grand foramen ischiatique', orientation: 'landscape' },
+    { type: 'figure', src: '/chapter-21/cartographie/figure-21-04.png', caption: 'Photo : petit foramen ischiatique, muscles obturateurs et jumeaux', alt: 'Repère podal du petit foramen ischiatique', orientation: 'landscape' },
+    { type: 'figure', src: '/chapter-21/cartographie/figure-21-06.png', caption: 'Photo : ligaments sacro-tubéral et sacro-épineux', alt: 'Repère podal des ligaments sacro-tubéral et sacro-épineux', orientation: 'landscape' },
+    { type: 'figure', src: '/chapter-21/cartographie/figure-21-10.png', caption: 'Photo : nerf pudendal', alt: 'Repère podal du nerf pudendal', orientation: 'portrait' },
+    { type: 'sub', text: '10.4.2. Balance viscéro-émotionnelle' },
+    { type: 'para', text: 'Il n’est pas toujours facile de dissocier la part respective des facteurs physiques et psycho-émotionnels dans les troubles sexuels, chez la femme comme chez l’homme.' },
+    { type: 'para', text: 'La sexualité implique des dimensions cognitives, émotionnelles et corporelles. Des facteurs tels que le stress, la perte de l’estime de soi, l’anxiété ou l’angoisse de la performance, la dépression, les conflits au sein du couple, les tabous religieux ou éducationnels et les traumatismes sexuels vécus dans le passé peuvent être associés à des difficultés sexuelles et en moduler le vécu, sans permettre d’attribuer automatiquement un trouble sexuel à une origine psychologique.' },
+    { type: 'bullets', items: [
+      'Cerveau limbique.',
+      'Nerf olfactif I : repère sensoriel associé de la cartographie ROP.',
+    ] },
+    { type: 'xref', label: 'Cf. chapitre 3 — Système nerveux central pour les réseaux centraux et cortico-limbiques', href: '/lecture/chapitre-3-rework?lang=fr', text: 'Voir également la section 9 « Relations viscéro-émotionnelles » du présent chapitre.' },
+    { type: 'sub', text: '10.5. Lecture clinique selon le trouble' },
+    { type: 'para', text: 'La hiérarchie des niveaux varie selon le motif de consultation et ne doit pas être appliquée comme une séquence rigide.' },
+    { type: 'bullets', items: [
+      'Trouble de l’érection : importance fréquente des Niveaux 2, 3 et 4, avec Niveau 1 lorsque désir, anticipation ou anxiété participent au tableau.',
+      'Troubles de l’excitation ou de la lubrification chez la femme : intégration des Niveaux 2 et 3, avec Niveau 4 lorsque douleurs, stress ou contexte relationnel sont associés.',
+      'Éjaculation rapide ou difficulté d’éjaculation : lecture combinant régulation autonome, innervation pudendale et contexte central ou émotionnel.',
+      'Anorgasmie ou difficultés orgasmiques : privilégier une lecture intégrée des composantes somatiques, autonomes, centrales et relationnelles, sans réduire l’orgasme à une seule branche du SNA.',
+      'Douleurs sexuelles ou périnéales : priorité à l’exclusion d’une cause organique, puis intégration du pelvis, du plancher pelvien, du pudendal et des structures génitales concernées.',
+    ] },
+    { type: 'note', label: 'Principe de sécurité', body: [
+      'Un trouble de l’érection, de la lubrification, de l’éjaculation, de l’orgasme ou une douleur sexuelle peut avoir une origine vasculaire, neurologique, endocrinienne, médicamenteuse, gynécologique, urologique ou psychologique. La ROP ne remplace ni le diagnostic ni la prise en charge médicale ou sexologique lorsque celle-ci est indiquée.',
+    ] },
+  ]
 }
 
 const chapter21FigureRefs = /\s*\((?:figure|figures)\s+(?:21\.1|21\.2|17\.3|21\.3 et 21\.4|17\.15 et 17\.16|21\.6 et 21\.7|17\.21)\)/gi

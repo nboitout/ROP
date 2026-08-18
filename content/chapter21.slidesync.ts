@@ -39,12 +39,12 @@ export const chapter21SlideAnchors: SyncAnchor[] = [
   { sectionId: 'relations-viscero-somatiques', blockIndex: 0, slide: 9 },
   { sectionId: 'relations-viscero-emotionnelles', blockIndex: 0, slide: 10 },
   { sectionId: 'zones-reflexes-podales', blockIndex: -1, slide: 11 },
-  { sectionId: 'zones-reflexes-podales', blockIndex: 8, slide: 17, end: { sectionId: 'zones-reflexes-podales', blockIndex: 8 } },
-  { sectionId: 'zones-reflexes-podales', blockIndex: 19, slide: 15, end: { sectionId: 'zones-reflexes-podales', blockIndex: 19 } },
-  { sectionId: 'zones-reflexes-podales', blockIndex: 28, slide: 12, end: { sectionId: 'zones-reflexes-podales', blockIndex: 28 } },
-  { sectionId: 'zones-reflexes-podales', blockIndex: 29, slide: 13, end: { sectionId: 'zones-reflexes-podales', blockIndex: 29 } },
-  { sectionId: 'zones-reflexes-podales', blockIndex: 30, slide: 14, end: { sectionId: 'zones-reflexes-podales', blockIndex: 30 } },
-  { sectionId: 'zones-reflexes-podales', blockIndex: 31, slide: 16, end: { sectionId: 'zones-reflexes-podales', blockIndex: 31 } },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 31, slide: 17, end: { sectionId: 'zones-reflexes-podales', blockIndex: 31 } },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 16, slide: 15, end: { sectionId: 'zones-reflexes-podales', blockIndex: 16 } },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 24, slide: 12, end: { sectionId: 'zones-reflexes-podales', blockIndex: 24 } },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 25, slide: 13, end: { sectionId: 'zones-reflexes-podales', blockIndex: 25 } },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 26, slide: 14, end: { sectionId: 'zones-reflexes-podales', blockIndex: 26 } },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 27, slide: 16, end: { sectionId: 'zones-reflexes-podales', blockIndex: 27 } },
 ]
 
 export const chapter21HalfBreaks: SyncBreakPoint[] = [
