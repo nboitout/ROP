@@ -1,0 +1,1048 @@
+{
+  "title": "Fondements neuro-anatomiques de la R.O.P.",
+  "subtitle": "Du point réflexe à la porte d'entrée somatique : quatre portes, six ponts et un gradient de ciblage à deux axes.",
+  "source": "ROP_v3C_Hub_Fondements_neuro-anatomiques.docx",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "La R.O.P. ne suppose pas qu'un organe soit matériellement « représenté » dans un point du pied. La proposition de travail est différente : une zone podale constitue d'abord une porte d'entrée sensorielle. La pression déforme la peau et les tissus sous-cutanés, recrute des mécanorécepteurs et d'autres afférences somatiques, puis transmet un message par un nerf périphérique vers la moelle épinière et les centres supérieurs [1-3]."
+    },
+    {
+      "type": "paragraph",
+      "text": "À chacun de ces étages, cette activité peut rencontrer des circuits somatiques, autonomes et viscéraux. Nous conservons le terme pédagogique de pont neuro-anatomique pour désigner chacune de ces possibilités de convergence. Un pont n'est ni une liaison anatomique directe entre un point du pied et un organe, ni la preuve d'une efficacité thérapeutique : c'est un mécanisme plausible par lequel une entrée somatique peut accéder à un réseau susceptible de moduler une fonction viscérale."
+    },
+    {
+      "type": "paragraph",
+      "text": "Deux questions doivent rester séparées. La première est celle de l'existence d'une modulation somato-viscérale : une stimulation du pied peut-elle modifier une fonction autonome ou viscérale ? La seconde est celle du ciblage : certaines zones ou certains nerfs offrent-ils un accès plus régional ou plus reproductible que d'autres ? Les confondre est l'erreur la plus fréquente des textes de réflexologie, et celle qu'on leur reproche le plus justement [16,14,48,49]."
+    },
+    {
+      "type": "paragraph",
+      "text": "Cette version intègre trois éléments qui modifient la lecture. Les données de stimulation du nerf saphène dissocient les deux questions au lieu de les superposer. Les réflexes somato-viscéraux digestifs et céphaliques montrent qu'une entrée du membre inférieur peut modifier une fonction très éloignée de tout recouvrement segmentaire. Et les essais cliniques négatifs rappellent qu'un pont mécanistique ne prédit pas un effet thérapeutique."
+    },
+    {
+      "type": "callout",
+      "title": "PRÉCISION MÉTHODOLOGIQUE",
+      "text": "Dans cette page, les verbes « atteindre » ou « agir sur » sont à comprendre comme des raccourcis pédagogiques. La formulation scientifique privilégiée est : générer une entrée somatique, recruter un réseau, moduler l'excitabilité d'un circuit ou influencer une fonction. Une activation cérébrale, une réponse autonome ou une convergence médullaire ne démontrent pas à elles seules une correspondance point-organe."
+    },
+    {
+      "type": "callout",
+      "title": "CE QUE « STIMULATION » DÉSIGNE SELON LES ÉTUDES",
+      "text": "Quatre situations expérimentales très différentes sont régulièrement citées ensemble. La stimulation d'un tronc nerveux, par aiguille ou électrode au voisinage de la malléole médiale, correspond à la neuromodulation tibiale percutanée ou transcutanée. La stimulation d'un point de jambe, typiquement ST36 ou ST37, est le protocole dominant de la littérature digestive. La stimulation de la patte postérieure du rongeur recrute simultanément plusieurs nerfs. La pression manuelle sur la plante du pied est le geste de la R.O.P.\nPresque toute la littérature mécanistique disponible relève des trois premières situations. À notre connaissance, aucune donnée publiée ne porte sur une stimulation sélective du nerf plantaire médial ou latéral. Chaque fois que cette page transpose un résultat vers la R.O.P., cette distance doit être lue en même temps que le résultat."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "lecture-rapide-les-conclusions-essentielles",
+      "text": "Lecture rapide : les conclusions essentielles"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Le pied est une interface sensorielle riche. La peau glabre plantaire contient plusieurs classes de mécanorécepteurs à bas seuil, avec des champs récepteurs et des seuils qui varient selon les régions [2,3].",
+        "Quatre grandes portes somatiques peuvent être distinguées au niveau du pied et de la cheville : plantaire/tibiale, latérale/surale, dorsale/fibulaire et médiale/saphène. Elles ne sont équivalentes ni sur le plan périphérique ni sur le plan radiculaire [1].",
+        "La porte plantaire/tibiale est la mieux documentée pour une stimulation mécanique du pied : branches plantaires médiale et latérale et rameaux calcanéens convergent vers le nerf tibial [2,3,5,6].",
+        "Le nerf tibial est pluriradiculaire, classiquement L4–S3. Son recouvrement possible avec l'organisation sacrée pelvienne S2–S4 concerne surtout S2–S3. Ce recouvrement renforce une hypothèse de ciblage régional pelvien, mais ne crée pas un trajet direct vers un viscère [1,8-11,14].",
+        "Le nerf saphène, dépourvu de recouvrement sacré, module pourtant le réflexe vésical chez le rat et le chat, et donne un premier signal clinique humain [17-19,24]. Ce résultat sépare la proximité segmentaire de la capacité de modulation : c'est l'argument central de la lecture à deux axes.",
+        "Le deuxième pont est intranerveux : talon, arche et avant-pied ne recrutent pas nécessairement les mêmes branches, les mêmes tissus ni les mêmes populations afférentes, même lorsqu'ils rejoignent le même nerf tibial [2,3,5,6].",
+        "La moelle lombo-sacrée est un carrefour d'intégration. Des afférences somatiques, périnéales et viscérales peuvent converger sur des interneurones et des circuits sacrés ; l'effet dépend de l'état du réseau et n'est pas une commande directe du viscère [9-11].",
+        "Les voies supraspinales ajoutent un second niveau d'intégration. Plus un mécanisme dépend de ces relais généraux, moins il permet à lui seul d'affirmer une spécificité régionale [8,12,13,16,48].",
+        "Deux familles d'arguments doivent être distinguées. Les Ponts 1 à 4 construisent un argument de proximité : ils expliquent pourquoi le pelvis est la région la plus accessible depuis le pied. Les Ponts 5 et 6 construisent un argument de réseau : ils expliquent comment une fonction sans segment commun avec le pied peut néanmoins être modulée.",
+        "Une entrée du membre inférieur peut modifier une sortie autonome crânienne. Chez le rat, une stimulation de la patte postérieure recrutant les afférences tibiales et saphènes modifie le diamètre pupillaire ; la réponse disparaît après section du nerf oculomoteur mais persiste après section des troncs sympathiques cervicaux [43]. C'est le seul trajet documenté où la proximité segmentaire est nulle par construction.",
+        "Sur le versant digestif, des réflexes somato-viscéraux sont documentés pour le duodénum par voie vagale, pour le jéjunum et pour le côlon distal par voie parasympathique sacrée [36-42].",
+        "La preuve clinique est hétérogène selon l'indication : favorable dans l'hyperactivité vésicale [21,22], négative dans deux essais contrôlés d'incontinence fécale [25,26], à nouveau favorable dans certaines formes de constipation et de dyssynergie [27,28].",
+        "Le pelvis reste le meilleur candidat à un ciblage régional depuis le pied, et la vessie le modèle viscéral le mieux documenté. Le côlon distal et le rectum en constituent une extension importante [30-35]."
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "1-le-pied-une-interface-sensorielle-et-quatre-portes-somatiques",
+      "text": "1.  Le pied : une interface sensorielle et quatre portes somatiques"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "id": "1-1-de-la-pression-a-l-afference",
+      "text": "1.1. De la pression à l'afférence"
+    },
+    {
+      "type": "paragraph",
+      "text": "La peau glabre de la plante n'est pas une surface passive. Les enregistrements microneurographiques humains décrivent quatre grandes classes d'afférences tactiles à bas seuil : unités à adaptation rapide de type I et II, unités à adaptation lente de type I et II. Leurs champs récepteurs se distribuent sur les orteils, les têtes métatarsiennes, les arches et le talon ; leur densité, leur taille et leur seuil ne sont pas uniformes [2,3]."
+    },
+    {
+      "type": "paragraph",
+      "text": "Une pression manuelle R.O.P. est donc susceptible de recruter des populations afférentes différentes selon la zone, la surface de contact, la direction, la vitesse, la durée et la profondeur du geste. Deux zones voisines ne doivent pas être supposées équivalentes, mais leur différence doit être recherchée dans l'innervation réelle, les tissus sollicités et les propriétés des récepteurs, non dans une ressemblance topographique avec un organe."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "id": "1-2-quatre-portes-d-entree-a-comparer",
+      "text": "1.2. Quatre portes d'entrée à comparer"
+    },
+    {
+      "type": "paragraph",
+      "text": "Ces territoires se chevauchent et varient selon les individus ; ils doivent être compris comme des régions fonctionnelles, non comme des frontières millimétriques [1]."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Porte",
+        "Racines",
+        "Territoire et nerfs",
+        "Recouvrement sacré"
+      ],
+      "rows": [
+        [
+          "Plantaire / tibiale",
+          "L4–S3",
+          "Plante, arche, avant-pied et grande partie du talon. Nerfs plantaires médial et latéral, rameaux calcanéens, puis nerf tibial.",
+          "Le plus large : S2–S3 possibles."
+        ],
+        [
+          "Latérale / surale",
+          "S1–S2",
+          "Bord latéral du pied, région postéro-latérale de la cheville et du talon. Nerf sural.",
+          "Partiel, principalement par S2."
+        ],
+        [
+          "Dorsale / fibulaire",
+          "L4–S2",
+          "Dos du pied. Nerfs fibulaires superficiel et profond, puis fibulaire commun.",
+          "S2 possible, sans composante S3."
+        ],
+        [
+          "Médiale / saphène",
+          "L3–L4",
+          "Bord médial de la cheville et portion médiale proximale du pied. Nerf saphène.",
+          "Pas de recouvrement sacré direct évident."
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Ces quatre portes peuvent toutes générer une entrée somatique ascendante. La question scientifique n'est donc pas de savoir si une seule zone « communique avec le cerveau », mais si le nerf d'entrée, la branche périphérique et la population afférente recrutée modifient la nature, l'intensité ou la spécificité de la réponse centrale et viscérale."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "id": "1-3-du-pied-vers-le-systeme-nerveux-central",
+      "text": "1.3. Du pied vers le système nerveux central"
+    },
+    {
+      "type": "paragraph",
+      "text": "Dans une représentation simplifiée, la chaîne fonctionnelle s'écrit : pression locale, mécanorécepteurs et afférences somatiques, branche périphérique, nerf principal, racines spinales, moelle, voies ascendantes, réseaux supraspinaux. Cette chaîne n'est pas un faisceau unique : selon la modalité sensorielle, les messages empruntent plusieurs systèmes ascendants et plusieurs relais. L'idée importante pour la R.O.P. est qu'une pression locale peut être convertie en une activité nerveuse mesurable qui n'est pas confinée au pied [1-3]."
+    },
+    {
+      "type": "paragraph",
+      "text": "Des données humaines montrent par ailleurs que le feedback mécanorécepteur cutané provenant de la main ou du pied peut modifier l'activité nerveuse sympathique musculaire. Cette observation ne démontre pas une action sur un organe déterminé, mais elle établit un couplage possible entre entrée somatosensorielle et régulation autonome [49]."
+    },
+    {
+      "type": "figure",
+      "images": [
+        "pont-schema.webp"
+      ],
+      "caption": "Du stimulus podal à la modulation du réseau, les quatre étapes d'un pont neuro-anatomique."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "2-le-versant-visceral-comment-l-information-interne-rejoint-les-memes-systemes",
+      "text": "2.  Le versant viscéral : comment l'information interne rejoint les mêmes systèmes"
+    },
+    {
+      "type": "paragraph",
+      "text": "Un pont ne peut pas être décrit uniquement depuis le pied. Les récepteurs viscéraux renseignent sur la distension, la tension, les contractions, l'état chimique du milieu et, dans certaines conditions, l'inflammation ou la lésion. Les corps cellulaires des neurones sensitifs se trouvent dans les ganglions vagaux ou les ganglions rachidiens [29]."
+    },
+    {
+      "type": "paragraph",
+      "text": "Les afférences vagales projettent vers le noyau du tractus solitaire dans le tronc cérébral. Les afférences viscérales spinales pénètrent dans la corne dorsale après avoir cheminé avec des voies splanchniques thoraciques ou lombaires, hypogastriques ou pelviennes. Certains viscères — notamment le côlon distal, le rectum et plusieurs organes du petit bassin — possèdent ainsi une organisation afférente distribuée sur plusieurs voies [29,30]. Chez l'humain, le côlon distal reçoit en outre des nerfs parasympathiques ascendants issus du territoire pelvien et parcourant de longues distances [34], une organisation que les modèles murins ne reproduisent pas exactement [35]."
+    },
+    {
+      "type": "paragraph",
+      "text": "Il convient de distinguer le trajet emprunté de la nature du message. Une fibre sensitive qui accompagne un nerf splanchnique ou un nerf pelvien reste une afférence sensitive ; elle ne doit pas être confondue avec les fibres autonomes efférentes qui quittent le système nerveux central pour contrôler les muscles lisses, les glandes ou les vaisseaux. Nous privilégions donc les formulations « afférences viscérales cheminant avec les voies splanchniques thoracolombaires » et « afférences viscérales cheminant avec les nerfs pelviens » [29]."
+    },
+    {
+      "type": "figure",
+      "images": [
+        "versant-visceral.webp"
+      ],
+      "caption": "Le versant viscéral : comment les organes informent le système nerveux central."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "3-les-six-ponts-neuro-anatomiques",
+      "text": "3.  Les six ponts neuro-anatomiques"
+    },
+    {
+      "type": "paragraph",
+      "text": "Un pont n'est pas un câble direct entre un point du pied et un organe : c'est un maillon identifiable d'un réseau fonctionnel. Le modèle en distingue six, du recouvrement radiculaire jusqu'aux sorties crâniennes du tronc cérébral."
+    },
+    {
+      "type": "paragraph",
+      "text": "Ces six ponts ne relèvent pas du même type d'argument, et les confondre a longtemps brouillé la discussion. Les Ponts 1 à 4 construisent un argument de proximité : recouvrement radiculaire, organisation des branches périphériques, convergence dans les réseaux lombo-sacrés. Ils expliquent pourquoi le pelvis est la région la plus accessible depuis le pied. Les Ponts 5 et 6 construisent un argument de réseau : intégration supraspinale, commandes descendantes, sorties crâniennes. Ils expliquent comment une fonction sans aucun segment commun avec le pied peut néanmoins être modulée."
+    },
+    {
+      "type": "paragraph",
+      "text": "Ces deux familles ne sont pas concurrentes : le nerf tibial les cumule. Mais elles ne répondent pas à la même question et ne se testent pas de la même manière. Le modèle de proximité se teste en comparant des territoires ; le modèle de réseau se teste en cherchant un effet là où la proximité est nulle."
+    },
+    {
+      "type": "callout",
+      "title": "OÙ SE TESTE LE MODÈLE DE RÉSEAU",
+      "text": "À sa limite. Une cible pelvienne modulée depuis le pied reste compatible avec les deux modèles : on ne sait pas lequel opère. Une cible sans aucun segment médullaire partagé n'est compatible qu'avec le second. C'est ce qui donne au Pont 6 et au nerf saphène une valeur démonstrative supérieure à leur poids clinique."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "id": "pont-1-le-recouvrement-segmentaire-s2s3-a-travers-le-nerf-tibial",
+      "text": "Pont 1 — Le recouvrement segmentaire : S2–S3 à travers le nerf tibial"
+    },
+    {
+      "type": "paragraph",
+      "text": "Le nerf tibial reçoit classiquement des fibres issues de L4 à S3. Les circuits sacrés impliqués dans les fonctions pelviennes sont principalement organisés autour de S2–S4, et le contrôle somatique des sphincters et du plancher pelvien implique notamment le nerf pudendal, lui aussi rattaché à S2–S4 [1,8-11]. Si l'on raisonne par recouvrement radiculaire, S2 et S3 constituent les niveaux communs possibles entre le nerf tibial et une partie de l'organisation pelvienne."
+    },
+    {
+      "type": "paragraph",
+      "text": "Ce raisonnement ne signifie pas qu'une zone cutanée plantaire soit un « dermatome S2 » ou « S3 ». Les cartes dermatomériques humaines placent surtout L4, L5 et S1 au niveau du membre inférieur distal et du pied [4]. Un dermatome décrit l'origine radiculaire dominante d'un territoire cutané ; un nerf périphérique mixte contient au contraire des axones provenant de plusieurs racines et destinés à la peau, aux muscles, aux articulations et aux tissus profonds."
+    },
+    {
+      "type": "paragraph",
+      "text": "Une réserve doit être posée explicitement. La constance de la contribution S3 au nerf tibial n'est pas uniforme selon les sources anatomiques. Comme l'ensemble de l'argument de proximité repose sur le couple S2–S3, cette variabilité doit être signalée plutôt que lissée : elle affaiblit d'autant la prédiction d'un ciblage segmentaire reproductible d'un individu à l'autre."
+    },
+    {
+      "type": "paragraph",
+      "text": "Le Pont 1 doit donc être formulé avec précision : une stimulation d'un territoire tibial peut introduire une activité afférente dans un ensemble lombo-sacré contenant S2–S3 et communiquant avec les circuits pelviens. Elle ne sélectionne pas automatiquement S2 ou S3, ne rejoint pas directement un organe et ne garantit pas une réponse viscérale. Elle apporte cependant un argument de proximité segmentaire plus dense que celui de certaines portes plus lombaires."
+    },
+    {
+      "type": "figure",
+      "images": [
+        "pont-1-tibial.webp"
+      ],
+      "caption": "Le nerf tibial, une porte d'entrée lombo-sacrée."
+    },
+    {
+      "type": "callout",
+      "title": "CONSÉQUENCE POUR LE GRADIENT",
+      "text": "Le recouvrement segmentaire doit être interprété comme un facteur de ciblage régional, non comme une condition nécessaire à tout effet viscéral. Une porte sans recouvrement S2–S4 peut encore agir par des relais intersegmentaires ou supraspinaux ; elle apporte simplement moins d'arguments en faveur d'une spécificité pelvienne."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "id": "pont-2-de-la-zone-podale-au-nerf-tibial-quelles-afferences-sont-reellement-recrutees",
+      "text": "Pont 2 — De la zone podale au nerf tibial : quelles afférences sont réellement recrutées ?"
+    },
+    {
+      "type": "paragraph",
+      "text": "Le territoire tibial n'est pas homogène. Le nerf plantaire médial, le nerf plantaire latéral et les rameaux calcanéens transportent des informations provenant de régions et de tissus différents. Leurs trajectoires, leur séparabilité fasciculaire et leurs territoires présentent des variations anatomiques [5,6]. Les propriétés des mécanorécepteurs varient également selon les régions plantaires [2,3]."
+    },
+    {
+      "type": "paragraph",
+      "text": "Cette organisation donne au Pont 2 une fonction précise : faire le lien entre la pression manuelle R.O.P. et les données de neuromodulation du nerf tibial. Une stimulation électrique appliquée à proximité d'un tronc nerveux et une pression locale sur le pied ne recrutent pas nécessairement les mêmes fibres. Pour transposer prudemment les connaissances issues de la neuromodulation, il faut demander quelle branche périphérique et quelle population afférente sont réellement sollicitées par le geste manuel [14]."
+    },
+    {
+      "type": "paragraph",
+      "text": "Le talon permet un recrutement préférentiel possible des rameaux calcanéens et des afférences des tissus superficiels et profonds du coussinet adipeux. L'arche sollicite davantage les branches plantaires, avec des différences possibles entre versants médial et latéral. L'avant-pied présente une densité sensorielle élevée et recrute des branches digitales issues des nerfs plantaires."
+    },
+    {
+      "type": "paragraph",
+      "text": "La question expérimentale devient alors : deux zones appartenant au même nerf tibial produisent-elles la même modulation ? Si talon, arche et avant-pied produisent des réponses comparables sous stimulation contrôlée, l'effet dépendrait principalement de l'accès général au système tibial. Si les réponses diffèrent de façon reproductible, il faudra rechercher la contribution de la branche, du tissu, de la profondeur, du profil mécanorécepteur et de l'organisation fasciculaire."
+    },
+    {
+      "type": "figure",
+      "images": [
+        "pont-2-plantaires.webp"
+      ],
+      "caption": "De la zone podale au nerf tibial : talon, arche et avant-pied au sein d'un même tronc nerveux."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "id": "pont-3-les-autres-portes-somatiques-sural-fibulaire-et-saphene",
+      "text": "Pont 3 — Les autres portes somatiques : sural, fibulaire et saphène"
+    },
+    {
+      "type": "paragraph",
+      "text": "Le nerf tibial n'est pas la seule porte possible. Le bord latéral du pied dépend largement du nerf sural ; le dos du pied dépend principalement des nerfs fibulaires superficiel et profond ; le versant médial de la cheville et une partie du pied proximal peuvent recevoir le nerf saphène [1,7]. Le tibial L4–S3 offre le recouvrement sacré le plus large ; le sural S1–S2 et le système fibulaire L4–S2 disposent d'une composante S2 possible ; le saphène, surtout L3–L4, ne possède pas de recouvrement sacré direct évident. Ces distributions sont des plages anatomiques et non des codes exclusifs : une pression locale ne sélectionne pas une racine isolée."
+    },
+    {
+      "type": "paragraph",
+      "text": "Jusqu'ici, ce raisonnement conduisait à une prédiction simple : un gradient tibial > sural/fibulaire > saphène serait attendu si la proximité segmentaire gouvernait la réponse. Cette prédiction a été partiellement testée, et les résultats ne vont pas dans ce sens."
+    },
+    {
+      "type": "paragraph",
+      "text": "Chez le rat anesthésié, la stimulation du nerf saphène inhibe le réflexe vésical, avec un effet dépendant de la fréquence [17]. Le résultat est retrouvé chez le chat, où la stimulation saphène modifie la capacité vésicale selon les paramètres appliqués [19]. Une étude mécanistique a par ailleurs montré que la section du nerf hypogastrique ne supprime pas cet effet inhibiteur, ce qui indique que cette voie sympathique périphérique ne suffit pas à l'expliquer [18]. Côté humain, une étude pilote de faisabilité a porté sur la stimulation percutanée du saphène chez des patientes présentant une hyperactivité vésicale : dix-huit incluses, seize ayant terminé, quatorze satisfaisant au critère composite défini par les auteurs [24]. Il s'agit d'une petite série non contrôlée, sans groupe sham : un signal, non une démonstration."
+    },
+    {
+      "type": "paragraph",
+      "text": "Un travail complémentaire ajoute une difficulté intéressante : certaines modalités de neuromodulation tibiale percutanée pourraient co-recruter des fibres saphènes [20]. La frontière entre « porte tibiale » et « porte saphène » n'est donc pas nécessairement aussi nette dans la pratique clinique que dans la description anatomique."
+    },
+    {
+      "type": "paragraph",
+      "text": "Le Pont 3 change alors de statut. Le saphène n'est pas le témoin négatif du modèle : c'est, conceptuellement, une expérience naturelle. Il permet de séparer ce que le tibial cumule — proximité segmentaire sacrée et capacité de modulation — et d'isoler la seconde propriété. Que le saphène module la vessie sans partager S2–S4 constitue aujourd'hui le meilleur argument en faveur d'une lecture à deux axes indépendants."
+    },
+    {
+      "type": "callout",
+      "title": "POURQUOI LE SAPHÈNE EST DÉCISIF",
+      "text": "Si la proximité segmentaire suffisait à expliquer la modulation viscérale, une porte lombaire sans recouvrement sacré ne devrait pas modifier le réflexe vésical. Elle le modifie. Il faut donc admettre un second mécanisme, intersegmentaire ou supraspinal, qui opère indépendamment du recouvrement radiculaire.\nCe constat ne dévalue pas le Pont 1 : il en délimite la portée. La proximité segmentaire reste un argument de spécificité régionale, pas une condition d'existence de l'effet."
+    },
+    {
+      "type": "figure",
+      "images": [
+        "pont-3-autres-nerfs.webp"
+      ],
+      "caption": "À mettre à jour : la vignette saphène doit désormais porter la mention « module la vessie sans recouvrement sacré » plutôt qu'une position de simple contrôle."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "id": "pont-4-les-reseaux-lombo-sacres-un-carrefour-d-integration-spinale",
+      "text": "Pont 4 — Les réseaux lombo-sacrés : un carrefour d'intégration spinale"
+    },
+    {
+      "type": "paragraph",
+      "text": "Les afférences qui pénètrent dans la moelle lombo-sacrée ne restent pas enfermées dans un segment isolé. Elles se distribuent à des interneurones excitateurs et inhibiteurs, à des neurones de projection et à des circuits reliant plusieurs niveaux. Dans les circuits pelviens, ces réseaux reçoivent des informations viscérales, périnéales et somatiques et sont simultanément soumis aux commandes descendantes du cerveau [9-11]."
+    },
+    {
+      "type": "paragraph",
+      "text": "Des travaux expérimentaux sur la fonction vésicale montrent que des afférences tibiales et pudendales agissent à travers des mécanismes interneuronaux spinaux et modifient les réflexes de la vessie [11,15]. Une entrée somatique n'a donc pas besoin d'un trajet direct vers le viscère pour influencer un circuit autonome : elle peut modifier l'excitabilité du réseau dans lequel l'information viscérale est traitée."
+    },
+    {
+      "type": "paragraph",
+      "text": "La réponse dépend de l'état du système. Fréquence, intensité, durée de stimulation, fibres recrutées et état fonctionnel du viscère peuvent modifier le sens de la réponse. Dans les modèles vésicaux, le degré de remplissage est une variable importante [8-11,14]. Une même porte périphérique peut donc être facilitatrice, inhibitrice ou sans effet selon les conditions."
+    },
+    {
+      "type": "paragraph",
+      "text": "Le petit bassin forme un réseau intégré plutôt qu'une juxtaposition d'organes indépendants. Les interactions entre vessie, côlon distal et rectum sont documentées à plusieurs niveaux, depuis certaines afférences primaires jusqu'aux réseaux spinaux et aux phénomènes de sensibilisation croisée [31-33]. Ces données justifient de parler d'abord de ciblage régional pelvien avant d'affirmer un ciblage d'organe isolé."
+    },
+    {
+      "type": "figure",
+      "images": [
+        "pont-4-lombosacre.webp",
+        "reseaux-pelviens.webp"
+      ],
+      "caption": "Illustration neuro-anatomique R.O.P."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "id": "pont-5-les-voies-supraspinales-commandes-descendantes-et-fonctions-a-distance",
+      "text": "Pont 5 — Les voies supraspinales : commandes descendantes et fonctions à distance"
+    },
+    {
+      "type": "paragraph",
+      "text": "Une entrée somatique issue du pied peut remonter vers les centres supérieurs, participer à l'activité de réseaux cérébraux, puis modifier des commandes descendantes vers la moelle et les circuits autonomes. La littérature expérimentale sur les réflexes somato-autonomes montre de façon générale que l'entrée somatosensorielle peut influencer des fonctions autonomes par des mécanismes spinaux et supraspinaux [48]."
+    },
+    {
+      "type": "paragraph",
+      "text": "Pour la vessie, ce contrôle central est particulièrement bien décrit. Les informations viscérales et somatiques sont intégrées à plusieurs niveaux impliquant la substance grise périaqueducale, des centres pontiques, l'insula, le cortex cingulaire et les régions préfrontales ; ces réseaux participent à la perception de l'état viscéral, à l'attention, au contexte, à la décision et à la coordination des réponses autonomes et sphinctériennes [8,12,13]."
+    },
+    {
+      "type": "paragraph",
+      "text": "Le terme « cerveau limbique » doit être utilisé avec prudence : il est préférable de nommer les structures ou les réseaux concernés plutôt que de suggérer l'existence d'un centre limbique unique de la R.O.P. Les réponses cérébrales observées lors de stimulations transcutanées tibiales et fibulaires ne sont d'ailleurs pas identiques [16] : plusieurs portes périphériques peuvent atteindre des réseaux centraux partiellement communs tout en conservant des profils différents."
+    },
+    {
+      "type": "paragraph",
+      "text": "Le principal enseignement du Pont 5 est méthodologique : l'absence de recouvrement radiculaire direct ne suffit pas à exclure un effet viscéral. En revanche, plus l'hypothèse dépend exclusivement de relais supraspinaux généraux, moins elle permet d'affirmer une spécificité régionale ou une correspondance point-organe."
+    },
+    {
+      "type": "figure",
+      "images": [
+        "pont-5-schema.webp",
+        "pont-5-supraspinal.webp"
+      ],
+      "caption": "Illustration neuro-anatomique R.O.P."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "id": "pont-6-les-sorties-craniennes-du-tronc-cerebral",
+      "text": "Pont 6 — Les sorties crâniennes du tronc cérébral"
+    },
+    {
+      "type": "paragraph",
+      "text": "Le Pont 5 décrit des commandes descendantes vers des circuits autonomes spinaux. Le Pont 6 décrit une autre voie effectrice : une sortie parasympathique qui quitte le tronc cérébral par des nerfs crâniens, sans passer par la moelle. Les deux voies partagent leur montée et leur intégration centrale, mais divergent au moment de la sortie."
+    },
+    {
+      "type": "paragraph",
+      "text": "Ce sixième pont a une particularité : aucune proximité segmentaire n'y est invocable. Entre une afférence plantaire et un ganglion parasympathique céphalique, il n'existe ni racine commune ni voie périphérique partagée. Toute modulation observée y est donc nécessairement centrale — ce qui en fait, malgré la minceur des données, le test le plus propre du modèle de réseau."
+    },
+    {
+      "type": "paragraph",
+      "text": "La voie oculomotrice fournit la démonstration la plus solide. Chez le rat anesthésié, une stimulation électrique de la patte postérieure provoque une dilatation pupillaire dépendante de l'intensité. La section des nerfs somatiques innervant le membre stimulé abolit la réponse, et les auteurs ont enregistré des potentiels d'action dans les nerfs tibial et saphène. La section bilatérale des troncs sympathiques cervicaux n'abolit pas la réponse, tandis que la section des nerfs oculomoteurs la supprime [43]. Une information somatique du membre postérieur peut donc, après intégration centrale, modifier une fonction oculaire dépendant de la voie parasympathique du III. Dans ce modèle, la dilatation observée correspond vraisemblablement à une modulation — notamment une inhibition de l'activité parasympathique constrictrice — plutôt qu'à une activation parasympathique simple. La stimulation n'était toutefois pas limitée sélectivement aux nerfs plantaires, et aucune correspondance topographique n'est démontrée entre une zone podale et cette voie."
+    },
+    {
+      "type": "paragraph",
+      "text": "Pour le pharynx et le larynx, le pont est central mais incomplet. Des afférences somatiques du membre inférieur, recrutées notamment par stimulation du nerf tibial, produisent des réponses neuronales dans le noyau du tractus solitaire [44]. Indépendamment, les afférences pharyngées et laryngées transportées par le glossopharyngien et le nerf laryngé supérieur convergent dans ce même noyau [45]. La convergence anatomique est donc établie des deux côtés, mais l'expérience décisive — montrer qu'une stimulation plantaire modifie une fonction pharyngo-laryngée mesurable — n'a pas été publiée."
+    },
+    {
+      "type": "paragraph",
+      "text": "Pour les autres ganglions céphaliques, la physiologie locale est démontrée, le pont podal ne l'est pas. Les ganglions ptérygo-palatin, otique et submandibulaire disposent de données expérimentales établissant leur rôle autonome local : la stimulation directe du ganglion sphéno-/ptérygo-palatin modifie le débit sanguin de la muqueuse nasale [46] et la stimulation du noyau salivaire déclenche une sécrétion parotidienne ipsilatérale soutenue [47]. Aucune étude connue ne relie une stimulation sélective des nerfs plantaires à ces sorties. Une correction de lecture s'impose par ailleurs : les ganglions ciliaire, ptérygo-palatin, submandibulaire et otique sont des relais parasympathiques, tandis que le ganglion trigéminal et le ganglion inférieur du vague sont avant tout des ganglions sensitifs. Les regrouper sous une même catégorie crée une ambiguïté."
+    },
+    {
+      "type": "callout",
+      "title": "NIVEAU DE PREUVE DES SORTIES CRÂNIENNES",
+      "text": "Œil, voie du III — réflexe somato-autonomique depuis le membre postérieur directement démontré chez l'animal [43].\nPharynx–larynx, IX–X — convergence centrale démontrée dans le noyau du tractus solitaire ; effet d'une stimulation plantaire non testé [44,45].\nGanglions ptérygo-palatin, otique, submandibulaire — fonction autonome locale démontrée ; connexion depuis les afférences plantaires non démontrée."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "4-un-gradient-de-ciblage-neuro-anatomique-a-deux-axes",
+      "text": "4.  Un gradient de ciblage neuro-anatomique à deux axes"
+    },
+    {
+      "type": "paragraph",
+      "text": "La première version du gradient classait les zones selon la densité des arguments anatomiques reliant le pied à une région viscérale. Les données présentées ci-dessus obligent à séparer deux dimensions qui, jusqu'ici, semblaient varier ensemble."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "id": "4-1-axe-horizontal-proximite-segmentaire-et-densite-des-ponts-regionaux",
+      "text": "4.1. Axe horizontal : proximité segmentaire et densité des ponts régionaux"
+    },
+    {
+      "type": "paragraph",
+      "text": "Combien d'arguments anatomiques convergent vers une même région ? Cet axe prend en compte le nerf périphérique, les racines probables, la présence ou non d'un recouvrement avec les voies viscérales, la convergence spinale régionale et l'intégration fonctionnelle locale. Les territoires tibiaux associés aux réseaux pelviens y sont les candidats les plus forts [8-11,14]."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "id": "4-2-axe-vertical-niveau-de-preuve-de-modulation-somato-viscerale",
+      "text": "4.2. Axe vertical : niveau de preuve de modulation somato-viscérale"
+    },
+    {
+      "type": "paragraph",
+      "text": "Existe-t-il des données montrant qu'une stimulation somatique de cette voie modifie effectivement une fonction viscérale ? Cet axe doit être qualifié par trois éléments : l'espèce étudiée, le site de stimulation réellement employé, et le type d'étude — mécanistique animale, série humaine non contrôlée, essai randomisé. Une position haute sur cet axe ne signifie pas la même chose selon que la donnée vient d'une préparation animale ou d'un essai contrôlé."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "id": "4-3-quatre-quadrants",
+      "text": "4.3. Quatre quadrants"
+    },
+    {
+      "type": "paragraph",
+      "text": "Croiser les deux axes produit quatre situations, dont trois sont occupées par des données réelles."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Quadrant",
+        "Cibles",
+        "Lecture"
+      ],
+      "rows": [
+        [
+          "Q1 — Proximité forte, preuve forte",
+          "Bas appareil urinaire, interface périnéo-sphinctérienne.",
+          "Le meilleur modèle actuel. Recouvrement S2–S3, convergence spinale documentée et essais contrôlés favorables [8-16,21,22]. Ciblage régional plausible ; spécificité point-organe non démontrée."
+        ],
+        [
+          "Q2 — Proximité forte, preuve inégale",
+          "Rectum et côlon distal, autres organes pelviens.",
+          "Afférences distribuées et sensibilisation croisée bien établies [30-34], mais preuve clinique contradictoire selon l'indication [25-28]. La proximité anatomique n'a pas suffi à produire un effet homogène."
+        ],
+        [
+          "Q3 — Proximité faible, preuve réelle",
+          "Voie oculomotrice et réponse pupillaire ; duodénum et jéjunum par voie vagale ; côlon distal par voie pelvienne ; vessie par le nerf saphène.",
+          "Le quadrant décisif. Chacune de ces cibles est hors de portée d'un recouvrement segmentaire sacré depuis le pied, et chacune dispose pourtant d'une démonstration expérimentale de modulation [17-19,36-43]."
+        ],
+        [
+          "Q4 — Proximité faible, preuve absente",
+          "Rate, glandes surrénales, ganglions céphaliques hors voie du III, diaphragme.",
+          "Une influence somato-autonome reste physiologiquement concevable par les relais généraux [29,48], mais rien ne permet d'affirmer une modulation spécifique par une pression podale."
+        ]
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "POURQUOI LE QUADRANT 3 EST LE PLUS IMPORTANT",
+      "text": "Tant que toutes les cibles documentées étaient aussi les plus proches de S2–S3, les deux axes variaient ensemble — et le modèle à deux axes se réduisait en pratique à une échelle unique de proximité segmentaire.\nLe quadrant 3 rompt cette corrélation. Il montre que la capacité de modulation existe indépendamment de la proximité, et que ce sont bien deux propriétés distinctes d'une porte somatique. C'est ce qui rend le gradient utile plutôt que décoratif.\nLa voie oculomotrice y occupe une place particulière : la proximité segmentaire y est nulle par construction. Une démonstration à cet endroit n'est pas un cas parmi d'autres, c'est le test du mécanisme à sa limite — ce qui ne lui confère aucune portée clinique supérieure."
+    },
+    {
+      "type": "figure",
+      "images": [
+        "gradient-deux-axes.webp"
+      ],
+      "caption": "Remplace gradient-deux-axes.webp."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "id": "4-4-les-degres-comme-etiquette-de-synthese",
+      "text": "4.4. Les degrés comme étiquette de synthèse"
+    },
+    {
+      "type": "paragraph",
+      "text": "L'échelle en quatre niveaux est conservée comme résumé, à condition d'être lue comme la densité des arguments neuro-anatomiques, jamais comme une échelle de puissance clinique."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Degré",
+        "Intitulé",
+        "Contenu"
+      ],
+      "rows": [
+        [
+          "3",
+          "Ciblage régional renforcé",
+          "Porte périphérique identifiable, proximité radiculaire, convergence spinale documentée et fonction régionale intégrée."
+        ],
+        [
+          "2",
+          "Ciblage régional plausible",
+          "Proximité segmentaire partielle ou hétérogène, mais organisation afférente et réseaux spinaux communs permettant une modulation de la région."
+        ],
+        [
+          "1",
+          "Modulation fonctionnelle générale",
+          "Le lien repose surtout sur les relais intersegmentaires et supraspinaux. Une influence reste concevable, mais peu spécifique d'une région."
+        ],
+        [
+          "0",
+          "Correspondance point-organe non étayée",
+          "La position du point repose sur une tradition cartographique ou une analogie de forme, sans pont neuro-anatomique identifiable."
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Le diaphragme reste traité séparément : muscle strié sous contrôle phrénique cervical, il n'est pas un viscère au sens de ce gradient. Une influence depuis le pied relèverait d'une modulation centrale, respiratoire ou somatique, pas d'un pont viscéral segmentaire sacré [1]."
+    },
+    {
+      "type": "figure",
+      "images": [
+        "pelvis.webp",
+        "matrice-gradient.webp"
+      ],
+      "caption": "La matrice est à compléter d'une colonne « quadrant »."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "5-etat-de-la-preuve-clinique",
+      "text": "5.  État de la preuve clinique"
+    },
+    {
+      "type": "paragraph",
+      "text": "Le gradient décrit des voies d'accès. Il ne dit rien de l'efficacité thérapeutique. La littérature clinique de neuromodulation tibiale, la plus proche de nos hypothèses, donne des résultats nettement hétérogènes selon l'indication."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Indication",
+        "Données",
+        "Résultat"
+      ],
+      "rows": [
+        [
+          "Hyperactivité vésicale",
+          "SUmiT, essai randomisé contre sham ; OrBIT, essai randomisé contre traitement pharmacologique [21,22] ; données de maintien de la réponse [23].",
+          "Favorable. Référence clinique de la neuromodulation tibiale."
+        ],
+        [
+          "Incontinence fécale",
+          "CONFIDeNT, essai multicentrique en double aveugle contre sham ; NOTABLe, essai randomisé contre sham [25,26].",
+          "Pas de supériorité démontrée sur le sham dans les deux essais."
+        ],
+        [
+          "Constipation, dyssynergie défécatoire",
+          "Essais randomisés récents en syndrome de défécation obstructive et en dyssynergie du post-partum [27,28].",
+          "Signaux favorables, sur des critères fonctionnels."
+        ],
+        [
+          "Hyperactivité vésicale, porte saphène",
+          "Étude pilote de faisabilité, non contrôlée, sans sham [24].",
+          "Signal préliminaire seulement."
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Ce tableau est instructif dans les deux sens. Un même nerf, une même technique et une région anatomiquement voisine produisent des résultats opposés selon la fonction visée : un pont neuro-anatomique décrit une voie d'accès possible, jamais un effet thérapeutique acquis. Mais l'inverse est également vrai : l'échec dans une indication ne disqualifie pas la voie, il indique que la fonction, les paramètres ou la population étudiée ne s'y prêtaient pas."
+    },
+    {
+      "type": "paragraph",
+      "text": "Il faut enfin rappeler que ces essais portent sur une stimulation électrique appliquée au voisinage d'un tronc nerveux. Aucun ne teste une pression manuelle plantaire."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "6-transformer-la-cartographie-r-o-p-en-hypothese-experimentale",
+      "text": "6.  Transformer la cartographie R.O.P. en hypothèse expérimentale"
+    },
+    {
+      "type": "paragraph",
+      "text": "L'intérêt de cette architecture n'est pas de justifier rétrospectivement chaque point de la cartographie, mais de la transformer en série d'hypothèses vérifiables. Chaque zone peut être décrite par une chaîne explicite : tissu stimulé, population réceptrice, branche nerveuse, nerf principal, racines probables, réseau spinal, relais supraspinaux, fonction mesurée."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "id": "6-1-comparaison-intratibiale-tester-le-pont-2",
+      "text": "6.1. Comparaison intratibiale : tester le Pont 2"
+    },
+    {
+      "type": "paragraph",
+      "text": "Comparer, avec un geste aussi standardisé que possible, plusieurs zones appartenant toutes au système tibial — talon, arche médiale, arche latérale, avant-pied. Si les réponses sont identiques, la branche périphérique jouerait un rôle limité. Si elles diffèrent, la distribution des afférences, la profondeur, les tissus stimulés et l'organisation fasciculaire deviennent des variables explicatives prioritaires [2,3,5,6]."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "id": "6-2-comparaison-entre-nerfs-tester-le-pont-3",
+      "text": "6.2. Comparaison entre nerfs : tester le Pont 3"
+    },
+    {
+      "type": "paragraph",
+      "text": "Cette comparaison a déjà été menée en partie, sous stimulation électrique et chez l'animal, et son résultat oriente vers les mécanismes centraux [17-19]. Ce qui reste spécifiquement à établir pour la R.O.P. est différent : une pression manuelle appliquée sur quatre territoires podaux distincts produit-elle des profils de réponse différents ? Une gradation tibial > sural/fibulaire > saphène soutiendrait une contribution segmentaire ; une réponse comparable des quatre portes confirmerait la prééminence des mécanismes centraux [1,16]."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "id": "6-3-comparaison-entre-cibles-viscerales-tester-le-gradient",
+      "text": "6.3. Comparaison entre cibles viscérales : tester le gradient"
+    },
+    {
+      "type": "paragraph",
+      "text": "Le pelvis constitue le premier terrain de validation, parce qu'il combine la densité de ponts la plus forte et un modèle fonctionnel déjà largement étudié [8-16]. Le côlon distal et le rectum représentent une seconde cible logique [30-34]. Les cibles du quadrant 3 — duodénum, jéjunum, réponse pupillaire — permettent ensuite de mesurer directement la part des mécanismes intersegmentaires et supraspinaux [36-43]."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "id": "6-4-un-premier-protocole-accessible-pression-plantaire-et-pupillometrie",
+      "text": "6.4. Un premier protocole accessible : pression plantaire et pupillométrie"
+    },
+    {
+      "type": "paragraph",
+      "text": "Les critères de jugement pelviens exigent un recrutement clinique, un suivi long et souvent une instrumentation invasive. Le diamètre pupillaire offre au contraire une sortie autonome non invasive, continue, quantifiable et mesurable en séance, avec un matériel de coût modeste. C'est probablement la première expérience que le programme R.O.P. peut effectivement conduire."
+    },
+    {
+      "type": "paragraph",
+      "text": "Le protocole minimal découle de l'architecture elle-même. Une pression manuelle standardisée est appliquée sur des territoires plantaires définis — plantaire médial, plantaire latéral, calcanéen — comparés entre eux, ce qui teste le Pont 2, puis à une zone relevant d'une autre porte somatique, par exemple le territoire saphène médial ou le dos du pied, ce qui teste le Pont 3. La pupillométrie est enregistrée sous luminance contrôlée, en comparaison intra-sujet, avec une condition sham et une condition sans stimulation."
+    },
+    {
+      "type": "paragraph",
+      "text": "Ce que ce protocole établirait est exactement le maillon manquant de l'ensemble de l'architecture : qu'une pression manuelle plantaire, au niveau T4 de l'échelle ci-dessous, produit une réponse autonome mesurable chez l'humain. Ce qu'il n'établirait pas : une correspondance point-organe, ni un effet clinique. Il resterait une démonstration de couplage, comparable à celle déjà obtenue pour l'activité sympathique musculaire [49]."
+    },
+    {
+      "type": "paragraph",
+      "text": "La réserve doit être posée d'emblée : la démonstration disponible est animale, électrique et appliquée à la patte postérieure [43]. Rien ne garantit qu'une pression manuelle humaine recrute assez de fibres pour produire une réponse détectable. C'est précisément pour cette raison que l'expérience mérite d'être conduite plutôt que supposée."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "id": "6-5-l-echelle-de-transposition",
+      "text": "6.5. L'échelle de transposition"
+    },
+    {
+      "type": "paragraph",
+      "text": "Toute transposition d'un résultat vers la R.O.P. doit préciser à quel niveau elle se situe. Quatre niveaux, du plus éloigné au plus proche du geste :"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Niveau",
+        "Situation expérimentale",
+        "Distance au geste R.O.P."
+      ],
+      "rows": [
+        [
+          "T1",
+          "Stimulation d'un tronc nerveux par aiguille ou électrode, au voisinage de la malléole médiale (PTNS, TTNS).",
+          "Recrutement synchrone, intensité contrôlée, fibres différentes de celles d'une pression cutanée."
+        ],
+        [
+          "T2",
+          "Stimulation d'un point de jambe (ST36, ST37).",
+          "Territoire somatique distinct du pied ; utilisé par l'essentiel de la littérature digestive."
+        ],
+        [
+          "T3",
+          "Stimulation de la patte postérieure du rongeur.",
+          "Recrutement de plusieurs nerfs simultanément ; espèce différente."
+        ],
+        [
+          "T4",
+          "Pression manuelle sur un territoire plantaire défini.",
+          "Le geste réel. Aucune donnée mécanistique publiée à ce niveau."
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "La question spécifique à la R.O.P. devient alors : une pression manuelle reproductible sur un territoire anatomiquement défini produit-elle une activité afférente suffisante pour modifier un marqueur neurophysiologique, autonome ou viscéral ? Ce n'est qu'après cette étape qu'il devient pertinent de tester la spécificité de la zone."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "id": "6-6-variables-a-documenter",
+      "text": "6.6. Variables à documenter"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Localisation anatomique exacte de la zone, côté stimulé et territoire nerveux probable.",
+        "Caractéristiques du geste : surface de contact, direction, profondeur, intensité, durée et répétition.",
+        "État fonctionnel du système au moment du test, particulièrement important pour les circuits viscéraux dépendants de l'état du réseau.",
+        "Comparateur : autre zone du même nerf, autre nerf du pied, stimulation sham ou absence de stimulation selon le protocole.",
+        "Mesure de sortie : marqueur sensoriel, autonome, neurophysiologique, d'imagerie ou fonctionnel adapté à la question étudiée.",
+        "Distinction explicite entre effet général, effet régional et effet attribué à un organe particulier."
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "7-portee-et-limites-de-la-proposition",
+      "text": "7.  Portée et limites de la proposition"
+    },
+    {
+      "type": "paragraph",
+      "text": "Cette lecture ne cherche pas à démontrer l'efficacité de la réflexothérapie. Elle propose une architecture de travail. Une zone R.O.P. est anatomiquement mieux fondée lorsqu'elle réunit plusieurs éléments concordants : porte périphérique identifiable, profil afférent plausible, compatibilité radiculaire, convergence spinale régionale et, idéalement, données expérimentales de modulation. Elle l'est moins lorsque le lien repose principalement sur des relais centraux généraux ou sur une correspondance cartographique traditionnelle."
+    },
+    {
+      "type": "paragraph",
+      "text": "Quatre limites doivent rester explicites. Aucune donnée mécanistique publiée ne porte sur une stimulation sélective des nerfs plantaires : toute la littérature transposée ici se situe aux niveaux T1 à T3 de l'échelle ci-dessus. Deux essais contrôlés sont négatifs en incontinence fécale [25,26], et cette page les mentionne au même titre que les essais favorables. La constance de la contribution S3 au nerf tibial n'est pas établie de façon homogène, ce qui fragilise d'autant la prédiction d'un ciblage segmentaire reproductible. La présence d'une réponse autonome n'est pas une preuve de ciblage viscéral : que le feedback mécanorécepteur du pied module l'activité sympathique musculaire [49] établit un couplage, non une correspondance point-organe."
+    },
+    {
+      "type": "paragraph",
+      "text": "Une cinquième limite concerne le Pont 6. La modulation d'une sortie autonome crânienne depuis le membre inférieur repose sur une étude animale unique, ancienne, en stimulation électrique de la patte postérieure, et sur un critère — le diamètre pupillaire — sans rapport direct avec une plainte clinique. Elle est citée ici pour sa valeur démonstrative sur le mécanisme, non comme preuve d'un effet céphalique de la R.O.P. Pour l'essentiel des sorties céphaliques, la conclusion de cette page est explicitement négative : la physiologie locale du ganglion est établie, le pont podal ne l'est pas."
+    },
+    {
+      "type": "paragraph",
+      "text": "Enfin, une précision de périmètre. Cette page décrit l'entrée podale. Le protocole R.O.P. comporte par ailleurs une entrée occipitale, dont les afférences, les segments cervicaux et les convergences relèvent d'une analyse distincte qui n'est pas conduite ici. Rien de ce qui précède ne doit être lu comme une description de cette seconde porte d'entrée."
+    },
+    {
+      "type": "paragraph",
+      "text": "La bibliographie retenue soutient particulièrement la plante du pied, l'anatomie du nerf tibial et de ses branches, la neuromodulation vésicale, les réseaux sacrés, les interactions vessie-intestin, les réflexes somato-viscéraux digestifs et les mécanismes généraux somato-autonomes. Elle ne fournit pas le même niveau de preuve pour chaque viscère évoqué. Les propositions concernant l'estomac, le rein, la rate ou les glandes surrénales doivent rester formulées comme des hypothèses de modulation à distance à documenter."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "8-synthese-des-portes-des-ponts-et-un-gradient",
+      "text": "8.  Synthèse : des portes, des ponts et un gradient"
+    },
+    {
+      "type": "paragraph",
+      "text": "Le pied ne contient pas les organes ; il contient des portes d'entrée somatiques. Ces portes n'ont probablement ni la même densité sensorielle, ni la même organisation périphérique, ni la même proximité avec les réseaux spinaux. La porte plantaire/tibiale possède une base anatomique particulièrement riche pour le pelvis, mais elle n'est ni unique ni exclusive."
+    },
+    {
+      "type": "paragraph",
+      "text": "Le modèle s'organise autour de six ponts. Le Pont 1 examine la proximité segmentaire du tibial avec les réseaux sacrés. Le Pont 2 descend au niveau des branches plantaires et calcanéennes pour comprendre ce que la pression manuelle recrute réellement. Le Pont 3 compare les autres portes somatiques et découvre, avec le saphène, une modulation viscérale sans recouvrement sacré. Le Pont 4 situe leur convergence dans les réseaux lombo-sacrés. Le Pont 5 explique comment une entrée du pied accède aux réseaux supraspinaux et modifie des commandes descendantes. Le Pont 6 ajoute les sorties parasympathiques crâniennes, seule voie où une fonction céphalique a été effectivement modifiée depuis le membre inférieur."
+    },
+    {
+      "type": "paragraph",
+      "text": "Ces six ponts se répartissent en deux familles. Les quatre premiers construisent un modèle de proximité, qui explique pourquoi le pelvis est la région la plus accessible depuis le pied et qui reste le mieux étayé par la clinique. Les deux derniers construisent un modèle de réseau, qui explique comment une fonction sans segment commun avec le pied peut être modulée, et dont la valeur est d'abord démonstrative."
+    },
+    {
+      "type": "paragraph",
+      "text": "De cette architecture découle une règle simple, et une correction. La règle : plus une hypothèse associe une branche périphérique identifiable, une proximité radiculaire et une convergence spinale régionale, plus le ciblage anatomique est plausible. La correction : cette plausibilité concerne la spécificité du ciblage, non l'existence de l'effet. Une porte dépourvue de proximité segmentaire peut moduler un viscère — le saphène le montre pour la vessie, la voie du III pour la pupille, la voie vagale pour le duodénum. La preuve expérimentale constitue donc un axe distinct, à évaluer séparément."
+    },
+    {
+      "type": "paragraph",
+      "text": "La R.O.P. peut ainsi être reformulée comme un programme de recherche neuro-anatomique : identifier les portes, caractériser les afférences recrutées, comparer les nerfs, mesurer la réponse des réseaux et déterminer jusqu'où cette organisation explique les effets cliniques observés. La cartographie n'est plus une représentation figée du corps sur le pied ; elle devient une hypothèse anatomique et neurofonctionnelle à tester."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "terminologie-retenue",
+      "text": "Terminologie retenue"
+    },
+    {
+      "type": "paragraph",
+      "text": "Pont neuro-anatomique — Possibilité de convergence ou de relais entre une entrée somatique et un réseau susceptible de participer à une fonction viscérale."
+    },
+    {
+      "type": "paragraph",
+      "text": "Porte d'entrée somatique — Territoire périphérique dont la stimulation génère une activité afférente par un nerf identifiable."
+    },
+    {
+      "type": "paragraph",
+      "text": "Afférences viscérales cheminant avec les voies splanchniques thoracolombaires / avec les nerfs pelviens — Formulations préférées à « afférences sympathiques » ou « parasympathiques » lorsque l'on décrit un message sensitif."
+    },
+    {
+      "type": "paragraph",
+      "text": "Ciblage régional — Plausibilité anatomique qu'une porte somatique accède préférentiellement à un réseau régional ; ne signifie ni efficacité clinique ni spécificité point-organe."
+    },
+    {
+      "type": "paragraph",
+      "text": "Modulation viscérale — Modification mesurable d'une fonction ou d'un circuit viscéral ; terme préféré à « action directe sur l'organe »."
+    },
+    {
+      "type": "paragraph",
+      "text": "Voie supraspinale — Participation de centres situés au-dessus de la moelle à l'intégration de l'entrée somatique et aux commandes descendantes."
+    },
+    {
+      "type": "paragraph",
+      "text": "Modèle de proximité / modèle de réseau — Les deux familles d'arguments du modèle. Le premier repose sur le partage de segments médullaires (Ponts 1 à 4), le second sur l'intégration centrale (Ponts 5 et 6). Ils ne se testent pas de la même manière."
+    },
+    {
+      "type": "paragraph",
+      "text": "Sortie crânienne — Voie efférente parasympathique quittant le tronc cérébral par un nerf crânien, sans relais spinal — par opposition aux commandes descendantes du Pont 5."
+    },
+    {
+      "type": "paragraph",
+      "text": "Dissociation des axes — Constat qu'une porte somatique peut moduler une fonction viscérale sans partager de segment médullaire avec elle ; impose de traiter proximité segmentaire et preuve de modulation comme deux dimensions indépendantes."
+    },
+    {
+      "type": "paragraph",
+      "text": "Échelle de transposition — Quatre niveaux (T1 à T4) situant la distance entre le protocole d'une étude citée et le geste manuel de la R.O.P."
+    },
+    {
+      "type": "paragraph",
+      "text": "Quadrant — Position d'une cible viscérale au croisement des deux axes du gradient ; complète, sans le remplacer, le degré 0 à 3."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "bibliographie",
+      "text": "Bibliographie"
+    },
+    {
+      "type": "paragraph",
+      "text": "Cette bibliographie soutient l'architecture neuro-anatomique présentée ici. Elle n'a pas pour objet de constituer une revue systématique de l'efficacité clinique de la réflexothérapie ni de documenter avec le même niveau de détail chaque viscère évoqué."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "id": "a-anatomie-peripherique-et-afferences-du-pied",
+      "text": "A. Anatomie périphérique et afférences du pied"
+    },
+    {
+      "type": "paragraph",
+      "text": "1. Standring S, ed. Gray's Anatomy: The Anatomical Basis of Clinical Practice. 42e éd. Elsevier ; 2020."
+    },
+    {
+      "type": "paragraph",
+      "text": "2. Kennedy PM, Inglis JT. Distribution and behaviour of glabrous cutaneous receptors in the human foot sole. J Physiol. 2002;538(Pt 3):995–1002. doi:10.1113/jphysiol.2001.013087."
+    },
+    {
+      "type": "paragraph",
+      "text": "3. Strzalkowski NDJ, Peters RM, Inglis JT, Bent LR. Cutaneous afferent innervation of the human foot sole: what can we learn from single-unit recordings? J Neurophysiol. 2018;120(3):1233–1246. doi:10.1152/jn.00848.2017."
+    },
+    {
+      "type": "paragraph",
+      "text": "4. de Souza Faleiros AT, de Lima Resende LA, Zanini MA, de Lima Castro HA, Colichio Gabarra R. L4-L5-S1 human dermatomes. Arq Neuropsiquiatr. 2009;67(2A):265–267. doi:10.1590/S0004-282X2009000200017."
+    },
+    {
+      "type": "paragraph",
+      "text": "5. Deniel C, Guenoun D, Guillin R, Moraux A, Champsaur P, Le Corroller T. Anatomical study of the medial calcaneal nerve using high-resolution ultrasound. Eur Radiol. 2023;33(10):7330–7337. doi:10.1007/s00330-023-09699-6."
+    },
+    {
+      "type": "paragraph",
+      "text": "6. Andreasen Struijk LNS, Birn H, Teglbjærg PS, Haase J, Struijk JJ. Size and separability of the calcaneal and the medial and lateral plantar nerves in the distal tibial nerve. Anat Sci Int. 2010;85(1):13–22. doi:10.1007/s12565-009-0045-y."
+    },
+    {
+      "type": "paragraph",
+      "text": "7. Peng M, Yoo PB, Agur AMR. Distribution, course, and spatial relationships of the saphenous nerve: a 3D neuroanatomical map for nerve stimulation. PLoS ONE. 2024;19(2):e0297680. doi:10.1371/journal.pone.0297680."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "id": "b-controle-nerveux-du-bas-appareil-urinaire",
+      "text": "B. Contrôle nerveux du bas appareil urinaire"
+    },
+    {
+      "type": "paragraph",
+      "text": "8. Fowler CJ, Griffiths D, de Groat WC. The neural control of micturition. Nat Rev Neurosci. 2008;9(6):453–466. doi:10.1038/nrn2401."
+    },
+    {
+      "type": "paragraph",
+      "text": "9. Shefchyk SJ. Spinal cord neural organization controlling the urinary bladder and striated sphincter. Prog Brain Res. 2002;137:71–82. doi:10.1016/S0079-6123(02)37008-0."
+    },
+    {
+      "type": "paragraph",
+      "text": "10. de Groat WC, Vizzard MA, Araki I, Roppolo J. Spinal interneurons and preganglionic neurons in sacral autonomic reflex pathways. Prog Brain Res. 1996;107:97–111. doi:10.1016/S0079-6123(08)61860-9."
+    },
+    {
+      "type": "paragraph",
+      "text": "11. Yecies T, Li S, Zhang Y, Cai H, Shen B, Wang J, et al. Spinal interneuronal mechanisms underlying pudendal and tibial neuromodulation of bladder function in cats. Exp Neurol. 2018;308:100–110. doi:10.1016/j.expneurol.2018.06.015."
+    },
+    {
+      "type": "paragraph",
+      "text": "12. Griffiths D. Neural control of micturition in humans: a working model. Nat Rev Urol. 2015;12(12):695–705. doi:10.1038/nrurol.2015.266."
+    },
+    {
+      "type": "paragraph",
+      "text": "13. de Rijk MM, Fernández Chadily S, Knops A, Schoutens Y, Verstegen AMJ. The periaqueductal gray and its role in the neural control of lower urinary tract function. Auton Neurosci. 2026;265:103413. doi:10.1016/j.autneu.2026.103413."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "id": "c-mecanismes-de-la-neuromodulation-tibiale-et-saphene",
+      "text": "C. Mécanismes de la neuromodulation tibiale et saphène"
+    },
+    {
+      "type": "paragraph",
+      "text": "14. Li X, Li X, Liao L. Mechanism of action of tibial nerve stimulation in the treatment of lower urinary tract dysfunction. Neuromodulation. 2024;27(2):256–266. doi:10.1016/j.neurom.2023.03.017."
+    },
+    {
+      "type": "paragraph",
+      "text": "15. Kovacevic M, Yoo PB. Reflex neuromodulation of bladder function elicited by posterior tibial nerve stimulation in anesthetized rats. Am J Physiol Renal Physiol. 2015;308(4):F320–F329. doi:10.1152/ajprenal.00212.2014."
+    },
+    {
+      "type": "paragraph",
+      "text": "16. Krhut J, Tintěra J, Rejchrt M, Skugarevská B, Zachoval R, Zvara P, et al. Differences between brain responses to peroneal electrical transcutaneous neuromodulation and transcutaneous tibial nerve stimulation. Neurourol Urodyn. 2023;42(6):1352–1361. doi:10.1002/nau.25197."
+    },
+    {
+      "type": "paragraph",
+      "text": "17. Moazzam Z, Yoo PB. Frequency-dependent inhibition of bladder function by saphenous nerve stimulation in anesthetized rats. Neurourol Urodyn. 2018;37(2):592–599. doi:10.1002/nau.23323."
+    },
+    {
+      "type": "paragraph",
+      "text": "18. Franz KS, Yoo PB. Transecting the hypogastric nerve to uncover the bladder-inhibitory pathways involved with saphenous nerve stimulation in anesthetized rats. Auton Neurosci. 2020;226:102672. doi:10.1016/j.autneu.2020.102672."
+    },
+    {
+      "type": "paragraph",
+      "text": "19. Li X, Wan X, Wang Z, et al. Frequency-dependent effects on bladder reflex by saphenous nerve stimulation and a possible action mechanism of tibial nerve stimulation in cats. Int Neurourol J. 2021;25(2):128–136. doi:10.5213/inj.2040304.152."
+    },
+    {
+      "type": "paragraph",
+      "text": "20. Elder CW, Yoo PB. Co-activation of saphenous nerve fibers: a potential therapeutic mechanism of percutaneous tibial nerve stimulation? Conf Proc IEEE Eng Med Biol Soc. 2016:3129–3132. doi:10.1109/EMBC.2016.7591392."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "id": "d-donnees-cliniques-de-neuromodulation",
+      "text": "D. Données cliniques de neuromodulation"
+    },
+    {
+      "type": "paragraph",
+      "text": "21. Peters KM, Carrico DJ, Perez-Marrero RA, et al. Randomized trial of percutaneous tibial nerve stimulation versus sham efficacy in the treatment of overactive bladder syndrome: results from the SUmiT trial. J Urol. 2010;183(4):1438–1443. doi:10.1016/j.juro.2009.12.036."
+    },
+    {
+      "type": "paragraph",
+      "text": "22. Peters KM, MacDiarmid SA, Wooldridge LS, et al. Randomized trial of percutaneous tibial nerve stimulation versus extended-release tolterodine: results from the Overactive Bladder Innovative Therapy trial. J Urol. 2009;182(3):1055–1061. doi:10.1016/j.juro.2009.05.045."
+    },
+    {
+      "type": "paragraph",
+      "text": "23. MacDiarmid SA, Peters KM, Shobeiri SA, et al. Long-term durability of percutaneous tibial nerve stimulation for the treatment of overactive bladder. J Urol. 2010;183(1):234–240. doi:10.1016/j.juro.2009.08.160."
+    },
+    {
+      "type": "paragraph",
+      "text": "24. MacDiarmid SA, John MS, Yoo PB. A pilot feasibility study of treating overactive bladder patients with percutaneous saphenous nerve stimulation. Neurourol Urodyn. 2018;37(5):1815–1820. doi:10.1002/nau.23531."
+    },
+    {
+      "type": "paragraph",
+      "text": "25. Knowles CH, Horrocks EJ, Bremner SA, et al.; CONFIDeNT Study Group. Percutaneous tibial nerve stimulation versus sham electrical stimulation for the treatment of faecal incontinence in adults (CONFIDeNT). Lancet. 2015;386(10004):1640–1648. doi:10.1016/S0140-6736(15)60314-2."
+    },
+    {
+      "type": "paragraph",
+      "text": "26. Zyczynski HM, Richter HE, Sung VW, et al.; NICHD Pelvic Floor Disorders Network. Percutaneous tibial nerve stimulation vs sham stimulation for fecal incontinence in women (NOTABLe). Am J Gastroenterol. 2022;117(4):654–667. doi:10.14309/ajg.0000000000001605."
+    },
+    {
+      "type": "paragraph",
+      "text": "27. Ashoush F, Abdelrahim A, Ali O, et al. A randomized controlled trial comparing bilateral percutaneous tibial nerve stimulation versus biofeedback pelvic floor muscle training in obstructed defecation syndrome. Cureus. 2025;17(3):e80885. doi:10.7759/cureus.80885."
+    },
+    {
+      "type": "paragraph",
+      "text": "28. Wu J, Yuan M, Zhao Y, Yang Y, Yan Z, Wu Y. The efficacy of transcutaneous tibial nerve stimulation as an adjunct to standard rehabilitation for postpartum pelvic floor dyssynergic defecation in primiparous women. Int Urogynecol J. 2026. doi:10.1007/s00192-026-06564-0."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "id": "e-afferences-viscerales-et-reseaux-pelviens",
+      "text": "E. Afférences viscérales et réseaux pelviens"
+    },
+    {
+      "type": "paragraph",
+      "text": "29. Jänig W. Neurobiology of visceral afferent neurons: neuroanatomy, functions, organ regulations and sensations. Biol Psychol. 1996;42(1–2):29–51. doi:10.1016/0301-0511(95)05145-7."
+    },
+    {
+      "type": "paragraph",
+      "text": "30. Brierley SM, Hibberd TJ, Spencer NJ. Spinal afferent innervation of the colon and rectum. Front Cell Neurosci. 2018;12:467. doi:10.3389/fncel.2018.00467."
+    },
+    {
+      "type": "paragraph",
+      "text": "31. Panicker JN, Marcelissen T, von Gontard A, Vrijens D, Abrams P, Wyndaele M. Bladder-bowel interactions: do we understand pelvic organ cross-sensitization? Neurourol Urodyn. 2019;38(Suppl 5):S25–S34. doi:10.1002/nau.24111."
+    },
+    {
+      "type": "paragraph",
+      "text": "32. Malykhina AP. Neural mechanisms of pelvic organ cross-sensitization. Neuroscience. 2007;149(3):660–672. doi:10.1016/j.neuroscience.2007.07.053."
+    },
+    {
+      "type": "paragraph",
+      "text": "33. Christianson JA, Liang R, Ustinova EE, Davis BM, Fraser MO, Pezzone MA. Convergence of bladder and colon sensory innervation occurs at the primary afferent level. Pain. 2007;128(3):235–243. doi:10.1016/j.pain.2006.09.023."
+    },
+    {
+      "type": "paragraph",
+      "text": "34. Johnson ME, Humenick A, Peterson RA, Costa M, Wattchow DA, Sia TC, Dinning PG, Brookes SJH. Characterisation of parasympathetic ascending nerves in human colon. Front Neurosci. 2022;16:1072002. doi:10.3389/fnins.2022.1072002."
+    },
+    {
+      "type": "paragraph",
+      "text": "35. Wang L, Taché Y. The parasympathetic and sensory innervation of the proximal and distal colon in male mice. Front Neuroanat. 2024;18:1422403. doi:10.3389/fnana.2024.1422403."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "id": "f-reflexes-somato-visceraux-digestifs",
+      "text": "F. Réflexes somato-viscéraux digestifs"
+    },
+    {
+      "type": "paragraph",
+      "text": "36. Noguchi E, Ohsawa H, Tanaka H, Ikeda H, Aikawa Y. Electro-acupuncture stimulation effects on duodenal motility in anesthetized rats. Jpn J Physiol. 2003;53(1):1–7. doi:10.2170/jjphysiol.53.1."
+    },
+    {
+      "type": "paragraph",
+      "text": "37. Iwa M, Matsushima M, Nakade Y, Pappas TN, Fujimiya M, Takahashi T. Electroacupuncture at ST-36 accelerates colonic motility and transit in freely moving conscious rats. Am J Physiol Gastrointest Liver Physiol. 2006;290:G285–G292. doi:10.1152/ajpgi.00068.2005."
+    },
+    {
+      "type": "paragraph",
+      "text": "38. Qin QG, Gao XY, Liu K, Yu XC, Li L, Wang HP, Zhu B. Acupuncture at heterotopic acupoints enhances jejunal motility in constipated and diarrheic rats. World J Gastroenterol. 2014;20(48):18271–18283. doi:10.3748/wjg.v20.i48.18271."
+    },
+    {
+      "type": "paragraph",
+      "text": "39. Gao X, et al. Acupuncture at heterotopic acupoints facilitates distal colonic motility via activating M3 receptors and somatic afferent C-fibers. Neurogastroenterol Motil. 2015. doi:10.1111/nmo.12694."
+    },
+    {
+      "type": "paragraph",
+      "text": "40. Yuan M, Li Y, Wang Y, Zhang N, Hu X, Yin Y, Zhu B, Yu Z, Xu B. Electroacupuncture at ST37 enhances jejunal motility via excitation of the parasympathetic system in rats and mice. Evid Based Complement Alternat Med. 2016;2016:3840230. doi:10.1155/2016/3840230."
+    },
+    {
+      "type": "paragraph",
+      "text": "41. Du L, Qin Q, He X, Wang X, Sun G, Zhu B, Liu K, Gao X. Interstitial cells of Cajal are required for different intestinal motility responses induced by acupuncture. Neurogastroenterol Motil. 2025;37(6). doi:10.1111/nmo.14973."
+    },
+    {
+      "type": "paragraph",
+      "text": "42. Zhang N, Chen H, Gao X, Li S, Li X, Li W, Liu K, Wang S, Zhu B. Multimodal enhancement of colonic motility by acupuncture at ST36 is mediated by TRPV1+ cutaneous sensory fibers. Front Biosci (Landmark). 2026;31(1):46975. doi:10.31083/FBL46975."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "id": "g-reflexes-somato-autonomiques-cephaliques",
+      "text": "G. Réflexes somato-autonomiques céphaliques"
+    },
+    {
+      "type": "paragraph",
+      "text": "43. Ohsawa H, Yamaguchi S, Ishimaru H, Shimura M, Sato Y. Neural mechanism of pupillary dilation elicited by electro-acupuncture stimulation in anesthetized rats. J Auton Nerv Syst. 1997;64(2–3):101–106. doi:10.1016/S0165-1838(97)00023-4."
+    },
+    {
+      "type": "paragraph",
+      "text": "44. Toney GM, Mifflin SW. Time-dependent inhibition of hindlimb somatic afferent transmission within nucleus tractus solitarius. Neuroscience. 1995;68(2):445–453. doi:10.1016/0306-4522(95)00156-D."
+    },
+    {
+      "type": "paragraph",
+      "text": "45. Ootani S, Umezaki T, Shin T, Murata Y. Convergence of afferents from the SLN and GPN in cat medullary swallowing neurons. Brain Res Bull. 1995;37(4):397–404. doi:10.1016/0361-9230(95)00018-6."
+    },
+    {
+      "type": "paragraph",
+      "text": "46. Zheng C. Control of blood flow in nasal mucosa by electro-stimulation of sphenopalatine ganglion. Zhonghua Er Bi Yan Hou Ke Za Zhi. 1997;32(3):163–166."
+    },
+    {
+      "type": "paragraph",
+      "text": "47. Donaldson J, Mitchell J, Templeton D. Electrical stimulation of the salivatory nucleus in the rat. J Physiol. 1984;356:1–7. doi:10.1113/jphysiol.1984.sp015448."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "id": "h-mecanismes-generaux-somato-autonomiques",
+      "text": "H. Mécanismes généraux somato-autonomiques"
+    },
+    {
+      "type": "paragraph",
+      "text": "48. Sato A, Sato Y, Schmidt RF. The impact of somatosensory input on autonomic functions. Rev Physiol Biochem Pharmacol. 1997;130:1–328. doi:10.1007/BFb0046598."
+    },
+    {
+      "type": "paragraph",
+      "text": "49. Strzalkowski NDJ, Incognito AV, Bent LR, Millar PJ. Cutaneous mechanoreceptor feedback from the hand and foot can modulate muscle sympathetic nerve activity. Front Neurosci. 2016;10:568. doi:10.3389/fnins.2016.00568."
+    }
+  ]
+}
