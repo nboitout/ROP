@@ -1682,7 +1682,8 @@ a.ss-switch-opt:hover { color:var(--gold); }
 .nap-home:hover { color:var(--gold); }
 .nap-article { max-width:860px; margin:0 auto; padding:26px 24px 90px; }
 
-.nap-hero { padding-bottom:26px; border-bottom:1px solid rgba(26,26,24,.1); margin-bottom:10px; }
+.nap-hero { position:static; height:auto; display:block; padding:0 0 26px; background:transparent;
+  border-bottom:1px solid rgba(26,26,24,.1); margin-bottom:10px; box-shadow:none; backdrop-filter:none; }
 .nap-eyebrow { font-size:.66rem; font-weight:600; letter-spacing:.2em; text-transform:uppercase; color:var(--sage); }
 .nap-hero h1 { font-family:'Cormorant Garamond',serif; font-size:clamp(2rem,5vw,3rem); font-weight:300;
   line-height:1.1; margin:12px 0 16px; }
