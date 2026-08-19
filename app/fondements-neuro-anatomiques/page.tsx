@@ -33,14 +33,22 @@ const toc = blocks.filter(
 )
 
 function FigureBlock({ block }: { block: Extract<ContentBlock, { type: 'figure' }> }) {
-  const figures = block.images.map((image, index) => (
-    <NapFigure
-      key={image}
-      src={`/assets/anatomie/${image}`}
-      caption={block.images.length > 1 ? `${block.caption} (${index + 1}/${block.images.length})` : block.caption}
-      alt={block.caption}
-    />
-  ))
+  const figures = block.images.map((image, index) => {
+    const dimensions = image === 'pont-2-plantaires.png'
+      ? { width: 1536, height: 1024 }
+      : image.endsWith('.png')
+        ? { width: 1672, height: 941 }
+        : {}
+    return (
+      <NapFigure
+        key={image}
+        src={`/assets/anatomie/${image}`}
+        caption={block.images.length > 1 ? `${block.caption} (${index + 1}/${block.images.length})` : block.caption}
+        alt={block.caption}
+        {...dimensions}
+      />
+    )
+  })
   return block.images.length > 1 ? <div className="nap-fig-pair">{figures}</div> : figures[0]
 }
 

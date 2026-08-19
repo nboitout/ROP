@@ -13,12 +13,12 @@ import { getSessionId } from '@/lib/session'
 const figureFolders: Partial<Record<Lang, string>> = {}
 
 const DESKTOP_FIGURE = {
-  src: '/assets/Gradient -- version desktop.png',
+  src: '/assets/Fondements Neuro-Anatomiques/Gradient -- version desktop.png',
   width: 1672,
   height: 941,
 }
 const MOBILE_FIGURE = {
-  src: '/assets/Gradient -- version mobile.png',
+  src: '/assets/Fondements Neuro-Anatomiques/Gradient -- version mobile.png',
   width: 1122,
   height: 1402,
 }

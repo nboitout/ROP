@@ -19,7 +19,19 @@ const MIN_ZOOM = 0.5
 const MAX_ZOOM = 4
 const STEP = 0.25
 
-export default function NapFigure({ src, caption, alt }: { src: string; caption: string; alt: string }) {
+export default function NapFigure({
+  src,
+  caption,
+  alt,
+  width = FIG_W,
+  height = FIG_H,
+}: {
+  src: string
+  caption: string
+  alt: string
+  width?: number
+  height?: number
+}) {
   const [open, setOpen] = useState(false)
   const [zoom, setZoom] = useState(1)
 
@@ -49,7 +61,7 @@ export default function NapFigure({ src, caption, alt }: { src: string; caption:
           onClick={() => setOpen(true)}
           aria-label={`${caption} — Cliquer pour agrandir`}
         >
-          <Image src={src} alt={alt} width={FIG_W} height={FIG_H} sizes="(max-width:900px) 92vw, 860px" />
+          <Image src={src} alt={alt} width={width} height={height} sizes="(max-width:900px) 92vw, 860px" />
           <span className="nap-fig-zoom" aria-hidden>⌕</span>
         </button>
         <figcaption>{caption}</figcaption>
@@ -86,8 +98,8 @@ export default function NapFigure({ src, caption, alt }: { src: string; caption:
                 className="nap-lb-img"
                 src={src}
                 alt={alt}
-                width={FIG_W}
-                height={FIG_H}
+                width={width}
+                height={height}
                 sizes="(max-width:900px) 92vw, 1200px"
                 style={{ transform: `scale(${zoom})` }}
               />

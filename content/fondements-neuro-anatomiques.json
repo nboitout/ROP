@@ -139,7 +139,7 @@
     {
       "type": "figure",
       "images": [
-        "pont-schema.webp"
+        "pont-schema.png"
       ],
       "caption": "Du stimulus podal à la modulation du réseau, les quatre étapes d'un pont neuro-anatomique."
     },
@@ -216,7 +216,7 @@
     {
       "type": "figure",
       "images": [
-        "pont-1-tibial.webp"
+        "pont-1-tibial.png"
       ],
       "caption": "Le nerf tibial, une porte d'entrée lombo-sacrée."
     },
@@ -250,7 +250,7 @@
     {
       "type": "figure",
       "images": [
-        "pont-2-plantaires.webp"
+        "pont-2-plantaires.png"
       ],
       "caption": "De la zone podale au nerf tibial : talon, arche et avant-pied au sein d'un même tronc nerveux."
     },
