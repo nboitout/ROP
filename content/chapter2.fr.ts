@@ -1,12 +1,12 @@
 // Chapter 2 content — French synchronized reading stream
-// Source: public/chapter-2/Chapitre_2_Traitement_ROP_version_alignee_chapitre_0.docx
+// Source: public/chapter-2/Chapitre_2_Traitement_ROP_version_publisable_balance_viscero_emotionnelle.docx
 
 import type { Chapter } from './types'
 
 export const chapter2Fr: Chapter = {
   slug: 'chapter-2',
   number: '2',
-  title: 'Traitement par la Réflexothérapie Occipito-Podale',
+  title: 'Traitement par la Réflexothérapie Occipito-Podale (ROP)',
   sections: [
     {
       id: 'presentation',
@@ -263,12 +263,41 @@ export const chapter2Fr: Chapter = {
             'Nerfs somatiques et plexus lombaires ou sacrés impliqués dans les relations viscéro-somatiques.',
             'Relations segmentaires, convergences spinales et territoires musculo-squelettiques associés.',
             'Réseaux limbiques et cortico-limbiques : notamment insula et cortex cingulaire ; amygdale et hippocampe lorsque leur cartographie clinique ROP est utilisée.',
-            'Balance viscéro-émotionnelle dans le protocole ROP : écoute-induction, un contact sur le viscère dominant et l’autre sur la zone réflexe choisie.',
+            'Balance viscéro-émotionnelle : mise en relation de la zone réflexe du viscère dominant et de la zone réflexe cérébrale retenue par l’écoute.',
+          ],
+        },
+        {
+          type: 'sub',
+          text: '4.4.1. La balance viscéro-émotionnelle',
+        },
+        {
+          type: 'para',
+          text: 'Les viscères et le cerveau entretiennent des relations permanentes et bidirectionnelles. Les informations provenant des organes sont transmises au système nerveux central par les voies afférentes viscérales et participent à l’interoception, c’est-à-dire à la perception et à l’intégration de l’état interne de l’organisme. En sens inverse, les états émotionnels et les processus cérébraux modulent, notamment par l’intermédiaire du système nerveux autonome, le fonctionnement viscéral.',
+        },
+        {
+          type: 'para',
+          text: 'La balance viscéro-émotionnelle aborde cliniquement cette interaction en mettant simultanément en relation la zone réflexe du viscère dominant identifié par les tests et la zone réflexe cérébrale choisie au cours de l’écoute. Le praticien établit généralement un contact avec un pouce sur la zone réflexe viscérale et l’autre sur la zone réflexe cérébrale.',
+        },
+        {
+          type: 'para',
+          text: 'La manœuvre se déroule en quatre temps :',
+        },
+        {
+          type: 'numbered',
+          items: [
+            'Mise en relation. Les deux zones sont contactées simultanément, avec une pression fine, stable et non douloureuse.',
+            'Écoute. Le praticien apprécie la qualité texturale des deux zones et la réponse qui apparaît lorsqu’elles sont mises en relation.',
+            'Induction. Lorsque l’écoute met en évidence une réponse nécessitant un traitement, une sollicitation manuelle douce et précise est appliquée à la ou aux zones réflexes concernées.',
+            'Laisser faire et réévaluation. Le contact est maintenu pendant le temps de réponse tissulaire, puis les zones sont réévaluées afin d’apprécier la modification obtenue.',
           ],
         },
         {
           type: 'para',
-          text: 'Cette dernière manœuvre appartient au protocole clinique ROP. Elle ne suppose pas l’existence démontrée d’une connexion anatomique directe entre la zone palpée et une structure limbique particulière. Les voies supraspinales rendent plausible une modulation contextuelle et descendante, mais apportent moins d’arguments pour une spécificité point-organe.',
+          text: 'La balance ne se substitue pas au traitement anatomique, neuro-végétatif ou loco-régional du viscère. Elle le complète lorsque l’écoute clinique fait apparaître une composante viscéro-émotionnelle pertinente. Elle ne doit pas être comprise comme une correspondance mécanique et exclusive entre une émotion déterminée et un organe déterminé. L’histoire du patient, le contexte du stress, son vécu et ses capacités d’adaptation modulent l’expression de cette relation. La cartographie émotionnelle utilisée en ROP sert à orienter l’écoute et le traitement ; elle n’est pas utilisée comme une grille d’interprétation prédéterminée du patient.',
+        },
+        {
+          type: 'para',
+          text: 'Cette mise en relation ne suppose pas l’existence démontrée d’une connexion anatomique directe entre la zone palpée et une structure limbique particulière. Les voies supraspinales rendent plausible une modulation contextuelle et descendante, mais apportent moins d’arguments pour une spécificité point-organe.',
         },
       ],
     },
