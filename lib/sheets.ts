@@ -17,6 +17,10 @@ const ALWAYS_EXCLUDED_READER_IDS = [
   '9ccbcb83-5f0f-47e7-8a33-13ae826a28f0',
   '4fd915c9-cab3-49d1-989d-911a2f5214af',
   '8aa28bec-8f8f-42d6-a068-7348ad0ffa50',
+  // QA / monitoring traffic observed from the US on 2026-08-18..20.
+  'fbb24fb6-9191-4e91-9273-26b2fa8dd37c', // Chrome-Lighthouse
+  'ce3a664b-56e9-4401-b46f-c09512014af2', // short US desktop visit
+  '6ad9dc93-839c-48c8-8be9-c41c68d483c5', // short US desktop visit
 ]
 
 // Emails always hidden from the dashboard, in addition to anything in the
@@ -508,14 +512,14 @@ export async function fetchAllSheets(options: {
   })
 
   // --- Traffic-quality filter --------------------------------------------
-  // Keep a whole browsing connection only if it accumulated at least
+  // Keep a whole browsing connection only if it accumulated more than
   // MIN_DWELL_SECONDS of active time. A "connection" maps to one browser
   // session (sessionId), with a legacy fallback to readerId+day for older rows.
-  // This removes both first visits and later reconnections that last under 4s.
+  // This removes both first visits and later reconnections that last 7s or less.
   // Self-declared crawlers are still dropped by user-agent as an explicit guard.
   // Rows before BOT_FILTER_START are historical seed data and are kept as-is.
   const BOT_FILTER_START = '2026-05-28'
-  const MIN_DWELL_SECONDS = 4
+  const MIN_DWELL_SECONDS = 7
   const BOT_UA = /bot|crawl|spider|slurp|mediapartners|bingpreview|google-read-aloud|read-aloud|google web preview|apis-google|feedfetcher|facebookexternal|embedly|quora link preview|pinterest|vkshare|whatsapp|telegram|headless|phantomjs|python-requests|curl|wget|httpclient|go-http-client|java\/|okhttp|axios|node-fetch|libwww|scrapy/i
 
   // Total active seconds per connection, summed across page_leave fragments.
@@ -532,7 +536,7 @@ export async function fetchAllSheets(options: {
   function keepConnection(row: { timestamp: string; userAgent: string; sessionId: string; readerId: string }): boolean {
     if (row.timestamp.slice(0, 10) < BOT_FILTER_START) return true
     if (BOT_UA.test(row.userAgent ?? '')) return false
-    return (dwellByConnection.get(connectionKeyForFilter(row)) ?? 0) >= MIN_DWELL_SECONDS
+    return (dwellByConnection.get(connectionKeyForFilter(row)) ?? 0) > MIN_DWELL_SECONDS
   }
 
   const filteredVisits = cleanVisits.filter((v) => keepConnection(v))
