@@ -1,5 +1,6 @@
 // Chapter 5 rework - private review page (/lecture/chapitre-5-rework).
-// The regenerated deck follows the revised text flow and ends with two annexes.
+// The deck follows the revised text flow. Its two former annex slides remain
+// available in the deck, but are no longer injected into the body text.
 
 export type SyncSlide = { src: string; title: string; orientation?: 'portrait' }
 export type SyncAnchorPoint = { sectionId: string; blockIndex: number; itemIndex?: number }
@@ -60,15 +61,10 @@ export const chapter5ReworkSlideAnchors: SyncAnchor[] = [
   { sectionId: 'la-cible-autonome-la-flexibilite-non-la-domination-vagale', blockIndex: -1, slide: 17, ...endAt('la-cible-autonome-la-flexibilite-non-la-domination-vagale', 1) },
   { sectionId: 'la-cible-autonome-la-flexibilite-non-la-domination-vagale', blockIndex: 1, slide: 18, ...endAt('le-pont-avec-la-rop-agir-sur-la-reponse-non-sur-l-existence-du-stresseur', -1) },
   { sectionId: 'le-pont-avec-la-rop-agir-sur-la-reponse-non-sur-l-existence-du-stresseur', blockIndex: -1, slide: 19, ...endAt('la-seance-rop-stimuler-puis-laisser-integrer', -1) },
-  { sectionId: 'la-seance-rop-stimuler-puis-laisser-integrer', blockIndex: -1, slide: 20, ...endAt('quatre-niveaux-de-progressions-durant-la-seance-rop', -1) },
-  { sectionId: 'quatre-niveaux-de-progressions-durant-la-seance-rop', blockIndex: -1, slide: 21, ...endAt('quatre-niveaux-de-progressions-durant-la-seance-rop', 3) },
-  { sectionId: 'quatre-niveaux-de-progressions-durant-la-seance-rop', blockIndex: 3, slide: 22, ...endAt('quatre-niveaux-de-progressions-durant-la-seance-rop', 8) },
-  { sectionId: 'quatre-niveaux-de-progressions-durant-la-seance-rop', blockIndex: 8, slide: 23, ...endAt('quatre-niveaux-de-progressions-durant-la-seance-rop', 14) },
-  { sectionId: 'quatre-niveaux-de-progressions-durant-la-seance-rop', blockIndex: 14, slide: 24, ...endAt('quatre-niveaux-de-progressions-durant-la-seance-rop', 21) },
-  { sectionId: 'quatre-niveaux-de-progressions-durant-la-seance-rop', blockIndex: 21, slide: 25, ...endAt('reactions-apres-seance-recuperation', -1) },
+  { sectionId: 'la-seance-rop-stimuler-puis-laisser-integrer', blockIndex: -1, slide: 20, ...endAt('les-quatre-niveaux-rop-appliques-au-stress', -1) },
+  { sectionId: 'les-quatre-niveaux-rop-appliques-au-stress', blockIndex: -1, slide: 21, ...endAt('les-quatre-niveaux-rop-appliques-au-stress', 1) },
+  { sectionId: 'les-quatre-niveaux-rop-appliques-au-stress', blockIndex: 1, slide: [22, 23, 24, 25], ...endAt('les-quatre-niveaux-rop-appliques-au-stress', 7) },
+  { sectionId: 'les-quatre-niveaux-rop-appliques-au-stress', blockIndex: 7, slide: 28, ...endAt('reactions-apres-seance-recuperation', -1) },
   { sectionId: 'illustration-clinique-fibromyalgie-et-charge-allostatique', blockIndex: -1, slide: 26, ...endAt('vers-une-recherche-sur-la-cinetique-de-recuperation', -1) },
   { sectionId: 'vers-une-recherche-sur-la-cinetique-de-recuperation', blockIndex: -1, slide: 27, ...endAt('conclusion', -1) },
-  { sectionId: 'zones-reflexes-podales', blockIndex: -1, slide: 28, ...endAt('zones-reflexes-podales', 2) },
-  { sectionId: 'annexe-1', blockIndex: -1, slide: 29, ...endAt('annexe-2', -1) },
-  { sectionId: 'annexe-2', blockIndex: -1, slide: 30, ...endAt('tableau-synthetique-de-la-progression-clinique', -1) },
 ]
