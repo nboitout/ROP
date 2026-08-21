@@ -1,5 +1,5 @@
 // Chapter 2 content — French synchronized reading stream
-// Source: public/chapter-2/Chapitre_2_Traitement_ROP_version_publisable_balance_viscero_emotionnelle.docx
+// Source: public/chapter-2/Chapitre_2_Traitement_ROP_version_CT_temperature_32C.docx
 
 import type { Chapter } from './types'
 
@@ -46,6 +46,10 @@ export const chapter2Fr: Chapter = {
         },
         {
           type: 'para',
+          text: 'La qualité du contact ne dépend pas seulement de l’intensité de la pression : la vitesse de mobilisation, la stabilité du contact, sa durée et les caractéristiques thermiques de la main constituent également des composantes du stimulus cutané.',
+        },
+        {
+          type: 'para',
           text: 'Une douleur vive, une force excessive ou une trituration appuyée traduisent un surdosage de la stimulation et doivent être évitées.',
         },
         {
@@ -72,6 +76,18 @@ export const chapter2Fr: Chapter = {
         {
           type: 'para',
           text: 'Lorsque la couche épidermo-dermique se déforme sous le doigt, les mécanorécepteurs génèrent une activité afférente transmise par une branche périphérique, puis par un nerf vers la moelle épinière et les centres supérieurs. La chaîne de lecture proposée dans ce volume est simple : pression locale → mécanorécepteurs → branche périphérique → nerf → racines spinales → réseaux spinaux et supraspinaux. Dans le modèle de la ROP, cette information sensorielle constitue une porte d’entrée susceptible de modifier l’excitabilité de réseaux somatiques, autonomes ou viscéraux. La théorie du gate control peut contribuer à expliquer une partie de l’effet antalgique immédiat d’une stimulation tactile non douloureuse.',
+        },
+        {
+          type: 'para',
+          text: 'Le toucher cutané ne repose toutefois pas sur un système afférent unique. À côté des mécanorécepteurs associés aux fibres myélinisées rapides, des travaux de microneurographie ont mis en évidence chez l’être humain des afférences mécanosensibles non myélinisées de type C répondant à des stimulations tactiles non nocives. Décrites initialement par Vallbo et collaborateurs en 1993 dans la peau pileuse, ces afférences ont ensuite été étudiées sous le terme de fibres C-tactiles (CT). [1]',
+        },
+        {
+          type: 'para',
+          text: 'Les travaux ultérieurs montrent que leur réponse dépend non seulement de l’intensité mécanique du contact, mais aussi de ses caractéristiques physiques. Lors d’un effleurement cutané, les fibres CT répondent préférentiellement à des vitesses lentes à intermédiaires, de l’ordre de 1 à 10 cm/s, qui sont également associées à une perception plus agréable du toucher. [2] Leur activité est aussi modulée par la température : dans une étude comparant des stimulations à 18 °C, 32 °C et 42 °C, la réponse était maximale autour de 32 °C, température proche de celle de la surface cutanée et donc d’un contact peau-à-peau. [3] Ces données illustrent que la qualité d’une stimulation manuelle dépend de plusieurs paramètres — intensité, vitesse, température et durée du contact — et pas uniquement de la force appliquée.',
+        },
+        {
+          type: 'para',
+          text: 'Cette voie ne doit cependant pas être extrapolée directement à la ROP. Les fibres C-tactiles ont surtout été caractérisées dans la peau pileuse, tandis que la plante du pied est une peau glabre dans laquelle les afférences tactiles myélinisées occupent une place majeure. Leur contribution éventuelle à une stimulation plantaire manuelle doit donc être distinguée des mécanismes mécanosensoriels mieux établis. Les données sur les fibres CT apportent ici un modèle de physiologie du toucher, et non la démonstration d’un mécanisme spécifique de la ROP.',
         },
         {
           type: 'para',
@@ -265,6 +281,10 @@ export const chapter2Fr: Chapter = {
             'Réseaux limbiques et cortico-limbiques : notamment insula et cortex cingulaire ; amygdale et hippocampe lorsque leur cartographie clinique ROP est utilisée.',
             'Balance viscéro-émotionnelle : mise en relation de la zone réflexe du viscère dominant et de la zone réflexe cérébrale retenue par l’écoute.',
           ],
+        },
+        {
+          type: 'para',
+          text: 'Certains systèmes afférents cutanés, notamment ceux étudiés dans le cadre du toucher affectif, participent à des traitements centraux associés à la dimension affective et interoceptive de l’expérience tactile. [2] Cette observation souligne l’existence d’interactions entre information somatique cutanée, état interne et contexte affectif, sans établir pour autant une correspondance spécifique entre une zone réflexe et un réseau cérébral déterminé.',
         },
         {
           type: 'sub',
@@ -567,6 +587,20 @@ export const chapter2Fr: Chapter = {
         {
           type: 'para',
           text: 'Principe directeur : observer, mesurer, réévaluer.',
+        },
+      ],
+    },
+    {
+      id: 'references-bibliographiques',
+      title: 'Références bibliographiques',
+      blocks: [
+        {
+          type: 'numbered',
+          items: [
+            'Vallbo Å, Olausson H, Wessberg J, Norrsell U. A system of unmyelinated afferents for innocuous mechanoreception in the human skin. Brain Res. 1993;628(1–2):301–304. doi:10.1016/0006-8993(93)90968-S.',
+            'Löken LS, Wessberg J, Morrison I, McGlone F, Olausson H. Coding of pleasant touch by unmyelinated afferents in humans. Nat Neurosci. 2009;12(5):547–548. doi:10.1038/nn.2312.',
+            'Ackerley R, Backlund Wasling H, Liljencrantz J, Olausson H, Johnson RD, Wessberg J. Human C-tactile afferents are tuned to the temperature of a skin-stroking caress. J Neurosci. 2014;34(8):2879–2883. doi:10.1523/JNEUROSCI.2847-13.2014.',
+          ],
         },
       ],
     },

@@ -23,10 +23,10 @@ export const chapter10Slides: SyncSlide[] = [
   { src: '/chapter-10/slides/slide-12.png', title: 'Conflit mécanique de D4' },
   { src: '/chapter-10/slides/slide-14.png', title: 'Protocole clinique ROP en 4 niveaux — Duodénum' },
   { src: '/chapter-10/slides/slide-13.png', title: 'Objectifs thérapeutiques en ROP' },
-  { src: '/chapter-10/figure-10-cartographie-duodenum-d1-d3.png', title: 'Cartographie : duodénum D1, D2 et D3' },
-  { src: '/chapter-10/figure-10-cartographie-sphincter-oddi.png', title: 'Cartographie : sphincter d’Oddi' },
-  { src: '/chapter-10/figure-10-cartographie-duodenum-d4-hiatus-oesophagien.png', title: 'Cartographie : duodénum D4' },
-  { src: '/chapter-10/figure-10-cartographie-jonction-duodeno-jejunale.png', title: 'Cartographie : jonction duodéno-jéjunale' },
+  { src: '/chapter-10/cartographie/figure-10-cartographie-duodenum-d1-d3.png', title: 'Cartographie : duodénum D1, D2 et D3' },
+  { src: '/chapter-10/cartographie/figure-10-cartographie-sphincter-oddi.png', title: 'Cartographie : sphincter d’Oddi' },
+  { src: '/chapter-10/cartographie/figure-10-cartographie-duodenum-d4-hiatus-oesophagien.png', title: 'Cartographie : duodénum D4' },
+  { src: '/chapter-10/cartographie/figure-10-cartographie-jonction-duodeno-jejunale.png', title: 'Cartographie : jonction duodéno-jéjunale' },
 ]
 
 export const chapter10SlideAnchors: SyncAnchor[] = [

@@ -452,15 +452,15 @@ export const chapter10Fr: Chapter = {
           label: "Face plantaire du pied droit",
           text: "D1 est projeté horizontalement à hauteur de L1 ; D2 verticalement de L1 à L4 ; le sphincter d’Oddi à l’union du tiers moyen et du tiers inférieur de D2, vers L2 ; D3 horizontalement à hauteur du tubercule du naviculaire."
         },
-        { type: "figure", src: "/chapter-10/figure-10-cartographie-duodenum-d1-d3.png", caption: "Cartographie : Duodénum D1, D2, D3", alt: "Cartographie podale du duodénum D1, D2 et D3 avec les repères associés", orientation: "landscape" },
-        { type: "figure", src: "/chapter-10/figure-10-sphincter-oddi.png", caption: "Photo : Sphincter d’Oddi", alt: "Repère podal du sphincter d’Oddi", orientation: "landscape" },
+        { type: "figure", src: "/chapter-10/cartographie/figure-10-cartographie-duodenum-d1-d3.png", caption: "Cartographie : Duodénum D1, D2, D3", alt: "Cartographie podale du duodénum D1, D2 et D3 avec les repères associés", orientation: "landscape" },
+        { type: "figure", src: "/chapter-10/cartographie/figure-10-sphincter-oddi.png", caption: "Photo : Sphincter d’Oddi", alt: "Repère podal du sphincter d’Oddi", orientation: "landscape" },
         {
           type: "lead",
           label: "Face plantaire du pied gauche",
           text: "D4 est projeté selon une ligne oblique crânio-latérale, et la jonction duodéno-jéjunale est décrite comme symétrique du sphincter d’Oddi, vers L2."
         },
-        { type: "figure", src: "/chapter-10/figure-10-cartographie-duodenum-d4-hiatus-oesophagien.png", caption: "Cartographie : Duodénum D4, hiatus œsophagien et cardia", alt: "Cartographie podale du duodénum D4 avec repères du hiatus œsophagien, du cardia et de la jonction duodéno-jéjunale", orientation: "landscape" },
-        { type: "figure", src: "/chapter-10/figure-10-jonction-duodeno-jejunale.png", caption: "Photo : Jonction duodéno-jéjunale", alt: "Repère podal de la jonction duodéno-jéjunale", orientation: "landscape" },
+        { type: "figure", src: "/chapter-10/cartographie/figure-10-cartographie-duodenum-d4-hiatus-oesophagien.png", caption: "Cartographie : Duodénum D4, hiatus œsophagien et cardia", alt: "Cartographie podale du duodénum D4 avec repères du hiatus œsophagien, du cardia et de la jonction duodéno-jéjunale", orientation: "landscape" },
+        { type: "figure", src: "/chapter-10/cartographie/figure-10-jonction-duodeno-jejunale.png", caption: "Photo : Jonction duodéno-jéjunale", alt: "Repère podal de la jonction duodéno-jéjunale", orientation: "landscape" },
         {
           type: "para",
           text: "Sur les deux pieds, le pylore est repéré sur le bord médial de la peau plantaire, en général plus marqué à droite."
@@ -517,10 +517,10 @@ if (chapter10ReflexSection) chapter10ReflexSection.blocks = [
   { type: "xref", label: "Voir le chapitre 14 — Intestin grêle", href: "/lecture/chapitre-14?lang=fr" },
   { type: "sub", text: "13.5. Niveau 4 — Intégration viscéro-somatique et Balance cerveau limbique–duodénum" },
   { type: "para", text: "Versant viscéro-somatique. Selon les tests, la lecture peut intégrer Th7-Th9, L1-L2, les dernières côtes, la charnière thoraco-lombaire, les piliers du diaphragme, le psoas et la paroi abdominale postérieure." },
-  { type: "figure", src: "/chapter-10/figure-10-d2.png", caption: "Photo : Duodénum D2", alt: "Repère podal du deuxième duodénum", orientation: "portrait" },
-  { type: "figure", src: "/chapter-10/figure-10-sphincter-oddi.png", caption: "Photo : Sphincter d’Oddi", alt: "Repère podal du sphincter d’Oddi", orientation: "portrait" },
-  { type: "figure", src: "/chapter-10/figure-10-jonction-duodeno-jejunale.png", caption: "Photo : Duodénum D4", alt: "Repère podal du quatrième duodénum", orientation: "portrait" },
-  { type: "figure", src: "/chapter-10/figure-10-jonction-duodeno-jejunale.png", caption: "Photo : Jonction duodéno-jéjunale", alt: "Repère podal de la jonction duodéno-jéjunale", orientation: "portrait" },
+  { type: "figure", src: "/chapter-10/cartographie/figure-10-d2.png", caption: "Photo : Duodénum D2", alt: "Repère podal du deuxième duodénum", orientation: "portrait" },
+  { type: "figure", src: "/chapter-10/cartographie/figure-10-sphincter-oddi.png", caption: "Photo : Sphincter d’Oddi", alt: "Repère podal du sphincter d’Oddi", orientation: "portrait" },
+  { type: "figure", src: "/chapter-10/cartographie/figure-10-jonction-duodeno-jejunale.png", caption: "Photo : Duodénum D4", alt: "Repère podal du quatrième duodénum", orientation: "portrait" },
+  { type: "figure", src: "/chapter-10/cartographie/figure-10-jonction-duodeno-jejunale.png", caption: "Photo : Jonction duodéno-jéjunale", alt: "Repère podal de la jonction duodéno-jéjunale", orientation: "portrait" },
   { type: "para", text: "Balance cerveau limbique-duodénum. Dans le vocabulaire propre à la ROP, l’écoute-induction associe un pouce sur la zone du duodénum et l’autre sur la zone du cerveau limbique." },
   { type: "xref", label: "Voir le chapitre 3 — Système nerveux central", href: "/lecture/chapitre-3-rework?lang=fr" },
   { type: "xref", label: "Voir le chapitre 5 — Mécanisme de stress", href: "/lecture/chapitre-5-rework?lang=fr" },

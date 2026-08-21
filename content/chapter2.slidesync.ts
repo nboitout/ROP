@@ -123,11 +123,11 @@ export const chapter2SlidesIt: SyncSlide[] = [
 
 export const chapter2SlideAnchorsFr: SyncAnchor[] = [
   { sectionId: 'presentation', blockIndex: -1, slide: 1, ...endAt('technique', -1) },
-  { sectionId: 'technique', blockIndex: 0, slide: 2, ...endAt('technique', 4) },
-  { sectionId: 'technique', blockIndex: 4, slide: 3, ...endAt('technique', 7) },
-  { sectionId: 'technique', blockIndex: 7, slide: 4, ...endAt('technique', 9) },
-  { sectionId: 'technique', blockIndex: 9, slide: 5, ...endAt('technique', 11) },
-  { sectionId: 'technique', blockIndex: 11, slide: 6, ...endAt('modalites', -1) },
+  { sectionId: 'technique', blockIndex: 0, slide: 2, ...endAt('technique', 5) },
+  { sectionId: 'technique', blockIndex: 5, slide: 3, ...endAt('technique', 8) },
+  { sectionId: 'technique', blockIndex: 8, slide: 4, ...endAt('technique', 12) },
+  { sectionId: 'technique', blockIndex: 12, slide: 5, ...endAt('technique', 15) },
+  { sectionId: 'technique', blockIndex: 15, slide: 6, ...endAt('modalites', -1) },
   { sectionId: 'modalites', blockIndex: 1, slide: 7, ...endAt('hierarchisation', -1) },
   { sectionId: 'reactions', blockIndex: 0, slide: 7, ...endAt('conseils', -1) },
   { sectionId: 'hierarchisation', blockIndex: -1, slide: 8, ...endAt('zones-reflexes', -1) },
