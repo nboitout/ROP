@@ -16,6 +16,13 @@
       "text": "À chacun de ces étages, cette activité peut rencontrer des circuits somatiques, autonomes et viscéraux. Nous conservons le terme pédagogique de pont neuro-anatomique pour désigner chacune de ces possibilités de convergence. Un pont n'est ni une liaison anatomique directe entre un point du pied et un organe, ni la preuve d'une efficacité thérapeutique : c'est un mécanisme plausible par lequel une entrée somatique peut accéder à un réseau susceptible de moduler une fonction viscérale."
     },
     {
+      "type": "figure",
+      "images": [
+        "pont-schema.png"
+      ],
+      "caption": "Du stimulus podal à la modulation du réseau, les quatre étapes d'un pont neuro-anatomique."
+    },
+    {
       "type": "paragraph",
       "text": "Deux questions doivent rester séparées. La première est celle de l'existence d'une modulation somato-viscérale : une stimulation du pied peut-elle modifier une fonction autonome ou viscérale ? La seconde est celle du ciblage : certaines zones ou certains nerfs offrent-ils un accès plus régional ou plus reproductible que d'autres ? Les confondre est l'erreur la plus fréquente des textes de réflexologie, et celle qu'on leur reproche le plus justement [16,14,48,49]."
     },
@@ -139,13 +146,6 @@
     {
       "type": "paragraph",
       "text": "Des données humaines montrent par ailleurs que le feedback mécanorécepteur cutané provenant de la main ou du pied peut modifier l'activité nerveuse sympathique musculaire. Cette observation ne démontre pas une action sur un organe déterminé, mais elle établit un couplage possible entre entrée somatosensorielle et régulation autonome [49]."
-    },
-    {
-      "type": "figure",
-      "images": [
-        "pont-schema.png"
-      ],
-      "caption": "Du stimulus podal à la modulation du réseau, les quatre étapes d'un pont neuro-anatomique."
     },
     {
       "type": "heading",

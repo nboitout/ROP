@@ -105,6 +105,27 @@ def main(source: Path, destination: Path):
                 blocks.append({"type": "table", "headers": rows[0], "rows": rows[1:]})
     flush_list()
 
+    # Keep the defining bridge diagram next to the paragraph that introduces
+    # the concept, regardless of where its marker sits in the Word source.
+    bridge_figure_index = next(
+        (index for index, block in enumerate(blocks) if block.get("type") == "figure" and "pont-schema.png" in block.get("images", [])),
+        None,
+    )
+    bridge_definition_index = next(
+        (
+            index
+            for index, block in enumerate(blocks)
+            if block.get("type") == "paragraph"
+            and block.get("text", "").endswith("un réseau susceptible de moduler une fonction viscérale.")
+        ),
+        None,
+    )
+    if bridge_figure_index is not None and bridge_definition_index is not None:
+        bridge_figure = blocks.pop(bridge_figure_index)
+        if bridge_figure_index < bridge_definition_index:
+            bridge_definition_index -= 1
+        blocks.insert(bridge_definition_index + 1, bridge_figure)
+
     payload = {
         "title": "Fondements neuro-anatomiques de la R.O.P.",
         "subtitle": "Du point réflexe à la porte d'entrée somatique : quatre portes, six ponts et un gradient de ciblage à deux axes.",
