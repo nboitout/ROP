@@ -1226,19 +1226,11 @@ const uterusLevel3BulletsIndex = revisedReflexSection.blocks.findIndex(
 )
 if (uterusLevel3BulletsIndex >= 0) {
   revisedReflexSection.blocks.splice(uterusLevel3BulletsIndex + 1, 0, {
-    type: 'figurePair',
-    figures: [
-      {
-        src: '/chapter-19/cartographie/Chapter19 Cartographie et Photos -1.png',
-        caption: 'Cartographie : trigone de la vessie, région cervico-isthmique de l’utérus et plexus hypogastrique inférieur',
-        alt: 'Vue sagittale médiale de la cartographie pelvienne et de ses repères podaux',
-      },
-      {
-        src: '/chapter-19/cartographie/Chapter19 Cartographie et Photos - 2.png',
-        caption: 'Photo : repère podal du trigone, de la région cervico-isthmique et du plexus hypogastrique inférieur',
-        alt: 'Technique podale pour le trigone, la région cervico-isthmique et le plexus hypogastrique inférieur',
-      },
-    ],
+    type: 'figure',
+    src: '/chapter-19/cartographie/Chapter19 Cartographie et Photos - 2.png',
+    caption: 'Photo : repère podal du trigone, de la région cervico-isthmique et du plexus hypogastrique inférieur',
+    alt: 'Technique podale pour le trigone, la région cervico-isthmique et le plexus hypogastrique inférieur',
+    orientation: 'landscape',
   })
 }
 

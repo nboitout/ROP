@@ -55,6 +55,7 @@ export const chapter19Slides: SyncSlide[] = [
   { src: '/chapter-19/cartographie/figure-19-17.png', title: 'Cartographie ROP : noyau fibreux central du périnée et fente uro-génitale' },
   { src: '/chapter-19/cartographie/figure-19-19.png', title: 'Cartographie ROP : ligaments sacro-tubéral et sacro-épineux — repère pelvien' },
   { src: '/chapter-19/cartographie/figure-19-21.png', title: 'Cartographie ROP : trompe utérine' },
+  { src: '/chapter-19/cartographie/Chapter19 Cartographie et Photos -1.png', title: 'Cartographie ROP : trigone de la vessie, région cervico-isthmique de l’utérus et plexus hypogastrique inférieur' },
 ]
 
 export const chapter19SlideAnchors: SyncAnchor[] = [
@@ -92,6 +93,7 @@ export const chapter19SlideAnchors: SyncAnchor[] = [
   { sectionId: 'zones-reflexes-podales', blockIndex: 0, slide: 35 },
   { sectionId: 'zones-reflexes-podales', blockIndex: 12, slide: 44, end: { sectionId: 'zones-reflexes-podales', blockIndex: 12 } },
   { sectionId: 'zones-reflexes-podales', blockIndex: 13, slide: 45, end: { sectionId: 'zones-reflexes-podales', blockIndex: 13 } },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 11, slide: 48, end: { sectionId: 'zones-reflexes-podales', blockIndex: 11 } },
   { sectionId: 'zones-reflexes-podales', blockIndex: 18, slide: 39, end: { sectionId: 'zones-reflexes-podales', blockIndex: 18 } },
   { sectionId: 'zones-reflexes-podales', blockIndex: 19, slide: 40, end: { sectionId: 'zones-reflexes-podales', blockIndex: 19 } },
   { sectionId: 'zones-reflexes-podales', blockIndex: 20, slide: 41, end: { sectionId: 'zones-reflexes-podales', blockIndex: 20 } },
