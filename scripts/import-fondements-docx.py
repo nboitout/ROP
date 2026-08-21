@@ -19,7 +19,7 @@ FIGURES = {
     "versant-visceral.webp": ["versant-visceral.webp"],
     "pont-1-tibial.webp": ["pont-1-tibial.png"],
     "pont-2-plantaires.webp": ["pont-2-plantaires.png"],
-    "pont-3-autres-nerfs.webp": ["pont-3-autres-nerfs.webp"],
+    "pont-3-autres-nerfs.webp": ["pont-3-autres-nerfs.png"],
     "pont-4-lombosacre.webp": ["pont-4-lombosacre.webp", "reseaux-pelviens.webp"],
     "pont-5-schema.webp": ["pont-5-schema.webp", "pont-5-supraspinal.webp"],
     "gradient-deux-axes.webp": ["gradient-deux-axes.webp"],

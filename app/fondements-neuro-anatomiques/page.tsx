@@ -36,6 +36,8 @@ function FigureBlock({ block }: { block: Extract<ContentBlock, { type: 'figure' 
   const figures = block.images.map((image, index) => {
     const dimensions = image === 'pont-2-plantaires.png'
       ? { width: 1536, height: 1024 }
+      : image === 'pont-3-autres-nerfs.png'
+        ? { width: 1448, height: 1086 }
       : image.endsWith('.png')
         ? { width: 1672, height: 941 }
         : {}
