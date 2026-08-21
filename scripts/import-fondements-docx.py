@@ -44,7 +44,12 @@ def paragraph_block(text: str):
     if text.startswith("FIGURE"):
         for marker, images in FIGURES.items():
             if marker in text or (marker == "gradient-deux-axes.webp" and "gradient à deux axes" in text):
-                caption = text.split(". ", 1)[1] if ". " in text else "Illustration neuro-anatomique R.O.P."
+                caption = (
+                    "Pont 3 — Comparaison des portes somatiques surale, fibulaire et saphène, "
+                    "avec les données de modulation vésicale propres au nerf saphène."
+                    if marker == "pont-3-autres-nerfs.webp"
+                    else text.split(". ", 1)[1] if ". " in text else "Illustration neuro-anatomique R.O.P."
+                )
                 return {"type": "figure", "images": images, "caption": caption}
         return None
     if text.startswith("LIEN →"):

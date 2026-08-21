@@ -32,6 +32,11 @@ const toc = blocks.filter(
   (block): block is Extract<ContentBlock, { type: 'heading' }> => block.type === 'heading' && block.level === 2,
 )
 
+function safeInternalReturn(value: string | undefined) {
+  if (!value || !value.startsWith('/') || value.startsWith('//')) return null
+  return value
+}
+
 function FigureBlock({ block }: { block: Extract<ContentBlock, { type: 'figure' }> }) {
   const figures = block.images.map((image, index) => {
     const dimensions = image === 'pont-2-plantaires.png'
@@ -85,10 +90,21 @@ function Block({ block }: { block: ContentBlock }) {
   }
 }
 
-export default function FondementsNeuroAnatomiquesPage() {
+export default async function FondementsNeuroAnatomiquesPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ xrefBack?: string; xrefBackLabel?: string }>
+}) {
+  const params = await searchParams
+  const xrefBack = safeInternalReturn(params.xrefBack)
+  const xrefBackLabel = params.xrefBackLabel || 'Retour à la référence'
+
   return (
     <main className="nap-root">
-      <div className="nap-top"><Link href="/" className="nap-home">← Retour à l’accueil</Link></div>
+      <div className="nap-top">
+        <Link href="/" className="nap-home">← Retour à l’accueil</Link>
+        {xrefBack && <Link href={xrefBack} className="btn b-out nap-xref-back">← {xrefBackLabel}</Link>}
+      </div>
       <article className="nap-article">
         <header className="nap-hero">
           <p className="nap-eyebrow">Réflexothérapie occipito-podale</p>

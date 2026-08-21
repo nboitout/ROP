@@ -1676,10 +1676,11 @@ a.ss-switch-opt:hover { color:var(--gold); }
    on dark) and the global section padding meant for full-bleed bands. */
 .nap-root section { padding:0; }
 .nap-root h1 { color:inherit; max-width:none; margin-bottom:0; }
-.nap-top { padding:22px 32px 0; }
+.nap-top { display:flex; align-items:center; justify-content:space-between; gap:16px; padding:22px 32px 0; }
 .nap-home { font-size:.74rem; letter-spacing:.08em; text-transform:uppercase; text-decoration:none;
   color:var(--sage); font-weight:600; }
 .nap-home:hover { color:var(--gold); }
+.nap-xref-back { flex-shrink:0; padding:8px 14px; font-size:.66rem; }
 .nap-article { max-width:860px; margin:0 auto; padding:26px 24px 90px; }
 
 .nap-hero { position:static; height:auto; display:block; padding:0 0 26px; background:transparent;
@@ -1846,7 +1847,7 @@ a.ss-switch-opt:hover { color:var(--gold); }
 .nap-cta-row { display:flex; flex-wrap:wrap; gap:12px; }
 
 @media(max-width:760px){
-  .nap-top { padding:16px 20px 0; }
+  .nap-top { align-items:flex-start; flex-direction:column; padding:16px 20px 0; }
   .nap-article { padding:20px 20px 70px; }
   .nap-fig-pair { grid-template-columns:1fr; }
   .nap-gates { grid-template-columns:1fr; }
