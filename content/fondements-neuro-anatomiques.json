@@ -321,8 +321,8 @@
     {
       "type": "figure",
       "images": [
-        "pont-4-lombosacre.webp",
-        "reseaux-pelviens.webp"
+        "pont-4-reseaux-lombosacres.png",
+        "pont-4-reseaux-pelviens.png"
       ],
       "caption": "Illustration neuro-anatomique R.O.P."
     },
@@ -351,8 +351,8 @@
     {
       "type": "figure",
       "images": [
-        "pont-5-schema.webp",
-        "pont-5-supraspinal.webp"
+        "pont-5-voies-supraspinales.png",
+        "pont-5-schema-simple.png"
       ],
       "caption": "Illustration neuro-anatomique R.O.P."
     },
@@ -519,14 +519,6 @@
     {
       "type": "paragraph",
       "text": "Le diaphragme reste traité séparément : muscle strié sous contrôle phrénique cervical, il n'est pas un viscère au sens de ce gradient. Une influence depuis le pied relèverait d'une modulation centrale, respiratoire ou somatique, pas d'un pont viscéral segmentaire sacré [1]."
-    },
-    {
-      "type": "figure",
-      "images": [
-        "pelvis.webp",
-        "matrice-gradient.webp"
-      ],
-      "caption": "La matrice est à compléter d'une colonne « quadrant »."
     },
     {
       "type": "heading",
