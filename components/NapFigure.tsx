@@ -7,10 +7,9 @@ import Image from 'next/image'
 // so they have to open full screen — the page itself is a server component,
 // hence this small client wrapper per figure.
 //
-// The overlay reuses the chapter reader's .cr-lightbox markup and CSS, zoom
-// controls included: at 390px wide the plate only grows from 310px to 366px,
-// which is not enough to read a dense figure, so panning and zooming is what
-// actually makes the feature useful on a phone.
+// The overlay reuses the chapter reader's .cr-lightbox markup and CSS. On a
+// portrait phone, landscape plates rotate to use the long edge of the screen;
+// desktop and landscape-phone presentation stay unchanged.
 
 // Dimensions of the revised deck export.
 const FIG_W = 1707
@@ -34,6 +33,7 @@ export default function NapFigure({
 }) {
   const [open, setOpen] = useState(false)
   const [zoom, setZoom] = useState(1)
+  const [isPhonePortrait, setIsPhonePortrait] = useState(false)
 
   useEffect(() => {
     if (!open) return
@@ -46,6 +46,20 @@ export default function NapFigure({
       document.body.style.overflow = previousOverflow
     }
   }, [open])
+
+  useEffect(() => {
+    const query = window.matchMedia('(max-width: 760px) and (orientation: portrait)')
+    const update = () => setIsPhonePortrait(query.matches)
+    update()
+    query.addEventListener('change', update)
+    window.addEventListener('orientationchange', update)
+    return () => {
+      query.removeEventListener('change', update)
+      window.removeEventListener('orientationchange', update)
+    }
+  }, [])
+
+  const rotateLandscapeLightbox = isPhonePortrait && width > height
 
   function close() {
     setOpen(false)
@@ -68,7 +82,13 @@ export default function NapFigure({
       </figure>
 
       {open && (
-        <div className="cr-lightbox nap-lb" role="dialog" aria-modal="true" aria-label={caption} onClick={close}>
+        <div
+          className={`cr-lightbox nap-lb cr-lightbox--landscape${rotateLandscapeLightbox ? ' cr-lightbox--auto-rotated' : ''}`}
+          role="dialog"
+          aria-modal="true"
+          aria-label={caption}
+          onClick={close}
+        >
           <div className="cr-lightbox-bar" onClick={(e) => e.stopPropagation()}>
             <span className="cr-lightbox-caption">{caption}</span>
             <div className="cr-lightbox-controls">
@@ -101,7 +121,7 @@ export default function NapFigure({
                 width={width}
                 height={height}
                 sizes="(max-width:900px) 92vw, 1200px"
-                style={{ transform: `scale(${zoom})` }}
+                style={{ transform: `${rotateLandscapeLightbox ? 'rotate(90deg) ' : ''}scale(${zoom})` }}
               />
               <figcaption>{caption}</figcaption>
             </figure>

@@ -1739,6 +1739,8 @@ a.ss-switch-opt:hover { color:var(--gold); }
 @media (max-width:760px){
   .nap-lb .cr-lightbox-zoom-controls { display:inline-flex; }
   .nap-lb .cr-lightbox-caption { display:none; }
+  .nap-lb.cr-lightbox--auto-rotated .nap-lb-img { width:auto; height:calc(100vw - 32px);
+    max-width:calc(100dvh - 84px); max-height:none; transform-origin:center; }
 }
 .nap-fig figcaption { font-size:.79rem; line-height:1.5; color:var(--i50); margin-top:9px; }
 .nap-fig-pair { display:grid; grid-template-columns:1fr 1fr; gap:18px; }
