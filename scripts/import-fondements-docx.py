@@ -22,7 +22,7 @@ FIGURES = {
     "pont-3-autres-nerfs.webp": ["pont-3-autres-nerfs.png"],
     "pont-4-lombosacre.webp": ["pont-4-lombosacre.webp", "reseaux-pelviens.webp"],
     "pont-5-schema.webp": ["pont-5-schema.webp", "pont-5-supraspinal.webp"],
-    "gradient-deux-axes.webp": ["gradient-deux-axes.webp"],
+    "gradient-deux-axes.webp": ["quatre-quadrants.png"],
     "pelvis.webp": ["pelvis.webp", "matrice-gradient.webp"],
 }
 
@@ -44,12 +44,18 @@ def paragraph_block(text: str):
     if text.startswith("FIGURE"):
         for marker, images in FIGURES.items():
             if marker in text or (marker == "gradient-deux-axes.webp" and "gradient à deux axes" in text):
-                caption = (
-                    "Pont 3 — Comparaison des portes somatiques surale, fibulaire et saphène, "
-                    "avec les données de modulation vésicale propres au nerf saphène."
-                    if marker == "pont-3-autres-nerfs.webp"
-                    else text.split(". ", 1)[1] if ". " in text else "Illustration neuro-anatomique R.O.P."
-                )
+                if marker == "pont-3-autres-nerfs.webp":
+                    caption = (
+                        "Pont 3 — Comparaison des portes somatiques surale, fibulaire et saphène, "
+                        "avec les données de modulation vésicale propres au nerf saphène."
+                    )
+                elif marker == "gradient-deux-axes.webp":
+                    caption = (
+                        "Les quatre quadrants du gradient neuroanatomique : proximité segmentaire "
+                        "et niveau de preuve de modulation somato-viscérale."
+                    )
+                else:
+                    caption = text.split(". ", 1)[1] if ". " in text else "Illustration neuro-anatomique R.O.P."
                 return {"type": "figure", "images": images, "caption": caption}
         return None
     if text.startswith("LIEN →"):
@@ -125,6 +131,27 @@ def main(source: Path, destination: Path):
         if bridge_figure_index < bridge_definition_index:
             bridge_definition_index -= 1
         blocks.insert(bridge_definition_index + 1, bridge_figure)
+
+    # Pont 6 has no figure marker in the current Word source. Keep its plate at
+    # the end of the Pont 6 discussion, immediately before section 4.
+    pont_6_figure = {
+        "type": "figure",
+        "images": ["pont-6-sorties-craniennes.png"],
+        "caption": "Pont 6 — Les sorties crâniennes du tronc cérébral : voies effectrices et niveaux de preuve.",
+    }
+    if not any("pont-6-sorties-craniennes.png" in block.get("images", []) for block in blocks):
+        section_4_index = next(
+            (
+                index
+                for index, block in enumerate(blocks)
+                if block.get("type") == "heading"
+                and block.get("level") == 2
+                and block.get("text", "").startswith("4.")
+            ),
+            None,
+        )
+        if section_4_index is not None:
+            blocks.insert(section_4_index, pont_6_figure)
 
     payload = {
         "title": "Fondements neuro-anatomiques de la R.O.P.",

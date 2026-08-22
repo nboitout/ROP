@@ -1680,7 +1680,9 @@ a.ss-switch-opt:hover { color:var(--gold); }
 .nap-home { font-size:.74rem; letter-spacing:.08em; text-transform:uppercase; text-decoration:none;
   color:var(--sage); font-weight:600; }
 .nap-home:hover { color:var(--gold); }
-.nap-xref-back { flex-shrink:0; padding:8px 14px; font-size:.66rem; }
+.nap-xref-back { position:fixed; top:74px; left:17px; z-index:240; flex-shrink:0;
+  padding:10px 18px; font-size:.66rem; background:rgba(251,248,241,.96);
+  box-shadow:0 5px 18px rgba(26,26,24,.1); backdrop-filter:blur(8px); }
 .nap-article { max-width:860px; margin:0 auto; padding:26px 24px 90px; }
 
 .nap-hero { position:static; height:auto; display:block; padding:0 0 26px; background:transparent;
@@ -1848,6 +1850,7 @@ a.ss-switch-opt:hover { color:var(--gold); }
 
 @media(max-width:760px){
   .nap-top { align-items:flex-start; flex-direction:column; padding:16px 20px 0; }
+  .nap-xref-back { top:68px; left:12px; max-width:calc(100vw - 24px); }
   .nap-article { padding:20px 20px 70px; }
   .nap-fig-pair { grid-template-columns:1fr; }
   .nap-gates { grid-template-columns:1fr; }
