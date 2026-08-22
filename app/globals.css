@@ -1702,7 +1702,6 @@ a.ss-switch-opt:hover { color:var(--gold); }
 .nap-hero h1 { font-family:'Cormorant Garamond',serif; font-size:clamp(2rem,5vw,3rem); font-weight:300;
   line-height:1.1; margin:12px 0 16px; }
 .nap-standfirst { font-size:1.06rem; line-height:1.6; color:rgba(26,26,24,.78); max-width:44em; }
-.nap-meta { margin-top:14px; font-size:.76rem; letter-spacing:.08em; text-transform:uppercase; color:var(--i50); }
 
 .nap-sec { margin-top:44px; }
 .nap-sec h2 { font-family:'Cormorant Garamond',serif; font-size:clamp(1.5rem,3vw,2rem); font-weight:300;

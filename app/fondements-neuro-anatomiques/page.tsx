@@ -110,7 +110,6 @@ export default async function FondementsNeuroAnatomiquesPage({
           <p className="nap-eyebrow">Réflexothérapie occipito-podale</p>
           <h1>{content.title}</h1>
           <p className="nap-standfirst">{content.subtitle}</p>
-          <p className="nap-meta">Guy Boitout · Institut R.O.P. · Texte de référence</p>
         </header>
 
         <section className="nap-sec nap-document">
