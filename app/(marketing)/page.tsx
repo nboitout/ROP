@@ -6,6 +6,7 @@ import Link from 'next/link'
 import { useSearchParams } from 'next/navigation'
 import HeroCarousel from '@/components/HeroCarousel'
 import HomepageVisualShowcase from '@/components/HomepageVisualShowcase'
+import AnatomyFoundation from '@/components/AnatomyFoundation'
 import BookJourney from '@/components/BookJourney'
 import QuoteSlider from '@/components/QuoteSlider'
 import FreeChapterForm from '@/components/FreeChapterForm'
@@ -201,6 +202,9 @@ export default function HomePage() {
           <cite>{t.genese.cite}</cite>
         </div>
       </section>
+
+      {/* FONDEMENTS NEURO-ANATOMIQUES */}
+      <AnatomyFoundation />
 
       {/* STATS */}
       <section id="stats">
