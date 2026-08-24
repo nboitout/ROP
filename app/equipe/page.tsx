@@ -23,6 +23,7 @@ type TeamMember = {
   body: ReactNode[]
   photo?: string
   photoPosition?: string
+  photoContained?: boolean
 }
 
 const team: TeamMember[] = [
@@ -54,6 +55,7 @@ const team: TeamMember[] = [
     ],
     photo: '/assets/Team/Matei.jpeg',
     photoPosition: 'center 52%',
+    photoContained: true,
   },
 ]
 
@@ -79,14 +81,18 @@ export default function TeamPage() {
       <section className="team-members" aria-label="Membres de l’équipe">
         {team.map((member, index) => (
           <article className="team-card" key={member.name}>
-            <div className={`team-portrait${member.photo ? ' team-portrait--photo' : ''}`}>
+            <div className={`team-portrait${member.photo ? ' team-portrait--photo' : ''}${member.photoContained ? ' team-portrait--contained' : ''}`}>
               {member.photo ? (
                 <Image
                   src={member.photo}
                   alt={`Portrait de ${member.name}`}
                   fill
                   sizes="(max-width:640px) calc(100vw - 40px), (max-width:960px) 36vw, 33vw"
-                  style={{ objectFit: 'cover', objectPosition: member.photoPosition ?? 'center 28%' }}
+                  style={{
+                    objectFit: member.photoContained ? 'contain' : 'cover',
+                    objectPosition: member.photoPosition ?? 'center 28%',
+                    transform: member.photoContained ? 'scale(1.3)' : undefined,
+                  }}
                 />
               ) : (
                 <>
