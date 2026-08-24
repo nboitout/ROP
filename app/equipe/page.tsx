@@ -32,6 +32,8 @@ const team: TeamMember[] = [
     name: 'Guy Boitout',
     role: 'Fondateur · Direction clinique · Formation',
     body: ["Guy est le créateur de la Réflexothérapie Occipito-Podale. Il en porte la vision clinique, la cohérence et la transmission. Il structure les contenus de la méthode, dirige les formations et accompagne leur évolution à partir de l’expérience accumulée auprès des patients et des praticiens. Il veille enfin à préserver la fidélité de la R.O.P. à ses fondements, à l’anatomie et aux principes cliniques qui ont guidé son développement."],
+    photo: '/assets/Team/Guy.jpg',
+    photoPosition: 'center 10%',
   },
   {
     initials: 'NB',
