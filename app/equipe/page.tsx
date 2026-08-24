@@ -66,7 +66,7 @@ export default function TeamPage() {
                   alt={`Portrait de ${member.name}`}
                   fill
                   sizes="(max-width:640px) calc(100vw - 40px), (max-width:960px) 36vw, 33vw"
-                  style={{ objectFit: 'cover', objectPosition: 'center 35%' }}
+                  style={{ objectFit: 'cover', objectPosition: 'center 28%' }}
                 />
               ) : (
                 <>
