@@ -22,6 +22,7 @@ type TeamMember = {
   role: string
   body: ReactNode[]
   photo?: string
+  photoPosition?: string
 }
 
 const team: TeamMember[] = [
@@ -52,6 +53,7 @@ const team: TeamMember[] = [
       <>À l’écoute des retours du terrain, Matei joue enfin un rôle de relais entre les utilisateurs et l’équipe. Il recueille les attentes, les questions et les suggestions afin d’améliorer en permanence l’expérience proposée et de veiller à ce que chaque interaction reste <strong>claire, humaine, réactive et utile</strong>.</>,
     ],
     photo: '/assets/Team/Matei.jpeg',
+    photoPosition: 'center 52%',
   },
 ]
 
@@ -84,7 +86,7 @@ export default function TeamPage() {
                   alt={`Portrait de ${member.name}`}
                   fill
                   sizes="(max-width:640px) calc(100vw - 40px), (max-width:960px) 36vw, 33vw"
-                  style={{ objectFit: 'cover', objectPosition: 'center 28%' }}
+                  style={{ objectFit: 'cover', objectPosition: member.photoPosition ?? 'center 28%' }}
                 />
               ) : (
                 <>
