@@ -400,7 +400,8 @@ footer > div > p { font-size:.95rem; color:rgba(245,240,232,.84); line-height:1.
 .team-hero > p { max-width:720px; margin-top:28px; color:rgba(245,240,232,.82); font-size:.98rem; line-height:1.7; }
 .team-members { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:20px; background:var(--parch); }
 .team-card { min-width:0; background:#fff; border:1px solid rgba(26,26,24,.07); box-shadow:0 10px 32px rgba(26,26,24,.06); }
-.team-portrait { aspect-ratio:4/3; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:12px; background:linear-gradient(145deg,var(--sage-pale),var(--cream)); color:rgba(74,107,90,.32); }
+.team-portrait { position:relative; aspect-ratio:4/3; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:12px; overflow:hidden; background:linear-gradient(145deg,var(--sage-pale),var(--cream)); color:rgba(74,107,90,.32); }
+.team-portrait--photo { background:#111; }
 .team-portrait span { font-family:'Cormorant Garamond',serif; font-size:4.7rem; font-weight:300; letter-spacing:.08em; }
 .team-portrait small { color:rgba(74,107,90,.5); font-size:.58rem; letter-spacing:.2em; text-transform:uppercase; }
 .team-card-copy { padding:26px 26px 30px; position:relative; }

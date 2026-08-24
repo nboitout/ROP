@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import Link from 'next/link'
 import { SITE_URL } from '@/lib/site'
 
@@ -24,8 +25,9 @@ const team = [
   {
     initials: 'NB',
     name: 'Nicolas Boitout',
-    role: 'Direction technologique',
-    body: "Nicolas conçoit et pilote l’environnement numérique de la R.O.P. Il transforme les contenus et les besoins de l’Institut en outils simples, fiables et accessibles — de l’expérience de lecture à l’infrastructure qui accompagne le développement du projet.",
+    role: 'Direction technologique · Imagerie scientifique',
+    body: "Nicolas conçoit et pilote l’environnement numérique de la R.O.P. Il est également responsable de la production des figures anatomiques, élaborées au moyen d’un processus complexe assisté par l’IA qui associe génération, vérifications croisées et corrections afin de limiter au maximum les erreurs dans les schémas. Il partage enfin la responsabilité de la revue de la littérature neuro-anatomique, pour relier les contenus de la méthode aux données scientifiques disponibles.",
+    photo: '/assets/Team/Nicolas.jpeg',
   },
   {
     initials: 'M',
@@ -57,9 +59,21 @@ export default function TeamPage() {
       <section className="team-members" aria-label="Membres de l’équipe">
         {team.map((member, index) => (
           <article className="team-card" key={member.name}>
-            <div className="team-portrait" aria-hidden="true">
-              <span>{member.initials}</span>
-              <small>Portrait à venir</small>
+            <div className={`team-portrait${member.photo ? ' team-portrait--photo' : ''}`}>
+              {member.photo ? (
+                <Image
+                  src={member.photo}
+                  alt={`Portrait de ${member.name}`}
+                  fill
+                  sizes="(max-width:640px) calc(100vw - 40px), (max-width:960px) 36vw, 33vw"
+                  style={{ objectFit: 'cover', objectPosition: 'center 35%' }}
+                />
+              ) : (
+                <>
+                  <span>{member.initials}</span>
+                  <small>Portrait à venir</small>
+                </>
+              )}
             </div>
             <div className="team-card-copy">
               <span className="team-number">0{index + 1}</span>
