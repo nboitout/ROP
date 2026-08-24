@@ -51,6 +51,7 @@ const team: TeamMember[] = [
       "Il participe également au développement et à la mise en œuvre des actions marketing : communication autour des publications et des formations, campagnes de sensibilisation, suivi des contacts et animation de la relation avec la communauté.",
       <>À l’écoute des retours du terrain, Matei joue enfin un rôle de relais entre les utilisateurs et l’équipe. Il recueille les attentes, les questions et les suggestions afin d’améliorer en permanence l’expérience proposée et de veiller à ce que chaque interaction reste <strong>claire, humaine, réactive et utile</strong>.</>,
     ],
+    photo: '/assets/Team/Matei.jpeg',
   },
 ]
 
