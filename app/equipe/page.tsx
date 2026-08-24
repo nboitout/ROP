@@ -28,14 +28,18 @@ const team: TeamMember[] = [
   {
     initials: 'GB',
     name: 'Guy Boitout',
-    role: 'Créateur de la méthode · Responsable pédagogique',
-    body: ["Guy est le créateur de la Réflexothérapie Occipito-Podale. Il en porte la vision clinique et la transmission : il structure les contenus, dirige les formations et veille à ce que la méthode reste fidèle à ses fondements, à l’anatomie et à l’expérience du praticien."],
+    role: 'Fondateur · Direction clinique · Formation',
+    body: ["Guy est le créateur de la Réflexothérapie Occipito-Podale. Il en porte la vision clinique, la cohérence et la transmission. Il structure les contenus de la méthode, dirige les formations et accompagne leur évolution à partir de l’expérience accumulée auprès des patients et des praticiens. Il veille enfin à préserver la fidélité de la R.O.P. à ses fondements, à l’anatomie et aux principes cliniques qui ont guidé son développement."],
   },
   {
     initials: 'NB',
     name: 'Nicolas Boitout',
     role: 'Direction technologique · Imagerie scientifique',
-    body: ["Nicolas conçoit et pilote l’environnement numérique de la R.O.P. Il est également responsable de la production des figures anatomiques, élaborées au moyen d’un processus complexe assisté par l’IA qui associe génération, vérifications croisées et corrections afin de limiter au maximum les erreurs dans les schémas. Il partage enfin la responsabilité de la revue de la littérature neuro-anatomique, pour relier les contenus de la méthode aux données scientifiques disponibles."],
+    body: [
+      "Nicolas conçoit et pilote l’environnement numérique de la R.O.P. et coordonne la production de ses contenus visuels et scientifiques. Il est notamment responsable de la réalisation des figures anatomiques, élaborées à l’aide d’un processus assisté par l’IA associant génération, vérifications croisées, confrontation aux sources anatomiques et corrections successives afin d’en renforcer la précision et la fiabilité.",
+      "Il contribue également à la revue de la littérature neuro-anatomique et à l’analyse des données scientifiques disponibles, afin de mettre en perspective les observations et les concepts de la méthode avec les connaissances actuelles en anatomie, neurophysiologie et neuromodulation.",
+      "Il pilote enfin Patient-Care, l’application dédiée au suivi des patients et à la collecte structurée des données issues de la pratique. Cet outil permet de documenter les prises en charge, leur évolution et les observations des praticiens, avec l’objectif de constituer progressivement une base de données exploitable pour mieux décrire, analyser et évaluer les pratiques en R.O.P.",
+    ],
     photo: '/assets/Team/Nicolas.jpeg',
   },
   {
