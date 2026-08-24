@@ -71,7 +71,7 @@ export default function TeamPage() {
 
       <section className="team-hero" aria-labelledby="team-title">
         <div className="lbl g">L’équipe R.O.P.</div>
-        <h1 id="team-title">Trois expertises,<br /><em>une même exigence.</em></h1>
+        <h1 id="team-title">Trois expertises,<br className="team-title-break" /> <em>une même exigence.</em></h1>
         <p>
           Faire vivre la R.O.P., c’est réunir la transmission d’une méthode construite sur plus de
           cinquante ans de pratique, une expérience numérique solide et un accompagnement attentif.
