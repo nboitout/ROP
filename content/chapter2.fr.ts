@@ -1,5 +1,5 @@
 // Chapter 2 content — French synchronized reading stream
-// Source: public/chapter-2/Chapitre_2_Traitement_ROP_version_CT_temperature_32C.docx
+// Source: public/chapter-2/Chapitre_2_ROP_version_complete_directement_publiable.docx
 
 import type { Chapter } from './types'
 
@@ -14,7 +14,7 @@ export const chapter2Fr: Chapter = {
       blocks: [
         {
           type: 'para',
-          text: 'La Réflexothérapie Occipito-Podale (ROP) s’inscrit dans une démarche de soin fonctionnel et intégratif. Le traitement est guidé par l’anamnèse, l’examen clinique, les tests d’écoute, la lecture des zones réflexes et la réponse observée. Il applique la séquence clinique présentée au chapitre 0 tout en s’appuyant, lorsque cela est pertinent, sur les fondements neuro-anatomiques des portes d’entrée somatiques, des convergences spinales et des voies supraspinales. Il vise à solliciter les capacités de régulation et d’adaptation du patient, sans se substituer au diagnostic médical ni à un traitement médical indiqué.',
+          text: 'La Réflexothérapie Occipito-Podale (ROP) s’inscrit dans une démarche de soin fonctionnel et intégratif. Le traitement est guidé par l’anamnèse, l’examen clinique, les tests d’écoute, la lecture des zones réflexes et la réponse observée. Il applique la séquence clinique présentée au chapitre 0 tout en s’appuyant, lorsque cela est pertinent, sur les fondements neuro-anatomiques des portes d’entrée somatiques, des convergences spinales et des voies supraspinales. Il vise à solliciter les capacités de régulation et d’adaptation du patient, sans se substituer au diagnostic médical ni à un traitement médical indiqué. Les fondements du modèle clinique sont précisés ci-après en distinguant la physiologie documentée, les arguments de plausibilité neurophysiologique et la cartographie propre à la ROP.',
         },
         {
           type: 'note',
@@ -25,6 +25,100 @@ export const chapter2Fr: Chapter = {
             'Observer plutôt que présumer. La réponse du patient est suivie dans les heures et les jours qui suivent la séance.',
             'Réorienter lorsque nécessaire. Toute suspicion de pathologie organique ou de signe d’alarme impose un avis médical.',
           ],
+        },
+      ],
+    },
+    {
+      id: 'fondements-modele-clinique',
+      title: '0. Fondements du modèle clinique de la ROP',
+      blocks: [
+        {
+          type: 'para',
+          text: 'Avant d’aborder la technique, trois niveaux doivent être distingués : la physiologie cutanée et somatosensorielle établie ; les arguments de plausibilité fournis par la neurophysiologie ; et la cartographie clinique propre à la ROP. Cette distinction permet de conserver la logique de la méthode sans présenter comme démontrée une correspondance point–organe qui ne l’est pas.',
+        },
+        {
+          type: 'sub',
+          text: '0.1. Pourquoi la ROP recherche-t-elle des zones réflexes sur le pied et l’occiput ?',
+        },
+        {
+          type: 'para',
+          text: 'Dans la pratique ROP, le praticien recherche sur la peau du pied et de la région occipitale des zones dont la texture ou la sensibilité diffèrent de l’environnement immédiat. Ces constatations sont mises en relation avec l’anamnèse, l’examen clinique, les tests d’écoute et l’évolution du patient. Elles constituent des repères de travail et de réévaluation ; elles ne sont pas utilisées isolément pour poser un diagnostic médical.',
+        },
+        {
+          type: 'para',
+          text: 'La cartographie occipito-podale associe ces zones à des territoires fonctionnels du corps. Dans ce volume, cette cartographie est considérée comme un modèle clinique propre à la ROP. Elle ne doit pas être confondue avec un dermatome, un territoire de nerf périphérique ni avec la projection anatomique directe d’un organe sur la peau du pied ou de l’occiput.',
+        },
+        {
+          type: 'para',
+          text: 'L’embryologie apporte un élément de contexte : l’épiderme dérive de l’ectoderme de surface, tandis que le système nerveux dérive du neuroectoderme, lui-même issu de l’ectoderme [1]. Cette origine embryologique commune est un fait anatomique ; elle ne démontre cependant pas l’existence d’une cartographie réflexe spécifique pied–occiput–organe.',
+        },
+        {
+          type: 'para',
+          text: 'La neurophysiologie fournit un cadre plus directement pertinent. La peau est un organe richement innervé et vascularisé, dont la sensibilité, la température, la sudation et la perfusion varient selon des facteurs locaux et systémiques. Le système sympathique participe notamment au contrôle de la circulation cutanée et de la vasomotricité [3]. Un état de stress, une douleur, la température, la pression locale ou d’autres facteurs peuvent donc modifier certaines caractéristiques de la peau. Ces mécanismes montrent que la peau est un tissu dynamique ; ils ne démontrent pas qu’un trouble fonctionnel d’un organe crée nécessairement une zone cutanée correspondante et spécifique sur le pied ou l’occiput.',
+        },
+        {
+          type: 'para',
+          text: 'Repère historique et terminologique — Les textes historiques de la ROP ont utilisé les notions de « somatotopie », « viscérotopie » ou de « réverbération » pour décrire la représentation clinique du corps sur le pied et l’occiput. Dans ce chapitre, ces termes décrivent le modèle de cartographie de la méthode ; ils ne sont pas présentés comme la preuve d’une correspondance anatomique point–organe démontrée.',
+        },
+        {
+          type: 'figure',
+          src: '/chapter-2/figure-2-1.png',
+          caption: 'Figure 2.1 — Pourquoi la ROP recherche-t-elle des zones réflexes ? La physiologie cutanée établit que la peau est un organe sensoriel, vasculaire et autonome dynamique ; la correspondance topographique pied–occiput–territoires fonctionnels relève de la cartographie clinique ROP et ne constitue pas une projection anatomique démontrée.',
+          alt: 'Physiologie cutanée et modèle clinique des zones réflexes en ROP',
+          orientation: 'landscape',
+          syncHide: true,
+        },
+        {
+          type: 'sub',
+          text: '0.2. Que désigne une « zone réflexe » en ROP ?',
+        },
+        {
+          type: 'para',
+          text: 'Une zone réflexe désigne, dans la terminologie palpatoire de la ROP, une aire cutanée qui se distingue des tissus voisins par une ou plusieurs caractéristiques : rugosité, densification, diminution du glissement, sensation granuleuse ou sensibilité localisée. L’identification repose sur la comparaison avec les zones adjacentes, le côté controlatéral lorsqu’il est pertinent, et les repères anatomiques sous-jacents.',
+        },
+        {
+          type: 'para',
+          text: 'Le terme de « cristaux », parfois utilisé historiquement par les praticiens pour décrire une sensation granuleuse sous le doigt, est conservé uniquement comme description palpatoire. Il ne suppose pas la présence de dépôts cristallins ou calciques objectivés dans la couche épidermo-dermique.',
+        },
+        {
+          type: 'bullets',
+          items: [
+            'Repérage : compléter l’anamnèse, l’examen clinique et les tests par une information tissulaire.',
+            'Stimulation : appliquer une pression fine, précise et non douloureuse sur la zone retenue.',
+            'Réévaluation : comparer après stimulation la texture, la sensibilité et les indicateurs fonctionnels définis avant la séance.',
+          ],
+        },
+        {
+          type: 'para',
+          text: 'Précision — Une zone réflexe est un repère clinique de la ROP. Sa présence, sa disparition ou sa modification après stimulation ne constituent ni un biomarqueur validé d’un organe, ni la preuve d’un mécanisme causal particulier.',
+        },
+        {
+          type: 'sub',
+          text: '0.3. Mécanisme neurophysiologique proposé de la stimulation ROP',
+        },
+        {
+          type: 'para',
+          text: 'La pression manuelle déforme la couche épidermo-dermique et sollicite notamment des mécanorécepteurs cutanés à bas seuil. Le toucher non nocif est transmis en grande partie par des afférences myélinisées, dont les fibres Aβ, qui rejoignent une branche périphérique, un nerf puis les racines spinales avant d’être intégrées dans les réseaux de la moelle et les voies ascendantes [2]. Le tact discriminatif et épicritique fait largement intervenir le système des colonnes dorsales–lemnisque médial ; une stimulation cutanée réelle ne se réduit toutefois pas à une seule population de fibres ni à une seule voie ascendante.',
+        },
+        {
+          type: 'para',
+          text: 'Au niveau spinal et supraspinal, l’information tactile peut interagir avec la transmission nociceptive et avec des réseaux impliqués dans la perception, l’attention, l’état autonome et les réponses somatiques. La théorie du gate control fournit un modèle classique pour comprendre comment une stimulation tactile non douloureuse peut contribuer à moduler une partie du message douloureux [4]. Elle ne résume cependant pas l’ensemble des effets possibles d’un contact manuel.',
+        },
+        {
+          type: 'para',
+          text: 'Dans le modèle ROP, ces voies constituent une porte d’entrée sensorielle susceptible de modifier l’excitabilité de réseaux somatiques, autonomes ou viscéraux. Cette formulation exprime une plausibilité neurophysiologique ; elle ne signifie pas qu’une pression sur une zone cutanée envoie un « ordre correcteur » spécifique à un organe ni qu’elle restaure une normotonie neuro-végétative, hormonale et somatique mesurable par un mécanisme démontré.',
+        },
+        {
+          type: 'para',
+          text: 'La conséquence pratique est essentielle : la ROP recherche une stimulation précise, progressive et non douloureuse. Une pression trop forte modifie la nature du stimulus et peut recruter davantage les voies nociceptives, ce qui n’est pas l’objectif de la technique. Après la stimulation, la réponse est appréciée par la réévaluation de la zone, du symptôme principal et des fonctions suivies, plutôt que par la présomption d’un effet physiologique spécifique.',
+        },
+        {
+          type: 'figure',
+          src: '/chapter-2/figure-2-2.png',
+          caption: 'Figure 2.2 — Stimulation cutanée en ROP : chaîne neurophysiologique proposée. La pression non douloureuse active des afférences cutanées qui rejoignent les réseaux spinaux et supraspinaux. Les effets de modulation sont plausibles à l’échelle sensorielle, nociceptive et autonome ; une correction sélective d’un organe par un point cutané n’est pas démontrée.',
+          alt: 'Chaîne neurophysiologique proposée de la stimulation cutanée en ROP',
+          orientation: 'landscape',
+          syncHide: true,
         },
       ],
     },
@@ -58,7 +152,7 @@ export const chapter2Fr: Chapter = {
         },
         {
           type: 'para',
-          text: 'La stimulation cutanée sollicite notamment des mécanorécepteurs à bas seuil présents dans la peau glabre, parmi lesquels :',
+          text: 'La stimulation cutanée sollicite notamment des mécanorécepteurs à bas seuil présents dans la peau glabre [2], parmi lesquels :',
         },
         {
           type: 'leadBullets',
@@ -75,15 +169,15 @@ export const chapter2Fr: Chapter = {
         },
         {
           type: 'para',
-          text: 'Lorsque la couche épidermo-dermique se déforme sous le doigt, les mécanorécepteurs génèrent une activité afférente transmise par une branche périphérique, puis par un nerf vers la moelle épinière et les centres supérieurs. La chaîne de lecture proposée dans ce volume est simple : pression locale → mécanorécepteurs → branche périphérique → nerf → racines spinales → réseaux spinaux et supraspinaux. Dans le modèle de la ROP, cette information sensorielle constitue une porte d’entrée susceptible de modifier l’excitabilité de réseaux somatiques, autonomes ou viscéraux. La théorie du gate control peut contribuer à expliquer une partie de l’effet antalgique immédiat d’une stimulation tactile non douloureuse.',
+          text: 'Lorsque la couche épidermo-dermique se déforme sous le doigt, les mécanorécepteurs génèrent une activité afférente transmise par une branche périphérique, puis par un nerf vers la moelle épinière et les centres supérieurs. La chaîne de lecture proposée dans ce volume est simple : pression locale → mécanorécepteurs → branche périphérique → nerf → racines spinales → réseaux spinaux et supraspinaux. Dans le modèle de la ROP, cette information sensorielle constitue une porte d’entrée susceptible de modifier l’excitabilité de réseaux somatiques, autonomes ou viscéraux. La théorie du gate control peut contribuer à expliquer une partie de l’effet antalgique immédiat d’une stimulation tactile non douloureuse [4].',
         },
         {
           type: 'para',
-          text: 'Le toucher cutané ne repose toutefois pas sur un système afférent unique. À côté des mécanorécepteurs associés aux fibres myélinisées rapides, des travaux de microneurographie ont mis en évidence chez l’être humain des afférences mécanosensibles non myélinisées de type C répondant à des stimulations tactiles non nocives. Décrites initialement par Vallbo et collaborateurs en 1993 dans la peau pileuse, ces afférences ont ensuite été étudiées sous le terme de fibres C-tactiles (CT). [1]',
+          text: 'Le toucher cutané ne repose toutefois pas sur un système afférent unique. À côté des mécanorécepteurs associés aux fibres myélinisées rapides, des travaux de microneurographie ont mis en évidence chez l’être humain des afférences mécanosensibles non myélinisées de type C répondant à des stimulations tactiles non nocives. Décrites initialement par Vallbo et collaborateurs en 1993 dans la peau pileuse, ces afférences ont ensuite été étudiées sous le terme de fibres C-tactiles (CT). [5]',
         },
         {
           type: 'para',
-          text: 'Les travaux ultérieurs montrent que leur réponse dépend non seulement de l’intensité mécanique du contact, mais aussi de ses caractéristiques physiques. Lors d’un effleurement cutané, les fibres CT répondent préférentiellement à des vitesses lentes à intermédiaires, de l’ordre de 1 à 10 cm/s, qui sont également associées à une perception plus agréable du toucher. [2] Leur activité est aussi modulée par la température : dans une étude comparant des stimulations à 18 °C, 32 °C et 42 °C, la réponse était maximale autour de 32 °C, température proche de celle de la surface cutanée et donc d’un contact peau-à-peau. [3] Ces données illustrent que la qualité d’une stimulation manuelle dépend de plusieurs paramètres — intensité, vitesse, température et durée du contact — et pas uniquement de la force appliquée.',
+          text: 'Les travaux ultérieurs montrent que leur réponse dépend non seulement de l’intensité mécanique du contact, mais aussi de ses caractéristiques physiques. Lors d’un effleurement cutané, les fibres CT répondent préférentiellement à des vitesses lentes à intermédiaires, de l’ordre de 1 à 10 cm/s, qui sont également associées à une perception plus agréable du toucher. [6] Leur activité est aussi modulée par la température : dans une étude comparant des stimulations à 18 °C, 32 °C et 42 °C, la réponse était maximale autour de 32 °C, température proche de celle de la surface cutanée et donc d’un contact peau-à-peau. [7] Ces données illustrent que la qualité d’une stimulation manuelle dépend de plusieurs paramètres — intensité, vitesse, température et durée du contact — et pas uniquement de la force appliquée.',
         },
         {
           type: 'para',
@@ -284,7 +378,7 @@ export const chapter2Fr: Chapter = {
         },
         {
           type: 'para',
-          text: 'Certains systèmes afférents cutanés, notamment ceux étudiés dans le cadre du toucher affectif, participent à des traitements centraux associés à la dimension affective et interoceptive de l’expérience tactile. [2] Cette observation souligne l’existence d’interactions entre information somatique cutanée, état interne et contexte affectif, sans établir pour autant une correspondance spécifique entre une zone réflexe et un réseau cérébral déterminé.',
+          text: 'Certains systèmes afférents cutanés, notamment ceux étudiés dans le cadre du toucher affectif, participent à des traitements centraux associés à la dimension affective et interoceptive de l’expérience tactile. [6] Cette observation souligne l’existence d’interactions entre information somatique cutanée, état interne et contexte affectif, sans établir pour autant une correspondance spécifique entre une zone réflexe et un réseau cérébral déterminé.',
         },
         {
           type: 'sub',
@@ -485,8 +579,8 @@ export const chapter2Fr: Chapter = {
       blocks: [
         {
           type: 'figure',
-          src: '/chapter-2/figure-2-1.png',
-          caption: 'Figure 2.1 — Fenêtre d’adaptation après la première séance. Cette courbe représente un modèle issu de l’expérience clinique. L’axe vertical décrit un niveau fonctionnel clinique et non une variable physiologique mesurée ; la cinétique doit être progressivement documentée par des mesures standardisées.',
+          src: '/chapter-2/figure-2-3.png',
+          caption: 'Figure 2.3 — Fenêtre d’adaptation après la première séance. Cette courbe représente un modèle issu de l’expérience clinique. L’axe vertical décrit un niveau fonctionnel clinique et non une variable physiologique mesurée ; la cinétique doit être progressivement documentée par des mesures standardisées.',
           alt: 'Fenêtre d’adaptation après la première séance de ROP',
           orientation: 'landscape',
           syncHide: true,
@@ -597,6 +691,10 @@ export const chapter2Fr: Chapter = {
         {
           type: 'numbered',
           items: [
+            'Standring S, ed. Gray’s Anatomy: The Anatomical Basis of Clinical Practice. 42nd ed. Elsevier; 2020.',
+            'Abraira VE, Ginty DD. The sensory neurons of touch. Neuron. 2013;79(4):618–639. doi:10.1016/j.neuron.2013.07.051.',
+            'Johnson JM, Minson CT, Kellogg DL Jr. Cutaneous vasodilator and vasoconstrictor mechanisms in temperature regulation. Compr Physiol. 2014;4(1):33–89. doi:10.1002/cphy.c130015.',
+            'Melzack R, Wall PD. Pain mechanisms: a new theory. Science. 1965;150(3699):971–979. doi:10.1126/science.150.3699.971.',
             'Vallbo Å, Olausson H, Wessberg J, Norrsell U. A system of unmyelinated afferents for innocuous mechanoreception in the human skin. Brain Res. 1993;628(1–2):301–304. doi:10.1016/0006-8993(93)90968-S.',
             'Löken LS, Wessberg J, Morrison I, McGlone F, Olausson H. Coding of pleasant touch by unmyelinated afferents in humans. Nat Neurosci. 2009;12(5):547–548. doi:10.1038/nn.2312.',
             'Ackerley R, Backlund Wasling H, Liljencrantz J, Olausson H, Johnson RD, Wessberg J. Human C-tactile afferents are tuned to the temperature of a skin-stroking caress. J Neurosci. 2014;34(8):2879–2883. doi:10.1523/JNEUROSCI.2847-13.2014.',
