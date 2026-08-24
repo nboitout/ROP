@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import type { ReactNode } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { SITE_URL } from '@/lib/site'
@@ -15,25 +16,37 @@ export const metadata: Metadata = {
   },
 }
 
-const team = [
+type TeamMember = {
+  initials: string
+  name: string
+  role: string
+  body: ReactNode[]
+  photo?: string
+}
+
+const team: TeamMember[] = [
   {
     initials: 'GB',
     name: 'Guy Boitout',
     role: 'Créateur de la méthode · Responsable pédagogique',
-    body: "Guy est le créateur de la Réflexothérapie Occipito-Podale. Il en porte la vision clinique et la transmission : il structure les contenus, dirige les formations et veille à ce que la méthode reste fidèle à ses fondements, à l’anatomie et à l’expérience du praticien.",
+    body: ["Guy est le créateur de la Réflexothérapie Occipito-Podale. Il en porte la vision clinique et la transmission : il structure les contenus, dirige les formations et veille à ce que la méthode reste fidèle à ses fondements, à l’anatomie et à l’expérience du praticien."],
   },
   {
     initials: 'NB',
     name: 'Nicolas Boitout',
     role: 'Direction technologique · Imagerie scientifique',
-    body: "Nicolas conçoit et pilote l’environnement numérique de la R.O.P. Il est également responsable de la production des figures anatomiques, élaborées au moyen d’un processus complexe assisté par l’IA qui associe génération, vérifications croisées et corrections afin de limiter au maximum les erreurs dans les schémas. Il partage enfin la responsabilité de la revue de la littérature neuro-anatomique, pour relier les contenus de la méthode aux données scientifiques disponibles.",
+    body: ["Nicolas conçoit et pilote l’environnement numérique de la R.O.P. Il est également responsable de la production des figures anatomiques, élaborées au moyen d’un processus complexe assisté par l’IA qui associe génération, vérifications croisées et corrections afin de limiter au maximum les erreurs dans les schémas. Il partage enfin la responsabilité de la revue de la littérature neuro-anatomique, pour relier les contenus de la méthode aux données scientifiques disponibles."],
     photo: '/assets/Team/Nicolas.jpeg',
   },
   {
     initials: 'M',
-    name: 'Matei',
+    name: 'Matei Boitout',
     role: 'Relation clients · Marketing',
-    body: "Matei accompagne les lecteurs, les praticiens et les futurs participants aux formations. Il coordonne la relation clients et le marketing, recueille les besoins du terrain et veille à ce que chaque échange avec l’équipe soit clair, humain et utile.",
+    body: [
+      "Matei est en charge de la relation avec les lecteurs et les praticiens. Il accompagne leurs premiers échanges avec l’équipe, répond à leurs questions et contribue à les orienter vers les contenus, ressources ou formations les plus adaptés à leurs besoins.",
+      "Il participe également au développement et à la mise en œuvre des actions marketing : communication autour des publications et des formations, campagnes de sensibilisation, suivi des contacts et animation de la relation avec la communauté.",
+      <>À l’écoute des retours du terrain, Matei joue enfin un rôle de relais entre les utilisateurs et l’équipe. Il recueille les attentes, les questions et les suggestions afin d’améliorer en permanence l’expérience proposée et de veiller à ce que chaque interaction reste <strong>claire, humaine, réactive et utile</strong>.</>,
+    ],
   },
 ]
 
@@ -79,7 +92,11 @@ export default function TeamPage() {
               <span className="team-number">0{index + 1}</span>
               <h2>{member.name}</h2>
               <p className="team-role">{member.role}</p>
-              <p className="team-bio">{member.body}</p>
+              <div className="team-bio">
+                {member.body.map((paragraph, paragraphIndex) => (
+                  <p key={paragraphIndex}>{paragraph}</p>
+                ))}
+              </div>
             </div>
           </article>
         ))}

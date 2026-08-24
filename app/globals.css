@@ -409,6 +409,8 @@ footer > div > p { font-size:.95rem; color:rgba(245,240,232,.84); line-height:1.
 .team-card h2 { padding-right:38px; font-size:1.9rem; }
 .team-role { min-height:38px; margin-bottom:16px; color:var(--sage); font-size:.69rem; font-weight:600; letter-spacing:.1em; line-height:1.45; text-transform:uppercase; }
 .team-bio { color:var(--i50); font-size:.86rem; line-height:1.65; }
+.team-bio p + p { margin-top:12px; }
+.team-bio strong { color:var(--ink); font-weight:600; }
 .team-cta { display:flex; align-items:center; justify-content:space-between; gap:30px; background:var(--ink); }
 .team-cta > p { max-width:510px; color:var(--cream); font-family:'Cormorant Garamond',serif; font-size:clamp(1.8rem,3vw,2.6rem); font-weight:300; line-height:1.15; }
 .team-cta > div { display:flex; gap:12px; flex-wrap:wrap; }
