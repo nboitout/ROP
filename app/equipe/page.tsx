@@ -91,7 +91,7 @@ export default function TeamPage() {
                   style={{
                     objectFit: member.photoContained ? 'contain' : 'cover',
                     objectPosition: member.photoPosition ?? 'center 28%',
-                    transform: member.photoContained ? 'scale(1.3)' : undefined,
+                    transform: member.photoContained ? 'translateY(-12%) scale(1.3)' : undefined,
                   }}
                 />
               ) : (
