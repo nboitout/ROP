@@ -50,7 +50,7 @@ function withChapter18Titles(titles: string[]): SyncSlide[] {
   return chapter18Slides.map((slide, index) => ({ ...slide, title: titles[index] ?? slide.title }))
 }
 
-export const chapter18SlidesEn = withChapter18Titles([
+export const chapter18SlidesEnLegacy = withChapter18Titles([
   'The bladder: anatomy, physiology and ROP',
   'The clinical overview',
   'Anatomical position in the pelvic cavity (female)',
@@ -189,4 +189,54 @@ export const chapter18SlideAnchors: SyncAnchor[] = [
   { sectionId: 'zones-reflexes-podales', blockIndex: 21, slide: 28, end: { sectionId: 'zones-reflexes-podales', blockIndex: 21 } },
   { sectionId: 'zones-reflexes-podales', blockIndex: 22, slide: 29, end: { sectionId: 'zones-reflexes-podales', blockIndex: 22 } },
   { sectionId: 'zones-reflexes-podales', blockIndex: 23, slide: 30, end: { sectionId: 'zones-reflexes-podales', blockIndex: 23 } },
+]
+
+export const chapter18SlidesEn: SyncSlide[] = [
+  { src: '/chapter-18/EN/Images/NCH 18 EN IMG 1.png', title: 'The Bladder: Anatomy, Physiology and ROP' },
+  { src: '/chapter-18/EN/Images/NCH 18 EN IMG 2.png', title: 'The Clinical Overview' },
+  { src: '/chapter-18/EN/Images/NCH 18 EN IMG 3.png', title: 'Anatomical Situation in the Pelvic Cavity — Female' },
+  { src: '/chapter-18/EN/Images/NCH 18 EN IMG 4.png', title: 'Anatomical Position within the Pelvic Cavity — Female' },
+  { src: '/chapter-18/EN/Images/NCH 18 EN IMG 5.png', title: 'Anatomical Situation in the Pelvic Cavity — Male' },
+  { src: '/chapter-18/EN/Images/NCH 18 EN IMG 6.png', title: 'Anatomical Position within the Pelvic Cavity — Male' },
+  { src: '/chapter-18/EN/Images/NCH 18 EN IMG 7.png', title: 'When the Bladder Fills: Morphology and Volume Dynamics' },
+  { src: '/chapter-18/EN/Images/NCH 18 EN IMG 8.png', title: 'Internal Architecture: The Three Layers of the Bladder' },
+  { src: '/chapter-18/EN/Images/NCH 18 EN IMG 9.png', title: 'Internal Morphology: The Vesical Trigone' },
+  { src: '/chapter-18/EN/Images/NCH 18 EN IMG 10.png', title: 'The Suspended Bladder: Peritoneum and Ligaments' },
+  { src: '/chapter-18/EN/Images/NCH 18 EN IMG 11.png', title: 'The Bladder Support System' },
+  { src: '/chapter-18/EN/Images/NCH 18 EN IMG 12.png', title: 'Innervation of the Bladder' },
+  { src: '/chapter-18/EN/Images/NCH 18 EN IMG 13.png', title: 'Physiology: The Micturition Cycle' },
+  { src: '/chapter-18/EN/Images/NCH 18 EN IMG 14.png', title: 'Biomechanics: The Pelvic Pressure Chamber' },
+  { src: '/chapter-18/EN/Images/NCH 18 EN IMG 15.png', title: 'Pathological Mechanisms and Dysfunctions' },
+  { src: '/chapter-18/EN/Images/NCH 18 EN IMG 16.png', title: 'How Tension Creates Urethral Gaping' },
+  { src: '/chapter-18/EN/Images/NCH 18 EN IMG 17.png', title: 'Differential Diagnoses: Cystitis and Urgency' },
+  { src: '/chapter-18/EN/Images/NCH 18 EN IMG 18.png', title: 'Urinary Disorders: Indications and Diagnoses of Exclusion' },
+  { src: '/chapter-18/EN/Images/NCH 18 EN IMG 19.png', title: 'Viscero-Emotional Relationships' },
+  { src: '/chapter-18/EN/Images/NCH 18 EN IMG 20.png', title: 'Practical Advice: Abdomino-Perineal Reeducation' },
+  { src: '/chapter-18/EN/Images/NCH 18 EN IMG 21.png', title: 'ROP Clinical Protocol: The Bladder' },
+  { src: '/chapter-18/EN/Images/NCH 18 EN IMG 22.png', title: 'Higher Centers of Neurovegetative Control' },
+]
+
+export const chapter18SlideAnchorsEn: SyncAnchor[] = [
+  { sectionId: 'presentation', blockIndex: -1, slide: 1 },
+  { sectionId: 'presentation', blockIndex: 0, slide: 2 },
+  { sectionId: 'situation', blockIndex: 1, slide: 3 },
+  { sectionId: 'situation', blockIndex: 1, slide: 4 },
+  { sectionId: 'situation', blockIndex: 4, slide: 5 },
+  { sectionId: 'situation', blockIndex: 4, slide: 6 },
+  { sectionId: 'situation', blockIndex: 7, slide: 7 },
+  { sectionId: 'anatomie', blockIndex: 0, slide: 8 },
+  { sectionId: 'anatomie', blockIndex: 10, slide: 9 },
+  { sectionId: 'anatomie', blockIndex: 19, slide: 10 },
+  { sectionId: 'anatomie', blockIndex: 21, slide: 11 },
+  { sectionId: 'innervation', blockIndex: 0, slide: 12 },
+  { sectionId: 'physiologie', blockIndex: 0, slide: 13 },
+  { sectionId: 'physiologie', blockIndex: 23, slide: 14 },
+  { sectionId: 'pathologies-courantes', blockIndex: 0, slide: 15 },
+  { sectionId: 'pathologies-courantes', blockIndex: 3, slide: 16 },
+  { sectionId: 'pathologies-courantes', blockIndex: 11, slide: 17 },
+  { sectionId: 'indications-troubles-fonctionnels', blockIndex: 0, slide: 18 },
+  { sectionId: 'relations-viscero-emotionnelles', blockIndex: 0, slide: 19 },
+  { sectionId: 'conseils', blockIndex: 0, slide: 20 },
+  { sectionId: 'zones-reflexes-podales', blockIndex: -1, slide: 21 },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 1, slide: 22 },
 ]
