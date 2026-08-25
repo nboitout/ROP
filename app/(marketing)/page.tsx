@@ -56,7 +56,7 @@ export default function HomePage() {
         <a className="h-logo" href="#">Guy Boitout</a>
         <div className="h-right">
           <nav>
-            <Link href="/equipe">{t.nav.equipe}</Link>
+            <Link href={`/equipe?lang=${lang}`}>{t.nav.equipe}</Link>
             <a href="#genese">{t.nav.genese}</a>
             <a href="#chapitres">{t.nav.sommaire}</a>
             <a href="#protocole">{t.nav.protocole}</a>
@@ -398,7 +398,7 @@ export default function HomePage() {
         <div>
           <div className="f-br">{t.footer.title}</div>
           <p>{t.footer.p}</p>
-          <Link href="/equipe" className="f-team-link">{t.nav.equipe} →</Link>
+          <Link href={`/equipe?lang=${lang}`} className="f-team-link">{t.nav.equipe} →</Link>
         </div>
         <div className="f-bot">
           <span>{t.footer.copy}</span>
