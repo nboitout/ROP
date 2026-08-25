@@ -6,7 +6,7 @@ import SlideSyncReader from '@/components/SlideSyncReader'
 import { getChapter } from '@/content/registry'
 import { getServerLang } from '@/app/i18n/serverLang'
 import { translations } from '@/app/i18n/translations'
-import { chapter9Slides, chapter9SlideAnchors } from '@/content/chapter9.slidesync'
+import { chapter9Slides, chapter9SlidesEn, chapter9SlideAnchors, chapter9SlideAnchorsEn } from '@/content/chapter9.slidesync'
 
 export const metadata: Metadata = {
   title: 'Chapitre 9 — Lecture synchronisée · R.O.P. · Guy Boitout',
@@ -26,14 +26,15 @@ export default async function Chapitre9SyncPage({
 
   const { lang: langParam } = await searchParams
   const lang = await getServerLang(langParam)
-  const { chapter } = getChapter('chapter-9', 'fr')
+  const { chapter } = getChapter('chapter-9', lang)
+  const hasEnglishEdition = lang === 'en'
 
   return (
     <SlideSyncReader
       chapter={chapter}
       bookTitle={translations[lang].reader.bookTitle}
-      slides={chapter9Slides}
-      anchors={chapter9SlideAnchors}
+      slides={hasEnglishEdition ? chapter9SlidesEn : chapter9Slides}
+      anchors={hasEnglishEdition ? chapter9SlideAnchorsEn : chapter9SlideAnchors}
       backHref="/chapitres-gratuits"
       classicHref={`/chapitre-9?lang=${lang}`}
     />

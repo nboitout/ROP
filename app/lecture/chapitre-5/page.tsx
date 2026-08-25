@@ -9,7 +9,7 @@ import { translations } from '@/app/i18n/translations'
 import type { Lang } from '@/app/i18n/translations'
 import {
   chapter5SlidesEn, chapter5SlidesDe, chapter5SlidesEs, chapter5SlidesIt,
-  chapter5SlideAnchorsLegacy,
+  chapter5SlideAnchorsEn, chapter5SlideAnchorsLegacy,
 } from '@/content/chapter5.slidesync'
 import { chapter5ReworkSlides as chapter5Slides, chapter5ReworkSlideAnchors as chapter5SlideAnchors } from '@/content/chapter5-rework.slidesync'
 
@@ -20,7 +20,7 @@ const DECKS: Record<Lang, typeof chapter5Slides> = {
 
 const ANCHORS: Record<Lang, typeof chapter5SlideAnchors> = {
   fr: chapter5SlideAnchors,
-  en: chapter5SlideAnchorsLegacy, de: chapter5SlideAnchorsLegacy,
+  en: chapter5SlideAnchorsEn, de: chapter5SlideAnchorsLegacy,
   es: chapter5SlideAnchorsLegacy, it: chapter5SlideAnchorsLegacy, th: chapter5SlideAnchorsLegacy,
 }
 

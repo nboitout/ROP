@@ -28,7 +28,7 @@ export default async function Chapitre7ClassicPage({
 
   const { lang: langParam } = await searchParams
   const lang = await getServerLang(langParam)
-  const { chapter, contentLang } = getChapter('chapter-7', 'fr')
+  const { chapter, contentLang } = getChapter('chapter-7', lang)
   const syncHref = `/lecture/chapitre-7?lang=${lang}`
 
   return (

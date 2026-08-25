@@ -61,6 +61,26 @@ export const chapter4ReworkSlides = [
   { src: '/chapter-4/rework-reflex/slide-33.png', title: 'Cartographie ROP : plexus hypogastrique inférieur, fibres moyennes et postérieures' },
 ]
 
+const synthesisEn = (file: number, title: string) => ({
+  src: `/chapter-4/EN/IMAGES/NCH 4 EN IMG ${file}.png`,
+  title,
+})
+
+export const chapter4ReworkSlidesEn = [
+  synthesisEn(1, 'Autonomic Nervous System'),
+  synthesisEn(2, 'Visual summary of the chapter'),
+  synthesisEn(3, 'Level 2 — Neurovegetative Regulation and Adaptation'),
+  synthesisEn(4, 'Two systems: Parasympathetic and Sympathetic'),
+  synthesisEn(5, 'General Physiology of the ANS'),
+  synthesisEn(6, 'Innervation Mapping'),
+  synthesisEn(7, 'Parasympathetic–Sympathetic Relationship'),
+  synthesisEn(8, 'Functional Interdependence within the Autonomic Plexuses'),
+  synthesisEn(9, 'Neuroendocrinology and Neuromediators'),
+  synthesisEn(10, 'Sleep: a prerequisite for autonomic balance'),
+  synthesisEn(11, 'Functional organization of the autonomic nervous system'),
+  synthesisEn(12, 'Craniosacral Organization of the Parasympathetic System'),
+]
+
 export const chapter4ReworkSlideAnchors = [
   { sectionId: 'presentation', blockIndex: -1, slide: 1 },
   { sectionId: 'presentation', blockIndex: 0, slide: 2 },
@@ -125,6 +145,21 @@ export const chapter4ReworkSlideAnchors = [
   { sectionId: 'zones-reflexes-podales', blockIndex: 51, slide: 47, ...endAt('zones-reflexes-podales', 53) },
   // Ends after the paired photo and before 11.16. Système nerveux intrinsèque ou entérique (SNE).
   { sectionId: 'zones-reflexes-podales', blockIndex: 54, slide: 48, ...endAt('zones-reflexes-podales', 54) },
+]
+
+export const chapter4ReworkSlideAnchorsEn = [
+  { sectionId: 'presentation', blockIndex: -1, slide: 1 },
+  { sectionId: 'presentation', blockIndex: 0, slide: 2 },
+  { sectionId: 'presentation', blockIndex: 0, slide: 3 },
+  { sectionId: 'presentation', blockIndex: 1, slide: 4 },
+  { sectionId: 'presentation', blockIndex: 6, slide: 5 },
+  { sectionId: 'presentation', blockIndex: 8, slide: 6 },
+  { sectionId: 'presentation', blockIndex: 10, slide: 7 },
+  { sectionId: 'presentation', blockIndex: 12, slide: 8 },
+  { sectionId: 'presentation', blockIndex: 15, slide: 9 },
+  { sectionId: 'presentation', blockIndex: 21, slide: 10 },
+  { sectionId: 'organisation-du-sna', blockIndex: -1, slide: 11 },
+  { sectionId: 'parasympathique-viscero-moteur', blockIndex: -1, slide: 12 },
 ]
 
 export const chapter4ReworkHalfBreaks = [

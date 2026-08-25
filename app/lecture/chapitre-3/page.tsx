@@ -6,7 +6,12 @@ import SlideSyncReader from '@/components/SlideSyncReader'
 import { getChapter } from '@/content/registry'
 import { getServerLang } from '@/app/i18n/serverLang'
 import { translations } from '@/app/i18n/translations'
-import { chapter3ReworkSlides as chapter3Slides, chapter3ReworkSlideAnchors as chapter3SlideAnchors } from '@/content/chapter3-rework.slidesync'
+import {
+  chapter3ReworkSlides as chapter3Slides,
+  chapter3ReworkSlidesEn as chapter3SlidesEn,
+  chapter3ReworkSlideAnchors as chapter3SlideAnchors,
+  chapter3ReworkSlideAnchorsEn as chapter3SlideAnchorsEn,
+} from '@/content/chapter3-rework.slidesync'
 
 export const metadata: Metadata = {
   title: 'Chapitre 3 — Lecture synchronisée · R.O.P. · Guy Boitout',
@@ -24,18 +29,17 @@ export default async function Chapitre3SyncPage({
     redirect('/#acheter')
   }
 
-  // Chapter 3 exists in French only; serve the French content + deck regardless
-  // of the reader's UI language.
   const { lang: langParam } = await searchParams
   const lang = await getServerLang(langParam)
 
   const { chapter } = getChapter('chapter-3', lang)
+  const hasEnglishEdition = lang === 'en'
   return (
     <SlideSyncReader
       chapter={chapter}
       bookTitle={translations[lang].reader.bookTitle}
-      slides={chapter3Slides}
-      anchors={chapter3SlideAnchors}
+      slides={hasEnglishEdition ? chapter3SlidesEn : chapter3Slides}
+      anchors={hasEnglishEdition ? chapter3SlideAnchorsEn : chapter3SlideAnchors}
       backHref="/chapitres-gratuits"
       classicHref={`/chapitre-3?lang=${lang}`}
     />

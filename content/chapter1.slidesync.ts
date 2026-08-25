@@ -34,6 +34,26 @@ export const chapter1Slides: SyncSlide[] = [
   { src: '/chapter-1/slides/slide-19.png', title: 'Synthèse opérationnelle' },
 ]
 
+export const chapter1SlidesEn: SyncSlide[] = [
+  { src: '/chapter-1/EN/Images/NCH%201%20EN%20IMG%201.png', title: 'Biomechanical and Neurophysiological Principles of ROP' },
+  { src: '/chapter-1/EN/Images/NCH%201%20EN%20IMG%202.png', title: 'Visceral function: an integrated balance' },
+  { src: '/chapter-1/EN/Images/NCH%201%20EN%20IMG%203.png', title: 'Mobility and Motility' },
+  { src: '/chapter-1/EN/Images/NCH%201%20EN%20IMG%204.png', title: 'The Four Determinants of Visceral Mobility' },
+  { src: '/chapter-1/EN/Images/NCH%201%20EN%20IMG%205.png', title: 'Somatic mobility and visceral gliding' },
+  { src: '/chapter-1/EN/Images/NCH%201%20EN%20IMG%206.png', title: 'Automatic mobility: cardiac motion' },
+  { src: '/chapter-1/EN/Images/NCH%201%20EN%20IMG%207.png', title: 'The autonomic nervous system' },
+  { src: '/chapter-1/EN/Images/NCH%201%20EN%20IMG%208.png', title: 'Motility: Intrinsic Movement and Clinical Assessment' },
+  { src: '/chapter-1/EN/Images/NCH%201%20EN%20IMG%209.png', title: 'Biorhythms: Cyclical Variations Useful for Diagnosis' },
+  { src: '/chapter-1/EN/Images/NCH%201%20EN%20IMG%2010.png', title: 'Visceral “Joints”' },
+  { src: '/chapter-1/EN/Images/NCH%201%20EN%20IMG%2011.png', title: 'Serous Membranes and Interstitium' },
+  { src: '/chapter-1/EN/Images/NCH%201%20EN%20IMG%2012.png', title: 'Visceral Means of Attachment' },
+  { src: '/chapter-1/EN/Images/NCH%201%20EN%20IMG%2013.png', title: 'Lesser omentum and omental foramen' },
+  { src: '/chapter-1/EN/Images/NCH%201%20EN%20IMG%2014.png', title: 'Visceral, Parietal, and Referred Pain' },
+  { src: '/chapter-1/EN/Images/NCH%201%20EN%20IMG%2015.png', title: 'Clinical safety: recognizing red flags' },
+  { src: '/chapter-1/EN/Images/NCH%201%20EN%20IMG%2016.png', title: 'When Mobility Is Lost: Adhesions and Ptosis' },
+  { src: '/chapter-1/EN/Images/NCH%201%20EN%20IMG%2017.png', title: 'Reflex Spasms and Hypertonicity' },
+]
+
 export const chapter1SlideAnchors: SyncAnchor[] = [
   { sectionId: 'intention', blockIndex: 0, slide: 1, ...endAt('intention', 1) },
   { sectionId: 'intention', blockIndex: 1, slide: 2, ...endAt('mobilite-viscerale', 0) },
@@ -54,4 +74,24 @@ export const chapter1SlideAnchors: SyncAnchor[] = [
   { sectionId: 'perte-de-mobilite', blockIndex: 13, slide: 17, ...endAt('approche-clinique', 0) },
   { sectionId: 'approche-clinique', blockIndex: 0, slide: 18, ...endAt('synthese-operationnelle', 0) },
   { sectionId: 'synthese-operationnelle', blockIndex: 0, slide: 19, ...endAt('synthese-operationnelle', 1) },
+]
+
+export const chapter1SlideAnchorsEn: SyncAnchor[] = [
+  { sectionId: 'intention', blockIndex: 0, slide: 1, ...endAt('intention', 1) },
+  { sectionId: 'intention', blockIndex: 1, slide: 2, ...endAt('mobilite-viscerale', 0) },
+  { sectionId: 'mobilite-viscerale', blockIndex: 0, slide: 3, ...endAt('mobilite-viscerale', 2) },
+  { sectionId: 'mobilite-viscerale', blockIndex: 2, slide: 4, gapBefore: 'half', ...endAt('mobilite-viscerale', 4) },
+  { sectionId: 'mobilite-viscerale', blockIndex: 4, slide: 5, ...endAt('mobilite-viscerale', 11) },
+  { sectionId: 'mobilite-viscerale', blockIndex: 11, slide: 6, ...endAt('mobilite-viscerale', 14) },
+  { sectionId: 'mobilite-viscerale', blockIndex: 12, slide: 7, ...endAt('mobilite-viscerale', 17) },
+  { sectionId: 'mobilite-viscerale', blockIndex: 17, slide: 8, ...endAt('mobilite-viscerale', 22) },
+  { sectionId: 'mobilite-viscerale', blockIndex: 22, slide: 9, ...endAt('articulations-viscerales', -1) },
+  { sectionId: 'articulations-viscerales', blockIndex: -1, slide: 10, ...endAt('articulations-viscerales', 3) },
+  { sectionId: 'articulations-viscerales', blockIndex: 3, slide: 11, ...endAt('articulations-viscerales', 9) },
+  { sectionId: 'articulations-viscerales', blockIndex: 9, slide: 12, ...endAt('articulations-viscerales', 13) },
+  { sectionId: 'articulations-viscerales', blockIndex: 12, slide: 13, ...endAt('articulations-viscerales', 13) },
+  { sectionId: 'articulations-viscerales', blockIndex: 13, slide: 14, ...endAt('securite', -1) },
+  { sectionId: 'securite', blockIndex: -1, slide: 15, ...endAt('perte-de-mobilite', -1) },
+  { sectionId: 'perte-de-mobilite', blockIndex: -1, slide: 16, ...endAt('perte-de-mobilite', 13) },
+  { sectionId: 'perte-de-mobilite', blockIndex: 13, slide: 17, ...endAt('approche-clinique', -1) },
 ]

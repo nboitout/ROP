@@ -250,3 +250,41 @@ export const chapter8SlideAnchors: SyncAnchor[] = [
     end: { sectionId: "zones-reflexes-podales", blockIndex: 45 }
   }
 ]
+
+export const chapter8SlidesEn: SyncSlide[] = [
+  { src: '/chapter-8/EN/Images/NCH 8 EN IMG 1.png', title: 'Chapter 8 — Diaphragm' },
+  { src: '/chapter-8/EN/Images/NCH 8 EN IMG 2.png', title: 'The 8 Functional Dimensions of the Diaphragm' },
+  { src: '/chapter-8/EN/Images/NCH 8 EN IMG 3.png', title: 'Diaphragmatic Domes and Central Tendon' },
+  { src: '/chapter-8/EN/Images/NCH 8 EN IMG 4.png', title: 'Clinical Application: Asymmetric Topography in ROP' },
+  { src: '/chapter-8/EN/Images/NCH 8 EN IMG 5.png', title: 'Three Main Hiatuses' },
+  { src: '/chapter-8/EN/Images/NCH 8 EN IMG 6.png', title: 'Inferior Anatomy of the Diaphragm' },
+  { src: '/chapter-8/EN/Images/NCH 8 EN IMG 7.png', title: 'Arteries of the Diaphragm' },
+  { src: '/chapter-8/EN/Images/NCH 8 EN IMG 8.png', title: 'Accessory Hiatuses: Passageways and Sites of Vulnerability' },
+  { src: '/chapter-8/EN/Images/NCH 8 EN IMG 9.png', title: 'The Electrical Wiring: The Phrenic Nerves' },
+  { src: '/chapter-8/EN/Images/NCH 8 EN IMG 10.png', title: 'The Azygos–Caval Junction and the Stress Axis' },
+  { src: '/chapter-8/EN/Images/NCH 8 EN IMG 11.png', title: 'Barometric Balance and Visceral Support' },
+  { src: '/chapter-8/EN/Images/NCH 8 EN IMG 12.png', title: 'The Anti-Reflux Mechanism: The Tie-Knot' },
+  { src: '/chapter-8/EN/Images/NCH 8 EN IMG 13.png', title: 'Biomechanics of the Esophagogastric Junction' },
+  { src: '/chapter-8/EN/Images/NCH 8 EN IMG 14.png', title: 'Mechanical Pathology: Hiatal Hernias' },
+  { src: '/chapter-8/EN/Images/NCH 8 EN IMG 15.png', title: 'Gastroesophageal Reflux Is a Manifestation of Global Tension Patterns' },
+  { src: '/chapter-8/EN/Images/NCH 8 EN IMG 16.png', title: 'Pediatric Focus: Neonatal GERD' },
+]
+
+export const chapter8SlideAnchorsEn: SyncAnchor[] = [
+  { sectionId: 'presentation', blockIndex: 0, slide: 1 },
+  { sectionId: 'presentation', blockIndex: 1, slide: 2 },
+  { sectionId: 'anatomie', blockIndex: 5, slide: 3 },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 2, slide: 4 },
+  { sectionId: 'anatomie', blockIndex: 28, slide: 5 },
+  { sectionId: 'anatomie', blockIndex: 33, slide: 6 },
+  { sectionId: 'vascularisation', blockIndex: 0, slide: 7 },
+  { sectionId: 'anatomie', blockIndex: 46, slide: 8 },
+  { sectionId: 'innervation', blockIndex: 1, slide: 9 },
+  { sectionId: 'vascularisation', blockIndex: 5, slide: 10 },
+  { sectionId: 'physiologie', blockIndex: 4, slide: 11 },
+  { sectionId: 'physiologie', blockIndex: 19, slide: 12 },
+  { sectionId: 'physiologie', blockIndex: 23, slide: 13 },
+  { sectionId: 'pathologies-courantes-diagnostic-d-exclusion-indications-troubles-fonctionnels', blockIndex: 5, slide: 14 },
+  { sectionId: 'pathologies-courantes-diagnostic-d-exclusion-indications-troubles-fonctionnels', blockIndex: 0, slide: 15 },
+  { sectionId: 'pathologies-courantes-diagnostic-d-exclusion-indications-troubles-fonctionnels', blockIndex: 28, slide: 16 },
+]

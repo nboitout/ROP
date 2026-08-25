@@ -9,7 +9,7 @@ import { translations } from '@/app/i18n/translations'
 import type { Lang } from '@/app/i18n/translations'
 import {
   chapter2Slides, chapter2SlidesEn, chapter2SlidesDe, chapter2SlidesEs, chapter2SlidesIt,
-  chapter2SlideAnchors, chapter2SlideAnchorsFr,
+  chapter2SlideAnchors, chapter2SlideAnchorsEn, chapter2SlideAnchorsFr,
 } from '@/content/chapter2.slidesync'
 
 const DECKS: Record<Lang, typeof chapter2Slides> = {
@@ -23,7 +23,7 @@ const DECKS: Record<Lang, typeof chapter2Slides> = {
 
 const ANCHORS: Record<Lang, typeof chapter2SlideAnchors> = {
   fr: chapter2SlideAnchorsFr,
-  en: chapter2SlideAnchors,
+  en: chapter2SlideAnchorsEn,
   de: chapter2SlideAnchors,
   es: chapter2SlideAnchors,
   it: chapter2SlideAnchors,

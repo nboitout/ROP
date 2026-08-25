@@ -48,3 +48,37 @@ export const chapter12SlideAnchors: SyncAnchor[] = [
   { sectionId: 'zones-reflexes-podales', blockIndex: 15, slide: 15, end: { sectionId: 'zones-reflexes-podales', blockIndex: 15 } },
   { sectionId: 'zones-reflexes-podales', blockIndex: 16, slide: 16, end: { sectionId: 'zones-reflexes-podales', blockIndex: 16 } },
 ]
+
+export const chapter12SlidesEn: SyncSlide[] = [
+  { src: '/chapter-12/EN/Images/NCH 12 EN IMG 1.png', title: 'Chapter 12 — The Pancreas' },
+  { src: '/chapter-12/EN/Images/NCH 12 EN IMG 2.png', title: 'The Functional Duality of the Pancreas' },
+  { src: '/chapter-12/EN/Images/NCH 12 EN IMG 3.png', title: 'A Deep and Vulnerable Organ' },
+  { src: '/chapter-12/EN/Images/NCH 12 EN IMG 4.png', title: 'Anatomical Morphology' },
+  { src: '/chapter-12/EN/Images/NCH 12 EN IMG 5.png', title: 'Exocrine Physiology: The Digestive Machine' },
+  { src: '/chapter-12/EN/Images/NCH 12 EN IMG 6.png', title: 'A Deep and Vulnerable Organ' },
+  { src: '/chapter-12/EN/Images/NCH 12 EN IMG 7.png', title: 'The Functional Duality of the Pancreas' },
+  { src: '/chapter-12/EN/Images/NCH 12 EN IMG 8.png', title: 'Exocrine Physiology: The Digestive Machine' },
+  { src: '/chapter-12/EN/Images/NCH 12 EN IMG 9.png', title: 'Glycemic Disorders: The Spectrum of Diabetes' },
+  { src: '/chapter-12/EN/Images/NCH 12 EN IMG 10.png', title: 'Severe Pathologies: Pancreatitis and Tumors' },
+  { src: '/chapter-12/EN/Images/NCH 12 EN IMG 11.png', title: 'Glycemic Disorders: The Spectrum of Diabetes' },
+  { src: '/chapter-12/EN/Images/NCH 12 EN IMG 12.png', title: 'Severe Pathologies: Pancreatitis and Tumors' },
+  { src: '/chapter-12/EN/Images/NCH 12 EN IMG 13.png', title: 'Viscero-Emotional Overview' },
+  { src: '/chapter-12/EN/Images/NCH 12 EN IMG 14.png', title: 'Pancreas — Viscero-Somatic Relations' },
+]
+
+export const chapter12SlideAnchorsEn: SyncAnchor[] = [
+  { sectionId: 'presentation', blockIndex: 0, slide: 1 },
+  { sectionId: 'presentation', blockIndex: 1, slide: 2 },
+  { sectionId: 'situation', blockIndex: 0, slide: 3 },
+  { sectionId: 'anatomie', blockIndex: 0, slide: 4 },
+  { sectionId: 'physiologie', blockIndex: 0, slide: 5 },
+  { sectionId: 'rapports', blockIndex: 0, slide: 6 },
+  { sectionId: 'physiologie', blockIndex: 19, slide: 7 },
+  { sectionId: 'physiologie', blockIndex: 5, slide: 8 },
+  { sectionId: 'pathologies-courantes', blockIndex: 15, slide: 9 },
+  { sectionId: 'pathologies-courantes', blockIndex: 52, slide: 10 },
+  { sectionId: 'pathologies-courantes', blockIndex: 30, slide: 11 },
+  { sectionId: 'pathologies-courantes', blockIndex: 58, slide: 12 },
+  { sectionId: 'relations-viscero-emotionnelles', blockIndex: 0, slide: 13 },
+  { sectionId: 'relations-viscero-somatiques', blockIndex: 0, slide: 14 },
+]

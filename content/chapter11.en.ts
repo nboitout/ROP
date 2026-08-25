@@ -1,0 +1,1556 @@
+// Chapter 11 content — English
+// Source: public/chapter-11/EN/Chapter_11_Liver_and_Biliary_Tract_medical_English_revised_EN.docx
+
+import type { Chapter } from './types'
+
+export const chapter11En: Chapter = {
+  "slug": "chapter-11",
+  "number": "11",
+  "title": "Liver and Biliary Tract",
+  "sections": [
+    {
+      "id": "presentation",
+      "title": "1. Overview",
+      "blocks": [
+        {
+          "type": "para",
+          "text": "The liver is a major organ because of the diversity of its digestive, vascular, immune, hormonal, metabolic, detoxification, mechanical and energetic functions."
+        },
+        {
+          "type": "para",
+          "text": "It plays an important role in maintaining homeostasis."
+        },
+        {
+          "type": "para",
+          "text": "It is the largest visceral organ in the body."
+        },
+        {
+          "type": "para",
+          "text": "It accounts for approximately 2% of body weight and receives about 25% of cardiac output."
+        },
+        {
+          "type": "para",
+          "text": "When engorged with blood, it may weigh approximately 2.5–3 kg, whereas its cadaveric weight is around 1.5 kg."
+        },
+        {
+          "type": "para",
+          "text": "In the living body, mechanical forces related to the diaphragm and abdominal pressure modify its apparent load and support conditions."
+        },
+        {
+          "type": "para",
+          "text": "(See Chapter 1, General Principles, page ....)"
+        },
+        {
+          "type": "para",
+          "text": "The liver is reddish-brown, and its internal temperature may be slightly higher than that of the rest of the body."
+        },
+        {
+          "type": "para",
+          "text": "It is intraperitoneal, except at the porta hepatis and a posterior area in contact with the diaphragm: the bare area."
+        },
+        {
+          "type": "para",
+          "text": "The liver contains a very large number of hepatocytes, numbering several hundred billion."
+        },
+        {
+          "type": "para",
+          "text": "Its internal structure is friable, but it is entirely covered by a fibrous capsule beneath the visceral peritoneum: Glisson’s capsule."
+        },
+        {
+          "type": "para",
+          "text": "From the porta hepatis, this capsule extends into the liver along the proper hepatic artery and its branches, as well as along the bile ducts and portal vein."
+        },
+        {
+          "type": "para",
+          "text": "Relevance to ROP"
+        },
+        {
+          "type": "para",
+          "text": "Glisson’s capsule provides the liver with a firm fibrous framework, making it readily identifiable by palpation within the clinical approach described here."
+        },
+        {
+          "type": "para",
+          "text": "Mechanically, its consistency, fibrous capsule and anterior position in the abdominal cavity make it vulnerable to abdominal trauma."
+        }
+      ]
+    },
+    {
+      "id": "situation",
+      "title": "2. Location",
+      "blocks": [
+        {
+          "type": "para",
+          "text": "The liver lies beneath the diaphragm, mainly within the right hypochondriac and epigastric regions."
+        },
+        {
+          "type": "para",
+          "text": "It occupies a substantial part of the abdomen and overlies many organs suspended from or located near the diaphragm: the hepatic flexure of the colon, proximal transverse colon, right kidney, first part of the duodenum, gastro-oesophageal junction and stomach."
+        },
+        {
+          "type": "para",
+          "text": "It is intraperitoneal and supramesocolic and is also mechanically continuous with the diaphragm and, indirectly through it, with the pleura and pericardium."
+        }
+      ]
+    },
+    {
+      "id": "anatomie",
+      "title": "3. Anatomy",
+      "blocks": [
+        {
+          "type": "sub",
+          "text": "3.1. Supporting structures"
+        },
+        {
+          "type": "para",
+          "text": "Because of its weight, the liver requires a strong system of attachments."
+        },
+        {
+          "type": "para",
+          "text": "It is attached to the diaphragm by peritoneal ligaments."
+        },
+        {
+          "type": "para",
+          "text": "Coronary ligament: transverse and crown-shaped, it lies on the posterior surface of the liver."
+        },
+        {
+          "type": "para",
+          "text": "It is one of the liver’s principal means of fixation."
+        },
+        {
+          "type": "para",
+          "text": "At each end, it continues as the right and left triangular ligaments."
+        },
+        {
+          "type": "para",
+          "text": "The left triangular ligament is the more developed of the two."
+        },
+        {
+          "type": "para",
+          "text": "It attaches to the diaphragm vertically below the left nipple at the level of the sixth intercostal space."
+        },
+        {
+          "type": "para",
+          "text": "In the traditional clinical description, it serves as the axis of hepatic movement."
+        },
+        {
+          "type": "para",
+          "text": "Falciform ligament: its name derives from its sickle shape."
+        },
+        {
+          "type": "para",
+          "text": "Running vertically in the midline, it extends anteriorly from the coronary ligament. Together they form a capital T, with the coronary ligament forming the horizontal limb and the falciform ligament the vertical limb."
+        },
+        {
+          "type": "para",
+          "text": "The falciform ligament separates the liver into two principal lobes of unequal size, the right lobe being larger than the left."
+        },
+        {
+          "type": "para",
+          "text": "It contains the round ligament, a remnant of the umbilical vein."
+        },
+        {
+          "type": "para",
+          "text": "It connects the superior surface of the liver to the anterior abdominal wall."
+        },
+        {
+          "type": "para",
+          "text": "Its supportive role is traditionally considered limited."
+        },
+        {
+          "type": "para",
+          "text": "On the inferior surface of the liver, it continues as the left sagittal fissure, which marks the boundary between the two hepatic lobes."
+        },
+        {
+          "type": "para",
+          "text": "Lesser omentum (historically also termed the lesser epiploon): it comprises two parts."
+        },
+        {
+          "type": "para",
+          "text": "Hepatogastric ligament: this thin ligament connects the liver to the abdominal oesophagus and lesser curvature of the stomach."
+        },
+        {
+          "type": "para",
+          "text": "Hepatoduodenal ligament: this stronger ligament connects the liver to the first part of the duodenum."
+        },
+        {
+          "type": "para",
+          "text": "Between its two peritoneal layers lie the hepatic vascular pedicle, comprising the proper hepatic artery and portal vein, together with the biliary tract."
+        },
+        {
+          "type": "para",
+          "text": "On the inferior surface of the liver, it continues as the hepatocolic ligament, which connects the liver to the right colic flexure."
+        },
+        {
+          "type": "para",
+          "text": "Hepatorenal ligament: this is the continuation of the right triangular ligament on the inferior surface of the liver."
+        },
+        {
+          "type": "para",
+          "text": "It connects the liver to the right kidney."
+        },
+        {
+          "type": "para",
+          "text": "Relevance to ROP"
+        },
+        {
+          "type": "para",
+          "text": "Within this clinical interpretation, the hepatorenal ligament highlights the close relationship between the liver and right kidney."
+        },
+        {
+          "type": "para",
+          "text": "In some clinical schools, the right kidney is termed the “digestive kidney”, in contrast to the left, which is termed the “genital kidney”."
+        },
+        {
+          "type": "para",
+          "text": "Within the ROP framework, loss of diaphragmatic support may be accompanied by increased downward mechanical stress on the liver."
+        },
+        {
+          "type": "para",
+          "text": "This stress may then be transmitted to the right kidney."
+        },
+        {
+          "type": "para",
+          "text": "Inferior vena cava: it lies on the posterior surface of the liver, to which it is closely bound by connective tissue."
+        },
+        {
+          "type": "para",
+          "text": "It also adheres to the diaphragm as it passes through the caval opening."
+        },
+        {
+          "type": "para",
+          "text": "The inferior vena cava and coronary ligament form the liver’s strongest attachments."
+        },
+        {
+          "type": "sub",
+          "text": "3.2. Turgor effect and intracavitary pressures"
+        },
+        {
+          "type": "para",
+          "text": "(See Chapter 1, General Principles, page ....)"
+        },
+        {
+          "type": "sub",
+          "text": "3.3. Surfaces of the liver"
+        },
+        {
+          "type": "para",
+          "text": "In the living body, the liver has three surfaces."
+        },
+        {
+          "type": "para",
+          "text": "At autopsy, after its blood has drained away, the liver appears more like a flattened mass with superior and inferior surfaces."
+        },
+        {
+          "type": "para",
+          "text": "Superior or diaphragmatic surface:"
+        },
+        {
+          "type": "para",
+          "text": "It is smooth and dome-shaped."
+        },
+        {
+          "type": "para",
+          "text": "It has two aspects."
+        },
+        {
+          "type": "para",
+          "text": "Anterior aspect: on the right, it is completely concealed by the right hemithorax."
+        },
+        {
+          "type": "para",
+          "text": "In the epigastric region, it lies against the anterior abdominal wall."
+        },
+        {
+          "type": "para",
+          "text": "On the left, it is concealed by the left hemithorax."
+        },
+        {
+          "type": "para",
+          "text": "Superior aspect: it is covered by the diaphragmatic dome."
+        },
+        {
+          "type": "para",
+          "text": "The superior surface is divided into two lobes by the falciform ligament."
+        },
+        {
+          "type": "para",
+          "text": "Superior surface of the right lobe: it corresponds to the highest point of the diaphragm, at the level of the fifth intercostal space."
+        },
+        {
+          "type": "para",
+          "text": "Its convex contour conforms to the concavity of the right hemidiaphragm and the right and anterior leaflets of the central tendon."
+        },
+        {
+          "type": "para",
+          "text": "Superior surface of the left lobe: it gradually flattens and becomes concave at the left leaflet of the central tendon, on which the pericardium and inferior surface of the heart rest."
+        },
+        {
+          "type": "para",
+          "text": "It lies lower than the right hemidiaphragm, at the level of the sixth intercostal space."
+        },
+        {
+          "type": "para",
+          "text": "Relevance to ROP"
+        },
+        {
+          "type": "para",
+          "text": "The liver follows the movements of the diaphragm."
+        },
+        {
+          "type": "para",
+          "text": "Within ROP reasoning, treatment of the liver therefore also involves the diaphragm."
+        },
+        {
+          "type": "para",
+          "text": "Conversely, restricted hepatic mobility may be accompanied by reduced diaphragmatic mobility."
+        },
+        {
+          "type": "para",
+          "text": "Inferior or visceral surface:"
+        },
+        {
+          "type": "para",
+          "text": "It is important because of its relationships with neighbouring organs and its vascular role."
+        },
+        {
+          "type": "para",
+          "text": "It is concave and faces obliquely downwards, posteriorly and to the left."
+        },
+        {
+          "type": "para",
+          "text": "It follows the costal margin of the false ribs."
+        },
+        {
+          "type": "sub",
+          "text": "Grooves of the visceral surface"
+        },
+        {
+          "type": "para",
+          "text": "The visceral surface is crossed by two sagittal grooves connected by a transverse groove."
+        },
+        {
+          "type": "para",
+          "text": "Together, these three grooves form a capital H."
+        },
+        {
+          "type": "para",
+          "text": "Right sagittal groove: anteriorly, it contains the gallbladder and, posteriorly, the inferior vena cava."
+        },
+        {
+          "type": "para",
+          "text": "Left sagittal groove: close to the midline, it contains remnants of the umbilical vessels—the round ligament anteriorly and ligamentum venosum posteriorly."
+        },
+        {
+          "type": "para",
+          "text": "It is continuous with the falciform ligament and, like it, separates the liver into right and left lobes."
+        },
+        {
+          "type": "para",
+          "text": "Transverse groove: this corresponds to the porta hepatis."
+        },
+        {
+          "type": "para",
+          "text": "It forms the entry point for the proper hepatic artery and portal vein and the exit point for the bile ducts."
+        },
+        {
+          "type": "para",
+          "text": "The porta hepatis also contains autonomic nerve fibres and lymphatic vessels."
+        },
+        {
+          "type": "para",
+          "text": "The transverse groove delineates two accessory lobes: the quadrate lobe anteriorly and the caudate lobe posteriorly."
+        },
+        {
+          "type": "sub",
+          "text": "Relationships of the visceral surface"
+        },
+        {
+          "type": "para",
+          "text": "It is related to the neighbouring viscera."
+        },
+        {
+          "type": "para",
+          "text": "Right lobe: it has three facets related to:"
+        },
+        {
+          "type": "para",
+          "text": "Anteriorly: the hepatic flexure of the colon."
+        },
+        {
+          "type": "para",
+          "text": "Centrally: the gallbladder and first part of the duodenum."
+        },
+        {
+          "type": "para",
+          "text": "Posteriorly: the right kidney and right adrenal gland."
+        },
+        {
+          "type": "para",
+          "text": "Left lobe: it is related to the stomach and abdominal oesophagus."
+        },
+        {
+          "type": "sub",
+          "text": "3.4. Biliary tract"
+        },
+        {
+          "type": "para",
+          "text": "Bile, synthesised by hepatocytes, consists mainly of water, together with electrolytes, mucus, bile salts and bilirubin."
+        },
+        {
+          "type": "para",
+          "text": "Bile is transported through intrahepatic bile canaliculi and then conveyed by the right and left hepatic ducts."
+        },
+        {
+          "type": "para",
+          "text": "Common hepatic duct: located on the visceral surface at the porta hepatis, it is formed by the union of the hepatic ducts."
+        },
+        {
+          "type": "para",
+          "text": "Approximately 4–5 cm long, it runs inferiorly and to the left within the lesser omentum to join the common bile duct at the level of the first part of the duodenum."
+        },
+        {
+          "type": "para",
+          "text": "Common bile duct: approximately 5 cm long, it is formed by the union of the common hepatic duct and cystic duct."
+        },
+        {
+          "type": "para",
+          "text": "It runs inferiorly, behind the neck of the pancreas and to the left, before opening at the major duodenal papilla in the second part of the duodenum."
+        },
+        {
+          "type": "para",
+          "text": "Gallbladder: this pear-shaped reservoir for bile lies on the visceral surface of the liver in a fossa between the right and quadrate lobes."
+        },
+        {
+          "type": "para",
+          "text": "It is approximately 10 cm long, has a capacity of 40–60 cm³ and is directed superiorly, posteriorly and to the left."
+        },
+        {
+          "type": "para",
+          "text": "It has three parts."
+        },
+        {
+          "type": "para",
+          "text": "The distal end, or fundus, is directed anteriorly and inferiorly."
+        },
+        {
+          "type": "para",
+          "text": "The body is oblique and directed posteriorly and superiorly."
+        },
+        {
+          "type": "para",
+          "text": "The neck is angulated and directed anteriorly, inferiorly and to the left."
+        },
+        {
+          "type": "para",
+          "text": "It continues as the cystic duct, which joins the common bile duct at the level of the first part of the duodenum."
+        },
+        {
+          "type": "sub",
+          "text": "3.4.1. Surface landmarks of the biliary tract"
+        },
+        {
+          "type": "para",
+          "text": "Gallbladder: it projects onto the right umbilico-midclavicular line, where the rectus abdominis meets the right ninth rib."
+        },
+        {
+          "type": "para",
+          "text": "Common bile duct: it lies posterior and medial to this same line."
+        },
+        {
+          "type": "para",
+          "text": "Sphincter of Oddi: it lies two fingerbreadths from the umbilicus on the same line, at the junction of the middle and inferior thirds of the second part of the duodenum, at vertebral level L2."
+        },
+        {
+          "type": "para",
+          "text": "Relevance to ROP"
+        },
+        {
+          "type": "para",
+          "text": "Within this approach, the visceral surface of the liver is important because of its relationships with neighbouring viscera and its vascular role."
+        },
+        {
+          "type": "para",
+          "text": "Because the liver is a dense organ, palpation can clinically distinguish the plantar reflex zone of its visceral surface from those of the neighbouring hollow organs."
+        },
+        {
+          "type": "sub",
+          "text": "3.5. Posterior surface"
+        },
+        {
+          "type": "para",
+          "text": "It is vertical and posteriorly concave, with a deep notch accommodating the inferior vena cava and vertebral column at T9–T11."
+        },
+        {
+          "type": "para",
+          "text": "To the right of the inferior vena cava, the liver is in direct contact with the diaphragm without intervening peritoneum: this is the bare area."
+        }
+      ]
+    },
+    {
+      "id": "rapports",
+      "title": "4. Anatomical relationships",
+      "blocks": [
+        {
+          "type": "para",
+          "text": "The liver lies beneath the diaphragm and occupies the upper part of the abdominal cavity."
+        },
+        {
+          "type": "para",
+          "text": "Anterior projection:"
+        },
+        {
+          "type": "para",
+          "text": "Superiorly: on the right, the liver projects to the level of the fifth intercostal space."
+        },
+        {
+          "type": "para",
+          "text": "On the left, it projects to the level of the sixth intercostal space."
+        },
+        {
+          "type": "para",
+          "text": "Anteriorly and inferiorly: on routine examination, the lower border of the liver should not extend beyond the inferior costal margin."
+        },
+        {
+          "type": "para",
+          "text": "It projects along a line running from the right ninth or tenth false rib to the left sixth or seventh false rib, passing one fingerbreadth below the xiphoid process."
+        },
+        {
+          "type": "para",
+          "text": "Posteriorly and superiorly: the liver projects from T8–T9 to the right eighth rib."
+        },
+        {
+          "type": "para",
+          "text": "Posteriorly and inferiorly: it projects from T12 to the right eleventh rib."
+        }
+      ]
+    },
+    {
+      "id": "vascularisation",
+      "title": "5. Vascular supply",
+      "blocks": [
+        {
+          "type": "para",
+          "text": "The liver is highly vascular."
+        },
+        {
+          "type": "para",
+          "text": "It receives a blood flow of approximately 1.5 L/min, or about 2,000 L per 24 hours."
+        },
+        {
+          "type": "para",
+          "text": "Its blood supply consists of approximately 75% venous blood and 25% arterial blood."
+        },
+        {
+          "type": "sub",
+          "text": "5.1. Afferent vessels"
+        },
+        {
+          "type": "para",
+          "text": "The liver receives oxygenated blood through the proper hepatic artery and venous blood through the portal vein."
+        },
+        {
+          "type": "para",
+          "text": "Proper hepatic artery: it is a branch of the common hepatic artery, itself a branch of the coeliac trunk."
+        },
+        {
+          "type": "para",
+          "text": "Portal vein: it is formed by the union of the splenic, superior mesenteric and inferior mesenteric veins."
+        },
+        {
+          "type": "para",
+          "text": "It carries nutrient-rich venous blood from digestion and the spleen to the liver."
+        },
+        {
+          "type": "para",
+          "text": "(See Liver Functions, page ....)"
+        },
+        {
+          "type": "para",
+          "text": "On entering the liver through the porta hepatis, the proper hepatic artery and portal vein divide into right and left branches and then into multiple vessels that penetrate the hepatic parenchyma, ultimately forming a dense network of sinusoidal capillaries supplying hepatocytes arranged in lobules."
+        },
+        {
+          "type": "para",
+          "text": "The lobule is the classical functional unit of the liver."
+        },
+        {
+          "type": "para",
+          "text": "Sinusoidal capillaries enable exchange between the blood and hepatocytes, nutrient processing, bile formation and blood detoxification."
+        },
+        {
+          "type": "sub",
+          "text": "5.2. Efferent vessels"
+        },
+        {
+          "type": "para",
+          "text": "After exchange with the hepatocytes, blood drains through the central veins and leaves the portal system through the hepatic veins. These empty into the inferior vena cava immediately before it passes through the diaphragm and reaches the right atrium."
+        },
+        {
+          "type": "sub",
+          "text": "5.3. Portosystemic anastomoses"
+        },
+        {
+          "type": "para",
+          "text": "Collateral communications exist between the portal vein and the caval system at:"
+        },
+        {
+          "type": "para",
+          "text": "• the gastro-oesophageal junction;"
+        },
+        {
+          "type": "para",
+          "text": "• the anorectal region;"
+        },
+        {
+          "type": "para",
+          "text": "• the umbilical region;"
+        },
+        {
+          "type": "para",
+          "text": "• the lumbar veins;"
+        },
+        {
+          "type": "para",
+          "text": "• the azygos veins."
+        },
+        {
+          "type": "para",
+          "text": "Normally, almost all venous blood in the portal system drains through the hepatic veins after passing through the liver."
+        },
+        {
+          "type": "sub",
+          "text": "5.4. Portal hypertension"
+        },
+        {
+          "type": "para",
+          "text": "Portal obstruction or intrahepatic fibrosis, notably in cirrhosis, advanced hepatitis or cancer, may impede the return of abdominal venous blood to the liver."
+        },
+        {
+          "type": "para",
+          "text": "Pressure within the portal vein then rises: this is portal hypertension."
+        },
+        {
+          "type": "para",
+          "text": "Some portal blood is consequently diverted into the caval system through dilated portosystemic anastomoses."
+        },
+        {
+          "type": "para",
+          "text": "This may result in:"
+        },
+        {
+          "type": "para",
+          "text": "• Oesophageal varices;"
+        },
+        {
+          "type": "para",
+          "text": "• Anorectal haemorrhoids;"
+        },
+        {
+          "type": "para",
+          "text": "• Paraumbilical venous collaterals producing a “caput medusae” appearance;"
+        },
+        {
+          "type": "para",
+          "text": "• Collateral venous congestion within the vertebral and azygos networks."
+        },
+        {
+          "type": "para",
+          "text": "Relevance to ROP"
+        },
+        {
+          "type": "para",
+          "text": "Without implying this degree of severity, ROP uses the concept of functional impairment of portohepatic circulation."
+        },
+        {
+          "type": "para",
+          "text": "Within this framework, reduced flexibility of the intrahepatic connective tissue may be considered an associated factor."
+        },
+        {
+          "type": "para",
+          "text": "Factors traditionally included in this model are:"
+        },
+        {
+          "type": "para",
+          "text": "• Sequelae of hepatitis;"
+        },
+        {
+          "type": "para",
+          "text": "• Functional cholestasis;"
+        },
+        {
+          "type": "para",
+          "text": "• Abdominal trauma;"
+        },
+        {
+          "type": "para",
+          "text": "• Prolonged sitting, which may be accompanied by mechanical abdominal constraints;"
+        },
+        {
+          "type": "para",
+          "text": "• Excessive use of alcohol, tobacco or drugs."
+        },
+        {
+          "type": "sub",
+          "text": "5.5. Lymphatic circulation"
+        },
+        {
+          "type": "para",
+          "text": "The liver contributes substantially to lymph production, producing approximately 1 litre per 24 hours."
+        },
+        {
+          "type": "para",
+          "text": "Lymph drains through two networks: superficial and deep."
+        },
+        {
+          "type": "para",
+          "text": "Superficial network: it accompanies the hepatic veins and inferior vena cava."
+        },
+        {
+          "type": "para",
+          "text": "It drains into the right lymphatic duct."
+        },
+        {
+          "type": "para",
+          "text": "The right lymphatic duct drains lymph from the right hemithorax, right upper limb and right side of the head and neck."
+        },
+        {
+          "type": "para",
+          "text": "It empties into the right subclavian vein at the right venous angle."
+        },
+        {
+          "type": "para",
+          "text": "Deep network: lymph formed within the hepatic parenchyma is collected by lymphatic vessels in the lesser omentum."
+        },
+        {
+          "type": "para",
+          "text": "It reaches lymph nodes around the coeliac trunk and then the cisterna chyli, from which the thoracic duct arises."
+        },
+        {
+          "type": "para",
+          "text": "The thoracic duct drains lymph from the abdomen, lower limbs, left hemithorax, left upper limb and left side of the head and neck—approximately three quarters of the body’s lymphatic network."
+        },
+        {
+          "type": "para",
+          "text": "It empties into the left subclavian vein at the left venous angle."
+        },
+        {
+          "type": "para",
+          "text": "Relevance to ROP: our approach to the lymphatic system includes the liver."
+        }
+      ]
+    },
+    {
+      "id": "segmentation-hepatique",
+      "title": "6. Hepatic segmentation",
+      "blocks": [
+        {
+          "type": "sub",
+          "text": "6.1. Anatomical segmentation"
+        },
+        {
+          "type": "para",
+          "text": "The liver is divided into right and left lobes and two accessory lobes: the quadrate and caudate lobes."
+        },
+        {
+          "type": "sub",
+          "text": "6.2. Couinaud segmentation"
+        },
+        {
+          "type": "para",
+          "text": "Functionally, the liver can be divided into eight independent units based on the distribution of the bile ducts, portal branches and hepatic veins; each unit has its own vascular, biliary and lymphatic organisation."
+        },
+        {
+          "type": "para",
+          "text": "Knowledge of these eight segments allows targeted partial hepatectomy in patients with metastases and also guides certain indications in liver transplantation."
+        },
+        {
+          "type": "para",
+          "text": "The liver has a substantial capacity for regeneration following partial resection."
+        },
+        {
+          "type": "para",
+          "text": "This regenerative capacity is commonly referred to as hepatic regeneration."
+        },
+        {
+          "type": "para",
+          "text": "The segments are numbered I to VIII in a clockwise direction."
+        },
+        {
+          "type": "para",
+          "text": "Segment I corresponds to the caudate lobe."
+        },
+        {
+          "type": "para",
+          "text": "The left lobe comprises segments II–IV."
+        },
+        {
+          "type": "para",
+          "text": "The right lobe comprises segments V–VIII."
+        },
+        {
+          "type": "sub",
+          "text": "6.3. Functional segmentation of the liver in ROP"
+        },
+        {
+          "type": "para",
+          "text": "In our ROP practice, the liver may be divided into four zones according to the functional disorders concerned (Figure 11.9)."
+        },
+        {
+          "type": "sub",
+          "text": "6.3.1. Zone 1: gallbladder and biliary tract"
+        },
+        {
+          "type": "para",
+          "text": "Tenderness at the ninth costal cartilage may clinically suggest a gallbladder disorder, particularly in the context of an unhealthy diet or excess cholesterol or triglycerides."
+        },
+        {
+          "type": "para",
+          "text": "Bile viscosity may vary with the hormonal context, particularly during the menstrual cycle."
+        },
+        {
+          "type": "para",
+          "text": "Within the ROP framework, this zone is associated with left-sided C4–C5 neck pain and subsequently right-sided pain if the disorder becomes chronic."
+        },
+        {
+          "type": "sub",
+          "text": "6.3.2. Zone 2: metabolic liver"
+        },
+        {
+          "type": "para",
+          "text": "Within this model, the epigastric part of the liver is associated with metabolic disorders: impaired elimination, vitamin deficiency, various inflammatory states, cervicothoracic pain and skin disorders such as pruritus, acne, jaundice or oily skin."
+        },
+        {
+          "type": "para",
+          "text": "The liver is functionally hormone-dependent."
+        },
+        {
+          "type": "para",
+          "text": "Oestrogen excess may be accompanied by reduced bile fluidity and less efficient hepatobiliary excretion."
+        },
+        {
+          "type": "para",
+          "text": "Among other factors, this may contribute to nausea or vomiting during pregnancy."
+        },
+        {
+          "type": "para",
+          "text": "Oral contraceptives may be accompanied by hepatobiliary adverse effects in some patients."
+        },
+        {
+          "type": "para",
+          "text": "Excessive protein and fat intake may be poorly tolerated by individuals with clinical hepatic sensitivity."
+        },
+        {
+          "type": "para",
+          "text": "(See Premenstrual Syndrome, page ....)"
+        },
+        {
+          "type": "sub",
+          "text": "6.3.3. Zone 3: infectious and immune liver"
+        },
+        {
+          "type": "para",
+          "text": "Within this clinical interpretation, the lateral part of the right lobe is considered more frequently involved in infectious liver disease, particularly hepatitis."
+        },
+        {
+          "type": "para",
+          "text": "The liver contributes to immune responses and the clearance of certain circulating substances."
+        },
+        {
+          "type": "para",
+          "text": "Following gastroenteritis, persistent fatigue may be interpreted within this model as reflecting an increased clearance burden."
+        },
+        {
+          "type": "sub",
+          "text": "6.3.4. Zone 4: mechanical liver"
+        },
+        {
+          "type": "para",
+          "text": "The left lobe and left triangular ligament are described as more frequently affected by certain forms of trauma, because collision forces may be preferentially transmitted to this area, as well as to the spleen and left kidney."
+        },
+        {
+          "type": "para",
+          "text": "Within the ROP framework, this zone is also associated with costovertebral pain at T7–T9 and right-sided sciatica."
+        }
+      ]
+    },
+    {
+      "id": "innervation",
+      "title": "7. Innervation",
+      "blocks": [
+        {
+          "type": "para",
+          "text": "This comprises the right phrenic nerve and autonomic innervation."
+        },
+        {
+          "type": "sub",
+          "text": "7.1. Right phrenic nerve"
+        },
+        {
+          "type": "para",
+          "text": "It arises from C3–C5."
+        },
+        {
+          "type": "para",
+          "text": "It innervates the diaphragm and provides sensory innervation to certain peritoneal areas adjacent to the liver and its capsule."
+        },
+        {
+          "type": "para",
+          "text": "Hepatobiliary dysfunction may be accompanied by capsular tension and referred symptoms."
+        },
+        {
+          "type": "para",
+          "text": "Within the clinical reasoning proposed here, cervicobrachial and phrenic connections help explain certain forms of neck pain, right scapulohumeral pain and exercise-related side stitches through diaphragmatic involvement."
+        },
+        {
+          "type": "sub",
+          "text": "7.2. Autonomic innervation"
+        },
+        {
+          "type": "para",
+          "text": "Right and left vagus nerves: they contribute to the regulation of digestive functions and indirectly influence bile secretion."
+        },
+        {
+          "type": "para",
+          "text": "Sympathetic nerves: arising from the mid-thoracic segments, they reach the coeliac plexus through the splanchnic nerves."
+        },
+        {
+          "type": "para",
+          "text": "Overall, they act in opposition to parasympathetic activity in certain digestive functions."
+        }
+      ]
+    },
+    {
+      "id": "physiologie",
+      "title": "8. Physiology",
+      "blocks": [
+        {
+          "type": "sub",
+          "text": "8.1. Functions of the liver"
+        },
+        {
+          "type": "para",
+          "text": "These functions are numerous and essential."
+        },
+        {
+          "type": "para",
+          "text": "Digestive function: nutrients reaching the liver through the portal vein are processed, stored or redistributed according to the body’s needs."
+        },
+        {
+          "type": "para",
+          "text": "This applies particularly to carbohydrates and amino acids."
+        },
+        {
+          "type": "para",
+          "text": "The liver also contributes to the metabolism of fat-soluble vitamins."
+        },
+        {
+          "type": "para",
+          "text": "Detoxification function: the liver processes and eliminates numerous substances."
+        },
+        {
+          "type": "para",
+          "text": "These include ammonia, bile pigments, various nitrogenous products, alcohol, certain drugs, numerous medicines, pesticides, nitrates and other environmental toxins."
+        },
+        {
+          "type": "para",
+          "text": "Immune function: the liver has an important role in immunity."
+        },
+        {
+          "type": "para",
+          "text": "Because it receives large volumes of portal blood and lymph, it comes into contact with substances originating from the digestive system and spleen."
+        },
+        {
+          "type": "para",
+          "text": "It contains Kupffer cells and participates in complex immune functions."
+        },
+        {
+          "type": "para",
+          "text": "These mechanisms contribute to blood clearance and the phagocytosis of microbes and metabolic waste, such as aged erythrocytes from the spleen and haemoglobin breakdown products."
+        },
+        {
+          "type": "para",
+          "text": "Hormonal function: the liver contributes to the metabolism of many steroid hormones, notably oestrogens and progesterone."
+        },
+        {
+          "type": "para",
+          "text": "They are then metabolised and eliminated through various pathways, including the biliary route."
+        },
+        {
+          "type": "para",
+          "text": "The hormonal context can influence bile composition and biliary sphincter dynamics."
+        },
+        {
+          "type": "para",
+          "text": "(See Premenstrual Syndrome, page ....)"
+        },
+        {
+          "type": "sub",
+          "text": "8.2. Biliary physiology and pathology"
+        },
+        {
+          "type": "para",
+          "text": "Gallbladder symptoms are more common in women during their reproductive years, and the risk of digestive symptoms or gallstones may increase during the premenstrual period."
+        },
+        {
+          "type": "para",
+          "text": "Oral contraceptives increase cholesterol saturation of bile."
+        },
+        {
+          "type": "para",
+          "text": "In some women, they are suspected of increasing the risk of gallstone formation by altering bile composition and fluidity."
+        },
+        {
+          "type": "para",
+          "text": "More viscous bile may promote stasis and the formation of biliary sludge, microlithiasis or gallstones."
+        },
+        {
+          "type": "para",
+          "text": "When gallstones are too large, they cannot pass into the cystic duct."
+        },
+        {
+          "type": "para",
+          "text": "However, gallstones often remain asymptomatic for a long time."
+        },
+        {
+          "type": "sub",
+          "text": "8.3. Functions of bile"
+        },
+        {
+          "type": "para",
+          "text": "Bile promotes the intestinal elimination of cholesterol."
+        },
+        {
+          "type": "para",
+          "text": "It thereby helps limit precipitation within the biliary system."
+        },
+        {
+          "type": "para",
+          "text": "It contributes to the control of certain intestinal bacterial populations and to regulation of the acidity of the food bolus. Its pH, approximately 7.6–8.6, favours the activity of pancreatic enzymes."
+        },
+        {
+          "type": "para",
+          "text": "Bile is influenced by the hormonal context."
+        },
+        {
+          "type": "para",
+          "text": "(See Hormonal Function, page ....)"
+        },
+        {
+          "type": "para",
+          "text": "Bile salts, synthesised from cholesterol by hepatocytes, contribute to lipid emulsification."
+        },
+        {
+          "type": "para",
+          "text": "Lipids are thereby broken into smaller droplets, facilitating the action of pancreatic and intestinal lipases and their subsequent absorption through the intestinal mucosa."
+        },
+        {
+          "type": "para",
+          "text": "After a meal, bile salts are reabsorbed in the ileum and return to the liver through the portal vein for reuse."
+        },
+        {
+          "type": "para",
+          "text": "Relevance to ROP"
+        },
+        {
+          "type": "para",
+          "text": "Within the ROP framework, the liver is considered particularly sensitive to hormonal fluctuations, especially changes in oestrogen levels."
+        },
+        {
+          "type": "para",
+          "text": "Certain functional hepatic burdens are therefore associated with cervical, cervicobrachial or phrenic referred symptoms."
+        },
+        {
+          "type": "para",
+          "text": "Within this model, right scapulohumeral periarthritis is consequently associated with the menopausal period."
+        }
+      ]
+    },
+    {
+      "id": "pathologies-courantes",
+      "title": "9. Common disorders",
+      "blocks": [
+        {
+          "type": "sub",
+          "text": "9.1. Red flags and exclusion criteria"
+        },
+        {
+          "type": "para",
+          "text": "Liver:"
+        },
+        {
+          "type": "para",
+          "text": "Nocturnal pain in the right hypochondrium."
+        },
+        {
+          "type": "para",
+          "text": "Recurrent vomiting."
+        },
+        {
+          "type": "para",
+          "text": "Fever with headache or migraine."
+        },
+        {
+          "type": "para",
+          "text": "Marked weight loss."
+        },
+        {
+          "type": "para",
+          "text": "Steatosis: accumulation of fat within the liver."
+        },
+        {
+          "type": "para",
+          "text": "Muscle wasting."
+        },
+        {
+          "type": "para",
+          "text": "Hepatomegaly: enlargement of the liver, particularly in fatty infiltration or fibrosis."
+        },
+        {
+          "type": "para",
+          "text": "Ascites: portal hypertension may increase lymph formation; when lymph can no longer drain adequately, it may accumulate within the peritoneal cavity."
+        },
+        {
+          "type": "para",
+          "text": "Active hepatitis."
+        },
+        {
+          "type": "para",
+          "text": "Active primary or secondary malignancy."
+        },
+        {
+          "type": "para",
+          "text": "Gallbladder:"
+        },
+        {
+          "type": "para",
+          "text": "Acute calculous cholecystitis."
+        },
+        {
+          "type": "para",
+          "text": "Acute cholangitis."
+        },
+        {
+          "type": "para",
+          "text": "Biliary colic."
+        }
+      ]
+    },
+    {
+      "id": "indications-troubles-fonctionnels",
+      "title": "10. Indications: functional disorders",
+      "blocks": [
+        {
+          "type": "sub",
+          "text": "10.1. Digestive symptoms"
+        },
+        {
+          "type": "para",
+          "text": "• Associated with unhealthy dietary habits."
+        },
+        {
+          "type": "para",
+          "text": "• Slow digestion."
+        },
+        {
+          "type": "para",
+          "text": "• Feeling excessively warm at night after an overly rich evening meal and alcohol consumption."
+        },
+        {
+          "type": "para",
+          "text": "• Morning fatigue."
+        },
+        {
+          "type": "para",
+          "text": "• Lack of appetite at breakfast."
+        },
+        {
+          "type": "para",
+          "text": "• Coated tongue."
+        },
+        {
+          "type": "para",
+          "text": "• Unpleasant breath or an acetone-like odour."
+        },
+        {
+          "type": "para",
+          "text": "• Dark urine."
+        },
+        {
+          "type": "sub",
+          "text": "10.2. Non-digestive symptoms"
+        },
+        {
+          "type": "para",
+          "text": "• Photophobia."
+        },
+        {
+          "type": "para",
+          "text": "• Excessive sweating during exertion."
+        },
+        {
+          "type": "para",
+          "text": "• Scalp tenderness."
+        },
+        {
+          "type": "para",
+          "text": "• Frontal sinusitis."
+        },
+        {
+          "type": "para",
+          "text": "• Allergies."
+        },
+        {
+          "type": "para",
+          "text": "• Pruritus or itching."
+        },
+        {
+          "type": "para",
+          "text": "• Neck pain on waking."
+        },
+        {
+          "type": "para",
+          "text": "• Right retroscapular pain or right scapulohumeral periarthritis."
+        },
+        {
+          "type": "para",
+          "text": "• Chronic musculoskeletal problems."
+        },
+        {
+          "type": "para",
+          "text": "• Depressive or cyclothymic states and adverse effects of anxiolytics and antidepressants."
+        },
+        {
+          "type": "para",
+          "text": "• Toxic effects of medicines, alcohol, drugs or chemotherapy."
+        },
+        {
+          "type": "para",
+          "text": "• Sequelae of uncomplicated hepatitis, cirrhosis or abdominal trauma."
+        },
+        {
+          "type": "sub",
+          "text": "10.3. General symptoms"
+        },
+        {
+          "type": "para",
+          "text": "Poor general health, particularly in the context of chronic cor pulmonale, bronchitis, asthma or depression."
+        },
+        {
+          "type": "sub",
+          "text": "10.4. Liver and pregnancy"
+        },
+        {
+          "type": "para",
+          "text": "Disturbances of bile secretion between the sixth and eighth months of pregnancy."
+        },
+        {
+          "type": "para",
+          "text": "Digestive disorders associated with hyperoestrogenism: nausea and vomiting."
+        },
+        {
+          "type": "sub",
+          "text": "10.5. Hyperoestrogenism"
+        },
+        {
+          "type": "para",
+          "text": "Oily skin and hair, sometimes with alopecia."
+        },
+        {
+          "type": "para",
+          "text": "Pruritus."
+        },
+        {
+          "type": "para",
+          "text": "Breast tenderness."
+        },
+        {
+          "type": "para",
+          "text": "Dysmenorrhoea or hypermenorrhoea."
+        },
+        {
+          "type": "sub",
+          "text": "10.6. Menopause"
+        },
+        {
+          "type": "para",
+          "text": "Hormonal imbalance may affect both certain hepatobiliary functions and the musculoskeletal system."
+        }
+      ]
+    },
+    {
+      "id": "relations-viscero-somatiques",
+      "title": "11. Viscerosomatic relationships",
+      "blocks": [
+        {
+          "type": "para",
+          "text": "Within the proposed model, hepatobiliary disorders predominantly produce right-sided referred symptoms."
+        },
+        {
+          "type": "para",
+          "text": "The fifth and sixth cervical vertebrae and cervicobrachial plexus, in relation to the phrenic nerve."
+        },
+        {
+          "type": "para",
+          "text": "The thoracic outlet, notably through the neuromuscular continuities discussed here."
+        },
+        {
+          "type": "para",
+          "text": "The seventh to ninth thoracic vertebrae and seventh and eighth ribs."
+        },
+        {
+          "type": "para",
+          "text": "Right shoulder."
+        },
+        {
+          "type": "sub",
+          "text": "11.1. Sequelae of abdominal trauma"
+        },
+        {
+          "type": "para",
+          "text": "The anterior position of the liver within the abdominal cavity makes it vulnerable during severe trauma, in which it may be lacerated."
+        },
+        {
+          "type": "para",
+          "text": "Following less severe trauma, fibrous scar tissue may persist."
+        },
+        {
+          "type": "para",
+          "text": "Within the ROP framework, these sequelae are interpreted as potentially increasing intrahepatic mechanical stress and affecting the portosystemic circulation."
+        },
+        {
+          "type": "para",
+          "text": "Relevance to ROP"
+        },
+        {
+          "type": "para",
+          "text": "In the sequelae of hepatitis and cirrhosis, where portal hypertension may impede lymphatic return to the thoracic duct, ROP reasoning supports including the kidneys and lymphatic system in liver treatment to support lymphatic circulation."
+        },
+        {
+          "type": "sub",
+          "text": "11.2. Viscerosomatic landmarks"
+        },
+        {
+          "type": "sub",
+          "text": "11.2.1. Liver"
+        },
+        {
+          "type": "para",
+          "text": "Predominantly on the right."
+        },
+        {
+          "type": "para",
+          "text": "C5 and C6."
+        },
+        {
+          "type": "para",
+          "text": "T7–T9."
+        },
+        {
+          "type": "para",
+          "text": "Seventh and eighth ribs."
+        },
+        {
+          "type": "para",
+          "text": "Right shoulder through:"
+        },
+        {
+          "type": "para",
+          "text": "The brachial plexus and its connections with the phrenic nerve."
+        },
+        {
+          "type": "para",
+          "text": "Fascial continuities between Glisson’s capsule, the diaphragm, pleura and shoulder girdle, as understood clinically within the model."
+        },
+        {
+          "type": "para",
+          "text": "Within this approach, menopausal hormonal imbalance is considered a factor that may increase vulnerability of the liver and the musculoskeletal structures of the right shoulder."
+        },
+        {
+          "type": "sub",
+          "text": "11.2.2. Gallbladder"
+        },
+        {
+          "type": "para",
+          "text": "Left phrenic nerve, C4–C6."
+        },
+        {
+          "type": "para",
+          "text": "T7–T9 and the corresponding ribs, predominantly on the right."
+        }
+      ]
+    },
+    {
+      "id": "relations-viscero-emotionnelles",
+      "title": "12. Viscero-emotional relationships",
+      "blocks": [
+        {
+          "type": "para",
+          "text": "Liver. Within the ROP viscero-emotional framework, the liver is associated with profound forms of stress affecting identity, one’s relationship with oneself and the meaning attributed to one’s life. It is traditionally described as a predominantly feminine organ, associated with deep anger, resentment, certain forms of family-related guilt and a tendency to dwell on the past. A person characterised as a “liver type” may be described as sensitive and readily destabilised by conflict, doubt or insecurity, with a tendency towards pessimism and physical and psychological exhaustion. Conversely, greater balance is associated within this clinical interpretation with increased calm, perspective and emotional integration. Certain anxious or phobic manifestations may also be considered in this approach, although no direct causal relationship with the liver can be established. Depending on the drug and clinical context, some antidepressants may also cause hepatic adverse effects."
+        },
+        {
+          "type": "para",
+          "text": "Gallbladder. It is traditionally associated with annoyance, repeated frustration and everyday dissatisfaction. A person characterised as a “gallbladder type” is described as hypersensitive, easily worried or irritated, and attached to familiar reference points, habits and a degree of stability. Within this interpretation, anxiety and sympathetic activation may accompany functional tension in the biliary system."
+        }
+      ]
+    },
+    {
+      "id": "conseils",
+      "title": "13. Advice",
+      "blocks": [
+        {
+          "type": "sub",
+          "text": "13.1. Dietary advice"
+        },
+        {
+          "type": "para",
+          "text": "Foods containing sulphites used as preservatives, including certain wines, beers, alcoholic drinks, prepared meals and processed fruit and vegetables."
+        },
+        {
+          "type": "para",
+          "text": "Products containing preservatives numbered E222–E227, which are considered within this approach to be unfavourable for the liver and gallbladder."
+        },
+        {
+          "type": "para",
+          "text": "Cooked animal fats and fried foods."
+        },
+        {
+          "type": "para",
+          "text": "Moderation is advised with chocolate, shellfish and pastries."
+        }
+      ]
+    },
+    {
+      "id": "zones-reflexes-podales-du-foie-et-des-voies-biliaires",
+      "title": "14. ROP reflex zones of the liver and biliary tract",
+      "blocks": [
+        {
+          "type": "sub",
+          "text": "14.1. Level 1 — Regulation of higher centres"
+        },
+        {
+          "type": "para",
+          "text": "Level 1 remains brief and optional. It may be included when the presentation combines prolonged stress, sleep and adaptation disorders, a neuroendocrine or hormonal context, or a strong emotional component."
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "Occipital reflex zones.",
+            "Brainstem and integration centres.",
+            "Hypothalamus.",
+            "Hypothalamic–pituitary axis."
+          ]
+        },
+        {
+          "type": "para",
+          "text": "See Chapter 3 — Central Nervous System."
+        },
+        {
+          "type": "sub",
+          "text": "14.2. Level 2 — Autonomic regulation and adaptation"
+        },
+        {
+          "type": "para",
+          "text": "The liver and biliary tract receive complex autonomic regulation. In this chapter, this organisation includes the vagus nerves, thoracic sympathetic pathways and coeliac plexus."
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "Right and left vagus nerves.",
+            "Mid-thoracic sympathetic system.",
+            "Splanchnic nerves.",
+            "Coeliac plexus.",
+            "Autonomic regulation of digestive and biliary functions."
+          ]
+        },
+        {
+          "type": "para",
+          "text": "The diaphragm is included here as a functional interface: the liver follows its movements, and their coordination contributes to thoracoabdominal dynamics. The phrenic nerve itself is somatic and is therefore placed at Level 4."
+        },
+        {
+          "type": "para",
+          "text": "See Chapter 4 — Autonomic Nervous System; see Chapter 8 — Diaphragm."
+        },
+        {
+          "type": "sub",
+          "text": "14.3. Level 3 — Local and regional visceral regulation"
+        },
+        {
+          "type": "para",
+          "text": "Level 3 forms the anatomical core of the hepatobiliary protocol. It combines the liver- and biliary-specific zones only with relevant regional components."
+        },
+        {
+          "type": "sub",
+          "text": "Landmarks specific to the liver and biliary tract"
+        },
+        {
+          "type": "para",
+          "text": "Liver:"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "Superior surface and its anterior aspect: this follows the diaphragmatic curvature. The difference in height between the two hemidiaphragms must be reflected on the plantar surfaces of the feet.",
+            "Left triangular ligament: on the plantar surface of the left foot, in line with the third toe and to the left of the oesophageal hiatus, which itself lies in line with the first and second toes.",
+            "Inferior surface: this is readily distinguished by palpation because it is denser than the neighbouring hollow organs. The landmark follows an oblique line from the base of the right fifth metatarsal to the medial border of the right foot at T12. The line continues to the left hemidiaphragm, which it reaches in line with the left third metatarsal.",
+            "Anterior and posterior surfaces: these correspond to the area between the superior and inferior lines.",
+            "Gallbladder: inferior surface of the liver, in line with a line passing between the right third and fourth toes.",
+            "Biliary tract: an oblique line extending from the gallbladder to the sphincter of Oddi, located in the lower third of the second part of the duodenum."
+          ]
+        },
+        {
+          "type": "para",
+          "text": "See Chapter 7 — Regional Abdominal and Peritoneal Foundation; see Chapter 10 — Duodenum."
+        },
+        {
+          "type": "sub",
+          "text": "14.4. Level 4 — Viscerosomatic integration and limbic brain–liver/gallbladder balance"
+        },
+        {
+          "type": "para",
+          "text": "Viscerosomatic component. The interpretation may include T7–T9, the seventh to ninth ribs, the C3–C5 phrenic nerve, associated cervical and cervicobrachial territories, the right shoulder, diaphragm and right lower thoracic region. For the hepatobiliary system, phrenic referred symptoms are described mainly on the right, although overly categorical lateralisation should be avoided."
+        },
+        {
+          "type": "para",
+          "text": "Limbic brain–liver/gallbladder balance: one thumb is placed on the liver/gallbladder zone and the other on the limbic brain zone."
+        },
+        {
+          "type": "para",
+          "text": "See Chapter 3 — Central Nervous System; see Chapter 5 — Stress Mechanism."
+        },
+        {
+          "type": "sub",
+          "text": "14.5. Associated support areas according to testing"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "Diaphragm: major interface.",
+            "Duodenum and sphincter of Oddi: biliary tract.",
+            "Pancreas: hepatopancreatoduodenal junction.",
+            "Stomach: lesser omentum and left hepatic lobe.",
+            "Right colon: hepatic flexure.",
+            "Right kidney: hepatorenal ligament.",
+            "Intestine: portal venous system.",
+            "Spleen: portal circulation according to the clinical context."
+          ]
+        },
+        {
+          "type": "sub",
+          "text": "14.6. Clinical interpretation"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "Slow digestion or functional biliary discomfort: Level 2 + liver/gallbladder/biliary tract at Level 3 + duodenum and sphincter of Oddi according to testing.",
+            "Metabolic or hormonal context: liver at Level 3 + Level 2 + Level 1 when justified by the overall clinical context.",
+            "Long-standing sequelae of abdominal trauma after medical exclusion: liver + ligaments/diaphragm at Level 3 + ribs and thoracic junction at Level 4.",
+            "Right scapular pain associated with a digestive context, after medical exclusion: liver/gallbladder + diaphragm + phrenic nerve at Level 4."
+          ]
+        },
+        {
+          "type": "para",
+          "text": "SAFETY PRINCIPLE — Jaundice, acute right upper-quadrant pain, fever, persistent vomiting, very dark urine, pale stools, weight loss or deterioration in general health require medical assessment."
+        }
+      ]
+    }
+  ]
+}

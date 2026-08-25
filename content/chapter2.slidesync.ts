@@ -38,24 +38,21 @@ export const chapter2Slides: SyncSlide[] = [
 ]
 
 export const chapter2SlidesEn: SyncSlide[] = [
-  { src: '/chapter-2/slides/en/slide-01.png', title: 'Occipito-Podal Reflexotherapy Treatment (ORT)' },
-  { src: '/chapter-2/slides/en/slide-02.png', title: 'The precision of the therapeutic gesture' },
-  { src: '/chapter-2/slides/en/slide-03.png', title: 'The skin' },
-  { src: '/chapter-2/slides/en/slide-04.png', title: 'Tissue target: epidermal-dermal layer' },
-  { src: '/chapter-2/slides/en/slide-05.png', title: 'The neurological vector' },
-  { src: '/chapter-2/slides/en/slide-06.png', title: 'Clinical chronology: the three phases of massage' },
-  { src: '/chapter-2/slides/en/slide-07.png', title: 'The neurovascular assimilation window' },
-  { src: '/chapter-2/slides/en/slide-08.png', title: 'Hierarchy of the treatment plan' },
-  { src: '/chapter-2/slides/en/slide-09.png', title: 'Intervention mapping' },
-  { src: '/chapter-2/slides/en/slide-10.png', title: 'Anatomical targets I: general adaptation syndrome' },
-  { src: '/chapter-2/slides/en/slide-11.png', title: 'Target II: locoregional syndrome' },
-  { src: '/chapter-2/slides/en/slide-12.png', title: 'Target III: limbic system' },
-  { src: '/chapter-2/slides/en/slide-13.png?v=6254c01', title: 'Clinical application: postpartum lumbosciatica' },
-  { src: '/chapter-2/slides/en/slide-15.png', title: 'ROP treatment plan — case application: Mrs X' },
-  { src: '/chapter-2/slides/en/slide-14.png', title: 'Targeted ROP treatment plan for patient X' },
-  { src: '/chapter-2/slides/en/slide-17.png', title: 'Clinical governance: safety and limits' },
-  { src: '/chapter-2/slides/en/slide-16.png', title: 'Therapeutic indications: reversible functional disorders' },
-  { src: '/chapter-2/slides/en/slide-18.png', title: 'Global patient support' },
+  { src: '/chapter-2/EN/Images/NCH 2 EN IMG 1.png', title: 'Treatment by Occipito-Podal Reflexotherapy (ROP)' },
+  { src: '/chapter-2/EN/Images/NCH 2 EN IMG 2.png', title: 'The Requirement for the Therapeutic Gesture' },
+  { src: '/chapter-2/EN/Images/NCH 2 EN IMG 3.png', title: 'Fine pressure stimulates superficial mechanoreceptors' },
+  { src: '/chapter-2/EN/Images/NCH 2 EN IMG 4.png', title: 'Pressure in ROP: a superficial action' },
+  { src: '/chapter-2/EN/Images/NCH 2 EN IMG 5.png', title: 'The lemniscal system and pain control' },
+  { src: '/chapter-2/EN/Images/NCH 2 EN IMG 6.png', title: 'The Three Times of Massage' },
+  { src: '/chapter-2/EN/Images/NCH 2 EN IMG 7.png', title: 'Adaptation window after the session' },
+  { src: '/chapter-2/EN/Images/NCH 2 EN IMG 8.png', title: 'Hierarchy of the Treatment Plan' },
+  { src: '/chapter-2/EN/Images/NCH 2 EN IMG 9.png', title: 'Level 1 — Regulation of Higher Centers' },
+  { src: '/chapter-2/EN/Images/NCH 2 EN IMG 9b.png', title: 'Level 2 — Neuro-vegetative Regulation and Adaptation' },
+  { src: '/chapter-2/EN/Images/NCH 2 EN IMG 10.png', title: 'Level 3 — Loco-regional Visceral Regulation' },
+  { src: '/chapter-2/EN/Images/NCH 2 EN IMG 11.png', title: 'Level 4 — Viscero-somatic and Viscero-emotional Integration' },
+  { src: '/chapter-2/EN/Images/NCH 2 EN IMG 12.png', title: 'Clinical case: postpartum left lumbosciatica' },
+  { src: '/chapter-2/EN/Images/NCH 2 EN IMG 13.png', title: 'Indications for ROP' },
+  { src: '/chapter-2/EN/Images/NCH 2 EN IMG 14.png', title: 'Contraindications and warning signs in ROP' },
 ]
 
 export const chapter2SlidesDe: SyncSlide[] = [
@@ -161,4 +158,22 @@ export const chapter2SlideAnchors: SyncAnchor[] = [
   { sectionId: 'contre-indications', blockIndex: -1, slide: 16, ...endAt('indications', -1) },
   { sectionId: 'indications', blockIndex: -1, slide: 17, ...endAt('conseils', -1) },
   { sectionId: 'conseils', blockIndex: -1, slide: 18, ...endAt('conseils', 4) },
+]
+
+export const chapter2SlideAnchorsEn: SyncAnchor[] = [
+  { sectionId: 'presentation', blockIndex: -1, slide: 1, ...endAt('technique', -1) },
+  { sectionId: 'technique', blockIndex: 0, slide: 2, ...endAt('technique', 2) },
+  { sectionId: 'technique', blockIndex: 2, slide: 3, ...endAt('technique', 5) },
+  { sectionId: 'technique', blockIndex: 5, slide: 4, ...endAt('technique', 6) },
+  { sectionId: 'technique', blockIndex: 6, slide: 5, ...endAt('technique', 12) },
+  { sectionId: 'technique', blockIndex: 12, slide: 6, ...endAt('modalites', -1) },
+  { sectionId: 'modalites', blockIndex: -1, slide: 7, ...endAt('hierarchisation', -1) },
+  { sectionId: 'hierarchisation', blockIndex: -1, slide: 8, ...endAt('zones-reflexes', -1) },
+  { sectionId: 'zones-reflexes', blockIndex: -1, slide: 9, ...endAt('zones-reflexes', 5) },
+  { sectionId: 'zones-reflexes', blockIndex: 5, slide: 10, ...endAt('zones-reflexes', 9) },
+  { sectionId: 'zones-reflexes', blockIndex: 9, slide: 11, ...endAt('zones-reflexes', 13) },
+  { sectionId: 'zones-reflexes', blockIndex: 13, slide: 12, ...endAt('exemple-clinique', -1) },
+  { sectionId: 'exemple-clinique', blockIndex: -1, slide: 13, ...endAt('contre-indications', -1) },
+  { sectionId: 'contre-indications', blockIndex: -1, slide: 15, ...endAt('indications', -1) },
+  { sectionId: 'indications', blockIndex: -1, slide: 14, ...endAt('actions', -1) },
 ]

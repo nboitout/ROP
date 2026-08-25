@@ -21,9 +21,8 @@ const DECKS: Record<Lang, typeof chapter15Slides> = {
   th: chapter15SlidesEn,
 }
 
-// The English deck has its own artwork and one extra slide, so it uses a
-// dedicated anchor table; the other languages reuse the French diagrams and
-// anchors.
+// The English deck has its own artwork and anchor table; the other translated
+// editions reuse the French diagrams and anchors.
 const ANCHORS: Record<Lang, typeof chapter15SlideAnchors> = {
   fr: chapter15SlideAnchors,
   en: chapter15SlideAnchorsEn,
@@ -35,11 +34,11 @@ const ANCHORS: Record<Lang, typeof chapter15SlideAnchors> = {
 
 const HIDDEN_DOT_SLIDES: Record<Lang, number[]> = {
   fr: [29, 30, 31, 32, 33],
-  en: [16, 17],
+  en: [],
   de: [29, 30, 31, 32, 33],
   es: [29, 30, 31, 32, 33],
   it: [29, 30, 31, 32, 33],
-  th: [16, 17],
+  th: [],
 }
 
 export const metadata: Metadata = {

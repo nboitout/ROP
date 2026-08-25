@@ -57,3 +57,37 @@ export const chapter7SlideAnchors: SyncAnchor[] = [
   { sectionId: 'zones-reflexes-podales', blockIndex: 13, slide: 18, end: { sectionId: 'zones-reflexes-podales', blockIndex: 14 } },
   { sectionId: 'zones-reflexes-podales', blockIndex: 15, slide: 19, end: { sectionId: 'zones-reflexes-podales', blockIndex: 16 } },
 ]
+
+export const chapter7SlidesEn: SyncSlide[] = [
+  { src: '/chapter-7/EN/IMAGES/NCH 7 EN IMG 1.png', title: 'Chapter 7 — Abdominal and Peritoneal Cavities' },
+  { src: '/chapter-7/EN/IMAGES/NCH 7 EN IMG 2.png', title: 'The Abdominal Container: Boundaries and Pressures' },
+  { src: '/chapter-7/EN/IMAGES/NCH 7 EN IMG 3.png', title: 'The Three Visceral Spaces (Contents)' },
+  { src: '/chapter-7/EN/IMAGES/NCH 7 EN IMG 4.png', title: 'The Architecture of the Peritoneum' },
+  { src: '/chapter-7/EN/IMAGES/NCH 7 EN IMG 5.png', title: 'Peritoneum, Peritoneal Folds, and Peritoneal Fluid' },
+  { src: '/chapter-7/EN/IMAGES/NCH 7 EN IMG 6.png', title: 'Peritoneal Folds: Ligaments, Omenta and Mesenteries' },
+  { src: '/chapter-7/EN/IMAGES/NCH 7 EN IMG 7.png', title: 'Orifices and Hiatuses of the Abdominal Cavity' },
+  { src: '/chapter-7/EN/IMAGES/NCH 7 EN IMG 8.png', title: 'The Main Vascular Axis' },
+  { src: '/chapter-7/EN/IMAGES/NCH 7 EN IMG 9.png', title: 'Dual Nervous Network: Somatic and Autonomic' },
+  { src: '/chapter-7/EN/IMAGES/NCH 7 EN IMG 10.png', title: 'Parietal-Visceral Physiology: The Role of the Transverse' },
+  { src: '/chapter-7/EN/IMAGES/NCH 7 EN IMG 11.png', title: 'Dynamics of Peritoneal Fluid' },
+  { src: '/chapter-7/EN/IMAGES/NCH 7 EN IMG 12.png', title: 'Peritoneal Pathologies: Mechanisms and Clinical Features' },
+  { src: '/chapter-7/EN/IMAGES/NCH 7 EN IMG 13.png', title: 'Map of Referred Pain' },
+  { src: '/chapter-7/EN/IMAGES/NCH 7 EN IMG 14.png', title: 'Synthesis — Containing, Contained and Peritoneal Networks' },
+]
+
+export const chapter7SlideAnchorsEn: SyncAnchor[] = [
+  { sectionId: 'presentation', blockIndex: 0, slide: 1 },
+  { sectionId: 'situation', blockIndex: 0, slide: 2 },
+  { sectionId: 'situation', blockIndex: 9, slide: 3 },
+  { sectionId: 'anatomie', blockIndex: 0, slide: 4 },
+  { sectionId: 'anatomie', blockIndex: 8, slide: 5 },
+  { sectionId: 'anatomie', blockIndex: 20, slide: 6 },
+  { sectionId: 'anatomie', blockIndex: 47, slide: 7 },
+  { sectionId: 'vascularisation', blockIndex: 0, slide: 8 },
+  { sectionId: 'innervation', blockIndex: 0, slide: 9 },
+  { sectionId: 'physiologie', blockIndex: 0, slide: 10 },
+  { sectionId: 'physiologie', blockIndex: 8, slide: 11 },
+  { sectionId: 'pathologie', blockIndex: 0, slide: 12 },
+  { sectionId: 'relations-peritoneo-somatiques', blockIndex: 0, slide: 13 },
+  { sectionId: 'relations-peritoneo-somatiques', blockIndex: 5, slide: 14 },
+]

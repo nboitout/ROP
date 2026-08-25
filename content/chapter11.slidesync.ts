@@ -51,3 +51,39 @@ export const chapter11SlideAnchors: SyncAnchor[] = [
   { sectionId: 'relations-viscero-emotionnelles', blockIndex: 0, slide: 13 },
   { sectionId: 'conseils', blockIndex: 0, slide: 14 },
 ]
+
+export const chapter11SlidesEn: SyncSlide[] = [
+  { src: '/chapter-11/EN/Images/NCH 11 EN IMG 1.png', title: 'Chapter 11 — Liver and Biliary Tract' },
+  { src: '/chapter-11/EN/Images/NCH 11 EN IMG 2.png', title: 'Macro-Anatomy and Tissue Structure' },
+  { src: '/chapter-11/EN/Images/NCH 11 EN IMG 3.png', title: 'Mechanical Architecture and Fixation Points' },
+  { src: '/chapter-11/EN/Images/NCH 11 EN IMG 4.png', title: 'Visceral Surface of the Liver' },
+  { src: '/chapter-11/EN/Images/NCH 11 EN IMG 6.png', title: 'The Hepatic Lobule: A Crossroads of Fluids and Energies' },
+  { src: '/chapter-11/EN/Images/NCH 11 EN IMG 7.png', title: 'The Portal System and Collateral Pathways' },
+  { src: '/chapter-11/EN/Images/NCH 11 EN IMG 8.png', title: 'Fluid Dynamics and Congestion' },
+  { src: '/chapter-11/EN/Images/NCH 11 EN IMG 9.png', title: 'Lymphatic Circulation and Drainage' },
+  { src: '/chapter-11/EN/Images/NCH 11 EN IMG 10.png', title: 'The 4 Functional Segments' },
+  { src: '/chapter-11/EN/Images/NCH 11 EN IMG 11.png', title: 'Overall Physiology: The 4 Functional Pillars' },
+  { src: '/chapter-11/EN/Images/NCH 11 EN IMG 12.png', title: 'Hormono-Biliary Mechanics' },
+  { src: '/chapter-11/EN/Images/NCH 11 EN IMG 13.png', title: 'Clinical Diagnostic Matrix' },
+  { src: '/chapter-11/EN/Images/NCH 11 EN IMG 14.png', title: 'Map of Viscero-Somatic Referred Projections' },
+  { src: '/chapter-11/EN/Images/NCH 11 EN IMG 15.png', title: 'Viscero-Emotional Profiles' },
+  { src: '/chapter-11/EN/Images/NCH 11 EN IMG 16.png', title: 'Clinical Summary and Lifestyle Hygiene' },
+]
+
+export const chapter11SlideAnchorsEn: SyncAnchor[] = [
+  { sectionId: 'presentation', blockIndex: 0, slide: 1 },
+  { sectionId: 'presentation', blockIndex: 1, slide: 2 },
+  { sectionId: 'anatomie', blockIndex: 0, slide: 3 },
+  { sectionId: 'anatomie', blockIndex: 33, slide: 4 },
+  { sectionId: 'vascularisation', blockIndex: 3, slide: 5 },
+  { sectionId: 'vascularisation', blockIndex: 14, slide: 6 },
+  { sectionId: 'vascularisation', blockIndex: 22, slide: 7 },
+  { sectionId: 'vascularisation', blockIndex: 40, slide: 8 },
+  { sectionId: 'segmentation-hepatique', blockIndex: 11, slide: 9 },
+  { sectionId: 'physiologie', blockIndex: 0, slide: 10 },
+  { sectionId: 'physiologie', blockIndex: 15, slide: 11 },
+  { sectionId: 'pathologies-courantes', blockIndex: 0, slide: 12 },
+  { sectionId: 'relations-viscero-somatiques', blockIndex: 11, slide: 13 },
+  { sectionId: 'relations-viscero-emotionnelles', blockIndex: 0, slide: 14 },
+  { sectionId: 'conseils', blockIndex: 0, slide: 15 },
+]

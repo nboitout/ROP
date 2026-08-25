@@ -1,4 +1,4 @@
-import { chapter1Slides, chapter1SlideAnchors } from './chapter1.slidesync'
+import { chapter1Slides, chapter1SlidesEn, chapter1SlideAnchors, chapter1SlideAnchorsEn } from './chapter1.slidesync'
 import {
   chapter2Slides,
   chapter2SlidesDe,
@@ -6,26 +6,38 @@ import {
   chapter2SlidesEs,
   chapter2SlidesIt,
   chapter2SlideAnchors,
+  chapter2SlideAnchorsEn,
   chapter2SlideAnchorsFr,
 } from './chapter2.slidesync'
-import { chapter3ReworkSlides as chapter3Slides, chapter3ReworkSlideAnchors as chapter3SlideAnchors } from './chapter3-rework.slidesync'
-import { chapter4ReworkSlides as chapter4Slides, chapter4ReworkSlideAnchors as chapter4SlideAnchors } from './chapter4-rework.slidesync'
+import {
+  chapter3ReworkSlides as chapter3Slides,
+  chapter3ReworkSlidesEn as chapter3SlidesEn,
+  chapter3ReworkSlideAnchors as chapter3SlideAnchors,
+  chapter3ReworkSlideAnchorsEn as chapter3SlideAnchorsEn,
+} from './chapter3-rework.slidesync'
+import {
+  chapter4ReworkSlides as chapter4Slides,
+  chapter4ReworkSlidesEn as chapter4SlidesEn,
+  chapter4ReworkSlideAnchors as chapter4SlideAnchors,
+  chapter4ReworkSlideAnchorsEn as chapter4SlideAnchorsEn,
+} from './chapter4-rework.slidesync'
 import {
   chapter5SlidesDe,
   chapter5SlidesEn,
   chapter5SlidesEs,
   chapter5SlidesIt,
+  chapter5SlideAnchorsEn,
   chapter5SlideAnchorsLegacy,
 } from './chapter5.slidesync'
 import { chapter5ReworkSlides as chapter5Slides, chapter5ReworkSlideAnchors as chapter5SlideAnchors } from './chapter5-rework.slidesync'
-import { chapter6Slides, chapter6SlideAnchors } from './chapter6.slidesync'
-import { chapter7Slides, chapter7SlideAnchors } from './chapter7.slidesync'
-import { chapter8Slides, chapter8SlideAnchors } from './chapter8.slidesync'
-import { chapter9Slides, chapter9SlideAnchors } from './chapter9.slidesync'
-import { chapter10Slides, chapter10SlideAnchors } from './chapter10.slidesync'
-import { chapter11Slides, chapter11SlideAnchors } from './chapter11.slidesync'
-import { chapter12Slides, chapter12SlideAnchors } from './chapter12.slidesync'
-import { chapter13Slides, chapter13SlideAnchors } from './chapter13.slidesync'
+import { chapter6Slides, chapter6SlidesEn, chapter6SlideAnchors, chapter6SlideAnchorsEn } from './chapter6.slidesync'
+import { chapter7Slides, chapter7SlidesEn, chapter7SlideAnchors, chapter7SlideAnchorsEn } from './chapter7.slidesync'
+import { chapter8Slides, chapter8SlidesEn, chapter8SlideAnchors, chapter8SlideAnchorsEn } from './chapter8.slidesync'
+import { chapter9Slides, chapter9SlidesEn, chapter9SlideAnchors, chapter9SlideAnchorsEn } from './chapter9.slidesync'
+import { chapter10Slides, chapter10SlidesEn, chapter10SlideAnchors, chapter10SlideAnchorsEn } from './chapter10.slidesync'
+import { chapter11Slides, chapter11SlidesEn, chapter11SlideAnchors, chapter11SlideAnchorsEn } from './chapter11.slidesync'
+import { chapter12Slides, chapter12SlidesEn, chapter12SlideAnchors, chapter12SlideAnchorsEn } from './chapter12.slidesync'
+import { chapter13Slides, chapter13SlidesEn, chapter13SlideAnchors, chapter13SlideAnchorsEn } from './chapter13.slidesync'
 import {
   chapter14Slides,
   chapter14SlidesDe,
@@ -109,31 +121,64 @@ const slideVisualSources: Record<string, SlideVisualSource> = {
 }
 
 const slideSearchSources: Record<string, readonly SlideSearchSource[]> = {
-  'chapter-1': [{ lang: 'fr', slides: chapter1Slides, anchors: chapter1SlideAnchors }],
+  'chapter-1': [
+    { lang: 'fr', slides: chapter1Slides, anchors: chapter1SlideAnchors },
+    { lang: 'en', slides: chapter1SlidesEn, anchors: chapter1SlideAnchorsEn },
+  ],
   'chapter-2': [
     { lang: 'fr', slides: chapter2Slides, anchors: chapter2SlideAnchorsFr },
-    { lang: 'en', slides: chapter2SlidesEn, anchors: chapter2SlideAnchors },
+    { lang: 'en', slides: chapter2SlidesEn, anchors: chapter2SlideAnchorsEn },
     { lang: 'de', slides: chapter2SlidesDe, anchors: chapter2SlideAnchors },
     { lang: 'es', slides: chapter2SlidesEs, anchors: chapter2SlideAnchors },
     { lang: 'it', slides: chapter2SlidesIt, anchors: chapter2SlideAnchors },
   ],
-  'chapter-3': [{ lang: 'fr', slides: chapter3Slides, anchors: chapter3SlideAnchors }],
-  'chapter-4': [{ lang: 'fr', slides: chapter4Slides, anchors: chapter4SlideAnchors }],
+  'chapter-3': [
+    { lang: 'fr', slides: chapter3Slides, anchors: chapter3SlideAnchors },
+    { lang: 'en', slides: chapter3SlidesEn, anchors: chapter3SlideAnchorsEn },
+  ],
+  'chapter-4': [
+    { lang: 'fr', slides: chapter4Slides, anchors: chapter4SlideAnchors },
+    { lang: 'en', slides: chapter4SlidesEn, anchors: chapter4SlideAnchorsEn },
+  ],
   'chapter-5': [
     { lang: 'fr', slides: chapter5Slides, anchors: chapter5SlideAnchors },
-    { lang: 'en', slides: chapter5SlidesEn, anchors: chapter5SlideAnchorsLegacy },
+    { lang: 'en', slides: chapter5SlidesEn, anchors: chapter5SlideAnchorsEn },
     { lang: 'de', slides: chapter5SlidesDe, anchors: chapter5SlideAnchorsLegacy },
     { lang: 'es', slides: chapter5SlidesEs, anchors: chapter5SlideAnchorsLegacy },
     { lang: 'it', slides: chapter5SlidesIt, anchors: chapter5SlideAnchorsLegacy },
   ],
-  'chapter-6': [{ lang: 'fr', slides: chapter6Slides, anchors: chapter6SlideAnchors }],
-  'chapter-7': [{ lang: 'fr', slides: chapter7Slides, anchors: chapter7SlideAnchors }],
-  'chapter-8': [{ lang: 'fr', slides: chapter8Slides, anchors: chapter8SlideAnchors }],
-  'chapter-9': [{ lang: 'fr', slides: chapter9Slides, anchors: chapter9SlideAnchors }],
-  'chapter-10': [{ lang: 'fr', slides: chapter10Slides, anchors: chapter10SlideAnchors }],
-  'chapter-11': [{ lang: 'fr', slides: chapter11Slides, anchors: chapter11SlideAnchors }],
-  'chapter-12': [{ lang: 'fr', slides: chapter12Slides, anchors: chapter12SlideAnchors }],
-  'chapter-13': [{ lang: 'fr', slides: chapter13Slides, anchors: chapter13SlideAnchors }],
+  'chapter-6': [
+    { lang: 'fr', slides: chapter6Slides, anchors: chapter6SlideAnchors },
+    { lang: 'en', slides: chapter6SlidesEn, anchors: chapter6SlideAnchorsEn },
+  ],
+  'chapter-7': [
+    { lang: 'fr', slides: chapter7Slides, anchors: chapter7SlideAnchors },
+    { lang: 'en', slides: chapter7SlidesEn, anchors: chapter7SlideAnchorsEn },
+  ],
+  'chapter-8': [
+    { lang: 'fr', slides: chapter8Slides, anchors: chapter8SlideAnchors },
+    { lang: 'en', slides: chapter8SlidesEn, anchors: chapter8SlideAnchorsEn },
+  ],
+  'chapter-9': [
+    { lang: 'fr', slides: chapter9Slides, anchors: chapter9SlideAnchors },
+    { lang: 'en', slides: chapter9SlidesEn, anchors: chapter9SlideAnchorsEn },
+  ],
+  'chapter-10': [
+    { lang: 'fr', slides: chapter10Slides, anchors: chapter10SlideAnchors },
+    { lang: 'en', slides: chapter10SlidesEn, anchors: chapter10SlideAnchorsEn },
+  ],
+  'chapter-11': [
+    { lang: 'fr', slides: chapter11Slides, anchors: chapter11SlideAnchors },
+    { lang: 'en', slides: chapter11SlidesEn, anchors: chapter11SlideAnchorsEn },
+  ],
+  'chapter-12': [
+    { lang: 'fr', slides: chapter12Slides, anchors: chapter12SlideAnchors },
+    { lang: 'en', slides: chapter12SlidesEn, anchors: chapter12SlideAnchorsEn },
+  ],
+  'chapter-13': [
+    { lang: 'fr', slides: chapter13Slides, anchors: chapter13SlideAnchors },
+    { lang: 'en', slides: chapter13SlidesEn, anchors: chapter13SlideAnchorsEn },
+  ],
   'chapter-14': [
     { lang: 'fr', slides: chapter14Slides, anchors: chapter14SlideAnchorsFr },
     { lang: 'en', slides: chapter14SlidesEn, anchors: chapter14SlideAnchors },

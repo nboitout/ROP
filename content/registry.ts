@@ -7,15 +7,22 @@ import { introductionDe } from './introduction.de'
 import { introductionEs } from './introduction.es'
 import { introductionIt } from './introduction.it'
 import { chapter1Fr } from './chapter1.fr'
+import { chapter1En } from './chapter1.en'
 import { chapter3ReworkFr } from './chapter3-rework.fr'
+import { chapter3En } from './chapter3.en'
 import { chapter6Fr } from './chapter6.fr'
+import { chapter6En } from './chapter6.en'
 import { chapter7Fr } from './chapter7.fr'
+import { chapter7En } from './chapter7.en'
+import { chapter8En } from './chapter8.en'
+import { chapter9En } from './chapter9.en'
 import { chapter2Fr } from './chapter2.fr'
 import { chapter2En } from './chapter2.en'
 import { chapter2De } from './chapter2.de'
 import { chapter2Es } from './chapter2.es'
 import { chapter2It } from './chapter2.it'
 import { chapter4ReworkFr } from './chapter4-rework.fr'
+import { chapter4En } from './chapter4.en'
 import { chapter5ReworkFr } from './chapter5-rework.fr'
 import { chapter5En } from './chapter5.en'
 import { chapter5De } from './chapter5.de'
@@ -24,6 +31,10 @@ import { chapter5It } from './chapter5.it'
 import { chapter8Fr } from './chapter8.fr'
 import { chapter9Fr } from './chapter9.fr'
 import { chapter10Fr } from './chapter10.fr'
+import { chapter10En } from './chapter10.en'
+import { chapter11En } from './chapter11.en'
+import { chapter12En } from './chapter12.en'
+import { chapter13En } from './chapter13.en'
 import { chapter11Fr } from './chapter11.fr'
 import { chapter12Fr } from './chapter12.fr'
 import { chapter13Fr } from './chapter13.fr'
@@ -96,19 +107,19 @@ for (const chapter of [chapter3ReworkFr, chapter4ReworkFr, chapter5ReworkFr, cha
  */
 const registry: Record<string, Partial<Record<Lang, Chapter>>> = {
   introduction: { fr: introductionFr, en: introductionEn, de: introductionDe, es: introductionEs, it: introductionIt },
-  'chapter-1': { fr: chapter1Fr },
-  'chapter-3': { fr: chapter3ReworkFr },
-  'chapter-6': { fr: chapter6Fr },
-  'chapter-7': { fr: chapter7Fr },
+  'chapter-1': { fr: chapter1Fr, en: chapter1En },
+  'chapter-3': { fr: chapter3ReworkFr, en: chapter3En },
+  'chapter-6': { fr: chapter6Fr, en: chapter6En },
+  'chapter-7': { fr: chapter7Fr, en: chapter7En },
   'chapter-2': { fr: chapter2Fr, en: chapter2En, de: chapter2De, es: chapter2Es, it: chapter2It },
-  'chapter-4': { fr: chapter4ReworkFr },
+  'chapter-4': { fr: chapter4ReworkFr, en: chapter4En },
   'chapter-5': { fr: chapter5ReworkFr, en: chapter5En, de: chapter5De, es: chapter5Es, it: chapter5It },
-  'chapter-8': { fr: chapter8Fr },
-  'chapter-9': { fr: chapter9Fr },
-  'chapter-10': { fr: chapter10Fr },
-  'chapter-11': { fr: chapter11Fr },
-  'chapter-12': { fr: chapter12Fr },
-  'chapter-13': { fr: chapter13Fr },
+  'chapter-8': { fr: chapter8Fr, en: chapter8En },
+  'chapter-9': { fr: chapter9Fr, en: chapter9En },
+  'chapter-10': { fr: chapter10Fr, en: chapter10En },
+  'chapter-11': { fr: chapter11Fr, en: chapter11En },
+  'chapter-12': { fr: chapter12Fr, en: chapter12En },
+  'chapter-13': { fr: chapter13Fr, en: chapter13En },
   'chapter-14': { fr: chapter14Fr, en: chapter14En, de: chapter14De, es: chapter14Es, it: chapter14It },
   'chapter-15': { fr: chapter15Fr, en: chapter15En, de: chapter15De, es: chapter15Es, it: chapter15It },
   'chapter-16': { fr: chapter16Fr, en: chapter16En, de: chapter16De, es: chapter16Es, it: chapter16It },

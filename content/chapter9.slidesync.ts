@@ -66,3 +66,29 @@ export const chapter9SlideAnchors: SyncAnchor[] = [
   { sectionId: 'zones-reflexes-podales', blockIndex: 20, slide: 22, end: { sectionId: 'zones-reflexes-podales', blockIndex: 20 } },
   { sectionId: 'zones-reflexes-podales', blockIndex: 26, slide: 23, gapBefore: 'half', end: { sectionId: 'zones-reflexes-podales', blockIndex: 29 } },
 ]
+
+export const chapter9SlidesEn: SyncSlide[] = [
+  { src: '/chapter-9/EN/Images/NCH 10 EN IMG 1.png', title: 'Chapter 9 — The Stomach' },
+  { src: '/chapter-9/EN/Images/NCH 10 EN IMG 2.png', title: 'Topographic Location' },
+  { src: '/chapter-9/EN/Images/NCH 10 EN IMG 3.png', title: 'Gastric Morphology and Segments' },
+  { src: '/chapter-9/EN/Images/NCH 10 EN IMG 4.png', title: 'Vascular Supply of the Lesser Curvature' },
+  { src: '/chapter-9/EN/Images/NCH 10 EN IMG 5.png', title: 'Anatomical Relationships' },
+  { src: '/chapter-9/EN/Images/NCH 10 EN IMG 6.png', title: 'Sphincters: Gatekeepers of Transit' },
+  { src: '/chapter-9/EN/Images/NCH 10 EN IMG 7.png', title: 'Arterial Supply: Origin of the Celiac Trunk' },
+  { src: '/chapter-9/EN/Images/NCH 10 EN IMG 8.png', title: 'Autonomic Balance' },
+  { src: '/chapter-9/EN/Images/NCH 10 EN IMG 9.png', title: 'Gastric Rhythm: The Gastric Pacemaker' },
+  { src: '/chapter-9/EN/Images/NCH 10 EN IMG 10.png', title: 'The Neurohormonal Cascade' },
+]
+
+export const chapter9SlideAnchorsEn: SyncAnchor[] = [
+  { sectionId: 'presentation', blockIndex: 0, slide: 1 },
+  { sectionId: 'situation', blockIndex: 0, slide: 2 },
+  { sectionId: 'anatomie', blockIndex: 0, slide: 3 },
+  { sectionId: 'anatomie', blockIndex: 20, slide: 4 },
+  { sectionId: 'rapports', blockIndex: 0, slide: 5 },
+  { sectionId: 'anatomie', blockIndex: 36, slide: 6 },
+  { sectionId: 'vascularisation', blockIndex: 0, slide: 7 },
+  { sectionId: 'innervation', blockIndex: 0, slide: 8 },
+  { sectionId: 'innervation', blockIndex: 8, slide: 9 },
+  { sectionId: 'physiologie', blockIndex: 4, slide: 10 },
+]

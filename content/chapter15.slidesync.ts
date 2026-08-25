@@ -48,37 +48,23 @@ export const chapter15Slides: SyncSlide[] = [
   { src: '/chapter-15/cartographie/figure-15-09.png', title: 'Cartographie : rectum, anus et mésosigmoïde' },
 ]
 
-// English deck - rendered from the dedicated English synthesis slides
-// (public/chapter-15/slides/en). It intentionally stays on the earlier English
-// artwork until a matching English rework deck is provided.
-const chapter15SlidesEnBySource: SyncSlide[] = [
-  { src: '/chapter-15/slides/en/slide-01.png', title: 'Colon and Rectum' },
-  { src: '/chapter-15/slides/en/slide-02.png', title: 'Architecture of the Colonic Frame' },
-  { src: '/chapter-15/slides/en/slide-03.png', title: 'The Origin: Cecum and Ileocecal Junction' },
-  { src: '/chapter-15/slides/en/slide-04.png', title: 'The Ascent and the Transverse: The Colic Angles' },
-  { src: '/chapter-15/slides/en/slide-05.png', title: 'The Descent and the Sigmoid Loop' },
-  { src: '/chapter-15/slides/en/slide-06.png', title: 'The Pelvic Crossroads: Rectum and Anal Canal' },
-  { src: '/chapter-15/slides/en/slide-07.png', title: 'Functional Matrix: Anorectal Control' },
-  { src: '/chapter-15/slides/en/slide-08.png', title: 'Vascular Supply and Consequences' },
-  { src: '/chapter-15/slides/en/slide-09.png', title: 'Autonomic Neurological Wiring' },
-  { src: '/chapter-15/slides/en/slide-10.png', title: 'Physiology: Motility and Absorption' },
-  { src: '/chapter-15/slides/en/slide-11.png', title: 'Autonomic Wiring: Innervation and Reflexes' },
-  { src: '/chapter-15/slides/en/slide-12.png', title: 'Mechanics of Defecation' },
-  { src: '/chapter-15/slides/en/slide-13.png', title: 'Clinical Aspects: Constipation and Colopathies' },
-  { src: '/chapter-15/slides/en/slide-14.png', title: 'Viscerosomatic Synthesis' },
-  { src: '/chapter-15/slides/en/slide-15.png', title: 'ROP Cartography: Nervous System, Limbic System and Microbiota' },
-  { src: '/chapter-15/slides/en/slide-16.png', title: 'ROP Cartography: Reflex Zones of the Colon' },
-  { src: '/chapter-15/slides/en/slide-17.png', title: 'ROP Podal Cartography' },
+export const chapter15SlidesEn: SyncSlide[] = [
+  { src: '/chapter-15/EN/Images/NCH 15 EN IMG 1.png', title: 'Chapter 15 — Colon and Rectum' },
+  { src: '/chapter-15/EN/Images/NCH 15 EN IMG 2.png', title: 'Anatomical Relationships of the Colonic Framework' },
+  { src: '/chapter-15/EN/Images/NCH 15 EN IMG 3.png', title: 'Location and Course of the Colon' },
+  { src: '/chapter-15/EN/Images/NCH 15 EN IMG 4.png', title: 'Cecum, Ileocecal Junction and Appendix' },
+  { src: '/chapter-15/EN/Images/NCH 15 EN IMG 5.png', title: 'Transverse Colon and Colic Flexures' },
+  { src: '/chapter-15/EN/Images/NCH 15 EN IMG 6.png', title: 'Descending Colon, Sigmoid Colon and Mesosigmoid' },
+  { src: '/chapter-15/EN/Images/NCH 15 EN IMG 7.png', title: 'Rectum, Anorectal Angle, and Anal Canal' },
+  { src: '/chapter-15/EN/Images/NCH 15 EN IMG 8.png', title: 'The Architecture of the Colonic Frame' },
+  { src: '/chapter-15/EN/Images/NCH 15 EN IMG 9.png', title: 'Vascularization of the Colon and Rectal Venous Drainage' },
+  { src: '/chapter-15/EN/Images/NCH 15 EN IMG 10.png', title: 'Rectum, Anus and Mechanism of Defecation' },
+  { src: '/chapter-15/EN/Images/NCH 15 EN IMG 11.png', title: 'Innervation of the Rectum and Anus' },
+  { src: '/chapter-15/EN/Images/NCH 15 EN IMG 12.png', title: 'Physiology of the Colon: Fermentation, Reabsorption, and Motility' },
+  { src: '/chapter-15/EN/Images/NCH 15 EN IMG 13.png', title: 'Autonomic Innervation of the Colon' },
+  { src: '/chapter-15/EN/Images/NCH 15 EN IMG 14.png', title: 'Physiology of the Colon, Rectum, and Anus' },
+  { src: '/chapter-15/EN/Images/NCH 15 EN IMG 15.png', title: 'Colon — Viscero-Somatic Relations' },
 ]
-
-const chapter15ReadingOrderEn = [1, 2, 3, 4, 5, 6, 8, 9, 10, 7, 11, 12, 13, 14, 15, 16, 17]
-const chapter15SlideNumberByReadingOrderEn = new Map(chapter15ReadingOrderEn.map((sourceSlide, index) => [sourceSlide, index + 1]))
-
-function remapChapter15SlideEn(slide: number) {
-  return chapter15SlideNumberByReadingOrderEn.get(slide) ?? slide
-}
-
-export const chapter15SlidesEn: SyncSlide[] = chapter15ReadingOrderEn.map((slideNumber) => chapter15SlidesEnBySource[slideNumber - 1])
 
 export const chapter15SlidesDe: SyncSlide[] = chapter15Slides
 export const chapter15SlidesEs: SyncSlide[] = chapter15Slides
@@ -129,27 +115,20 @@ export const chapter15HalfBreaks: SyncAnchorPoint[] = [
   { sectionId: 'relations-viscero-emotionnelles', blockIndex: -1 },
 ]
 
-const chapter15SlideAnchorsEnBySource: SyncAnchor[] = [
-  { sectionId: 'presentation', blockIndex: -1, slide: 1 },
-  { sectionId: 'presentation', blockIndex: 0, slide: 2 },
-  { sectionId: 'anatomie', blockIndex: 0, slide: 3 },
-  { sectionId: 'anatomie', blockIndex: 12, slide: 4 },
-  { sectionId: 'anatomie', blockIndex: 19, slide: 5 },
-  { sectionId: 'anatomie', blockIndex: 23, slide: 6 },
-  { sectionId: 'physiologie', blockIndex: 3, slide: 7 },
-  { sectionId: 'vascularisation', blockIndex: 0, slide: 8 },
-  { sectionId: 'innervation', blockIndex: 0, slide: 9 },
-  { sectionId: 'physiologie', blockIndex: 0, slide: 10 },
-  { sectionId: 'physiologie', blockIndex: 4, slide: 11 },
-  { sectionId: 'physiologie', blockIndex: 5, slide: 12 },
-  { sectionId: 'pathologies-courantes', blockIndex: 0, slide: 13 },
-  { sectionId: 'relations-viscero-somatiques', blockIndex: 0, slide: 14 },
-  { sectionId: 'relations-viscero-emotionnelles', blockIndex: 0, slide: 15 },
-  { sectionId: 'zones-reflexes-podales', blockIndex: 0, slide: 16 },
-  { sectionId: 'zones-reflexes-podales', blockIndex: 3, slide: 17 },
+export const chapter15SlideAnchorsEn: SyncAnchor[] = [
+  { sectionId: 'presentation', blockIndex: 0, slide: 1 },
+  { sectionId: 'rapports', blockIndex: 0, slide: 2 },
+  { sectionId: 'situation', blockIndex: 0, slide: 3 },
+  { sectionId: 'anatomie', blockIndex: 0, slide: 4 },
+  { sectionId: 'anatomie', blockIndex: 14, slide: 5 },
+  { sectionId: 'anatomie', blockIndex: 30, slide: 6 },
+  { sectionId: 'anatomie', blockIndex: 39, slide: 7 },
+  { sectionId: 'anatomie', blockIndex: 1, slide: 8 },
+  { sectionId: 'vascularisation', blockIndex: 0, slide: 9 },
+  { sectionId: 'physiologie', blockIndex: 4, slide: 10 },
+  { sectionId: 'innervation', blockIndex: 11, slide: 11 },
+  { sectionId: 'physiologie', blockIndex: 0, slide: 12 },
+  { sectionId: 'innervation', blockIndex: 0, slide: 13 },
+  { sectionId: 'physiologie', blockIndex: 2, slide: 14 },
+  { sectionId: 'relations-viscero-somatiques', blockIndex: 0, slide: 15 },
 ]
-
-export const chapter15SlideAnchorsEn: SyncAnchor[] = chapter15SlideAnchorsEnBySource.map((anchor) => ({
-  ...anchor,
-  slide: remapChapter15SlideEn(anchor.slide),
-}))

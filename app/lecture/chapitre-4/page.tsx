@@ -6,7 +6,13 @@ import SlideSyncReader from '@/components/SlideSyncReader'
 import { getChapter } from '@/content/registry'
 import { getServerLang } from '@/app/i18n/serverLang'
 import { translations } from '@/app/i18n/translations'
-import { chapter4ReworkHalfBreaks, chapter4ReworkSlides as chapter4Slides, chapter4ReworkSlideAnchors as chapter4SlideAnchors } from '@/content/chapter4-rework.slidesync'
+import {
+  chapter4ReworkHalfBreaks,
+  chapter4ReworkSlides as chapter4Slides,
+  chapter4ReworkSlidesEn as chapter4SlidesEn,
+  chapter4ReworkSlideAnchors as chapter4SlideAnchors,
+  chapter4ReworkSlideAnchorsEn as chapter4SlideAnchorsEn,
+} from '@/content/chapter4-rework.slidesync'
 
 export const metadata: Metadata = {
   title: 'Chapitre 4 - Lecture synchronisee · R.O.P. · Guy Boitout',
@@ -26,15 +32,16 @@ export default async function Chapitre4SyncPage({
 
   const { lang: langParam } = await searchParams
   const lang = await getServerLang(langParam)
-  const { chapter } = getChapter('chapter-4', 'fr')
+  const { chapter } = getChapter('chapter-4', lang)
+  const hasEnglishEdition = lang === 'en'
 
   return (
     <SlideSyncReader
       chapter={chapter}
       bookTitle={translations[lang].reader.bookTitle}
-      slides={chapter4Slides}
-      anchors={chapter4SlideAnchors}
-      halfBreaks={chapter4ReworkHalfBreaks}
+      slides={hasEnglishEdition ? chapter4SlidesEn : chapter4Slides}
+      anchors={hasEnglishEdition ? chapter4SlideAnchorsEn : chapter4SlideAnchors}
+      halfBreaks={hasEnglishEdition ? undefined : chapter4ReworkHalfBreaks}
       backHref="/admin/chapitres"
       classicHref={`/chapitre-4?lang=${lang}`}
     />

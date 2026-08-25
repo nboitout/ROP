@@ -54,3 +54,37 @@ export const chapter10SlideAnchors: SyncAnchor[] = [
 export const chapter10HalfBreaks: SyncAnchorPoint[] = [
   { sectionId: 'relations-viscero-emotionnelles', blockIndex: -1 },
 ]
+
+export const chapter10SlidesEn: SyncSlide[] = [
+  { src: '/chapter-10/EN/Images/NCH 10 EN IMG 1.png', title: 'Chapter 10 — Duodenum' },
+  { src: '/chapter-10/EN/Images/NCH 10 EN IMG 2.png', title: 'The Visceral Crossroads of the Abdomen' },
+  { src: '/chapter-10/EN/Images/NCH 10 EN IMG 3.png', title: 'The Four Segments of the Duodenum' },
+  { src: '/chapter-10/EN/Images/NCH 10 EN IMG 4.png', title: 'The Secretory Hub: Focus on D2 and the Papillae' },
+  { src: '/chapter-10/EN/Images/NCH 10 EN IMG 5.png', title: 'The Muscle of Treitz and Emptying Dynamics' },
+  { src: '/chapter-10/EN/Images/NCH 10 EN IMG 6.png', title: 'Palpation Mapping: Rogié’s Quadrilateral' },
+  { src: '/chapter-10/EN/Images/NCH 10 EN IMG 7.png', title: 'Arterial and Venous Blood Supply' },
+  { src: '/chapter-10/EN/Images/NCH 10 EN IMG 8.png', title: 'Neural Network and Autonomic Control' },
+  { src: '/chapter-10/EN/Images/NCH 10 EN IMG 9.png', title: 'Secretory and Biochemical Dynamics' },
+  { src: '/chapter-10/EN/Images/NCH 10 EN IMG 10.png', title: 'The Secretory Factory: Regulation and Hydrolysis' },
+  { src: '/chapter-10/EN/Images/NCH 10 EN IMG 11.png', title: 'Pathology Assessment Framework' },
+  { src: '/chapter-10/EN/Images/NCH 10 EN IMG 12.png', title: 'Mechanical Compression of D4' },
+  { src: '/chapter-10/EN/Images/NCH 10 EN IMG 13.png', title: 'Therapeutic Objectives in ROP' },
+  { src: '/chapter-10/EN/Images/NCH 10 EN IMG 14.png', title: 'ROP Clinical Protocol: The Duodenum' },
+]
+
+export const chapter10SlideAnchorsEn: SyncAnchor[] = [
+  { sectionId: 'presentation', blockIndex: 0, slide: 1 },
+  { sectionId: 'situation', blockIndex: 0, slide: 2 },
+  { sectionId: 'anatomie-figure-10-1', blockIndex: 2, slide: 3 },
+  { sectionId: 'anatomie-figure-10-1', blockIndex: 8, slide: 4 },
+  { sectionId: 'anatomie-figure-10-1', blockIndex: 25, slide: 5 },
+  { sectionId: 'rapports', blockIndex: 7, slide: 6 },
+  { sectionId: 'vascularisation', blockIndex: 0, slide: 7 },
+  { sectionId: 'innervation', blockIndex: 0, slide: 8 },
+  { sectionId: 'physiologie', blockIndex: 0, slide: 9 },
+  { sectionId: 'physiologie', blockIndex: 13, slide: 10 },
+  { sectionId: 'pathologies-courantes', blockIndex: 0, slide: 11 },
+  { sectionId: 'indications-troubles-fonctionnels', blockIndex: 3, slide: 12 },
+  { sectionId: 'conseils', blockIndex: 0, slide: 13 },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 6, slide: 14 },
+]
