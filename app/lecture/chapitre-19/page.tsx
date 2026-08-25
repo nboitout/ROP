@@ -7,11 +7,11 @@ import { getChapter } from '@/content/registry'
 import { getServerLang } from '@/app/i18n/serverLang'
 import { translations } from '@/app/i18n/translations'
 import type { Lang } from '@/app/i18n/translations'
-import { chapter19HalfBreaks, chapter19Slides, chapter19SlideAnchors } from '@/content/chapter19.slidesync'
+import { chapter19HalfBreaks, chapter19Slides, chapter19SlidesEn, chapter19SlideAnchors, chapter19SlideAnchorsEn } from '@/content/chapter19.slidesync'
 
 const DECKS: Record<Lang, typeof chapter19Slides> = {
   fr: chapter19Slides,
-  en: chapter19Slides,
+  en: chapter19SlidesEn,
   de: chapter19Slides,
   es: chapter19Slides,
   it: chapter19Slides,
@@ -43,7 +43,7 @@ export default async function Chapitre19LecturePage({
       chapter={chapter}
       bookTitle={translations[lang].reader.bookTitle}
       slides={DECKS[lang]}
-      anchors={chapter19SlideAnchors}
+      anchors={lang === 'en' ? chapter19SlideAnchorsEn : chapter19SlideAnchors}
       halfBreaks={chapter19HalfBreaks}
       backHref="/chapitres-gratuits"
       classicHref={`/chapitre-19?lang=${lang}`}

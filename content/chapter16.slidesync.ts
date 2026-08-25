@@ -45,7 +45,7 @@ function withChapter16Titles(titles: string[]): SyncSlide[] {
   return chapter16Slides.map((slide, index) => ({ ...slide, title: titles[index] ?? slide.title }))
 }
 
-export const chapter16SlidesEn = withChapter16Titles([
+export const chapter16SlidesEnLegacy = withChapter16Titles([
   'Chapter 16: the Kidneys',
   'Location and topography',
   'The renal lodge and its envelopes',
@@ -172,4 +172,55 @@ export const chapter16SlideAnchors: SyncAnchor[] = [
   { sectionId: 'zones-reflexes-podales', blockIndex: 37, slide: 26, end: { sectionId: 'zones-reflexes-podales', blockIndex: 37 } },
   { sectionId: 'zones-reflexes-podales', blockIndex: 38, slide: 27, end: { sectionId: 'zones-reflexes-podales', blockIndex: 38 } },
   { sectionId: 'zones-reflexes-podales', blockIndex: 39, slide: 28, end: { sectionId: 'zones-reflexes-podales', blockIndex: 39 } },
+]
+
+// EN REVISED DECK CHAPTER 16
+export const chapter16SlidesEn: SyncSlide[] = [
+  { src: '/chapter-16/EN/Images/NCH 16 EN IMG 1.png', title: 'Chapter 16: The Kidneys' },
+  { src: '/chapter-16/EN/Images/NCH 16 EN IMG 2.png', title: 'Location and Topography' },
+  { src: '/chapter-16/EN/Images/NCH 16 EN IMG 3.png', title: 'The Renal Compartment and Its Envelopes' },
+  { src: '/chapter-16/EN/Images/NCH 16 EN IMG 4.png', title: 'The Fascial Envelope: An Open Compartment' },
+  { src: '/chapter-16/EN/Images/NCH 16 EN IMG 5.png', title: 'Internal Structure of the Kidneys' },
+  { src: '/chapter-16/EN/Images/NCH 16 EN IMG 6.png', title: 'The Nephron: The Functional Unit' },
+  { src: '/chapter-16/EN/Images/NCH 16 EN IMG 7.png', title: 'Dorsal Relationships and the Lumbar Plexus' },
+  { src: '/chapter-16/EN/Images/NCH 16 EN IMG 8.png', title: 'Weak Points of the Lumbar Wall' },
+  { src: '/chapter-16/EN/Images/NCH 16 EN IMG 9.png', title: 'The Venous Crossroads and Nutcracker Syndrome' },
+  { src: '/chapter-16/EN/Images/NCH 9 EN IMG 10.png', title: 'Clinical Asymmetry: Right Kidney vs Left Kidney' },
+  { src: '/chapter-16/EN/Images/NCH 16 EN IMG 11.png', title: 'Respiratory Dynamics and Motility' },
+  { src: '/chapter-16/EN/Images/NCH EN IMG 12.png', title: 'Regulation of Arterial Blood Pressure: The RAAS' },
+  { src: '/chapter-16/EN/Images/NCH 16 EN IMG 13.png', title: 'Acid–Base Balance and Endocrine Functions of the Kidney' },
+  { src: '/chapter-16/EN/Images/NCH 16 EN IMG 14.png', title: 'Tissue Fixations and Warning Signs' },
+  { src: '/chapter-16/EN/Images/NCH 16 EN IMG 15.png', title: 'Tissue Fixations: Loss of Mobility' },
+  { src: '/chapter-16/EN/Images/NCH 16 EN IMG 16.png', title: 'Renal Ptosis: Forms, Causes and Postural Signs' },
+  { src: '/chapter-16/EN/Images/NCH 16 EN IMG 17.png', title: 'Renal Ptosis: ROP Interpretation in Three Degrees' },
+  { src: '/chapter-16/EN/Images/NCH 16 EN IMG 18.png', title: 'Pregnancy-Related Low Back Pain: Renal and Vascular Constraints' },
+  { src: '/chapter-16/EN/Images/NCH 16 EN IMG 19.png', title: 'Viscerosomatic Relationships — Kidneys' },
+  { src: '/chapter-16/EN/Images/NCH 16 EN IMG 20.png', title: 'ROP Approach: Symbolic and Emotional Interpretation' },
+  { src: '/chapter-16/EN/Images/NCH 16 EN IMG 21.png', title: 'Therapeutic Advice for the Patient' },
+  { src: '/chapter-16/EN/Images/NCH 16 EN IMG 22.png', title: 'ROP Clinical Protocol: The Kidneys' },
+]
+
+export const chapter16SlideAnchorsEn: SyncAnchor[] = [
+  { sectionId: 'presentation', blockIndex: -1, slide: 1 },
+  { sectionId: 'situation', blockIndex: 0, slide: 2 },
+  { sectionId: 'anatomie', blockIndex: 0, slide: 3 },
+  { sectionId: 'anatomie', blockIndex: 7, slide: 4 },
+  { sectionId: 'anatomie', blockIndex: 10, slide: 5 },
+  { sectionId: 'anatomie', blockIndex: 14, slide: 6 },
+  { sectionId: 'rapports', blockIndex: 0, slide: 7 },
+  { sectionId: 'rapports', blockIndex: 4, slide: 8 },
+  { sectionId: 'vascularisation', blockIndex: 3, slide: 9 },
+  { sectionId: 'rapports', blockIndex: 9, slide: 10 },
+  { sectionId: 'physiologie', blockIndex: 0, slide: 11 },
+  { sectionId: 'physiologie', blockIndex: 8, slide: 12 },
+  { sectionId: 'physiologie', blockIndex: 13, slide: 13 },
+  { sectionId: 'pathologies-courantes', blockIndex: 2, slide: 14 },
+  { sectionId: 'indications-troubles-fonctionnels', blockIndex: 26, slide: 15 },
+  { sectionId: 'indications-troubles-fonctionnels', blockIndex: 1, slide: 16 },
+  { sectionId: 'indications-troubles-fonctionnels', blockIndex: 9, slide: 17 },
+  { sectionId: 'indications-troubles-fonctionnels', blockIndex: 21, slide: 18 },
+  { sectionId: 'relations-viscero-somatiques', blockIndex: 0, slide: 19 },
+  { sectionId: 'relations-viscero-emotionnelles', blockIndex: 0, slide: 20 },
+  { sectionId: 'conseils', blockIndex: 0, slide: 21 },
+  { sectionId: 'zones-reflexes-podales', blockIndex: -1, slide: 22 },
 ]

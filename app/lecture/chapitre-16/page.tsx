@@ -9,7 +9,7 @@ import { translations } from '@/app/i18n/translations'
 import type { Lang } from '@/app/i18n/translations'
 import {
   chapter16Slides, chapter16SlidesEn, chapter16SlidesDe, chapter16SlidesEs, chapter16SlidesIt,
-  chapter16SlideAnchors,
+  chapter16SlideAnchors, chapter16SlideAnchorsEn,
 } from '@/content/chapter16.slidesync'
 
 const DECKS: Record<Lang, typeof chapter16Slides> = {
@@ -46,7 +46,7 @@ export default async function Chapitre16LecturePage({
       chapter={chapter}
       bookTitle={translations[lang].reader.bookTitle}
       slides={DECKS[lang]}
-      anchors={chapter16SlideAnchors}
+      anchors={lang === 'en' ? chapter16SlideAnchorsEn : chapter16SlideAnchors}
       backHref="/chapitres-gratuits"
       classicHref={`/chapitre-16?lang=${lang}`}
     />

@@ -53,12 +53,12 @@ import {
   chapter15SlideAnchors,
   chapter15SlideAnchorsEn,
 } from './chapter15.slidesync'
-import { chapter16Slides, chapter16SlideAnchors } from './chapter16.slidesync'
-import { chapter17Slides, chapter17SlideAnchors } from './chapter17.slidesync'
+import { chapter16Slides, chapter16SlidesEn, chapter16SlideAnchors, chapter16SlideAnchorsEn } from './chapter16.slidesync'
+import { chapter17Slides, chapter17SlidesEn, chapter17SlideAnchors, chapter17SlideAnchorsEn } from './chapter17.slidesync'
 import { chapter18Slides, chapter18SlideAnchors } from './chapter18.slidesync'
-import { chapter19Slides, chapter19SlideAnchors } from './chapter19.slidesync'
-import { chapter20Slides, chapter20SlideAnchors } from './chapter20.slidesync'
-import { chapter21Slides, chapter21SlideAnchors } from './chapter21.slidesync'
+import { chapter19Slides, chapter19SlidesEn, chapter19SlideAnchors, chapter19SlideAnchorsEn } from './chapter19.slidesync'
+import { chapter20Slides, chapter20SlidesEn, chapter20SlideAnchors, chapter20SlideAnchorsEn } from './chapter20.slidesync'
+import { chapter21Slides, chapter21SlidesEn, chapter21SlideAnchors, chapter21SlideAnchorsEn } from './chapter21.slidesync'
 import type { Lang } from '@/app/i18n/translations'
 import { FREE_CHAPTER_KEYS } from '@/lib/access'
 import { computeSlideVisuals, slideNumbers } from '@/lib/slideVisuals'
@@ -190,12 +190,27 @@ const slideSearchSources: Record<string, readonly SlideSearchSource[]> = {
     { lang: 'fr', slides: chapter15Slides, anchors: chapter15SlideAnchors },
     { lang: 'en', slides: chapter15SlidesEn, anchors: chapter15SlideAnchorsEn },
   ],
-  'chapter-16': [{ lang: 'fr', slides: chapter16Slides, anchors: chapter16SlideAnchors }],
-  'chapter-17': [{ lang: 'fr', slides: chapter17Slides, anchors: chapter17SlideAnchors }],
+  'chapter-16': [
+    { lang: 'fr', slides: chapter16Slides, anchors: chapter16SlideAnchors },
+    { lang: 'en', slides: chapter16SlidesEn, anchors: chapter16SlideAnchorsEn },
+  ],
+  'chapter-17': [
+    { lang: 'fr', slides: chapter17Slides, anchors: chapter17SlideAnchors },
+    { lang: 'en', slides: chapter17SlidesEn, anchors: chapter17SlideAnchorsEn },
+  ],
   'chapter-18': [{ lang: 'fr', slides: chapter18Slides, anchors: chapter18SlideAnchors }],
-  'chapter-19': [{ lang: 'fr', slides: chapter19Slides, anchors: chapter19SlideAnchors }],
-  'chapter-20': [{ lang: 'fr', slides: chapter20Slides, anchors: chapter20SlideAnchors }],
-  'chapter-21': [{ lang: 'fr', slides: chapter21Slides, anchors: chapter21SlideAnchors }],
+  'chapter-19': [
+    { lang: 'fr', slides: chapter19Slides, anchors: chapter19SlideAnchors },
+    { lang: 'en', slides: chapter19SlidesEn, anchors: chapter19SlideAnchorsEn },
+  ],
+  'chapter-20': [
+    { lang: 'fr', slides: chapter20Slides, anchors: chapter20SlideAnchors },
+    { lang: 'en', slides: chapter20SlidesEn, anchors: chapter20SlideAnchorsEn },
+  ],
+  'chapter-21': [
+    { lang: 'fr', slides: chapter21Slides, anchors: chapter21SlideAnchors },
+    { lang: 'en', slides: chapter21SlidesEn, anchors: chapter21SlideAnchorsEn },
+  ],
 }
 
 let cachedSlideSearchIndex: BookSlideSearchRecord[] | null = null

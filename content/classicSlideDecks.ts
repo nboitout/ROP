@@ -17,9 +17,9 @@ import { chapter15Slides, chapter15SlidesDe, chapter15SlidesEn, chapter15SlidesE
 import { chapter16Slides, chapter16SlidesDe, chapter16SlidesEn, chapter16SlidesEs, chapter16SlidesIt } from './chapter16.slidesync'
 import { chapter17Slides, chapter17SlidesDe, chapter17SlidesEn, chapter17SlidesEs, chapter17SlidesIt } from './chapter17.slidesync'
 import { chapter18Slides, chapter18SlidesDe, chapter18SlidesEn, chapter18SlidesEs, chapter18SlidesIt } from './chapter18.slidesync'
-import { chapter19Slides } from './chapter19.slidesync'
-import { chapter20Slides } from './chapter20.slidesync'
-import { chapter21Slides } from './chapter21.slidesync'
+import { chapter19Slides, chapter19SlidesEn } from './chapter19.slidesync'
+import { chapter20Slides, chapter20SlidesEn } from './chapter20.slidesync'
+import { chapter21Slides, chapter21SlidesEn } from './chapter21.slidesync'
 import type { Lang } from '@/app/i18n/translations'
 
 export type ClassicSlide = { src: string; title: string; orientation?: 'portrait' }
@@ -43,7 +43,7 @@ export const classicSlideDecks: Record<string, Partial<Record<Lang, ClassicSlide
   'chapter-16': { fr: chapter16Slides, en: chapter16SlidesEn, de: chapter16SlidesDe, es: chapter16SlidesEs, it: chapter16SlidesIt },
   'chapter-17': { fr: chapter17Slides, en: chapter17SlidesEn, de: chapter17SlidesDe, es: chapter17SlidesEs, it: chapter17SlidesIt },
   'chapter-18': { fr: chapter18Slides, en: chapter18SlidesEn, de: chapter18SlidesDe, es: chapter18SlidesEs, it: chapter18SlidesIt },
-  'chapter-19': { fr: chapter19Slides },
-  'chapter-20': { fr: chapter20Slides },
-  'chapter-21': { fr: chapter21Slides },
+  'chapter-19': { fr: chapter19Slides, en: chapter19SlidesEn },
+  'chapter-20': { fr: chapter20Slides, en: chapter20SlidesEn },
+  'chapter-21': { fr: chapter21Slides, en: chapter21SlidesEn },
 }

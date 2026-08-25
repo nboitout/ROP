@@ -39,7 +39,7 @@ function withChapter17Titles(titles: string[]): SyncSlide[] {
   return chapter17Slides.map((slide, index) => ({ ...slide, title: titles[index] ?? slide.title }))
 }
 
-export const chapter17SlidesEn = withChapter17Titles([
+export const chapter17SlidesEnLegacy = withChapter17Titles([
   'Chapter 17: the pelvic cavity',
   'The peritoneum and suspension system',
   'Organization of the medial visceral compartment — frontal view',
@@ -157,4 +157,49 @@ export const chapter17SlideAnchors: SyncAnchor[] = [
   { sectionId: 'zones-reflexes-podales', blockIndex: 22, slide: 23, end: { sectionId: 'zones-reflexes-podales', blockIndex: 22 } },
   { sectionId: 'zones-reflexes-podales', blockIndex: 23, slide: 24, end: { sectionId: 'zones-reflexes-podales', blockIndex: 23 } },
   { sectionId: 'zones-reflexes-podales', blockIndex: 24, slide: 25, end: { sectionId: 'zones-reflexes-podales', blockIndex: 24 } },
+]
+
+// EN REVISED DECK CHAPTER 17
+export const chapter17SlidesEn: SyncSlide[] = [
+  { src: '/chapter-17/EN/Images/NCH 17 EN IMG 1.png', title: 'Chapter 17: The Pelvic Cavity' },
+  { src: '/chapter-17/EN/Images/NCH 17 EN IMG 2.png', title: 'The Peritoneum and the Suspension System' },
+  { src: '/chapter-17/EN/Images/NCH 17 EN IMG 3.png', title: 'Organization of the Medial Visceral Compartment — Frontal View' },
+  { src: '/chapter-17/EN/Images/NCH 17 EN IMG 4.png', title: 'Organization of the Medial Visceral Compartment — Sagittal View' },
+  { src: '/chapter-17/EN/Images/NCH 17 EN IMG 5.png', title: 'The Vertebro-Hip-Pelvic Unit' },
+  { src: '/chapter-17/EN/Images/NCH 17 EN IMG 6.png', title: 'Biomechanics: Management of Pressure and Gravity' },
+  { src: '/chapter-17/EN/Images/NCH 17 EN IMG 7.png', title: 'The Perineum: Boundaries and Organization' },
+  { src: '/chapter-17/EN/Images/NCH 17 EN IMG 8.png', title: 'Deep Walls and Musculature of the Pelvis' },
+  { src: '/chapter-17/EN/Images/NCH 17 EN IMG 9.png', title: 'Arterial Supply and Venous Drainage of the Pelvis' },
+  { src: '/chapter-17/EN/Images/NCH 17 EN IMG 10.png', title: 'Somatic Innervation I: The Piriformis Trap' },
+  { src: '/chapter-17/EN/Images/NCH 17 EN IMG 11.png', title: 'Somatic Innervation II: The Pudendal Nerve Pathway' },
+  { src: '/chapter-17/EN/Images/NCH 17 EN IMG 12.png', title: 'Autonomic Innervation and Central Control' },
+  { src: '/chapter-17/EN/Images/NCH 17 EN IMG 13.png', title: 'Higher Autonomic Centers' },
+  { src: '/chapter-17/EN/Images/NCH 17 EN IMG 14.png', title: 'Biomechanics: Management of Pressure and Gravity' },
+  { src: '/chapter-17/EN/Images/NCH 17 EN IMG 15.png', title: 'Biomechanics: Balance of the Three Diaphragms' },
+  { src: '/chapter-17/EN/Images/NCH 17 EN IMG 16.png', title: 'Biomechanical Disorder: Visceral Ptosis' },
+  { src: '/chapter-17/EN/Images/NCH 17 EN IMG 17.png', title: 'Pudendal Syndrome' },
+  { src: '/chapter-17/EN/Images/NCH 17 EN IMG 18.png', title: 'Clinical Summary: Mechanical and Neurological Failures' },
+  { src: '/chapter-17/EN/Images/NCH 17 EN IMG 19.png', title: 'ROP Clinical Synthesis: Pelvic Cavity' },
+]
+
+export const chapter17SlideAnchorsEn: SyncAnchor[] = [
+  { sectionId: 'presentation', blockIndex: -1, slide: 1 },
+  { sectionId: 'situation', blockIndex: 10, slide: 2 },
+  { sectionId: 'situation', blockIndex: 6, slide: 3 },
+  { sectionId: 'situation', blockIndex: 6, slide: 4 },
+  { sectionId: 'situation', blockIndex: 14, slide: 5 },
+  { sectionId: 'physiologie', blockIndex: 0, slide: 6 },
+  { sectionId: 'anatomie', blockIndex: 19, slide: 7 },
+  { sectionId: 'anatomie', blockIndex: 0, slide: 8 },
+  { sectionId: 'vascularisation', blockIndex: 0, slide: 9 },
+  { sectionId: 'innervation', blockIndex: 0, slide: 10 },
+  { sectionId: 'innervation', blockIndex: 6, slide: 11 },
+  { sectionId: 'innervation', blockIndex: 12, slide: 12 },
+  { sectionId: 'innervation', blockIndex: 17, slide: 13 },
+  { sectionId: 'physiologie', blockIndex: 0, slide: 14 },
+  { sectionId: 'physiologie', blockIndex: 8, slide: 15 },
+  { sectionId: 'pathologies-courantes', blockIndex: 0, slide: 16 },
+  { sectionId: 'pathologies-courantes', blockIndex: 3, slide: 17 },
+  { sectionId: 'pathologies-courantes', blockIndex: 0, slide: 18 },
+  { sectionId: 'zones-reflexes-podales', blockIndex: -1, slide: 19 },
 ]

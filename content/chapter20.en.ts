@@ -1,6 +1,8 @@
+// Chapter 20 content — English
+// Source: public/chapter-20/EN/Chapter_20_Male_Genital_Organs_Medical_English_Revised.docx
+
 import type { Chapter } from './types'
 
-// English content for chapter 20
 export const chapter20En: Chapter = {
   "slug": "chapter-20",
   "number": "20",
@@ -8,912 +10,991 @@ export const chapter20En: Chapter = {
   "sections": [
     {
       "id": "presentation",
-      "title": "Overview",
+      "title": "1. Overview",
       "blocks": [
         {
-          "type": "bullets",
-          "items": [
-            "Around the age of sixty, the prostate enlarges as a result of hormonal imbalance and exerts greater pressure on the urethra and bladder. This is when many men begin to experience urinary problems, whose repercussions also affect their sexual and psycho-emotional life.",
-            "The prostate also brings its share of disorders of pelvic statics, lumbosciatic pain, or perineal pain, which may conceal vesicoprostatic dysfunction and are accentuated by a sedentary lifestyle, obesity, and poor lifestyle habits.",
-            "Even more than women, most men still often find it difficult to speak about “these things.” Surgery and drug treatments are not without risk, because they may cause side effects that are poorly tolerated: impotence, incontinence, and retrograde ejaculation.",
-            "ROP may help reduce the consequences of prostatic problems, provided that the patient also adopts good lifestyle habits. ROP has no iatrogenic effects and preserves male modesty through our remote action."
-          ]
+          "type": "para",
+          "text": "Around the age of 60, hormonal changes cause the prostate to enlarge, increasing pressure on the urethra and bladder. Many men then begin to experience urinary problems that may also affect their sexual and psycho-emotional well-being."
         },
         {
-          "type": "sub",
-          "text": "The male reproductive system"
+          "type": "para",
+          "text": "The prostate may also contribute to disturbances of pelvic mechanics, lumbosciatica, or perineal pain that can conceal vesicoprostatic dysfunction and may be aggravated by a sedentary lifestyle, obesity, and poor health habits."
+        },
+        {
+          "type": "para",
+          "text": "For many men, discussing “such matters” remains particularly difficult. Surgery and pharmacological treatments are not without risk, and their adverse effects—including erectile dysfunction, incontinence, and retrograde ejaculation—may be poorly tolerated."
+        },
+        {
+          "type": "para",
+          "text": "ROP may help reduce the consequences of prostatic disorders, provided that the patient also adopts a healthy lifestyle. ROP has no direct iatrogenic effects and, because it is applied at a distance, respects male modesty."
         },
         {
           "type": "bullets",
           "items": [
-            "it comprises the testes, epididymides, deferent ducts, seminal vesicles, ejaculatory ducts, prostate, urethra, and penis."
+            "The male reproductive system comprises the testes, epididymides, ductus deferentes, seminal vesicles, ejaculatory ducts, prostate, urethra, and penis."
           ]
         }
       ]
     },
     {
       "id": "situation",
-      "title": "Location",
+      "title": "2. Location",
       "blocks": [
         {
           "type": "sub",
-          "text": "Embryonic migration of the gonads in both sexes"
+          "text": "2.1. Embryonic migration of the gonads"
+        },
+        {
+          "type": "para",
+          "text": "The gonads initially develop near the kidneys. From the third month of gestation, they begin to migrate from the posterior abdominal wall, guided in particular by the gubernaculum. Their subsequent development differs according to sex."
         },
         {
           "type": "bullets",
           "items": [
-            "the gonads form near the kidneys. From the 3rd month of gestation, the gonads, guided by a tissue cord, the gubernaculum, migrate from the posterior abdominal wall toward the entrance of the inguinal canal:"
+            "In females, only the round ligament, a remnant of the gubernaculum, continues through the inguinal canal.",
+            "In males, the testes continue their descent through the inguinal canal, bringing with them their arteries, veins, lymphatics, nerves, and the ductus deferens. They reach the deep inguinal ring at approximately the sixth month, traverse the canal during the seventh month, and attain their definitive intrascrotal position towards the end of the eighth month. This descent is regulated by hormonal factors, fetal growth, and increasing testicular weight."
           ]
+        },
+        {
+          "type": "para",
+          "text": "Abnormalities are common, ranging from simple inguinoscrotal ectopia to pelvic, iliac, or lumbar cryptorchidism, and may cause infertility or cancer."
         },
         {
           "type": "sub",
-          "text": "In women"
+          "text": "2.2. Testes"
         },
         {
-          "type": "bullets",
-          "items": [
-            "only the round ligament, a remnant of the gubernaculum, continues its migration through the inguinal canal.",
-            "In men, the testes continue their migration through the inguinal canal, carrying with them arteries, veins, lymphatics, nerves, and the deferent duct. The testes reach the deep inguinal ring around the 6th month, pass through the canal during the 7th month, and reach their definitive intrascrotal position toward the end of the 8th month. This migration is regulated by the hormonal system, fetal growth, and the increasing weight of the testes.",
-            "Anomalies are common, ranging from simple inguinoscrotal ectopia to pelvic, iliac, or lumbar cryptorchidism, which may cause infertility or cancer."
-          ]
+          "type": "para",
+          "text": "The testes lie outside the pelvic cavity, within the scrotum beneath the perineum. This position maintains them at a temperature slightly below that of the abdominal cavity, which is required for normal spermatogenesis."
         },
         {
           "type": "sub",
-          "text": "Testes"
+          "text": "RELEVANCE TO ROP"
         },
         {
-          "type": "bullets",
-          "items": [
-            "they are located outside the pelvic cavity, in the scrotum beneath the perineum, so that they remain at a temperature lower than that of the abdomen, approximately 2 °C lower."
-          ]
-        },
-        {
-          "type": "rop",
-          "body": [
-            "The shared reflex zone of the ovaries and testes is explained by their common embryological migration as far as the pelvic cavity."
-          ]
+          "type": "para",
+          "text": "The ovaries and testes share the same reflex zone because of their common embryological origin and migration towards the pelvic cavity."
         },
         {
           "type": "sub",
-          "text": "Prostate"
+          "text": "2.3. Prostate"
         },
         {
-          "type": "bullets",
-          "items": [
-            "it is located deep within the pelvic cavity, between the trigone and the neck of the bladder superiorly, the deep transverse perineal muscle inferiorly, 2 to 3 cm posterior to the pubic symphysis, and anterior to the rectal ampulla."
-          ]
+          "type": "para",
+          "text": "The prostate lies deep within the pelvic cavity, below the bladder neck and above the pelvic floor. It is situated approximately 2–3 cm posterior to the pubic symphysis and anterior to the rectal ampulla."
         }
       ]
     },
     {
       "id": "anatomie",
-      "title": "Anatomy",
+      "title": "3. Anatomy",
       "blocks": [
         {
           "type": "sub",
-          "text": "Testes"
+          "text": "3.1. Testes"
         },
         {
-          "type": "bullets",
-          "items": [
-            "in the scrotum, they are the site of spermatozoon formation and of hormonal secretion, namely testosterone.",
-            "Ovoid in shape and 5 cm long in adults, the testis is covered by a resistant membrane, the tunica albuginea. It is surrounded by a sheath, the vaginal process. Its internal structure consists of lobules containing 400 to 600 seminiferous tubules, the site of sperm production and maturation (spermatogenesis). These tubules open, at the superior pole of the testis, into the epididymal duct."
-          ]
+          "type": "para",
+          "text": "Within the scrotum, the testes produce spermatozoa and secrete testosterone."
         },
         {
-          "type": "sub",
-          "text": "Epididymis"
-        },
-        {
-          "type": "bullets",
-          "items": [
-            "it stores spermatozoa, which acquire their ability to move and fertilize an oocyte. It caps the testis and descends to its inferior pole, where it continues as the deferent duct."
-          ]
+          "type": "para",
+          "text": "Ovoid in shape and approximately 5 cm long in the adult, each testis is covered by a tough fibrous capsule, the tunica albuginea, and partly invested by the tunica vaginalis. Internally, it contains lobules with 400–600 seminiferous tubules, where spermatozoa are produced and develop during spermatogenesis. These tubules drain through the straight tubules into the rete testis and subsequently through the efferent ductules into the epididymal duct."
         },
         {
           "type": "sub",
-          "text": "Deferent duct"
+          "text": "3.2. Epididymis"
         },
         {
-          "type": "bullets",
-          "items": [
-            "it is 50 to 60 cm long. It transports spermatozoa from the epididymis to the ejaculatory ducts. In its pelvic portion, it passes through the inguinal canal."
-          ]
-        },
-        {
-          "type": "sub",
-          "text": "Inguinal canal"
-        },
-        {
-          "type": "bullets",
-          "items": [
-            "this is a 4 cm tunnel through the anterior abdominal wall, just above and parallel to the inguinal ligament. It has two openings:"
-          ]
+          "type": "para",
+          "text": "The epididymis caps the testis and descends along its posterior border to the inferior pole, where it continues as the ductus deferens. It receives spermatozoa from the testis and contributes to their maturation and acquisition of motility."
         },
         {
           "type": "sub",
-          "text": "Deep inguinal ring"
+          "text": "3.3. Ductus deferens"
         },
         {
-          "type": "bullets",
-          "items": [
-            "it lies halfway between the anterior superior iliac spine and the pubic symphysis. It corresponds to the entrance of the inguinal canal."
-          ]
-        },
-        {
-          "type": "sub",
-          "text": "Superficial inguinal ring"
-        },
-        {
-          "type": "bullets",
-          "items": [
-            "it is located above the pubic tubercle. It corresponds to the exit of the inguinal canal."
-          ]
+          "type": "para",
+          "text": "The ductus deferens, approximately 50–60 cm long, conveys spermatozoa from the epididymis to the ejaculatory ducts. It ascends within the spermatic cord, passes through the inguinal canal, and enters the pelvic cavity."
         },
         {
           "type": "sub",
-          "text": "Structure"
+          "text": "3.4. Inguinal canal"
         },
         {
-          "type": "bullets",
-          "items": [
-            "the inguinal canal is formed by the same layers as the anterior abdominal wall. It transmits the spermatic cord, which contains the inguinal vessels, the deferent duct, and the iliohypogastric, ilioinguinal, and genitofemoral nerves, collateral branches of the lumbar plexus (L1 to L4). In men, these nerves contribute to the sensory innervation of the pubis and scrotum and, in women, to that of the pubis and labia majora."
-          ]
-        },
-        {
-          "type": "sub",
-          "text": "Inguinal hernias"
-        },
-        {
-          "type": "bullets",
-          "items": [
-            "as an area of weakness in the anterior abdominal wall, the inguinal canal is responsible for inguinal hernias, which are much more frequent in men than in women."
-          ]
+          "type": "para",
+          "text": "The inguinal canal is an approximately 4-cm passage through the anterior abdominal wall, immediately superior and parallel to the inguinal ligament. It has a deep and a superficial ring."
         },
         {
           "type": "sub",
-          "text": "Cremaster muscle"
+          "text": "3.4.1. Deep inguinal ring"
         },
         {
-          "type": "bullets",
-          "items": [
-            "its proximal attachment is on the inguinal ligament and pubis. It accompanies the spermatic cord through the inguinal canal. Its distal attachment is on the fibrous tunic of the scrotum. It is innervated by the genitofemoral and ilioinguinal nerves. It is the elevator muscle of the scrotum, which promotes the migration of sperm through the deferent duct by increasing the internal pressure of the testis and epididymis."
-          ]
-        },
-        {
-          "type": "rop",
-          "body": [
-            "Our combined reflex action on the inguinal ligament and on the deep and superficial openings of the inguinal canal helps balance intracanal pressures on the spermatic cord and on its vascular, neural, and deferent-duct contents."
-          ]
+          "type": "para",
+          "text": "The deep inguinal ring forms the entrance to the inguinal canal. It projects approximately midway between the anterior superior iliac spine and the pubic symphysis."
         },
         {
           "type": "sub",
-          "text": "Seminal vesicles"
+          "text": "3.4.2. Superficial inguinal ring"
         },
         {
-          "type": "bullets",
-          "items": [
-            "male accessory sex glands, they lie posterior to the prostate, contained within Denonvilliers fascia, which separates the prostate from the rectum.",
-            "Measuring 5 to 8 cm in length and 1.5 cm in width, the seminal vesicles have the consistency of a slightly ripe fig.",
-            "They produce a significant portion of the seminal fluid, rich in particular in fructose, which supports sperm function and contributes to ejaculate volume."
-          ]
+          "type": "para",
+          "text": "The superficial inguinal ring forms the exit from the inguinal canal. It lies superior to the pubic tubercle."
         },
         {
           "type": "sub",
-          "text": "Ejaculatory ducts"
+          "text": "3.4.3. Structure of the inguinal canal"
         },
         {
-          "type": "bullets",
-          "items": [
-            "the two deferent ducts join the ducts of the seminal vesicles to form the ejaculatory ducts, which open into the prostatic urethra."
-          ]
-        },
-        {
-          "type": "sub",
-          "text": "Prostate"
-        },
-        {
-          "type": "bullets",
-          "items": [
-            "this word comes from the Greek prostates, meaning placed in front of or exposed. Indeed, the prostate lies in front of the rectum. A male accessory sex gland, it secretes an enzyme, prostate-specific antigen (PSA), whose level is important in the diagnosis of cancer.",
-            "In a young adult, it has the shape of a chestnut. Its firm but supple consistency is comparable to that of the eyeball. It weighs 20 to 25 g. As its volume increases substantially after the age of 60, it may become as large as an orange and exert pressure on the urethra and bladder, causing voiding disorders.",
-            "The prostate contributes to the composition of semen and to the protection of spermatozoa during their passage through the vagina, uterus, and fallopian tubes."
-          ]
+          "type": "para",
+          "text": "The inguinal canal is formed by the layers of the anterior abdominal wall. In males, it transmits the spermatic cord, which contains the ductus deferens, vessels, and neural structures. The region is also related to the iliohypogastric, ilioinguinal, and genitofemoral nerves arising from the lumbar plexus. These territories contribute to sensory innervation of the pubic and scrotal regions."
         },
         {
           "type": "sub",
-          "text": "External structure"
+          "text": "3.4.4. Inguinal hernias"
         },
         {
-          "type": "bullets",
-          "items": [
-            "this is the periprostatic capsule, formed by connective-muscular fibers. It is comparable to the shell surrounding a chestnut. It ramifies within the prostate, partitioning the different prostatic lobes.",
-            "Lobes of the prostate:"
-          ]
+          "type": "para",
+          "text": "The inguinal canal is a weak area of the anterior abdominal wall. Inguinal hernias are particularly common in men."
         },
         {
           "type": "sub",
-          "text": "Lateral lobes"
+          "text": "3.4.5. Cremaster muscle"
         },
         {
-          "type": "bullets",
-          "items": [
-            "stimulated by male hormones, they are separated by a median groove that disappears when the middle lobe of the prostate hypertrophies."
-          ]
-        },
-        {
-          "type": "sub",
-          "text": "Middle lobe"
-        },
-        {
-          "type": "bullets",
-          "items": [
-            "medial, it is traversed by the prostatic urethra, which presents a slit, the prostatic utricle. This is the atrophied remnant of the female fallopian tubes, uterus, and vagina. Older authors called it the “male vagina.”",
-            "Estrogen-sensitive, the middle lobe hypertrophies during andropause as a result of hormonal imbalance affecting androgens and testosterone. Its increase in volume compresses the urethra, making micturition difficult, and ejaculation follows a retrograde course toward the bladder."
-          ]
+          "type": "para",
+          "text": "The cremaster muscle accompanies the spermatic cord. Its proximal attachments are at the inguinal ligament and pubis; its fibres descend around the cord and testicular coverings. It is innervated principally by the genital branch of the genitofemoral nerve and elevates the testis."
         },
         {
           "type": "sub",
-          "text": "Internal structure"
+          "text": "RELEVANCE TO ROP"
         },
         {
-          "type": "bullets",
-          "items": [
-            "the prostate contains approximately sixty glands that secrete and discharge prostatic secretion into the urethra."
-          ]
-        },
-        {
-          "type": "sub",
-          "text": "Urethra"
-        },
-        {
-          "type": "bullets",
-          "items": [
-            "it is both a urinary and a spermatic duct. Two parts are distinguished:",
-            "Prostatic urethra: this is the portion passing through the prostate. It is joined by the two ejaculatory ducts. About fifteen small orifices allow prostatic fluid to flow into the urethra."
-          ]
+          "type": "para",
+          "text": "Combined reflex work on the inguinal ligament and the deep and superficial inguinal rings is intended to help balance pressure within the canal around the spermatic cord and its vascular, neural, and deferential contents."
         },
         {
           "type": "sub",
-          "text": "Colliculus, or verumontanum"
+          "text": "3.5. Seminal vesicles"
         },
         {
-          "type": "bullets",
-          "items": [
-            "this is a ridge made of erectile tissue in the middle portion of the prostatic urethra. During erection, the verumontanum dilates, preventing urination during ejaculation and preventing retrograde ejaculation into the bladder."
-          ]
+          "type": "para",
+          "text": "The seminal vesicles are paired accessory sex glands situated posterior to the bladder and superior to the prostate, adjacent to Denonvilliers’ fascia, which separates them from the rectum."
         },
         {
-          "type": "sub",
-          "text": "Sphincters"
+          "type": "para",
+          "text": "Measuring 5–8 cm in length and approximately 1.5 cm in width, the seminal vesicles have a consistency comparable to that of a slightly ripe fig."
         },
         {
-          "type": "bullets",
-          "items": [
-            "the smooth sphincter surrounds the origin of the prostatic urethra at the bladder. It is innervated by the autonomic nervous system. The striated sphincter surrounds its caudal portion. Innervated by the pudendal nerve, it controls the voluntary motor function of bladder occlusion. Both sphincters lose their occlusive efficiency when the prostate hypertrophies."
-          ]
+          "type": "para",
+          "text": "They produce a substantial proportion of seminal fluid, notably rich in fructose, which supports sperm function and contributes to ejaculate volume."
         },
         {
           "type": "sub",
-          "text": "Membranous urethra"
+          "text": "3.6. Ejaculatory ducts"
+        },
+        {
+          "type": "para",
+          "text": "The ejaculatory ducts are formed by the union of the ampulla of the ductus deferens with the duct of the seminal vesicle. They traverse the prostate and open into the prostatic urethra."
+        },
+        {
+          "type": "sub",
+          "text": "3.7. Prostate"
+        },
+        {
+          "type": "para",
+          "text": "In a young adult, the prostate is chestnut-shaped. Its firm yet supple consistency may be compared with that of the eyeball, and it weighs approximately 20–25 g. Its volume may increase considerably after the age of 60; it can become markedly enlarged, exert pressure on the urethra and bladder, and cause voiding symptoms."
+        },
+        {
+          "type": "para",
+          "text": "The prostate contributes to semen composition and helps support spermatozoa during their passage through the vagina, uterus, and uterine tubes."
+        },
+        {
+          "type": "sub",
+          "text": "3.7.1. External structure"
+        },
+        {
+          "type": "para",
+          "text": "The prostate is surrounded by a fibromuscular capsule. Connective and smooth-muscle trabeculae extend inwards and contribute to the organisation of prostatic tissue."
+        },
+        {
+          "type": "sub",
+          "text": "3.7.2. Lobes of the prostate"
         },
         {
           "type": "bullets",
           "items": [
-            "it continues the prostatic urethra into the penis."
+            "Lateral lobes: influenced by androgens, they are separated by a median groove that becomes less distinct when the median lobe enlarges.",
+            "Median lobe: this midline region is traversed by the prostatic urethra, which bears a small recess, the prostatic utricle. The utricle is an embryological remnant of the Müllerian ducts and was historically termed the “male vagina”."
           ]
+        },
+        {
+          "type": "para",
+          "text": "The median lobe may enlarge with age in the setting of changing androgen–oestrogen balance. Enlargement can compress the urethra, impair micturition, and contribute to retrograde passage of ejaculate towards the bladder."
+        },
+        {
+          "type": "sub",
+          "text": "3.7.3. Internal structure"
+        },
+        {
+          "type": "para",
+          "text": "The prostate contains numerous tubuloalveolar glands whose secretions drain into the prostatic urethra through multiple small ducts."
+        },
+        {
+          "type": "sub",
+          "text": "3.8. Urethra"
+        },
+        {
+          "type": "para",
+          "text": "In males, the urethra conveys both urine and semen. This chapter focuses primarily on its prostatic and membranous portions."
+        },
+        {
+          "type": "sub",
+          "text": "3.8.1. Prostatic urethra"
+        },
+        {
+          "type": "para",
+          "text": "The prostatic urethra traverses the prostate. It receives the two ejaculatory ducts and numerous small ducts conveying prostatic secretions."
+        },
+        {
+          "type": "sub",
+          "text": "3.8.2. Seminal colliculus or verumontanum"
+        },
+        {
+          "type": "para",
+          "text": "The seminal colliculus, or verumontanum, is an elevation on the posterior wall of the prostatic urethra. It is an anatomical landmark near the openings of the ejaculatory ducts and the prostatic utricle."
+        },
+        {
+          "type": "sub",
+          "text": "3.8.3. Sphincters"
+        },
+        {
+          "type": "para",
+          "text": "The internal urethral sphincter, composed of smooth muscle fibres, contributes to involuntary control of the bladder neck. The striated external urethral sphincter, under somatic control through the pudendal nerve, contributes to voluntary continence."
+        },
+        {
+          "type": "sub",
+          "text": "3.8.4. Membranous urethra"
+        },
+        {
+          "type": "para",
+          "text": "The membranous urethra continues from the prostatic urethra through the pelvic floor before becoming the spongy urethra within the penis."
         }
       ]
     },
     {
       "id": "rapports",
-      "title": "Anatomical relationships",
+      "title": "4. Anatomical relationships",
       "blocks": [
         {
           "type": "sub",
-          "text": "Prostatic compartment"
+          "text": "4.1. Prostatic compartment"
+        },
+        {
+          "type": "para",
+          "text": "The prostatic compartment contains the prostate and its coverings. Its anatomical relationships explain the close connections between the prostate, bladder, pelvic floor, rectum, pubic symphysis, and pelvic neurovascular networks."
         },
         {
           "type": "bullets",
           "items": [
-            "it contains the prostate surrounded by its periprostatic capsule. It presents:"
+            "Cranial surface: supports the bladder.",
+            "Ventral surface: related to the pubic symphysis, puboprostatic ligaments, and Santorini’s venous plexus.",
+            "Caudal surface: related to the perineal floor.",
+            "Dorsal surface: related to Denonvilliers’ rectoprostatic fascia, extending from the perineum towards the rectovesical pouch and containing smooth muscle fibres.",
+            "Lateral walls: related to the obturator fasciae and the sacrorectogenitopubic laminae, which contain smooth muscle fibres and transmit the inferior hypogastric plexus."
           ]
         },
         {
           "type": "sub",
-          "text": "Cranial surface"
+          "text": "4.2. Seminal vesicles"
         },
         {
-          "type": "bullets",
-          "items": [
-            "it supports the bladder."
-          ]
-        },
-        {
-          "type": "sub",
-          "text": "Ventral surface"
-        },
-        {
-          "type": "bullets",
-          "items": [
-            "the pubic symphysis, the pubourethral ligaments, and Santorini venous plexus;"
-          ]
-        },
-        {
-          "type": "sub",
-          "text": "Caudal surface"
-        },
-        {
-          "type": "bullets",
-          "items": [
-            "the perineal floor;"
-          ]
-        },
-        {
-          "type": "sub",
-          "text": "Dorsal surface"
-        },
-        {
-          "type": "bullets",
-          "items": [
-            "Denonvilliers prostatoperitoneal fascia, extending from the perineum to the pouch of Douglas. It is the equivalent of the broad ligament in women and is rich in smooth muscle fibers."
-          ]
-        },
-        {
-          "type": "sub",
-          "text": "Lateral walls"
-        },
-        {
-          "type": "bullets",
-          "items": [
-            "the obturator membranes and the sacro-recto-genito-pubic laminae, composed of smooth muscle fibers. They are traversed by the inferior hypogastric plexus."
-          ]
-        },
-        {
-          "type": "sub",
-          "text": "Seminal vesicles"
-        },
-        {
-          "type": "bullets",
-          "items": [
-            "ventrally, they are related to the trigone of the bladder; caudally, to the prostate; dorsally, to the rectum; and cranially, to the rectovesical pouch of Douglas and the peritoneum."
-          ]
+          "type": "para",
+          "text": "The seminal vesicles are related anteriorly to the base of the bladder, inferiorly to the prostate, posteriorly to the rectum, and superiorly to the peritoneum of the rectovesical pouch."
         }
       ]
     },
     {
       "id": "vascularisation",
-      "title": "Vascular supply",
+      "title": "5. Vascular supply",
       "blocks": [
         {
           "type": "sub",
-          "text": "Testis"
+          "text": "5.1. Testes"
+        },
+        {
+          "type": "para",
+          "text": "Because of their abdominal embryological origin and subsequent descent, the testes retain a superior vascular supply arising from the abdominal aorta."
         },
         {
           "type": "bullets",
           "items": [
-            "because of its embryonic migration, the vascular pedicle of the testis has a high origin at L2-L3:"
+            "Arterial supply: the testicular artery arises from the abdominal aorta, near the renal artery.",
+            "Venous drainage: testicular venous drainage resembles that of the ovary. The right testicular vein drains into the inferior vena cava, whereas the left drains into the left renal vein. Left-sided venous stasis may promote varicocele and affect semen parameters. Oligozoospermia denotes a sperm concentration below the applicable reference limit; very low concentrations represent more severe forms. Hypospermia denotes an ejaculate volume below the expected reference range."
           ]
+        },
+        {
+          "type": "para",
+          "text": "The prostatic venous plexus contributes to the support of the prostate and cushions it against minor repetitive trauma. Prostatic venous drainage communicates widely with pelvic venous networks; congestion within the abdominopelvic venous system may therefore be accompanied by prostatic congestion."
         },
         {
           "type": "sub",
-          "text": "Arterial"
+          "text": "RELEVANCE TO ROP"
         },
         {
-          "type": "bullets",
-          "items": [
-            "the spermatic artery arises from the abdominal aorta, near the renal artery;",
-            "Venous: the venous vascular supply of the testis has anatomical features similar to those of the ovary. The right spermatic vein drains into the inferior vena cava, whereas the left spermatic vein drains into the left renal vein. Left-sided venous stasis may promote varicocele and affect the semen analysis. Oligozoospermia is classically defined when sperm concentration is below reference values, around 15 million/mL according to the reference standards used; very low values correspond to more severe forms. Hypospermia corresponds to an ejaculate volume below expected values.",
-            "The venous system maintains the prostate in place and absorbs microtrauma to which the prostate may be exposed. Venous return is under the dual control of the portal system. As with hemorrhoids, any congestion of the portal system, and therefore of the liver, causes congestion of the prostate."
-          ]
+          "type": "para",
+          "text": "The liver, left kidney, and small intestine are among the reflex zones considered when addressing the urogenital system and venous disorders of the lower limbs."
         },
         {
-          "type": "rop",
-          "body": [
-            "The liver, left kidney, and small intestine are among the reflex zones to address when treating the urogenital system and venous disorders of the lower limbs.",
-            "Fixation of the left kidney or clamping of the renal vein by the root of the mesentery or by the aortomesenteric clamp following ptosis of the small intestine slows venous return in the pelvic cavity, causing left-sided varicoceles and varicose veins predominating in the left lower limb. Prostate and seminal vesicles:"
-          ]
+          "type": "para",
+          "text": "Fixation of the left kidney or compression of the left renal vein by the mesenteric root or within the aortomesenteric angle following small-intestinal ptosis is described in this model as potentially impeding pelvic venous return, thereby contributing to left-sided varicocele and varicose veins predominantly affecting the left lower limb."
         }
       ]
     },
     {
       "id": "innervation",
-      "title": "Innervation",
+      "title": "6. Innervation",
       "blocks": [
         {
+          "type": "sub",
+          "text": "6.1. Testes"
+        },
+        {
           "type": "bullets",
           "items": [
-            "Testes:"
+            "Sympathetic: spinal cord segments T10–T12.",
+            "Parasympathetic pelvic pathways: S2–S4.",
+            "Aorticorenal plexus: situated anterior to the renal artery, it receives fibres from the lesser and least thoracic splanchnic nerves and upper lumbar sympathetic pathways. Its branches supply the kidney and testis."
           ]
         },
         {
           "type": "sub",
-          "text": "Sympathetic"
+          "text": "6.2. Prostate"
         },
         {
           "type": "bullets",
           "items": [
-            "spinal origin T10-T11 and T12;",
-            "Pelvic parasympathetic system S2 to S4 (at the level of vertebra L1);"
-          ]
-        },
-        {
-          "type": "sub",
-          "text": "Aorticorenal plexus"
-        },
-        {
-          "type": "bullets",
-          "items": [
-            "located anterior to the renal artery, it receives the lesser splanchnic nerve arising from the 10th, 11th, and 12th thoracic ganglia and the 1st lumbar ganglion. It supplies the kidney and the testis.",
-            "Prostate:"
-          ]
-        },
-        {
-          "type": "sub",
-          "text": "Sympathetic"
-        },
-        {
-          "type": "bullets",
-          "items": [
-            "T12-L1-L2 and the inferior mesenteric ganglion;"
-          ]
-        },
-        {
-          "type": "sub",
-          "text": "Parasympathetic"
-        },
-        {
-          "type": "bullets",
-          "items": [
-            "its origin is the sacral spinal cord S2 to S4, at the level of vertebra L1. The 2nd, 3rd, and 4th sacral roots form Eckardt’s nervi erigentes, destined for the pelvic organs;"
-          ]
-        },
-        {
-          "type": "sub",
-          "text": "Superior hypogastric plexus"
-        },
-        {
-          "type": "bullets",
-          "items": [
-            "it provides sympathetic innervation to the inferior hypogastric plexus."
-          ]
-        },
-        {
-          "type": "sub",
-          "text": "Inferior hypogastric plexus"
-        },
-        {
-          "type": "bullets",
-          "items": [
-            "it is located in the pelvic cavity, contained within the sacro-recto-genito-pubic lamina. It provides autonomic innervation to the pelvic organs."
+            "Sympathetic: T12–L2, through pathways associated with the inferior mesenteric and hypogastric plexuses.",
+            "Parasympathetic: arises from sacral spinal cord segments S2–S4. The pelvic splanchnic nerves supply pelvic organs and contribute to erectile function.",
+            "Superior hypogastric plexus: conveys sympathetic fibres towards the inferior hypogastric plexuses.",
+            "Inferior hypogastric plexus: situated within the pelvic cavity, in relation to the sacrorectogenitopubic laminae, it provides autonomic innervation to the pelvic organs."
           ]
         }
       ]
     },
     {
       "id": "physiologie",
-      "title": "Physiology",
+      "title": "7. Physiology",
       "blocks": [
         {
           "type": "sub",
-          "text": "Testes"
+          "text": "7.1. Testes"
         },
         {
-          "type": "bullets",
-          "items": [
-            "they have a dual function:"
-          ]
-        },
-        {
-          "type": "sub",
-          "text": "Spermatogenesis"
-        },
-        {
-          "type": "bullets",
-          "items": [
-            "the testes are the site of spermatozoon production, which occurs from puberty to old age from germline stem cells, the spermatogonia."
-          ]
+          "type": "para",
+          "text": "The testes perform two principal functions: spermatogenesis and steroidogenesis. These functions are integrated within central endocrine regulation and a specific local environment."
         },
         {
           "type": "sub",
-          "text": "Steroidogenesis"
+          "text": "7.1.1. Spermatogenesis"
         },
         {
-          "type": "bullets",
-          "items": [
-            "testosterone, the male sex hormone, stimulates sexual differentiation in utero after genetic sex determination, male sexual development, spermatogenesis, and male sexual drive."
-          ]
-        },
-        {
-          "type": "sub",
-          "text": "Adrenal cortices"
-        },
-        {
-          "type": "bullets",
-          "items": [
-            "the zona reticularis of the adrenal cortices, stimulated by anterior pituitary ACTH, is a source of testosterone and anabolic androgens that complement testicular testosterone.",
-            "Higher centers: spermatogenesis and testosterone production are regulated by the gonadotropins FSH and LH. These hormones are produced by the pituitary gland on hypothalamic command, in relation with the pineal gland, limbic centers, and cortex. In the central nervous system, testosterone is involved not only in male capacities for mating and procreation but also, to some extent, in behavior such as aggressiveness."
-          ]
+          "type": "para",
+          "text": "Spermatogenesis is the production of spermatozoa from germ cells. It begins at puberty and occurs continuously within the seminiferous tubules, although its efficiency may change with age."
         },
         {
           "type": "sub",
-          "text": "Immunity"
+          "text": "7.1.2. Steroidogenesis"
         },
         {
-          "type": "bullets",
-          "items": [
-            "spermatozoa could be considered foreign bodies by the female organism. They benefit from the production of special testicular proteins that inhibit the normal immune system within the testis.",
-            "Prostate and seminal vesicles:"
-          ]
+          "type": "para",
+          "text": "Testicular steroidogenesis primarily involves testosterone production. This hormone contributes to male sexual differentiation, the development of sexual characteristics, maintenance of spermatogenesis, and sexual function."
         },
         {
           "type": "sub",
-          "text": "Mechanical role"
+          "text": "7.1.3. Contribution of the adrenal cortices"
         },
         {
-          "type": "bullets",
-          "items": [
-            "the bladder rests on the prostate, which provides stability through its firmness, its fixation structures, and Santorini venous system."
-          ]
-        },
-        {
-          "type": "sub",
-          "text": "Urinary continence"
-        },
-        {
-          "type": "bullets",
-          "items": [
-            "the smooth sphincter and the striated sphincter control urinary continence of the bladder. Contraction of the striated sphincter also compresses the prostatic glands as semen passes through the prostatic urethra.",
-            "Composition of semen: spermatozoa are produced in the testes and then mature and are stored mainly in the epididymis. Semen is alkaline and consists of spermatozoa and secretions from the epididymis, seminal vesicles, and prostate. An ejaculation is generally in the range of 2 to 6 cm³. The seminal vesicles produce a significant portion of the seminal fluid, particularly rich in fructose and prostaglandins."
-          ]
+          "type": "para",
+          "text": "Under the influence of ACTH, the zona reticularis of the adrenal cortices also produces adrenal androgens. Their contribution complements gonadal hormone production."
         },
         {
           "type": "sub",
-          "text": "Role of prostatic secretions"
+          "text": "7.1.4. Regulation by higher centres"
         },
         {
-          "type": "bullets",
-          "items": [
-            "the prostate does not produce hormones, but it is a hormone-dependent organ. Its secretions, influenced by androgens, contribute to the composition of seminal fluid, to its fluidity, and to its biochemical balance.",
-            "The fluidity of seminal fluid, owing to prostatic enzymes, including prostate-specific antigen (PSA);",
-            "The supply of components such as citrate, zinc, and enzymes involved in sperm function;",
-            "Participation in the pH balance of semen, in addition to the secretions of the seminal vesicles.",
-            "Through its secretions, the prostate contributes to spermatozoon motility and viability, without being solely responsible for the fertilizing capacity of semen."
-          ]
+          "type": "para",
+          "text": "Testicular function is regulated by the hypothalamic–pituitary–gonadal axis. The hypothalamus controls pituitary secretion of FSH and LH, which contribute respectively to spermatogenesis and testosterone production. This endocrine regulation is integrated with central functions involved in sexuality, behaviour, and adaptation."
         },
         {
           "type": "sub",
-          "text": "Role of the seminal vesicles"
+          "text": "7.1.5. Immunity"
+        },
+        {
+          "type": "para",
+          "text": "Because germ cells emerge after immune tolerance has been established, they require a protective environment. The testis therefore possesses barrier mechanisms and local immune regulation that help protect spermatogenesis."
+        },
+        {
+          "type": "sub",
+          "text": "7.2. Prostate and seminal vesicles"
+        },
+        {
+          "type": "sub",
+          "text": "7.2.1. Mechanical role"
+        },
+        {
+          "type": "para",
+          "text": "Through its position beneath the bladder neck and its relationships with the pelvic-floor structures, the prostate contributes to the mechanical organisation of the vesicourethral region. Its supporting structures and venous environment contribute to regional stability."
+        },
+        {
+          "type": "sub",
+          "text": "7.2.2. Urinary continence"
+        },
+        {
+          "type": "para",
+          "text": "Urinary continence depends on coordination between the bladder neck, internal urethral sphincter, external urethral sphincter, and pelvic floor. The prostate’s anatomical proximity to these structures explains why changes in its volume or consistency may affect micturition."
+        },
+        {
+          "type": "sub",
+          "text": "7.2.3. Composition of semen"
+        },
+        {
+          "type": "para",
+          "text": "Semen combines spermatozoa of testicular origin with secretions from the genital tract and accessory sex glands, particularly the seminal vesicles and prostate. These secretions contribute to ejaculate volume and pH and provide conditions necessary for sperm motility and survival."
+        },
+        {
+          "type": "sub",
+          "text": "7.2.4. Role of prostatic secretions"
         },
         {
           "type": "bullets",
           "items": [
-            "they produce a significant portion of the seminal fluid, which is alkaline and rich in fructose. They do not store spermatozoa, which mature and are stored mainly in the epididymis."
+            "Liquefaction of seminal fluid through prostatic enzymes, including prostate-specific antigen (PSA).",
+            "Provision of citrate, zinc, and enzymes that contribute to semen function.",
+            "Contribution to semen pH, complementing the secretions of the seminal vesicles."
           ]
+        },
+        {
+          "type": "para",
+          "text": "Through its secretions, the prostate contributes to sperm motility and viability, although it is not solely responsible for the fertilising capacity of semen."
+        },
+        {
+          "type": "sub",
+          "text": "7.2.5. Role of the seminal vesicles"
+        },
+        {
+          "type": "para",
+          "text": "The seminal vesicles produce a substantial proportion of seminal fluid. Their fructose-rich secretion contributes to ejaculate volume and provides substrates for sperm metabolism."
         }
       ]
     },
     {
       "id": "pathologies-courantes",
-      "title": "Common pathologies",
+      "title": "8. Common disorders",
       "blocks": [
         {
-          "type": "bullets",
-          "items": [
-            "Diagnoses to exclude:"
-          ]
+          "type": "sub",
+          "text": "8.1. Diagnosis of exclusion"
         },
         {
           "type": "sub",
-          "text": "Testicular cancer"
+          "text": "8.1.1. Testicular cancer"
+        },
+        {
+          "type": "para",
+          "text": "Testicular cancer predominantly affects young men, with a particular incidence from late adolescence to early adulthood. Any persistent testicular mass or enlargement requires medical assessment."
+        },
+        {
+          "type": "para",
+          "text": "The most common presentation is testicular enlargement. The disease results from DNA mutations within testicular cells, causing rapid proliferation and tumour formation. Cryptorchidism is an established risk factor for testicular cancer."
         },
         {
           "type": "bullets",
           "items": [
-            "in France, it affects 2,300 men per year, mainly between the ages of 15 and 35.",
-            "The most frequent mode of discovery is an increase in volume. The cause is a mutation of the DNA of testicular cells, which multiply rapidly to form a tumor. Cryptorchidism, or undescended testis, is a cause of testicular cancer."
-          ]
-        },
-        {
-          "type": "sub",
-          "text": "Evolution"
-        },
-        {
-          "type": "bullets",
-          "items": [
-            "the risk is metastasis to the lymph nodes, liver, and lungs.",
+            "Progression: the principal risk is metastatic spread to lymph nodes, the liver, or the lungs.",
             "Symptoms:",
-            "Lump or swelling in the testis;",
-            "Pain or discomfort in the testis;",
-            "Pain or a feeling of heaviness in the lower abdomen or back;",
-            "Enlargement of breast tissue;",
-            "Changes in voice and growth of facial and body hair in prepubertal boys.",
-            "The main treatment is removal of the testis (orchidectomy)."
-          ]
-        },
-        {
-          "type": "sub",
-          "text": "Testicular torsion"
-        },
-        {
-          "type": "bullets",
-          "items": [
-            "this is an abnormality of testicular fixation caused by torsion of its spermatic cord. Since the testis is no longer supplied with blood, it becomes necrotic. Necrosis occurs within 6 hours after the onset of the first pain. This is a surgical emergency.",
-            "The two periods in which testicular torsion is discovered are:"
-          ]
-        },
-        {
-          "type": "sub",
-          "text": "Perinatal period"
-        },
-        {
-          "type": "bullets",
-          "items": [
-            "testicular torsion presents as an increase in testicular volume, with a bluish or red coloration. The testis becomes particularly tender to touch, and the newborn expresses the pain through sudden crying."
-          ]
-        },
-        {
-          "type": "sub",
-          "text": "Pubertal period"
-        },
-        {
-          "type": "bullets",
-          "items": [
-            "testicular torsion may occur during adolescence, with the rapid increase in testicular volume at puberty.",
-            "Symptoms consist of sudden, intense pain felt in the testis. It may radiate to the groin and/or the lumbar region. Surgical intervention is the only viable treatment: removal of the testis (orchidectomy)."
+            "A lump or swelling within the testis.",
+            "Testicular pain or discomfort.",
+            "Pain or a sensation of heaviness in the lower abdomen or back.",
+            "Breast-tissue enlargement.",
+            "Voice changes and increased facial or body-hair growth in prepubertal boys."
           ]
         },
         {
           "type": "para",
-          "text": "Testicular torsion is not in itself a cause of male infertility. The remaining testis is sufficient for spermatozoon production, although a reduction in fertility is often observed."
+          "text": "The principal treatment is removal of the affected testis (orchidectomy)."
         },
         {
           "type": "sub",
-          "text": "Prostate cancer"
+          "text": "8.1.2. Testicular torsion"
+        },
+        {
+          "type": "para",
+          "text": "Testicular torsion is rotation of the spermatic cord that abruptly compromises the blood supply to the testis. The risk of ischaemia and subsequent testicular necrosis increases rapidly; this is a surgical emergency requiring immediate treatment."
+        },
+        {
+          "type": "para",
+          "text": "Testicular torsion is encountered particularly during two periods:"
         },
         {
           "type": "bullets",
           "items": [
-            "prostate cancer is most often an adenocarcinoma arising from prostatic glandular cells, frequently in the peripheral zone. The prostate does not produce androgens, but it is hormone-dependent: androgens influence its growth and function. It is one of the most common cancers in men."
-          ]
-        },
-        {
-          "type": "sub",
-          "text": "Diagnosis"
-        },
-        {
-          "type": "bullets",
-          "items": [
-            "it is made by digital rectal examination (a stony-hard prostate, indurated contour, or abnormal outline) and by measuring the PSA level, which is produced in excessive quantity by cancer cells. After the age of 50, this level should be below 4 ng/mL of blood. However, not every increase in PSA means cancer. There are two types of PSA in the blood. What matters in the blood test is the level of free PSA in relation to total PSA. The lower this ratio, the greater the probability of cancer. Biopsy confirms the cancer."
-          ]
-        },
-        {
-          "type": "sub",
-          "text": "Evolution"
-        },
-        {
-          "type": "bullets",
-          "items": [
-            "PSA is a good marker for monitoring the course of the cancer. Age over 50 years and genetic, ethnic (African American), and dietary-lifestyle factors promote prostate cancer."
-          ]
-        },
-        {
-          "type": "sub",
-          "text": "Metastases"
-        },
-        {
-          "type": "bullets",
-          "items": [
-            "this is a cancer that metastasizes and is often diagnosed late because the early symptoms are those of benign prostatic hyperplasia (BPH), but later and less significant, because they do not involve the middle lobe surrounding the urethra. Once metastases have migrated, however, vertebral pain becomes very severe: patients suffer from acute low back pain and sciatic pain, predominantly at night."
+            "Perinatal period: torsion may present with enlargement and bluish or red discoloration of the testis. The testis becomes markedly tender, and the neonate may express pain through sudden crying.",
+            "Puberty: torsion may occur during adolescence as testicular volume increases rapidly."
           ]
         },
         {
           "type": "para",
-          "text": "ROP can do little for these patients. Medical treatment is based on androgen blockade (chemotherapy, hormone therapy) and morphine."
+          "text": "The typical symptom is sudden, severe testicular pain, which may radiate to the groin or lumbar region. Urgent surgery is required to untwist and fix the testis; orchidectomy is necessary only when the testis is no longer viable."
+        },
+        {
+          "type": "para",
+          "text": "Torsion of one testis does not necessarily cause male infertility, because the remaining testis may be sufficient for sperm production; nevertheless, reduced fertility is observed in some patients."
         },
         {
           "type": "sub",
-          "text": "Acute prostatitis"
+          "text": "8.1.3. Prostate cancer"
+        },
+        {
+          "type": "para",
+          "text": "Prostate cancer is most commonly an adenocarcinoma arising from prostatic glandular tissue. It may remain clinically silent for a prolonged period, underscoring the importance of medical assessment tailored to the clinical context and individual risk factors."
         },
         {
           "type": "bullets",
           "items": [
-            "this is most often a bacterial infection of the prostate, sometimes severe. It combines fever, pelvic or perineal pain, burning during micturition, urinary disorders, and marked fatigue. In young men, a sexually transmitted origin may be investigated depending on the context, but it does not account for all cases of acute prostatitis. Treatment is medical, with appropriate antibiotic therapy, rest, and hydration.",
-            "On digital rectal examination, the prostate is not very hard and is very painful."
+            "Assessment may include digital rectal examination, serum PSA testing, imaging, and, when indicated, biopsy. A hard, irregular, or indurated prostate may be suspicious. PSA is prostate-specific rather than cancer-specific: an elevated concentration does not by itself establish cancer. Total and free PSA may contribute to risk assessment, but interpretation depends on age, clinical context, prostate volume, and applicable guidance. Histological examination of biopsy tissue confirms the diagnosis.",
+            "Progression: PSA may be used alongside clinical and imaging findings to monitor disease. Increasing age, family history and genetic susceptibility, ancestry, and certain lifestyle factors may influence risk.",
+            "Metastatic disease: early symptoms may resemble those of benign prostatic enlargement, but prostate cancer often arises peripherally and may initially produce few urinary symptoms. When bone metastases occur, severe vertebral, lumbar, or radicular pain may develop, often with nocturnal predominance."
           ]
         },
         {
+          "type": "para",
+          "text": "ROP cannot treat prostate cancer. Medical management may include surgery, radiotherapy, androgen-deprivation therapy, other systemic anticancer treatments, and appropriate analgesia."
+        },
+        {
           "type": "sub",
-          "text": "Indications"
+          "text": "8.1.4. Acute prostatitis"
+        },
+        {
+          "type": "para",
+          "text": "Acute prostatitis is an infectious and inflammatory disorder of the prostate. It may present with fever, marked fatigue, dysuria, haematuria, and genital or abdominopelvic pain. It requires medical assessment and, when bacterial infection is diagnosed, appropriate antibiotic treatment."
+        },
+        {
+          "type": "para",
+          "text": "On digital rectal examination, the prostate may be swollen or boggy and is typically very tender; vigorous palpation should be avoided."
+        },
+        {
+          "type": "sub",
+          "text": "8.2. Indications: functional disorders"
+        },
+        {
+          "type": "sub",
+          "text": "8.2.1. Benign prostatic hyperplasia"
+        },
+        {
+          "type": "para",
+          "text": "Benign prostatic hyperplasia (BPH), or benign prostatic enlargement, becomes increasingly common with age. It is a non-malignant increase in prostatic volume that may compress the urethra and cause lower urinary tract symptoms; it is not itself a cancer."
         },
         {
           "type": "bullets",
           "items": [
-            "functional disorders"
+            "Its development is hormonally influenced. Factors described as potentially aggravating the functional presentation include alcohol, smoking, excessive animal-protein intake, physical inactivity, and vertebral or coccygeal dysfunction.",
+            "Clinical features:",
+            "Urinary: weak or intermittent stream, straining, urgency, and frequency. Persistent outflow obstruction may lead to detrusor hypertrophy, bladder trabeculation, diverticula, incomplete emptying, and infection. Symptoms depend not only on prostate size but also on smooth-muscle tone and the degree of urethral obstruction."
           ]
         },
         {
-          "type": "sub",
-          "text": "Benign prostatic hyperplasia (BPH), or prostate adenoma"
+          "type": "para",
+          "text": "Obstruction and impaired sphincter coordination may contribute to urinary incontinence."
         },
         {
           "type": "bullets",
           "items": [
-            "it is estimated that from the age of 60, 50% of men will have BPH. It is a benign tumor that develops in the middle lobe and does not become malignant."
+            "Lumbosciatica: described in this model as more frequent on the left because the left testicular vein drains into the left renal vein.",
+            "Sexual: erectile dysfunction and retrograde ejaculation.",
+            "Vascular and regional associations: haemorrhoids and inguinal hernias."
           ]
         },
         {
           "type": "sub",
-          "text": "Cause"
+          "text": "RELEVANCE TO ROP"
         },
         {
-          "type": "bullets",
-          "items": [
-            "it is hormonal. Contributing factors include alcohol, tobacco, excessive animal protein intake, lack of physical activity, and vertebral and coccygeal disorders.",
-            "Clinical signs:"
-          ]
+          "type": "para",
+          "text": "Prostatic enlargement may make the lateral boundaries of the prostatic compartment less compliant. Within the ROP model, this may increase tension in the sacrorectogenitopubic laminae and affect the inferior hypogastric plexuses and sacroiliac mobility. Congestive or irritative lumbosciatica and perineal pain may therefore precede overt voiding symptoms, although these presentations require appropriate medical assessment."
         },
         {
           "type": "sub",
-          "text": "Urinary"
+          "text": "8.2.2. Chronic prostatitis"
+        },
+        {
+          "type": "para",
+          "text": "Chronic prostatitis and chronic pelvic pain syndromes may fluctuate and may be accompanied by urinary, pelvic, genital, or sexual symptoms. Unlike acute prostatitis, fever is generally absent."
         },
         {
           "type": "bullets",
           "items": [
-            "weak and intermittent stream with abdominal participation, urgency, and urinary frequency. The need to strain in order to urinate causes hypertrophy of the detrusor: this is the trabeculated bladder of obstruction. Diverticula form and promote poor bladder emptying and infections. It is not so much prostatic enlargement that is responsible for urinary disorders, but rather its hardness, which compresses the urethra.",
-            "Hypertrophy makes the sphincters less functional, leading to incontinence."
-          ]
-        },
-        {
-          "type": "sub",
-          "text": "Lumbosciatic pain"
-        },
-        {
-          "type": "bullets",
-          "items": [
-            "it is most often on the left side because of spermatic venous return toward the left renal vein;"
-          ]
-        },
-        {
-          "type": "sub",
-          "text": "Sexual"
-        },
-        {
-          "type": "bullets",
-          "items": [
-            "impotence, retrograde ejaculation;"
-          ]
-        },
-        {
-          "type": "sub",
-          "text": "Vascular"
-        },
-        {
-          "type": "bullets",
-          "items": [
-            "hemorrhoids, inguinal hernias."
-          ]
-        },
-        {
-          "type": "rop",
-          "body": [
-            "Prostatic enlargement makes the lateral walls of the prostatic compartment more rigid. It places tension on the sacro-recto-genito-pubic laminae and the inferior hypogastric plexuses. It disturbs sacroiliac mobility and explains lumbosciatic pain or perineal pain of congestive or irritative origin rather than mechanical origin, as warning signs well before voiding disorders appear."
-          ]
-        },
-        {
-          "type": "sub",
-          "text": "Chronic prostatitis"
-        },
-        {
-          "type": "bullets",
-          "items": [
-            "it affects men around the age of fifty. It may recur over many years. It does not cause fever. Over time, chronic infection leads to hepatic disorders.",
-            "Clinical signs:"
-          ]
-        },
-        {
-          "type": "sub",
-          "text": "Dysuria"
-        },
-        {
-          "type": "bullets",
-          "items": [
-            "difficulty urinating;"
-          ]
-        },
-        {
-          "type": "sub",
-          "text": "Pollakiuria"
-        },
-        {
-          "type": "bullets",
-          "items": [
-            "frequent urination in small amounts;",
-            "burning during micturition;",
-            "lumbar, pelvic, and genital pain;",
-            "infertility, impotence."
-          ]
-        },
-        {
-          "type": "sub",
-          "text": "Examination"
-        },
-        {
-          "type": "bullets",
-          "items": [
-            "on digital rectal examination, the prostate is enlarged, firm in consistency, but not painful."
+            "Clinical features:",
+            "Dysuria: difficulty or discomfort during urination.",
+            "Urinary frequency: passing small volumes frequently.",
+            "Burning during urination.",
+            "Lumbar, pelvic, and genital pain.",
+            "Infertility or erectile dysfunction.",
+            "Examination: findings on digital rectal examination are variable; the prostate may be enlarged or firm, but is not necessarily tender."
           ]
         }
       ]
     },
     {
       "id": "relations-viscero-somatiques",
-      "title": "Viscerosomatic relationships",
+      "title": "9. Viscerosomatic relationships",
       "blocks": [
         {
           "type": "bullets",
           "items": [
-            "Vertebrae T12-L1, L5-sacrum, coccyx;",
-            "Lower limb, foot."
+            "T12–L1 vertebrae, L5–sacrum, and coccyx.",
+            "Lower limb and foot."
           ]
         }
       ]
     },
     {
       "id": "relations-viscero-emotionnelles",
-      "title": "Visceroemotional relationships",
+      "title": "10. Viscero-emotional relationships",
       "blocks": [
         {
-          "type": "bullets",
-          "items": [
-            "Highly hormone-dependent, the prostate reacts strongly to hormonal imbalances caused by states of stress. At andropause, retirement age causes a man to lose his social position; he feels devalued by the loss of recognition. He wants to find rewarding activities again and to prove to himself that he is still young. He wants to seduce. He launches himself into unreasonable challenges. Sexually, the dominant fear is that of sexual failure and no longer being up to the task."
-          ]
+          "type": "para",
+          "text": "Urinary and sexual functions are closely integrated with cerebral networks involved in interoception, emotion, attention, and autonomic regulation. Stress alone does not cause prostatic dysfunction, but it may alter autonomic tone, sleep, bodily perception, and sexual function, thereby increasing the impact of certain urogenital symptoms."
         },
         {
           "type": "para",
-          "text": "The couple: they must learn again how to live as two, avoid conflict, and allow each person to find their place. The family home must remain a welcoming nest where children and grandchildren are happy to gather."
+          "text": "With age, urinary or sexual changes may also affect body image, self-confidence, and quality of life. Retirement, changes in social or family roles, concerns about ageing, or fear of declining sexual performance may be sources of stress for some men. Their importance nevertheless varies considerably between individuals."
+        },
+        {
+          "type": "para",
+          "text": "The relationship is bidirectional: urinary disorders, pelvic pain, or sexual difficulties may generate anxiety, anticipation, and avoidance; conversely, these states may amplify symptom perception and associated autonomic responses."
+        },
+        {
+          "type": "para",
+          "text": "In ROP, this dimension is addressed within the brain–male genital axis. It complements anatomical, autonomic, and locoregional assessment without defining a “prostate personality” or automatically attributing symptoms to an emotional origin."
         }
       ]
     },
     {
       "id": "zones-reflexes-podales",
-      "title": "Foot reflex zones",
+      "title": "11. ROP reflex zones",
       "blocks": [
         {
-          "type": "sub",
-          "text": "General adaptation syndrome"
+          "type": "para",
+          "text": "The locations described below belong to the clinical mapping used in ROP. Their selection depends on the history, testing, palpatory responses, and functional presentation."
         },
         {
-          "type": "bullets",
-          "items": [
-            "Spinal column: sympathetic spinal level T10 to T12 (at the level of vertebrae T10 to T12), L5, sacrum, coccyx), lumbar and sacral paravertebral ganglionic chain;",
-            "Pelvic (sacral) parasympathetic system: sacral spinal cord S2-S3-S4 (vertebral level L1-L2);",
-            "Liver;",
-            "Left kidney."
-          ]
+          "type": "para",
+          "text": "For the male genital organs, interpretation of the reflex zones is organised according to the four levels of the ROP protocol, distinguishing the testes and spermatic pathways from the prostate and associated pelvic structures."
         },
         {
           "type": "sub",
-          "text": "Locoregional syndrome"
-        },
-        {
-          "type": "bullets",
-          "items": [
-            "Pelvic cavity, perineum:",
-            "Testis: this is the same reflex zone as the ovary: anterior border of the heel, in line with the 4th and 5th toes;.",
-            "Inguinal canal, spermatic cord, and cremaster muscle: at the anterior tibiotarsal joint line;",
-            "Prostate, seminal vesicle, and inferior hypogastric plexus (middle part): small depression anterior to the sacrococcygeal joint."
-          ]
+          "text": "11.1. Testes and spermatic pathways"
         },
         {
           "type": "sub",
-          "text": "Limbic system"
+          "text": "11.1.1. Level 1 — Regulation of higher centres"
         },
         {
-          "type": "bullets",
-          "items": [
-            "Limbic brain-prostate balancing: listening-induction technique, one thumb on the prostate, the other thumb on the limbic brain."
-          ]
+          "type": "para",
+          "text": "Testicular function forms part of central neuroendocrine regulation, particularly through the hypothalamic–pituitary–gonadal axis."
+        },
+        {
+          "type": "para",
+          "text": "• Occipital reflex zones."
+        },
+        {
+          "type": "para",
+          "text": "• Brainstem and integration centres."
+        },
+        {
+          "type": "para",
+          "text": "• Diencephalon, particularly the hypothalamus."
+        },
+        {
+          "type": "para",
+          "text": "• Pituitary gland and hypothalamic–pituitary axis."
+        },
+        {
+          "type": "para",
+          "text": "• Neuromeningeal environment within the ROP model."
+        },
+        {
+          "type": "para",
+          "text": "See Chapter 3 — Central Nervous System, Level 1: Regulation of Higher Centres."
+        },
+        {
+          "type": "sub",
+          "text": "11.1.2. Level 2 — Autonomic regulation and adaptation"
+        },
+        {
+          "type": "para",
+          "text": "• Vertebral column: sympathetic spinal cord levels T10–T12."
+        },
+        {
+          "type": "para",
+          "text": "• L5, sacrum, and coccyx."
+        },
+        {
+          "type": "para",
+          "text": "• Lumbar and sacral sympathetic trunks."
+        },
+        {
+          "type": "para",
+          "text": "• Pelvic parasympathetic system: sacral spinal cord segments S2–S4, with an L1–L2 vertebral landmark in ROP mapping."
+        },
+        {
+          "type": "para",
+          "text": "• Lumbar sympathetic trunk and diaphragmatic crura: associated landmarks in ROP mapping."
+        },
+        {
+          "type": "para",
+          "text": "See Chapter 4 — Autonomic Nervous System, particularly the sections on the thoracolumbar sympathetic system, splanchnic nerves, and prevertebral plexuses."
+        },
+        {
+          "type": "sub",
+          "text": "11.1.3. Level 3 — Local and regional visceral regulation"
+        },
+        {
+          "type": "para",
+          "text": "Level 3 encompasses mapping of the testes, spermatic cord, and inguinal canal, together with their regional relationships."
+        },
+        {
+          "type": "para",
+          "text": "• Liver."
+        },
+        {
+          "type": "para",
+          "text": "• Left kidney."
+        },
+        {
+          "type": "para",
+          "text": "• Pelvic cavity and perineum."
+        },
+        {
+          "type": "para",
+          "text": "• Testis: the same reflex zone as the ovary in ROP mapping, at the anterior border of the heel, in line with the fourth and fifth toes."
+        },
+        {
+          "type": "para",
+          "text": "• Inguinal canal, spermatic cord, and cremaster muscle: anterior ankle joint line."
+        },
+        {
+          "type": "para",
+          "text": "See Chapter 17 — Pelvic Cavity for the regional environment; see Chapter 19 — Female Genital Organs for the mapping landmark shared with the ovary."
+        },
+        {
+          "type": "sub",
+          "text": "11.1.4. Level 4 — Viscerosomatic and viscero-emotional integration"
+        },
+        {
+          "type": "para",
+          "text": "Level 4 combines somatic convergences from the genital territories with central integration of sexuality, pain, and bodily experience."
+        },
+        {
+          "type": "para",
+          "text": "Viscerosomatic component:"
+        },
+        {
+          "type": "para",
+          "text": "• T12–L1 vertebrae, L5–sacrum, and coccyx."
+        },
+        {
+          "type": "para",
+          "text": "• Lower limb and foot."
+        },
+        {
+          "type": "para",
+          "text": "• Nerves of the lumbar plexus."
+        },
+        {
+          "type": "para",
+          "text": "• Perineum and pudendal nerve for the external genital and sphincteric territories."
+        },
+        {
+          "type": "para",
+          "text": "• Pelvis and sacrum, together with associated muscle chains when referred pain or regional tension is present."
+        },
+        {
+          "type": "para",
+          "text": "• Greater sciatic foramen, piriformis muscle, sacral plexus, and pudendal nerve."
+        },
+        {
+          "type": "para",
+          "text": "• Lesser sciatic foramen, obturator internus, and gemelli muscles."
+        },
+        {
+          "type": "para",
+          "text": "• Obturator foramen and obturator muscles."
+        },
+        {
+          "type": "para",
+          "text": "• Sacrotuberous and sacrospinous ligaments."
+        },
+        {
+          "type": "para",
+          "text": "Viscero-emotional component — limbic brain–testis balance:"
+        },
+        {
+          "type": "para",
+          "text": "In ROP practice, “listening–induction” is performed with one thumb on the testicular reflex zone and the other on the limbic-brain reflex zone."
+        },
+        {
+          "type": "para",
+          "text": "Sexuality, body image, fertility, pain, ageing, stress, and performance anxiety may modify symptom perception and interact with autonomic, neuroendocrine, and emotional networks. These factors do not define a male “genital personality” and cannot be used to attribute a symptom automatically to an emotional origin."
+        },
+        {
+          "type": "para",
+          "text": "See Chapter 3 — Central Nervous System for central and corticolimbic networks; see Section 10, “Viscero-emotional Relationships”, in this chapter."
+        },
+        {
+          "type": "sub",
+          "text": "11.2. Prostate, seminal vesicles, and associated urinary pathways"
+        },
+        {
+          "type": "sub",
+          "text": "11.2.1. Level 1 — Regulation of higher centres"
+        },
+        {
+          "type": "para",
+          "text": "The prostate is sensitive to the hormonal environment and forms part of the general regulation of the hypothalamic–pituitary–gonadal axis."
+        },
+        {
+          "type": "para",
+          "text": "• Occipital reflex zones."
+        },
+        {
+          "type": "para",
+          "text": "• Brainstem and integration centres."
+        },
+        {
+          "type": "para",
+          "text": "• Diencephalon, particularly the hypothalamus."
+        },
+        {
+          "type": "para",
+          "text": "• Pituitary gland and hypothalamic–pituitary axis."
+        },
+        {
+          "type": "para",
+          "text": "• Neuromeningeal environment within the ROP model."
+        },
+        {
+          "type": "para",
+          "text": "See Chapter 3 — Central Nervous System."
+        },
+        {
+          "type": "sub",
+          "text": "11.2.2. Level 2 — Autonomic regulation and adaptation"
+        },
+        {
+          "type": "para",
+          "text": "The prostate, seminal vesicles, bladder neck, and pelvic genital pathways depend on a mixed autonomic network organised around the hypogastric plexuses."
+        },
+        {
+          "type": "para",
+          "text": "• Thoracolumbar sympathetic system: T11–L2."
+        },
+        {
+          "type": "para",
+          "text": "• Lumbar and sacral sympathetic trunks."
+        },
+        {
+          "type": "para",
+          "text": "• Pelvic parasympathetic system: sacral spinal cord segments S2–S4, with an L1–L2 vertebral landmark in ROP mapping."
+        },
+        {
+          "type": "para",
+          "text": "See Chapter 4 — Autonomic Nervous System, particularly the sections “Pelvic Parasympathetic System”, “Visceromotor Sympathetic System”, and “Pelvic Previsceral Plexus”; see Chapter 18 — Bladder."
+        },
+        {
+          "type": "sub",
+          "text": "11.2.3. Level 3 — Local and regional visceral regulation"
+        },
+        {
+          "type": "para",
+          "text": "Level 3 encompasses the core of prostatic mapping and its immediate pelvic environment."
+        },
+        {
+          "type": "para",
+          "text": "• Prostate, seminal vesicles, and middle part of the inferior hypogastric plexus: a small depression anterior to the sacrococcygeal joint."
+        },
+        {
+          "type": "para",
+          "text": "• Pelvic cavity and perineum."
+        },
+        {
+          "type": "para",
+          "text": "• Pelvic floor, pubic symphysis, and supporting structures of the prostatic compartment."
+        },
+        {
+          "type": "para",
+          "text": "• Bladder: when voiding symptoms are present, particularly in benign prostatic hyperplasia or pelvic pain syndromes."
+        },
+        {
+          "type": "para",
+          "text": "• Diaphragm and abdominal cavity: when overall trunk and pressure dynamics are clinically relevant."
+        },
+        {
+          "type": "para",
+          "text": "See Chapter 17 — Pelvic Cavity, Level 3: Local and Regional Visceral Regulation; see Chapter 18 — Bladder."
+        },
+        {
+          "type": "sub",
+          "text": "11.2.4. Level 4 — Viscerosomatic and viscero-emotional integration"
+        },
+        {
+          "type": "para",
+          "text": "Viscerosomatic component:"
+        },
+        {
+          "type": "para",
+          "text": "• T12–L1 vertebrae, L5–sacrum, and coccyx."
+        },
+        {
+          "type": "para",
+          "text": "• Lower limb and foot."
+        },
+        {
+          "type": "para",
+          "text": "• Pudendal nerve (S2–S4) and perineal territories."
+        },
+        {
+          "type": "para",
+          "text": "• Pelvic floor and external urethral sphincter."
+        },
+        {
+          "type": "para",
+          "text": "• Pubic symphysis."
+        },
+        {
+          "type": "para",
+          "text": "Viscero-emotional component — limbic brain–prostate balance:"
+        },
+        {
+          "type": "para",
+          "text": "In ROP practice, “listening–induction” is performed with one thumb on the prostatic reflex zone and the other on the limbic-brain reflex zone."
+        },
+        {
+          "type": "para",
+          "text": "Urinary or sexual symptoms may be modulated by stress, anticipation, anxiety, pain, relationship context, and the experience of ageing. These factors may increase the functional impact of certain symptoms, but they do not define a psychological profile specific to the prostate or permit prostatic dysfunction to be attributed automatically to an emotional origin."
+        },
+        {
+          "type": "para",
+          "text": "See Chapter 3 — Central Nervous System for central and corticolimbic networks; see Section 10, “Viscero-emotional Relationships”, in this chapter."
+        },
+        {
+          "type": "sub",
+          "text": "11.3. Safety principle"
+        },
+        {
+          "type": "sub",
+          "text": "CAUTION — A sensitive reflex zone or palpatory change is not a diagnostic test for testicular torsion, cancer, prostatitis, benign prostatic hyperplasia, infection, urinary retention, or any other urogenital disorder. Acute testicular pain, a mass or enlargement, fever, haematuria, urinary retention, deterioration in general condition, or any unusual symptom requires appropriate medical assessment."
         }
       ]
     }

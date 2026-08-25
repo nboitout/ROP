@@ -1,6 +1,5 @@
-// Chapter 17 — Pelvic Cavity — English
-// Source: Drive "CH 17" / Chapter17_Pelvic_Cavity_fluent_medical_EN.docx
-// Mirrors the block structure of chapter17.fr.ts (section IDs and ordering must match).
+// Chapter 17 content — English
+// Source: public/chapter-17/EN/Chapter_17_Pelvic_Cavity_Medical_English_Revised.docx
 
 import type { Chapter } from './types'
 
@@ -11,17 +10,17 @@ export const chapter17En: Chapter = {
   "sections": [
     {
       "id": "presentation",
-      "title": "Overview",
+      "title": "1. Overview",
       "blocks": [
         {
           "type": "para",
-          "text": "In addition to the rectum, the pelvic cavity contains the genital system and the urinary system, two separate medical specialties that are nevertheless closely linked from a functional standpoint. For example, malposition of the uterus will have consequences for the bladder."
+          "text": "In addition to the rectum, the pelvic cavity contains the genital and urinary systems. Although these are separate medical specialties, they are closely linked functionally. For example, malposition of the uterus may affect the bladder."
         }
       ]
     },
     {
       "id": "situation",
-      "title": "Situation",
+      "title": "2. Location",
       "blocks": [
         {
           "type": "para",
@@ -30,512 +29,852 @@ export const chapter17En: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Cranially: the superior pelvic aperture, or pelvic inlet;",
-            "Caudally: the inferior pelvic aperture, or pelvic outlet, closed by the perineum.",
-            "It occupies the space between the lower part of the hip bones, the sacrum and the coccyx.",
-            "The pelvic subperitoneal space: it fills the space between the peritoneum and the osteomuscular walls. It communicates with the retroperitoneal region of the abdomen and with the gluteal and obturator regions through openings: the greater and lesser sciatic foramina (or greater and lesser sciatic notches), the obturator foramina, and the space between the hip bone and the inguinal ligament.",
-            "It is divided by septa:",
-            "Sagittal septa: the sacro-recto-genito-pubic laminae (the uterosacral and pubocervical ligaments in women), stretched between the sacrum and the pubis. They prevent lateral movements of the pelvic organs. They contain the inferior hypogastric plexus, which provides autonomic innervation to the pelvic organs.",
-            "Transverse septa: between the pelvic viscera: the rectal wings and, in women, the transverse cervical ligament (or broad ligament of the uterus). They serve as carriers for the vessels and nerves destined for the pelvic organs.",
-            "This septal system delimits compartments:",
-            "a medial visceral compartment: it is occupied, from dorsal to ventral, by:",
-            "in women: the rectum, the uterus and its adnexa (ovaries and fallopian tubes), and the bladder;",
-            "in men: the rectum, the spermatic ducts and seminal vesicles, and the bladder.",
-            "two lateral compartments: they are occupied by the vessels and nerves of the autonomic system, cushioned by abundant fibro-fatty cellular tissue, and destined for the pelvic organs.",
-            "The pelvic subperitoneal space contains:",
-            "the internal iliac artery: it supplies the walls and the viscera;",
-            "the plexuses of the somatic nervous system: the sacral, pudendal and coccygeal plexuses.",
-            "The peritoneum rests like a sheet over the pelvic viscera, forming recesses:",
-            "in women: the peritoneum follows the contour of the bladder and uterus, forming the vesicouterine pouch, and between the uterus and the rectum, the rectouterine pouch of Douglas.",
-            "in men: the rectovesical pouch of Douglas is interposed between the bladder and the rectum.",
-            "The pouch of Douglas is the most dependent part of the abdomen.",
-            "Although the pelvic organs are subperitoneal and devoid of serosa, they can move in relation to one another thanks to the interposition of the peritoneum. Peritoneal involvement (infection, surgery, trauma, congestion) has repercussions on the statics and dynamics of the pelvic organs.",
-            "Vertebro-coxo-pelvic unit: the urogenital sphere cannot be understood without its osteomusculoarticular framework, to which it is intimately linked. Any articular blockage disturbs the mobility of the pelvic organs and, conversely, any visceral fixation, whether traumatic, infectious, surgical or congestive in origin, will cause articular fixations.",
-            "The functional vertebro-coxo-pelvic unit comprises 7 joints:",
-            "2 sacroiliac joints;",
-            "2 coxofemoral joints;",
-            "1 sacrococcygeal joint;",
-            "1 pubic symphysis;",
-            "1 lumbosacral junction.",
-            "It must ensure:",
-            "mobility during walking and articular stability;",
-            "protection, support and maintenance of the intrapelvic organs;",
-            "absorption of intra-abdominal pressures;",
-            "transmission of descending gravitational forces and ascending forces related to standing and walking;",
-            "evacuation of part of the mechanical stresses toward the lower limbs.",
-            "To meet these requirements, the pelvis has specific anatomical features:",
-            "Orientation of the pelvis: the pelvic inlet is inclined downward and forward, so that abdominal pressure is exerted mainly on the bony buttresses and only slightly on the pelvic viscera:",
+            "Superior boundary: the superior pelvic aperture (pelvic inlet);",
+            "Inferior boundary: the inferior pelvic aperture (pelvic outlet), which is closed by the perineum."
+          ]
+        },
+        {
+          "type": "para",
+          "text": "It occupies the space between the inferior portions of the hip bones, the sacrum, and the coccyx."
+        },
+        {
+          "type": "sub",
+          "text": "2.1. Subperitoneal pelvic space"
+        },
+        {
+          "type": "para",
+          "text": "It is divided by septa:"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "Sagittal septa: the sacrorectogenitopubic laminae (the uterosacral and pubocervical ligaments in women), extending between the sacrum and pubis. They limit lateral movement of the pelvic organs and contain the inferior hypogastric plexus, which provides autonomic innervation to the pelvic viscera.",
+            "Transverse septa: located between the pelvic viscera; these include the rectal wings and, in women, the transverse cervical (cardinal) ligament and the broad ligament of the uterus. They convey vessels and nerves to the pelvic organs."
+          ]
+        },
+        {
+          "type": "sub",
+          "text": "2.2. Pelvic septa and compartments"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "A medial visceral compartment, occupied from posterior to anterior by:",
+            "in women: the rectum, uterus and its adnexa (ovaries and uterine tubes), and bladder;",
+            "in men: the rectum, spermatic ducts and seminal vesicles, and bladder.",
+            "Two lateral compartments containing the vessels and autonomic nerves destined for the pelvic organs, embedded in abundant fibro-adipose tissue."
+          ]
+        },
+        {
+          "type": "para",
+          "text": "The subperitoneal pelvic space contains:"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "the internal iliac artery, which supplies the pelvic walls and viscera;",
+            "the somatic nerve plexuses: sacral, pudendal, and coccygeal plexuses."
+          ]
+        },
+        {
+          "type": "sub",
+          "text": "2.3. Peritoneal pouches"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "In women, the peritoneum follows the contours of the bladder and uterus, forming the vesicouterine pouch and, between the uterus and rectum, the rectouterine pouch (pouch of Douglas).",
+            "In men, the rectovesical pouch (pouch of Douglas) lies between the bladder and rectum."
+          ]
+        },
+        {
+          "type": "para",
+          "text": "The pouch of Douglas is the most dependent part of the abdominopelvic cavity."
+        },
+        {
+          "type": "para",
+          "text": "Although the pelvic organs are subperitoneal and lack a serosal covering, they can move relative to one another because of the intervening peritoneum. Peritoneal disease or injury—including infection, surgery, trauma, or congestion—may affect pelvic organ statics and dynamics."
+        },
+        {
+          "type": "sub",
+          "text": "2.4. Vertebral–hip–pelvic unit"
+        },
+        {
+          "type": "para",
+          "text": "The functional vertebral–hip–pelvic unit comprises seven joints:"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "two sacroiliac joints;",
+            "two hip joints;",
+            "one sacrococcygeal joint;",
+            "one pubic symphysis;",
+            "one lumbosacral junction."
+          ]
+        },
+        {
+          "type": "para",
+          "text": "It must provide:"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "mobility during walking and joint stability;",
+            "protection, support, and maintenance of the intrapelvic organs;",
+            "absorption of intra-abdominal pressure;",
+            "transmission of descending gravitational forces and ascending forces associated with standing and walking;",
+            "transfer of part of the mechanical load to the lower limbs."
+          ]
+        },
+        {
+          "type": "sub",
+          "text": "2.5. Pelvic orientation and osseous load distribution"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "Pelvic orientation: the pelvic inlet slopes downward and forward, so that abdominal pressure is borne mainly by osseous buttresses and only minimally by the pelvic viscera:",
             "the internal iliac fossae;",
             "the sacral promontory;",
             "the iliopubic rami.",
-            "The pelvis is not hermetically sealed: the pelvic walls have openings and notches (mentioned above), delimited by ligaments and obstructed by soft tissues (muscles, aponeuroses, membranes), which dampen the residual pressure on the pelvic viscera."
+            "The pelvis is not hermetically sealed. Its walls contain foramina and notches, described above, that are bounded by ligaments and closed by soft tissues—muscles, aponeuroses, and membranes—which cushion the residual pressure exerted on the pelvic viscera."
           ]
         }
       ]
     },
     {
       "id": "anatomie",
-      "title": "Anatomy",
+      "title": "3. Anatomy",
       "blocks": [
         {
           "type": "sub",
-          "text": "Greater sciatic foramen"
-        },
-        {
-          "type": "para",
-          "text": "it connects the pelvic cavity with the gluteal region. It is traversed by the piriformis muscle."
+          "text": "3.1. Greater sciatic foramen"
         },
         {
           "type": "sub",
-          "text": "Piriformis muscle"
-        },
-        {
-          "type": "para",
-          "text": "it is, par excellence, the major witness to the tensions exerted on the sacrum and the hip. Any tension from the pelvic organs attaching to the sacrum fixes the sacroiliac joint and increases contraction of the piriformis muscle. Its aponeurosis, however, is crossed by the sacral plexus and by its terminal branch, the sciatic nerve, which exits the pelvis through the greater sciatic foramen. Contracture of the piriformis irritates the sciatic nerve, explaining sciatic pain."
+          "text": "3.1.1. Piriformis muscle"
         },
         {
           "type": "sub",
-          "text": "Lesser sciatic foramen"
+          "text": "3.2. Lesser sciatic foramen"
+        },
+        {
+          "type": "sub",
+          "text": "Relevance to ROP"
         },
         {
           "type": "para",
-          "text": "it connects the perineum with the gluteal region (formerly the buttock region). It is traversed by the internal obturator muscle, accompanied by the superior and inferior gemelli muscles and by the pudendal nerve, which innervates the perineum."
+          "text": "Sciatic pain is not limited to L4–L5 or L5–S1 disc–nerve root conflict. Many cases of sciatica are truncal—that is, they arise along the course of the nerve trunk—and have a visceral or pelvic origin. They generate tension in the piriformis, obturator internus, superior and inferior gemelli, and quadratus femoris muscles, disturbing the sciatic nerve within the ischiotrochanteric groove."
         },
         {
-          "type": "rop",
-          "body": [
-            "Sciatic pain is not limited to an L4-L5 or L5-S1 discoradicular conflict. Many forms of sciatic pain, described as truncal (because they follow the course of the nerve trunk), have a visceral or pelvic origin, generating tension in the piriformis, obturator, superior and inferior gemelli, and quadratus femoris muscles, thereby disturbing the sciatic nerve in the ischiotrochanteric groove.",
-            "Treatment of these muscles is indispensable in all forms of sciatic pain, and in dysfunctions of the pelvis, hips and intrapelvic organs."
-          ]
+          "type": "para",
+          "text": "Treatment of these muscles is essential in all cases of sciatica and in dysfunction of the pelvis, hips, and intrapelvic organs."
+        },
+        {
+          "type": "sub",
+          "text": "3.3. Obturator foramen"
+        },
+        {
+          "type": "sub",
+          "text": "3.3.1. Obturator membrane"
+        },
+        {
+          "type": "sub",
+          "text": "3.3.2. Bladder–hip relationship"
+        },
+        {
+          "type": "sub",
+          "text": "Relevance to ROP"
+        },
+        {
+          "type": "para",
+          "text": "These bladder–pelvis–hip relationships explain the need to address the hip in stress urinary incontinence and the bladder when managing hip osteoarthritis."
+        },
+        {
+          "type": "sub",
+          "text": "3.3.3. Obturator canal"
+        },
+        {
+          "type": "sub",
+          "text": "3.4. Sacrospinous and sacrotuberous ligaments"
         },
         {
           "type": "bullets",
           "items": [
-            "Obturator foramen: formed by the junction of the ilio- and ischiopubic rami, it is closed by the obturator membrane.",
-            "Obturator membrane: on its endopelvic side it is covered by the internal obturator muscle and, on its exopelvic side, by the external obturator muscle, two pelvitrochanteric muscles that act as external rotators of the hip. It is reinforced by the subpubic band, which inserts onto the hip joint capsule. The bladder rests on the two obturator membranes.",
-            "Bladder-hip relationship: the obturator membrane, depressed like a tympanum, constitutes a mechanism for unloading and transferring the pressures of the intrapelvic organs during walking. The alternation of traction and relaxation of ligamentous tensions and of the subpubic band during hip movements makes it possible to evacuate part of the compressive forces exerted on the intrapelvic organs either toward the lower limbs, or toward the pubic symphysis and the sacroiliac joints. At the same time, a sort of endopelvic suction of the blood vessels crossing the obturator membrane occurs. This pumping action promotes intrapelvic circulatory exchange."
+            "Sacrotuberous ligament: extends from the ischium to the sacrum and coccyx;",
+            "Sacrospinous ligament: extends from the ischial spine to the sacrum and coccyx."
           ]
         },
         {
-          "type": "rop",
-          "body": [
-            "These bladder-pelvis-hip links explain the need to treat the hip in stress urinary incontinence, as well as the need to treat the bladder in the treatment of coxarthrosis."
-          ]
-        },
-        {
-          "type": "bullets",
-          "items": [
-            "Obturator canal: located in the subpubic part of the obturator foramen, it is traversed by the obturator nerve, which innervates the external obturator and hip adductor muscles. Irritation of this nerve produces pain on the medial aspect of the knee (see Occipito-podal Reflexotherapy and the neuro-meningeal system, pages 31 to 33).",
-            "Sacrospinous and sacrotuberous ligaments: they delimit the foramina between the pelvic cavity and the gluteal and perineal regions.",
-            "Sacrotuberous ligament: stretched from the ischium to the sacrum and coccyx;",
-            "Sacrospinous ligament: stretched from the ischial spine to the sacrum and coccyx.",
-            "They stabilize the coccyx laterally. They also play an important role in the stability and mobility of the sacrum between the iliac bones, since they act as restraints to sacral nutation in association with the anterior sacroiliac ligaments (counternutation is limited by the tension of the posterior iliosacral ligaments)."
-          ]
+          "type": "para",
+          "text": "These ligaments stabilize the coccyx laterally. They also play an important role in the stability and mobility of the sacrum between the ilia, acting with the anterior sacroiliac ligaments to limit sacral nutation; counternutation is limited by tension in the posterior sacroiliac ligaments."
         },
         {
           "type": "sub",
-          "text": "Pathology"
+          "text": "3.4.1. Possible consequences of shortening"
         },
         {
           "type": "bullets",
           "items": [
-            "their retractions lead to:",
             "Fixation of the coccyx, with consequences for the perineum and its sphincters;",
             "Fixation of the sacroiliac joint;",
-            "Fixation of the L4-L5-S1 junction: the sacrotuberous ligament continues toward L5-L4 and the iliolumbar ligaments. Its retraction prevents the separation of the ischial tuberosities that should normally occur in the sitting position. This is a source of lumbopelvic pain aggravated by sitting.",
-            "Modification of perineal tension, which affects closure of the urogenital and anal sphincters and is responsible for urinary or anal incontinence;",
-            "Irritation of the ganglion impar, located at the lower junction of the two sympathetic laterovertebral chains, anterior to the coccyx, in turn producing irritation of the sympathetic system, with repercussions on the pelvic arterial system and on the higher neurovegetative centers, partly explaining postpartum depressive syndrome."
-          ]
-        },
-        {
-          "type": "rop",
-          "body": [
-            "Any fixation of the coccyx modifies dural tension and disturbs the craniosacral primary respiratory movement;",
-            "The sacrotuberous and sacrospinous ligaments and the coccygeus muscle are markers of homolateral disorders of the pelvic framework and intrapelvic organs."
+            "Fixation of the L4–L5–S1 junction: the sacrotuberous ligament continues toward L5–L4 and the iliolumbar ligaments. Its shortening prevents the normal separation of the ischial tuberosities in the seated position and may cause lumbopelvic pain aggravated by sitting.",
+            "Altered perineal tension affecting closure of the urogenital and anal sphincters, potentially resulting in urinary or fecal incontinence;",
+            "Irritation of the ganglion impar, located anterior to the coccyx where the two paravertebral sympathetic chains converge inferiorly. This may in turn irritate the sympathetic nervous system, with effects on the pelvic arterial system and higher autonomic centers, partly explaining postpartum depressive syndrome."
           ]
         },
         {
           "type": "sub",
-          "text": "Perineum"
+          "text": "Relevance to ROP"
         },
         {
           "type": "bullets",
           "items": [
-            "it is a set of muscles and fasciae that close the pelvic outlet. They converge toward the central fibrous body of the perineum. The perineum is delimited by:",
-            "The inferior border of the pubic symphysis;",
-            "The apex of the coccyx;",
-            "The ischiopubic rami, ventrally;",
-            "The sacrotuberous ligaments, dorsally.",
-            "It is divided by a virtual line between the two ischial tuberosities into two triangles:",
-            "Anterior urogenital triangle: horizontal, it is traversed by the urogenital hiatus. On its external surface are attached the bulbocavernosus and bulbospongiosus muscles and the erectile organs of the penis and clitoris (see Chapter 21 Male and Female Erectile System, page…).",
-            "Posterior anal triangle: oriented dorsally and caudally, it is traversed by the anal canal and the external anal sphincter. Lateral to the anal canal, the ischioanal fossa is crossed by the pudendal nerve.",
-            "Muscles of the perineum: these are striated muscles controlled by the pudendal nerve (S2-S4). They are divided into:",
-            "Deep perineal muscles: levator ani, deep transverse perineal and coccygeus muscles. They form the pelvic diaphragm, which has a supporting function thanks to its parallel fibers.",
-            "Superficial perineal muscles: the external sphincter and superficial transverse perineal muscle. They have a sphincteric function for the urogenital and anal orifices thanks to their circular fibers.",
-            "Function of the perineum: the perineum has to meet a dual function:",
-            "Continence through its perpetual hypertonia (toilet training);",
-            "Episodic opening of the urinary, anal and vaginal orifices, through voluntary relaxation, to allow fecal and urinary excretion and sexual intercourse."
+            "Any fixation of the coccyx alters dural tension and disrupts the primary craniosacral respiratory mechanism;",
+            "The sacrotuberous and sacrospinous ligaments and the coccygeus muscle may reflect ipsilateral disorders of the pelvic framework and intrapelvic organs."
           ]
         },
         {
-          "type": "xref",
-          "label": "See the reference in chapter 21",
-          "text": "Male and Female Erectile System",
-          "href": "/lecture/chapitre-21?xrefBack=%2Flecture%2Fchapitre-17%23p-anatomie-14&xrefBackLabel=Retour%20au%20chapitre%2017#sec-presentation"
+          "type": "sub",
+          "text": "3.5. Perineum"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "The inferior border of the pubic symphysis;",
+            "The apex of the coccyx;",
+            "The ischiopubic rami anteriorly;",
+            "The sacrotuberous ligaments posteriorly."
+          ]
+        },
+        {
+          "type": "para",
+          "text": "A virtual line between the two ischial tuberosities divides it into two triangles:"
+        },
+        {
+          "type": "sub",
+          "text": "3.5.1. Anterior urogenital triangle"
+        },
+        {
+          "type": "sub",
+          "text": "3.5.2. Posterior anal triangle"
+        },
+        {
+          "type": "sub",
+          "text": "3.5.3. Perineal muscles"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "Deep perineal muscles: levator ani, deep transverse perineal muscle, and coccygeus. Their parallel fibers form the supportive pelvic diaphragm.",
+            "Superficial perineal muscles: external sphincter and superficial transverse perineal muscle. Their circular fibers provide sphincteric closure of the urogenital and anal orifices."
+          ]
+        },
+        {
+          "type": "sub",
+          "text": "3.5.4. Functions of the perineum"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "Continence through sustained resting tone, reinforced by continence training;",
+            "Intermittent opening of the urinary, anal, and vaginal orifices through voluntary relaxation, allowing urination, defecation, and sexual intercourse."
+          ]
         }
       ]
     },
     {
       "id": "vascularisation",
-      "title": "Vascularization",
+      "title": "4. Vascular supply",
       "blocks": [
         {
           "type": "sub",
-          "text": "Arterial"
+          "text": "4.1. Arterial supply"
         },
         {
           "type": "bullets",
           "items": [
-            "Internal iliac arteries: they arise from the common iliac artery at the level of the L5-S1 disc, run along the anteromedial border of the sacroiliac joint and divide into two branches:",
-            "Posterior branch: it supplies the posteroinferior wall of the abdomen, the posterior wall of the pelvis and the gluteal region.",
-            "Anterior branch: it supplies the pelvic viscera, the perineum, the adductor region and, in the fetus, the placenta.",
-            "The gonadal arteries and the median sacral artery, which arise from the abdominal aorta, complete the vascularization of the pelvis."
+            "Internal iliac arteries: they arise from the common iliac arteries at the level of the L5–S1 intervertebral disc, follow the anteromedial border of the sacroiliac joint, and divide into two divisions:",
+            "Posterior division: supplies the posteroinferior abdominal wall, posterior pelvic wall, and gluteal region.",
+            "Anterior division: supplies the pelvic viscera, perineum, and adductor region and, in the fetus, the placenta."
+          ]
+        },
+        {
+          "type": "para",
+          "text": "The gonadal arteries and median sacral artery, which arise from the abdominal aorta, complete the arterial supply to the pelvis."
+        },
+        {
+          "type": "sub",
+          "text": "4.2. Venous drainage"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "Internal iliac veins: they accompany the internal iliac arteries and join the common iliac veins.",
+            "Pelvic venous plexuses: they contribute to support of the pelvic organs and drain into the portal venous system."
           ]
         },
         {
           "type": "sub",
-          "text": "Venous"
+          "text": "Relevance to ROP"
+        },
+        {
+          "type": "para",
+          "text": "Any impediment to venous return through the hepatic portal system causes dilation of the pelvic venous plexuses, potentially resulting in hemorrhoids and destabilization of the pelvic organs."
         },
         {
           "type": "bullets",
           "items": [
-            "Internal iliac veins: they run alongside the internal iliac arteries and join the common iliac veins.",
-            "Pelvic venous plexuses: they contribute to maintaining the pelvic organs. They drain into the portal system."
-          ]
-        },
-        {
-          "type": "rop",
-          "body": [
-            "Any impediment to venous return in the hepatic portal system causes dilatation of the pelvic venous plexuses, responsible for hemorrhoids and destabilization of the pelvic organs."
-          ]
-        },
-        {
-          "type": "bullets",
-          "items": [
-            "Median sacral veins: they join the two common iliac veins to form the inferior vena cava.",
-            "Gonadal veins: they have different courses. The right gonadal vein joins the inferior vena cava, whereas the left gonadal vein joins the left renal vein."
+            "Median sacral veins: they join the two common iliac veins, which unite to form the inferior vena cava.",
+            "Gonadal veins: their drainage differs. The right gonadal vein drains into the inferior vena cava, whereas the left drains into the left renal vein."
           ]
         }
       ]
     },
     {
       "id": "innervation",
-      "title": "Innervation",
+      "title": "5. Innervation",
       "blocks": [
         {
           "type": "sub",
-          "text": "Somatic innervation"
+          "text": "5.1. Somatic innervation"
         },
         {
-          "type": "bullets",
-          "items": [            "Sacral plexus L5 to S3: formed by the anterior rami of L4 to S3, it gives collateral branches to the piriformis and pelvitrochanteric muscles, with the exception of the external obturator (obturator nerve), and to the gluteal nerves.",
-            "Its terminal branch is the sciatic nerve. Posteriorly, it is related to the piriformis muscle.",
-            "Ischiotrochanteric groove: the greater and lesser sciatic nerves leave the greater sciatic foramen and cross the gluteal region in the ischiotrochanteric groove, passing between the superficial muscles (gluteal muscles) and the deep muscles (internal obturator, gemelli and quadratus femoris muscles).",
-            "Pudendal plexus S2 to S4: it is anastomosed cranially with the sacral plexus and caudally with the coccygeal plexus:",
-            "Its visceral collateral branches (or Eckardt’s nervi erigentes), parasympathetic in nature, are destined for the pelvic organs;",
-            "Its somatic muscular collateral branches innervate the deep muscles of the perineum: levator ani, deep transverse perineal and coccygeus muscles;",
-            "Pudendal nerve: it leaves the greater sciatic foramen below the piriformis muscle, enters beneath the perineal floor through the lesser sciatic foramen by winding around the ischial spine, and passes between the sacrospinous and sacrotuberous ligaments. It runs along the ischiopubic ramus in Alcock’s canal (a splitting of the aponeurosis of the internal obturator muscle). It gives two branches:",
-            "Motor branch: it innervates the deep and superficial muscles of the perineum.",
-            "Sensory branch: it innervates the skin of the anal triangle, the central fibrous body of the perineum, the scrotum in men and the labial region in women. Its terminal branch, the dorsal nerve of the penis or clitoris, passes just below the pubic symphysis and innervates the penis and its glans or the clitoris."
-          ]
-        },
-        {
-          "type": "rop",
-          "body": [
-            "The pudendal nerve may be irritated through contact with the coccygeus and internal obturator muscles and the sacrotuberous and sacrospinous ligaments. It may also be irritated in Alcock’s canal. It is important to free the pudendal nerve along its entire course. Refer to our work Occipito-podal Reflexotherapy and the Neuro-meningeal System, Elsevier Masson, page 44."
-          ]
+          "type": "sub",
+          "text": "5.1.1. Sacral plexus"
         },
         {
           "type": "bullets",
           "items": [
-            "Coccygeal plexus S4-S5: it traverses and innervates the coccygeus muscle, the rectum and the anus. Its terminal branch, the coccygeal nerve, traverses and innervates the sacrococcygeal joint. Its sensory branch innervates the skin around the central fibrous body of the perineum.",
-            "Clinical note: fracture of the coccyx"
+            "Its terminal branch is the sciatic nerve, which lies anterior to the piriformis muscle."
           ]
         },
         {
           "type": "sub",
-          "text": "Symptoms"
+          "text": "5.1.2. Ischiotrochanteric groove"
+        },
+        {
+          "type": "sub",
+          "text": "5.1.3. Pudendal plexus"
         },
         {
           "type": "bullets",
           "items": [
-            "coccygodynia."
+            "Its parasympathetic visceral collateral branches—the nervi erigentes of Eckardt—are distributed to the pelvic organs;",
+            "Its somatic muscular collateral branches innervate the deep perineal muscles: levator ani, deep transverse perineal muscle, and coccygeus;"
           ]
         },
         {
           "type": "sub",
-          "text": "Autonomic innervation"
+          "text": "5.1.4. Pudendal nerve"
         },
         {
           "type": "bullets",
-          "items": [            "Sympathetic: the medullary cells of origin arise from the lateral horn of the spinal cord from T12 to L1, at the level of vertebrae T11 to T12, and continue along two pathways:",
-            "Lumbar and sacral laterovertebral ganglionic chains;",
-            "Prevertebral plexus chain: the ovary and the testis are innervated by the aorticorenal plexus arising from the 10th, 11th and 12th thoracic ganglia and the 1st lumbar ganglion;",
-            "The other pelvic organs are innervated by the inferior mesenteric plexus arising from the 12th thoracic ganglion. These sympathetic fibers then join the superior hypogastric plexus.",
-            "Gray rami communicantes: arising from the ganglia of the sacral laterovertebral ganglionic chain, they join the anterior rami of the sacral plexus to provide sympathetic innervation to the sacral and pudendal somatic nerves.",
-            "Pelvic parasympathetic system: the medullary cells of origin arise from the lateral horn of the sacral spinal cord from S2 to S4, at the level of vertebra L1. The fibers exit through the anterior sacral foramina with the anterior branches of the pudendal plexus, to form Eckardt’s nervi erigentes, which bring the parasympathetic contingent to the inferior hypogastric plexus.",
-            "Inferior hypogastric plexus: it provides dual autonomic innervation to the pelvic organs and to the internal sphincters of the bladder and anus."
+          "items": [
+            "Motor branch: innervates the deep and superficial muscles of the perineum.",
+            "Sensory branch: supplies the skin of the anal triangle, the perineal body, the scrotum in men, and the labial region in women. Its terminal branch, the dorsal nerve of the penis or clitoris, passes immediately inferior to the pubic symphysis and supplies the penis and glans or the clitoris."
           ]
         },
         {
           "type": "sub",
-          "text": "Higher subcortical neurovegetative centers"
+          "text": "Relevance to ROP"
         },
         {
           "type": "para",
-          "text": "The sympathetic and parasympathetic systems are under the control of the hypothalamus, which itself regulates the endocrine function of the pituitary gland:"
-        },
-        {
-          "type": "bullets",
-          "items": [
-            "Hypothalamus: it governs the proper functioning of the urogenital system through neurovegetative and hormonal pathways: it ensures the neural regulation of desire, the neuronal mechanisms of sexual arousal, and the hormonal regulation of the menstrual cycle and pregnancy. It is located beneath the floor of the 3rd ventricle and therefore occupies a central and vital position in the brain.",
-            "Pituitary gland: located just below the hypothalamus, it lies in the sella turcica of the sphenoid, near the sphenobasilar synchondrosis. Through FSH, LH and prolactin, it controls the hormonal activity of the genital organs.",
-            "Pineal gland, or epiphysis: it also occupies a central position behind the hypothalamus. It is bathed in cerebrospinal fluid and is therefore stimulated by the primary respiratory movement. It controls and regulates the hypothalamus. Through its hormone, melatonin, it regulates the sleep-wake rhythm and adapts the organism to seasonal rhythms. It counters aging and stimulates sexual activity. Its role is essential in the immune system and in mechanisms of adaptation to stress.",
-            "Limbic system: it is the brain of our drives and emotions, which themselves depend on our memory of the events that have marked our lives since early childhood (see Chapter 3 CNS, Brain, Limbic or Emotional System, page…). It adapts the hypothalamus’s program choices to the needs of the organism.",
-            "Prefrontal cortex: it subjects behavior to certain volitions and intentions. Located in the ascending frontal gyrus, it is the regulatory center of the psyche, consciousness and moral sense (see Chapter 3 CNS, Prefrontal and orbitonasal cortex, page…)."
-          ]
-        },
-        {
-          "type": "xref",
-          "label": "See the reference in chapter 3",
-          "text": "CNS, Brain, Limbic or Emotional System",
-          "href": "/lecture/chapitre-3?xrefBack=%2Flecture%2Fchapitre-17%23p-innervation-10&xrefBackLabel=Retour%20au%20chapitre%2017#sec-section-2-cadre-terminologique"
-        },
-        {
-          "type": "xref",
-          "label": "See the reference in chapter 3",
-          "text": "CNS, Prefrontal and orbitonasal cortex",
-          "href": "/lecture/chapitre-3?xrefBack=%2Flecture%2Fchapitre-17%23p-innervation-10&xrefBackLabel=Retour%20au%20chapitre%2017#sec-section-3-organisation-anatomique"
+          "text": "The pudendal nerve may be irritated where it contacts the coccygeus and obturator internus muscles and the sacrotuberous and sacrospinous ligaments. It may also be irritated within Alcock’s canal. The pudendal nerve should be released along its entire course. See our book Occipito-Podal Reflex Therapy and the Neuromeningeal System, Elsevier Masson, p. 44."
         },
         {
           "type": "sub",
-          "text": "Physiology"
-        },
-        {
-          "type": "para",
-          "text": "Mechanism of pressure unloading and absorption:"
-        },
-        {
-          "type": "sub",
-          "text": "Turgor effect and intracavitary pressures"
+          "text": "5.1.5. Coccygeal plexus"
         },
         {
           "type": "bullets",
           "items": [
-            "(see Chapter 1 General Considerations, turgor effect and intracavitary pressures, page…)"
+            "Clinical presentation: coccygeal fracture.",
+            "Symptoms: coccydynia."
           ]
         },
         {
-          "type": "xref",
-          "label": "See the reference in chapter 1",
-          "text": "General Considerations, turgor effect and intracavitary pressures",
-          "href": "/lecture/chapitre-1?xrefBack=%2Flecture%2Fchapitre-17%23p-innervation-14&xrefBackLabel=Retour%20au%20chapitre%2017#p-articulations-viscerales-3"
+          "type": "sub",
+          "text": "5.2. Autonomic innervation"
         },
         {
-          "type": "para",
-          "text": "In the standing position, the pressure is:"
+          "type": "sub",
+          "text": "5.2.1. Sympathetic division"
         },
         {
           "type": "bullets",
           "items": [
-            "+10 to +20 cm H2O in the cranial cavity;",
-            "-5 to -10 cm H2O in the pleural cavity;",
-            "< 0 at the supramesocolic subdiaphragmatic level;",
-            "+5 to +10 cm H2O at the inframesocolic level.",
-            "Under physiological conditions, the organs of the pelvic cavity are relatively well protected from the pressures of the visceral column coming from the thoracic and abdominal cavities, thanks to unloading-absorption of intracavitary pressures by:",
-            "Thoracic suction and thoracodiaphragmatic attraction: the subdiaphragmatic organs are subjected to thoracic suction, all the more so when they are close to the diaphragm. Conversely, “the farther one moves away from the diaphragm downward, the less the organs benefit from thoracic suction and diaphragmatic attraction. They therefore exert a gravitational force on the pelvic organs, all the greater the farther they are from the diaphragm” (Urogenital Manipulations, Jean-Pierre Barral, Elsevier).",
-            "Orientation of the pelvic cavity: thanks to the caudal and ventral orientation of the pelvic cavity, gravitational forces are distributed over the bony perimeter of the pelvic outlet.",
-            "Dome shape of the pelvic viscera: the body of the uterus, located in the center of the pelvic cavity, further reinforces this distribution of gravitational forces over the perimeter of the pelvic outlet, thereby further relieving pressure on the pelvic organs.",
-            "Contractility and elasticity of the perineal muscles: the perineal muscles redirect the residual gravitational forces upward and horizontally toward the perimeter of the pelvic outlet.",
-            "Balance of the three diaphragms: the perineum, or pelvic diaphragm, constantly adapts to pressure variations related to the movements of the thoracic diaphragm, which itself balances changes in tension of the cranial diaphragm (falx cerebri and tentorium cerebelli) due to the alternation of flexion and extension in the craniosacral primary respiratory movement.",
-            "When all these conditions are met, the pelvic organs undergo little gravitational stress and perform their respective roles harmoniously.",
-            "These pressures are considerably increased during coughing, sneezing, defecation, childbirth and certain sporting activities."
+            "Lumbar and sacral paravertebral sympathetic chains;",
+            "Prevertebral plexus chain: the ovary and testis are innervated by the aorticorenal plexus arising from the tenth, eleventh, and twelfth thoracic ganglia and the first lumbar ganglion;",
+            "The other pelvic organs are innervated by the inferior mesenteric plexus arising from the twelfth thoracic ganglion. These sympathetic fibers then join the superior hypogastric plexus.",
+            "Gray rami communicantes: arising from the ganglia of the sacral paravertebral sympathetic chain, they join the anterior rami of the sacral plexus and convey sympathetic innervation to the sacral and pudendal somatic nerves."
+          ]
+        },
+        {
+          "type": "sub",
+          "text": "5.2.2. Pelvic parasympathetic division"
+        },
+        {
+          "type": "sub",
+          "text": "5.2.3. Inferior hypogastric plexus"
+        },
+        {
+          "type": "sub",
+          "text": "5.3. Higher autonomic centers"
+        },
+        {
+          "type": "para",
+          "text": "The sympathetic and parasympathetic divisions are controlled by the hypothalamus, which in turn regulates the endocrine function of the pituitary gland:"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "Hypothalamus: it regulates urogenital function through autonomic and hormonal pathways. It contributes to the neural regulation of desire, the neuronal mechanisms of sexual arousal, and hormonal regulation of the menstrual cycle and pregnancy. Located beneath the floor of the third ventricle, it occupies a central and vital position in the brain.",
+            "Pituitary gland: located immediately below the hypothalamus, it lies within the sphenoidal sella turcica near the sphenobasilar synchondrosis. Through FSH, LH, and prolactin, it controls the hormonal activity of the genital organs.",
+            "Pineal gland (epiphysis cerebri): it also occupies a central position posterior to the hypothalamus. It is surrounded by cerebrospinal fluid and is therefore stimulated by the primary respiratory mechanism. It controls and regulates the hypothalamus. Through melatonin, it regulates the sleep–wake cycle and adapts the body to seasonal rhythms. It counters aging and stimulates sexual activity. It plays an essential role in immune function and mechanisms of adaptation to stress.",
+            "Limbic system: it is the neural system of drives and emotions, which are themselves influenced by memories of events that have shaped life since early childhood (see Chapter 3, Central Nervous System, Limbic or Emotional Brain, p. …). It adapts hypothalamic program selection to the body’s needs.",
+            "Prefrontal cortex: located in the frontal lobe, it contributes to the regulation of behavior, conscious decision-making, and moral judgment (see Chapter 3, Central Nervous System, Prefrontal and Orbitonasal Cortex, p. …)."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "physiologie",
+      "title": "6. Physiology: load distribution and pressure-absorption mechanisms",
+      "blocks": [
+        {
+          "type": "sub",
+          "text": "6.1. Turgor effect and intracavitary pressures"
+        },
+        {
+          "type": "para",
+          "text": "In the standing position, pressure is:"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "+10 to +20 cmH₂O in the cranial cavity;",
+            "−5 to −10 cmH₂O in the pleural cavity;",
+            "<0 in the supramesocolic subdiaphragmatic compartment;",
+            "+5 to +10 cmH₂O in the inframesocolic compartment."
           ]
         },
         {
           "type": "para",
-          "text": "To illustrate the role of pressures, let us take three examples:"
+          "text": "Under physiological conditions, the pelvic organs are relatively well protected from pressure transmitted by the thoracoabdominal contents through the following intracavitary pressure-distribution and absorption mechanisms:"
+        },
+        {
+          "type": "sub",
+          "text": "6.2. Thoracic suction and thoracodiaphragmatic attraction"
+        },
+        {
+          "type": "sub",
+          "text": "6.3. Orientation of the pelvic cavity"
+        },
+        {
+          "type": "sub",
+          "text": "6.4. Domed configuration of the pelvic viscera"
+        },
+        {
+          "type": "sub",
+          "text": "6.5. Contractility and elasticity of the perineum"
+        },
+        {
+          "type": "sub",
+          "text": "6.6. Balance among the three diaphragms"
         },
         {
           "type": "bullets",
           "items": [
-            "The liver is a heavy organ, weighing approximately 1.5 kg on the scale. Thanks to diaphragmatic attraction, its effective weight is only 400 g. A ptotic liver that loses its normal relationships with the diaphragm loses much of its diaphragmatic suction and comes to bear heavily on the right kidney and on the abdominal and pelvic organs.",
-            "Pleuropulmonary sequelae make thoracic suction less effective, and the entire abdominal visceral column benefits less from diaphragmatic attraction and will weigh more heavily on the abdominopelvic organs and the perineum.",
-            "Retroversion and anteversion of the uterus: it no longer performs its role as a pressure distributor over the intrapelvic organs. If fascial tensions of the perineum are also present, all the factors are in place to create visceral ptosis and stress urinary incontinence. Let us also imagine the consequences of a hysterectomy."
+            "When all these conditions are met, the pelvic organs are subjected to little gravitational stress and can perform their respective functions effectively.",
+            "These pressures increase considerably during coughing, sneezing, defecation, childbirth, and certain sporting activities."
+          ]
+        },
+        {
+          "type": "sub",
+          "text": "6.7. Clinical examples illustrating the role of pressure"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "The liver is a heavy organ, weighing approximately 1.5 kg on a scale. Owing to diaphragmatic attraction, its effective weight is only approximately 400 g. A ptotic liver that loses its normal relationship with the diaphragm also loses much of the benefit of diaphragmatic suction and bears heavily on the right kidney and the abdominal and pelvic organs.",
+            "Pleuropulmonary sequelae reduce the effectiveness of thoracic suction. Consequently, the abdominal visceral mass receives less support from diaphragmatic attraction and exerts greater pressure on the abdominopelvic organs and perineum.",
+            "Uterine retroversion and anteversion: the uterus no longer performs its role in distributing pressure across the intrapelvic organs. If perineal fascial tension is also present, the conditions favor visceral ptosis and stress urinary incontinence. The consequences of hysterectomy should likewise be considered."
           ]
         }
       ]
     },
     {
       "id": "pathologies-courantes",
-      "title": "Common pathologies",
+      "title": "7. Common disorders",
       "blocks": [
         {
-          "type": "bullets",
-          "items": [
-            "Ptoses: the urinary, anal and vaginal orifices are points of lesser resistance. If gravitational forces increase and if the closing forces of an orifice decrease, the perineum offers less resistance and can no longer oppose gravitational forces; the viscera gradually migrate toward their orifices. This is ptosis: stress urinary incontinence, uterine prolapse, rectal prolapse."
-          ]
+          "type": "sub",
+          "text": "7.1. Pelvic organ prolapse"
         },
         {
           "type": "sub",
-          "text": "Causes"
+          "text": "7.1.1. Causes"
         },
         {
-          "type": "bullets",
-          "items": [
-            "during childbirth, they occur in multiparous women or in primiparous women when the child is “pulled out” with a vacuum extractor or forceps, without taking the mother’s uterine contractions into account and with a wide episiotomy (see Chapter 18 Bladder, Stress Urinary Incontinence, page…).",
-            "Other causes of ptosis are aging, depressive states, high visceral ptoses (small intestine), uterine anteversions, low constipation, and fixations of the pubic symphysis and coccyx."
-          ]
-        },
-        {
-          "type": "xref",
-          "label": "See the reference in chapter 18",
-          "text": "Bladder, Stress Urinary Incontinence",
-          "href": "/lecture/chapitre-18?xrefBack=%2Flecture%2Fchapitre-17%23p-pathologies-courantes-2&xrefBackLabel=Retour%20au%20chapitre%2017#sec-pathologies-courantes"
+          "type": "para",
+          "text": "Other causes of prolapse include aging, depression, prolapse of superior viscera such as the small intestine, uterine anteversion, distal constipation, and fixation of the pubic symphysis or coccyx."
         },
         {
           "type": "sub",
-          "text": "Pudendal syndrome"
+          "text": "7.2. Pudendal neuralgia syndrome"
         },
         {
           "type": "sub",
-          "text": "Symptoms"
+          "text": "7.2.1. Symptoms"
         },
         {
           "type": "bullets",
           "items": [
-            "Shooting sensations, burning and unbearable pain of the perineum and anus;",
-            "Discomfort and burning during micturition and defecation;",
-            "Sexual disorders with significant physical and psychological consequences."
+            "Shooting and burning sensations and severe pain in the perineum and anus;",
+            "Discomfort and burning during urination and defecation;",
+            "Sexual dysfunction with major physical and psychological consequences."
           ]
         },
         {
           "type": "sub",
-          "text": "Causes"
+          "text": "7.2.2. Causes"
         },
         {
           "type": "bullets",
           "items": [
             "Sexual assault;",
-            "Fall onto the coccyx;",
+            "A fall onto the coccyx;",
             "Sequelae of childbirth;",
             "Pelvic fractures;",
             "Urogenital surgery;",
-            "Muscular overuse of the piriformis and internal obturator muscles (sport)."
+            "Muscular overuse of the piriformis and obturator internus muscles, particularly during athletic activity."
           ]
         },
         {
           "type": "sub",
-          "text": "Diagnosis"
-        },
-        {
-          "type": "bullets",
-          "items": [
-            "poorly understood and often delayed, leading to treatment errors and inappropriate treatments."
-          ]
+          "text": "7.2.3. Diagnosis"
         },
         {
           "type": "sub",
-          "text": "Evolution"
+          "text": "7.2.4. Clinical course"
         },
         {
           "type": "bullets",
           "items": [
             "Stage I (neurapraxia): pain;",
-            "Stage II (axonotmesis): dysfunctional and reflex activity of the urinary, anal and sexual systems;",
+            "Stage II (axonotmesis): dysfunctional and reflex activity involving the urinary, anal, and sexual systems;",
             "Stage III: hypotonia of the striated sphincter muscles and pelvic floor."
           ]
         },
         {
           "type": "sub",
-          "text": "Treatment"
+          "text": "7.2.5. Medical treatment"
         },
         {
           "type": "bullets",
           "items": [
-            "Stage I: functional treatment;",
-            "Stage II: infiltration;",
+            "Stage I: conservative functional treatment;",
+            "Stage II: injection therapy;",
             "Stage III: surgery."
           ]
         },
         {
           "type": "sub",
-          "text": "ROP treatment"
+          "text": "7.2.6. ROP management"
         },
         {
           "type": "bullets",
           "items": [
             "Sacral and pudendal plexuses;",
-            "Piriformis and internal obturator muscles;",
+            "Piriformis and obturator internus muscles;",
             "Sacrospinous and sacrotuberous ligaments;",
-            "Alcock’s canal (along the ischiopubic ramus)."
+            "Alcock’s canal, along the ischiopubic ramus."
           ]
         }
       ]
     },
     {
       "id": "zones-reflexes-podales",
-      "title": "Foot reflex zones",
+      "title": "8. ROP Reflex Zones — Regional Mapping of the Pelvic Cavity",
       "blocks": [
         {
           "type": "sub",
-          "text": "General adaptation syndrome"
+          "text": "8.1. Key point — Chapter 17 as the regional foundation for Level 3"
         },
         {
-          "type": "bullets",
-          "items": [
-            "Pelvic parasympathetic system (sacral);",
-            "Spinal column, costotransverse joints (lower thoracic, lumbar and sacral laterovertebral ganglionic chain)."
-          ]
+          "type": "para",
+          "text": "Chapter 17 should not be treated as an additional organ-specific chapter. It serves as the regional reference for the chapters on the bladder, female genital organs, male genital organs, and erectile system."
         },
         {
           "type": "sub",
-          "text": "Locoregional syndrome"
+          "text": "8.2. Level 3 — Local and regional visceral regulation: the pelvic foundation"
+        },
+        {
+          "type": "para",
+          "text": "Level 3 is the core of this chapter. It does not target an isolated viscus, but the anatomical environment in which the pelvic organs move, are supported, and maintain their relationships."
+        },
+        {
+          "type": "para",
+          "text": "8.2.1. The pelvic container"
+        },
+        {
+          "type": "para",
+          "text": "• Pelvic inlet and pelvic outlet."
+        },
+        {
+          "type": "para",
+          "text": "• Sacrum and coccyx as the posterior boundaries of the pelvic framework."
+        },
+        {
+          "type": "para",
+          "text": "• Pubic symphysis and ischiopubic rami as anterior landmarks."
+        },
+        {
+          "type": "para",
+          "text": "• Lateral pelvic walls."
+        },
+        {
+          "type": "para",
+          "text": "• Greater sciatic foramen."
+        },
+        {
+          "type": "para",
+          "text": "• Lesser sciatic foramen."
+        },
+        {
+          "type": "para",
+          "text": "• Obturator foramen and obturator membrane."
+        },
+        {
+          "type": "para",
+          "text": "These landmarks describe the osseous framework and the routes of communication among the pelvic cavity, gluteal region, perineum, and lower limbs. They constitute the first component of the regional module."
+        },
+        {
+          "type": "para",
+          "text": "8.2.2. Ligamentous and fascial interfaces"
+        },
+        {
+          "type": "para",
+          "text": "• Sacrotuberous ligaments."
+        },
+        {
+          "type": "para",
+          "text": "• Sacrospinous ligaments."
+        },
+        {
+          "type": "para",
+          "text": "• Sacrorectogenitopubic laminae and the other pelvic septa described in this chapter."
+        },
+        {
+          "type": "para",
+          "text": "• Membranes and fasciae of the pelvic wall."
+        },
+        {
+          "type": "para",
+          "text": "• Perineum, considered here as a regional supporting and closing plane."
+        },
+        {
+          "type": "para",
+          "text": "In this interpretation, the ligaments and fasciae are not treated as evidence of a specific lesion. They serve as landmarks of regional continuity and relative mobility among pelvic structures."
+        },
+        {
+          "type": "para",
+          "text": "8.2.3. Pelvic visceral space"
+        },
+        {
+          "type": "para",
+          "text": "• Medial visceral compartment."
+        },
+        {
+          "type": "para",
+          "text": "• Subperitoneal pelvic space."
+        },
+        {
+          "type": "para",
+          "text": "• Pelvic peritoneal pouches."
+        },
+        {
+          "type": "para",
+          "text": "• Relationships among the rectum, bladder, uterus, and adnexa in women."
+        },
+        {
+          "type": "para",
+          "text": "• Relationships among the rectum, bladder, prostate, seminal vesicles, and genital ducts in men."
+        },
+        {
+          "type": "para",
+          "text": "• Relationships with the peritoneum and pelvic septa."
+        },
+        {
+          "type": "para",
+          "text": "Chapter 17 provides the common regional foundation. The reflex zones specific to each viscus remain described in their respective chapters and are not duplicated in this section."
+        },
+        {
+          "type": "para",
+          "text": "See Chapter 18 — Bladder; Chapter 19 — Female Genital Organs; Chapter 20 — Male Genital Organs; Chapter 21 — Erectile System."
         },
         {
           "type": "sub",
-          "text": "Pelvic cavity"
+          "text": "8.3. Level 4 — Pelvic somatic integration"
         },
         {
-          "type": "bullets",
-          "items": [            "Greater sciatic foramen and piriformis muscle;",
-            "Ischiotrochanteric fossa and sciatic nerve;",
-            "Lesser sciatic foramen and obturator and gemelli muscles;",
-            "Obturator fossa and obturator muscles;",
-            "Pudendal plexus."
-          ]
+          "type": "para",
+          "text": "In this regional chapter, Level 4 is deliberately adapted: it groups the somatic structures that border, traverse, or stabilize the pelvis and may contribute to painful or functional convergence associated with the pelvic viscera."
+        },
+        {
+          "type": "para",
+          "text": "8.3.1. Sacral plexus and sciatic nerve"
+        },
+        {
+          "type": "para",
+          "text": "• Sacral plexus."
+        },
+        {
+          "type": "para",
+          "text": "• Greater sciatic foramen."
+        },
+        {
+          "type": "para",
+          "text": "• Piriformis muscle."
+        },
+        {
+          "type": "para",
+          "text": "• Ischiotrochanteric groove."
+        },
+        {
+          "type": "para",
+          "text": "• Sciatic nerve."
+        },
+        {
+          "type": "para",
+          "text": "These landmarks are particularly useful when a pelvic presentation is accompanied by lumbosacral, gluteal, or sciatic pain. They do not imply that sciatic pain necessarily has a visceral origin."
+        },
+        {
+          "type": "para",
+          "text": "8.3.2. Pudendal nerve and perineal environment"
+        },
+        {
+          "type": "para",
+          "text": "• Pudendal nerve and pudendal plexus according to the method’s mapping."
+        },
+        {
+          "type": "para",
+          "text": "• Ischial spine."
+        },
+        {
+          "type": "para",
+          "text": "• Sacrospinous and sacrotuberous ligaments."
+        },
+        {
+          "type": "para",
+          "text": "• Lesser sciatic foramen."
+        },
+        {
+          "type": "para",
+          "text": "• Alcock’s canal along the ischiopubic ramus."
+        },
+        {
+          "type": "para",
+          "text": "• Perineum and pelvic floor."
+        },
+        {
+          "type": "para",
+          "text": "The pudendal nerve is a somatic sensorimotor pathway. It must be distinguished from the parasympathetic pelvic splanchnic nerves, even though these systems share closely related sacral levels."
+        },
+        {
+          "type": "para",
+          "text": "8.3.3. Associated muscles and joints"
+        },
+        {
+          "type": "para",
+          "text": "• Piriformis."
+        },
+        {
+          "type": "para",
+          "text": "• Obturator internus and gemelli muscles."
+        },
+        {
+          "type": "para",
+          "text": "• Deep perineal muscles."
+        },
+        {
+          "type": "para",
+          "text": "• Sacrum and coccyx."
+        },
+        {
+          "type": "para",
+          "text": "• Sacroiliac joints."
+        },
+        {
+          "type": "para",
+          "text": "• Hips and the coxofemoral environment when justified by the clinical presentation."
+        },
+        {
+          "type": "para",
+          "text": "These structures constitute the somatic aspect of the pelvis. Their selection depends on symptoms, examination findings, and the functional relationships identified during assessment."
+        },
+        {
+          "type": "para",
+          "text": "8.3.4. Coccygeal plexus and sacrococcygeal region"
+        },
+        {
+          "type": "para",
+          "text": "• Coccygeal plexus."
+        },
+        {
+          "type": "para",
+          "text": "• Sacrococcygeal joint."
+        },
+        {
+          "type": "para",
+          "text": "• Coccyx and perineal attachments."
+        },
+        {
+          "type": "para",
+          "text": "These landmarks may supplement Level 4 when coccydynia, perineal pain, or a history of coccygeal trauma contributes to the clinical presentation."
         },
         {
           "type": "sub",
-          "text": "Coccygeal plexus"
+          "text": "8.4. Cross-references to Levels 1 and 2"
         },
         {
-          "type": "bullets",
-          "items": [
-            "coccyx;",
-            "Sacrotuberous and sacrospinous ligaments;"
-          ]
+          "type": "para",
+          "text": "• Level 1: higher centers and the neuromeningeal environment—see Chapter 3, “Central Nervous System.”"
+        },
+        {
+          "type": "para",
+          "text": "• Level 2: thoracolumbar sympathetic division, S2–S4 pelvic parasympathetic outflow, hypogastric nerves, and inferior hypogastric plexus—see Chapter 4, “Autonomic Nervous System.”"
         },
         {
           "type": "sub",
-          "text": "Spinal dura mater"
+          "text": "8.5. Clinical use of the regional foundation"
         },
         {
-          "type": "bullets",
-          "items": [
-            "upper attachments: perimeter of the foramen magnum, C2",
-            "lower attachments: 2nd sacral vertebra"
-          ]
+          "type": "para",
+          "text": "The regional map is not applied as a fixed sequence. Its purpose is to provide a common framework for the different pelvic organs."
+        },
+        {
+          "type": "para",
+          "text": "• Bladder symptoms: bladder-specific zone + regional pelvic components selected according to findings."
+        },
+        {
+          "type": "para",
+          "text": "• Uterine or ovarian symptoms: organ-specific zone + peritoneum, ligaments, walls, or perineum according to context."
+        },
+        {
+          "type": "para",
+          "text": "• Prostatic or male genital symptoms: specific zone + pelvic compartment, perineum, and relevant somatic interfaces."
+        },
+        {
+          "type": "para",
+          "text": "• Perineal pain or pudendal neuralgia syndrome: greater emphasis on Level 4, particularly the pudendal nerve, Alcock’s canal, and neighboring muscles and ligaments."
+        },
+        {
+          "type": "para",
+          "text": "• Associated lumbopelvic or sciatic pain: if supported by the findings, include the sacral plexus, piriformis, ischiotrochanteric groove, and pelvic joints."
         }
       ]
     }
