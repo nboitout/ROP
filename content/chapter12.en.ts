@@ -1034,6 +1034,34 @@ export const chapter12En: Chapter = {
           ]
         },
         {
+          "type": "figure",
+          "src": "/chapter-12/EN/cartography/figure-12-01.png",
+          "caption": "Cartography: Pancreas — head and neck",
+          "alt": "English ROP plantar cartography of the head and neck of the pancreas",
+          "orientation": "landscape"
+        },
+        {
+          "type": "figure",
+          "src": "/chapter-12/EN/cartography/figure-12-02.png",
+          "caption": "Photo: Pancreas — head and neck",
+          "alt": "Plantar landmark for the head and neck of the pancreas",
+          "orientation": "portrait"
+        },
+        {
+          "type": "figure",
+          "src": "/chapter-12/EN/cartography/figure-12-03.png",
+          "caption": "Cartography: Pancreas — body and tail",
+          "alt": "English ROP plantar cartography of the body and tail of the pancreas",
+          "orientation": "landscape"
+        },
+        {
+          "type": "figure",
+          "src": "/chapter-12/EN/cartography/figure-12-04.png",
+          "caption": "Photo: Pancreas — body and tail",
+          "alt": "Plantar landmark for the body and tail of the pancreas",
+          "orientation": "portrait"
+        },
+        {
           "type": "para",
           "text": "RELEVANCE TO ROP — In ROP mapping, the head may be used primarily as a landmark for exocrine function and the tail as a landmark for endocrine function. This distinction is a practical feature of the method and does not represent a strict anatomical separation of pancreatic functions."
         },
