@@ -214,7 +214,7 @@ export const chapter18SlidesEn: SyncSlide[] = [
   { src: '/chapter-18/EN/Images/NCH 18 EN IMG 20.png', title: 'Practical Advice: Abdomino-Perineal Reeducation' },
   { src: '/chapter-18/EN/Images/NCH 18 EN IMG 21.png', title: 'ROP Clinical Protocol: The Bladder' },
   { src: '/chapter-18/EN/Images/NCH 18 EN IMG 22.png', title: 'Higher Centers of Neurovegetative Control' },
-]
+].map((slide) => ({ ...slide, src: `${slide.src}?v=20260826-en` }))
 
 export const chapter18SlideAnchorsEn: SyncAnchor[] = [
   { sectionId: 'presentation', blockIndex: -1, slide: 1 },
