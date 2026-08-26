@@ -11,7 +11,15 @@ import { getSessionId } from '@/lib/session'
  * launch-waitlist link, so the whole checkout can ship dark and be switched on
  * the day the book is published.
  */
-export default function BuyOnlineBookButton({ className }: { className?: string }) {
+export default function BuyOnlineBookButton({
+  className,
+  label,
+  source = 'home',
+}: {
+  className?: string
+  label?: string
+  source?: string
+}) {
   const { t, lang } = useLanguage()
   const [pending, setPending] = useState(false)
   const [failed, setFailed] = useState(false)
@@ -22,7 +30,7 @@ export default function BuyOnlineBookButton({ className }: { className?: string 
     fetch('/api/track', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ chapter: 'home', event: 'cta_click', data: { cta }, lang, sessionId: getSessionId() }),
+      body: JSON.stringify({ chapter: source, event: 'cta_click', data: { cta }, lang, sessionId: getSessionId() }),
       keepalive: true,
     }).catch(() => {})
   }
@@ -44,7 +52,7 @@ export default function BuyOnlineBookButton({ className }: { className?: string 
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
-        chapter: 'home',
+        chapter: source,
         event: 'checkout_start',
         data: { product: 'online_book' },
         lang,
@@ -71,7 +79,7 @@ export default function BuyOnlineBookButton({ className }: { className?: string 
   return (
     <>
       <button type="button" className={className} onClick={startCheckout} disabled={pending}>
-        {pending ? t.checkout.starting : t.checkout.buyCta}
+        {pending ? t.checkout.starting : (label ?? t.checkout.buyCta)}
       </button>
       {failed && <p className="checkout-error">{t.checkout.error}</p>}
     </>

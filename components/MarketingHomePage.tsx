@@ -89,7 +89,8 @@ export default function MarketingHomePage() {
               ))}
             </div>
             <div className="hero-ctas">
-              <Link href={localizedHref('/chapitres-gratuits', lang)} className="btn b-gold" onClick={() => trackCta('hero_chapters')}>{t.hero.cta1}</Link>
+              <BuyOnlineBookButton className="btn b-gold" label={t.hero.buyCta} />
+              <Link href={localizedHref('/chapitres-gratuits', lang)} className="btn b-ghost" onClick={() => trackCta('hero_chapters')}>{t.hero.cta1}</Link>
               <a href="#chapitres" className="btn b-ghost" onClick={() => trackCta('hero_summary')}>{t.hero.cta2}</a>
             </div>
             <div className="hl-author">

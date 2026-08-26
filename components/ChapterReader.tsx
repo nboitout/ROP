@@ -8,8 +8,8 @@ import type { Chapter, Block, Section } from '@/content/types'
 import type { Lang } from '@/app/i18n/translations'
 
 const PdfSlideViewer = dynamic(() => import('@/components/PdfSlideViewer'), { ssr: false })
-import BookNotifyForm from '@/components/BookNotifyForm'
 import ReflexZoneAtlas from '@/components/ReflexZoneAtlas'
+import BuyOnlineBookButton from '@/components/BuyOnlineBookButton'
 import { currentTopAnchorId, saveReadingPosition, loadReadingPosition, restoreToAnchor } from '@/lib/readingPosition'
 import { useLanguage } from '@/app/i18n/LanguageContext'
 import { getSessionId } from '@/lib/session'
@@ -49,7 +49,7 @@ export default function ChapterReader({ chapter, bookTitle, backHref = '/chapitr
   const { lang, t } = useLanguage()
   const searchParams = useSearchParams()
   const showFallbackNotice = lang !== contentLang
-  const showEndCard = new Set(['introduction', 'chapter-3', 'chapter-14']).has(chapter.slug)
+  const showEndCard = new Set(['introduction', 'chapter-2', 'chapter-14']).has(chapter.slug)
   const [sessionId] = useState<string>(() =>
     typeof window !== 'undefined' ? getSessionId() : ''
   )
@@ -402,7 +402,11 @@ export default function ChapterReader({ chapter, bookTitle, backHref = '/chapitr
                 <p className="cr-end-body">
                   {chapter.number ? t.reader.endCardBodyChapter : t.reader.endCardBodyIntro}
                 </p>
-                <BookNotifyForm labels={t.pricing.notify.form} />
+                <BuyOnlineBookButton
+                  className="btn b-gold"
+                  label={t.chapters.cta}
+                  source={chapter.slug}
+                />
               </div>
             </div>
           ) : (
