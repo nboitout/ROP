@@ -4,13 +4,13 @@ import { useEffect, useState } from 'react'
 import { getImageProps } from 'next/image'
 import Link from 'next/link'
 import { useLanguage } from '@/app/i18n/LanguageContext'
+import { localizedHref } from '@/app/i18n/locale'
 import type { Lang } from '@/app/i18n/translations'
 import { getSessionId } from '@/lib/session'
 
-// The gradient plate carries its labels inside the image and is French only for
-// now. Same convention as the homepage showcase: drop a localized export in
-// /assets/anatomie/<lang>/ and add the entry here to switch that locale over.
-const figureFolders: Partial<Record<Lang, string>> = {}
+const figureFolders: Partial<Record<Lang, string>> = {
+  en: '/assets/Fondements Neuro-Anatomiques/EN',
+}
 
 const DESKTOP_FIGURE = {
   src: '/assets/Fondements Neuro-Anatomiques/Gradient -- version desktop.png',
@@ -67,10 +67,10 @@ export default function AnatomyFoundation() {
 
   const figureFolder = figureFolders[lang]
   const desktopSrc = figureFolder
-    ? `${figureFolder}/gradient-impact-visceral.webp`
+    ? `${figureFolder}/Gradient -- version desktop.png`
     : DESKTOP_FIGURE.src
   const mobileSrc = figureFolder
-    ? `${figureFolder}/gradient-impact-visceral.webp`
+    ? `${figureFolder}/Gradient -- version mobile.png`
     : MOBILE_FIGURE.src
 
   useEffect(() => {
@@ -103,7 +103,7 @@ export default function AnatomyFoundation() {
           <p className="anat-intro">{a.p1}</p>
           <p className="anat-intro">{a.p2}</p>
           <Link
-            href={FOUNDATIONS_HREF}
+            href={localizedHref(FOUNDATIONS_HREF, lang)}
             className="btn b-gold anat-cta"
             onClick={() => track('anatomy_foundations_page')}
           >

@@ -1,0 +1,837 @@
+{
+  "title": "Neuroanatomical Foundations of ROP",
+  "subtitle": "From the reflex point to the somatic gateway: four gateways, six bridges, and a two-axis targeting gradient.",
+  "source": "ROP_Neuroanatomical_Foundations_EN_Revised.docx",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "Authors: Nicolas Boitout, Guy Boitout"
+    },
+    {
+      "type": "paragraph",
+      "text": "ROP does not assume that an organ is materially “represented” at a point on the foot. The working proposition is different: a region of the foot first constitutes a sensory gateway. Pressure deforms the skin and subcutaneous tissues, recruits mechanoreceptors and other somatic afferents, and conveys a signal through a peripheral nerve to the spinal cord and higher centers [1–3]."
+    },
+    {
+      "type": "paragraph",
+      "text": "At each of these levels, the activity may encounter somatic, autonomic, and visceral circuits. We retain the pedagogical term neuroanatomical bridge for each possible site of convergence. A bridge is neither a direct anatomical connection between a point on the foot and an organ nor proof of therapeutic efficacy; it is a plausible mechanism through which somatic input may access a network capable of modulating visceral function."
+    },
+    {
+      "type": "paragraph",
+      "text": "Two questions must remain separate. First, does somatovisceral modulation exist—can stimulation of the foot alter an autonomic or visceral function? Second, can some regions or nerves provide more regional or reproducible targeting than others? Conflating these questions is the most frequent weakness of reflexology texts, and the criticism most justifiably directed at them [14,16,48,49]."
+    },
+    {
+      "type": "paragraph",
+      "text": "Three findings alter the interpretation. Saphenous nerve stimulation separates the two questions instead of superimposing them. Digestive and cephalic somatovisceral reflexes show that lower-limb input can modify a function far removed from any segmental overlap. Negative clinical trials remind us that a mechanistic bridge does not predict a therapeutic effect."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "at-a-glance-essential-conclusions",
+      "text": "At a glance: essential conclusions"
+    },
+    {
+      "type": "list",
+      "items": [
+        "The foot is a rich sensory interface. Plantar glabrous skin contains several classes of low-threshold mechanoreceptors whose receptive-field sizes and activation thresholds vary by location [2,3].",
+        "Four major somatic gateways can be distinguished at the foot and ankle: plantar/tibial, lateral/sural, dorsal/fibular, and medial/saphenous. They are not equivalent peripherally or at root level [1].",
+        "The tibial nerve is multiradicular, classically L4–S3. Its potential overlap with the S2–S4 sacral organization of pelvic function mainly concerns S2–S3. This supports regional pelvic targeting but creates no direct pathway to a viscus [1,8–11,14].",
+        "Despite having no sacral overlap, the saphenous nerve modulates the bladder reflex in rats and cats and has yielded an initial human clinical signal [17–19,24]. Segmental proximity and modulatory capacity are therefore distinct axes.",
+        "Bridges 1–4 form a proximity argument; Bridges 5–6 form a network argument. The former explain why the pelvis is the most accessible region from the foot; the latter explain how a function sharing no spinal segment with the foot may nevertheless be modulated.",
+        "Clinical evidence varies by indication: favorable for overactive bladder [21,22], negative in two controlled trials of fecal incontinence [25,26], and favorable again in certain forms of constipation and dyssynergia [27,28].",
+        "The pelvis remains the best candidate for regional targeting from the foot, and the bladder is the best-documented visceral model. The distal colon and rectum are important extensions [30–35]."
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "1-the-foot-a-sensory-interface-and-four-somatic-gateways",
+      "text": "1. The foot: a sensory interface and four somatic gateways"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "id": "1-1-from-pressure-to-afferent-input",
+      "text": "1.1. From pressure to afferent input"
+    },
+    {
+      "type": "paragraph",
+      "text": "The glabrous skin of the sole is not passive. Human microneurographic recordings identify four major classes of low-threshold tactile afferents: rapidly adapting type I and II units and slowly adapting type I and II units. Their receptive fields extend across the toes, metatarsal heads, arches, and heel; their density, receptive-field sizes, and activation thresholds vary by location [2,3]."
+    },
+    {
+      "type": "paragraph",
+      "text": "Manual ROP pressure may therefore recruit different afferent populations according to location, contact area, direction, speed, duration, and depth. Neighboring regions should not be assumed equivalent, but differences must be sought in actual innervation, recruited tissues, and receptor properties—not in a topographic resemblance to an organ."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "id": "1-2-four-gateways-to-compare",
+      "text": "1.2. Four gateways to compare"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Gateway",
+        "Roots",
+        "Territory and nerves",
+        "Sacral overlap"
+      ],
+      "rows": [
+        [
+          "Plantar / tibial",
+          "L4–S3",
+          "Sole, arch, forefoot, and most of the heel; medial and lateral plantar nerves, calcaneal branches, then tibial nerve.",
+          "Broadest: possible S2–S3 overlap."
+        ],
+        [
+          "Lateral / sural",
+          "S1–S2",
+          "Lateral border of the foot and posterolateral ankle and heel; sural nerve.",
+          "Partial, mainly through S2."
+        ],
+        [
+          "Dorsal / fibular",
+          "L4–S2",
+          "Dorsum of the foot; superficial and deep fibular nerves, then common fibular nerve.",
+          "Possible S2, without S3."
+        ],
+        [
+          "Medial / saphenous",
+          "L3–L4",
+          "Medial ankle and proximal medial foot; saphenous nerve.",
+          "No obvious direct sacral overlap."
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "These territories overlap and vary between individuals; they should be understood as functional regions rather than millimetric boundaries [1]. All four can generate ascending somatic input. The scientific question is whether the entry nerve, peripheral branch, and recruited afferent population alter the nature, intensity, or specificity of the central and visceral response."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "id": "1-3-from-the-foot-to-the-central-nervous-system",
+      "text": "1.3. From the foot to the central nervous system"
+    },
+    {
+      "type": "paragraph",
+      "text": "In simplified form, the functional chain is: local pressure → mechanoreceptors and somatic afferents → peripheral branch → main nerve → spinal roots → spinal cord → ascending pathways → supraspinal networks. This is not a single tract. Depending on sensory modality, signals use several ascending systems and relays. For ROP, the central point is that local pressure can be converted into measurable neural activity that is not confined to the foot [1–3]. Human data also show that cutaneous mechanoreceptor feedback from the hand or foot can modulate muscle sympathetic nerve activity [49]. This demonstrates possible somatosensory–autonomic coupling, not action on a specific organ."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "2-the-visceral-side-how-internal-information-reaches-the-same-systems",
+      "text": "2. The visceral side: how internal information reaches the same systems"
+    },
+    {
+      "type": "paragraph",
+      "text": "A bridge cannot be described from the foot alone. Visceral receptors signal distension, tension, contraction, the chemical state of the milieu and, under some conditions, inflammation or injury. Sensory neuron cell bodies lie in vagal or spinal ganglia [29]. Vagal afferents project to the nucleus tractus solitarius in the brainstem. Spinal visceral afferents enter the dorsal horn after traveling with thoracic or lumbar splanchnic, hypogastric, or pelvic pathways. Several viscera—notably the distal colon, rectum, and pelvic organs—therefore have afferent organization distributed across several routes [29,30]."
+    },
+    {
+      "type": "paragraph",
+      "text": "The route followed must be distinguished from the nature of the signal. A sensory fiber accompanying a splanchnic or pelvic nerve remains a sensory afferent and must not be confused with autonomic efferents leaving the central nervous system to control smooth muscle, glands, or vessels. We therefore prefer “visceral afferents traveling with thoracolumbar splanchnic pathways” and “visceral afferents traveling with the pelvic nerves” [29]."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "3-the-six-neuroanatomical-bridges",
+      "text": "3. The six neuroanatomical bridges"
+    },
+    {
+      "type": "paragraph",
+      "text": "A bridge is not a direct cable between a point on the foot and an organ; it is an identifiable link within a functional network. The model distinguishes six bridges, from root overlap to cranial autonomic outputs. Bridges 1–4 establish proximity through root overlap, peripheral branch organization, and lumbosacral convergence. Bridges 5–6 establish network access through supraspinal integration, descending control, and cranial output. These families are complementary but answer different questions and require different tests."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "id": "bridge-1-segmental-overlap-s2s3-through-the-tibial-nerve",
+      "text": "Bridge 1 — Segmental overlap: S2–S3 through the tibial nerve"
+    },
+    {
+      "type": "paragraph",
+      "text": "The tibial nerve classically receives fibers from L4 to S3. Sacral circuits involved in pelvic function are organized mainly around S2–S4; somatic control of the sphincters and pelvic floor also involves the pudendal nerve, classically arising from S2–S4 [1,8–11]. S2 and S3 are therefore possible shared levels. This does not make plantar skin an “S2” or “S3 dermatome.” Dermatomal maps place mainly L4, L5, and S1 in the distal lower limb and foot [4], whereas a mixed peripheral nerve contains axons from several roots serving skin, muscle, joints, and deep tissues."
+    },
+    {
+      "type": "paragraph",
+      "text": "The consistency of the S3 contribution to the tibial nerve varies across anatomical sources. Because the proximity argument rests on S2–S3, this variability must be stated: it weakens prediction of reproducible segmental targeting between individuals. Tibial stimulation may introduce afferent activity into a lumbosacral ensemble containing S2–S3 and communicating with pelvic circuits; it does not automatically select those roots, directly reach an organ, or guarantee a visceral response."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "id": "bridge-2-from-plantar-region-to-tibial-nerve-which-afferents-are-actually-recruited",
+      "text": "Bridge 2 — From plantar region to tibial nerve: which afferents are actually recruited?"
+    },
+    {
+      "type": "paragraph",
+      "text": "The tibial territory is not homogeneous. The medial plantar, lateral plantar, and calcaneal branches carry information from different regions and tissues, and their courses, fascicular separability, and territories vary anatomically [5,6]. Mechanoreceptor properties also vary across plantar regions [2,3]. Electrical stimulation near a nerve trunk and local manual pressure do not necessarily recruit the same fibers. Translation from tibial neuromodulation to ROP must therefore identify the peripheral branch and afferent population actually recruited by the manual maneuver [14]."
+    },
+    {
+      "type": "paragraph",
+      "text": "The heel may preferentially recruit calcaneal branches and superficial and deep afferents of the heel fat pad; the arch recruits plantar branches, with possible medial–lateral differences; the forefoot has high sensory density and recruits digital branches. Comparing heel, arch, and forefoot under controlled stimulation tests whether the effect depends mainly on general access to the tibial system or varies reproducibly with branch, tissue, depth, receptor profile, and fascicular organization."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "id": "bridge-3-other-somatic-gateways-sural-fibular-and-saphenous",
+      "text": "Bridge 3 — Other somatic gateways: sural, fibular, and saphenous"
+    },
+    {
+      "type": "paragraph",
+      "text": "The tibial nerve is not the only gateway. The lateral foot is supplied largely by the sural nerve, the dorsum mainly by the superficial and deep fibular nerves, and the medial ankle and part of the proximal foot may receive saphenous innervation [1,7]. If segmental proximity governed the response, a tibial > sural/fibular > saphenous gradient would be expected. Available experiments do not support that simple prediction."
+    },
+    {
+      "type": "paragraph",
+      "text": "In anesthetized rats, saphenous stimulation inhibits the bladder reflex in a frequency-dependent manner [17]; in cats it alters bladder capacity according to stimulation parameters [19]. Hypogastric nerve transection does not abolish the inhibitory effect [18]. In a small uncontrolled human feasibility study of percutaneous saphenous stimulation for overactive bladder, 18 participants were enrolled, 16 completed the study, and 14 met the authors’ composite endpoint [24]. This is a signal, not a demonstration. Some forms of percutaneous tibial neuromodulation may also co-recruit saphenous fibers [20]."
+    },
+    {
+      "type": "paragraph",
+      "text": "The saphenous nerve is therefore not a negative control but a natural experiment. It separates the properties accumulated by the tibial nerve—sacral segmental proximity and modulatory capacity—and isolates the latter. Its ability to modulate the bladder without sharing S2–S4 currently provides the strongest argument for two independent axes."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "id": "bridge-4-lumbosacral-networks-a-spinal-integration-hub",
+      "text": "Bridge 4 — Lumbosacral networks: a spinal integration hub"
+    },
+    {
+      "type": "paragraph",
+      "text": "Afferents entering the lumbosacral cord are not confined to a single segment. They reach excitatory and inhibitory interneurons, projection neurons, and multisegmental circuits. Pelvic networks receive visceral, perineal, and somatic information while also being subject to descending brain control [9–11]. Tibial and pudendal afferents act through spinal interneuronal mechanisms and modify bladder reflexes [11,15]. The effect depends on frequency, intensity, duration, recruited fibers, and the functional state of the viscus; the same gateway may facilitate, inhibit, or have no effect under different conditions."
+    },
+    {
+      "type": "paragraph",
+      "text": "The pelvis is an integrated network rather than a juxtaposition of independent organs. Bladder, distal colon, and rectal interactions are documented from primary afferents to spinal networks and cross-sensitization [31–33]. These findings justify regional pelvic targeting before any claim of isolated organ targeting."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "id": "bridge-5-supraspinal-pathways-descending-commands-and-remote-functions",
+      "text": "Bridge 5 — Supraspinal pathways: descending commands and remote functions"
+    },
+    {
+      "type": "paragraph",
+      "text": "Somatic input from the foot can ascend to higher centers, enter brain networks, and alter descending commands to spinal and autonomic circuits. For the bladder, integration involves the periaqueductal gray, pontine centers, insula, cingulate cortex, and prefrontal regions [8,12,13]. The term “limbic brain” should be used cautiously; named structures and networks are more precise. Brain responses to transcutaneous tibial and fibular stimulation are not identical [16]. The methodological lesson is that lack of direct root overlap does not exclude visceral modulation, but reliance on general supraspinal relays weakens claims of regional or point–organ specificity."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "id": "bridge-6-cranial-outputs-from-the-brainstem",
+      "text": "Bridge 6 — Cranial outputs from the brainstem"
+    },
+    {
+      "type": "paragraph",
+      "text": "Bridge 6 describes parasympathetic output leaving the brainstem through cranial nerves without passing through the spinal cord. No segmental proximity can be invoked between plantar afferents and a cranial parasympathetic ganglion; any observed modulation is necessarily central. This makes the bridge, despite limited evidence, the cleanest test of the network model."
+    },
+    {
+      "type": "paragraph",
+      "text": "The oculomotor pathway provides the strongest demonstration. In anesthetized rats, electrical hindlimb stimulation produces intensity-dependent pupillary dilation. Transection of the somatic nerves supplying the stimulated limb abolishes the response; action potentials were recorded in tibial and saphenous nerves. Bilateral cervical sympathetic trunk transection does not abolish the response, whereas oculomotor nerve transection does [43]. After central integration, hindlimb somatic information can therefore alter an ocular function dependent on the parasympathetic third-nerve pathway. The response likely reflects modulation—particularly inhibition of constrictor parasympathetic activity—rather than simple parasympathetic activation. Stimulation was not selective for plantar nerves, and no topographic correspondence with a plantar region was demonstrated."
+    },
+    {
+      "type": "paragraph",
+      "text": "For the pharynx and larynx, lower-limb somatic afferents can evoke neuronal responses in the nucleus tractus solitarius [44], while pharyngeal and laryngeal afferents carried by the glossopharyngeal and superior laryngeal nerves converge in the same nucleus [45]. Central convergence is established, but the decisive experiment—showing that plantar stimulation alters a measurable pharyngolaryngeal function—has not been published. For other cephalic ganglia, local autonomic physiology is established but a plantar bridge is not [46,47]."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "4-a-two-axis-neuroanatomical-targeting-gradient",
+      "text": "4. A two-axis neuroanatomical targeting gradient"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "id": "4-1-horizontal-axis-segmental-proximity-and-density-of-regional-bridges",
+      "text": "4.1. Horizontal axis: segmental proximity and density of regional bridges"
+    },
+    {
+      "type": "paragraph",
+      "text": "This axis asks how many anatomical arguments converge on one region: peripheral nerve, probable roots, overlap with visceral pathways, regional spinal convergence, and local functional integration. Tibial territories associated with pelvic networks are the strongest candidates [8–11,14]."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "id": "4-2-vertical-axis-evidence-for-somatovisceral-modulation",
+      "text": "4.2. Vertical axis: evidence for somatovisceral modulation"
+    },
+    {
+      "type": "paragraph",
+      "text": "This axis asks whether data show that somatic stimulation of the pathway actually changes visceral function. Interpretation must specify species, actual stimulation site, and study type—animal mechanism, uncontrolled human series, or randomized trial. A high position does not carry the same meaning across these forms of evidence."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "id": "4-3-four-quadrants",
+      "text": "4.3. Four quadrants"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Quadrant",
+        "Targets",
+        "Interpretation"
+      ],
+      "rows": [
+        [
+          "Q1 — Strong proximity, strong evidence",
+          "Lower urinary tract; perineal–sphincter interface.",
+          "Best current model: S2–S3 overlap, documented spinal convergence, and favorable controlled trials [8–16,21,22]. Regional targeting is plausible; point–organ specificity is unproven."
+        ],
+        [
+          "Q2 — Strong proximity, uneven evidence",
+          "Rectum and distal colon; other pelvic organs.",
+          "Distributed afferents and cross-sensitization are established [30–34], but clinical evidence differs by indication [25–28]."
+        ],
+        [
+          "Q3 — Weak proximity, real evidence",
+          "Oculomotor pathway and pupil; duodenum and jejunum via vagal pathways; distal colon via pelvic pathways; bladder via the saphenous nerve.",
+          "Decisive quadrant: modulation has been demonstrated despite the absence of sacral segmental overlap [17–19,36–43]."
+        ],
+        [
+          "Q4 — Weak proximity, no evidence",
+          "Spleen, adrenal glands, cephalic ganglia outside the third-nerve pathway, diaphragm.",
+          "General somatoautonomic influence remains physiologically conceivable [29,48], but specific modulation by plantar pressure cannot be claimed."
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Quadrant 3 breaks the correlation between proximity and modulation. It establishes that modulatory capacity can exist independently of segmental proximity, making the two axes genuinely distinct. The oculomotor pathway is especially informative because segmental proximity is absent by definition; its value is mechanistic, not a claim of superior clinical relevance."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "id": "4-4-degrees-as-a-summary-label",
+      "text": "4.4. Degrees as a summary label"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Degree",
+        "Label",
+        "Content"
+      ],
+      "rows": [
+        [
+          "3",
+          "Strengthened regional targeting",
+          "Identifiable peripheral gateway, root proximity, documented spinal convergence, and integrated regional function."
+        ],
+        [
+          "2",
+          "Plausible regional targeting",
+          "Partial or heterogeneous segmental proximity, with afferent organization and shared spinal networks permitting regional modulation."
+        ],
+        [
+          "1",
+          "General functional modulation",
+          "The link rests mainly on intersegmental and supraspinal relays; influence is conceivable but regionally nonspecific."
+        ],
+        [
+          "0",
+          "Unsupported point–organ correspondence",
+          "Point position rests on traditional mapping or shape analogy, without an identifiable neuroanatomical bridge."
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "The scale summarizes the density of neuroanatomical arguments, never clinical potency. The diaphragm remains separate: it is striated muscle under cervical phrenic control, not a viscus within this gradient [1]."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "5-state-of-the-clinical-evidence",
+      "text": "5. State of the clinical evidence"
+    },
+    {
+      "type": "paragraph",
+      "text": "The gradient describes access pathways, not therapeutic efficacy. Tibial neuromodulation—the clinical literature closest to the present hypotheses—produces markedly heterogeneous results by indication."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Indication",
+        "Evidence",
+        "Result"
+      ],
+      "rows": [
+        [
+          "Overactive bladder",
+          "SUmiT randomized sham-controlled trial; OrBIT randomized pharmacologic-comparator trial [21,22]; maintenance data [23].",
+          "Favorable; the clinical reference indication for tibial neuromodulation."
+        ],
+        [
+          "Fecal incontinence",
+          "CONFIDeNT multicenter double-blind sham-controlled trial; NOTABLe randomized sham-controlled trial [25,26].",
+          "No superiority over sham in either trial."
+        ],
+        [
+          "Constipation / defecatory dyssynergia",
+          "Recent randomized trials in obstructed defecation and postpartum dyssynergia [27,28].",
+          "Favorable signals on functional outcomes."
+        ],
+        [
+          "Overactive bladder / saphenous gateway",
+          "Uncontrolled feasibility pilot without sham [24].",
+          "Preliminary signal only."
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "The same nerve, technique, and neighboring anatomical region can yield opposite outcomes depending on the target function. A neuroanatomical bridge describes possible access, never an established therapeutic effect. Conversely, failure in one indication does not invalidate the pathway; it may reflect function, stimulation parameters, or population. These trials used electrical stimulation near a nerve trunk; none tested manual plantar pressure."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "6-turning-the-rop-map-into-an-experimental-hypothesis",
+      "text": "6. Turning the ROP map into an experimental hypothesis"
+    },
+    {
+      "type": "paragraph",
+      "text": "The purpose of this architecture is not to justify every mapped point retrospectively, but to convert the map into testable hypotheses. Each region should be described through an explicit chain: stimulated tissue, receptor population, nerve branch, main nerve, probable roots, spinal network, supraspinal relays, and measured function."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "id": "6-1-intratibial-comparison-testing-bridge-2",
+      "text": "6.1. Intratibial comparison: testing Bridge 2"
+    },
+    {
+      "type": "paragraph",
+      "text": "Compare heel, medial arch, lateral arch, and forefoot using the most standardized maneuver possible. Identical responses would suggest a limited role for the peripheral branch. Reproducible differences would prioritize afferent distribution, depth, recruited tissues, and fascicular organization [2,3,5,6]."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "id": "6-2-between-nerve-comparison-testing-bridge-3",
+      "text": "6.2. Between-nerve comparison: testing Bridge 3"
+    },
+    {
+      "type": "paragraph",
+      "text": "Animal electrical-stimulation experiments already point toward central mechanisms [17–19]. The ROP-specific question is whether manual pressure over four distinct foot territories produces different response profiles. A tibial > sural/fibular > saphenous gradient would support a segmental contribution; comparable responses across all four gateways would favor central mechanisms [1,16]."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "id": "6-3-between-viscus-comparison-testing-the-gradient",
+      "text": "6.3. Between-viscus comparison: testing the gradient"
+    },
+    {
+      "type": "paragraph",
+      "text": "The pelvis is the first validation field because it combines the densest bridge architecture with a well-studied functional model [8–16]. The distal colon and rectum are logical second targets [30–34]. Quadrant-3 targets—the duodenum, jejunum, and pupillary response—then allow direct assessment of intersegmental and supraspinal mechanisms [36–43]."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "id": "6-4-an-accessible-first-protocol-plantar-pressure-and-pupillometry",
+      "text": "6.4. An accessible first protocol: plantar pressure and pupillometry"
+    },
+    {
+      "type": "paragraph",
+      "text": "Pelvic outcomes require clinical recruitment, long follow-up, and often invasive instrumentation. Pupil diameter provides a noninvasive, continuous, quantifiable autonomic output measurable during a session with modest-cost equipment. It is probably the first experiment the ROP program can realistically conduct."
+    },
+    {
+      "type": "paragraph",
+      "text": "Standardized manual pressure would be applied to defined medial plantar, lateral plantar, and calcaneal territories and compared between sites (Bridge 2), then with a region belonging to another gateway, such as the medial saphenous territory or dorsum of the foot (Bridge 3). Pupil diameter would be recorded by pupillometry under controlled luminance in a within-subject design with sham and no-stimulation conditions. A positive finding would establish measurable human autonomic coupling after T4 manual plantar pressure—not point–organ correspondence or clinical benefit. The current demonstration is animal, electrical, and applied to the hindlimb [43]; detectable human responses cannot be assumed."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "id": "6-5-translation-scale",
+      "text": "6.5. Translation scale"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Level",
+        "Experimental situation",
+        "Distance from the ROP maneuver"
+      ],
+      "rows": [
+        [
+          "T1",
+          "Needle or electrode stimulation of a nerve trunk near the medial malleolus (PTNS/TTNS).",
+          "Synchronous, controlled recruitment; fibers differ from those recruited by cutaneous pressure."
+        ],
+        [
+          "T2",
+          "Stimulation of a leg point (ST36/ST37).",
+          "Somatic territory distinct from the foot; used by most digestive studies."
+        ],
+        [
+          "T3",
+          "Rodent hindlimb stimulation.",
+          "Several nerves recruited simultaneously; different species."
+        ],
+        [
+          "T4",
+          "Manual pressure over a defined plantar territory.",
+          "The actual maneuver; no published mechanistic data at this level."
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "The ROP-specific question is therefore whether reproducible manual pressure over an anatomically defined territory generates sufficient afferent activity to alter a neurophysiological, autonomic, or visceral marker. Only then does testing regional specificity become meaningful."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "id": "6-6-variables-to-document",
+      "text": "6.6. Variables to document"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Exact anatomical location, stimulated side, and probable nerve territory.",
+        "Contact area, direction, depth, intensity, duration, and repetition of the maneuver.",
+        "Functional state of the system at testing, particularly for state-dependent visceral circuits.",
+        "Comparator: another region of the same nerve, another foot nerve, sham stimulation, or no stimulation.",
+        "Outcome: sensory, autonomic, neurophysiological, imaging, or functional marker suited to the question.",
+        "Explicit distinction between a general effect, regional effect, and effect attributed to a specific organ."
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "7-scope-and-limitations",
+      "text": "7. Scope and limitations"
+    },
+    {
+      "type": "paragraph",
+      "text": "This interpretation does not seek to demonstrate the efficacy of reflex therapy. It proposes a working architecture. An ROP region is better supported anatomically when it combines an identifiable peripheral gateway, plausible afferent profile, root compatibility, regional spinal convergence, and ideally experimental modulation data. Support is weaker when the proposed link rests mainly on general central relays or traditional cartographic correspondence."
+    },
+    {
+      "type": "paragraph",
+      "text": "Five limitations must remain explicit. First, no published mechanistic data concern selective stimulation of the plantar nerves; the literature translated here lies at T1–T3. Second, two controlled trials in fecal incontinence were negative [25,26]. Third, the S3 contribution to the tibial nerve is not consistently established, weakening prediction of reproducible segmental targeting. Fourth, an autonomic response demonstrates coupling, not visceral targeting [49]. Fifth, Bridge 6 rests chiefly on a single older animal study using electrical hindlimb stimulation and pupil diameter [43]. Its value is mechanistic; for most cephalic outputs, local ganglion physiology is established but the plantar bridge is not."
+    },
+    {
+      "type": "paragraph",
+      "text": "This page describes plantar input. The ROP protocol also includes an occipital input, whose afferents, cervical segments, and convergences require a separate analysis. Nothing above should be read as a description of that second gateway. Evidence is strongest for the sole, tibial nerve anatomy, bladder neuromodulation, sacral networks, bladder–bowel interactions, digestive somatovisceral reflexes, and general somatoautonomic mechanisms. Propositions concerning the stomach, kidney, spleen, or adrenal glands must remain hypotheses of remote modulation requiring documentation."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "8-synthesis-gateways-bridges-and-a-gradient",
+      "text": "8. Synthesis: gateways, bridges, and a gradient"
+    },
+    {
+      "type": "paragraph",
+      "text": "The foot does not contain the organs; it contains somatic gateways. These gateways probably differ in sensory density, peripheral organization, and proximity to spinal networks. The plantar/tibial gateway has an especially rich anatomical basis for the pelvis, but it is neither unique nor exclusive."
+    },
+    {
+      "type": "paragraph",
+      "text": "Six bridges organize the model. Bridge 1 examines tibial segmental proximity to sacral networks. Bridge 2 moves down to plantar and calcaneal branches to determine what manual pressure recruits. Bridge 3 compares other gateways and identifies, through the saphenous nerve, visceral modulation without sacral overlap. Bridge 4 locates convergence in lumbosacral networks. Bridge 5 explains supraspinal access and descending modulation. Bridge 6 adds cranial parasympathetic outputs, including the only documented pathway in which a cephalic function was modified from the lower limb."
+    },
+    {
+      "type": "paragraph",
+      "text": "A simple rule and an essential correction follow. The more a hypothesis combines an identifiable peripheral branch, root proximity, and regional spinal convergence, the more plausible anatomical targeting becomes. But this plausibility concerns targeting specificity, not the existence of an effect. A gateway without segmental proximity may modulate a viscus: the saphenous nerve shows this for the bladder, the third-nerve pathway for the pupil, and the vagal pathway for the duodenum. Experimental evidence is therefore a separate axis."
+    },
+    {
+      "type": "paragraph",
+      "text": "ROP can thus be reformulated as a neuroanatomical research program: identify the gateways, characterize recruited afferents, compare nerves, measure network responses, and determine how far this organization explains observed clinical effects. The map is no longer a fixed representation of the body on the foot; it becomes a testable anatomical and neurofunctional hypothesis."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "terminology-adopted",
+      "text": "Terminology adopted"
+    },
+    {
+      "type": "paragraph",
+      "text": "Neuroanatomical bridge — A possible convergence or relay between somatic input and a network capable of participating in visceral function."
+    },
+    {
+      "type": "paragraph",
+      "text": "Somatic gateway — A peripheral territory whose stimulation generates afferent activity through an identifiable nerve."
+    },
+    {
+      "type": "paragraph",
+      "text": "Visceral afferents traveling with thoracolumbar splanchnic pathways / pelvic nerves — Preferred over “sympathetic” or “parasympathetic afferents” when describing a sensory signal."
+    },
+    {
+      "type": "paragraph",
+      "text": "Regional targeting — Anatomical plausibility that a somatic gateway preferentially accesses a regional network; it implies neither clinical efficacy nor point–organ specificity."
+    },
+    {
+      "type": "paragraph",
+      "text": "Visceral modulation — A measurable change in visceral function or circuitry; preferred to “direct action on the organ.”"
+    },
+    {
+      "type": "paragraph",
+      "text": "Supraspinal pathway — Participation of centers above the spinal cord in integrating somatic input and shaping descending commands."
+    },
+    {
+      "type": "paragraph",
+      "text": "Proximity model / network model — Two argument families: shared spinal segments (Bridges 1–4) and central integration (Bridges 5–6)."
+    },
+    {
+      "type": "paragraph",
+      "text": "Cranial output — A parasympathetic efferent pathway leaving the brainstem through a cranial nerve without a spinal relay."
+    },
+    {
+      "type": "paragraph",
+      "text": "Axis dissociation — The finding that a somatic gateway can modulate visceral function without sharing a spinal segment with it."
+    },
+    {
+      "type": "paragraph",
+      "text": "Translation scale — Four levels (T1–T4) expressing the distance between a cited study protocol and the manual ROP maneuver."
+    },
+    {
+      "type": "paragraph",
+      "text": "Quadrant — The position of a visceral target at the intersection of the gradient’s two axes; it supplements rather than replaces degrees 0–3."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "bibliography",
+      "text": "Bibliography"
+    },
+    {
+      "type": "paragraph",
+      "text": "The bibliography below supports the neuroanatomical architecture presented here. It is not intended as a systematic review of reflex-therapy efficacy or to document every viscus mentioned with the same level of detail."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "id": "a-peripheral-anatomy-and-afferents-of-the-foot",
+      "text": "A. Peripheral anatomy and afferents of the foot"
+    },
+    {
+      "type": "paragraph",
+      "text": "1. Standring S, ed. Gray's Anatomy: The Anatomical Basis of Clinical Practice. 42nd ed. Elsevier; 2020."
+    },
+    {
+      "type": "paragraph",
+      "text": "2. Kennedy PM, Inglis JT. Distribution and behaviour of glabrous cutaneous receptors in the human foot sole. J Physiol. 2002;538(Pt 3):995–1002. doi:10.1113/jphysiol.2001.013087."
+    },
+    {
+      "type": "paragraph",
+      "text": "3. Strzalkowski NDJ, Peters RM, Inglis JT, Bent LR. Cutaneous afferent innervation of the human foot sole: what can we learn from single-unit recordings? J Neurophysiol. 2018;120(3):1233–1246. doi:10.1152/jn.00848.2017."
+    },
+    {
+      "type": "paragraph",
+      "text": "4. de Souza Faleiros AT, de Lima Resende LA, Zanini MA, de Lima Castro HA, Colichio Gabarra R. L4-L5-S1 human dermatomes. Arq Neuropsiquiatr. 2009;67(2A):265–267. doi:10.1590/S0004-282X2009000200017."
+    },
+    {
+      "type": "paragraph",
+      "text": "5. Deniel C, Guenoun D, Guillin R, Moraux A, Champsaur P, Le Corroller T. Anatomical study of the medial calcaneal nerve using high-resolution ultrasound. Eur Radiol. 2023;33(10):7330–7337. doi:10.1007/s00330-023-09699-6."
+    },
+    {
+      "type": "paragraph",
+      "text": "6. Andreasen Struijk LNS, Birn H, Teglbjærg PS, Haase J, Struijk JJ. Size and separability of the calcaneal and the medial and lateral plantar nerves in the distal tibial nerve. Anat Sci Int. 2010;85(1):13–22. doi:10.1007/s12565-009-0045-y."
+    },
+    {
+      "type": "paragraph",
+      "text": "7. Peng M, Yoo PB, Agur AMR. Distribution, course, and spatial relationships of the saphenous nerve: a 3D neuroanatomical map for nerve stimulation. PLoS ONE. 2024;19(2):e0297680. doi:10.1371/journal.pone.0297680."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "id": "b-neural-control-of-the-lower-urinary-tract",
+      "text": "B. Neural control of the lower urinary tract"
+    },
+    {
+      "type": "paragraph",
+      "text": "8. Fowler CJ, Griffiths D, de Groat WC. The neural control of micturition. Nat Rev Neurosci. 2008;9(6):453–466. doi:10.1038/nrn2401."
+    },
+    {
+      "type": "paragraph",
+      "text": "9. Shefchyk SJ. Spinal cord neural organization controlling the urinary bladder and striated sphincter. Prog Brain Res. 2002;137:71–82. doi:10.1016/S0079-6123(02)37008-0."
+    },
+    {
+      "type": "paragraph",
+      "text": "10. de Groat WC, Vizzard MA, Araki I, Roppolo J. Spinal interneurons and preganglionic neurons in sacral autonomic reflex pathways. Prog Brain Res. 1996;107:97–111. doi:10.1016/S0079-6123(08)61860-9."
+    },
+    {
+      "type": "paragraph",
+      "text": "11. Yecies T, Li S, Zhang Y, Cai H, Shen B, Wang J, et al. Spinal interneuronal mechanisms underlying pudendal and tibial neuromodulation of bladder function in cats. Exp Neurol. 2018;308:100–110. doi:10.1016/j.expneurol.2018.06.015."
+    },
+    {
+      "type": "paragraph",
+      "text": "12. Griffiths D. Neural control of micturition in humans: a working model. Nat Rev Urol. 2015;12(12):695–705. doi:10.1038/nrurol.2015.266."
+    },
+    {
+      "type": "paragraph",
+      "text": "13. de Rijk MM, Fernández Chadily S, Knops A, Schoutens Y, Verstegen AMJ. The periaqueductal gray and its role in the neural control of lower urinary tract function. Auton Neurosci. 2026;265:103413. doi:10.1016/j.autneu.2026.103413."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "id": "c-mechanisms-of-tibial-and-saphenous-neuromodulation",
+      "text": "C. Mechanisms of tibial and saphenous neuromodulation"
+    },
+    {
+      "type": "paragraph",
+      "text": "14. Li X, Li X, Liao L. Mechanism of action of tibial nerve stimulation in the treatment of lower urinary tract dysfunction. Neuromodulation. 2024;27(2):256–266. doi:10.1016/j.neurom.2023.03.017."
+    },
+    {
+      "type": "paragraph",
+      "text": "15. Kovacevic M, Yoo PB. Reflex neuromodulation of bladder function elicited by posterior tibial nerve stimulation in anesthetized rats. Am J Physiol Renal Physiol. 2015;308(4):F320–F329. doi:10.1152/ajprenal.00212.2014."
+    },
+    {
+      "type": "paragraph",
+      "text": "16. Krhut J, Tintěra J, Rejchrt M, Skugarevská B, Zachoval R, Zvara P, et al. Differences between brain responses to peroneal electrical transcutaneous neuromodulation and transcutaneous tibial nerve stimulation. Neurourol Urodyn. 2023;42(6):1352–1361. doi:10.1002/nau.25197."
+    },
+    {
+      "type": "paragraph",
+      "text": "17. Moazzam Z, Yoo PB. Frequency-dependent inhibition of bladder function by saphenous nerve stimulation in anesthetized rats. Neurourol Urodyn. 2018;37(2):592–599. doi:10.1002/nau.23323."
+    },
+    {
+      "type": "paragraph",
+      "text": "18. Franz KS, Yoo PB. Transecting the hypogastric nerve to uncover the bladder-inhibitory pathways involved with saphenous nerve stimulation in anesthetized rats. Auton Neurosci. 2020;226:102672. doi:10.1016/j.autneu.2020.102672."
+    },
+    {
+      "type": "paragraph",
+      "text": "19. Li X, Wan X, Wang Z, et al. Frequency-dependent effects on bladder reflex by saphenous nerve stimulation and a possible action mechanism of tibial nerve stimulation in cats. Int Neurourol J. 2021;25(2):128–136. doi:10.5213/inj.2040304.152."
+    },
+    {
+      "type": "paragraph",
+      "text": "20. Elder CW, Yoo PB. Co-activation of saphenous nerve fibers: a potential therapeutic mechanism of percutaneous tibial nerve stimulation? Conf Proc IEEE Eng Med Biol Soc. 2016:3129–3132. doi:10.1109/EMBC.2016.7591392."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "id": "d-clinical-neuromodulation-evidence",
+      "text": "D. Clinical neuromodulation evidence"
+    },
+    {
+      "type": "paragraph",
+      "text": "21. Peters KM, Carrico DJ, Perez-Marrero RA, et al. Randomized trial of percutaneous tibial nerve stimulation versus sham efficacy in the treatment of overactive bladder syndrome: results from the SUmiT trial. J Urol. 2010;183(4):1438–1443. doi:10.1016/j.juro.2009.12.036."
+    },
+    {
+      "type": "paragraph",
+      "text": "22. Peters KM, MacDiarmid SA, Wooldridge LS, et al. Randomized trial of percutaneous tibial nerve stimulation versus extended-release tolterodine: results from the Overactive Bladder Innovative Therapy trial. J Urol. 2009;182(3):1055–1061. doi:10.1016/j.juro.2009.05.045."
+    },
+    {
+      "type": "paragraph",
+      "text": "23. MacDiarmid SA, Peters KM, Shobeiri SA, et al. Long-term durability of percutaneous tibial nerve stimulation for the treatment of overactive bladder. J Urol. 2010;183(1):234–240. doi:10.1016/j.juro.2009.08.160."
+    },
+    {
+      "type": "paragraph",
+      "text": "24. MacDiarmid SA, John MS, Yoo PB. A pilot feasibility study of treating overactive bladder patients with percutaneous saphenous nerve stimulation. Neurourol Urodyn. 2018;37(5):1815–1820. doi:10.1002/nau.23531."
+    },
+    {
+      "type": "paragraph",
+      "text": "25. Knowles CH, Horrocks EJ, Bremner SA, et al.; CONFIDeNT Study Group. Percutaneous tibial nerve stimulation versus sham electrical stimulation for the treatment of faecal incontinence in adults (CONFIDeNT). Lancet. 2015;386(10004):1640–1648. doi:10.1016/S0140-6736(15)60314-2."
+    },
+    {
+      "type": "paragraph",
+      "text": "26. Zyczynski HM, Richter HE, Sung VW, et al.; NICHD Pelvic Floor Disorders Network. Percutaneous tibial nerve stimulation vs sham stimulation for fecal incontinence in women (NOTABLe). Am J Gastroenterol. 2022;117(4):654–667. doi:10.14309/ajg.0000000000001605."
+    },
+    {
+      "type": "paragraph",
+      "text": "27. Ashoush F, Abdelrahim A, Ali O, et al. A randomized controlled trial comparing bilateral percutaneous tibial nerve stimulation versus biofeedback pelvic floor muscle training in obstructed defecation syndrome. Cureus. 2025;17(3):e80885. doi:10.7759/cureus.80885."
+    },
+    {
+      "type": "paragraph",
+      "text": "28. Wu J, Yuan M, Zhao Y, Yang Y, Yan Z, Wu Y. The efficacy of transcutaneous tibial nerve stimulation as an adjunct to standard rehabilitation for postpartum pelvic floor dyssynergic defecation in primiparous women. Int Urogynecol J. 2026. doi:10.1007/s00192-026-06564-0."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "id": "e-visceral-afferents-and-pelvic-networks",
+      "text": "E. Visceral afferents and pelvic networks"
+    },
+    {
+      "type": "paragraph",
+      "text": "29. Jänig W. Neurobiology of visceral afferent neurons: neuroanatomy, functions, organ regulations and sensations. Biol Psychol. 1996;42(1–2):29–51. doi:10.1016/0301-0511(95)05145-7."
+    },
+    {
+      "type": "paragraph",
+      "text": "30. Brierley SM, Hibberd TJ, Spencer NJ. Spinal afferent innervation of the colon and rectum. Front Cell Neurosci. 2018;12:467. doi:10.3389/fncel.2018.00467."
+    },
+    {
+      "type": "paragraph",
+      "text": "31. Panicker JN, Marcelissen T, von Gontard A, Vrijens D, Abrams P, Wyndaele M. Bladder-bowel interactions: do we understand pelvic organ cross-sensitization? Neurourol Urodyn. 2019;38(Suppl 5):S25–S34. doi:10.1002/nau.24111."
+    },
+    {
+      "type": "paragraph",
+      "text": "32. Malykhina AP. Neural mechanisms of pelvic organ cross-sensitization. Neuroscience. 2007;149(3):660–672. doi:10.1016/j.neuroscience.2007.07.053."
+    },
+    {
+      "type": "paragraph",
+      "text": "33. Christianson JA, Liang R, Ustinova EE, Davis BM, Fraser MO, Pezzone MA. Convergence of bladder and colon sensory innervation occurs at the primary afferent level. Pain. 2007;128(3):235–243. doi:10.1016/j.pain.2006.09.023."
+    },
+    {
+      "type": "paragraph",
+      "text": "34. Johnson ME, Humenick A, Peterson RA, Costa M, Wattchow DA, Sia TC, Dinning PG, Brookes SJH. Characterisation of parasympathetic ascending nerves in human colon. Front Neurosci. 2022;16:1072002. doi:10.3389/fnins.2022.1072002."
+    },
+    {
+      "type": "paragraph",
+      "text": "35. Wang L, Taché Y. The parasympathetic and sensory innervation of the proximal and distal colon in male mice. Front Neuroanat. 2024;18:1422403. doi:10.3389/fnana.2024.1422403."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "id": "f-digestive-somatovisceral-reflexes",
+      "text": "F. Digestive somatovisceral reflexes"
+    },
+    {
+      "type": "paragraph",
+      "text": "36. Noguchi E, Ohsawa H, Tanaka H, Ikeda H, Aikawa Y. Electro-acupuncture stimulation effects on duodenal motility in anesthetized rats. Jpn J Physiol. 2003;53(1):1–7. doi:10.2170/jjphysiol.53.1."
+    },
+    {
+      "type": "paragraph",
+      "text": "37. Iwa M, Matsushima M, Nakade Y, Pappas TN, Fujimiya M, Takahashi T. Electroacupuncture at ST-36 accelerates colonic motility and transit in freely moving conscious rats. Am J Physiol Gastrointest Liver Physiol. 2006;290:G285–G292. doi:10.1152/ajpgi.00068.2005."
+    },
+    {
+      "type": "paragraph",
+      "text": "38. Qin QG, Gao XY, Liu K, Yu XC, Li L, Wang HP, Zhu B. Acupuncture at heterotopic acupoints enhances jejunal motility in constipated and diarrheic rats. World J Gastroenterol. 2014;20(48):18271–18283. doi:10.3748/wjg.v20.i48.18271."
+    },
+    {
+      "type": "paragraph",
+      "text": "39. Gao X, et al. Acupuncture at heterotopic acupoints facilitates distal colonic motility via activating M3 receptors and somatic afferent C-fibers. Neurogastroenterol Motil. 2015. doi:10.1111/nmo.12694."
+    },
+    {
+      "type": "paragraph",
+      "text": "40. Yuan M, Li Y, Wang Y, Zhang N, Hu X, Yin Y, Zhu B, Yu Z, Xu B. Electroacupuncture at ST37 enhances jejunal motility via excitation of the parasympathetic system in rats and mice. Evid Based Complement Alternat Med. 2016;2016:3840230. doi:10.1155/2016/3840230."
+    },
+    {
+      "type": "paragraph",
+      "text": "41. Du L, Qin Q, He X, Wang X, Sun G, Zhu B, Liu K, Gao X. Interstitial cells of Cajal are required for different intestinal motility responses induced by acupuncture. Neurogastroenterol Motil. 2025;37(6). doi:10.1111/nmo.14973."
+    },
+    {
+      "type": "paragraph",
+      "text": "42. Zhang N, Chen H, Gao X, Li S, Li X, Li W, Liu K, Wang S, Zhu B. Multimodal enhancement of colonic motility by acupuncture at ST36 is mediated by TRPV1+ cutaneous sensory fibers. Front Biosci (Landmark). 2026;31(1):46975. doi:10.31083/FBL46975."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "id": "g-cephalic-somatoautonomic-reflexes",
+      "text": "G. Cephalic somatoautonomic reflexes"
+    },
+    {
+      "type": "paragraph",
+      "text": "43. Ohsawa H, Yamaguchi S, Ishimaru H, Shimura M, Sato Y. Neural mechanism of pupillary dilation elicited by electro-acupuncture stimulation in anesthetized rats. J Auton Nerv Syst. 1997;64(2–3):101–106. doi:10.1016/S0165-1838(97)00023-4."
+    },
+    {
+      "type": "paragraph",
+      "text": "44. Toney GM, Mifflin SW. Time-dependent inhibition of hindlimb somatic afferent transmission within nucleus tractus solitarius. Neuroscience. 1995;68(2):445–453. doi:10.1016/0306-4522(95)00156-D."
+    },
+    {
+      "type": "paragraph",
+      "text": "45. Ootani S, Umezaki T, Shin T, Murata Y. Convergence of afferents from the SLN and GPN in cat medullary swallowing neurons. Brain Res Bull. 1995;37(4):397–404. doi:10.1016/0361-9230(95)00018-6."
+    },
+    {
+      "type": "paragraph",
+      "text": "46. Zheng C. Control of blood flow in nasal mucosa by electro-stimulation of sphenopalatine ganglion. Zhonghua Er Bi Yan Hou Ke Za Zhi. 1997;32(3):163–166."
+    },
+    {
+      "type": "paragraph",
+      "text": "47. Donaldson J, Mitchell J, Templeton D. Electrical stimulation of the salivatory nucleus in the rat. J Physiol. 1984;356:1–7. doi:10.1113/jphysiol.1984.sp015448."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "id": "h-general-somatoautonomic-mechanisms",
+      "text": "H. General somatoautonomic mechanisms"
+    },
+    {
+      "type": "paragraph",
+      "text": "48. Sato A, Sato Y, Schmidt RF. The impact of somatosensory input on autonomic functions. Rev Physiol Biochem Pharmacol. 1997;130:1–328. doi:10.1007/BFb0046598."
+    },
+    {
+      "type": "paragraph",
+      "text": "49. Strzalkowski NDJ, Incognito AV, Bent LR, Millar PJ. Cutaneous mechanoreceptor feedback from the hand and foot can modulate muscle sympathetic nerve activity. Front Neurosci. 2016;10:568. doi:10.3389/fnins.2016.00568."
+    }
+  ]
+}

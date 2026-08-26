@@ -1,19 +1,29 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import NapFigure from '@/components/NapFigure'
-import content from '@/content/fondements-neuro-anatomiques.json'
+import frenchContent from '@/content/fondements-neuro-anatomiques.json'
+import englishContent from '@/content/fondements-neuro-anatomiques.en.json'
+import { getServerLang } from '@/app/i18n/serverLang'
+import { languageAlternates, localizedHref, OPEN_GRAPH_LOCALES } from '@/app/i18n/locale'
 import { SITE_URL } from '@/lib/site'
 
-export const metadata: Metadata = {
-  title: 'Fondements neuro-anatomiques de la R.O.P. · Guy Boitout',
-  description: "Du point réflexe à la porte d'entrée somatique : quatre portes, six ponts et un gradient de ciblage à deux axes.",
-  alternates: { canonical: `${SITE_URL}/fondements-neuro-anatomiques` },
-  openGraph: {
-    title: 'Fondements neuro-anatomiques de la R.O.P.',
-    description: 'Quatre portes somatiques, six ponts neuro-anatomiques et un gradient de ciblage à deux axes.',
-    url: `${SITE_URL}/fondements-neuro-anatomiques`,
-    type: 'article',
-  },
+export async function generateMetadata({ searchParams }: { searchParams: Promise<{ lang?: string }> }): Promise<Metadata> {
+  const { lang: requestedLang } = await searchParams
+  const lang = await getServerLang(requestedLang)
+  const content = lang === 'en' ? englishContent : frenchContent
+  const url = `${SITE_URL}${localizedHref('/fondements-neuro-anatomiques', lang)}`
+  return {
+    title: `${content.title} · Guy Boitout`,
+    description: content.subtitle,
+    alternates: { canonical: url, languages: languageAlternates('/fondements-neuro-anatomiques') },
+    openGraph: {
+      title: content.title,
+      description: content.subtitle,
+      url,
+      locale: OPEN_GRAPH_LOCALES[lang],
+      type: 'article',
+    },
+  }
 }
 
 type ContentBlock =
@@ -23,14 +33,6 @@ type ContentBlock =
   | { type: 'callout'; title: string; text: string }
   | { type: 'table'; headers: string[]; rows: string[][] }
   | { type: 'figure'; images: string[]; caption: string }
-
-const blocks = content.blocks as ContentBlock[]
-const firstHeadingIndex = blocks.findIndex((block) => block.type === 'heading')
-const introduction = blocks.slice(0, firstHeadingIndex)
-const body = blocks.slice(firstHeadingIndex)
-const toc = blocks.filter(
-  (block): block is Extract<ContentBlock, { type: 'heading' }> => block.type === 'heading' && block.level === 2,
-)
 
 function safeInternalReturn(value: string | undefined) {
   if (!value || !value.startsWith('/') || value.startsWith('//')) return null
@@ -93,21 +95,31 @@ function Block({ block }: { block: ContentBlock }) {
 export default async function FondementsNeuroAnatomiquesPage({
   searchParams,
 }: {
-  searchParams: Promise<{ xrefBack?: string; xrefBackLabel?: string }>
+  searchParams: Promise<{ lang?: string; xrefBack?: string; xrefBackLabel?: string }>
 }) {
   const params = await searchParams
+  const lang = await getServerLang(params.lang)
+  const isEnglish = lang === 'en'
+  const content = isEnglish ? englishContent : frenchContent
+  const blocks = content.blocks as ContentBlock[]
+  const firstHeadingIndex = blocks.findIndex((block) => block.type === 'heading')
+  const introduction = blocks.slice(0, firstHeadingIndex)
+  const body = blocks.slice(firstHeadingIndex)
+  const toc = blocks.filter(
+    (block): block is Extract<ContentBlock, { type: 'heading' }> => block.type === 'heading' && block.level === 2,
+  )
   const xrefBack = safeInternalReturn(params.xrefBack)
-  const xrefBackLabel = params.xrefBackLabel || 'Retour à la référence'
+  const xrefBackLabel = params.xrefBackLabel || (isEnglish ? 'Back to the reference' : 'Retour à la référence')
 
   return (
     <main className="nap-root">
       <div className="nap-top">
-        <Link href="/" className="nap-home">← Retour à l’accueil</Link>
+        <Link href={localizedHref('/', lang)} className="nap-home">← {isEnglish ? 'Back to home' : 'Retour à l’accueil'}</Link>
         {xrefBack && <Link href={xrefBack} className="btn b-out nap-xref-back">← {xrefBackLabel}</Link>}
       </div>
       <article className="nap-article">
         <header className="nap-hero">
-          <p className="nap-eyebrow">Réflexothérapie occipito-podale</p>
+          <p className="nap-eyebrow">{isEnglish ? 'Occipito-podal reflexotherapy' : 'Réflexothérapie occipito-podale'}</p>
           <h1>{content.title}</h1>
           <p className="nap-standfirst">{content.subtitle}</p>
         </header>
@@ -116,8 +128,8 @@ export default async function FondementsNeuroAnatomiquesPage({
           {introduction.map((block, index) => <Block block={block} key={`introduction-${block.type}-${index}`} />)}
         </section>
 
-        <div className="nap-toc" role="navigation" aria-label="Sommaire">
-          <p className="nap-toc-t">Sommaire</p>
+        <div className="nap-toc" role="navigation" aria-label={isEnglish ? 'Contents' : 'Sommaire'}>
+          <p className="nap-toc-t">{isEnglish ? 'Contents' : 'Sommaire'}</p>
           <ol>{toc.map((heading) => <li key={heading.id}><a href={`#${heading.id}`}>{heading.text}</a></li>)}</ol>
         </div>
 
@@ -126,9 +138,9 @@ export default async function FondementsNeuroAnatomiquesPage({
         </section>
 
         <aside className="nap-cta">
-          <p className="nap-cta-eyebrow">Poursuivre la lecture</p>
-          <p className="nap-cta-body">Retrouvez l’ensemble des chapitres et des cartographies de la méthode R.O.P.</p>
-          <div className="nap-cta-row"><Link href="/chapitres-gratuits" className="btn btn-primary">Découvrir les chapitres</Link></div>
+          <p className="nap-cta-eyebrow">{isEnglish ? 'Continue reading' : 'Poursuivre la lecture'}</p>
+          <p className="nap-cta-body">{isEnglish ? 'Explore the chapters and mappings of the R.O.P. method.' : 'Retrouvez l’ensemble des chapitres et des cartographies de la méthode R.O.P.'}</p>
+          <div className="nap-cta-row"><Link href={localizedHref('/chapitres-gratuits', lang)} className="btn btn-primary">{isEnglish ? 'Explore the chapters' : 'Découvrir les chapitres'}</Link></div>
         </aside>
       </article>
     </main>
