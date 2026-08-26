@@ -2,15 +2,7 @@
 
 import { useLanguage } from '@/app/i18n/LanguageContext'
 import type { Lang } from '@/app/i18n/translations'
-
-const LANGS: { code: Lang; label: string }[] = [
-  { code: 'fr', label: 'Français' },
-  { code: 'en', label: 'English' },
-  { code: 'de', label: 'Deutsch' },
-  { code: 'es', label: 'Español' },
-  { code: 'it', label: 'Italiano' },
-  { code: 'th', label: 'ไทย' },
-]
+import { LOCALE_CONFIG, SUPPORTED_LANGS } from '@/app/i18n/locale'
 
 export default function LanguageToggle() {
   const { lang, setLang } = useLanguage()
@@ -22,8 +14,8 @@ export default function LanguageToggle() {
         onChange={(e) => setLang(e.target.value as Lang)}
         aria-label="Select language"
       >
-        {LANGS.map(({ code, label }) => (
-          <option key={code} value={code}>{label}</option>
+        {SUPPORTED_LANGS.map((code) => (
+          <option key={code} value={code}>{LOCALE_CONFIG[code].label}</option>
         ))}
       </select>
     </div>

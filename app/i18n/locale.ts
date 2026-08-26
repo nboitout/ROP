@@ -1,7 +1,16 @@
-import type { Lang } from './translations'
+import { translations, type Lang } from './translations'
 import { SITE_URL } from '@/lib/site'
 
-export const SUPPORTED_LANGS: readonly Lang[] = ['fr', 'en', 'de', 'es', 'it', 'th']
+export const LOCALE_CONFIG: Record<Lang, { label: string; openGraphLocale: string }> = {
+  fr: { label: 'Français', openGraphLocale: 'fr_FR' },
+  en: { label: 'English', openGraphLocale: 'en_GB' },
+  de: { label: 'Deutsch', openGraphLocale: 'de_DE' },
+  es: { label: 'Español', openGraphLocale: 'es_ES' },
+  it: { label: 'Italiano', openGraphLocale: 'it_IT' },
+  th: { label: 'ไทย', openGraphLocale: 'th_TH' },
+}
+
+export const SUPPORTED_LANGS = Object.keys(LOCALE_CONFIG) as Lang[]
 export const DEFAULT_LANG: Lang = 'fr'
 export const LOCALE_REQUEST_HEADER = 'x-rop-lang'
 
@@ -30,6 +39,20 @@ export function languageAlternates(pathname: string): Record<string, string> {
   ])
 }
 
-export const OPEN_GRAPH_LOCALES: Record<Lang, string> = {
-  fr: 'fr_FR', en: 'en_GB', de: 'de_DE', es: 'es_ES', it: 'it_IT', th: 'th_TH',
+export function localizedSiteMetadata(lang: Lang): { title: string; description: string } {
+  const t = translations[lang]
+  return {
+    title: `${t.hero.h1.before} ${t.hero.h1.em}${t.hero.h1.after} · Guy Boitout`,
+    description: t.hero.sub,
+  }
+}
+
+export const OPEN_GRAPH_LOCALES = Object.fromEntries(
+  SUPPORTED_LANGS.map((lang) => [lang, LOCALE_CONFIG[lang].openGraphLocale]),
+) as Record<Lang, string>
+
+export function alternateOpenGraphLocales(lang: Lang): string[] {
+  return SUPPORTED_LANGS
+    .filter((candidate) => candidate !== lang)
+    .map((candidate) => LOCALE_CONFIG[candidate].openGraphLocale)
 }

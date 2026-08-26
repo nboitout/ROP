@@ -1,29 +1,48 @@
 import assert from 'node:assert/strict'
 import { test } from 'node:test'
-import { languageAlternates, localizedHref, resolveLang } from '../app/i18n/locale'
+import {
+  DEFAULT_LANG,
+  languageAlternates,
+  LOCALE_CONFIG,
+  localizedHref,
+  localizedSiteMetadata,
+  resolveLang,
+  SUPPORTED_LANGS,
+} from '../app/i18n/locale'
 
-test('an explicit supported locale wins over a persisted preference', () => {
-  assert.equal(resolveLang('en', 'fr'), 'en')
-  assert.equal(resolveLang('fr', 'en'), 'fr')
-})
+for (const lang of SUPPORTED_LANGS) {
+  test(`${lang}: an explicit locale wins over every persisted preference`, () => {
+    for (const persisted of SUPPORTED_LANGS) assert.equal(resolveLang(lang, persisted), lang)
+  })
+
+  test(`${lang}: localized links preserve the selected locale`, () => {
+    assert.equal(localizedHref('/equipe', lang), `/equipe?lang=${lang}`)
+    assert.equal(localizedHref('/?gate=free#acces-libre', lang), `/?gate=free&lang=${lang}#acces-libre`)
+    assert.equal(localizedHref('/equipe?lang=fr', lang), `/equipe?lang=${lang}`)
+  })
+
+  test(`${lang}: metadata and hreflang are configured`, () => {
+    const metadata = localizedSiteMetadata(lang)
+    const alternates = languageAlternates('/equipe')
+    assert.ok(metadata.title.length > 0)
+    assert.ok(metadata.description.length > 0)
+    assert.match(LOCALE_CONFIG[lang].openGraphLocale, /^[a-z]{2}_[A-Z]{2}$/)
+    assert.match(alternates[lang], new RegExp(`/equipe\\?lang=${lang}$`))
+  })
+}
 
 test('an invalid explicit locale falls back to French instead of a stale cookie', () => {
-  assert.equal(resolveLang('xyz', 'en'), 'fr')
-  assert.equal(resolveLang(undefined, 'en'), 'en')
-  assert.equal(resolveLang(undefined, 'xyz'), 'fr')
+  for (const persisted of SUPPORTED_LANGS) assert.equal(resolveLang('xyz', persisted), DEFAULT_LANG)
+  assert.equal(resolveLang(undefined, 'xyz'), DEFAULT_LANG)
 })
 
-test('localized links preserve paths, parameters, and fragments', () => {
-  assert.equal(localizedHref('/equipe', 'en'), '/equipe?lang=en')
-  assert.equal(localizedHref('/?gate=free#acces-libre', 'en'), '/?gate=free&lang=en#acces-libre')
-  assert.equal(localizedHref('/equipe?lang=fr', 'en'), '/equipe?lang=en')
+test('localized links leave same-page fragments and external URLs unchanged', () => {
   assert.equal(localizedHref('#chapitres', 'en'), '#chapitres')
   assert.equal(localizedHref('https://example.com/page', 'en'), 'https://example.com/page')
 })
 
-test('SEO alternates expose canonical language URLs and an x-default', () => {
+test('SEO alternates expose all six locales and an x-default', () => {
   const alternates = languageAlternates('/equipe')
-  assert.match(alternates.en, /\/equipe\?lang=en$/)
-  assert.match(alternates.fr, /\/equipe\?lang=fr$/)
-  assert.equal(alternates['x-default'], alternates.fr)
+  assert.deepEqual(Object.keys(alternates), [...SUPPORTED_LANGS, 'x-default'])
+  assert.equal(alternates['x-default'], alternates[DEFAULT_LANG])
 })

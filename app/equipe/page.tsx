@@ -4,7 +4,7 @@ import Link from 'next/link'
 import LanguageToggle from '@/components/LanguageToggle'
 import { getServerLang } from '@/app/i18n/serverLang'
 import { SITE_URL } from '@/lib/site'
-import { languageAlternates, localizedHref, OPEN_GRAPH_LOCALES, SUPPORTED_LANGS } from '@/app/i18n/locale'
+import { alternateOpenGraphLocales, languageAlternates, localizedHref, OPEN_GRAPH_LOCALES } from '@/app/i18n/locale'
 import { teamPageCopy } from './copy'
 
 export async function generateMetadata({
@@ -25,7 +25,7 @@ export async function generateMetadata({
       description: copy.description,
       url,
       locale: OPEN_GRAPH_LOCALES[lang],
-      alternateLocale: SUPPORTED_LANGS.filter((candidate) => candidate !== lang).map((candidate) => OPEN_GRAPH_LOCALES[candidate]),
+      alternateLocale: alternateOpenGraphLocales(lang),
       type: 'website',
     },
   }
