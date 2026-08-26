@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { useLanguage } from '@/app/i18n/LanguageContext'
+import { localizedHref } from '@/app/i18n/locale'
 import { getSessionId } from '@/lib/session'
 import { bookVisualTotals, chapterMetaSnapshot } from '@/lib/chapterMetaSnapshot'
 
@@ -137,7 +138,7 @@ export default function BookJourney() {
                               )}
                               {meta && <span className="jn-meta">{meta}</span>}
                               {isFree && (
-                                <a href="/chapitres-gratuits" className="jn-read" onClick={() => track(`toc_read_${card.num}`)}>
+                                <a href={localizedHref('/chapitres-gratuits', lang)} className="jn-read" onClick={() => track(`toc_read_${card.num}`)}>
                                   {t.chapters.freeBtnLabel}
                                 </a>
                               )}
@@ -156,7 +157,7 @@ export default function BookJourney() {
 
       <div className="jn-foot">
         <a href="#acheter" className="btn b-gold" onClick={() => track('chapters_buy')}>{t.chapters.cta}</a>
-        <a href="/chapitres-gratuits" className="btn b-out" onClick={() => track('chapters_free')}>{t.pricing.readFirst.cta}</a>
+        <a href={localizedHref('/chapitres-gratuits', lang)} className="btn b-out" onClick={() => track('chapters_free')}>{t.pricing.readFirst.cta}</a>
       </div>
     </section>
   )

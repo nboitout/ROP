@@ -1,4 +1,4 @@
-export const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL ?? 'https://guy-boitout.com').replace(/\/$/, '')
+export const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL ?? 'https://www.guy-boitout.com').replace(/\/$/, '')
 
 export const SITE_NAME = 'R.O.P. - Guy Boitout'
 

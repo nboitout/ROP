@@ -3,9 +3,8 @@
 import { createContext, useContext, useEffect, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { translations, type Lang } from './translations'
+import { resolveLang, SUPPORTED_LANGS } from './locale'
 import { getSessionId } from '@/lib/session'
-
-const LANGS: Lang[] = ['fr', 'en', 'de', 'es', 'it', 'th']
 
 type LanguageContextValue = {
   lang: Lang
@@ -42,17 +41,18 @@ export function LanguageProvider({
   // initialLang was stale.
   useEffect(() => {
     const urlLang = new URLSearchParams(window.location.search).get('lang')
-    if (urlLang && LANGS.includes(urlLang as Lang)) {
-      if (urlLang !== lang) {
+    if (urlLang !== null) {
+      const resolvedUrlLang = resolveLang(urlLang)
+      if (resolvedUrlLang !== lang) {
         // eslint-disable-next-line react-hooks/set-state-in-effect
-        setLangState(urlLang as Lang)
+        setLangState(resolvedUrlLang)
       }
       return
     }
     const match = document.cookie.match(/(?:^|; )lang=([^;]+)/)
     if (match) {
       const cookieLang = match[1] as Lang
-      if (LANGS.includes(cookieLang) && cookieLang !== lang) {
+      if (SUPPORTED_LANGS.includes(cookieLang) && cookieLang !== lang) {
         setLangState(cookieLang)
       }
     }

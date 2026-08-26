@@ -4,6 +4,7 @@ import Link from 'next/link'
 import LanguageToggle from '@/components/LanguageToggle'
 import { getServerLang } from '@/app/i18n/serverLang'
 import { SITE_URL } from '@/lib/site'
+import { languageAlternates, localizedHref, OPEN_GRAPH_LOCALES, SUPPORTED_LANGS } from '@/app/i18n/locale'
 import { teamPageCopy } from './copy'
 
 export async function generateMetadata({
@@ -14,11 +15,19 @@ export async function generateMetadata({
   const { lang: langParam } = await searchParams
   const lang = await getServerLang(langParam)
   const copy = teamPageCopy[lang].metadata
+  const url = `${SITE_URL}${localizedHref('/equipe', lang)}`
   return {
     title: copy.title,
     description: copy.description,
-    alternates: { canonical: `${SITE_URL}/equipe` },
-    openGraph: { title: copy.title, description: copy.description, url: `${SITE_URL}/equipe`, type: 'website' },
+    alternates: { canonical: url, languages: languageAlternates('/equipe') },
+    openGraph: {
+      title: copy.title,
+      description: copy.description,
+      url,
+      locale: OPEN_GRAPH_LOCALES[lang],
+      alternateLocale: SUPPORTED_LANGS.filter((candidate) => candidate !== lang).map((candidate) => OPEN_GRAPH_LOCALES[candidate]),
+      type: 'website',
+    },
   }
 }
 

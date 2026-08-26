@@ -1,12 +1,8 @@
-import { cookies } from 'next/headers'
+import { cookies, headers } from 'next/headers'
 import type { Lang } from './translations'
+import { isLang, LOCALE_REQUEST_HEADER } from './locale'
 
-const LANGS: Lang[] = ['fr', 'en', 'de', 'es', 'it', 'th']
-
-/** Type guard: is the value one of the supported languages? */
-export function isLang(value: string | undefined | null): value is Lang {
-  return !!value && LANGS.includes(value as Lang)
-}
+export { isLang } from './locale'
 
 /**
  * Resolves the content language for a server component.
@@ -19,6 +15,9 @@ export function isLang(value: string | undefined | null): value is Lang {
  */
 export async function getServerLang(override?: string): Promise<Lang> {
   if (isLang(override)) return override
+  if (override != null) return 'fr'
+  const requestLang = (await headers()).get(LOCALE_REQUEST_HEADER)
+  if (isLang(requestLang)) return requestLang
   const value = (await cookies()).get('lang')?.value
   return isLang(value) ? value : 'fr'
 }

@@ -8,6 +8,7 @@ import { translations } from '@/app/i18n/translations'
 import { getChapter } from '@/content/registry'
 import { chapterMeta } from '@/lib/chapterStats'
 import { chapterKeyFromHref, isFreeChapterKey } from '@/lib/access'
+import { localizedHref } from '@/app/i18n/locale'
 
 // Chapters that have a synthesis deck: free readers start in the synchronized
 // reading experience (text + slides) by default, in the languages for which a
@@ -23,13 +24,18 @@ export const metadata: Metadata = {
   robots: { index: false, follow: false },
 }
 
-export default async function ChapitresGratuitsPage() {
+export default async function ChapitresGratuitsPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ lang?: string }>
+}) {
+  const { lang: langParam } = await searchParams
+  const lang = await getServerLang(langParam)
   const cookieStore = await cookies()
   if (!canReadFreeChapter(cookieStore)) {
-    redirect('/?gate=free#acces-libre')
+    redirect(`/?gate=free&lang=${lang}#acces-libre`)
   }
 
-  const lang = await getServerLang()
   const t = translations[lang]
   const p = t.chaptersPage
 
@@ -40,7 +46,7 @@ export default async function ChapitresGratuitsPage() {
     // their language.
     const sync = SYNC[c.href]
     const href = sync && sync.langs.has(lang) ? sync.href : c.href
-    return { ...c, href, meta }
+    return { ...c, href: localizedHref(href, lang), meta }
   }).filter((c) => {
     const slug = chapterKeyFromHref(c.href)
     return slug ? isFreeChapterKey(slug) : true
@@ -49,7 +55,7 @@ export default async function ChapitresGratuitsPage() {
   return (
     <div className="cg-root">
       <div className="cg-topbar">
-        <Link href="/" className="cg-home">{p.back}</Link>
+        <Link href={localizedHref('/', lang)} className="cg-home">{p.back}</Link>
         <div className="cg-topbar-title">
           <span className="cg-eyebrow">{p.eyebrow}</span>
           <span className="cg-sep">·</span>
