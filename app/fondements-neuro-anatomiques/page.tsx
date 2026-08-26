@@ -39,9 +39,9 @@ function safeInternalReturn(value: string | undefined) {
   return value
 }
 
-function FigureBlock({ block }: { block: Extract<ContentBlock, { type: 'figure' }> }) {
+function FigureBlock({ block, assetBase, isEnglish }: { block: Extract<ContentBlock, { type: 'figure' }>; assetBase: string; isEnglish: boolean }) {
   const figures = block.images.map((image, index) => {
-    const dimensions = image === 'pont-2-plantaires.png'
+    const dimensions = image === 'pont-2-plantaires.png' || image === 'bridge-2-plantar-afferents.png'
       ? { width: 1536, height: 1024 }
       : image === 'pont-3-autres-nerfs.png'
         ? { width: 1448, height: 1086 }
@@ -51,9 +51,10 @@ function FigureBlock({ block }: { block: Extract<ContentBlock, { type: 'figure' 
     return (
       <NapFigure
         key={image}
-        src={`/assets/anatomie/${image}`}
+        src={`${assetBase}/${image}`}
         caption={block.images.length > 1 ? `${block.caption} (${index + 1}/${block.images.length})` : block.caption}
         alt={block.caption}
+        uiLang={isEnglish ? 'en' : 'fr'}
         {...dimensions}
       />
     )
@@ -61,7 +62,7 @@ function FigureBlock({ block }: { block: Extract<ContentBlock, { type: 'figure' 
   return block.images.length > 1 ? <div className="nap-fig-pair">{figures}</div> : figures[0]
 }
 
-function Block({ block }: { block: ContentBlock }) {
+function Block({ block, assetBase, isEnglish }: { block: ContentBlock; assetBase: string; isEnglish: boolean }) {
   switch (block.type) {
     case 'paragraph':
       return <p>{block.text}</p>
@@ -88,7 +89,7 @@ function Block({ block }: { block: ContentBlock }) {
         </div>
       )
     case 'figure':
-      return <FigureBlock block={block} />
+      return <FigureBlock block={block} assetBase={assetBase} isEnglish={isEnglish} />
   }
 }
 
@@ -101,6 +102,7 @@ export default async function FondementsNeuroAnatomiquesPage({
   const lang = await getServerLang(params.lang)
   const isEnglish = lang === 'en'
   const content = isEnglish ? englishContent : frenchContent
+  const assetBase = isEnglish ? '/assets/Fondements Neuro-Anatomiques/EN' : '/assets/anatomie'
   const blocks = content.blocks as ContentBlock[]
   const firstHeadingIndex = blocks.findIndex((block) => block.type === 'heading')
   const introduction = blocks.slice(0, firstHeadingIndex)
@@ -125,7 +127,7 @@ export default async function FondementsNeuroAnatomiquesPage({
         </header>
 
         <section className="nap-sec nap-document">
-          {introduction.map((block, index) => <Block block={block} key={`introduction-${block.type}-${index}`} />)}
+          {introduction.map((block, index) => <Block block={block} assetBase={assetBase} isEnglish={isEnglish} key={`introduction-${block.type}-${index}`} />)}
         </section>
 
         <div className="nap-toc" role="navigation" aria-label={isEnglish ? 'Contents' : 'Sommaire'}>
@@ -134,7 +136,7 @@ export default async function FondementsNeuroAnatomiquesPage({
         </div>
 
         <section className="nap-sec nap-document">
-          {body.map((block, index) => <Block block={block} key={`${block.type}-${index}`} />)}
+          {body.map((block, index) => <Block block={block} assetBase={assetBase} isEnglish={isEnglish} key={`${block.type}-${index}`} />)}
         </section>
 
         <aside className="nap-cta">

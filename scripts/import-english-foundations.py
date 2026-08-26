@@ -12,6 +12,33 @@ ROOT = Path(__file__).resolve().parents[1]
 SOURCE = ROOT / "public/assets/Fondements Neuro-Anatomiques/EN/ROP_Neuroanatomical_Foundations_EN_Revised.docx"
 OUTPUT = ROOT / "content/fondements-neuro-anatomiques.en.json"
 
+FIGURES_AFTER = {
+    "The consistency of the S3 contribution": {
+        "images": ["bridge-1-tibial-lumbosacral.png"],
+        "caption": "Bridge 1 — The tibial nerve as a lumbosacral gateway, with possible S2–S3 segmental overlap.",
+    },
+    "The heel may preferentially recruit": {
+        "images": ["bridge-2-plantar-afferents.png"],
+        "caption": "Bridge 2 — Plantar and calcaneal territories may recruit different sensory afferent populations.",
+    },
+    "The pelvis is an integrated network": {
+        "images": ["bridge-4-lumbosacral-networks.png", "integrated-pelvic-networks.png"],
+        "caption": "Bridge 4 — Lumbosacral convergence and integrated pelvic networks.",
+    },
+    "Somatic input from the foot can ascend": {
+        "images": ["bridge-5-supraspinal-pathways.png"],
+        "caption": "Bridge 5 — Supraspinal integration and descending modulation.",
+    },
+    "For the pharynx and larynx": {
+        "images": ["bridge-6-cranial-outflow.png"],
+        "caption": "Bridge 6 — Cranial parasympathetic outflow pathways and their differing levels of evidence.",
+    },
+    "Quadrant 3 breaks the correlation": {
+        "images": ["four-quadrants.png"],
+        "caption": "The four quadrants of the neuroanatomical gradient: segmental proximity and evidence for somatovisceral modulation are assessed independently.",
+    },
+}
+
 
 def iter_blocks(document):
     for child in document.element.body.iterchildren():
@@ -48,6 +75,14 @@ for item in iter_blocks(document):
         if skipped_opening < 3 and text == (title, authors, subtitle)[skipped_opening]:
             skipped_opening += 1
             continue
+        if text.startswith("FIGURE — existing: pont-schema"):
+            flush_list()
+            blocks.append({
+                "type": "figure",
+                "images": ["neuroanatomical-bridge.png"],
+                "caption": "From plantar stimulation to network modulation: the four stages of a neuroanatomical bridge.",
+            })
+            continue
         if text.startswith("FIGURE —"):
             flush_list()
             continue
@@ -62,6 +97,10 @@ for item in iter_blocks(document):
             blocks.append({"type": "heading", "level": 3, "id": slugify(text), "text": text})
         else:
             blocks.append({"type": "paragraph", "text": text})
+            for prefix, figure in FIGURES_AFTER.items():
+                if text.startswith(prefix):
+                    blocks.append({"type": "figure", **figure})
+                    break
     else:
         flush_list()
         rows = [[cell.text.strip() for cell in row.cells] for row in item.rows]

@@ -24,12 +24,14 @@ export default function NapFigure({
   alt,
   width = FIG_W,
   height = FIG_H,
+  uiLang = 'fr',
 }: {
   src: string
   caption: string
   alt: string
   width?: number
   height?: number
+  uiLang?: 'fr' | 'en'
 }) {
   const [open, setOpen] = useState(false)
   const [zoom, setZoom] = useState(1)
@@ -60,6 +62,9 @@ export default function NapFigure({
   }, [])
 
   const rotateLandscapeLightbox = isPhonePortrait && width > height
+  const labels = uiLang === 'en'
+    ? { enlarge: 'Click to enlarge', zoomOut: 'Zoom out', reset: 'Reset zoom', zoomIn: 'Zoom in', close: 'Close' }
+    : { enlarge: 'Cliquer pour agrandir', zoomOut: 'Dézoomer', reset: 'Réinitialiser le zoom', zoomIn: 'Zoomer', close: 'Fermer' }
 
   function close() {
     setOpen(false)
@@ -73,7 +78,7 @@ export default function NapFigure({
           type="button"
           className="nap-fig-btn"
           onClick={() => setOpen(true)}
-          aria-label={`${caption} — Cliquer pour agrandir`}
+          aria-label={`${caption} — ${labels.enlarge}`}
         >
           <Image src={src} alt={alt} width={width} height={height} sizes="(max-width:900px) 92vw, 860px" />
           <span className="nap-fig-zoom" aria-hidden>⌕</span>
@@ -97,19 +102,19 @@ export default function NapFigure({
                   className="cr-viewer-nav-btn"
                   onClick={() => setZoom((z) => Math.max(MIN_ZOOM, +(z - STEP).toFixed(2)))}
                   disabled={zoom <= MIN_ZOOM}
-                  aria-label="Dézoomer"
+                  aria-label={labels.zoomOut}
                 >−</button>
-                <button className="cr-viewer-zoom-reset" onClick={() => setZoom(1)} title="Réinitialiser le zoom">
+                <button className="cr-viewer-zoom-reset" onClick={() => setZoom(1)} title={labels.reset}>
                   {Math.round(zoom * 100)}%
                 </button>
                 <button
                   className="cr-viewer-nav-btn"
                   onClick={() => setZoom((z) => Math.min(MAX_ZOOM, +(z + STEP).toFixed(2)))}
                   disabled={zoom >= MAX_ZOOM}
-                  aria-label="Zoomer"
+                  aria-label={labels.zoomIn}
                 >+</button>
               </div>
-              <button className="cr-lightbox-close" onClick={close} aria-label="Fermer">×</button>
+              <button className="cr-lightbox-close" onClick={close} aria-label={labels.close}>×</button>
             </div>
           </div>
           <div className="cr-lightbox-scroll" onClick={close}>

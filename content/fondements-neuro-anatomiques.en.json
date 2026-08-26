@@ -117,6 +117,13 @@
       "text": "In simplified form, the functional chain is: local pressure → mechanoreceptors and somatic afferents → peripheral branch → main nerve → spinal roots → spinal cord → ascending pathways → supraspinal networks. This is not a single tract. Depending on sensory modality, signals use several ascending systems and relays. For ROP, the central point is that local pressure can be converted into measurable neural activity that is not confined to the foot [1–3]. Human data also show that cutaneous mechanoreceptor feedback from the hand or foot can modulate muscle sympathetic nerve activity [49]. This demonstrates possible somatosensory–autonomic coupling, not action on a specific organ."
     },
     {
+      "type": "figure",
+      "images": [
+        "neuroanatomical-bridge.png"
+      ],
+      "caption": "From plantar stimulation to network modulation: the four stages of a neuroanatomical bridge."
+    },
+    {
       "type": "heading",
       "level": 2,
       "id": "2-the-visceral-side-how-internal-information-reaches-the-same-systems",
@@ -155,6 +162,13 @@
       "text": "The consistency of the S3 contribution to the tibial nerve varies across anatomical sources. Because the proximity argument rests on S2–S3, this variability must be stated: it weakens prediction of reproducible segmental targeting between individuals. Tibial stimulation may introduce afferent activity into a lumbosacral ensemble containing S2–S3 and communicating with pelvic circuits; it does not automatically select those roots, directly reach an organ, or guarantee a visceral response."
     },
     {
+      "type": "figure",
+      "images": [
+        "bridge-1-tibial-lumbosacral.png"
+      ],
+      "caption": "Bridge 1 — The tibial nerve as a lumbosacral gateway, with possible S2–S3 segmental overlap."
+    },
+    {
       "type": "heading",
       "level": 3,
       "id": "bridge-2-from-plantar-region-to-tibial-nerve-which-afferents-are-actually-recruited",
@@ -167,6 +181,13 @@
     {
       "type": "paragraph",
       "text": "The heel may preferentially recruit calcaneal branches and superficial and deep afferents of the heel fat pad; the arch recruits plantar branches, with possible medial–lateral differences; the forefoot has high sensory density and recruits digital branches. Comparing heel, arch, and forefoot under controlled stimulation tests whether the effect depends mainly on general access to the tibial system or varies reproducibly with branch, tissue, depth, receptor profile, and fascicular organization."
+    },
+    {
+      "type": "figure",
+      "images": [
+        "bridge-2-plantar-afferents.png"
+      ],
+      "caption": "Bridge 2 — Plantar and calcaneal territories may recruit different sensory afferent populations."
     },
     {
       "type": "heading",
@@ -201,6 +222,14 @@
       "text": "The pelvis is an integrated network rather than a juxtaposition of independent organs. Bladder, distal colon, and rectal interactions are documented from primary afferents to spinal networks and cross-sensitization [31–33]. These findings justify regional pelvic targeting before any claim of isolated organ targeting."
     },
     {
+      "type": "figure",
+      "images": [
+        "bridge-4-lumbosacral-networks.png",
+        "integrated-pelvic-networks.png"
+      ],
+      "caption": "Bridge 4 — Lumbosacral convergence and integrated pelvic networks."
+    },
+    {
       "type": "heading",
       "level": 3,
       "id": "bridge-5-supraspinal-pathways-descending-commands-and-remote-functions",
@@ -209,6 +238,13 @@
     {
       "type": "paragraph",
       "text": "Somatic input from the foot can ascend to higher centers, enter brain networks, and alter descending commands to spinal and autonomic circuits. For the bladder, integration involves the periaqueductal gray, pontine centers, insula, cingulate cortex, and prefrontal regions [8,12,13]. The term “limbic brain” should be used cautiously; named structures and networks are more precise. Brain responses to transcutaneous tibial and fibular stimulation are not identical [16]. The methodological lesson is that lack of direct root overlap does not exclude visceral modulation, but reliance on general supraspinal relays weakens claims of regional or point–organ specificity."
+    },
+    {
+      "type": "figure",
+      "images": [
+        "bridge-5-supraspinal-pathways.png"
+      ],
+      "caption": "Bridge 5 — Supraspinal integration and descending modulation."
     },
     {
       "type": "heading",
@@ -227,6 +263,13 @@
     {
       "type": "paragraph",
       "text": "For the pharynx and larynx, lower-limb somatic afferents can evoke neuronal responses in the nucleus tractus solitarius [44], while pharyngeal and laryngeal afferents carried by the glossopharyngeal and superior laryngeal nerves converge in the same nucleus [45]. Central convergence is established, but the decisive experiment—showing that plantar stimulation alters a measurable pharyngolaryngeal function—has not been published. For other cephalic ganglia, local autonomic physiology is established but a plantar bridge is not [46,47]."
+    },
+    {
+      "type": "figure",
+      "images": [
+        "bridge-6-cranial-outflow.png"
+      ],
+      "caption": "Bridge 6 — Cranial parasympathetic outflow pathways and their differing levels of evidence."
     },
     {
       "type": "heading",
@@ -293,6 +336,13 @@
     {
       "type": "paragraph",
       "text": "Quadrant 3 breaks the correlation between proximity and modulation. It establishes that modulatory capacity can exist independently of segmental proximity, making the two axes genuinely distinct. The oculomotor pathway is especially informative because segmental proximity is absent by definition; its value is mechanistic, not a claim of superior clinical relevance."
+    },
+    {
+      "type": "figure",
+      "images": [
+        "four-quadrants.png"
+      ],
+      "caption": "The four quadrants of the neuroanatomical gradient: segmental proximity and evidence for somatovisceral modulation are assessed independently."
     },
     {
       "type": "heading",
