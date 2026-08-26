@@ -78,10 +78,12 @@ export function LanguageProvider({
     }
     setLangState(l)
     persistLang(l)
-    // Flush the Next.js router cache so server components re-run with the new
-    // lang cookie on the next navigation — without this, pages like /introduction
-    // keep serving the previously cached RSC payload in the old language.
-    router.refresh()
+    // Keep an explicit ?lang= route in sync with the visitor's selection. A
+    // refresh alone would leave the old query override pinned on server pages.
+    const params = new URLSearchParams(window.location.search)
+    params.set('lang', l)
+    const query = params.toString()
+    router.replace(`${window.location.pathname}${query ? `?${query}` : ''}${window.location.hash}`, { scroll: false })
   }
 
   return (
