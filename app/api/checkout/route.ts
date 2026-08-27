@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { parseCart, priceCart, rejectCart } from '@/lib/cart'
-import { paymentsOpenFor, siteUrl } from '@/lib/payments'
+import { paymentsEnabled, paymentsOpenFor, siteUrl } from '@/lib/payments'
 import { getStripe } from '@/lib/stripe'
 
 export const runtime = 'nodejs'
@@ -37,6 +37,11 @@ export async function POST(req: NextRequest) {
     const status = rejection === 'price-not-configured' ? 503 : 400
     return NextResponse.json({ error: rejection }, { status })
   }
+
+  // Open but not launched means this is a preview walkthrough, which is
+  // exactly when a reviewer needs to see what Stripe actually complained
+  // about rather than a polite "try again".
+  const previewing = !paymentsEnabled()
 
   const lang = typeof body?.lang === 'string' && body.lang in SUPPORTED_LOCALES ? body.lang : 'fr'
   const readerId = req.cookies.get('reader_id')?.value ?? ''
@@ -82,6 +87,13 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ url: session.url })
   } catch (error) {
     console.error('[checkout] session creation failed:', error)
-    return NextResponse.json({ error: 'Checkout could not be started' }, { status: 502 })
+    // Stripe's message names the misconfiguration (wrong price id, a recurring
+    // price in payment mode, a key from another account). Shown only to a
+    // preview grant holder — never to a buyer once the shop has launched.
+    const detail = previewing && error instanceof Error ? error.message : undefined
+    return NextResponse.json(
+      { error: 'Checkout could not be started', ...(detail ? { detail } : {}) },
+      { status: 502 },
+    )
   }
 }

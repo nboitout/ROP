@@ -41,6 +41,8 @@ export default function CheckoutValidation() {
   const [email, setEmail] = useState('')
   const [terms, setTerms] = useState(false)
   const [error, setError] = useState<string | null>(null)
+  /** Stripe's own words, returned only during a sales preview. */
+  const [detail, setDetail] = useState<string | null>(null)
   const [pending, setPending] = useState(false)
 
   const cart = priceCart(lines)
@@ -76,6 +78,7 @@ export default function CheckoutValidation() {
     }
 
     setError(null)
+    setDetail(null)
     setPending(true)
 
     fetch('/api/track', {
@@ -103,7 +106,10 @@ export default function CheckoutValidation() {
         }),
       })
       const data = await response.json().catch(() => null)
-      if (!response.ok || !data?.url) throw new Error('checkout unavailable')
+      if (!response.ok || !data?.url) {
+        if (typeof data?.detail === 'string') setDetail(data.detail)
+        throw new Error('checkout unavailable')
+      }
       // The cart is cleared on /merci, not here: a buyer who abandons Stripe
       // and comes back must still find their order waiting.
       window.location.assign(data.url)
@@ -172,6 +178,11 @@ export default function CheckoutValidation() {
       </section>
 
       {error && <p className="cart-error" role="alert">{error}</p>}
+      {detail && (
+        <p className="cart-error-detail">
+          <strong>Stripe :</strong> {detail}
+        </p>
+      )}
 
       <div className="buy-actions">
         <button type="submit" className="btn b-gold" disabled={pending}>

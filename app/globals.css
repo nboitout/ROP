@@ -1142,6 +1142,13 @@ body:has(.sales-preview-bar) { padding-bottom:64px; }
 .cart-terms input { margin-top:3px; width:17px; height:17px; flex-shrink:0; accent-color:var(--sage); cursor:pointer; }
 
 .cart-error { margin:20px 0 0; text-align:center; font-size:.8rem; line-height:1.5; color:#a33; }
+/* Stripe's raw message during a sales preview: monospaced and selectable,
+   because it usually has to be pasted into a search or a support thread. */
+.cart-error-detail { margin:10px auto 0; max-width:560px; padding:10px 14px; text-align:left;
+  background:#fbeded; border-left:3px solid #a33; border-radius:0 3px 3px 0;
+  font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:.76rem; line-height:1.55;
+  color:#7a2020; word-break:break-word; }
+.cart-error-detail strong { font-family:'DM Sans',sans-serif; }
 
 .cart-validation .buy-actions { margin-top:26px; }
 
