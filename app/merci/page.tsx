@@ -53,7 +53,9 @@ export default async function MerciPage({
 
   return (
     <div className="cg-root buy-root">
-      {state === 'paid' && sessionId && <CheckoutSuccessTracker sessionId={sessionId} />}
+      {sessionId && (state === 'paid' || state === 'pending') && (
+        <CheckoutSuccessTracker sessionId={sessionId} paid={state === 'paid'} />
+      )}
 
       <div className="cg-topbar">
         <Link href="/" className="cg-home">← {copy.home}</Link>

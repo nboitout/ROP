@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from 'next'
 import './globals.css'
 import { LanguageProvider } from '@/app/i18n/LanguageContext'
+import { CartProvider } from '@/components/CartProvider'
 import { getServerLang } from '@/app/i18n/serverLang'
 import VisitTracker from '@/components/VisitTracker'
 import { APP_NAME, SITE_NAME, SITE_URL, SOCIAL_IMAGE_PATH } from '@/lib/site'
@@ -76,7 +77,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
           rel="stylesheet"
         />
       </head>
-      <body><LanguageProvider initialLang={lang}><VisitTracker />{children}</LanguageProvider></body>
+      <body><LanguageProvider initialLang={lang}><CartProvider><VisitTracker />{children}</CartProvider></LanguageProvider></body>
     </html>
   )
 }

@@ -11,7 +11,8 @@ import BookJourney from '@/components/BookJourney'
 import QuoteSlider from '@/components/QuoteSlider'
 import FreeChapterForm from '@/components/FreeChapterForm'
 import BookNotifyForm from '@/components/BookNotifyForm'
-import BuyOnlineBookButton from '@/components/BuyOnlineBookButton'
+import AddToCartButton from '@/components/AddToCartButton'
+import CartLink from '@/components/CartLink'
 import LanguageToggle from '@/components/LanguageToggle'
 import { useLanguage } from '@/app/i18n/LanguageContext'
 import { localizedHref } from '@/app/i18n/locale'
@@ -62,6 +63,7 @@ export default function MarketingHomePage() {
             <a href="#chapitres">{t.nav.sommaire}</a>
             <a href="#protocole">{t.nav.protocole}</a>
             <a href="#acheter">{t.nav.commander}</a>
+            <CartLink className="n-cart" />
             <Link href={localizedHref('/chapitres-gratuits', lang)} className="n-cta">{t.nav.chapitreGratuit}</Link>
           </nav>
           <Link href={localizedHref('/chapitres-gratuits', lang)} className="h-mobile-cta" onClick={() => trackCta('header_mobile_free_chapters')}>
@@ -89,7 +91,7 @@ export default function MarketingHomePage() {
               ))}
             </div>
             <div className="hero-ctas">
-              <BuyOnlineBookButton className="btn b-gold" label={t.hero.buyCta} />
+              <AddToCartButton className="btn b-gold" source="home-hero" />
               <Link href={localizedHref('/chapitres-gratuits', lang)} className="btn b-ghost" onClick={() => trackCta('hero_chapters')}>{t.hero.cta1}</Link>
               <a href="#chapitres" className="btn b-ghost" onClick={() => trackCta('hero_summary')}>{t.hero.cta2}</a>
             </div>
@@ -370,7 +372,7 @@ export default function MarketingHomePage() {
               {t.pricing.plan1.features.map((f) => <li key={f}>{f}</li>)}
             </ul>
             {/* The only plan sold here: the printed edition ships from the publisher. */}
-            <BuyOnlineBookButton className="btn b-gold pc-cta" />
+            <AddToCartButton className="btn b-gold pc-cta" source="home-pricing" />
           </div>
           <div className="pc">
             <div className="pc-n">{t.pricing.plan2.name}</div>

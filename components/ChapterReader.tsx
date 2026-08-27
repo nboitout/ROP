@@ -9,7 +9,7 @@ import type { Lang } from '@/app/i18n/translations'
 
 const PdfSlideViewer = dynamic(() => import('@/components/PdfSlideViewer'), { ssr: false })
 import ReflexZoneAtlas from '@/components/ReflexZoneAtlas'
-import BuyOnlineBookButton from '@/components/BuyOnlineBookButton'
+import AddToCartButton from '@/components/AddToCartButton'
 import { currentTopAnchorId, saveReadingPosition, loadReadingPosition, restoreToAnchor } from '@/lib/readingPosition'
 import { useLanguage } from '@/app/i18n/LanguageContext'
 import { getSessionId } from '@/lib/session'
@@ -402,11 +402,7 @@ export default function ChapterReader({ chapter, bookTitle, backHref = '/chapitr
                 <p className="cr-end-body">
                   {chapter.number ? t.reader.endCardBodyChapter : t.reader.endCardBodyIntro}
                 </p>
-                <BuyOnlineBookButton
-                  className="btn b-gold"
-                  label={t.chapters.cta}
-                  source={chapter.slug}
-                />
+                <AddToCartButton className="btn b-gold" source={chapter.slug} notifyHref="/#notify" />
               </div>
             </div>
           ) : (

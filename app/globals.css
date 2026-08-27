@@ -957,6 +957,87 @@ footer > div > p { font-size:.95rem; color:rgba(245,240,232,.84); line-height:1.
     .buy-actions .btn { width:100%; text-align:center; }
   }
 
+/* ========== CART · VALIDATION (/panier) ========== */
+/* Shares the .cg-root / .buy-panel shell with /merci and /acheter-livre, so the
+   whole purchase path keeps one visual language. */
+.cart-panel { text-align:left; }
+.cart-panel h1 { text-align:center; }
+
+.cart-steps { list-style:none; display:flex; justify-content:center; flex-wrap:wrap; gap:10px 26px;
+  margin:0 0 26px; padding:0; }
+.cart-step { display:flex; align-items:center; gap:9px; font-size:.72rem; letter-spacing:.14em;
+  text-transform:uppercase; font-weight:500; color:rgba(26,26,24,.38); }
+.cart-step-index { display:flex; align-items:center; justify-content:center; width:24px; height:24px;
+  border-radius:50%; border:1px solid currentColor; font-size:.7rem; letter-spacing:0; flex-shrink:0; }
+.cart-step[data-state='current'] { color:var(--gold); }
+.cart-step[data-state='current'] .cart-step-index { background:var(--gold); border-color:var(--gold); color:var(--cream); }
+.cart-step[data-state='done'] { color:var(--sage); }
+
+.cart-loading { text-align:center; font-size:.9rem; color:rgba(26,26,24,.55); padding:24px 0; }
+
+.cart-empty { text-align:center; }
+.cart-empty-title { font-family:'Cormorant Garamond',serif; font-size:1.5rem; color:var(--ink); margin:0 0 8px; }
+.cart-empty-body { font-size:.95rem; line-height:1.65; color:rgba(26,26,24,.68); max-width:520px; margin:0 auto 24px; }
+
+.cart-lines { list-style:none; margin:0; padding:0; border-top:1px solid rgba(26,26,24,.1); }
+.cart-line { display:flex; align-items:flex-start; justify-content:space-between; gap:24px;
+  padding:22px 0; border-bottom:1px solid rgba(26,26,24,.1); }
+.cart-line-main { flex:1; min-width:0; }
+.cart-line-name { font-family:'Cormorant Garamond',serif; font-size:1.35rem; color:var(--ink); margin:0 0 6px; }
+.cart-line-desc { font-size:.88rem; line-height:1.6; color:rgba(26,26,24,.68); margin:0; }
+.cart-line-note { font-size:.76rem; color:rgba(26,26,24,.48); margin:8px 0 0; font-style:italic; }
+.cart-line-side { display:flex; flex-direction:column; align-items:flex-end; gap:8px; flex-shrink:0; }
+.cart-line-price { font-family:'Cormorant Garamond',serif; font-size:1.5rem; color:var(--ink); margin:0; white-space:nowrap; }
+.cart-line-remove { background:none; border:none; padding:0; cursor:pointer; font-family:'DM Sans',sans-serif;
+  font-size:.72rem; letter-spacing:.1em; text-transform:uppercase; color:rgba(26,26,24,.5);
+  text-decoration:underline; text-underline-offset:3px; }
+.cart-line-remove:hover { color:#a33; }
+
+.cart-totals { margin:20px 0 26px; }
+.cart-total-row { display:flex; justify-content:space-between; align-items:baseline; gap:16px; padding:5px 0; }
+.cart-total-row dt { font-size:.84rem; color:rgba(26,26,24,.66); }
+.cart-total-row dd { margin:0; font-size:.95rem; color:var(--ink); }
+.cart-total-row-grand { padding-top:12px; margin-top:6px; border-top:1px solid rgba(26,26,24,.12); }
+.cart-total-row-grand dt { font-size:.74rem; letter-spacing:.16em; text-transform:uppercase; font-weight:600; color:var(--ink); }
+.cart-total-row-grand dd { font-family:'Cormorant Garamond',serif; font-size:1.9rem; color:var(--gold); }
+.cart-vat { margin:10px 0 0; font-size:.76rem; line-height:1.55; color:rgba(26,26,24,.5); }
+
+.cart-secure { margin:22px 0 0; text-align:center; font-size:.76rem; line-height:1.55; color:rgba(26,26,24,.5); }
+
+.cart-recap-title { font-family:'Cormorant Garamond',serif; font-size:1.15rem; font-weight:400;
+  letter-spacing:.02em; color:var(--sage); margin:0 0 10px; }
+
+.cart-fields { margin:4px 0 0; padding-top:26px; border-top:1px solid rgba(26,26,24,.1); }
+.cart-field-label { display:block; font-size:.74rem; letter-spacing:.14em; text-transform:uppercase;
+  font-weight:600; color:var(--ink); margin-bottom:8px; }
+.cart-fields input[type='email'] { width:100%; padding:12px 14px; font-size:16px; font-family:'DM Sans',sans-serif;
+  color:var(--ink); background:#fff; border:1px solid rgba(26,26,24,.2); border-radius:3px; }
+.cart-fields input[type='email']:focus { outline:none; border-color:var(--sage); }
+.cart-fields input[aria-invalid='true'] { border-color:#a33; }
+.cart-field-help { margin:8px 0 0; font-size:.78rem; line-height:1.55; color:rgba(26,26,24,.55); }
+
+.cart-terms { display:flex; align-items:flex-start; gap:11px; margin:22px 0 0;
+  font-size:.83rem; line-height:1.6; color:rgba(26,26,24,.72); cursor:pointer; }
+.cart-terms input { margin-top:3px; width:17px; height:17px; flex-shrink:0; accent-color:var(--sage); cursor:pointer; }
+
+.cart-error { margin:20px 0 0; text-align:center; font-size:.8rem; line-height:1.5; color:#a33; }
+
+.cart-validation .buy-actions { margin-top:26px; }
+
+/* Header cart shortcut, shown only once something is in the cart. */
+.n-cart { display:inline-flex; align-items:center; gap:7px; }
+.cart-count { display:inline-flex; align-items:center; justify-content:center; min-width:18px; height:18px;
+  padding:0 5px; border-radius:9px; background:var(--gold); color:var(--cream);
+  font-size:.62rem; font-weight:600; letter-spacing:0; }
+
+@media (max-width:640px){
+  .cart-steps { gap:8px 14px; }
+  .cart-step { font-size:.64rem; letter-spacing:.1em; gap:6px; }
+  .cart-step-index { width:20px; height:20px; font-size:.62rem; }
+  .cart-line { flex-direction:column; gap:12px; }
+  .cart-line-side { flex-direction:row; align-items:center; justify-content:space-between; width:100%; }
+}
+
 /* ========== SLIDE-SYNC READER (prototype /lecture/chapitre-5) ========== */
 /* Mode switch (Synchronisée / Classique) in the reader top bar */
 .ss-switch-wrap { flex-shrink:0; display:inline-flex; align-items:center; gap:9px; }

@@ -1,9 +1,11 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import AddToCartButton from '@/components/AddToCartButton'
 import { chapterKeyFromHref, isFreeChapterHref } from '@/lib/access'
 import { getChapter } from '@/content/registry'
 import { getServerLang } from '@/app/i18n/serverLang'
 import { translations } from '@/app/i18n/translations'
+import { paymentsEnabled } from '@/lib/payments'
 
 export const metadata: Metadata = {
   title: 'Accès au livre complet · R.O.P. · Guy Boitout',
@@ -44,6 +46,7 @@ export default async function AcheterLivrePage({
     }
   }
   const returnHref = targetHref ? returnHrefFromTarget(targetHref) : '/chapitres-gratuits'
+  const onSale = paymentsEnabled()
 
   return (
     <div className="cg-root buy-root">
@@ -59,13 +62,17 @@ export default async function AcheterLivrePage({
       <main className="buy-main">
         <section className="buy-panel">
           <p className="buy-eyebrow">Renvoi réservé au livre complet</p>
-          <h1>Le livre complet est en préparation</h1>
+          <h1>{onSale ? 'Accédez au livre complet' : 'Le livre complet est en préparation'}</h1>
           <p className="buy-lead">
-            Ce renvoi approfondit le chapitre gratuit avec une section qui sera disponible dans l’ouvrage intégral.
+            {onSale
+              ? 'Ce renvoi approfondit le chapitre gratuit avec une section de l’ouvrage intégral.'
+              : 'Ce renvoi approfondit le chapitre gratuit avec une section qui sera disponible dans l’ouvrage intégral.'}
             {chapterTitle ? ` Il pointe vers : ${chapterTitle}.` : ''}
           </p>
           <div className="buy-actions">
-            <Link href="/#acheter" className="btn b-gold">Être averti de la parution</Link>
+            {/* Before launch this renders the waitlist link, after launch the
+                add-to-cart button — the same switch as the pricing card. */}
+            <AddToCartButton className="btn b-gold" source="acheter-livre" notifyHref="/#notify" />
             <Link href={returnHref} className="btn b-out">Retour à la lecture</Link>
           </div>
         </section>
