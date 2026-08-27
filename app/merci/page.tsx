@@ -4,7 +4,8 @@ import AccessLinkForm from '@/components/AccessLinkForm'
 import CheckoutSuccessTracker from '@/components/CheckoutSuccessTracker'
 import { getServerLang } from '@/app/i18n/serverLang'
 import { translations } from '@/app/i18n/translations'
-import { paymentsEnabled } from '@/lib/payments'
+import { cookies } from 'next/headers'
+import { paymentsOpenFor } from '@/lib/payments'
 import { getStripe } from '@/lib/stripe'
 
 export const metadata: Metadata = {
@@ -32,7 +33,7 @@ export default async function MerciPage({
   let state: PageState = 'pending'
   if (stateParam === 'invalid-link' || stateParam === 'no-access' || stateParam === 'error') {
     state = stateParam
-  } else if (sessionId && paymentsEnabled()) {
+  } else if (sessionId && (await paymentsOpenFor(await cookies()))) {
     try {
       const session = await getStripe().checkout.sessions.retrieve(sessionId)
       state = session.payment_status === 'paid' ? 'paid' : 'pending'

@@ -1,7 +1,11 @@
 import type { Metadata, Viewport } from 'next'
 import './globals.css'
+import { cookies } from 'next/headers'
 import { LanguageProvider } from '@/app/i18n/LanguageContext'
 import { CartProvider } from '@/components/CartProvider'
+import { SalesModeProvider } from '@/components/SalesModeProvider'
+import SalesPreviewBanner from '@/components/SalesPreviewBanner'
+import { paymentsEnabled, paymentsOpenFor } from '@/lib/payments'
 import { getServerLang } from '@/app/i18n/serverLang'
 import VisitTracker from '@/components/VisitTracker'
 import { APP_NAME, SITE_NAME, SITE_URL, SOCIAL_IMAGE_PATH } from '@/lib/site'
@@ -62,6 +66,12 @@ export const viewport: Viewport = {
 
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
   const lang = await getServerLang()
+
+  // Whether the shop is open is per-visitor once the preview exists, so it is
+  // resolved here from the request and handed to the client tree.
+  const cookieStore = await cookies()
+  const open = await paymentsOpenFor(cookieStore)
+  const preview = open && !paymentsEnabled()
   return (
     <html lang={lang}>
       <head>
@@ -77,7 +87,17 @@ export default async function RootLayout({ children }: { children: React.ReactNo
           rel="stylesheet"
         />
       </head>
-      <body><LanguageProvider initialLang={lang}><CartProvider><VisitTracker />{children}</CartProvider></LanguageProvider></body>
+      <body>
+        <LanguageProvider initialLang={lang}>
+          <SalesModeProvider mode={{ open, preview }}>
+            <CartProvider>
+              <VisitTracker />
+              {preview && <SalesPreviewBanner />}
+              {children}
+            </CartProvider>
+          </SalesModeProvider>
+        </LanguageProvider>
+      </body>
     </html>
   )
 }

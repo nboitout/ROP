@@ -5,7 +5,8 @@ import CartSteps from '@/components/CartSteps'
 import CartView from '@/components/CartView'
 import { getServerLang } from '@/app/i18n/serverLang'
 import { translations } from '@/app/i18n/translations'
-import { paymentsEnabled } from '@/lib/payments'
+import { cookies } from 'next/headers'
+import { paymentsOpenFor } from '@/lib/payments'
 
 export const metadata: Metadata = {
   title: 'Panier · R.O.P. · Guy Boitout',
@@ -18,7 +19,7 @@ export default async function PanierPage() {
   const lang = await getServerLang()
   const t = translations[lang]
   const c = t.cart
-  const onSale = paymentsEnabled()
+  const onSale = await paymentsOpenFor(await cookies())
 
   return (
     <div className="cg-root buy-root">

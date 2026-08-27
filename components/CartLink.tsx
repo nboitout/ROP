@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { useLanguage } from '@/app/i18n/LanguageContext'
 import { localizedHref } from '@/app/i18n/locale'
 import { useCart } from '@/components/CartProvider'
+import { useSalesMode } from '@/components/SalesModeProvider'
 
 /**
  * Header shortcut back to the cart. Hidden while the cart is empty so the
@@ -12,8 +13,9 @@ import { useCart } from '@/components/CartProvider'
 export default function CartLink({ className }: { className?: string }) {
   const { t, lang } = useLanguage()
   const { itemCount, ready } = useCart()
+  const { open } = useSalesMode()
 
-  if (process.env.NEXT_PUBLIC_PAYMENTS_ENABLED !== 'true' || !ready || itemCount === 0) return null
+  if (!open || !ready || itemCount === 0) return null
 
   return (
     <Link href={localizedHref('/panier', lang)} className={className}>

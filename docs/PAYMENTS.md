@@ -71,6 +71,45 @@ Both fulfilment paths run the same idempotent `lib/fulfillment.ts`, so paying
 and clicking "open the book" before the webhook lands cannot double-grant or
 double-charge anything.
 
+## Previewing the sales path before launch
+
+`/apercu-ventes` opens the whole purchase path — cart, validation, Stripe, the
+access email, the book — for one browser, while every other visitor still sees
+the waitlist form. It is how the team reviews the shop on the deployed site
+instead of on someone's laptop.
+
+The grant is a signed token (`lib/salesPreview.ts`) issued by
+`POST /api/sales-preview` against `SALES_PREVIEW_PASSWORD`, stored in the
+`sales_preview` cookie for 30 days. It reuses the reader-session machinery, so
+forging one needs `AUTH_SECRET` — a hand-set `sales_preview=1` opens nothing.
+It names `sales_preview` rather than a product, so it can never be turned into
+book access. An admin session opens the preview too.
+
+`paymentsEnabled()` is now three functions:
+
+| Function | Question it answers |
+|---|---|
+| `paymentsConfigured()` | Are the Stripe keys, price id and `AUTH_SECRET` all present? |
+| `paymentsEnabled()` | Has the shop launched for everyone? (the `NEXT_PUBLIC_` flag) |
+| `paymentsOpenFor(cookies)` | Is the shop open to *this visitor*? — what every page and route in the purchase path asks |
+
+Because the decision is now per-visitor, the buy button can no longer read
+`NEXT_PUBLIC_PAYMENTS_ENABLED` (inlined at build time, identical for everyone):
+the root layout resolves it from the request and passes it down through
+`SalesModeProvider`.
+
+While the preview is on, a bar is pinned to the foot of every page naming the
+test card, so a test payment is never mistaken for a real one.
+
+**Set test-mode Stripe keys while previewing.** The preview uses whatever keys
+the deployment has; with live keys a reviewer's card is really charged. And a
+test purchase is a real purchase everywhere else: it writes a customer, an
+order and an entitlement, and sends a real email. Clear those rows before
+opening the shop.
+
+Preview clicks are marked as internal traffic, so they stay out of the
+`/admin/parcours` funnel.
+
 ## Access control
 
 `paid_access` is a signed token (`v1.<payload>.<HMAC-SHA256>`, `lib/authSession.ts`),
@@ -96,7 +135,8 @@ that trade is worth it.
 | `STRIPE_SECRET_KEY` | Server-side Stripe key (`sk_test_…` / `sk_live_…`) |
 | `STRIPE_WEBHOOK_SECRET` | Signing secret of the webhook endpoint (`whsec_…`) |
 | `STRIPE_PRICE_ONLINE_BOOK` | Price id of the online book (`price_…`) — the amount lives in Stripe, never in the request |
-| `NEXT_PUBLIC_PAYMENTS_ENABLED` | Master switch. Anything but `"true"` keeps the waitlist link, shows the waitlist form on `/panier`, and makes `/api/checkout` answer 503 |
+| `NEXT_PUBLIC_PAYMENTS_ENABLED` | Master switch. Anything but `"true"` keeps the waitlist link, shows the waitlist form on `/panier`, and makes `/api/checkout` answer 503 — except for a browser holding a sales-preview grant |
+| `SALES_PREVIEW_PASSWORD` | Password for `/apercu-ventes`. Falls back to `ADMIN_PASSWORD`; set it to share the walkthrough without the admin dashboard |
 | `STRIPE_AUTOMATIC_TAX` | `"true"` turns on Stripe Tax. Leave it off until the dashboard has an origin address and your VAT registrations, otherwise Stripe refuses the session |
 | `AUTH_SECRET` | HMAC secret for reader sessions and magic links |
 | `DATABASE_URL` | Neon Postgres — customers, orders, entitlements, tokens |

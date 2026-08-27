@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import { PAID_ACCESS_COOKIE } from '@/lib/access'
 import { createReaderSessionToken, READER_SESSION_MAX_AGE } from '@/lib/authSession'
 import { fulfillCheckoutSession } from '@/lib/fulfillment'
-import { paymentsEnabled } from '@/lib/payments'
+import { paymentsOpenFor } from '@/lib/payments'
 import { getStripe } from '@/lib/stripe'
 
 export const runtime = 'nodejs'
@@ -18,7 +18,7 @@ const READING_ENTRY = '/lecture/chapitre-1'
  */
 export async function GET(req: NextRequest) {
   const sessionId = req.nextUrl.searchParams.get('session_id')
-  if (!sessionId || !paymentsEnabled()) {
+  if (!sessionId || !(await paymentsOpenFor(req.cookies))) {
     return NextResponse.redirect(new URL('/merci?state=error', req.url))
   }
 

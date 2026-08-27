@@ -5,7 +5,8 @@ import CheckoutValidation from '@/components/CheckoutValidation'
 import { getServerLang } from '@/app/i18n/serverLang'
 import { localizedHref } from '@/app/i18n/locale'
 import { translations } from '@/app/i18n/translations'
-import { paymentsEnabled } from '@/lib/payments'
+import { cookies } from 'next/headers'
+import { paymentsOpenFor } from '@/lib/payments'
 
 export const metadata: Metadata = {
   title: 'Validation de la commande · R.O.P. · Guy Boitout',
@@ -19,6 +20,7 @@ export default async function ValidationPage() {
   const t = translations[lang]
   const c = t.cart
   const v = c.validation
+  const onSale = await paymentsOpenFor(await cookies())
 
   return (
     <div className="cg-root buy-root">
@@ -37,7 +39,7 @@ export default async function ValidationPage() {
           <h1>{v.title}</h1>
           <p className="buy-lead">{v.lead}</p>
 
-          {paymentsEnabled() ? (
+          {onSale ? (
             <>
               <CartSteps lang={lang} active="validation" />
               <CheckoutValidation />

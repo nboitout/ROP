@@ -4,17 +4,18 @@ import { useRouter } from 'next/navigation'
 import { useLanguage } from '@/app/i18n/LanguageContext'
 import { localizedHref } from '@/app/i18n/locale'
 import { useCart } from '@/components/CartProvider'
+import { useSalesMode } from '@/components/SalesModeProvider'
 import { ONLINE_BOOK_PRODUCT } from '@/lib/access'
 import { getSessionId } from '@/lib/session'
 
 /**
  * Entry point of the purchase pipeline.
  *
- * Before launch (NEXT_PUBLIC_PAYMENTS_ENABLED ≠ "true") it stays the
- * "notify me on release" link it has always been, so the whole cart,
- * validation and checkout chain can ship dark and be switched on the day the
- * book is published. After launch the same button puts the online book in the
- * cart and takes the reader to /panier.
+ * Before launch it stays the "notify me on release" link it has always been,
+ * so the whole cart, validation and checkout chain can ship dark and be
+ * switched on the day the book is published. Once the shop is open to this
+ * visitor — the site has launched, or they hold a sales-preview grant — the
+ * same button puts the online book in the cart and takes them to /panier.
  */
 export default function AddToCartButton({
   className,
@@ -32,9 +33,8 @@ export default function AddToCartButton({
 }) {
   const { t, lang } = useLanguage()
   const { lines, add } = useCart()
+  const { open } = useSalesMode()
   const router = useRouter()
-
-  const enabled = process.env.NEXT_PUBLIC_PAYMENTS_ENABLED === 'true'
   const inCart = lines.some((line) => line.product === ONLINE_BOOK_PRODUCT)
 
   function track(cta: string, event = 'cta_click') {
@@ -52,7 +52,7 @@ export default function AddToCartButton({
     }).catch(() => {})
   }
 
-  if (!enabled) {
+  if (!open) {
     const href = notifyHref.startsWith('/') ? localizedHref(notifyHref, lang) : notifyHref
     return (
       <a href={href} className={className} onClick={() => track('pricing_notify')}>

@@ -2,7 +2,7 @@ import { verifyReaderSession } from '@/lib/authSession'
 
 type CookieValue = { value?: string } | undefined | null
 
-type CookieReader = {
+export type CookieReader = {
   get(name: string): unknown
 }
 
@@ -13,7 +13,7 @@ export const ADMIN_SESSION_COOKIE = 'admin_session'
 /** The paid product sold on the site — the enriched online book. */
 export const ONLINE_BOOK_PRODUCT = 'online_book'
 
-function cookieValue(cookieStore: CookieReader, name: string): string | undefined {
+export function cookieValue(cookieStore: CookieReader, name: string): string | undefined {
   const entry = cookieStore.get(name) as CookieValue
   if (typeof entry === 'string') return entry
   return entry?.value

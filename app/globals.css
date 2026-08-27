@@ -959,6 +959,62 @@ footer > div > p { font-size:.95rem; color:rgba(245,240,232,.84); line-height:1.
     .buy-actions .btn { width:100%; text-align:center; }
   }
 
+/* ========== SALES PREVIEW (/apercu-ventes) ========== */
+/* Fixed to the bottom, not the top: the site already has a fixed header, and
+   a review session spends most of its time reading the page underneath. */
+.sales-preview-bar { position:fixed; left:0; right:0; bottom:0; z-index:400;
+  display:flex; align-items:center; gap:14px; flex-wrap:wrap;
+  padding:10px 20px; background:var(--ink); color:var(--cream);
+  font-size:.78rem; line-height:1.45; box-shadow:0 -4px 20px rgba(26,26,24,.28); }
+.sales-preview-dot { width:8px; height:8px; border-radius:50%; background:var(--gold-l);
+  flex-shrink:0; box-shadow:0 0 0 3px rgba(201,163,94,.25); }
+.sales-preview-text { flex:1; min-width:200px; }
+.sales-preview-text strong { color:var(--gold-l); }
+.sales-preview-text code { font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+  font-size:.92em; background:rgba(245,240,232,.12); padding:1px 5px; border-radius:2px; }
+.sales-preview-link { color:var(--cream); text-decoration:underline; text-underline-offset:3px;
+  font-size:.72rem; letter-spacing:.08em; text-transform:uppercase; flex-shrink:0; }
+.sales-preview-link:hover { color:var(--gold-l); }
+.sales-preview-exit { flex-shrink:0; cursor:pointer; border:1px solid rgba(245,240,232,.42);
+  background:transparent; color:var(--cream); border-radius:2px; padding:6px 14px;
+  font-family:'DM Sans',sans-serif; font-size:.7rem; letter-spacing:.09em; text-transform:uppercase; }
+.sales-preview-exit:hover { background:rgba(245,240,232,.12); }
+.sales-preview-exit:disabled { opacity:.6; cursor:progress; }
+
+.preview-gate { max-width:460px; margin:0 auto; }
+.preview-gate-lead { font-size:.94rem; line-height:1.7; color:rgba(26,26,24,.75); margin:0 0 22px; }
+.preview-gate input { width:100%; padding:12px 14px; font-size:16px; font-family:'DM Sans',sans-serif;
+  color:var(--ink); background:#fff; border:1px solid rgba(26,26,24,.2); border-radius:3px; }
+.preview-gate input:focus { outline:none; border-color:var(--sage); }
+.preview-gate input[aria-invalid='true'] { border-color:#a33; }
+.preview-gate .buy-actions { margin-top:20px; }
+
+.preview-note, .preview-warning { margin:0 0 26px; padding:16px 20px; border-radius:0 4px 4px 0;
+  font-size:.9rem; line-height:1.65; }
+.preview-note { background:var(--sage-pale); border-left:3px solid var(--sage); color:rgba(26,26,24,.8); }
+.preview-warning { background:rgba(160,124,58,.1); border-left:3px solid var(--gold); color:rgba(26,26,24,.85); }
+.preview-note p, .preview-warning p { margin:0; }
+.preview-note code, .preview-warning code { font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+  font-size:.92em; background:rgba(26,26,24,.07); padding:1px 5px; border-radius:2px; }
+
+.preview-steps { list-style:none; margin:0 0 26px; padding:0;
+  border-top:1px solid rgba(26,26,24,.1); }
+.preview-step { padding:18px 0; border-bottom:1px solid rgba(26,26,24,.1); }
+.preview-step-title { margin:0 0 6px; font-family:'Cormorant Garamond',serif; font-size:1.24rem;
+  color:var(--sage); }
+.preview-step-body { margin:0; font-size:.92rem; line-height:1.65; color:rgba(26,26,24,.75); }
+.preview-step-link { display:inline-block; margin-top:9px; font-size:.72rem; font-weight:600;
+  letter-spacing:.12em; text-transform:uppercase; color:var(--gold); text-decoration:none; }
+.preview-step-link:hover { color:var(--sage); }
+
+/* The bar covers the foot of every page while the preview is on. */
+body:has(.sales-preview-bar) { padding-bottom:64px; }
+
+@media (max-width:640px){
+  .sales-preview-bar { gap:10px; padding:10px 14px; font-size:.72rem; }
+  body:has(.sales-preview-bar) { padding-bottom:96px; }
+}
+
 /* ========== LEGAL PAGES (/cgv) ========== */
 .legal-main { width:100%; max-width:780px; margin:0 auto; padding:104px 28px 72px; }
 

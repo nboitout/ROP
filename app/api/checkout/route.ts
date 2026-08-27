@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { parseCart, priceCart, rejectCart } from '@/lib/cart'
-import { paymentsEnabled, siteUrl } from '@/lib/payments'
+import { paymentsOpenFor, siteUrl } from '@/lib/payments'
 import { getStripe } from '@/lib/stripe'
 
 export const runtime = 'nodejs'
@@ -13,7 +13,8 @@ const SUPPORTED_LOCALES: Record<string, 'fr' | 'en' | 'de' | 'es' | 'it' | 'th'>
 const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 
 export async function POST(req: NextRequest) {
-  if (!paymentsEnabled()) {
+  // Open to everyone once launched, and to a preview grant before that.
+  if (!(await paymentsOpenFor(req.cookies))) {
     return NextResponse.json({ error: 'Payments are not enabled' }, { status: 503 })
   }
 
