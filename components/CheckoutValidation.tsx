@@ -11,6 +11,23 @@ import { getSessionId } from '@/lib/session'
 const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 
 /**
+ * Turns the words naming the terms of sale into a link to /cgv, without
+ * splitting the sentence into fragments each locale would have to reassemble
+ * in its own word order.
+ */
+function consentWithTermsLink(sentence: string, linkText: string, href: string) {
+  const parts = sentence.split(linkText)
+  if (parts.length !== 2) return sentence
+  return (
+    <>
+      {parts[0]}
+      <Link href={href} target="_blank" rel="noopener">{linkText}</Link>
+      {parts[1]}
+    </>
+  )
+}
+
+/**
  * Step 2 of the pipeline: the last screen on this site.
  *
  * It collects the two things Stripe's hosted page cannot decide for us — the
@@ -150,7 +167,7 @@ export default function CheckoutValidation() {
             onChange={(e) => { setTerms(e.target.checked); setError(null) }}
             aria-invalid={error === v.termsRequired}
           />
-          <span>{v.terms}</span>
+          <span>{consentWithTermsLink(v.terms, v.termsLink, localizedHref('/cgv', lang))}</span>
         </label>
       </section>
 

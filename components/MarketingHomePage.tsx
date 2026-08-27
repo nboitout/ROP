@@ -406,6 +406,7 @@ export default function MarketingHomePage() {
         </div>
         <div className="f-bot">
           <span>{t.footer.copy}</span>
+          <Link href={localizedHref('/cgv', lang)} className="f-legal-link">{t.footer.cgv}</Link>
         </div>
       </footer>
 
