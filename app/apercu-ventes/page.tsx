@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { cookies } from 'next/headers'
 import SalesPreviewGate from '@/components/SalesPreviewGate'
-import { paymentsConfigured, paymentsEnabled } from '@/lib/payments'
+import { missingPaymentsConfig, paymentsEnabled } from '@/lib/payments'
 import { hasSalesPreview } from '@/lib/salesPreview'
 
 export const metadata: Metadata = {
@@ -23,7 +23,7 @@ export default async function ApercuVentesPage() {
   return (
     <SalesPreviewGate
       unlocked={unlocked}
-      configured={paymentsConfigured()}
+      missingConfig={unlocked ? missingPaymentsConfig() : []}
       live={paymentsEnabled()}
     />
   )

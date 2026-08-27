@@ -6,15 +6,17 @@ import { useLanguage } from '@/app/i18n/LanguageContext'
 import { localizedHref } from '@/app/i18n/locale'
 
 /**
- * Always on screen while the sales preview is active.
+ * Always on screen while a sales-preview grant is held.
  *
- * The whole point of the preview is that the site behaves exactly as it will
- * once it launches — which is precisely why it needs saying out loud that this
- * is not the live shop, and which card to use.
+ * Two jobs. When the shop is open for this browser, say out loud that this is
+ * not the live shop and which card to use. When it cannot open — the
+ * deployment has no Stripe keys yet — say *that*, because otherwise unlocking
+ * the preview appears to do nothing at all.
  */
-export default function SalesPreviewBanner() {
+export default function SalesPreviewBanner({ missingConfig = [] }: { missingConfig?: string[] }) {
   const { lang } = useLanguage()
   const [leaving, setLeaving] = useState(false)
+  const blocked = missingConfig.length > 0
 
   async function leave() {
     setLeaving(true)
@@ -27,12 +29,23 @@ export default function SalesPreviewBanner() {
   }
 
   return (
-    <div className="sales-preview-bar" role="status">
+    <div className={`sales-preview-bar${blocked ? ' is-blocked' : ''}`} role="status">
       <span className="sales-preview-dot" aria-hidden="true" />
       <span className="sales-preview-text">
-        <strong>Aperçu ventes</strong>{' — la boutique n’est ouverte que pour vous. Carte de test\u00a0: '}
-        <code>4242 4242 4242 4242</code>
-        {', date future, CVC au choix.'}
+        {blocked ? (
+          <>
+            <strong>{'Aperçu ventes actif, mais le panier reste fermé : '}</strong>
+            {'Stripe n’est pas configuré sur ce déploiement. Variables manquantes : '}
+            <code>{missingConfig.join(', ')}</code>
+          </>
+        ) : (
+          <>
+            <strong>Aperçu ventes</strong>
+            {' — la boutique n’est ouverte que pour vous. Carte de test : '}
+            <code>4242 4242 4242 4242</code>
+            {', date future, CVC au choix.'}
+          </>
+        )}
       </span>
       <Link href={localizedHref('/apercu-ventes', lang)} className="sales-preview-link">Guide</Link>
       <button type="button" className="sales-preview-exit" onClick={leave} disabled={leaving}>

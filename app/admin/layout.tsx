@@ -32,6 +32,9 @@ export default async function AdminLayout({
           </div>
         </div>
         <div className="adm-nav-right">
+          {/* An admin session already opens the sales preview; this is just the
+              door, so it does not have to be remembered as a URL. */}
+          <Link href="/apercu-ventes" className="adm-nav-site-link">Sales preview</Link>
           <Link href="/" className="adm-nav-site-link">&lt;- guy-boitout.com</Link>
           <LogoutButton />
         </div>

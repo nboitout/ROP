@@ -37,12 +37,22 @@ export function getProduct(key: string): ProductDefinition | null {
  * payment, previewed or not.
  */
 export function paymentsConfigured(): boolean {
-  return (
-    !!process.env.STRIPE_SECRET_KEY?.trim()
-    && !!process.env.STRIPE_WEBHOOK_SECRET?.trim()
-    && !!process.env.AUTH_SECRET?.trim()
-    && !!PRODUCTS[ONLINE_BOOK_PRODUCT].priceId
-  )
+  return missingPaymentsConfig().length === 0
+}
+
+/**
+ * Names of the environment variables a payment still needs. Names only, never
+ * values — this is shown to whoever holds a sales-preview grant so they can see
+ * at a glance why the cart is still closed, instead of unlocking the preview
+ * and finding the site apparently unchanged.
+ */
+export function missingPaymentsConfig(): string[] {
+  const missing: string[] = []
+  if (!process.env.STRIPE_SECRET_KEY?.trim()) missing.push('STRIPE_SECRET_KEY')
+  if (!process.env.STRIPE_WEBHOOK_SECRET?.trim()) missing.push('STRIPE_WEBHOOK_SECRET')
+  if (!process.env.AUTH_SECRET?.trim()) missing.push('AUTH_SECRET')
+  if (!PRODUCTS[ONLINE_BOOK_PRODUCT].priceId) missing.push('STRIPE_PRICE_ONLINE_BOOK')
+  return missing
 }
 
 /**

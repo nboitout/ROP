@@ -970,6 +970,11 @@ footer > div > p { font-size:.95rem; color:rgba(245,240,232,.84); line-height:1.
   flex-shrink:0; box-shadow:0 0 0 3px rgba(201,163,94,.25); }
 .sales-preview-text { flex:1; min-width:200px; }
 .sales-preview-text strong { color:var(--gold-l); }
+/* Blocked: the preview is on but the shop cannot open. Different colour so it
+   reads as "something is missing", not as "ready to test". */
+.sales-preview-bar.is-blocked { background:#5c1f1f; }
+.sales-preview-bar.is-blocked .sales-preview-dot { background:#f0b8b0; box-shadow:0 0 0 3px rgba(240,184,176,.22); }
+.sales-preview-bar.is-blocked .sales-preview-text strong { color:#f0b8b0; }
 .sales-preview-text code { font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
   font-size:.92em; background:rgba(245,240,232,.12); padding:1px 5px; border-radius:2px; }
 .sales-preview-link { color:var(--cream); text-decoration:underline; text-underline-offset:3px;
@@ -993,7 +998,10 @@ footer > div > p { font-size:.95rem; color:rgba(245,240,232,.84); line-height:1.
   font-size:.9rem; line-height:1.65; }
 .preview-note { background:var(--sage-pale); border-left:3px solid var(--sage); color:rgba(26,26,24,.8); }
 .preview-warning { background:rgba(160,124,58,.1); border-left:3px solid var(--gold); color:rgba(26,26,24,.85); }
-.preview-note p, .preview-warning p { margin:0; }
+.preview-note p, .preview-warning p { margin:0 0 10px; }
+.preview-note p:last-child, .preview-warning p:last-child { margin-bottom:0; }
+.preview-missing { margin:0 0 10px; padding-left:20px; }
+.preview-missing li { margin-bottom:3px; }
 .preview-note code, .preview-warning code { font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
   font-size:.92em; background:rgba(26,26,24,.07); padding:1px 5px; border-radius:2px; }
 

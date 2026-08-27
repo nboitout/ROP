@@ -5,7 +5,8 @@ import { LanguageProvider } from '@/app/i18n/LanguageContext'
 import { CartProvider } from '@/components/CartProvider'
 import { SalesModeProvider } from '@/components/SalesModeProvider'
 import SalesPreviewBanner from '@/components/SalesPreviewBanner'
-import { paymentsEnabled, paymentsOpenFor } from '@/lib/payments'
+import { missingPaymentsConfig, paymentsEnabled, paymentsOpenFor } from '@/lib/payments'
+import { hasSalesPreview } from '@/lib/salesPreview'
 import { getServerLang } from '@/app/i18n/serverLang'
 import VisitTracker from '@/components/VisitTracker'
 import { APP_NAME, SITE_NAME, SITE_URL, SOCIAL_IMAGE_PATH } from '@/lib/site'
@@ -71,7 +72,12 @@ export default async function RootLayout({ children }: { children: React.ReactNo
   // resolved here from the request and handed to the client tree.
   const cookieStore = await cookies()
   const open = await paymentsOpenFor(cookieStore)
-  const preview = open && !paymentsEnabled()
+
+  // The banner follows the *grant*, not the open shop: holding a preview grant
+  // on a deployment that has no Stripe keys leaves the site looking untouched,
+  // which reads as a broken feature. Better to say what is missing.
+  const preview = !paymentsEnabled() && (await hasSalesPreview(cookieStore))
+  const missingConfig = preview ? missingPaymentsConfig() : []
   return (
     <html lang={lang}>
       <head>
@@ -92,7 +98,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
           <SalesModeProvider mode={{ open, preview }}>
             <CartProvider>
               <VisitTracker />
-              {preview && <SalesPreviewBanner />}
+              {preview && <SalesPreviewBanner missingConfig={missingConfig} />}
               {children}
             </CartProvider>
           </SalesModeProvider>

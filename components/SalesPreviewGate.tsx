@@ -38,13 +38,15 @@ const STEPS: Array<{ title: string; body: string; href?: string }> = [
 
 export default function SalesPreviewGate({
   unlocked,
-  configured,
+  missingConfig,
   live,
 }: {
   unlocked: boolean
-  configured: boolean
+  /** Environment variables still missing before a payment can be taken. */
+  missingConfig: string[]
   live: boolean
 }) {
+  const configured = missingConfig.length === 0
   const { lang } = useLanguage()
   const [password, setPassword] = useState('')
   const [error, setError] = useState('')
@@ -115,9 +117,17 @@ export default function SalesPreviewGate({
         {unlocked && !configured && (
           <div className="preview-warning">
             <p>
-              <strong>Stripe n’est pas configuré sur ce déploiement.</strong> Le panier reste fermé
-              tant que les clés Stripe, l’identifiant de tarif et le secret d’authentification ne
-              sont pas renseignés dans les variables d’environnement.
+              <strong>Stripe n’est pas configuré sur ce déploiement.</strong> Le panier reste donc
+              fermé, même avec l’aperçu actif. Renseignez ces variables d’environnement, puis
+              redéployez :
+            </p>
+            <ul className="preview-missing">
+              {missingConfig.map((name) => <li key={name}><code>{name}</code></li>)}
+            </ul>
+            <p>
+              Utilisez des clés Stripe de <strong>test</strong> (<code>sk_test_…</code> et un
+              identifiant de tarif de test) : avec des clés réelles, la carte du relecteur est
+              réellement débitée.
             </p>
           </div>
         )}
