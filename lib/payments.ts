@@ -74,6 +74,12 @@ export function missingPaymentsConfig(): string[] {
     problems.push('STRIPE_PRICE_ONLINE_BOOK (doit être un identifiant « price_… », pas un montant)')
   }
 
+  // A checkout that redirects the buyer to localhost is broken even though
+  // every key above is valid, so it belongs in the same list.
+  if (siteUrl().startsWith('http://localhost')) {
+    problems.push('NEXT_PUBLIC_SITE_URL (l’adresse publique du site, sinon le retour de paiement pointe vers localhost)')
+  }
+
   return problems
 }
 
@@ -98,6 +104,28 @@ export async function paymentsOpenFor(cookieStore: CookieReader): Promise<boolea
   return hasSalesPreview(cookieStore)
 }
 
+/**
+ * Where Stripe sends the buyer back to, and where magic links point.
+ *
+ * NEXT_PUBLIC_SITE_URL wins when set. Failing that this used to fall straight
+ * back to localhost, which on a deployment means a buyer pays and is redirected
+ * to a machine that isn't theirs — a silent break, since everything up to the
+ * redirect works. So on Vercel the URL is derived instead: a preview deployment
+ * returns to itself, production to the project's own domain. Localhost is only
+ * ever the answer when nothing indicates a deployment at all.
+ */
 export function siteUrl(): string {
-  return (process.env.NEXT_PUBLIC_SITE_URL?.trim() || 'http://localhost:3000').replace(/\/$/, '')
+  const explicit = process.env.NEXT_PUBLIC_SITE_URL?.trim()
+  if (explicit) return explicit.replace(/\/$/, '')
+
+  const vercelEnv = process.env.VERCEL_ENV?.trim()
+  const deploymentUrl = process.env.VERCEL_URL?.trim()
+  if (vercelEnv && vercelEnv !== 'production' && deploymentUrl) {
+    return `https://${deploymentUrl}`
+  }
+
+  const productionDomain = process.env.VERCEL_PROJECT_PRODUCTION_URL?.trim()
+  if (productionDomain) return `https://${productionDomain}`
+
+  return 'http://localhost:3000'
 }

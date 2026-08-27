@@ -127,6 +127,9 @@ const COMPLETE = {
   STRIPE_WEBHOOK_SECRET: 'whsec_abc',
   AUTH_SECRET: 'a-secret',
   STRIPE_PRICE_ONLINE_BOOK: 'price_abc',
+  // Without this the return URL falls back to localhost, which is itself a
+  // reported problem — so a "complete" configuration has to include it.
+  NEXT_PUBLIC_SITE_URL: 'https://www.guy-boitout.com',
 }
 
 test('a fully configured deployment reports nothing missing', () => {
@@ -154,9 +157,63 @@ test('a restricted key is accepted, and every absent variable is named', () => {
     assert.deepEqual(missingPaymentsConfig(), [])
   })
   withEnv(
-    { STRIPE_SECRET_KEY: undefined, STRIPE_WEBHOOK_SECRET: undefined, AUTH_SECRET: undefined, STRIPE_PRICE_ONLINE_BOOK: undefined },
+    {
+      STRIPE_SECRET_KEY: undefined, STRIPE_WEBHOOK_SECRET: undefined, AUTH_SECRET: undefined,
+      STRIPE_PRICE_ONLINE_BOOK: undefined, NEXT_PUBLIC_SITE_URL: 'https://www.guy-boitout.com',
+    },
     () => assert.deepEqual(missingPaymentsConfig(), [
       'STRIPE_SECRET_KEY', 'STRIPE_WEBHOOK_SECRET', 'AUTH_SECRET', 'STRIPE_PRICE_ONLINE_BOOK',
     ]),
   )
+})
+
+// --- Return URL resolution ---------------------------------------------------
+// A buyer redirected to localhost after paying is the failure this guards: it
+// only shows up in production, after money has changed hands.
+
+import { siteUrl } from '../lib/payments'
+
+const URL_VARS = {
+  NEXT_PUBLIC_SITE_URL: undefined,
+  VERCEL_ENV: undefined,
+  VERCEL_URL: undefined,
+  VERCEL_PROJECT_PRODUCTION_URL: undefined,
+}
+
+test('an explicit site URL always wins, without its trailing slash', () => {
+  withEnv({ ...URL_VARS, NEXT_PUBLIC_SITE_URL: 'https://www.guy-boitout.com/' }, () => {
+    assert.equal(siteUrl(), 'https://www.guy-boitout.com')
+  })
+  withEnv(
+    {
+      ...URL_VARS,
+      NEXT_PUBLIC_SITE_URL: 'https://www.guy-boitout.com',
+      VERCEL_ENV: 'production',
+      VERCEL_PROJECT_PRODUCTION_URL: 'other.example',
+    },
+    () => assert.equal(siteUrl(), 'https://www.guy-boitout.com'),
+  )
+})
+
+test('a Vercel production deployment returns to the project domain, never localhost', () => {
+  withEnv(
+    { ...URL_VARS, VERCEL_ENV: 'production', VERCEL_URL: 'dpl-xyz.vercel.app', VERCEL_PROJECT_PRODUCTION_URL: 'www.guy-boitout.com' },
+    () => assert.equal(siteUrl(), 'https://www.guy-boitout.com'),
+  )
+})
+
+test('a Vercel preview deployment returns to itself, not to production', () => {
+  withEnv(
+    { ...URL_VARS, VERCEL_ENV: 'preview', VERCEL_URL: 'dpl-xyz.vercel.app', VERCEL_PROJECT_PRODUCTION_URL: 'www.guy-boitout.com' },
+    () => assert.equal(siteUrl(), 'https://dpl-xyz.vercel.app'),
+  )
+})
+
+test('localhost only when nothing says otherwise, and it is reported as a problem', () => {
+  withEnv(URL_VARS, () => assert.equal(siteUrl(), 'http://localhost:3000'))
+  withEnv({ ...COMPLETE, ...URL_VARS }, () => {
+    const problems = missingPaymentsConfig()
+    assert.equal(problems.length, 1, JSON.stringify(problems))
+    assert.match(problems[0], /^NEXT_PUBLIC_SITE_URL \(/)
+  })
 })
