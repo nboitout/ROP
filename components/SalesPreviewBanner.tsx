@@ -35,7 +35,7 @@ export default function SalesPreviewBanner({ missingConfig = [] }: { missingConf
         {blocked ? (
           <>
             <strong>{'Aperçu ventes actif, mais le panier reste fermé : '}</strong>
-            {'Stripe n’est pas configuré sur ce déploiement. Variables manquantes : '}
+            {'Configuration Stripe incomplète : '}
             <code>{missingConfig.join(', ')}</code>
           </>
         ) : (

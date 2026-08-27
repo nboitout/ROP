@@ -117,9 +117,8 @@ export default function SalesPreviewGate({
         {unlocked && !configured && (
           <div className="preview-warning">
             <p>
-              <strong>Stripe n’est pas configuré sur ce déploiement.</strong> Le panier reste donc
-              fermé, même avec l’aperçu actif. Renseignez ces variables d’environnement, puis
-              redéployez :
+              <strong>La configuration Stripe est incomplète.</strong> Le panier reste donc fermé,
+              même avec l’aperçu actif. Corrigez ces variables d’environnement, puis redéployez :
             </p>
             <ul className="preview-missing">
               {missingConfig.map((name) => <li key={name}><code>{name}</code></li>)}

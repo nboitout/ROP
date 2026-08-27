@@ -98,3 +98,65 @@ test('amounts render in the reader’s locale', () => {
   assert.match(formatAmount(7000, 'eur', 'en'), /^€70\.00$/)
   assert.match(formatAmount(7000, 'eur', 'zz').replace(/\s/g, ' '), /^70,00 €$/)
 })
+
+// --- Payment configuration guards -------------------------------------------
+// A non-empty but wrong value used to pass every check here and fail at Stripe
+// with a 502. These pin the two mistakes that actually happened.
+
+import { missingPaymentsConfig } from '../lib/payments'
+
+function withEnv(vars: Record<string, string | undefined>, run: () => void) {
+  const keys = Object.keys(vars)
+  const previous = Object.fromEntries(keys.map((k) => [k, process.env[k]]))
+  try {
+    for (const [k, v] of Object.entries(vars)) {
+      if (v === undefined) delete process.env[k]
+      else process.env[k] = v
+    }
+    run()
+  } finally {
+    for (const k of keys) {
+      if (previous[k] === undefined) delete process.env[k]
+      else process.env[k] = previous[k]
+    }
+  }
+}
+
+const COMPLETE = {
+  STRIPE_SECRET_KEY: 'sk_test_abc',
+  STRIPE_WEBHOOK_SECRET: 'whsec_abc',
+  AUTH_SECRET: 'a-secret',
+  STRIPE_PRICE_ONLINE_BOOK: 'price_abc',
+}
+
+test('a fully configured deployment reports nothing missing', () => {
+  withEnv(COMPLETE, () => assert.deepEqual(missingPaymentsConfig(), []))
+})
+
+test('a price amount pasted instead of a price id is caught before Stripe', () => {
+  for (const wrong of ['70', '70.00', '7000', '€70']) {
+    withEnv({ ...COMPLETE, STRIPE_PRICE_ONLINE_BOOK: wrong }, () => {
+      const problems = missingPaymentsConfig()
+      assert.equal(problems.length, 1, `value ${wrong} produced ${JSON.stringify(problems)}`)
+      assert.match(problems[0], /^STRIPE_PRICE_ONLINE_BOOK \(/)
+    })
+  }
+})
+
+test('the publishable key pasted instead of the secret key is caught', () => {
+  withEnv({ ...COMPLETE, STRIPE_SECRET_KEY: 'pk_test_abc' }, () => {
+    assert.deepEqual(missingPaymentsConfig(), ['STRIPE_SECRET_KEY (doit commencer par « sk_ »)'])
+  })
+})
+
+test('a restricted key is accepted, and every absent variable is named', () => {
+  withEnv({ ...COMPLETE, STRIPE_SECRET_KEY: 'rk_test_abc' }, () => {
+    assert.deepEqual(missingPaymentsConfig(), [])
+  })
+  withEnv(
+    { STRIPE_SECRET_KEY: undefined, STRIPE_WEBHOOK_SECRET: undefined, AUTH_SECRET: undefined, STRIPE_PRICE_ONLINE_BOOK: undefined },
+    () => assert.deepEqual(missingPaymentsConfig(), [
+      'STRIPE_SECRET_KEY', 'STRIPE_WEBHOOK_SECRET', 'AUTH_SECRET', 'STRIPE_PRICE_ONLINE_BOOK',
+    ]),
+  )
+})

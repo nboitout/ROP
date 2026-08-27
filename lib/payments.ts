@@ -21,7 +21,12 @@ export type ProductDefinition = {
 export const PRODUCTS: Record<PaidProduct, ProductDefinition> = {
   [ONLINE_BOOK_PRODUCT]: {
     key: ONLINE_BOOK_PRODUCT,
-    priceId: process.env.STRIPE_PRICE_ONLINE_BOOK?.trim() || null,
+    // A getter, not a captured value: read at module load this would freeze
+    // whatever the environment held on first import, which is a stale answer
+    // for every later caller and unobservable in tests.
+    get priceId() {
+      return process.env.STRIPE_PRICE_ONLINE_BOOK?.trim() || null
+    },
     amount: 7000,
     currency: 'eur',
   },
@@ -41,18 +46,35 @@ export function paymentsConfigured(): boolean {
 }
 
 /**
- * Names of the environment variables a payment still needs. Names only, never
- * values — this is shown to whoever holds a sales-preview grant so they can see
- * at a glance why the cart is still closed, instead of unlocking the preview
- * and finding the site apparently unchanged.
+ * What still stands between this deployment and a working payment. Variable
+ * names and shape complaints only, never values — this is shown to whoever
+ * holds a sales-preview grant so they can see at a glance why the cart is
+ * closed, instead of unlocking the preview and finding the site unchanged.
+ *
+ * The prefixes are checked, not just presence: pasting the publishable key
+ * instead of the secret one, or a bare "70" instead of a price id, are the two
+ * mistakes that otherwise pass every check here and fail at Stripe with a 502.
  */
 export function missingPaymentsConfig(): string[] {
-  const missing: string[] = []
-  if (!process.env.STRIPE_SECRET_KEY?.trim()) missing.push('STRIPE_SECRET_KEY')
-  if (!process.env.STRIPE_WEBHOOK_SECRET?.trim()) missing.push('STRIPE_WEBHOOK_SECRET')
-  if (!process.env.AUTH_SECRET?.trim()) missing.push('AUTH_SECRET')
-  if (!PRODUCTS[ONLINE_BOOK_PRODUCT].priceId) missing.push('STRIPE_PRICE_ONLINE_BOOK')
-  return missing
+  const problems: string[] = []
+
+  const secretKey = process.env.STRIPE_SECRET_KEY?.trim()
+  if (!secretKey) problems.push('STRIPE_SECRET_KEY')
+  else if (!/^(sk|rk)_/.test(secretKey)) problems.push('STRIPE_SECRET_KEY (doit commencer par « sk_ »)')
+
+  const webhookSecret = process.env.STRIPE_WEBHOOK_SECRET?.trim()
+  if (!webhookSecret) problems.push('STRIPE_WEBHOOK_SECRET')
+  else if (!webhookSecret.startsWith('whsec_')) problems.push('STRIPE_WEBHOOK_SECRET (doit commencer par « whsec_ »)')
+
+  if (!process.env.AUTH_SECRET?.trim()) problems.push('AUTH_SECRET')
+
+  const priceId = PRODUCTS[ONLINE_BOOK_PRODUCT].priceId
+  if (!priceId) problems.push('STRIPE_PRICE_ONLINE_BOOK')
+  else if (!priceId.startsWith('price_')) {
+    problems.push('STRIPE_PRICE_ONLINE_BOOK (doit être un identifiant « price_… », pas un montant)')
+  }
+
+  return problems
 }
 
 /**
