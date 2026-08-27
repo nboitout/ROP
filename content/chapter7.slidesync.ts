@@ -73,6 +73,11 @@ export const chapter7SlidesEn: SyncSlide[] = [
   { src: '/chapter-7/EN/IMAGES/NCH 7 EN IMG 12.png', title: 'Peritoneal Pathologies: Mechanisms and Clinical Features' },
   { src: '/chapter-7/EN/IMAGES/NCH 7 EN IMG 13.png', title: 'Map of Referred Pain' },
   { src: '/chapter-7/EN/IMAGES/NCH 7 EN IMG 14.png', title: 'Synthesis — Containing, Contained and Peritoneal Networks' },
+  { src: '/chapter-7/EN/cartography/figure-7-01.png', title: 'Cartography: root of the mesentery — duodenojejunal junction to umbilicus' },
+  { src: '/chapter-7/EN/cartography/figure-7-03.png', title: 'Cartography: root of the mesentery — umbilicus to ileocecal valve' },
+  { src: '/chapter-7/EN/cartography/figure-7-05.png', title: 'Cartography: root of the transverse mesocolon — second part of the duodenum to L2' },
+  { src: '/chapter-7/EN/cartography/figure-7-07.png', title: 'Cartography: root of the transverse mesocolon — L2 to the body of the pancreas' },
+  { src: '/chapter-7/EN/cartography/figure-7-09.png', title: 'Cartography: root of the sigmoid mesocolon' },
 ]
 
 export const chapter7SlideAnchorsEn: SyncAnchor[] = [
@@ -89,5 +94,15 @@ export const chapter7SlideAnchorsEn: SyncAnchor[] = [
   { sectionId: 'physiologie', blockIndex: 8, slide: 11 },
   { sectionId: 'pathologie', blockIndex: 0, slide: 12 },
   { sectionId: 'relations-peritoneo-somatiques', blockIndex: 0, slide: 13 },
-  { sectionId: 'relations-peritoneo-somatiques', blockIndex: 5, slide: 14 },
+  {
+    sectionId: 'relations-peritoneo-somatiques',
+    blockIndex: 5,
+    slide: 14,
+    end: { sectionId: 'zones-reflexes-podales', blockIndex: -1 },
+  },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 7, slide: 15, end: { sectionId: 'zones-reflexes-podales', blockIndex: 8 } },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 9, slide: 16, end: { sectionId: 'zones-reflexes-podales', blockIndex: 10 } },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 11, slide: 17, end: { sectionId: 'zones-reflexes-podales', blockIndex: 12 } },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 13, slide: 18, end: { sectionId: 'zones-reflexes-podales', blockIndex: 14 } },
+  { sectionId: 'zones-reflexes-podales', blockIndex: 15, slide: 19, end: { sectionId: 'zones-reflexes-podales', blockIndex: 16 } },
 ]

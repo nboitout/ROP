@@ -950,13 +950,6 @@ export const chapter7En: Chapter = {
         },
         {
           "type": "figure",
-          "src": "/chapter-7/EN/cartography/figure-7-01.png",
-          "caption": "Cartography: Root of the mesentery — duodenojejunal junction to umbilicus",
-          "alt": "English ROP plantar cartography of the root of the mesentery between the duodenojejunal junction and the umbilicus",
-          "orientation": "landscape"
-        },
-        {
-          "type": "figure",
           "src": "/chapter-7/EN/cartography/figure-7-02.png",
           "caption": "Photo: Root of the mesentery between the duodenojejunal junction and the umbilicus",
           "alt": "Plantar landmark for the root of the mesentery between the duodenojejunal junction and the umbilicus",
@@ -965,13 +958,6 @@ export const chapter7En: Chapter = {
         {
           "type": "bullets",
           "items": ["Root of the mesentery: between the umbilicus and the ileocecal valve."]
-        },
-        {
-          "type": "figure",
-          "src": "/chapter-7/EN/cartography/figure-7-03.png",
-          "caption": "Cartography: Root of the mesentery — umbilicus to ileocecal valve",
-          "alt": "English ROP plantar cartography of the root of the mesentery between the umbilicus and the ileocecal valve",
-          "orientation": "landscape"
         },
         {
           "type": "figure",
@@ -986,13 +972,6 @@ export const chapter7En: Chapter = {
         },
         {
           "type": "figure",
-          "src": "/chapter-7/EN/cartography/figure-7-05.png",
-          "caption": "Cartography: Root of the transverse mesocolon — second part of the duodenum to L2",
-          "alt": "English ROP plantar cartography of the root of the transverse mesocolon between the second part of the duodenum and L2",
-          "orientation": "landscape"
-        },
-        {
-          "type": "figure",
           "src": "/chapter-7/EN/cartography/figure-7-06.png",
           "caption": "Photo: Root of the transverse mesocolon between the second part of the duodenum and L2",
           "alt": "Plantar landmark for the root of the transverse mesocolon between the second part of the duodenum and L2",
@@ -1004,13 +983,6 @@ export const chapter7En: Chapter = {
         },
         {
           "type": "figure",
-          "src": "/chapter-7/EN/cartography/figure-7-07.png",
-          "caption": "Cartography: Root of the transverse mesocolon — L2 to the body of the pancreas",
-          "alt": "English ROP plantar cartography of the root of the transverse mesocolon between L2 and the body of the pancreas",
-          "orientation": "landscape"
-        },
-        {
-          "type": "figure",
           "src": "/chapter-7/EN/cartography/figure-7-08.png",
           "caption": "Photo: Root of the transverse mesocolon between L2 and the body of the pancreas",
           "alt": "Plantar landmark for the root of the transverse mesocolon between L2 and the body of the pancreas",
@@ -1019,13 +991,6 @@ export const chapter7En: Chapter = {
         {
           "type": "bullets",
           "items": ["Root of the sigmoid mesocolon."]
-        },
-        {
-          "type": "figure",
-          "src": "/chapter-7/EN/cartography/figure-7-09.png",
-          "caption": "Cartography: Root of the sigmoid mesocolon",
-          "alt": "English ROP plantar cartography of the root of the sigmoid mesocolon",
-          "orientation": "landscape"
         },
         {
           "type": "figure",
