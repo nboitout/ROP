@@ -1823,7 +1823,7 @@ const de: typeof fr = {
       {
         href: '/introduction',
         eyebrow: 'Vorwort',
-        title: 'Einleitung',
+        title: 'Einführung',
         description: 'Der Rahmen des dritten Bandes: das abdomino-pelvine Viszeralsystem, das autonome Nervensystem und Stressmechanismen. Unser Ansatz, die Terminologie und der Aufbau der Kapitel.',
         meta: '~4 Min. Lektüre',
       },
