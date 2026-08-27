@@ -1,5 +1,5 @@
 // Chapter 11 content — English
-// Source: public/chapter-11/EN/Chapter_11_Liver_and_Biliary_Tract_medical_English_revised_EN.docx
+// Source: public/chapter-11/EN/Chapter_11_Liver_and_Biliary_Tract_full_medical_English.docx
 
 import type { Chapter } from './types'
 
@@ -390,7 +390,7 @@ export const chapter11En: Chapter = {
         },
         {
           "type": "sub",
-          "text": "3.4. Biliary tract"
+          "text": "3.4. Visceral surface and biliary tract"
         },
         {
           "type": "para",
@@ -1384,11 +1384,35 @@ export const chapter11En: Chapter = {
       "blocks": [
         {
           "type": "para",
-          "text": "Liver. Within the ROP viscero-emotional framework, the liver is associated with profound forms of stress affecting identity, one’s relationship with oneself and the meaning attributed to one’s life. It is traditionally described as a predominantly feminine organ, associated with deep anger, resentment, certain forms of family-related guilt and a tendency to dwell on the past. A person characterised as a “liver type” may be described as sensitive and readily destabilised by conflict, doubt or insecurity, with a tendency towards pessimism and physical and psychological exhaustion. Conversely, greater balance is associated within this clinical interpretation with increased calm, perspective and emotional integration. Certain anxious or phobic manifestations may also be considered in this approach, although no direct causal relationship with the liver can be established. Depending on the drug and clinical context, some antidepressants may also cause hepatic adverse effects."
+          "text": "Liver. Within the ROP viscero-emotional framework, the liver is traditionally associated with profound forms of stress affecting identity, one’s relationship with oneself and the meaning attributed to life. Within this interpretation, a serious event may alter a person’s outlook on life and confront them with their sense of self."
         },
         {
           "type": "para",
-          "text": "Gallbladder. It is traditionally associated with annoyance, repeated frustration and everyday dissatisfaction. A person characterised as a “gallbladder type” is described as hypersensitive, easily worried or irritated, and attached to familiar reference points, habits and a degree of stability. Within this interpretation, anxiety and sympathetic activation may accompany functional tension in the biliary system."
+          "text": "It is also described as a predominantly feminine organ, associated with deep anger directed towards oneself or others, resentment, certain forms of family-related guilt and a tendency to dwell on past failures. A person characterised as a ‘liver type’ may consequently experience doubt, lose confidence in the future and adopt a more pessimistic view of events."
+        },
+        {
+          "type": "para",
+          "text": "Being highly sensitive, such a person may react strongly to remarks, conflict or situations experienced in a context of fear and insecurity. Certain anxious or phobic manifestations may also be considered within this clinical interpretation, although no direct causal relationship with the liver can be established."
+        },
+        {
+          "type": "para",
+          "text": "A liver perceived as congested is traditionally associated with physical and psychological exhaustion, fatigue present from the moment of waking, reduced creative drive and a sense of discouragement. Conversely, improved balance is associated with calm, serenity, greater perspective and an enhanced ability to integrate emotions."
+        },
+        {
+          "type": "para",
+          "text": "Note: depending on the drug, dose, duration of treatment and individual clinical context, some antidepressants may cause hepatic adverse effects."
+        },
+        {
+          "type": "para",
+          "text": "Gallbladder. Within the same framework, the gallbladder is traditionally associated with annoyance, repeated frustration and dissatisfaction in everyday life."
+        },
+        {
+          "type": "para",
+          "text": "A person characterised as a ‘gallbladder type’ is described as readily preoccupied with material concerns, hypersensitive to remarks and attached to familiar reference points, habits and a degree of stability. Such a person may find change, departures, separations or conflicts difficult to cope with, even when they are relatively minor."
+        },
+        {
+          "type": "para",
+          "text": "Within this interpretation, persistent worry, anxiety and sympathetic activation may accompany functional tension in the biliary system. This profile is also traditionally described as sensitive to offence, punctual, cyclothymic or jealous."
         }
       ]
     },
@@ -1441,7 +1465,7 @@ export const chapter11En: Chapter = {
         },
         {
           "type": "para",
-          "text": "See Chapter 3 — Central Nervous System."
+          "text": "See Chapter 3 — Central Nervous System; see Chapter 5 — Stress Mechanism."
         },
         {
           "type": "sub",
@@ -1488,17 +1512,25 @@ export const chapter11En: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Superior surface and its anterior aspect: this follows the diaphragmatic curvature. The difference in height between the two hemidiaphragms must be reflected on the plantar surfaces of the feet.",
+            "Superior surface and its anterior aspect: this follows the diaphragmatic curvature. The difference in height between the two hemidiaphragms must be taken into account on the plantar surfaces of both feet.",
             "Left triangular ligament: on the plantar surface of the left foot, in line with the third toe and to the left of the oesophageal hiatus, which itself lies in line with the first and second toes.",
             "Inferior surface: this is readily distinguished by palpation because it is denser than the neighbouring hollow organs. The landmark follows an oblique line from the base of the right fifth metatarsal to the medial border of the right foot at T12. The line continues to the left hemidiaphragm, which it reaches in line with the left third metatarsal.",
             "Anterior and posterior surfaces: these correspond to the area between the superior and inferior lines.",
-            "Gallbladder: inferior surface of the liver, in line with a line passing between the right third and fourth toes.",
+            "Gallbladder: on the inferior surface of the liver, along a line passing between the third and fourth toes of the right foot.",
             "Biliary tract: an oblique line extending from the gallbladder to the sphincter of Oddi, located in the lower third of the second part of the duodenum."
           ]
         },
         {
           "type": "para",
-          "text": "See Chapter 7 — Regional Abdominal and Peritoneal Foundation; see Chapter 10 — Duodenum."
+          "text": "Relevance to ROP"
+        },
+        {
+          "type": "para",
+          "text": "The hepatic zone remains the organ-specific target."
+        },
+        {
+          "type": "para",
+          "text": "Neighbouring viscera are added according to testing and the clinical context: the gallbladder, biliary tract, sphincter of Oddi and second part of the duodenum, hepatic flexure of the colon, right kidney, right adrenal gland and diaphragm."
         },
         {
           "type": "sub",
@@ -1506,11 +1538,11 @@ export const chapter11En: Chapter = {
         },
         {
           "type": "para",
-          "text": "Viscerosomatic component. The interpretation may include T7–T9, the seventh to ninth ribs, the C3–C5 phrenic nerve, associated cervical and cervicobrachial territories, the right shoulder, diaphragm and right lower thoracic region. For the hepatobiliary system, phrenic referred symptoms are described mainly on the right, although overly categorical lateralisation should be avoided."
+          "text": "Viscerosomatic integration. The interpretation may include T7–T9, the seventh to ninth ribs, the C3–C5 phrenic nerve, associated cervical and cervicobrachial territories, the right shoulder, diaphragm and right lower thoracic region. For the hepatobiliary system, phrenic referred symptoms are described mainly on the right."
         },
         {
           "type": "para",
-          "text": "Limbic brain–liver/gallbladder balance: one thumb is placed on the liver/gallbladder zone and the other on the limbic brain zone."
+          "text": "Limbic brain–liver/gallbladder balance. In ROP terminology, listening–induction combines one thumb on the liver/gallbladder zone and the other on the limbic brain zone."
         },
         {
           "type": "para",
