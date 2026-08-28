@@ -73,9 +73,10 @@ export default function CartView() {
         <p className="cart-vat">{c.vat}</p>
       </dl>
 
+      {/* One action only: there is a single product, so "continue shopping"
+          led nowhere useful. The topbar still offers the way back. */}
       <div className="buy-actions">
         <Link href={localizedHref('/panier/validation', lang)} className="btn b-gold">{c.checkoutCta}</Link>
-        <Link href={localizedHref('/#acheter', lang)} className="btn b-out">{c.continue}</Link>
       </div>
 
       <p className="cart-secure">{c.secure}</p>

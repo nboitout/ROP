@@ -256,7 +256,6 @@ const fr = {
     addCta: 'Ajouter au panier',
     viewCta: 'Voir mon panier',
     checkoutCta: 'Valider ma commande →',
-    continue: 'Continuer mes achats',
     remove: 'Retirer',
     removeLabel: (name: string) => `Retirer ${name} du panier`,
     licenceNote: 'Accès personnel, valable sur tous vos appareils.',
@@ -268,7 +267,7 @@ const fr = {
     products: {
       online_book: {
         name: 'Livre en ligne',
-        desc: 'Édition numérique enrichie : illustrations complémentaires, fiches de synthèse, visuels interactifs et quiz d’auto-évaluation.',
+        desc: 'Édition numérique enrichie.',
       },
     },
     empty: {
@@ -730,7 +729,6 @@ const en: typeof fr = {
     addCta: 'Add to cart',
     viewCta: 'View my cart',
     checkoutCta: 'Review my order →',
-    continue: 'Continue browsing',
     remove: 'Remove',
     removeLabel: (name: string) => `Remove ${name} from the cart`,
     licenceNote: 'Personal access, valid on all your devices.',
@@ -742,7 +740,7 @@ const en: typeof fr = {
     products: {
       online_book: {
         name: 'Online Book',
-        desc: 'Enriched digital edition: extra illustrations, review sheets, interactive visuals and self-assessment quizzes.',
+        desc: 'Enriched digital edition.',
       },
     },
     empty: {
@@ -1207,7 +1205,6 @@ const th: typeof fr = {
     addCta: 'ใส่ตะกร้า',
     viewCta: 'ดูตะกร้าของฉัน',
     checkoutCta: 'ตรวจสอบคำสั่งซื้อ →',
-    continue: 'เลือกดูต่อ',
     remove: 'นำออก',
     removeLabel: (name: string) => `นำ ${name} ออกจากตะกร้า`,
     licenceNote: 'สิทธิ์การเข้าถึงส่วนบุคคล ใช้ได้กับทุกอุปกรณ์ของคุณ',
@@ -1219,7 +1216,7 @@ const th: typeof fr = {
     products: {
       online_book: {
         name: 'หนังสือออนไลน์',
-        desc: 'ฉบับดิจิทัลเสริมเนื้อหา: ภาพประกอบเพิ่มเติม สรุปย่อ ภาพเชิงโต้ตอบ และแบบทดสอบประเมินตนเอง',
+        desc: 'ฉบับดิจิทัลเสริมเนื้อหา',
       },
     },
     empty: {
@@ -1627,7 +1624,6 @@ const de: typeof fr = {
     addCta: 'In den Warenkorb',
     viewCta: 'Warenkorb ansehen',
     checkoutCta: 'Bestellung prüfen →',
-    continue: 'Weiter stöbern',
     remove: 'Entfernen',
     removeLabel: (name: string) => `${name} aus dem Warenkorb entfernen`,
     licenceNote: 'Persönlicher Zugang, gültig auf all Ihren Geräten.',
@@ -1639,7 +1635,7 @@ const de: typeof fr = {
     products: {
       online_book: {
         name: 'Online-Buch',
-        desc: 'Erweiterte digitale Ausgabe: zusätzliche Illustrationen, Zusammenfassungen, interaktive Grafiken und Selbsttests.',
+        desc: 'Erweiterte digitale Ausgabe.',
       },
     },
     empty: {
@@ -2101,7 +2097,6 @@ const es: typeof fr = {
     addCta: 'Añadir a la cesta',
     viewCta: 'Ver mi cesta',
     checkoutCta: 'Revisar mi pedido →',
-    continue: 'Seguir explorando',
     remove: 'Quitar',
     removeLabel: (name: string) => `Quitar ${name} de la cesta`,
     licenceNote: 'Acceso personal, válido en todos sus dispositivos.',
@@ -2113,7 +2108,7 @@ const es: typeof fr = {
     products: {
       online_book: {
         name: 'Libro en línea',
-        desc: 'Edición digital enriquecida: ilustraciones adicionales, fichas de síntesis, visuales interactivos y cuestionarios de autoevaluación.',
+        desc: 'Edición digital enriquecida.',
       },
     },
     empty: {
@@ -2575,7 +2570,6 @@ const it: typeof fr = {
     addCta: 'Aggiungi al carrello',
     viewCta: 'Vedi il carrello',
     checkoutCta: 'Verifica il mio ordine →',
-    continue: 'Continua a esplorare',
     remove: 'Rimuovi',
     removeLabel: (name: string) => `Rimuovi ${name} dal carrello`,
     licenceNote: 'Accesso personale, valido su tutti i suoi dispositivi.',
@@ -2587,7 +2581,7 @@ const it: typeof fr = {
     products: {
       online_book: {
         name: 'Libro online',
-        desc: 'Edizione digitale arricchita: illustrazioni aggiuntive, schede di sintesi, immagini interattive e quiz di autovalutazione.',
+        desc: 'Edizione digitale arricchita.',
       },
     },
     empty: {
