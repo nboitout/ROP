@@ -18,6 +18,10 @@ export type SendEmailInput = {
 export async function sendEmail({ to, subject, html, text }: SendEmailInput): Promise<boolean> {
   const apiKey = process.env.RESEND_API_KEY?.trim()
   const from = process.env.EMAIL_FROM?.trim() || 'Guy Boitout <contact@guy-boitout.com>'
+  // The sending identity is not necessarily a mailbox: a domain can be verified
+  // in Resend without anyone being able to read what is sent back to it. Point
+  // replies at an address that is actually read, when one is configured.
+  const replyTo = process.env.EMAIL_REPLY_TO?.trim()
 
   if (!apiKey) {
     console.warn(`[email] RESEND_API_KEY is not set — would have sent "${subject}" to ${to}:\n${text}`)
@@ -31,7 +35,7 @@ export async function sendEmail({ to, subject, html, text }: SendEmailInput): Pr
         Authorization: `Bearer ${apiKey}`,
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({ from, to: [to], subject, html, text }),
+      body: JSON.stringify({ from, to: [to], subject, html, text, ...(replyTo ? { reply_to: replyTo } : {}) }),
     })
 
     if (!response.ok) {

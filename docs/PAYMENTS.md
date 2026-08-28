@@ -219,8 +219,9 @@ same email.
 | `STRIPE_AUTOMATIC_TAX` | `"true"` turns on Stripe Tax. Leave it off until the dashboard has an origin address and your VAT registrations, otherwise Stripe refuses the session |
 | `AUTH_SECRET` | HMAC secret for reader sessions and magic links |
 | `APPS_SCRIPT_URL` | Google Apps Script endpoint for the sales mirror. Optional: without it sales are not logged, but purchases still work |
-| `RESEND_API_KEY`, `EMAIL_FROM` | Delivery of the access email. Without the key the link is logged to the server console instead |
-| `NEXT_PUBLIC_SITE_URL` | Base URL for `success_url`, `cancel_url` and the magic links |
+| `RESEND_API_KEY` | Resend key. Without it the access link is logged to the server console instead of sent |
+| `EMAIL_FROM` | Sending identity, e.g. `Institut R.O.P. <contact@guy-boitout.com>`. Its domain must be verified in Resend; defaults to `contact@guy-boitout.com`. `onboarding@resend.dev` needs no verification but only ever delivers to the Resend account owner |
+| `EMAIL_REPLY_TO` | Optional. A mailbox someone actually reads, for buyers who hit reply — the `EMAIL_FROM` domain can be verified for sending without any mailbox existing behind it |
 
 `NEXT_PUBLIC_PAYMENTS_ENABLED` is inlined at build time — flipping it on Vercel
 requires a redeploy.
@@ -241,7 +242,8 @@ requires a redeploy.
 4. **Webhook** — add an endpoint at `https://<site>/api/stripe/webhook` subscribed to
    `checkout.session.completed`, `checkout.session.async_payment_succeeded` and
    `charge.refunded`. Copy its signing secret into `STRIPE_WEBHOOK_SECRET`.
-5. **Email** — verify the sending domain in Resend and set `EMAIL_FROM`.
+5. **Email** — verify the sending domain in Resend and set `EMAIL_FROM`, plus
+   `EMAIL_REPLY_TO` if the from-address is not a mailbox anyone reads.
 6. **Go live** — set `NEXT_PUBLIC_PAYMENTS_ENABLED=true` and redeploy.
 
 ## Testing before launch
