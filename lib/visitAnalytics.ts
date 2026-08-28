@@ -1,0 +1,142 @@
+const DEFAULT_SESSION_GAP_MS = 30 * 60 * 1000
+const ENGAGED_DWELL_SECONDS = 10
+
+type VisitActivityRow = {
+  timestamp: string
+  readerId: string
+  event: string
+  duration_seconds?: string
+  country?: string
+  lang?: string
+}
+
+type InteractionRow = {
+  timestamp: string
+  readerId: string
+  event: string
+}
+
+export interface DerivedVisit {
+  readerId: string
+  startedAt: string
+  endedAt: string
+  pageViews: number
+  dwellSeconds: number
+  interactions: number
+  engaged: boolean
+  country: string
+  lang: string
+}
+
+type Activity = {
+  at: number
+  timestamp: string
+  kind: 'page_view' | 'dwell' | 'interaction'
+  durationSeconds: number
+  country: string
+  lang: string
+}
+
+/**
+ * Derive browser visits from raw activity instead of trusting a tab-scoped
+ * session id. Activity from the same reader stays in one visit until there is
+ * a 30-minute inactivity gap, so dwell flushed by a sibling tab can still
+ * qualify the reader's visit without rewriting the raw events.
+ */
+export function deriveVisits(
+  visits: VisitActivityRow[],
+  events: InteractionRow[] = [],
+  sessionGapMs = DEFAULT_SESSION_GAP_MS,
+): DerivedVisit[] {
+  const byReader = new Map<string, Activity[]>()
+
+  function add(readerId: string, activity: Activity) {
+    if (!readerId || !Number.isFinite(activity.at)) return
+    const key = readerId.toLowerCase()
+    const current = byReader.get(key) ?? []
+    current.push(activity)
+    byReader.set(key, current)
+  }
+
+  visits.forEach((row) => {
+    const at = new Date(row.timestamp).getTime()
+    if (row.event === 'page_visit') {
+      add(row.readerId, {
+        at,
+        timestamp: row.timestamp,
+        kind: 'page_view',
+        durationSeconds: 0,
+        country: row.country ?? '',
+        lang: row.lang ?? '',
+      })
+      return
+    }
+    if (row.event !== 'page_leave') return
+    const durationSeconds = Number(row.duration_seconds)
+    if (!Number.isFinite(durationSeconds) || durationSeconds <= 0) return
+    add(row.readerId, {
+      at,
+      timestamp: row.timestamp,
+      kind: 'dwell',
+      durationSeconds,
+      country: row.country ?? '',
+      lang: row.lang ?? '',
+    })
+  })
+
+  events.forEach((row) => {
+    add(row.readerId, {
+      at: new Date(row.timestamp).getTime(),
+      timestamp: row.timestamp,
+      kind: 'interaction',
+      durationSeconds: 0,
+      country: '',
+      lang: '',
+    })
+  })
+
+  const result: DerivedVisit[] = []
+  byReader.forEach((activities, readerId) => {
+    activities.sort((a, b) => a.at - b.at)
+    let group: Activity[] = []
+
+    function finishGroup() {
+      if (group.length === 0) return
+      const pageViews = group.filter((item) => item.kind === 'page_view')
+      if (pageViews.length === 0) {
+        group = []
+        return
+      }
+      const dwellSeconds = group.reduce(
+        (sum, item) => sum + (item.kind === 'dwell' ? item.durationSeconds : 0),
+        0,
+      )
+      const interactions = group.filter((item) => item.kind === 'interaction').length
+      const firstPageView = pageViews[0]
+      result.push({
+        readerId,
+        startedAt: group[0].timestamp,
+        endedAt: group[group.length - 1].timestamp,
+        pageViews: pageViews.length,
+        dwellSeconds,
+        interactions,
+        engaged:
+          dwellSeconds >= ENGAGED_DWELL_SECONDS
+          || pageViews.length >= 2
+          || interactions > 0,
+        country: firstPageView.country,
+        lang: firstPageView.lang,
+      })
+      group = []
+    }
+
+    activities.forEach((activity) => {
+      const previous = group[group.length - 1]
+      if (previous && activity.at - previous.at > sessionGapMs) finishGroup()
+      group.push(activity)
+    })
+    finishGroup()
+  })
+
+  return result.sort((a, b) => a.startedAt.localeCompare(b.startedAt))
+}

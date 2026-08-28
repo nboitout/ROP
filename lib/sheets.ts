@@ -512,12 +512,12 @@ export async function fetchAllSheets(options: {
   })
 
   // --- Traffic-quality filter --------------------------------------------
-  // Keep a whole browsing connection only if it accumulated more than
-  // MIN_DWELL_SECONDS of active time. A "connection" maps to one browser
-  // session (sessionId), with a legacy fallback to readerId+day for older rows.
-  // This removes both first visits and later reconnections that last 7s or less.
-  // Self-declared crawlers are still dropped by user-agent as an explicit guard.
-  // Rows before BOT_FILTER_START are historical seed data and are kept as-is.
+  // Page views are retained as evidence that a visit occurred. Dwell fragments
+  // must still belong to a connection with more than MIN_DWELL_SECONDS of
+  // active time before they can affect time-based metrics. A "connection" maps
+  // to one browser session (sessionId), with a legacy readerId+day fallback.
+  // Self-declared crawlers are dropped explicitly. Rows before BOT_FILTER_START
+  // are historical seed data and retain their earlier treatment.
   const BOT_FILTER_START = '2026-05-28'
   const MIN_DWELL_SECONDS = 7
   const BOT_UA = /bot|crawl|spider|slurp|mediapartners|bingpreview|google-read-aloud|read-aloud|google web preview|apis-google|feedfetcher|facebookexternal|embedly|quora link preview|pinterest|vkshare|whatsapp|telegram|headless|phantomjs|python-requests|curl|wget|httpclient|go-http-client|java\/|okhttp|axios|node-fetch|libwww|scrapy/i
@@ -533,14 +533,26 @@ export async function fetchAllSheets(options: {
       dwellByConnection.set(key, (dwellByConnection.get(key) ?? 0) + n)
     })
 
-  function keepConnection(row: { timestamp: string; userAgent: string; sessionId: string; readerId: string }): boolean {
+  function isExplicitBot(row: { timestamp: string; userAgent: string }): boolean {
+    if (row.timestamp.slice(0, 10) < BOT_FILTER_START) return false
+    return BOT_UA.test(row.userAgent ?? '')
+  }
+
+  function hasQualifiedDwell(row: { timestamp: string; sessionId: string; readerId: string }): boolean {
     if (row.timestamp.slice(0, 10) < BOT_FILTER_START) return true
-    if (BOT_UA.test(row.userAgent ?? '')) return false
     return (dwellByConnection.get(connectionKeyForFilter(row)) ?? 0) > MIN_DWELL_SECONDS
   }
 
-  const filteredVisits = cleanVisits.filter((v) => keepConnection(v))
-  const filteredEvents = cleanEvents.filter((e) => keepConnection(e))
+  // A page view is evidence that a visit occurred, even when its unload beacon
+  // was lost or another tab reported the dwell under a different session id.
+  // Keep those page views and classify engagement later. Short dwell fragments
+  // remain excluded from time-based metrics, while explicit interactions count
+  // as intent without requiring a matching leave event.
+  const filteredVisits = cleanVisits.filter((v) => {
+    if (isExplicitBot(v)) return false
+    return v.event === 'page_visit' || hasQualifiedDwell(v)
+  })
+  const filteredEvents = cleanEvents.filter((e) => !isExplicitBot(e))
 
   // --- Suspiciously long reader-day outliers ------------------------------
   // Keep these visible in the Visits inspector, but exclude them from the
@@ -609,18 +621,29 @@ export async function fetchAllSheets(options: {
     item.isExcluded = override.decision === 'exclude'
   })
 
-  const outlierVisitDayKeys = new Set(
+  const autoOutlierVisitDayKeys = new Set(
     outlierVisitDays
-      .filter((item) => item.isExcluded)
+      .filter((item) => item.isExcluded && item.decision === 'auto')
+      .map((item) => item.key)
+  )
+  const manuallyExcludedVisitDayKeys = new Set(
+    outlierVisitDays
+      .filter((item) => item.isExcluded && item.decision === 'exclude')
       .map((item) => item.key)
   )
   const includeOutlierVisitDays = !!options?.includeOutlierVisitDays
   const finalVisits = includeOutlierVisitDays
     ? filteredVisits
-    : filteredVisits.filter((v) => !outlierVisitDayKeys.has(`${v.readerId.toLowerCase()}|${parisDate(v.timestamp)}`))
+    : filteredVisits.filter((v) => {
+        const key = `${v.readerId.toLowerCase()}|${parisDate(v.timestamp)}`
+        if (manuallyExcludedVisitDayKeys.has(key)) return false
+        // Automatic outliers suppress only unreliable dwell. The visit itself
+        // remains visible in visitor and page-view counts.
+        return v.event === 'page_visit' || !autoOutlierVisitDayKeys.has(key)
+      })
   const finalEvents = includeOutlierVisitDays
     ? filteredEvents
-    : filteredEvents.filter((e) => !outlierVisitDayKeys.has(`${e.readerId.toLowerCase()}|${parisDate(e.timestamp)}`))
+    : filteredEvents.filter((e) => !manuallyExcludedVisitDayKeys.has(`${e.readerId.toLowerCase()}|${parisDate(e.timestamp)}`))
 
   return {
     leads:  cleanLeads,

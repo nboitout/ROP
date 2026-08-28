@@ -5,6 +5,7 @@ import AdminPieChart, { PieDataPoint } from '@/components/admin/AdminPieChart'
 import DaySelect from '@/components/admin/DaySelect'
 import { fmtParis, parisDate, parisHour, fmtDuration } from '@/lib/adminFormat'
 import { perVisitSeconds, type LeaveLike } from '@/lib/dwell'
+import { deriveVisits } from '@/lib/visitAnalytics'
 
 export const dynamic = 'force-dynamic'
 
@@ -51,9 +52,9 @@ export default async function AdminOverviewPage({
   searchParams: Promise<{ day?: string }>
 }) {
   const { day } = await searchParams
-  let leads, visits, errors
+  let leads, events, visits, errors
   try {
-    ;({ leads, visits, errors } = await fetchAllSheets())
+    ;({ leads, events, visits, errors } = await fetchAllSheets())
   } catch (err) {
     return (
       <div style={{ padding: 40, color: 'var(--adm-cream)', fontFamily: 'DM Sans, sans-serif' }}>
@@ -68,6 +69,7 @@ export default async function AdminOverviewPage({
 
   // --- Filter all data from launch date onwards (Paris calendar dates) ---
   const filteredLeads = leads.filter((l) => parisDate(l.timestamp) >= START_DATE)
+  const filteredEvents = events.filter((e) => parisDate(e.timestamp) >= START_DATE)
   const filteredVisits = visits.filter((v) => parisDate(v.timestamp) >= START_DATE)
 
   // --- Unique visitors (distinct readerId in page_visit events) ---
@@ -76,6 +78,11 @@ export default async function AdminOverviewPage({
   const liveSitePageVisits = liveSiteVisits.filter((v) => v.event === 'page_visit')
   const uniqueVisitorSet = new Set(pageVisits.map((v) => v.readerId).filter(Boolean))
   const uniqueVisitors = uniqueVisitorSet.size
+  const liveSiteEvents = filteredEvents.filter((e) => isGuyBoitoutReferer(e.referer))
+  const derivedVisits = deriveVisits(liveSiteVisits, liveSiteEvents)
+  const totalVisits = derivedVisits.length
+  const engagedVisits = derivedVisits.filter((visit) => visit.engaged).length
+  const engagementRate = totalVisits > 0 ? (engagedVisits / totalVisits) * 100 : 0
 
   // --- Total readers (distinct emails — each person may submit multiple forms) ---
   const totalLeads = new Set(filteredLeads.map((l) => l.email.toLowerCase()).filter(Boolean)).size
@@ -244,8 +251,10 @@ export default async function AdminOverviewPage({
         </div>
       )}
 
-<div className="adm-scorecards">
+      <div className="adm-scorecards">
         <Scorecard label="Unique Visitors" value={uniqueVisitors.toLocaleString()} />
+        <Scorecard label="Total Visits" value={totalVisits.toLocaleString()} subtitle="30-minute inactivity window" />
+        <Scorecard label="Engaged Visits" value={engagedVisits.toLocaleString()} subtitle={`${formatPct(engagementRate)} of visits`} />
         <Scorecard label="Total Readers" value={totalLeads.toLocaleString()} />
         <Scorecard label="Conversion Rate" value={formatPct(convRate)} subtitle="became a registered reader" />
         <Scorecard label="Return Visitor Rate" value={formatPct(returnRate)} subtitle="came back on a later day" />
@@ -258,7 +267,7 @@ export default async function AdminOverviewPage({
 
       <p className="adm-section-title">Readers &amp; Visitors — Since {START_DATE}</p>
       <div className="adm-chart-card" style={{ marginBottom: 24 }}>
-        <p className="adm-chart-title">Daily unique visitors by country (top 10)</p>
+        <p className="adm-chart-title">Daily unique visitors by country (top 10 + Other)</p>
         <AdminStackedCountryChart data={stackedData} countries={stackedCountries} colorMap={countryColors} />
       </div>
 
