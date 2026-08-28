@@ -20,10 +20,18 @@ import { createReaderSessionToken, verifyReaderSession } from '@/lib/authSession
 import { normalizeEmail } from '@/lib/entitlements'
 
 /**
- * Long enough to walk from the checkout page to a mail client, short enough
- * that a forwarded or intercepted mail is not a standing key to the book.
+ * Long enough that an email read over a weekend, or on the phone days later,
+ * still works — and short enough that a forwarded message is not a standing
+ * key to the book. A reader who lets it lapse asks for another from the site;
+ * nothing is stored that could go stale.
+ *
+ * The wording of the email is derived from this (lib/email.ts), so changing it
+ * here changes what buyers are told.
  */
-export const ACCESS_LINK_TTL_SECONDS = 30 * 60
+export const ACCESS_LINK_TTL_SECONDS = 7 * 24 * 60 * 60
+
+/** The same span in whole days, for the copy that tells the reader. */
+export const ACCESS_LINK_TTL_DAYS = Math.round(ACCESS_LINK_TTL_SECONDS / 86400)
 
 /** Not a product: it proves an address was verified, never that it owns anything. */
 const ACCESS_LINK_GRANT = 'access_link'

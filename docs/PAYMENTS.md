@@ -156,8 +156,18 @@ The emailed link is a second signed token (`lib/accessLink.ts`) carrying only th
 address. **It is short-lived rather than single-use**: the old `auth_tokens` row
 was consumed with an atomic `update … where used_at is null`, and without a
 database that atomicity is not available. Rather than pretend, the link lives
-**30 minutes** and is replayable inside that window — `ACCESS_LINK_TTL_SECONDS`
-is the one constant. Losing a link costs nothing; the reader asks for another.
+**7 days** and is replayable inside that window — `ACCESS_LINK_TTL_SECONDS` is
+the one constant, and the email's wording is derived from it so the two cannot
+drift apart. Losing a link costs nothing; the reader asks for another.
+
+A link that never expired would be a permanent, shareable key to the paid book,
+revocable only by rotating `AUTH_SECRET` — which signs out every reader at once.
+That is a product decision, not a default; the tests refuse a lifetime beyond a
+month so it cannot become one by drift.
+
+Clicking the link is not what has to happen within 7 days — it is what starts
+the **year-long** reader session on that device. The window is only for the
+link itself.
 
 Entitlement is re-derived from Stripe when a link is used, so a link minted
 before a refund stops working the moment the refund lands.

@@ -4,6 +4,8 @@
 // local development and preview deployments usable: the magic link shows up in
 // the server console.
 
+import { ACCESS_LINK_TTL_DAYS } from '@/lib/accessLink'
+
 const RESEND_ENDPOINT = 'https://api.resend.com/emails'
 
 export type SendEmailInput = {
@@ -43,25 +45,37 @@ export async function sendEmail({ to, subject, html, text }: SendEmailInput): Pr
   }
 }
 
+// The validity stated here is derived from the token's own lifetime rather
+// than written out, because the two drifted apart once already: the copy still
+// promised seven days after the link had been cut to thirty minutes.
 const ACCESS_EMAIL_COPY = {
   fr: {
     subject: 'Votre accès au livre en ligne — R.O.P.',
     heading: 'Votre accès au livre en ligne',
-    body: 'Merci pour votre achat. Ce lien ouvre le livre complet et reste valable 7 jours ; il fonctionne sur l’appareil de votre choix.',
+    body: (days: number) =>
+      `Merci pour votre achat. Ce lien ouvre le livre complet et reste valable ${days} jours ; il fonctionne sur l’appareil de votre choix.`,
     cta: 'Ouvrir le livre',
     footer: 'Vous pourrez redemander un lien à tout moment depuis le site, avec cette même adresse e-mail.',
   },
   en: {
     subject: 'Your online book access — R.O.P.',
     heading: 'Your online book access',
-    body: 'Thank you for your purchase. This link opens the complete book and stays valid for 7 days; it works on any device.',
+    body: (days: number) =>
+      `Thank you for your purchase. This link opens the complete book and stays valid for ${days} days; it works on any device.`,
     cta: 'Open the book',
     footer: 'You can request a new link at any time from the site, using this same email address.',
   },
 } as const
 
-export async function sendAccessLinkEmail(to: string, url: string, lang = 'fr'): Promise<boolean> {
+/** Exported so the copy can be checked against the real token lifetime in tests. */
+export function accessLinkEmailContent(url: string, lang = 'fr') {
   const copy = lang === 'fr' ? ACCESS_EMAIL_COPY.fr : ACCESS_EMAIL_COPY.en
+  const body = copy.body(ACCESS_LINK_TTL_DAYS)
+  return { subject: copy.subject, heading: copy.heading, body, cta: copy.cta, footer: copy.footer }
+}
+
+export async function sendAccessLinkEmail(to: string, url: string, lang = 'fr'): Promise<boolean> {
+  const copy = accessLinkEmailContent(url, lang)
 
   const text = `${copy.heading}\n\n${copy.body}\n\n${url}\n\n${copy.footer}`
   const html = `

@@ -6,8 +6,9 @@ import assert from 'node:assert/strict'
 import { after, before, test } from 'node:test'
 import type Stripe from 'stripe'
 import { canReadPaidChapter, ONLINE_BOOK_PRODUCT } from '@/lib/access'
-import { ACCESS_LINK_TTL_SECONDS, createAccessLinkToken, emailFromAccessLink } from '@/lib/accessLink'
+import { ACCESS_LINK_TTL_DAYS, ACCESS_LINK_TTL_SECONDS, createAccessLinkToken, emailFromAccessLink } from '@/lib/accessLink'
 import { createReaderSessionToken } from '@/lib/authSession'
+import { accessLinkEmailContent } from '@/lib/email'
 import { emailFromSession, normalizeEmail, productsFromSession } from '@/lib/entitlements'
 
 const SECRET = 'test-secret-for-entitlements'
@@ -115,13 +116,29 @@ test('a link signed with another secret is refused', async () => {
   assert.equal(await emailFromAccessLink(foreign), null)
 })
 
-test('a link expires, and its lifetime stays short', async () => {
+test('a link expires, and its lifetime stays bounded', async () => {
   const expired = await createReaderSessionToken('reader@example.com', ['access_link'], -10)
   assert.equal(await emailFromAccessLink(expired), null)
 
-  // The short TTL is what buys back the single-use property the token table
-  // used to provide; a regression to days would quietly undo that.
-  assert.ok(ACCESS_LINK_TTL_SECONDS <= 60 * 60, 'access links must stay short-lived')
+  // A bounded lifetime is what stands in for the single-use property the token
+  // table used to provide. An unbounded link would be a permanent, shareable
+  // key to the paid book, which is a product decision and not a drift.
+  assert.ok(ACCESS_LINK_TTL_SECONDS > 0, 'access links must expire')
+  assert.ok(ACCESS_LINK_TTL_SECONDS <= 30 * 24 * 60 * 60, 'access links must not outlive a month')
+})
+
+test('the email states the lifetime the link actually has', () => {
+  // These drifted apart once: the copy promised seven days after the link had
+  // been cut to thirty minutes. The wording is derived now, and this is what
+  // keeps it that way.
+  for (const lang of ['fr', 'en']) {
+    const { body } = accessLinkEmailContent('https://example.com/verify', lang)
+    assert.ok(
+      body.includes(String(ACCESS_LINK_TTL_DAYS)),
+      `${lang} copy does not state ${ACCESS_LINK_TTL_DAYS} days: ${body}`,
+    )
+  }
+  assert.equal(ACCESS_LINK_TTL_DAYS, ACCESS_LINK_TTL_SECONDS / 86400)
 })
 
 test('an access link is not itself book access', async () => {
