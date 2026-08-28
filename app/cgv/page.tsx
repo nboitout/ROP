@@ -82,8 +82,9 @@ export default async function CgvPage() {
             <h2>Article 2 — Identité du Vendeur</h2>
             {/* Identity below is taken from the association's INSEE situation
                 notice and its DIRECCTE training-provider declaration, which
-                agree on the name, address and SIRET. What neither document
-                carries stays a placeholder. */}
+                agree on the name, address and SIRET, plus the RNA number
+                supplied by the association. What none of them carries stays a
+                placeholder. */}
             <ul className="legal-identity">
               <li>Dénomination sociale : Association Française de Réflexologie</li>
               <li>Forme juridique : association déclarée régie par la loi du 1<sup>er</sup> juillet 1901</li>
@@ -92,7 +93,7 @@ export default async function CgvPage() {
               <li>Numéro SIRET (siège) : 428 736 342 00026</li>
               <li>Code APE : 85.59A — Formation continue d’adultes</li>
               <li>Numéro de TVA intracommunautaire : <Todo>à compléter après avis de l’expert-comptable, ou mention « non assujettie à la TVA »</Todo></li>
-              <li>Numéro RNA (registre national des associations) : <Todo>à compléter — numéro en W…, délivré par la préfecture</Todo></li>
+              <li>Numéro RNA (registre national des associations) : W452017552</li>
               <li>Directeur de la publication : <Todo>à compléter — le président de l’association</Todo></li>
               <li>Adresse électronique de contact : <Todo>à compléter</Todo></li>
               <li>Téléphone : <Todo>à compléter</Todo></li>
