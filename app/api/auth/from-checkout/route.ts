@@ -32,7 +32,7 @@ export async function GET(req: NextRequest) {
     const response = NextResponse.redirect(new URL(READING_ENTRY, req.url))
     response.cookies.set(
       PAID_ACCESS_COOKIE,
-      await createReaderSessionToken(purchase.customerId, purchase.products),
+      await createReaderSessionToken(purchase.email, purchase.products),
       {
         httpOnly: true,
         sameSite: 'lax',

@@ -1,7 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server'
+import { createAccessLinkToken } from '@/lib/accessLink'
 import { sendAccessLinkEmail } from '@/lib/email'
+import { purchasedProductsFor } from '@/lib/entitlements'
 import { siteUrl } from '@/lib/payments'
-import { createMagicLinkToken, findCustomerByEmail, listActiveProducts } from '@/lib/paymentsDb'
 
 export const runtime = 'nodejs'
 export const dynamic = 'force-dynamic'
@@ -24,17 +25,14 @@ export async function POST(req: NextRequest) {
   }
 
   try {
-    const customer = await findCustomerByEmail(email)
-    if (customer) {
-      const products = await listActiveProducts(customer.id)
-      if (products.length > 0) {
-        const token = await createMagicLinkToken(customer.id)
-        await sendAccessLinkEmail(
-          customer.email,
-          `${siteUrl()}/api/auth/verify?token=${encodeURIComponent(token)}`,
-          lang,
-        )
-      }
+    const products = await purchasedProductsFor(email)
+    if (products.length > 0) {
+      const token = await createAccessLinkToken(email)
+      await sendAccessLinkEmail(
+        email,
+        `${siteUrl()}/api/auth/verify?token=${encodeURIComponent(token)}`,
+        lang,
+      )
     }
   } catch (error) {
     console.error('[auth/request-link] failed:', error)

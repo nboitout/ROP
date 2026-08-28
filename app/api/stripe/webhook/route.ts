@@ -1,15 +1,10 @@
 import { NextRequest, NextResponse } from 'next/server'
 import type Stripe from 'stripe'
+import { createAccessLinkToken } from '@/lib/accessLink'
 import { sendAccessLinkEmail } from '@/lib/email'
 import { fulfillCheckoutSession } from '@/lib/fulfillment'
 import { siteUrl } from '@/lib/payments'
-import {
-  claimStripeEvent,
-  createMagicLinkToken,
-  markOrderRefundedByPaymentIntent,
-  releaseStripeEvent,
-  revokeEntitlements,
-} from '@/lib/paymentsDb'
+import { recordSale } from '@/lib/salesLog'
 import { getStripe } from '@/lib/stripe'
 
 // Signature verification needs the raw body, so this route must stay on the
@@ -18,12 +13,10 @@ export const runtime = 'nodejs'
 export const dynamic = 'force-dynamic'
 
 async function handleCheckoutCompleted(session: Stripe.Checkout.Session): Promise<void> {
-  // Line items are not expanded on the event payload; the session id is enough
-  // because the price comes from our own catalogue.
   const purchase = await fulfillCheckoutSession(session)
   if (!purchase) return
 
-  const token = await createMagicLinkToken(purchase.customerId)
+  const token = await createAccessLinkToken(purchase.email)
   const sent = await sendAccessLinkEmail(
     purchase.email,
     `${siteUrl()}/api/auth/verify?token=${encodeURIComponent(token)}`,
@@ -34,14 +27,31 @@ async function handleCheckoutCompleted(session: Stripe.Checkout.Session): Promis
   }
 }
 
+/**
+ * Nothing to revoke: access is derived from Stripe, so the refund itself is
+ * what ends it (lib/entitlements.ts drops refunded sessions). The reader's
+ * existing cookie stays valid until it expires; the next link they request
+ * will not open the book.
+ *
+ * All this does is keep the mirror honest for the author.
+ */
 async function handleRefund(charge: Stripe.Charge): Promise<void> {
-  const paymentIntentId = typeof charge.payment_intent === 'string'
-    ? charge.payment_intent
-    : charge.payment_intent?.id
-  if (!paymentIntentId) return
+  const email = charge.billing_details?.email ?? charge.receipt_email
+  if (!email) return
 
-  const customerId = await markOrderRefundedByPaymentIntent(paymentIntentId)
-  if (customerId) await revokeEntitlements(customerId)
+  await recordSale({
+    sessionId: typeof charge.payment_intent === 'string'
+      ? charge.payment_intent
+      : charge.payment_intent?.id ?? charge.id,
+    email,
+    product: '',
+    amountTotal: charge.amount_refunded,
+    currency: charge.currency,
+    status: 'refunded',
+    lang: '',
+    readerId: null,
+    termsAcceptedAt: null,
+  })
 }
 
 export async function POST(req: NextRequest) {
@@ -62,11 +72,10 @@ export async function POST(req: NextRequest) {
   }
 
   try {
-    // Stripe retries deliveries; only the first arrival of an event does work.
-    if (!(await claimStripeEvent(event.id, event.type))) {
-      return NextResponse.json({ received: true, duplicate: true })
-    }
-
+    // Stripe retries deliveries. There is no event-claim table any more and
+    // none is needed: fulfilment grants nothing that can be granted twice, so
+    // a retry costs at most a duplicate mirror row and a second copy of the
+    // same email.
     switch (event.type) {
       case 'checkout.session.completed':
       case 'checkout.session.async_payment_succeeded':
@@ -80,11 +89,6 @@ export async function POST(req: NextRequest) {
     }
   } catch (error) {
     console.error(`[stripe-webhook] handling ${event.type} failed:`, error)
-    // Release the claim, otherwise Stripe's retry would be dismissed as a
-    // duplicate and the purchase would never be fulfilled.
-    await releaseStripeEvent(event.id).catch((releaseError) => {
-      console.error('[stripe-webhook] could not release event claim:', releaseError)
-    })
     // A 500 tells Stripe to retry.
     return NextResponse.json({ error: 'Handler failed' }, { status: 500 })
   }

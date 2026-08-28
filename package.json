@@ -8,7 +8,6 @@
     "start": "next start",
     "lint": "eslint",
     "test": "tsx --test tests/*.test.mts",
-    "db:init-payments": "tsx scripts/init-payments-db.ts",
     "azure:sync-book": "tsx scripts/sync-azure-search-index.ts",
     "azure:sync-book:dry": "tsx scripts/sync-azure-search-index.ts --dry-run --limit=5",
     "azure:ocr-slides": "tsx scripts/ocr-slides.ts",

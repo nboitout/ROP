@@ -74,12 +74,8 @@ export function missingPaymentsConfig(): string[] {
     problems.push('STRIPE_PRICE_ONLINE_BOOK (doit être un identifiant « price_… », pas un montant)')
   }
 
-  // Everything above only gets the buyer as far as paying. Fulfilment writes
-  // the customer, the order and the entitlement, and emails the access link;
-  // without these two a payment succeeds and the reader never gets the book.
-  if (!process.env.DATABASE_URL?.trim()) {
-    problems.push('DATABASE_URL (sans base, « Ouvrir le livre » échoue après le paiement)')
-  }
+  // Everything above only gets the buyer as far as paying. Delivering the book
+  // needs one more thing: a way to email the access link.
   if (!process.env.RESEND_API_KEY?.trim()) {
     problems.push('RESEND_API_KEY (sans clé, le lien d’accès n’est pas envoyé par e-mail)')
   }

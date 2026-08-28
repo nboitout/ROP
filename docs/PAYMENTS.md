@@ -8,6 +8,11 @@ Checkout is **Stripe-hosted**: the buyer leaves for `checkout.stripe.com` and
 comes back to `/merci`. No card data and no Stripe.js touch this site, which is
 why the CSP in `next.config.ts` needs no stripe.com origins.
 
+**Stripe is the source of truth.** There is no customers/orders/entitlements
+database: Stripe already records every payment and every refund, so ownership is
+asked of it. A Google Sheet mirrors the sales for the author to read, and
+nothing reads that sheet back.
+
 ## Flow
 
 ```
@@ -25,13 +30,14 @@ Stripe Checkout              → checkout.stripe.com         → card payment
 Stripe redirect back         → /merci?session_id=…         → "open the book"
                                                               (and the cart is emptied)
                                                               ↓
-Stripe webhook (truth)       → POST /api/stripe/webhook    → GET /api/auth/from-checkout
-  · records customer + order                                  · same fulfilment
-  · grants the entitlement                                    · sets the session cookie
-  · emails a magic link                                       · opens /lecture/chapitre-1
+Stripe webhook               → POST /api/stripe/webhook    → GET /api/auth/from-checkout
+  · mirrors the sale to Sheets                                 · same fulfilment
+  · emails the access link                                     · sets the session cookie
+                                                               · opens /lecture/chapitre-1
                                     ↓
-magic link (any device)      → GET /api/auth/verify?token= → session cookie → book
-lost the link                → POST /api/auth/request-link → new magic link
+access link (any device)     → GET /api/auth/verify?token= → session cookie → book
+                                 · re-asks Stripe what this address owns
+lost the link                → POST /api/auth/request-link → a new one, 30 min
 ```
 
 Before launch every "add to cart" button is instead the "notify me on release"
@@ -118,23 +124,77 @@ opening the shop.
 Preview clicks are marked as internal traffic, so they stay out of the
 `/admin/parcours` funnel.
 
-## Access control
+## Where the truth lives
+
+`lib/entitlements.ts` answers "what does this address own?" by asking Stripe:
+every customer with that email, every paid Checkout Session of theirs, minus
+anything refunded. `metadata.product` — stamped on the session at checkout — is
+matched against our own catalogue, so a session for something we no longer sell
+unlocks nothing.
+
+Because `customer_creation: 'always'` makes one Stripe customer per *purchase*
+rather than per person, a repeat buyer has several; all of them are searched.
+
+This runs at three moments only: issuing an access link, verifying one, and
+completing a purchase. **Reading a chapter never gets here** — that is decided
+by the signed cookie alone, so the book stays readable even if Stripe is
+unreachable.
+
+Refunds need no revocation. `lib/entitlements.ts` drops refunded sessions, so
+the refund itself ends the entitlement. The reader's existing cookie stays valid
+until it expires; the next link they ask for will not open the book.
+
+## Access links
 
 `paid_access` is a signed token (`v1.<payload>.<HMAC-SHA256>`, `lib/authSession.ts`),
 not a flag. `canReadPaidChapter()` verifies the signature, the expiry and that
-the session actually names `online_book` — it is async because verification
-uses Web Crypto, which is what lets the same code run in `proxy.ts` middleware
-(Edge) and in server components (Node).
+the session actually names `online_book` — it is async because verification uses
+Web Crypto, which is what lets the same code run in `proxy.ts` middleware (Edge)
+and in server components (Node).
 
-`tests/access.test.mts` locks this down: forged values, tampered payloads,
-foreign signatures, expired tokens, wrong product, and a missing `AUTH_SECRET`
-must all fail closed. Run with `npm test`.
+The emailed link is a second signed token (`lib/accessLink.ts`) carrying only the
+address. **It is short-lived rather than single-use**: the old `auth_tokens` row
+was consumed with an atomic `update … where used_at is null`, and without a
+database that atomicity is not available. Rather than pretend, the link lives
+**30 minutes** and is replayable inside that window — `ACCESS_LINK_TTL_SECONDS`
+is the one constant. Losing a link costs nothing; the reader asks for another.
 
-Refunds: `charge.refunded` marks the order refunded and revokes the
-entitlement. The reader's existing cookie stays valid until it expires — revoke
-is enforced the next time a magic link is issued. Cutting live sessions off
-immediately would mean a database read on every chapter view; say the word if
-that trade is worth it.
+Entitlement is re-derived from Stripe when a link is used, so a link minted
+before a refund stops working the moment the refund lands.
+
+`tests/access.test.mts` and `tests/entitlements.test.mts` lock this down: forged
+values, tampered payloads, foreign signatures, expired tokens, wrong product, a
+missing `AUTH_SECRET`, refunded and partially-refunded payments, and an access
+link pasted into the `paid_access` cookie must all fail closed. Run with
+`npm test`.
+
+## The sales mirror
+
+`lib/salesLog.ts` appends one row per order to the same Apps Script endpoint
+that already receives leads and events (`APPS_SCRIPT_URL`), as `type: "order"`:
+
+| Field | Example |
+|---|---|
+| `type` | `order` |
+| `timestamp` | `2026-08-28T09:12:44.031Z` |
+| `sessionId` | `cs_test_b1RKnL…` |
+| `email` | `reader@example.com` |
+| `product` | `online_book` |
+| `amount` | `70.00` (euros, not cents — people read this) |
+| `currency` | `EUR` |
+| `status` | `paid` / `refunded` |
+| `lang`, `readerId`, `termsAcceptedAt` | context for reconciliation |
+
+The Apps Script needs a branch for `type === 'order'` writing to an "Orders"
+sheet; without one the rows are simply dropped and the payment still succeeds.
+
+Appending never throws and never blocks: a mirror that fails must not turn a
+completed payment into an error page. If a row goes missing, reconcile from the
+Stripe dashboard — it, not the sheet, is the record.
+
+Webhook retries need no idempotency table. Fulfilment grants nothing that can be
+granted twice, so a retry costs at most a duplicate row and a second copy of the
+same email.
 
 ## Configuration
 
@@ -148,7 +208,7 @@ that trade is worth it.
 | `NEXT_PUBLIC_SITE_URL` | Base URL for `success_url`, `cancel_url` and magic links. On Vercel it is derived from the deployment when unset, so it never falls back to localhost there |
 | `STRIPE_AUTOMATIC_TAX` | `"true"` turns on Stripe Tax. Leave it off until the dashboard has an origin address and your VAT registrations, otherwise Stripe refuses the session |
 | `AUTH_SECRET` | HMAC secret for reader sessions and magic links |
-| `DATABASE_URL` | Neon Postgres — customers, orders, entitlements, tokens |
+| `APPS_SCRIPT_URL` | Google Apps Script endpoint for the sales mirror. Optional: without it sales are not logged, but purchases still work |
 | `RESEND_API_KEY`, `EMAIL_FROM` | Delivery of the access email. Without the key the link is logged to the server console instead |
 | `NEXT_PUBLIC_SITE_URL` | Base URL for `success_url`, `cancel_url` and the magic links |
 
@@ -157,7 +217,8 @@ requires a redeploy.
 
 ## Setting it up
 
-1. **Database** — `npm run db:init-payments` (idempotent, applies `db/payments.sql`).
+1. **Sheets** — add a `type === 'order'` branch to the Apps Script (row shape
+   above). Nothing else to provision: there is no database to create.
 2. **Stripe product** — create a product "Livre en ligne" with a €70 recurring-free
    one-off price. Prices are **tax-inclusive**: the French display price is TTC.
    Copy the price id into `STRIPE_PRICE_ONLINE_BOOK`.
@@ -188,11 +249,11 @@ and CVC. Check that:
 
 - the validation step refuses an invalid address and an unticked consent box,
 - the cart is still there after cancelling on Stripe, and empty after paying,
-- the order and the entitlement land in Postgres,
+- the order row lands in the Orders sheet,
 - the access email arrives (or the link appears in the console without a Resend key),
 - the link opens chapter 1 and survives a browser restart,
-- a second click on the same link is refused (single use),
-- `stripe trigger charge.refunded` revokes the entitlement.
+- the link still works on a second click within 30 minutes, and not after,
+- `stripe trigger charge.refunded` makes the next requested link refuse access.
 
 ## Analytics
 

@@ -130,8 +130,7 @@ const COMPLETE = {
   // Without this the return URL falls back to localhost, which is itself a
   // reported problem — so a "complete" configuration has to include it.
   NEXT_PUBLIC_SITE_URL: 'https://www.guy-boitout.com',
-  // Fulfilment needs both: one to record the order, one to deliver the link.
-  DATABASE_URL: 'postgres://user:pw@host/db',
+  // Delivering the book needs a mailer; there is no database any more.
   RESEND_API_KEY: 're_test',
 }
 
@@ -222,12 +221,7 @@ test('localhost only when nothing says otherwise, and it is reported as a proble
   })
 })
 
-test('a payment that cannot be recorded or delivered is reported, not sold', () => {
-  withEnv({ ...COMPLETE, DATABASE_URL: undefined }, () => {
-    const problems = missingPaymentsConfig()
-    assert.equal(problems.length, 1, JSON.stringify(problems))
-    assert.match(problems[0], /^DATABASE_URL \(/)
-  })
+test('a payment that cannot be delivered is reported, not sold', () => {
   withEnv({ ...COMPLETE, RESEND_API_KEY: undefined }, () => {
     const problems = missingPaymentsConfig()
     assert.equal(problems.length, 1, JSON.stringify(problems))
