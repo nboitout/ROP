@@ -268,10 +268,13 @@ call, means changing `app/confidentialite/content.ts` too. That file holds all
 six languages typed as `typeof fr`, so the compiler refuses a French-only edit.
 Neither page has placeholders left.
 
-The terms stay French-only on purpose: they are a contract, and two texts
-stating obligations can disagree. The privacy policy is an information notice
-whose purpose under art. 12.1 GDPR is to be understood, so it is translated,
-with a note on each non-French version that the French text prevails.
+Both are translated into all six site languages, from
+`app/cgv/content.ts` and `app/confidentialite/content.ts`. Every non-French
+version carries a note that the French text prevails — necessary for the terms,
+which are a contract, since two texts stating obligations can otherwise
+disagree. `tests/legal.test.mts` guards what the type system cannot: that no
+language lost a paragraph, a cookie or a sub-processor, and that no `**`
+emphasis marker or `{site}` / `{link}` token survives to the reader.
 
 ## Invoices
 
