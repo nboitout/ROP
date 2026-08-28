@@ -15,15 +15,6 @@ export const metadata: Metadata = {
 /** Last substantive revision. Shown to the reader and archived with each order. */
 const VERSION_DATE = '28 août 2026'
 
-/**
- * A field only the seller can fill in — company identity, mediator, contact.
- * Rendered loud on purpose: these must not reach production unnoticed, and a
- * CGV naming the wrong legal entity is worse than no CGV at all.
- */
-function Todo({ children }: { children: React.ReactNode }) {
-  return <mark className="legal-todo">{children}</mark>
-}
-
 export default async function CgvPage() {
   const lang = await getServerLang()
   const t = translations[lang]
@@ -352,8 +343,9 @@ export default async function CgvPage() {
             <p>
               Le Client dispose d’un droit d’accès, de rectification, d’effacement, de limitation,
               d’opposition et de portabilité, qu’il peut exercer à l’adresse électronique indiquée
-              à l’article 2. Les modalités complètes sont décrites dans la{' '}
-              <Todo>à compléter — publier la politique de confidentialité et lier cette page</Todo>.
+              à l’article 2. Les modalités complètes — données collectées, destinataires, durées
+              de conservation et cookies — sont décrites dans la{' '}
+              <Link href={localizedHref('/confidentialite', lang)}>politique de confidentialité</Link>.
             </p>
           </section>
 

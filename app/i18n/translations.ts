@@ -335,6 +335,7 @@ const fr = {
     copy: '© 2026 Guy Boitout · Institut R.O.P.',
     address: '',
     cgv: 'Conditions générales de vente',
+    privacy: 'Politique de confidentialité',
   },
   form: {
     title: 'Accès aux chapitres gratuits',
@@ -809,6 +810,7 @@ const en: typeof fr = {
     copy: '© 2026 Guy Boitout · R.O.P. Institute',
     address: '',
     cgv: 'Terms of sale',
+    privacy: 'Privacy policy',
   },
   form: {
     title: 'Access the free chapters',
@@ -1286,6 +1288,7 @@ const th: typeof fr = {
     copy: '© 2026 Guy Boitout · สถาบัน ROP',
     address: '',
     cgv: 'เงื่อนไขการขาย',
+    privacy: 'นโยบายความเป็นส่วนตัว',
   },
   form: {
     ...en.form,
@@ -1706,6 +1709,7 @@ const de: typeof fr = {
     copy: '© 2026 Guy Boitout · R.O.P.-Institut',
     address: '',
     cgv: 'Verkaufsbedingungen',
+    privacy: 'Datenschutzerklärung',
   },
   form: {
     title: 'Kostenlose Kapitel öffnen',
@@ -2180,6 +2184,7 @@ const es: typeof fr = {
     copy: '© 2026 Guy Boitout · Instituto R.O.P.',
     address: '',
     cgv: 'Condiciones de venta',
+    privacy: 'Política de privacidad',
   },
   form: {
     title: 'Acceder a los capítulos gratuitos',
@@ -2654,6 +2659,7 @@ const it: typeof fr = {
     copy: '© 2026 Guy Boitout · Istituto R.O.P.',
     address: '',
     cgv: 'Condizioni di vendita',
+    privacy: 'Informativa sulla privacy',
   },
   form: {
     title: 'Accedi ai capitoli gratuiti',

@@ -257,6 +257,15 @@ requires a redeploy.
    check the invoice from the link on `/merci` instead.
 7. **Go live** — set `NEXT_PUBLIC_PAYMENTS_ENABLED=true` and redeploy.
 
+## Legal pages
+
+`/cgv` (terms of sale) and `/confidentialite` (privacy policy) are both written
+against what the code actually does, not against a template. The privacy policy
+in particular enumerates the real cookies, the real analytics payload and the
+real sub-processors — so changing `lib/readerId.ts`, `app/api/visit/route.ts`,
+`app/api/free-chapter/route.ts`, `lib/salesLog.ts`, or the services any of them
+call, means changing that page too. Neither page has placeholders left.
+
 ## Invoices
 
 Every purchase produces a real Stripe invoice, not a card receipt: the Checkout
