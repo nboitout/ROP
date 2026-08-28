@@ -126,8 +126,8 @@ export default function SalesPreviewGate({
             <p>
               Utilisez des clés Stripe de <strong>test</strong> (<code>sk_test_…</code> et un
               identifiant de tarif de test) : avec des clés réelles, la carte du relecteur est
-              réellement débitée. La base de données et la clé d’envoi d’e-mails sont nécessaires
-              elles aussi : sans elles le paiement aboutit, mais le lecteur n’obtient pas le livre.
+              réellement débitée. La clé d’envoi d’e-mails est nécessaire elle aussi : sans elle le
+              paiement aboutit, mais le lien d’accès n’est jamais envoyé.
             </p>
           </div>
         )}
