@@ -370,9 +370,34 @@ export default async function CgvPage() {
               litige, après avoir tenté de le résoudre directement auprès du Vendeur par une
               réclamation écrite.
             </p>
+            {/* Avenir Conso, referenced by the CECMC on 27 July 2016. Details
+                taken from the signed convention individuelle and its annexed
+                charte — seat, website and the two ways a consumer may refer a
+                dispute. */}
             <p>
-              Le médiateur dont relève le Vendeur est : <Todo>à compléter — nom, adresse postale et
-              site du médiateur auprès duquel le Vendeur doit adhérer avant l’ouverture des ventes</Todo>.
+              Le Vendeur a désigné, par convention, l’entité de médiation de la consommation
+              suivante :
+            </p>
+            <ul className="legal-identity">
+              <li><strong>Avenir Conso</strong></li>
+              <li>197 boulevard Saint-Germain, 75007 Paris, France</li>
+              <li>
+                <a href="https://www.avenir-conso.com" target="_blank" rel="noopener noreferrer">
+                  www.avenir-conso.com
+                </a>
+              </li>
+            </ul>
+            <p>
+              Le Client peut saisir Avenir Conso soit en ligne, au moyen du formulaire disponible
+              sur son site, soit par courrier postal à l’adresse ci-dessus, en joignant les
+              documents étayant sa demande. La médiation est gratuite pour le Client, sa charge
+              financière incombant au Vendeur.
+            </p>
+            <p>
+              Conformément à l’article L. 612-2 du code de la consommation, la demande n’est
+              recevable que si le Client justifie avoir tenté au préalable de résoudre le litige
+              directement auprès du Vendeur par une réclamation écrite, et si elle est introduite
+              dans un délai d’un an à compter de cette réclamation.
             </p>
           </section>
 
