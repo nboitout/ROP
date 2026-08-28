@@ -92,11 +92,11 @@ export default async function CgvPage() {
               <li>Numéro SIREN : 428 736 342</li>
               <li>Numéro SIRET (siège) : 428 736 342 00026</li>
               <li>Code APE : 85.59A — Formation continue d’adultes</li>
-              <li>Numéro de TVA intracommunautaire : <Todo>à compléter après avis de l’expert-comptable, ou mention « non assujettie à la TVA »</Todo></li>
+              <li>Numéro de TVA intracommunautaire : sans objet — l’association n’est pas assujettie à la taxe sur la valeur ajoutée</li>
               <li>Numéro RNA (registre national des associations) : W452017552</li>
-              <li>Directeur de la publication : <Todo>à compléter — le président de l’association</Todo></li>
-              <li>Adresse électronique de contact : <Todo>à compléter</Todo></li>
-              <li>Téléphone : <Todo>à compléter</Todo></li>
+              <li>Directeur de la publication : Guy Boitout, président de l’association</li>
+              <li>Adresse électronique de contact : contact@institut-rop.com</li>
+              <li>Téléphone : 06 07 84 26 14</li>
               <li>Hébergeur du Site : Vercel Inc., 440 N Barranca Ave #4133, Covina, CA 91723, États-Unis</li>
             </ul>
           </section>
@@ -117,8 +117,8 @@ export default async function CgvPage() {
             <p>
               L’accès est ouvert pour une durée indéterminée à compter du paiement, sous réserve
               de l’article 11. Le Vendeur s’engage à maintenir le Livre en ligne accessible
-              pendant une durée minimale de <Todo>à compléter — durée d’engagement, par exemple 3 ans</Todo>
-              {' '}à compter de la commande.
+              pendant une durée minimale de <strong>trois (3) ans</strong> à compter de la
+              commande.
             </p>
           </section>
 
@@ -134,11 +134,17 @@ export default async function CgvPage() {
               ce prix est le prix de vente au public fixé par l’éditeur et s’impose à toute
               personne proposant le Livre en ligne à un acheteur situé en France.
             </p>
+            {/* The association is not VAT-liable today. The exact statutory mention
+                to print on invoices (franchise en base, art. 293 B du CGI, versus
+                the non-lucrative exemption of art. 261, 7-1° du CGI) depends on
+                which regime applies and is the accountant's call; it belongs on
+                the invoice rather than here. Cross-border EU sales are the point
+                to revisit if volume grows — see docs/PAYMENTS.md. */}
             <p>
-              Le taux de taxe sur la valeur ajoutée applicable est de <Todo>à compléter après
-              confirmation par l’expert-comptable — taux applicable au livre numérique</Todo>. Pour
-              les Clients établis dans un autre État membre de l’Union européenne, la taxe
-              applicable est celle de leur pays de résidence, déterminée lors du paiement.
+              Le Vendeur n’est pas assujetti à la taxe sur la valeur ajoutée. Le prix indiqué ne
+              comporte donc aucune TVA et aucune TVA n’est facturée au Client, quel que soit son
+              pays de résidence. Si la situation fiscale du Vendeur venait à évoluer, le prix
+              affiché resterait le prix toutes taxes comprises.
             </p>
             <p>
               Aucun frais de livraison n’est applicable, le Livre en ligne étant consulté en ligne.

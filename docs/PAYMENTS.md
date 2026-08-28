@@ -233,7 +233,13 @@ requires a redeploy.
 2. **Stripe product** — create a product "Livre en ligne" with a €70 recurring-free
    one-off price. Prices are **tax-inclusive**: the French display price is TTC.
    Copy the price id into `STRIPE_PRICE_ONLINE_BOOK`.
-3. **Stripe Tax** (can wait) — first tests work with `STRIPE_AUTOMATIC_TAX=false`.
+3. **Stripe Tax** (can wait) — the association is not VAT-liable today, so the
+   €70 carries no VAT and `STRIPE_AUTOMATIC_TAX=false` is the correct setting,
+   not merely a temporary one. Two things would change that: the association
+   becoming liable in France, or cross-border EU sales of the digital book
+   growing past the €10,000 distance-selling threshold, at which point VAT is
+   due in the buyer's country. Revisit with the accountant if either happens.
+   First tests work with `STRIPE_AUTOMATIC_TAX=false`.
    To turn VAT on, set the origin address and the registrations in the dashboard
    (Settings → Tax), then set `STRIPE_AUTOMATIC_TAX=true`. France applies a
    reduced VAT rate to books including digital ones — confirm the rate and
