@@ -128,11 +128,20 @@ const NUMBER_LOCALES: Record<string, string> = {
   fr: 'fr-FR', en: 'en-GB', de: 'de-DE', es: 'es-ES', it: 'it-IT', th: 'th-TH',
 }
 
-/** Cents → "70,00 €". Whole euros keep their ",00" so totals line up in a column. */
+/**
+ * Cents → "70 €", or "63,50 €" when there actually are cents.
+ *
+ * A round price shown as "70,00 €" reads like a form field rather than a
+ * price. The decimals are kept only when they carry information, which for
+ * this catalogue means a promotion code has been applied.
+ */
 export function formatAmount(cents: number, currency: string, lang = 'fr'): string {
+  const whole = cents % 100 === 0
   return new Intl.NumberFormat(NUMBER_LOCALES[lang] ?? NUMBER_LOCALES.fr, {
     style: 'currency',
     currency: currency.toUpperCase(),
+    minimumFractionDigits: whole ? 0 : 2,
+    maximumFractionDigits: whole ? 0 : 2,
   }).format(cents / 100)
 }
 

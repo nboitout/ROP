@@ -94,9 +94,15 @@ test('a cart is refused while the Stripe price id is missing', () => {
 
 test('amounts render in the reader’s locale', () => {
   // Non-breaking spaces vary by ICU build, so compare on the digits.
-  assert.match(formatAmount(7000, 'eur', 'fr').replace(/\s/g, ' '), /^70,00 €$/)
-  assert.match(formatAmount(7000, 'eur', 'en'), /^€70\.00$/)
-  assert.match(formatAmount(7000, 'eur', 'zz').replace(/\s/g, ' '), /^70,00 €$/)
+  // A round price drops its decimals: "70,00 €" reads like a form field.
+  assert.match(formatAmount(7000, 'eur', 'fr').replace(/\s/g, ' '), /^70 €$/)
+  assert.match(formatAmount(7000, 'eur', 'en'), /^€70$/)
+  assert.match(formatAmount(7000, 'eur', 'zz').replace(/\s/g, ' '), /^70 €$/)
+
+  // They come back when they mean something — a promotion code, say.
+  assert.match(formatAmount(6350, 'eur', 'fr').replace(/\s/g, ' '), /^63,50 €$/)
+  assert.match(formatAmount(6350, 'eur', 'en'), /^€63\.50$/)
+  assert.match(formatAmount(7005, 'eur', 'fr').replace(/\s/g, ' '), /^70,05 €$/)
 })
 
 // --- Payment configuration guards -------------------------------------------
