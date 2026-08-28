@@ -317,6 +317,7 @@ const fr = {
       unknown: 'Nous n’avons pas retrouvé ce paiement. Si votre carte a été débitée, écrivez-nous et nous régularisons immédiatement.',
       open: 'Ouvrir le livre',
       freeChapters: 'Voir les chapitres gratuits',
+      invoice: 'Télécharger ma facture',
     },
     recover: {
       title: 'Déjà acheté le livre en ligne ?',
@@ -790,6 +791,7 @@ const en: typeof fr = {
       unknown: 'We could not find that payment. If your card was charged, write to us and we will sort it out straight away.',
       open: 'Open the book',
       freeChapters: 'See the free chapters',
+      invoice: 'Download my invoice',
     },
     recover: {
       title: 'Already bought the online book?',
@@ -1266,6 +1268,7 @@ const th: typeof fr = {
       unknown: 'ไม่พบรายการชำระเงินนี้ หากบัตรของคุณถูกตัดเงินแล้ว กรุณาติดต่อเรา',
       open: 'เปิดหนังสือ',
       freeChapters: 'ดูบทอ่านฟรี',
+      invoice: 'ดาวน์โหลดใบแจ้งหนี้',
     },
     recover: {
       title: 'ซื้อหนังสือออนไลน์ไว้แล้ว?',
@@ -1685,6 +1688,7 @@ const de: typeof fr = {
       unknown: 'Diese Zahlung konnten wir nicht finden. Falls Ihre Karte belastet wurde, schreiben Sie uns — wir klären das sofort.',
       open: 'Buch öffnen',
       freeChapters: 'Kostenlose Kapitel ansehen',
+      invoice: 'Rechnung herunterladen',
     },
     recover: {
       title: 'Online-Buch bereits gekauft?',
@@ -2158,6 +2162,7 @@ const es: typeof fr = {
       unknown: 'No hemos encontrado ese pago. Si se ha cobrado a su tarjeta, escríbanos y lo resolvemos enseguida.',
       open: 'Abrir el libro',
       freeChapters: 'Ver los capítulos gratuitos',
+      invoice: 'Descargar mi factura',
     },
     recover: {
       title: '¿Ya compró el libro en línea?',
@@ -2631,6 +2636,7 @@ const it: typeof fr = {
       unknown: 'Non abbiamo trovato questo pagamento. Se la carta è stata addebitata, scrivici e sistemiamo subito.',
       open: 'Apri il libro',
       freeChapters: 'Vedi i capitoli gratuiti',
+      invoice: 'Scarica la fattura',
     },
     recover: {
       title: 'Hai già acquistato il libro online?',

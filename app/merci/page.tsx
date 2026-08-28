@@ -31,12 +31,21 @@ export default async function MerciPage({
   const t = translations[lang]
 
   let state: PageState = 'pending'
+  // Stripe emails the invoice PDF on its own, but only in live mode and only
+  // once the invoice has finalised. Surfacing the hosted invoice here gives the
+  // buyer a copy immediately, and gives a preview reviewer something to check
+  // at all — no customer email is ever sent from a sandbox.
+  let invoiceUrl: string | null = null
   if (stateParam === 'invalid-link' || stateParam === 'no-access' || stateParam === 'error') {
     state = stateParam
   } else if (sessionId && (await paymentsOpenFor(await cookies()))) {
     try {
-      const session = await getStripe().checkout.sessions.retrieve(sessionId)
+      const session = await getStripe().checkout.sessions.retrieve(sessionId, { expand: ['invoice'] })
       state = session.payment_status === 'paid' ? 'paid' : 'pending'
+      const invoice = session.invoice
+      // A string means Stripe returned the id alone; null means the invoice is
+      // not finalised yet. Either way there is nothing to link to.
+      if (invoice && typeof invoice !== 'string') invoiceUrl = invoice.hosted_invoice_url ?? null
     } catch (error) {
       console.error('[merci] could not read the checkout session:', error)
       state = 'error'
@@ -77,6 +86,11 @@ export default async function MerciPage({
             {state === 'paid' && sessionId && (
               <a href={`/api/auth/from-checkout?session_id=${encodeURIComponent(sessionId)}`} className="btn b-gold">
                 {copy.open}
+              </a>
+            )}
+            {invoiceUrl && (
+              <a href={invoiceUrl} className="btn b-out" target="_blank" rel="noopener noreferrer">
+                {copy.invoice}
               </a>
             )}
             <Link href="/chapitres-gratuits" className="btn b-out">{copy.freeChapters}</Link>

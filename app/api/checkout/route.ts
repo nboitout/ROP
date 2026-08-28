@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { parseCart, priceCart, rejectCart } from '@/lib/cart'
 import { paymentsEnabled, paymentsOpenFor, siteUrl } from '@/lib/payments'
+import { INVOICE_MEMO, invoiceFooter } from '@/lib/seller'
 import { getStripe } from '@/lib/stripe'
 
 export const runtime = 'nodejs'
@@ -64,6 +65,23 @@ export async function POST(req: NextRequest) {
       // brand-new account.
       automatic_tax: { enabled: process.env.STRIPE_AUTOMATIC_TAX === 'true' },
       allow_promotion_codes: true,
+      // Many buyers are practitioners who expense the book, so every purchase
+      // gets a real invoice rather than a card receipt: Stripe numbers it,
+      // renders the PDF and — in live mode — emails it to the buyer without
+      // any code of ours. A postal address is required because an invoice
+      // without the buyer's address is not one.
+      invoice_creation: {
+        enabled: true,
+        invoice_data: {
+          description: INVOICE_MEMO,
+          footer: invoiceFooter(siteUrl()),
+          metadata: { product: cart.lines[0].product, lang },
+        },
+      },
+      billing_address_collection: 'required',
+      // Optional for the buyer, and the only way a practitioner's own SIRET or
+      // VAT number reaches the invoice. Stripe cannot make it mandatory.
+      tax_id_collection: { enabled: true },
       // The receipt address is also the address the access link is sent to;
       // prefilled with the one the buyer confirmed on the validation step.
       customer_creation: 'always',

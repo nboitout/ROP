@@ -250,7 +250,32 @@ requires a redeploy.
    `charge.refunded`. Copy its signing secret into `STRIPE_WEBHOOK_SECRET`.
 5. **Email** — verify the sending domain in Resend and set `EMAIL_FROM`, plus
    `EMAIL_REPLY_TO` if the from-address is not a mailbox anyone reads.
-6. **Go live** — set `NEXT_PUBLIC_PAYMENTS_ENABLED=true` and redeploy.
+6. **Invoice emails** — in the Stripe Dashboard, Settings → Business →
+   Customer emails, turn on **Successful payments**; Settings → Billing →
+   Invoices controls the template and the PDF attachment. Stripe sends these
+   only in **live mode**, so a sandbox purchase never produces an email —
+   check the invoice from the link on `/merci` instead.
+7. **Go live** — set `NEXT_PUBLIC_PAYMENTS_ENABLED=true` and redeploy.
+
+## Invoices
+
+Every purchase produces a real Stripe invoice, not a card receipt: the Checkout
+Session sets `invoice_creation.enabled`, so Stripe numbers the invoice
+sequentially per account, renders the PDF, and emails it to the buyer in live
+mode without any code of ours. Many buyers are practitioners who expense the
+book, which is why `billing_address_collection` is `required` (an invoice
+without the buyer's address is not one) and `tax_id_collection` is on (optional
+for the buyer — Stripe cannot make it mandatory — and the only way their own
+SIRET or VAT number reaches the invoice).
+
+The seller identity Stripe prints in the footer comes from `lib/seller.ts`,
+which must stay in step with Article 2 of the terms of sale. Its `VAT_MENTION`
+is deliberately neutral: the association is not VAT-liable, but which statute
+grants that decides the exact wording, and citing the wrong article is worse
+than citing none.
+
+`/merci` also links to the hosted invoice when it has finalised, which is the
+only way to see one before going live.
 
 ## Testing before launch
 
