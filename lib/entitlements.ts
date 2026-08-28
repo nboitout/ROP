@@ -85,6 +85,20 @@ export async function hasPurchased(email: string): Promise<boolean> {
 }
 
 /**
+ * Whether a cart holds nothing the buyer does not already own.
+ *
+ * Separated from the Stripe lookup so the decision itself is testable, and
+ * because it is the part that will need thought when a second product exists:
+ * with a mixed cart the right answer is to drop the owned lines, not to refuse
+ * the order. Today the catalogue has one product, so "all owned" and "any
+ * owned" are the same question.
+ */
+export function cartIsFullyOwned(products: string[], owned: string[]): boolean {
+  if (products.length === 0) return false
+  return products.every((product) => owned.includes(product))
+}
+
+/**
  * The same question for a single Checkout Session, used right after payment
  * when the buyer is still on the page and Stripe has just confirmed it.
  * Avoids the customer lookup entirely.

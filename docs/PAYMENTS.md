@@ -276,6 +276,22 @@ disagree. `tests/legal.test.mts` guards what the type system cannot: that no
 language lost a paragraph, a cookie or a sub-processor, and that no `**`
 emphasis marker or `{site}` / `{link}` token survives to the reader.
 
+## Buying the same book twice
+
+`/api/checkout` asks `purchasedProductsFor()` what the address already owns and
+answers `409 already-owned` when the cart holds nothing new. The validation
+screen then replaces the pay button with the access-link form, prefilled with
+the address just typed. A buyer cannot slip past it by editing the address on
+Stripe's page: a session created with `customer_email` renders that field
+read-only.
+
+The check **fails open**. If the Stripe lookup throws, the order proceeds — an
+outage must not become a lost sale, and the worst case is one duplicate to
+refund. The decision itself is `cartIsFullyOwned()`, kept separate from the
+Stripe call so it can be tested, and so the multi-product case is easy to find
+later: with a mixed cart the right answer is to drop the owned lines, not to
+refuse the order.
+
 ## Invoices
 
 Every purchase produces a real Stripe invoice, not a card receipt: the Checkout

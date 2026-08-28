@@ -4,6 +4,7 @@ import { useState } from 'react'
 import Link from 'next/link'
 import { useLanguage } from '@/app/i18n/LanguageContext'
 import { localizedHref } from '@/app/i18n/locale'
+import AccessLinkForm from '@/components/AccessLinkForm'
 import { useCart } from '@/components/CartProvider'
 import { formatAmount, priceCart } from '@/lib/cart'
 import { getSessionId } from '@/lib/session'
@@ -43,6 +44,8 @@ export default function CheckoutValidation() {
   const [error, setError] = useState<string | null>(null)
   /** Stripe's own words, returned only during a sales preview. */
   const [detail, setDetail] = useState<string | null>(null)
+  /** The address already owns the book, so there is nothing left to sell it. */
+  const [owned, setOwned] = useState(false)
   const [pending, setPending] = useState(false)
 
   const cart = priceCart(lines)
@@ -50,6 +53,18 @@ export default function CheckoutValidation() {
   const v = c.validation
 
   if (!ready) return <p className="cart-loading">{c.loading}</p>
+
+  if (owned) {
+    return (
+      <div className="cart-owned">
+        <p className="cart-owned-title">{v.alreadyOwned}</p>
+        <AccessLinkForm initialEmail={email.trim()} />
+        <div className="buy-actions">
+          <Link href={localizedHref('/panier', lang)} className="btn b-out">{v.back}</Link>
+        </div>
+      </div>
+    )
+  }
 
   if (cart.lines.length === 0) {
     return (
@@ -79,6 +94,7 @@ export default function CheckoutValidation() {
 
     setError(null)
     setDetail(null)
+    setOwned(false)
     setPending(true)
 
     fetch('/api/track', {
@@ -106,6 +122,13 @@ export default function CheckoutValidation() {
         }),
       })
       const data = await response.json().catch(() => null)
+      // Not a failure: the buyer already owns this, and re-selling it would be
+      // taking money for nothing. Offer them the access link instead.
+      if (response.status === 409 && data?.error === 'already-owned') {
+        setOwned(true)
+        setPending(false)
+        return
+      }
       if (!response.ok || !data?.url) {
         if (typeof data?.detail === 'string') setDetail(data.detail)
         throw new Error('checkout unavailable')
@@ -160,7 +183,7 @@ export default function CheckoutValidation() {
           spellCheck={false}
           placeholder={v.emailPlaceholder}
           value={email}
-          onChange={(e) => { setEmail(e.target.value); setError(null) }}
+          onChange={(e) => { setEmail(e.target.value); setError(null); setOwned(false) }}
           aria-invalid={error === v.emailInvalid}
           required
         />

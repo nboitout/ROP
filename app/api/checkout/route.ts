@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { parseCart, priceCart, rejectCart } from '@/lib/cart'
+import { cartIsFullyOwned, purchasedProductsFor } from '@/lib/entitlements'
 import { paymentsEnabled, paymentsOpenFor, siteUrl } from '@/lib/payments'
 import { INVOICE_MEMO, invoiceFooter } from '@/lib/seller'
 import { getStripe } from '@/lib/stripe'
@@ -51,6 +52,27 @@ export async function POST(req: NextRequest) {
   const customerEmail = EMAIL_PATTERN.test(email) ? email : undefined
 
   const cart = priceCart(lines)
+
+  // Nobody should pay twice for the same book. Access is derived from Stripe,
+  // so a second purchase buys literally nothing the buyer does not already
+  // have — and the refund that follows costs the association the card fee.
+  //
+  // The buyer cannot slip past this by editing the address on Stripe's page:
+  // a session created with `customer_email` renders that field read-only.
+  //
+  // Deliberately fails open. If Stripe is unreachable we let the order through
+  // rather than turn an outage into a lost sale; the worst case is one
+  // duplicate to refund, which is the situation we are already in today.
+  if (customerEmail) {
+    try {
+      const owned = await purchasedProductsFor(customerEmail)
+      if (cartIsFullyOwned(cart.lines.map((line) => line.product), owned)) {
+        return NextResponse.json({ error: 'already-owned' }, { status: 409 })
+      }
+    } catch (error) {
+      console.error('[checkout] ownership check failed, letting the order through:', error)
+    }
+  }
 
   try {
     const session = await getStripe().checkout.sessions.create({

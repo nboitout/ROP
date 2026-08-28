@@ -9,7 +9,7 @@ import { canReadPaidChapter, ONLINE_BOOK_PRODUCT } from '@/lib/access'
 import { ACCESS_LINK_TTL_DAYS, ACCESS_LINK_TTL_SECONDS, createAccessLinkToken, emailFromAccessLink } from '@/lib/accessLink'
 import { createReaderSessionToken } from '@/lib/authSession'
 import { accessLinkEmailContent } from '@/lib/email'
-import { emailFromSession, normalizeEmail, productsFromSession } from '@/lib/entitlements'
+import { cartIsFullyOwned, emailFromSession, normalizeEmail, productsFromSession } from '@/lib/entitlements'
 
 const SECRET = 'test-secret-for-entitlements'
 const originalSecret = process.env.AUTH_SECRET
@@ -93,6 +93,28 @@ test('the buyer address is normalised, wherever Stripe put it', () => {
   )
   assert.equal(emailFromSession(session({ customer_details: null, customer_email: null })), null)
   assert.equal(normalizeEmail('  MiXeD@Case.Com '), 'mixed@case.com')
+})
+
+// --- Whether there is anything left to sell ----------------------------------
+
+test('a cart holding only what the buyer owns is refused', () => {
+  assert.equal(cartIsFullyOwned([ONLINE_BOOK_PRODUCT], [ONLINE_BOOK_PRODUCT]), true)
+})
+
+test('a cart is sellable when the buyer owns nothing in it', () => {
+  assert.equal(cartIsFullyOwned([ONLINE_BOOK_PRODUCT], []), false)
+  assert.equal(cartIsFullyOwned([ONLINE_BOOK_PRODUCT], ['something_else']), false)
+})
+
+test('an empty cart is not "fully owned" — there is nothing to own', () => {
+  // Guards against `[].every(...)` returning true and refusing an order that
+  // the cart checks would have rejected with a clearer message.
+  assert.equal(cartIsFullyOwned([], []), false)
+  assert.equal(cartIsFullyOwned([], [ONLINE_BOOK_PRODUCT]), false)
+})
+
+test('a mixed cart still goes through, so the unowned line can be bought', () => {
+  assert.equal(cartIsFullyOwned([ONLINE_BOOK_PRODUCT, 'future_product'], [ONLINE_BOOK_PRODUCT]), false)
 })
 
 // --- What an access link may prove -------------------------------------------

@@ -5,10 +5,16 @@ import { useLanguage } from '@/app/i18n/LanguageContext'
 
 const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 
-/** "Already bought the book?" — sends a fresh access link to the buyer's address. */
-export default function AccessLinkForm() {
+/**
+ * "Already bought the book?" — sends a fresh access link to the buyer's address.
+ *
+ * `initialEmail` is for the one place that already knows it: the checkout step,
+ * when the address turns out to own the book already. Retyping an address you
+ * just typed is a small insult.
+ */
+export default function AccessLinkForm({ initialEmail = '' }: { initialEmail?: string }) {
   const { t, lang } = useLanguage()
-  const [email, setEmail] = useState('')
+  const [email, setEmail] = useState(initialEmail)
   const [state, setState] = useState<'idle' | 'sending' | 'done' | 'invalid'>('idle')
 
   async function submit(event: React.FormEvent) {
