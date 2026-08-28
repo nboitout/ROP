@@ -44,7 +44,7 @@ const fr = {
     'Numéro RNA (registre national des associations) : W452017552',
     'Directeur de la publication : Guy Boitout, président de l’association',
     'Adresse électronique de contact : contact@institut-rop.com',
-    'Téléphone : 06 07 84 26 14',
+    'Téléphone : +33 6 07 84 26 14 (contact par WhatsApp de préférence)',
     'Hébergeur du Site : Vercel Inc., 440 N Barranca Ave #4133, Covina, CA 91723, États-Unis',
   ],
 
@@ -192,7 +192,7 @@ const en: Content = {
     'RNA number (national register of associations): W452017552',
     'Publication director: Guy Boitout, president of the association',
     'Contact email address: contact@institut-rop.com',
-    'Telephone: +33 6 07 84 26 14',
+    'Telephone: +33 6 07 84 26 14 (WhatsApp preferred)',
     'Site host: Vercel Inc., 440 N Barranca Ave #4133, Covina, CA 91723, United States',
   ],
 
@@ -338,7 +338,7 @@ const de: Content = {
     'RNA-Nummer (nationales Vereinsregister): W452017552',
     'Verantwortlich für die Veröffentlichung: Guy Boitout, Präsident des Vereins',
     'Kontakt-E-Mail-Adresse: contact@institut-rop.com',
-    'Telefon: +33 6 07 84 26 14',
+    'Telefon: +33 6 07 84 26 14 (Kontakt bevorzugt über WhatsApp)',
     'Hoster der Website: Vercel Inc., 440 N Barranca Ave #4133, Covina, CA 91723, Vereinigte Staaten',
   ],
 
@@ -484,7 +484,7 @@ const es: Content = {
     'Número RNA (registro nacional de asociaciones): W452017552',
     'Director de la publicación: Guy Boitout, presidente de la asociación',
     'Dirección electrónica de contacto: contact@institut-rop.com',
-    'Teléfono: +33 6 07 84 26 14',
+    'Teléfono: +33 6 07 84 26 14 (contacto preferentemente por WhatsApp)',
     'Alojador del Sitio: Vercel Inc., 440 N Barranca Ave #4133, Covina, CA 91723, Estados Unidos',
   ],
 
@@ -630,7 +630,7 @@ const it: Content = {
     'Numero RNA (registro nazionale delle associazioni): W452017552',
     'Direttore della pubblicazione: Guy Boitout, presidente dell’associazione',
     'Indirizzo di posta elettronica di contatto: contact@institut-rop.com',
-    'Telefono: +33 6 07 84 26 14',
+    'Telefono: +33 6 07 84 26 14 (contatto preferibilmente via WhatsApp)',
     'Fornitore di hosting del Sito: Vercel Inc., 440 N Barranca Ave #4133, Covina, CA 91723, Stati Uniti',
   ],
 
@@ -776,7 +776,7 @@ const th: Content = {
     'เลขทะเบียน RNA (ทะเบียนสมาคมแห่งชาติ) : W452017552',
     'ผู้อำนวยการฝ่ายเผยแพร่ : Guy Boitout ประธานสมาคม',
     'อีเมลติดต่อ : contact@institut-rop.com',
-    'โทรศัพท์ : +33 6 07 84 26 14',
+    'โทรศัพท์ : +33 6 07 84 26 14 (ติดต่อทาง WhatsApp จะสะดวกที่สุด)',
     'ผู้ให้บริการโฮสติ้งของเว็บไซต์ : Vercel Inc., 440 N Barranca Ave #4133, Covina, CA 91723 สหรัฐอเมริกา',
   ],
 
