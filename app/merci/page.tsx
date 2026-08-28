@@ -45,7 +45,15 @@ export default async function MerciPage({
       const invoice = session.invoice
       // A string means Stripe returned the id alone; null means the invoice is
       // not finalised yet. Either way there is nothing to link to.
-      if (invoice && typeof invoice !== 'string') invoiceUrl = invoice.hosted_invoice_url ?? null
+      //
+      // hosted_invoice_url is only populated when "include a link to a payment
+      // page" is on in the dashboard's invoice settings — a switch about
+      // collecting payment, which has nothing to do with our already-paid
+      // invoices, and which would silently remove the buyer's only link to
+      // their invoice. The PDF is not gated that way, so it is the fallback.
+      if (invoice && typeof invoice !== 'string') {
+        invoiceUrl = invoice.hosted_invoice_url ?? invoice.invoice_pdf ?? null
+      }
     } catch (error) {
       console.error('[merci] could not read the checkout session:', error)
       state = 'error'

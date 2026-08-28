@@ -274,8 +274,16 @@ is deliberately neutral: the association is not VAT-liable, but which statute
 grants that decides the exact wording, and citing the wrong article is worse
 than citing none.
 
-`/merci` also links to the hosted invoice when it has finalised, which is the
-only way to see one before going live.
+These invoices are created already paid — Stripe settles them from the Checkout
+payment, so `amount_due` is zero and the PDF reads *Paid*. The dashboard's
+invoice editor and its "Payment collection / request payment" options describe a
+different flow (billing someone who has not paid) and do not apply here.
+
+`/merci` also links to the invoice once it has finalised, which is the only way
+to see one before going live. It prefers `hosted_invoice_url` and falls back to
+`invoice_pdf`, because the hosted URL is only populated when *include a link to
+a payment page* is enabled in the invoice settings — a switch about collecting
+payment that would otherwise silently remove the buyer's link.
 
 ## Testing before launch
 
