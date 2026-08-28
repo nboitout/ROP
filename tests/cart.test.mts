@@ -130,6 +130,9 @@ const COMPLETE = {
   // Without this the return URL falls back to localhost, which is itself a
   // reported problem — so a "complete" configuration has to include it.
   NEXT_PUBLIC_SITE_URL: 'https://www.guy-boitout.com',
+  // Fulfilment needs both: one to record the order, one to deliver the link.
+  DATABASE_URL: 'postgres://user:pw@host/db',
+  RESEND_API_KEY: 're_test',
 }
 
 test('a fully configured deployment reports nothing missing', () => {
@@ -158,8 +161,9 @@ test('a restricted key is accepted, and every absent variable is named', () => {
   })
   withEnv(
     {
+      ...COMPLETE,
       STRIPE_SECRET_KEY: undefined, STRIPE_WEBHOOK_SECRET: undefined, AUTH_SECRET: undefined,
-      STRIPE_PRICE_ONLINE_BOOK: undefined, NEXT_PUBLIC_SITE_URL: 'https://www.guy-boitout.com',
+      STRIPE_PRICE_ONLINE_BOOK: undefined,
     },
     () => assert.deepEqual(missingPaymentsConfig(), [
       'STRIPE_SECRET_KEY', 'STRIPE_WEBHOOK_SECRET', 'AUTH_SECRET', 'STRIPE_PRICE_ONLINE_BOOK',
@@ -215,5 +219,18 @@ test('localhost only when nothing says otherwise, and it is reported as a proble
     const problems = missingPaymentsConfig()
     assert.equal(problems.length, 1, JSON.stringify(problems))
     assert.match(problems[0], /^NEXT_PUBLIC_SITE_URL \(/)
+  })
+})
+
+test('a payment that cannot be recorded or delivered is reported, not sold', () => {
+  withEnv({ ...COMPLETE, DATABASE_URL: undefined }, () => {
+    const problems = missingPaymentsConfig()
+    assert.equal(problems.length, 1, JSON.stringify(problems))
+    assert.match(problems[0], /^DATABASE_URL \(/)
+  })
+  withEnv({ ...COMPLETE, RESEND_API_KEY: undefined }, () => {
+    const problems = missingPaymentsConfig()
+    assert.equal(problems.length, 1, JSON.stringify(problems))
+    assert.match(problems[0], /^RESEND_API_KEY \(/)
   })
 })

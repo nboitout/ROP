@@ -117,7 +117,7 @@ export default function SalesPreviewGate({
         {unlocked && !configured && (
           <div className="preview-warning">
             <p>
-              <strong>La configuration Stripe est incomplète.</strong> Le panier reste donc fermé,
+              <strong>La configuration est incomplète.</strong> Le panier reste donc fermé,
               même avec l’aperçu actif. Corrigez ces variables d’environnement, puis redéployez :
             </p>
             <ul className="preview-missing">
@@ -126,7 +126,8 @@ export default function SalesPreviewGate({
             <p>
               Utilisez des clés Stripe de <strong>test</strong> (<code>sk_test_…</code> et un
               identifiant de tarif de test) : avec des clés réelles, la carte du relecteur est
-              réellement débitée.
+              réellement débitée. La base de données et la clé d’envoi d’e-mails sont nécessaires
+              elles aussi : sans elles le paiement aboutit, mais le lecteur n’obtient pas le livre.
             </p>
           </div>
         )}

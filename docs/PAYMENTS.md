@@ -101,6 +101,14 @@ the root layout resolves it from the request and passes it down through
 While the preview is on, a bar is pinned to the foot of every page naming the
 test card, so a test payment is never mistaken for a real one.
 
+The preview refuses to open the shop until everything a purchase needs is
+present — not just the Stripe keys, but `DATABASE_URL` and `RESEND_API_KEY`
+too. Fulfilment writes the customer, the order and the entitlement, then emails
+the access link; without those two a payment succeeds and the reader never gets
+the book. The banner names whatever is missing, and checks the shape as well as
+the presence: a bare amount where a `price_…` id belongs, or the publishable key
+in place of the secret one, are caught here rather than at Stripe.
+
 **Set test-mode Stripe keys while previewing.** The preview uses whatever keys
 the deployment has; with live keys a reviewer's card is really charged. And a
 test purchase is a real purchase everywhere else: it writes a customer, an
@@ -137,6 +145,7 @@ that trade is worth it.
 | `STRIPE_PRICE_ONLINE_BOOK` | Price id of the online book (`price_…`) — the amount lives in Stripe, never in the request |
 | `NEXT_PUBLIC_PAYMENTS_ENABLED` | Master switch. Anything but `"true"` keeps the waitlist link, shows the waitlist form on `/panier`, and makes `/api/checkout` answer 503 — except for a browser holding a sales-preview grant |
 | `SALES_PREVIEW_PASSWORD` | Password for `/apercu-ventes`. Falls back to `ADMIN_PASSWORD`; set it to share the walkthrough without the admin dashboard |
+| `NEXT_PUBLIC_SITE_URL` | Base URL for `success_url`, `cancel_url` and magic links. On Vercel it is derived from the deployment when unset, so it never falls back to localhost there |
 | `STRIPE_AUTOMATIC_TAX` | `"true"` turns on Stripe Tax. Leave it off until the dashboard has an origin address and your VAT registrations, otherwise Stripe refuses the session |
 | `AUTH_SECRET` | HMAC secret for reader sessions and magic links |
 | `DATABASE_URL` | Neon Postgres — customers, orders, entitlements, tokens |
