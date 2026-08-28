@@ -264,7 +264,14 @@ against what the code actually does, not against a template. The privacy policy
 in particular enumerates the real cookies, the real analytics payload and the
 real sub-processors — so changing `lib/readerId.ts`, `app/api/visit/route.ts`,
 `app/api/free-chapter/route.ts`, `lib/salesLog.ts`, or the services any of them
-call, means changing that page too. Neither page has placeholders left.
+call, means changing `app/confidentialite/content.ts` too. That file holds all
+six languages typed as `typeof fr`, so the compiler refuses a French-only edit.
+Neither page has placeholders left.
+
+The terms stay French-only on purpose: they are a contract, and two texts
+stating obligations can disagree. The privacy policy is an information notice
+whose purpose under art. 12.1 GDPR is to be understood, so it is translated,
+with a note on each non-French version that the French text prevails.
 
 ## Invoices
 

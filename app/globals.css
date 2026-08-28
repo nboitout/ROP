@@ -1064,6 +1064,8 @@ body:has(.sales-preview-bar) { padding-bottom:64px; }
 .legal-table th { font-family:'Cormorant Garamond',serif; font-size:.95rem; font-weight:600;
   color:var(--ink); border-bottom-color:rgba(26,26,24,.18); white-space:nowrap; }
 .legal-table td:first-child { white-space:nowrap; padding-right:22px; }
+/* Company names and record types are prose, not identifiers: they wrap. */
+.legal-table-prose td:first-child { white-space:normal; }
 .legal-table code { font-size:.85em; background:rgba(26,26,24,.05); padding:1px 5px; border-radius:3px; }
 
 /* Article 8 (rétractation) and Article 9 (garanties) are the two the reader is
