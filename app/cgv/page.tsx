@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 }
 
 /** Last substantive revision. Shown to the reader and archived with each order. */
-const VERSION_DATE = '27 août 2026'
+const VERSION_DATE = '28 août 2026'
 
 /**
  * A field only the seller can fill in — company identity, mediator, contact.
@@ -62,8 +62,9 @@ export default async function CgvPage() {
               Les présentes conditions générales de vente (les « CGV ») régissent la vente du
               livre en ligne « Réflexothérapie occipito-podale et viscères des cavités abdominale
               et pelvienne » (le « Livre en ligne ») proposé sur le site {SITE_URL} (le « Site »)
-              par le Vendeur identifié à l’article 2, à tout acheteur agissant en qualité de
-              consommateur au sens du code de la consommation (le « Client »).
+              par l’Association Française de Réflexologie (le « Vendeur »), identifiée à
+              l’article 2, à tout acheteur agissant en qualité de consommateur au sens du code de
+              la consommation (le « Client »).
             </p>
             <p>
               Toute commande passée sur le Site suppose l’acceptation préalable et expresse des
@@ -79,14 +80,20 @@ export default async function CgvPage() {
 
           <section>
             <h2>Article 2 — Identité du Vendeur</h2>
+            {/* Identity below is taken from the association's INSEE situation
+                notice and its DIRECCTE training-provider declaration, which
+                agree on the name, address and SIRET. What neither document
+                carries stays a placeholder. */}
             <ul className="legal-identity">
-              <li>Dénomination sociale : <Todo>à compléter — dénomination exacte de l’entité qui encaisse</Todo></li>
-              <li>Forme juridique : <Todo>à compléter — association loi 1901, EI, SASU…</Todo></li>
-              <li>Siège social : <Todo>à compléter — adresse postale complète</Todo></li>
-              <li>Numéro SIRET : <Todo>à compléter</Todo></li>
-              <li>Numéro de TVA intracommunautaire : <Todo>à compléter, ou mention « non assujetti à la TVA »</Todo></li>
-              <li>Numéro d’inscription au RCS ou au RNA : <Todo>à compléter</Todo></li>
-              <li>Directeur de la publication : <Todo>à compléter</Todo></li>
+              <li>Dénomination sociale : Association Française de Réflexologie</li>
+              <li>Forme juridique : association déclarée régie par la loi du 1<sup>er</sup> juillet 1901</li>
+              <li>Siège social : 17 rue du Coq, 45600 Sully-sur-Loire, France</li>
+              <li>Numéro SIREN : 428 736 342</li>
+              <li>Numéro SIRET (siège) : 428 736 342 00026</li>
+              <li>Code APE : 85.59A — Formation continue d’adultes</li>
+              <li>Numéro de TVA intracommunautaire : <Todo>à compléter après avis de l’expert-comptable, ou mention « non assujettie à la TVA »</Todo></li>
+              <li>Numéro RNA (registre national des associations) : <Todo>à compléter — numéro en W…, délivré par la préfecture</Todo></li>
+              <li>Directeur de la publication : <Todo>à compléter — le président de l’association</Todo></li>
               <li>Adresse électronique de contact : <Todo>à compléter</Todo></li>
               <li>Téléphone : <Todo>à compléter</Todo></li>
               <li>Hébergeur du Site : Vercel Inc., 440 N Barranca Ave #4133, Covina, CA 91723, États-Unis</li>
@@ -346,8 +353,9 @@ export default async function CgvPage() {
           <section>
             <h2>Article 14 — Réclamation et médiation de la consommation</h2>
             <p>
-              Toute réclamation doit être adressée au Vendeur à l’adresse électronique indiquée à
-              l’article 2. Le Vendeur s’engage à y répondre dans un délai raisonnable.
+              Toute réclamation doit être adressée au Vendeur — Association Française de
+              Réflexologie, 17 rue du Coq, 45600 Sully-sur-Loire — à l’adresse électronique
+              indiquée à l’article 2. Le Vendeur s’engage à y répondre dans un délai raisonnable.
             </p>
             <p>
               Conformément à l’article L. 612-1 du code de la consommation, le Client peut recourir
