@@ -39,12 +39,21 @@ export async function sendEmail({ to, subject, html, text }: SendEmailInput): Pr
     })
 
     if (!response.ok) {
-      console.error('[email] send failed:', response.status, (await response.text()).slice(0, 300))
+      // Name the recipient and the message. A failed access link is a buyer
+      // sitting with nothing, and without this the log said only that "an"
+      // email failed — not whose, so nobody could be told to ask again.
+      // The link itself stays out: it opens the paid book for seven days, and
+      // the reader can always request another.
+      console.error(
+        `[email] send failed for "${subject}" to ${to}:`,
+        response.status,
+        (await response.text()).slice(0, 300),
+      )
       return false
     }
     return true
   } catch (error) {
-    console.error('[email] send threw:', error)
+    console.error(`[email] send threw for "${subject}" to ${to}:`, error)
     return false
   }
 }
