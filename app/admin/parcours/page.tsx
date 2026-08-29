@@ -8,8 +8,13 @@ import { fmtDuration } from '@/lib/adminFormat'
 import { FREE_CHAPTER_KEYS } from '@/lib/access'
 import { perVisitSeconds, type LeaveLike } from '@/lib/dwell'
 import { translations } from '@/app/i18n/translations'
+import { deriveVisits } from '@/lib/visitAnalytics'
+import { buildNavigationFlow } from '@/lib/navigationFlow'
+import NavigationFlowChart from '@/components/admin/NavigationFlowChart'
 
 export const dynamic = 'force-dynamic'
+
+const START_DATE = '2026-05-25'
 
 type AccessState = 'free' | 'paid' | 'draft' | 'planned'
 
@@ -143,6 +148,15 @@ function emptyMetrics(): Metrics {
 
 function stripPath(p: string) {
   return p.replace(/^https?:\/\/[^/]+/, '') || '/'
+}
+
+function isGuyBoitoutReferer(referer: string): boolean {
+  if (!referer) return false
+  try {
+    return new URL(referer).hostname === 'www.guy-boitout.com'
+  } catch {
+    return false
+  }
 }
 
 function parseDur(data: string): number | null {
@@ -290,6 +304,18 @@ export default async function ParcoursPage({ searchParams }: Props) {
   const params = await searchParams
   const rawSelected = params.chapter ?? 'all'
   const { leads, events, visits } = await fetchAllSheets()
+  const navigationVisits = visits.filter((visit) =>
+    visit.timestamp.slice(0, 10) >= START_DATE && isGuyBoitoutReferer(visit.referer)
+  )
+  const navigationEvents = events.filter((event) =>
+    event.timestamp.slice(0, 10) >= START_DATE && isGuyBoitoutReferer(event.referer)
+  )
+  const navigationLeadEvents = leads
+    .filter((lead) => lead.timestamp.slice(0, 10) >= START_DATE && isGuyBoitoutReferer(lead.referer))
+    .map((lead) => ({ timestamp: lead.timestamp, readerId: lead.readerId, event: 'lead_submit' }))
+  const navigationFlow = buildNavigationFlow(
+    deriveVisits(navigationVisits, [...navigationEvents, ...navigationLeadEvents]),
+  )
 
   function computeChapter(
     slug: string,
@@ -469,6 +495,27 @@ export default async function ParcoursPage({ searchParams }: Props) {
           </p>
         </div>
       </div>
+
+      <section className="adm-flow-section">
+        <div className="adm-flow-head">
+          <div>
+            <p className="adm-section-title adm-section-title-first">Top navigation flows</p>
+            <p className="adm-page-sub adm-journey-intro">
+              The first four pages of each qualified visit. Reloads are collapsed; bands show how visits continue or drop off.
+            </p>
+          </div>
+          <div className="adm-flow-total">
+            <strong>{fmtCount(navigationFlow.totalVisits)}</strong>
+            <span>qualified visits</span>
+          </div>
+        </div>
+        <div className="adm-chart-card adm-flow-card">
+          <NavigationFlowChart data={navigationFlow} />
+        </div>
+        <p className="adm-page-sub adm-flow-note">
+          Uses the same 30-minute inactivity window and human-visit rule as Overview: 8+ seconds, a second page, or a meaningful interaction.
+        </p>
+      </section>
 
       <div className="adm-scorecards adm-journey-kpis">
         <Scorecard label="Free signups" value={fmtCount(freeSignupIds.size)} subtitle="registered for the 3 free chapters" />

@@ -8,6 +8,7 @@ type VisitActivityRow = {
   duration_seconds?: string
   country?: string
   lang?: string
+  page?: string
 }
 
 type InteractionRow = {
@@ -26,6 +27,7 @@ export interface DerivedVisit {
   qualified: boolean
   country: string
   lang: string
+  pageSequence: string[]
 }
 
 type Activity = {
@@ -35,6 +37,7 @@ type Activity = {
   durationSeconds: number
   country: string
   lang: string
+  page: string
 }
 
 /**
@@ -68,6 +71,7 @@ export function deriveVisits(
         durationSeconds: 0,
         country: row.country ?? '',
         lang: row.lang ?? '',
+        page: row.page ?? '',
       })
       return
     }
@@ -81,6 +85,7 @@ export function deriveVisits(
       durationSeconds,
       country: row.country ?? '',
       lang: row.lang ?? '',
+      page: row.page ?? '',
     })
   })
 
@@ -92,6 +97,7 @@ export function deriveVisits(
       durationSeconds: 0,
       country: '',
       lang: '',
+      page: '',
     })
   })
 
@@ -113,6 +119,11 @@ export function deriveVisits(
       )
       const interactions = group.filter((item) => item.kind === 'interaction').length
       const firstPageView = pageViews[0]
+      const pageSequence = pageViews.reduce<string[]>((pages, item) => {
+        if (!item.page || pages[pages.length - 1] === item.page) return pages
+        pages.push(item.page)
+        return pages
+      }, [])
       result.push({
         readerId,
         startedAt: firstPageView.timestamp,
@@ -126,6 +137,7 @@ export function deriveVisits(
           || interactions > 0,
         country: firstPageView.country,
         lang: firstPageView.lang,
+        pageSequence,
       })
       group = []
     }
