@@ -58,7 +58,7 @@ export default function CheckoutValidation() {
     return (
       <div className="cart-owned">
         <p className="cart-owned-title">{v.alreadyOwned}</p>
-        <AccessLinkForm initialEmail={email.trim()} />
+        <AccessLinkForm initialEmail={email.trim()} hideIntro />
         <div className="buy-actions">
           <Link href={localizedHref('/panier', lang)} className="btn b-out">{v.back}</Link>
         </div>

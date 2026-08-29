@@ -957,6 +957,9 @@ footer > div > p { font-size:.95rem; color:rgba(245,240,232,.84); line-height:1.
     .buy-panel { padding:32px 20px; }
     .buy-actions { align-items:stretch; }
     .buy-actions .btn { width:100%; text-align:center; }
+    /* Once the row wraps, a half-width button under a full-width field reads
+       as unfinished. Match what .buy-actions already does below it. */
+    .access-recover-form .btn { width:100%; text-align:center; }
   }
 
 /* ========== SALES PREVIEW (/apercu-ventes) ========== */
@@ -1154,9 +1157,13 @@ body:has(.sales-preview-bar) { padding-bottom:64px; }
 .cart-error { margin:20px 0 0; text-align:center; font-size:.8rem; line-height:1.5; color:#a33; }
 /* Not an error: the buyer owns the book already. Sage rather than red, because
    nothing has gone wrong — there is simply nothing left to sell them. */
-.cart-owned { max-width:560px; margin:0 auto; padding:26px 28px; border-radius:6px;
+.cart-owned { max-width:560px; margin:0 auto; padding:28px; border-radius:6px; text-align:center;
   border:1px solid rgba(74,107,90,.28); background:rgba(74,107,90,.05); }
-.cart-owned-title { margin:0 0 18px; font-size:.95rem; line-height:1.6; color:var(--ink); }
+.cart-owned-title { margin:0 0 20px; font-size:.95rem; line-height:1.65; color:var(--ink); }
+/* The recovery form carries its own separator and spacing for the bottom of
+   /merci. Inside this panel it is the content, not an afterthought. */
+.cart-owned .access-recover { margin:0; padding-top:0; border-top:none; max-width:none; }
+.cart-owned .buy-actions { margin-top:22px; }
 /* Stripe's raw message during a sales preview: monospaced and selectable,
    because it usually has to be pasted into a search or a support thread. */
 .cart-error-detail { margin:10px auto 0; max-width:560px; padding:10px 14px; text-align:left;

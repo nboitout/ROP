@@ -11,8 +11,15 @@ const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
  * `initialEmail` is for the one place that already knows it: the checkout step,
  * when the address turns out to own the book already. Retyping an address you
  * just typed is a small insult.
+ *
+ * `hideIntro` is for that same place: it has already explained why the form is
+ * there, and "Déjà acheté le livre ?" immediately under "cette adresse possède
+ * déjà le livre" is the same sentence twice.
  */
-export default function AccessLinkForm({ initialEmail = '' }: { initialEmail?: string }) {
+export default function AccessLinkForm({
+  initialEmail = '',
+  hideIntro = false,
+}: { initialEmail?: string; hideIntro?: boolean }) {
   const { t, lang } = useLanguage()
   const [email, setEmail] = useState(initialEmail)
   const [state, setState] = useState<'idle' | 'sending' | 'done' | 'invalid'>('idle')
@@ -42,8 +49,12 @@ export default function AccessLinkForm({ initialEmail = '' }: { initialEmail?: s
 
   return (
     <div className="access-recover">
-      <p className="access-recover-title">{t.checkout.recover.title}</p>
-      <p className="access-recover-body">{t.checkout.recover.body}</p>
+      {!hideIntro && (
+        <>
+          <p className="access-recover-title">{t.checkout.recover.title}</p>
+          <p className="access-recover-body">{t.checkout.recover.body}</p>
+        </>
+      )}
 
       {state === 'done' ? (
         <p className="access-recover-done">{t.checkout.recover.done}</p>
