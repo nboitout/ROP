@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict'
 import test from 'node:test'
-import { buildNavigationFlow } from '../lib/navigationFlow.ts'
-import type { DerivedVisit } from '../lib/visitAnalytics.ts'
+import { buildNavigationFlow } from '@/lib/navigationFlow'
+import type { DerivedVisit } from '@/lib/visitAnalytics'
 
 function visit(pageSequence: string[], qualified = true): DerivedVisit {
   return {
