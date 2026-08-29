@@ -22,7 +22,7 @@ export default async function AdminLayout({
             <AdminNavLink href="/admin/visits">Visits</AdminNavLink>
             <AdminNavLink href="/admin/engagement">Engagement</AdminNavLink>
             <AdminNavLink href="/admin/readers">Readers</AdminNavLink>
-            <AdminNavLink href="/admin/parcours">Journey</AdminNavLink>
+            <AdminNavLink href="/admin/parcours">Parcours</AdminNavLink>
             <AdminNavLink href="/admin/campaigns">Campaigns</AdminNavLink>
             <span className="adm-nav-sep" aria-hidden="true" />
             <AdminNavLink href="/admin/sales-plan" className="sales">Sales Plan</AdminNavLink>
