@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict'
 import test from 'node:test'
-import { deriveVisits } from '../lib/visitAnalytics.ts'
+import { deriveVisits } from '@/lib/visitAnalytics'
 
 test('merges cross-tab dwell into one reader visit within 30 minutes', () => {
   const readerId = '8846d514-d731-4977-9ffd-275bc97a06d2'
