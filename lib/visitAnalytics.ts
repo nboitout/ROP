@@ -1,5 +1,5 @@
 const DEFAULT_SESSION_GAP_MS = 30 * 60 * 1000
-const ENGAGED_DWELL_SECONDS = 10
+const MIN_HUMAN_DWELL_SECONDS = 8
 
 type VisitActivityRow = {
   timestamp: string
@@ -23,7 +23,7 @@ export interface DerivedVisit {
   pageViews: number
   dwellSeconds: number
   interactions: number
-  engaged: boolean
+  qualified: boolean
   country: string
   lang: string
 }
@@ -115,13 +115,13 @@ export function deriveVisits(
       const firstPageView = pageViews[0]
       result.push({
         readerId,
-        startedAt: group[0].timestamp,
+        startedAt: firstPageView.timestamp,
         endedAt: group[group.length - 1].timestamp,
         pageViews: pageViews.length,
         dwellSeconds,
         interactions,
-        engaged:
-          dwellSeconds >= ENGAGED_DWELL_SECONDS
+        qualified:
+          dwellSeconds >= MIN_HUMAN_DWELL_SECONDS
           || pageViews.length >= 2
           || interactions > 0,
         country: firstPageView.country,

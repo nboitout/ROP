@@ -13,7 +13,7 @@ test('merges cross-tab dwell into one reader visit within 30 minutes', () => {
   assert.equal(result.length, 1)
   assert.equal(result[0].country, 'NO')
   assert.equal(result[0].dwellSeconds, 37)
-  assert.equal(result[0].engaged, true)
+  assert.equal(result[0].qualified, true)
 })
 
 test('starts a new visit after 30 minutes of inactivity', () => {
@@ -25,8 +25,8 @@ test('starts a new visit after 30 minutes of inactivity', () => {
   ])
 
   assert.equal(result.length, 2)
-  assert.equal(result[0].engaged, true)
-  assert.equal(result[1].engaged, false)
+  assert.equal(result[0].qualified, true)
+  assert.equal(result[1].qualified, false)
 })
 
 test('a second page view or an interaction qualifies engagement', () => {
@@ -40,6 +40,21 @@ test('a second page view or an interaction qualifies engagement', () => {
     [{ timestamp: '2026-08-26T12:00:02.000Z', event: 'cta_click', readerId }],
   )
 
-  assert.equal(twoPages[0].engaged, true)
-  assert.equal(withInteraction[0].engaged, true)
+  assert.equal(twoPages[0].qualified, true)
+  assert.equal(withInteraction[0].qualified, true)
+})
+
+test('requires eight seconds when a visit has no other engagement', () => {
+  const readerId = 'reader'
+  const sevenSeconds = deriveVisits([
+    { timestamp: '2026-08-26T10:00:00.000Z', event: 'page_visit', readerId },
+    { timestamp: '2026-08-26T10:00:07.000Z', event: 'page_leave', readerId, duration_seconds: '7' },
+  ])
+  const eightSeconds = deriveVisits([
+    { timestamp: '2026-08-26T11:00:00.000Z', event: 'page_visit', readerId },
+    { timestamp: '2026-08-26T11:00:08.000Z', event: 'page_leave', readerId, duration_seconds: '8' },
+  ])
+
+  assert.equal(sevenSeconds[0].qualified, false)
+  assert.equal(eightSeconds[0].qualified, true)
 })

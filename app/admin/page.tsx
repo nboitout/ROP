@@ -72,17 +72,20 @@ export default async function AdminOverviewPage({
   const filteredEvents = events.filter((e) => parisDate(e.timestamp) >= START_DATE)
   const filteredVisits = visits.filter((v) => parisDate(v.timestamp) >= START_DATE)
 
-  // --- Unique visitors (distinct readerId in page_visit events) ---
-  const pageVisits = filteredVisits.filter((v) => v.event === 'page_visit')
+  // --- Human-qualified visits --------------------------------------------
+  // A visit qualifies with at least 8 seconds of active dwell, a second page
+  // view, or a meaningful interaction. Raw observations remain available in
+  // the Visits inspector but do not enter the human-facing overview metrics.
   const liveSiteVisits = filteredVisits.filter((v) => isGuyBoitoutReferer(v.referer))
-  const liveSitePageVisits = liveSiteVisits.filter((v) => v.event === 'page_visit')
-  const uniqueVisitorSet = new Set(pageVisits.map((v) => v.readerId).filter(Boolean))
-  const uniqueVisitors = uniqueVisitorSet.size
   const liveSiteEvents = filteredEvents.filter((e) => isGuyBoitoutReferer(e.referer))
-  const derivedVisits = deriveVisits(liveSiteVisits, liveSiteEvents)
-  const totalVisits = derivedVisits.length
-  const engagedVisits = derivedVisits.filter((visit) => visit.engaged).length
-  const engagementRate = totalVisits > 0 ? (engagedVisits / totalVisits) * 100 : 0
+  const leadInteractions = filteredLeads
+    .filter((lead) => isGuyBoitoutReferer(lead.referer))
+    .map((lead) => ({ timestamp: lead.timestamp, readerId: lead.readerId, event: 'lead_submit' }))
+  const observedVisits = deriveVisits(liveSiteVisits, [...liveSiteEvents, ...leadInteractions])
+  const qualifiedVisits = observedVisits.filter((visit) => visit.qualified)
+  const filteredShortVisits = observedVisits.length - qualifiedVisits.length
+  const uniqueVisitors = new Set(qualifiedVisits.map((visit) => visit.readerId)).size
+  const totalVisits = qualifiedVisits.length
 
   // --- Total readers (distinct emails — each person may submit multiple forms) ---
   const totalLeads = new Set(filteredLeads.map((l) => l.email.toLowerCase()).filter(Boolean)).size
@@ -92,10 +95,9 @@ export default async function AdminOverviewPage({
 
   // --- Return visitor rate: % of distinct visitors seen on more than one distinct date ---
   const visitorDates = new Map<string, Set<string>>()
-  pageVisits.forEach((v) => {
-    if (!v.readerId) return
-    if (!visitorDates.has(v.readerId)) visitorDates.set(v.readerId, new Set())
-    visitorDates.get(v.readerId)!.add(v.timestamp.slice(0, 10))
+  qualifiedVisits.forEach((visit) => {
+    if (!visitorDates.has(visit.readerId)) visitorDates.set(visit.readerId, new Set())
+    visitorDates.get(visit.readerId)!.add(parisDate(visit.startedAt))
   })
   const totalVisitors = visitorDates.size
   const returningVisitors = [...visitorDates.values()].filter((dates) => dates.size > 1).length
@@ -114,10 +116,10 @@ export default async function AdminOverviewPage({
   // Count distinct reader_ids per bucket (not raw page_visit events), so reloads
   // and returns within a bucket don't inflate the numbers.
   const countryVisitors = new Map<string, Set<string>>()
-  liveSitePageVisits.forEach((v) => {
-    const c = countryLabel(v.country || 'Unknown')
+  qualifiedVisits.forEach((visit) => {
+    const c = countryLabel(visit.country || 'Unknown')
     if (!countryVisitors.has(c)) countryVisitors.set(c, new Set())
-    if (v.readerId) countryVisitors.get(c)!.add(v.readerId)
+    countryVisitors.get(c)!.add(visit.readerId)
   })
   const topCountries = [...countryVisitors.entries()]
     .sort((a, b) => b[1].size - a[1].size)
@@ -128,14 +130,14 @@ export default async function AdminOverviewPage({
 
   // distinct reader_ids per (date, country bucket)
   const perDate = new Map<string, Map<string, Set<string>>>()
-  liveSitePageVisits.forEach((v) => {
-    const date = parisDate(v.timestamp)
-    const c = countryLabel(v.country || 'Unknown')
+  qualifiedVisits.forEach((visit) => {
+    const date = parisDate(visit.startedAt)
+    const c = countryLabel(visit.country || 'Unknown')
     const key = topCountrySet.has(c) ? c : 'Other'
     if (!perDate.has(date)) perDate.set(date, new Map())
     const m = perDate.get(date)!
     if (!m.has(key)) m.set(key, new Set())
-    if (v.readerId) m.get(key)!.add(v.readerId)
+    m.get(key)!.add(visit.readerId)
   })
 
   // Axis: one entry per Paris calendar date from launch to today.
@@ -155,25 +157,25 @@ export default async function AdminOverviewPage({
   }
 
   // --- Pie chart: visitors by language ---
-  const langCount = new Map<string, number>()
-  liveSitePageVisits.forEach((v) => {
-    const l = v.lang || 'Unknown'
-    langCount.set(l, (langCount.get(l) ?? 0) + 1)
+  const langVisitors = new Map<string, Set<string>>()
+  qualifiedVisits.forEach((visit) => {
+    const lang = visit.lang || 'Unknown'
+    if (!langVisitors.has(lang)) langVisitors.set(lang, new Set())
+    langVisitors.get(lang)!.add(visit.readerId)
   })
-  const langData: PieDataPoint[] = [...langCount.entries()]
-    .sort((a, b) => b[1] - a[1])
-    .map(([name, value]) => ({ name, value }))
+  const langData: PieDataPoint[] = [...langVisitors.entries()]
+    .sort((a, b) => b[1].size - a[1].size)
+    .map(([name, readers]) => ({ name, value: readers.size }))
 
   // --- All-time unique visitors by country (every date; exclusions + bot filter
   // already applied in fetchAllSheets, so this omits the owner's own visits and
   // bots). Distinct reader_ids per country, not raw page_visit events. ---
   const allTimeCountry = new Map<string, Set<string>>()
-  liveSiteVisits
-    .filter((v) => v.event === 'page_visit')
-    .forEach((v) => {
-      const c = countryLabel(v.country || 'Unknown')
+  qualifiedVisits
+    .forEach((visit) => {
+      const c = countryLabel(visit.country || 'Unknown')
       if (!allTimeCountry.has(c)) allTimeCountry.set(c, new Set())
-      if (v.readerId) allTimeCountry.get(c)!.add(v.readerId)
+      allTimeCountry.get(c)!.add(visit.readerId)
     })
   const countryRows = [...allTimeCountry.entries()]
     .map(([country, set]) => ({ country, count: set.size }))
@@ -184,16 +186,16 @@ export default async function AdminOverviewPage({
   const todayParisDay = parisDate(new Date())
   const selectedDay = day && /^\d{4}-\d{2}-\d{2}$/.test(day) ? day : todayParisDay
   // Days offered in the picker: today + every day that has visit data, newest first
-  const dayOptions = [...new Set([todayParisDay, ...liveSitePageVisits.map((v) => parisDate(v.timestamp))])]
+  const dayOptions = [...new Set([todayParisDay, ...qualifiedVisits.map((visit) => parisDate(visit.startedAt))])]
     .sort((a, b) => (a < b ? 1 : -1))
-  const dayVisits = liveSitePageVisits.filter((v) => parisDate(v.timestamp) === selectedDay)
-  const dayVisitorCount = new Set(dayVisits.map((v) => v.readerId).filter(Boolean)).size
+  const dayVisits = qualifiedVisits.filter((visit) => parisDate(visit.startedAt) === selectedDay)
+  const dayVisitorCount = new Set(dayVisits.map((visit) => visit.readerId)).size
   // rank that day's countries by distinct visitors
   const dayCountryVisitors = new Map<string, Set<string>>()
-  dayVisits.forEach((v) => {
-    const c = countryLabel(v.country || 'Unknown')
+  dayVisits.forEach((visit) => {
+    const c = countryLabel(visit.country || 'Unknown')
     if (!dayCountryVisitors.has(c)) dayCountryVisitors.set(c, new Set())
-    if (v.readerId) dayCountryVisitors.get(c)!.add(v.readerId)
+    dayCountryVisitors.get(c)!.add(visit.readerId)
   })
   const dayTopCountries = [...dayCountryVisitors.entries()]
     .sort((a, b) => b[1].size - a[1].size)
@@ -203,14 +205,14 @@ export default async function AdminOverviewPage({
   const intradayCountries = [...dayTopCountries, 'Other']
   // distinct reader_ids per (hour, country bucket) — hour in Paris time
   const hourSets: Map<string, Set<string>>[] = Array.from({ length: 24 }, () => new Map())
-  dayVisits.forEach((v) => {
-    const hour = parisHour(v.timestamp)
+  dayVisits.forEach((visit) => {
+    const hour = parisHour(visit.startedAt)
     if (isNaN(hour) || hour < 0 || hour > 23) return
-    const c = countryLabel(v.country || 'Unknown')
+    const c = countryLabel(visit.country || 'Unknown')
     const key = dayTopSet.has(c) ? c : 'Other'
     const m = hourSets[hour]
     if (!m.has(key)) m.set(key, new Set())
-    if (v.readerId) m.get(key)!.add(v.readerId)
+    m.get(key)!.add(visit.readerId)
   })
   const intradayData: StackedTimePoint[] = []
   for (let h = 0; h < 24; h++) {
@@ -254,7 +256,7 @@ export default async function AdminOverviewPage({
       <div className="adm-scorecards">
         <Scorecard label="Unique Visitors" value={uniqueVisitors.toLocaleString()} />
         <Scorecard label="Total Visits" value={totalVisits.toLocaleString()} subtitle="30-minute inactivity window" />
-        <Scorecard label="Engaged Visits" value={engagedVisits.toLocaleString()} subtitle={`${formatPct(engagementRate)} of visits`} />
+        <Scorecard label="Filtered Visits" value={filteredShortVisits.toLocaleString()} subtitle="&lt;8s, one page, no interaction" />
         <Scorecard label="Total Readers" value={totalLeads.toLocaleString()} />
         <Scorecard label="Conversion Rate" value={formatPct(convRate)} subtitle="became a registered reader" />
         <Scorecard label="Return Visitor Rate" value={formatPct(returnRate)} subtitle="came back on a later day" />
