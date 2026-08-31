@@ -2256,6 +2256,23 @@
   padding-left: 3px;
 }
 
+.adm-version-cell {
+  display: grid;
+  justify-items: start;
+  gap: 4px;
+}
+
+.adm-version-date {
+  color: var(--adm-i30);
+  font-size: .66rem;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.adm-version-date-missing {
+  font-style: italic;
+}
+
 .adm-row-badge {
   display: inline-block;
   font-size: .58rem;

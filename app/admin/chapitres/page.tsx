@@ -10,6 +10,7 @@ import ChapterTextAnalyticsChart, { type ChapterTextAnalyticsRow } from '@/compo
 import RecalculateStatsButton from '@/components/admin/RecalculateStatsButton'
 import { chapterKeyFromHref } from '@/lib/access'
 import { chapterQualityMetrics, type ChapterQualityMetrics } from '@/lib/chapterStats'
+import { getChapterSourceModifiedAt } from '@/lib/chapterSourceDocuments'
 import type { Block } from '@/content/types'
 
 export const metadata: Metadata = { title: 'Chapters · Admin R.O.P.' }
@@ -117,6 +118,9 @@ function buildChapterStatsSnapshot(): ChapterStatsSnapshot {
     const de: LangStatus = route ? (langs.includes('de') ? 'live' : 'fallback') : 'none'
     const es: LangStatus = route ? (langs.includes('es') ? 'live' : 'fallback') : 'none'
     const it: LangStatus = route ? (langs.includes('it') ? 'live' : 'fallback') : 'none'
+    const sourceModifiedAt = (lang: Lang) => route && langs.includes(lang)
+      ? getChapterSourceModifiedAt(route.key, lang)
+      : null
     return {
       num: card.num,
       title: card.title,
@@ -131,6 +135,11 @@ function buildChapterStatsSnapshot(): ChapterStatsSnapshot {
       de,
       es,
       it,
+      frSourceModifiedAt: sourceModifiedAt('fr'),
+      enSourceModifiedAt: sourceModifiedAt('en'),
+      deSourceModifiedAt: sourceModifiedAt('de'),
+      esSourceModifiedAt: sourceModifiedAt('es'),
+      itSourceModifiedAt: sourceModifiedAt('it'),
     }
   })
 

@@ -18,6 +18,11 @@ export type BoardRow = {
   de: LangStatus
   es: LangStatus
   it: LangStatus
+  frSourceModifiedAt: string | null
+  enSourceModifiedAt: string | null
+  deSourceModifiedAt: string | null
+  esSourceModifiedAt: string | null
+  itSourceModifiedAt: string | null
 }
 
 type Part = { id: string; title: string }
@@ -28,7 +33,16 @@ const STATUS_LABEL: Record<LangStatus, string> = {
   none: '-',
 }
 
-function LangCell({ href, status }: { href: string | null; status: LangStatus }) {
+function formatSourceModifiedAt(value: string): string {
+  return new Intl.DateTimeFormat('en-GB', {
+    day: '2-digit',
+    month: 'short',
+    year: 'numeric',
+    timeZone: 'Europe/Paris',
+  }).format(new Date(value))
+}
+
+function LangCell({ href, status, sourceModifiedAt }: { href: string | null; status: LangStatus; sourceModifiedAt: string | null }) {
   if (status === 'none' || !href) {
     return <span className="adm-chip none">{STATUS_LABEL.none}</span>
   }
@@ -36,9 +50,14 @@ function LangCell({ href, status }: { href: string | null; status: LangStatus })
     return <span className="adm-chip fallback">{STATUS_LABEL.fallback}</span>
   }
   return (
-    <a className={`adm-chip ${status}`} href={href} target="_blank" rel="noopener noreferrer">
-      {STATUS_LABEL[status]} -&gt;
-    </a>
+    <div className="adm-version-cell">
+      <a className={`adm-chip ${status}`} href={href} target="_blank" rel="noopener noreferrer">
+        {STATUS_LABEL[status]} -&gt;
+      </a>
+      {sourceModifiedAt
+        ? <span className="adm-version-date">Word: {formatSourceModifiedAt(sourceModifiedAt)}</span>
+        : <span className="adm-version-date adm-version-date-missing">No Word source</span>}
+    </div>
   )
 }
 
@@ -90,11 +109,11 @@ export default function ChapterBoard({ parts, rows }: { parts: Part[]; rows: Boa
                   {r.free && <span className="adm-row-badge free">Free access</span>}
                 </td>
                 <td className="muted">{r.partTitle}</td>
-                <td><LangCell href={r.href ? `${r.href}?lang=fr` : null} status={r.fr} /></td>
-                <td><LangCell href={r.href ? `${r.href}?lang=en` : null} status={r.en} /></td>
-                <td><LangCell href={r.href ? `${r.href}?lang=de` : null} status={r.de} /></td>
-                <td><LangCell href={r.href ? `${r.href}?lang=es` : null} status={r.es} /></td>
-                <td><LangCell href={r.href ? `${r.href}?lang=it` : null} status={r.it} /></td>
+                <td><LangCell href={r.href ? `${r.href}?lang=fr` : null} status={r.fr} sourceModifiedAt={r.frSourceModifiedAt} /></td>
+                <td><LangCell href={r.href ? `${r.href}?lang=en` : null} status={r.en} sourceModifiedAt={r.enSourceModifiedAt} /></td>
+                <td><LangCell href={r.href ? `${r.href}?lang=de` : null} status={r.de} sourceModifiedAt={r.deSourceModifiedAt} /></td>
+                <td><LangCell href={r.href ? `${r.href}?lang=es` : null} status={r.es} sourceModifiedAt={r.esSourceModifiedAt} /></td>
+                <td><LangCell href={r.href ? `${r.href}?lang=it` : null} status={r.it} sourceModifiedAt={r.itSourceModifiedAt} /></td>
               </tr>
             ))}
           </tbody>
