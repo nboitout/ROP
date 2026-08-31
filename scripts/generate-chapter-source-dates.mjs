@@ -1,5 +1,6 @@
 import { statSync, writeFileSync } from 'node:fs'
 import { join } from 'node:path'
+import { execFileSync } from 'node:child_process'
 
 const sourceDocuments = {
   introduction: { fr: 'chapter-0/Chapitre_0_Introduction_ROP (3).docx', en: 'chapter-0/EN/Chapter_0_Introduction_ROP_EN_Final_Publishable (1) (1).docx', de: 'chapter-0/Chapter0 Introduction DE.docx', es: 'chapter-0/Chapter0 Introduction ES.docx', it: 'chapter-0/Chapter0 Introduction IT.docx' },
@@ -27,7 +28,13 @@ const sourceDocuments = {
 }
 
 const dates = Object.fromEntries(Object.entries(sourceDocuments).map(([chapter, languages]) => [chapter, Object.fromEntries(Object.entries(languages).flatMap(([language, source]) => {
-  try { return [[language, statSync(join(process.cwd(), 'public', source)).mtime.toISOString()]] } catch { return [] }
+  try {
+    statSync(join(process.cwd(), 'public', source))
+    const updatedAt = execFileSync('git', ['log', '-1', '--format=%cI', '--', `public/${source}`], { encoding: 'utf8' }).trim()
+    return updatedAt ? [[language, updatedAt]] : []
+  } catch {
+    return []
+  }
 }))]))
 
 const output = `import type { Lang } from '@/app/i18n/translations'\n\n// Generated during the build from the source Word documents.\nexport const chapterSourceModifiedAt: Record<string, Partial<Record<Lang, string>>> = ${JSON.stringify(dates, null, 2)}\n`

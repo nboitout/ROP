@@ -55,7 +55,7 @@ function LangCell({ href, status, sourceModifiedAt }: { href: string | null; sta
         {STATUS_LABEL[status]} -&gt;
       </a>
       {sourceModifiedAt
-        ? <span className="adm-version-date">Word: {formatSourceModifiedAt(sourceModifiedAt)}</span>
+        ? <span className="adm-version-date">Updated: {formatSourceModifiedAt(sourceModifiedAt)}</span>
         : <span className="adm-version-date adm-version-date-missing">No Word source</span>}
     </div>
   )
