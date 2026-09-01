@@ -42,7 +42,7 @@ function formatSourceModifiedAt(value: string): string {
     minute: '2-digit',
     second: '2-digit',
     hourCycle: 'h23',
-    timeZone: 'Europe/Bucharest',
+    timeZone: 'UTC',
   }).formatToParts(new Date(value))
   const byType = Object.fromEntries(parts.map(({ type, value: part }) => [type, part]))
 
