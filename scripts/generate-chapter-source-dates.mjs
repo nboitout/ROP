@@ -15,7 +15,7 @@ const sourceDocuments = {
   'chapter-8': { fr: 'chapter-8/Chapitre_8_Diaphragme_version_revisee_protocole_ROP.docx', en: 'chapter-8/EN/Chapter_8_Diaphragm_ROP_Medical_English_Revised.docx' },
   'chapter-9': { fr: 'chapter-9/Chapitre_9_Estomac_version_finale_publiable.docx', en: 'chapter-9/EN/Chapter_9_Stomach_medical_English_revised_EN.docx' },
   'chapter-10': { fr: 'chapter-10/Chapitre_10_Duodenum_version_finale_publiable.docx', en: 'chapter-10/EN/Chapter_10_Duodenum_ROP_Medical_English.docx' },
-  'chapter-11': { fr: 'chapter-11/Chapitre_11_Foie_et_voies_biliaires_version_publiable_finale.docx', en: 'chapter-11/EN/Chapter_11_Liver_and_Biliary_Tract_full_medical_English.docx' },
+  'chapter-11': { fr: 'chapter-11/Chapitre_11_Foie_et_voies_biliaires_version_finale_revisee.docx', en: 'chapter-11/EN/Chapter_11_Liver_and_Biliary_Tract_full_medical_English.docx' },
   'chapter-12': { fr: 'chapter-12/Chapitre_12_Pancreas_version_finale_publiable.docx', en: 'chapter-12/EN/Chapter_12_Pancreas_Medical_English_Revised.docx' },
   'chapter-13': { fr: 'chapter-13/Chapitre_13_Rate_version_publiable_A_master_Niveaux_3_4_B.docx', en: 'chapter-13/EN/Chapter_13_Spleen_Medical_English_Revised.docx' },
   'chapter-14': { de: 'chapter-14/DE/Kapitel_14_Duenndarm_ROP_Medizinisches_Deutsch.docx' },

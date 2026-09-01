@@ -1,4 +1,4 @@
-// Source: public/chapter-11/Chapitre_11_Foie_et_voies_biliaires_version_publiable_finale.docx
+// Source: public/chapter-11/Chapitre_11_Foie_et_voies_biliaires_version_finale_revisee.docx
 import type { Chapter } from './types'
 
 export const chapter11Fr: Chapter = {
@@ -199,7 +199,7 @@ export const chapter11Fr: Chapter = {
     },
     {
       "id": "interet-en-rop-2",
-      "title": "3.2–3.3. Effet turgor et faces du foie",
+      "title": "3.2–3.4. Effet turgor, faces du foie et voies biliaires",
       "blocks": [
         {
           "type": "rop",
@@ -1479,30 +1479,36 @@ for (const section of chapter11Fr.sections) {
 const chapter11Segmentation = chapter11Fr.sections.find((section) => section.id === 'interet-en-rop-6')
 if (chapter11Segmentation) chapter11Segmentation.blocks = [
   { type: 'para', text: 'Dans notre pratique de la ROP, nous pouvons différencier le foie en quatre segments selon les troubles fonctionnels (figure 11.9).' },
-  { type: 'sub', text: '6.3.1. Zone 1 : vésicule et voies biliaires' },
+  { type: 'sub', text: 'Zone 1 : vésicule et voies biliaires' },
   { type: 'para', text: 'La sensibilité du cartilage de la 9ème côte peut orienter cliniquement vers un trouble vésiculaire, notamment dans un contexte d’hygiène alimentaire défavorable, d’excès de cholestérol ou de triglycérides.' },
   { type: 'para', text: 'La viscosité de la bile peut varier selon le contexte hormonal, notamment au cours du cycle menstruel.' },
   { type: 'para', text: 'Dans le cadre ROP, cette zone est associée à des douleurs cervicales gauches C4-C5, puis droites si le trouble devient chronique.' },
-  { type: 'sub', text: '6.3.2. Zone 2 : foie métabolique' },
+  { type: 'sub', text: 'Zone 2 : foie métabolique' },
   { type: 'para', text: 'La partie épigastrique du foie est rattachée, dans ce modèle, à des troubles métaboliques : difficulté d’élimination, avitaminose, états inflammatoires divers, douleurs cervico-dorsales et troubles cutanés tels que prurit, acné, ictère ou peau grasse.' },
   { type: 'para', text: 'Le foie est hormono-dépendant au sens fonctionnel.' },
   { type: 'para', text: 'Un excès d’œstrogènes peut s’accompagner d’une moindre fluidité biliaire et d’une moindre aisance d’excrétion hépatobiliaire.' },
   { type: 'para', text: 'Cela peut contribuer, parmi d’autres facteurs, aux nausées ou vomissements pendant la grossesse.' },
   { type: 'para', text: 'Les contraceptifs oraux peuvent s’accompagner d’effets indésirables hépato-biliaires chez certaines patientes.' },
   { type: 'para', text: 'L’excès de protéines et de graisses peut être mal toléré par les personnes cliniquement sensibles sur le plan hépatique.' },
-  { type: 'sub', text: '6.3.3. Zone 3 : foie infectieux et immunitaire' },
+  { type: 'sub', text: 'Zone 3 : foie infectieux et immunitaire' },
   { type: 'para', text: 'La partie droite du lobe droit est considérée, dans cette lecture clinique, comme plus souvent concernée lors d’atteintes infectieuses du foie, notamment les hépatites.' },
   { type: 'para', text: 'Le foie participe à la réponse immunitaire et à l’épuration de certaines charges circulantes.' },
   { type: 'para', text: 'Après une gastro-entérite, une fatigue persistante peut être interprétée, dans ce modèle, comme le reflet d’une surcharge d’épuration.' },
-  { type: 'sub', text: '6.3.4. Zone 4 : foie mécanique' },
+  { type: 'sub', text: 'Zone 4 : foie mécanique' },
   { type: 'para', text: 'Le lobe gauche et le ligament triangulaire gauche sont décrits comme plus fréquemment concernés par certains traumatismes, les forces collisionnelles pouvant se transmettre préférentiellement vers cette zone, ainsi que vers la rate et le rein gauche.' },
   { type: 'para', text: 'Dans le cadre ROP, cette zone est aussi associée à des douleurs costo-vertébrales Th7, Th8, Th9 et à une sciatalgie droite.' },
 ]
 
 const chapter11Emotion = chapter11Fr.sections.find((section) => section.id === 'relations-viscero-emotionnelles')
 if (chapter11Emotion) chapter11Emotion.blocks = [
-  { type: 'para', text: 'Foie. Dans le référentiel viscéro-émotionnel de la ROP, le foie est associé aux stress profonds qui touchent l’identité, le rapport à soi et le sens donné à sa vie. Il est traditionnellement décrit comme un organe plutôt féminin, en relation avec la colère profonde, le ressentiment, certaines culpabilités familiales et une tendance à ressasser le passé. La personne dite « foie » peut être décrite comme sensible, facilement déstabilisée par les conflits, le doute ou l’insécurité, avec une tendance au pessimisme et à l’épuisement physique et psychique. À l’inverse, un meilleur équilibre est associé, dans cette lecture clinique, à davantage de calme, de recul et de capacité à intégrer les émotions. Certaines manifestations anxieuses ou phobiques peuvent également être prises en compte dans cette approche, sans qu’une relation causale directe avec le foie puisse être affirmée. Certains antidépresseurs peuvent par ailleurs, selon la molécule et le contexte, entraîner des effets indésirables hépatiques.' },
-  { type: 'para', text: 'Vésicule biliaire. Elle est traditionnellement associée aux contrariétés, aux frustrations répétées et aux insatisfactions du quotidien. La personne dite « vésicule » est décrite comme hypersensible, facilement préoccupée ou contrariée, attachée à ses repères, à ses habitudes et à une certaine stabilité. Dans cette lecture, l’anxiété et l’activation sympathique peuvent accompagner des tensions fonctionnelles de la sphère biliaire.' },
+  { type: 'para', text: 'Foie. Dans le référentiel viscéro-émotionnel de la ROP, le foie est traditionnellement associé aux stress profonds qui touchent l’identité, le rapport à soi et le sens donné à la vie. Un événement grave peut, dans cette lecture, modifier la vision de l’existence et confronter la personne à elle-même.' },
+  { type: 'para', text: 'Il est également présenté comme un organe plutôt féminin, associé à une colère profonde dirigée vers soi-même ou vers les autres, au ressentiment, à certaines culpabilités familiales et à une tendance à ressasser les échecs du passé. La personne dite « foie » peut alors douter, perdre confiance en l’avenir et adopter une vision plus pessimiste des événements.' },
+  { type: 'para', text: 'D’une grande sensibilité, elle peut réagir vivement aux remarques, aux conflits ou aux situations vécues dans la peur et l’insécurité. Certaines manifestations anxieuses ou phobiques peuvent aussi être prises en compte dans cette lecture clinique, sans qu’une relation causale directe avec le foie puisse être affirmée.' },
+  { type: 'para', text: 'Un foie ressenti comme congestionné est traditionnellement rapproché d’un épuisement physique et psychique, d’une fatigue présente dès le réveil, d’une diminution de l’élan créatif et d’un sentiment de découragement. À l’inverse, un meilleur équilibre est associé au calme, à la sérénité, au recul et à une meilleure capacité d’intégration des émotions.' },
+  { type: 'para', text: 'À noter : certains antidépresseurs peuvent, selon la molécule, la dose, la durée du traitement et le contexte individuel, entraîner des effets indésirables hépatiques.' },
+  { type: 'para', text: 'Vésicule biliaire. Dans ce même référentiel, la vésicule biliaire est traditionnellement associée aux contrariétés, aux frustrations répétées et aux insatisfactions de la vie quotidienne.' },
+  { type: 'para', text: 'La personne dite « vésicule » est décrite comme facilement préoccupée par les questions matérielles, hypersensible aux remarques et attachée à ses repères, à ses habitudes et à une certaine stabilité. Elle peut vivre difficilement les changements, les départs, les séparations ou les conflits, même mineurs.' },
+  { type: 'para', text: 'Dans cette lecture, le souci permanent, l’anxiété et l’activation sympathique peuvent accompagner des tensions fonctionnelles de la sphère biliaire. Ce profil est aussi traditionnellement décrit comme susceptible, ponctuel, cyclothymique ou jaloux.' },
 ]
 
 chapter11Reflex.blocks = [
@@ -1537,16 +1543,11 @@ chapter11Reflex.blocks = [
   { type: 'xref', label: 'Voir le chapitre 7 — Socle régional abdominal et péritonéal', href: '/lecture/chapitre-7?lang=fr' },
   { type: 'xref', label: 'Voir le chapitre 10 — Duodénum', href: '/lecture/chapitre-10?lang=fr' },
   { type: 'sub', text: '14.4. Niveau 4 — Intégration viscéro-somatique et Balance cerveau limbique-foie/vésicule biliaire' },
-  { type: 'para', text: 'Versant viscéro-somatique. La lecture peut intégrer Th7-Th9, les 7e à 9e côtes, le nerf phrénique C3-C5, les territoires cervicaux et cervico-brachiaux associés, l’épaule droite, le diaphragme et la région thoracique inférieure droite. Pour la sphère hépatobiliaire, les projections phréniques sont décrites surtout à droite ; on évite une latéralisation trop catégorique.' },
+  { type: 'para', text: 'Intégration viscéro-somatique. La lecture peut intégrer Th7-Th9, les 7e à 9e côtes, le nerf phrénique C3-C5, les territoires cervicaux et cervico-brachiaux associés, l’épaule droite, le diaphragme et la région thoracique inférieure droite. Pour la sphère hépatobiliaire, les projections phréniques sont décrites surtout à droite.' },
   { type: 'figure', src: '/chapter-11/cartographie/figure-11-18.png', caption: 'Photo : Nerf phrénique C3-C4-C5', alt: 'Repère podal du nerf phrénique C3 C4 C5', orientation: 'landscape' },
   { type: 'figure', src: '/chapter-11/cartographie/figure-11-20.png', caption: 'Photo : Nerf phrénique — triangle de Sédillot', alt: 'Repère podal du nerf phrénique dans le triangle de Sédillot', orientation: 'landscape' },
-  { type: 'para', text: 'Balance cerveau limbique-foie/vésicule biliaire : pouce sur la zone foie/vésicule biliaire et l’autre sur la zone du cerveau limbique.' },
+  { type: 'para', text: 'Balance cerveau limbique-foie/vésicule biliaire. Dans le vocabulaire propre à la ROP, l’écoute-induction associe un pouce sur la zone foie/vésicule biliaire et l’autre sur la zone du cerveau limbique.' },
   { type: 'figure', src: '/chapter-11/cartographie/figure-11-22.png', caption: 'Photo : Balance cerveau limbique — foie/vésicule biliaire', alt: 'Technique balance cerveau limbique foie-vésicule biliaire', orientation: 'portrait' },
   { type: 'xref', label: 'Voir le chapitre 3 — Système nerveux central', href: '/lecture/chapitre-3?lang=fr' },
   { type: 'xref', label: 'Voir le chapitre 5 — Mécanisme de stress', href: '/lecture/chapitre-5?lang=fr' },
-  { type: 'sub', text: '14.5. Soutiens associés selon les tests' },
-  { type: 'bullets', items: ['Diaphragme : interface majeure.', 'Duodénum et sphincter d’Oddi : voies biliaires.', 'Pancréas : carrefour hépato-pancréatico-duodénal.', 'Estomac : petit omentum et lobe gauche.', 'Côlon droit : angle hépatique.', 'Rein droit : ligament hépato-rénal.', 'Intestin : système porte.', 'Rate : circulation porte selon le contexte.'] },
-  { type: 'sub', text: '14.6. Lecture clinique' },
-  { type: 'bullets', items: ['Digestion lente ou inconfort biliaire fonctionnel : Niveau 2 + foie/vésicule/voies biliaires au Niveau 3 + duodénum et sphincter d’Oddi selon les tests.', 'Contexte métabolique ou hormonal : foie au Niveau 3 + Niveau 2 + Niveau 1 si le contexte général le justifie.', 'Séquelles anciennes d’un traumatisme abdominal après exclusion médicale : foie + ligaments/diaphragme au Niveau 3 + côtes et charnière thoracique au Niveau 4.', 'Douleur scapulaire droite associée à un contexte digestif, après exclusion médicale : foie/vésicule + diaphragme + nerf phrénique au Niveau 4.'] },
-  { type: 'note', label: 'Principe de sécurité', body: ['Ictère, douleur aiguë de l’hypochondre droit, fièvre, vomissements persistants, urines très foncées, selles décolorées, amaigrissement ou altération de l’état général nécessitent une évaluation médicale.'] },
 ]
