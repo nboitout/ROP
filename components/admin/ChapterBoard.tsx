@@ -34,12 +34,19 @@ const STATUS_LABEL: Record<LangStatus, string> = {
 }
 
 function formatSourceModifiedAt(value: string): string {
-  return new Intl.DateTimeFormat('en-GB', {
-    day: '2-digit',
-    month: 'short',
+  const parts = new Intl.DateTimeFormat('en-GB', {
     year: 'numeric',
-    timeZone: 'Europe/Paris',
-  }).format(new Date(value))
+    month: '2-digit',
+    day: '2-digit',
+    hour: '2-digit',
+    minute: '2-digit',
+    second: '2-digit',
+    hourCycle: 'h23',
+    timeZone: 'Europe/Bucharest',
+  }).formatToParts(new Date(value))
+  const byType = Object.fromEntries(parts.map(({ type, value: part }) => [type, part]))
+
+  return `${byType.year}-${byType.month}-${byType.day} ${byType.hour}:${byType.minute}:${byType.second}`
 }
 
 function LangCell({ href, status, sourceModifiedAt }: { href: string | null; status: LangStatus; sourceModifiedAt: string | null }) {
@@ -55,7 +62,7 @@ function LangCell({ href, status, sourceModifiedAt }: { href: string | null; sta
         {STATUS_LABEL[status]} -&gt;
       </a>
       {sourceModifiedAt
-        ? <span className="adm-version-date">Word modified: {formatSourceModifiedAt(sourceModifiedAt)}</span>
+        ? <span className="adm-version-date">{formatSourceModifiedAt(sourceModifiedAt)}</span>
         : <span className="adm-version-date adm-version-date-missing">No Word source</span>}
     </div>
   )
