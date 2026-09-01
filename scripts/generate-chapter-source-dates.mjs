@@ -1,17 +1,7 @@
-import { readFileSync, writeFileSync } from 'node:fs'
+import { statSync, writeFileSync } from 'node:fs'
 import { join } from 'node:path'
-import AdmZip from 'adm-zip'
 
 const sourceRoot = process.env.CHAPTER_SOURCE_ROOT ?? process.cwd()
-
-function readWordModifiedAt(path) {
-  const coreProperties = new AdmZip(readFileSync(path)).readAsText('docProps/core.xml')
-  const match = coreProperties.match(/<dcterms:modified(?:\s[^>]*)?>([^<]+)<\/dcterms:modified>/)
-  const modifiedAt = match?.[1]?.trim()
-
-  if (!modifiedAt || Number.isNaN(new Date(modifiedAt).getTime())) return null
-  return new Date(modifiedAt).toISOString()
-}
 
 const sourceDocuments = {
   introduction: { fr: 'chapter-0/Chapitre_0_Introduction_ROP (3).docx', en: 'chapter-0/EN/Chapter_0_Introduction_ROP_EN_Final_Publishable (1) (1).docx', de: 'chapter-0/Chapter0 Introduction DE.docx', es: 'chapter-0/Chapter0 Introduction ES.docx', it: 'chapter-0/Chapter0 Introduction IT.docx' },
@@ -40,12 +30,11 @@ const sourceDocuments = {
 
 const dates = Object.fromEntries(Object.entries(sourceDocuments).map(([chapter, languages]) => [chapter, Object.fromEntries(Object.entries(languages).flatMap(([language, source]) => {
   try {
-    const modifiedAt = readWordModifiedAt(join(sourceRoot, 'public', source))
-    return modifiedAt ? [[language, modifiedAt]] : []
+    return [[language, statSync(join(sourceRoot, 'public', source)).mtime.toISOString()]]
   } catch {
     return []
   }
 }))]))
 
-const output = `import type { Lang } from '@/app/i18n/translations'\n\n// Generated from the source Word documents' embedded modified metadata.\nexport const chapterSourceModifiedAt: Record<string, Partial<Record<Lang, string>>> = ${JSON.stringify(dates, null, 2)}\n`
+const output = `import type { Lang } from '@/app/i18n/translations'\n\n// Generated from the source Word documents' local modified timestamps.\nexport const chapterSourceModifiedAt: Record<string, Partial<Record<Lang, string>>> = ${JSON.stringify(dates, null, 2)}\n`
 writeFileSync(join(process.cwd(), 'lib', 'chapterSourceDates.generated.ts'), output)

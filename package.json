@@ -17,7 +17,6 @@
     "azure:sync-slides:dry": "tsx scripts/sync-azure-slide-index.ts --dry-run --limit=10"
   },
   "dependencies": {
-    "adm-zip": "^0.6.0",
     "next": "16.2.6",
     "pg": "^8.22.0",
     "react": "19.2.4",
