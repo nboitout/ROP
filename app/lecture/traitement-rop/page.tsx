@@ -18,6 +18,7 @@ const DECKS: Record<Lang, typeof chapter2Slides> = {
   de: chapter2SlidesDe,
   es: chapter2SlidesEs,
   it: chapter2SlidesIt,
+  pt: chapter2SlidesEn,
   th: chapter2SlidesEn,
 }
 
@@ -27,6 +28,7 @@ const ANCHORS: Record<Lang, typeof chapter2SlideAnchors> = {
   de: chapter2SlideAnchors,
   es: chapter2SlideAnchors,
   it: chapter2SlideAnchors,
+  pt: chapter2SlideAnchors,
   th: chapter2SlideAnchors,
 }
 

@@ -7,6 +7,7 @@ export const LOCALE_CONFIG: Record<Lang, { label: string; openGraphLocale: strin
   de: { label: 'Deutsch', openGraphLocale: 'de_DE' },
   es: { label: 'Español', openGraphLocale: 'es_ES' },
   it: { label: 'Italiano', openGraphLocale: 'it_IT' },
+  pt: { label: 'Português', openGraphLocale: 'pt_PT' },
   th: { label: 'ไทย', openGraphLocale: 'th_TH' },
 }
 

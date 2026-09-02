@@ -1,4 +1,4 @@
-export type Lang = 'fr' | 'en' | 'de' | 'es' | 'it' | 'th'
+export type Lang = 'fr' | 'en' | 'de' | 'es' | 'it' | 'pt' | 'th'
 
 const fr = {
   chapterFallbackNotice: 'Ce chapitre n’est pas encore disponible dans votre langue — la version française est affichée.',
@@ -2805,4 +2805,26 @@ const it: typeof fr = {
   },
 }
 
-export const translations: Record<Lang, typeof fr> = { fr, en, de, es, it, th }
+const pt: typeof fr = {
+  ...en,
+  chapterFallbackNotice: 'Este capítulo ainda não está disponível em português — é apresentada a versão francesa.',
+  reader: {
+    ...en.reader,
+    back: '← Todos os capítulos',
+    chapterPrefix: 'Capítulo',
+    toc: 'Índice',
+    classicMode: 'Leitura clássica →',
+    syncMode: 'Leitura sincronizada →',
+    chapterComplete: 'Capítulo completo',
+    endChapter: (n: string) => `Fim do capítulo ${n}`,
+    endIntro: (title: string) => `Fim de ${title.toLowerCase()}`,
+    resources: 'Recursos',
+    revisionSheet: 'Ficha de revisão',
+    clinicalCase: 'Caso clínico',
+    ropTitle: 'Relevância na R.O.P.',
+    slidesOpen: 'Ver diapositivos →',
+    bookTitle: 'Reflexoterapia Occipito-Podal e as Vísceras das Cavidades Abdominal e Pélvica',
+  },
+}
+
+export const translations: Record<Lang, typeof fr> = { fr, en, de, es, it, pt, th }

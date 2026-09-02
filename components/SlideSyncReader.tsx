@@ -295,6 +295,7 @@ export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, h
     de: 'Zuruck zur Lekture',
     es: 'Volver a la lectura',
     it: 'Torna alla lettura',
+    pt: 'Voltar à leitura',
     th: 'กลับไปอ่าน',
   }[lang] ?? 'Back to reading'
   const [sessionId] = useState<string>(() =>

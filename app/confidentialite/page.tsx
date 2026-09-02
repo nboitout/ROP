@@ -11,7 +11,7 @@ const VERSION_DATE = '2026-08-28'
 
 /** A French date in the German version would undo half the point of translating. */
 const DATE_LOCALE: Record<Lang, string> = {
-  fr: 'fr-FR', en: 'en-GB', de: 'de-DE', es: 'es-ES', it: 'it-IT', th: 'th-TH',
+  fr: 'fr-FR', en: 'en-GB', de: 'de-DE', es: 'es-ES', it: 'it-IT', pt: 'pt-PT', th: 'th-TH',
 }
 
 function formatVersionDate(lang: Lang): string {

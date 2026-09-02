@@ -34,6 +34,25 @@ FIGURES = {
     ],
 }
 
+PT_FIGURES = {
+    "2. A sequência clínica ROP: quatro níveis complementares": [
+        (1, "NCH 0 PT IMG 1.png", "A sequência clínica ROP: uma progressão através de quatro níveis", "Diagrama da progressão clínica ROP através de quatro níveis complementares."),
+        (-1, "NCH 0 PT IMG 2 V2.png", "Sequência clínica ROP — quatro níveis complementares", "Visão geral dos quatro níveis complementares utilizados para organizar e priorizar uma sessão de ROP."),
+    ],
+    "6. Fundamentos neuroanatómicos, em resumo": [
+        (-1, "NCH 0 PT IMG 4.png", "Fundamentos neuroanatómicos, em resumo", "Diagrama das quatro portas somáticas do pé e das pontes de convergência periférica, espinal e supraespinal."),
+    ],
+    "7. A pélvis: uma região particularmente informativa": [
+        (-1, "NCH 0 PT IMG 5.png", "A pélvis: uma região particularmente informativa", "Diagrama da informação somática plantar e da convergência para as redes lombossagradas e pélvicas."),
+    ],
+    "8. Além da pélvis: modulação distante e técnica manual": [
+        (-1, "NCH 0 PT IMG 6.png", "Além da pélvis: a modulação à distância continua a ser possível", "Diagrama das vias supraespinais e da possível modulação somatoautonómica à distância."),
+    ],
+    "13. Terminologia": [
+        (-1, "NCH 0 PT IMG 3 V2.png", "Terminologia espacial do Atlas", "Diagrama das direções anatómicas utilizadas ao longo do Atlas."),
+    ],
+}
+
 
 def slug(text: str) -> str:
     plain = unicodedata.normalize("NFKD", text).encode("ascii", "ignore").decode()
@@ -48,10 +67,10 @@ def iter_blocks(doc):
             yield Table(child, doc)
 
 
-def figure_block(filename: str, caption: str, alt: str):
+def figure_block(filename: str, caption: str, alt: str, language: str):
     return {
         "type": "figure",
-        "src": f"/chapter-0/EN/Images/{filename}",
+        "src": f"/chapter-0/{language.upper()}/Images/{filename}",
         "caption": caption,
         "alt": alt,
         "orientation": "landscape",
@@ -59,6 +78,8 @@ def figure_block(filename: str, caption: str, alt: str):
 
 
 def main(source: Path, destination: Path):
+    language = "pt" if destination.stem.endswith(".pt") else "en"
+    figures = PT_FIGURES if language == "pt" else FIGURES
     doc = Document(source)
     sections = []
     current = None
@@ -74,9 +95,9 @@ def main(source: Path, destination: Path):
         if current is None:
             return
         flush_list()
-        for position, filename, caption, alt in FIGURES.get(current["title"], []):
+        for position, filename, caption, alt in figures.get(current["title"], []):
             if position == -1:
-                current["blocks"].append(figure_block(filename, caption, alt))
+                current["blocks"].append(figure_block(filename, caption, alt, language))
 
     for item in iter_blocks(doc):
         if isinstance(item, Paragraph):
@@ -108,9 +129,9 @@ def main(source: Path, destination: Path):
                 })
             else:
                 current["blocks"].append({"type": "para", "text": text})
-            for position, filename, caption, alt in FIGURES.get(current["title"], []):
+            for position, filename, caption, alt in figures.get(current["title"], []):
                 if position == len(current["blocks"]):
-                    current["blocks"].append(figure_block(filename, caption, alt))
+                    current["blocks"].append(figure_block(filename, caption, alt, language))
         else:
             flush_list()
             if current is None:
@@ -120,13 +141,13 @@ def main(source: Path, destination: Path):
                 current["blocks"].append({"type": "table", "headers": rows[0], "rows": rows[1:]})
     close_section()
 
-    payload = {"slug": "introduction", "title": "Introduction", "sections": sections}
+    payload = {"slug": "introduction", "title": "Introdução" if language == "pt" else "Introduction", "sections": sections}
     serialized = json.dumps(payload, ensure_ascii=False, indent=2)
     output = (
-        "// Introduction — English synchronized reading stream\n"
-        f"// Source: public/chapter-0/EN/{source.name}\n\n"
+        f"// Introduction — {'Portuguese' if language == 'pt' else 'English'} synchronized reading stream\n"
+        f"// Source: public/chapter-0/{language.upper()}/{source.name}\n\n"
         "import type { Chapter } from './types'\n\n"
-        f"export const introductionEn: Chapter = {serialized}\n"
+        f"export const introduction{'Pt' if language == 'pt' else 'En'}: Chapter = {serialized}\n"
     )
     destination.write_text(output, encoding="utf-8")
 

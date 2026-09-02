@@ -18,6 +18,7 @@ const DECKS: Record<Lang, typeof chapter15Slides> = {
   de: chapter15SlidesDe,
   es: chapter15SlidesEs,
   it: chapter15SlidesIt,
+  pt: chapter15SlidesEn,
   th: chapter15SlidesEn,
 }
 
@@ -29,6 +30,7 @@ const ANCHORS: Record<Lang, typeof chapter15SlideAnchors> = {
   de: chapter15SlideAnchors,
   es: chapter15SlideAnchors,
   it: chapter15SlideAnchors,
+  pt: chapter15SlideAnchorsEn,
   th: chapter15SlideAnchorsEn,
 }
 
@@ -38,6 +40,7 @@ const HIDDEN_DOT_SLIDES: Record<Lang, number[]> = {
   de: [29, 30, 31, 32, 33],
   es: [29, 30, 31, 32, 33],
   it: [29, 30, 31, 32, 33],
+  pt: [],
   th: [],
 }
 

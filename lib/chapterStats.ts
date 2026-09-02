@@ -7,6 +7,7 @@ const META_LABELS: Record<Lang, { perMin: (m: number) => string; perFig: (f: num
   de: { perMin: (m) => `~${m} Min. Lektüre`,         perFig: (f) => `~${f} Illustration${f > 1 ? 'en' : ''}` },
   es: { perMin: (m) => `~${m} min de lectura`,       perFig: (f) => `~${f} ilustración${f > 1 ? 'es' : ''}` },
   it: { perMin: (m) => `~${m} min di lettura`,       perFig: (f) => `~${f} illustrazion${f > 1 ? 'i' : 'e'}` },
+  pt: { perMin: (m) => `~${m} min de leitura`,        perFig: (f) => `~${f} ilustração${f > 1 ? 'ões' : ''}` },
   th: { perMin: (m) => `ประมาณ ${m} นาที`,          perFig: (f) => `ภาพประกอบ ${f} ภาพ` },
 }
 

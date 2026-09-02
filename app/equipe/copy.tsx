@@ -17,7 +17,7 @@ export type TeamPageCopy = {
   discoverMethod: string
 }
 
-export const teamPageCopy: Record<Lang, TeamPageCopy> = {
+export const teamPageCopy: Partial<Record<Lang, TeamPageCopy>> & Record<'en', TeamPageCopy> = {
   fr: {
     metadata: { title: "L'équipe · R.O.P.", description: "Découvrez l'équipe qui porte la Réflexothérapie Occipito-Podale : clinique, formation, technologie, relation avec les lecteurs et marketing." },
     home: 'Retour à l’accueil', eyebrow: 'L’équipe R.O.P.', titleBefore: 'Trois expertises,', titleEmphasis: 'une même exigence.',

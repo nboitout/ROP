@@ -24,7 +24,7 @@ import type { Lang } from '@/app/i18n/translations'
 
 type Foot = 'jejunum' | 'ileum'
 type LandmarkKey = 'upper' | 'lower' | 'lateral' | 'loops'
-type AtlasLang = Exclude<Lang, 'th'>
+type AtlasLang = Exclude<Lang, 'th' | 'pt'>
 
 type Bound = { label: string; detail: string }
 type Strings = {
@@ -47,7 +47,7 @@ type Strings = {
 }
 
 function atlasLang(lang: Lang): AtlasLang {
-  return lang === 'th' ? 'en' : lang
+  return lang === 'th' || lang === 'pt' ? 'en' : lang
 }
 
 const ASSETS: Record<AtlasLang, Record<Foot, { carto: string; photo: string }>> = {

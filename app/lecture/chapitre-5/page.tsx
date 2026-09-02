@@ -15,13 +15,13 @@ import { chapter5ReworkSlides as chapter5Slides, chapter5ReworkSlideAnchors as c
 
 // Synthesis deck per language (all five available for chapter 5).
 const DECKS: Record<Lang, typeof chapter5Slides> = {
-  fr: chapter5Slides, en: chapter5SlidesEn, de: chapter5SlidesDe, es: chapter5SlidesEs, it: chapter5SlidesIt, th: chapter5SlidesEn,
+  fr: chapter5Slides, en: chapter5SlidesEn, de: chapter5SlidesDe, es: chapter5SlidesEs, it: chapter5SlidesIt, pt: chapter5SlidesEn, th: chapter5SlidesEn,
 }
 
 const ANCHORS: Record<Lang, typeof chapter5SlideAnchors> = {
   fr: chapter5SlideAnchors,
   en: chapter5SlideAnchorsEn, de: chapter5SlideAnchorsLegacy,
-  es: chapter5SlideAnchorsLegacy, it: chapter5SlideAnchorsLegacy, th: chapter5SlideAnchorsLegacy,
+  es: chapter5SlideAnchorsLegacy, it: chapter5SlideAnchorsLegacy, pt: chapter5SlideAnchorsLegacy, th: chapter5SlideAnchorsLegacy,
 }
 
 export const metadata: Metadata = {

@@ -892,4 +892,4 @@ const th: Content = {
   ],
 }
 
-export const cgv: Record<Lang, Content> = { fr, en, de, es, it, th }
+export const cgv: Record<Lang, Content> = { fr, en, de, es, it, pt: en, th }

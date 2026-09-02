@@ -14,7 +14,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { lang: langParam } = await searchParams
   const lang = await getServerLang(langParam)
-  const copy = teamPageCopy[lang].metadata
+  const copy = (teamPageCopy[lang] ?? teamPageCopy.en).metadata
   const url = `${SITE_URL}${localizedHref('/equipe', lang)}`
   return {
     title: copy.title,
@@ -50,7 +50,7 @@ export default async function TeamPage({
 }) {
   const { lang: langParam } = await searchParams
   const lang = await getServerLang(langParam)
-  const copy = teamPageCopy[lang]
+  const copy = teamPageCopy[lang] ?? teamPageCopy.en
   const homeHref = `/?lang=${lang}`
 
   return (

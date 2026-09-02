@@ -848,4 +848,4 @@ const th: Content = {
     'นโยบายนี้อาจได้รับการแก้ไขเพื่อให้สอดคล้องกับการเปลี่ยนแปลงของเว็บไซต์หรือของกฎระเบียบ ฉบับที่ใช้บังคับคือฉบับที่เผยแพร่บนหน้านี้ ซึ่งระบุวันที่ไว้ด้านบน',
 }
 
-export const privacy: Record<Lang, Content> = { fr, en, de, es, it, th }
+export const privacy: Record<Lang, Content> = { fr, en, de, es, it, pt: en, th }

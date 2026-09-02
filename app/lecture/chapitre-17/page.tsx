@@ -18,6 +18,7 @@ const DECKS: Record<Lang, typeof chapter17Slides> = {
   de: chapter17SlidesDe,
   es: chapter17SlidesEs,
   it: chapter17SlidesIt,
+  pt: chapter17SlidesEn,
   th: chapter17SlidesEn,
 }
 
