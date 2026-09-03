@@ -32,8 +32,8 @@ export const chapter13Slides: SyncSlide[] = [
   { src: '/chapter-13/FR/slides/slide-17.png', title: 'Relations viscéro-somatiques de la rate' },
   { src: '/chapter-13/FR/slides/slide-18.png', title: 'Relations viscéro-émotionnelles' },
   { src: '/chapter-13/FR/slides/slide-20.png', title: 'Synthèse ROP : écoute de la rate' },
-  { src: '/chapter-13/FR/cartographie/figure-13-01.png', title: 'Cartographie : articulations costo-vertébrales' },
-  { src: '/chapter-13/FR/cartographie/figure-13-03.png', title: 'Cartographie : rate' },
+  { src: '/chapter-13/FR/cartographies/figure-13-01.png', title: 'Cartographie : articulations costo-vertébrales' },
+  { src: '/chapter-13/FR/cartographies/figure-13-03.png', title: 'Cartographie : rate' },
 ]
 
 export const chapter13SlideAnchors: SyncAnchor[] = [

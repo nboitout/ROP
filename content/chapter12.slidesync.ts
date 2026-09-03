@@ -25,8 +25,8 @@ export const chapter12Slides: SyncSlide[] = [
   { src: '/chapter-12/FR/slides/slide-12.png', title: 'Pathologies severes : pancreatites et tumeurs' },
   { src: '/chapter-12/FR/slides/slide-14.png', title: 'Pancréas — relations viscéro-somatiques' },
   { src: '/chapter-12/FR/slides/slide-13.png', title: 'Synthèse viscéro-émotionnelle' },
-  { src: '/chapter-12/FR/cartographie/figure-12-01.png', title: 'Cartographie : Pancréas — tête et col' },
-  { src: '/chapter-12/FR/cartographie/figure-12-03.png', title: 'Cartographie : Pancréas — corps et queue' },
+  { src: '/chapter-12/FR/cartographies/figure-12-01.png', title: 'Cartographie : Pancréas — tête et col' },
+  { src: '/chapter-12/FR/cartographies/figure-12-03.png', title: 'Cartographie : Pancréas — corps et queue' },
 ]
 
 export const chapter12SlideAnchors: SyncAnchor[] = [

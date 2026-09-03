@@ -86,35 +86,35 @@ export const chapter8Slides: SyncSlide[] = [
     title: "Topographie asymetrique en ROP"
   },
   {
-    src: "/chapter-8/FR/cartographie/figure-8-02.png",
+    src: "/chapter-8/FR/cartographies/figure-8-02.png",
     title: "Cartographie podale : coupole diaphragmatique gauche et hiatus œsophagien"
   },
   {
-    src: "/chapter-8/FR/cartographie/figure-8-03.png",
+    src: "/chapter-8/FR/cartographies/figure-8-03.png",
     title: "Cartographie podale : coupole diaphragmatique droite"
   },
   {
-    src: "/chapter-8/FR/cartographie/figure-8-05.png",
+    src: "/chapter-8/FR/cartographies/figure-8-05.png",
     title: "Cartographie podale : hiatus œsophagien"
   },
   {
-    src: "/chapter-8/FR/cartographie/figure-8-07.png",
+    src: "/chapter-8/FR/cartographies/figure-8-07.png",
     title: "Cartographie podale : hiatus de Marfran et de Larrey"
   },
   {
-    src: "/chapter-8/FR/cartographie/figure-8-12.png",
+    src: "/chapter-8/FR/cartographies/figure-8-12.png",
     title: "Cartographie podale : nerf phrénique"
   },
   {
-    src: "/chapter-8/FR/cartographie/figure-8-14.png",
+    src: "/chapter-8/FR/cartographies/figure-8-14.png",
     title: "Cartographie podale : articulations costo-vertébrales"
   },
   {
-    src: "/chapter-8/FR/cartographie/figure-8-09.png",
+    src: "/chapter-8/FR/cartographies/figure-8-09.png",
     title: "Cartographie podale : jonction azygo-cave"
   },
   {
-    src: "/chapter-8/FR/cartographie/figure-8-16.png",
+    src: "/chapter-8/FR/cartographies/figure-8-16.png",
     title: "Cartographie podale : nerf intercostal brachial de Hyrtl"
   }
 ]

@@ -954,7 +954,7 @@ export const chapter8Fr: Chapter = {
         },
         {
           "type": "figure",
-          "src": "/chapter-8/FR/cartographie/figure-8-01.png",
+          "src": "/chapter-8/FR/cartographies/figure-8-01.png",
           "caption": "Obliquité du centre phrénique",
           "alt": "Photo du repérage podal de l’obliquité du centre phrénique",
           "orientation": "landscape"
@@ -1017,7 +1017,7 @@ export const chapter8Fr: Chapter = {
         },
         {
           "type": "figure",
-          "src": "/chapter-8/FR/cartographie/figure-8-04.png",
+          "src": "/chapter-8/FR/cartographies/figure-8-04.png",
           "caption": "Hiatus œsophagien et cardia",
           "alt": "Photo du repérage podal du hiatus œsophagien et du cardia",
           "orientation": "landscape"
@@ -1039,7 +1039,7 @@ export const chapter8Fr: Chapter = {
         },
         {
           "type": "figure",
-          "src": "/chapter-8/FR/cartographie/figure-8-06.png",
+          "src": "/chapter-8/FR/cartographies/figure-8-06.png",
           "caption": "Hiatus de Marfran et de Larrey (tubercule du naviculaire, face plantaire)",
           "alt": "Photo du repérage podal des hiatus de Marfran et de Larrey",
           "orientation": "landscape"
@@ -1060,7 +1060,7 @@ export const chapter8Fr: Chapter = {
         },
         {
           "type": "figure",
-          "src": "/chapter-8/FR/cartographie/figure-8-08.png",
+          "src": "/chapter-8/FR/cartographies/figure-8-08.png",
           "caption": "Jonction azygo-cave (2e et 3e articulations chondro-sternales droites)",
           "alt": "Photo du repérage podal de la jonction azygo-cave",
           "orientation": "landscape"
@@ -1075,7 +1075,7 @@ export const chapter8Fr: Chapter = {
         },
         {
           "type": "figure",
-          "src": "/chapter-8/FR/cartographie/figure-8-10.png",
+          "src": "/chapter-8/FR/cartographies/figure-8-10.png",
           "caption": "Nerf phrénique (C3-C4-C5)",
           "alt": "Photo du repérage podal du nerf phrénique au niveau cervical",
           "orientation": "landscape"
@@ -1087,7 +1087,7 @@ export const chapter8Fr: Chapter = {
         },
         {
           "type": "figure",
-          "src": "/chapter-8/FR/cartographie/figure-8-11.png",
+          "src": "/chapter-8/FR/cartographies/figure-8-11.png",
           "caption": "Nerf phrénique (triangle de Sédillot)",
           "alt": "Photo du repérage podal du nerf phrénique au triangle de Sédillot",
           "orientation": "landscape"
@@ -1107,7 +1107,7 @@ export const chapter8Fr: Chapter = {
         },
         {
           "type": "figure",
-          "src": "/chapter-8/FR/cartographie/figure-8-13.png",
+          "src": "/chapter-8/FR/cartographies/figure-8-13.png",
           "caption": "Articulations costo-vertébrales (entre les deux pouces)",
           "alt": "Photo du repérage podal des articulations costo-vertébrales",
           "orientation": "landscape"
@@ -1118,7 +1118,7 @@ export const chapter8Fr: Chapter = {
         },
         {
           "type": "figure",
-          "src": "/chapter-8/FR/cartographie/figure-8-15.png",
+          "src": "/chapter-8/FR/cartographies/figure-8-15.png",
           "caption": "Nerf intercostal brachial de Hyrtl",
           "alt": "Photo du repérage podal du nerf intercostal brachial de Hyrtl",
           "orientation": "landscape"
@@ -1175,7 +1175,7 @@ chapter8Reflex.blocks = [
   { type: 'para', text: 'Pour le diaphragme, la lecture des zones réflexes s’intègre aux quatre niveaux du protocole ROP. Le diaphragme lui-même constitue principalement une interface fonctionnelle du Niveau 2, sans appartenir anatomiquement au système nerveux autonome.' },
   { type: 'sub', text: '12.1. Repères anatomiques préalables au positionnement des zones' },
   { type: 'para', text: 'En raison de l’obliquité caudale, ventrale et gauche du centre phrénique, la coupole diaphragmatique gauche se projette légèrement plus bas que la droite. Cette asymétrie doit être respectée dans la cartographie ROP.' },
-  { type: 'figure', src: '/chapter-8/FR/cartographie/figure-8-01.png', caption: 'Obliquité du centre phrénique', alt: 'Obliquité du centre phrénique et projection podale asymétrique', orientation: 'portrait' },
+  { type: 'figure', src: '/chapter-8/FR/cartographies/figure-8-01.png', caption: 'Obliquité du centre phrénique', alt: 'Obliquité du centre phrénique et projection podale asymétrique', orientation: 'portrait' },
   { type: 'bullets', items: [
     'Centre phrénique : sur les faces plantaires, sous la tête du premier métatarsien ; le repère gauche est situé légèrement plus bas que le droit.',
     'Coupoles diaphragmatiques : chaque coupole suit une ligne courbe allant du centre phrénique vers la région de la styloïde du cinquième métatarsien.',
@@ -1195,8 +1195,8 @@ chapter8Reflex.blocks = [
   { type: 'sub', text: '12.3.2. Nerfs phréniques' },
   { type: 'para', text: 'Origine principale : C3-C5, avec prédominance C4.' },
   { type: 'bullets', items: ['C3, C4 et C5 sur les repères cervicaux du gros orteil.', 'Triangle de Sédillot : bord supérieur de la malléole tibiale.', 'Trajet médiastinal : face plantaire des têtes des premiers métatarsiens.'] },
-  { type: 'figure', src: '/chapter-8/FR/cartographie/figure-8-10.png', caption: 'Nerf phrénique (C3-C4-C5)', alt: 'Photo du repérage podal du nerf phrénique au niveau cervical', orientation: 'landscape' },
-  { type: 'figure', src: '/chapter-8/FR/cartographie/figure-8-11.png', caption: 'Nerf phrénique (triangle de Sédillot)', alt: 'Photo du repérage podal du nerf phrénique au triangle de Sédillot', orientation: 'landscape' },
+  { type: 'figure', src: '/chapter-8/FR/cartographies/figure-8-10.png', caption: 'Nerf phrénique (C3-C4-C5)', alt: 'Photo du repérage podal du nerf phrénique au niveau cervical', orientation: 'landscape' },
+  { type: 'figure', src: '/chapter-8/FR/cartographies/figure-8-11.png', caption: 'Nerf phrénique (triangle de Sédillot)', alt: 'Photo du repérage podal du nerf phrénique au triangle de Sédillot', orientation: 'landscape' },
   { type: 'para', text: 'Le nerf phrénique est principalement somatique ; il est intégré ici parce qu’il constitue la commande motrice essentielle du diaphragme et participe à ses afférences sensitives.' },
   { type: 'sub', text: '12.3.3. Nerf vague' },
   { type: 'para', text: 'Le nerf vague traverse le diaphragme avec l’œsophage au niveau du hiatus œsophagien. Selon les tests, la lecture peut intégrer le trajet vagal cervico-thoracique, le hiatus œsophagien et les territoires digestifs associés.' },
@@ -1212,8 +1212,8 @@ chapter8Reflex.blocks = [
     'Hiatus de Marfran et de Larrey : repères xyphoïdiens.',
     'Hiatus du ligament de Henlé : région costo-transversaire inférieure, autour de T11-T12.',
   ] },
-  { type: 'figure', src: '/chapter-8/FR/cartographie/figure-8-04.png', caption: 'Hiatus œsophagien et cardia', alt: 'Photo du repérage podal du hiatus œsophagien et du cardia', orientation: 'portrait' },
-  { type: 'figure', src: '/chapter-8/FR/cartographie/figure-8-06.png', caption: 'Hiatus de Marfran et de Larrey', alt: 'Photo du repérage podal des hiatus de Marfran et de Larrey', orientation: 'landscape' },
+  { type: 'figure', src: '/chapter-8/FR/cartographies/figure-8-04.png', caption: 'Hiatus œsophagien et cardia', alt: 'Photo du repérage podal du hiatus œsophagien et du cardia', orientation: 'portrait' },
+  { type: 'figure', src: '/chapter-8/FR/cartographies/figure-8-06.png', caption: 'Hiatus de Marfran et de Larrey', alt: 'Photo du repérage podal des hiatus de Marfran et de Larrey', orientation: 'landscape' },
   { type: 'rop', body: ['Le Niveau 2 vise ici à accompagner la coordination entre respiration, activité autonome et adaptation générale, sans supposer qu’une pression podale modifie directement le calibre d’un hiatus ou l’activité d’un nerf.'] },
   { type: 'sub', text: '12.4. Niveau 3 — Régulation viscérale loco-régionale' },
   { type: 'para', text: 'Le diaphragme entretient des rapports directs ou étroits avec plusieurs viscères thoraciques et abdominaux. Le Niveau 3 vise donc à replacer le diaphragme dans son environnement régional.' },
@@ -1224,7 +1224,7 @@ chapter8Reflex.blocks = [
   { type: 'para', text: 'Le diaphragme constitue également une interface entre respiration, rachis, côtes, muscles du tronc et perception corporelle.' },
   { type: 'sub', text: '12.5.1. Relations somatiques' },
   { type: 'bullets', items: ['C3-C5 et nerfs phréniques.', 'Six derniers nerfs intercostaux.', 'Articulations costo-vertébrales et costo-transversaires.', 'Charnière thoraco-lombaire.', 'Grand psoas.', 'Carré des lombes.', 'Région cervicale et scapulaire lorsque des douleurs phréniques projetées sont plausibles.'] },
-  { type: 'figure', src: '/chapter-8/FR/cartographie/figure-8-13.png', caption: 'Articulations costo-vertébrales', alt: 'Photo du repérage podal des articulations costo-vertébrales', orientation: 'landscape' },
+  { type: 'figure', src: '/chapter-8/FR/cartographies/figure-8-13.png', caption: 'Articulations costo-vertébrales', alt: 'Photo du repérage podal des articulations costo-vertébrales', orientation: 'landscape' },
   { type: 'para', text: 'Les afférences phréniques permettent notamment de comprendre certaines douleurs projetées vers le cou et l’épaule lors d’une irritation du territoire diaphragmatique.' },
   { type: 'sub', text: '12.5.2. Relations viscéro-émotionnelles' },
   { type: 'para', text: 'La respiration est étroitement liée aux états émotionnels. Stress, anxiété, douleur ou hypervigilance peuvent modifier fréquence, amplitude et coordination respiratoires ; inversement, la respiration participe à la perception de l’état interne.' },
@@ -1249,7 +1249,7 @@ const chapter8HiatusPhoto = chapter8Reflex.blocks.findIndex(
 )
 if (chapter8HiatusPhoto >= 0) chapter8Reflex.blocks.splice(chapter8HiatusPhoto + 1, 0,
   { type: 'para', text: 'Jonction azygo-cave : repère associé aux 2e et 3e articulations chondro-costales droites.' },
-  { type: 'figure', src: '/chapter-8/FR/cartographie/figure-8-08.png', caption: 'Jonction azygo-cave', alt: 'Photo du repérage podal de la jonction azygo-cave', orientation: 'landscape' },
+  { type: 'figure', src: '/chapter-8/FR/cartographies/figure-8-08.png', caption: 'Jonction azygo-cave', alt: 'Photo du repérage podal de la jonction azygo-cave', orientation: 'landscape' },
 )
 
 const chapter8CostoPhoto = chapter8Reflex.blocks.findIndex(
@@ -1257,5 +1257,5 @@ const chapter8CostoPhoto = chapter8Reflex.blocks.findIndex(
 )
 if (chapter8CostoPhoto >= 0) chapter8Reflex.blocks.splice(chapter8CostoPhoto + 1, 0,
   { type: 'para', text: 'Nerf intercostal brachial de Hyrtl : jonction entre la diaphyse et la tête latérale du 5e métatarsien.' },
-  { type: 'figure', src: '/chapter-8/FR/cartographie/figure-8-15.png', caption: 'Nerf intercostal brachial de Hyrtl', alt: 'Photo du repérage podal du nerf intercostal brachial de Hyrtl', orientation: 'landscape' },
+  { type: 'figure', src: '/chapter-8/FR/cartographies/figure-8-15.png', caption: 'Nerf intercostal brachial de Hyrtl', alt: 'Photo du repérage podal du nerf intercostal brachial de Hyrtl', orientation: 'landscape' },
 )

@@ -25,10 +25,10 @@ export const chapter11Slides: SyncSlide[] = [
   { src: '/chapter-11/FR/slides/slide-13.png', title: 'Matrice diagnostique clinique' },
   { src: '/chapter-11/FR/slides/slide-15.png', title: 'Profils viscéro-émotionnels' },
   { src: '/chapter-11/FR/slides/slide-16.png', title: 'Synthèse clinique et hygiène de vie' },
-  { src: '/chapter-11/FR/cartographie/figure-11-01.png', title: 'Cartographie : Foie — lobe gauche' },
-  { src: '/chapter-11/FR/cartographie/figure-11-02.png', title: 'Cartographie : Foie — lobe droit' },
-  { src: '/chapter-11/FR/cartographie/figure-11-06.png', title: 'Cartographie : Nerf phrénique C3-C4-C5' },
-  { src: '/chapter-11/FR/cartographie/figure-11-08.png', title: 'Cartographie : Nerf phrénique — triangle de Sédillot' },
+  { src: '/chapter-11/FR/cartographies/figure-11-01.png', title: 'Cartographie : Foie — lobe gauche' },
+  { src: '/chapter-11/FR/cartographies/figure-11-02.png', title: 'Cartographie : Foie — lobe droit' },
+  { src: '/chapter-11/FR/cartographies/figure-11-06.png', title: 'Cartographie : Nerf phrénique C3-C4-C5' },
+  { src: '/chapter-11/FR/cartographies/figure-11-08.png', title: 'Cartographie : Nerf phrénique — triangle de Sédillot' },
 ]
 
 export const chapter11SlideAnchors: SyncAnchor[] = [

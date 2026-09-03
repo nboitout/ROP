@@ -199,10 +199,10 @@ export const chapter14Fr: Chapter = {
           'Hiatus œsophagien (nerfs vagues droit et gauche) et cardia.',
           'Petite courbure de l’estomac, riche en fibres vagales.',
         ]},
-        { type: 'figure', src: '/chapter-14/FR/cartographie/figure-14-02.png', caption: 'Photo : Nerf vague X dans la moelle allongée', alt: 'Repère podal du nerf vague X dans la moelle allongée', orientation: 'portrait' },
-        { type: 'figure', src: '/chapter-14/FR/cartographie/figure-14-04.png', caption: 'Photo : Nerf vague X dans le foramen jugulaire', alt: 'Repère podal du nerf vague X dans le foramen jugulaire', orientation: 'portrait' },
-        { type: 'figure', src: '/chapter-14/FR/cartographie/figure-14-06.png', caption: 'Photo : Hiatus œsophagien et nerfs vagues droit et gauche', alt: 'Repère podal du hiatus œsophagien et des nerfs vagues', orientation: 'portrait' },
-        { type: 'figure', src: '/chapter-14/FR/cartographie/figure-14-08.png', caption: 'Photo : Petite courbure de l’estomac', alt: 'Repère podal de la petite courbure de l’estomac', orientation: 'portrait' },
+        { type: 'figure', src: '/chapter-14/FR/cartographies/figure-14-02.png', caption: 'Photo : Nerf vague X dans la moelle allongée', alt: 'Repère podal du nerf vague X dans la moelle allongée', orientation: 'portrait' },
+        { type: 'figure', src: '/chapter-14/FR/cartographies/figure-14-04.png', caption: 'Photo : Nerf vague X dans le foramen jugulaire', alt: 'Repère podal du nerf vague X dans le foramen jugulaire', orientation: 'portrait' },
+        { type: 'figure', src: '/chapter-14/FR/cartographies/figure-14-06.png', caption: 'Photo : Hiatus œsophagien et nerfs vagues droit et gauche', alt: 'Repère podal du hiatus œsophagien et des nerfs vagues', orientation: 'portrait' },
+        { type: 'figure', src: '/chapter-14/FR/cartographies/figure-14-08.png', caption: 'Photo : Petite courbure de l’estomac', alt: 'Repère podal de la petite courbure de l’estomac', orientation: 'portrait' },
 
         { type: 'sub', text: '2. Système sympathique' },
         { type: 'bullets', items: [
@@ -210,8 +210,8 @@ export const chapter14Fr: Chapter = {
           'Plexus cœliaque (solaire).',
           'Plexus lombaire (lien viscéro-somatique).',
         ]},
-        { type: 'figure', src: '/chapter-14/FR/cartographie/figure-14-10.png', caption: 'Photo : Origine médullaire du parasympathique pelvien ou sacré', alt: 'Repère podal de l’origine médullaire du parasympathique pelvien ou sacré', orientation: 'landscape' },
-        { type: 'figure', src: '/chapter-14/FR/cartographie/figure-14-12.png', caption: 'Photo : Chaîne plexique prévertébrale', alt: 'Repère podal de la chaîne plexique prévertébrale', orientation: 'landscape' },
+        { type: 'figure', src: '/chapter-14/FR/cartographies/figure-14-10.png', caption: 'Photo : Origine médullaire du parasympathique pelvien ou sacré', alt: 'Repère podal de l’origine médullaire du parasympathique pelvien ou sacré', orientation: 'landscape' },
+        { type: 'figure', src: '/chapter-14/FR/cartographies/figure-14-12.png', caption: 'Photo : Chaîne plexique prévertébrale', alt: 'Repère podal de la chaîne plexique prévertébrale', orientation: 'landscape' },
 
         { type: 'para', text: 'N.B. Dans notre expérience clinique, les troubles fonctionnels intestinaux sont souvent observés chez la femme en lien avec des facteurs hormonaux et émotionnels.' },
 
@@ -222,7 +222,7 @@ export const chapter14Fr: Chapter = {
           'Racine du mésentère : une ligne de la jonction duodéno-jéjunale à l’ombilic, à hauteur de L3-L4 (face plantaire du pied gauche).',
           'Racine du mésentère : une ligne de la valvule iléo-caecale à l’ombilic (face plantaire du pied droit).',
         ]},
-        { type: 'figure', src: '/chapter-14/FR/cartographie/figure-14-16.png', caption: 'Photo : Racine du mésentère entre la valvule iléo-caecale et l’ombilic', alt: 'Repère podal de la racine du mésentère côté iléum', orientation: 'portrait' },
+        { type: 'figure', src: '/chapter-14/FR/cartographies/figure-14-16.png', caption: 'Photo : Racine du mésentère entre la valvule iléo-caecale et l’ombilic', alt: 'Repère podal de la racine du mésentère côté iléum', orientation: 'portrait' },
 
         { type: 'sub', text: 'Zones réflexes podales — Jéjunum (pied gauche)' },
         { type: 'bullets', items: [
@@ -231,7 +231,7 @@ export const chapter14Fr: Chapter = {
           'Limite latérale : jusqu’au bord latéral du pied gauche.',
           'Respecter l’orientation des anses : horizontales pour le jéjunum.',
         ]},
-        { type: 'figure', src: '/chapter-14/FR/cartographie/figure-14-17.png', caption: 'Photo : Jéjunum (limites supérieure et inférieure)', alt: 'Repère podal du jéjunum sur le pied gauche', orientation: 'portrait' },
+        { type: 'figure', src: '/chapter-14/FR/cartographies/figure-14-17.png', caption: 'Photo : Jéjunum (limites supérieure et inférieure)', alt: 'Repère podal du jéjunum sur le pied gauche', orientation: 'portrait' },
 
         { type: 'sub', text: 'Zones réflexes podales — Iléum (pied droit)' },
         { type: 'bullets', items: [
@@ -240,11 +240,11 @@ export const chapter14Fr: Chapter = {
           'Limite latérale : à l’aplomb du 4ème orteil du pied droit.',
           'Respecter l’orientation des anses : verticales pour l’iléum.',
         ]},
-        { type: 'figure', src: '/chapter-14/FR/cartographie/figure-14-18.png', caption: 'Photo : Iléum (limites supérieure et inférieure)', alt: 'Repère podal de l’iléum sur le pied droit', orientation: 'portrait' },
+        { type: 'figure', src: '/chapter-14/FR/cartographies/figure-14-18.png', caption: 'Photo : Iléum (limites supérieure et inférieure)', alt: 'Repère podal de l’iléum sur le pied droit', orientation: 'portrait' },
 
         { type: 'sub', text: '3. Système limbique' },
         { type: 'lead', label: 'Balance cerveau limbique — intestin grêle', text: 'écoute-induction : un pouce sur l’intestin grêle, l’autre pouce sur le cerveau limbique.' },
-        { type: 'figure', src: '/chapter-14/FR/cartographie/figure-14-19.png', caption: 'Photo : Technique balance viscéro-émotionnelle — intestin grêle', alt: 'Technique balance viscéro-émotionnelle intestin grêle et cerveau limbique', orientation: 'portrait' },
+        { type: 'figure', src: '/chapter-14/FR/cartographies/figure-14-19.png', caption: 'Photo : Technique balance viscéro-émotionnelle — intestin grêle', alt: 'Technique balance viscéro-émotionnelle intestin grêle et cerveau limbique', orientation: 'portrait' },
       ],
     },
     {
@@ -299,16 +299,16 @@ chapter14Reflex.blocks = [
   { type: 'sub', text: '12.4. Niveau 3 — Régulation viscérale loco-régionale' },
   { type: 'para', text: 'Le Niveau 3 constitue le cœur anatomique du protocole intestinal. Il associe la zone propre de l’intestin aux seules composantes régionales pertinentes.' },
   { type: 'bullets', items: ['Anses jéjunales et iléales.', 'Mésentère.', 'Racine du mésentère.', 'Péritoine et glissement interviscéral.', 'Jonction duodéno-jéjunale.', 'Jonction iléo-cæcale.', 'Rapports avec le côlon, les reins, les uretères et, caudalement, les organes pelviens.', 'Vascularisation mésentérique lorsque le contexte régional le justifie.'] },
-  { type: 'figure', src: '/chapter-14/FR/cartographie/figure-14-02.png', caption: 'Photo : Racine du mésentère — jonction duodéno-jéjunale à ombilic', alt: 'Repère podal de la racine du mésentère entre la jonction duodéno-jéjunale et l’ombilic', orientation: 'portrait' },
-  { type: 'figure', src: '/chapter-14/FR/cartographie/figure-14-04.png', caption: 'Photo : Racine du mésentère — valvule iléo-cæcale à ombilic', alt: 'Repère podal de la racine du mésentère entre la valvule iléo-cæcale et l’ombilic', orientation: 'portrait' },
-  { type: 'figure', src: '/chapter-14/FR/cartographie/figure-14-06.png', caption: 'Photo : Jéjunum — limites supérieure et inférieure', alt: 'Repère podal du jéjunum sur le pied gauche', orientation: 'portrait' },
-  { type: 'figure', src: '/chapter-14/FR/cartographie/figure-14-08.png', caption: 'Photo : Iléum — limites supérieure et inférieure', alt: 'Repère podal de l’iléum sur le pied droit', orientation: 'portrait' },
+  { type: 'figure', src: '/chapter-14/FR/cartographies/figure-14-02.png', caption: 'Photo : Racine du mésentère — jonction duodéno-jéjunale à ombilic', alt: 'Repère podal de la racine du mésentère entre la jonction duodéno-jéjunale et l’ombilic', orientation: 'portrait' },
+  { type: 'figure', src: '/chapter-14/FR/cartographies/figure-14-04.png', caption: 'Photo : Racine du mésentère — valvule iléo-cæcale à ombilic', alt: 'Repère podal de la racine du mésentère entre la valvule iléo-cæcale et l’ombilic', orientation: 'portrait' },
+  { type: 'figure', src: '/chapter-14/FR/cartographies/figure-14-06.png', caption: 'Photo : Jéjunum — limites supérieure et inférieure', alt: 'Repère podal du jéjunum sur le pied gauche', orientation: 'portrait' },
+  { type: 'figure', src: '/chapter-14/FR/cartographies/figure-14-08.png', caption: 'Photo : Iléum — limites supérieure et inférieure', alt: 'Repère podal de l’iléum sur le pied droit', orientation: 'portrait' },
   { type: 'xref', label: 'Voir le chapitre 7 — Socle régional abdominal et péritonéal', href: '/lecture/chapitre-7?lang=fr' },
   { type: 'rop', body: ['Le Niveau 3 replace l’intestin dans son environnement mésentérique et péritonéal. Toute la cavité abdominale ou toute la racine du mésentère ne sont pas travaillées systématiquement.'] },
   { type: 'sub', text: '12.5. Niveau 4 — Intégration viscéro-somatique et axe cerveau-intestin' },
   { type: 'para', text: 'Versant viscéro-somatique. Selon les tests, la lecture peut intégrer la charnière thoraco-lombaire, les territoires segmentaires T9-T11 avec prédominance T10, la paroi abdominale, la région lombaire, le psoas, le carré des lombes et le bassin lorsque le tableau s’étend vers la région abdomino-pelvienne.' },
   { type: 'para', text: 'Axe cerveau-intestin. Stress, attention portée aux sensations digestives, hypersensibilité viscérale, motricité, sommeil et vécu émotionnel peuvent s’influencer mutuellement. Cette lecture remplace toute typologie de « personnalité intestin ».' },
-  { type: 'figure', src: '/chapter-14/FR/cartographie/figure-14-09.png', caption: 'Photo : Balance viscéro-émotionnelle — intestin grêle', alt: 'Technique de balance viscéro-émotionnelle de l’intestin grêle', orientation: 'portrait' },
+  { type: 'figure', src: '/chapter-14/FR/cartographies/figure-14-09.png', caption: 'Photo : Balance viscéro-émotionnelle — intestin grêle', alt: 'Technique de balance viscéro-émotionnelle de l’intestin grêle', orientation: 'portrait' },
   { type: 'xref', label: 'Voir le chapitre 3 — Système nerveux central', href: '/lecture/chapitre-3-rework?lang=fr' },
   { type: 'xref', label: 'Voir le chapitre 5 — Mécanisme de stress', href: '/lecture/chapitre-5-rework?lang=fr' },
   { type: 'rop', body: ['Le Niveau 4 intègre les convergences somatiques et le contexte émotionnel sans attribuer automatiquement un trouble digestif à une origine psychologique.'] },

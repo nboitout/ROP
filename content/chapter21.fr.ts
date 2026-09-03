@@ -568,13 +568,13 @@ if (chapter21Reflex) {
   }
 
   insertPhotosAfterBullets('10.5.1. Versant somatique', [
-    { type: 'figure', src: '/chapter-21/FR/cartographie/figure-21-02.png', caption: 'Photo : grand foramen ischiatique, muscle piriforme, plexus sacré et nerf pudendal', alt: 'Repère podal du grand foramen ischiatique', orientation: 'landscape' },
-    { type: 'figure', src: '/chapter-21/FR/cartographie/figure-21-04.png', caption: 'Photo : petit foramen ischiatique, muscles obturateurs et jumeaux', alt: 'Repère podal du petit foramen ischiatique', orientation: 'landscape' },
-    { type: 'figure', src: '/chapter-21/FR/cartographie/figure-21-06.png', caption: 'Photo : ligaments sacro-tubéral et sacro-épineux', alt: 'Repère podal des ligaments sacro-tubéral et sacro-épineux', orientation: 'landscape' },
-    { type: 'figure', src: '/chapter-21/FR/cartographie/figure-21-10.png', caption: 'Photo : nerf pudendal', alt: 'Repère podal du nerf pudendal', orientation: 'portrait' },
+    { type: 'figure', src: '/chapter-21/FR/cartographies/figure-21-02.png', caption: 'Photo : grand foramen ischiatique, muscle piriforme, plexus sacré et nerf pudendal', alt: 'Repère podal du grand foramen ischiatique', orientation: 'landscape' },
+    { type: 'figure', src: '/chapter-21/FR/cartographies/figure-21-04.png', caption: 'Photo : petit foramen ischiatique, muscles obturateurs et jumeaux', alt: 'Repère podal du petit foramen ischiatique', orientation: 'landscape' },
+    { type: 'figure', src: '/chapter-21/FR/cartographies/figure-21-06.png', caption: 'Photo : ligaments sacro-tubéral et sacro-épineux', alt: 'Repère podal des ligaments sacro-tubéral et sacro-épineux', orientation: 'landscape' },
+    { type: 'figure', src: '/chapter-21/FR/cartographies/figure-21-10.png', caption: 'Photo : nerf pudendal', alt: 'Repère podal du nerf pudendal', orientation: 'portrait' },
   ])
   insertPhotosAfterBullets('10.4. Niveau 3', [
-    { type: 'figure', src: '/chapter-21/FR/cartographie/figure-21-08.png', caption: 'Photo : ligament inguinal et canal inguinal', alt: 'Repère podal du ligament et du canal inguinaux', orientation: 'landscape' },
+    { type: 'figure', src: '/chapter-21/FR/cartographies/figure-21-08.png', caption: 'Photo : ligament inguinal et canal inguinal', alt: 'Repère podal du ligament et du canal inguinaux', orientation: 'landscape' },
   ])
 
   // Final publication structure from the latest Word source.
@@ -610,7 +610,7 @@ if (chapter21Reflex) {
     { type: 'para', text: 'Ces localisations constituent des repères cliniques ROP. Elles sont ensuite hiérarchisées selon le mécanisme dominant et le contexte clinique.' },
     { type: 'para', text: 'Le nerf pudendal est une voie somatique distincte des voies autonomes pelviennes. Il assure la sensibilité des organes génitaux externes et participe à la commande des muscles striés périnéaux.' },
     { type: 'bullets', items: ['Ligament inguinal et canal inguinal.'] },
-    { type: 'figure', src: '/chapter-21/FR/cartographie/figure-21-08.png', caption: 'Photo : ligament inguinal et canal inguinal', alt: 'Repère podal du ligament et du canal inguinaux', orientation: 'landscape' },
+    { type: 'figure', src: '/chapter-21/FR/cartographies/figure-21-08.png', caption: 'Photo : ligament inguinal et canal inguinal', alt: 'Repère podal du ligament et du canal inguinaux', orientation: 'landscape' },
     { type: 'xref', label: 'Cf. chapitre 17 — Cavité pelvienne', href: '/lecture/chapitre-17?lang=fr' },
     { type: 'xref', label: 'cf. chapitre 19 — Organes génitaux féminins', href: '/lecture/chapitre-19?lang=fr' },
     { type: 'xref', label: 'cf. chapitre 20 — Organes génitaux masculins', href: '/lecture/chapitre-20?lang=fr' },
@@ -625,10 +625,10 @@ if (chapter21Reflex) {
       'Grand foramen ischiatique, muscle piriforme, plexus sacré et nerf pudendal.',
       'Petit foramen ischiatique, muscles obturateurs et jumeaux.',
     ] },
-    { type: 'figure', src: '/chapter-21/FR/cartographie/figure-21-02.png', caption: 'Photo : grand foramen ischiatique, muscle piriforme, plexus sacré et nerf pudendal', alt: 'Repère podal du grand foramen ischiatique', orientation: 'landscape' },
-    { type: 'figure', src: '/chapter-21/FR/cartographie/figure-21-04.png', caption: 'Photo : petit foramen ischiatique, muscles obturateurs et jumeaux', alt: 'Repère podal du petit foramen ischiatique', orientation: 'landscape' },
-    { type: 'figure', src: '/chapter-21/FR/cartographie/figure-21-06.png', caption: 'Photo : ligaments sacro-tubéral et sacro-épineux', alt: 'Repère podal des ligaments sacro-tubéral et sacro-épineux', orientation: 'landscape' },
-    { type: 'figure', src: '/chapter-21/FR/cartographie/figure-21-10.png', caption: 'Photo : nerf pudendal', alt: 'Repère podal du nerf pudendal', orientation: 'portrait' },
+    { type: 'figure', src: '/chapter-21/FR/cartographies/figure-21-02.png', caption: 'Photo : grand foramen ischiatique, muscle piriforme, plexus sacré et nerf pudendal', alt: 'Repère podal du grand foramen ischiatique', orientation: 'landscape' },
+    { type: 'figure', src: '/chapter-21/FR/cartographies/figure-21-04.png', caption: 'Photo : petit foramen ischiatique, muscles obturateurs et jumeaux', alt: 'Repère podal du petit foramen ischiatique', orientation: 'landscape' },
+    { type: 'figure', src: '/chapter-21/FR/cartographies/figure-21-06.png', caption: 'Photo : ligaments sacro-tubéral et sacro-épineux', alt: 'Repère podal des ligaments sacro-tubéral et sacro-épineux', orientation: 'landscape' },
+    { type: 'figure', src: '/chapter-21/FR/cartographies/figure-21-10.png', caption: 'Photo : nerf pudendal', alt: 'Repère podal du nerf pudendal', orientation: 'portrait' },
     { type: 'sub', text: '10.4.2. Balance viscéro-émotionnelle' },
     { type: 'para', text: 'Il n’est pas toujours facile de dissocier la part respective des facteurs physiques et psycho-émotionnels dans les troubles sexuels, chez la femme comme chez l’homme.' },
     { type: 'para', text: 'La sexualité implique des dimensions cognitives, émotionnelles et corporelles. Des facteurs tels que le stress, la perte de l’estime de soi, l’anxiété ou l’angoisse de la performance, la dépression, les conflits au sein du couple, les tabous religieux ou éducationnels et les traumatismes sexuels vécus dans le passé peuvent être associés à des difficultés sexuelles et en moduler le vécu, sans permettre d’attribuer automatiquement un trouble sexuel à une origine psychologique.' },
