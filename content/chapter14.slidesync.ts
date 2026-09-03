@@ -42,9 +42,9 @@ export const chapter14Slides: SyncSlide[] = [
   { src: '/chapter-14/FR/slides/slide-17.png', title: 'Maladie de Crohn' },
   { src: '/chapter-14/FR/slides/slide-18.png', title: 'Intestin grêle — relations viscéro-somatiques' },
   { src: '/chapter-14/FR/slides/slide-21.png', title: 'Protocole clinique ROP : l’intestin grêle' },
-  { src: '/chapter-14/FR/cartographie/figure-14-01.png', title: 'Cartographie : Racine du mésentère — jonction duodéno-jéjunale à ombilic' },
-  { src: '/chapter-14/FR/cartographie/figure-14-03.png', title: 'Cartographie : Racine du mésentère — valvule iléo-cæcale à ombilic' },
-  { src: '/chapter-14/FR/cartographie/figure-14-05.png', title: 'Cartographie : Jéjunum' },
+  { src: '/chapter-14/FR/cartographies/figure-14-01.png', title: 'Cartographie : Racine du mésentère — jonction duodéno-jéjunale à ombilic' },
+  { src: '/chapter-14/FR/cartographies/figure-14-03.png', title: 'Cartographie : Racine du mésentère — valvule iléo-cæcale à ombilic' },
+  { src: '/chapter-14/FR/cartographies/figure-14-05.png', title: 'Cartographie : Jéjunum' },
   { src: '/chapter-14/FR/slides/slide-20.png', title: 'Relations viscéro-émotionnelles' },
 ]
 

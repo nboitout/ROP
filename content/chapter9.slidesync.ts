@@ -36,9 +36,9 @@ export const chapter9Slides: SyncSlide[] = [
   { src: '/chapter-9/FR/slides/slide-20.png', title: 'Relations viscéro-émotionnelles — Estomac' },
   { src: '/chapter-9/FR/slides/slide-21.png', title: 'Tableau de bord therapeutique ROP' },
   { src: '/chapter-9/FR/slides/slide-19.png', title: 'Cartographie ROP : cibles reflexes' },
-  { src: '/chapter-9/FR/cartographie/figure-9-01.png', title: 'Cartographie : hiatus œsophagien et nerfs vagues droit et gauche' },
-  { src: '/chapter-9/FR/cartographie/figure-9-03.png', title: 'Cartographie plantaire : estomac' },
-  { src: '/chapter-9/FR/cartographie/figure-9-05.png', title: 'Cartographie : relation cerveau limbique-estomac' },
+  { src: '/chapter-9/FR/cartographies/figure-9-01.png', title: 'Cartographie : hiatus œsophagien et nerfs vagues droit et gauche' },
+  { src: '/chapter-9/FR/cartographies/figure-9-03.png', title: 'Cartographie plantaire : estomac' },
+  { src: '/chapter-9/FR/cartographies/figure-9-05.png', title: 'Cartographie : relation cerveau limbique-estomac' },
 ]
 
 export const chapter9SlideAnchors: SyncAnchor[] = [

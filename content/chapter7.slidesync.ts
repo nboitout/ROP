@@ -23,11 +23,11 @@ export const chapter7Slides: SyncSlide[] = [
   { src: '/chapter-7/FR/slides/slide-12.png', title: 'Pathologies du péritoine : mécaniques et cliniques' },
   { src: '/chapter-7/FR/slides/slide-13.png', title: 'Cartographie des douleurs projetées' },
   { src: '/chapter-7/FR/slides/slide-14.png', title: 'Synthèse — contenant, contenu et réseaux péritonéaux' },
-  { src: '/chapter-7/FR/cartographie/figure-7-01.png', title: 'Cartographie : racine du mésentère — jonction duodéno-jéjunale à ombilic' },
-  { src: '/chapter-7/FR/cartographie/figure-7-03.png', title: 'Cartographie : racine du mésentère — ombilic à valvule iléocæcale' },
-  { src: '/chapter-7/FR/cartographie/figure-7-05.png', title: 'Cartographie : racine du mésocôlon transverse — deuxième duodénum à L2' },
-  { src: '/chapter-7/FR/cartographie/figure-7-07.png', title: 'Cartographie : racine du mésocôlon transverse — L2 au corps du pancréas' },
-  { src: '/chapter-7/FR/cartographie/figure-7-09.png', title: 'Cartographie : racine du mésosigmoïde' },
+  { src: '/chapter-7/FR/cartographies/figure-7-01.png', title: 'Cartographie : racine du mésentère — jonction duodéno-jéjunale à ombilic' },
+  { src: '/chapter-7/FR/cartographies/figure-7-03.png', title: 'Cartographie : racine du mésentère — ombilic à valvule iléocæcale' },
+  { src: '/chapter-7/FR/cartographies/figure-7-05.png', title: 'Cartographie : racine du mésocôlon transverse — deuxième duodénum à L2' },
+  { src: '/chapter-7/FR/cartographies/figure-7-07.png', title: 'Cartographie : racine du mésocôlon transverse — L2 au corps du pancréas' },
+  { src: '/chapter-7/FR/cartographies/figure-7-09.png', title: 'Cartographie : racine du mésosigmoïde' },
 ]
 
 export const chapter7SlideAnchors: SyncAnchor[] = [

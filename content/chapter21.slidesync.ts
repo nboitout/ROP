@@ -19,12 +19,12 @@ export const chapter21Slides: SyncSlide[] = [
   { src: '/chapter-21/FR/slides/slide-09.png', title: 'Relations viscéro-somatiques' },
   { src: '/chapter-21/FR/slides/slide-10.png', title: 'La dimension psycho-émotionnelle' },
   { src: '/chapter-21/FR/slides/slide-11.png', title: 'Protocole clinique ROP : système érectile masculin et féminin' },
-  { src: '/chapter-21/FR/cartographie/figure-21-01.png', title: 'Cartographie ROP : grand foramen ischiatique' },
-  { src: '/chapter-21/FR/cartographie/figure-21-03.png', title: 'Cartographie ROP : petit foramen ischiatique' },
-  { src: '/chapter-21/FR/cartographie/figure-21-05.png', title: 'Cartographie ROP : ligaments sacro-tubéral et sacro-épineux' },
-  { src: '/chapter-21/FR/cartographie/figure-21-07.png', title: 'Cartographie ROP : ligament et canal inguinaux' },
-  { src: '/chapter-21/FR/cartographie/figure-21-09.png', title: 'Cartographie ROP : nerf pudendal et organes érectiles' },
-  { src: '/chapter-21/FR/cartographie/figure-21-11.png', title: 'Cartographie ROP : nerf olfactif I' },
+  { src: '/chapter-21/FR/cartographies/figure-21-01.png', title: 'Cartographie ROP : grand foramen ischiatique' },
+  { src: '/chapter-21/FR/cartographies/figure-21-03.png', title: 'Cartographie ROP : petit foramen ischiatique' },
+  { src: '/chapter-21/FR/cartographies/figure-21-05.png', title: 'Cartographie ROP : ligaments sacro-tubéral et sacro-épineux' },
+  { src: '/chapter-21/FR/cartographies/figure-21-07.png', title: 'Cartographie ROP : ligament et canal inguinaux' },
+  { src: '/chapter-21/FR/cartographies/figure-21-09.png', title: 'Cartographie ROP : nerf pudendal et organes érectiles' },
+  { src: '/chapter-21/FR/cartographies/figure-21-11.png', title: 'Cartographie ROP : nerf olfactif I' },
 ]
 
 export const chapter21SlideAnchors: SyncAnchor[] = [
