@@ -1,6 +1,6 @@
 import type { Chapter } from './types'
 
-// Source: public/chapter-19/Chapitre_19_Organes_genitaux_feminins_version_finale_publiable.docx
+// Source: public/chapter-19/FR/Chapitre_19_Organes_genitaux_feminins_version_finale_publiable.docx
 // Figure-number mentions are intentionally omitted from the web prose.
 export const chapter19Fr: Chapter = {
   "slug": "chapter-19",
@@ -1199,23 +1199,23 @@ const insertChapter19PhotosAfterBullets = (heading: string, photos: typeof revis
 }
 
 insertChapter19PhotosAfterBullets('3.3. Soutiens associés', [
-  { type: 'figure', src: '/chapter-19/cartographie/figure-19-02.png', caption: 'Photo : rein gauche', alt: 'Repère podal du rein gauche', orientation: 'portrait' },
-  { type: 'figure', src: '/chapter-19/cartographie/figure-19-04.png', caption: 'Photo : surrénale gauche', alt: 'Repère podal de la surrénale gauche', orientation: 'portrait' },
+  { type: 'figure', src: '/chapter-19/FR/cartographie/figure-19-02.png', caption: 'Photo : rein gauche', alt: 'Repère podal du rein gauche', orientation: 'portrait' },
+  { type: 'figure', src: '/chapter-19/FR/cartographie/figure-19-04.png', caption: 'Photo : surrénale gauche', alt: 'Repère podal de la surrénale gauche', orientation: 'portrait' },
 ])
 insertChapter19PhotosAfterBullets('3.2.3. Niveau 3', [
-  { type: 'figure', src: '/chapter-19/cartographie/figure-19-14.png', caption: 'Photo : ovaire', alt: 'Repère podal de l’ovaire', orientation: 'portrait' },
-  { type: 'figure', src: '/chapter-19/cartographie/figure-19-22.png', caption: 'Photo : trompe utérine', alt: 'Repère podal de la trompe utérine', orientation: 'portrait' },
+  { type: 'figure', src: '/chapter-19/FR/cartographie/figure-19-14.png', caption: 'Photo : ovaire', alt: 'Repère podal de l’ovaire', orientation: 'portrait' },
+  { type: 'figure', src: '/chapter-19/FR/cartographie/figure-19-22.png', caption: 'Photo : trompe utérine', alt: 'Repère podal de la trompe utérine', orientation: 'portrait' },
 ])
 insertChapter19PhotosAfterBullets('3.1.4. Niveau 4', [
-  { type: 'figure', src: '/chapter-19/cartographie/figure-19-06.png', caption: 'Photo : grand foramen ischiatique, muscle piriforme, plexus sacré et nerf pudendal', alt: 'Repère podal du grand foramen ischiatique', orientation: 'landscape' },
-  { type: 'figure', src: '/chapter-19/cartographie/figure-19-08.png', caption: 'Photo : petit foramen ischiatique, muscles obturateurs et jumeaux', alt: 'Repère podal du petit foramen ischiatique', orientation: 'landscape' },
-  { type: 'figure', src: '/chapter-19/cartographie/figure-19-10.png', caption: 'Photo : fosse obturée et muscles obturateurs', alt: 'Repère podal de la fosse obturée', orientation: 'portrait' },
-  { type: 'figure', src: '/chapter-19/cartographie/figure-19-12.png', caption: 'Photo : ligaments sacro-tubéral et sacro-épineux', alt: 'Repère podal des ligaments sacro-tubéral et sacro-épineux', orientation: 'landscape' },
-  { type: 'figure', src: '/chapter-19/cartographie/figure-19-20.png', caption: 'Photo : ligaments sacro-tubéral et sacro-épineux — repère pelvien', alt: 'Repère pelvien podal des ligaments sacro-tubéral et sacro-épineux', orientation: 'landscape' },
+  { type: 'figure', src: '/chapter-19/FR/cartographie/figure-19-06.png', caption: 'Photo : grand foramen ischiatique, muscle piriforme, plexus sacré et nerf pudendal', alt: 'Repère podal du grand foramen ischiatique', orientation: 'landscape' },
+  { type: 'figure', src: '/chapter-19/FR/cartographie/figure-19-08.png', caption: 'Photo : petit foramen ischiatique, muscles obturateurs et jumeaux', alt: 'Repère podal du petit foramen ischiatique', orientation: 'landscape' },
+  { type: 'figure', src: '/chapter-19/FR/cartographie/figure-19-10.png', caption: 'Photo : fosse obturée et muscles obturateurs', alt: 'Repère podal de la fosse obturée', orientation: 'portrait' },
+  { type: 'figure', src: '/chapter-19/FR/cartographie/figure-19-12.png', caption: 'Photo : ligaments sacro-tubéral et sacro-épineux', alt: 'Repère podal des ligaments sacro-tubéral et sacro-épineux', orientation: 'landscape' },
+  { type: 'figure', src: '/chapter-19/FR/cartographie/figure-19-20.png', caption: 'Photo : ligaments sacro-tubéral et sacro-épineux — repère pelvien', alt: 'Repère pelvien podal des ligaments sacro-tubéral et sacro-épineux', orientation: 'landscape' },
 ])
 insertChapter19PhotosAfterBullets('3.1.3. Niveau 3', [
-  { type: 'figure', src: '/chapter-19/cartographie/figure-19-16.png', caption: 'Photo : ligament inguinal et canal inguinal', alt: 'Repère podal du ligament et du canal inguinaux', orientation: 'landscape' },
-  { type: 'figure', src: '/chapter-19/cartographie/figure-19-18.png', caption: 'Photo : noyau fibreux central du périnée et fente uro-génitale', alt: 'Repère podal du noyau fibreux central du périnée et de la fente uro-génitale', orientation: 'landscape' },
+  { type: 'figure', src: '/chapter-19/FR/cartographie/figure-19-16.png', caption: 'Photo : ligament inguinal et canal inguinal', alt: 'Repère podal du ligament et du canal inguinaux', orientation: 'landscape' },
+  { type: 'figure', src: '/chapter-19/FR/cartographie/figure-19-18.png', caption: 'Photo : noyau fibreux central du périnée et fente uro-génitale', alt: 'Repère podal du noyau fibreux central du périnée et de la fente uro-génitale', orientation: 'landscape' },
 ])
 
 const uterusLevel3HeadingIndex = revisedReflexSection.blocks.findIndex(
@@ -1227,7 +1227,7 @@ const uterusLevel3BulletsIndex = revisedReflexSection.blocks.findIndex(
 if (uterusLevel3BulletsIndex >= 0) {
   revisedReflexSection.blocks.splice(uterusLevel3BulletsIndex + 1, 0, {
     type: 'figure',
-    src: '/chapter-19/cartographie/Chapter19 Cartographie et Photos - 2.png',
+    src: '/chapter-19/FR/cartographie/Chapter19 Cartographie et Photos - 2.png',
     caption: 'Photo : repère podal du trigone, de la région cervico-isthmique et du plexus hypogastrique inférieur',
     alt: 'Technique podale pour le trigone, la région cervico-isthmique et le plexus hypogastrique inférieur',
     orientation: 'landscape',

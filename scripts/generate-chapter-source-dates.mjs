@@ -23,9 +23,9 @@ const sourceDocuments = {
   'chapter-16': { fr: 'chapter-16/FR/Chapitre_16_Reins_version_finale_publisable.docx', en: 'chapter-16/EN/Chapter_16_Kidneys_Medical_English_Revised.docx' },
   'chapter-17': { fr: 'chapter-17/FR/Chapitre_17_Cavite_pelvienne_socle_regional_niveaux_3_4.docx', en: 'chapter-17/EN/Chapter_17_Pelvic_Cavity_Medical_English_Revised.docx' },
   'chapter-18': { fr: 'chapter-18/FR/Chapitre_18_Vessie_version_finale_publiable.docx', en: 'chapter-18/EN/Chapter_18_Urinary_Bladder_ROP_Medical_English_Revised.docx' },
-  'chapter-19': { fr: 'chapter-19/Chapitre_19_Organes_genitaux_feminins_version_finale_publiable.docx', en: 'chapter-19/EN/Chapter_19_Female_Genital_Organs_medical_English_revised_EN.docx' },
-  'chapter-20': { fr: 'chapter-20/Chapitre_20_Organes_genitaux_masculins_version_finale_publiable.docx', en: 'chapter-20/EN/Chapter_20_Male_Genital_Organs_Medical_English_Revised.docx' },
-  'chapter-21': { fr: 'chapter-21/Chapitre_21_Systeme_erectile_version_finale_publiable.docx', en: 'chapter-21/EN/Chapter_21_Erectile_System_Medical_English_Revised.docx' },
+  'chapter-19': { fr: 'chapter-19/FR/Chapitre_19_Organes_genitaux_feminins_version_finale_publiable.docx', en: 'chapter-19/EN/Chapter_19_Female_Genital_Organs_medical_English_revised_EN.docx' },
+  'chapter-20': { fr: 'chapter-20/FR/Chapitre_20_Organes_genitaux_masculins_version_finale_publiable.docx', en: 'chapter-20/EN/Chapter_20_Male_Genital_Organs_Medical_English_Revised.docx' },
+  'chapter-21': { fr: 'chapter-21/FR/Chapitre_21_Systeme_erectile_version_finale_publiable.docx', en: 'chapter-21/EN/Chapter_21_Erectile_System_Medical_English_Revised.docx' },
 }
 
 const dates = Object.fromEntries(Object.entries(sourceDocuments).map(([chapter, languages]) => [chapter, Object.fromEntries(Object.entries(languages).flatMap(([language, source]) => {
