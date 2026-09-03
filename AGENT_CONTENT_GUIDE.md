@@ -124,7 +124,7 @@ def extract_docx(path):
 
 ```ts
 // Introduction — Italian
-// Source: public/chapter-0/Chapter_0_Introduction_ROP_Italian.docx
+// Source: public/chapter-0/IT/Chapter_0_Introduction_ROP_Italian.docx
 
 import type { Chapter } from './types'
 

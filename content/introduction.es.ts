@@ -1,5 +1,5 @@
 // Introduction - Spanish
-// Source: public/chapter-0/Chapter0 Introduction ES.docx
+// Source: public/chapter-0/ES/Chapter0 Introduction ES.docx
 
 import type { Chapter } from './types'
 

@@ -1,5 +1,5 @@
 // Introduction - Italian
-// Source: public/chapter-0/Chapter0 Introduction IT.docx
+// Source: public/chapter-0/IT/Chapter0 Introduction IT.docx
 
 import type { Chapter } from './types'
 

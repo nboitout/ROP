@@ -656,7 +656,7 @@ function BlockView({
               src: block.src,
               alt: block.alt,
               caption: block.caption,
-              orientation: block.src.startsWith('/chapter-0/figure-0-') ? 'landscape' : undefined,
+              orientation: block.src.startsWith('/chapter-0/FR/figure-0-') ? 'landscape' : undefined,
             })}
             aria-label={`Agrandir : ${block.caption}`}
           >

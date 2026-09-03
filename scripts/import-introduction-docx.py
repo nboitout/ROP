@@ -51,7 +51,7 @@ def iter_blocks(doc):
 def figure_block(filename: str, caption: str, alt: str):
     return {
         "type": "figure",
-        "src": f"/chapter-0/{filename}",
+        "src": f"/chapter-0/FR/{filename}",
         "caption": caption,
         "alt": alt,
         "orientation": "landscape",
@@ -130,7 +130,7 @@ def main(source: Path, destination: Path):
     serialized = json.dumps(payload, ensure_ascii=False, indent=2)
     output = (
         "// Introduction — French synchronized reading stream\n"
-        f"// Source: public/chapter-0/{source.name}\n\n"
+        f"// Source: public/chapter-0/FR/{source.name}\n\n"
         "import type { Chapter } from './types'\n\n"
         f"export const introductionFr: Chapter = {serialized}\n"
     )

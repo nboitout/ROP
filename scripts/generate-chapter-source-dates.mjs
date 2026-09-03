@@ -4,7 +4,7 @@ import { join } from 'node:path'
 const sourceRoot = process.env.CHAPTER_SOURCE_ROOT ?? process.cwd()
 
 const sourceDocuments = {
-  introduction: { fr: 'chapter-0/Chapitre_0_Introduction_ROP (3).docx', en: 'chapter-0/EN/Chapter_0_Introduction_ROP_EN_Final_Publishable (1) (1).docx', de: 'chapter-0/Chapter0 Introduction DE.docx', es: 'chapter-0/Chapter0 Introduction ES.docx', it: 'chapter-0/Chapter0 Introduction IT.docx' },
+  introduction: { fr: 'chapter-0/FR/Chapitre_0_Introduction_ROP (3).docx', en: 'chapter-0/EN/Chapter_0_Introduction_ROP_EN_Final_Publishable (1) (1).docx', de: 'chapter-0/DE/Chapter0 Introduction DE.docx', es: 'chapter-0/ES/Chapter0 Introduction ES.docx', it: 'chapter-0/IT/Chapter0 Introduction IT.docx' },
   'chapter-1': { fr: 'chapter-1/Chapitre_1_Generalites_version_publiable.docx', en: 'chapter-1/EN/Chapter_1_General_Considerations_EN_publishable_revised.docx' },
   'chapter-2': { fr: 'chapter-2/Chapitre_2_ROP_version_complete_directement_publiable.docx', en: 'chapter-2/EN/Chapter_2_ROP_Treatment_Medical_English_Revised.docx', de: 'chapter-2/DE/Kapitel_2_ROP_Behandlung_Medizinisches_Deutsch.docx', es: 'chapter-2/Chapter_2_Treatment_by_ROP_Spanish.docx', it: 'chapter-2/Chapter_2_Treatment_by_ROP_Italian.docx' },
   'chapter-3': { fr: 'chapter-3/Chapitre_3_SNC_ROP_version_publiable_sinus_carotidien.docx', en: 'chapter-3/EN/Chapter_3_Central_Nervous_System_ROP_EN_Publishable_Revised.docx' },

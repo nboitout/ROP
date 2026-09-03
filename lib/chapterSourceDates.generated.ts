@@ -25,7 +25,7 @@ export const chapterSourceModifiedAt: Record<string, Partial<Record<Lang, string
     "en": "2026-08-25T10:46:01.448Z"
   },
   "chapter-4": {
-    "fr": "2026-08-13T07:45:01.829Z",
+    "fr": "2026-09-01T13:37:16.687Z",
     "en": "2026-08-25T10:55:43.226Z"
   },
   "chapter-5": {
@@ -56,7 +56,7 @@ export const chapterSourceModifiedAt: Record<string, Partial<Record<Lang, string
     "en": "2026-08-25T13:41:14.274Z"
   },
   "chapter-11": {
-    "fr": "2026-08-27T06:35:40.211Z",
+    "fr": "2026-09-01T13:37:16.555Z",
     "en": "2026-08-27T07:00:23.156Z"
   },
   "chapter-12": {

@@ -1,5 +1,5 @@
 // Introduction — German synchronized reading stream
-// Source: Kapitel_0_Einfuehrung_ROP_Medizinisches_Deutsch.docx
+// Source: public/chapter-0/DE/Chapter0 Introduction DE.docx
 
 import type { Chapter } from './types'
 
