@@ -1,6 +1,6 @@
 import type { Chapter } from './types'
 
-// Source: public/chapter-15/Chapitre_15_Colon_et_rectum_version_complete_publisable.docx
+// Source: public/chapter-15/FR/Chapitre_15_Colon_et_rectum_version_complete_publisable.docx
 export const chapter15Fr: Chapter = {
   "slug": "chapter-15",
   "number": "15",
@@ -711,14 +711,14 @@ export const chapter15Fr: Chapter = {
         },
         {
           "type": "figure",
-          "src": "/chapter-15/cartographie/figure-15-02.png",
+          "src": "/chapter-15/FR/cartographie/figure-15-02.png",
           "caption": "Photo : Nerf vague X dans la moelle allongée",
           "alt": "Repère podal du nerf vague X dans la moelle allongée",
           "orientation": "portrait"
         },
         {
           "type": "figure",
-          "src": "/chapter-15/cartographie/figure-15-04.png",
+          "src": "/chapter-15/FR/cartographie/figure-15-04.png",
           "caption": "Photo : Nerf vague X dans le foramen jugulaire",
           "alt": "Repère podal du nerf vague X dans le foramen jugulaire",
           "orientation": "portrait"
@@ -731,7 +731,7 @@ export const chapter15Fr: Chapter = {
         },
         {
           "type": "figure",
-          "src": "/chapter-15/cartographie/figure-15-06.png",
+          "src": "/chapter-15/FR/cartographie/figure-15-06.png",
           "caption": "Cartographie : Origine médullaire du Parasympathique pelvien ou sacré",
           "alt": "Titre cartographique de l'origine médullaire du Parasympathique pelvien ou sacré",
           "orientation": "landscape"
@@ -744,14 +744,14 @@ export const chapter15Fr: Chapter = {
         },
         {
           "type": "figure",
-          "src": "/chapter-15/cartographie/figure-15-08.png",
+          "src": "/chapter-15/FR/cartographie/figure-15-08.png",
           "caption": "Cartographie : Origine médullaire du Sympathique",
           "alt": "Titre cartographique de l'origine médullaire du Sympathique",
           "orientation": "landscape"
         },
         {
           "type": "figure",
-          "src": "/chapter-15/cartographie/figure-15-10.png",
+          "src": "/chapter-15/FR/cartographie/figure-15-10.png",
           "caption": "Photo : Chaîne ganglionnaire latéro-vertébrale thoracique",
           "alt": "Repère podal de la chaîne ganglionnaire latéro-vertébrale thoracique",
           "orientation": "landscape"
@@ -776,21 +776,21 @@ export const chapter15Fr: Chapter = {
         },
         {
           "type": "figure",
-          "src": "/chapter-15/cartographie/figure-15-15.png",
+          "src": "/chapter-15/FR/cartographie/figure-15-15.png",
           "caption": "Cartographie : Valvule iléocaecale",
           "alt": "Titre cartographique de la valvule iléocaecale",
           "orientation": "landscape"
         },
         {
           "type": "figure",
-          "src": "/chapter-15/cartographie/figure-15-16.png",
+          "src": "/chapter-15/FR/cartographie/figure-15-16.png",
           "caption": "Photo : Valvule iléocaecale",
           "alt": "Repère podal de la valvule iléocaecale sur le pied gauche",
           "orientation": "portrait"
         },
         {
           "type": "figure",
-          "src": "/chapter-15/cartographie/figure-15-12.png",
+          "src": "/chapter-15/FR/cartographie/figure-15-12.png",
           "caption": "Cartographie : Côlon ascendant et côlon transverse",
           "alt": "Titre cartographique du côlon ascendant et du côlon transverse",
           "orientation": "landscape"
@@ -806,35 +806,35 @@ export const chapter15Fr: Chapter = {
         },
         {
           "type": "figure",
-          "src": "/chapter-15/cartographie/figure-15-17.png",
+          "src": "/chapter-15/FR/cartographie/figure-15-17.png",
           "caption": "Cartographie : Racine du mésocôlon transverse entre le 2ème duodénum et L2",
           "alt": "Titre cartographique de la racine du mésocôlon transverse entre le 2ème duodénum et L2",
           "orientation": "landscape"
         },
         {
           "type": "figure",
-          "src": "/chapter-15/cartographie/figure-15-18.png",
+          "src": "/chapter-15/FR/cartographie/figure-15-18.png",
           "caption": "Photo : Racine du mésocôlon transverse",
           "alt": "Repère podal de la racine du mésocôlon transverse",
           "orientation": "portrait"
         },
         {
           "type": "figure",
-          "src": "/chapter-15/cartographie/figure-15-19.png",
+          "src": "/chapter-15/FR/cartographie/figure-15-19.png",
           "caption": "Cartographie : Racine du mésocôlon transverse entre L2 et le corps du pancréas",
           "alt": "Titre cartographique de la racine du mésocôlon transverse entre L2 et le corps du pancréas",
           "orientation": "landscape"
         },
         {
           "type": "figure",
-          "src": "/chapter-15/cartographie/figure-15-20.png",
+          "src": "/chapter-15/FR/cartographie/figure-15-20.png",
           "caption": "Photo : Racine du mésocôlon transverse entre les deux corps du pancréas",
           "alt": "Repère podal de la racine du mésocôlon transverse entre les deux corps du pancréas",
           "orientation": "landscape"
         },
         {
           "type": "figure",
-          "src": "/chapter-15/cartographie/figure-15-14.png",
+          "src": "/chapter-15/FR/cartographie/figure-15-14.png",
           "caption": "Cartographie : Côlon transverse et côlon descendant",
           "alt": "Titre cartographique du côlon transverse et du côlon descendant",
           "orientation": "landscape"
@@ -854,7 +854,7 @@ export const chapter15Fr: Chapter = {
         },
         {
           "type": "figure",
-          "src": "/chapter-15/cartographie/figure-15-22.png",
+          "src": "/chapter-15/FR/cartographie/figure-15-22.png",
           "caption": "Cartographie : Rectum, anus, mésosigmoïde",
           "alt": "Titre cartographique du rectum, de l'anus et du mésosigmoïde",
           "orientation": "landscape"
@@ -990,14 +990,14 @@ chapter15Reflex.blocks = [
   { type: 'sub', text: '13.3.1. Côlon proximal' },
   { type: 'para', text: 'Selon les tests, la lecture peut intégrer :' },
   { type: 'bullets', items: ['Nerf vague.', 'Voies sympathiques thoraco-lombaires.', 'Plexus mésentérique supérieur.', 'Interface SNA-SNE.'] },
-  { type: 'figure', src: '/chapter-15/cartographie/figure-15-02.png', caption: 'Photo : Nerf vague X dans la moelle allongée', alt: 'Repère podal du nerf vague dans la moelle allongée', orientation: 'portrait' },
-  { type: 'figure', src: '/chapter-15/cartographie/figure-15-04.png', caption: 'Photo : Nerf vague X dans le foramen jugulaire', alt: 'Repère podal du nerf vague dans le foramen jugulaire', orientation: 'portrait' },
-  { type: 'figure', src: '/chapter-15/cartographie/figure-15-08.png', caption: 'Cartographie : Origine médullaire du sympathique', alt: 'Cartographie de l’origine médullaire du sympathique', orientation: 'landscape' },
-  { type: 'figure', src: '/chapter-15/cartographie/figure-15-10.png', caption: 'Photo : Chaîne ganglionnaire latéro-vertébrale thoracique', alt: 'Repère podal de la chaîne ganglionnaire thoracique', orientation: 'landscape' },
+  { type: 'figure', src: '/chapter-15/FR/cartographie/figure-15-02.png', caption: 'Photo : Nerf vague X dans la moelle allongée', alt: 'Repère podal du nerf vague dans la moelle allongée', orientation: 'portrait' },
+  { type: 'figure', src: '/chapter-15/FR/cartographie/figure-15-04.png', caption: 'Photo : Nerf vague X dans le foramen jugulaire', alt: 'Repère podal du nerf vague dans le foramen jugulaire', orientation: 'portrait' },
+  { type: 'figure', src: '/chapter-15/FR/cartographie/figure-15-08.png', caption: 'Cartographie : Origine médullaire du sympathique', alt: 'Cartographie de l’origine médullaire du sympathique', orientation: 'landscape' },
+  { type: 'figure', src: '/chapter-15/FR/cartographie/figure-15-10.png', caption: 'Photo : Chaîne ganglionnaire latéro-vertébrale thoracique', alt: 'Repère podal de la chaîne ganglionnaire thoracique', orientation: 'landscape' },
   { type: 'sub', text: '13.3.2. Côlon distal, sigmoïde et rectum' },
   { type: 'para', text: 'Selon les tests, la lecture peut intégrer :' },
   { type: 'bullets', items: ['Parasympathique pelvien S2-S4.', 'Voies sympathiques thoraco-lombaires basses.', 'Plexus mésentérique inférieur.', 'Plexus hypogastrique supérieur et nerfs hypogastriques.', 'Plexus hypogastrique inférieur pour le territoire rectal et pelvien.'] },
-  { type: 'figure', src: '/chapter-15/cartographie/figure-15-06.png', caption: 'Cartographie : Origine médullaire du parasympathique pelvien ou sacré', alt: 'Cartographie du parasympathique pelvien', orientation: 'landscape' },
+  { type: 'figure', src: '/chapter-15/FR/cartographie/figure-15-06.png', caption: 'Cartographie : Origine médullaire du parasympathique pelvien ou sacré', alt: 'Cartographie du parasympathique pelvien', orientation: 'landscape' },
   { type: 'sub', text: '13.3.3. Zone de transition de Cannon-Böhm' },
   { type: 'para', text: 'La zone de Cannon-Böhm peut être conservée comme repère de transition fonctionnelle entre les territoires parasympathiques proximal et distal, sans la présenter comme un point anatomique absolument fixe.' },
   { type: 'xref', label: 'Voir le chapitre 4 — Système nerveux autonome', href: '/lecture/chapitre-4-rework?lang=fr' },
@@ -1006,24 +1006,24 @@ chapter15Reflex.blocks = [
   { type: 'para', text: 'C’est le niveau principal du protocole colorectal. Le socle régional change selon le segment concerné.' },
   { type: 'sub', text: '13.4.1. Côlon droit' },
   { type: 'bullets', items: ['Cæcum et jonction iléo-cæcale.', 'Côlon ascendant.', 'Angle colique droit.', 'Rapports avec l’iléon, le rein droit, le foie et le diaphragme selon les tests.'] },
-  { type: 'figure', src: '/chapter-15/cartographie/figure-15-15.png', caption: 'Cartographie : Valvule iléo-cæcale', alt: 'Cartographie de la valvule iléo-cæcale', orientation: 'landscape' },
-  { type: 'figure', src: '/chapter-15/cartographie/figure-15-16.png', caption: 'Photo : Valvule iléo-cæcale', alt: 'Repère podal de la valvule iléo-cæcale', orientation: 'portrait' },
-  { type: 'figure', src: '/chapter-15/cartographie/figure-15-12.png', caption: 'Cartographie : Côlon ascendant et côlon transverse', alt: 'Cartographie du côlon ascendant et transverse', orientation: 'landscape' },
+  { type: 'figure', src: '/chapter-15/FR/cartographie/figure-15-15.png', caption: 'Cartographie : Valvule iléo-cæcale', alt: 'Cartographie de la valvule iléo-cæcale', orientation: 'landscape' },
+  { type: 'figure', src: '/chapter-15/FR/cartographie/figure-15-16.png', caption: 'Photo : Valvule iléo-cæcale', alt: 'Repère podal de la valvule iléo-cæcale', orientation: 'portrait' },
+  { type: 'figure', src: '/chapter-15/FR/cartographie/figure-15-12.png', caption: 'Cartographie : Côlon ascendant et côlon transverse', alt: 'Cartographie du côlon ascendant et transverse', orientation: 'landscape' },
   { type: 'xref', label: 'Voir le chapitre 7 — Socle régional abdominal et péritonéal', href: '/lecture/chapitre-7?lang=fr' },
   { type: 'sub', text: '13.4.2. Côlon transverse' },
   { type: 'bullets', items: ['Côlon transverse.', 'Angles coliques droit et gauche.', 'Mésocôlon transverse.', 'Racine du mésocôlon transverse lorsqu’elle est pertinente.'] },
   { type: 'para', text: 'La racine du mésocôlon transverse est utilisée comme complément régional de la zone colique, et non comme une étape systématique.' },
-  { type: 'figure', src: '/chapter-15/cartographie/figure-15-17.png', caption: 'Cartographie : Racine du mésocôlon transverse entre le deuxième duodénum et L2', alt: 'Cartographie de la première partie de la racine du mésocôlon transverse', orientation: 'landscape' },
-  { type: 'figure', src: '/chapter-15/cartographie/figure-15-18.png', caption: 'Photo : Racine du mésocôlon transverse', alt: 'Repère podal de la racine du mésocôlon transverse', orientation: 'portrait' },
-  { type: 'figure', src: '/chapter-15/cartographie/figure-15-19.png', caption: 'Cartographie : Racine du mésocôlon transverse entre L2 et le corps du pancréas', alt: 'Cartographie de la seconde partie de la racine du mésocôlon transverse', orientation: 'landscape' },
-  { type: 'figure', src: '/chapter-15/cartographie/figure-15-20.png', caption: 'Photo : Racine du mésocôlon transverse entre les deux zones du pancréas', alt: 'Repère podal de la racine du mésocôlon transverse et du pancréas', orientation: 'landscape' },
+  { type: 'figure', src: '/chapter-15/FR/cartographie/figure-15-17.png', caption: 'Cartographie : Racine du mésocôlon transverse entre le deuxième duodénum et L2', alt: 'Cartographie de la première partie de la racine du mésocôlon transverse', orientation: 'landscape' },
+  { type: 'figure', src: '/chapter-15/FR/cartographie/figure-15-18.png', caption: 'Photo : Racine du mésocôlon transverse', alt: 'Repère podal de la racine du mésocôlon transverse', orientation: 'portrait' },
+  { type: 'figure', src: '/chapter-15/FR/cartographie/figure-15-19.png', caption: 'Cartographie : Racine du mésocôlon transverse entre L2 et le corps du pancréas', alt: 'Cartographie de la seconde partie de la racine du mésocôlon transverse', orientation: 'landscape' },
+  { type: 'figure', src: '/chapter-15/FR/cartographie/figure-15-20.png', caption: 'Photo : Racine du mésocôlon transverse entre les deux zones du pancréas', alt: 'Repère podal de la racine du mésocôlon transverse et du pancréas', orientation: 'landscape' },
   { type: 'sub', text: '13.4.3. Côlon gauche et sigmoïde' },
   { type: 'bullets', items: ['Angle colique gauche.', 'Côlon descendant.', 'Sigmoïde.', 'Mésosigmoïde et ses racines selon les tests.', 'Rapports avec le psoas gauche, le rein gauche et le pelvis lorsqu’ils sont pertinents.'] },
-  { type: 'figure', src: '/chapter-15/cartographie/figure-15-14.png', caption: 'Cartographie : Côlon transverse et côlon descendant', alt: 'Cartographie du côlon transverse et descendant', orientation: 'landscape' },
+  { type: 'figure', src: '/chapter-15/FR/cartographie/figure-15-14.png', caption: 'Cartographie : Côlon transverse et côlon descendant', alt: 'Cartographie du côlon transverse et descendant', orientation: 'landscape' },
   { type: 'xref', label: 'Voir le chapitre 7 — Socle régional abdominal et péritonéal', href: '/lecture/chapitre-7?lang=fr' },
   { type: 'sub', text: '13.4.4. Rectum' },
   { type: 'bullets', items: ['Ampoule rectale.', 'Canal anal.', 'Sphincter interne.', 'Rapports avec le sacrum, le périnée et les organes pelviens.'] },
-  { type: 'figure', src: '/chapter-15/cartographie/figure-15-22.png', caption: 'Cartographie : Rectum, anus et mésosigmoïde', alt: 'Cartographie du rectum, de l’anus et du mésosigmoïde', orientation: 'landscape' },
+  { type: 'figure', src: '/chapter-15/FR/cartographie/figure-15-22.png', caption: 'Cartographie : Rectum, anus et mésosigmoïde', alt: 'Cartographie du rectum, de l’anus et du mésosigmoïde', orientation: 'landscape' },
   { type: 'xref', label: 'Voir le chapitre 17 — Socle régional du Niveau 3 pelvien', href: '/lecture/chapitre-17?lang=fr' },
   { type: 'rop', body: ['Le Niveau 3 associe la zone propre du segment colorectal aux seules composantes régionales pertinentes. Il n’impose pas de traiter systématiquement tout le mésocôlon ou toute la cavité pelvienne.'] },
   { type: 'sub', text: '13.5. Niveau 4 — Intégration viscéro-somatique et axe cerveau-intestin' },
@@ -1060,14 +1060,14 @@ chapter15Reflex.blocks.splice(
   0,
   {
     type: 'figure',
-    src: '/chapter-15/cartographie/figure-15-01.png',
+    src: '/chapter-15/FR/cartographie/figure-15-01.png',
     caption: 'Cartographie : Côlon transverse et côlon descendant',
     alt: 'Cartographie podale du côlon transverse et du côlon descendant',
     orientation: 'landscape',
   },
   {
     type: 'figure',
-    src: '/chapter-15/cartographie/figure-15-02.png',
+    src: '/chapter-15/FR/cartographie/figure-15-02.png',
     caption: 'Photo : Côlon ascendant et côlon transverse',
     alt: 'Geste podal pour le côlon ascendant et le côlon transverse',
     orientation: 'portrait',
@@ -1085,14 +1085,14 @@ chapter15Reflex.blocks.splice(
   0,
   {
     type: 'figure',
-    src: '/chapter-15/cartographie/figure-15-03.png',
+    src: '/chapter-15/FR/cartographie/figure-15-03.png',
     caption: 'Cartographie : Valvule iléo-cæcale, côlon ascendant et côlon transverse',
     alt: 'Cartographie podale de la valvule iléo-cæcale, du côlon ascendant et du côlon transverse',
     orientation: 'landscape',
   },
   {
     type: 'figure',
-    src: '/chapter-15/cartographie/figure-15-04.png',
+    src: '/chapter-15/FR/cartographie/figure-15-04.png',
     caption: 'Photo : Valvule iléo-cæcale',
     alt: 'Repère podal de la valvule iléo-cæcale',
     orientation: 'portrait',
@@ -1113,28 +1113,28 @@ chapter15Reflex.blocks.splice(
   0,
   {
     type: 'figure',
-    src: '/chapter-15/cartographie/figure-15-05.png',
+    src: '/chapter-15/FR/cartographie/figure-15-05.png',
     caption: 'Cartographie : Racine du mésocôlon transverse entre le deuxième duodénum et L2',
     alt: 'Cartographie podale du premier segment de la racine du mésocôlon transverse',
     orientation: 'landscape',
   },
   {
     type: 'figure',
-    src: '/chapter-15/cartographie/figure-15-06.png',
+    src: '/chapter-15/FR/cartographie/figure-15-06.png',
     caption: 'Photo : Racine du mésocôlon transverse — premier segment',
     alt: 'Repère podal du premier segment de la racine du mésocôlon transverse',
     orientation: 'portrait',
   },
   {
     type: 'figure',
-    src: '/chapter-15/cartographie/figure-15-07.png',
+    src: '/chapter-15/FR/cartographie/figure-15-07.png',
     caption: 'Cartographie : Racine du mésocôlon transverse entre L2 et le corps du pancréas',
     alt: 'Cartographie podale du second segment de la racine du mésocôlon transverse',
     orientation: 'landscape',
   },
   {
     type: 'figure',
-    src: '/chapter-15/cartographie/figure-15-08.png',
+    src: '/chapter-15/FR/cartographie/figure-15-08.png',
     caption: 'Photo : Racine du mésocôlon transverse — second segment',
     alt: 'Repère podal du second segment de la racine du mésocôlon transverse',
     orientation: 'landscape',
@@ -1152,14 +1152,14 @@ chapter15Reflex.blocks.splice(
   0,
   {
     type: 'figure',
-    src: '/chapter-15/cartographie/figure-15-09.png',
+    src: '/chapter-15/FR/cartographie/figure-15-09.png',
     caption: 'Cartographie : Rectum, anus et mésosigmoïde',
     alt: 'Cartographie podale du rectum, de l’anus et du mésosigmoïde',
     orientation: 'landscape',
   },
   {
     type: 'figure',
-    src: '/chapter-15/cartographie/figure-15-10.png',
+    src: '/chapter-15/FR/cartographie/figure-15-10.png',
     caption: 'Photo : Racines du mésosigmoïde',
     alt: 'Repère podal des racines du mésosigmoïde entre les deux index',
     orientation: 'landscape',

@@ -1,6 +1,6 @@
 import type { Chapter } from './types'
 
-// Source: public/chapter-17/Chapitre_17_Cavite_pelvienne_socle_regional_niveaux_3_4.docx
+// Source: public/chapter-17/FR/Chapitre_17_Cavite_pelvienne_socle_regional_niveaux_3_4.docx
 export const chapter17Fr: Chapter = {
   "slug": "chapter-17",
   "number": "17",
@@ -683,12 +683,12 @@ chapter17Reflex.blocks = [
   { type: 'xref', label: 'Voir le chapitre 21 — Système érectile', href: '/lecture/chapitre-21?lang=fr' },
   { type: 'sub', text: '8.3. Niveau 4 — Intégration somatique pelvienne' },
   { type: 'para', text: 'Dans ce chapitre régional, le Niveau 4 est volontairement adapté : il regroupe les structures somatiques qui bordent, traversent ou stabilisent le pelvis et qui peuvent participer aux convergences douloureuses ou fonctionnelles associées aux viscères pelviens.' },
-  { type: 'figure', src: '/chapter-17/cartographie/figure-17-02.png', caption: 'Photo : Grand foramen ischiatique, muscle piriforme, plexus sacré et nerf pudendal', alt: 'Repères podaux du grand foramen ischiatique, du piriforme, du plexus sacré et du nerf pudendal', orientation: 'landscape' },
-  { type: 'figure', src: '/chapter-17/cartographie/figure-17-04.png', caption: 'Photo : Petit foramen ischiatique, muscles obturateurs et jumeaux', alt: 'Repères podaux du petit foramen ischiatique et des muscles obturateurs et jumeaux', orientation: 'landscape' },
-  { type: 'figure', src: '/chapter-17/cartographie/figure-17-06.png', caption: 'Photo : Fosse obturée et muscles obturateurs', alt: 'Repères podaux de la fosse obturée et des muscles obturateurs', orientation: 'portrait' },
-  { type: 'figure', src: '/chapter-17/cartographie/figure-17-08.png', caption: 'Photo : Nerf pudendal', alt: 'Repère podal du nerf pudendal entre les deux pouces', orientation: 'portrait' },
-  { type: 'figure', src: '/chapter-17/cartographie/figure-17-10.png', caption: 'Photo : Ligaments sacrotubéral et sacroépineux', alt: 'Repères podaux des ligaments sacrotubéral et sacroépineux', orientation: 'landscape' },
-  { type: 'figure', src: '/chapter-17/cartographie/figure-17-12.png', caption: 'Photo : Technique de synchronisation sphéno-basilaire–S2', alt: 'Technique de synchronisation entre la synchondrose sphéno-basilaire et S2', orientation: 'portrait' },
+  { type: 'figure', src: '/chapter-17/FR/cartographie/figure-17-02.png', caption: 'Photo : Grand foramen ischiatique, muscle piriforme, plexus sacré et nerf pudendal', alt: 'Repères podaux du grand foramen ischiatique, du piriforme, du plexus sacré et du nerf pudendal', orientation: 'landscape' },
+  { type: 'figure', src: '/chapter-17/FR/cartographie/figure-17-04.png', caption: 'Photo : Petit foramen ischiatique, muscles obturateurs et jumeaux', alt: 'Repères podaux du petit foramen ischiatique et des muscles obturateurs et jumeaux', orientation: 'landscape' },
+  { type: 'figure', src: '/chapter-17/FR/cartographie/figure-17-06.png', caption: 'Photo : Fosse obturée et muscles obturateurs', alt: 'Repères podaux de la fosse obturée et des muscles obturateurs', orientation: 'portrait' },
+  { type: 'figure', src: '/chapter-17/FR/cartographie/figure-17-08.png', caption: 'Photo : Nerf pudendal', alt: 'Repère podal du nerf pudendal entre les deux pouces', orientation: 'portrait' },
+  { type: 'figure', src: '/chapter-17/FR/cartographie/figure-17-10.png', caption: 'Photo : Ligaments sacrotubéral et sacroépineux', alt: 'Repères podaux des ligaments sacrotubéral et sacroépineux', orientation: 'landscape' },
+  { type: 'figure', src: '/chapter-17/FR/cartographie/figure-17-12.png', caption: 'Photo : Technique de synchronisation sphéno-basilaire–S2', alt: 'Technique de synchronisation entre la synchondrose sphéno-basilaire et S2', orientation: 'portrait' },
   { type: 'sub', text: '8.3.1. Plexus sacré et nerf sciatique' },
   { type: 'bullets', items: ['Plexus sacré.', 'Grand foramen ischiatique.', 'Muscle piriforme.', 'Gouttière ischio-trochantérienne.', 'Nerf sciatique.'] },
   { type: 'para', text: 'Ces repères sont particulièrement utiles lorsqu’un tableau pelvien s’accompagne de douleurs lombo-sacrées, fessières ou sciatiques. Ils ne signifient pas qu’une douleur sciatique a nécessairement une origine viscérale.' },

@@ -1,7 +1,7 @@
 // Chapter 18 - slide <-> text synchronisation map for the combined reading
 // experience (/lecture/chapitre-18).
 //
-// Slides are supplied as pre-rendered PNGs in public/chapter-18/slides.
+// Slides are supplied as pre-rendered PNGs in public/chapter-18/FR/slides.
 
 export type SyncSlide = { src: string; title: string; orientation?: 'portrait' }
 export type SyncAnchor = {
@@ -14,36 +14,36 @@ export type SyncAnchor = {
 }
 
 export const chapter18Slides: SyncSlide[] = [
-  { src: '/chapter-18/slides/slide-01.png', title: 'La vessie : anatomie, physiologie et ROP' },
-  { src: '/chapter-18/slides/slide-02.png', title: 'Le panorama clinique' },
-  { src: '/chapter-18/slides/slide-03.png', title: 'Situation anatomique dans la cavité pelvienne — femme' },
-  { src: '/chapter-18/slides/slide-04.png', title: 'Situation anatomique dans la cavité pelvienne — femme' },
-  { src: '/chapter-18/slides/slide-05.png', title: 'Situation anatomique dans la cavité pelvienne — homme' },
-  { src: '/chapter-18/slides/slide-06.png', title: 'Situation anatomique dans la cavité pelvienne — homme' },
-  { src: '/chapter-18/slides/slide-07.png', title: 'Quand la vessie se remplit : morphologie et dynamique volumétrique' },
-  { src: '/chapter-18/slides/slide-08.png', title: 'Architecture interne : les trois parois de la vessie' },
-  { src: '/chapter-18/slides/slide-09.png', title: 'Morphologie interne : le trigone de Lieutaud' },
-  { src: '/chapter-18/slides/slide-10.png', title: 'La vessie suspendue : péritoine et ligaments' },
-  { src: '/chapter-18/slides/slide-11.png', title: 'Le système de soutènement de la vessie' },
-  { src: '/chapter-18/slides/slide-12.png', title: 'Innervation de la vessie' },
-  { src: '/chapter-18/slides/slide-13.png', title: 'Physiologie : le cycle de la miction' },
-  { src: '/chapter-18/slides/slide-14.png', title: 'Biomécanique : l’enceinte manométrique pelvienne' },
-  { src: '/chapter-18/slides/slide-15.png', title: 'Mécanismes pathologiques et dysfonctions' },
-  { src: '/chapter-18/slides/slide-16.png', title: 'Comment les tensions créent une béance urétrale' },
-  { src: '/chapter-18/slides/slide-17.png', title: 'Diagnostics différentiels : cystites et impériosités' },
-  { src: '/chapter-18/slides/slide-18.png', title: 'Troubles urinaires : indications et diagnostics d’exclusion' },
-  { src: '/chapter-18/slides/viscero-somatiques -- Vessie.png', title: 'Relations viscéro-somatiques — vessie' },
-  { src: '/chapter-18/slides/slide-19.png', title: 'Relations viscéro-émotionnelles' },
-  { src: '/chapter-18/slides/slide-20.png', title: 'Conseils pratiques : rééducation abdomino-périnéale' },
-  { src: '/chapter-18/slides/slide-21.png', title: 'Protocole clinique ROP : la vessie' },
-  { src: '/chapter-18/slides/slide-22.png', title: 'Centres supérieurs du contrôle neurovégétatif' },
-  { src: '/chapter-18/cartographie/figure-18-09.png', title: 'Cartographie : vessie, utérus ou prostate — ligament pubo-vésical' },
-  { src: '/chapter-18/cartographie/figure-18-11.png', title: 'Cartographie : vessie, utérus ou prostate — trigone' },
-  { src: '/chapter-18/cartographie/figure-18-13.png', title: 'Cartographie : vessie, utérus ou prostate — périnée' },
-  { src: '/chapter-18/cartographie/figure-18-01.png', title: 'Cartographie : grand et petit foramens ischiatiques' },
-  { src: '/chapter-18/cartographie/figure-18-03.png', title: 'Cartographie : grand et petit foramens ischiatiques' },
-  { src: '/chapter-18/cartographie/figure-18-05.png', title: 'Cartographie : fosse obturée, muscles obturateurs et nerf pudendal' },
-  { src: '/chapter-18/cartographie/figure-18-07.png', title: 'Cartographie : ligaments sacro-tubéral et sacro-épineux, nerf pudendal' },
+  { src: '/chapter-18/FR/slides/slide-01.png', title: 'La vessie : anatomie, physiologie et ROP' },
+  { src: '/chapter-18/FR/slides/slide-02.png', title: 'Le panorama clinique' },
+  { src: '/chapter-18/FR/slides/slide-03.png', title: 'Situation anatomique dans la cavité pelvienne — femme' },
+  { src: '/chapter-18/FR/slides/slide-04.png', title: 'Situation anatomique dans la cavité pelvienne — femme' },
+  { src: '/chapter-18/FR/slides/slide-05.png', title: 'Situation anatomique dans la cavité pelvienne — homme' },
+  { src: '/chapter-18/FR/slides/slide-06.png', title: 'Situation anatomique dans la cavité pelvienne — homme' },
+  { src: '/chapter-18/FR/slides/slide-07.png', title: 'Quand la vessie se remplit : morphologie et dynamique volumétrique' },
+  { src: '/chapter-18/FR/slides/slide-08.png', title: 'Architecture interne : les trois parois de la vessie' },
+  { src: '/chapter-18/FR/slides/slide-09.png', title: 'Morphologie interne : le trigone de Lieutaud' },
+  { src: '/chapter-18/FR/slides/slide-10.png', title: 'La vessie suspendue : péritoine et ligaments' },
+  { src: '/chapter-18/FR/slides/slide-11.png', title: 'Le système de soutènement de la vessie' },
+  { src: '/chapter-18/FR/slides/slide-12.png', title: 'Innervation de la vessie' },
+  { src: '/chapter-18/FR/slides/slide-13.png', title: 'Physiologie : le cycle de la miction' },
+  { src: '/chapter-18/FR/slides/slide-14.png', title: 'Biomécanique : l’enceinte manométrique pelvienne' },
+  { src: '/chapter-18/FR/slides/slide-15.png', title: 'Mécanismes pathologiques et dysfonctions' },
+  { src: '/chapter-18/FR/slides/slide-16.png', title: 'Comment les tensions créent une béance urétrale' },
+  { src: '/chapter-18/FR/slides/slide-17.png', title: 'Diagnostics différentiels : cystites et impériosités' },
+  { src: '/chapter-18/FR/slides/slide-18.png', title: 'Troubles urinaires : indications et diagnostics d’exclusion' },
+  { src: '/chapter-18/FR/slides/viscero-somatiques -- Vessie.png', title: 'Relations viscéro-somatiques — vessie' },
+  { src: '/chapter-18/FR/slides/slide-19.png', title: 'Relations viscéro-émotionnelles' },
+  { src: '/chapter-18/FR/slides/slide-20.png', title: 'Conseils pratiques : rééducation abdomino-périnéale' },
+  { src: '/chapter-18/FR/slides/slide-21.png', title: 'Protocole clinique ROP : la vessie' },
+  { src: '/chapter-18/FR/slides/slide-22.png', title: 'Centres supérieurs du contrôle neurovégétatif' },
+  { src: '/chapter-18/FR/cartographie/figure-18-09.png', title: 'Cartographie : vessie, utérus ou prostate — ligament pubo-vésical' },
+  { src: '/chapter-18/FR/cartographie/figure-18-11.png', title: 'Cartographie : vessie, utérus ou prostate — trigone' },
+  { src: '/chapter-18/FR/cartographie/figure-18-13.png', title: 'Cartographie : vessie, utérus ou prostate — périnée' },
+  { src: '/chapter-18/FR/cartographie/figure-18-01.png', title: 'Cartographie : grand et petit foramens ischiatiques' },
+  { src: '/chapter-18/FR/cartographie/figure-18-03.png', title: 'Cartographie : grand et petit foramens ischiatiques' },
+  { src: '/chapter-18/FR/cartographie/figure-18-05.png', title: 'Cartographie : fosse obturée, muscles obturateurs et nerf pudendal' },
+  { src: '/chapter-18/FR/cartographie/figure-18-07.png', title: 'Cartographie : ligaments sacro-tubéral et sacro-épineux, nerf pudendal' },
 ]
 
 function withChapter18Titles(titles: string[]): SyncSlide[] {

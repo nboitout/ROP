@@ -1,38 +1,38 @@
 // Chapter 17 - slide <-> text synchronisation map for the combined reading
 // experience (/lecture/chapitre-17).
 //
-// Slides are supplied as pre-rendered PNGs in public/chapter-17/slides.
+// Slides are supplied as pre-rendered PNGs in public/chapter-17/FR/slides.
 
 export type SyncSlide = { src: string; title: string; orientation?: 'portrait' }
 export type SyncAnchorPoint = { sectionId: string; blockIndex: number; itemIndex?: number }
 export type SyncAnchor = SyncAnchorPoint & { slide: number; gapBefore?: 'half'; end?: SyncAnchorPoint }
 
 export const chapter17Slides: SyncSlide[] = [
-  { src: '/chapter-17/slides/slide-01.png', title: 'Chapitre 17 : la cavité pelvienne' },
-  { src: '/chapter-17/slides/slide-02.png', title: 'Le péritoine et le système de suspension' },
-  { src: '/chapter-17/slides/slide-03.png', title: 'Organisation de la loge viscérale médiale — vue frontale' },
-  { src: '/chapter-17/slides/slide-04.png', title: 'Organisation de la loge viscérale médiale — vue sagittale' },
-  { src: '/chapter-17/slides/slide-05.png', title: 'L’unité vertébro-coxo-pelvienne' },
-  { src: '/chapter-17/slides/slide-06.png', title: 'Biomécanique : gestion des pressions et de la gravité' },
-  { src: '/chapter-17/slides/slide-07.png', title: 'Le périnée : limites et organisation' },
-  { src: '/chapter-17/slides/slide-08.png', title: 'Parois et musculature profonde du pelvis' },
-  { src: '/chapter-17/slides/slide-09.png', title: 'Vascularisation artérielle et drainage veineux du pelvis' },
-  { src: '/chapter-17/slides/slide-10.png', title: 'Innervation somatique I : le piège du piriforme' },
-  { src: '/chapter-17/slides/slide-11.png', title: 'Innervation somatique II : le trajet du nerf pudendal' },
-  { src: '/chapter-17/slides/slide-12.png', title: 'Innervation autonome et contrôle central' },
-  { src: '/chapter-17/slides/slide-13.png', title: 'Les centres supérieurs neuro-végétatifs' },
-  { src: '/chapter-17/slides/slide-14.png', title: 'Biomécanique : gestion des pressions et de la gravité' },
-  { src: '/chapter-17/slides/slide-15.png', title: 'Biomécanique : équilibre des trois diaphragmes' },
-  { src: '/chapter-17/slides/slide-16.png', title: 'Pathologie biomécanique : la ptose viscérale' },
-  { src: '/chapter-17/slides/slide-17.png', title: 'Syndrome pudendal' },
-  { src: '/chapter-17/slides/slide-18.png', title: 'Synthèse clinique : défaillances mécaniques et neurologiques' },
-  { src: '/chapter-17/slides/slide-19.png', title: 'Synthèse clinique ROP : cavité pelvienne' },
-  { src: '/chapter-17/cartographie/figure-17-01.png', title: 'Cartographie : Grand foramen ischiatique et muscle piriforme' },
-  { src: '/chapter-17/cartographie/figure-17-03.png', title: 'Cartographie : Petit foramen ischiatique, obturateurs et jumeaux' },
-  { src: '/chapter-17/cartographie/figure-17-05.png', title: 'Cartographie : Fosse obturée, muscles obturateurs et nerf pudendal' },
-  { src: '/chapter-17/cartographie/figure-17-07.png', title: 'Cartographie : Nerf pudendal' },
-  { src: '/chapter-17/cartographie/figure-17-09.png', title: 'Cartographie : Ceinture pelvienne, ligaments et nerf pudendal' },
-  { src: '/chapter-17/cartographie/figure-17-11.png', title: 'Cartographie : Repères crânio-sacrés' },
+  { src: '/chapter-17/FR/slides/slide-01.png', title: 'Chapitre 17 : la cavité pelvienne' },
+  { src: '/chapter-17/FR/slides/slide-02.png', title: 'Le péritoine et le système de suspension' },
+  { src: '/chapter-17/FR/slides/slide-03.png', title: 'Organisation de la loge viscérale médiale — vue frontale' },
+  { src: '/chapter-17/FR/slides/slide-04.png', title: 'Organisation de la loge viscérale médiale — vue sagittale' },
+  { src: '/chapter-17/FR/slides/slide-05.png', title: 'L’unité vertébro-coxo-pelvienne' },
+  { src: '/chapter-17/FR/slides/slide-06.png', title: 'Biomécanique : gestion des pressions et de la gravité' },
+  { src: '/chapter-17/FR/slides/slide-07.png', title: 'Le périnée : limites et organisation' },
+  { src: '/chapter-17/FR/slides/slide-08.png', title: 'Parois et musculature profonde du pelvis' },
+  { src: '/chapter-17/FR/slides/slide-09.png', title: 'Vascularisation artérielle et drainage veineux du pelvis' },
+  { src: '/chapter-17/FR/slides/slide-10.png', title: 'Innervation somatique I : le piège du piriforme' },
+  { src: '/chapter-17/FR/slides/slide-11.png', title: 'Innervation somatique II : le trajet du nerf pudendal' },
+  { src: '/chapter-17/FR/slides/slide-12.png', title: 'Innervation autonome et contrôle central' },
+  { src: '/chapter-17/FR/slides/slide-13.png', title: 'Les centres supérieurs neuro-végétatifs' },
+  { src: '/chapter-17/FR/slides/slide-14.png', title: 'Biomécanique : gestion des pressions et de la gravité' },
+  { src: '/chapter-17/FR/slides/slide-15.png', title: 'Biomécanique : équilibre des trois diaphragmes' },
+  { src: '/chapter-17/FR/slides/slide-16.png', title: 'Pathologie biomécanique : la ptose viscérale' },
+  { src: '/chapter-17/FR/slides/slide-17.png', title: 'Syndrome pudendal' },
+  { src: '/chapter-17/FR/slides/slide-18.png', title: 'Synthèse clinique : défaillances mécaniques et neurologiques' },
+  { src: '/chapter-17/FR/slides/slide-19.png', title: 'Synthèse clinique ROP : cavité pelvienne' },
+  { src: '/chapter-17/FR/cartographie/figure-17-01.png', title: 'Cartographie : Grand foramen ischiatique et muscle piriforme' },
+  { src: '/chapter-17/FR/cartographie/figure-17-03.png', title: 'Cartographie : Petit foramen ischiatique, obturateurs et jumeaux' },
+  { src: '/chapter-17/FR/cartographie/figure-17-05.png', title: 'Cartographie : Fosse obturée, muscles obturateurs et nerf pudendal' },
+  { src: '/chapter-17/FR/cartographie/figure-17-07.png', title: 'Cartographie : Nerf pudendal' },
+  { src: '/chapter-17/FR/cartographie/figure-17-09.png', title: 'Cartographie : Ceinture pelvienne, ligaments et nerf pudendal' },
+  { src: '/chapter-17/FR/cartographie/figure-17-11.png', title: 'Cartographie : Repères crânio-sacrés' },
 ]
 
 function withChapter17Titles(titles: string[]): SyncSlide[] {

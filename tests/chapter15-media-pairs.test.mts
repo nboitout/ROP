@@ -19,14 +19,14 @@ test('Chapter 15 reflex cartographies stay synchronized with their paired text p
   assert.deepEqual(
     photoSources,
     [2, 4, 6, 8, 10].map(
-      (number) => `/chapter-15/cartographie/figure-15-${String(number).padStart(2, '0')}.png`,
+      (number) => `/chapter-15/FR/cartographie/figure-15-${String(number).padStart(2, '0')}.png`,
     ),
   )
 
   assert.deepEqual(
     chapter15Slides.slice(-5).map(({ src }) => src),
     [1, 3, 5, 7, 9].map(
-      (number) => `/chapter-15/cartographie/figure-15-${String(number).padStart(2, '0')}.png`,
+      (number) => `/chapter-15/FR/cartographie/figure-15-${String(number).padStart(2, '0')}.png`,
     ),
   )
   assert.deepEqual(

@@ -1,6 +1,6 @@
 import type { Chapter } from './types'
 
-// Source: public/chapter-16/Chapitre_16_Reins_version_finale_publisable.docx
+// Source: public/chapter-16/FR/Chapitre_16_Reins_version_finale_publisable.docx
 export const chapter16Fr: Chapter = {
   "slug": "chapter-16",
   "number": "16",
@@ -638,14 +638,14 @@ export const chapter16Fr: Chapter = {
         },
         {
           "type": "figure",
-          "src": "/chapter-16/cartographie/figure-16-02.png",
+          "src": "/chapter-16/FR/cartographie/figure-16-02.png",
           "caption": "Photo : Nerf vague X dans la moelle allongée",
           "alt": "Repère podal du nerf vague X dans la moelle allongée",
           "orientation": "portrait"
         },
         {
           "type": "figure",
-          "src": "/chapter-16/cartographie/figure-16-04.png",
+          "src": "/chapter-16/FR/cartographie/figure-16-04.png",
           "caption": "Photo : Nerf vague X dans le foramen jugulaire",
           "alt": "Repère podal du nerf vague X dans le foramen jugulaire",
           "orientation": "portrait"
@@ -658,7 +658,7 @@ export const chapter16Fr: Chapter = {
         },
         {
           "type": "figure",
-          "src": "/chapter-16/cartographie/figure-16-06.png",
+          "src": "/chapter-16/FR/cartographie/figure-16-06.png",
           "caption": "Photo : Chaîne ganglionnaire latéro-vertébrale thoracique",
           "alt": "Repère podal de la chaîne ganglionnaire latéro-vertébrale thoracique",
           "orientation": "landscape"
@@ -678,7 +678,7 @@ export const chapter16Fr: Chapter = {
         },
         {
           "type": "figure",
-          "src": "/chapter-16/cartographie/figure-16-08.png",
+          "src": "/chapter-16/FR/cartographie/figure-16-08.png",
           "caption": "Photo : Chaîne ganglionnaire lombaire et piliers du diaphragme",
           "alt": "Repère podal de la chaîne ganglionnaire lombaire et des piliers du diaphragme",
           "orientation": "landscape"
@@ -697,7 +697,7 @@ export const chapter16Fr: Chapter = {
         },
         {
           "type": "figure",
-          "src": "/chapter-16/cartographie/figure-16-10.png",
+          "src": "/chapter-16/FR/cartographie/figure-16-10.png",
           "caption": "Cartographie : Rein et surrénale droits",
           "alt": "Titre cartographique du rein et de la surrénale droits",
           "orientation": "landscape"
@@ -714,14 +714,14 @@ export const chapter16Fr: Chapter = {
         },
         {
           "type": "figure",
-          "src": "/chapter-16/cartographie/figure-16-12.png",
+          "src": "/chapter-16/FR/cartographie/figure-16-12.png",
           "caption": "Photo : Rein gauche",
           "alt": "Repère podal du rein gauche",
           "orientation": "portrait"
         },
         {
           "type": "figure",
-          "src": "/chapter-16/cartographie/figure-16-14.png",
+          "src": "/chapter-16/FR/cartographie/figure-16-14.png",
           "caption": "Photo : Surrénale gauche",
           "alt": "Repère podal de la surrénale gauche",
           "orientation": "portrait"
@@ -738,7 +738,7 @@ export const chapter16Fr: Chapter = {
         },
         {
           "type": "figure",
-          "src": "/chapter-16/cartographie/figure-16-18.png",
+          "src": "/chapter-16/FR/cartographie/figure-16-18.png",
           "caption": "Photo : Plexus lombal, triangle de Jean-Louis Petit et quadrilatère de Grynfelt",
           "alt": "Repère podal du plexus lombal, du triangle de Jean-Louis Petit et du quadrilatère de Grynfelt",
           "orientation": "landscape"
@@ -761,7 +761,7 @@ export const chapter16Fr: Chapter = {
         },
         {
           "type": "figure",
-          "src": "/chapter-16/cartographie/figure-16-16.png",
+          "src": "/chapter-16/FR/cartographie/figure-16-16.png",
           "caption": "Photo : Manœuvre combinée du rein",
           "alt": "Repère podal de la manœuvre combinée du rein par voies postérieure et antérieure",
           "orientation": "portrait"
@@ -952,11 +952,11 @@ chapter16Reflex.blocks = [
   { type: 'rop', body: ['Le Niveau 3 vise à replacer le rein dans sa loge et dans ses rapports régionaux. Les viscères voisins ne sont pas travaillés systématiquement : ils sont sélectionnés selon les tests et la cohérence du tableau clinique.'] },
   { type: 'sub', text: '13.5. Niveau 4 — Intégration viscéro-somatique et viscéro-émotionnelle' },
   { type: 'para', text: 'Le Niveau 4 est particulièrement important pour le rein en raison de ses rapports avec la paroi abdominale postérieure, la charnière thoraco-lombaire et le plexus lombaire.' },
-  { type: 'figure', src: '/chapter-16/cartographie/figure-16-02.png', caption: 'Photo : Rein et surrénale droits', alt: 'Repères podaux du rein et de la surrénale droits', orientation: 'landscape' },
-  { type: 'figure', src: '/chapter-16/cartographie/figure-16-04.png', caption: 'Photo : Rein gauche', alt: 'Repère podal du rein gauche', orientation: 'portrait' },
-  { type: 'figure', src: '/chapter-16/cartographie/figure-16-06.png', caption: 'Photo : Surrénale gauche', alt: 'Repère podal de la surrénale gauche', orientation: 'portrait' },
-  { type: 'figure', src: '/chapter-16/cartographie/figure-16-08.png', caption: 'Photo : Manœuvre combinée du rein', alt: 'Manœuvre combinée plantaire-dorsale de la zone rénale', orientation: 'portrait' },
-  { type: 'figure', src: '/chapter-16/cartographie/figure-16-10.png', caption: 'Photo : Plexus lombal, triangle de Jean-Louis Petit et quadrilatère de Grynfelt', alt: 'Repères podaux dorsaux du plexus lombal et de la région rénale', orientation: 'landscape' },
+  { type: 'figure', src: '/chapter-16/FR/cartographie/figure-16-02.png', caption: 'Photo : Rein et surrénale droits', alt: 'Repères podaux du rein et de la surrénale droits', orientation: 'landscape' },
+  { type: 'figure', src: '/chapter-16/FR/cartographie/figure-16-04.png', caption: 'Photo : Rein gauche', alt: 'Repère podal du rein gauche', orientation: 'portrait' },
+  { type: 'figure', src: '/chapter-16/FR/cartographie/figure-16-06.png', caption: 'Photo : Surrénale gauche', alt: 'Repère podal de la surrénale gauche', orientation: 'portrait' },
+  { type: 'figure', src: '/chapter-16/FR/cartographie/figure-16-08.png', caption: 'Photo : Manœuvre combinée du rein', alt: 'Manœuvre combinée plantaire-dorsale de la zone rénale', orientation: 'portrait' },
+  { type: 'figure', src: '/chapter-16/FR/cartographie/figure-16-10.png', caption: 'Photo : Plexus lombal, triangle de Jean-Louis Petit et quadrilatère de Grynfelt', alt: 'Repères podaux dorsaux du plexus lombal et de la région rénale', orientation: 'landscape' },
   { type: 'sub', text: '13.5.1. Versant viscéro-somatique' },
   { type: 'bullets', items: ['Charnière thoraco-lombaire.', 'T11-T12.', 'L1-L3.', '11e et 12e côtes.', 'Nerf subcostal.', 'Nerfs iliohypogastrique et ilio-inguinal.', 'Nerf cutané fémoral latéral selon le contexte.', 'Plexus lombaire.', 'Grand psoas.', 'Carré des lombes.', 'Hanche et genou lorsque le tableau clinique le justifie.'] },
   { type: 'para', text: 'Le plexus lombaire est ainsi déplacé de l’ancien « syndrome général d’adaptation » vers le Niveau 4, car il relève de l’intégration somatique.' },

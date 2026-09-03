@@ -1,6 +1,6 @@
 import type { Chapter } from './types'
 
-// Source: public/chapter-18/Chapitre_18_Vessie_version_publiable.docx
+// Source: public/chapter-18/FR/Chapitre_18_Vessie_version_finale_publiable.docx
 
 export const chapter18Fr: Chapter = {
   "slug": "chapter-18",
@@ -639,14 +639,14 @@ export const chapter18Fr: Chapter = {
         },
         {
           "type": "figure",
-          "src": "/chapter-18/cartographie/figure-18-02.png",
+          "src": "/chapter-18/FR/cartographie/figure-18-02.png",
           "caption": "Photo : chaîne ganglionnaire latéro-vertébrale thoracique",
           "alt": "Repère podal de la chaîne ganglionnaire latéro-vertébrale thoracique",
           "orientation": "landscape"
         },
         {
           "type": "figure",
-          "src": "/chapter-18/cartographie/figure-18-04.png",
+          "src": "/chapter-18/FR/cartographie/figure-18-04.png",
           "caption": "Photo : chaîne ganglionnaire lombaire et piliers du diaphragme",
           "alt": "Repère podal de la chaîne ganglionnaire lombaire et des piliers du diaphragme",
           "orientation": "landscape"
@@ -668,49 +668,49 @@ export const chapter18Fr: Chapter = {
         },
         {
           "type": "figure",
-          "src": "/chapter-18/cartographie/figure-18-06.png",
+          "src": "/chapter-18/FR/cartographie/figure-18-06.png",
           "caption": "Photo : grand foramen ischiatique, muscle piriforme, plexus sacré et nerf pudendal",
           "alt": "Repère podal du grand foramen ischiatique, du muscle piriforme, du plexus sacré et du nerf pudendal",
           "orientation": "landscape"
         },
         {
           "type": "figure",
-          "src": "/chapter-18/cartographie/figure-18-08.png",
+          "src": "/chapter-18/FR/cartographie/figure-18-08.png",
           "caption": "Photo : petit foramen ischiatique, muscles obturateurs et jumeaux",
           "alt": "Repère podal du petit foramen ischiatique et des muscles obturateurs et jumeaux",
           "orientation": "landscape"
         },
         {
           "type": "figure",
-          "src": "/chapter-18/cartographie/figure-18-11.png",
+          "src": "/chapter-18/FR/cartographie/figure-18-11.png",
           "caption": "Photo : fosse obturée et muscles obturateurs",
           "alt": "Repère podal de la fosse obturée et des muscles obturateurs",
           "orientation": "portrait"
         },
         {
           "type": "figure",
-          "src": "/chapter-18/cartographie/figure-18-13.png",
+          "src": "/chapter-18/FR/cartographie/figure-18-13.png",
           "caption": "Photo : ligaments sacro-tubéral et sacro-épineux",
           "alt": "Repère podal des ligaments sacro-tubéral et sacro-épineux",
           "orientation": "landscape"
         },
         {
           "type": "figure",
-          "src": "/chapter-18/cartographie/figure-18-15.png",
+          "src": "/chapter-18/FR/cartographie/figure-18-15.png",
           "caption": "Photo : ligament pubo-vésical",
           "alt": "Repère podal du ligament pubo-vésical",
           "orientation": "landscape"
         },
         {
           "type": "figure",
-          "src": "/chapter-18/cartographie/figure-18-17.png",
+          "src": "/chapter-18/FR/cartographie/figure-18-17.png",
           "caption": "Photo : trigone de la vessie et plexus hypogastrique",
           "alt": "Repère podal du trigone de la vessie et du plexus hypogastrique",
           "orientation": "landscape"
         },
         {
           "type": "figure",
-          "src": "/chapter-18/cartographie/figure-18-19.png",
+          "src": "/chapter-18/FR/cartographie/figure-18-19.png",
           "caption": "Photo : noyau fibreux central du périnée et fente uro-génitale",
           "alt": "Repère podal du noyau fibreux central du périnée et de la fente uro-génitale",
           "orientation": "landscape"
@@ -842,18 +842,18 @@ chapter18Section('zones-reflexes-podales').blocks = [
   { type: 'sub', text: '13.3. Niveau 3 — Régulation viscérale loco-régionale' },
   { type: 'para', text: 'Le Niveau 3 rassemble le cœur de la cartographie propre à l’organe : cavité pelvienne, vessie, région cervico-trigonale, urètre et environnement de soutien.' },
   { type: 'bullets', items: ['Cavité pelvienne et périnée.', 'Vessie et dôme vésical.', 'Ligaments pubo-vésicaux : bord postérieur de la malléole tibiale.', 'Trigone de la vessie et région cervico-isthmique de l’utérus chez la femme / prostate chez l’homme : repérer la zone réflexe du noyau fibreux central du périnée, en avant du coccyx ; un sillon orienté dorsalement et postérieurement aboutit à une fossette sur la face postéro-médiale du calcanéum.', 'Vessie et corps de l’utérus : zone légèrement bombée antérieure au trigone.', 'Fente uro-génitale, noyau fibreux central du périnée, urètre et sphincter externe de la vessie : bord inférieur du calcanéum en avant du coccyx.', 'Symphyse pubienne et structures pubovésicales.', 'Péritoine supérieur de la vessie et rapports avec les organes voisins.'] },
-  { type: 'figure', src: '/chapter-18/cartographie/figure-18-10.png', caption: 'Photo : ligament pubo-vésical', alt: 'Repère podal du ligament pubo-vésical', orientation: 'landscape' },
-  { type: 'figure', src: '/chapter-18/cartographie/figure-18-12.png', caption: 'Photo : trigone de la vessie et plexus hypogastrique', alt: 'Repère podal du trigone de la vessie et du plexus hypogastrique', orientation: 'landscape' },
-  { type: 'figure', src: '/chapter-18/cartographie/figure-18-14.png', caption: 'Photo : noyau fibreux central du périnée et fente uro-génitale', alt: 'Repère podal du noyau fibreux central du périnée et de la fente uro-génitale', orientation: 'landscape' },
+  { type: 'figure', src: '/chapter-18/FR/cartographie/figure-18-10.png', caption: 'Photo : ligament pubo-vésical', alt: 'Repère podal du ligament pubo-vésical', orientation: 'landscape' },
+  { type: 'figure', src: '/chapter-18/FR/cartographie/figure-18-12.png', caption: 'Photo : trigone de la vessie et plexus hypogastrique', alt: 'Repère podal du trigone de la vessie et du plexus hypogastrique', orientation: 'landscape' },
+  { type: 'figure', src: '/chapter-18/FR/cartographie/figure-18-14.png', caption: 'Photo : noyau fibreux central du périnée et fente uro-génitale', alt: 'Repère podal du noyau fibreux central du périnée et de la fente uro-génitale', orientation: 'landscape' },
   { type: 'xref', label: 'Voir le chapitre 17 — Cavité pelvienne', href: '/lecture/chapitre-17?lang=fr', text: 'Niveau 3 : Régulation viscérale loco-régionale.' },
   { type: 'sub', text: '13.4. Niveau 4 — Intégration viscéro-somatique et viscéro-émotionnelle' },
   { type: 'para', text: 'Cette partie remplace l’ancienne rubrique « Système limbique ». Elle relie le symptôme vésical aux convergences somatiques, au plancher pelvien et au contexte de perception et d’adaptation.' },
   { type: 'sub', text: '13.4.1. Versant viscéro-somatique' },
   { type: 'bullets', items: ['Nerf pudendal S2-S4.', 'Plancher pelvien et sphincter urétral externe.', 'Sacrum et coccyx.', 'Symphyse pubienne.', 'Territoires lombo-sacrés associés aux afférences vésicales.'] },
-  { type: 'figure', src: '/chapter-18/cartographie/figure-18-02.png', caption: 'Photo : grand foramen ischiatique, muscle piriforme, plexus sacré et nerf pudendal', alt: 'Repère podal du grand foramen ischiatique et du nerf pudendal', orientation: 'landscape' },
-  { type: 'figure', src: '/chapter-18/cartographie/figure-18-04.png', caption: 'Photo : petit foramen ischiatique, muscles obturateurs et jumeaux', alt: 'Repère podal du petit foramen ischiatique', orientation: 'landscape' },
-  { type: 'figure', src: '/chapter-18/cartographie/figure-18-06.png', caption: 'Photo : fosse obturée et muscles obturateurs', alt: 'Repère podal de la fosse obturée et des muscles obturateurs', orientation: 'portrait' },
-  { type: 'figure', src: '/chapter-18/cartographie/figure-18-08.png', caption: 'Photo : ligaments sacro-tubéral et sacro-épineux', alt: 'Repère podal des ligaments sacro-tubéral et sacro-épineux', orientation: 'landscape' },
+  { type: 'figure', src: '/chapter-18/FR/cartographie/figure-18-02.png', caption: 'Photo : grand foramen ischiatique, muscle piriforme, plexus sacré et nerf pudendal', alt: 'Repère podal du grand foramen ischiatique et du nerf pudendal', orientation: 'landscape' },
+  { type: 'figure', src: '/chapter-18/FR/cartographie/figure-18-04.png', caption: 'Photo : petit foramen ischiatique, muscles obturateurs et jumeaux', alt: 'Repère podal du petit foramen ischiatique', orientation: 'landscape' },
+  { type: 'figure', src: '/chapter-18/FR/cartographie/figure-18-06.png', caption: 'Photo : fosse obturée et muscles obturateurs', alt: 'Repère podal de la fosse obturée et des muscles obturateurs', orientation: 'portrait' },
+  { type: 'figure', src: '/chapter-18/FR/cartographie/figure-18-08.png', caption: 'Photo : ligaments sacro-tubéral et sacro-épineux', alt: 'Repère podal des ligaments sacro-tubéral et sacro-épineux', orientation: 'landscape' },
   { type: 'para', text: 'Le nerf pudendal est une voie somatique distincte des nerfs splanchniques pelviens autonomes, même s’ils partagent une proximité segmentaire S2-S4.' },
   { type: 'sub', text: '13.4.2. Versant viscéro-émotionnel' },
   { type: 'para', text: 'La « balance cerveau limbique-vessie » décrit l’intégration des signaux vésicaux avec les réseaux cérébraux impliqués dans l’interoception, l’attention, l’urgence, le contrôle contextuel et le vécu émotionnel.' },
