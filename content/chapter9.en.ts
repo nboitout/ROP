@@ -1,5 +1,5 @@
 // Chapter 9 content — English
-// Source: public/chapter-9/EN/Chapter_9_Stomach_medical_English_revised_EN.docx
+// Source: public/chapter-9/EN/Chapter_9_Stomach_CodexTranslationV2.docx
 
 import type { Chapter } from './types'
 
@@ -22,7 +22,7 @@ export const chapter9En: Chapter = {
         },
         {
           "type": "para",
-          "text": "It stores, churns and mixes food and initiates the chemical phase of digestion in a highly acidic environment before the contents pass into the duodenum."
+          "text": "It stores, churns and mixes food and initiates an initial chemical phase of digestion in a highly acidic environment before the contents pass into the duodenum."
         }
       ]
     },
@@ -48,7 +48,7 @@ export const chapter9En: Chapter = {
         },
         {
           "type": "para",
-          "text": "Its posterior surface is related to the omental bursa (formerly the lesser sac)."
+          "text": "Its posterior surface is related to the omental bursa (lesser sac)."
         },
         {
           "type": "para",
@@ -78,7 +78,7 @@ export const chapter9En: Chapter = {
         },
         {
           "type": "para",
-          "text": "It contributes to continence at the gastro-oesophageal junction."
+          "text": "It contributes to the competence of the gastro-oesophageal junction."
         },
         {
           "type": "para",
@@ -246,11 +246,11 @@ export const chapter9En: Chapter = {
         },
         {
           "type": "sub",
-          "text": "3.8. Angular incisure"
+          "text": "3.8. Angular notch (incisura angularis)"
         },
         {
           "type": "para",
-          "text": "The angular incisure is the angle formed by the lesser curvature and the pyloric antrum."
+          "text": "The angular notch is formed by the lesser curvature and the pyloric antrum."
         },
         {
           "type": "para",
@@ -264,27 +264,27 @@ export const chapter9En: Chapter = {
       "blocks": [
         {
           "type": "para",
-          "text": "• Superiorly: the stomach is related to the diaphragm, to which it is connected notably by the gastrophrenic ligament."
+          "text": "Superiorly: the stomach is related to the diaphragm, to which it is connected notably by the gastrophrenic ligament."
         },
         {
           "type": "para",
-          "text": "• Inferiorly: it is related to the transverse colon, to which it is connected by the greater omentum."
+          "text": "Inferiorly: it is related to the transverse colon, to which it is connected by the greater omentum."
         },
         {
           "type": "para",
-          "text": "• Anteriorly: it is related to the left hepatic lobe, the costal margin and the abdominal wall."
+          "text": "Anteriorly: it is related to the left hepatic lobe, the costal margin and the abdominal wall."
         },
         {
           "type": "para",
-          "text": "• Posteriorly: it is related to the omental bursa, pancreas and fourth part of the duodenum."
+          "text": "Posteriorly: it is related to the omental bursa, pancreas and fourth part of the duodenum."
         },
         {
           "type": "para",
-          "text": "• Laterally: it is related to the spleen, to which it is connected by the gastrosplenic ligament."
+          "text": "Laterally: it is related to the spleen, to which it is connected by the gastrosplenic ligament."
         },
         {
           "type": "para",
-          "text": "• Medially: the lesser omentum connects the lesser curvature to the first part of the duodenum and the porta hepatis."
+          "text": "Medially: the lesser omentum connects the lesser curvature to the first part of the duodenum and the porta hepatis."
         }
       ]
     },
@@ -298,7 +298,7 @@ export const chapter9En: Chapter = {
         },
         {
           "type": "para",
-          "text": "The stomach is supplied by branches of the coeliac trunk, a collateral branch of the abdominal aorta arising at approximately T12."
+          "text": "The stomach is supplied by branches of the coeliac trunk, which arises from the abdominal aorta at approximately T12."
         },
         {
           "type": "para",
@@ -314,7 +314,7 @@ export const chapter9En: Chapter = {
         },
         {
           "type": "para",
-          "text": "The gastric veins generally accompany the arteries and drain into the portal venous system (Chapter 11, Liver, page ...)."
+          "text": "The gastric veins generally accompany the arteries and drain into the portal venous system (see Chapter 11 — Liver)."
         }
       ]
     },
@@ -368,7 +368,7 @@ export const chapter9En: Chapter = {
         },
         {
           "type": "para",
-          "text": "The slow waves then propagate towards the pyloric antrum and pylorus at intervals of several tens of seconds."
+          "text": "The slow waves then propagate towards the pyloric antrum and pylorus at intervals of a few tens of seconds."
         },
         {
           "type": "para",
@@ -564,31 +564,31 @@ export const chapter9En: Chapter = {
         },
         {
           "type": "para",
-          "text": "• Rapid, unexplained weight loss."
+          "text": "Rapid, unexplained weight loss."
         },
         {
           "type": "para",
-          "text": "• Presence of an enlarged left supraclavicular (Troisier's) lymph node."
+          "text": "Presence of an enlarged left supraclavicular (Troisier's) lymph node."
         },
         {
           "type": "para",
-          "text": "• Deep thoracoabdominal pain."
+          "text": "Deep thoracoabdominal pain."
         },
         {
           "type": "para",
-          "text": "• Fever."
+          "text": "Fever."
         },
         {
           "type": "para",
-          "text": "• Haematemesis: vomiting of fresh red blood."
+          "text": "Haematemesis: vomiting of fresh red blood."
         },
         {
           "type": "para",
-          "text": "• Melaena: passage of black, digested blood with tarry stools, consistent with upper gastrointestinal bleeding."
+          "text": "Melaena: passage of black, digested blood with tarry stools, consistent with upper gastrointestinal bleeding."
         },
         {
           "type": "para",
-          "text": "• Nocturnal or early-morning pain."
+          "text": "Nocturnal or early-morning pain."
         }
       ]
     },
@@ -650,31 +650,31 @@ export const chapter9En: Chapter = {
         },
         {
           "type": "para",
-          "text": "• Excessive alcohol consumption."
+          "text": "Excessive alcohol consumption."
         },
         {
           "type": "para",
-          "text": "• Prolonged use of anti-inflammatory drugs, including aspirin."
+          "text": "Prolonged use of anti-inflammatory drugs, including aspirin."
         },
         {
           "type": "para",
-          "text": "• Initial infection with Helicobacter pylori."
+          "text": "Initial infection with Helicobacter pylori."
         },
         {
           "type": "para",
-          "text": "• Bacterial gingival or dental infection."
+          "text": "Bacterial gingival or dental infection."
         },
         {
           "type": "para",
-          "text": "• Food allergies or intolerances."
+          "text": "Food allergies or intolerances."
         },
         {
           "type": "para",
-          "text": "• Autoimmune diseases."
+          "text": "Autoimmune diseases."
         },
         {
           "type": "para",
-          "text": "• Vitamin deficiencies or other nutritional deficiencies."
+          "text": "Vitamin deficiencies or other nutritional deficiencies."
         },
         {
           "type": "sub",
@@ -682,7 +682,7 @@ export const chapter9En: Chapter = {
         },
         {
           "type": "para",
-          "text": "See Chapter 8, Diaphragm, page ..."
+          "text": "See Chapter 8 — Diaphragm."
         },
         {
           "type": "sub",
@@ -706,7 +706,7 @@ export const chapter9En: Chapter = {
         },
         {
           "type": "para",
-          "text": "• Menorrhagia (heavy or prolonged menstrual bleeding)."
+          "text": "• Abnormal uterine bleeding.\n• Heavy or prolonged menstrual bleeding."
         },
         {
           "type": "para",
@@ -768,29 +768,29 @@ export const chapter9En: Chapter = {
       "blocks": [
         {
           "type": "para",
-          "text": "• Costovertebral back pain at the left sixth and seventh thoracic vertebrae."
+          "text": "Costovertebral back pain at the left sixth and seventh thoracic vertebrae."
         },
         {
           "type": "para",
-          "text": "• Left-sided neck pain."
+          "text": "Left-sided neck pain and left cervicobrachial neuralgia."
         },
         {
           "type": "para",
-          "text": "• Left shoulder pain."
+          "text": "Left shoulder pain."
         },
         {
           "type": "para",
-          "text": "• Cervicobrachial neuralgia."
+          "text": "Cervicobrachial neuralgias."
         }
       ]
     },
     {
       "id": "relations-viscero-emotionnelles",
-      "title": "11. Viscero-emotional relationships",
+      "title": "11. Visceral–emotional relationships",
       "blocks": [
         {
           "type": "para",
-          "text": "In the viscero-emotional interpretation specific to ROP, the stomach is associated with the ‘social self’: outward appearance and the place occupied within a group, family, workplace or hierarchy."
+          "text": "In the visceral–emotional interpretation specific to ROP, the stomach is associated with the ‘social self’: outward appearance and the place occupied within a group, family, workplace or hierarchy."
         },
         {
           "type": "para",
@@ -955,7 +955,7 @@ export const chapter9En: Chapter = {
         },
         {
           "type": "para",
-          "text": "Limbic brain–stomach balance. In ROP terminology, “listening–induction” is performed with one thumb on the stomach zone and the other on the limbic brain zone."
+          "text": "Limbic brain–stomach balance. In ROP terminology, ‘listening–induction’ is performed with one thumb on the stomach zone and the other on the limbic brain zone."
         },
         {
           "type": "para",

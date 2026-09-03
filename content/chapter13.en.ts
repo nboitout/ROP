@@ -1,5 +1,5 @@
 // Chapter 13 content — English
-// Source: public/chapter-13/EN/Chapter_13_Spleen_Medical_English_Revised.docx
+// Source: public/chapter-13/EN/Chapter_13_Spleen_CodexTranslationV2.docx
 
 import type { Chapter } from './types'
 
@@ -18,7 +18,7 @@ export const chapter13En: Chapter = {
         },
         {
           "type": "para",
-          "text": "Its soft, friable consistency makes it particularly vulnerable to trauma. The surrounding capsule contains smooth-muscle fibers and extends into the spleen, dividing it into several segments."
+          "text": "Its soft, friable texture makes it particularly vulnerable to trauma. The surrounding capsule contains smooth-muscle fibers and extends into the spleen, dividing it into several segments."
         },
         {
           "type": "para",
@@ -48,7 +48,7 @@ export const chapter13En: Chapter = {
       "blocks": [
         {
           "type": "para",
-          "text": "The spleen lies beneath the left hemidiaphragm in the posterosuperior part of the abdomen. It is overlapped by the lower lateral thoracic cage at the level of the left ninth, tenth, and eleventh ribs. Its long axis follows that of the left tenth rib."
+          "text": "The spleen lies beneath the left hemidiaphragm in the posterosuperior part of the abdomen. It lies deep to the lower lateral thoracic wall at the level of the left ninth, tenth, and eleventh ribs. Its long axis follows that of the left tenth rib."
         },
         {
           "type": "para",
@@ -74,7 +74,7 @@ export const chapter13En: Chapter = {
         },
         {
           "type": "para",
-          "text": "• Medial or visceral surface: concave, containing the hilum and divided into two aspects."
+          "text": "• Medial or visceral surface: concave, containing the hilum and presenting anterior and posterior aspects."
         },
         {
           "type": "para",
@@ -86,7 +86,7 @@ export const chapter13En: Chapter = {
         },
         {
           "type": "para",
-          "text": "• Anterior border: notched by several indentations."
+          "text": "• Anterior border: bears several notches."
         },
         {
           "type": "para",
@@ -212,7 +212,7 @@ export const chapter13En: Chapter = {
         },
         {
           "type": "para",
-          "text": "From the ROP clinical perspective, the practical point is not to isolate the spleen from its autonomic level: the lower thoracic vertebrae, costotransverse joints, celiac plexus, left hemidiaphragm, and splenic pedicle form a single region for clinical assessment. Vagal involvement is described less directly and varies among sources; in practice, the celiac plexus remains the central landmark."
+          "text": "From the ROP clinical perspective, the practical point is not to assess the spleen in isolation from its autonomic connections: the lower thoracic vertebrae, costotransverse joints, celiac plexus, left hemidiaphragm, and splenic pedicle form a single region for clinical assessment. Vagal involvement is described less directly and varies among sources; in practice, the celiac plexus remains the central landmark."
         }
       ]
     },
@@ -300,7 +300,7 @@ export const chapter13En: Chapter = {
         },
         {
           "type": "para",
-          "text": "• painful supraclavicular or lateral clavicular lymph nodes;"
+          "text": "• painful retroclavicular or lateral supraclavicular lymph nodes;"
         },
         {
           "type": "para",
@@ -344,7 +344,7 @@ export const chapter13En: Chapter = {
         },
         {
           "type": "para",
-          "text": "Pain in the left hypochondrium or lower left ribs after trauma—particularly when accompanied by faintness, pallor, hypotension, left shoulder pain, or sudden fatigue—must be regarded as a warning sign and medically evaluated."
+          "text": "Pain in the left hypochondrium or lower left ribs after trauma—particularly when accompanied by faintness, pallor, hypotension, left shoulder pain, or sudden fatigue—must be regarded as a warning sign and should prompt medical evaluation."
         },
         {
           "type": "sub",
@@ -392,11 +392,11 @@ export const chapter13En: Chapter = {
         },
         {
           "type": "para",
-          "text": "Caution is essential, but working at a distance avoids aggressive intervention over a fragile organ. Functional indications discussed within the ROP framework include:"
+          "text": "Caution is essential. Treatment through distant reflex zones avoids direct, aggressive work over this fragile organ. Functional indications discussed within the ROP framework include:"
         },
         {
           "type": "para",
-          "text": "• immune deficiency with recurrent upper respiratory tract infections, particularly in adolescents;"
+          "text": "• immunodeficiency with recurrent upper respiratory tract infections, particularly in adolescents;"
         },
         {
           "type": "para",
@@ -438,7 +438,7 @@ export const chapter13En: Chapter = {
         },
         {
           "type": "para",
-          "text": "The spleen is suspended beneath the left hemidiaphragm and follows respiratory movement. From an ROP clinical perspective, associated tension may therefore be sought in the left posteroinferior thorax, left hemidiaphragm, splenic flexure of the colon, and lower costovertebral junction. This relationship does not constitute a diagnosis of splenic disease; it serves primarily as a clinical thread when left costal pain, postinfectious fatigue, or a left-sided stitch occurs without an evident mechanical cause."
+          "text": "The spleen is suspended beneath the left hemidiaphragm and follows respiratory movement. From an ROP clinical perspective, associated tension may therefore be sought in the left posteroinferior thorax, left hemidiaphragm, splenic flexure of the colon, and lower costovertebral junction. This relationship does not constitute a diagnosis of splenic disease; it serves primarily as a guide for clinical assessment when left costal pain, postinfectious fatigue, or a left-sided stitch occurs without an evident mechanical cause."
         }
       ]
     },
@@ -474,7 +474,7 @@ export const chapter13En: Chapter = {
         },
         {
           "type": "para",
-          "text": "• ROP work relating to the spleen must remain gentle and nonaggressive because of the organ’s friability and rich vascular supply."
+          "text": "• ROP treatment of spleen-related reflex zones must remain gentle and nonaggressive because of the organ’s friability and rich vascular supply."
         },
         {
           "type": "para",
@@ -492,7 +492,7 @@ export const chapter13En: Chapter = {
         },
         {
           "type": "para",
-          "text": "The spleen-specific plantar landmark is retained. On the ROP map, it is located in relation to the splenic flexure of the colon, which lies medial and superior to the styloid process of the left fifth metatarsal. The splenic zone is situated within this territory, beneath the left extremity of the left hemidiaphragm zone."
+          "text": "The spleen-specific plantar landmark is retained. On the ROP map, it is located in relation to the splenic flexure of the colon, which lies medial and superior to the styloid process of the left fifth metatarsal. The splenic zone is situated within this territory, beneath the lateral end of the left hemidiaphragm reflex zone."
         },
         {
           "type": "sub",
@@ -520,7 +520,7 @@ export const chapter13En: Chapter = {
         },
         {
           "type": "para",
-          "text": "The spleen receives predominantly sympathetic autonomic innervation. In this chapter, the relevant organization is described around levels T6–T9, with fibers passing through the celiac plexus and then along the splenic pedicle."
+          "text": "The spleen receives predominantly sympathetic autonomic innervation. In this chapter, the relevant pathway is described as involving spinal levels T6–T9, with fibers passing through the celiac plexus and then along the splenic pedicle."
         },
         {
           "type": "bullets",
@@ -533,7 +533,7 @@ export const chapter13En: Chapter = {
         },
         {
           "type": "para",
-          "text": "The vagus nerve is not included in the standard spleen sequence. Depending on the context, the liver and portal system may be included as functional support, but they are not mandatory steps."
+          "text": "The vagus nerve is not included in the standard spleen sequence. Depending on the context, the liver and portal system may be included as functional supports, but they are not mandatory steps."
         },
         {
           "type": "para",
@@ -561,11 +561,11 @@ export const chapter13En: Chapter = {
         },
         {
           "type": "para",
-          "text": "Viscerosomatic integration. The principal landmarks are T9–T11, the corresponding costotransverse joints, the left ninth, tenth, and eleventh ribs, the left posteroinferior thorax, and the left hemidiaphragm. A left scapular manifestation may be included when relevant to the diaphragmatic context, without treating it as a systematic correspondence."
+          "text": "Viscerosomatic integration. The principal landmarks are T9–T11, the corresponding costotransverse joints, the left ninth, tenth, and eleventh ribs, the left posteroinferior thorax, and the left hemidiaphragm. A left scapular manifestation may be included when relevant to the diaphragmatic context, without treating it as a universal association."
         },
         {
           "type": "para",
-          "text": "Viscero-emotional integration. From the clinical perspective specific to ROP, the spleen and pancreas may be difficult to distinguish at this level. Certain presentations may be accompanied by profound fatigue, a tendency toward rumination or withdrawal, longstanding grief, remorse, loss of motivation, or sleep-onset disturbance. These features provide contextual and clinical listening cues."
+          "text": "Viscero-emotional integration. From the clinical perspective specific to ROP, the spleen and pancreas may be difficult to distinguish at this level. Certain presentations may be accompanied by profound fatigue, a tendency toward rumination or withdrawal, longstanding grief, remorse, loss of motivation, or sleep-onset disturbance. These features provide contextual cues for clinical inquiry."
         },
         {
           "type": "para",
@@ -590,7 +590,7 @@ export const chapter13En: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Liver and portal system: portal or hepatic context.",
+            "Liver and portal system: portal venous or hepatic context.",
             "Stomach: gastrosplenic relationship.",
             "Pancreas: proximity to the hilum and pancreatic tail.",
             "Left kidney: splenorenal relationship.",
@@ -600,7 +600,7 @@ export const chapter13En: Chapter = {
         },
         {
           "type": "para",
-          "text": "These territories are associated support zones rather than systematic steps."
+          "text": "These territories are associated support zones rather than routine steps."
         },
         {
           "type": "sub",
@@ -609,9 +609,9 @@ export const chapter13En: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Postinfectious fatigue or recovery following infectious mononucleosis after medical follow-up: Level 1 if relevant + Level 2 + splenic zone, with great caution.",
-            "Longstanding sequelae of thoracoabdominal trauma after medical causes have been excluded: splenic zone + Level 3 regional environment + ribs and diaphragm at Level 4.",
-            "A left-sided stitch or left subcostal discomfort without warning signs: diaphragm + spleen + splenic flexure according to findings."
+            "Postinfectious fatigue or recovery following infectious mononucleosis after medical follow-up: Level 1 where relevant, together with Level 2 and the splenic zone, applied with great caution.",
+            "Longstanding sequelae of thoracoabdominal trauma after medical causes have been excluded: the splenic zone, the Level 3 regional environment, and the ribs and diaphragm at Level 4.",
+            "A left-sided stitch or left subcostal discomfort without warning signs: the diaphragm, spleen, and splenic flexure as indicated by assessment findings."
           ]
         },
         {

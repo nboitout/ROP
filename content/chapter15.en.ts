@@ -1,5 +1,5 @@
 // Chapter 15 content — English
-// Source: public/chapter-15/EN/Chapter_15_Colon_and_Rectum_medical_English_revised_EN.docx
+// Source: public/chapter-15/EN/Chapter_15_Colon_and_Rectum_CodexTranslationV2.docx
 
 import type { Chapter } from './types'
 
@@ -93,7 +93,7 @@ export const chapter15En: Chapter = {
           "items": [
             "Positions of the vermiform appendix: it may be subcaecal and extend into the pelvic cavity. More rarely, it may lie in the right hypochondrium or in a pre-ileal or post-ileal position because of abnormal rotation of the intestinal loops during embryogenesis.",
             "The vermiform appendix is intraperitoneal. It is connected to the ileum by the mesoappendix and to the ovary by the appendiculo-ovarian ligament.",
-            "Function of the vermiform appendix: it is a lymphoid organ that provides a protected reservoir of commensal bacteria that are beneficial to the host (see Microbiota, page ....). These organisms help to counter pathogenic bacteria, particularly in individuals living in contaminated environments or with poor hygiene.",
+            "Function of the vermiform appendix: it is a lymphoid organ that provides a protected reservoir of commensal bacteria that are beneficial to the host (see Microbiota). These organisms help to counter pathogenic bacteria, particularly in individuals living in contaminated environments or whose living conditions are unhygienic.",
             "McBurney’s point: it lies at the junction of the lateral and middle thirds of the line joining the umbilicus to the right anterior superior iliac spine. Tenderness on palpation is a clinical sign of inflammation of the vermiform appendix."
           ]
         },
@@ -104,7 +104,7 @@ export const chapter15En: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Adhesion of the caecum following appendicectomy, functional colonic disorder, or irritable or spastic colon may restrict caecal mobility and, within this clinical model, contribute to a caecoileal reflex, fixation of the right sacroiliac joint and referred pain in the right lower limb.",
+            "Any caecal adhesion following appendicectomy, a functional colonic disorder, or an irritable or spastic colon may restrict caecal mobility and, within this clinical model, contribute to a caecoileal reflex, fixation of the right sacroiliac joint and referred pain in the right lower limb.",
             "Following appendicectomy, mobility of the right ovary may be reduced and may be associated with difficulty conceiving. The reflex zones of the caecum and ovary should therefore be assessed after appendicectomy.",
             "In any case of right-sided low back pain with sciatica, particularly when there is no history of trauma or mechanical overuse of the spine, the caecal reflex zone should be assessed."
           ]
@@ -153,7 +153,7 @@ export const chapter15En: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Root of the transverse mesocolon: it forms a partition dividing the abdominal cavity into two compartments. See Chapter 1, General Principles - Visceral Articulations, page ....",
+            "Root of the transverse mesocolon: it forms a partition dividing the abdominal cavity into two compartments. See Chapter 1, General Principles: Visceral Articulations.",
             "The transverse mesocolon allows the transverse colon considerable mobility, except at the hepatic flexure. It accommodates movements of the body and stomach.",
             "In its usual configuration, the transverse colon lies between two horizontal lines: the upper line passes through the ninth costal cartilages and the lower line through the umbilicus, according to Testut (Treatise on Human Anatomy)."
           ]
@@ -242,7 +242,7 @@ export const chapter15En: Chapter = {
             "Principal root: this vertical root runs lateral to the anterior sacral foramina and ends anterior to the third sacral vertebra. It contains the superior rectal vessels and superior hypogastric plexus.",
             "Secondary root: this root runs obliquely downwards and to the left, along the medial border of the psoas and the lateral border of the sacrum. It contains the inferior mesenteric artery.",
             "Relevance to ROP:",
-            "The rich neurovascular network of the sigmoid mesocolon is considered highly reflexogenic within this model, supporting assessment of its reflex zone."
+            "The rich neurovascular network of the sigmoid mesocolon is considered highly reflexogenic within this model, supporting assessment and stimulation of its reflex zone."
           ]
         },
         {
@@ -256,7 +256,7 @@ export const chapter15En: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "It is initially retroperitoneal and then subperitoneal. It lies anterior to the sacrum and posterior to the rectouterine pouch in women—commonly known as the pouch of Douglas—or the rectovesical pouch in men.",
+            "It is initially retroperitoneal and then subperitoneal. It lies anterior to the sacrum and posterior to the rectouterine pouch in women (pouch of Douglas) or the rectovesical pouch in men.",
             "It comprises two segments oriented in different planes. Together they form the 90° anorectal angle, or perineal flexure, which opens posteriorly and is maintained by the puborectalis portion of the levator ani:",
             "Pelvic segment, or rectal ampulla: it lies above the perineum, faces caudally and follows the curvature of the sacrum;",
             "Perineal segment, or anal canal: it corresponds to the anorectal triangle of the perineum and faces posteriorly."
@@ -273,8 +273,8 @@ export const chapter15En: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Internal sphincter: it is formed by smooth muscle continuous with the rectum and is controlled by the pelvic parasympathetic and sympathetic pathways from T12 to L1. See Chapter 17, Pelvic Cavity - Innervation, page ....",
-            "External sphincter: it is a ring of striated muscle supplied by the pudendal nerve of the somatic nervous system (see Chapter 17, Pelvic Cavity - Innervation, page ....). It controls anal continence and is reinforced by the levator ani muscle."
+            "Internal sphincter: it is formed by smooth muscle continuous with the rectum and is controlled by the pelvic parasympathetic and sympathetic pathways from T12 to L1. See Chapter 17, Pelvic Cavity: Innervation.",
+            "External sphincter: it is a ring of striated muscle supplied by the pudendal nerve of the somatic nervous system (see Chapter 17, Pelvic Cavity: Innervation). It controls anal continence and is reinforced by the levator ani muscle."
           ]
         }
       ]
@@ -398,7 +398,7 @@ export const chapter15En: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Superior mesenteric artery: it supplies the ascending colon and the proximal two thirds of the transverse colon. See Chapter 14, Small Intestine - Vascular Supply, page ....",
+            "Superior mesenteric artery: it supplies the ascending colon and the proximal two thirds of the transverse colon. See Chapter 14, Small Intestine: Vascular Supply.",
             "Inferior mesenteric artery: it arises from the left side of the abdominal aorta, just above the umbilicus, at the level of L3. Its pulse may be palpable at this level, although it is often difficult to detect. It runs within the secondary root of the sigmoid mesocolon and supplies the distal third of the transverse colon, descending colon and sigmoid colon. It gives rise to the superior rectal artery, which principally supplies the upper rectum; the middle and lower rectum and the anal canal also receive the middle and inferior rectal arteries, which arise from the internal iliac circulation."
           ]
         },
@@ -409,7 +409,7 @@ export const chapter15En: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Inferior mesenteric vein: it drains the descending colon, left colic flexure, sigmoid colon and upper rectum, and most commonly joins the splenic vein. The splenic and superior mesenteric veins unite to form the portal vein, which enters the liver. Rectal venous drainage is mixed: the upper rectum drains into the portal system, whereas the middle and lower territories communicate with the caval system through the internal iliac veins."
+            "Inferior mesenteric vein: it drains the descending colon, left colic flexure, sigmoid colon and upper rectum, and most commonly joins the splenic vein. The splenic and superior mesenteric veins unite to form the portal vein, which enters the liver. Rectal venous drainage is mixed: the upper rectum drains into the portal system, whereas the middle and lower rectum communicate with the caval system through the internal iliac veins."
           ]
         },
         {
@@ -492,7 +492,7 @@ export const chapter15En: Chapter = {
         },
         {
           "type": "para",
-          "text": "Intrinsic innervation is provided by the enteric nervous system. See Chapter 4 - Autonomic Nervous System."
+          "text": "Intrinsic innervation is provided by the enteric nervous system. See Chapter 4, Autonomic Nervous System."
         },
         {
           "type": "sub",
@@ -505,7 +505,7 @@ export const chapter15En: Chapter = {
             "Pelvic parasympathetic: its fibres arise from the S2-S4 sacral spinal cord. In surface mapping, their projection is conventionally located in the lower lumbar region.",
             "Superior hypogastric plexus: sympathetic and parasympathetic fibres from the inferior mesenteric plexus join the superior hypogastric plexus at the level of L5. This plexus gives rise to the right and left hypogastric nerves.",
             "Inferior hypogastric plexus: the right and left hypogastric nerves run along the lateral wall of the rectum and join the right and left inferior hypogastric plexuses within the sacrorectogenitopubic laminae. These plexuses provide sympathetic and parasympathetic innervation to the pelvic organs.",
-            "Sympathetic action: closure, maintenance of tone and relative dryness of the rectal mucosa.",
+            "Sympathetic action: contraction, maintenance of tone and relative dryness of the rectal mucosa.",
             "Parasympathetic action: opening, mucosal secretion and reflex initiation of defaecation."
           ]
         }
@@ -536,7 +536,7 @@ export const chapter15En: Chapter = {
             "Gastrocolic reflexes when food enters the stomach;",
             "Distension of the duodenum by intestinal contents;",
             "Stimulation of the vagus nerve and sacral parasympathetic pathways during meals;",
-            "In the sigmoid colon, contractions become more frequent and herald the urge to defaecate through the rectum and anus."
+            "In the sigmoid colon, contractions become more frequent and signal the urge to defaecate."
           ]
         },
         {
@@ -646,7 +646,7 @@ export const chapter15En: Chapter = {
         },
         {
           "type": "para",
-          "text": "Diverticula may become inflamed or infected, resulting in diverticulitis or sigmoiditis."
+          "text": "Diverticula may become inflamed or infected, causing diverticulitis, including sigmoid diverticulitis."
         },
         {
           "type": "para",
@@ -696,7 +696,7 @@ export const chapter15En: Chapter = {
         },
         {
           "type": "para",
-          "text": "Inadequate water, physical activity or fibre intake promotes constipation."
+          "text": "Insufficient fluid and fibre intake and lack of physical activity promote constipation."
         },
         {
           "type": "para",
@@ -716,7 +716,7 @@ export const chapter15En: Chapter = {
         },
         {
           "type": "para",
-          "text": "Lifestyle habits therefore contribute directly to intestinal comfort."
+          "text": "Lifestyle habits therefore contribute directly to bowel comfort and regularity."
         },
         {
           "type": "sub",
@@ -744,7 +744,7 @@ export const chapter15En: Chapter = {
         },
         {
           "type": "para",
-          "text": "The longer stools remain stagnant, the harder they become and the more difficult they are to evacuate."
+          "text": "The longer stool remains in the colon, the harder it becomes and the more difficult it is to pass."
         },
         {
           "type": "sub",
@@ -792,7 +792,7 @@ export const chapter15En: Chapter = {
         },
         {
           "type": "para",
-          "text": "An appropriate diet, adequate hydration and physical activity are among the first useful measures."
+          "text": "Dietary adjustment, adequate hydration and physical activity are appropriate first-line measures."
         },
         {
           "type": "sub",
@@ -836,7 +836,7 @@ export const chapter15En: Chapter = {
         },
         {
           "type": "para",
-          "text": "Bile supports digestion and promotes smooth intestinal transit."
+          "text": "Bile supports digestion and contributes to normal bowel transit."
         },
         {
           "type": "para",
@@ -848,7 +848,7 @@ export const chapter15En: Chapter = {
         },
         {
           "type": "para",
-          "text": "Faeces remain stagnant mainly in the descending colon, sigmoid colon or rectum."
+          "text": "Faeces accumulate mainly in the descending colon, sigmoid colon or rectum."
         },
         {
           "type": "para",
@@ -868,11 +868,11 @@ export const chapter15En: Chapter = {
         },
         {
           "type": "sub",
-          "text": "9.4. Painful rectal urgency and tenesmus"
+          "text": "9.4. Rectal colic (épreinte) and tenesmus"
         },
         {
           "type": "para",
-          "text": "Painful rectal urgency is characterised by spasmodic pain in the lower abdomen or rectum."
+          "text": "Rectal colic (épreinte) is characterised by spasmodic pain in the lower abdomen or rectum."
         },
         {
           "type": "para",
@@ -1063,7 +1063,7 @@ export const chapter15En: Chapter = {
         },
         {
           "type": "para",
-          "text": "See Chapter 3 - Central Nervous System."
+          "text": "See Chapter 3, Central Nervous System."
         },
         {
           "type": "sub",
@@ -1079,7 +1079,7 @@ export const chapter15En: Chapter = {
         },
         {
           "type": "para",
-          "text": "Depending on the findings, assessment may include:"
+          "text": "According to the assessment findings, evaluation may include:"
         },
         {
           "type": "bullets",
@@ -1096,7 +1096,7 @@ export const chapter15En: Chapter = {
         },
         {
           "type": "para",
-          "text": "Depending on the findings, assessment may include:"
+          "text": "According to the assessment findings, evaluation may include:"
         },
         {
           "type": "bullets",
@@ -1118,7 +1118,7 @@ export const chapter15En: Chapter = {
         },
         {
           "type": "para",
-          "text": "See Chapter 4 - Autonomic Nervous System."
+          "text": "See Chapter 4, Autonomic Nervous System."
         },
         {
           "type": "sub",
@@ -1138,12 +1138,12 @@ export const chapter15En: Chapter = {
             "Caecum and ileocaecal junction.",
             "Ascending colon.",
             "Right colic flexure.",
-            "Relationships with the ileum, right kidney, liver and diaphragm, according to the findings."
+            "Relationships with the ileum, right kidney, liver and diaphragm, according to the assessment findings."
           ]
         },
         {
           "type": "para",
-          "text": "Regional module: see Chapter 7 - Regional Abdominal and Peritoneal Foundation."
+          "text": "Regional module: see Chapter 7, Regional Abdominal and Peritoneal Foundation."
         },
         {
           "type": "para",
@@ -1172,13 +1172,13 @@ export const chapter15En: Chapter = {
             "Left colic flexure.",
             "Descending colon.",
             "Sigmoid colon.",
-            "Sigmoid mesocolon and its roots, according to the findings.",
+            "Sigmoid mesocolon and its roots, according to the assessment findings.",
             "Relationships with the left psoas, left kidney and pelvis, where relevant."
           ]
         },
         {
           "type": "para",
-          "text": "Regional module: see Chapter 7 - Regional Abdominal and Peritoneal Foundation."
+          "text": "Regional module: see Chapter 7, Regional Abdominal and Peritoneal Foundation."
         },
         {
           "type": "para",
@@ -1195,7 +1195,7 @@ export const chapter15En: Chapter = {
         },
         {
           "type": "para",
-          "text": "Regional module: see Chapter 17 - Regional Pelvic Foundation at Level 3."
+          "text": "Regional module: see Chapter 17, Regional Pelvic Foundation at Level 3."
         },
         {
           "type": "sub",
@@ -1242,11 +1242,11 @@ export const chapter15En: Chapter = {
         },
         {
           "type": "para",
-          "text": "See Chapter 3 - Central Nervous System; see Chapter 5 - Stress Mechanism."
+          "text": "See Chapter 3, Central Nervous System; see Chapter 5, Stress Mechanism."
         },
         {
           "type": "sub",
-          "text": "13.6. Associated support areas according to testing"
+          "text": "13.6. Associated support areas according to the assessment findings"
         },
         {
           "type": "bullets",
@@ -1266,7 +1266,7 @@ export const chapter15En: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Proximal constipation: right colon + proximal Level 2 + abdominal module according to testing.",
+            "Proximal constipation: right colon + proximal Level 2 + abdominal module according to the assessment findings.",
             "Distal constipation: left colon, sigmoid colon or rectum + pelvic parasympathetic pathways + pelvic module where required.",
             "Irritable bowel syndrome or functional colonic disorder: Level 1 + Level 2 + symptomatic colonic zones + brain-gut axis.",
             "Defaecatory disorder or tenesmus: rectum + pelvic Level 2 + pelvic floor and pudendal nerve at Level 4."

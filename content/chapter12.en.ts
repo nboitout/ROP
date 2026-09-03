@@ -1,5 +1,5 @@
 // Chapter 12 content — English
-// Source: public/chapter-12/EN/Chapter_12_Pancreas_Medical_English_Revised.docx
+// Source: public/chapter-12/EN/Chapter_12_Pancreas_CodexTranslationV2.docx
 
 import type { Chapter } from './types'
 
@@ -162,7 +162,7 @@ export const chapter12En: Chapter = {
         },
         {
           "type": "sub",
-          "text": "3.6. Means of fixation"
+          "text": "3.6. Attachments"
         },
         {
           "type": "sub",
@@ -194,11 +194,11 @@ export const chapter12En: Chapter = {
         },
         {
           "type": "sub",
-          "text": "3.6.4. Turgor effect and intracavitary pressures"
+          "text": "3.6.4. Turgor and intracavitary pressure effects"
         },
         {
           "type": "para",
-          "text": "(See Chapter 1, General Principles, p. …)"
+          "text": "(See Chapter 1, General Principles.)"
         }
       ]
     },
@@ -212,7 +212,7 @@ export const chapter12En: Chapter = {
         },
         {
           "type": "para",
-          "text": "With the second part of the duodenum, within Rogié’s quadrilateral."
+          "text": "It is related to the second part of the duodenum within Rogié’s quadrilateral."
         },
         {
           "type": "sub",
@@ -316,7 +316,7 @@ export const chapter12En: Chapter = {
         },
         {
           "type": "para",
-          "text": "The sympathetic supply involved here is classically associated with the mid-thoracic spinal segments, particularly left T8–T10."
+          "text": "The sympathetic supply involved here is classically associated with the thoracic spinal segments, particularly left T8–T10."
         },
         {
           "type": "sub",
@@ -442,7 +442,7 @@ export const chapter12En: Chapter = {
         },
         {
           "type": "para",
-          "text": "Although glucose requirements vary with activity, blood glucose must remain within a range compatible with normal function—approximately 0.80–1.20 g/L according to the reference values used here."
+          "text": "Although glucose requirements vary with activity, blood glucose must remain within a range compatible with normal function. The reference range used here is approximately 0.80–1.20 g/L; clinical interpretation depends on the measurement conditions and context."
         },
         {
           "type": "sub",
@@ -506,7 +506,7 @@ export const chapter12En: Chapter = {
         },
         {
           "type": "para",
-          "text": "(See Chapter 5, Stress Mechanism, p. …)"
+          "text": "(See Chapter 5, Stress Mechanism.)"
         },
         {
           "type": "sub",
@@ -530,7 +530,7 @@ export const chapter12En: Chapter = {
         },
         {
           "type": "para",
-          "text": "(See Chapter 14, Small Intestine, Dysbiosis, p. …)"
+          "text": "(See Chapter 14, Small Intestine: Dysbiosis.)"
         },
         {
           "type": "sub",
@@ -538,7 +538,7 @@ export const chapter12En: Chapter = {
         },
         {
           "type": "para",
-          "text": "Following a meal, intestinal hormones such as GLP-1 help slow gastric emptying, inhibit glucagon secretion, and stimulate insulin secretion."
+          "text": "In response to a postprandial rise in blood glucose, intestinal hormones such as GLP-1 help slow gastric emptying, inhibit glucagon secretion, and stimulate insulin secretion."
         },
         {
           "type": "para",
@@ -682,11 +682,11 @@ export const chapter12En: Chapter = {
         },
         {
           "type": "para",
-          "text": "Type 1 insulin-dependent diabetes: an autoimmune disease that most commonly develops during childhood or adolescence in genetically susceptible individuals."
+          "text": "Type 1 diabetes: an autoimmune disease that most commonly develops during childhood or adolescence in genetically susceptible individuals."
         },
         {
           "type": "para",
-          "text": "Adult-onset, insulin-resistant type 2 diabetes: associated with obesity, physical inactivity, and various dietary and metabolic factors."
+          "text": "Type 2 diabetes: characterised by insulin resistance and associated with obesity, physical inactivity, and various dietary and metabolic factors; it often develops in adulthood but may occur earlier."
         },
         {
           "type": "sub",
@@ -738,7 +738,7 @@ export const chapter12En: Chapter = {
         },
         {
           "type": "para",
-          "text": "Chronic hyperglycaemia initially damages the microcirculation and small nerve fibres."
+          "text": "Chronic hyperglycaemia primarily affects the microcirculation and small nerve fibres."
         },
         {
           "type": "para",
@@ -834,7 +834,7 @@ export const chapter12En: Chapter = {
         },
         {
           "type": "para",
-          "text": "Less commonly, a complication of major biliary surgery or abdominal trauma."
+          "text": "Less commonly, a complication of surgery involving the main bile duct or of abdominal trauma."
         },
         {
           "type": "sub",
@@ -876,11 +876,7 @@ export const chapter12En: Chapter = {
         },
         {
           "type": "para",
-          "text": "Hyperinsulinaemia and hypoinsulinaemia."
-        },
-        {
-          "type": "para",
-          "text": "(See Chapter 5, Stress Mechanism, pp. …)"
+          "text": "Hyperinsulinaemia and hypoinsulinaemia (see Chapter 5, Stress Mechanism)."
         },
         {
           "type": "para",
@@ -888,11 +884,11 @@ export const chapter12En: Chapter = {
         },
         {
           "type": "para",
-          "text": "Supporting the flow of pancreatic secretions through the ampulla of Vater and sphincter of Oddi."
+          "text": "Support for the flow of pancreatic secretions through the ampulla of Vater and sphincter of Oddi."
         },
         {
           "type": "para",
-          "text": "Stimulating exocrine secretion (head of the pancreas) and endocrine secretion (body and tail of the pancreas)."
+          "text": "Functional support for exocrine activity (mapped in ROP primarily to the head of the pancreas) and endocrine activity (mapped primarily to the body and tail)."
         },
         {
           "type": "para",
@@ -1091,7 +1087,7 @@ export const chapter12En: Chapter = {
         },
         {
           "type": "para",
-          "text": "“Listening–induction” combines a landmark on the pancreatic zone with a landmark on the limbic brain zone. Within the method, it is used as a functional integration technique, particularly when stress, emotional experience, eating behaviour, or the metabolic context contributes to the clinical presentation."
+          "text": "The ROP “listening–induction” technique combines a landmark on the pancreatic zone with a landmark on the limbic brain zone. Within the method, it is used as a functional integration technique, particularly when stress, emotional experience, eating behaviour, or the metabolic context contributes to the clinical presentation."
         },
         {
           "type": "para",

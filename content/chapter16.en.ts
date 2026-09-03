@@ -1,5 +1,5 @@
 // Chapter 16 content — English
-// Source: public/chapter-16/EN/Chapter_16_Kidneys_Medical_English_Revised.docx
+// Source: public/chapter-16/EN/Chapter_16_Kidneys_CodexTranslationV2.docx
 
 import type { Chapter } from './types'
 
@@ -41,7 +41,7 @@ export const chapter16En: Chapter = {
         },
         {
           "type": "sub",
-          "text": "2.1. Ventral relationships"
+          "text": "2.1. Surface landmarks"
         },
         {
           "type": "bullets",
@@ -91,24 +91,24 @@ export const chapter16En: Chapter = {
         },
         {
           "type": "para",
-          "text": "Within the renal compartment, the kidney is embedded in semi-fluid perirenal fat contained within a thin membrane, the renal capsule. Outside the capsule, between the capsule and renal compartment, lies a second layer of fat: pararenal fat."
+          "text": "Within the renal fascia, the kidney is enclosed by a fibrous renal capsule and surrounded by perirenal fat. Pararenal fat lies outside the renal fascia, between the fascia and the posterior abdominal wall."
         },
         {
           "type": "sub",
-          "text": "3.3. Means of fixation"
+          "text": "3.3. Factors maintaining renal position"
         },
         {
           "type": "para",
-          "text": "The kidneys have no attachments within the abdominal cavity. Within the renal compartment, they have neither ligaments nor mesenteries. Their fixation depends on:"
+          "text": "The kidneys have no ligamentous or mesenteric attachment comparable to that of many intraperitoneal organs. Their position is maintained by their retroperitoneal environment, including:"
         },
         {
           "type": "bullets",
           "items": [
-            "thoracic suction and diaphragmatic attraction (see Chapter 1, General Principles, p. …);",
+            "pressure relationships between the thorax, diaphragm, and abdomen (see Chapter 1, General Principles);",
             "the tone of the abdominal muscles;",
-            "to a lesser extent, the vascular pedicle;",
+            "to a lesser extent, the renal vascular pedicle;",
             "the volume of perirenal and pararenal fat.",
-            "At the inferior part of the renal compartment, the prerenal and retrorenal fasciae do not join. The compartment is therefore open inferiorly, forming a true funnel into which the kidney may descend. Renal position depends entirely on the surrounding environment. The volume of fat varies with the individual’s nutritional and general condition. Marked weight loss reduces this fat volume: the kidney becomes mobile and tends to slide downwards along the lateral border of the psoas. Failure of these means of fixation predisposes to renal ptosis. (See Pathology, p. …)"
+            "Inferiorly, the anterior and posterior layers of the renal fascia may remain incompletely fused. Within the mechanical model used in ROP, reduced support following marked weight loss may increase renal mobility and favour downward displacement along the lateral border of the psoas. Clinically significant nephroptosis requires medical assessment (see Section 9.1, Renal ptosis)."
           ]
         },
         {
@@ -128,7 +128,7 @@ export const chapter16En: Chapter = {
         },
         {
           "type": "para",
-          "text": "The cortex sends extensions—the renal columns—towards the centre of the kidney, dividing the medulla into approximately ten pyramids, known as the renal pyramids or pyramids of Malpighi. Their medial tips contain numerous openings that drain into the minor calyces, which receive urine. Several minor calyces unite to form a major calyx. The major calyces collectively form the renal pelvis, which collects all the urine and continues as the ureter."
+          "text": "The cortex extends inward as renal columns (columns of Bertin), dividing the medulla into approximately ten renal pyramids. The papilla at the tip of each pyramid drains through small openings into a minor calyx. Several minor calyces unite to form a major calyx; the major calyces drain into the renal pelvis, which continues as the ureter."
         },
         {
           "type": "sub",
@@ -145,7 +145,7 @@ export const chapter16En: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Glomerulus: filters blood plasma (see Physiology, p. …);",
+            "Glomerulus: filters blood plasma (see Section 7.2.1, Urine formation);",
             "Tubule: reabsorbs and secretes substances required by the body."
           ]
         }
@@ -165,7 +165,7 @@ export const chapter16En: Chapter = {
         },
         {
           "type": "para",
-          "text": "The twelfth intercostal (subcostal) nerve and branches of the lumbar plexus—the iliohypogastric, ilioinguinal, and lateral femoral cutaneous nerves—run through the pararenal fat."
+          "text": "The subcostal nerve (the anterior ramus of T12) and branches of the lumbar plexus—the iliohypogastric, ilioinguinal, and lateral femoral cutaneous nerves—run through the posterior abdominal wall in relation to the renal region."
         },
         {
           "type": "para",
@@ -190,7 +190,7 @@ export const chapter16En: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Ventrally:"
+            "4.2. Ventral relationships"
           ]
         },
         {
@@ -201,7 +201,7 @@ export const chapter16En: Chapter = {
           "type": "bullets",
           "items": [
             "Superiorly: the liver, through the hepatorenal ligament;",
-            "Ventrally: the second part of the duodenum through the suspensory fascia of Treitz, and the hepatic flexure of the colon;",
+            "Ventrally: the second part of the duodenum through the retroduodenal fascia (Treitz fascia), and the right colic flexure;",
             "Inferiorly: the ileum;",
             "Laterally: the ascending colon, from which it is separated by Toldt’s fascia."
           ]
@@ -213,7 +213,7 @@ export const chapter16En: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Ventrally: the left triangular ligament of the liver, spleen, and stomach, from which it is separated by the lesser sac; the splenic flexure of the colon; and the pancreas;",
+            "Ventrally: the spleen, stomach (separated from the kidney by the lesser sac), pancreas, and left colic flexure; the left triangular ligament of the liver may also be related superiorly;",
             "Inferiorly: the jejunum and left gonadal venous system;",
             "Medially: the duodenojejunal flexure."
           ]
@@ -248,8 +248,8 @@ export const chapter16En: Chapter = {
           "type": "bullets",
           "items": [
             "Right renal vein: drains directly into the inferior vena cava;",
-            "Left renal vein: longer than the right; it receives the left gonadal vein and the left lumbar vein, which drains venous blood from the lumbar vertebrae and contributes to the fluid supply of the intervertebral discs.",
-            "Nutcracker syndrome (see Chapter 10, Duodenum, p. …) involves compression of the left renal vein between the aorta and superior mesenteric artery, in the environment of the third part of the duodenum. In ROP clinical interpretation, this left-sided venous compression may be considered in relation to certain presentations of pelvic, lumbar, or left genital congestion, without replacing medical assessment of true nutcracker syndrome. Left-sided varicoceles and varicose veins predominantly affecting the left lower limb may prompt assessment of left renal fixation and small-intestinal ptosis."
+            "Left renal vein: longer than the right; it receives the left gonadal and left suprarenal veins and communicates with lumbar venous channels.",
+            "Nutcracker syndrome (see Chapter 10, Duodenum) is compression of the left renal vein, most commonly between the aorta and superior mesenteric artery. It is a medical diagnosis. Within ROP clinical interpretation, left-sided venous relationships may be considered when assessing pelvic, lumbar, or left genital congestion, but reflex findings cannot diagnose the syndrome. A new left-sided varicocele, haematuria, pelvic pain, or other unexplained symptoms require medical evaluation."
           ]
         },
         {
@@ -263,8 +263,8 @@ export const chapter16En: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Right kidney: it could be described as the “digestive kidney” because of its proximity to the liver and ascending colon. Its tendency to migrate downwards may exacerbate digestive symptoms through spasm associated with its descent, which may be mistaken for appendicitis.",
-            "Left kidney: it could be described as the “genital kidney”. Its fixation has little effect on the digestive system apart from spasm of the duodenojejunal flexure, experienced as epigastric pain. Through its venous relationship with the urogenital region, nutcracker syndrome and fixation of the left kidney may contribute to venous problems affecting the left testis (varicocele) or left labium majus. Sexual symptoms may be attributed within this model to fixation of the left kidney: premenstrual pelvic heaviness in women and reduced sexual function and libido in men. Left-sided lumbosciatica, even after trauma, should prompt assessment of the left kidney. During pregnancy, lumbar pain may be associated with compression of the aortomesenteric region by the enlarging uterus."
+            "Right kidney: within the ROP model, it is sometimes described as the ‘digestive kidney’ because of its proximity to the liver and ascending colon. Reduced regional mobility may be considered alongside digestive symptoms only after appropriate medical causes have been excluded.",
+            "Left kidney: within the ROP model, it is sometimes described as the ‘genital kidney’ because of its venous and regional relationships. Pelvic heaviness, varicocele, sexual symptoms, sciatica, or pregnancy-related pain must not be attributed to renal fixation without medical assessment; nutcracker syndrome and other vascular disorders remain medical diagnoses."
           ]
         }
       ]
@@ -283,7 +283,7 @@ export const chapter16En: Chapter = {
         },
         {
           "type": "para",
-          "text": "In ROP clinical interpretation, this sympathetic predominance supports linking the kidney with blood-pressure regulation, the prevertebral plexuses, the thoracolumbar junction, and deep tension within the lumbar region. Prolonged sympathetic overactivity may contribute to renal vasoconstriction and a hypertensive tendency."
+          "text": "Within ROP clinical interpretation, sympathetic innervation provides a rationale for considering the kidney in relation to blood-pressure regulation, the prevertebral plexuses, the thoracolumbar junction, and deep tension in the lumbar region. Sustained sympathetic activation can affect renal vascular tone, but hypertension requires conventional medical evaluation and management."
         }
       ]
     },
@@ -301,7 +301,7 @@ export const chapter16En: Chapter = {
         },
         {
           "type": "para",
-          "text": "The amplitude of this movement is 3–4 cm. It is repeated approximately 20,000 times per day. Motility follows the same direction but occurs more slowly, at approximately seven cycles per minute: during “inspiration” the kidney descends, and during “expiration” it rises."
+          "text": "Respiratory renal excursion varies with body position and breathing. Within the ROP model, an excursion of approximately 3–4 cm is used as a clinical reference. The separate concept of renal ‘motility’, described as a slower intrinsic rhythm of approximately seven cycles per minute, is method-specific and should not be interpreted as a conventional diagnostic measurement."
         },
         {
           "type": "sub",
@@ -363,7 +363,15 @@ export const chapter16En: Chapter = {
         },
         {
           "type": "para",
-          "text": "Blood pH is approximately 7.4. To buffer acidity, the kidneys excrete hydrogen ions (H+) in the urine and retain bicarbonate ions (HCO₃−). At the same time, ventilation increases so that the lungs eliminate carbon dioxide. In persistent acidosis, acid may accumulate within the body’s connective tissues. Excess acidity is described here as increasing inflammatory reactions, bone demineralisation, and exaggerated stress responses."
+          "text": "Blood pH is normally maintained within a narrow range. The kidneys contribute to acid–base balance by excreting hydrogen ions (H+) and conserving or generating bicarbonate (HCO₃−), while the lungs regulate carbon dioxide through ventilation. Persistent acidosis is a medical condition that requires investigation; it should not be inferred from nonspecific symptoms or reflex-zone findings."
+        },
+        {
+          "type": "sub",
+          "text": "Dietary terminology within the ROP framework"
+        },
+        {
+          "type": "para",
+          "text": "Within traditional ROP teaching, the following foods have been described as acid-producing. This is not a statement that they directly acidify the blood, whose pH is tightly regulated:"
         },
         {
           "type": "para",
@@ -374,25 +382,27 @@ export const chapter16En: Chapter = {
           "items": [
             "sugar, particularly when consumed on an empty stomach;",
             "alcohol;",
-            "animal fats;",
-            "red meat and offal;",
+            "animal fats, red meat, and offal;",
             "fried foods."
           ]
         },
         {
           "type": "para",
-          "text": "Foods described as alkaline include:"
+          "text": "Foods traditionally described within the same framework as alkaline include:"
         },
         {
           "type": "bullets",
           "items": [
-            "potatoes, but not chips;",
+            "potatoes, excluding chips;",
             "onions and garlic;",
-            "carrots;",
-            "cabbage;",
+            "carrots and cabbage;",
             "almonds and hazelnuts;",
-            "lemon, in small quantities."
+            "lemon in small quantities."
           ]
+        },
+        {
+          "type": "para",
+          "text": "These traditional categories are not a substitute for individualised dietary or medical advice."
         },
         {
           "type": "sub",
@@ -410,32 +420,32 @@ export const chapter16En: Chapter = {
       "blocks": [
         {
           "type": "para",
-          "text": "As with other organs, functional kidney disorders may initially produce symptoms similar to those of early renal impairment. Thoracic or lumbar pain is not always mechanical, even when it follows physical exertion. An underlying renal disorder may be approaching decompensation."
+          "text": "Symptoms associated with kidney or urinary tract disease may be nonspecific and can overlap with musculoskeletal complaints. Thoracic, flank, or lumbar pain is not always mechanical, even when it follows exertion. Unexplained, persistent, severe, or systemic symptoms require medical assessment."
         },
         {
           "type": "para",
-          "text": "If there is any doubt, the patient should be referred to a physician for investigations such as urinalysis and urine culture, ultrasonography, CT, or other appropriate imaging."
+          "text": "If there is any doubt, refer the patient to a physician. Assessment may include urinalysis, urine culture, blood tests, ultrasonography, CT, or other investigations selected according to the clinical presentation."
         },
         {
           "type": "sub",
-          "text": "8.1. Diagnosis of exclusion"
+          "text": "8.1. Red flags and conditions requiring medical exclusion"
         },
         {
           "type": "bullets",
           "items": [
-            "acute renal colic with dysuria or proteinuria;",
+            "acute renal colic or acute flank pain, especially with dysuria, haematuria, vomiting, or reduced urine output;",
             "haematuria (blood in the urine);",
             "fever;",
-            "urinary tract or renal infection, including pyelonephritis or glomerulonephritis;",
+            "suspected urinary tract infection or pyelonephritis; suspected glomerulonephritis or another inflammatory renal disorder;",
             "weight loss and loss of appetite;",
-            "general fatigue or depression;",
-            "palpable flank mass;",
-            "nocturnal flank pain that wakes the patient and is accompanied by fever;",
-            "hyperuricaemia or excess uric acid;",
+            "unexplained marked fatigue, functional decline, or significant mood change;",
+            "palpable flank or abdominal mass;",
+            "nocturnal flank pain that wakes the patient, particularly when accompanied by fever;",
+            "clinically significant hyperuricaemia or complications related to excess uric acid;",
             "polyuria in a patient with diabetes;",
             "polycystic kidney disease;",
             "sudden-onset varicocele;",
-            "renal cancer."
+            "suspected renal cancer."
           ]
         }
       ]
@@ -447,9 +457,9 @@ export const chapter16En: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "lumbar pain occurring at dawn, around 4–5 a.m.;",
+            "low-back or flank pain that wakes the patient around 4–5 a.m.;",
             "morning thirst;",
-            "profound morning fatigue described as constitutional;",
+            "profound morning fatigue;",
             "congested eyes with “bags” beneath them;",
             "high blood pressure;",
             "sequelae of a fall onto the back, coccyx, heels, or abdomen;",
@@ -459,9 +469,9 @@ export const chapter16En: Chapter = {
             "infertility;",
             "reduced libido;",
             "joint pain associated with excess uric acid;",
-            "afebrile urinary symptoms with clear urine;",
-            "pregnancy-related lumbar pain (see Chapter 19, Female Reproductive Organs, p. …);",
-            "benign prostatic enlargement (see Chapter 20, Male Reproductive Organs, p. …);",
+            "afebrile urinary symptoms, including symptoms occurring despite clear-appearing urine;",
+            "pregnancy-related lumbar pain (see Chapter 19, Female Reproductive Organs);",
+            "benign prostatic enlargement (see Chapter 20, Male Reproductive Organs);",
             "post-traumatic depression."
           ]
         },
@@ -471,12 +481,12 @@ export const chapter16En: Chapter = {
         },
         {
           "type": "para",
-          "text": "Strictly speaking, the kidneys have no attachments; their means of fixation depend on their environment. (p. …)"
+          "text": "Strictly speaking, the kidneys have no ligamentous attachment comparable to that of many intraperitoneal organs; their position depends on the surrounding fascia, fat, vessels, abdominal pressure, and neighbouring structures (see Section 3.3)."
         },
         {
           "type": "bullets",
           "items": [
-            "A radiological sign of renal ptosis is loss of contact between the superior pole and the eleventh rib, resulting in loss of the thoracic suction and diaphragmatic attraction described in this model.",
+            "Within the model presented here, loss of contact between the superior pole and the eleventh rib is described as a radiological feature associated with nephroptosis. Diagnosis and grading require appropriate medical imaging and interpretation.",
             "Renal ptosis may be congenital or acquired:"
           ]
         },
@@ -486,7 +496,7 @@ export const chapter16En: Chapter = {
         },
         {
           "type": "para",
-          "text": "The adrenal gland follows the kidney. The scope for intervention is limited, other than supporting renal function."
+          "text": "The adrenal gland may remain associated with an ectopic kidney. ROP does not alter congenital renal position; any intervention is limited to non-diagnostic supportive work within the method."
         },
         {
           "type": "sub",
@@ -506,7 +516,7 @@ export const chapter16En: Chapter = {
             "severe or chronic coughing;",
             "post-infectious or postoperative adhesions;",
             "fixation of the eleventh and twelfth ribs or the T10–L1 region;",
-            "psoas disorder, including psoitis."
+            "psoas dysfunction or inflammation (psoitis)."
           ]
         },
         {
@@ -548,7 +558,7 @@ export const chapter16En: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Symptoms: irritation of the iliohypogastric, ilioinguinal, and lateral femoral cutaneous nerves of the lumbar plexus radiates to the lower abdomen, scrotum or labia majora, and lateral thigh. The kidney is externally rotated. Traction on the vascular pedicle may raise blood pressure."
+            "Symptoms described within this model include pain radiating to the lower abdomen, scrotum or labia majora, and lateral thigh in relation to the iliohypogastric, ilioinguinal, and lateral femoral cutaneous nerves. The kidney is described as externally rotated. Hypertension or suspected vascular traction requires medical assessment."
           ]
         },
         {
@@ -562,7 +572,7 @@ export const chapter16En: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Symptoms: knee pain without a history of trauma due to femoral nerve irritation; psoas spasm; urinary tract infection; and calculi. Kinking of the ureter reduces urinary flow, thereby promoting calculi and urinary tract infection, as well as irritation of the colon or uterus. An unexplained urinary tract infection should prompt consideration of renal ptosis."
+            "Within this model, associated findings may include non-traumatic knee pain, psoas spasm, urinary symptoms, or calculi. A kinked ureter can obstruct urinary flow, but obstruction, infection, and stones require medical diagnosis and treatment. Unexplained urinary symptoms must not be assumed to result from renal ptosis."
           ]
         },
         {
@@ -571,7 +581,7 @@ export const chapter16En: Chapter = {
         },
         {
           "type": "para",
-          "text": "It is only rarely osteoarticular in a pregnant patient."
+          "text": "Low-back pain during pregnancy is common and may have musculoskeletal, obstetric, vascular, urinary, or other causes. New, severe, persistent, or systemic symptoms require assessment by an appropriate healthcare professional."
         },
         {
           "type": "bullets",
@@ -579,9 +589,9 @@ export const chapter16En: Chapter = {
             "Causes:",
             "uterovascular compression;",
             "pericaecal, sigmoid, or obturator tension;",
-            "sequelae of appendicectomy, resulting in pressure from the fetal head on the right kidney, right lumbar region, inferior vena cava, and lumbar plexus nerves. The pregnant patient is advised to lie on the left side;",
+            "Within the ROP model, previous appendicectomy and right-sided abdominal or pelvic tension may be considered in relation to the right renal and lumbar regions. Side-lying advice during pregnancy should follow obstetric guidance and individual comfort;",
             "compression of the left common iliac vein by the right common iliac artery (May-Thurner or Cockett syndrome);",
-            "pressure on the left kidney."
+            "mechanical or vascular pressure affecting the left renal region."
           ]
         },
         {
@@ -598,15 +608,15 @@ export const chapter16En: Chapter = {
         },
         {
           "type": "para",
-          "text": "The left kidney is more prone to posterior fixation. A fall onto the back, a direct blow to the lumbar region, costal trauma, or fracture of T12, L1, or L2 may cause the kidney to strike the transverse processes of the lumbar vertebrae. The posterior renal parenchyma may be injured, and pararenal fat may subsequently become fibrotic."
+          "text": "The left kidney is described within the ROP model as more prone to posterior fixation after a fall onto the back, a direct blow to the lumbar region, lower-rib trauma, or vertebral injury at T12–L2. Significant trauma can injure the kidney or surrounding tissues and requires medical assessment. Subsequent local fibrosis is a proposed mechanism within the method, not a palpatory diagnosis."
         },
         {
           "type": "para",
-          "text": "The kidney loses mobility and the lumbar plexus nerves may be compressed, causing pain in the lumbar region, iliac crest, trochanteric region, and proximal thigh. Intrauterine devices and erectile difficulties in men are described within this model as potentially affecting left renal motility."
+          "text": "The model associates reduced regional mobility with irritation of tissues near the lumbar plexus and pain in the lumbar, iliac crest, trochanteric, or proximal thigh regions. Associations with intrauterine devices or erectile difficulties are method-specific and must not replace gynaecological, urological, neurological, or musculoskeletal assessment."
         },
         {
           "type": "para",
-          "text": "Spasm of the paravertebral, psoas, and quadratus lumborum muscles may cause lumbago during an otherwise innocuous movement. The patient may regard the “wrong movement” as the cause of the restriction, when an underlying renal problem was already approaching decompensation. Traumatic renal fixations are described as more common in men."
+          "text": "Spasm of the paravertebral, psoas, or quadratus lumborum muscles may contribute to acute low-back pain during an apparently minor movement. The ROP model considers whether a pre-existing visceral or regional factor may coexist, but renal disease must not be inferred from musculoskeletal findings alone. Traumatic renal fixation is described within the method as more common in men."
         },
         {
           "type": "sub",
@@ -631,7 +641,7 @@ export const chapter16En: Chapter = {
             "T11–T12 vertebrae and the two lowest ribs;",
             "L1–L3;",
             "hip and knee;",
-            "irritation along the medial arch of the foot through the saphenous nerve, the terminal branch of the femoral nerve, often considered in relation to a renal disorder."
+            "Within ROP mapping, irritation along the medial arch of the foot may be considered in relation to the saphenous nerve, a terminal sensory branch of the femoral nerve. This finding is nonspecific and is not evidence of renal disease."
           ]
         }
       ]
@@ -663,13 +673,20 @@ export const chapter16En: Chapter = {
       "title": "12. Advice",
       "blocks": [
         {
+          "type": "note",
+          "label": "Safety note",
+          "body": [
+            "Do not perform self-mobilisation during acute flank or abdominal pain, fever, haematuria, recent trauma, pregnancy, known renal disease, or unexplained symptoms without appropriate medical advice. These exercises are not a substitute for diagnosis or treatment."
+          ]
+        },
+        {
           "type": "bullets",
           "items": [
-            "Advise drinking small amounts frequently and limiting animal protein, particularly red meat, cheese, and fats, especially in the evening;",
-            "Prefer lying on the left side to reduce venous constraints. Add breathing exercises;",
-            "On all fours, inhale while allowing the abdomen to descend, then exhale while drawing it in; repeat approximately ten times;",
-            "For both men and women: self-mobilisation of the kidneys in the supine position with the knees flexed. Place the thumbs between the twelfth rib and iliac crest and direct them ventrally.",
-            "While tilting the knees approximately 45° to the right and left, engage the thumbs within Grynfeltt’s quadrilateral to direct the kidneys ventrally. Repeat approximately ten times."
+            "General hydration and dietary advice should be individualised. Where medically appropriate, encourage regular fluid intake in moderate amounts and avoid excessive intake of animal protein, particularly red and processed meat. Patients with kidney disease, heart failure, pregnancy, or prescribed fluid restrictions should follow their clinician’s advice;",
+            "Within the ROP approach, comfortable side-lying and gentle breathing exercises may be used to reduce regional tension. Positioning during pregnancy or illness should follow appropriate clinical advice;",
+            "On all fours, inhale while allowing the abdomen to relax, then exhale gently while drawing it in; repeat up to ten times if comfortable and symptom-free;",
+            "After instruction by a qualified practitioner, and only when no contraindication is present, a person may practise gentle self-contact over the renal region while supine with the knees flexed. Place the thumbs between the twelfth rib and iliac crest without deep or painful pressure.",
+            "While allowing the knees to move gently to the right and left, maintain light contact over the posterior renal region. Stop immediately if pain, dizziness, nausea, urinary symptoms, or other adverse symptoms occur."
           ]
         }
       ]
@@ -684,19 +701,19 @@ export const chapter16En: Chapter = {
         },
         {
           "type": "para",
-          "text": "• Occipital reflex zones."
+          "text": "Occipital reflex zones."
         },
         {
           "type": "para",
-          "text": "• Brainstem and integration centres, depending on the context."
+          "text": "Brainstem and integration centres, depending on the context."
         },
         {
           "type": "para",
-          "text": "• Diencephalon, particularly the hypothalamus."
+          "text": "Diencephalon, particularly the hypothalamus."
         },
         {
           "type": "para",
-          "text": "• Hypothalamic-pituitary axis."
+          "text": "Hypothalamic-pituitary axis."
         },
         {
           "type": "para",
@@ -704,7 +721,7 @@ export const chapter16En: Chapter = {
         },
         {
           "type": "para",
-          "text": "The vagus nerve (CN X), included in the former “general adaptation syndrome”, is no longer regarded as a principal renal pathway and is therefore not included in the standard renal sequence."
+          "text": "The vagus nerve (CN X), included in the former ‘general adaptation syndrome’, is no longer regarded within the current ROP protocol as a principal renal pathway and is therefore not included in the standard renal sequence."
         },
         {
           "type": "sub",
@@ -720,15 +737,15 @@ export const chapter16En: Chapter = {
         },
         {
           "type": "para",
-          "text": "• Lower thoracic sympathetic chain and thoracolumbar junction."
+          "text": "Lower thoracic sympathetic chain and thoracolumbar junction."
         },
         {
           "type": "para",
-          "text": "• Splanchnic nerves supplying the prevertebral plexuses."
+          "text": "Splanchnic nerves supplying the prevertebral plexuses."
         },
         {
           "type": "para",
-          "text": "• Segmental territories identified in the clinical mapping presented in this chapter."
+          "text": "Segmental territories identified in the clinical mapping presented in this chapter."
         },
         {
           "type": "para",
@@ -736,15 +753,15 @@ export const chapter16En: Chapter = {
         },
         {
           "type": "para",
-          "text": "• Coeliac plexus."
+          "text": "Coeliac plexus."
         },
         {
           "type": "para",
-          "text": "• Aorticorenal plexus."
+          "text": "Aorticorenal plexus."
         },
         {
           "type": "para",
-          "text": "• Renal plexus."
+          "text": "Renal plexus."
         },
         {
           "type": "para",
@@ -760,15 +777,15 @@ export const chapter16En: Chapter = {
         },
         {
           "type": "para",
-          "text": "• Diaphragmatic domes, according to side."
+          "text": "Diaphragmatic domes, according to side."
         },
         {
           "type": "para",
-          "text": "• Diaphragmatic crura."
+          "text": "Diaphragmatic crura."
         },
         {
           "type": "para",
-          "text": "• Thoracolumbar interfaces when indicated by testing."
+          "text": "Thoracolumbar interfaces when indicated by testing."
         },
         {
           "type": "para",
@@ -780,171 +797,171 @@ export const chapter16En: Chapter = {
         },
         {
           "type": "para",
-          "text": "13.3.1.1. Plantar surface"
+          "text": "13.3.1. Plantar surface"
         },
         {
           "type": "para",
-          "text": "• Inferior pole: around the L3–L4 landmarks, in line with the first and second toes, above the anterior border of the heel."
+          "text": "Inferior pole: around the L3–L4 landmarks, in line with the first and second toes, above the anterior border of the heel."
         },
         {
           "type": "para",
-          "text": "• Superior pole: around the T12 landmark."
+          "text": "Superior pole: around the T12 landmark."
         },
         {
           "type": "para",
-          "text": "• Lateral border: convex."
+          "text": "Lateral border: convex."
         },
         {
           "type": "para",
-          "text": "• Medial border: concave."
+          "text": "Medial border: concave."
         },
         {
           "type": "para",
-          "text": "• Hilum: around the L1 landmark."
+          "text": "Hilum: around the L1 landmark."
         },
         {
           "type": "para",
-          "text": "13.3.1.2. Dorsal surface"
+          "text": "13.3.2. Dorsal surface"
         },
         {
           "type": "para",
-          "text": "• Inferior lumbar triangle (Petit’s triangle)."
+          "text": "Inferior lumbar triangle (Petit’s triangle)."
         },
         {
           "type": "para",
-          "text": "• Superior lumbar triangle (Grynfeltt’s quadrilateral)."
+          "text": "Superior lumbar triangle (Grynfeltt’s quadrilateral)."
         },
         {
           "type": "para",
-          "text": "• In ROP mapping, these landmarks are sought opposite the cuboid region."
+          "text": "In ROP mapping, these landmarks are sought opposite the cuboid region."
         },
         {
           "type": "para",
-          "text": "13.3.1.3. Combined plantar-dorsal manoeuvre"
+          "text": "13.3.3. Combined plantar-dorsal manoeuvre"
         },
         {
           "type": "para",
-          "text": "• Place one thumb on the plantar surface and the other on the dorsal surface of the renal zone."
+          "text": "Place one thumb on the plantar surface and the other on the dorsal surface of the renal zone."
         },
         {
           "type": "para",
-          "text": "• Direct the two thumbs towards one another and engage the zone in a coordinated manner."
+          "text": "Direct the two thumbs towards one another and engage the zone in a coordinated manner."
         },
         {
           "type": "para",
-          "text": "• In conjunction with breathing, guide the zone caudally during inspiration and cranially during expiration."
+          "text": "In conjunction with breathing, guide the zone caudally during inspiration and cranially during expiration."
         },
         {
           "type": "para",
-          "text": "• The same manoeuvre may be used without respiratory synchronisation during palpatory assessment within the method."
+          "text": "The same manoeuvre may be used without respiratory synchronisation during palpatory assessment within the method."
         },
         {
           "type": "para",
-          "text": "13.3.2. Kidney and renal compartment"
+          "text": "13.3.4. Kidney and renal compartment"
         },
         {
           "type": "para",
-          "text": "• Right and left kidneys."
+          "text": "Right and left kidneys."
         },
         {
           "type": "para",
-          "text": "• Capsule and perirenal environment."
+          "text": "Capsule and perirenal environment."
         },
         {
           "type": "para",
-          "text": "• Renal fascia and renal compartment."
+          "text": "Renal fascia and renal compartment."
         },
         {
           "type": "para",
-          "text": "• Renal hilum."
+          "text": "Renal hilum."
         },
         {
           "type": "para",
-          "text": "• Superior and inferior poles."
+          "text": "Superior and inferior poles."
         },
         {
           "type": "para",
-          "text": "• Renal pedicle."
+          "text": "Renal pedicle."
         },
         {
           "type": "para",
-          "text": "• Renal pelvis and proximal ureter when warranted by the context."
+          "text": "Renal pelvis and proximal ureter when warranted by the context."
         },
         {
           "type": "para",
-          "text": "13.3.3. Posterior interfaces"
+          "text": "13.3.5. Posterior interfaces"
         },
         {
           "type": "para",
-          "text": "• Diaphragm."
+          "text": "Diaphragm."
         },
         {
           "type": "para",
-          "text": "• Eleventh and twelfth ribs."
+          "text": "Eleventh and twelfth ribs."
         },
         {
           "type": "para",
-          "text": "• Psoas major."
+          "text": "Psoas major."
         },
         {
           "type": "para",
-          "text": "• Quadratus lumborum."
+          "text": "Quadratus lumborum."
         },
         {
           "type": "para",
-          "text": "• Posterior fascia of the renal compartment."
+          "text": "Posterior fascia of the renal compartment."
         },
         {
           "type": "para",
-          "text": "13.3.4. Visceral relationships of the right kidney"
+          "text": "13.3.6. Visceral relationships of the right kidney"
         },
         {
           "type": "para",
-          "text": "• Liver."
+          "text": "Liver."
         },
         {
           "type": "para",
-          "text": "• Duodenum."
+          "text": "Duodenum."
         },
         {
           "type": "para",
-          "text": "• Right colic flexure and ascending colon."
+          "text": "Right colic flexure and ascending colon."
         },
         {
           "type": "para",
-          "text": "• Ileum."
+          "text": "Ileum."
         },
         {
           "type": "para",
-          "text": "13.3.5. Visceral relationships of the left kidney"
+          "text": "13.3.7. Visceral relationships of the left kidney"
         },
         {
           "type": "para",
-          "text": "• Spleen."
+          "text": "Spleen."
         },
         {
           "type": "para",
-          "text": "• Stomach."
+          "text": "Stomach."
         },
         {
           "type": "para",
-          "text": "• Pancreas."
+          "text": "Pancreas."
         },
         {
           "type": "para",
-          "text": "• Left colic flexure."
+          "text": "Left colic flexure."
         },
         {
           "type": "para",
-          "text": "• Jejunum."
+          "text": "Jejunum."
         },
         {
           "type": "para",
-          "text": "• Duodenojejunal flexure."
+          "text": "Duodenojejunal flexure."
         },
         {
           "type": "para",
-          "text": "13.3.6. Left renal vein and vascular-genital context"
+          "text": "13.3.8. Left renal vein and vascular-genital context"
         },
         {
           "type": "para",
@@ -964,47 +981,47 @@ export const chapter16En: Chapter = {
         },
         {
           "type": "para",
-          "text": "• Thoracolumbar junction."
+          "text": "Thoracolumbar junction."
         },
         {
           "type": "para",
-          "text": "• T11–T12."
+          "text": "T11–T12."
         },
         {
           "type": "para",
-          "text": "• L1–L3."
+          "text": "L1–L3."
         },
         {
           "type": "para",
-          "text": "• Eleventh and twelfth ribs."
+          "text": "Eleventh and twelfth ribs."
         },
         {
           "type": "para",
-          "text": "• Subcostal nerve."
+          "text": "Subcostal nerve."
         },
         {
           "type": "para",
-          "text": "• Iliohypogastric and ilioinguinal nerves."
+          "text": "Iliohypogastric and ilioinguinal nerves."
         },
         {
           "type": "para",
-          "text": "• Lateral femoral cutaneous nerve, depending on the context."
+          "text": "Lateral femoral cutaneous nerve, depending on the context."
         },
         {
           "type": "para",
-          "text": "• Lumbar plexus."
+          "text": "Lumbar plexus."
         },
         {
           "type": "para",
-          "text": "• Psoas major."
+          "text": "Psoas major."
         },
         {
           "type": "para",
-          "text": "• Quadratus lumborum."
+          "text": "Quadratus lumborum."
         },
         {
           "type": "para",
-          "text": "• Hip and knee when warranted by the clinical presentation."
+          "text": "Hip and knee when warranted by the clinical presentation."
         },
         {
           "type": "para",
@@ -1020,7 +1037,7 @@ export const chapter16En: Chapter = {
         },
         {
           "type": "para",
-          "text": "“Listening–induction”: one landmark on the renal zone and one central landmark."
+          "text": "‘Listening–induction’, an ROP palpatory procedure: place one landmark on the renal reflex zone and one central landmark, then assess the response within the method."
         },
         {
           "type": "para",
@@ -1036,19 +1053,19 @@ export const chapter16En: Chapter = {
         },
         {
           "type": "para",
-          "text": "• Right kidney: liver, duodenum, and right colon when a regional relationship is clinically relevant."
+          "text": "Right kidney: liver, duodenum, and right colon when a regional relationship is clinically relevant."
         },
         {
           "type": "para",
-          "text": "• Left kidney: spleen, stomach, pancreas, left colon, and duodenojejunal region according to testing."
+          "text": "Left kidney: spleen, stomach, pancreas, left colon, and duodenojejunal region according to testing."
         },
         {
           "type": "para",
-          "text": "• Left urogenital context: left renal vein and gonadal relationships when relevant."
+          "text": "Left urogenital context: left renal vein and gonadal relationships when relevant."
         },
         {
           "type": "para",
-          "text": "• Diaphragm: include when thoracolumbar and respiratory dynamics appear to contribute to the presentation."
+          "text": "Diaphragm: include when thoracolumbar and respiratory dynamics appear to contribute to the presentation."
         },
         {
           "type": "sub",
@@ -1060,23 +1077,23 @@ export const chapter16En: Chapter = {
         },
         {
           "type": "para",
-          "text": "• Lumbar pain or previous trauma: Level 3—renal compartment, fascia, and dorsal surface; Level 4—ribs, psoas, quadratus lumborum, and lumbar plexus."
+          "text": "Lumbar pain or previous trauma: Level 3—renal compartment, fascia, and dorsal surface; Level 4—ribs, psoas, quadratus lumborum, and lumbar plexus."
         },
         {
           "type": "para",
-          "text": "• Clinical suspicion of ptosis or loss of regional mobility following medical exclusion: Level 2—diaphragm and adaptation; Level 3—kidney, compartment, and relationships; Level 4—psoas, quadratus lumborum, and thoracolumbar junction."
+          "text": "Clinical suspicion of ptosis or loss of regional mobility following medical exclusion: Level 2—diaphragm and adaptation; Level 3—kidney, compartment, and relationships; Level 4—psoas, quadratus lumborum, and thoracolumbar junction."
         },
         {
           "type": "para",
-          "text": "• Hypertensive or stress-related context: Level 2—sympathetic system, renal plexus, and adrenal glands; Level 1 and brain-kidney axis according to testing."
+          "text": "Hypertensive or stress-related context: Level 2—sympathetic system, renal plexus, and adrenal glands; Level 1 and brain-kidney axis according to testing."
         },
         {
           "type": "para",
-          "text": "• Left urogenital context: left kidney, venous relationships, and pelvic region only when supported by the history and testing."
+          "text": "Left urogenital context: left kidney, venous relationships, and pelvic region only when supported by the history and testing."
         },
         {
           "type": "para",
-          "text": "SAFETY PRINCIPLE — A sensitive reflex zone or palpatory change is not a diagnostic test for calculi, infection, renal failure, haematuria, tumour, vascular syndrome, or any other renal disease. Haematuria, fever, acute flank pain, significant trauma, deterioration in general condition, or any unexplained symptom requires appropriate medical assessment."
+          "text": "SAFETY PRINCIPLE — A sensitive reflex zone or palpatory change is not a diagnostic test for calculi, infection, renal failure, haematuria, tumour, vascular syndrome, or any other renal disease. Haematuria, fever, acute flank pain, significant trauma, reduced urine output, deterioration in general condition, or any unexplained symptom requires appropriate medical assessment. ROP is complementary and must not delay diagnosis or evidence-based treatment."
         }
       ]
     }

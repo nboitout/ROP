@@ -1,5 +1,5 @@
 // Introduction — English synchronized reading stream
-// Source: public/chapter-0/EN/Chapter_0_Introduction_ROP_EN_Final_Publishable (1) (1).docx
+// Source: public/chapter-0/EN/Chapter_0_Introduction_ROP_EN_CodexTranslationV2.docx
 
 import type { Chapter } from './types'
 
@@ -21,7 +21,7 @@ export const introductionEn: Chapter = {
         },
         {
           "type": "para",
-          "text": "We also aim to give visceral ROP more explicit scientific foundations. The aim is not to present all the mechanisms proposed by the method as established, but to distinguish what belongs to established anatomy, experimental neurophysiology, clinical hypothesis, and observation."
+          "text": "We also aim to give visceral ROP more explicit scientific foundations. The aim is not to present all the mechanisms proposed by the method as demonstrated, but to distinguish what belongs to established anatomy, experimental neurophysiology, clinical hypothesis, and observation."
         },
         {
           "type": "para",
@@ -43,7 +43,7 @@ export const introductionEn: Chapter = {
             "A simple four-level clinical sequence to organise and prioritise the session.",
             "Clinical foot and occipital maps that can be used in practice, with reproducible anatomical landmarks.",
             "An accessible understanding of viscerosomatic, somatovisceral, and viscero-emotional relationships.",
-            "A method of palpation and reassessment: what to examine, which zone to address, how to adapt the manual technique, and when to stop.",
+            "A method of palpation and reassessment: what to examine, which zone to work on, how to adapt the manual technique, and when to stop.",
             "Numerous clinical cases showing how this framework translates into day-to-day practice.",
             "A scientific framework for distinguishing what is established, plausible, hypothetical, or simply observed in practice."
           ]
@@ -113,11 +113,11 @@ export const introductionEn: Chapter = {
         },
         {
           "type": "para",
-          "text": "The visceral or functional target belongs to Level 3, together with the regional environment that conditions it. Level 4 does not repeat the work on the organ: it relates the target to its somatic manifestations and emotional context. This distribution is used throughout the visceral chapters in this volume."
+          "text": "The visceral or functional target belongs to Level 3, together with the regional environment that conditions it. Level 4 does not repeat treatment of the organ: it relates the target to its somatic manifestations and emotional context. This distribution is used throughout the visceral chapters in this volume."
         },
         {
           "type": "para",
-          "text": "At Level 4, it is preferable to refer to limbic and corticolimbic networks rather than to a single, closed “limbic system”. Limbic Brain-Organ Balance belongs to the clinical vocabulary of ROP when this terminology is used; it does not describe a direct anatomical connection and assumes neither a fixed correspondence between an emotion and an organ nor a psychological cause of the symptom."
+          "text": "At Level 4, it is preferable to refer to limbic and corticolimbic networks rather than to a single, closed “limbic system”. Limbic Brain-Organ Balance is part of ROP’s clinical terminology; it does not describe a direct anatomical connection and assumes neither a fixed correspondence between an emotion and an organ nor a psychological cause of the symptom."
         },
         {
           "type": "para",
@@ -185,7 +185,7 @@ export const introductionEn: Chapter = {
         },
         {
           "type": "para",
-          "text": "For consistency with the standard of evidence set out below, the status of this framework should be made explicit. Polyvagal theory offers a useful clinical vocabulary for describing states of mobilisation and recovery, and it has the merit of placing autonomic regulation at the centre of clinical support. Several of its anatomical and phylogenetic hypotheses, however, have been subject to substantial criticism in the neurophysiological literature. We therefore use it as a descriptive framework rather than as a demonstrated mechanism, distinguishing established vagal organisation from interpretation."
+          "text": "For consistency with the standard of evidence set out below, the status of this framework should be made explicit. Polyvagal theory offers a useful clinical vocabulary for describing states of mobilisation and recovery, and it has the merit of placing autonomic regulation at the centre of clinical practice. Several of its anatomical and phylogenetic hypotheses, however, have been subject to substantial criticism in the neurophysiological literature. We therefore use it as a descriptive framework rather than as a demonstrated mechanism, distinguishing established vagal organisation from interpretation."
         }
       ]
     },
@@ -195,7 +195,7 @@ export const introductionEn: Chapter = {
       "blocks": [
         {
           "type": "para",
-          "text": "ROP uses a three-dimensional cartography of the body within the foot, historically conceived as a body in the fetal position. This representation is a localisation tool specific to the method. It does not mean that an organ is physically projected onto a point on the foot."
+          "text": "ROP uses a three-dimensional map of the body projected onto the foot, historically conceived as a body in the foetal position. This representation is a localisation tool specific to the method. It does not mean that an organ is physically projected onto a point on the foot."
         },
         {
           "type": "para",
@@ -217,7 +217,7 @@ export const introductionEn: Chapter = {
         },
         {
           "type": "para",
-          "text": "Four major somatic gateways can be distinguished at the foot: the plantar gateway, whose branches primarily join the tibial nerve; the lateral, sural gateway; the dorsal, fibular gateway; and the medial, saphenous gateway [1]. They are not equivalent in either their peripheral innervation or their roots. Even within the tibial territory, the plantar and calcaneal branches are not interchangeable."
+          "text": "Four major somatic gateways can be distinguished on the foot: the plantar gateway, whose branches primarily join the tibial nerve; the lateral (sural) gateway; the dorsal (fibular) gateway; and the medial (saphenous) gateway [1]. They are not equivalent in either their peripheral innervation or their roots. Even within the tibial territory, the plantar and calcaneal branches are not interchangeable."
         },
         {
           "type": "para",
@@ -233,7 +233,7 @@ export const introductionEn: Chapter = {
         },
         {
           "type": "para",
-          "text": "Because the method is occipito-podal, its cephalic component also deserves mention. It has an experimental point of support: in animals, stimulation of the hindlimb can modify a cranial parasympathetic output despite the absence of any segmental overlap, without demonstrating any precise topographic correspondence [18]."
+          "text": "Because the method is occipito-podal, its cephalic component also deserves mention. It also has experimental support: in animals, stimulation of the hindlimb can modify a cranial parasympathetic output despite the absence of any segmental overlap, without demonstrating any precise topographic correspondence [18]."
         },
         {
           "type": "figure",
@@ -254,7 +254,7 @@ export const introductionEn: Chapter = {
         },
         {
           "type": "para",
-          "text": "Segmental proximity. The tibial nerve is multiradicular, classically L4-S3, although the consistency of the S3 contribution varies across anatomical sources [1]. Many pelvic circuits are organised around S2-S4 [13]; the possible overlap therefore concerns mainly S2 and S3. This does not mean that a plantar input selects an organ, but that it can reach lumbosacral networks that also process perineal and visceral information."
+          "text": "Segmental proximity. The tibial nerve is multiradicular, classically L4–S3, although the consistency of the S3 contribution varies across anatomical sources [1]. Many pelvic circuits are organised around S2–S4 [13]; the possible overlap therefore concerns mainly S2 and S3. This does not mean that a plantar input selects an organ, but that it can reach lumbosacral networks that also process perineal and visceral information."
         },
         {
           "type": "para",
@@ -262,7 +262,7 @@ export const introductionEn: Chapter = {
         },
         {
           "type": "para",
-          "text": "Independence from anatomical coincidence. This is the strongest argument. The saphenous nerve, whose territory is predominantly lumbar, has no S2-S4 overlap; under a strictly segmental model, it should have provided the ideal negative control. Yet its stimulation inhibits bladder function in animals [8], through a pathway that appears to be supraspinal [9], and a first clinical feasibility study reports a high proportion of responders [10]. The conclusion is clear: segmental proximity is not a necessary condition. It strengthens the plausibility of regional targeting, but access to pelvic networks from the lower limb does not depend on the constant presence of a particular root."
+          "text": "Independence from anatomical coincidence. This is the strongest argument. The saphenous nerve, whose territory is predominantly lumbar, has no S2–S4 overlap; under a strictly segmental model, it should have provided the ideal negative control. Yet its stimulation inhibits bladder function in animals [8], through a pathway that appears to be supraspinal [9], and a first clinical feasibility study reports a high proportion of responders [10]. The conclusion is clear: segmental proximity is not a necessary condition. It strengthens the plausibility of regional targeting, but access to pelvic networks from the lower limb does not depend on the consistent contribution of a particular root."
         },
         {
           "type": "para",
@@ -299,7 +299,7 @@ export const introductionEn: Chapter = {
         },
         {
           "type": "para",
-          "text": "None of these studies is ROP. All are the right type of experiment, and that is what makes a research programme practicable."
+          "text": "None of these studies investigates ROP itself. All provide the kind of evidence relevant to the research question, making a dedicated ROP research programme feasible."
         },
         {
           "type": "para",
@@ -358,7 +358,7 @@ export const introductionEn: Chapter = {
       "blocks": [
         {
           "type": "para",
-          "text": "The visceral system manages a large part of the body’s essential logistics: nutrition, digestion, absorption, elimination, fluid and mineral balance, endocrine functions, reproduction, and maintenance of internal homeostasis."
+          "text": "The visceral system manages a large part of the body’s essential logistics: nutrition, digestion, absorption, elimination, fluid and electrolyte balance, endocrine functions, reproduction, and maintenance of internal homeostasis."
         },
         {
           "type": "para",
@@ -416,7 +416,7 @@ export const introductionEn: Chapter = {
         },
         {
           "type": "para",
-          "text": "The SuiviPatient application, made available free of charge to certified ROP practitioners, follows this logic. It makes it possible to document the main reason for consultation, the history, the zones worked on, the protocol followed, the reactions observed, and changes in symptoms or functional capacity."
+          "text": "The SuiviPatient application, made available free of charge to certified ROP practitioners, follows this logic. It makes it possible to document the main reason for consultation, the history, the areas treated, the protocol followed, the reactions observed, and changes in symptoms or functional capacity."
         },
         {
           "type": "para",
@@ -438,7 +438,7 @@ export const introductionEn: Chapter = {
         },
         {
           "type": "para",
-          "text": "The two diaphragmatic domes are not at the same height. The right dome is generally higher than the left, particularly because of the presence of the liver. This asymmetry must be respected in the cartography and in clinical examination."
+          "text": "The two diaphragmatic domes are not at the same height. The right dome is generally higher than the left, particularly because of the presence of the liver. This asymmetry must be respected in the mapping and in clinical examination."
         },
         {
           "type": "sub",
@@ -518,7 +518,7 @@ export const introductionEn: Chapter = {
         },
         {
           "type": "para",
-          "text": "Presents its relationships with neighbouring organs, body walls, fasciae, muscles, ligaments, and neurovascular structures."
+          "text": "Presents its relationships with neighbouring organs, body walls, fascia, muscles, ligaments, and neurovascular structures."
         },
         {
           "type": "sub",
@@ -550,7 +550,7 @@ export const introductionEn: Chapter = {
         },
         {
           "type": "para",
-          "text": "Provides reference points for understanding, exclusion of relevant pathology, and appropriate caution. ROP does not replace medical diagnosis."
+          "text": "Provides reference points for understanding, differential diagnosis, recognition of conditions requiring referral, and appropriate caution. ROP does not replace medical diagnosis."
         },
         {
           "type": "sub",
@@ -600,7 +600,7 @@ export const introductionEn: Chapter = {
       "blocks": [
         {
           "type": "para",
-          "text": "This third volume does more than present new visceral cartographies. It proposes a simple way to organise practice and then to consider it in light of anatomy and neurophysiology."
+          "text": "This third volume does more than present new visceral maps. It proposes a simple way to organise practice and then to consider it in light of anatomy and neurophysiology."
         },
         {
           "type": "para",
@@ -616,11 +616,11 @@ export const introductionEn: Chapter = {
         },
         {
           "type": "para",
-          "text": "The pelvis currently provides the most informative territory for comparing neuroanatomical proximity, clinical observations, and research. Its plausibility rests on three independent supports: S2-S3 segmental proximity, the density of the experimental and clinical evidence base, and the fact that access to pelvic networks does not depend on this segmental coincidence."
+          "text": "The pelvis currently provides the most informative territory for comparing neuroanatomical proximity, clinical observations, and research. Its plausibility rests on three independent supports: S2–S3 segmental proximity, the density of the experimental and clinical evidence base, and the fact that access to pelvic networks does not depend on this segmental coincidence."
         },
         {
           "type": "para",
-          "text": "The manual technique has its own experimental foundation, still limited but real. None of the available studies is ROP; all are the right type of experiment."
+          "text": "The manual technique has its own experimental foundation, still limited but real. None of the available studies investigates ROP itself; all provide evidence relevant to the research question."
         },
         {
           "type": "para",

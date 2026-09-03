@@ -1,5 +1,5 @@
 // Chapter 2 content — English
-// Source: public/chapter-2/EN/Chapter_2_ROP_Treatment_Medical_English_Revised.docx
+// Source: public/chapter-2/EN/Chapter_2_ROP_CodexTranslationV2.docx
 
 import type { Chapter } from './types'
 
@@ -8,7 +8,7 @@ export type { Block, Section, Chapter } from './types'
 export const chapter2En: Chapter = {
   "slug": "chapter-2",
   "number": "2",
-  "title": "Treatment by Occipito-Podal Reflexotherapy (ROP)",
+  "title": "Treatment with Occipito-Podal Reflexotherapy (ROP)",
   "sections": [
     {
       "id": "presentation",
@@ -16,7 +16,99 @@ export const chapter2En: Chapter = {
       "blocks": [
         {
           "type": "para",
-          "text": "Occipito-Podal Reflexotherapy (ROP) forms part of a functional, integrative approach to care. Treatment is guided by the patient history, clinical examination, listening tests, assessment of reflex zones, and the response observed. It follows the clinical sequence presented in Chapter 0 while drawing, where relevant, on the neuroanatomical basis of somatic entry pathways, spinal convergence, and supraspinal pathways. Its aim is to engage the patient’s regulatory and adaptive capacities, without replacing medical diagnosis or any indicated medical treatment."
+          "text": "Occipito-Podal Reflexotherapy (ROP) forms part of a functional, integrative approach to care. Treatment is guided by the patient history, clinical examination, listening tests, assessment of reflex zones, and the response observed. It follows the clinical sequence presented in Chapter 0 while drawing, where relevant, on the neuroanatomical basis of somatic entry pathways, spinal convergence, and supraspinal pathways. Its aim is to engage the patient’s regulatory and adaptive capacities, without replacing medical diagnosis or any indicated medical treatment. The foundations of the clinical model are set out below, distinguishing documented physiology, arguments based on neurophysiological plausibility, and the mapping specific to ROP."
+        },
+        {
+          "type": "sub",
+          "text": "0. Foundations of the ROP clinical model"
+        },
+        {
+          "type": "para",
+          "text": "Before considering the technique, three levels must be distinguished: established cutaneous and somatosensory physiology; plausibility arguments provided by neurophysiology; and the clinical mapping specific to ROP. This distinction preserves the logic of the method without presenting an unproven point-to-organ correspondence as established fact."
+        },
+        {
+          "type": "sub",
+          "text": "0.1. Why does ROP look for reflex zones on the foot and occiput?"
+        },
+        {
+          "type": "para",
+          "text": "In ROP practice, the practitioner looks for areas on the skin of the foot and occipital region whose texture or sensitivity differs from that of the immediately surrounding tissue. These findings are considered alongside the patient history, clinical examination, listening tests, and the patient’s progress. They serve as working and reassessment landmarks; they are not used in isolation to make a medical diagnosis."
+        },
+        {
+          "type": "para",
+          "text": "Occipito-podal mapping associates these zones with functional territories of the body. In this volume, the mapping is treated as a clinical model specific to ROP. It must not be confused with a dermatome, a peripheral nerve territory, or the direct anatomical projection of an organ onto the skin of the foot or occiput."
+        },
+        {
+          "type": "para",
+          "text": "Embryology provides contextual information: the epidermis derives from surface ectoderm, whereas the nervous system derives from neuroectoderm, which itself arises from ectoderm [1]. This shared embryological origin is an anatomical fact; it does not, however, demonstrate the existence of a specific foot–occiput–organ reflex map."
+        },
+        {
+          "type": "para",
+          "text": "Neurophysiology provides a more directly relevant framework. The skin is richly innervated and vascularised, and its sensitivity, temperature, sweating, and perfusion vary in response to local and systemic factors. The sympathetic nervous system contributes in particular to the control of cutaneous circulation and vasomotor tone [3]. Stress, pain, temperature, local pressure, and other factors may therefore alter certain characteristics of the skin. These mechanisms show that the skin is a dynamic tissue; they do not demonstrate that a functional disorder of an organ necessarily creates a corresponding, specific cutaneous zone on the foot or occiput."
+        },
+        {
+          "type": "para",
+          "text": "Historical and terminological note — Historical ROP texts used the concepts of “somatotopy”, “viscerotopy”, and “reverberation” to describe the clinical representation of the body on the foot and occiput. In this chapter, these terms describe the method’s mapping model; they are not presented as evidence of a demonstrated anatomical point-to-organ correspondence."
+        },
+        {
+          "type": "figure",
+          "src": "/chapter-2/EN/figure-2-1_CodexTranslationV2.png",
+          "caption": "Figure 2.1 — Why does ROP look for reflex zones? Established cutaneous physiology shows that the skin is a dynamic sensory, vascular, and autonomic organ; the topographical correspondence between the foot, occiput, and functional territories belongs to ROP clinical mapping and does not constitute a demonstrated anatomical projection.",
+          "alt": "ROP reflex-zone model",
+          "orientation": "landscape",
+          "syncHide": true
+        },
+        {
+          "type": "sub",
+          "text": "0.2. What does “reflex zone” mean in ROP?"
+        },
+        {
+          "type": "para",
+          "text": "In ROP palpation terminology, a reflex zone is an area of skin distinguished from neighbouring tissues by one or more characteristics: roughness, increased density, reduced glide, a granular sensation, or localised sensitivity. Identification is based on comparison with adjacent areas, the contralateral side where relevant, and the underlying anatomical landmarks."
+        },
+        {
+          "type": "para",
+          "text": "The term “crystals”, historically used by some practitioners to describe a granular sensation beneath the finger, is retained only as a palpatory description. It does not imply the presence of objectively demonstrated crystalline or calcium deposits in the epidermal-dermal layer."
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "Identification: supplement the history, clinical examination, and tests with information obtained from the tissues.",
+            "Stimulation: apply light, precise, painless pressure to the selected zone.",
+            "Reassessment: after stimulation, compare the texture, sensitivity, and functional indicators defined before the session."
+          ]
+        },
+        {
+          "type": "para",
+          "text": "Clarification — A reflex zone is an ROP clinical landmark. Its presence, disappearance, or alteration after stimulation is neither a validated biomarker of an organ nor proof of a particular causal mechanism."
+        },
+        {
+          "type": "sub",
+          "text": "0.3. Proposed neurophysiological mechanism of ROP stimulation"
+        },
+        {
+          "type": "para",
+          "text": "Manual pressure deforms the epidermal-dermal layer and stimulates, in particular, low-threshold cutaneous mechanoreceptors. Non-noxious touch is transmitted largely by myelinated afferents, including Aβ fibres, which pass through a peripheral branch and then a nerve to the spinal roots before being integrated into spinal networks and ascending pathways [2]. Discriminative, epicritic touch relies extensively on the dorsal column–medial lemniscus system; actual cutaneous stimulation is not, however, limited to a single fibre population or a single ascending pathway."
+        },
+        {
+          "type": "para",
+          "text": "At spinal and supraspinal levels, tactile information can interact with nociceptive transmission and with networks involved in perception, attention, autonomic state, and somatic responses. Gate control theory provides a classic model for understanding how non-painful tactile stimulation can help modulate part of the pain signal [4]. It does not, however, account for all the possible effects of manual contact."
+        },
+        {
+          "type": "para",
+          "text": "Within the ROP model, these pathways constitute a sensory entry pathway capable of modifying the excitability of somatic, autonomic, or visceral networks. This formulation expresses neurophysiological plausibility; it does not mean that pressure on a cutaneous zone sends a specific “corrective command” to an organ or restores measurable autonomic, hormonal, and somatic normotonia through a demonstrated mechanism."
+        },
+        {
+          "type": "para",
+          "text": "The practical consequence is essential: ROP seeks precise, progressive, non-painful stimulation. Excessive pressure changes the nature of the stimulus and may recruit nociceptive pathways to a greater degree, which is not the aim of the technique. After stimulation, the response is assessed by reassessing the zone, the main symptom, and the monitored functions rather than by presuming a specific physiological effect."
+        },
+        {
+          "type": "figure",
+          "src": "/chapter-2/EN/figure-2-2_CodexTranslationV2.png",
+          "caption": "Figure 2.2 — Cutaneous stimulation in ROP: proposed neurophysiological pathway. Non-painful pressure activates cutaneous afferents that reach spinal and supraspinal networks. Modulatory effects are plausible at sensory, nociceptive, and autonomic levels; selective correction of an organ through a cutaneous point has not been demonstrated.",
+          "alt": "Proposed neurophysiological pathway for ROP stimulation",
+          "orientation": "landscape",
+          "syncHide": true
         },
         {
           "type": "note",
@@ -37,7 +129,7 @@ export const chapter2En: Chapter = {
           "type": "bullets",
           "items": [
             "The technique is exclusively manual. The practitioner uses the pad of the thumb or the proximal interphalangeal joint of the index finger, without oil or cream.",
-            "Pressure is gentle, progressive, and painless. It mobilises the epidermal-dermal layer of the occipital and plantar reflex zones while preserving perception of bony landmarks and skin texture.",
+            "Pressure is light, precise, progressive, and painless. It mobilises the epidermal-dermal layer of the occipital and plantar reflex zones while preserving perception of bony landmarks and skin texture.",
             "The quality of contact depends not only on pressure intensity: the speed of mobilisation, stability and duration of contact, and the thermal characteristics of the hand are also components of the cutaneous stimulus.",
             "Sharp pain, excessive force, or vigorous rubbing indicate overstimulation and must be avoided."
           ]
@@ -48,7 +140,7 @@ export const chapter2En: Chapter = {
         },
         {
           "type": "para",
-          "text": "Cutaneous stimulation activates, in particular, low-threshold mechanoreceptors in glabrous skin, including:"
+          "text": "Cutaneous stimulation activates, in particular, low-threshold mechanoreceptors in glabrous skin [2], including:"
         },
         {
           "type": "bullets",
@@ -59,15 +151,15 @@ export const chapter2En: Chapter = {
         },
         {
           "type": "para",
-          "text": "When the epidermal-dermal layer is deformed beneath the finger, mechanoreceptors generate afferent activity transmitted through a peripheral branch and then a nerve to the spinal cord and higher centres. The interpretive sequence proposed in this volume is straightforward: local pressure → mechanoreceptors → peripheral branch → nerve → spinal roots → spinal and supraspinal networks. In the ROP model, this sensory information constitutes an entry pathway capable of modifying the excitability of somatic, autonomic, or visceral networks. Gate control theory may help explain part of the immediate analgesic effect of non-painful tactile stimulation."
+          "text": "When the epidermal-dermal layer is deformed beneath the finger, mechanoreceptors generate afferent activity transmitted through a peripheral branch and then a nerve to the spinal cord and higher centres. The interpretive sequence proposed in this volume is straightforward: local pressure → mechanoreceptors → peripheral branch → nerve → spinal roots → spinal and supraspinal networks. In the ROP model, this sensory information constitutes an entry pathway capable of modifying the excitability of somatic, autonomic, or visceral networks. Gate control theory may help explain part of the immediate analgesic effect of non-painful tactile stimulation [4]."
         },
         {
           "type": "para",
-          "text": "Cutaneous touch does not, however, rely on a single afferent system. Alongside mechanoreceptors associated with fast myelinated fibres, human microneurographic studies have identified unmyelinated, C-type mechanosensitive afferents that respond to non-noxious tactile stimulation. First described by Vallbo and colleagues in 1993 in hairy skin, these afferents were subsequently studied under the term C-tactile (CT) fibres. [1]"
+          "text": "Cutaneous touch does not, however, rely on a single afferent system. Alongside mechanoreceptors associated with fast myelinated fibres, human microneurographic studies have identified unmyelinated, C-type mechanosensitive afferents that respond to non-noxious tactile stimulation. First described by Vallbo and colleagues in 1993 in hairy skin, these afferents were subsequently studied under the term C-tactile (CT) fibres [5]."
         },
         {
           "type": "para",
-          "text": "Subsequent studies show that their response depends not only on the mechanical intensity of contact but also on its physical characteristics. During gentle skin stroking, CT fibres respond preferentially to slow-to-intermediate velocities of approximately 1–10 cm/s, which are also associated with a more pleasant perception of touch. [2] Their activity is also modulated by temperature: in a study comparing stimulation at 18 °C, 32 °C, and 42 °C, the response was maximal around 32 °C, a temperature close to that of the skin surface and therefore to skin-to-skin contact. [3] These findings illustrate that the quality of manual stimulation depends on several parameters—intensity, speed, temperature, and duration of contact—and not solely on the force applied."
+          "text": "Subsequent studies show that their response depends not only on the mechanical intensity of contact but also on its physical characteristics. During gentle skin stroking, CT fibres respond preferentially to slow-to-intermediate velocities of approximately 1–10 cm/s, which are also associated with a more pleasant perception of touch [6]. Their activity is also modulated by temperature: in a study comparing stimulation at 18 °C, 32 °C, and 42 °C, the response was maximal around 32 °C, a temperature close to that of the skin surface and therefore to skin-to-skin contact [7]. These findings illustrate that the quality of manual stimulation depends on several parameters—intensity, speed, temperature, and duration of contact—and not solely on the force applied."
         },
         {
           "type": "para",
@@ -88,7 +180,7 @@ export const chapter2En: Chapter = {
         },
         {
           "type": "sub",
-          "text": "1.3. The three phases of massage"
+          "text": "1.3. The three stages of manual stimulation"
         },
         {
           "type": "numbered",
@@ -250,7 +342,7 @@ export const chapter2En: Chapter = {
         },
         {
           "type": "para",
-          "text": "Certain cutaneous afferent systems, particularly those studied in affective touch, contribute to central processing associated with the affective and interoceptive dimensions of tactile experience. [2] This observation highlights interactions among cutaneous somatic information, internal state, and affective context, without establishing a specific correspondence between a reflex zone and a particular cerebral network."
+          "text": "Certain cutaneous afferent systems, particularly those studied in affective touch, contribute to central processing associated with the affective and interoceptive dimensions of tactile experience [6]. This observation highlights interactions among cutaneous somatic information, internal state, and affective context, without establishing a specific correspondence between a reflex zone and a particular cerebral network."
         },
         {
           "type": "sub",
@@ -317,10 +409,10 @@ export const chapter2En: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "global listening tests in standing and sitting show low anterior trunk flexion and left lateral flexion;",
+            "global listening tests performed in standing and sitting indicate a low anterior-flexion pattern and a low left-lateral-flexion pattern of the trunk;",
             "vertebral tests reveal a moderate reduction in left-sided mobility at L2–L3 and L5–S1, with fixation of the left sacroiliac joint and coccyx;",
-            "in the supine position, the augmented straight-leg-raise test improves when the hand placed over the pubic symphysis is drawn slightly to the left and deeply towards the cervical-isthmic region of the uterus;",
-            "in the left lateral decubitus position, listening over the lower abdomen reveals resistance to uterine mobility;",
+            "in the supine position, the modified Lasègue (straight-leg-raise) test improves when the hand placed over the pubic symphysis is drawn slightly to the left and deeply towards the cervico-isthmic region of the uterus;",
+            "with the patient lying on her left side, listening over the lower abdomen reveals resistance to uterine mobility;",
             "the left hip shows reduced internal rotation."
           ]
         },
@@ -352,7 +444,7 @@ export const chapter2En: Chapter = {
           "items": [
             "Level 1 — Central regulation: occipital reflex zones, ROP neuromeningeal landmarks, diencephalon, brainstem, and hypothalamic-pituitary axis.",
             "Level 2 — Autonomic regulation and adaptation: diaphragm, sympathetic and parasympathetic pathways, adrenal glands, sacral pelvic pathways, and pelvic plexuses according to testing.",
-            "Level 3 — Local and regional visceral regulation: cervical-isthmic region of the uterus, pelvic cavity, and local and regional relationships, particularly the ligamentous structures identified on examination.",
+            "Level 3 — Local and regional visceral regulation: cervico-isthmic region of the uterus, pelvic cavity, and local and regional relationships, particularly the ligamentous structures identified on examination.",
             "Level 4 — Viscerosomatic and viscero-emotional integration: pudendal nerve, sacral plexus, piriformis muscle, sacrococcygeal and sacroiliac joints, and course of the left sciatic nerve; insular and limbic networks if warranted by the clinical context."
           ]
         },
@@ -382,10 +474,10 @@ export const chapter2En: Chapter = {
             "blood in the urine or stools;",
             "fever or suspected infectious disease;",
             "unexplained weight loss;",
-            "known risk of thrombus migration;",
+            "a known thrombus with a risk of embolisation;",
             "pallor associated with marked fatigue;",
             "neurological deficit, new sphincter disturbance, or progressive sensory symptoms;",
-            "acute anxiety, fear of dying, or unusual deterioration in general condition;",
+            "acute anxiety, a sense of impending doom, or an unusual deterioration in general condition;",
             "an unexplained clinical situation or one beyond the practitioner’s scope of competence."
           ]
         },
@@ -434,7 +526,7 @@ export const chapter2En: Chapter = {
           "items": [
             "reduced pain or discomfort;",
             "signs compatible with a change in autonomic state: calmness, yawning, drowsiness, marked relaxation, or a need to rest;",
-            "changes in bowel transit, diuresis, or visceral sensations;",
+            "changes in bowel function, diuresis, or visceral sensations;",
             "altered mobility in a somatic or local and regional territory identified before the session;",
             "improved sleep, energy, and functional capacity."
           ]
@@ -451,8 +543,8 @@ export const chapter2En: Chapter = {
       "blocks": [
         {
           "type": "figure",
-          "src": "/chapter-2/EN/figure-2-1.png",
-          "caption": "Figure 2.1 — Adaptation window after the first session. This curve represents a model derived from clinical experience. The vertical axis describes a clinical functional level rather than a measured physiological variable; the time course should be progressively documented using standardised measurements.",
+          "src": "/chapter-2/EN/figure-2-3_CodexTranslationV2.png",
+          "caption": "Figure 2.3 — Adaptation window after the first session. This curve represents a model derived from clinical experience. The vertical axis describes a clinical functional level rather than a measured physiological variable; the time course should be progressively documented using standardised measurements.",
           "alt": "Adaptation window after the first ROP session",
           "orientation": "landscape",
           "syncHide": true
@@ -555,10 +647,14 @@ export const chapter2En: Chapter = {
         {
           "type": "numbered",
           "items": [
+            "Standring S, ed. Gray’s Anatomy: The Anatomical Basis of Clinical Practice. 42nd ed. Elsevier; 2020.",
+            "Abraira VE, Ginty DD. The sensory neurons of touch. Neuron. 2013;79(4):618–639. doi:10.1016/j.neuron.2013.07.051.",
+            "Johnson JM, Minson CT, Kellogg DL Jr. Cutaneous vasodilator and vasoconstrictor mechanisms in temperature regulation. Compr Physiol. 2014;4(1):33–89. doi:10.1002/cphy.c130015.",
+            "Melzack R, Wall PD. Pain mechanisms: a new theory. Science. 1965;150(3699):971–979. doi:10.1126/science.150.3699.971.",
             "Vallbo Å, Olausson H, Wessberg J, Norrsell U. A system of unmyelinated afferents for innocuous mechanoreception in the human skin. Brain Res. 1993;628(1–2):301–304. doi:10.1016/0006-8993(93)90968-S.",
             "Löken LS, Wessberg J, Morrison I, McGlone F, Olausson H. Coding of pleasant touch by unmyelinated afferents in humans. Nat Neurosci. 2009;12(5):547–548. doi:10.1038/nn.2312.",
             "Ackerley R, Backlund Wasling H, Liljencrantz J, Olausson H, Johnson RD, Wessberg J. Human C-tactile afferents are tuned to the temperature of a skin-stroking caress. J Neurosci. 2014;34(8):2879–2883. doi:10.1523/JNEUROSCI.2847-13.2014."
-          ]
+]
         }
       ]
     }

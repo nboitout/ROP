@@ -1,5 +1,5 @@
 // Chapter 1 — English
-// Source: public/chapter-1/EN/Chapter_1_General_Considerations_EN_publishable_revised.docx
+// Source: public/chapter-1/EN/Chapter_1_General_Considerations_EN_CodexTranslationV2.docx
 
 import type { Chapter } from './types'
 
@@ -14,7 +14,7 @@ export const chapter1En: Chapter = {
       blocks: [
         { type: 'para', text: 'This first chapter establishes a biomechanical and neurophysiological framework for the practitioner.' },
         { type: 'para', text: 'Visceral function depends not only on biochemistry and innervation, but also on the ability of organs to deform, move, and glide relative to one another.' },
-        { type: 'para', text: 'When this freedom is reduced (trauma, infection, surgery, stress), the associated tissues (fasciae, neurovascular structures, and the musculoskeletal system) adapt and compensate.' },
+        { type: 'para', text: 'When this freedom is reduced (by trauma, infection, surgery, or stress), the associated tissues (fascia, neurovascular structures, and the musculoskeletal system) adapt and compensate.' },
         { type: 'para', text: 'In some cases, these compensations may contribute to symptoms at distant sites, according to a clinical model of mechanical and autonomic chains.' },
         { type: 'para', text: 'Important: some of the concepts described below relate to (a) established physiology and others to (b) the clinical model used in ROP (Occipito-Podal Reflexotherapy).' },
       ],
@@ -37,7 +37,7 @@ export const chapter1En: Chapter = {
         ]},
         { type: 'sub', text: '2.1. Somatic nervous system: “passive” mobility through movement' },
         { type: 'para', text: 'Active movements controlled by the somatic nervous system—walking, running, dancing, moving the trunk—produce displacement and deformation of the viscera.' },
-        { type: 'para', text: 'Conversely, after abdominal surgery, pain, adhesions, and fixations may limit range of motion and alter overall kinematics.' },
+        { type: 'para', text: 'Conversely, after abdominal surgery, pain, adhesions, and tissue restrictions may limit range of motion and alter overall kinematics.' },
         { type: 'para', text: 'The diaphragm is a major driver of visceral gliding through the alternating phases of inhalation and exhalation.' },
         { type: 'para', text: 'This alternation repeatedly mobilizes the thoracic and abdominal viscera (≈ 21,000 breathing cycles per 24 h, order of magnitude).' },
         { type: 'para', text: 'Regular physical activity helps maintain this mobility.' },
@@ -57,13 +57,13 @@ export const chapter1En: Chapter = {
         { type: 'para', text: 'Here, motility refers to the organ’s intrinsic activity: micromovements and variations in tension, volume, and vascularization (in the broad sense).' },
         { type: 'para', text: 'Clinically, the practitioner focuses less on instrumental “measurement” than on overall tissue behavior: elasticity, preferred direction, recoil, symmetry, and adaptive capacity.' },
         { type: 'para', text: 'Within the ROP approach, this “motility” is assessed using the manual tests and reflex responses defined in the method.' },
-        { type: 'para', text: 'The aim is to identify restrictions in mobility/motility associated with fascial and autonomic chains, and then to seek clinical normalization of the observed restriction.' },
+        { type: 'para', text: 'The aim is to identify restrictions in mobility or motility associated with fascial and autonomic chains, and then to seek to restore more normal tissue function clinically.' },
         { type: 'sub', text: '2.4. Biological rhythms: cyclical variations useful for clinical assessment' },
         { type: 'para', text: 'Many visceral parameters vary according to cyclical rhythms (circadian and ultradian rhythms, digestive cycles, hormonal cycles).' },
         { type: 'para', text: 'For the practitioner, this requires:' },
         { type: 'bullets', items: [
           'placing the symptom in its temporal context (time of day, after meals, after exertion, menstrual cycle, etc.);',
-          'distinguishing a more “reactive” disorder (fatigue, stress, overload) from a more established disorder (inflammation, fixations, visceral ptosis) as a clinical guide.',
+          'distinguishing a more “reactive” presentation (fatigue, stress, overload) from a more persistent condition (inflammation, tissue restrictions, visceral ptosis) as a clinical guide.',
         ]},
       ],
     },
@@ -91,7 +91,7 @@ export const chapter1En: Chapter = {
         ]},
         { type: 'sub', text: '4.1. Serous membranes: gliding and pressures' },
         { type: 'para', text: 'Serous membranes (pleura, pericardium, peritoneum) allow low-friction gliding and contribute to pressure relationships between body cavities.' },
-        { type: 'para', text: 'They may also contribute to referred pain when the parietal layer is involved, as parietal sensitivity is more precisely localized.' },
+        { type: 'para', text: 'They may also contribute to referred pain when the parietal layer is involved, because sensation from the parietal layer is more precisely localized.' },
         { type: 'sub', text: '4.2. Interstitium: tissue continuity and capacity for deformation' },
         { type: 'para', text: 'In the clinical sense used here, the term interstitium refers to the concept of a microfibrillar continuum among tissues (skin, fascia, muscle, viscera, bone).' },
         { type: 'para', text: 'The practical implication is that deformation and gliding are possible because fibers, particularly collagen fibers, are organized in a three-dimensional network that permits changes in direction and adaptation to mechanical constraints.' },
@@ -102,7 +102,7 @@ export const chapter1En: Chapter = {
           'Ligaments (e.g., coronary ligament / suspensory ligament of the liver).',
           'Mesenteries: serous folds of the digestive tract that provide pathways for vessels, nerves, and lymphatics.',
           'Omenta: peritoneal folds between digestive structures, with vascular, neural, and immune roles.',
-          'Lesser omentum: formed by the hepatogastric and hepatoduodenal ligaments, containing in particular the hepatobiliary elements.',
+          'Lesser omentum: formed by the hepatogastric and hepatoduodenal ligaments and containing, in particular, the hepatobiliary structures.',
           'Omental foramen: anatomical communication between peritoneal compartments.',
         ]},
         { type: 'sub', text: '4.4. Innervation: visceral pain, parietal pain, referred pain' },
@@ -114,7 +114,7 @@ export const chapter1En: Chapter = {
     },
     {
       id: 'securite',
-      title: 'Safety note: do not overlook organic pathology',
+      title: '4.5. Safety note: do not overlook organic pathology',
       blocks: [
         { type: 'para', text: 'A functional disorder and a mobility dysfunction may coexist with organic pathology.' },
         { type: 'para', text: 'The practitioner must remain alert to warning signs and refer the patient for medical assessment when necessary.' },
@@ -132,23 +132,23 @@ export const chapter1En: Chapter = {
       title: '5. When mobility is lost: adhesions, visceral ptosis, spasms',
       blocks: [
         { type: 'para', text: 'Loss of gliding and compliance may manifest in three main ways. A tissue may be fixed by adhesions, pulled downward by gravity, or held under tension by a reflex reaction. In practice, these phenomena are rarely isolated: a scar may alter local pressures, a loss of support may promote tension, and pain may establish muscular guarding.' },
-        { type: 'sub', text: '5.1. Adhesions and fixations' },
+        { type: 'sub', text: '5.1. Adhesions and tissue restrictions' },
         { type: 'para', text: 'After surgery, infection, inflammation, or repeated microtrauma, adhesions may restrict gliding.' },
-        { type: 'para', text: 'The simplest example is an abdominal or pelvic scar: appendectomy, cesarean section, cholecystectomy, gynecological surgery, or digestive surgery. Even when the scar appears well healed on the surface, the deeper tissue planes may remain less supple. The skin, fasciae, peritoneum, mesenteries, or neighboring tissues may no longer glide with the same freedom.' },
+        { type: 'para', text: 'The simplest example is an abdominal or pelvic scar following an appendectomy, cesarean section, cholecystectomy, gynecological procedure, or gastrointestinal surgery. Even when the scar appears well healed on the surface, the deeper tissue planes may remain less supple. The skin, fascia, peritoneum, mesenteries, or neighboring tissues may no longer glide with the same freedom.' },
         { type: 'para', text: 'A previous inflammatory episode may produce a comparable effect. After a digestive, gynecological, or pelvic episode, an area may remain denser, more sensitive, or less mobile, without the patient spontaneously linking it to the initial event.' },
-        { type: 'para', text: 'These fixations alter local mechanics. They may also create compensations at distant sites: more limited abdominal breathing, a pulling sensation during trunk extension, pelvic adaptation, lumbar tension, diaphragmatic discomfort, or postural change.' },
+        { type: 'para', text: 'These restrictions alter local mechanics. They may also create compensations at distant sites: more limited abdominal breathing, a pulling sensation during trunk extension, pelvic adaptation, lumbar tension, diaphragmatic discomfort, or postural change.' },
         { type: 'para', text: 'They may also perpetuate a pain–stress–hypertonia cycle: the area protects itself, tissues contract, movement decreases, and the restriction becomes more established.' },
         { type: 'sub', text: '5.2. Visceral ptosis and gravitational constraints' },
         { type: 'para', text: 'Gravity continuously places stress on the organs and their supporting structures.' },
         { type: 'para', text: 'Normally, these stresses are distributed through the body cavities, internal pressure relationships, visceral ligaments, mesenteries, omenta, the diaphragm, the abdominal wall, and the pelvic floor.' },
-        { type: 'para', text: 'When this support system becomes deconditioned—because of hypotonia, scars, loss of abdominal or pelvic-floor tone, after-effects of pregnancy, prolonged standing, chronic constipation, chronic cough, or repeated lifting—the viscera may be subjected to greater downward stress.' },
+        { type: 'para', text: 'When this support system becomes deconditioned—because of hypotonia, scars, loss of abdominal or pelvic-floor tone, postpartum changes, prolonged standing, chronic constipation, chronic cough, or repeated lifting—the viscera may be subjected to greater downward stress.' },
         { type: 'para', text: 'In practice, some patients describe abdominal or pelvic heaviness, discomfort at the end of the day, lumbar fatigue, a pulling sensation in the abdomen when standing, or a breathing pattern that becomes higher and less abdominal.' },
         { type: 'para', text: 'Within the ROP framework, the aim is not to make a medical diagnosis of visceral ptosis or prolapse based solely on manual examination. Rather, the practitioner considers whether gravity, internal pressures, loss of tone, or scarring contribute to the observed restriction in mobility.' },
         { type: 'sub', text: '5.3. Spasms and reflex hypertonia' },
         { type: 'para', text: 'A visceral constraint may be accompanied by somatic and autonomic reflex responses: hypertonia, restrictions in segmental mobility, disturbances in venous or lymphatic return, and changes in the breathing pattern.' },
         { type: 'para', text: 'The clearest example is abdominal guarding: when an area is painful or irritated, the abdominal wall contracts spontaneously to protect the region. The patient breathes less deeply, avoids certain movements, and sometimes adopts a protective posture.' },
         { type: 'para', text: 'The same principle may be observed, in a more functional way, around the diaphragm, pelvic floor, lumbar region, or abdominal wall. A sensitive scar, digestive disorder, pelvic irritation, persistent pain, or prolonged stress may be accompanied by local or regional reflex tension.' },
-        { type: 'para', text: 'Clinically, the aim is to determine whether the observed tension is the primary problem or a protective response. The practitioner then examines the chain: which area appears to lose mobility first, which areas compensate, and how tissue adaptability can be restored.' },
+        { type: 'para', text: 'Clinically, the aim is to determine whether the observed tension is the primary problem or a protective response. The practitioner then examines the chain: which area appears to lose mobility first, which areas compensate, and how tissue adaptability can be improved.' },
       ],
     },
     {
@@ -156,7 +156,7 @@ export const chapter1En: Chapter = {
       title: '6. Clinical application in ROP',
       blocks: [
         { type: 'para', text: 'Within its methodological framework, ROP uses reflex circuits involving occipital and foot zones to guide assessment and treatment.' },
-        { type: 'sub', text: 'Clinical illustration — Limbic system–liver viscero-emotional balance' },
+        { type: 'sub', text: '6.1. Clinical illustration: limbic system–liver viscero-emotional balance' },
         { type: 'para', text: 'This technique was selected to illustrate the transition from general principles to clinical application in ROP. It relates a viscus—the liver—to its mobility restrictions, attachments, diaphragmatic environment, and autonomic regulation, while also incorporating the emotional dimension through the limbic system. It thus illustrates that ROP does not consider the organ in isolation, but instead seeks to identify a restriction, its associated reflex pathways, and its integration within the overall functional pattern. At this stage of the book, the aim is not to describe a detailed liver protocol, but to provide the reader with a concrete illustration of the viscero-emotional logic of the method.' },
         { type: 'para', text: 'The practitioner looks for:' },
         { type: 'bullets', items: [
@@ -177,7 +177,7 @@ export const chapter1En: Chapter = {
           'Relate a musculoskeletal symptom to a possible visceral hypothesis (referred pain, fascial chains).',
           'Identify the triggering event (surgery, infection, stress) and the adaptation strategy (Selye) as an interpretive framework.',
           'Use a verification-based approach: local correction → overall integration → retest.',
-          'Maintain clinical vigilance: any suspicion of organic pathology requires medical referral.',
+          'Maintain clinical vigilance: any suspicion of organic pathology warrants referral for medical assessment.',
         ]},
       ],
     },

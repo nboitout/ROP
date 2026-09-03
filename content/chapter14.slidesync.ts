@@ -77,46 +77,29 @@ export const chapter14SlidesEn: SyncSlide[] = [
 ]
 
 export const chapter14SlideAnchors: SyncAnchor[] = [
-  { sectionId: 'presentation',   blockIndex: 0,  slide: 1 },
-  // Slide 2 sits just above the "Ils s'étendent du pylore…" paragraph (presentation block 2).
-  { sectionId: 'presentation',   blockIndex: 2,  slide: 2 },
-  // Slide 3 is Figure 14.2 and appears immediately after the Anatomy heading.
-  { sectionId: 'anatomie',       blockIndex: 0,  slide: 3 },
-  // Slide 4 is Figure 14.4 and appears before the longitudinal-tension sentence.
-  { sectionId: 'anatomie',       blockIndex: 7,  slide: 4 },
-  // Slide 5 points to the "Artère mésentérique supérieure" lead (block 2 now
-  // that figure 14.5 leads the Vascularisation section).
+  { sectionId: 'presentation', blockIndex: 0, slide: 1 },
+  { sectionId: 'presentation', blockIndex: 3, slide: 2 },
+  { sectionId: 'anatomie', blockIndex: 0, slide: 3 },
+  { sectionId: 'anatomie', blockIndex: 1, slide: 4 },
   { sectionId: 'vascularisation', blockIndex: 2, slide: 5 },
-  { sectionId: 'innervation',    blockIndex: 2,  slide: 6 },
-  { sectionId: 'innervation',    blockIndex: 10, slide: 7 },
-  { sectionId: 'innervation',    blockIndex: 12, slide: 8 },
-  { sectionId: 'physiologie',    blockIndex: 5,  slide: 9 },
-  { sectionId: 'physiologie',    blockIndex: 10, slide: 10 },
-  { sectionId: 'pathologies',    blockIndex: 0,  slide: 11 },
-  { sectionId: 'pathologies',    blockIndex: 1,  slide: 12 },
-  { sectionId: 'pathologies',    blockIndex: 7,  slide: 13 },
-  { sectionId: 'pathologies',    blockIndex: 11, slide: 14 },
-  // Crohn clinical-case slide, right after the "Maladie de Crohn" heading.
-  { sectionId: 'pathologies',    blockIndex: 14, slide: 15 },
-  // Protocole ROP (ordre de traitement) — overview, at the ROP section heading.
-  { sectionId: 'rop',            blockIndex: -1, slide: 16 },
-  // Cranial/cervical vagus-nerve territory slide, right after the "1. Nerf vague" heading.
-  { sectionId: 'rop',            blockIndex: 1,  slide: 17 },
-  // Left-abdominal vagus territory slide, right below figure 14.17 (rendered
-  // above figure 14.18, which is block 4 after figure 14.16 moved to the deck).
-  { sectionId: 'rop',            blockIndex: 4,  slide: 18 },
-  // Sympathetic-system slide, right above figure 14.20 (block 7 after figure
-  // 14.19 moved to the deck).
-  { sectionId: 'rop',            blockIndex: 7,  slide: 19 },
-  // Jejunum reflex-zone slide, right above figure 14.24 (block 16).
-  { sectionId: 'rop',            blockIndex: 16, slide: 20 },
-  // Ileum reflex-zone slide, right below the "Iléum (pied droit)" heading
-  // (rendered above the bullets, which are block 18).
-  { sectionId: 'rop',            blockIndex: 18, slide: 21 },
-  // ROP intervention synthesis — after the reflex-zone slides, at the limbic step.
-  { sectionId: 'rop',            blockIndex: 20, slide: 22 },
-  // Viscero-emotional profile — final slide encountered in the text.
-  { sectionId: 'relations',      blockIndex: 2,  slide: 23 },
+  { sectionId: 'innervation', blockIndex: 0, slide: 6 },
+  { sectionId: 'innervation', blockIndex: 4, slide: 7 },
+  { sectionId: 'innervation', blockIndex: 8, slide: 8 },
+  { sectionId: 'physiologie', blockIndex: 0, slide: 9 },
+  { sectionId: 'physiologie', blockIndex: 4, slide: 10 },
+  { sectionId: 'physiologie', blockIndex: 7, slide: 11 },
+  { sectionId: 'physiologie', blockIndex: 9, slide: 12 },
+  { sectionId: 'pathologies', blockIndex: 0, slide: 13 },
+  { sectionId: 'pathologies', blockIndex: 1, slide: 14 },
+  { sectionId: 'pathologies', blockIndex: 7, slide: 15 },
+  { sectionId: 'pathologies', blockIndex: 12, slide: 16 },
+  { sectionId: 'pathologies', blockIndex: 19, slide: 17 },
+  { sectionId: 'relations', blockIndex: 0, slide: 18 },
+  { sectionId: 'rop', blockIndex: 0, slide: 19 },
+  { sectionId: 'rop', blockIndex: 9, slide: 20 },
+  { sectionId: 'rop', blockIndex: 9, slide: 21 },
+  { sectionId: 'rop', blockIndex: 14, slide: 22 },
+  { sectionId: 'relations', blockIndex: 3, slide: 23 },
 ]
 
 // French anchor table — for the rebuilt synthesis deck (FR only). The retained

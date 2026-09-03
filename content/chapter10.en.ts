@@ -1,5 +1,5 @@
 // Chapter 10 content — English
-// Source: public/chapter-10/EN/Chapter_10_Duodenum_ROP_Medical_English.docx
+// Source: public/chapter-10/EN/Chapter_10_Duodenum_CodexTranslationV2.docx
 
 import type { Chapter } from './types'
 
@@ -58,7 +58,7 @@ export const chapter10En: Chapter = {
         },
         {
           "type": "sub",
-          "text": "3.1. D1, or the bulbopyloric duodenum"
+          "text": "3.1. D1, or the bulbopyloric portion of the duodenum"
         },
         {
           "type": "para",
@@ -90,7 +90,7 @@ export const chapter10En: Chapter = {
         },
         {
           "type": "para",
-          "text": "It is a functionally central segment because the biliary and pancreatic ducts open onto its posteromedial wall."
+          "text": "It is a functionally central segment because the biliary and pancreatic ducts open on its posteromedial aspect."
         },
         {
           "type": "para",
@@ -102,7 +102,7 @@ export const chapter10En: Chapter = {
         },
         {
           "type": "para",
-          "text": "Its surface projection is provided here as a clinical landmark: on the right umbilicomidclavicular line, approximately three fingerbreadths above the umbilicus, near L2."
+          "text": "Its surface projection is provided here as a clinical landmark: on the right umbilico-midclavicular line, approximately three fingerbreadths above the umbilicus, near L2."
         },
         {
           "type": "para",
@@ -126,7 +126,7 @@ export const chapter10En: Chapter = {
         },
         {
           "type": "sub",
-          "text": "3.4. D4, or the jejunal duodenum"
+          "text": "3.4. D4, or the duodenojejunal portion"
         },
         {
           "type": "para",
@@ -142,23 +142,23 @@ export const chapter10En: Chapter = {
         },
         {
           "type": "para",
-          "text": "Its surface projection is presented here as symmetrical to that of the sphincter of Oddi, on the left umbilicomidclavicular line."
+          "text": "Its surface projection is presented here as symmetrical to that of the sphincter of Oddi, on the left umbilico-midclavicular line."
         },
         {
           "type": "para",
-          "text": "It provides the caudal attachment of the suspensory ligament of the duodenum (ligament of Treitz)."
+          "text": "It provides the caudal attachment of the suspensory muscle of the duodenum (muscle of Treitz)."
         },
         {
           "type": "sub",
-          "text": "3.6. Suspensory ligament of the duodenum (ligament of Treitz)"
+          "text": "3.6. Suspensory muscle of the duodenum (muscle of Treitz)"
         },
         {
           "type": "para",
-          "text": "The suspensory ligament of the duodenum, or ligament of Treitz, is described as connecting the duodenojejunal region to the deep connective and muscular structures of the subdiaphragmatic and mesenteric regions."
+          "text": "The muscle of Treitz, or suspensory muscle of the duodenum, is described as connecting the duodenojejunal region to deep subdiaphragmatic and mesenteric connective and muscular structures."
         },
         {
           "type": "para",
-          "text": "Tension in its muscular component is classically described as helping open the duodenojejunal flexure and supporting gastroduodenal emptying dynamics."
+          "text": "Its tension is classically described as helping to open the duodenojejunal flexure and support gastroduodenal emptying dynamics."
         },
         {
           "type": "para",
@@ -238,7 +238,7 @@ export const chapter10En: Chapter = {
         },
         {
           "type": "para",
-          "text": "The pancreaticoduodenal veins drain into the superior mesenteric vein, which is continuous with the portal venous system."
+          "text": "The pancreaticoduodenal veins drain into the superior mesenteric vein and ultimately into the portal venous system."
         }
       ]
     },
@@ -318,7 +318,7 @@ export const chapter10En: Chapter = {
         },
         {
           "type": "para",
-          "text": "Secretin contributes to acid-neutralizing regulation and stimulates pancreatic bicarbonate secretion."
+          "text": "Secretin contributes to the regulation of acid neutralization and stimulates pancreatic bicarbonate secretion."
         },
         {
           "type": "para",
@@ -418,11 +418,11 @@ export const chapter10En: Chapter = {
         },
         {
           "type": "para",
-          "text": "Loss of longitudinal tension in the root of the mesentery is described here as potentially being accompanied by reduced mechanical efficiency of the muscular component of the ligament of Treitz."
+          "text": "Loss of longitudinal tension in the root of the mesentery is described here as potentially being accompanied by reduced mechanical efficiency of the muscle of Treitz."
         },
         {
           "type": "para",
-          "text": "Superior mesenteric artery syndrome corresponds to compression of D4 between the aorta and the superior mesenteric artery, with possible involvement of the left renal vein."
+          "text": "Superior mesenteric artery syndrome corresponds to compression of D4 between the aorta and the superior mesenteric artery, with possible compression of the left renal vein."
         },
         {
           "type": "para",
@@ -558,7 +558,7 @@ export const chapter10En: Chapter = {
         },
         {
           "type": "para",
-          "text": "D3–D4 — mesenteric interface. D3, D4, root of the mesentery, superior mesenteric vessels, duodenojejunal junction, ligament of Treitz, and proximal jejunum."
+          "text": "D3–D4 — mesenteric interface. D3, D4, root of the mesentery, superior mesenteric vessels, duodenojejunal junction, muscle of Treitz, and proximal jejunum."
         },
         {
           "type": "para",
@@ -582,7 +582,7 @@ export const chapter10En: Chapter = {
         },
         {
           "type": "sub",
-          "text": "13.6. Associated support according to test findings"
+          "text": "13.6. Associated supports according to test findings"
         },
         {
           "type": "bullets",
@@ -604,12 +604,12 @@ export const chapter10En: Chapter = {
           "items": [
             "Slow digestion or functional duodenal stasis: Level 2 + the duodenal segment involved at Level 3 + the pylorus or duodenojejunal junction, according to test findings.",
             "Functional pancreaticobiliary context: D2 + sphincter of Oddi + liver/gallbladder + pancreas.",
-            "Tension involving D3–D4 or the flexure of Treitz after medical causes have been excluded: D3–D4 + root of the mesentery + ligament of Treitz + the regional framework described in Chapter 7."
+            "Tension involving D3–D4 or the flexure of Treitz after medical causes have been excluded: D3–D4 + root of the mesentery + muscle of Treitz + the regional framework described in Chapter 7."
           ]
         },
         {
           "type": "para",
-          "text": "SAFETY PRINCIPLE — Severe or persistent epigastric pain, gastrointestinal bleeding, black stools, recurrent vomiting, unexplained weight loss, or acute transfixing pain requires medical assessment."
+          "text": "SAFETY PRINCIPLE — Severe or persistent epigastric pain, gastrointestinal bleeding, black stools, recurrent vomiting, unexplained weight loss, or acute pain radiating through to the back requires medical assessment."
         }
       ]
     }

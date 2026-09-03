@@ -1,5 +1,5 @@
 // Chapter 8 content — English
-// Source: public/chapter-8/EN/Chapter_8_Diaphragm_ROP_Medical_English_Revised.docx
+// Source: public/chapter-8/EN/Chapter_8_Diaphragm_ROP_CodexTranslationV2.docx
 
 import type { Chapter } from './types'
 
@@ -54,7 +54,7 @@ export const chapter8En: Chapter = {
         },
         {
           "type": "para",
-          "text": "The central tendon (phrenic center)."
+          "text": "The central tendon."
         },
         {
           "type": "para",
@@ -138,7 +138,7 @@ export const chapter8En: Chapter = {
         },
         {
           "type": "para",
-          "text": "The following are distinguished:"
+          "text": "Two structures are distinguished:"
         },
         {
           "type": "para",
@@ -158,7 +158,7 @@ export const chapter8En: Chapter = {
         },
         {
           "type": "para",
-          "text": "The muscle fibers and Henle's ligament exchange fibers with the transversus abdominis muscle."
+          "text": "The muscle fibers and Henle's ligament blend with fibers of the transversus abdominis muscle."
         },
         {
           "type": "sub",
@@ -174,7 +174,7 @@ export const chapter8En: Chapter = {
         },
         {
           "type": "para",
-          "text": "Major openings, or hiatuses: the aortic, esophageal, and inferior vena caval openings."
+          "text": "Major openings: the aortic hiatus, esophageal hiatus, and caval opening."
         },
         {
           "type": "para",
@@ -186,7 +186,7 @@ export const chapter8En: Chapter = {
         },
         {
           "type": "para",
-          "text": "Located centrally and posteriorly between the right and left leaflets of the central tendon, it is formed by the two crura of the diaphragm, which create a ring anterior to the T12 vertebra."
+          "text": "Located centrally and posteriorly between the right and left leaflets of the central tendon, it is formed by the right and left crura, which create a ring anterior to the T12 vertebra."
         },
         {
           "type": "para",
@@ -202,7 +202,7 @@ export const chapter8En: Chapter = {
         },
         {
           "type": "para",
-          "text": "N.B. Enlargement of Virchow's node (Troisier's node) at the left jugulosubclavian junction is a clinical warning sign classically associated with possible abdominal malignancy."
+          "text": "Note: Enlargement of the left supraclavicular (Virchow/Troisier) node is a clinical warning sign classically associated with possible abdominal malignancy."
         },
         {
           "type": "sub",
@@ -222,11 +222,11 @@ export const chapter8En: Chapter = {
         },
         {
           "type": "sub",
-          "text": "3.4.3. Inferior vena caval opening"
+          "text": "3.4.3. Caval opening"
         },
         {
           "type": "para",
-          "text": "Located at the junction of the anterior and right leaflets of the central tendon, at the level of T9, it transmits the inferior vena cava and the right phrenic nerve."
+          "text": "Located at the junction of the anterior and right leaflets of the central tendon, at the level of T9, the caval opening transmits the inferior vena cava and the right phrenic nerve."
         },
         {
           "type": "para",
@@ -258,7 +258,7 @@ export const chapter8En: Chapter = {
         },
         {
           "type": "para",
-          "text": "N.B. Through its anastomosis with the inferior epigastric artery in the inguinal region, the superior epigastric artery establishes vascular continuity between the inguinal and retroclavicular regions."
+          "text": "Note: Through its anastomosis with the inferior epigastric artery in the inguinal region, the superior epigastric artery establishes vascular continuity between the inguinal and retroclavicular regions."
         },
         {
           "type": "para",
@@ -290,7 +290,7 @@ export const chapter8En: Chapter = {
         },
         {
           "type": "para",
-          "text": "Within the ROP framework, Henle's ligament may be described as fibrotic following post-traumatic renal fixation, particularly after a fall flat onto the back that knocks the wind out of the patient."
+          "text": "Within the ROP framework, Henle's ligament may be described as fibrotic following a post-traumatic ‘renal fixation,’ particularly after a fall flat onto the back that knocks the wind out of the patient."
         }
       ]
     },
@@ -340,7 +340,7 @@ export const chapter8En: Chapter = {
         },
         {
           "type": "para",
-          "text": "Less efficient visceral mobilization may also be considered in this context."
+          "text": "Reduced visceral excursion may also be considered in this context."
         },
         {
           "type": "para",
@@ -364,7 +364,7 @@ export const chapter8En: Chapter = {
         },
         {
           "type": "para",
-          "text": "The pleura, to which the esophageal hiatus is connected by the Treitz and Paimer sheath."
+          "text": "The pleura, to which the esophageal hiatus is connected through the phrenoesophageal membrane (phrenoesophageal ligament)."
         },
         {
           "type": "para",
@@ -376,7 +376,7 @@ export const chapter8En: Chapter = {
         },
         {
           "type": "para",
-          "text": "We shall return to the causes of gastroesophageal reflux and hiatal hernia on page…"
+          "text": "The causes of gastroesophageal reflux and hiatal hernia are discussed in Section 8.1."
         }
       ]
     },
@@ -442,7 +442,7 @@ export const chapter8En: Chapter = {
         },
         {
           "type": "para",
-          "text": "It contributes to the portocaval system. (See Chapter 11, Liver, page…)"
+          "text": "It contributes to the portocaval system. (See Chapter 11, Liver.)"
         }
       ]
     },
@@ -452,7 +452,7 @@ export const chapter8En: Chapter = {
       "blocks": [
         {
           "type": "para",
-          "text": "The diaphragm receives dual somatic innervation from the right and left phrenic nerves and the lowest six right and left intercostal nerves."
+          "text": "The diaphragm receives somatic innervation from the right and left phrenic nerves and from the lowest six intercostal nerves on each side."
         },
         {
           "type": "sub",
@@ -460,7 +460,7 @@ export const chapter8En: Chapter = {
         },
         {
           "type": "para",
-          "text": "They are the principal inspiratory nerves of the diaphragm."
+          "text": "They provide the diaphragm's principal motor innervation during inspiration."
         },
         {
           "type": "para",
@@ -472,7 +472,7 @@ export const chapter8En: Chapter = {
         },
         {
           "type": "para",
-          "text": "Origin: anterior ramus of the fourth cervical nerve, with additional contributions from the third and fifth cervical nerves."
+          "text": "Origin: each phrenic nerve arises primarily from the anterior ramus of C4, with additional contributions from C3 and C5."
         },
         {
           "type": "para",
@@ -496,7 +496,7 @@ export const chapter8En: Chapter = {
         },
         {
           "type": "para",
-          "text": "Right phrenic nerve: it passes through the inferior vena caval opening and innervates the right crus of the diaphragm, the coronary and triangular ligaments of the liver, Glisson's capsule, the peritoneum, the inferior vena cava, and the diaphragmatic plexus, which is formed by the right phrenicoabdominal nerve and several intercostal nerves."
+          "text": "Right phrenic nerve: it passes through the caval opening and innervates the right crus of the diaphragm, the coronary and triangular ligaments of the liver, Glisson's capsule, the peritoneum, the inferior vena cava, and the diaphragmatic plexus, which is formed by the right phrenicoabdominal nerve and several intercostal nerves."
         },
         {
           "type": "para",
@@ -516,11 +516,11 @@ export const chapter8En: Chapter = {
         },
         {
           "type": "para",
-          "text": "Cranial nerves: hypoglossal nerve (XII) and accessory nerve (XI)."
+          "text": "Cranial nerves: hypoglossal nerve (CN XII) and accessory nerve (CN XI)."
         },
         {
           "type": "para",
-          "text": "ANS: vagus nerve (X), inferior cervical ganglion, celiac plexus, and reciprocal anastomoses."
+          "text": "Autonomic nervous system (ANS): vagus nerve (CN X), inferior cervical ganglion, and celiac plexus, with reciprocal connections among these pathways."
         },
         {
           "type": "sub",
@@ -542,7 +542,7 @@ export const chapter8En: Chapter = {
         },
         {
           "type": "para",
-          "text": "The alternation of inspiration and expiration, at approximately 16 cycles per minute—or on the order of several tens of thousands of cycles per 24 hours—contributes to relative visceral gliding through the serous membranes mobilized by the diaphragm. (See Chapter 1, General Principles, page…)"
+          "text": "The alternation of inspiration and expiration, at approximately 16 breaths per minute—or several tens of thousands of respiratory cycles per 24 hours—contributes to relative visceral gliding through the serous membranes mobilized by the diaphragm. (See Chapter 1, General Principles.)"
         },
         {
           "type": "sub",
@@ -550,7 +550,7 @@ export const chapter8En: Chapter = {
         },
         {
           "type": "para",
-          "text": "The alternation of inspiration and expiration is accompanied by alternating pressures that may contribute to venous return to the heart and to the return of lymphatic flow to the jugulosubclavian venous system."
+          "text": "The alternation of inspiration and expiration produces pressure changes that may contribute to venous return to the heart and lymphatic return to the jugulosubclavian venous system."
         },
         {
           "type": "sub",
@@ -558,7 +558,7 @@ export const chapter8En: Chapter = {
         },
         {
           "type": "para",
-          "text": "Although a pressure gradient exists—with negative pressure in the thoracic cavity and positive pressure in the abdominal cavity—the flexible wall of the diaphragm rests against both cavities and contributes to the pressure balance between them."
+          "text": "A pressure gradient exists between the thoracic cavity, where pressure is negative, and the abdominal cavity, where pressure is positive. The flexible diaphragm is interposed between these cavities and contributes to their pressure relationship."
         },
         {
           "type": "para",
@@ -566,7 +566,7 @@ export const chapter8En: Chapter = {
         },
         {
           "type": "para",
-          "text": "Diaphragmatic movements may enhance this venous return, particularly for cranial venous blood through the internal jugular veins and for abdominal venous blood through the inferior vena cava and portal system."
+          "text": "Diaphragmatic movements may enhance venous return, particularly from the head through the internal jugular veins and from the abdomen through the inferior vena cava and portal system."
         },
         {
           "type": "para",
@@ -574,15 +574,15 @@ export const chapter8En: Chapter = {
         },
         {
           "type": "para",
-          "text": "Within the ROP framework, positive abdominal pressure allows the subdiaphragmatic viscera to benefit from a diaphragmatic support effect. (See Chapter 1, General Principles, page…)"
+          "text": "Within the ROP framework, positive abdominal pressure provides a degree of diaphragmatic support for the subdiaphragmatic viscera. (See Chapter 1, General Principles.)"
         },
         {
           "type": "para",
-          "text": "Within this same framework, the mechanism may help distribute some of the pressure forces exerted on the pelvic organs and perineal floor more evenly. (See Chapter 18, Bladder, page…)"
+          "text": "Within the same framework, this mechanism may help distribute pressure forces on the pelvic organs and pelvic floor more evenly. (See Chapter 18, Bladder.)"
         },
         {
           "type": "sub",
-          "text": "7.4. Membranous tension function"
+          "text": "7.4. Role in serous-membrane mobility"
         },
         {
           "type": "para",
@@ -598,7 +598,7 @@ export const chapter8En: Chapter = {
         },
         {
           "type": "sub",
-          "text": "7.6. Articular barometric function"
+          "text": "7.6. Role of subatmospheric intra-articular pressure"
         },
         {
           "type": "para",
@@ -610,19 +610,19 @@ export const chapter8En: Chapter = {
         },
         {
           "type": "para",
-          "text": "The alternation of diaphragmatic inspiration and expiration promotes return through the external iliac veins, which drain venous blood from the lower limbs."
+          "text": "The respiratory cycle and associated diaphragmatic movement promote venous return through the external iliac veins, which drain the lower limbs."
         },
         {
           "type": "sub",
-          "text": "7.7. Esophagogastric junction (EGJ)"
+          "text": "7.7. Gastroesophageal junction and cardia–fundus complex"
         },
         {
           "type": "para",
-          "text": "This junction is subject to numerous forces of tension."
+          "text": "This junction is subject to multiple mechanical forces."
         },
         {
           "type": "para",
-          "text": "Adoption of an upright posture in humans: it led the gastroesophageal junction to develop a mechanical organization compatible with standing."
+          "text": "Upright posture in humans: the gastroesophageal junction has a mechanical organization adapted to standing."
         },
         {
           "type": "para",
@@ -630,27 +630,27 @@ export const chapter8En: Chapter = {
         },
         {
           "type": "para",
-          "text": "Diaphragmatic movements: within the ROP framework, the cervical and mediastinal fasciae, stretched between the base of the skull and the central tendon of the diaphragm, exert tension on the EGJ."
+          "text": "Diaphragmatic movements: within the ROP framework, the cervical and mediastinal fasciae extending between the base of the skull and the central tendon of the diaphragm exert tension on the gastroesophageal junction."
         },
         {
           "type": "para",
-          "text": "These fasciae are referred to as the diaphragmatic tie."
+          "text": "In ROP terminology, these fasciae are described collectively as the ‘diaphragmatic tie.’"
         },
         {
           "type": "para",
-          "text": "Embryonic rotation of the stomach: by rotating approximately 90° clockwise about a vertical axis in the frontal plane, the stomach contributed to bringing the left vagus nerve anteriorly and the right vagus nerve posteriorly, as well as establishing a physiological twist in the lower esophageal sphincter."
+          "text": "Embryonic rotation of the stomach: rotation of approximately 90° clockwise around a vertical axis in the frontal plane brings the left vagus nerve anteriorly and the right vagus nerve posteriorly and contributes to a physiological twist in the lower esophageal sphincter."
         },
         {
           "type": "para",
-          "text": "Antireflux system: whenever gastric pressure rises as a result of food intake or during inspiration, coughing, and physical exertion, fibers of the diaphragm—arising chiefly from the right crus—tighten around the esophageal hiatus like a necktie knot."
+          "text": "Antireflux system: when gastric pressure rises with gastric filling, inspiration, coughing, or physical exertion, diaphragmatic fibers arising chiefly from the right crus tighten around the esophageal hiatus like a necktie knot."
         },
         {
           "type": "para",
-          "text": "In this description, the Juvara and Rouget muscle fibers (Figure 8.6) refine the adaptation of the esophageal hiatus to pressure changes during opening and closure."
+          "text": "In this description, the Juvara and Rouget muscle fibers help fine-tune the opening and closure of the esophageal hiatus in response to pressure changes."
         },
         {
           "type": "para",
-          "text": "Helvetius' tie: the antireflux system, known as Helvetius' tie, is ensured jointly by tension in the diaphragmatic crura, the lower esophageal sphincter, the fasciae, and the phrenicoesophageal muscle fibers."
+          "text": "In ROP terminology, the antireflux mechanism described as ‘Helvetius’ tie’ depends jointly on the diaphragmatic crura, lower esophageal sphincter, fasciae, and phrenicoesophageal muscle fibers."
         },
         {
           "type": "para",
@@ -658,11 +658,11 @@ export const chapter8En: Chapter = {
         },
         {
           "type": "para",
-          "text": "It contributes to the continence of the lower esophageal sphincter."
+          "text": "It contributes to the competence of the lower esophageal sphincter."
         },
         {
           "type": "para",
-          "text": "In the context of this presentation, this continence is also associated with the valve of Gubaroff, which opposes gastroesophageal reflux."
+          "text": "In this presentation, antireflux competence is also associated with Gubaroff's valve, which helps oppose gastroesophageal reflux."
         }
       ]
     },
@@ -680,7 +680,7 @@ export const chapter8En: Chapter = {
         },
         {
           "type": "para",
-          "text": "Within the ROP framework, any abnormal tension involving the pleuropulmonary system, diaphragm, peritoneum, stomach, liver, abdominal and even pelvic regions through the diaphragmatic crura, as well as certain costovertebral fixations at T9, T10, and T11, the sixth thoracic vertebra, and the left sixth chondrocostal joint, may promote gastroesophageal reflux and hiatal hernia."
+          "text": "Within the ROP framework, abnormal tension involving the pleuropulmonary system, diaphragm, peritoneum, stomach, liver, or abdominal and pelvic regions may affect the diaphragmatic crura. Certain costovertebral restrictions at T9–T11, T6, and the left sixth chondrocostal joint are also considered potential contributors to gastroesophageal reflux and hiatal hernia."
         },
         {
           "type": "para",
@@ -696,7 +696,7 @@ export const chapter8En: Chapter = {
         },
         {
           "type": "para",
-          "text": "This common lesion corresponds to displacement of part of the gastric fundus (see Chapter 9, Stomach, page…) into the mediastinum through the esophageal hiatus, following collapse of the muscular portion of the diaphragm, particularly the right crus."
+          "text": "This common condition is the displacement of part of the gastric fundus into the mediastinum through the esophageal hiatus, associated here with weakening or descent of the muscular diaphragm, especially the right crus. (See Chapter 9, Stomach.)"
         },
         {
           "type": "para",
@@ -704,7 +704,7 @@ export const chapter8En: Chapter = {
         },
         {
           "type": "para",
-          "text": "Rolling, or paraesophageal, hernia: part of the peritoneum containing a portion of the fundus rolls anteriorly alongside the esophagus, while the cardia remains in place."
+          "text": "Paraesophageal (rolling) hernia: a peritoneal sac containing part of the fundus moves anteriorly alongside the esophagus while the cardia remains in place."
         },
         {
           "type": "para",
@@ -712,7 +712,7 @@ export const chapter8En: Chapter = {
         },
         {
           "type": "para",
-          "text": "The occlusive action of the right crus of the diaphragm can then no longer fully perform its function."
+          "text": "The right crus can then no longer close the esophageal hiatus effectively."
         },
         {
           "type": "sub",
@@ -720,7 +720,7 @@ export const chapter8En: Chapter = {
         },
         {
           "type": "para",
-          "text": "Gastroparesis. (See Chapter 9, Stomach, page…)"
+          "text": "Gastroparesis. (See Chapter 9, Stomach.)"
         },
         {
           "type": "para",
@@ -744,7 +744,7 @@ export const chapter8En: Chapter = {
         },
         {
           "type": "para",
-          "text": "Excessive intake of fats, alcohol, and carbonated beverages."
+          "text": "Excessive intake of fatty foods, alcohol, and carbonated beverages."
         },
         {
           "type": "para",
@@ -768,7 +768,7 @@ export const chapter8En: Chapter = {
         },
         {
           "type": "para",
-          "text": "Pseudo-cardiac symptoms, or precordial pain, which may cause anxiety and lead to misdiagnosis."
+          "text": "Noncardiac chest pain (precordial pain), which may cause anxiety and lead to misdiagnosis."
         },
         {
           "type": "para",
@@ -784,11 +784,11 @@ export const chapter8En: Chapter = {
         },
         {
           "type": "sub",
-          "text": "8.2. Gastroesophageal reflux in newborns"
+          "text": "8.2. Gastroesophageal reflux in neonates"
         },
         {
           "type": "para",
-          "text": "Within the ROP framework, gastroesophageal reflux in newborns may be described as having a cranial component."
+          "text": "Within the ROP framework, gastroesophageal reflux in neonates may be described as having a cranial component."
         },
         {
           "type": "para",
@@ -818,7 +818,7 @@ export const chapter8En: Chapter = {
         },
         {
           "type": "para",
-          "text": "This connection may help explain certain effects of the territory innervated by the right phrenic nerve on the shoulder girdle and right shoulder, particularly in clinical presentations of scapulohumeral periarthritis or right cervicobrachialgia."
+          "text": "This connection may help explain referred symptoms involving the right shoulder girdle and shoulder through shared phrenic pathways, particularly in presentations of scapulohumeral periarthritis or right-sided cervicobrachial pain."
         },
         {
           "type": "sub",
@@ -842,7 +842,7 @@ export const chapter8En: Chapter = {
         },
         {
           "type": "para",
-          "text": "Within the ROP clinical framework, trauma to the thoracolumbar junction and lower ribs is not limited to osteoarticular injury; associated renal fixations may also be sought. (See Chapter 16, Kidneys, page…)"
+          "text": "Within the ROP clinical framework, trauma to the thoracolumbar junction and lower ribs is not limited to osteoarticular injury; associated ‘renal fixations,’ as defined in ROP terminology, may also be assessed. (See Chapter 16, Kidneys.)"
         }
       ]
     },
@@ -852,11 +852,11 @@ export const chapter8En: Chapter = {
       "blocks": [
         {
           "type": "para",
-          "text": "Stress: the alternation of inspiration and expiration may have a calming effect in states of stress."
+          "text": "Stress: the alternation of inspiration and expiration may have a calming effect during periods of stress."
         },
         {
           "type": "para",
-          "text": "In states of stress, the two phrenic nerves become clinically important factors."
+          "text": "The phrenic nerves may therefore be clinically relevant in stress-related breathing presentations."
         },
         {
           "type": "para",
@@ -864,7 +864,7 @@ export const chapter8En: Chapter = {
         },
         {
           "type": "para",
-          "text": "Having one's breath taken away or being short of breath are respiratory alterations found in anxiety and depression."
+          "text": "Feeling unable to catch one's breath or becoming short of breath are respiratory changes that may occur with anxiety and depression."
         }
       ]
     },
@@ -888,7 +888,7 @@ export const chapter8En: Chapter = {
       "blocks": [
         {
           "type": "para",
-          "text": "The locations described in this section belong to the clinical mapping system used in ROP. They do not constitute a direct anatomical projection of the diaphragm, nerves, or viscera onto the foot. Their selection depends on the history, clinical tests, palpatory response, and the functional territory involved."
+          "text": "The locations described in this section belong to the clinical mapping system used in ROP. They do not constitute a direct anatomical projection of the diaphragm, nerves, or viscera onto the foot. Their selection depends on the clinical history, examination findings, palpatory response, and functional region involved."
         },
         {
           "type": "para",
@@ -928,7 +928,7 @@ export const chapter8En: Chapter = {
         },
         {
           "type": "para",
-          "text": "Central work is not routinely included in treatment of the diaphragm. It is used when the clinical context warrants general neurofunctional preparation: marked stress, hypervigilance, emotional breathing, poor recovery, or symptoms associated with general dysregulation."
+          "text": "Level 1 work is not routinely included when treating the diaphragm. It is used when the clinical context warrants general neurofunctional preparation, such as marked stress, hypervigilance, emotion-related breathing changes, poor recovery, or symptoms associated with general dysregulation."
         },
         {
           "type": "para",
@@ -956,7 +956,7 @@ export const chapter8En: Chapter = {
         },
         {
           "type": "para",
-          "text": "Relevance in ROP — The diaphragm is strongly influenced by alertness, stress, and emotions. Level 1 may therefore precede respiratory work when general central regulation appears clinically relevant."
+          "text": "Relevance in ROP — The diaphragm is strongly influenced by alertness, stress, and emotions. Level 1 work may therefore precede diaphragm- or breathing-focused work when general central regulation appears clinically relevant."
         },
         {
           "type": "sub",
@@ -964,7 +964,7 @@ export const chapter8En: Chapter = {
         },
         {
           "type": "para",
-          "text": "This is the principal level for the diaphragm in the ROP protocol. The diaphragm does not anatomically belong to the autonomic nervous system, but it constitutes a major functional interface between respiration, thoracoabdominal pressure variations, venous return, vagal pathways, and sympathetic chains."
+          "text": "This is the principal level for assessing the diaphragm in the ROP protocol. The diaphragm is not anatomically part of the autonomic nervous system, but it forms a major functional interface among respiration, thoracoabdominal pressure changes, venous return, vagal pathways, and sympathetic chains."
         },
         {
           "type": "sub",
@@ -1012,7 +1012,7 @@ export const chapter8En: Chapter = {
         },
         {
           "type": "para",
-          "text": "The phrenic nerve is primarily somatic; it is included here because it provides the essential motor supply to the diaphragm and contributes to its sensory afferents."
+          "text": "The phrenic nerve is primarily somatic; it is included here because it provides the diaphragm's principal motor supply and carries sensory afferent fibers from it."
         },
         {
           "type": "sub",
@@ -1020,7 +1020,7 @@ export const chapter8En: Chapter = {
         },
         {
           "type": "para",
-          "text": "The vagus nerve passes through the diaphragm with the esophagus at the esophageal hiatus. Depending on test findings, interpretation may include the cervicothoracic vagal course, the esophageal hiatus, and the associated digestive territories."
+          "text": "The vagus nerve passes through the diaphragm with the esophagus at the esophageal hiatus. Depending on the examination findings, ROP assessment may include the cervicothoracic vagal course, esophageal hiatus, and associated digestive regions."
         },
         {
           "type": "para",
@@ -1032,7 +1032,7 @@ export const chapter8En: Chapter = {
         },
         {
           "type": "para",
-          "text": "The sympathetic chains and splanchnic nerves pass through or alongside the posterior regions of the diaphragm and its crura. Depending on the territory involved, interpretation may include the lower thoracic sympathetic chain, lumbar chain, splanchnic nerves, and prevertebral plexuses."
+          "text": "The sympathetic chains and splanchnic nerves pass through or alongside the posterior diaphragm and its crura. Depending on the region involved, ROP assessment may include the lower thoracic and lumbar sympathetic chains, splanchnic nerves, and prevertebral plexuses."
         },
         {
           "type": "para",
@@ -1052,7 +1052,7 @@ export const chapter8En: Chapter = {
         },
         {
           "type": "para",
-          "text": "Inferior vena caval opening: mapped in relation to the right portion of the central tendon."
+          "text": "Caval opening: mapped in relation to the right portion of the central tendon."
         },
         {
           "type": "para",
@@ -1064,7 +1064,7 @@ export const chapter8En: Chapter = {
         },
         {
           "type": "para",
-          "text": "Relevance in ROP — Here, Level 2 aims to support coordination between respiration, autonomic activity, and general adaptation, without assuming that pressure applied to the foot directly alters the caliber of a hiatus or the activity of a nerve."
+          "text": "Relevance in ROP — Level 2 aims to support coordination among respiration, autonomic activity, and general adaptation, without implying that pressure applied to the foot directly changes the caliber of a hiatus or the activity of a nerve."
         },
         {
           "type": "sub",
@@ -1152,11 +1152,11 @@ export const chapter8En: Chapter = {
         },
         {
           "type": "para",
-          "text": "Cervical and scapular region when phrenic referred pain is plausible."
+          "text": "Cervical and scapular regions when phrenic referred pain is plausible."
         },
         {
           "type": "para",
-          "text": "Phrenic afferents help explain certain patterns of referred pain to the neck and shoulder when the diaphragmatic territory is irritated."
+          "text": "Phrenic afferents help explain certain patterns of referred neck and shoulder pain when diaphragmatic or adjacent serosal afferents are irritated."
         },
         {
           "type": "sub",
@@ -1204,7 +1204,7 @@ export const chapter8En: Chapter = {
         },
         {
           "type": "sub",
-          "text": "12.6.2. Gastroesophageal reflux in newborns"
+          "text": "12.6.2. Gastroesophageal reflux in neonates"
         },
         {
           "type": "para",
@@ -1212,7 +1212,7 @@ export const chapter8En: Chapter = {
         },
         {
           "type": "para",
-          "text": "Level 1: neuromeningeal environment, occipital landmarks, and PRM within the ROP model."
+          "text": "Level 1: neuromeningeal environment, occipital landmarks, and the primary respiratory mechanism (PRM) within the ROP model."
         },
         {
           "type": "para",
