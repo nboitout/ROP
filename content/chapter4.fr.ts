@@ -1,5 +1,5 @@
 // Chapter 4 content - French synchronized reading stream
-// Source: public/chapter-4/Chapitre_4_SNA_version_publiable.docx
+// Source: public/chapter-4/FR/Chapitre_4_SNA_version_publiable.docx
 // Generated for SlideSyncReader; the bottom reflex-zone section includes selected hands-on figures.
 
 import type { Chapter } from './types'

@@ -1,5 +1,5 @@
 // Chapter 6 content - French synchronized reading stream
-// Source: public/chapter-6/Chapitre_6_Theorie_polyvagale_version_publiable.docx
+// Source: public/chapter-6/FR/Chapitre_6_Theorie_polyvagale_version_publiable.docx
 
 import type { Chapter } from './types'
 

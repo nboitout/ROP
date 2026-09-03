@@ -1,5 +1,5 @@
 // Chapter 7 content - French synchronized reading stream
-// Source: public/chapter-7/Chapitre_7_Cavites_abdominale_et_peritoneale_version_publiable.docx
+// Source: public/chapter-7/FR/Chapitre_7_[NEW]_ Cavites_abdominale_et_peritoneale_socle_regional_revise.docx
 
 import type { Chapter } from './types'
 
@@ -883,7 +883,7 @@ export const chapter7Fr: Chapter = {
         },
         {
           "type": "figure",
-          "src": "/chapter-7/cartographie/figure-7-02.png",
+          "src": "/chapter-7/FR/cartographie/figure-7-02.png",
           "caption": "Photo : Racine du mésentère entre la jonction duodéno-jéjunale et l’ombilic",
           "alt": "Repère podal de la racine du mésentère entre la jonction duodéno-jéjunale et l’ombilic",
           "orientation": "portrait"
@@ -896,7 +896,7 @@ export const chapter7Fr: Chapter = {
         },
         {
           "type": "figure",
-          "src": "/chapter-7/cartographie/figure-7-04.png",
+          "src": "/chapter-7/FR/cartographie/figure-7-04.png",
           "caption": "Photo : Racine du mésentère entre l’ombilic et la valvule iléocaecale",
           "alt": "Repère podal de la racine du mésentère entre l’ombilic et la valvule iléocaecale",
           "orientation": "portrait"
@@ -909,7 +909,7 @@ export const chapter7Fr: Chapter = {
         },
         {
           "type": "figure",
-          "src": "/chapter-7/cartographie/figure-7-06.png",
+          "src": "/chapter-7/FR/cartographie/figure-7-06.png",
           "caption": "Photo : Racine du mésocôlon transverse entre le 2ème duodénum et L2",
           "alt": "Repère podal de la racine du mésocôlon transverse entre le 2ème duodénum et L2",
           "orientation": "portrait"
@@ -922,7 +922,7 @@ export const chapter7Fr: Chapter = {
         },
         {
           "type": "figure",
-          "src": "/chapter-7/cartographie/figure-7-08.png",
+          "src": "/chapter-7/FR/cartographie/figure-7-08.png",
           "caption": "Photo : Racine du mésocôlon transverse entre L2 et le corps du pancréas",
           "alt": "Repère podal de la racine du mésocôlon transverse entre L2 et le corps du pancréas",
           "orientation": "landscape"
@@ -935,7 +935,7 @@ export const chapter7Fr: Chapter = {
         },
         {
           "type": "figure",
-          "src": "/chapter-7/cartographie/figure-7-10.png",
+          "src": "/chapter-7/FR/cartographie/figure-7-10.png",
           "caption": "Photo : Racines du mésosigmoïde",
           "alt": "Repère podal des racines du mésosigmoïde entre les deux index",
           "orientation": "landscape"
@@ -983,15 +983,15 @@ chapter7Reflex.blocks = [
   { type: 'para', text: 'Les racines des mésos restent des repères particulièrement importants dans la cartographie ROP, mais elles sont utilisées comme complément régional de la zone du viscère et non comme substitut de celle-ci.' },
   { type: 'sub', text: 'Repères des racines des mésos' },
   { type: 'bullets', items: ['Racine du mésentère : entre la jonction duodéno-jéjunale et l’ombilic.'] },
-  { type: 'figure', src: '/chapter-7/cartographie/figure-7-02.png', caption: 'Photo : Racine du mésentère entre la jonction duodéno-jéjunale et l’ombilic', alt: 'Repère podal de la racine du mésentère entre la jonction duodéno-jéjunale et l’ombilic', orientation: 'portrait' },
+  { type: 'figure', src: '/chapter-7/FR/cartographie/figure-7-02.png', caption: 'Photo : Racine du mésentère entre la jonction duodéno-jéjunale et l’ombilic', alt: 'Repère podal de la racine du mésentère entre la jonction duodéno-jéjunale et l’ombilic', orientation: 'portrait' },
   { type: 'bullets', items: ['Racine du mésentère : entre l’ombilic et la valvule iléo-cæcale.'] },
-  { type: 'figure', src: '/chapter-7/cartographie/figure-7-04.png', caption: 'Photo : Racine du mésentère entre l’ombilic et la valvule iléo-cæcale', alt: 'Repère podal de la racine du mésentère entre l’ombilic et la valvule iléo-cæcale', orientation: 'portrait' },
+  { type: 'figure', src: '/chapter-7/FR/cartographie/figure-7-04.png', caption: 'Photo : Racine du mésentère entre l’ombilic et la valvule iléo-cæcale', alt: 'Repère podal de la racine du mésentère entre l’ombilic et la valvule iléo-cæcale', orientation: 'portrait' },
   { type: 'bullets', items: ['Racine du mésocôlon transverse : entre le deuxième duodénum et L2.'] },
-  { type: 'figure', src: '/chapter-7/cartographie/figure-7-06.png', caption: 'Photo : Racine du mésocôlon transverse entre le deuxième duodénum et L2', alt: 'Repère podal de la racine du mésocôlon transverse entre le deuxième duodénum et L2', orientation: 'portrait' },
+  { type: 'figure', src: '/chapter-7/FR/cartographie/figure-7-06.png', caption: 'Photo : Racine du mésocôlon transverse entre le deuxième duodénum et L2', alt: 'Repère podal de la racine du mésocôlon transverse entre le deuxième duodénum et L2', orientation: 'portrait' },
   { type: 'bullets', items: ['Racine du mésocôlon transverse : entre L2 et le corps du pancréas.'] },
-  { type: 'figure', src: '/chapter-7/cartographie/figure-7-08.png', caption: 'Photo : Racine du mésocôlon transverse entre L2 et le corps du pancréas', alt: 'Repère podal de la racine du mésocôlon transverse entre L2 et le corps du pancréas', orientation: 'landscape' },
+  { type: 'figure', src: '/chapter-7/FR/cartographie/figure-7-08.png', caption: 'Photo : Racine du mésocôlon transverse entre L2 et le corps du pancréas', alt: 'Repère podal de la racine du mésocôlon transverse entre L2 et le corps du pancréas', orientation: 'landscape' },
   { type: 'bullets', items: ['Racine du mésosigmoïde.'] },
-  { type: 'figure', src: '/chapter-7/cartographie/figure-7-10.png', caption: 'Photo : Racines du mésosigmoïde', alt: 'Repère podal des racines du mésosigmoïde entre les deux index', orientation: 'landscape' },
+  { type: 'figure', src: '/chapter-7/FR/cartographie/figure-7-10.png', caption: 'Photo : Racines du mésosigmoïde', alt: 'Repère podal des racines du mésosigmoïde entre les deux index', orientation: 'landscape' },
   { type: 'para', text: 'Exemples : intestin grêle + racine du mésentère si pertinente ; côlon transverse + racine du mésocôlon transverse ; sigmoïde + racine du mésosigmoïde.' },
   { type: 'rop', body: ['Le Niveau 3 replace le viscère dans son environnement régional. Une réaction palpatoire ne permet pas à elle seule d’affirmer l’existence d’une adhérence ou d’une lésion anatomique précise.'] },
   { type: 'sub', text: '9.2. Niveau 4 — Intégration péritonéo-somatique' },

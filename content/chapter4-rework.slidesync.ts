@@ -2,7 +2,7 @@
 // The synthesis assets are isolated from the published Chapter 4 deck.
 
 const synthesis = (file: number, title: string) => ({
-  src: `/chapter-4/rework-slides/slide-${String(file).padStart(2, '0')}.png`,
+  src: `/chapter-4/FR/rework-slides/slide-${String(file).padStart(2, '0')}.png`,
   title,
 })
 
@@ -43,22 +43,22 @@ export const chapter4ReworkSlides = [
   synthesis(33, 'Les glandes surrénales et le stress'),
   synthesis(34, 'Synthèse : trois modalités coordonnées de régulation viscérale'),
   synthesis(35, 'Zones réflexes podales du SNA'),
-  { src: '/chapter-4/rework-reflex/slide-01.png', title: 'Cartographie ROP : territoire céphalique du parasympathique' },
-  { src: '/chapter-4/rework-reflex/slide-04.png', title: 'Cartographie ROP : nerf vague X dans la moelle allongée' },
-  { src: '/chapter-4/rework-reflex/slide-06.png', title: 'Cartographie ROP : nerf vague X dans le foramen jugulaire' },
-  { src: '/chapter-4/rework-reflex/slide-08.png', title: 'Cartographie ROP : sinus carotidien' },
-  { src: '/chapter-4/rework-reflex/slide-10.png', title: 'Cartographie ROP : territoire gauche du nerf vague X' },
-  { src: '/chapter-4/rework-reflex/slide-13.png', title: 'Cartographie ROP : territoire droit du nerf vague X' },
-  { src: '/chapter-4/rework-reflex/slide-15.png', title: 'Cartographie ROP : hiatus œsophagien et nerfs vagues' },
-  { src: '/chapter-4/rework-reflex/slide-17.png', title: 'Cartographie ROP : territoire abdominal droit du nerf vague X' },
-  { src: '/chapter-4/rework-reflex/slide-19.png', title: 'Cartographie ROP : origine parasympathique pelvienne ou sacrée' },
-  { src: '/chapter-4/rework-reflex/slide-21.png', title: 'Cartographie ROP : origine médullaire du sympathique' },
-  { src: '/chapter-4/rework-reflex/slide-23.png', title: 'Cartographie ROP : chaîne ganglionnaire thoracique' },
-  { src: '/chapter-4/rework-reflex/slide-25.png', title: 'Cartographie ROP : chaîne ganglionnaire cervicale' },
-  { src: '/chapter-4/rework-reflex/slide-27.png', title: 'Cartographie ROP : chaîne ganglionnaire lombale' },
-  { src: '/chapter-4/rework-reflex/slide-29.png', title: 'Cartographie ROP : chaîne ganglionnaire sacro-coccygienne' },
-  { src: '/chapter-4/rework-reflex/slide-31.png', title: 'Cartographie ROP : plexus hypogastrique inférieur, fibres antérieures' },
-  { src: '/chapter-4/rework-reflex/slide-33.png', title: 'Cartographie ROP : plexus hypogastrique inférieur, fibres moyennes et postérieures' },
+  { src: '/chapter-4/FR/rework-reflex/slide-01.png', title: 'Cartographie ROP : territoire céphalique du parasympathique' },
+  { src: '/chapter-4/FR/rework-reflex/slide-04.png', title: 'Cartographie ROP : nerf vague X dans la moelle allongée' },
+  { src: '/chapter-4/FR/rework-reflex/slide-06.png', title: 'Cartographie ROP : nerf vague X dans le foramen jugulaire' },
+  { src: '/chapter-4/FR/rework-reflex/slide-08.png', title: 'Cartographie ROP : sinus carotidien' },
+  { src: '/chapter-4/FR/rework-reflex/slide-10.png', title: 'Cartographie ROP : territoire gauche du nerf vague X' },
+  { src: '/chapter-4/FR/rework-reflex/slide-13.png', title: 'Cartographie ROP : territoire droit du nerf vague X' },
+  { src: '/chapter-4/FR/rework-reflex/slide-15.png', title: 'Cartographie ROP : hiatus œsophagien et nerfs vagues' },
+  { src: '/chapter-4/FR/rework-reflex/slide-17.png', title: 'Cartographie ROP : territoire abdominal droit du nerf vague X' },
+  { src: '/chapter-4/FR/rework-reflex/slide-19.png', title: 'Cartographie ROP : origine parasympathique pelvienne ou sacrée' },
+  { src: '/chapter-4/FR/rework-reflex/slide-21.png', title: 'Cartographie ROP : origine médullaire du sympathique' },
+  { src: '/chapter-4/FR/rework-reflex/slide-23.png', title: 'Cartographie ROP : chaîne ganglionnaire thoracique' },
+  { src: '/chapter-4/FR/rework-reflex/slide-25.png', title: 'Cartographie ROP : chaîne ganglionnaire cervicale' },
+  { src: '/chapter-4/FR/rework-reflex/slide-27.png', title: 'Cartographie ROP : chaîne ganglionnaire lombale' },
+  { src: '/chapter-4/FR/rework-reflex/slide-29.png', title: 'Cartographie ROP : chaîne ganglionnaire sacro-coccygienne' },
+  { src: '/chapter-4/FR/rework-reflex/slide-31.png', title: 'Cartographie ROP : plexus hypogastrique inférieur, fibres antérieures' },
+  { src: '/chapter-4/FR/rework-reflex/slide-33.png', title: 'Cartographie ROP : plexus hypogastrique inférieur, fibres moyennes et postérieures' },
 ]
 
 const synthesisEn = (file: number, title: string) => ({
