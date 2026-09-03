@@ -69,7 +69,7 @@ export default function MarketingHomePage() {
           <Link href={localizedHref('/chapitres-gratuits', lang)} className="h-mobile-cta" onClick={() => trackCta('header_mobile_free_chapters')}>
             {t.nav.chapitreGratuit}
           </Link>
-          <LanguageToggle />
+          <LanguageToggle hiddenLanguages={['pt']} />
         </div>
       </header>
 
