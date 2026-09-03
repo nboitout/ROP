@@ -1,5 +1,5 @@
 // Chapter 2 content — Spanish
-// Source: public/chapter-2/Chapter_2_Treatment_by_ROP_Spanish.docx
+// Source: public/chapter-2/ES/Chapter_2_Treatment_by_ROP_Spanish.docx
 
 import type { Chapter } from './types'
 
@@ -234,7 +234,7 @@ export const chapter2Es: Chapter = {
     },
   ],
   slides: {
-    url: '/chapter-2/Chapter2 - Slides de synthese ES.pdf?v=c5f6540',
+    url: '/chapter-2/ES/Chapter2 - Slides de synthese ES.pdf?v=c5f6540',
     label: 'Diapositivas',
     description: 'Síntesis visual del capítulo — técnica, modalidades, jerarquía del tratamiento e indicaciones de la R.O.P.',
   },

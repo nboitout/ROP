@@ -2,7 +2,7 @@
 // experience (/lecture/chapitre-3).
 //
 // Slide images are the pre-rendered pages of the chapter 3 synthesis deck,
-// stored under public/chapter-3/slides/. Each slide is anchored to the passage
+// stored under public/chapter-3/FR/slides/. Each slide is anchored to the passage
 // of the text it best illustrates. The deck is partly thematic rather than
 // strictly linear, so some of the later ROP slides are aligned with the
 // reflex-zone passages they clarify rather than with the slide number order.
@@ -11,31 +11,31 @@ export type SyncSlide = { src: string; title: string; orientation?: 'portrait' }
 export type SyncAnchor = { sectionId: string; blockIndex: number; slide: number; gapBefore?: 'half' }
 
 export const chapter3Slides: SyncSlide[] = [
-  { src: '/chapter-3/slides/slide-01.png', title: 'Le système nerveux central (SNC) en Réflexothérapie Occipito-Podale' },
-  { src: '/chapter-3/slides/slide-02.png', title: 'Le SNC : tronc cerebral, diencephale et telencephale' },
-  { src: '/chapter-3/slides/slide-03.png', title: 'Theorie des trois cerveaux' },
-  { src: '/chapter-3/slides/slide-04.png', title: 'Le cerveau reptilien : anatomie de la survie' },
-  { src: '/chapter-3/slides/slide-05.png', title: 'Les ganglions de la base et la formation reticulaire' },
-  { src: '/chapter-3/slides/slide-06.png', title: 'Le système limbique : l architecture des émotions' },
-  { src: '/chapter-3/slides/slide-07.png', title: 'Matrice clinique des noyaux limbiques' },
-  { src: '/chapter-3/slides/slide-08.png', title: 'L insula : la conscience interoceptive' },
-  { src: '/chapter-3/slides/slide-09.png', title: 'Cortex cingulaire, fornix et hippocampe' },
-  { src: '/chapter-3/slides/slide-10.png', title: 'Noyau accumbens et ganglions de la base' },
-  { src: '/chapter-3/slides/slide-11.png', title: 'L instinct : le bulbe olfactif' },
-  { src: '/chapter-3/slides/slide-12.png', title: 'Le diencephale : chef d orchestre neuro-hormonal' },
-  { src: '/chapter-3/slides/slide-13.png', title: 'Mécanique vasculaire : le système porte hypothalamo-hypophysaire' },
-  { src: '/chapter-3/slides/slide-14.png', title: 'L axe hypothalamo-hypophysaire : système porte' },
-  { src: '/chapter-3/slides/slide-15.png', title: 'Le système glymphatique : détoxification cérébrale' },
-  { src: '/chapter-3/slides/slide-16.png', title: 'Le neocortex necessite une approche purement indirecte' },
-  { src: '/chapter-3/slides/slide-17.png', title: 'Cartographie ROP : les zones occipitales' },
-  { src: '/chapter-3/slides/slide-18.png', title: 'Zones réflexes podales' },
-  { src: '/chapter-3/slides/slide-19.png', title: 'Reperes ROP du tronc cerebral, de la base endocrinienne et des noyaux limbiques' },
-  { src: '/chapter-3/slides/slide-20.png', title: 'Reperes ROP du cerveau limbique' },
-  { src: '/chapter-3/slides/slide-21.png', title: 'Reperes ROP du diencephale et de l hypophyse' },
-  { src: '/chapter-3/slides/slide-25.png', title: 'Diencephale, hypophyse et duremere cranienne' },
-  { src: '/chapter-3/slides/slide-24.png', title: 'Base exocranienne et nerf vague X dans le foramen jugulaire' },
-  { src: '/chapter-3/slides/slide-22.png', title: 'Les trois piliers d action indirecte sur le cortex et la cognition' },
-  { src: '/chapter-3/slides/slide-23.png', title: 'Action indirecte : le MRP et la dura-mere' },
+  { src: '/chapter-3/FR/slides/slide-01.png', title: 'Le système nerveux central (SNC) en Réflexothérapie Occipito-Podale' },
+  { src: '/chapter-3/FR/slides/slide-02.png', title: 'Le SNC : tronc cerebral, diencephale et telencephale' },
+  { src: '/chapter-3/FR/slides/slide-03.png', title: 'Theorie des trois cerveaux' },
+  { src: '/chapter-3/FR/slides/slide-04.png', title: 'Le cerveau reptilien : anatomie de la survie' },
+  { src: '/chapter-3/FR/slides/slide-05.png', title: 'Les ganglions de la base et la formation reticulaire' },
+  { src: '/chapter-3/FR/slides/slide-06.png', title: 'Le système limbique : l architecture des émotions' },
+  { src: '/chapter-3/FR/slides/slide-07.png', title: 'Matrice clinique des noyaux limbiques' },
+  { src: '/chapter-3/FR/slides/slide-08.png', title: 'L insula : la conscience interoceptive' },
+  { src: '/chapter-3/FR/slides/slide-09.png', title: 'Cortex cingulaire, fornix et hippocampe' },
+  { src: '/chapter-3/FR/slides/slide-10.png', title: 'Noyau accumbens et ganglions de la base' },
+  { src: '/chapter-3/FR/slides/slide-11.png', title: 'L instinct : le bulbe olfactif' },
+  { src: '/chapter-3/FR/slides/slide-12.png', title: 'Le diencephale : chef d orchestre neuro-hormonal' },
+  { src: '/chapter-3/FR/slides/slide-13.png', title: 'Mécanique vasculaire : le système porte hypothalamo-hypophysaire' },
+  { src: '/chapter-3/FR/slides/slide-14.png', title: 'L axe hypothalamo-hypophysaire : système porte' },
+  { src: '/chapter-3/FR/slides/slide-15.png', title: 'Le système glymphatique : détoxification cérébrale' },
+  { src: '/chapter-3/FR/slides/slide-16.png', title: 'Le neocortex necessite une approche purement indirecte' },
+  { src: '/chapter-3/FR/slides/slide-17.png', title: 'Cartographie ROP : les zones occipitales' },
+  { src: '/chapter-3/FR/slides/slide-18.png', title: 'Zones réflexes podales' },
+  { src: '/chapter-3/FR/slides/slide-19.png', title: 'Reperes ROP du tronc cerebral, de la base endocrinienne et des noyaux limbiques' },
+  { src: '/chapter-3/FR/slides/slide-20.png', title: 'Reperes ROP du cerveau limbique' },
+  { src: '/chapter-3/FR/slides/slide-21.png', title: 'Reperes ROP du diencephale et de l hypophyse' },
+  { src: '/chapter-3/FR/slides/slide-25.png', title: 'Diencephale, hypophyse et duremere cranienne' },
+  { src: '/chapter-3/FR/slides/slide-24.png', title: 'Base exocranienne et nerf vague X dans le foramen jugulaire' },
+  { src: '/chapter-3/FR/slides/slide-22.png', title: 'Les trois piliers d action indirecte sur le cortex et la cognition' },
+  { src: '/chapter-3/FR/slides/slide-23.png', title: 'Action indirecte : le MRP et la dura-mere' },
 ]
 
 export const chapter3SlideAnchors: SyncAnchor[] = [

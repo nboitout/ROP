@@ -1,5 +1,5 @@
 // Chapter 2 content — German
-// Source: public/chapter-2/Chapter_2_Treatment_by_ROP_German.docx
+// Source: public/chapter-2/DE/Chapter_2_Treatment_by_ROP_German.docx
 
 import type { Chapter } from './types'
 
@@ -234,7 +234,7 @@ export const chapter2De: Chapter = {
     },
   ],
   slides: {
-    url: '/chapter-2/Chapter2 - Slides de synthese GE.pdf?v=c5f6540',
+    url: '/chapter-2/DE/Chapter2 - Slides de synthese GE.pdf?v=c5f6540',
     label: 'Folien',
     description: 'Visuelle Zusammenfassung des Kapitels — Technik, Modalitäten, Behandlungshierarchie und Indikationen der R.O.P.',
   },

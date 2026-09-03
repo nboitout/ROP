@@ -1,4 +1,4 @@
-// Source: public/chapter-3/Chapitre_3_SNC_version_publiable.docx
+// Source: public/chapter-3/FR/Chapitre_3_SNC_ROP_version_publiable_sinus_carotidien.docx
 import type { Chapter } from "./types";
 
 export const chapter3Fr: Chapter = {
@@ -511,7 +511,7 @@ export const chapter3Fr: Chapter = {
         },
         {
           type: "figure",
-          src: "/chapter-3/figures/figure-01.png",
+          src: "/chapter-3/FR/figures/figure-01.png",
           caption: "Tronc cérébral (entre les deux pouces)",
           alt: "Photo du repérage podal du tronc cérébral entre les deux pouces",
           orientation: "portrait",
@@ -538,7 +538,7 @@ export const chapter3Fr: Chapter = {
         },
         {
           type: "figure",
-          src: "/chapter-3/figures/figure-02.png",
+          src: "/chapter-3/FR/figures/figure-02.png",
           caption: "Amygdale du cerveau limbique (pouce gauche)",
           alt: "Photo du repérage podal de l’amygdale du cerveau limbique",
           orientation: "portrait",
@@ -560,7 +560,7 @@ export const chapter3Fr: Chapter = {
         },
         {
           type: "figure",
-          src: "/chapter-3/figures/figure-05.png",
+          src: "/chapter-3/FR/figures/figure-05.png",
           caption: "Diencéphale (pouce gauche)",
           alt: "Photo du repérage podal du diencéphale",
           orientation: "portrait",
@@ -591,14 +591,14 @@ export const chapter3Fr: Chapter = {
         },
         {
           type: "figure",
-          src: "/chapter-3/figures/figure-04.png",
+          src: "/chapter-3/FR/figures/figure-04.png",
           caption: "Sinus et glomus carotidien Index Gauche",
           alt: "Photo du repérage podal du sinus et du glomus carotidien à l’index gauche",
           orientation: "landscape",
         },
         {
           type: "figure",
-          src: "/chapter-3/figures/figure-03.png",
+          src: "/chapter-3/FR/figures/figure-03.png",
           caption: "Nerf vague X dans le foramen jugulaire",
           alt: "Photo du repérage podal du nerf vague X dans le foramen jugulaire",
           orientation: "portrait",
@@ -623,14 +623,14 @@ export const chapter3Fr: Chapter = {
         },
         {
           type: "figure",
-          src: "/chapter-3/figures/figure-06.png",
+          src: "/chapter-3/FR/figures/figure-06.png",
           caption: "Technique compression du IVème ventricule",
           alt: "Photo de la technique de compression du quatrième ventricule",
           orientation: "landscape",
         },
         {
           type: "figure",
-          src: "/chapter-3/figures/figure-07.png",
+          src: "/chapter-3/FR/figures/figure-07.png",
           caption: "Technique de synchronisation SSB-S2",
           alt: "Photo de la technique de synchronisation SSB-S2",
           orientation: "portrait",
@@ -733,7 +733,7 @@ export const chapter3Fr: Chapter = {
     },
   ],
   slides: {
-    url: "/chapter-3/Chapter3 Slides FR.pdf",
+    url: "/chapter-3/FR/Chapter3 Slides FR.pdf",
     label: "Diapositives",
     description: "Synthèse visuelle du chapitre 3.",
   },

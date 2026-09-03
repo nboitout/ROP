@@ -1,5 +1,5 @@
 // Chapitre 1 — Généralités
-// Source: public/chapter-1/Chapitre_1_Generalites_version_publiable.docx
+// Source: public/chapter-1/FR/Chapitre_1_Generalites_version_publiable.docx
 
 import type { Chapter } from './types'
 
@@ -183,7 +183,7 @@ export const chapter1Fr: Chapter = {
     },
   ],
   slides: {
-    url: '/chapter-1/Chapter1 Slides de synthese FR.pdf',
+    url: '/chapter-1/FR/Chapter1 Slides de synthese FR.pdf',
     label: 'Diapositives',
     description: 'Synthèse visuelle du chapitre 1.',
   },

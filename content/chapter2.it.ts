@@ -1,5 +1,5 @@
 // Chapter 2 content — Italian
-// Source: public/chapter-2/Chapter_2_Treatment_by_ROP_Italian.docx
+// Source: public/chapter-2/IT/Chapter_2_Treatment_by_ROP_Italian.docx
 
 import type { Chapter } from './types'
 
@@ -235,7 +235,7 @@ export const chapter2It: Chapter = {
     },
   ],
   slides: {
-    url: '/chapter-2/Chapter2 - Slides de synthese IT.pdf?v=c5f6540',
+    url: '/chapter-2/IT/Chapter2 - Slides de synthese IT.pdf?v=c5f6540',
     label: 'Diapositive',
     description: 'Sintesi visiva del capitolo — tecnica, modalità, gerarchia del trattamento e indicazioni della R.O.P.',
   },

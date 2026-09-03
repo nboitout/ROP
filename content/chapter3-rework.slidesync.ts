@@ -1,5 +1,5 @@
 const synthesis = (file: number, title: string) => ({
-  src: `/chapter-3/rework-slides/slide-${String(file).padStart(2, '0')}.png`,
+  src: `/chapter-3/FR/rework-slides/slide-${String(file).padStart(2, '0')}.png`,
   title,
 })
 
@@ -27,9 +27,9 @@ export const chapter3ReworkSlides = [
   synthesis(16, 'Le système glymphatique : détoxification cérébrale'),
   synthesis(11, 'Ganglions de la base : repères anatomiques'),
   synthesis(18, 'Cartographie ROP — les zones occipitales'),
-  { src: '/chapter-3/rework-reflex/slide-01.png', title: 'Cartographie ROP : tronc cérébral' },
-  { src: '/chapter-3/rework-reflex/slide-03.png', title: 'Cartographie ROP : réseaux limbiques et cortico-limbiques' },
-  { src: '/chapter-3/rework-reflex/slide-05.png', title: 'Cartographie ROP : diencéphale et hypophyse' },
+  { src: '/chapter-3/FR/rework-reflex/slide-01.png', title: 'Cartographie ROP : tronc cérébral' },
+  { src: '/chapter-3/FR/rework-reflex/slide-03.png', title: 'Cartographie ROP : réseaux limbiques et cortico-limbiques' },
+  { src: '/chapter-3/FR/rework-reflex/slide-05.png', title: 'Cartographie ROP : diencéphale et hypophyse' },
   synthesis(19, 'Cortex : pas de zone ROP directe, mais des voies ascendantes réelles'),
 ]
 

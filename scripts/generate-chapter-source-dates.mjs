@@ -5,9 +5,9 @@ const sourceRoot = process.env.CHAPTER_SOURCE_ROOT ?? process.cwd()
 
 const sourceDocuments = {
   introduction: { fr: 'chapter-0/FR/Chapitre_0_Introduction_ROP (3).docx', en: 'chapter-0/EN/Chapter_0_Introduction_ROP_EN_Final_Publishable (1) (1).docx', de: 'chapter-0/DE/Chapter0 Introduction DE.docx', es: 'chapter-0/ES/Chapter0 Introduction ES.docx', it: 'chapter-0/IT/Chapter0 Introduction IT.docx' },
-  'chapter-1': { fr: 'chapter-1/Chapitre_1_Generalites_version_publiable.docx', en: 'chapter-1/EN/Chapter_1_General_Considerations_EN_publishable_revised.docx' },
-  'chapter-2': { fr: 'chapter-2/Chapitre_2_ROP_version_complete_directement_publiable.docx', en: 'chapter-2/EN/Chapter_2_ROP_Treatment_Medical_English_Revised.docx', de: 'chapter-2/DE/Kapitel_2_ROP_Behandlung_Medizinisches_Deutsch.docx', es: 'chapter-2/Chapter_2_Treatment_by_ROP_Spanish.docx', it: 'chapter-2/Chapter_2_Treatment_by_ROP_Italian.docx' },
-  'chapter-3': { fr: 'chapter-3/Chapitre_3_SNC_ROP_version_publiable_sinus_carotidien.docx', en: 'chapter-3/EN/Chapter_3_Central_Nervous_System_ROP_EN_Publishable_Revised.docx' },
+  'chapter-1': { fr: 'chapter-1/FR/Chapitre_1_Generalites_version_publiable.docx', en: 'chapter-1/EN/Chapter_1_General_Considerations_EN_publishable_revised.docx' },
+  'chapter-2': { fr: 'chapter-2/FR/Chapitre_2_ROP_version_complete_directement_publiable.docx', en: 'chapter-2/EN/Chapter_2_ROP_Treatment_Medical_English_Revised.docx', de: 'chapter-2/DE/Kapitel_2_ROP_Behandlung_Medizinisches_Deutsch.docx', es: 'chapter-2/ES/Chapter_2_Treatment_by_ROP_Spanish.docx', it: 'chapter-2/IT/Chapter_2_Treatment_by_ROP_Italian.docx' },
+  'chapter-3': { fr: 'chapter-3/FR/Chapitre_3_SNC_ROP_version_publiable_sinus_carotidien.docx', en: 'chapter-3/EN/Chapter_3_Central_Nervous_System_ROP_EN_Publishable_Revised.docx' },
   'chapter-4': { fr: 'chapter-4/Chapter4_SNA_revise_FR_final.docx', en: 'chapter-4/EN/Chapter_4_Autonomic_Nervous_System_ROP_EN_Faithful_Translation (1).docx' },
   'chapter-5': { fr: 'Chapter-5 Rework/Chapitre_5_Mecanisme_de_stress_ROP.docx', en: 'Chapter-5 Rework/EN/Chapter_5_Stress_Mechanism_ROP_EN_Publishable.docx', de: 'chapter-5/Chapter5_Stressmechanismus_ROP_DE_fluency_revised.docx', es: 'chapter-5/Chapter5_Mecanismo_de_Estres_ROP_ES_fluency_revised_final.docx', it: 'chapter-5/Chapter5_Meccanismo_dello_Stress_ROP_IT_fluency_revised_final.docx' },
   'chapter-6': { fr: 'chapter-6/Chapitre_6_Theorie_polyvagale_version_publiable.docx', en: 'chapter-6/EN/Chapter_6_Polyvagal_Theory_ROP_EN_Final_Publishable.docx' },

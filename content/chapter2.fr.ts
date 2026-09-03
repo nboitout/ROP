@@ -1,5 +1,5 @@
 // Chapter 2 content — French synchronized reading stream
-// Source: public/chapter-2/Chapitre_2_ROP_version_complete_directement_publiable.docx
+// Source: public/chapter-2/FR/Chapitre_2_ROP_version_complete_directement_publiable.docx
 
 import type { Chapter } from './types'
 
@@ -62,7 +62,7 @@ export const chapter2Fr: Chapter = {
         },
         {
           type: 'figure',
-          src: '/chapter-2/figure-2-1.png',
+          src: '/chapter-2/FR/figure-2-1.png',
           caption: 'Figure 2.1 — Pourquoi la ROP recherche-t-elle des zones réflexes ? La physiologie cutanée établit que la peau est un organe sensoriel, vasculaire et autonome dynamique ; la correspondance topographique pied–occiput–territoires fonctionnels relève de la cartographie clinique ROP et ne constitue pas une projection anatomique démontrée.',
           alt: 'Physiologie cutanée et modèle clinique des zones réflexes en ROP',
           orientation: 'landscape',
@@ -114,7 +114,7 @@ export const chapter2Fr: Chapter = {
         },
         {
           type: 'figure',
-          src: '/chapter-2/figure-2-2.png',
+          src: '/chapter-2/FR/figure-2-2.png',
           caption: 'Figure 2.2 — Stimulation cutanée en ROP : chaîne neurophysiologique proposée. La pression non douloureuse active des afférences cutanées qui rejoignent les réseaux spinaux et supraspinaux. Les effets de modulation sont plausibles à l’échelle sensorielle, nociceptive et autonome ; une correction sélective d’un organe par un point cutané n’est pas démontrée.',
           alt: 'Chaîne neurophysiologique proposée de la stimulation cutanée en ROP',
           orientation: 'landscape',
@@ -579,7 +579,7 @@ export const chapter2Fr: Chapter = {
       blocks: [
         {
           type: 'figure',
-          src: '/chapter-2/figure-2-3.png',
+          src: '/chapter-2/FR/figure-2-3.png',
           caption: 'Figure 2.3 — Fenêtre d’adaptation après la première séance. Cette courbe représente un modèle issu de l’expérience clinique. L’axe vertical décrit un niveau fonctionnel clinique et non une variable physiologique mesurée ; la cinétique doit être progressivement documentée par des mesures standardisées.',
           alt: 'Fenêtre d’adaptation après la première séance de ROP',
           orientation: 'landscape',

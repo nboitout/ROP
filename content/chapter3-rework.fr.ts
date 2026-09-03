@@ -671,7 +671,7 @@ export const chapter3ReworkFr: Chapter = { slug: 'chapter-3-rework', number: '3'
   }
 ] }
 
-const reworkFigure = (slide: string, caption: string, orientation: 'landscape' | 'portrait' = 'landscape'): Block => ({ type: 'figure', src: `/chapter-3/rework-reflex/slide-${slide}.png`, caption, alt: caption, orientation })
+const reworkFigure = (slide: string, caption: string, orientation: 'landscape' | 'portrait' = 'landscape'): Block => ({ type: 'figure', src: `/chapter-3/FR/rework-reflex/slide-${slide}.png`, caption, alt: caption, orientation })
 const addAfter = (sectionId: string, match: (block: Block) => boolean, figures: Block[]) => { const section=chapter3ReworkFr.sections.find(s=>s.id===sectionId); if(!section)throw new Error(`Missing section ${sectionId}`); const index=section.blocks.findIndex(match); if(index<0)throw new Error(`Missing insertion point in ${sectionId}`); section.blocks.splice(index+1,0,...figures) }
 addAfter('zones-reflexes-rop', b=>b.type==='bullets'&&b.items.some(i=>i.startsWith('Tronc cérébral')), [reworkFigure('02','Photo : tronc cérébral','portrait')])
 addAfter('zones-reflexes-rop', b=>b.type==='bullets'&&b.items.some(i=>i.startsWith('Amygdale')), [reworkFigure('04','Photo : système limbique','portrait')])
