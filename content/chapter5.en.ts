@@ -1,5 +1,5 @@
 // Chapter 5 content — English
-// Source: public/Chapter-5 Rework/EN/Chapter_5_Stress_Mechanism_ROP_EN_Publishable.docx
+// Source: public/chapter-5/EN/Chapter_5_Stress_Mechanism_ROP_EN_Publishable.docx
 
 import type { Chapter } from './types'
 

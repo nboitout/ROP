@@ -3,7 +3,7 @@ import { chapter2Slides, chapter2SlidesEn } from './chapter2.slidesync'
 import { chapter3ReworkSlides, chapter3ReworkSlidesEn } from './chapter3-rework.slidesync'
 import { chapter4ReworkSlides, chapter4ReworkSlidesEn } from './chapter4-rework.slidesync'
 import { chapter5ReworkSlides } from './chapter5-rework.slidesync'
-import { chapter5SlidesDe, chapter5SlidesEn, chapter5SlidesEs, chapter5SlidesIt } from './chapter5.slidesync'
+import { chapter5SlidesEn } from './chapter5.slidesync'
 import { chapter6Slides, chapter6SlidesEn } from './chapter6.slidesync'
 import { chapter7Slides, chapter7SlidesEn } from './chapter7.slidesync'
 import { chapter8Slides, chapter8SlidesEn } from './chapter8.slidesync'
@@ -29,7 +29,7 @@ export const classicSlideDecks: Record<string, Partial<Record<Lang, ClassicSlide
   'chapter-2': { fr: chapter2Slides, en: chapter2SlidesEn },
   'chapter-3': { fr: chapter3ReworkSlides, en: chapter3ReworkSlidesEn },
   'chapter-4': { fr: chapter4ReworkSlides, en: chapter4ReworkSlidesEn },
-  'chapter-5': { fr: chapter5ReworkSlides, en: chapter5SlidesEn, de: chapter5SlidesDe, es: chapter5SlidesEs, it: chapter5SlidesIt },
+  'chapter-5': { fr: chapter5ReworkSlides, en: chapter5SlidesEn },
   'chapter-6': { fr: chapter6Slides, en: chapter6SlidesEn },
   'chapter-7': { fr: chapter7Slides, en: chapter7SlidesEn },
   'chapter-8': { fr: chapter8Slides, en: chapter8SlidesEn },

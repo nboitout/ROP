@@ -22,12 +22,8 @@ import {
   chapter4ReworkSlideAnchorsEn as chapter4SlideAnchorsEn,
 } from './chapter4-rework.slidesync'
 import {
-  chapter5SlidesDe,
   chapter5SlidesEn,
-  chapter5SlidesEs,
-  chapter5SlidesIt,
   chapter5SlideAnchorsEn,
-  chapter5SlideAnchorsLegacy,
 } from './chapter5.slidesync'
 import { chapter5ReworkSlides as chapter5Slides, chapter5ReworkSlideAnchors as chapter5SlideAnchors } from './chapter5-rework.slidesync'
 import { chapter6Slides, chapter6SlidesEn, chapter6SlideAnchors, chapter6SlideAnchorsEn } from './chapter6.slidesync'
@@ -143,9 +139,6 @@ const slideSearchSources: Record<string, readonly SlideSearchSource[]> = {
   'chapter-5': [
     { lang: 'fr', slides: chapter5Slides, anchors: chapter5SlideAnchors },
     { lang: 'en', slides: chapter5SlidesEn, anchors: chapter5SlideAnchorsEn },
-    { lang: 'de', slides: chapter5SlidesDe, anchors: chapter5SlideAnchorsLegacy },
-    { lang: 'es', slides: chapter5SlidesEs, anchors: chapter5SlideAnchorsLegacy },
-    { lang: 'it', slides: chapter5SlidesIt, anchors: chapter5SlideAnchorsLegacy },
   ],
   'chapter-6': [
     { lang: 'fr', slides: chapter6Slides, anchors: chapter6SlideAnchors },

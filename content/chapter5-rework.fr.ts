@@ -1,4 +1,4 @@
-// Source: public/Chapter-5 Rework/Chapitre_5_Mecanisme_de_stress_ROP.docx
+// Source: public/chapter-5/FR/Chapitre_5_Mecanisme_de_stress_ROP.docx
 import type { Chapter } from './types'
 
 export const chapter5ReworkFr: Chapter = {
@@ -827,5 +827,10 @@ export const chapter5ReworkFr: Chapter = {
         }
       ]
     }
-  ]
+  ],
+  clinicalCase: {
+    src: '/chapter-5/FR/cas-clinique.png',
+    alt: 'Cas clinique — Fibromyalgie · Chapitre 5',
+    caption: 'Cas clinique · Fibromyalgie — Chapitre 5',
+  },
 }

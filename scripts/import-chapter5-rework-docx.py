@@ -116,7 +116,7 @@ def main(source: Path, destination: Path):
     }
     serialized = json.dumps(payload, ensure_ascii=False, indent=2)
     output = (
-        f"// Source: public/Chapter-5 Rework/{source.name}\n"
+        f"// Source: public/chapter-5/FR/{source.name}\n"
         "import type { Chapter } from './types'\n\n"
         f"export const chapter5ReworkFr: Chapter = {serialized}\n"
     )
