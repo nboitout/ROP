@@ -2,7 +2,7 @@
 // experience (/lecture/chapitre-8).
 //
 // Slides 1-16 are the retained pre-rendered pages of the chapter 8 synthesis deck,
-// stored under public/chapter-8/slides/.
+// stored under public/chapter-8/FR/slides/.
 //
 // Slides 20+ reuse the cartography pages from:
 // public/chapter-8/Chapter8 Cartes et Photos.pdf
@@ -22,99 +22,99 @@ export type SyncAnchor = {
 
 export const chapter8Slides: SyncSlide[] = [
   {
-    src: "/chapter-8/slides/slide-01.png",
+    src: "/chapter-8/FR/slides/slide-01.png",
     title: "Chapitre 8 : Diaphragme"
   },
   {
-    src: "/chapter-8/slides/slide-02.png",
+    src: "/chapter-8/FR/slides/slide-02.png",
     title: "Les 8 dimensions fonctionnelles du diaphragme"
   },
   {
-    src: "/chapter-8/slides/slide-06.png",
+    src: "/chapter-8/FR/slides/slide-06.png",
     title: "Anatomie du diaphragme et des passages"
   },
   {
-    src: "/chapter-8/slides/slide-03.png",
+    src: "/chapter-8/FR/slides/slide-03.png",
     title: "Coupoles et centre phrénique"
   },
   {
-    src: "/chapter-8/slides/slide-05.png",
+    src: "/chapter-8/FR/slides/slide-05.png",
     title: "Trois hiatus principaux"
   },
   {
-    src: "/chapter-8/slides/slide-08.png",
+    src: "/chapter-8/FR/slides/slide-08.png",
     title: "Les hiatus accessoires et leurs vulnérabilités"
   },
   {
-    src: "/chapter-8/slides/slide-07.png",
+    src: "/chapter-8/FR/slides/slide-07.png",
     title: "Vascularisation du diaphragme"
   },
   {
-    src: "/chapter-8/slides/slide-09.png",
+    src: "/chapter-8/FR/slides/slide-09.png",
     title: "Le câblage électrique : les nerfs phréniques"
   },
   {
-    src: "/chapter-8/slides/slide-11.png",
+    src: "/chapter-8/FR/slides/slide-11.png",
     title: "L équilibre barometrique et le soutien visceral"
   },
   {
-    src: "/chapter-8/slides/slide-13.png",
+    src: "/chapter-8/FR/slides/slide-13.png",
     title: "Biomécanique de la JOCT"
   },
   {
-    src: "/chapter-8/slides/slide-12.png",
+    src: "/chapter-8/FR/slides/slide-12.png",
     title: "Le mecanisme anti-reflux : le noeud de cravate"
   },
   {
-    src: "/chapter-8/slides/slide-14.png",
+    src: "/chapter-8/FR/slides/slide-14.png",
     title: "Pathologie mécanique : les hernies hiatales"
   },
   {
-    src: "/chapter-8/slides/slide-15.png",
+    src: "/chapter-8/FR/slides/slide-15.png",
     title: "Le reflux gastro-œsophagien et le symptôme de tensions globales"
   },
   {
-    src: "/chapter-8/slides/slide-16.png",
+    src: "/chapter-8/FR/slides/slide-16.png",
     title: "Focus pediatrique : RGO du nouveau-ne"
   },
   {
-    src: "/chapter-8/slides/slide-10.png",
+    src: "/chapter-8/FR/slides/slide-10.png",
     title: "Le carrefour azygo-cave et l axe du stress"
   },
   {
-    src: "/chapter-8/slides/slide-04.png",
+    src: "/chapter-8/FR/slides/slide-04.png",
     title: "Topographie asymetrique en ROP"
   },
   {
-    src: "/chapter-8/cartographie/figure-8-02.png",
+    src: "/chapter-8/FR/cartographie/figure-8-02.png",
     title: "Cartographie podale : coupole diaphragmatique gauche et hiatus œsophagien"
   },
   {
-    src: "/chapter-8/cartographie/figure-8-03.png",
+    src: "/chapter-8/FR/cartographie/figure-8-03.png",
     title: "Cartographie podale : coupole diaphragmatique droite"
   },
   {
-    src: "/chapter-8/cartographie/figure-8-05.png",
+    src: "/chapter-8/FR/cartographie/figure-8-05.png",
     title: "Cartographie podale : hiatus œsophagien"
   },
   {
-    src: "/chapter-8/cartographie/figure-8-07.png",
+    src: "/chapter-8/FR/cartographie/figure-8-07.png",
     title: "Cartographie podale : hiatus de Marfran et de Larrey"
   },
   {
-    src: "/chapter-8/cartographie/figure-8-12.png",
+    src: "/chapter-8/FR/cartographie/figure-8-12.png",
     title: "Cartographie podale : nerf phrénique"
   },
   {
-    src: "/chapter-8/cartographie/figure-8-14.png",
+    src: "/chapter-8/FR/cartographie/figure-8-14.png",
     title: "Cartographie podale : articulations costo-vertébrales"
   },
   {
-    src: "/chapter-8/cartographie/figure-8-09.png",
+    src: "/chapter-8/FR/cartographie/figure-8-09.png",
     title: "Cartographie podale : jonction azygo-cave"
   },
   {
-    src: "/chapter-8/cartographie/figure-8-16.png",
+    src: "/chapter-8/FR/cartographie/figure-8-16.png",
     title: "Cartographie podale : nerf intercostal brachial de Hyrtl"
   }
 ]
