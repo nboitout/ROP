@@ -1,4 +1,4 @@
-// Source: public/chapter-13/Chapitre_13_Rate_version_publiable_A_master_Niveaux_3_4_B.docx
+// Source: public/chapter-13/FR/Chapitre_13_Rate_version_publiable_A_master_Niveaux_3_4_B.docx
 import type { Chapter } from './types'
 
 export const chapter13Fr: Chapter = {
@@ -408,7 +408,7 @@ export const chapter13Fr: Chapter = {
     }
   ],
   clinicalCase: {
-    src: "/chapter-13/clinical-case.png",
+    src: "/chapter-13/FR/clinical-case.png",
     alt: "Cas clinique - fatigue post-mononucléose et point de cote gauche",
     caption: "Cas clinique - Chapitre 13",
   },
@@ -423,7 +423,7 @@ const reflexFigure = (
   orientation: "landscape" | "portrait" = "landscape",
 ): ChapterBlock => ({
   type: "figure",
-  src: `/chapter-13/cartographie/figure-13-${n}.png`,
+  src: `/chapter-13/FR/cartographie/figure-13-${n}.png`,
   caption: `Photo : ${title}`,
   alt,
   orientation,
@@ -471,7 +471,7 @@ chapter13Reflex.title = '12. Zones réflexes ROP'
 chapter13Reflex.blocks = [
   { type: 'sub', text: '12.1. Repère propre à la rate' },
   { type: 'para', text: 'Le repère podal spécifique de la rate est conservé. Dans la cartographie ROP, il est recherché à partir de l’angle splénique du côlon : celui-ci se situe médialement et au-dessus de la styloïde du 5e métatarsien gauche. La zone de la rate se place sur ce territoire, sous l’extrémité gauche de la zone de l’hémi-coupole diaphragmatique gauche.' },
-  { type: 'figure', src: '/chapter-13/cartographie/figure-13-04.png', caption: 'Photo : Rate', alt: 'Repère podal de la rate', orientation: 'portrait' },
+  { type: 'figure', src: '/chapter-13/FR/cartographie/figure-13-04.png', caption: 'Photo : Rate', alt: 'Repère podal de la rate', orientation: 'portrait' },
   { type: 'sub', text: '12.2. Niveau 1 — Régulation des centres supérieurs' },
   { type: 'para', text: 'Le Niveau 1 reste court et optionnel. Il peut être intégré dans certains tableaux de fatigue prolongée, récupération post-infectieuse, stress important ou trouble du sommeil lorsque le contexte général le justifie.' },
   { type: 'bullets', items: ['Zones réflexes occipitales.', 'Tronc cérébral et centres d’intégration.', 'Hypothalamus et régulation générale de l’adaptation.'] },
@@ -491,7 +491,7 @@ chapter13Reflex.blocks = [
   { type: 'rop', body: ['Le Niveau 3 ne conduit pas à traiter systématiquement estomac, pancréas, rein et côlon. Les rapports régionaux sont sélectionnés selon les tests et la cohérence du tableau clinique.'] },
   { type: 'sub', text: '12.5. Niveau 4 — Intégration viscéro-somatique et neuro-immunitaire' },
   { type: 'para', text: 'Versant viscéro-somatique. Les principaux repères sont Th9-Th11, les articulations costo-transversaires correspondantes, les 9e, 10e et 11e côtes gauches, le thorax postéro-inférieur gauche et le diaphragme gauche. Une manifestation scapulaire gauche peut être intégrée lorsque le contexte diaphragmatique le rend pertinent, sans en faire une correspondance systématique.' },
-  { type: 'figure', src: '/chapter-13/cartographie/figure-13-02.png', caption: 'Photo : Articulations costo-vertébrales', alt: 'Repères podaux des articulations costo-vertébrales', orientation: 'landscape' },
+  { type: 'figure', src: '/chapter-13/FR/cartographie/figure-13-02.png', caption: 'Photo : Articulations costo-vertébrales', alt: 'Repères podaux des articulations costo-vertébrales', orientation: 'landscape' },
   { type: 'para', text: 'Axe cerveau-immunité / rate. La notion de « balance cerveau limbique-rate » est remplacée par une lecture plus large. La rate participe aux fonctions immunitaires et la réponse immunitaire interagit avec les systèmes nerveux, endocrinien et comportemental. Fatigue, récupération post-infectieuse, stress et sommeil peuvent donc être intégrés dans une logique générale d’adaptation.' },
   { type: 'para', text: 'L’écoute-induction peut conserver son principe — un repère splénique et un repère central — mais elle est présentée comme une technique d’intégration fonctionnelle, et non comme une action directe sur un « cerveau limbique ».' },
   { type: 'xref', label: 'Voir le chapitre 3 — Système nerveux central', href: '/lecture/chapitre-3-rework?lang=fr' },
@@ -534,7 +534,7 @@ if (chapter13NewLevel4 >= 0 && chapter13Supports > chapter13NewLevel4) {
   chapter13Reflex.blocks.splice(chapter13NewLevel4, chapter13Supports - chapter13NewLevel4,
     { type: 'sub', text: '12.5. Niveau 4 — Intégration viscéro-somatique et viscéro-émotionnelle' },
     { type: 'para', text: 'Intégration viscéro-somatique. Les principaux repères sont Th9-Th11, les articulations costo-transversaires correspondantes, les 9e, 10e et 11e côtes gauches, le thorax postéro-inférieur gauche et le diaphragme gauche. Une manifestation scapulaire gauche peut être intégrée lorsque le contexte diaphragmatique le rend pertinent, sans en faire une correspondance systématique.' },
-    { type: 'figure', src: '/chapter-13/cartographie/figure-13-02.png', caption: 'Photo : Articulations costo-vertébrales', alt: 'Repères podaux des articulations costo-vertébrales', orientation: 'landscape' },
+    { type: 'figure', src: '/chapter-13/FR/cartographie/figure-13-02.png', caption: 'Photo : Articulations costo-vertébrales', alt: 'Repères podaux des articulations costo-vertébrales', orientation: 'landscape' },
     { type: 'para', text: 'Intégration viscéro-émotionnelle. Dans la lecture clinique propre à la ROP, la rate et le pancréas peuvent être difficiles à différencier sur ce plan. Certains tableaux peuvent s’accompagner d’une fatigue profonde, d’une tendance à la rumination ou au repli, d’un chagrin ancien, de remords, d’une démotivation ou de troubles de l’endormissement. Ces éléments constituent des repères d’écoute et de contexte.' },
     { type: 'para', text: 'Contexte adaptatif et neuro-immunitaire. La rate participe aux fonctions immunitaires et la réponse immunitaire interagit avec les systèmes nerveux, endocrinien et comportemental.' },
     { type: 'para', text: 'Fatigue, récupération post-infectieuse, stress et sommeil peuvent ainsi être intégrés dans une lecture générale de l’adaptation, sans supposer une relation causale simple entre un état émotionnel et la rate.' },

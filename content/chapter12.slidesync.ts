@@ -2,7 +2,7 @@
 // experience (/lecture/chapitre-12).
 //
 // Slides 1-14 are the pre-rendered pages of the chapter 12 synthesis deck,
-// stored under public/chapter-12/slides/.
+// stored under public/chapter-12/FR/slides/.
 //
 // Slides 15+ reuse the cartography pages from:
 // public/chapter-12/Chapter12 Cartographie et Photos.pdf
@@ -11,22 +11,22 @@ export type SyncSlide = { src: string; title: string; orientation?: 'portrait' }
 export type SyncAnchor = { sectionId: string; blockIndex: number; slide: number; gapBefore?: 'half'; end?: { sectionId: string; blockIndex: number } }
 
 export const chapter12Slides: SyncSlide[] = [
-  { src: '/chapter-12/slides/slide-01.png', title: 'Le Pancréas' },
-  { src: '/chapter-12/slides/slide-02.png', title: 'La dualité fonctionnelle du pancréas' },
-  { src: '/chapter-12/slides/slide-03.png', title: 'Un organe profond et vulnerable' },
-  { src: '/chapter-12/slides/slide-04.png', title: 'Morphologie anatomique' },
-  { src: '/chapter-12/slides/slide-05.png', title: 'Le réseau canalaire exocrine' },
-  { src: '/chapter-12/slides/slide-06.png', title: 'Un écosystème vasculaire partagé' },
-  { src: '/chapter-12/slides/slide-07.png', title: 'Innervation et commande neurovegetative' },
-  { src: '/chapter-12/slides/slide-08.png', title: 'Physiologie exocrine : la machine digestive' },
-  { src: '/chapter-12/slides/slide-09.png', title: 'Physiologie endocrine : l homéostasie glycémique' },
-  { src: '/chapter-12/slides/slide-10.png', title: 'Manifestations cliniques et diagnostics d exclusion' },
-  { src: '/chapter-12/slides/slide-11.png', title: 'Pathologies glycémiques : le spectre du diabète' },
-  { src: '/chapter-12/slides/slide-12.png', title: 'Pathologies severes : pancreatites et tumeurs' },
-  { src: '/chapter-12/slides/slide-14.png', title: 'Pancréas — relations viscéro-somatiques' },
-  { src: '/chapter-12/slides/slide-13.png', title: 'Synthèse viscéro-émotionnelle' },
-  { src: '/chapter-12/cartographie/figure-12-01.png', title: 'Cartographie : Pancréas — tête et col' },
-  { src: '/chapter-12/cartographie/figure-12-03.png', title: 'Cartographie : Pancréas — corps et queue' },
+  { src: '/chapter-12/FR/slides/slide-01.png', title: 'Le Pancréas' },
+  { src: '/chapter-12/FR/slides/slide-02.png', title: 'La dualité fonctionnelle du pancréas' },
+  { src: '/chapter-12/FR/slides/slide-03.png', title: 'Un organe profond et vulnerable' },
+  { src: '/chapter-12/FR/slides/slide-04.png', title: 'Morphologie anatomique' },
+  { src: '/chapter-12/FR/slides/slide-05.png', title: 'Le réseau canalaire exocrine' },
+  { src: '/chapter-12/FR/slides/slide-06.png', title: 'Un écosystème vasculaire partagé' },
+  { src: '/chapter-12/FR/slides/slide-07.png', title: 'Innervation et commande neurovegetative' },
+  { src: '/chapter-12/FR/slides/slide-08.png', title: 'Physiologie exocrine : la machine digestive' },
+  { src: '/chapter-12/FR/slides/slide-09.png', title: 'Physiologie endocrine : l homéostasie glycémique' },
+  { src: '/chapter-12/FR/slides/slide-10.png', title: 'Manifestations cliniques et diagnostics d exclusion' },
+  { src: '/chapter-12/FR/slides/slide-11.png', title: 'Pathologies glycémiques : le spectre du diabète' },
+  { src: '/chapter-12/FR/slides/slide-12.png', title: 'Pathologies severes : pancreatites et tumeurs' },
+  { src: '/chapter-12/FR/slides/slide-14.png', title: 'Pancréas — relations viscéro-somatiques' },
+  { src: '/chapter-12/FR/slides/slide-13.png', title: 'Synthèse viscéro-émotionnelle' },
+  { src: '/chapter-12/FR/cartographie/figure-12-01.png', title: 'Cartographie : Pancréas — tête et col' },
+  { src: '/chapter-12/FR/cartographie/figure-12-03.png', title: 'Cartographie : Pancréas — corps et queue' },
 ]
 
 export const chapter12SlideAnchors: SyncAnchor[] = [
