@@ -36,7 +36,7 @@ export const chapter5ReworkSlides: SyncSlide[] = [
   { src: '/chapter-5/FR/slides/slide-25.png', title: 'Niveau 4 : cible viscérale ou fonctionnelle et intégration' },
   { src: '/chapter-5/FR/slides/slide-26.png', title: 'Fibromyalgie et charge allostatique' },
   { src: '/chapter-5/FR/slides/slide-27.png', title: 'Vers la recherche : mesurer la cinétique de récupération' },
-  { src: '/chapter-5/FR/slides/cartographie-fr/slide-01.png', title: 'Cartographie ROP — zones occipitales' },
+  { src: '/chapter-5/FR/cartographies/slide-01.png', title: 'Cartographie ROP — zones occipitales' },
   { src: '/chapter-5/FR/slides/slide-28.png', title: 'Annexe 1 : réponse neurologique SAM' },
   { src: '/chapter-5/FR/slides/slide-29.png', title: 'Annexe 2 : axe hormonal HHS' },
 ]
