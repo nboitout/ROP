@@ -450,14 +450,6 @@ export const chapter2En: Chapter = {
       "title": "Post-treatment reactions and reassessment",
       "blocks": [
         {
-          "type": "figure",
-          "src": "/chapter-2/EN/figure-2-1.png",
-          "caption": "Figure 2.1 — Adaptation window after the first session. This curve represents a model derived from clinical experience. The vertical axis describes a clinical functional level rather than a measured physiological variable; the time course should be progressively documented using standardised measurements.",
-          "alt": "Adaptation window after the first ROP session",
-          "orientation": "landscape",
-          "syncHide": true
-        },
-        {
           "type": "sub",
           "text": "9.1. Immediate reactions"
         },
@@ -568,9 +560,4 @@ export const chapter2En: Chapter = {
     "label": "Slides",
     "description": "Visual summary of the chapter — technique, treatment arrangements, clinical sequence, safety, and indications for ROP."
   },
-  "revisionSheet": {
-    "src": "/chapter-2/Chap2 - Fiche de revision.png",
-    "alt": "Revision sheet — Chapter 2, Treatment by ROP.",
-    "caption": "Revision sheet — Chapter 2 · Treatment by ROP."
-  }
 }

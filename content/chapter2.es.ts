@@ -238,9 +238,4 @@ export const chapter2Es: Chapter = {
     label: 'Diapositivas',
     description: 'Síntesis visual del capítulo — técnica, modalidades, jerarquía del tratamiento e indicaciones de la R.O.P.',
   },
-  revisionSheet: {
-    src: '/chapter-2/Chap2 - Fiche de revision.png',
-    alt: 'Ficha de revisión — Capítulo 2, Tratamiento con R.O.P.',
-    caption: 'Ficha de revisión — Capítulo 2 · Tratamiento con R.O.P.',
-  },
 }

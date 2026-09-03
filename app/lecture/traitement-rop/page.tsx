@@ -8,16 +8,16 @@ import { getServerLang } from '@/app/i18n/serverLang'
 import { translations } from '@/app/i18n/translations'
 import type { Lang } from '@/app/i18n/translations'
 import {
-  chapter2Slides, chapter2SlidesEn, chapter2SlidesDe, chapter2SlidesEs, chapter2SlidesIt,
+  chapter2Slides, chapter2SlidesEn,
   chapter2SlideAnchors, chapter2SlideAnchorsEn, chapter2SlideAnchorsFr,
 } from '@/content/chapter2.slidesync'
 
 const DECKS: Record<Lang, typeof chapter2Slides> = {
   fr: chapter2Slides,
   en: chapter2SlidesEn,
-  de: chapter2SlidesDe,
-  es: chapter2SlidesEs,
-  it: chapter2SlidesIt,
+  de: chapter2Slides,
+  es: chapter2Slides,
+  it: chapter2Slides,
   pt: chapter2SlidesEn,
   th: chapter2SlidesEn,
 }
@@ -25,9 +25,9 @@ const DECKS: Record<Lang, typeof chapter2Slides> = {
 const ANCHORS: Record<Lang, typeof chapter2SlideAnchors> = {
   fr: chapter2SlideAnchorsFr,
   en: chapter2SlideAnchorsEn,
-  de: chapter2SlideAnchors,
-  es: chapter2SlideAnchors,
-  it: chapter2SlideAnchors,
+  de: chapter2SlideAnchorsFr,
+  es: chapter2SlideAnchorsFr,
+  it: chapter2SlideAnchorsFr,
   pt: chapter2SlideAnchors,
   th: chapter2SlideAnchors,
 }

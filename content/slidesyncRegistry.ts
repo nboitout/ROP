@@ -1,10 +1,7 @@
 import { chapter1Slides, chapter1SlidesEn, chapter1SlideAnchors, chapter1SlideAnchorsEn } from './chapter1.slidesync'
 import {
   chapter2Slides,
-  chapter2SlidesDe,
   chapter2SlidesEn,
-  chapter2SlidesEs,
-  chapter2SlidesIt,
   chapter2SlideAnchors,
   chapter2SlideAnchorsEn,
   chapter2SlideAnchorsFr,
@@ -121,9 +118,6 @@ const slideSearchSources: Record<string, readonly SlideSearchSource[]> = {
   'chapter-2': [
     { lang: 'fr', slides: chapter2Slides, anchors: chapter2SlideAnchorsFr },
     { lang: 'en', slides: chapter2SlidesEn, anchors: chapter2SlideAnchorsEn },
-    { lang: 'de', slides: chapter2SlidesDe, anchors: chapter2SlideAnchors },
-    { lang: 'es', slides: chapter2SlidesEs, anchors: chapter2SlideAnchors },
-    { lang: 'it', slides: chapter2SlidesIt, anchors: chapter2SlideAnchors },
   ],
   'chapter-3': [
     { lang: 'fr', slides: chapter3Slides, anchors: chapter3SlideAnchors },
