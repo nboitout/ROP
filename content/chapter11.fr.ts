@@ -1,4 +1,4 @@
-// Source: public/chapter-11/Chapitre_11_Foie_et_voies_biliaires_version_finale_revisee.docx
+// Source: public/chapter-11/FR/Chapitre_11_Foie_et_voies_biliaires_version_finale_revisee.docx
 import type { Chapter } from './types'
 
 export const chapter11Fr: Chapter = {
@@ -1279,7 +1279,7 @@ export const chapter11Fr: Chapter = {
     }
   ],
   "slides": {
-    "url": "/chapter-11/Chapter11 Slides de synthese - FR.pdf",
+    "url": "/chapter-11/FR/Chapter11 Slides de synthese - FR.pdf",
     "label": "Diaporama de synthèse",
     "description": "Repères visuels du chapitre 11 : foie, voies biliaires, vascularisation, lymphatique, zones réflexes et profils cliniques."
   }
@@ -1295,7 +1295,7 @@ const reflexFigure = (
   orientation: "landscape" | "portrait" = "landscape",
 ): ChapterBlock => ({
   type: "figure",
-  src: `/chapter-11/cartographie/figure-11-${n}.png`,
+  src: `/chapter-11/FR/cartographie/figure-11-${n}.png`,
   caption: `${kind} : ${title}`,
   alt,
   orientation,
@@ -1375,10 +1375,10 @@ chapter11Reflex.blocks = [
   { type: 'sub', text: '14.4. Niveau 3 — Régulation viscérale loco-régionale' },
   { type: 'para', text: 'Le Niveau 3 constitue le cœur anatomique du protocole hépatobiliaire. Il associe la zone propre du foie et des voies biliaires aux seules composantes régionales pertinentes.' },
   { type: 'para', text: 'Foie et attaches. Selon les tests : foie droit et gauche, face supérieure et face viscérale, capsule de Glisson, hile hépatique, ligament coronaire, ligaments triangulaires, ligament falciforme, petit omentum, ligament hépato-duodénal, ligament hépato-colique et ligament hépato-rénal.' },
-  { type: 'figure', src: '/chapter-11/cartographie/figure-11-03.png', caption: 'Photo : Foie — face inférieure et lobe droit', alt: 'Repère podal de la face inférieure et du lobe droit du foie', orientation: 'portrait' },
+  { type: 'figure', src: '/chapter-11/FR/cartographie/figure-11-03.png', caption: 'Photo : Foie — face inférieure et lobe droit', alt: 'Repère podal de la face inférieure et du lobe droit du foie', orientation: 'portrait' },
   { type: 'para', text: 'Voies biliaires. Vésicule biliaire, canal cystique, canal hépatique commun, cholédoque, sphincter d’Oddi et deuxième portion du duodénum.' },
-  { type: 'figure', src: '/chapter-11/cartographie/figure-11-04.png', caption: 'Photo : Vésicule biliaire', alt: 'Repère podal de la vésicule biliaire', orientation: 'portrait' },
-  { type: 'figure', src: '/chapter-11/cartographie/figure-11-05.png', caption: 'Photo : Voies biliaires', alt: 'Repère podal des voies biliaires', orientation: 'portrait' },
+  { type: 'figure', src: '/chapter-11/FR/cartographie/figure-11-04.png', caption: 'Photo : Vésicule biliaire', alt: 'Repère podal de la vésicule biliaire', orientation: 'portrait' },
+  { type: 'figure', src: '/chapter-11/FR/cartographie/figure-11-05.png', caption: 'Photo : Voies biliaires', alt: 'Repère podal des voies biliaires', orientation: 'portrait' },
   { type: 'para', text: 'Rapports viscéraux. Selon les tests : estomac, premier et deuxième duodénum, angle hépatique du côlon, rein droit, surrénale droite et diaphragme.' },
   { type: 'para', text: 'Système porte. La veine porte, le hile, le petit omentum et la circulation porto-hépatique peuvent être intégrés comme contexte régional vasculaire. La palpation réflexe ne constitue pas une mesure du débit portal.' },
   { type: 'xref', label: 'Voir le chapitre 7 — Socle régional abdominal et péritonéal', href: '/lecture/chapitre-7?lang=fr' },
@@ -1386,10 +1386,10 @@ chapter11Reflex.blocks = [
   { type: 'rop', body: ['Le Niveau 3 replace le foie et les voies biliaires dans leur environnement régional. Duodénum, côlon, rein ou estomac ne sont pas travaillés automatiquement.'] },
   { type: 'sub', text: '14.5. Niveau 4 — Intégration viscéro-somatique et Balance cerveau limbique-foie/vésicule biliaire' },
   { type: 'para', text: 'Versant viscéro-somatique. La lecture peut intégrer Th7-Th9, les 7e à 9e côtes, le nerf phrénique C3-C5, les territoires cervicaux et cervico-brachiaux associés, l’épaule droite, le diaphragme et la région thoracique inférieure droite. Pour la sphère hépatobiliaire, les projections phréniques sont décrites surtout à droite ; on évite une latéralisation trop catégorique.' },
-  { type: 'figure', src: '/chapter-11/cartographie/figure-11-07.png', caption: 'Photo : Nerf phrénique C3-C4-C5', alt: 'Repère podal du nerf phrénique', orientation: 'landscape' },
-  { type: 'figure', src: '/chapter-11/cartographie/figure-11-09.png', caption: 'Photo : Nerf phrénique — triangle de Sédillot', alt: 'Repère podal du nerf phrénique au triangle de Sédillot', orientation: 'landscape' },
+  { type: 'figure', src: '/chapter-11/FR/cartographie/figure-11-07.png', caption: 'Photo : Nerf phrénique C3-C4-C5', alt: 'Repère podal du nerf phrénique', orientation: 'landscape' },
+  { type: 'figure', src: '/chapter-11/FR/cartographie/figure-11-09.png', caption: 'Photo : Nerf phrénique — triangle de Sédillot', alt: 'Repère podal du nerf phrénique au triangle de Sédillot', orientation: 'landscape' },
   { type: 'para', text: 'Balance cerveau limbique-foie/vésicule biliaire. Dans le vocabulaire propre à la ROP, l’écoute-induction associe un pouce sur la zone foie/vésicule biliaire et l’autre sur la zone du cerveau limbique.' },
-  { type: 'figure', src: '/chapter-11/cartographie/figure-11-10.png', caption: 'Photo : Balance cerveau limbique — foie/vésicule biliaire', alt: 'Technique de balance cerveau limbique et foie-vésicule biliaire', orientation: 'portrait' },
+  { type: 'figure', src: '/chapter-11/FR/cartographie/figure-11-10.png', caption: 'Photo : Balance cerveau limbique — foie/vésicule biliaire', alt: 'Technique de balance cerveau limbique et foie-vésicule biliaire', orientation: 'portrait' },
   { type: 'para', text: 'Dans le cadre ROP, cette « balance » constitue une technique clinique d’intégration entre un repère viscéral et un repère central. Elle ne décrit pas une connexion anatomique directe entre le pied, le système limbique et le foie.' },
   { type: 'xref', label: 'Voir le chapitre 3 — Système nerveux central', href: '/lecture/chapitre-3-rework?lang=fr' },
   { type: 'xref', label: 'Voir le chapitre 5 — Mécanisme de stress', href: '/lecture/chapitre-5-rework?lang=fr' },
@@ -1530,24 +1530,24 @@ chapter11Reflex.blocks = [
     'Face supérieure et son versant antérieur : elle suit la courbure diaphragmatique. Il faut tenir compte de la différence de hauteur entre les deux hémi-coupoles à la face plantaire des deux pieds.',
     'Ligament triangulaire gauche : face plantaire du pied gauche, à l’aplomb du 3e orteil et à gauche du hiatus œsophagien, lui-même situé à l’aplomb des 1er et 2e orteils.',
   ] },
-  { type: 'figure', src: '/chapter-11/cartographie/figure-11-08.png', caption: 'Photo : Foie — lobe gauche', alt: 'Repère podal du lobe gauche du foie', orientation: 'landscape' },
+  { type: 'figure', src: '/chapter-11/FR/cartographie/figure-11-08.png', caption: 'Photo : Foie — lobe gauche', alt: 'Repère podal du lobe gauche du foie', orientation: 'landscape' },
   { type: 'bullets', items: [
     'Face inférieure : elle est facile à distinguer à la palpation car elle est plus dense que les organes avoisinants creux. Le repère suit une ligne oblique allant de la base du 5e métatarsien droit au bord médial du pied droit à hauteur de Th12. La ligne se prolonge jusqu’à l’hémi-coupole diaphragmatique gauche, qu’elle rejoint à l’aplomb du 3e métatarsien gauche.',
     'Faces antérieure et postérieure : elles correspondent à l’espace compris entre les lignes supérieure et inférieure.',
   ] },
-  { type: 'figure', src: '/chapter-11/cartographie/figure-11-12.png', caption: 'Photo : Foie — face inférieure et lobe droit', alt: 'Repère podal de la face inférieure et du lobe droit du foie', orientation: 'portrait' },
+  { type: 'figure', src: '/chapter-11/FR/cartographie/figure-11-12.png', caption: 'Photo : Foie — face inférieure et lobe droit', alt: 'Repère podal de la face inférieure et du lobe droit du foie', orientation: 'portrait' },
   { type: 'bullets', items: ['Vésicule biliaire : face inférieure du foie, à l’aplomb d’une ligne passant entre les 3e et 4e orteils droits.'] },
-  { type: 'figure', src: '/chapter-11/cartographie/figure-11-14.png', caption: 'Photo : Vésicule biliaire', alt: 'Repère podal de la vésicule biliaire sur le pouce gauche', orientation: 'portrait' },
+  { type: 'figure', src: '/chapter-11/FR/cartographie/figure-11-14.png', caption: 'Photo : Vésicule biliaire', alt: 'Repère podal de la vésicule biliaire sur le pouce gauche', orientation: 'portrait' },
   { type: 'bullets', items: ['Voies biliaires : une ligne oblique allant de la vésicule biliaire au sphincter d’Oddi, situé au tiers inférieur du deuxième duodénum.'] },
-  { type: 'figure', src: '/chapter-11/cartographie/figure-11-16.png', caption: 'Photo : Voies biliaires', alt: 'Repère podal des voies biliaires entre les deux pouces', orientation: 'portrait' },
+  { type: 'figure', src: '/chapter-11/FR/cartographie/figure-11-16.png', caption: 'Photo : Voies biliaires', alt: 'Repère podal des voies biliaires entre les deux pouces', orientation: 'portrait' },
   { type: 'xref', label: 'Voir le chapitre 7 — Socle régional abdominal et péritonéal', href: '/lecture/chapitre-7?lang=fr' },
   { type: 'xref', label: 'Voir le chapitre 10 — Duodénum', href: '/lecture/chapitre-10?lang=fr' },
   { type: 'sub', text: '14.4. Niveau 4 — Intégration viscéro-somatique et Balance cerveau limbique-foie/vésicule biliaire' },
   { type: 'para', text: 'Intégration viscéro-somatique. La lecture peut intégrer Th7-Th9, les 7e à 9e côtes, le nerf phrénique C3-C5, les territoires cervicaux et cervico-brachiaux associés, l’épaule droite, le diaphragme et la région thoracique inférieure droite. Pour la sphère hépatobiliaire, les projections phréniques sont décrites surtout à droite.' },
-  { type: 'figure', src: '/chapter-11/cartographie/figure-11-18.png', caption: 'Photo : Nerf phrénique C3-C4-C5', alt: 'Repère podal du nerf phrénique C3 C4 C5', orientation: 'landscape' },
-  { type: 'figure', src: '/chapter-11/cartographie/figure-11-20.png', caption: 'Photo : Nerf phrénique — triangle de Sédillot', alt: 'Repère podal du nerf phrénique dans le triangle de Sédillot', orientation: 'landscape' },
+  { type: 'figure', src: '/chapter-11/FR/cartographie/figure-11-18.png', caption: 'Photo : Nerf phrénique C3-C4-C5', alt: 'Repère podal du nerf phrénique C3 C4 C5', orientation: 'landscape' },
+  { type: 'figure', src: '/chapter-11/FR/cartographie/figure-11-20.png', caption: 'Photo : Nerf phrénique — triangle de Sédillot', alt: 'Repère podal du nerf phrénique dans le triangle de Sédillot', orientation: 'landscape' },
   { type: 'para', text: 'Balance cerveau limbique-foie/vésicule biliaire. Dans le vocabulaire propre à la ROP, l’écoute-induction associe un pouce sur la zone foie/vésicule biliaire et l’autre sur la zone du cerveau limbique.' },
-  { type: 'figure', src: '/chapter-11/cartographie/figure-11-22.png', caption: 'Photo : Balance cerveau limbique — foie/vésicule biliaire', alt: 'Technique balance cerveau limbique foie-vésicule biliaire', orientation: 'portrait' },
+  { type: 'figure', src: '/chapter-11/FR/cartographie/figure-11-22.png', caption: 'Photo : Balance cerveau limbique — foie/vésicule biliaire', alt: 'Technique balance cerveau limbique foie-vésicule biliaire', orientation: 'portrait' },
   { type: 'xref', label: 'Voir le chapitre 3 — Système nerveux central', href: '/lecture/chapitre-3?lang=fr' },
   { type: 'xref', label: 'Voir le chapitre 5 — Mécanisme de stress', href: '/lecture/chapitre-5?lang=fr' },
 ]

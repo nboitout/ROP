@@ -2,31 +2,31 @@
 // experience (/lecture/chapitre-10).
 //
 // Slide images are the pre-rendered pages of the chapter 10 synthesis deck,
-// stored under public/chapter-10/slides/.
+// stored under public/chapter-10/FR/slides/.
 
 export type SyncSlide = { src: string; title: string; orientation?: 'portrait' }
 export type SyncAnchorPoint = { sectionId: string; blockIndex: number; itemIndex?: number }
 export type SyncAnchor = SyncAnchorPoint & { slide: number | number[]; gapBefore?: 'half'; end?: SyncAnchorPoint }
 
 export const chapter10Slides: SyncSlide[] = [
-  { src: '/chapter-10/slides/slide-01.png', title: 'Chapitre 10 : Duodenum' },
-  { src: '/chapter-10/slides/slide-02.png', title: 'Le carrefour visceral de l abdomen' },
-  { src: '/chapter-10/slides/slide-03.png', title: 'Les quatre segments du duodenum' },
-  { src: '/chapter-10/slides/slide-04.png', title: 'D2 et les papilles duodenales' },
-  { src: '/chapter-10/slides/slide-05.png', title: 'Muscle de Treitz et dynamique de vidange' },
-  { src: '/chapter-10/slides/slide-06.png', title: 'Cartographie palpatoire : quadrilatere de Rogie' },
-  { src: '/chapter-10/slides/slide-07.png', title: 'Vascularisation artérielle et veineuse' },
-  { src: '/chapter-10/slides/slide-08.png', title: 'Réseau neurologique et autonomie' },
-  { src: '/chapter-10/slides/slide-09.png', title: 'Dynamique secretoire et biochimique' },
-  { src: '/chapter-10/slides/slide-10.png', title: 'Régulation et hydrolyse' },
-  { src: '/chapter-10/slides/slide-11.png', title: 'Grille de lecture pathologique' },
-  { src: '/chapter-10/slides/slide-12.png', title: 'Conflit mécanique de D4' },
-  { src: '/chapter-10/slides/slide-14.png', title: 'Protocole clinique ROP en 4 niveaux — Duodénum' },
-  { src: '/chapter-10/slides/slide-13.png', title: 'Objectifs thérapeutiques en ROP' },
-  { src: '/chapter-10/cartographie/figure-10-cartographie-duodenum-d1-d3.png', title: 'Cartographie : duodénum D1, D2 et D3' },
-  { src: '/chapter-10/cartographie/figure-10-cartographie-sphincter-oddi.png', title: 'Cartographie : sphincter d’Oddi' },
-  { src: '/chapter-10/cartographie/figure-10-cartographie-duodenum-d4-hiatus-oesophagien.png', title: 'Cartographie : duodénum D4' },
-  { src: '/chapter-10/cartographie/figure-10-cartographie-jonction-duodeno-jejunale.png', title: 'Cartographie : jonction duodéno-jéjunale' },
+  { src: '/chapter-10/FR/slides/slide-01.png', title: 'Chapitre 10 : Duodenum' },
+  { src: '/chapter-10/FR/slides/slide-02.png', title: 'Le carrefour visceral de l abdomen' },
+  { src: '/chapter-10/FR/slides/slide-03.png', title: 'Les quatre segments du duodenum' },
+  { src: '/chapter-10/FR/slides/slide-04.png', title: 'D2 et les papilles duodenales' },
+  { src: '/chapter-10/FR/slides/slide-05.png', title: 'Muscle de Treitz et dynamique de vidange' },
+  { src: '/chapter-10/FR/slides/slide-06.png', title: 'Cartographie palpatoire : quadrilatere de Rogie' },
+  { src: '/chapter-10/FR/slides/slide-07.png', title: 'Vascularisation artérielle et veineuse' },
+  { src: '/chapter-10/FR/slides/slide-08.png', title: 'Réseau neurologique et autonomie' },
+  { src: '/chapter-10/FR/slides/slide-09.png', title: 'Dynamique secretoire et biochimique' },
+  { src: '/chapter-10/FR/slides/slide-10.png', title: 'Régulation et hydrolyse' },
+  { src: '/chapter-10/FR/slides/slide-11.png', title: 'Grille de lecture pathologique' },
+  { src: '/chapter-10/FR/slides/slide-12.png', title: 'Conflit mécanique de D4' },
+  { src: '/chapter-10/FR/slides/slide-14.png', title: 'Protocole clinique ROP en 4 niveaux — Duodénum' },
+  { src: '/chapter-10/FR/slides/slide-13.png', title: 'Objectifs thérapeutiques en ROP' },
+  { src: '/chapter-10/FR/cartographie/figure-10-cartographie-duodenum-d1-d3.png', title: 'Cartographie : duodénum D1, D2 et D3' },
+  { src: '/chapter-10/FR/cartographie/figure-10-cartographie-sphincter-oddi.png', title: 'Cartographie : sphincter d’Oddi' },
+  { src: '/chapter-10/FR/cartographie/figure-10-cartographie-duodenum-d4-hiatus-oesophagien.png', title: 'Cartographie : duodénum D4' },
+  { src: '/chapter-10/FR/cartographie/figure-10-cartographie-jonction-duodeno-jejunale.png', title: 'Cartographie : jonction duodéno-jéjunale' },
 ]
 
 export const chapter10SlideAnchors: SyncAnchor[] = [
