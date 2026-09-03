@@ -1,7 +1,7 @@
 // Chapter 14 — slide ↔ text synchronisation map for the combined reading
 // experience (/lecture/chapitre-14).
 //
-// Slide images are the pre-rendered pages of public/chapter-14/synthese.pdf.
+// Slide images are the published French and English synthesis decks.
 // Each slide of the synthesis deck is anchored to the passage of the text it
 // best illustrates. The deck is a thematic synthesis, so a few slides do not
 // follow the strict linear order of the chapter (e.g. the emotional-profile
@@ -20,144 +20,60 @@ export type SyncAnchor = SyncAnchorPoint & { slide: number; gapBefore?: 'half'; 
 // pathology slides remain in place until their dedicated update, followed by
 // the supplementary reflex-zone figure-slides.
 // Because the FR PDF was reorganised independently of EN/DE/ES/IT, the French
-// deck uses its own anchor table (chapter14SlideAnchorsFr); the other four
-// languages still share chapter14SlideAnchors until their PDFs are updated too.
+// deck uses its own anchor table (chapter14SlideAnchorsFr); English uses the
+// original anchor table.
 export const chapter14Slides: SyncSlide[] = [
-  { src: '/chapter-14/slides/fr-rework/slide-01.png', title: 'L’intestin grêle' },
-  { src: '/chapter-14/slides/fr-rework/slide-02.png', title: 'Le jéjunum-iléum dans le cadre colique' },
-  { src: '/chapter-14/slides/fr-rework/slide-03.png', title: 'Le mésentère : racine et suspension de l’intestin grêle' },
-  { src: '/chapter-14/slides/fr-rework/slide-04.png', title: 'Vascularisation de l’intestin grêle' },
-  { src: '/chapter-14/slides/fr-rework/slide-05.png', title: 'Le réseau lymphatique de l’intestin grêle' },
-  { src: '/chapter-14/slides/fr-rework/slide-06.png', title: 'La double innervation du péritoine' },
-  { src: '/chapter-14/slides/fr-rework/slide-07.png', title: 'Nerf vague et système sympathique' },
-  { src: '/chapter-14/slides/fr-rework/slide-08.png', title: 'Le deuxième cerveau : système nerveux entérique (SNE)' },
-  { src: '/chapter-14/slides/fr-rework/slide-09.png', title: 'Motricité de l’intestin grêle' },
-  { src: '/chapter-14/slides/fr-rework/slide-10.png', title: 'L’écosystème intestinal : frontière biologique' },
-  { src: '/chapter-14/slides/fr-rework/slide-11.png', title: 'La double voie d’absorption micronutritionnelle' },
-  { src: '/chapter-14/slides/fr-rework/slide-12.png', title: 'Micro-anatomie : la barrière intestinale' },
-  { src: '/chapter-14/slides/fr-rework/slide-13.png', title: 'Hyperperméabilité et dysbiose : une association réciproque' },
-  { src: '/chapter-14/slides/fr-rework/slide-14.png', title: 'Hyperperméabilité intestinale' },
-  { src: '/chapter-14/slides/fr-rework/slide-15.png', title: 'La dysbiose et l’axe intestin-cerveau' },
-  { src: '/chapter-14/slides/fr-rework/slide-16.png', title: 'Indications en ROP et critères d’orientation médicale' },
-  { src: '/chapter-14/slides/fr-rework/slide-17.png', title: 'Maladie de Crohn' },
-  { src: '/chapter-14/slides/fr-rework/slide-18.png', title: 'Intestin grêle — relations viscéro-somatiques' },
-  { src: '/chapter-14/slides/fr-rework/slide-21.png', title: 'Protocole clinique ROP : l’intestin grêle' },
-  { src: '/chapter-14/cartographie/figure-14-01.png', title: 'Cartographie : Racine du mésentère — jonction duodéno-jéjunale à ombilic' },
-  { src: '/chapter-14/cartographie/figure-14-03.png', title: 'Cartographie : Racine du mésentère — valvule iléo-cæcale à ombilic' },
-  { src: '/chapter-14/cartographie/figure-14-05.png', title: 'Cartographie : Jéjunum' },
-  { src: '/chapter-14/slides/fr-rework/slide-20.png', title: 'Relations viscéro-émotionnelles' },
+  { src: '/chapter-14/FR/slides/slide-01.png', title: 'L’intestin grêle' },
+  { src: '/chapter-14/FR/slides/slide-02.png', title: 'Le jéjunum-iléum dans le cadre colique' },
+  { src: '/chapter-14/FR/slides/slide-03.png', title: 'Le mésentère : racine et suspension de l’intestin grêle' },
+  { src: '/chapter-14/FR/slides/slide-04.png', title: 'Vascularisation de l’intestin grêle' },
+  { src: '/chapter-14/FR/slides/slide-05.png', title: 'Le réseau lymphatique de l’intestin grêle' },
+  { src: '/chapter-14/FR/slides/slide-06.png', title: 'La double innervation du péritoine' },
+  { src: '/chapter-14/FR/slides/slide-07.png', title: 'Nerf vague et système sympathique' },
+  { src: '/chapter-14/FR/slides/slide-08.png', title: 'Le deuxième cerveau : système nerveux entérique (SNE)' },
+  { src: '/chapter-14/FR/slides/slide-09.png', title: 'Motricité de l’intestin grêle' },
+  { src: '/chapter-14/FR/slides/slide-10.png', title: 'L’écosystème intestinal : frontière biologique' },
+  { src: '/chapter-14/FR/slides/slide-11.png', title: 'La double voie d’absorption micronutritionnelle' },
+  { src: '/chapter-14/FR/slides/slide-12.png', title: 'Micro-anatomie : la barrière intestinale' },
+  { src: '/chapter-14/FR/slides/slide-13.png', title: 'Hyperperméabilité et dysbiose : une association réciproque' },
+  { src: '/chapter-14/FR/slides/slide-14.png', title: 'Hyperperméabilité intestinale' },
+  { src: '/chapter-14/FR/slides/slide-15.png', title: 'La dysbiose et l’axe intestin-cerveau' },
+  { src: '/chapter-14/FR/slides/slide-16.png', title: 'Indications en ROP et critères d’orientation médicale' },
+  { src: '/chapter-14/FR/slides/slide-17.png', title: 'Maladie de Crohn' },
+  { src: '/chapter-14/FR/slides/slide-18.png', title: 'Intestin grêle — relations viscéro-somatiques' },
+  { src: '/chapter-14/FR/slides/slide-21.png', title: 'Protocole clinique ROP : l’intestin grêle' },
+  { src: '/chapter-14/FR/cartographie/figure-14-01.png', title: 'Cartographie : Racine du mésentère — jonction duodéno-jéjunale à ombilic' },
+  { src: '/chapter-14/FR/cartographie/figure-14-03.png', title: 'Cartographie : Racine du mésentère — valvule iléo-cæcale à ombilic' },
+  { src: '/chapter-14/FR/cartographie/figure-14-05.png', title: 'Cartographie : Jéjunum' },
+  { src: '/chapter-14/FR/slides/slide-20.png', title: 'Relations viscéro-émotionnelles' },
 ]
 
 // English deck — same slides, translated. The text↔slide anchors are shared
 // (chapter14SlideAnchors): the EN content mirrors the FR block structure.
 export const chapter14SlidesEn: SyncSlide[] = [
-  { src: '/chapter-14/slides/en/slide-01.jpg', title: 'The small intestine: anatomy, ecosystem and ROP approach' },
-  { src: '/chapter-14/slides/en/slide-02.jpg', title: 'Topography and intra-abdominal arrangement' },
-  { src: '/chapter-14/en/figure-14-2.png', title: 'Mesos', orientation: 'portrait' },
-  { src: '/chapter-14/en/figure-14-4.png', title: 'Suspensory muscle of the duodenum (muscle of Treitz)' },
-  { src: '/chapter-14/en/figure-14-5.png', title: 'The axis of irrigation and drainage: superior mesenteric trunk', orientation: 'portrait' },
-  { src: '/chapter-14/slides/en/slide-05.jpg', title: 'The double neurological reality of the peritoneum' },
-  { src: '/chapter-14/slides/en/slide-06.jpg', title: 'The second brain: autonomy of the enteric nervous system' },
-  { src: '/chapter-14/slides/en/slide-07.jpg', title: 'The second brain: enteric nervous system' },
-  { src: '/chapter-14/slides/en/slide-08.jpg', title: 'The intestinal ecosystem: the tripod of digestive health' },
-  { src: '/chapter-14/slides/en/slide-09.jpg', title: 'The dual pathway of micronutrient absorption' },
-  { src: '/chapter-14/slides/en/slide-10.jpg', title: 'The spiral: dysbiosis and hyperpermeability' },
-  { src: '/chapter-14/slides/en/slide-11.jpg', title: 'Pathology I: intestinal hyperpermeability (leaky gut)' },
-  { src: '/chapter-14/slides/en/slide-12.jpg', title: 'Pathology II: dysbiosis and its manifestations' },
-  { src: '/chapter-14/slides/en/slide-13.jpg', title: 'Warning signs and diagnosis of exclusion' },
-  { src: '/chapter-14/slides/en/Chapter14 FigCrohn EN.png', title: 'Clinical case — Crohn’s disease and spondyloarthritis' },
-  { src: '/chapter-14/slides/en/slide-14.jpg', title: 'ROP treatment protocol: order of management' },
-  { src: '/chapter-14/en/figure-14-15 EN.png', title: 'Cranial and cervical territory of the vagus nerve' },
-  { src: '/chapter-14/en/figure-14-16.png', title: 'Left abdominal territory of the vagus nerve and coeliac (solar) plexus' },
-  { src: '/chapter-14/en/Chapter14 Fig19 EN.png', title: 'Sympathetic system (spinal origin)' },
-  { src: '/chapter-14/en/figure-14-25.png', title: 'Jejunum (foot reflex zone)' },
-  { src: '/chapter-14/en/figure-14-27.png', title: 'Ileum and root of the mesentery (foot reflex zone)' },
-  { src: '/chapter-14/slides/en/slide-15.jpg', title: 'ROP intervention summary: small intestine protocol' },
-  { src: '/chapter-14/slides/en/slide-16.jpg', title: 'Viscero-emotional profile: the intestine person' },
-]
-
-// German deck — same slides, translated. Anchors are shared.
-// (Deck note: slide 10's inner labels are still in English in the source PDF.)
-export const chapter14SlidesDe: SyncSlide[] = [
-  { src: '/chapter-14/slides/de/slide-01.jpg', title: 'Der Dünndarm: Anatomie, Ökosystem und ROP-Ansatz' },
-  { src: '/chapter-14/slides/de/slide-02.jpg', title: 'Topographie und intraabdominale Anordnung' },
-  { src: '/chapter-14/ge/Chapter14 Fig2 GE.png', title: 'Mesos', orientation: 'portrait' },
-  { src: '/chapter-14/ge/Chapter14 Fig4 GE.png', title: 'Treitz-Muskel' },
-  { src: '/chapter-14/ge/Chapter14 Fig5 GE.png', title: 'Die Achse der Versorgung und des Abflusses: oberer Mesenterialstamm', orientation: 'portrait' },
-  { src: '/chapter-14/slides/de/slide-05.jpg', title: 'Die doppelte neurologische Realität des Peritoneums' },
-  { src: '/chapter-14/slides/de/slide-06.jpg', title: 'Das zweite Gehirn: Autonomie des enterischen Nervensystems (ENS)' },
-  { src: '/chapter-14/slides/de/slide-07.jpg', title: 'Das „zweite Gehirn“: enterisches Nervensystem' },
-  { src: '/chapter-14/slides/de/slide-08.jpg', title: 'Das intestinale Ökosystem: das Dreibein der Verdauungsgesundheit' },
-  { src: '/chapter-14/slides/de/slide-09.jpg', title: 'Der doppelte Weg der Mikronährstoffabsorption' },
-  { src: '/chapter-14/slides/de/slide-10.jpg', title: 'Die Spirale: Dysbiose und Hyperpermeabilität' },
-  { src: '/chapter-14/slides/de/slide-11.jpg', title: 'Pathologie I: erhöhte intestinale Permeabilität (Leaky Gut)' },
-  { src: '/chapter-14/slides/de/slide-12.jpg', title: 'Pathologie II: die Dysbiose und ihre Manifestationen' },
-  { src: '/chapter-14/slides/de/slide-13.jpg', title: 'Warnzeichen und Ausschlussdiagnostik' },
-  { src: '/chapter-14/slides/de/Chapter14 FigCrohn GE.png', title: 'Klinischer Fall — Morbus Crohn und Spondyloarthritis' },
-  { src: '/chapter-14/slides/de/slide-14.jpg', title: 'ROP-Behandlungsprotokoll: Reihenfolge der Behandlung' },
-  { src: '/chapter-14/ge/figure-14-15 GE.png', title: 'Kranialer und zervikaler Bereich des Vagusnervs' },
-  { src: '/chapter-14/ge/Chapter14 Fig16 GE.png', title: 'Linker abdominaler Bereich des Vagusnervs und Plexus coeliacus (Solarplexus)' },
-  { src: '/chapter-14/ge/Chapter14 Fig19 GE.png', title: 'Sympathisches System (spinaler Ursprung)' },
-  { src: '/chapter-14/ge/Chapter14 Fig25 GE.png', title: 'Jejunum (podale Reflexzone)' },
-  { src: '/chapter-14/ge/Chapter14 Fig27 GE.png', title: 'Ileum und Mesenterialwurzel (podale Reflexzone)' },
-  { src: '/chapter-14/slides/de/slide-15.jpg', title: 'Synthese der ROP-Intervention: Dünndarm-Protokoll' },
-  { src: '/chapter-14/slides/de/slide-16.jpg', title: 'Viszero-emotionales Profil: die Person mit ROP' },
-]
-
-// Spanish deck — same slides, translated. Anchors are shared.
-export const chapter14SlidesEs: SyncSlide[] = [
-  { src: '/chapter-14/slides/es/slide-01.jpg', title: 'El intestino delgado: anatomía, ecosistema y enfoque ROP' },
-  { src: '/chapter-14/slides/es/slide-02.jpg', title: 'Topografía y disposición intraabdominal' },
-  { src: '/chapter-14/es/Chapter14 Fig2 ES.png', title: 'Mesos', orientation: 'portrait' },
-  { src: '/chapter-14/es/Chapter14 Fig4 ES.png', title: 'Músculo de Treitz' },
-  { src: '/chapter-14/es/Chapter14 Fig5 ES.png', title: 'El eje de la irrigación y el drenaje: tronco mesentérico superior', orientation: 'portrait' },
-  { src: '/chapter-14/slides/es/slide-05.jpg', title: 'La doble realidad neurológica del peritoneo' },
-  { src: '/chapter-14/slides/es/slide-06.jpg', title: 'El segundo cerebro: autonomía del sistema nervioso entérico (SNE)' },
-  { src: '/chapter-14/slides/es/slide-07.jpg', title: 'El segundo cerebro: sistema nervioso entérico' },
-  { src: '/chapter-14/slides/es/slide-08.jpg', title: 'El ecosistema intestinal: el trípode de la salud digestiva' },
-  { src: '/chapter-14/slides/es/slide-09.jpg', title: 'La doble vía de absorción de micronutrientes' },
-  { src: '/chapter-14/slides/es/slide-10.jpg', title: 'La espiral: disbiosis e hiperpermeabilidad' },
-  { src: '/chapter-14/slides/es/slide-11.jpg', title: 'Patología I: hiperpermeabilidad intestinal (leaky gut)' },
-  { src: '/chapter-14/slides/es/slide-12.jpg', title: 'Patología II: la disbiosis y sus manifestaciones' },
-  { src: '/chapter-14/slides/es/slide-13.jpg', title: 'Signos de alerta y diagnóstico de exclusión' },
-  { src: '/chapter-14/slides/es/Chapter14 FigCrohn ES.png', title: 'Caso clínico — enfermedad de Crohn y espondiloartritis' },
-  { src: '/chapter-14/slides/es/slide-14.jpg', title: 'Protocolo de tratamiento ROP: orden de tratamiento' },
-  { src: '/chapter-14/es/figure-14-15 ES.png', title: 'Territorio craneal y cervical del nervio vago' },
-  { src: '/chapter-14/es/Chapter14 Fig16 ES.png', title: 'Territorio abdominal izquierdo del nervio vago y plexo celíaco (solar)' },
-  { src: '/chapter-14/es/Chapter14 Fig19 ES.png', title: 'Sistema simpático (origen medular)' },
-  { src: '/chapter-14/figure-14-25.png', title: 'Yeyuno (zona refleja podal)' },
-  { src: '/chapter-14/figure-14-27.png', title: 'Íleon y raíz del mesenterio (zona refleja podal)' },
-  { src: '/chapter-14/slides/es/slide-15.jpg', title: 'Síntesis de intervención ROP: protocolo intestino delgado' },
-  { src: '/chapter-14/slides/es/slide-16.jpg', title: 'Perfil viscero-emocional: la persona intestino' },
-]
-
-// Italian deck — same slides, translated. Anchors are shared.
-// (Deck note: the source PDF says "intestino crasso" (large intestine) where it
-// should read "intestino tenue" (small intestine) — titles mirror the deck.)
-export const chapter14SlidesIt: SyncSlide[] = [
-  { src: '/chapter-14/slides/it/slide-01.jpg', title: 'L’intestino crasso: anatomia, ecosistema e approccio ROP' },
-  { src: '/chapter-14/slides/it/slide-02.jpg', title: 'Topografia e disposizione intra-addominale' },
-  { src: '/chapter-14/it/Chapter14 Fig2 IT.png', title: 'Mesos', orientation: 'portrait' },
-  { src: '/chapter-14/it/Chapter14 Fig4 IT.png', title: 'Muscolo di Treitz' },
-  { src: '/chapter-14/it/Chapter14 Fig5 IT.png', title: 'L’asse dell’irrigazione e del drenaggio: tronco mesenterico superiore', orientation: 'portrait' },
-  { src: '/chapter-14/slides/it/slide-05.jpg', title: 'La doppia realtà neurologica del peritoneo' },
-  { src: '/chapter-14/slides/it/slide-06.jpg', title: 'Il secondo cervello: autonomia del sistema nervoso enterico (SNE)' },
-  { src: '/chapter-14/slides/it/slide-07.jpg', title: 'Il secondo cervello: sistema nervoso enterico' },
-  { src: '/chapter-14/slides/it/slide-08.jpg', title: 'L’ecosistema intestinale: il treppiede della salute digestiva' },
-  { src: '/chapter-14/slides/it/slide-09.jpg', title: 'La doppia via di assorbimento dei micronutrienti' },
-  { src: '/chapter-14/slides/it/slide-10.jpg', title: 'La spirale: disbiosi e iperpermeabilità' },
-  { src: '/chapter-14/slides/it/slide-11.jpg', title: 'Patologia I: iperpermeabilità intestinale (leaky gut)' },
-  { src: '/chapter-14/slides/it/slide-12.jpg', title: 'Patologia II: la disbiosi e le sue manifestazioni' },
-  { src: '/chapter-14/slides/it/slide-13.jpg', title: 'Segnali d’allarme e diagnosi di esclusione' },
-  { src: '/chapter-14/slides/it/Chapter14 FigCrohn IT.png', title: 'Caso clinico — malattia di Crohn e spondiloartrite' },
-  { src: '/chapter-14/slides/it/slide-14.jpg', title: 'Protocollo di trattamento ROP: ordine di trattamento' },
-  { src: '/chapter-14/it/figure-14-15 IT.png', title: 'Territorio cranico e cervicale del nervo vago' },
-  { src: '/chapter-14/it/Chapter14 Fig16 IT.png', title: 'Territorio addominale sinistro del nervo vago e plesso celiaco (solare)' },
-  { src: '/chapter-14/it/Chapter14 Fig19 IT.png', title: 'Sistema simpatico (origine midollare)' },
-  { src: '/chapter-14/it/Chapter14 Fig25 IT.png', title: 'Digiuno (zona riflessa podalica)' },
-  { src: '/chapter-14/it/Chapter14 Fig27 IT.png', title: 'Ileo e radice del mesentere (zona riflessa podalica)' },
-  { src: '/chapter-14/slides/it/slide-15.jpg', title: 'Sintesi dell’intervento ROP: protocollo intestino tenue' },
-  { src: '/chapter-14/slides/it/slide-16.jpg', title: 'Profilo viscerale-emotivo: la persona con ROP' },
+  { src: '/chapter-14/EN/slides/slide-01.jpg', title: 'The small intestine: anatomy, ecosystem and ROP approach' },
+  { src: '/chapter-14/EN/slides/slide-02.jpg', title: 'Topography and intra-abdominal arrangement' },
+  { src: '/chapter-14/EN/figure-14-2.png', title: 'Mesos', orientation: 'portrait' },
+  { src: '/chapter-14/EN/figure-14-4.png', title: 'Suspensory muscle of the duodenum (muscle of Treitz)' },
+  { src: '/chapter-14/EN/figure-14-5.png', title: 'The axis of irrigation and drainage: superior mesenteric trunk', orientation: 'portrait' },
+  { src: '/chapter-14/EN/slides/slide-05.jpg', title: 'The double neurological reality of the peritoneum' },
+  { src: '/chapter-14/EN/slides/slide-06.jpg', title: 'The second brain: autonomy of the enteric nervous system' },
+  { src: '/chapter-14/EN/slides/slide-07.jpg', title: 'The second brain: enteric nervous system' },
+  { src: '/chapter-14/EN/slides/slide-08.jpg', title: 'The intestinal ecosystem: the tripod of digestive health' },
+  { src: '/chapter-14/EN/slides/slide-09.jpg', title: 'The dual pathway of micronutrient absorption' },
+  { src: '/chapter-14/EN/slides/slide-10.jpg', title: 'The spiral: dysbiosis and hyperpermeability' },
+  { src: '/chapter-14/EN/slides/slide-11.jpg', title: 'Pathology I: intestinal hyperpermeability (leaky gut)' },
+  { src: '/chapter-14/EN/slides/slide-12.jpg', title: 'Pathology II: dysbiosis and its manifestations' },
+  { src: '/chapter-14/EN/slides/slide-13.jpg', title: 'Warning signs and diagnosis of exclusion' },
+  { src: '/chapter-14/EN/slides/Chapter14 FigCrohn EN.png', title: 'Clinical case — Crohn’s disease and spondyloarthritis' },
+  { src: '/chapter-14/EN/slides/slide-14.jpg', title: 'ROP treatment protocol: order of management' },
+  { src: '/chapter-14/EN/figure-14-15 EN.png', title: 'Cranial and cervical territory of the vagus nerve' },
+  { src: '/chapter-14/EN/figure-14-16.png', title: 'Left abdominal territory of the vagus nerve and coeliac (solar) plexus' },
+  { src: '/chapter-14/EN/Chapter14 Fig19 EN.png', title: 'Sympathetic system (spinal origin)' },
+  { src: '/chapter-14/EN/figure-14-25.png', title: 'Jejunum (foot reflex zone)' },
+  { src: '/chapter-14/EN/figure-14-27.png', title: 'Ileum and root of the mesentery (foot reflex zone)' },
+  { src: '/chapter-14/EN/slides/slide-15.jpg', title: 'ROP intervention summary: small intestine protocol' },
+  { src: '/chapter-14/EN/slides/slide-16.jpg', title: 'Viscero-emotional profile: the intestine person' },
 ]
 
 export const chapter14SlideAnchors: SyncAnchor[] = [

@@ -11,26 +11,23 @@ import type { Lang } from '@/app/i18n/translations'
 // content copy (content/prototype/*), its own tracking slug
 // ('chapter-14-prototype'), and is reachable only from the admin "Research"
 // menu. Editing the book's chapter 14 does not affect it.
-import { chapter14Fr } from '@/content/prototype/chapter14.fr'
-import { chapter14En } from '@/content/prototype/chapter14.en'
-import { chapter14De } from '@/content/prototype/chapter14.de'
-import { chapter14Es } from '@/content/prototype/chapter14.es'
-import { chapter14It } from '@/content/prototype/chapter14.it'
+import { chapter14Fr } from '@/content/chapter14.fr'
+import { chapter14En } from '@/content/chapter14.en'
 import {
-  chapter14Slides, chapter14SlidesEn, chapter14SlidesDe, chapter14SlidesEs, chapter14SlidesIt,
+  chapter14Slides, chapter14SlidesEn,
   chapter14SlideAnchors, chapter14SlideAnchorsFr,
-} from '@/content/prototype/chapter14.slidesync'
+} from '@/content/chapter14.slidesync'
 
 const CHAPTERS: Record<Lang, typeof chapter14Fr> = {
-  fr: chapter14Fr, en: chapter14En, de: chapter14De, es: chapter14Es, it: chapter14It, pt: chapter14En, th: chapter14En,
+  fr: chapter14Fr, en: chapter14En, de: chapter14Fr, es: chapter14Fr, it: chapter14Fr, pt: chapter14Fr, th: chapter14Fr,
 }
 const DECKS: Record<Lang, typeof chapter14Slides> = {
-  fr: chapter14Slides, en: chapter14SlidesEn, de: chapter14SlidesDe, es: chapter14SlidesEs, it: chapter14SlidesIt, pt: chapter14SlidesEn, th: chapter14SlidesEn,
+  fr: chapter14Slides, en: chapter14SlidesEn, de: chapter14Slides, es: chapter14Slides, it: chapter14Slides, pt: chapter14Slides, th: chapter14Slides,
 }
 const ANCHORS: Record<Lang, typeof chapter14SlideAnchors> = {
   fr: chapter14SlideAnchorsFr,
-  en: chapter14SlideAnchors, de: chapter14SlideAnchors,
-  es: chapter14SlideAnchors, it: chapter14SlideAnchors, pt: chapter14SlideAnchors, th: chapter14SlideAnchors,
+  en: chapter14SlideAnchors, de: chapter14SlideAnchorsFr,
+  es: chapter14SlideAnchorsFr, it: chapter14SlideAnchorsFr, pt: chapter14SlideAnchorsFr, th: chapter14SlideAnchorsFr,
 }
 
 export const metadata: Metadata = {

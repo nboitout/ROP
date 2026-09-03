@@ -8,21 +8,21 @@ import { getServerLang } from '@/app/i18n/serverLang'
 import { translations } from '@/app/i18n/translations'
 import type { Lang } from '@/app/i18n/translations'
 import {
-  chapter14Slides, chapter14SlidesEn, chapter14SlidesDe, chapter14SlidesEs, chapter14SlidesIt,
+  chapter14Slides, chapter14SlidesEn,
   chapter14SlideAnchors, chapter14SlideAnchorsFr,
 } from '@/content/chapter14.slidesync'
 
-// Synthesis deck per language (all five available for chapter 14).
+// Chapter 14 is maintained in French and English; unsupported locales use French.
 const DECKS: Record<Lang, typeof chapter14Slides> = {
-  fr: chapter14Slides, en: chapter14SlidesEn, de: chapter14SlidesDe, es: chapter14SlidesEs, it: chapter14SlidesIt, pt: chapter14SlidesEn, th: chapter14SlidesEn,
+  fr: chapter14Slides, en: chapter14SlidesEn, de: chapter14Slides, es: chapter14Slides, it: chapter14Slides, pt: chapter14Slides, th: chapter14Slides,
 }
 
 // The French PDF was reorganised independently, so French uses its own anchor
-// table; the other languages share the original one until their PDFs catch up.
+// table; English uses the original table and fallback locales use French.
 const ANCHORS: Record<Lang, typeof chapter14SlideAnchors> = {
   fr: chapter14SlideAnchorsFr,
-  en: chapter14SlideAnchors, de: chapter14SlideAnchors,
-  es: chapter14SlideAnchors, it: chapter14SlideAnchors, pt: chapter14SlideAnchors, th: chapter14SlideAnchors,
+  en: chapter14SlideAnchors, de: chapter14SlideAnchorsFr,
+  es: chapter14SlideAnchorsFr, it: chapter14SlideAnchorsFr, pt: chapter14SlideAnchorsFr, th: chapter14SlideAnchorsFr,
 }
 
 const HALF_BREAKS_FR = [
@@ -49,8 +49,7 @@ export default async function Chapitre14SyncPage({
   }
   const restrictPaidXrefs = !(await canReadPaidChapter(cookieStore))
 
-  // The synthesis deck exists in all five languages for chapter 14; serve the
-  // reader's language.
+  // Serve English when explicitly requested; unsupported locales fall back to French.
   const { lang: langParam } = await searchParams
   const lang = await getServerLang(langParam)
   const { chapter } = getChapter('chapter-14', lang)

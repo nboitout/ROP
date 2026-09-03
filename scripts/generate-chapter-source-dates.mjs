@@ -18,7 +18,6 @@ const sourceDocuments = {
   'chapter-11': { fr: 'chapter-11/FR/Chapitre_11_Foie_et_voies_biliaires_version_finale_revisee.docx', en: 'chapter-11/EN/Chapter_11_Liver_and_Biliary_Tract_full_medical_English.docx' },
   'chapter-12': { fr: 'chapter-12/FR/Chapitre_12_Pancreas_version_finale_publiable.docx', en: 'chapter-12/EN/Chapter_12_Pancreas_Medical_English_Revised.docx' },
   'chapter-13': { fr: 'chapter-13/FR/Chapitre_13_Rate_version_publiable_A_master_Niveaux_3_4_B.docx', en: 'chapter-13/EN/Chapter_13_Spleen_Medical_English_Revised.docx' },
-  'chapter-14': { de: 'chapter-14/DE/Kapitel_14_Duenndarm_ROP_Medizinisches_Deutsch.docx' },
   'chapter-15': { fr: 'chapter-15/FR/Chapitre_15_Colon_et_rectum_version_complete_publisable.docx', en: 'chapter-15/EN/Chapter_15_Colon_and_Rectum_medical_English_revised_EN.docx' },
   'chapter-16': { fr: 'chapter-16/FR/Chapitre_16_Reins_version_finale_publisable.docx', en: 'chapter-16/EN/Chapter_16_Kidneys_Medical_English_Revised.docx' },
   'chapter-17': { fr: 'chapter-17/FR/Chapitre_17_Cavite_pelvienne_socle_regional_niveaux_3_4.docx', en: 'chapter-17/EN/Chapter_17_Pelvic_Cavity_Medical_English_Revised.docx' },
