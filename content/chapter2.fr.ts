@@ -61,14 +61,6 @@ export const chapter2Fr: Chapter = {
           text: 'Repère historique et terminologique — Les textes historiques de la ROP ont utilisé les notions de « somatotopie », « viscérotopie » ou de « réverbération » pour décrire la représentation clinique du corps sur le pied et l’occiput. Dans ce chapitre, ces termes décrivent le modèle de cartographie de la méthode ; ils ne sont pas présentés comme la preuve d’une correspondance anatomique point–organe démontrée.',
         },
         {
-          type: 'figure',
-          src: '/chapter-2/FR/figure-2-1.png',
-          caption: 'Figure 2.1 — Pourquoi la ROP recherche-t-elle des zones réflexes ? La physiologie cutanée établit que la peau est un organe sensoriel, vasculaire et autonome dynamique ; la correspondance topographique pied–occiput–territoires fonctionnels relève de la cartographie clinique ROP et ne constitue pas une projection anatomique démontrée.',
-          alt: 'Physiologie cutanée et modèle clinique des zones réflexes en ROP',
-          orientation: 'landscape',
-          syncHide: true,
-        },
-        {
           type: 'sub',
           text: '0.2. Que désigne une « zone réflexe » en ROP ?',
         },
@@ -111,14 +103,6 @@ export const chapter2Fr: Chapter = {
         {
           type: 'para',
           text: 'La conséquence pratique est essentielle : la ROP recherche une stimulation précise, progressive et non douloureuse. Une pression trop forte modifie la nature du stimulus et peut recruter davantage les voies nociceptives, ce qui n’est pas l’objectif de la technique. Après la stimulation, la réponse est appréciée par la réévaluation de la zone, du symptôme principal et des fonctions suivies, plutôt que par la présomption d’un effet physiologique spécifique.',
-        },
-        {
-          type: 'figure',
-          src: '/chapter-2/FR/figure-2-2.png',
-          caption: 'Figure 2.2 — Stimulation cutanée en ROP : chaîne neurophysiologique proposée. La pression non douloureuse active des afférences cutanées qui rejoignent les réseaux spinaux et supraspinaux. Les effets de modulation sont plausibles à l’échelle sensorielle, nociceptive et autonome ; une correction sélective d’un organe par un point cutané n’est pas démontrée.',
-          alt: 'Chaîne neurophysiologique proposée de la stimulation cutanée en ROP',
-          orientation: 'landscape',
-          syncHide: true,
         },
       ],
     },
@@ -578,14 +562,6 @@ export const chapter2Fr: Chapter = {
       title: '9. Réactions post-traitement et réévaluation',
       blocks: [
         {
-          type: 'figure',
-          src: '/chapter-2/FR/figure-2-3.png',
-          caption: 'Figure 2.3 — Fenêtre d’adaptation après la première séance. Cette courbe représente un modèle issu de l’expérience clinique. L’axe vertical décrit un niveau fonctionnel clinique et non une variable physiologique mesurée ; la cinétique doit être progressivement documentée par des mesures standardisées.',
-          alt: 'Fenêtre d’adaptation après la première séance de ROP',
-          orientation: 'landscape',
-          syncHide: true,
-        },
-        {
           type: 'sub',
           text: '9.1. Réactions immédiates',
         },
@@ -703,9 +679,4 @@ export const chapter2Fr: Chapter = {
       ],
     },
   ],
-  revisionSheet: {
-    src: '/chapter-2/Chap2 - Fiche de revision.png',
-    alt: 'Fiche de révision — Chapitre 2, Traitement par la R.O.P.',
-    caption: 'Fiche de révision — Chapitre 2 · Traitement par la R.O.P.',
-  },
 }

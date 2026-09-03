@@ -51,14 +51,6 @@ export const chapter2En: Chapter = {
           "text": "Historical and terminological note — Historical ROP texts used the concepts of “somatotopy”, “viscerotopy”, and “reverberation” to describe the clinical representation of the body on the foot and occiput. In this chapter, these terms describe the method’s mapping model; they are not presented as evidence of a demonstrated anatomical point-to-organ correspondence."
         },
         {
-          "type": "figure",
-          "src": "/chapter-2/EN/figure-2-1_CodexTranslationV2.png",
-          "caption": "Figure 2.1 — Why does ROP look for reflex zones? Established cutaneous physiology shows that the skin is a dynamic sensory, vascular, and autonomic organ; the topographical correspondence between the foot, occiput, and functional territories belongs to ROP clinical mapping and does not constitute a demonstrated anatomical projection.",
-          "alt": "ROP reflex-zone model",
-          "orientation": "landscape",
-          "syncHide": true
-        },
-        {
           "type": "sub",
           "text": "0.2. What does “reflex zone” mean in ROP?"
         },
@@ -101,14 +93,6 @@ export const chapter2En: Chapter = {
         {
           "type": "para",
           "text": "The practical consequence is essential: ROP seeks precise, progressive, non-painful stimulation. Excessive pressure changes the nature of the stimulus and may recruit nociceptive pathways to a greater degree, which is not the aim of the technique. After stimulation, the response is assessed by reassessing the zone, the main symptom, and the monitored functions rather than by presuming a specific physiological effect."
-        },
-        {
-          "type": "figure",
-          "src": "/chapter-2/EN/figure-2-2_CodexTranslationV2.png",
-          "caption": "Figure 2.2 — Cutaneous stimulation in ROP: proposed neurophysiological pathway. Non-painful pressure activates cutaneous afferents that reach spinal and supraspinal networks. Modulatory effects are plausible at sensory, nociceptive, and autonomic levels; selective correction of an organ through a cutaneous point has not been demonstrated.",
-          "alt": "Proposed neurophysiological pathway for ROP stimulation",
-          "orientation": "landscape",
-          "syncHide": true
         },
         {
           "type": "note",
@@ -542,14 +526,6 @@ export const chapter2En: Chapter = {
       "title": "Post-treatment reactions and reassessment",
       "blocks": [
         {
-          "type": "figure",
-          "src": "/chapter-2/EN/figure-2-3_CodexTranslationV2.png",
-          "caption": "Figure 2.3 — Adaptation window after the first session. This curve represents a model derived from clinical experience. The vertical axis describes a clinical functional level rather than a measured physiological variable; the time course should be progressively documented using standardised measurements.",
-          "alt": "Adaptation window after the first ROP session",
-          "orientation": "landscape",
-          "syncHide": true
-        },
-        {
           "type": "sub",
           "text": "9.1. Immediate reactions"
         },
@@ -664,9 +640,4 @@ export const chapter2En: Chapter = {
     "label": "Slides",
     "description": "Visual summary of the chapter — technique, treatment arrangements, clinical sequence, safety, and indications for ROP."
   },
-  "revisionSheet": {
-    "src": "/chapter-2/Chap2 - Fiche de revision.png",
-    "alt": "Revision sheet — Chapter 2, Treatment by ROP.",
-    "caption": "Revision sheet — Chapter 2 · Treatment by ROP."
-  }
 }

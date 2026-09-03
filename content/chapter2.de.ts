@@ -238,9 +238,4 @@ export const chapter2De: Chapter = {
     label: 'Folien',
     description: 'Visuelle Zusammenfassung des Kapitels — Technik, Modalitäten, Behandlungshierarchie und Indikationen der R.O.P.',
   },
-  revisionSheet: {
-    src: '/chapter-2/Chap2 - Fiche de revision.png',
-    alt: 'Lernblatt — Kapitel 2, Behandlung durch R.O.P.',
-    caption: 'Lernblatt — Kapitel 2 · Behandlung durch R.O.P.',
-  },
 }
