@@ -45,15 +45,12 @@ export const chapter14Fr: Chapter = {
       id: 'anatomie',
       title: '3. Anatomie',
       blocks: [
-        { type: 'figure', src: '/chapter-14/FR/images/figure-14-2.png', caption: 'Figure 14.2 — Mésos', alt: 'Les mésos du péritoine', orientation: 'portrait', syncHide: true },
         { type: 'lead', label: '3.1. Jéjunum-iléum', text: 'il comporte 15 à 16 anses intestinales en forme de U, disposées en deux groupes. Un groupe supérieur à gauche, le jéjunum, plus développé que l’iléum, dont les anses et le système vasculaire sont plutôt orientés horizontalement. Un groupe inférieur à droite, l’iléum, dont les anses et le système vasculaire sont plutôt orientés verticalement.' },
         { type: 'lead', label: '3.2. Mésentère', text: 'c’est un méso, c’est-à-dire une réflexion à double feuillet du péritoine. Il enveloppe le jéjunum-iléum et le relie à la paroi postérieure de l’abdomen par l’intermédiaire de la racine du mésentère.' },
         { type: 'lead', label: '3.3. Racine du mésentère', text: 'elle constitue la ligne d’attache du mésentère et contribue à la stabilité de l’intestin grêle par ailleurs très mobile. Elle mesure 16 à 18 cm. Elle s’étend de la jonction duodéno-jéjunale à la jonction iléo-caecale en croisant l’axe médian de l’abdomen au niveau de l’ombilic (à hauteur du disque L3-L4).' },
         { type: 'para', text: 'La jonction duodéno-jéjunale est maintenue par le muscle de Treitz dont les fibres lisses s’attachent sur le pilier droit du diaphragme.' },
-        { type: 'figure', src: '/chapter-14/FR/images/figure-14-3.png', caption: 'Figure 14.3 — Racine du mésentère', alt: 'Racine du mésentère et son trajet abdominal', orientation: 'landscape', syncHide: true },
         { type: 'lead', label: 'Muscle de Treitz', text: 'il participe au maintien de l’angle duodéno-jéjunal par sa contraction, en attirant la racine du mésentère en haut et à gauche.' },
         { type: 'para', text: 'En favorisant une tension longitudinale, il participe à l’évacuation du contenu duodénal dans le jéjunum. La racine du mésentère fournit la vascularisation et l’innervation à l’intestin grêle.' },
-        { type: 'figure', src: '/chapter-14/FR/images/figure-14-4.png', caption: 'Figure 14.4 — Muscle de Treitz', alt: 'Muscle de Treitz et angle duodéno-jéjunal', orientation: 'landscape', syncHide: true },
         { type: 'rop', body: [
           'La perte de tension longitudinale de la racine du mésentère est à rapprocher, sur le plan clinique, du syndrome de la pince aorto-mésentérique ou nutcracker syndrome : c’est une compression du 4ème duodénum et de la veine rénale gauche entre l’aorte et l’artère mésentérique supérieure. L’évacuation du contenu duodénal dans le jéjunum peut être retardée avec risque de reflux gastroduodénal.',
           'Le riche réseau vasculo-nerveux et lymphatique de la racine du mésentère est hautement réflexogène. La sollicitation de sa zone réflexe vise à faciliter une réponse fonctionnelle du jéjunum-iléum.',
@@ -79,7 +76,6 @@ export const chapter14Fr: Chapter = {
       id: 'vascularisation',
       title: '5. Vascularisation',
       blocks: [
-        { type: 'figure', src: '/chapter-14/FR/images/figure-14-5.png', caption: 'Figure 14.5 — Artère mésentérique supérieure', alt: 'Artère mésentérique supérieure et ses branches', orientation: 'portrait', syncHide: true },
         { type: 'para', text: 'L’intestin grêle a besoin d’une importante irrigation vasculaire et lymphatique pour assurer ses fonctions de digestion, d’absorption et immunitaire.' },
         { type: 'lead', label: '5.1. Vascularisation artérielle — artère mésentérique supérieure', text: 'elle constitue l’axe artériel principal de l’intestin grêle. Elle est une branche de l’aorte abdominale. Son origine se situe 1 cm au-dessous du tronc cœliaque, en regard du disque intervertébral Th12-L1. D’abord rétro-pancréatique puis en avant de la 3ème portion du duodénum, elle chemine entre les deux feuillets du mésentère. Elle donne de nombreuses branches collatérales. Elle irrigue tout l’intestin grêle, le côlon ascendant et les 2/3 proximaux du côlon transverse.' },
         { type: 'para', text: 'Son pouls, perceptible au niveau de la 3ème portion du duodénum, à droite de l’ombilic, peut constituer un repère clinique vasculaire, sans préjuger à lui seul du fonctionnement de l’intestin.' },
@@ -272,11 +268,6 @@ export const chapter14Fr: Chapter = {
       ],
     },
   ],
-  revisionSheet: {
-    src: '/chapter-14/FR/images/fiche-de-revision.png',
-    alt: 'Fiche de révision — Chapitre 14, Intestin grêle',
-    caption: 'Fiche de révision — Chapitre 14 · Intestin grêle',
-  },
   clinicalCase: {
     src: '/chapter-14/FR/Chapter14 Cas Clinique.jpg',
     caption: 'Cas clinique — Chapitre 14',
