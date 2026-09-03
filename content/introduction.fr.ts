@@ -64,7 +64,7 @@ export const introductionFr: Chapter = {
         },
         {
           "type": "figure",
-          "src": "/chapter-0/FR/figure-0-1.png",
+          "src": "/chapter-0/FR/slides/figure-0-1.png",
           "caption": "La séquence clinique ROP : une progression en quatre niveaux",
           "alt": "Schéma de la progression clinique ROP en quatre niveaux.",
           "orientation": "landscape"
@@ -125,7 +125,7 @@ export const introductionFr: Chapter = {
         },
         {
           "type": "figure",
-          "src": "/chapter-0/FR/figure-0-2.png",
+          "src": "/chapter-0/FR/slides/figure-0-2.png",
           "caption": "Séquence clinique ROP — quatre niveaux complémentaires",
           "alt": "Schéma des quatre niveaux complémentaires servant à hiérarchiser le traitement ROP.",
           "orientation": "landscape"
@@ -237,7 +237,7 @@ export const introductionFr: Chapter = {
         },
         {
           "type": "figure",
-          "src": "/chapter-0/FR/figure-0-4.png",
+          "src": "/chapter-0/FR/slides/figure-0-4.png",
           "caption": "Les fondements neuro-anatomiques, en quelques lignes",
           "alt": "Schéma des portes somatiques du pied et des convergences périphériques, spinales et supraspinales.",
           "orientation": "landscape"
@@ -270,7 +270,7 @@ export const introductionFr: Chapter = {
         },
         {
           "type": "figure",
-          "src": "/chapter-0/FR/figure-0-5.png",
+          "src": "/chapter-0/FR/slides/figure-0-5.png",
           "caption": "Le pelvis : un territoire particulièrement intéressant",
           "alt": "Schéma de l’entrée somatique plantaire et de la convergence vers les réseaux pelviens.",
           "orientation": "landscape"
@@ -317,7 +317,7 @@ export const introductionFr: Chapter = {
         },
         {
           "type": "figure",
-          "src": "/chapter-0/FR/figure-0-6.png",
+          "src": "/chapter-0/FR/slides/figure-0-6.png",
           "caption": "Au-delà du pelvis : modulation à distance et geste manuel",
           "alt": "Schéma des voies supraspinales et de la modulation somato-autonome possible à distance.",
           "orientation": "landscape"
@@ -466,7 +466,7 @@ export const introductionFr: Chapter = {
         },
         {
           "type": "figure",
-          "src": "/chapter-0/FR/figure-0-3.png",
+          "src": "/chapter-0/FR/slides/figure-0-3.png",
           "caption": "Terminologie spatiale de l’Atlas",
           "alt": "Schéma des orientations anatomiques appliquées au pied.",
           "orientation": "landscape"
