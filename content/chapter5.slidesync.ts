@@ -200,10 +200,10 @@ export const chapter5SlideAnchorsEn: SyncAnchor[] = [
   { sectionId: 'la-seance-rop-stimuler-puis-laisser-integrer', blockIndex: -1, slide: 20 },
   { sectionId: 'les-quatre-niveaux-rop-appliques-au-stress', blockIndex: -1, slide: 21 },
   { sectionId: 'les-quatre-niveaux-rop-appliques-au-stress', blockIndex: 0, slide: 22 },
-  { sectionId: 'les-quatre-niveaux-rop-appliques-au-stress', blockIndex: 0, slide: 23 },
-  { sectionId: 'les-quatre-niveaux-rop-appliques-au-stress', blockIndex: 0, slide: 24 },
+  { sectionId: 'les-quatre-niveaux-rop-appliques-au-stress', blockIndex: 2, slide: 23 },
+  { sectionId: 'les-quatre-niveaux-rop-appliques-au-stress', blockIndex: 2, slide: 24 },
   { sectionId: 'les-quatre-niveaux-rop-appliques-au-stress', blockIndex: 2, slide: 25 },
-  { sectionId: 'les-quatre-niveaux-rop-appliques-au-stress', blockIndex: 3, slide: 26 },
+  { sectionId: 'les-quatre-niveaux-rop-appliques-au-stress', blockIndex: 2, slide: 26 },
   { sectionId: 'illustration-clinique-fibromyalgie-et-charge-allostatique', blockIndex: -1, slide: 27 },
   { sectionId: 'vers-une-recherche-sur-la-cinetique-de-recuperation', blockIndex: -1, slide: 28 },
 ]

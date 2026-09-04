@@ -1,5 +1,5 @@
 // Chapter 5 content — English
-// Source: public/chapter-5/EN/Chapter_5_Stress_Mechanism_ROP_EN_CodexTranslationV2.docx
+// Source: public/chapter-5/EN/Chapter_5_Stress_Mechanism_ROP_EN_CodexTranslationV3.docx
 
 import type { Chapter } from './types'
 
@@ -586,6 +586,35 @@ export const chapter5En: Chapter = {
         },
         {
           "type": "para",
+          "text": "Summary table — four-level ROP protocol"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Level",
+            "Clinical intention in the context of stress"
+          ],
+          "rows": [
+            [
+              "1 — Regulation of higher centres",
+              "Reduce the persistence of the alarm signal and make the system more available for the remainder of treatment"
+            ],
+            [
+              "2 — Autonomic regulation and adaptation",
+              "Support the withdrawal of mobilisation that is no longer needed and promote a more flexible autonomic baseline"
+            ],
+            [
+              "3 — Locoregional regulation and target",
+              "Release regional constraints that sustain bodily signals, then allow the relevant function to return"
+            ],
+            [
+              "4 — Viscerosomatic and viscero-emotional integration",
+              "Relate the function to its bodily expressions and emotional context without separating it from the whole"
+            ]
+          ]
+        },
+        {
+          "type": "para",
           "text": "Two particular points should be noted in this chapter."
         },
         {
@@ -872,40 +901,6 @@ export const chapter5En: Chapter = {
         {
           "type": "para",
           "text": "The HPA axis constitutes the slower and more sustained hormonal component of the stress response. When the stressor persists, the hypothalamus releases CRH, which stimulates the anterior pituitary; this secretes ACTH, which activates the adrenal cortex and promotes cortisol release. Cortisol supports adaptation over time by maintaining energy availability and modulating immune and inflammatory responses. When equilibrium returns, feedback mechanisms progressively reduce the response; if the stressor persists, the HPA axis complements and prolongs the SAM response."
-        },
-        {
-          "type": "para",
-          "text": "Summary table — four-level ROP protocol"
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Level",
-            "Clinical intention",
-            "Main ROP landmarks"
-          ],
-          "rows": [
-            [
-              "1. Regulation of higher centres",
-              "Reduce the persistence of the alarm signal and prepare integration.",
-              "Occipital zones; brainstem; diencephalon/hypothalamus; hypothalamic-pituitary axis; neuro-meningeal environment."
-            ],
-            [
-              "2. Autonomic regulation and adaptation",
-              "Promote flexibility between mobilisation and recovery.",
-              "Sympathetic; parasympathetic/vagal; splanchnic pathways; autonomic plexuses; ANS-ENS interface; adrenal glands; sleep and systemic support according to testing."
-            ],
-            [
-              "3. Locoregional regulation",
-              "Prepare the regional environment of the target.",
-              "Cavities; peritoneum; mesenteries and roots; omenta; fasciae; ligaments; intervisceral relationships; abdominal and pelvic regional foundations."
-            ],
-            [
-              "4. Visceral or functional target and integration",
-              "Work on the target and integrate its overall expression.",
-              "Organ or function zone; specific sub-territories; viscerosomatic convergences; somatic nerves; muscles/joints; brain-organ axis or Limbic Brain-Organ Balance according to the chapter."
-            ]
-          ]
         }
       ]
     }
