@@ -1,5 +1,5 @@
 // Chapter 19 content — English
-// Source: public/chapter-19/EN/Chapter_19_Female_Genital_Organs_medical_English_revised_EN.docx
+// Source: public/chapter-19/EN/Chapter_19_Female_Genital_Organs_CodexTranslationV2.docx
 
 import type { Chapter } from './types'
 
@@ -113,7 +113,7 @@ export const chapter19En: Chapter = {
         },
         {
           "type": "sub",
-          "text": "1.3.5. Genitopelvic statics"
+          "text": "1.3.5. Uterine position and pelvic support"
         },
         {
           "type": "para",
@@ -139,7 +139,7 @@ export const chapter19En: Chapter = {
         },
         {
           "type": "para",
-          "text": "The cervico-isthmic region is the most important part of the uterus from both static and dynamic perspectives. It is rich in stretch-sensitive mechanoreceptors and its reflex zone is therefore given priority."
+          "text": "The cervico-isthmic region is the most important part of the uterus in terms of support and mobility. It is rich in stretch-sensitive mechanoreceptors, and its reflex zone is therefore given priority."
         },
         {
           "type": "para",
@@ -158,7 +158,7 @@ export const chapter19En: Chapter = {
             "Anteriorly: the peritoneum and bladder, separated from the uterus by the vesicouterine pouch;",
             "Posteriorly: the peritoneum and rectum, separated from the uterus by the rectouterine pouch of Douglas;",
             "Laterally: the broad ligaments;",
-            "Inferiorly: the cervico-isthmic region articulates with the cervicotrigonal region of the bladder, vagina and perineum."
+            "Inferiorly: the cervico-isthmic region is closely related to the cervicotrigonal region of the bladder, the vagina and the perineum."
           ]
         }
       ]
@@ -185,7 +185,7 @@ export const chapter19En: Chapter = {
           "items": [
             "Sympathetic innervation: spinal origin from T12 to L2, corresponding approximately to the T12 vertebral level. It continues through two pathways:",
             "Lumbar and sacral sympathetic chains;",
-            "Superior hypogastric plexus: the inferior continuation of the prevertebral plexus chain. It conveys sympathetic fibres to the inferior hypogastric plexus.",
+            "Superior hypogastric plexus: the caudal continuation of the prevertebral autonomic plexuses. It conveys sympathetic fibres to the inferior hypogastric plexus.",
             "Parasympathetic innervation: fibres arise from the S2-S4 sacral spinal cord, approximately at the L1 vertebral level. The second, third and fourth sacral roots form the pelvic splanchnic nerves, historically termed the nervi erigentes of Eckhard, which join the inferior hypogastric plexus.",
             "Inferior hypogastric plexus: situated in the pelvic cavity within the SRGCP lamina, it provides sympathetic and parasympathetic innervation to the urogenital organs, rectum and anus. The uterosacral ligaments are particularly rich in visceral sensory sympathetic fibres. Rupture and fibrosis may produce congestion and pain, including dysmenorrhoea, through the resulting deviation of the cervix.",
             "Sympathetic action: tendency towards uterine relaxation and dilatation;",
@@ -317,7 +317,7 @@ export const chapter19En: Chapter = {
           "type": "bullets",
           "items": [
             "Low back pain, sacral pain and sciatica: these may be associated with uterine fixation. Excessive ligamentous tension may deviate the cervico-isthmic region and restrict the sacroiliac joint and piriformis, contributing to sciatica, most often on the left.",
-            "Post-traumatic, postoperative, postinfectious and postpartum sequelae: adhesions may affect pelvic statics, including prolapse, and genital and urinary dynamics.",
+            "Post-traumatic, postoperative, postinfectious and postpartum sequelae: adhesions may affect pelvic support and alignment, including prolapse, as well as genital and urinary function.",
             "Circulatory disorders: fixation or ptosis may compress vasomotor nerves and compromise arterial, venous and lymphatic circulation in the pelvic cavity and lower limbs, contributing to varicose veins or oedema.",
             "Dysmenorrhoea: articular and genital restrictions may contribute to premenstrual or menstrual genital pain by irritating visceral sensory sympathetic fibres within the inferior hypogastric plexus.",
             "Dyspareunia and anorgasmia: disorders of libido and orgasm may have causes other than tissue dysfunction; nevertheless, vesicouterovaginal or coccygeal restriction may make intercourse difficult or painful.",
@@ -424,7 +424,7 @@ export const chapter19En: Chapter = {
           "items": [
             "Isthmus: it has a thick muscular layer and communicates with the uterus through the uterine ostium;",
             "Ampulla: the usual site of fertilisation;",
-            "Infundibulum: a funnel-shaped distal end bordered by 12-13 fimbriae, which sweep over the ovarian surface to collect the mature oocyte released from a Graafian follicle. The abdominal ostium opens at its apex."
+            "Infundibulum: a funnel-shaped distal end bordered by 12-13 fimbriae, which sweep over the ovarian surface to collect the mature oocyte released from a Graafian follicle. The abdominal ostium opens at the free distal end of the infundibulum."
           ]
         },
         {
@@ -491,7 +491,7 @@ export const chapter19En: Chapter = {
             "Ovary",
             "Sympathetic innervation: spinal origin from T10-T12;",
             "Aorticorenal plexus: situated anterior to the renal artery, it receives fibres from the lesser splanchnic nerve arising from the tenth to twelfth thoracic ganglia and the first lumbar ganglion. It supplies the kidney and ovary.",
-            "Pelvic parasympathetic pathways, S2-S4, approximately at the L1 vertebral level.",
+            "Pelvic parasympathetic pathways, S2-S4: a regional landmark in ROP mapping, approximately at the L1 vertebral level, but not presented here as a routine direct ovarian pathway.",
             "Uterine tubes",
             "Sympathetic innervation, with spinal origin from T10-T12: contraction;",
             "Pelvic parasympathetic innervation: secretion."
@@ -509,11 +509,11 @@ export const chapter19En: Chapter = {
         },
         {
           "type": "para",
-          "text": "• Movements of the uterus, to which the ovary is connected by the broad ligament."
+          "text": "Movements of the uterus, to which the ovary is connected by the broad ligament."
         },
         {
           "type": "para",
-          "text": "• Digestive factors: ovarian mobility may be affected by spasm, congestion or postoperative changes involving abdominal organs."
+          "text": "Digestive factors: ovarian mobility may be affected by spasm, congestion or postoperative changes involving abdominal organs."
         },
         {
           "type": "sub",
@@ -521,7 +521,7 @@ export const chapter19En: Chapter = {
         },
         {
           "type": "para",
-          "text": "• Hormonal factors associated with the menstrual cycle or stress."
+          "text": "Hormonal factors associated with the menstrual cycle or stress."
         },
         {
           "type": "sub",
@@ -558,7 +558,8 @@ export const chapter19En: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Higher autonomic centres"
+            "2.7.4. Higher autonomic centres",
+            "Higher autonomic centres participate in neuroendocrine regulation through the hypothalamic-pituitary-ovarian axis described above."
           ]
         }
       ]
@@ -587,7 +588,7 @@ export const chapter19En: Chapter = {
             "Premenstrual pain; see Section 2.9.1, “Premenstrual syndrome”.",
             "Menstrual pain:",
             "Obstructive dysmenorrhoea: delayed menstrual flow due to uterine malposition, uterine hypoplasia or vaginal stenosis;",
-            "Congestive dysmenorrhoea: normal menstrual flow accompanied by pain, as may occur with endometriosis, infection or disorders of pelvic statics.",
+            "Congestive dysmenorrhoea: normal menstrual flow accompanied by pain, as may occur with endometriosis, infection or disorders of pelvic support and alignment.",
             "Non-cyclical pain:",
             "Extragenital pain: this may have various causes:",
             "Rheumatological;",
@@ -596,9 +597,9 @@ export const chapter19En: Chapter = {
             "Genital pain: pelvic, lumbar or sacrococcygeal pain that increases on standing and with fatigue and is relieved by rest, lying prone or supporting the abdomen. It may be associated with:",
             "Uterine malposition: a retroverted uterus caused by ligamentous distension, most commonly after childbirth;",
             "Dyspareunia: pain during sexual intercourse:",
-            "Superficial, or pain on penetration: this may be psychogenic and present as vaginismus;",
+            "Superficial, or pain on penetration: this may be associated with vaginismus; causes are multifactorial and require appropriate assessment;",
             "Intermediate pain, 2-3 cm deeper: associated in this traditional description with levator ani injury following sexual violence, difficult childbirth or extensive episiotomy;",
-            "Deep, or collision, dyspareunia: the penis contacts a fixed uterus. Within this clinical model, sudden pain persisting for several hours after intercourse is attributed to abdominal spasm caused by irritation of peritoneum stretched by a cervix deviated after rupture of a uterosacral ligament. This presentation is described as Masters and Allen syndrome following childbirth.",
+            "Deep dyspareunia caused by contact with the cervix or a fixed uterus: within this clinical model, sudden pain persisting for several hours after intercourse is attributed to abdominal spasm caused by irritation of the peritoneum stretched by a cervix deviated after rupture of a uterosacral ligament. This presentation is described as Masters and Allen syndrome following childbirth.",
             "Endometriosis;",
             "Infection.",
             "Psychological or relationship factors, including marital conflict."
@@ -619,7 +620,7 @@ export const chapter19En: Chapter = {
             "Functional: hyperoestrogenism due to relative or absolute luteal insufficiency;",
             "Treatment-related: oral contraceptive dosage or intrauterine device;",
             "Non-cyclical bleeding:",
-            "Serious in adolescent girls and requiring investigation for a tumour;",
+            "Non-cyclical bleeding in an adolescent warrants medical assessment; the differential diagnosis should be guided by the clinical context;",
             "Women of reproductive age: fibroids, endometriosis, infection, cervical cancer or ovarian cancer;",
             "Perimenopausal or postmenopausal period: endometrial or vaginal cancer."
           ]
@@ -675,7 +676,7 @@ export const chapter19En: Chapter = {
             "Menstrual disturbance;",
             "Endocrine features: hyperoestrogenism or virilisation;",
             "Deterioration in general health.",
-            "Investigations: cervical cytology, laparoscopy and hysterosalpingography.",
+            "Investigations: specialist assessment usually begins with pelvic ultrasonography, including transvaginal ultrasonography when appropriate. Further imaging, laboratory testing or surgery is guided by the clinical and ultrasound findings.",
             "Ovarian cancer:",
             "Diagnosis is often delayed:",
             "Pelvic pain;",
@@ -684,7 +685,7 @@ export const chapter19En: Chapter = {
             "Ascites due to lymphatic obstruction and accumulation of fluid within the peritoneal cavity;",
             "Constipation;",
             "Lower-limb oedema.",
-            "Ectopic pregnancy: a potentially life-threatening emergency because of the risk of internal haemorrhage. Risk is increased by sexually transmitted infections and the presence of an intrauterine device.",
+            "Ectopic pregnancy: a potentially life-threatening emergency because of the risk of internal haemorrhage. Risk factors include pelvic inflammatory disease and certain sexually transmitted infections. Intrauterine devices greatly reduce the absolute risk of pregnancy, including ectopic pregnancy; however, if pregnancy occurs with an intrauterine device in place, it is relatively more likely to be ectopic.",
             "Symptoms:",
             "Woman of reproductive age;",
             "Delayed menstruation with slight brown, or “sepia”, discharge;",
@@ -788,19 +789,19 @@ export const chapter19En: Chapter = {
       "blocks": [
         {
           "type": "para",
-          "text": "• Thoracolumbar junction, with a landmark particularly centred on T10 in ROP mapping."
+          "text": "Thoracolumbar junction, with a landmark particularly centred on T10 in ROP mapping."
         },
         {
           "type": "para",
-          "text": "• Lumbosacral region, particularly L5 and the sacrum."
+          "text": "Lumbosacral region, particularly L5 and the sacrum."
         },
         {
           "type": "para",
-          "text": "• Pelvis, pelvic floor and pelvitrochanteric muscles according to associated tension and pain."
+          "text": "Pelvis, pelvic floor and pelvitrochanteric muscles according to associated tension and pain."
         },
         {
           "type": "para",
-          "text": "• Associated pain territories: pelvic, lumbar, inguinal or lower-limb regions according to the clinical context."
+          "text": "Associated pain territories: pelvic, lumbar, inguinal or lower-limb regions according to the clinical context."
         }
       ]
     },
@@ -844,23 +845,23 @@ export const chapter19En: Chapter = {
         },
         {
           "type": "para",
-          "text": "• Occipital reflex zones."
+          "text": "Occipital reflex zones."
         },
         {
           "type": "para",
-          "text": "• Brainstem and integration centres."
+          "text": "Brainstem and integration centres."
         },
         {
           "type": "para",
-          "text": "• Diencephalon, particularly the hypothalamus."
+          "text": "Diencephalon, particularly the hypothalamus."
         },
         {
           "type": "para",
-          "text": "• Pituitary gland and hypothalamic-pituitary axis."
+          "text": "Pituitary gland and hypothalamic-pituitary axis."
         },
         {
           "type": "para",
-          "text": "• Neuromeningeal environment within the ROP model."
+          "text": "Neuromeningeal environment within the ROP model."
         },
         {
           "type": "para",
@@ -876,31 +877,31 @@ export const chapter19En: Chapter = {
         },
         {
           "type": "para",
-          "text": "• Thoracolumbar sympathetic system: for the uterus, this chapter principally identifies spinal segments T12-L2; ROP clinical assessment may include the broader thoracolumbar junction according to testing."
+          "text": "Thoracolumbar sympathetic system: for the uterus, this chapter principally identifies spinal segments T12-L2; ROP clinical assessment may include the broader thoracolumbar junction according to testing."
         },
         {
           "type": "para",
-          "text": "• Vertebral column and thoracolumbar landmarks corresponding to this segmental organisation in ROP mapping."
+          "text": "Vertebral column and thoracolumbar landmarks corresponding to this segmental organisation in ROP mapping."
         },
         {
           "type": "para",
-          "text": "• Lumbar and sacral sympathetic chains."
+          "text": "Lumbar and sacral sympathetic chains."
         },
         {
           "type": "para",
-          "text": "• Superior hypogastric plexus."
+          "text": "Superior hypogastric plexus."
         },
         {
           "type": "para",
-          "text": "• Hypogastric nerves."
+          "text": "Hypogastric nerves."
         },
         {
           "type": "para",
-          "text": "• Pelvic parasympathetic pathways, S2-S4; associated vertebral landmarks are interpreted according to ROP spinal-cord mapping."
+          "text": "Pelvic parasympathetic pathways, S2-S4; associated vertebral landmarks are interpreted according to ROP spinal-cord mapping."
         },
         {
           "type": "para",
-          "text": "• Inferior hypogastric plexus."
+          "text": "Inferior hypogastric plexus."
         },
         {
           "type": "para",
@@ -912,39 +913,39 @@ export const chapter19En: Chapter = {
         },
         {
           "type": "para",
-          "text": "• Pelvic cavity and perineum."
+          "text": "Pelvic cavity and perineum."
         },
         {
           "type": "para",
-          "text": "• Uterus."
+          "text": "Uterus."
         },
         {
           "type": "para",
-          "text": "• Cervico-isthmic region and middle portion of the inferior hypogastric plexus: a small depression anterior to the sacrococcygeal landmark."
+          "text": "Cervico-isthmic region and middle portion of the inferior hypogastric plexus: a small depression anterior to the sacrococcygeal landmark."
         },
         {
           "type": "para",
-          "text": "• Vagina: a groove extending from the perineal body to the cervico-isthmic region."
+          "text": "Vagina: a groove extending from the perineal body to the cervico-isthmic region."
         },
         {
           "type": "para",
-          "text": "• Uterine dome and cornua: the zone above the anterior border of the heel, on its medial aspect."
+          "text": "Uterine dome and cornua: the zone above the anterior border of the heel, on its medial aspect."
         },
         {
           "type": "para",
-          "text": "• Broad, round and uterosacral ligaments according to testing and the method’s mapping."
+          "text": "Broad, round and uterosacral ligaments according to testing and the method’s mapping."
         },
         {
           "type": "para",
-          "text": "• Inguinal canal and round ligament: anterior ankle joint line."
+          "text": "Inguinal canal and round ligament: anterior ankle joint line."
         },
         {
           "type": "para",
-          "text": "• Inguinal ligament and inguinal structures: supplementary landmarks according to ROP mapping."
+          "text": "Inguinal ligament and inguinal structures: supplementary landmarks according to ROP mapping."
         },
         {
           "type": "para",
-          "text": "• Perineal body and urogenital cleft: supplementary pelvic landmarks according to the method’s mapping."
+          "text": "Perineal body and urogenital cleft: supplementary pelvic landmarks according to the method’s mapping."
         },
         {
           "type": "para",
@@ -960,47 +961,47 @@ export const chapter19En: Chapter = {
         },
         {
           "type": "para",
-          "text": "• Segmental landmarks used in ROP mapping: T12-L1, L5-sacrum and C2."
+          "text": "Segmental landmarks used in ROP mapping: T12-L1, L5-sacrum and C2."
         },
         {
           "type": "para",
-          "text": "• Occipitomastoid suture."
+          "text": "Occipitomastoid suture."
         },
         {
           "type": "para",
-          "text": "• Sacrum and coccyx."
+          "text": "Sacrum and coccyx."
         },
         {
           "type": "para",
-          "text": "• Pelvic floor."
+          "text": "Pelvic floor."
         },
         {
           "type": "para",
-          "text": "• Pudendal nerve and S2-S4 territories where justified by the presentation."
+          "text": "Pudendal nerve and S2-S4 territories where justified by the presentation."
         },
         {
           "type": "para",
-          "text": "• Lower limb and foot."
+          "text": "Lower limb and foot."
         },
         {
           "type": "para",
-          "text": "• Greater sciatic foramen, piriformis muscle and sacral plexus."
+          "text": "Greater sciatic foramen, piriformis muscle and sacral plexus."
         },
         {
           "type": "para",
-          "text": "• Lesser sciatic foramen, obturator muscles and gemelli."
+          "text": "Lesser sciatic foramen, obturator muscles and gemelli."
         },
         {
           "type": "para",
-          "text": "• Obturator fossa."
+          "text": "Obturator fossa."
         },
         {
           "type": "para",
-          "text": "• Sacrotuberous and sacrospinous ligaments."
+          "text": "Sacrotuberous and sacrospinous ligaments."
         },
         {
           "type": "para",
-          "text": "• Associated painful muscles and joints according to testing."
+          "text": "Associated painful muscles and joints according to testing."
         },
         {
           "type": "sub",
@@ -1032,19 +1033,19 @@ export const chapter19En: Chapter = {
         },
         {
           "type": "para",
-          "text": "• Hypothalamus."
+          "text": "Hypothalamus."
         },
         {
           "type": "para",
-          "text": "• Pituitary gland."
+          "text": "Pituitary gland."
         },
         {
           "type": "para",
-          "text": "• Hypothalamic-pituitary axis."
+          "text": "Hypothalamic-pituitary axis."
         },
         {
           "type": "para",
-          "text": "• Higher centres according to the clinical context."
+          "text": "Higher centres according to the clinical context."
         },
         {
           "type": "para",
@@ -1060,23 +1061,23 @@ export const chapter19En: Chapter = {
         },
         {
           "type": "para",
-          "text": "• Lower thoracic sympathetic system: landmarks principally around T10-T12 in this chapter’s framework."
+          "text": "Lower thoracic sympathetic system: landmarks principally around T10-T12 in this chapter’s framework."
         },
         {
           "type": "para",
-          "text": "• Lumbar and sacral paravertebral sympathetic chains according to ROP mapping."
+          "text": "Lumbar and sacral paravertebral sympathetic chains according to ROP mapping."
         },
         {
           "type": "para",
-          "text": "• Aorticorenal plexus."
+          "text": "Aorticorenal plexus."
         },
         {
           "type": "para",
-          "text": "• Ovarian plexus accompanying the ovarian vessels."
+          "text": "Ovarian plexus accompanying the ovarian vessels."
         },
         {
           "type": "para",
-          "text": "• Pelvic autonomic networks, considered mainly for the uterotubal region and local context rather than as an obligatory direct pathway to the ovary."
+          "text": "Pelvic autonomic networks, considered mainly for the uterotubal region and local context rather than as an obligatory direct pathway to the ovary."
         },
         {
           "type": "para",
@@ -1096,39 +1097,39 @@ export const chapter19En: Chapter = {
         },
         {
           "type": "para",
-          "text": "• Pelvic cavity."
+          "text": "Pelvic cavity."
         },
         {
           "type": "para",
-          "text": "• Ovary: anterior border of the heel, in line with the fourth and fifth toes."
+          "text": "Ovary: anterior border of the heel, in line with the fourth and fifth toes."
         },
         {
           "type": "para",
-          "text": "• Uterine tube: along the anterior border of the heel, from the ovarian reflex zone to the uterotubal junction, in line with the first and second toes."
+          "text": "Uterine tube: along the anterior border of the heel, from the ovarian reflex zone to the uterotubal junction, in line with the first and second toes."
         },
         {
           "type": "para",
-          "text": "• Uterotubal junction: in ROP mapping, this also corresponds to the anterior portion of the inferior hypogastric plexus."
+          "text": "Uterotubal junction: in ROP mapping, this also corresponds to the anterior portion of the inferior hypogastric plexus."
         },
         {
           "type": "para",
-          "text": "• Suspensory ligament of the ovary."
+          "text": "Suspensory ligament of the ovary."
         },
         {
           "type": "para",
-          "text": "• Utero-ovarian ligament."
+          "text": "Utero-ovarian ligament."
         },
         {
           "type": "para",
-          "text": "• Tubo-ovarian ligament."
+          "text": "Tubo-ovarian ligament."
         },
         {
           "type": "para",
-          "text": "• Broad ligament and mesosalpinx."
+          "text": "Broad ligament and mesosalpinx."
         },
         {
           "type": "para",
-          "text": "• Relationships with the uterus, peritoneum, bladder and rectum."
+          "text": "Relationships with the uterus, peritoneum, bladder and rectum."
         },
         {
           "type": "para",
@@ -1144,31 +1145,31 @@ export const chapter19En: Chapter = {
         },
         {
           "type": "para",
-          "text": "• ROP landmarks particularly emphasised: T10, L5 and sacrum."
+          "text": "ROP landmarks particularly emphasised: T10, L5 and sacrum."
         },
         {
           "type": "para",
-          "text": "• Thoracolumbar junction."
+          "text": "Thoracolumbar junction."
         },
         {
           "type": "para",
-          "text": "• Lumbosacral region."
+          "text": "Lumbosacral region."
         },
         {
           "type": "para",
-          "text": "• Pelvis and sacrum."
+          "text": "Pelvis and sacrum."
         },
         {
           "type": "para",
-          "text": "• Pelvic floor."
+          "text": "Pelvic floor."
         },
         {
           "type": "para",
-          "text": "• Pelvitrochanteric muscles where justified by the clinical presentation."
+          "text": "Pelvitrochanteric muscles where justified by the clinical presentation."
         },
         {
           "type": "para",
-          "text": "• Associated pain territories: pelvic, lumbar, inguinal or lower-limb regions according to convergence patterns and clinical context."
+          "text": "Associated pain territories: pelvic, lumbar, inguinal or lower-limb regions according to convergence patterns and clinical context."
         },
         {
           "type": "sub",
@@ -1192,23 +1193,23 @@ export const chapter19En: Chapter = {
         },
         {
           "type": "para",
-          "text": "• Liver: where the history and tests indicate a metabolic or hormonal context."
+          "text": "Liver: where the history and tests indicate a metabolic or hormonal context."
         },
         {
           "type": "para",
-          "text": "• Left kidney and left ovarian venous axis: where justified by the vascular or regional context."
+          "text": "Left kidney and left ovarian venous axis: where justified by the vascular or regional context."
         },
         {
           "type": "para",
-          "text": "• Left adrenal gland: associated support where the method’s tests indicate a neuroendocrine or stress-related context."
+          "text": "Left adrenal gland: associated support where the method’s tests indicate a neuroendocrine or stress-related context."
         },
         {
           "type": "para",
-          "text": "• Bladder, rectum and intestine: according to pelvic relationships and associated symptoms."
+          "text": "Bladder, rectum and intestine: according to pelvic relationships and associated symptoms."
         },
         {
           "type": "para",
-          "text": "• Diaphragm and abdominal cavity: where global trunk and pressure dynamics are clinically relevant."
+          "text": "Diaphragm and abdominal cavity: where global trunk and pressure dynamics are clinically relevant."
         },
         {
           "type": "para",

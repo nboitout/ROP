@@ -1,5 +1,5 @@
 // Chapter 5 content — English
-// Source: public/chapter-5/EN/Chapter_5_Stress_Mechanism_ROP_EN_Publishable.docx
+// Source: public/chapter-5/EN/Chapter_5_Stress_Mechanism_ROP_EN_CodexTranslationV3.docx
 
 import type { Chapter } from './types'
 
@@ -60,7 +60,7 @@ export const chapter5En: Chapter = {
         },
         {
           "type": "para",
-          "text": "Homeostasis is the organism’s capacity to maintain its major internal variables within limits compatible with life: temperature, pH, blood glucose, blood pressure, fluid and electrolyte balance, and oxygenation. It is not a static state. Living equilibrium depends on constant corrections, most of which remain invisible."
+          "text": "Homeostasis, a concept formalised by Walter Cannon, is the organism’s capacity to maintain its major internal variables within limits compatible with life: temperature, pH, blood glucose, blood pressure, fluid and electrolyte balance, and oxygenation [9]. It is not a static state. Living equilibrium depends on constant corrections, most of which remain invisible."
         },
         {
           "type": "sub",
@@ -215,7 +215,7 @@ export const chapter5En: Chapter = {
         },
         {
           "type": "para",
-          "text": "If the stressor persists, a second system takes over. The hypothalamus releases CRH, which stimulates the anterior pituitary; this secretes ACTH, which acts on the adrenal cortex and promotes, in particular, the release of cortisol. The hypothalamic-pituitary-adrenal, or HPA, axis then helps the organism sustain adaptation over time."
+          "text": "If the stressor persists, a second system is recruited. The hypothalamus releases CRH, which stimulates the anterior pituitary; the latter secretes ACTH, which acts on the adrenal cortex and promotes, in particular, the release of cortisol. The hypothalamic–pituitary–adrenal, or HPA, axis then helps the organism sustain adaptation over time."
         },
         {
           "type": "para",
@@ -272,7 +272,7 @@ export const chapter5En: Chapter = {
       "blocks": [
         {
           "type": "para",
-          "text": "Hans Selye proposed the general adaptation syndrome to represent how the organism responds to prolonged stress. Bruce McEwen’s later work on allostasis and allostatic load extended this model by describing the cumulative cost of adaptation. The model remains highly useful for teaching and clinical reasoning, provided it is not treated as a rigid chronology. After the alarm phase, two pathways are possible: if the stressor ceases, the organism enters recovery; if it persists, the organism enters a resistance/adaptation phase. In reality, these responses overlap and vary from one patient to another."
+          "text": "Hans Selye proposed the general adaptation syndrome to represent how the organism responds to prolonged stress [10]. Bruce McEwen’s later work on allostasis and allostatic load extended this model by describing the cumulative cost of adaptation [1]. This model remains highly useful for teaching and clinical reasoning, provided it is not treated as a rigid chronology. After the alarm phase, two pathways are possible: if the stressor ceases, the organism enters recovery; if it persists, it organises an adaptation–resistance response. In reality, these responses overlap and vary from one patient to another."
         },
         {
           "type": "sub",
@@ -380,7 +380,7 @@ export const chapter5En: Chapter = {
       "blocks": [
         {
           "type": "para",
-          "text": "The image of a draining battery is intuitive, but inaccurate if taken literally. The organism does not receive a fixed amount of ATP (ATP = energy) in the morning that it then consumes until evening. ATP is produced and renewed continuously according to need."
+          "text": "The image of a draining battery is intuitive, but inaccurate if taken literally. The organism does not receive a fixed amount of ATP in the morning that it then consumes until evening. ATP is produced and renewed continuously according to need."
         },
         {
           "type": "para",
@@ -445,11 +445,7 @@ export const chapter5En: Chapter = {
         },
         {
           "type": "para",
-          "text": "The energy resistance principle proposed by Picard and Murugan [2025] seeks to describe the relationship between the demand placed on a system and its capacity to transform energy flow into useful work [4]. A certain degree of resistance is necessary; when it becomes excessive, it could promote heat, oxidative stress, inflammation, and molecular damage."
-        },
-        {
-          "type": "para",
-          "text": "This framework is recent. It represents a stimulating theoretical hypothesis."
+          "text": "The energy resistance principle proposed by Picard and Murugan seeks to describe the relationship between the demand placed on a system and its capacity to transform energy flow into useful work [4]. A certain degree of resistance is necessary; when it becomes excessive, it could promote heat, oxidative stress, inflammation, and molecular damage. This framework is recent and constitutes a stimulating theoretical hypothesis."
         }
       ]
     },
@@ -492,7 +488,11 @@ export const chapter5En: Chapter = {
         },
         {
           "type": "para",
-          "text": "Polyvagal Theory proposes a hierarchical interpretation involving social engagement, sympathetic mobilisation, and defensive immobilisation. It can enrich clinical teaching and help us better understand the mechanisms considered in ROP."
+          "text": "Polyvagal Theory proposes a hierarchical interpretation of social engagement, sympathetic mobilisation, and defensive immobilisation. It offers practitioners a useful vocabulary for describing states they observe every day: a patient who is available and engaged, one who is mobilised and on alert, and one who withdraws and freezes. Above all, it places perceived safety and the quality of connection at the centre of the therapeutic relationship. This directly relates to our practice: predictable, explained, and measured touch is not merely a technique; it contributes to the context that makes recovery possible."
+        },
+        {
+          "type": "para",
+          "text": "This interpretation therefore enriches ROP clinical teaching and clarifies our aim: not to impose a state, but to restore the capacity to move flexibly from one state to another."
         },
         {
           "type": "note",
@@ -578,130 +578,85 @@ export const chapter5En: Chapter = {
     },
     {
       "id": "les-quatre-niveaux-rop-appliques-au-stress",
-      "title": "14. The four-level ROP clinical progression",
+      "title": "14. The four ROP levels applied to stress",
       "blocks": [
         {
           "type": "para",
-          "text": "The ROP session can be organised according to four complementary levels: regulation of higher centres, autonomic regulation and adaptation, locoregional regulation, then the visceral or functional target and integration. These four levels form a clinical framework, not four mandatory steps. Their selection, order, and intensity depend on the reason for consultation, the history, the tests, the stage of adaptation, and the patient’s tolerance."
+          "text": "The ROP session is organised around four complementary levels: regulation of higher centres; autonomic regulation and adaptation; locoregional regulation and the target; and, finally, viscerosomatic and viscero-emotional integration. This sequence, its anatomical landmarks, and its selection rules are developed in Chapter 2. Here, we recall only how it applies specifically in the context of stress."
         },
         {
           "type": "para",
-          "text": "This organisation distinguishes general regulation, the regional environment, and the clinical target itself. It describes neither a direct anatomical causality nor a mandatory pathway between a reflex zone and a deep structure."
+          "text": "Summary table — four-level ROP protocol"
         },
         {
-          "type": "para",
-          "text": "SELECTION PRINCIPLE — The session does not consist of systematically working through all four levels. The practitioner selects the relevant levels, doses the stimulation, and then gives the patient time to integrate the response."
-        },
-        {
-          "type": "sub",
-          "text": "14.1. Level 1 — Regulation of higher centres"
-        },
-        {
-          "type": "para",
-          "text": "Clinical intention: reduce the persistence of the alarm signal and make the system more available for the remainder of treatment."
-        },
-        {
-          "type": "para",
-          "text": "The first level concerns central regulatory structures and their neuro-meningeal environment. In the ROP clinical model, it may include the occipital zones, the cranio-cervical junction, the brainstem, and landmarks attributed to the diencephalon and emotional networks."
-        },
-        {
-          "type": "bullets",
-          "items": [
-            "Possible ROP landmarks: occipital zones; occiput-C1-C2; brainstem; foramen magnum and jugular foramen according to the cartography; diencephalon, particularly the hypothalamus; hypothalamic-pituitary axis; associated neuro-meningeal environment.",
-            "Clinical objective: reduce excessive bodily vigilance and provide stable, predictable, measured tactile information.",
-            "Anatomical interpretation: this level mainly corresponds to the central nervous system and the central landmarks described in Chapter 3.",
-            "Limitation: ROP does not make it possible to palpate or directly treat the amygdala, hypothalamus, cortex, or a specific brainstem nucleus."
+          "type": "table",
+          "headers": [
+            "Level",
+            "Clinical intention in the context of stress"
+          ],
+          "rows": [
+            [
+              "1 — Regulation of higher centres",
+              "Reduce the persistence of the alarm signal and make the system more available for the remainder of treatment"
+            ],
+            [
+              "2 — Autonomic regulation and adaptation",
+              "Support the withdrawal of mobilisation that is no longer needed and promote a more flexible autonomic baseline"
+            ],
+            [
+              "3 — Locoregional regulation and target",
+              "Release regional constraints that sustain bodily signals, then allow the relevant function to return"
+            ],
+            [
+              "4 — Viscerosomatic and viscero-emotional integration",
+              "Relate the function to its bodily expressions and emotional context without separating it from the whole"
+            ]
           ]
         },
         {
           "type": "para",
-          "text": "See Chapter 3 — Central nervous system."
-        },
-        {
-          "type": "sub",
-          "text": "14.2. Level 2 — Autonomic regulation and adaptation"
+          "text": "Two particular points should be noted in this chapter."
         },
         {
           "type": "para",
-          "text": "Clinical intention: facilitate the reduction of mobilisation that is no longer needed and support a return to a more flexible autonomic baseline."
+          "text": "The target may be a function rather than an organ. Sleep, digestion, recovery, breathing, pain, micturition, sexuality, or visceral comfort are legitimate clinical targets at Level 3, just like an organ reflex zone."
         },
         {
           "type": "para",
-          "text": "The second level concerns the autonomic pathways and adaptive structures involved in mobilisation, maintenance of effort, and recovery. The target is neither sympathetic inhibition nor parasympathetic dominance, but flexibility between mobilisation and restoration."
+          "text": "Breathing occupies a particular place. When it is predominantly upper-chest, rapid, irregular, or poorly adaptable, regional work may focus on the diaphragm, its crura, the hiatuses, and thoraco-abdominal interfaces. This approach is consistent with breathing interventions whose effects on physiological and psychological markers of stress have been examined in a systematic review [8]."
         },
         {
-          "type": "bullets",
-          "items": [
-            "Possible ROP landmarks: cervical, thoracic, and thoracolumbar sympathetic pathways; cranial parasympathetic pathways; vagus nerve; pelvic parasympathetic pathways S2-S4 when relevant; splanchnic nerves; autonomic plexuses; ANS-ENS interface for digestive territories; adrenal zones; relationships with the SAM and HPA axes.",
-            "Sleep and recovery: to be integrated when incomplete termination of the stress response sustains mobilisation.",
-            "Systemic support according to testing: adrenal glands, liver, kidneys, intestine, or other relevant metabolic and homeostatic territories. These targets are not mandatory steps.",
-            "Diaphragm: a functional interface at this level when breathing and autonomic mobilisation dominate the clinical picture. The phrenic nerve, being somatic, is more appropriately placed in Level 4 when approached as a somatic convergence.",
-            "Limitation: a session does not allow one to conclude that cortisol, the HPA axis, catecholamines, or a metabolic function have normalised without specific measurements."
-          ]
-        },
-        {
-          "type": "para",
-          "text": "See Chapter 4 — Autonomic nervous system; see Chapter 8 — Diaphragm."
-        },
-        {
-          "type": "sub",
-          "text": "14.3. Level 3 — Locoregional regulation"
-        },
-        {
-          "type": "para",
-          "text": "Clinical intention: prepare the regional environment of the target and reduce constraints that may sustain bodily signals."
-        },
-        {
-          "type": "para",
-          "text": "The third level concerns the anatomical and functional environment of the target, not yet the visceral target itself. It brings together regional structures that may contribute to tension, restriction, or discomfort perceived by the patient."
-        },
-        {
-          "type": "bullets",
-          "items": [
-            "Possible landmarks according to the region: anatomical cavities; peritoneum and other serous membranes; mesenteries and mesenteric roots; omenta; fasciae; visceral ligaments; intervisceral relationships; hiatuses and passage spaces; mechanical or respiratory interfaces directly related to the region.",
-            "Abdominal regional foundation: Chapter 7 — Abdominal and peritoneal cavities.",
-            "Pelvic regional foundation: Chapter 17 — Pelvic cavity.",
-            "Application to stress: when breathing is predominantly upper-chest, rapid, irregular, or poorly adaptable, regional work may focus on the diaphragm, its crura, the hiatuses, and thoraco-abdominal interfaces before moving to the functional target.",
-            "Limitation: vagal, sympathetic, and splanchnic pathways and autonomic plexuses belong to Level 2; somatic nerves, muscles, joints, and referred territories are integrated into Level 4 when they express the clinical target."
+          "type": "note",
+          "label": "SELECTION PRINCIPLE",
+          "body": [
+            "The session does not consist of systematically working through all four levels. The practitioner selects the relevant levels, adjusts the dose of tactile input, and then gives the patient time to integrate the response. One patient may mainly require Levels 2 and 3, while another may require Levels 1 and 4."
           ]
         },
         {
           "type": "sub",
-          "text": "14.4. Level 4 — Visceral or functional target and integration"
+          "text": "14.1. Example of an entry point: occipital reflex zones"
         },
         {
           "type": "para",
-          "text": "Clinical intention: work on the function or organ of primary concern while integrating its viscerosomatic and viscero-emotional expressions."
+          "text": "In ROP practice, gentle stimulation of the occipital zones aims, where possible, to reduce excessive bodily vigilance and prepare the integration of subsequent stages. Through cutaneous, myofascial, and proprioceptive afferents from the C2–C3 region, it may help modify attention to the body, protective tension, and respiratory or emotional agitation."
         },
         {
           "type": "para",
-          "text": "The fourth level corresponds to the individualised clinical target. In the visceral chapters, it brings together the organ-specific reflex zone and its functional sub-territories with the somatic and emotional relationships that may modulate its expression. In the chapter on stress, the target may also be a function: sleep, digestion, recovery, breathing, pain, micturition, sexuality, or visceral comfort."
-        },
-        {
-          "type": "bullets",
-          "items": [
-            "Specific target: reflex zone of the organ or function; specific sub-territories of its cartography.",
-            "Viscerosomatic integration: segmental convergences; somatic nerves; muscles; joints; painful or referred areas associated with the target.",
-            "Viscero-emotional integration: brain-organ axis, emotional context, and interoception; Limbic Brain-Organ Balance when this ROP-specific clinical terminology is used in the chapter concerned.",
-            "Clinical objective: create a central, autonomic, and regional context more favourable to the return of function, then treat the target without separating it from its overall expression.",
-            "Limitation: these correspondences constitute a clinical ROP framework. They demonstrate neither a direct anatomical projection of the organ onto the foot nor a psychological cause of the symptom."
-          ]
+          "text": "The three bands—parasympathetic, sympathetic, and structural—remain clinical landmarks specific to ROP. Their palpatory qualities may vary according to the level of stress and the patient’s adaptive state."
         },
         {
           "type": "para",
-          "text": "LIMBIC BRAIN-ORGAN BALANCE — In ROP terminology, this expression describes a listening-induction technique combining a visceral landmark and a central landmark. It does not describe a direct anatomical connection between the foot, limbic networks, and the organ."
+          "text": "The objective is not to command the autonomic nervous system directly, but to introduce measured sensory information so that the patient is more available for the remainder of treatment. ROP does not make it possible to palpate or directly treat the amygdala, hypothalamus, cortex, or a specific brainstem nucleus."
         },
         {
-          "type": "sub",
-          "text": "SYNTHETIC SEQUENCE"
+          "type": "xref",
+          "label": "See Chapter 2 — ROP treatment and the four-level sequence",
+          "href": "/lecture/traitement-rop?lang=en"
         },
         {
-          "type": "para",
-          "text": "1. Regulation of higher centres → 2. Autonomic regulation and adaptation → 3. Locoregional regulation → 4. Visceral or functional target and integration."
-        },
-        {
-          "type": "para",
-          "text": "This progression is not a mandatory order. One patient may mainly require Levels 2 and 4, another Levels 1 and 3. The session selects the relevant levels rather than attempting to work through them systematically."
+          "type": "xref",
+          "label": "See Chapter 8 — Diaphragm",
+          "href": "/lecture/chapitre-8?lang=en"
         }
       ]
     },
@@ -858,7 +813,7 @@ export const chapter5En: Chapter = {
         },
         {
           "type": "para",
-          "text": "The most credible bridge with ROP remains regulation of the response and recovery. Through tissue assessment, measured touch, and an adapted progression between central regulation, autonomic regulation, the locoregional environment, and an integrated clinical target, we seek to provide the nervous system with new bodily information, reduce mobilisation that has become unnecessary, and favour the return of respiratory, digestive, and restorative functions."
+          "text": "The most credible bridge with ROP remains the regulation of the response and recovery. Through tissue assessment, measured touch, and an adapted progression encompassing central regulation, autonomic regulation, the locoregional environment and clinical target, followed by integration of its somatic and emotional expressions, we seek to provide the nervous system with new bodily information, reduce mobilisation that is no longer needed, and support the return of respiratory, digestive, and restorative functions."
         },
         {
           "type": "quote",
@@ -880,24 +835,6 @@ export const chapter5En: Chapter = {
             "The autonomic target is not vagal dominance, but flexibility between mobilisation and recovery.",
             "ROP is most relevant as a functional and integrative approach, whose specific effects remain to be tested in comparative protocols."
           ]
-        }
-      ]
-    },
-    {
-      "id": "exemple-niveau-1-zones-occipitales",
-      "title": "Example of a Level 1 entry point — Occipital reflex zones",
-      "blocks": [
-        {
-          "type": "para",
-          "text": "In ROP practice, gentle stimulation of the occipital zones aims, where possible, to reduce excessive bodily vigilance and facilitate the integration of subsequent stages. Through cutaneous, myofascial, and proprioceptive afferents from the C2-C3 region, it may contribute to modifying attention to the body, protective tension, and respiratory or emotional agitation."
-        },
-        {
-          "type": "para",
-          "text": "The three bands — parasympathetic, sympathetic, and structural — remain clinical landmarks specific to ROP, whose palpatory qualities may vary according to the level of stress and the patient’s adaptive state."
-        },
-        {
-          "type": "para",
-          "text": "The objective is not to command the autonomic system directly, but to introduce measured sensory information so that the patient is more available for the remainder of treatment."
         }
       ]
     },
@@ -964,40 +901,6 @@ export const chapter5En: Chapter = {
         {
           "type": "para",
           "text": "The HPA axis constitutes the slower and more sustained hormonal component of the stress response. When the stressor persists, the hypothalamus releases CRH, which stimulates the anterior pituitary; this secretes ACTH, which activates the adrenal cortex and promotes cortisol release. Cortisol supports adaptation over time by maintaining energy availability and modulating immune and inflammatory responses. When equilibrium returns, feedback mechanisms progressively reduce the response; if the stressor persists, the HPA axis complements and prolongs the SAM response."
-        },
-        {
-          "type": "para",
-          "text": "Summary table — four-level ROP protocol"
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Level",
-            "Clinical intention",
-            "Main ROP landmarks"
-          ],
-          "rows": [
-            [
-              "1. Regulation of higher centres",
-              "Reduce the persistence of the alarm signal and prepare integration.",
-              "Occipital zones; brainstem; diencephalon/hypothalamus; hypothalamic-pituitary axis; neuro-meningeal environment."
-            ],
-            [
-              "2. Autonomic regulation and adaptation",
-              "Promote flexibility between mobilisation and recovery.",
-              "Sympathetic; parasympathetic/vagal; splanchnic pathways; autonomic plexuses; ANS-ENS interface; adrenal glands; sleep and systemic support according to testing."
-            ],
-            [
-              "3. Locoregional regulation",
-              "Prepare the regional environment of the target.",
-              "Cavities; peritoneum; mesenteries and roots; omenta; fasciae; ligaments; intervisceral relationships; abdominal and pelvic regional foundations."
-            ],
-            [
-              "4. Visceral or functional target and integration",
-              "Work on the target and integrate its overall expression.",
-              "Organ or function zone; specific sub-territories; viscerosomatic convergences; somatic nerves; muscles/joints; brain-organ axis or Limbic Brain-Organ Balance according to the chapter."
-            ]
-          ]
         }
       ]
     }

@@ -1,5 +1,5 @@
 // Chapter 21 content — English
-// Source: public/chapter-21/EN/Chapter_21_Erectile_System_Medical_English_Revised.docx
+// Source: public/chapter-21/EN/Chapter_21_Erectile_System_CodexTranslationV2.docx
 
 import type { Chapter } from './types'
 
@@ -39,9 +39,9 @@ export const chapter21En: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Corpora cavernosa: these paired erectile structures are attached proximally to the pubic arch. Their proximal portions are known as the crura of the clitoris or penis. Distally, they converge to form the body of the clitoris in women and the dorsal erectile bodies of the penis in men.",
-            "Vestibular bulbs: in women, these are paired erectile structures located on either side of the vaginal opening. They contribute to erectile engorgement of the vulva and are homologous to the male corpus spongiosum, but do not directly form the glans clitoris.",
-            "Corpus spongiosum: in men, this is an unpaired midline structure that begins as an expansion—the bulb of the penis—attached to the perineal membrane. It terminates in the glans and surrounds the urethra. It contributes to expelling urethral contents during urination and semen during ejaculation."
+            "Corpora cavernosa: These paired erectile structures are attached proximally to the pubic arch. Their proximal portions are known as the crura of the clitoris or penis. Distally, they converge to form the body of the clitoris in women and the dorsal erectile bodies of the penis in men.",
+            "Vestibular bulbs: In women, these are paired erectile structures located on either side of the vaginal opening. They contribute to erectile engorgement of the vulva and are homologous to the male corpus spongiosum, but do not directly form the glans clitoris.",
+            "Corpus spongiosum: In men, this is an unpaired midline structure that begins as an expansion—the bulb of the penis—attached to the perineal membrane. It terminates in the glans and surrounds the urethra. It contributes to expelling urethral contents during urination and semen during ejaculation."
           ]
         },
         {
@@ -51,8 +51,8 @@ export const chapter21En: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Ischiocavernosus muscles: these paired muscles attach to the medial borders of the ischiopubic rami and to the crura of the clitoris or penis. Their contraction propels blood from the crura toward the body of the penis or clitoris.",
-            "Bulbospongiosus muscles: these paired muscles attach to the perineum and to the vestibular bulbs in women or the corpus spongiosum in men. Their contraction propels blood toward the penis or clitoris. In men, their reflex contractions facilitate emptying of the urethra after urination and expulsion of semen during ejaculation."
+            "Ischiocavernosus muscles: These paired muscles attach to the medial borders of the ischiopubic rami and to the crura of the clitoris or penis. Their contraction propels blood from the crura toward the body of the penis or clitoris.",
+            "Bulbospongiosus muscles: These paired muscles attach to the perineum and to the vestibular bulbs in women or the corpus spongiosum in men. Their contraction propels blood toward the penis or clitoris. In men, their reflex contractions facilitate emptying of the urethra after urination and expulsion of semen during ejaculation."
           ]
         },
         {
@@ -66,8 +66,8 @@ export const chapter21En: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Suspensory ligament: superiorly, it attaches to the pubic symphysis and the linea alba of the anterior abdominal wall;",
-            "Fundiform ligament: it attaches to the linea alba."
+            "Suspensory ligament: Superiorly, it attaches to the pubic symphysis and the linea alba of the anterior abdominal wall;",
+            "Fundiform ligament: It attaches to the linea alba."
           ]
         },
         {
@@ -84,7 +84,7 @@ export const chapter21En: Chapter = {
         },
         {
           "type": "para",
-          "text": "In men, these glands are located within the deep perineal pouch. They secrete an alkaline fluid that helps protect spermatozoa as they pass through the urethra and vagina during sexual activity."
+          "text": "In men, these glands are located in the perineum. They secrete an alkaline fluid that helps protect spermatozoa as they pass through the urethra and vagina during sexual arousal."
         }
       ]
     },
@@ -188,7 +188,7 @@ export const chapter21En: Chapter = {
         },
         {
           "type": "para",
-          "text": "Reduced fertility, decreased libido, dysmenorrhea, premature menopause, and early-onset male hypogonadism. (See Chapter 5—Stress Mechanisms.)"
+          "text": "Reduced fertility, decreased libido, dysmenorrhea, premature menopause, and early androgen deficiency in men. (See Chapter 5—Stress Mechanisms.)"
         },
         {
           "type": "sub",
@@ -246,7 +246,7 @@ export const chapter21En: Chapter = {
         },
         {
           "type": "para",
-          "text": "In men, and even more so in women, sexuality engages the mind and emotions as much as the body. Psycho-emotional stressors may hinder a fulfilling sexual life: low self-esteem, anxiety, stress, performance anxiety, depression, relationship conflict, religious or educational taboos, and a history of sexual trauma (incest, rape, sexual abuse, etc.)."
+          "text": "In men, and even more so in women, sexuality engages the mind and emotions as much as the body. Psycho-emotional stressors may hinder a fulfilling sexual life: low self-esteem, anxiety, stress, performance anxiety, depression, relationship conflict, religious or educational taboos, and past sexual trauma (incest, rape, unwanted sexual touching, etc.)."
         }
       ]
     },
@@ -268,15 +268,15 @@ export const chapter21En: Chapter = {
         },
         {
           "type": "para",
-          "text": "• Occipital reflex zones."
+          "text": "Occipital reflex zones."
         },
         {
           "type": "para",
-          "text": "• Diencephalon, particularly the hypothalamus, in neuroendocrine and autonomic regulation."
+          "text": "Diencephalon, particularly the hypothalamus, in neuroendocrine and autonomic regulation."
         },
         {
           "type": "para",
-          "text": "• Central and corticolimbic networks involved in perception, motivation, and emotional context."
+          "text": "Central and corticolimbic networks involved in perception, motivation, and emotional context."
         },
         {
           "type": "para",
@@ -292,19 +292,19 @@ export const chapter21En: Chapter = {
         },
         {
           "type": "para",
-          "text": "• Pelvic parasympathetic outflow (S2–S4): associated with vasodilation and filling of erectile tissues."
+          "text": "Pelvic parasympathetic outflow (S2–S4): associated with vasodilation and filling of erectile tissues."
         },
         {
           "type": "para",
-          "text": "• Thoracolumbar sympathetic outflow: described in this chapter as arising from L1–L3 and involved particularly in the ejaculatory phase."
+          "text": "Thoracolumbar sympathetic outflow: described in this chapter around L1–L3 and involved particularly in the ejaculatory phase."
         },
         {
           "type": "para",
-          "text": "• Inferior hypogastric plexus and pelvic autonomic networks: a functional crossroads between the sympathetic and parasympathetic pathways supplying the pelvic organs."
+          "text": "Inferior hypogastric plexus and pelvic autonomic networks: a functional crossroads between the sympathetic and parasympathetic pathways supplying the pelvic organs."
         },
         {
           "type": "para",
-          "text": "• Autonomic coordination: a functional interpretation of the arousal–erection–emission sequence should be favored over isolated stimulation of either the sympathetic or parasympathetic system."
+          "text": "Autonomic coordination: a functional interpretation of the arousal–erection–emission sequence should be favored over isolated stimulation of either the sympathetic or parasympathetic system."
         },
         {
           "type": "para",
@@ -320,27 +320,27 @@ export const chapter21En: Chapter = {
         },
         {
           "type": "para",
-          "text": "Key plantar landmarks"
+          "text": "Key foot landmarks"
         },
         {
           "type": "para",
-          "text": "• Pudendal nerve (S2–S4): lateral aspect of the heel, corresponding on the ROP map to the sacral plexus and ischial spine region."
+          "text": "Pudendal nerve (S2–S4): lateral aspect of the heel, corresponding on the ROP map to the sacral plexus and ischial spine region."
         },
         {
           "type": "para",
-          "text": "• Continuation of the pudendal pathway: plantar aspect of the heel, then the medial border of the ischiopubic ramus."
+          "text": "Continuation of the pudendal pathway: plantar aspect of the heel, then the medial border of the ischiopubic ramus."
         },
         {
           "type": "para",
-          "text": "• Corpora cavernosa and ischiocavernosus muscles: medial border of the ischiopubic rami."
+          "text": "Corpora cavernosa and ischiocavernosus muscles: medial border of the ischiopubic rami."
         },
         {
           "type": "para",
-          "text": "• Erectile organs: medial end of the iliopubic ramus, at the anterior border of the heel."
+          "text": "Erectile organs: medial end of the iliopubic ramus, at the anterior border of the heel."
         },
         {
           "type": "para",
-          "text": "• Sacrotuberous and sacrospinous ligaments: posterior border of the heels."
+          "text": "Sacrotuberous and sacrospinous ligaments: posterior border of the heels."
         },
         {
           "type": "para",
@@ -352,7 +352,7 @@ export const chapter21En: Chapter = {
         },
         {
           "type": "para",
-          "text": "• Inguinal ligament and inguinal canal."
+          "text": "Inguinal ligament and inguinal canal."
         },
         {
           "type": "para",
@@ -372,27 +372,27 @@ export const chapter21En: Chapter = {
         },
         {
           "type": "para",
-          "text": "• Pelvic floor."
+          "text": "Pelvic floor."
         },
         {
           "type": "para",
-          "text": "• Sacrum and coccyx."
+          "text": "Sacrum and coccyx."
         },
         {
           "type": "para",
-          "text": "• Ischial spine and ischiopubic rami."
+          "text": "Ischial spine and ischiopubic rami."
         },
         {
           "type": "para",
-          "text": "• Sacrotuberous and sacrospinous ligaments: posterior border of the heels."
+          "text": "Sacrotuberous and sacrospinous ligaments: posterior border of the heels."
         },
         {
           "type": "para",
-          "text": "• Greater sciatic foramen, piriformis muscle, sacral plexus, and pudendal nerve."
+          "text": "Greater sciatic foramen, piriformis muscle, sacral plexus, and pudendal nerve."
         },
         {
           "type": "para",
-          "text": "• Lesser sciatic foramen, obturator muscles, and gemelli muscles."
+          "text": "Lesser sciatic foramen, obturator muscles, and gemelli muscles."
         },
         {
           "type": "para",
@@ -408,11 +408,11 @@ export const chapter21En: Chapter = {
         },
         {
           "type": "para",
-          "text": "• Limbic system."
+          "text": "Limbic system."
         },
         {
           "type": "para",
-          "text": "• Olfactory nerve (CN I): an associated sensory landmark on the ROP map."
+          "text": "Olfactory nerve (CN I): an associated sensory landmark on the ROP map."
         },
         {
           "type": "para",
@@ -428,23 +428,23 @@ export const chapter21En: Chapter = {
         },
         {
           "type": "para",
-          "text": "• Erectile dysfunction: Levels 2, 3, and 4 are frequently important, together with Level 1 when desire, anticipation, or anxiety contributes to the clinical presentation."
+          "text": "Erectile dysfunction: Levels 2, 3, and 4 are frequently important, together with Level 1 when desire, anticipation, or anxiety contributes to the clinical presentation."
         },
         {
           "type": "para",
-          "text": "• Disorders of arousal or lubrication in women: integration of Levels 2 and 3, with Level 4 when pain, stress, or relationship factors are present."
+          "text": "Disorders of arousal or lubrication in women: integration of Levels 2 and 3, with Level 4 when pain, stress, or relationship factors are present."
         },
         {
           "type": "para",
-          "text": "• Premature ejaculation or difficulty ejaculating: an assessment combining autonomic regulation, pudendal innervation, and the central or emotional context."
+          "text": "Premature ejaculation or difficulty ejaculating: an assessment combining autonomic regulation, pudendal innervation, and the central or emotional context."
         },
         {
           "type": "para",
-          "text": "• Anorgasmia or orgasmic difficulties: an integrated assessment of somatic, autonomic, central, and relational components should be favored, without reducing orgasm to a single branch of the autonomic nervous system."
+          "text": "Anorgasmia or orgasmic difficulties: an integrated assessment of somatic, autonomic, central, and relational components should be favored, without reducing orgasm to a single branch of the autonomic nervous system."
         },
         {
           "type": "para",
-          "text": "• Sexual or perineal pain: organic causes should first be excluded, followed by integrated assessment of the pelvis, pelvic floor, pudendal nerve, and relevant genital structures."
+          "text": "Sexual or perineal pain: organic causes should first be excluded, followed by integrated assessment of the pelvis, pelvic floor, pudendal nerve, and relevant genital structures."
         },
         {
           "type": "para",

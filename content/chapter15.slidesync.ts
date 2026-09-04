@@ -50,20 +50,20 @@ export const chapter15Slides: SyncSlide[] = [
 
 export const chapter15SlidesEn: SyncSlide[] = [
   { src: '/chapter-15/EN/Images/NCH 15 EN IMG 1.png', title: 'Chapter 15 — Colon and Rectum' },
-  { src: '/chapter-15/EN/Images/NCH 15 EN IMG 2.png', title: 'Anatomical Relationships of the Colonic Framework' },
-  { src: '/chapter-15/EN/Images/NCH 15 EN IMG 3.png', title: 'Location and Course of the Colon' },
-  { src: '/chapter-15/EN/Images/NCH 15 EN IMG 4.png', title: 'Cecum, Ileocecal Junction and Appendix' },
-  { src: '/chapter-15/EN/Images/NCH 15 EN IMG 5.png', title: 'Transverse Colon and Colic Flexures' },
-  { src: '/chapter-15/EN/Images/NCH 15 EN IMG 6.png', title: 'Descending Colon, Sigmoid Colon and Mesosigmoid' },
+  { src: '/chapter-15/EN/Images/NCH 15 EN IMG 2 V2.png', title: 'Anatomical Relationships of the Colonic Framework' },
+  { src: '/chapter-15/EN/Images/NCH 15 EN IMG 3 V2.png', title: 'Location and Course of the Colon' },
+  { src: '/chapter-15/EN/Images/NCH 15 EN IMG 4 V2.png', title: 'Cecum, Ileocecal Junction and Appendix' },
+  { src: '/chapter-15/EN/Images/NCH 15 EN IMG 5 V2.png', title: 'Transverse Colon and Colic Flexures' },
+  { src: '/chapter-15/EN/Images/NCH 15 EN IMG 6 V2.png', title: 'Descending Colon, Sigmoid Colon and Mesosigmoid' },
   { src: '/chapter-15/EN/Images/NCH 15 EN IMG 7.png', title: 'Rectum, Anorectal Angle, and Anal Canal' },
-  { src: '/chapter-15/EN/Images/NCH 15 EN IMG 8.png', title: 'The Architecture of the Colonic Frame' },
-  { src: '/chapter-15/EN/Images/NCH 15 EN IMG 9.png', title: 'Vascularization of the Colon and Rectal Venous Drainage' },
+  { src: '/chapter-15/EN/Images/NCH 15 EN IMG 8 V2.png', title: 'The Architecture of the Colonic Frame' },
+  { src: '/chapter-15/EN/Images/NCH 15 EN IMG 9 V2.png', title: 'Vascularization of the Colon and Rectal Venous Drainage' },
   { src: '/chapter-15/EN/Images/NCH 15 EN IMG 10.png', title: 'Rectum, Anus and Mechanism of Defecation' },
   { src: '/chapter-15/EN/Images/NCH 15 EN IMG 11.png', title: 'Innervation of the Rectum and Anus' },
-  { src: '/chapter-15/EN/Images/NCH 15 EN IMG 12.png', title: 'Physiology of the Colon: Fermentation, Reabsorption, and Motility' },
-  { src: '/chapter-15/EN/Images/NCH 15 EN IMG 13.png', title: 'Autonomic Innervation of the Colon' },
+  { src: '/chapter-15/EN/Images/NCH 15 EN IMG 12 V2.png', title: 'Physiology of the Colon: Fermentation, Reabsorption, and Motility' },
+  { src: '/chapter-15/EN/Images/NCH 15 EN IMG 13 V2.png', title: 'Autonomic Innervation of the Colon' },
   { src: '/chapter-15/EN/Images/NCH 15 EN IMG 14.png', title: 'Physiology of the Colon, Rectum, and Anus' },
-  { src: '/chapter-15/EN/Images/NCH 15 EN IMG 15.png', title: 'Colon — Viscero-Somatic Relations' },
+  { src: '/chapter-15/EN/Images/NCH 15 EN IMG 15 V2.png', title: 'Colon — Viscero-Somatic Relations' },
 ]
 
 export const chapter15SlidesDe: SyncSlide[] = chapter15Slides

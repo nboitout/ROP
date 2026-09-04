@@ -74,6 +74,7 @@ import { chapter21En } from './chapter21.en'
 import { chapter21De } from './chapter21.de'
 import { chapter21Es } from './chapter21.es'
 import { chapter21It } from './chapter21.it'
+import { integrateEnglishReflexPhotos } from '@/lib/englishReflexMedia'
 
 // The former reworked editions are now the canonical French Chapters 3–5.
 chapter3ReworkFr.slug = 'chapter-3'
@@ -124,6 +125,13 @@ const registry: Record<string, Partial<Record<Lang, Chapter>>> = {
   'chapter-19': { fr: chapter19Fr, en: chapter19En, de: chapter19De, es: chapter19Es, it: chapter19It },
   'chapter-20': { fr: chapter20Fr, en: chapter20En, de: chapter20De, es: chapter20Es, it: chapter20It },
   'chapter-21': { fr: chapter21Fr, en: chapter21En, de: chapter21De, es: chapter21Es, it: chapter21It },
+}
+
+// English cartography exports use the same paired presentation as the French
+// reflex-zone sections: the treatment photo lives in the prose and its map is
+// shown alongside it by the synchronized reader.
+for (const translations of Object.values(registry)) {
+  if (translations.en) integrateEnglishReflexPhotos(translations.en)
 }
 
 // Classic reading uses the same current image deck as synchronized reading.

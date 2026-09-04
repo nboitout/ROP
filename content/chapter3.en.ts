@@ -1,5 +1,5 @@
 // Chapter 3 content — English
-// Source: public/chapter-3/EN/Chapter_3_Central_Nervous_System_ROP_EN_Publishable_Revised.docx
+// Source: public/chapter-3/EN/Chapter_3_Central_Nervous_System_ROP_EN_CodexTranslationV2.docx
 
 import type { Chapter } from './types'
 
@@ -20,7 +20,7 @@ export const chapter3En: Chapter = {
         },
         {
           "type": "para",
-          "text": "The central nervous system comprises the brain and spinal cord. It receives information from the body, integrates it, and contributes to the organization of motor, autonomic, endocrine, emotional, and cognitive responses."
+          "text": "The central nervous system comprises the brain and spinal cord. It receives information from the body, integrates it, and contributes to the organisation of motor, autonomic, endocrine, emotional, and cognitive responses."
         },
         {
           "type": "para",
@@ -28,7 +28,7 @@ export const chapter3En: Chapter = {
         },
         {
           "type": "para",
-          "text": "Chapter 4 is devoted to the autonomic nervous system. Its peripheral sympathetic and parasympathetic organization will therefore not be detailed here. This chapter focuses on the CNS centres that receive, integrate, and modulate this information."
+          "text": "Chapter 4 is devoted to the autonomic nervous system. Its peripheral sympathetic and parasympathetic organisation will therefore not be detailed here. This chapter focuses on the CNS centres that receive, integrate, and modulate this information."
         },
         {
           "type": "sub",
@@ -66,7 +66,7 @@ export const chapter3En: Chapter = {
         },
         {
           "type": "para",
-          "text": "For ROP, this organization is fundamental: pressure applied to a foot or occipital zone does not directly reach an organ or cerebral area through a dedicated pathway. Rather, it provides sensory input that may modify the state of a network."
+          "text": "For ROP, this organisation is fundamental: pressure applied to a foot or occipital zone does not directly reach an organ or cerebral area through a dedicated pathway. Rather, it provides sensory input that may modify the state of a network."
         },
         {
           "type": "sub",
@@ -78,7 +78,7 @@ export const chapter3En: Chapter = {
         },
         {
           "type": "para",
-          "text": "This organization helps explain how somatic input may contribute to broader modulation of pain, muscle tone, vigilance, autonomic state, or certain visceral functions, without assuming a direct connection between a specific point and a specific target."
+          "text": "This organisation helps explain how somatic input may contribute to broader modulation of pain, muscle tone, vigilance, autonomic state, or certain visceral functions, without assuming a direct connection between a specific point and a specific target."
         }
       ]
     },
@@ -92,7 +92,7 @@ export const chapter3En: Chapter = {
         },
         {
           "type": "para",
-          "text": "In the context of visceral ROP, its relevance lies primarily in its role as an interface between ascending information from the body and the autonomic and behavioural responses organized by higher centres."
+          "text": "In the context of visceral ROP, its relevance lies primarily in its role as an interface between ascending information from the body and the autonomic and behavioural responses organised by higher centres."
         },
         {
           "type": "sub",
@@ -100,7 +100,7 @@ export const chapter3En: Chapter = {
         },
         {
           "type": "para",
-          "text": "The nucleus of the solitary tract (NTS), located in the medulla oblongata, is a major relay for visceral information arriving particularly through the vagus and glossopharyngeal nerves. It contributes to the integration of cardiovascular, respiratory, and digestive signals and communicates with other autonomic centres in the brainstem and hypothalamus."
+          "text": "The nucleus of the solitary tract (NTS), located in the medulla oblongata, is a major relay for visceral information arriving particularly through the vagus and glossopharyngeal nerves. Baroreceptors in the carotid sinus contribute to these cardiovascular afferents via the glossopharyngeal nerve. It contributes to the integration of cardiovascular, respiratory, and digestive signals and communicates with other autonomic centres in the brainstem and hypothalamus."
         },
         {
           "type": "para",
@@ -120,11 +120,11 @@ export const chapter3En: Chapter = {
         },
         {
           "type": "sub",
-          "text": "3.3. Periaqueductal gray: integration and descending control"
+          "text": "3.3. Periaqueductal grey: integration and descending control"
         },
         {
           "type": "para",
-          "text": "The periaqueductal gray (PAG), located around the cerebral aqueduct in the midbrain, contributes to pain modulation, defensive responses, and the integration of certain autonomic and visceral functions. It also participates in networks involved in the neural control of pelvic functions."
+          "text": "The periaqueductal grey (PAG), located around the cerebral aqueduct in the midbrain, contributes to pain modulation, defensive responses, and the integration of certain autonomic and visceral functions. It also participates in networks involved in the neural control of pelvic functions."
         },
         {
           "type": "para",
@@ -166,7 +166,7 @@ export const chapter3En: Chapter = {
         },
         {
           "type": "para",
-          "text": "The pituitary gland is not strictly part of the diencephalon, but its function is closely linked to the hypothalamus. The posterior pituitary releases vasopressin and oxytocin synthesized in the hypothalamus. The anterior pituitary secretes several hormones under hypothalamic control, including ACTH, TSH, GH, FSH, LH, and prolactin."
+          "text": "The pituitary gland is not strictly part of the diencephalon, but its function is closely linked to the hypothalamus. The posterior pituitary releases vasopressin and oxytocin synthesised in the hypothalamus. The anterior pituitary secretes several hormones under hypothalamic control, including ACTH, TSH, GH, FSH, LH, and prolactin."
         },
         {
           "type": "para",
@@ -192,11 +192,11 @@ export const chapter3En: Chapter = {
         },
         {
           "type": "sub",
-          "text": "5.2. Cingulate cortex: attention, pain, and mobilization of the response"
+          "text": "5.2. Cingulate cortex: attention, pain, and mobilisation of the response"
         },
         {
           "type": "para",
-          "text": "The cingulate cortex contributes to attention, motivation, pain processing, emotional regulation, and certain autonomic responses. In particular, it helps assess the relevance or salience of a signal and mobilize a response when required."
+          "text": "The cingulate cortex contributes to attention, motivation, pain processing, emotional regulation, and certain autonomic responses. In particular, it helps assess the relevance or salience of a signal and mobilise a response when required."
         },
         {
           "type": "sub",
@@ -212,7 +212,7 @@ export const chapter3En: Chapter = {
         },
         {
           "type": "para",
-          "text": "The amygdala contributes to the evaluation of the emotional significance of situations, particularly in relation to threat, whereas the hippocampus plays a major role in memory, learning, and the contextualization of experience."
+          "text": "The amygdala contributes to the evaluation of the emotional significance of situations, particularly in relation to threat, whereas the hippocampus plays a major role in memory, learning, and the contextualisation of experience."
         },
         {
           "type": "para",
@@ -250,11 +250,11 @@ export const chapter3En: Chapter = {
         },
         {
           "type": "para",
-          "text": "Within the ROP method, the terms “craniosacral axis” and “primary respiratory mechanism (PRM)” are used as clinical landmarks derived from the neuro-meningeal model developed in previous volumes. They do not refer to a recognized independent anatomical system."
+          "text": "Within the ROP method, the terms “craniosacral axis” and “primary respiratory mechanism (PRM)” are used as clinical landmarks derived from the neuro-meningeal model developed in previous volumes. They do not refer to a recognised independent anatomical system."
         },
         {
           "type": "para",
-          "text": "Likewise, techniques described as compression of the fourth ventricle, SBS–S2 synchronization, or work on CSF circulation belong to the ROP therapeutic model. Their precise effects on intracranial dynamics or CSF flow have not been directly established."
+          "text": "Likewise, techniques described as compression of the fourth ventricle, SBS–S2 synchronisation, or work on CSF circulation belong to the ROP therapeutic model. Their precise effects on intracranial dynamics or CSF flow have not been directly established."
         },
         {
           "type": "para",
@@ -331,7 +331,7 @@ export const chapter3En: Chapter = {
       "blocks": [
         {
           "type": "para",
-          "text": "The following locations are part of ROP clinical cartography. They do not constitute direct anatomical projections of cerebral structures onto the foot or occiput."
+          "text": "The following locations are part of ROP clinical cartography."
         },
         {
           "type": "sub",
@@ -355,13 +355,12 @@ export const chapter3En: Chapter = {
         },
         {
           "type": "sub",
-          "text": "9.1. Brainstem, cerebellum, and basal ganglia"
+          "text": "9.1. Brainstem and basal ganglia"
         },
         {
           "type": "bullets",
           "items": [
             "Brainstem: medial plantar surface of the distal phalanx of the great toe, extending from the interphalangeal joint to the junction between the shaft and head.",
-            "Cerebellum: landmark on the medial plantar aspect at the junction between the shaft and head of the second and third toes. Within the ROP model, this zone has historically been associated with vertebrobasilar vasculo-sympathetic pathways; this relationship remains a hypothesis of the model.",
             "Basal ganglia: landmark located close to the midbrain landmark, lateral to the medial shaft–head junction. This proximity reflects ROP topography rather than the actual anatomical position of these nuclei."
           ]
         },
@@ -377,10 +376,6 @@ export const chapter3En: Chapter = {
             "Olfactory bulb: medial plantar aspect of the head of the distal phalanx of the great toe.",
             "Cingulate cortex and corpus callosum: medial plantar border of the distal phalanx of the great toe."
           ]
-        },
-        {
-          "type": "para",
-          "text": "These landmarks may be retained within clinical cartography, but they do not demonstrate that pressure applied to the corresponding zone selectively activates the named cerebral structure."
         },
         {
           "type": "sub",
@@ -415,7 +410,7 @@ export const chapter3En: Chapter = {
         },
         {
           "type": "para",
-          "text": "ROP techniques associated with the PRM, intracranial membranes, or fluid circulation constitute a distinct clinical model. Their specific effects on the cortex or intracranial circulation have not been directly established."
+          "text": "ROP techniques associated with the PRM, intracranial membranes, or fluid circulation constitute a distinct clinical model."
         }
       ]
     },
@@ -430,8 +425,7 @@ export const chapter3En: Chapter = {
             "The brainstem, hypothalamus, insula, cingulate cortex, and prefrontal networks are important hubs for the integration of somatic, visceral, autonomic, and contextual information.",
             "Chapter 4 examines the autonomic nervous system in detail; here, the emphasis remains on the centres that receive and modulate information.",
             "Limbic networks are described here as CNS structures, but their clinical application to viscero-emotional relationships belongs to Level 4.",
-            "The neuro-meningeal environment and CSF must be distinguished from ROP therapeutic concepts such as the PRM, craniosacral axis, compression of the fourth ventricle, or SBS–S2 synchronization.",
-            "ROP reflex zones are clinical landmarks, not direct anatomical projections of cerebral structures.",
+            "The neuro-meningeal environment and CSF must be distinguished from ROP therapeutic concepts such as the PRM, craniosacral axis, compression of the fourth ventricle, or SBS–S2 synchronisation.",
             "The central principle is network modulation: somatic input can reach the spinal cord, brainstem, and higher centres and subsequently influence descending control."
           ]
         }

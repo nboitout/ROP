@@ -1,5 +1,5 @@
 // Chapter 7 content — English
-// Source: public/chapter-7/EN/Chapter_7_Abdominal_and_Peritoneal_Cavities_ROP_English_Revised.docx
+// Source: public/chapter-7/EN/Chapter_7_Abdominal_and_Peritoneal_Cavities_ROP_CodexTranslationV2.docx
 
 import type { Chapter } from './types'
 
@@ -56,7 +56,7 @@ export const chapter7En: Chapter = {
         },
         {
           "type": "para",
-          "text": "Superiorly: the diaphragm; (see Chapter 8, Diaphragm, page …)"
+          "text": "Superiorly: the diaphragm (see Chapter 8, Diaphragm);"
         },
         {
           "type": "para",
@@ -108,7 +108,7 @@ export const chapter7En: Chapter = {
         },
         {
           "type": "para",
-          "text": "For anatomical accuracy, it may be specified that they are not strictly ‘within’ the peritoneal cavity, but are peritonealized."
+          "text": "Strictly speaking, these organs are not located ‘within’ the peritoneal cavity; rather, they are peritonealized."
         },
         {
           "type": "sub",
@@ -116,11 +116,11 @@ export const chapter7En: Chapter = {
         },
         {
           "type": "para",
-          "text": "It contains the ascending and descending colon, the renal compartment, duodenum, pancreas, and, depending on the anatomical planes described, part of the splenic relations."
+          "text": "It contains the ascending and descending colon, the renal compartment, the duodenum, the pancreas, and, depending on the anatomical planes described, some of the anatomical relations of the spleen."
         },
         {
           "type": "para",
-          "text": "These viscera appear to be independent of the peritoneum."
+          "text": "These viscera may appear to be independent of the peritoneum."
         },
         {
           "type": "para",
@@ -234,11 +234,11 @@ export const chapter7En: Chapter = {
         },
         {
           "type": "para",
-          "text": "In the abdomen, certain surface-active factors may be understood to contribute to sliding between the peritoneal layers and to intervisceral mobility."
+          "text": "In the abdomen, certain surface-active factors may contribute to sliding between the peritoneal layers and to intervisceral mobility."
         },
         {
           "type": "para",
-          "text": "Within the ROP model, these factors are also incorporated into the concept of the turgor effect. (See Chapter 1, General Principles, Turgor Effect, page …)"
+          "text": "Within the ROP model, these factors are also incorporated into the concept of the turgor effect. (See Chapter 1, General Principles: Turgor Effect.)"
         },
         {
           "type": "sub",
@@ -294,7 +294,7 @@ export const chapter7En: Chapter = {
         },
         {
           "type": "para",
-          "text": "The supramesocolic compartment contains the abdominal esophagus, stomach, proximal duodenum, liver, most of the pancreas, biliary tract, spleen, and a substantial portion of the renal relations."
+          "text": "The supramesocolic compartment contains the abdominal esophagus, stomach, proximal duodenum, liver, most of the pancreas, biliary tract, spleen, and many of the anatomical relations of the kidneys."
         },
         {
           "type": "para",
@@ -448,7 +448,7 @@ export const chapter7En: Chapter = {
         },
         {
           "type": "para",
-          "text": "Symptoms may be absent or nonspecific: thoracic back pain, low back pain, dull abdominal pain—usually central or left-sided—and, less commonly, signs of compression."
+          "text": "Symptoms may be absent or nonspecific: mid-back pain, low back pain, dull abdominal pain—usually central or left-sided—and, less commonly, signs of compression."
         },
         {
           "type": "sub",
@@ -460,7 +460,7 @@ export const chapter7En: Chapter = {
         },
         {
           "type": "para",
-          "text": "The three branches of the abdominal aorta supplying the digestive system are:"
+          "text": "The three unpaired anterior branches of the abdominal aorta supplying the digestive tract are:"
         },
         {
           "type": "para",
@@ -487,20 +487,20 @@ export const chapter7En: Chapter = {
           "text": "Left gastric artery: arises from the celiac trunk and follows the lesser curvature of the stomach to the pylorus, where it anastomoses with the right gastric artery, a branch of the proper hepatic artery."
         },
         {
-          "type": "sub",
-          "text": "4.3.3. Common hepatic artery"
-        },
-        {
           "type": "para",
           "text": "Its pulse may occasionally be sought to the left of the celiac trunk and slightly superior to it."
         },
         {
           "type": "sub",
-          "text": "4.3.4. Splenic artery"
+          "text": "4.3.3. Common hepatic artery"
         },
         {
           "type": "para",
           "text": "Common hepatic artery: arises from the celiac trunk, courses toward the liver, and contributes to hepatic blood supply through the proper hepatic artery, while giving rise to the gastroduodenal artery."
+        },
+        {
+          "type": "sub",
+          "text": "4.3.4. Splenic artery"
         },
         {
           "type": "para",
@@ -524,7 +524,7 @@ export const chapter7En: Chapter = {
         },
         {
           "type": "para",
-          "text": "(See Chapter 14, Small Intestine, Vascular Supply, page …) It arises at the level of L1, slightly below the celiac trunk."
+          "text": "It arises at the level of L1, slightly below the celiac trunk. (See Chapter 14, Small Intestine: Vascular Supply.)"
         },
         {
           "type": "para",
@@ -544,7 +544,7 @@ export const chapter7En: Chapter = {
         },
         {
           "type": "para",
-          "text": "(See Chapter 15, Colon, Vascular Supply, page …) It most commonly arises at the level of L3."
+          "text": "It most commonly arises at the level of L3. (See Chapter 15, Colon: Vascular Supply.)"
         },
         {
           "type": "para",
@@ -564,7 +564,7 @@ export const chapter7En: Chapter = {
         },
         {
           "type": "para",
-          "text": "Venous drainage is provided by the portal system, which carries to the liver venous blood containing nutrients absorbed from the gastrointestinal tract, together with blood from the spleen. (See Chapter 11, Liver, Portal System, page …)"
+          "text": "Venous drainage is provided by the portal system, which carries to the liver venous blood containing nutrients absorbed from the gastrointestinal tract, together with blood from the spleen. (See Chapter 11, Liver: Portal System.)"
         },
         {
           "type": "sub",
@@ -642,7 +642,7 @@ export const chapter7En: Chapter = {
         },
         {
           "type": "para",
-          "text": "An association with symptoms traditionally described as scapulohumeral periarthritis, such as adhesive capsulitis, belongs more to an interpretive clinical framework than to a specifically demonstrated relationship."
+          "text": "An association with scapulohumeral periarthritis-type symptoms belongs more to an interpretive clinical framework than to a specifically demonstrated relationship."
         },
         {
           "type": "sub",
@@ -650,11 +650,11 @@ export const chapter7En: Chapter = {
         },
         {
           "type": "para",
-          "text": "It innervates the posterior parietal territories related to the abdominal cavity."
+          "text": "The lumbar plexus supplies the posterior parietal territories related to the abdominal cavity."
         },
         {
           "type": "para",
-          "text": "Irritation may be accompanied by lumbar pain radiating to the inguinal region, labia majora or scrotum, and the anterior aspect of the thigh."
+          "text": "Irritation of these nerves may be accompanied by low back pain radiating to the inguinal region, the labia majora or scrotum, and the anterior aspect of the thigh."
         },
         {
           "type": "sub",
@@ -680,7 +680,7 @@ export const chapter7En: Chapter = {
         },
         {
           "type": "para",
-          "text": "Adequate tone of the abdominal wall helps maintain and support the abdominal viscera."
+          "text": "Adequate tone of the abdominal wall helps support and stabilize the abdominal viscera."
         },
         {
           "type": "para",
@@ -704,7 +704,7 @@ export const chapter7En: Chapter = {
         },
         {
           "type": "para",
-          "text": "Mobility (see Chapter 1, General Principles, page …)"
+          "text": "Mobility (see Chapter 1, General Principles.)"
         },
         {
           "type": "sub",
@@ -720,7 +720,7 @@ export const chapter7En: Chapter = {
         },
         {
           "type": "para",
-          "text": "It bears numerous microvilli that greatly increase the exchange surface between the peritoneal cavity and the blood and lymphatic circulations."
+          "text": "It bears numerous microvilli that substantially increase the exchange surface between the peritoneal cavity and the blood and lymphatic circulations."
         },
         {
           "type": "sub",
@@ -732,7 +732,7 @@ export const chapter7En: Chapter = {
         },
         {
           "type": "para",
-          "text": "During inspiration, diaphragmatic mechanics and hepatoperitoneal relations may promote redistribution of fluid toward dependent areas, particularly the right paracolic gutter and the rectouterine pouch (pouch of Douglas)."
+          "text": "During inspiration, diaphragmatic mechanics and hepatoperitoneal relations may promote redistribution of fluid toward gravity-dependent regions, particularly the right paracolic gutter and, in females, the rectouterine pouch (pouch of Douglas)."
         },
         {
           "type": "para",
@@ -770,7 +770,7 @@ export const chapter7En: Chapter = {
         },
         {
           "type": "para",
-          "text": "Peritoneal inflammation, often infectious, may result from:"
+          "text": "Peritoneal inflammation, often infectious, may arise from:"
         },
         {
           "type": "para",
@@ -806,11 +806,11 @@ export const chapter7En: Chapter = {
         },
         {
           "type": "para",
-          "text": "Irreducible inguinal hernia"
+          "text": "An irreducible inguinal hernia is an exclusion criterion requiring prompt medical assessment."
         },
         {
           "type": "sub",
-          "text": "7.2. Indications: functional disorders"
+          "text": "7.2. Indications — Functional Disorders"
         },
         {
           "type": "para",
@@ -822,19 +822,19 @@ export const chapter7En: Chapter = {
         },
         {
           "type": "para",
-          "text": "Pain; (see Innervation, page …)"
+          "text": "Pain (see Section 5, Innervation);"
         },
         {
           "type": "para",
-          "text": "Hiatal and inguinal weakness: after abdominopelvic surgery, scars may alter the distribution of mechanical stresses in the abdominal wall and peritoneum and promote areas of parietal weakness."
+          "text": "Hiatal and inguinal wall weakness: after abdominopelvic surgery, scars may alter the distribution of mechanical stresses in the abdominal wall and peritoneum and promote areas of parietal weakness."
         },
         {
           "type": "para",
-          "text": "Gastroesophageal reflux and hiatal hernia at the esophagogastric junction; (see Hiatal Hernia, page …)"
+          "text": "Gastroesophageal reflux and hiatal hernia at the gastroesophageal junction (see the chapter on hiatal hernia);"
         },
         {
           "type": "para",
-          "text": "Reducible inguinal hernia caused by widening of the deep inguinal ring. (See Inguinal Hernia, page …)"
+          "text": "Reducible inguinal hernia caused by widening of the deep inguinal ring (see the chapter on inguinal hernia);"
         },
         {
           "type": "para",
@@ -864,15 +864,15 @@ export const chapter7En: Chapter = {
         },
         {
           "type": "para",
-          "text": "A horizontal line passing through the umbilicus and a vertical line along the xipho-umbilical line define four quadrants:"
+          "text": "A horizontal line passing through the umbilicus and a vertical line along the xipho-umbilical line define the right upper, left upper, right lower, and left lower quadrants."
         },
         {
           "type": "para",
-          "text": "They may be accompanied by symptoms perceived in the lumbar region, pelvis, and ipsilateral lower limb."
+          "text": "Clinical patterns involving the lower quadrants may be accompanied by symptoms perceived in the lumbar region, pelvis, and ipsilateral lower limb."
         },
         {
           "type": "para",
-          "text": "They may be accompanied by symptoms perceived in the thoracic and cervical regions, head, and ipsilateral upper limb."
+          "text": "Clinical patterns involving the upper quadrants may be accompanied by symptoms perceived in the thoracic and cervical regions, head, and ipsilateral upper limb."
         },
         {
           "type": "para",
@@ -880,7 +880,7 @@ export const chapter7En: Chapter = {
         },
         {
           "type": "para",
-          "text": "femoral neuralgia and ipsilateral renal dysfunction;"
+          "text": "femoral nerve pain (cruralgia) and ipsilateral renal dysfunction;"
         },
         {
           "type": "para",
@@ -892,11 +892,11 @@ export const chapter7En: Chapter = {
         },
         {
           "type": "para",
-          "text": "scapular pain and right-sided adhesive capsulitis-type symptoms of hepatic or right pulmonary origin;"
+          "text": "scapular pain and right-sided scapulohumeral periarthritis-type symptoms of hepatic or right pulmonary origin;"
         },
         {
           "type": "para",
-          "text": "scapular pain and left-sided adhesive capsulitis-type symptoms of left pulmonary, cardiac, or gastric origin."
+          "text": "scapular pain and left-sided scapulohumeral periarthritis-type symptoms of left pulmonary, cardiac, or gastric origin."
         }
       ]
     },

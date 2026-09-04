@@ -1,5 +1,5 @@
 // Chapter 20 content — English
-// Source: public/chapter-20/EN/Chapter_20_Male_Genital_Organs_Medical_English_Revised.docx
+// Source: public/chapter-20/EN/Chapter_20_Male_Genital_Organs_CodexTranslationV2.docx
 
 import type { Chapter } from './types'
 
@@ -14,19 +14,19 @@ export const chapter20En: Chapter = {
       "blocks": [
         {
           "type": "para",
-          "text": "Around the age of 60, hormonal changes cause the prostate to enlarge, increasing pressure on the urethra and bladder. Many men then begin to experience urinary problems that may also affect their sexual and psycho-emotional well-being."
+          "text": "Around the age of 60, the prostate commonly enlarges as the hormonal environment changes, increasing pressure on the urethra and bladder. Many men then begin to experience urinary problems that may also affect their sexual and psycho-emotional well-being."
         },
         {
           "type": "para",
-          "text": "The prostate may also contribute to disturbances of pelvic mechanics, lumbosciatica, or perineal pain that can conceal vesicoprostatic dysfunction and may be aggravated by a sedentary lifestyle, obesity, and poor health habits."
+          "text": "Prostatic dysfunction may also be associated with disturbances of pelvic mechanics, lumbosacral or sciatic pain, and perineal pain. These presentations may obscure vesicoprostatic dysfunction and can be aggravated by physical inactivity, obesity, and poor health habits."
         },
         {
           "type": "para",
-          "text": "For many men, discussing “such matters” remains particularly difficult. Surgery and pharmacological treatments are not without risk, and their adverse effects—including erectile dysfunction, incontinence, and retrograde ejaculation—may be poorly tolerated."
+          "text": "For many men, discussing these matters remains particularly difficult. Surgery and pharmacological treatments are not without risk, and adverse effects such as erectile dysfunction, incontinence, and retrograde ejaculation may be poorly tolerated."
         },
         {
           "type": "para",
-          "text": "ROP may help reduce the consequences of prostatic disorders, provided that the patient also adopts a healthy lifestyle. ROP has no direct iatrogenic effects and, because it is applied at a distance, respects male modesty."
+          "text": "ROP may help reduce the functional impact of prostatic disorders when used alongside appropriate medical care and healthy lifestyle measures. Because it is non-invasive and applied at a distance from the genital region, the approach also respects the patient's privacy and modesty."
         },
         {
           "type": "bullets",
@@ -73,7 +73,7 @@ export const chapter20En: Chapter = {
         },
         {
           "type": "para",
-          "text": "The ovaries and testes share the same reflex zone because of their common embryological origin and migration towards the pelvic cavity."
+          "text": "The ovaries and testes share the same reflex zone in ROP mapping because their embryological trajectories initially follow a common route from the posterior abdominal region towards the pelvis."
         },
         {
           "type": "sub",
@@ -99,7 +99,7 @@ export const chapter20En: Chapter = {
         },
         {
           "type": "para",
-          "text": "Ovoid in shape and approximately 5 cm long in the adult, each testis is covered by a tough fibrous capsule, the tunica albuginea, and partly invested by the tunica vaginalis. Internally, it contains lobules with 400–600 seminiferous tubules, where spermatozoa are produced and develop during spermatogenesis. These tubules drain through the straight tubules into the rete testis and subsequently through the efferent ductules into the epididymal duct."
+          "text": "Ovoid in shape and approximately 5 cm long in the adult, each testis is covered by a tough fibrous capsule, the tunica albuginea, and partly invested by the tunica vaginalis. Internally, it contains lobules with 400–600 seminiferous tubules, where spermatozoa are produced and mature during spermatogenesis. These tubules drain through the straight tubules into the rete testis, then through the efferent ductules into the epididymal duct."
         },
         {
           "type": "sub",
@@ -171,7 +171,7 @@ export const chapter20En: Chapter = {
         },
         {
           "type": "para",
-          "text": "Combined reflex work on the inguinal ligament and the deep and superficial inguinal rings is intended to help balance pressure within the canal around the spermatic cord and its vascular, neural, and deferential contents."
+          "text": "Combined reflex work on the inguinal ligament and the deep and superficial inguinal rings is intended to help balance pressure within the canal around the spermatic cord, including the ductus deferens and its vascular and neural structures."
         },
         {
           "type": "sub",
@@ -183,7 +183,7 @@ export const chapter20En: Chapter = {
         },
         {
           "type": "para",
-          "text": "Measuring 5–8 cm in length and approximately 1.5 cm in width, the seminal vesicles have a consistency comparable to that of a slightly ripe fig."
+          "text": "Measuring 5–8 cm in length and approximately 1.5 cm in width, the seminal vesicles have a consistency traditionally likened to that of a slightly ripe fig."
         },
         {
           "type": "para",
@@ -203,11 +203,11 @@ export const chapter20En: Chapter = {
         },
         {
           "type": "para",
-          "text": "In a young adult, the prostate is chestnut-shaped. Its firm yet supple consistency may be compared with that of the eyeball, and it weighs approximately 20–25 g. Its volume may increase considerably after the age of 60; it can become markedly enlarged, exert pressure on the urethra and bladder, and cause voiding symptoms."
+          "text": "In a young adult, the prostate is chestnut-shaped. Its firm yet supple consistency may be compared with that of the eyeball, and it weighs approximately 20–25 g. Its volume may increase considerably after the age of 60; it may become markedly enlarged, exert pressure on the urethra and bladder, and cause voiding symptoms."
         },
         {
           "type": "para",
-          "text": "The prostate contributes to semen composition and helps support spermatozoa during their passage through the vagina, uterus, and uterine tubes."
+          "text": "The prostate contributes to the composition of semen and helps maintain conditions that support spermatozoa during their passage through the vagina, uterus, and uterine tubes."
         },
         {
           "type": "sub",
@@ -225,12 +225,12 @@ export const chapter20En: Chapter = {
           "type": "bullets",
           "items": [
             "Lateral lobes: influenced by androgens, they are separated by a median groove that becomes less distinct when the median lobe enlarges.",
-            "Median lobe: this midline region is traversed by the prostatic urethra, which bears a small recess, the prostatic utricle. The utricle is an embryological remnant of the Müllerian ducts and was historically termed the “male vagina”."
+            "Median lobe: this midline region is traversed by the prostatic urethra, whose posterior wall bears a small recess, the prostatic utricle. The utricle is an embryological remnant of the Müllerian ducts and was historically termed the ‘male vagina’."
           ]
         },
         {
           "type": "para",
-          "text": "The median lobe may enlarge with age in the setting of changing androgen–oestrogen balance. Enlargement can compress the urethra, impair micturition, and contribute to retrograde passage of ejaculate towards the bladder."
+          "text": "The median lobe may enlarge with age as the androgen–oestrogen balance changes. Enlargement can compress the urethra, impair micturition, and contribute to retrograde passage of ejaculate towards the bladder."
         },
         {
           "type": "sub",
@@ -298,9 +298,9 @@ export const chapter20En: Chapter = {
           "type": "bullets",
           "items": [
             "Cranial surface: supports the bladder.",
-            "Ventral surface: related to the pubic symphysis, puboprostatic ligaments, and Santorini’s venous plexus.",
+            "Ventral surface: related to the pubic symphysis, the puboprostatic ligaments, and Santorini’s venous plexus.",
             "Caudal surface: related to the perineal floor.",
-            "Dorsal surface: related to Denonvilliers’ rectoprostatic fascia, extending from the perineum towards the rectovesical pouch and containing smooth muscle fibres.",
+            "Dorsal surface: related to Denonvilliers’ rectoprostatic fascia, extending from the perineum to the rectovesical pouch and containing smooth muscle fibres.",
             "Lateral walls: related to the obturator fasciae and the sacrorectogenitopubic laminae, which contain smooth muscle fibres and transmit the inferior hypogastric plexus."
           ]
         },
@@ -324,7 +324,7 @@ export const chapter20En: Chapter = {
         },
         {
           "type": "para",
-          "text": "Because of their abdominal embryological origin and subsequent descent, the testes retain a superior vascular supply arising from the abdominal aorta."
+          "text": "Because of their abdominal embryological origin and subsequent descent, the testes retain a high-origin vascular pedicle arising from the abdominal aortic region."
         },
         {
           "type": "bullets",
@@ -347,7 +347,7 @@ export const chapter20En: Chapter = {
         },
         {
           "type": "para",
-          "text": "Fixation of the left kidney or compression of the left renal vein by the mesenteric root or within the aortomesenteric angle following small-intestinal ptosis is described in this model as potentially impeding pelvic venous return, thereby contributing to left-sided varicocele and varicose veins predominantly affecting the left lower limb."
+          "text": "Within the ROP model, fixation of the left kidney or compression of the left renal vein by the mesenteric root or within the aortomesenteric angle following small-intestinal ptosis is considered capable of impeding pelvic venous return. This mechanism is proposed as a possible contributor to left-sided varicocele and to varicose veins predominantly affecting the left lower limb."
         }
       ]
     },
@@ -363,8 +363,8 @@ export const chapter20En: Chapter = {
           "type": "bullets",
           "items": [
             "Sympathetic: spinal cord segments T10–T12.",
-            "Parasympathetic pelvic pathways: S2–S4.",
-            "Aorticorenal plexus: situated anterior to the renal artery, it receives fibres from the lesser and least thoracic splanchnic nerves and upper lumbar sympathetic pathways. Its branches supply the kidney and testis."
+            "Pelvic parasympathetic pathways: sacral spinal cord segments S2–S4. In ROP mapping, these segments are associated with an approximate L1–L2 vertebral landmark.",
+            "Aorticorenal plexus: situated anterior to the renal artery, it receives fibres from thoracic splanchnic nerves and upper lumbar sympathetic pathways. Its branches supply the kidney and testis."
           ]
         },
         {
@@ -375,7 +375,7 @@ export const chapter20En: Chapter = {
           "type": "bullets",
           "items": [
             "Sympathetic: T12–L2, through pathways associated with the inferior mesenteric and hypogastric plexuses.",
-            "Parasympathetic: arises from sacral spinal cord segments S2–S4. The pelvic splanchnic nerves supply pelvic organs and contribute to erectile function.",
+            "Parasympathetic: arises from sacral spinal cord segments S2–S4. The pelvic splanchnic nerves supply the pelvic organs and contribute to erectile function.",
             "Superior hypogastric plexus: conveys sympathetic fibres towards the inferior hypogastric plexuses.",
             "Inferior hypogastric plexus: situated within the pelvic cavity, in relation to the sacrorectogenitopubic laminae, it provides autonomic innervation to the pelvic organs."
           ]
@@ -416,7 +416,7 @@ export const chapter20En: Chapter = {
         },
         {
           "type": "para",
-          "text": "Under the influence of ACTH, the zona reticularis of the adrenal cortices also produces adrenal androgens. Their contribution complements gonadal hormone production."
+          "text": "Under the influence of ACTH, the zona reticularis of each adrenal cortex also produces adrenal androgens. Their contribution complements gonadal hormone production."
         },
         {
           "type": "sub",
@@ -469,7 +469,7 @@ export const chapter20En: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Liquefaction of seminal fluid through prostatic enzymes, including prostate-specific antigen (PSA).",
+            "Liquefaction of seminal fluid through the action of prostatic enzymes, including prostate-specific antigen (PSA).",
             "Provision of citrate, zinc, and enzymes that contribute to semen function.",
             "Contribution to semen pH, complementing the secretions of the seminal vesicles."
           ]
@@ -539,17 +539,17 @@ export const chapter20En: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Perinatal period: torsion may present with enlargement and bluish or red discoloration of the testis. The testis becomes markedly tender, and the neonate may express pain through sudden crying.",
+            "Perinatal period: torsion may present with enlargement and bluish or red discolouration of the testis. The testis becomes markedly tender, and the neonate may express pain through sudden crying.",
             "Puberty: torsion may occur during adolescence as testicular volume increases rapidly."
           ]
         },
         {
           "type": "para",
-          "text": "The typical symptom is sudden, severe testicular pain, which may radiate to the groin or lumbar region. Urgent surgery is required to untwist and fix the testis; orchidectomy is necessary only when the testis is no longer viable."
+          "text": "The typical symptom is sudden, severe testicular pain, which may radiate to the groin or lumbar region. Immediate surgical assessment is required. Treatment usually involves urgent scrotal exploration, detorsion, and fixation of the testes; orchidectomy is necessary only when the affected testis is no longer viable."
         },
         {
           "type": "para",
-          "text": "Torsion of one testis does not necessarily cause male infertility, because the remaining testis may be sufficient for sperm production; nevertheless, reduced fertility is observed in some patients."
+          "text": "Torsion of one testis does not necessarily cause infertility, because the remaining testis may be sufficient for sperm production. Nevertheless, reduced fertility can occur in some patients."
         },
         {
           "type": "sub",
@@ -562,14 +562,14 @@ export const chapter20En: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Assessment may include digital rectal examination, serum PSA testing, imaging, and, when indicated, biopsy. A hard, irregular, or indurated prostate may be suspicious. PSA is prostate-specific rather than cancer-specific: an elevated concentration does not by itself establish cancer. Total and free PSA may contribute to risk assessment, but interpretation depends on age, clinical context, prostate volume, and applicable guidance. Histological examination of biopsy tissue confirms the diagnosis.",
+            "Assessment may include digital rectal examination, serum PSA testing, magnetic resonance imaging, and, when indicated, biopsy. A hard, irregular, or indurated prostate may be suspicious. PSA is prostate-specific rather than cancer-specific: an elevated concentration does not by itself establish cancer, and a normal concentration does not exclude it. Interpretation depends on age, clinical context, prostate volume, current guidance, and other findings. Histological examination of biopsy tissue confirms the diagnosis.",
             "Progression: PSA may be used alongside clinical and imaging findings to monitor disease. Increasing age, family history and genetic susceptibility, ancestry, and certain lifestyle factors may influence risk.",
             "Metastatic disease: early symptoms may resemble those of benign prostatic enlargement, but prostate cancer often arises peripherally and may initially produce few urinary symptoms. When bone metastases occur, severe vertebral, lumbar, or radicular pain may develop, often with nocturnal predominance."
           ]
         },
         {
           "type": "para",
-          "text": "ROP cannot treat prostate cancer. Medical management may include surgery, radiotherapy, androgen-deprivation therapy, other systemic anticancer treatments, and appropriate analgesia."
+          "text": "ROP does not treat prostate cancer. Medical management may include active surveillance or monitoring, surgery, radiotherapy, androgen-deprivation therapy, other systemic anticancer treatments, and appropriate symptom control, according to disease stage and individual circumstances."
         },
         {
           "type": "sub",
@@ -577,11 +577,11 @@ export const chapter20En: Chapter = {
         },
         {
           "type": "para",
-          "text": "Acute prostatitis is an infectious and inflammatory disorder of the prostate. It may present with fever, marked fatigue, dysuria, haematuria, and genital or abdominopelvic pain. It requires medical assessment and, when bacterial infection is diagnosed, appropriate antibiotic treatment."
+          "text": "Acute prostatitis is an infectious and inflammatory disorder of the prostate. It may present with fever, marked fatigue, dysuria, haematuria, difficulty urinating, and genital or abdominopelvic pain. It requires prompt medical assessment and, when bacterial infection is diagnosed or strongly suspected, appropriate antibiotic treatment."
         },
         {
           "type": "para",
-          "text": "On digital rectal examination, the prostate may be swollen or boggy and is typically very tender; vigorous palpation should be avoided."
+          "text": "On digital rectal examination, the prostate may be swollen or boggy and is typically very tender; vigorous prostatic palpation should be avoided."
         },
         {
           "type": "sub",
@@ -598,9 +598,9 @@ export const chapter20En: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Its development is hormonally influenced. Factors described as potentially aggravating the functional presentation include alcohol, smoking, excessive animal-protein intake, physical inactivity, and vertebral or coccygeal dysfunction.",
+            "Its development is hormonally influenced. Alcohol, smoking, excessive animal-protein intake, physical inactivity, and vertebral or coccygeal dysfunction are described in the source model as factors that may aggravate the functional presentation; they should not be interpreted as established direct causes of BPH.",
             "Clinical features:",
-            "Urinary: weak or intermittent stream, straining, urgency, and frequency. Persistent outflow obstruction may lead to detrusor hypertrophy, bladder trabeculation, diverticula, incomplete emptying, and infection. Symptoms depend not only on prostate size but also on smooth-muscle tone and the degree of urethral obstruction."
+            "Urinary: weak or intermittent stream, straining, urgency, and frequency. Persistent bladder-outlet obstruction may lead to detrusor hypertrophy, bladder trabeculation, diverticula, incomplete emptying, and infection. Symptoms depend not only on prostate size but also on smooth-muscle tone and the degree of urethral obstruction."
           ]
         },
         {
@@ -610,7 +610,7 @@ export const chapter20En: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Lumbosciatica: described in this model as more frequent on the left because the left testicular vein drains into the left renal vein.",
+            "Lumbosacral pain or sciatica: described in the ROP model as more frequent on the left because the left testicular vein drains into the left renal vein. This proposed association is not a substitute for standard assessment of spinal, neurological, vascular, or other causes.",
             "Sexual: erectile dysfunction and retrograde ejaculation.",
             "Vascular and regional associations: haemorrhoids and inguinal hernias."
           ]
@@ -621,7 +621,7 @@ export const chapter20En: Chapter = {
         },
         {
           "type": "para",
-          "text": "Prostatic enlargement may make the lateral boundaries of the prostatic compartment less compliant. Within the ROP model, this may increase tension in the sacrorectogenitopubic laminae and affect the inferior hypogastric plexuses and sacroiliac mobility. Congestive or irritative lumbosciatica and perineal pain may therefore precede overt voiding symptoms, although these presentations require appropriate medical assessment."
+          "text": "Prostatic enlargement may make the lateral boundaries of the prostatic compartment less compliant. Within the ROP model, this may increase tension in the sacrorectogenitopubic laminae and affect the inferior hypogastric plexuses and sacroiliac mobility. Congestive or irritative lumbosacral pain, sciatica, or perineal pain may therefore precede overt voiding symptoms in this model, although such presentations require appropriate medical assessment."
         },
         {
           "type": "sub",
@@ -629,18 +629,18 @@ export const chapter20En: Chapter = {
         },
         {
           "type": "para",
-          "text": "Chronic prostatitis and chronic pelvic pain syndromes may fluctuate and may be accompanied by urinary, pelvic, genital, or sexual symptoms. Unlike acute prostatitis, fever is generally absent."
+          "text": "Chronic prostatitis and chronic pelvic pain syndromes may fluctuate and may be accompanied by urinary, pelvic, genital, or sexual symptoms. Unlike acute bacterial prostatitis, fever is generally absent."
         },
         {
           "type": "bullets",
           "items": [
             "Clinical features:",
-            "Dysuria: difficulty or discomfort during urination.",
+            "Voiding difficulty: difficulty starting or maintaining urination.",
             "Urinary frequency: passing small volumes frequently.",
-            "Burning during urination.",
+            "Dysuria: burning or pain on urination.",
             "Lumbar, pelvic, and genital pain.",
-            "Infertility or erectile dysfunction.",
-            "Examination: findings on digital rectal examination are variable; the prostate may be enlarged or firm, but is not necessarily tender."
+            "Reduced fertility or erectile dysfunction.",
+            "Examination: findings on digital rectal examination are variable; the prostate may be enlarged or firm but is not necessarily tender."
           ]
         }
       ]
@@ -664,7 +664,7 @@ export const chapter20En: Chapter = {
       "blocks": [
         {
           "type": "para",
-          "text": "Urinary and sexual functions are closely integrated with cerebral networks involved in interoception, emotion, attention, and autonomic regulation. Stress alone does not cause prostatic dysfunction, but it may alter autonomic tone, sleep, bodily perception, and sexual function, thereby increasing the impact of certain urogenital symptoms."
+          "text": "Urinary and sexual functions are closely integrated with cerebral networks involved in interoception, emotion, attention, and autonomic regulation. Stress alone does not cause prostatic dysfunction, but it may alter autonomic tone, sleep, bodily perception, and sexual function, thereby increasing the impact of some urogenital symptoms."
         },
         {
           "type": "para",
@@ -676,7 +676,7 @@ export const chapter20En: Chapter = {
         },
         {
           "type": "para",
-          "text": "In ROP, this dimension is addressed within the brain–male genital axis. It complements anatomical, autonomic, and locoregional assessment without defining a “prostate personality” or automatically attributing symptoms to an emotional origin."
+          "text": "In ROP, this dimension is addressed within the brain–male genital axis. It complements anatomical, autonomic, and locoregional assessment without defining a ‘prostate personality’ or automatically attributing symptoms to an emotional origin."
         }
       ]
     },
@@ -842,7 +842,7 @@ export const chapter20En: Chapter = {
         },
         {
           "type": "para",
-          "text": "In ROP practice, “listening–induction” is performed with one thumb on the testicular reflex zone and the other on the limbic-brain reflex zone."
+          "text": "In ROP practice, the technique termed ‘listening and induction’ is performed with one thumb on the testicular reflex zone and the other on the limbic-brain reflex zone."
         },
         {
           "type": "para",
@@ -978,7 +978,7 @@ export const chapter20En: Chapter = {
         },
         {
           "type": "para",
-          "text": "In ROP practice, “listening–induction” is performed with one thumb on the prostatic reflex zone and the other on the limbic-brain reflex zone."
+          "text": "In ROP practice, the technique termed ‘listening and induction’ is performed with one thumb on the prostatic reflex zone and the other on the limbic-brain reflex zone."
         },
         {
           "type": "para",
@@ -994,7 +994,7 @@ export const chapter20En: Chapter = {
         },
         {
           "type": "sub",
-          "text": "CAUTION — A sensitive reflex zone or palpatory change is not a diagnostic test for testicular torsion, cancer, prostatitis, benign prostatic hyperplasia, infection, urinary retention, or any other urogenital disorder. Acute testicular pain, a mass or enlargement, fever, haematuria, urinary retention, deterioration in general condition, or any unusual symptom requires appropriate medical assessment."
+          "text": "CAUTION — A sensitive reflex zone or palpatory change is not a diagnostic test for testicular torsion, cancer, prostatitis, benign prostatic hyperplasia, infection, urinary retention, or any other urogenital disorder. Sudden or severe testicular pain, a testicular mass or persistent enlargement, fever, haematuria, inability to urinate, deterioration in general condition, or any other concerning symptom requires prompt medical assessment. Suspected testicular torsion is a surgical emergency."
         }
       ]
     }

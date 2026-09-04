@@ -79,7 +79,7 @@ export const chapter20SlidesEn: SyncSlide[] = [
   { src: '/chapter-20/EN/Images/NCH 20 EN IMG 12.png', title: 'Mechanical Dissonance: The Cascade Effect of BPH' },
   { src: '/chapter-20/EN/Images/NCH 20 EN IMG 13.png', title: 'Male Genital Organs — Viscerosomatic Relationships' },
   { src: '/chapter-20/EN/Images/NCH 20 EN IMG 14.png', title: 'Psycho-Emotional Dimension' },
-  { src: '/chapter-20/EN/Images/NCH 20 EN IMG 15.png', title: 'ROP Clinical Protocol: Male Genital Organs' },
+  { src: '/chapter-20/EN/Images/NCH 20 EN IMG 15 V2.png', title: 'ROP Clinical Protocol: Male Genital Organs' },
 ]
 
 export const chapter20SlideAnchorsEn: SyncAnchor[] = [

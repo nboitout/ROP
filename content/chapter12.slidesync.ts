@@ -51,19 +51,19 @@ export const chapter12SlideAnchors: SyncAnchor[] = [
 
 export const chapter12SlidesEn: SyncSlide[] = [
   { src: '/chapter-12/EN/Images/NCH 12 EN IMG 1.png', title: 'Chapter 12 — The Pancreas' },
-  { src: '/chapter-12/EN/Images/NCH 12 EN IMG 2.png', title: 'The Functional Duality of the Pancreas' },
-  { src: '/chapter-12/EN/Images/NCH 12 EN IMG 3.png', title: 'A Deep and Vulnerable Organ' },
-  { src: '/chapter-12/EN/Images/NCH 12 EN IMG 4.png', title: 'Anatomical Morphology' },
-  { src: '/chapter-12/EN/Images/NCH 12 EN IMG 5.png', title: 'Exocrine Physiology: The Digestive Machine' },
-  { src: '/chapter-12/EN/Images/NCH 12 EN IMG 6.png', title: 'A Deep and Vulnerable Organ' },
-  { src: '/chapter-12/EN/Images/NCH 12 EN IMG 7.png', title: 'The Functional Duality of the Pancreas' },
-  { src: '/chapter-12/EN/Images/NCH 12 EN IMG 8.png', title: 'Exocrine Physiology: The Digestive Machine' },
-  { src: '/chapter-12/EN/Images/NCH 12 EN IMG 9.png', title: 'Glycemic Disorders: The Spectrum of Diabetes' },
-  { src: '/chapter-12/EN/Images/NCH 12 EN IMG 10.png', title: 'Severe Pathologies: Pancreatitis and Tumors' },
-  { src: '/chapter-12/EN/Images/NCH 12 EN IMG 11.png', title: 'Glycemic Disorders: The Spectrum of Diabetes' },
-  { src: '/chapter-12/EN/Images/NCH 12 EN IMG 12.png', title: 'Severe Pathologies: Pancreatitis and Tumors' },
-  { src: '/chapter-12/EN/Images/NCH 12 EN IMG 13.png', title: 'Viscero-Emotional Overview' },
-  { src: '/chapter-12/EN/Images/NCH 12 EN IMG 14.png', title: 'Pancreas — Viscero-Somatic Relations' },
+  { src: '/chapter-12/EN/Images/NCH 12 EN IMG 2 V2.png', title: 'The Functional Duality of the Pancreas' },
+  { src: '/chapter-12/EN/Images/NCH 12 EN IMG 3 V2.png', title: 'A Deep and Vulnerable Organ' },
+  { src: '/chapter-12/EN/Images/NCH 12 EN IMG 4 V2.png', title: 'Anatomical Morphology' },
+  { src: '/chapter-12/EN/Images/NCH 12 EN IMG 5 V2.png', title: 'Exocrine Physiology: The Digestive Machine' },
+  { src: '/chapter-12/EN/Images/NCH 12 EN IMG 6 V2.png', title: 'A Deep and Vulnerable Organ' },
+  { src: '/chapter-12/EN/Images/NCH 12 EN IMG 7 V2.png', title: 'The Functional Duality of the Pancreas' },
+  { src: '/chapter-12/EN/Images/NCH 12 EN IMG 8 V2.png', title: 'Exocrine Physiology: The Digestive Machine' },
+  { src: '/chapter-12/EN/Images/NCH 12 EN IMG 9 V2.png', title: 'Glycemic Disorders: The Spectrum of Diabetes' },
+  { src: '/chapter-12/EN/Images/NCH 12 EN IMG 10 V2.png', title: 'Severe Pathologies: Pancreatitis and Tumors' },
+  { src: '/chapter-12/EN/Images/NCH 12 EN IMG 11 V2.png', title: 'Glycemic Disorders: The Spectrum of Diabetes' },
+  { src: '/chapter-12/EN/Images/NCH 12 EN IMG 12 V2.png', title: 'Severe Pathologies: Pancreatitis and Tumors' },
+  { src: '/chapter-12/EN/Images/NCH 12 EN IMG 13 V2.png', title: 'Viscero-Emotional Overview' },
+  { src: '/chapter-12/EN/Images/NCH 12 EN IMG 14 V2.png', title: 'Pancreas — Viscero-Somatic Relations' },
 ]
 
 export const chapter12SlideAnchorsEn: SyncAnchor[] = [

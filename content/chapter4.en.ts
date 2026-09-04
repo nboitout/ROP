@@ -1,5 +1,5 @@
 // Chapter 4 content — English
-// Source: public/chapter-4/EN/Chapter_4_Autonomic_Nervous_System_ROP_EN_Faithful_Translation (1).docx
+// Source: public/chapter-4/EN/Chapter_4_Autonomic_Nervous_System_ROP_EN_CodexTranslationV2.docx
 
 import type { Chapter } from './types'
 
@@ -36,7 +36,7 @@ export const chapter4En: Chapter = {
         },
         {
           "type": "para",
-          "text": "Ontogeny is the phylogenetic study of the human being from fertilization to adulthood."
+          "text": "Ontogeny is the study of the development of an individual organism from fertilization to adulthood."
         },
         {
           "type": "sub",
@@ -59,7 +59,7 @@ export const chapter4En: Chapter = {
             "Parasympathetic system: it manages everyday functions. It is described as endophylactic: it protects and restores the internal environment. It predominates at night and during sleep. It is anabolic and trophotropic. It counterbalances the effects of the sympathetic system.",
             "Sympathetic system: it is described as ergotropic: it prepares the individual for action. It responds especially to new and urgent situations, danger, stress, negative emotions, and pain. It predominates during the day and in states of wakefulness. It is described as catabolic. It is the system for fighting or fleeing, the well-known \"fight or flight\" response.",
             "Viscera: they receive dual parasympathetic and sympathetic innervation.",
-            "Walls of the trunk, limbs, and integument: they are modulated only by the sympathetic system.",
+            "Trunk wall, limbs, and integument: these structures are modulated only by the sympathetic system.",
             "Vascular system: it is controlled almost exclusively by the sympathetic system. Its action is predominantly vasoconstrictive, although it also produces vasodilation of the arteries supplying the muscles of the somatic system, the coronary arteries of the myocardium, and the pulmonary arteries during intense physical and sporting activities.",
             "Brain: it has its own system for regulating blood flow because it cannot tolerate abrupt variations in its circulation. This regulatory system is based on the carotid sinus and carotid body, located at the carotid bifurcation at the level of the C4 vertebra, and controlled jointly by the superior cervical sympathetic ganglion and the glossopharyngeal nerve IX and vagus nerve X. (See Carotid Sinus and Carotid Body.)",
             "Sexual erectile tissues (corpora cavernosa and corpus spongiosum): the blood supply required for erection of the erectile organs (penis and clitoris) is governed by the parasympathetic system. (See Chapter 21, Male and Female Erectile System.)",
@@ -188,7 +188,7 @@ export const chapter4En: Chapter = {
         },
         {
           "type": "para",
-          "text": "It governs two territories: the cephalic territory and the cervicothoracoabdominal territory."
+          "text": "It supplies two regions: the cephalic region and the cervicothoracoabdominal region."
         },
         {
           "type": "sub",
@@ -205,10 +205,10 @@ export const chapter4En: Chapter = {
             "Course: parasympathetic fibers travel with the following cranial nerves:",
             "Oculomotor nerve III: parasympathetic innervation of the sphincter pupillae muscle (miosis) and the ciliary muscles (increasing the curvature of the lens) for accommodation to near vision.",
             "Facial nerve VII: parasympathetic innervation of the lacrimal glands (tears), the submandibular and sublingual salivary glands (continuous secretion), and the mucous glands of the nose, paranasal sinuses, palate, and soft palate.",
-            "Glossopharyngeal nerve IX: its origin is in the medulla oblongata located at the level of the foramen magnum; it provides parasympathetic innervation for salivary secretion by the parotid gland (during mastication) and, together with the vagus nerve X at the carotid sinus, contributes to regulation of blood pressure (hypotension) and slowing of the heart rate (bradycardia). See our book Occipito-Podal Reflexotherapy and the Neuro-Meningeal System, Chapter 8, page 99.",
+            "Glossopharyngeal nerve IX: its nuclei of origin lie in the medulla oblongata, near the level of the foramen magnum. It provides parasympathetic innervation for salivary secretion by the parotid gland during mastication and, together with the vagus nerve X at the carotid sinus, contributes to the regulation of blood pressure and heart rate. See our book Occipito-Podal Reflexotherapy and the Neuro-Meningeal System, Chapter 8, page 99.",
             "Termination: previsceral plexuses of the organs of the head. The cranial parasympathetic fibers, together with sympathetic fibers arising from the cervical ganglia and the paravertebral thoracic ganglia from C8 to T2 or T3, form the previsceral plexuses of the organs of the head:",
-            "Ciliary ganglion: located in the orbital cavity and associated with the oculomotor nerve III, it controls the ciliary body (accommodation to near vision) and the constrictor muscle of the pupil (adaptation to light).",
-            "Pterygopalatine ganglion: located in the pterygopalatine fossa, deep within the infratemporal fossa (a crossroads of the principal cavities of the skull), it is associated with the maxillary nerve V2, immediately below the foramen rotundum, beneath the middle cranial base. It controls lacrimal, nasal mucosal, and oral secretions.",
+            "Ciliary ganglion: located in the orbit and associated with the oculomotor nerve III, it controls the ciliary muscle for near accommodation and the sphincter pupillae for pupillary constriction in response to light.",
+            "Pterygopalatine ganglion: located in the pterygopalatine fossa, deep in the infratemporal region, it is associated with the maxillary nerve V2 immediately below the foramen rotundum and beneath the middle cranial fossa. It controls lacrimal, nasal mucosal, and oral secretions.",
             "Submandibular and sublingual ganglia: located in the floor of the mouth and associated with the mandibular nerve V3, they control submandibular and sublingual salivary secretions.",
             "Otic ganglion: located in the infratemporal fossa, it is associated with the mandibular nerve V3, immediately below the foramen ovale, and controls parotid salivary secretion."
           ]
@@ -230,9 +230,9 @@ export const chapter4En: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Origin: the motor cell bodies arise from the dorsal nucleus and the nucleus ambiguus, or ventral nucleus, located in the medulla oblongata (formerly the bulb) at the level of the foramen magnum. They are connected with the hypothalamus, olfactory system, limbic system, glossopharyngeal nerve IX, and accessory nerve XI.",
-            "Dorsal nucleus: neurons arising from the dorsal nucleus consist of unmyelinated fibers with slow nerve impulse conduction. They mainly innervate the subdiaphragmatic organs.",
-            "Nucleus ambiguus, or ventral nucleus: neurons arising from the ventral nucleus consist of myelinated fibers with rapid nerve impulse conduction. They mainly innervate the supradiaphragmatic organs:",
+            "Origin: the preganglionic motor neurons arise from the dorsal motor nucleus of the vagus and the nucleus ambiguus, located in the medulla oblongata near the level of the foramen magnum. These nuclei are connected with the hypothalamus, olfactory system, limbic system, glossopharyngeal nerve IX, and accessory nerve XI.",
+            "Dorsal motor nucleus: neurons arising from this nucleus give rise predominantly to slowly conducting unmyelinated fibers. They mainly innervate the subdiaphragmatic organs.",
+            "Nucleus ambiguus: neurons arising from this nucleus give rise to rapidly conducting myelinated fibers. They mainly innervate the supradiaphragmatic organs:",
             "the larynx and pharynx;",
             "the esophagus, where they promote progression of the food bolus toward the stomach;",
             "the heart: the atria (formerly auricles), located at the base of the heart (the upper part of the heart), have a predominance of vagal innervation. The nucleus ambiguus controls cardiac activity, not only heart rate (bradycardia), but especially heart rate variability (HRV), in order to adapt the heart to stress mechanisms (see Chapter 6, Polyvagal Theory);",
@@ -246,8 +246,8 @@ export const chapter4En: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Vagal hyperactivity of neurons arising from the dorsal nucleus is responsible for gastroduodenal ulcers, colitis, asthma attacks, apnea, and bradycardia.",
-            "Intracranial course - jugular foramen: the vagus nerve exits the skull through the jugular foramen together with the glossopharyngeal nerve IX and accessory nerve XI, the internal jugular vein, and the posterior meningeal artery.",
+            "Excessive vagal activity involving neurons associated with the dorsal motor nucleus may contribute to gastroduodenal ulceration, colitis, asthma attacks, apnea, and bradycardia.",
+            "Cranial course - jugular foramen: the vagus nerve exits the skull through the jugular foramen together with the glossopharyngeal nerve IX, accessory nerve XI, internal jugular vein, and posterior meningeal artery.",
             "At this level, it has two ganglia: the superior ganglion within the jugular foramen and the inferior, or plexiform, ganglion immediately below the jugular foramen. The cell bodies of the sensory neurons of the vagus nerve originate in the inferior ganglion.",
             "Cervical level: in the neck, the vagus nerve descends within the carotid sheath. It then anastomoses with the superior and inferior cervical sympathetic ganglia."
           ]
@@ -272,7 +272,7 @@ export const chapter4En: Chapter = {
           "type": "bullets",
           "items": [
             "The carotid sinus is a baroreceptor that measures stretching of the carotid wall under the effect of arterial pressure, in order to regulate it according to the body's needs. Stimulation of the carotid sinus causes bradycardia and arterial hypotension, which may progress to syncope following a blow to this area.",
-            "Carotid body: it is a chemoreceptor that measures blood O2 and CO2 levels. It regulates acid-base balance."
+            "Carotid body: this chemoreceptor measures blood oxygen and carbon dioxide levels and contributes to the regulation of acid-base balance."
           ]
         },
         {
@@ -308,14 +308,14 @@ export const chapter4En: Chapter = {
             "Cardiac plexus: in the superior mediastinum, the two vagus nerves and the left recurrent laryngeal nerve anastomose with sympathetic fibers from the three cardiac nerves arising from the three cervical ganglia, and with fibers arising from the paravertebral thoracic ganglia from T3 to T5. Together, they form the cardiac plexus. Two parts are distinguished:",
             "the superior, or superficial, cardiac plexus of Wrisberg, around the aortic arch at the level of the sternal angle;",
             "the inferior cardiac plexus, which merges with the bronchopulmonary plexus.",
-            "Cyon nerves: arising from the vagus nerve, they are located in the endocardium. They slow the heart rate by decreasing the speed of electrical conduction through the intrinsic innervation of the heart, or nodal tissue (sinoatrial and atrioventricular nodes).",
+            "Depressor nerves of Cyon: arising from the vagus nerve and associated with cardiac reflex pathways, they help slow the heart rate by reducing conduction through the heart's intrinsic nodal tissue (the sinoatrial and atrioventricular nodes).",
             "Parasympathetic innervation: parasympathetic fibers are directed mainly to the atria (formerly auricles) and nodal tissue, and practically not to the ventricles.",
             "They slow the heart rate (bradycardia), lower blood pressure, and reduce the force of myocardial contraction.",
             "Overall, the parasympathetic system lowers cardiac output. Hypervagotonia produces vagal syndrome.",
             "Sympathetic innervation: sympathetic fibers innervate all regions of the heart, particularly the ventricles.",
             "The sympathetic system has an effect opposite to that of the parasympathetic system. Its action is manifested during physical activity, stress, emotions, and hemorrhage. Products such as coffee, alcohol, and tobacco increase the heart rate (tachycardia).",
             "Bronchopulmonary plexus: it is located at the bifurcation of the pulmonary artery and on the posterior surface of the main bronchi, near the lung hilum:",
-            "Parasympathetic innervation: the cell body is located in the dorsal nucleus of the vagus nerve and its branch, the recurrent laryngeal nerve.",
+            "Parasympathetic innervation: preganglionic cell bodies lie in the dorsal motor nucleus of the vagus, and vagal fibers also travel with the recurrent laryngeal nerve.",
             "Sympathetic innervation: it arises mainly from the inferior cervical ganglion (ICG) and the paravertebral thoracic ganglia from T1 to T5 or T6."
           ]
         },
@@ -333,7 +333,7 @@ export const chapter4En: Chapter = {
             "Left vagus nerve, now anterior: it passes over the anterior border of the cardia and innervates the lesser curvature of the stomach, the pylorus, the duodenum, and the biliary tract. It terminates in the celiac plexus (formerly solar plexus).",
             "Right vagus nerve, now posterior: it lies behind the abdominal esophagus and the stomach, which it innervates. It terminates in the semilunar ganglion of the celiac plexus.",
             "Prevertebral (preaortic) plexuses: these are the plexuses of the abdominal viscera. They extend along the abdominal aorta and are convergence points for parasympathetic and sympathetic fibers that provide dual autonomic innervation to the abdominal viscera.",
-            "Cannon-Bohm zone: it is located at the junction between the right two-thirds and left one-third of the transverse colon. It represents the boundary between the territory controlled by the vagus nerve and the pelvic parasympathetic system. (See Chapter 15, Colon.)"
+            "Cannon-Böhm zone: located at the junction between the right two-thirds and left one-third of the transverse colon, it marks the boundary between the territories supplied by the vagus nerve and the pelvic parasympathetic system. (See Chapter 15, Colon.)"
           ]
         },
         {
@@ -343,7 +343,7 @@ export const chapter4En: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Stomach: the vagus nerves stimulate secretion by the gastric glands. They are motor to the smooth muscle of the stomach and open the sphincters of the cardia (for gastric filling) and pylorus (for gastric emptying).",
+            "Stomach: the vagus nerves stimulate secretion by the gastric glands and the activity of gastric smooth muscle. They promote relaxation of the cardia for gastric filling and regulate pyloric function during gastric emptying.",
             "Intestine: the vagus nerves act on peristalsis and secretion by the glands of the duodenum, small intestine, right colon, and right two-thirds of the transverse colon, as well as the biliary tract and pancreas.",
             "Gallbladder: the vagus nerves stimulate bile secretion."
           ]
@@ -354,14 +354,14 @@ export const chapter4En: Chapter = {
         },
         {
           "type": "para",
-          "text": "It is destined for the pelvic organs, the distal third of the transverse colon, and the left colon."
+          "text": "It supplies the pelvic organs, the distal third of the transverse colon, and the left colon."
         },
         {
           "type": "bullets",
           "items": [
             "Origin: sacral spinal cord S2-S3-S4 at the level of the lower border of the L1 vertebra.",
-            "Course: the sacral roots S2-S3-S4 accompany the cauda equina within the lumbar and sacral vertebral canal. They enter the pelvic cavity through the anterior sacral foramina S2-S3-S4 and form the nervi erigentes of Eckardt, or pelvic splanchnic nerves, destined for the pelvic organs.",
-            "Termination: the nervi erigentes of Eckardt, together with the sacral sympathetic system, form the inferior hypogastric plexus contained within the sacro-recto-genito-pubic fascia.",
+            "Course: the sacral roots S2-S4 descend with the cauda equina through the lumbar and sacral vertebral canal. They enter the pelvic cavity through the anterior sacral foramina and form the pelvic splanchnic nerves, also known as the nervi erigentes, which supply the pelvic organs.",
+            "Termination: together with the sacral sympathetic system, the pelvic splanchnic nerves contribute to the inferior hypogastric plexus within the sacrorectogenitopubic fascia.",
             "Function:",
             "Defecation through contraction of the rectum and opening of the internal anal sphincter (the external sphincter is under voluntary control of the pudendal nerve, which belongs to the somatic nervous system);",
             "Micturition through contraction of the detrusor muscle of the bladder and opening of the internal urethral sphincter (the external sphincter is under voluntary control of the pudendal nerve);",
@@ -404,7 +404,7 @@ export const chapter4En: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Origin: the cells of origin are located in the gray matter of the lateral horn of the thoracic spinal cord, between the ventral horn and the dorsal horn. Sympathetic fibers join the ventral branch of the spinal nerve through the ventral root."
+            "Origin: the cell bodies of preganglionic sympathetic neurons lie in the gray matter of the lateral horn of the thoracic and upper lumbar spinal cord. Their fibers leave through the ventral roots and briefly join the spinal nerves."
           ]
         },
         {
@@ -432,25 +432,25 @@ export const chapter4En: Chapter = {
         },
         {
           "type": "para",
-          "text": "It contains approximately ten ganglia located anterior to the costovertebral joints of vertebrae T1 to T12. A costovertebral fixation almost always has repercussions on the ganglion opposite the joint and on the viscera that it innervates."
+          "text": "It contains approximately ten ganglia located anterior to the costovertebral joints from T1 to T12. A costovertebral fixation may affect the ganglion corresponding to that joint and the viscera it supplies."
         },
         {
           "type": "bullets",
           "items": [
-            "Rami communicantes: immediately after leaving the intervertebral foramina, the preganglionic neurons, or white rami communicantes (because they are myelinated), join the spinal nerve and then quickly leave it to enter a ganglion of the paravertebral sympathetic chain. The preganglionic neurons then divide into two groups:"
+            "Rami communicantes: after leaving the intervertebral foramina, preganglionic sympathetic fibers briefly travel within the spinal nerves, then leave through the myelinated white rami communicantes to enter the paravertebral sympathetic chain. They then follow one of two principal pathways:"
           ]
         },
         {
           "type": "para",
-          "text": "Preganglionic neurons arising from the T1 to L2 myelomeres and destined for the somatic component and for viscera outside the abdominal cavity: they terminate in the ganglia of the paravertebral sympathetic chain, where they synapse with postganglionic neurons, or gray rami communicantes (because they are unmyelinated), which rejoin the spinal nerve."
+          "text": "Preganglionic fibers arising from T1 to L2 and destined for the body wall, limbs, or viscera outside the abdominal cavity synapse in paravertebral ganglia. Unmyelinated postganglionic fibers then return to the spinal nerves through the gray rami communicantes."
         },
         {
           "type": "bullets",
           "items": [
-            "The postganglionic neurons therefore have their cell bodies in a paravertebral ganglion.",
-            "Preganglionic neurons arising from the T5 or T6 to T11 or T12 myelomeres and destined for the viscera of the abdominal cavity: they pass through a paravertebral ganglion without synapsing and join the prevertebral (or preaortic) chain.",
-            "Their cell bodies are therefore located in the lateral horn of the spinal cord.",
-            "Note the disparity between the number of preganglionic neurons (14) and the number of paravertebral ganglia (approximately 30). Only the paravertebral ganglia from T1 to L2 receive a white ramus communicans. All of them, however, have a gray ramus communicans.",
+            "The cell bodies of these postganglionic neurons therefore lie within the paravertebral ganglia.",
+            "Preganglionic fibers arising mainly from T5 to T12 and destined for the abdominal viscera pass through the paravertebral ganglia without synapsing and continue as splanchnic nerves toward the prevertebral (preaortic) plexuses.",
+            "Their cell bodies lie in the lateral horn of the spinal cord.",
+            "Note the difference between the 14 spinal levels from T1 to L2 that give rise to preganglionic sympathetic fibers and the approximately 30 paravertebral ganglia. Only ganglia receiving fibers from T1 to L2 have white rami communicantes; all paravertebral ganglia have gray rami communicantes.",
             "Recurrent meningeal branches: they arise from two roots, one from the ramus communicans and the other from the ventral branch of the spinal nerve. They follow a recurrent course back into the vertebral canal to innervate the spinal meninges, vertebrae, and intervertebral discs."
           ]
         },
@@ -465,13 +465,13 @@ export const chapter4En: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "The digestive system is directly innervated by the lateral horn of the thoracic spinal cord from T5 or T6 to T11 or T12 because there is no synapse at the level of the paravertebral sympathetic chain ganglion.",
+            "Preganglionic sympathetic fibers destined for the abdominal digestive viscera arise in the lateral horn of the thoracic spinal cord, mainly from T5 or T6 to T11 or T12. They pass through the paravertebral sympathetic ganglia without synapsing before reaching the prevertebral plexuses.",
             "At each vertebral level, the spinal meninges are innervated by a recurrent meningeal branch. Any irritation of the spinal nerve as it exits the intervertebral foramen causes irritation of the meninges, with repercussions on craniosacral dynamics."
           ]
         },
         {
           "type": "sub",
-          "text": "5.2. Cervical Sympathetic Chain"
+          "text": "Foot reflex zones:"
         },
         {
           "type": "para",
@@ -484,7 +484,7 @@ export const chapter4En: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Intertransverse nerve (or Francois-Franck nerve): it innervates the vertebral artery, a branch of the subclavian artery, within the transverse foramina from C6 to C1. The two vertebral arteries unite in the foramen magnum to form the basilar artery along the brainstem. It supplies the posterior part of the brain, the cerebellum, and the inner ear.",
+            "Intertransverse nerve (or François-Franck nerve): it accompanies the vertebral artery, a branch of the subclavian artery, through the transverse foramina from C6 to C1. The two vertebral arteries unite near the foramen magnum to form the basilar artery along the brainstem. Together, they supply the posterior brain, cerebellum, and inner ear.",
             "Branches to the pleural dome and trachea;",
             "The inferior cardiac nerve;",
             "Gray rami communicantes (GRC) to the brachial plexus from C5 to T1."
@@ -510,14 +510,14 @@ export const chapter4En: Chapter = {
           "type": "bullets",
           "items": [
             "Trauma: whiplash injuries and trauma to the cervical region, shoulder girdle, and upper limb can affect the ICG.",
-            "The blood supply through the vertebral artery is severely compromised by cervical osteoarthritis and craniocervical trauma: vertigo and instability, tinnitus, and hearing loss.",
+            "Blood flow through the vertebral artery may be compromised by cervical osteoarthritis and craniocervical trauma, potentially contributing to vertigo, instability, tinnitus, and hearing loss.",
             "Compression of the ICG can also affect the vasomotor function of the subclavian artery. The consequences are paresthesia of the upper limb, carpal tunnel syndrome, adhesive capsulitis of the shoulder, and recurrent tendinitis (epicondylitis).",
             "Coronary spasms and functional precordial pain associated with fixations of the left first rib."
           ]
         },
         {
           "type": "para",
-          "text": "b) Middle cervical ganglion (MCG): it is inconstant and often fuses with the ICG. When present, it is located anterior to the transverse process of C6. Its collateral branches are the middle cardiac nerve and the nerve to the inferior thyroid artery."
+          "text": "b) Middle cervical ganglion (MCG): this ganglion is variably present and often fuses with the ICG. When present, it lies anterior to the transverse process of C6. Its collateral branches include the middle cardiac nerve and a branch to the inferior thyroid artery."
         },
         {
           "type": "para",
@@ -601,7 +601,7 @@ export const chapter4En: Chapter = {
         },
         {
           "type": "para",
-          "text": "Arising from the thoracic ganglia from T5 to T12, they converge with the vagus nerve toward the prevertebral plexuses. The greater splanchnic nerve is described as arising from the T6 to T9 ganglia, the lesser splanchnic nerve from the T10 and T12 ganglia, and the lowest splanchnic nerve from the L11 and L2 ganglia."
+          "text": "Arising from the thoracic sympathetic ganglia, the thoracic splanchnic nerves converge toward the prevertebral plexuses alongside vagal fibers. The greater splanchnic nerve usually arises from T5-T9, the lesser splanchnic nerve from T10-T11, and the least splanchnic nerve from T12."
         }
       ]
     },
@@ -613,11 +613,11 @@ export const chapter4En: Chapter = {
           "type": "bullets",
           "items": [
             "Nociception (transmission of a potentially harmful or painful message): sympathetic nerves carry nociception.",
-            "Origin: the sensory sympathetic nerves have their cell bodies in the spinal ganglion of the dorsal root of the spinal nerve. They arise from both the somatic and visceral components.",
+            "Origin: visceral afferent neurons that travel with sympathetic pathways have their cell bodies in the dorsal root ganglia of the spinal nerves. They carry sensory information from somatic and visceral territories.",
             "Course:",
-            "Somatic component: sensory sympathetic nerves arising from the somatic component, blood vessels, and skin join the paravertebral sympathetic chain and the gray rami communicantes connecting the sympathetic chain to the spinal nerve.",
-            "Visceral component: sensory neurons arising from the viscera join the paravertebral sympathetic chain.",
-            "Termination: sympathetic fibers from both components terminate in the dorsal horn of the spinal cord. Within the spinal cord, sensory neurons from the two components - somatic and visceral - intermingle.",
+            "Somatic component: sensory fibers from the body wall, blood vessels, and skin travel through the spinal nerves and their connections with the paravertebral sympathetic chain.",
+            "Visceral component: visceral afferent fibers arising from the viscera travel through the paravertebral sympathetic chain toward the spinal nerves.",
+            "Termination: sensory fibers from the somatic and visceral components enter the dorsal horn of the spinal cord, where their pathways converge. This convergence helps explain referred visceral pain.",
             "Vascular component: nociceptive sensory neurons do not all reach the lateral horn of the spinal cord. The third sympathetic pathway is periarterial and periaortic. According to Prof. Guy Lazorthes, it reaches the spinal cord at a level distant from its level of origin. It could explain the persistence of visceral reflex responses in paraplegic patients."
           ]
         },
@@ -627,7 +627,7 @@ export const chapter4En: Chapter = {
         },
         {
           "type": "para",
-          "text": "\"Spinal interrelationships between the pathways of visceral sensation and those of somatic sensation are the origin of referred pain and reflex contractures\" (Prof. Guy Lazorthes). Thus, visceral pain is not always projected opposite the affected viscus. It is projected onto a cutaneous territory, known as a dermatome, corresponding to the spinal segment at which the sensory pathways from the viscus terminate. (See Clinical Relevance.)"
+          "text": "\"Spinal interrelationships between the pathways of visceral sensation and those of somatic sensation are the origin of referred pain and reflex contractures\" (Prof. Guy Lazorthes). Thus, visceral pain is not always felt directly over the affected viscus. Instead, it may be referred to a cutaneous territory, known as a dermatome, corresponding to the spinal segment that receives sensory input from that viscus. (See Clinical Relevance.)"
         },
         {
           "type": "para",
@@ -644,14 +644,14 @@ export const chapter4En: Chapter = {
           "items": [
             "Anatomy: it consists of plexuses interposed between the paravertebral sympathetic chains and the viscera, anterior to the abdominal aorta and the crura of the diaphragm. It extends from the aortic hiatus of the diaphragm (at the level of the T12 vertebra) to the aortic bifurcation at the level of the L4 vertebra.",
             "Composition: it consists of five splanchnic plexuses in which the vagus nerves and sympathetic splanchnic nerves converge:",
-            "Celiac plexus (formerly solar plexus): it is located below the aortic opening of the diaphragm, anterior to the abdominal aorta and the crura of the diaphragm. It consists of two right and left semilunar ganglia. It receives nerve filaments from the greater splanchnic nerve arising from the 6th, 7th, 8th, and 9th paravertebral ganglia. It is destined for the upper abdominal viscera.",
-            "Superior mesenteric plexus: located at the origin of the superior mesenteric artery, it receives nerve filaments from the greater and lesser splanchnic nerves arising from the 8th, 9th, 10th, and 11th thoracic ganglia and destined for the small intestine.",
-            "Aorticorenal plexus: located anterior to the renal artery, it receives the lesser splanchnic nerve arising from the 10th, 11th, and 12th thoracic ganglia and the first lumbar ganglion. It is destined for the kidney, testis, or ovary.",
-            "Inferior mesenteric plexus: located at the origin of the inferior mesenteric artery, it receives the lowest splanchnic nerve arising from the 12th thoracic ganglion.",
+            "Celiac plexus (formerly the solar plexus): located below the aortic hiatus, anterior to the abdominal aorta and the crura of the diaphragm, it contains right and left celiac ganglia. It receives fibers from the greater splanchnic nerves, which usually arise from T5-T9, and supplies the upper abdominal viscera.",
+            "Superior mesenteric plexus: located at the origin of the superior mesenteric artery, it receives fibers chiefly through the lesser thoracic splanchnic nerves and supplies the small intestine and other midgut structures.",
+            "Aorticorenal plexus: located anterior to the renal artery, it receives fibers from the lesser and least thoracic splanchnic nerves and supplies the kidney and gonads.",
+            "Inferior mesenteric plexus: located at the origin of the inferior mesenteric artery, it receives sympathetic fibers primarily from the lumbar splanchnic nerves.",
             "Superior hypogastric plexus: located at the level of the aortic bifurcation, at the L4 vertebra, it receives fibers arising from the inferior mesenteric plexus and the third lumbar sympathetic ganglion. It provides sympathetic innervation to the inferior hypogastric plexus, the previsceral plexus of the pelvic organs.",
             "Function:",
-            "Vagus nerve: it has a dual role: it increases motor activity (peristalsis), motility, and secretions. It also relaxes the walls.",
-            "Sympathetic system: it has effects opposite to those of the vagus nerve. It is also vasoconstrictive and contributes to reducing blood flow and increasing blood pressure by increasing resistance to blood flow. It can stop digestion in order to divert blood toward the muscles of the locomotor system during exertion, physical activity, or sport. In states of stress, the parasympathetic system is inhibited and the sympathetic system is activated."
+            "Vagus nerve: it increases gastrointestinal motor activity, peristalsis, and secretions, while coordinating relaxation of the walls and sphincters of hollow viscera as required.",
+            "Sympathetic system: its effects generally oppose those of the vagus nerve. It promotes vasoconstriction, reduces gastrointestinal blood flow, and can increase arterial pressure by raising vascular resistance. During exertion or intense physical activity, it inhibits digestion and redirects blood toward skeletal muscles. In states of stress, parasympathetic activity is reduced and sympathetic activity increases."
           ]
         },
         {
@@ -682,12 +682,12 @@ export const chapter4En: Chapter = {
           "type": "bullets",
           "items": [
             "Sympathetic innervation: it arises from the hypogastric nerve, which comes from the superior hypogastric plexus.",
-            "Parasympathetic innervation: it arises from the second, third, and fourth sacral roots, which form the pelvic splanchnic nerve (or nervus erigens of Eckardt).",
+            "Parasympathetic innervation: it arises from the second, third, and fourth sacral roots, which form the pelvic splanchnic nerves (nervi erigentes).",
             "Function:",
             "Parasympathetic system:",
             "defecation through contraction of the rectum and relaxation of the smooth sphincter of the anus;",
             "micturition through contraction of the detrusor muscle of the bladder and relaxation of its internal sphincter;",
-            "erection through dilation of the erectile organs.",
+            "erection through vasodilation within the erectile tissues.",
             "Sympathetic system: its effects are opposite:",
             "anal continence and contraction of the smooth sphincter of the anus;",
             "bladder continence and contraction of the smooth sphincter;",
@@ -723,7 +723,7 @@ export const chapter4En: Chapter = {
             "Function:",
             "The ENS is designed to function as autonomously as possible, independently of commands from the brain and spinal cord. These structures delegate and do not intervene as long as physiological conditions remain normal. They \"take over\" only according to need or under abnormal conditions of stress or emotional states.",
             "The intestine produces neurotransmitters that it shares with the brain: serotonin, acetylcholine, norepinephrine, and GABA.",
-            "The intestine produces 80% of immune cells.",
+            "A large proportion of the body's immune cells resides in gut-associated lymphoid tissue.",
             "The ENS fully deserves its description as a second brain. This relative independence of the ENS is said to have freed the brain from tasks that would otherwise occupy it and prevent it from carrying out other, more advanced functions. \"This may have been one of the factors that enabled the development of intelligence\" (Eric Marlien)."
           ]
         }
@@ -754,7 +754,7 @@ export const chapter4En: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "This predominance of sympathetic innervation is related to the role of the adrenal glands in states of stress or emotion. It produces adrenaline during the emergency phase of the general adaptation syndrome (see Chapter 5, Stress Mechanism).",
+            "The predominance of sympathetic innervation is related to the role of the adrenal glands in stress and emotional responses. The adrenal medulla secretes adrenaline during the emergency phase of the general adaptation syndrome. (See Chapter 5, Stress Mechanism.)",
             "Function:",
             "Adrenaline causes an acceleration of the heart rate (tachycardia) and vasoconstriction."
           ]
@@ -765,7 +765,7 @@ export const chapter4En: Chapter = {
         },
         {
           "type": "para",
-          "text": "It stimulates the secretion of aldosterone, which increases the secretion of renin, which in turn increases blood volume (the total volume of blood circulating in the body)."
+          "text": "The adrenal cortex secretes aldosterone, primarily in response to angiotensin II and increased plasma potassium. Aldosterone promotes renal sodium and water retention, thereby increasing blood volume."
         }
       ]
     },
@@ -781,14 +781,14 @@ export const chapter4En: Chapter = {
           "type": "bullets",
           "items": [
             "Foot reflex zones: plantar surface of the toes (base of the skull):",
-            "Brainstem: medial border of the distal phalanx of the great toe.",
+            "Brainstem: medial aspect of the distal phalanx of the great toe.",
             "Cranial nerves III, VII, and IX within the foramina of the skull base: phalanges of the four lesser toes. (Cranial nerves and ganglia: see Occipito-Podal Reflexotherapy and the Neuro-Meningeal System, Chapter 8.)",
             "Cranial nerve III (superior orbital fissure): medial shaft-head junction of the middle phalanx of the second toe;",
             "Ciliary ganglion: medial shaft-base junction of the distal phalanx of the second toe;",
             "Maxillary nerve (foramen rotundum): lateral shaft of the middle phalanx of the second toe;",
             "Pterygopalatine ganglion: medial part of the shaft of the middle phalanx of the second toe;",
             "Mandibular nerve (foramen ovale): lateral shaft of the middle phalanx of the third toe;",
-            "Submandibular and sublingual ganglia (floor of the mouth): retrocapitate part of the distal phalanx of the toes;",
+            "Submandibular and sublingual ganglia (floor of the mouth): region immediately proximal to the head of the distal phalanges of the toes;",
             "Otic ganglion: medial part of the shaft of the middle phalanx of the third toe."
           ]
         },
@@ -852,7 +852,7 @@ export const chapter4En: Chapter = {
           "type": "bullets",
           "items": [
             "Esophageal hiatus: plantar surface of the left foot, lateral to the central tendon and aligned with a line beginning between the first and second toes and crossing the left dome of the diaphragm.",
-            "N.B.: take into account the difference in height between the two diaphragmatic domes, the left being lower than the right. (See Chapter on the Diaphragm, page ...)"
+            "N.B.: take into account the difference in height between the two diaphragmatic domes, the left being lower than the right. (See the chapter on the diaphragm.)"
           ]
         },
         {
@@ -913,7 +913,7 @@ export const chapter4En: Chapter = {
         },
         {
           "type": "para",
-          "text": "Figure 4.31. Cervical (green), Lumbar (yellow), and Sacrococcygeal (red) Paravertebral Sympathetic Chain (PSC)"
+          "text": "Figure 4.31. Cervical (green), lumbar (yellow), and sacrococcygeal (red) paravertebral sympathetic chains"
         },
         {
           "type": "sub",
@@ -986,7 +986,7 @@ export const chapter4En: Chapter = {
           "type": "bullets",
           "items": [
             "Inferior hypogastric plexus (anterior fibers): plantar surface, medial part of the anterior border of the heel, at the junction of the reflex zone of the fallopian tube and the uterine fundus;",
-            "Inferior hypogastric plexus (middle fibers): medial surface of the heel, reflex zone of the cervico-isthmic region of the uterus (or prostate);",
+            "Inferior hypogastric plexus (middle fibers): medial surface of the heel, reflex zone of the cervico-isthmic region of the uterus (or the prostate);",
             "Inferior hypogastric plexus (posterior fibers): medial surface of the heel, middle part of the anterior border of the posteromedial tuberosity of the calcaneus."
           ]
         },
@@ -1007,7 +1007,7 @@ export const chapter4En: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Reflex zones: (See Chapter 16.)"
+            "Reflex zones: see Chapter 16."
           ]
         }
       ]

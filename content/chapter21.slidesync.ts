@@ -58,13 +58,13 @@ export const chapter21SlidesEn: SyncSlide[] = [
   { src: '/chapter-21/EN/Images/NCH 21 EN IMG 1.png', title: 'Chapter 21: Male and Female Erectile System' },
   { src: '/chapter-21/EN/Images/NCH 21 EN IMG 2.png', title: 'Function and Anatomical Location' },
   { src: '/chapter-21/EN/Images/NCH 21 EN IMG 3.png', title: 'Muscular Dynamics' },
-  { src: '/chapter-21/EN/Images/NCH 21 EN IMG 4.png', title: 'Accessory Glands and Vascular Supply' },
+  { src: '/chapter-21/EN/Images/NCH 21 EN IMG 4 V2.png', title: 'Accessory Glands and Vascular Supply' },
   { src: '/chapter-21/EN/Images/NCH 21 EN IMG 5.png', title: 'Vascular Network and Drainage' },
   { src: '/chapter-21/EN/Images/NCH 21 EN IMG 7.png', title: 'Physiological Sequence of the Sexual Response' },
   { src: '/chapter-21/EN/Images/NCH 21 EN IMG 8.png', title: 'Common Disorders and Associated Factors' },
   { src: '/chapter-21/EN/Images/NCH 21 EN IMG 9.png', title: 'Viscerosomatic Relationships' },
   { src: '/chapter-21/EN/Images/NCH 21 EN IMG 10.png', title: 'The Psycho-Emotional Dimension' },
-  { src: '/chapter-21/EN/Images/NCH 21 EN IMG 11.png', title: 'ROP Clinical Protocol: Male and Female Erectile System' },
+  { src: '/chapter-21/EN/Images/NCH 21 EN IMG 11 V2.png', title: 'ROP Clinical Protocol: Male and Female Erectile System' },
 ]
 
 export const chapter21SlideAnchorsEn: SyncAnchor[] = [

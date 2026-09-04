@@ -46,12 +46,12 @@ export const chapter2SlidesEn: SyncSlide[] = [
   { src: '/chapter-2/EN/Images/NCH 2 EN IMG 6.png', title: 'The Three Times of Massage' },
   { src: '/chapter-2/EN/Images/NCH 2 EN IMG 7.png', title: 'Adaptation window after the session' },
   { src: '/chapter-2/EN/Images/NCH 2 EN IMG 8.png', title: 'Hierarchy of the Treatment Plan' },
-  { src: '/chapter-2/EN/Images/NCH 2 EN IMG 9.png', title: 'Level 1 — Regulation of Higher Centers' },
-  { src: '/chapter-2/EN/Images/NCH 2 EN IMG 9b.png', title: 'Level 2 — Neuro-vegetative Regulation and Adaptation' },
-  { src: '/chapter-2/EN/Images/NCH 2 EN IMG 10.png', title: 'Level 3 — Loco-regional Visceral Regulation' },
+  { src: '/chapter-2/EN/Images/NCH 2 EN IMG 9 V2.png', title: 'Level 1 — Regulation of Higher Centers' },
+  { src: '/chapter-2/EN/Images/NCH 2 EN IMG 9b V2.png', title: 'Level 2 — Neuro-vegetative Regulation and Adaptation' },
+  { src: '/chapter-2/EN/Images/NCH 2 EN IMG 10 V2.png', title: 'Level 3 — Loco-regional Visceral Regulation' },
   { src: '/chapter-2/EN/Images/NCH 2 EN IMG 11.png', title: 'Level 4 — Viscero-somatic and Viscero-emotional Integration' },
   { src: '/chapter-2/EN/Images/NCH 2 EN IMG 12.png', title: 'Clinical case: postpartum left lumbosciatica' },
-  { src: '/chapter-2/EN/Images/NCH 2 EN IMG 13.png', title: 'Indications for ROP' },
+  { src: '/chapter-2/EN/Images/NCH 2 EN IMG 13 V2.png', title: 'Indications for ROP' },
   { src: '/chapter-2/EN/Images/NCH 2 EN IMG 14.png', title: 'Contraindications and warning signs in ROP' },
 ]
 
