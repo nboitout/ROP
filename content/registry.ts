@@ -75,6 +75,7 @@ import { chapter21De } from './chapter21.de'
 import { chapter21Es } from './chapter21.es'
 import { chapter21It } from './chapter21.it'
 import { integrateEnglishReflexPhotos } from '@/lib/englishReflexMedia'
+import { synchronizeEnglishCrossReferences } from '@/lib/englishCrossReferences'
 
 // The former reworked editions are now the canonical French Chapters 3–5.
 chapter3ReworkFr.slug = 'chapter-3'
@@ -126,6 +127,16 @@ const registry: Record<string, Partial<Record<Lang, Chapter>>> = {
   'chapter-20': { fr: chapter20Fr, en: chapter20En, de: chapter20De, es: chapter20Es, it: chapter20It },
   'chapter-21': { fr: chapter21Fr, en: chapter21En, de: chapter21De, es: chapter21Es, it: chapter21It },
 }
+
+export const englishCrossReferenceSyncIssues = Object.entries(registry).flatMap(([chapterKey, translations]) => {
+  if (!translations.fr || !translations.en || chapterKey === 'introduction' || chapterKey === 'chapter-3' || chapterKey === 'chapter-5') return []
+  return synchronizeEnglishCrossReferences(
+    chapterKey,
+    translations.fr,
+    translations.en,
+    (targetKey) => registry[targetKey]?.en,
+  )
+})
 
 // English cartography exports use the same paired presentation as the French
 // reflex-zone sections: the treatment photo lives in the prose and its map is

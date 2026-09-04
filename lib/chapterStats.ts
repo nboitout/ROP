@@ -235,6 +235,7 @@ export function chapterQualityMetrics(
       if (block.type === 'numbered') bulletCount += block.items.length
       if (block.type === 'leadBullets') bulletCount += block.items.length
       if (block.type === 'xref') xrefCount++
+      xrefCount += block.xrefs?.length ?? 0
       if (block.type === 'rop') ropBlockCount++
 
       for (const text of blockParagraphTexts(block)) {

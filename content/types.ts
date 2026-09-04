@@ -1,4 +1,6 @@
-export type Block =
+export type CrossReference = { label: string; href: string; text?: string }
+
+type BlockContent =
   | { type: 'para'; text: string }
   | { type: 'lead'; label: string; text: string }
   | { type: 'sub'; text: string }
@@ -8,11 +10,16 @@ export type Block =
   | { type: 'table'; headers: string[]; rows: string[][]; caption?: string }
   | { type: 'figure'; src: string; caption: string; alt: string; orientation: 'landscape' | 'portrait' | 'medium' | 'narrow'; syncHide?: true }
   | { type: 'figurePair'; figures: { src: string; caption: string; alt: string }[] }
-  | { type: 'xref'; label: string; href: string; text?: string }
+  | ({ type: 'xref' } & CrossReference)
   | { type: 'note'; label: string; body: string[] }
   | { type: 'quote'; text: string }
   | { type: 'rop'; body: string[] }
   | { type: 'reflexAtlas' }
+
+/** References attached to a passage render immediately after it without
+ * becoming additional content blocks. This preserves slide-anchor indices and
+ * makes the return route point to the exact source passage. */
+export type Block = BlockContent & { xrefs?: CrossReference[] }
 
 export type Section = { id: string; title: string; blocks: Block[]; railTitle?: string; railHidden?: true }
 

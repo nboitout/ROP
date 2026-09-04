@@ -2,6 +2,7 @@ import assert from 'node:assert/strict'
 import test from 'node:test'
 import { chapter19Fr } from '../content/chapter19.fr'
 import { chapter19SlideAnchors, chapter19Slides } from '../content/chapter19.slidesync'
+import type { Block } from '../content/types'
 
 const pairs = [
   ['figure-19-01.png', 'figure-19-02.png'],
@@ -32,7 +33,7 @@ test('Chapter 19 cartographies stay synchronized with their paired text photos',
     assert.ok(anchor, `cartography has no text anchor: ${cartography}`)
     assert.equal(anchor.sectionId, 'zones-reflexes-podales')
 
-    const block = section.blocks[anchor.blockIndex]
+    const block: Block | undefined = section.blocks[anchor.blockIndex]
     assert.equal(block?.type, 'figure', `cartography is not anchored beside a photo: ${cartography}`)
     assert.ok(block?.type === 'figure' && block.src.endsWith(`/${photo}`),
       `${cartography} is paired with the wrong photo`)

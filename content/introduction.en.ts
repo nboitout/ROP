@@ -312,7 +312,7 @@ export const introductionEn: Chapter = {
         {
           "type": "xref",
           "label": "Read the neuroanatomical foundations",
-          "href": "/fondements-neuro-anatomiques",
+          "href": "/fondements-neuro-anatomiques?lang=en",
           "text": "www.guy-boitout.com/fondements-neuro-anatomiques"
         },
         {

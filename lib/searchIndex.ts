@@ -85,35 +85,39 @@ function compactText(value: string): string {
 }
 
 function blockText(block: Block): string {
-  switch (block.type) {
+  const ownText = (() => {
+    switch (block.type) {
     case 'para':
     case 'sub':
     case 'quote':
-      return block.text
+        return block.text
     case 'lead':
-      return `${block.label} ${block.text}`.trim()
+        return `${block.label} ${block.text}`.trim()
     case 'bullets':
     case 'numbered':
-      return block.items.join(' ')
+        return block.items.join(' ')
     case 'leadBullets':
-      return block.items.map((item) => `${item.label} ${item.text}`.trim()).join(' ')
+        return block.items.map((item) => `${item.label} ${item.text}`.trim()).join(' ')
     case 'table':
-      return [
-        ...block.headers,
-        ...block.rows.flat(),
-        block.caption ?? '',
-      ].join(' ')
+        return [
+          ...block.headers,
+          ...block.rows.flat(),
+          block.caption ?? '',
+        ].join(' ')
     case 'xref':
-      return `${block.label} ${block.text ?? ''}`.trim()
+        return `${block.label} ${block.text ?? ''}`.trim()
     case 'note':
-      return `${block.label} ${block.body.join(' ')}`.trim()
+        return `${block.label} ${block.body.join(' ')}`.trim()
     case 'rop':
-      return block.body.join(' ')
+        return block.body.join(' ')
     case 'figure':
     case 'figurePair':
     case 'reflexAtlas':
-      return ''
-  }
+        return ''
+    }
+  })()
+  const referenceText = block.xrefs?.map((reference) => `${reference.label} ${reference.text ?? ''}`.trim()).join(' ') ?? ''
+  return `${ownText} ${referenceText}`.trim()
 }
 
 function chapterBaseHref(chapterKey: string): string {

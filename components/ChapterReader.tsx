@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useRef, useState } from 'react'
+import { Fragment, useEffect, useRef, useState } from 'react'
 import Link from 'next/link'
 import { useSearchParams } from 'next/navigation'
 import dynamic from 'next/dynamic'
@@ -16,6 +16,7 @@ import { getSessionId } from '@/lib/session'
 import { readerXrefHref } from '@/lib/access'
 import { renderBookReferenceText } from '@/components/BookReferenceText'
 import { applyLocalizedTypography } from '@/lib/frenchTypography'
+import CrossReferenceLinks from '@/components/CrossReferenceLinks'
 
 type Props = {
   chapter: Chapter
@@ -378,16 +379,27 @@ export default function ChapterReader({ chapter, bookTitle, backHref = '/chapitr
           {chapter.sections.map((section) => (
             <section key={section.id} id={`sec-${section.id}`} data-section-id={section.id} className="cr-section">
               {!isRopInterestSection(section) && <h2 className="cr-h2">{applyLocalizedTypography(section.title, contentLang)}</h2>}
-              {section.blocks.map((b, i) => (
-                <BlockView
-                  key={i}
-                  block={b}
-                  onOpenImage={setLightbox}
-                  anchorId={`p-${section.id}-${i}`}
-                  sourceChapterKey={chapter.slug}
-                  restrictPaidXrefs={restrictPaidXrefs}
-                />
-              ))}
+              {section.blocks.map((b, i) => {
+                const anchorId = `p-${section.id}-${i}`
+                return (
+                  <Fragment key={i}>
+                    <BlockView
+                      block={b}
+                      onOpenImage={setLightbox}
+                      anchorId={anchorId}
+                      sourceChapterKey={chapter.slug}
+                      restrictPaidXrefs={restrictPaidXrefs}
+                    />
+                    <CrossReferenceLinks
+                      references={b.xrefs}
+                      sourceChapterKey={chapter.slug}
+                      sourceAnchorId={anchorId}
+                      restrictPaidXrefs={restrictPaidXrefs}
+                      lang={lang}
+                    />
+                  </Fragment>
+                )
+              })}
             </section>
           ))}
 
