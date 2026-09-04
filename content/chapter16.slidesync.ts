@@ -32,11 +32,11 @@ const chapter16SlidesBySource: SyncSlide[] = [
   { src: '/chapter-16/FR/slides/slide-20.png', title: 'Approche ROP : lecture symbolique et émotionnelle' },
   { src: '/chapter-16/FR/slides/slide-21.png', title: 'Conseils thérapeutiques au patient' },
   { src: '/chapter-16/FR/slides/slide-22.png', title: 'Protocole clinique ROP : les reins' },
-  { src: '/chapter-16/FR/cartographie/figure-16-01.png', title: 'Cartographie : Rein et surrénale droits' },
-  { src: '/chapter-16/FR/cartographie/figure-16-03.png', title: 'Cartographie : Rein et surrénale gauches — rein gauche' },
-  { src: '/chapter-16/FR/cartographie/figure-16-05.png', title: 'Cartographie : Rein et surrénale gauches — surrénale gauche' },
-  { src: '/chapter-16/FR/cartographie/figure-16-07.png', title: 'Cartographie : Manœuvre combinée du rein' },
-  { src: '/chapter-16/FR/cartographie/figure-16-09.png', title: 'Cartographie : Plexus lombal et fenêtre dorsale du rein' },
+  { src: '/chapter-16/FR/cartographies/figure-16-01.png', title: 'Cartographie : Rein et surrénale droits' },
+  { src: '/chapter-16/FR/cartographies/figure-16-03.png', title: 'Cartographie : Rein et surrénale gauches — rein gauche' },
+  { src: '/chapter-16/FR/cartographies/figure-16-05.png', title: 'Cartographie : Rein et surrénale gauches — surrénale gauche' },
+  { src: '/chapter-16/FR/cartographies/figure-16-07.png', title: 'Cartographie : Manœuvre combinée du rein' },
+  { src: '/chapter-16/FR/cartographies/figure-16-09.png', title: 'Cartographie : Plexus lombal et fenêtre dorsale du rein' },
 ]
 
 export const chapter16Slides: SyncSlide[] = chapter16SlidesBySource

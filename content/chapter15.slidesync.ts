@@ -41,11 +41,11 @@ export const chapter15Slides: SyncSlide[] = [
   { src: '/chapter-15/FR/slides/pathologies/slide-12.png', title: 'Distinguer les grands types de colopathies' },
   { src: '/chapter-15/FR/slides/pathologies/slide-13.png', title: 'Le cercle vicieux de la colopathie fonctionnelle' },
   { src: '/chapter-15/FR/slides/slide-15.png', title: 'Relations viscéro-somatiques du côlon' },
-  { src: '/chapter-15/FR/cartographie/figure-15-01.png', title: 'Cartographie : côlon transverse et côlon descendant' },
-  { src: '/chapter-15/FR/cartographie/figure-15-03.png', title: 'Cartographie : valvule iléo-cæcale, côlon ascendant et côlon transverse' },
-  { src: '/chapter-15/FR/cartographie/figure-15-05.png', title: 'Cartographie : racine du mésocôlon transverse — premier segment' },
-  { src: '/chapter-15/FR/cartographie/figure-15-07.png', title: 'Cartographie : racine du mésocôlon transverse — second segment' },
-  { src: '/chapter-15/FR/cartographie/figure-15-09.png', title: 'Cartographie : rectum, anus et mésosigmoïde' },
+  { src: '/chapter-15/FR/cartographies/figure-15-01.png', title: 'Cartographie : côlon transverse et côlon descendant' },
+  { src: '/chapter-15/FR/cartographies/figure-15-03.png', title: 'Cartographie : valvule iléo-cæcale, côlon ascendant et côlon transverse' },
+  { src: '/chapter-15/FR/cartographies/figure-15-05.png', title: 'Cartographie : racine du mésocôlon transverse — premier segment' },
+  { src: '/chapter-15/FR/cartographies/figure-15-07.png', title: 'Cartographie : racine du mésocôlon transverse — second segment' },
+  { src: '/chapter-15/FR/cartographies/figure-15-09.png', title: 'Cartographie : rectum, anus et mésosigmoïde' },
 ]
 
 export const chapter15SlidesEn: SyncSlide[] = [
