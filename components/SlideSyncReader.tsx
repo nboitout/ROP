@@ -16,6 +16,7 @@ import ReflexZoneAtlas from '@/components/ReflexZoneAtlas'
 import { readerXrefHref } from '@/lib/access'
 import { renderBookReferenceText } from '@/components/BookReferenceText'
 import { applyLocalizedTypography } from '@/lib/frenchTypography'
+import { integrateEnglishReflexDeck } from '@/lib/englishReflexMedia'
 
 type SyncSlide = { src: string; title: string; orientation?: 'portrait' }
 type SyncAnchorPoint = { sectionId: string; blockIndex: number; itemIndex?: number }
@@ -285,8 +286,16 @@ function preloadSlideImage(src: string | undefined) {
   img.src = src
 }
 
-export default function SlideSyncReader({ chapter, bookTitle, slides, anchors, halfBreaks = [], backHref = '/chapitres-gratuits', sectionRail = true, showClinicalCaseResource = false, restrictPaidXrefs = false, hiddenDotSlides = [], classicHref }: Props) {
+export default function SlideSyncReader({ chapter, bookTitle, slides: suppliedSlides, anchors: suppliedAnchors, halfBreaks = [], backHref = '/chapitres-gratuits', sectionRail = true, showClinicalCaseResource = false, restrictPaidXrefs = false, hiddenDotSlides = [], classicHref }: Props) {
   const { lang, t } = useLanguage()
+  const englishReflexDeck = useMemo(
+    () => lang === 'en'
+      ? integrateEnglishReflexDeck(chapter, suppliedSlides, suppliedAnchors)
+      : { slides: suppliedSlides, anchors: suppliedAnchors },
+    [chapter, lang, suppliedAnchors, suppliedSlides],
+  )
+  const slides = englishReflexDeck.slides
+  const anchors = englishReflexDeck.anchors
   const searchParams = useSearchParams()
   const ui = SS_UI[lang] ?? SS_UI.fr
   const closeToReadingLabel = {
