@@ -51,12 +51,12 @@ export const chapter14Slides: SyncSlide[] = [
 // English deck — same slides, translated. The text↔slide anchors are shared
 // (chapter14SlideAnchors): the EN content mirrors the FR block structure.
 export const chapter14SlidesEn: SyncSlide[] = [
-  { src: '/chapter-14/EN/slides/slide-01.jpg', title: 'The small intestine: anatomy, ecosystem and ROP approach' },
+  { src: '/chapter-14/EN/slides/slide-01_V2.jpg', title: 'The small intestine: anatomy, ecosystem and ROP approach' },
   { src: '/chapter-14/EN/slides/slide-02.jpg', title: 'Topography and intra-abdominal arrangement' },
   { src: '/chapter-14/EN/figure-14-2.png', title: 'Mesos', orientation: 'portrait' },
   { src: '/chapter-14/EN/figure-14-4.png', title: 'Suspensory muscle of the duodenum (muscle of Treitz)' },
-  { src: '/chapter-14/EN/figure-14-5.png', title: 'The axis of irrigation and drainage: superior mesenteric trunk', orientation: 'portrait' },
-  { src: '/chapter-14/EN/slides/slide-05.jpg', title: 'The double neurological reality of the peritoneum' },
+  { src: '/chapter-14/EN/slides/slide-04_V2.jpg', title: 'Blood supply and venous drainage: superior mesenteric vessels' },
+  { src: '/chapter-14/EN/slides/slide-05_V2.jpg', title: 'The double neurological reality of the peritoneum' },
   { src: '/chapter-14/EN/slides/slide-06.jpg', title: 'The second brain: autonomy of the enteric nervous system' },
   { src: '/chapter-14/EN/slides/slide-07.jpg', title: 'The second brain: enteric nervous system' },
   { src: '/chapter-14/EN/slides/slide-08.jpg', title: 'The intestinal ecosystem: the tripod of digestive health' },
@@ -65,7 +65,7 @@ export const chapter14SlidesEn: SyncSlide[] = [
   { src: '/chapter-14/EN/slides/slide-11.jpg', title: 'Pathology I: intestinal hyperpermeability (leaky gut)' },
   { src: '/chapter-14/EN/slides/slide-12.jpg', title: 'Pathology II: dysbiosis and its manifestations' },
   { src: '/chapter-14/EN/slides/slide-13.jpg', title: 'Warning signs and diagnosis of exclusion' },
-  { src: '/chapter-14/EN/slides/Chapter14 FigCrohn EN.png', title: 'Clinical case — Crohn’s disease and spondyloarthritis' },
+  { src: '/chapter-14/EN/slides/Chapter14 FigCrohn EN_V2.png', title: 'Clinical case — Crohn’s disease and spondyloarthritis' },
   { src: '/chapter-14/EN/slides/slide-14.jpg', title: 'ROP treatment protocol: order of management' },
   { src: '/chapter-14/EN/figure-14-15 EN.png', title: 'Cranial and cervical territory of the vagus nerve' },
   { src: '/chapter-14/EN/figure-14-16.png', title: 'Left abdominal territory of the vagus nerve and coeliac (solar) plexus' },
@@ -73,7 +73,7 @@ export const chapter14SlidesEn: SyncSlide[] = [
   { src: '/chapter-14/EN/figure-14-25.png', title: 'Jejunum (foot reflex zone)' },
   { src: '/chapter-14/EN/figure-14-27.png', title: 'Ileum and root of the mesentery (foot reflex zone)' },
   { src: '/chapter-14/EN/slides/slide-15.jpg', title: 'ROP intervention summary: small intestine protocol' },
-  { src: '/chapter-14/EN/slides/slide-16.jpg', title: 'Viscero-emotional profile: the intestine person' },
+  { src: '/chapter-14/EN/slides/slide-16_V2.jpg', title: 'Viscero-emotional profile: the intestine person' },
 ]
 
 export const chapter14SlideAnchors: SyncAnchor[] = [

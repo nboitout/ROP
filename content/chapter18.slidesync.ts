@@ -205,15 +205,15 @@ export const chapter18SlidesEn: SyncSlide[] = [
   { src: '/chapter-18/EN/Images/NCH 18 EN IMG 11.png', title: 'The Bladder Support System' },
   { src: '/chapter-18/EN/Images/NCH 18 EN IMG 12.png', title: 'Innervation of the Bladder' },
   { src: '/chapter-18/EN/Images/NCH 18 EN IMG 13.png', title: 'Physiology: The Micturition Cycle' },
-  { src: '/chapter-18/EN/Images/NCH 18 EN IMG 14.png', title: 'Biomechanics: The Pelvic Pressure Chamber' },
+  { src: '/chapter-18/EN/Images/NCH 18 EN IMG 14 V2.png', title: 'Biomechanics: The Pelvic Pressure Chamber' },
   { src: '/chapter-18/EN/Images/NCH 18 EN IMG 15.png', title: 'Pathological Mechanisms and Dysfunctions' },
   { src: '/chapter-18/EN/Images/NCH 18 EN IMG 16.png', title: 'How Tension Creates Urethral Gaping' },
   { src: '/chapter-18/EN/Images/NCH 18 EN IMG 17.png', title: 'Differential Diagnoses: Cystitis and Urgency' },
   { src: '/chapter-18/EN/Images/NCH 18 EN IMG 18.png', title: 'Urinary Disorders: Indications and Diagnoses of Exclusion' },
   { src: '/chapter-18/EN/Images/NCH 18 EN IMG 19.png', title: 'Viscero-Emotional Relationships' },
   { src: '/chapter-18/EN/Images/NCH 18 EN IMG 20.png', title: 'Practical Advice: Abdomino-Perineal Reeducation' },
-  { src: '/chapter-18/EN/Images/NCH 18 EN IMG 21.png', title: 'ROP Clinical Protocol: The Bladder' },
-  { src: '/chapter-18/EN/Images/NCH 18 EN IMG 22.png', title: 'Higher Centers of Neurovegetative Control' },
+  { src: '/chapter-18/EN/Images/NCH 18 EN IMG 21 V2.png', title: 'ROP Clinical Protocol: The Bladder' },
+  { src: '/chapter-18/EN/Images/NCH 18 EN IMG 22 V2.png', title: 'Higher Centers of Neurovegetative Control' },
 ].map((slide) => ({ ...slide, src: `${slide.src}?v=20260826-en` }))
 
 export const chapter18SlideAnchorsEn: SyncAnchor[] = [

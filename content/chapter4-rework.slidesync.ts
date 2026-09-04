@@ -61,8 +61,10 @@ export const chapter4ReworkSlides = [
   { src: '/chapter-4/FR/cartographies/slide-33.png', title: 'Cartographie ROP : plexus hypogastrique inférieur, fibres moyennes et postérieures' },
 ]
 
+const chapter4EnglishV2Slides = new Set([14, 15, 16, 17, 20, 21, 25, 30, 32, 35])
+
 const synthesisEn = (file: number, title: string) => ({
-  src: `/chapter-4/EN/IMAGES/NCH 4 EN IMG ${file}.png`,
+  src: `/chapter-4/EN/IMAGES/NCH 4 EN IMG ${file}${chapter4EnglishV2Slides.has(file) ? ' V2' : ''}.png`,
   title,
 })
 
@@ -79,6 +81,26 @@ export const chapter4ReworkSlidesEn = [
   synthesisEn(10, 'Sleep: a prerequisite for autonomic balance'),
   synthesisEn(11, 'Functional organization of the autonomic nervous system'),
   synthesisEn(12, 'Craniosacral Organization of the Parasympathetic System'),
+  synthesisEn(13, 'Cephalic parasympathetic innervation: the cranial ganglia'),
+  synthesisEn(14, 'Motor origins of the vagus nerve: dorsal and ambiguus nuclei'),
+  synthesisEn(15, 'The vagus nerve: from the skull to the abdomen'),
+  synthesisEn(16, 'Vagal trunks: diaphragmatic passage and abdominal distribution'),
+  synthesisEn(17, 'The pelvic parasympathetic system'),
+  synthesisEn(18, 'Viscerosensory vagus nerve: interoception'),
+  synthesisEn(22, 'Spinal origin of the sympathetic system'),
+  synthesisEn(21, 'Metameric organization of the sympathetic system'),
+  synthesisEn(23, 'Thoracic sympathetic chain'),
+  synthesisEn(24, 'Cervical sympathetic chain'),
+  synthesisEn(25, 'Lumbar sympathetic chain'),
+  synthesisEn(19, 'Interoception, nociception and referred pain'),
+  synthesisEn(20, 'Reflex dermalgias'),
+  synthesisEn(29, 'Prevertebral plexuses: vagal and sympathetic convergence'),
+  synthesisEn(30, 'The inferior hypogastric plexus'),
+  synthesisEn(31, 'Pelvic functions: autonomic and somatic control'),
+  synthesisEn(32, 'The enteric nervous system: local autonomy and extrinsic modulation'),
+  synthesisEn(33, 'The adrenal glands and stress'),
+  synthesisEn(34, 'Three coordinated modes of visceral regulation'),
+  synthesisEn(35, 'ANS foot reflex zones'),
 ]
 
 export const chapter4ReworkSlideAnchors = [
@@ -160,6 +182,26 @@ export const chapter4ReworkSlideAnchorsEn = [
   { sectionId: 'presentation', blockIndex: 21, slide: 10 },
   { sectionId: 'organisation-du-sna', blockIndex: -1, slide: 11 },
   { sectionId: 'parasympathique-viscero-moteur', blockIndex: -1, slide: 12 },
+  { sectionId: 'parasympathique-viscero-moteur', blockIndex: 1, slide: 13, gapBefore: 'half' as const },
+  { sectionId: 'parasympathique-viscero-moteur', blockIndex: 6, slide: 14 },
+  { sectionId: 'parasympathique-viscero-moteur', blockIndex: 8, slide: 15 },
+  { sectionId: 'parasympathique-viscero-moteur', blockIndex: 23, slide: 16 },
+  { sectionId: 'parasympathique-viscero-moteur', blockIndex: 24, slide: 17 },
+  { sectionId: 'nerf-vague-viscero-sensitif', blockIndex: -1, slide: 18, ...endAt('sympathique-viscero-moteur', -1) },
+  { sectionId: 'sympathique-viscero-moteur', blockIndex: 1, slide: 19 },
+  { sectionId: 'sympathique-viscero-moteur', blockIndex: 4, slide: 20 },
+  { sectionId: 'sympathique-viscero-moteur', blockIndex: 6, slide: 21 },
+  { sectionId: 'sympathique-viscero-moteur', blockIndex: 13, slide: 22 },
+  { sectionId: 'sympathique-viscero-moteur', blockIndex: 24, slide: 23 },
+  { sectionId: 'sympathique-viscero-moteur', blockIndex: 32, slide: 24 },
+  { sectionId: 'sympathique-somato-viscero-sensitif', blockIndex: -1, slide: 25 },
+  { sectionId: 'chaine-plexique-prevertebrale-ou-pre-aortique', blockIndex: 1, slide: 26 },
+  { sectionId: 'plexus-previsceral-pelvien', blockIndex: -1, slide: 27 },
+  { sectionId: 'plexus-previsceral-pelvien', blockIndex: 2, slide: 28 },
+  { sectionId: 'systeme-nerveux-intrinseque-ou-enterique-sne', blockIndex: -1, slide: 29 },
+  { sectionId: 'glandes-surrenales', blockIndex: -1, slide: 30 },
+  { sectionId: 'glandes-surrenales', blockIndex: 6, slide: 31, ...endAt('glandes-surrenales', 6) },
+  { sectionId: 'zones-reflexes-podales', blockIndex: -1, slide: 32 },
 ]
 
 export const chapter4ReworkHalfBreaks = [

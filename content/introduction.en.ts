@@ -125,7 +125,7 @@ export const introductionEn: Chapter = {
         },
         {
           "type": "figure",
-          "src": "/chapter-0/EN/Images/NCH 0 EN IMG 2.png",
+          "src": "/chapter-0/EN/Images/NCH 0 EN IMG 2 V2.png",
           "caption": "ROP clinical sequence — four complementary levels",
           "alt": "Overview of the four complementary levels used to organise and prioritise an ROP session.",
           "orientation": "landscape"

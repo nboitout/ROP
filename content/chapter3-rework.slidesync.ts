@@ -33,8 +33,10 @@ export const chapter3ReworkSlides = [
   synthesis(19, 'Cortex : pas de zone ROP directe, mais des voies ascendantes réelles'),
 ]
 
+const chapter3EnglishV2Slides = new Set([2, 3, 5, 17, 18])
+
 const synthesisEn = (file: number, title: string) => ({
-  src: `/chapter-3/EN/Images/NCH 3 EN IMG ${file}.png`,
+  src: `/chapter-3/EN/Images/NCH 3 EN IMG ${file}${chapter3EnglishV2Slides.has(file) ? ' V2' : ''}.png`,
   title,
 })
 

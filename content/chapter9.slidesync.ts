@@ -69,15 +69,15 @@ export const chapter9SlideAnchors: SyncAnchor[] = [
 
 export const chapter9SlidesEn: SyncSlide[] = [
   { src: '/chapter-9/EN/Images/NCH 10 EN IMG 1.png', title: 'Chapter 9 — The Stomach' },
-  { src: '/chapter-9/EN/Images/NCH 10 EN IMG 2.png', title: 'Topographic Location' },
-  { src: '/chapter-9/EN/Images/NCH 10 EN IMG 3.png', title: 'Gastric Morphology and Segments' },
-  { src: '/chapter-9/EN/Images/NCH 10 EN IMG 4.png', title: 'Vascular Supply of the Lesser Curvature' },
-  { src: '/chapter-9/EN/Images/NCH 10 EN IMG 5.png', title: 'Anatomical Relationships' },
-  { src: '/chapter-9/EN/Images/NCH 10 EN IMG 6.png', title: 'Sphincters: Gatekeepers of Transit' },
-  { src: '/chapter-9/EN/Images/NCH 10 EN IMG 7.png', title: 'Arterial Supply: Origin of the Celiac Trunk' },
-  { src: '/chapter-9/EN/Images/NCH 10 EN IMG 8.png', title: 'Autonomic Balance' },
-  { src: '/chapter-9/EN/Images/NCH 10 EN IMG 9.png', title: 'Gastric Rhythm: The Gastric Pacemaker' },
-  { src: '/chapter-9/EN/Images/NCH 10 EN IMG 10.png', title: 'The Neurohormonal Cascade' },
+  { src: '/chapter-9/EN/Images/NCH 10 EN IMG 2 V2.png', title: 'Topographic Location' },
+  { src: '/chapter-9/EN/Images/NCH 10 EN IMG 3 V2.png', title: 'Gastric Morphology and Segments' },
+  { src: '/chapter-9/EN/Images/NCH 10 EN IMG 4 V2.png', title: 'Vascular Supply of the Lesser Curvature' },
+  { src: '/chapter-9/EN/Images/NCH 10 EN IMG 5 V2.png', title: 'Anatomical Relationships' },
+  { src: '/chapter-9/EN/Images/NCH 10 EN IMG 6 V2.png', title: 'Sphincters: Gatekeepers of Transit' },
+  { src: '/chapter-9/EN/Images/NCH 10 EN IMG 7 V2.png', title: 'Arterial Supply: Origin of the Celiac Trunk' },
+  { src: '/chapter-9/EN/Images/NCH 10 EN IMG 8 V2.png', title: 'Autonomic Balance' },
+  { src: '/chapter-9/EN/Images/NCH 10 EN IMG 9 V2.png', title: 'Gastric Rhythm: The Gastric Pacemaker' },
+  { src: '/chapter-9/EN/Images/NCH 10 EN IMG 10 V2.png', title: 'The Neurohormonal Cascade' },
 ]
 
 export const chapter9SlideAnchorsEn: SyncAnchor[] = [

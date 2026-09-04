@@ -253,8 +253,8 @@ export const chapter8SlideAnchors: SyncAnchor[] = [
 
 export const chapter8SlidesEn: SyncSlide[] = [
   { src: '/chapter-8/EN/Images/NCH 8 EN IMG 1.png', title: 'Chapter 8 — Diaphragm' },
-  { src: '/chapter-8/EN/Images/NCH 8 EN IMG 2.png', title: 'The 8 Functional Dimensions of the Diaphragm' },
-  { src: '/chapter-8/EN/Images/NCH 8 EN IMG 3.png', title: 'Diaphragmatic Domes and Central Tendon' },
+  { src: '/chapter-8/EN/Images/NCH 8 EN IMG 2 V2.png', title: 'The 8 Functional Dimensions of the Diaphragm' },
+  { src: '/chapter-8/EN/Images/NCH 8 EN IMG 3 V2.png', title: 'Diaphragmatic Domes and Central Tendon' },
   { src: '/chapter-8/EN/Images/NCH 8 EN IMG 4.png', title: 'Clinical Application: Asymmetric Topography in ROP' },
   { src: '/chapter-8/EN/Images/NCH 8 EN IMG 5.png', title: 'Three Main Hiatuses' },
   { src: '/chapter-8/EN/Images/NCH 8 EN IMG 6.png', title: 'Inferior Anatomy of the Diaphragm' },

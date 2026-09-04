@@ -37,10 +37,12 @@ test('every chapter has a distinct, complete English slide deck', () => {
 
 test('Chapter 18 English slides use the dedicated English assets with a cache revision', () => {
   const slides = classicSlideDecks['chapter-18'].en ?? []
+  const v2Slides = new Set([14, 21, 22])
 
   assert.equal(slides.length, 22)
   for (const [index, slide] of slides.entries()) {
-    assert.match(slide.src, /^\/chapter-18\/EN\/Images\/NCH 18 EN IMG \d+\.png\?v=20260826-en$/)
-    assert.equal(slide.src, `/chapter-18/EN/Images/NCH 18 EN IMG ${index + 1}.png?v=20260826-en`)
+    const slideNumber = index + 1
+    const version = v2Slides.has(slideNumber) ? ' V2' : ''
+    assert.equal(slide.src, `/chapter-18/EN/Images/NCH 18 EN IMG ${slideNumber}${version}.png?v=20260826-en`)
   }
 })
