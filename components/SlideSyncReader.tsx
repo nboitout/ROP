@@ -17,6 +17,7 @@ import { readerXrefHref } from '@/lib/access'
 import { renderBookReferenceText } from '@/components/BookReferenceText'
 import { applyLocalizedTypography } from '@/lib/frenchTypography'
 import { integrateEnglishReflexDeck } from '@/lib/englishReflexMedia'
+import CrossReferenceLinks from '@/components/CrossReferenceLinks'
 
 type SyncSlide = { src: string; title: string; orientation?: 'portrait' }
 type SyncAnchorPoint = { sectionId: string; blockIndex: number; itemIndex?: number }
@@ -1303,6 +1304,13 @@ export default function SlideSyncReader({ chapter, bookTitle, slides: suppliedSl
                       className={hasHalfGapBefore(section.id, i) ? 'ss-anchor-halfbreak' : undefined}
                     >
                       {view}
+                      <CrossReferenceLinks
+                        references={b.xrefs}
+                        sourceChapterKey={chapter.slug}
+                        sourceAnchorId={posId}
+                        restrictPaidXrefs={restrictPaidXrefs}
+                        lang={lang}
+                      />
                       {endSentinel}
                     </div>
                   )
@@ -1328,6 +1336,13 @@ export default function SlideSyncReader({ chapter, bookTitle, slides: suppliedSl
                       </div>
                     ))}
                     {view}
+                    <CrossReferenceLinks
+                      references={b.xrefs}
+                      sourceChapterKey={chapter.slug}
+                      sourceAnchorId={posId}
+                      restrictPaidXrefs={restrictPaidXrefs}
+                      lang={lang}
+                    />
                     {endSentinel}
                   </div>
                 )

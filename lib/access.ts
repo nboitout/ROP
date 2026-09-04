@@ -110,7 +110,9 @@ export function readerXrefHref(
           : `/lecture/${sourceChapterKey.replace(/^chapter-/, 'chapitre-')}`
       params.set('xrefBack', `${sourcePath}?lang=${lang}#${sourceAnchorId}`)
       const chapterNumber = sourceChapterKey.match(/^chapter-(\d+)/)?.[1]
-      params.set('xrefBackLabel', chapterNumber ? `Retour au chapitre ${chapterNumber}` : 'Retour à la référence')
+      params.set('xrefBackLabel', lang === 'en'
+        ? (chapterNumber ? `Back to Chapter ${chapterNumber}` : 'Back to the reference')
+        : (chapterNumber ? `Retour au chapitre ${chapterNumber}` : 'Retour à la référence'))
       enrichedHref = `${pathname}?${params.toString()}${hash ? `#${hash}` : ''}`
     }
   }

@@ -24,11 +24,17 @@ export const chapter3En: Chapter = {
         },
         {
           "type": "para",
-          "text": "Within the ROP clinical sequence presented in Chapter 0, this chapter develops Level 1: regulation of higher centres. The aim is not to “treat the brain” as an isolated organ. Rather, it is to understand the major integrative networks that receive somatic and visceral information and subsequently contribute to the body’s adaptive responses."
+          "text": "Within the ROP clinical sequence presented in Chapter 0, this chapter develops Level 1: regulation of higher centres. The aim is not to “treat the brain” as an isolated organ. Rather, it is to understand the major integrative networks that receive somatic and visceral information and subsequently contribute to the body’s adaptive responses.",
+          "xrefs": [
+            { "label": "See the reference in Chapter 0", "text": "Neuroanatomical Foundations of ROP", "href": "/fondements-neuro-anatomiques?lang=en" }
+          ]
         },
         {
           "type": "para",
-          "text": "Chapter 4 is devoted to the autonomic nervous system. Its peripheral sympathetic and parasympathetic organisation will therefore not be detailed here. This chapter focuses on the CNS centres that receive, integrate, and modulate this information."
+          "text": "Chapter 4 is devoted to the autonomic nervous system. Its peripheral sympathetic and parasympathetic organisation will therefore not be detailed here. This chapter focuses on the CNS centres that receive, integrate, and modulate this information.",
+          "xrefs": [
+            { "label": "See the reference in Chapter 4", "text": "Autonomic Nervous System", "href": "/lecture/chapitre-4?lang=en#sec-presentation" }
+          ]
         },
         {
           "type": "sub",
@@ -78,7 +84,11 @@ export const chapter3En: Chapter = {
         },
         {
           "type": "para",
-          "text": "This organisation helps explain how somatic input may contribute to broader modulation of pain, muscle tone, vigilance, autonomic state, or certain visceral functions, without assuming a direct connection between a specific point and a specific target."
+          "text": "This organisation helps explain how somatic input may contribute to broader modulation of pain, muscle tone, vigilance, autonomic state, or certain visceral functions, without assuming a direct connection between a specific point and a specific target.",
+          "xrefs": [
+            { "label": "See the reference in Chapter 0", "text": "Neuroanatomical Foundations of ROP", "href": "/fondements-neuro-anatomiques?lang=en" },
+            { "label": "See the reference in Chapter 4", "text": "Autonomic Nervous System", "href": "/lecture/chapitre-4?lang=en#sec-presentation" }
+          ]
         }
       ]
     },
@@ -104,7 +114,10 @@ export const chapter3En: Chapter = {
         },
         {
           "type": "para",
-          "text": "It illustrates an important general principle: information arising from the viscera is integrated early within central networks before contributing to reflex or adaptive responses."
+          "text": "It illustrates an important general principle: information arising from the viscera is integrated early within central networks before contributing to reflex or adaptive responses.",
+          "xrefs": [
+            { "label": "See the reference in Chapter 4", "text": "Viscerosensory Vagus Nerve", "href": "/lecture/chapitre-4?lang=en#sec-nerf-vague-viscero-sensitif" }
+          ]
         },
         {
           "type": "sub",
@@ -116,7 +129,10 @@ export const chapter3En: Chapter = {
         },
         {
           "type": "para",
-          "text": "These structures do not function as isolated switches: they receive multiple sources of input and modulate the overall state of the nervous system."
+          "text": "These structures do not function as isolated switches: they receive multiple sources of input and modulate the overall state of the nervous system.",
+          "xrefs": [
+            { "label": "See the reference in Chapter 5", "text": "Stress Mechanisms", "href": "/lecture/chapitre-5?lang=en#sec-le-stress-une-reponse-d-adaptation" }
+          ]
         },
         {
           "type": "sub",
@@ -128,7 +144,10 @@ export const chapter3En: Chapter = {
         },
         {
           "type": "para",
-          "text": "Within our model, it provides an example of a supraspinal relay capable of transforming ascending information into a descending response that modulates spinal circuits."
+          "text": "Within our model, it provides an example of a supraspinal relay capable of transforming ascending information into a descending response that modulates spinal circuits.",
+          "xrefs": [
+            { "label": "See the reference in Chapter 18", "text": "Neural Control of Bladder Function", "href": "/lecture/chapitre-18?lang=en#sec-innervation" }
+          ]
         }
       ]
     },
@@ -158,7 +177,11 @@ export const chapter3En: Chapter = {
         },
         {
           "type": "para",
-          "text": "During stress, the hypothalamus contributes to the activation of sympathetic and neuroendocrine responses. It therefore represents an important point of convergence between Level 1 described here, the autonomic nervous system developed in Chapter 4, and the stress mechanisms discussed in Chapter 5."
+          "text": "During stress, the hypothalamus contributes to the activation of sympathetic and neuroendocrine responses. It therefore represents an important point of convergence between Level 1 described here, the autonomic nervous system developed in Chapter 4, and the stress mechanisms discussed in Chapter 5.",
+          "xrefs": [
+            { "label": "See the reference in Chapter 4", "text": "Autonomic Nervous System Organisation", "href": "/lecture/chapitre-4?lang=en#sec-organisation-du-sna" },
+            { "label": "See the reference in Chapter 5", "text": "Stress Mechanisms", "href": "/lecture/chapitre-5?lang=en#sec-le-stress-une-reponse-d-adaptation" }
+          ]
         },
         {
           "type": "sub",
@@ -170,7 +193,11 @@ export const chapter3En: Chapter = {
         },
         {
           "type": "para",
-          "text": "For ROP, the relevance of this axis is primarily functional: it is a reminder that central, autonomic, and hormonal responses are integrated and cannot be understood in isolation."
+          "text": "For ROP, the relevance of this axis is primarily functional: it is a reminder that central, autonomic, and hormonal responses are integrated and cannot be understood in isolation.",
+          "xrefs": [
+            { "label": "See the reference in Chapter 4", "text": "Autonomic Nervous System Organisation", "href": "/lecture/chapitre-4?lang=en#sec-organisation-du-sna" },
+            { "label": "See the reference in Chapter 5", "text": "Stress Mechanisms", "href": "/lecture/chapitre-5?lang=en#sec-le-stress-une-reponse-d-adaptation" }
+          ]
         }
       ]
     },
@@ -220,7 +247,10 @@ export const chapter3En: Chapter = {
         },
         {
           "type": "para",
-          "text": "An emotion can alter breathing, heart rate, or intestinal transit; conversely, bodily and visceral signals can influence emotional state. This bidirectionality is better understood as an interaction among networks than as a fixed relationship between an organ and an emotion."
+          "text": "An emotion can alter breathing, heart rate, or intestinal transit; conversely, bodily and visceral signals can influence emotional state. This bidirectionality is better understood as an interaction among networks than as a fixed relationship between an organ and an emotion.",
+          "xrefs": [
+            { "label": "See the reference in Chapter 6", "text": "Polyvagal Theory", "href": "/lecture/chapitre-6?lang=en#sec-theorie-polyvagale" }
+          ]
         }
       ]
     },
@@ -242,7 +272,10 @@ export const chapter3En: Chapter = {
         },
         {
           "type": "para",
-          "text": "The glymphatic system refers to perivascular exchange pathways that contribute to fluid movement and the clearance of certain metabolic waste products from the brain. It operates in relation to CSF and the meningeal lymphatic vessels, while remaining distinct from them."
+          "text": "The glymphatic system refers to perivascular exchange pathways that contribute to fluid movement and the clearance of certain metabolic waste products from the brain. It operates in relation to CSF and the meningeal lymphatic vessels, while remaining distinct from them.",
+          "xrefs": [
+            { "label": "See the reference in Chapter 4", "text": "Relationship Between the ANS and Sleep", "href": "/lecture/chapitre-4?lang=en#p-presentation-21" }
+          ]
         },
         {
           "type": "sub",
@@ -258,7 +291,10 @@ export const chapter3En: Chapter = {
         },
         {
           "type": "para",
-          "text": "This distinction preserves the historical and clinical coherence of the method while clearly separating established anatomy from the therapeutic model."
+          "text": "This distinction preserves the historical and clinical coherence of the method while clearly separating established anatomy from the therapeutic model.",
+          "xrefs": [
+            { "label": "See the reference in Chapter 1", "text": "Primary Respiratory Mechanism", "href": "/lecture/chapitre-1?lang=en#sec-mrp" }
+          ]
         }
       ]
     },
@@ -317,7 +353,11 @@ export const chapter3En: Chapter = {
         },
         {
           "type": "para",
-          "text": "The link with visceral ROP lies primarily in the CNS’s ability to integrate somatic and visceral information and subsequently modify descending control. This rationale complements the spinal and autonomic mechanisms examined in the following chapters."
+          "text": "The link with visceral ROP lies primarily in the CNS’s ability to integrate somatic and visceral information and subsequently modify descending control. This rationale complements the spinal and autonomic mechanisms examined in the following chapters.",
+          "xrefs": [
+            { "label": "See the reference in Chapter 0", "text": "Neuroanatomical Foundations of ROP", "href": "/fondements-neuro-anatomiques?lang=en" },
+            { "label": "See the reference in Chapter 4", "text": "Autonomic Nervous System", "href": "/lecture/chapitre-4?lang=en#sec-presentation" }
+          ]
         },
         {
           "type": "para",
@@ -410,7 +450,10 @@ export const chapter3En: Chapter = {
         },
         {
           "type": "para",
-          "text": "ROP techniques associated with the PRM, intracranial membranes, or fluid circulation constitute a distinct clinical model."
+          "text": "ROP techniques associated with the PRM, intracranial membranes, or fluid circulation constitute a distinct clinical model.",
+          "xrefs": [
+            { "label": "See the reference in Chapter 0", "text": "Neuroanatomical Foundations of ROP", "href": "/fondements-neuro-anatomiques?lang=en" }
+          ]
         }
       ]
     },

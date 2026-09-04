@@ -625,11 +625,6 @@ export const chapter14En: Chapter = {
           "type": "xref",
           "label": "See Chapter 7 — Abdominal and Peritoneal Cavities",
           "href": "/lecture/chapitre-7?lang=en"
-        },
-        {
-          "type": "xref",
-          "label": "See Chapter 15 — Colon and Rectum",
-          "href": "/lecture/chapitre-15?lang=en"
         }
       ]
     }
