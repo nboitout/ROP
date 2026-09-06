@@ -308,13 +308,13 @@ export const chapter17Fr: Chapter = {
           "type": "xref",
           "label": "Voir la référence dans le chapitre 3",
           "text": "SNC, Cerveau, limbique ou émotionnel",
-          "href": "/lecture/chapitre-3?lang=fr&xrefBack=%2Flecture%2Fchapitre-17%3Flang%3Dfr%23p-innervation-10&xrefBackLabel=Retour%20au%20chapitre%2017#p-section-3-organisation-anatomique-22"
+          "href": "/lecture/chapitre-3?lang=fr&xrefBack=%2Flecture%2Fchapitre-17%3Flang%3Dfr%23p-innervation-11&xrefBackLabel=Retour%20au%20chapitre%2017#p-reseaux-corticaux-et-cortico-limbiques-0"
         },
         {
           "type": "xref",
           "label": "Voir la référence dans le chapitre 3",
           "text": "SNC, Cortex préfrontal et orbito-nasal",
-          "href": "/lecture/chapitre-3?lang=fr&xrefBack=%2Flecture%2Fchapitre-17%3Flang%3Dfr%23p-innervation-10&xrefBackLabel=Retour%20au%20chapitre%2017#p-section-3-organisation-anatomique-85"
+          "href": "/lecture/chapitre-3?lang=fr&xrefBack=%2Flecture%2Fchapitre-17%3Flang%3Dfr%23p-innervation-12&xrefBackLabel=Retour%20au%20chapitre%2017#p-reseaux-corticaux-et-cortico-limbiques-6"
         },
         {
           "type": "sub",

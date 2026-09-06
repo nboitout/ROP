@@ -33,7 +33,7 @@ export const chapter3ReworkSlides = [
   synthesis(19, 'Cortex : pas de zone ROP directe, mais des voies ascendantes réelles'),
 ]
 
-const chapter3EnglishV2Slides = new Set([2, 3, 5, 17, 18])
+const chapter3EnglishV2Slides = new Set([2, 3, 5, 17])
 
 const synthesisEn = (file: number, title: string) => ({
   src: `/chapter-3/EN/Images/NCH 3 EN IMG ${file}${chapter3EnglishV2Slides.has(file) ? ' V2' : ''}.png`,
@@ -42,24 +42,28 @@ const synthesisEn = (file: number, title: string) => ({
 
 export const chapter3ReworkSlidesEn = [
   synthesisEn(1, 'The Central Nervous System'),
-  synthesisEn(2, 'Level 1 — Regulation of the Higher Centers'),
+  synthesisEn(2, 'Level 1 — Regulation of the Higher Centres'),
   synthesisEn(3, 'The CNS coordinates automatic, emotional, and cognitive responses'),
-  synthesisEn(4, 'The theory of the three brains: a historical model'),
-  synthesisEn(5, 'Cerebral trunk and cerebellum'),
-  synthesisEn(6, 'The Basal Ganglia & The Reticular Formation'),
+  synthesisEn(5, 'Brainstem and Cerebellum'),
+  { src: '/chapter-3/EN/Images/NCH 3 EN SLIDE CAROTID NTS V3.png', title: 'Carotid Sinus and Afferents to the NTS' },
+  synthesisEn(6, 'Basal Ganglia and Reticular Formation'),
+  synthesisEn(13, 'The Diencephalon: Neurohormonal Conductor'),
+  synthesisEn(14, 'Vascular Mechanics: The Hypothalamic–Pituitary Portal System'),
+  synthesisEn(15, 'The Hypothalamic–Pituitary Axis: Portal System'),
+  synthesisEn(4, 'The Triune Brain Theory: A Historical Model'),
   synthesisEn(7, 'The Limbic System: The Architecture of Emotions'),
   synthesisEn(8, 'Clinical Matrix of the Limbic Nuclei'),
-  synthesisEn(9, 'Insula: Interoceptive Awareness'),
-  synthesisEn(10, 'Limbic system: anatomical landmarks'),
-  synthesisEn(11, 'Basal ganglia: anatomical landmarks'),
+  synthesisEn(9, 'The Insula: Interoceptive Awareness'),
+  synthesisEn(10, 'Limbic and Corticolimbic Networks'),
   synthesisEn(12, 'Instinct'),
-  synthesisEn(13, 'The Diencephalon: Neuro-Hormonal Conductor'),
-  synthesisEn(14, 'Vascular Mechanics: The Hypothalamic-Pituitary Portal System'),
-  synthesisEn(15, 'The Hypothalamo-Hypophyseal Axis: Gating System'),
+  synthesisEn(17, 'The Neocortex Requires an Indirect Therapeutic Approach'),
   synthesisEn(16, 'The Glymphatic System: Cerebral Detoxification'),
-  synthesisEn(17, 'The neocortex requires a purely indirect therapeutic approach'),
-  synthesisEn(18, 'Cartographie ROP — Occipital Zones'),
-  synthesisEn(19, 'ROP Mapping — The Occipital Zones'),
+  synthesisEn(11, 'Basal Ganglia: Anatomical Landmarks'),
+  synthesisEn(19, 'ROP Mapping — Occipital Zones'),
+  { src: '/chapter-3/EN/Images/NCH 3 EN SLIDE BRAINSTEM CARTOGRAPHY V3.png', title: 'ROP Mapping: Brainstem' },
+  { src: '/chapter-3/EN/Images/NCH 3 EN SLIDE LIMBIC CARTOGRAPHY V3.png', title: 'ROP Mapping: Limbic and Corticolimbic Networks' },
+  { src: '/chapter-3/EN/Images/NCH 3 EN SLIDE DIENCEPHALON PITUITARY CARTOGRAPHY V3.png', title: 'ROP Mapping: Diencephalon and Pituitary Gland' },
+  { src: '/chapter-3/EN/Images/NCH 3 EN SLIDE CORTEX ASCENDING PATHWAYS V3.png', title: 'Cortex: No Direct ROP Zone, but Established Ascending Pathways' },
 ]
 
 export const chapter3ReworkSlideAnchors = [
@@ -88,25 +92,4 @@ export const chapter3ReworkSlideAnchors = [
   { sectionId: 'zones-reflexes-rop', blockIndex: 17, slide: 23, ...endAt('zones-reflexes-rop', 20) },
 ]
 
-export const chapter3ReworkSlideAnchorsEn = [
-  { sectionId: 'presentation', blockIndex: -1, slide: 1 },
-  { sectionId: 'presentation', blockIndex: 4, slide: 2 },
-  { sectionId: 'du-corps-vers-les-centres-d-integration', blockIndex: -1, slide: 3 },
-  { sectionId: 'tronc-cerebral', blockIndex: -1, slide: 5 },
-  { sectionId: 'tronc-cerebral', blockIndex: 5, slide: 6 },
-  { sectionId: 'diencephale', blockIndex: -1, slide: 13 },
-  { sectionId: 'diencephale', blockIndex: 5, slide: 14 },
-  { sectionId: 'diencephale', blockIndex: 6, slide: 15 },
-  { sectionId: 'reseaux-corticaux-et-cortico-limbiques', blockIndex: -1, slide: 4 },
-  { sectionId: 'reseaux-corticaux-et-cortico-limbiques', blockIndex: 1, slide: 9 },
-  { sectionId: 'reseaux-corticaux-et-cortico-limbiques', blockIndex: 3, slide: 7 },
-  { sectionId: 'reseaux-corticaux-et-cortico-limbiques', blockIndex: 5, slide: 17 },
-  { sectionId: 'reseaux-corticaux-et-cortico-limbiques', blockIndex: 7, slide: 8 },
-  { sectionId: 'reseaux-corticaux-et-cortico-limbiques', blockIndex: 8, slide: 10 },
-  { sectionId: 'reseaux-corticaux-et-cortico-limbiques', blockIndex: 10, slide: 12 },
-  { sectionId: 'environnement-neuro-meninge', blockIndex: 2, slide: 16 },
-  { sectionId: 'cervelet-et-ganglions-de-la-base', blockIndex: -1, slide: 5 },
-  { sectionId: 'cervelet-et-ganglions-de-la-base', blockIndex: 3, slide: 11 },
-  { sectionId: 'zones-reflexes-rop', blockIndex: 1, slide: 18 },
-  { sectionId: 'zones-reflexes-rop', blockIndex: 2, slide: 19 },
-]
+export const chapter3ReworkSlideAnchorsEn = chapter3ReworkSlideAnchors.map((anchor) => ({ ...anchor }))

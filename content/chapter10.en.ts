@@ -449,8 +449,9 @@ export const chapter10En: Chapter = {
           "text": "Within the ROP framework, the duodenum is described as being particularly responsive to emotions involving interpersonal relationships."
         },
         {
-          "type": "para",
-          "text": "Limbic brain–duodenum balance: this relationship belongs to the ROP clinical framework and its listening–induction techniques."
+          "type": "lead",
+          "label": "Limbic brain–duodenum balance",
+          "text": "this relationship belongs to the ROP clinical framework and its listening–induction techniques."
         }
       ]
     },
@@ -478,7 +479,7 @@ export const chapter10En: Chapter = {
       "blocks": [
         {
           "type": "sub",
-          "text": "13.1. Duodenum-specific landmarks"
+          "text": "13.1. Landmarks Specific to the Duodenum"
         },
         {
           "type": "para",
@@ -502,24 +503,21 @@ export const chapter10En: Chapter = {
         },
         {
           "type": "sub",
-          "text": "13.2. Level 1 — Regulation of higher centers"
+          "text": "13.2. Level 1 — Regulation of Higher Centres"
         },
         {
           "type": "bullets",
           "items": [
             "Occipital reflex zones.",
-            "Brainstem and integration centers.",
+            "Brainstem and integration centres.",
             "Hypothalamus.",
             "Hypothalamic–pituitary axis."
           ]
         },
-        {
-          "type": "para",
-          "text": "See Chapter 3 — Central Nervous System."
-        },
+        { "type": "xref", "label": "See Chapter 3 — Central Nervous System", "href": "/lecture/chapitre-3?lang=en" },
         {
           "type": "sub",
-          "text": "13.3. Level 2 — Autonomic regulation and adaptation"
+          "text": "13.3. Level 2 — Autonomic Regulation and Adaptation"
         },
         {
           "type": "para",
@@ -531,18 +529,15 @@ export const chapter10En: Chapter = {
             "Vagus nerve (X).",
             "Thoracic sympathetic system.",
             "Splanchnic nerves.",
-            "Celiac plexus.",
+            "Coeliac plexus.",
             "Superior mesenteric plexus.",
             "Autonomic coordination of duodenal motility and digestive secretions."
           ]
         },
-        {
-          "type": "para",
-          "text": "See Chapter 4 — Autonomic Nervous System."
-        },
+        { "type": "xref", "label": "See Chapter 4 — Autonomic Nervous System", "href": "/lecture/chapitre-4?lang=en" },
         {
           "type": "sub",
-          "text": "13.4. Level 3 — Local and regional visceral regulation"
+          "text": "13.4. Level 3 — Locoregional Visceral Regulation"
         },
         {
           "type": "para",
@@ -560,29 +555,55 @@ export const chapter10En: Chapter = {
           "type": "para",
           "text": "D3–D4 — mesenteric interface. D3, D4, root of the mesentery, superior mesenteric vessels, duodenojejunal junction, muscle of Treitz, and proximal jejunum."
         },
-        {
-          "type": "para",
-          "text": "See Chapter 7 — Regional Abdominal and Peritoneal Framework; Chapter 11 — Liver and Biliary Tract; Chapter 12 — Pancreas; Chapter 14 — Small Intestine."
-        },
+        { "type": "xref", "label": "See Chapter 7 — Regional Abdominal and Peritoneal Foundation", "href": "/lecture/chapitre-7?lang=en" },
+        { "type": "xref", "label": "See Chapter 11 — Liver and Biliary Tract", "href": "/lecture/chapitre-11?lang=en" },
+        { "type": "xref", "label": "See Chapter 12 — Pancreas", "href": "/lecture/chapitre-12?lang=en" },
+        { "type": "xref", "label": "See Chapter 14 — Small Intestine", "href": "/lecture/chapitre-14?lang=en" },
         {
           "type": "sub",
-          "text": "13.5. Level 4 — Viscerosomatic integration and limbic brain–duodenum balance"
+          "text": "13.5. Level 4 — Viscerosomatic Integration and Limbic Brain–Duodenum Balance"
         },
         {
           "type": "para",
           "text": "Viscerosomatic component. Depending on test findings, assessment may include T7–T9, L1–L2, the lowest ribs, the thoracolumbar junction, diaphragmatic crura, psoas, and posterior abdominal wall."
         },
         {
+          "type": "figure",
+          "src": "/chapter-10/EN/Cartography/figure-10-d2.png",
+          "caption": "Photo: Duodenum D2",
+          "alt": "Plantar reflex landmark for the second part of the duodenum",
+          "orientation": "portrait"
+        },
+        {
+          "type": "figure",
+          "src": "/chapter-10/EN/Cartography/figure-10-sphincter-of-oddi.png",
+          "caption": "Photo: Sphincter of Oddi",
+          "alt": "Plantar reflex landmark for the sphincter of Oddi",
+          "orientation": "portrait"
+        },
+        {
+          "type": "figure",
+          "src": "/chapter-10/EN/Cartography/figure-10-duodenojejunal-junction.png",
+          "caption": "Photo: Duodenum D4",
+          "alt": "Plantar reflex landmark for the fourth part of the duodenum",
+          "orientation": "portrait"
+        },
+        {
+          "type": "figure",
+          "src": "/chapter-10/EN/Cartography/figure-10-duodenojejunal-junction.png",
+          "caption": "Photo: Duodenojejunal Junction",
+          "alt": "Plantar reflex landmark for the duodenojejunal junction",
+          "orientation": "portrait"
+        },
+        {
           "type": "para",
           "text": "Limbic brain–duodenum balance. In terminology specific to ROP, listening–induction places one thumb on the duodenal zone and the other on the limbic brain zone."
         },
-        {
-          "type": "para",
-          "text": "See Chapter 3 — Central Nervous System; see Chapter 5 — Stress Mechanism."
-        },
+        { "type": "xref", "label": "See Chapter 3 — Central Nervous System", "href": "/lecture/chapitre-3?lang=en" },
+        { "type": "xref", "label": "See Chapter 5 — Stress Mechanism", "href": "/lecture/chapitre-5?lang=en" },
         {
           "type": "sub",
-          "text": "13.6. Associated supports according to test findings"
+          "text": "13.6. Associated Support According to Testing"
         },
         {
           "type": "bullets",
@@ -597,7 +618,7 @@ export const chapter10En: Chapter = {
         },
         {
           "type": "sub",
-          "text": "13.7. Clinical interpretation"
+          "text": "13.7. Clinical Interpretation"
         },
         {
           "type": "bullets",
@@ -608,8 +629,11 @@ export const chapter10En: Chapter = {
           ]
         },
         {
-          "type": "para",
-          "text": "SAFETY PRINCIPLE — Severe or persistent epigastric pain, gastrointestinal bleeding, black stools, recurrent vomiting, unexplained weight loss, or acute pain radiating through to the back requires medical assessment."
+          "type": "note",
+          "label": "Safety principle",
+          "body": [
+            "Severe or persistent epigastric pain, gastrointestinal bleeding, black stools, recurrent vomiting, unexplained weight loss, or acute pain radiating through to the back requires medical assessment."
+          ]
         }
       ]
     }

@@ -1,7 +1,7 @@
 // Chapter 8 content — English
 // Source: public/chapter-8/EN/Chapter_8_Diaphragm_ROP_CodexTranslationV2.docx
 
-import type { Chapter } from './types'
+import type { Block, Chapter, CrossReference } from './types'
 
 export const chapter8En: Chapter = {
   "slug": "chapter-8",
@@ -1229,4 +1229,125 @@ export const chapter8En: Chapter = {
       ]
     }
   ]
+}
+
+// The French edition is the editorial source of truth.  The first English
+// translation retained its information but flattened a number of semantic
+// blocks.  Keep the translated wording above and restore those boundaries
+// here so both readers share stable, language-independent anchors.
+const chapter8Section = (id: string) => chapter8En.sections.find(section => section.id === id)!
+const lead = (text: string): Block => {
+  const split = text.indexOf(':')
+  return split < 0 ? { type: 'lead', label: text, text: '' } : {
+    type: 'lead', label: text.slice(0, split).trim(), text: text.slice(split + 1).trim(),
+  }
+}
+const cleanSee = (text: string) => text.replace(/\s*\(See Chapter \d+[^)]*\)\.?$/u, '').trim()
+const ref = (label: string, text: string, href: string): CrossReference => ({ label, text, href });
+
+{
+  const s = chapter8Section('presentation'); s.blocks[1] = lead((s.blocks[1] as { text: string }).text)
+}
+{
+  const s = chapter8Section('situation'); for (const i of [0, 1, 2]) s.blocks[i] = lead((s.blocks[i] as { text: string }).text)
+}
+{
+  const s = chapter8Section('anatomie'); const b = s.blocks; const take = (i: number) => (b[i] as { text: string }).text
+  const source = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60]
+  const kinds = ['lead','para','sub','para','para','sub','para','para','para','para','para','para','sub','para','para','para','para','lead','para','lead','para','lead','lead','para','lead','para','para','sub','para','lead','para','para','sub','para','para','para','sub','para','para','para','para','para','sub','para','para','sub','para','para','para','sub','para','para','para','para','para','para','para','para','para','para']
+  s.blocks = source.map((i, n) => kinds[n] === 'lead' ? lead(take(i)) : { type: kinds[n], text: take(i) } as Block)
+}
+{
+  const s = chapter8Section('vascularisation'); const b = s.blocks; const t = (i: number) => (b[i] as { text: string }).text
+  s.blocks = [
+    { type:'lead', label:t(0), text:t(1) }, { type:'para', text:t(2) }, lead(t(3)), lead(t(4)),
+    { type:'para', text:t(5) }, lead(t(6)), lead(t(7)),
+    { type:'para', text:t(8) }, { type:'para', text:t(9) }, { type:'para', text:t(10) }, { type:'para', text:t(11) },
+    { type:'sub', text:t(12) }, { type:'para', text:t(13) }, { type:'para', text:cleanSee(t(14)) },
+  ]
+  s.blocks[13].xrefs = [ref('See the reference in Chapter 11', 'Liver', '/lecture/chapitre-11?lang=en&xrefBack=%2Flecture%2Fchapitre-8%3Flang%3Den%23p-vascularisation-13&xrefBackLabel=Back%20to%20Chapter%208#p-vascularisation-13')]
+}
+{
+  const s = chapter8Section('innervation'); for (const i of [0,5,6,7,8,10,11,12,13,15,16,17]) if (s.blocks[i]?.type === 'para') s.blocks[i] = lead((s.blocks[i] as { text:string }).text)
+}
+{
+  const s = chapter8Section('physiologie'); const b=s.blocks; const t=(i:number)=>cleanSee((b[i] as {text:string}).text)
+  s.blocks = [lead(`${t(0)}: ${t(1)}`), lead(`${t(2)}: ${t(3)}`), {type:'para',text:t(4)}, {type:'para',text:t(5)}, {type:'para',text:t(6)}, {type:'para',text:t(7)}, {type:'para',text:t(8)}, {type:'para',text:t(9)}, {type:'para',text:t(10)}, lead(`${t(11)}: ${t(12)}`), lead(`${t(13)}: ${t(14)}`), lead(`${t(15)}: ${t(16)}`), {type:'para',text:t(17)}, {type:'para',text:t(18)}, {type:'sub',text:t(19)}, {type:'para',text:t(20)}, lead(t(21)), {type:'para',text:t(22)}, lead(t(23)), {type:'para',text:t(24)}, lead(t(25)), lead(t(26)), {type:'para',text:t(27)}, lead(t(28)), {type:'para',text:t(29)}, {type:'para',text:t(30)}, {type:'para',text:t(31)}]
+  s.blocks[0].xrefs=[ref('See Chapter 1','General Principles','/lecture/chapitre-1?lang=en&xrefBack=%2Flecture%2Fchapitre-8%3Flang%3Den%23p-physiologie-0&xrefBackLabel=Back%20to%20Chapter%208#p-mobilite-viscerale-12')]
+  s.blocks[7].xrefs=[ref('See Chapter 1','General Principles','/lecture/chapitre-1?lang=en&xrefBack=%2Flecture%2Fchapitre-8%3Flang%3Den%23p-physiologie-7&xrefBackLabel=Back%20to%20Chapter%208#p-articulations-viscerales-4')]
+  s.blocks[8].xrefs=[ref('See Chapter 18','Bladder','/lecture/chapitre-18?lang=en&xrefBack=%2Flecture%2Fchapitre-8%3Flang%3Den%23p-physiologie-8&xrefBackLabel=Back%20to%20Chapter%208#p-physiologie-19')]
+}
+{
+  const s=chapter8Section('pathologies-courantes-diagnostic-d-exclusion-indications-troubles-fonctionnels')
+  for (const i of [8,9,19]) s.blocks[i]=lead((s.blocks[i] as {text:string}).text)
+}
+{
+  const s=chapter8Section('relations-viscero-somatiques'); s.blocks[2]=lead((s.blocks[2] as {text:string}).text)
+}
+{
+  const s=chapter8Section('relations-viscero-emotionnelles'); s.blocks[0]=lead((s.blocks[0] as {text:string}).text)
+}
+{
+  const s=chapter8Section('zones-reflexes-podales'); const b=s.blocks; const t=(i:number)=>(b[i] as {text:string}).text
+  const bullets=(...indices:number[]):Block=>({type:'bullets',items:indices.map(t)})
+  const figure=(src:string,caption:string,alt:string,orientation:'portrait'|'landscape'):Block=>({type:'figure',src,caption,alt,orientation})
+  s.blocks=[
+    {type:'para',text:t(0)},{type:'para',text:t(1)},{type:'sub',text:t(2)},{type:'para',text:t(3)},
+    figure('/chapter-8/EN/Cartography/NCH 8 EN INLINE CENTRAL TENDON OBLIQUITY V3.png','Obliquity of the central tendon','Obliquity of the central tendon and asymmetric plantar projection','portrait'),bullets(4,5,6,7,8),
+    {type:'sub',text:t(9)},{type:'para',text:t(10)},bullets(11,12,13,14,15),{type:'rop',body:[t(17)]},
+    {type:'sub',text:t(18)},{type:'para',text:t(19)},{type:'sub',text:t(20)},bullets(21,22,23,24,25),
+    {type:'sub',text:t(26)},{type:'para',text:t(27)},bullets(28,29,30),
+    figure('/chapter-8/EN/Cartography/NCH 8 EN INLINE PHRENIC C3-C5 V3.png','Phrenic nerve (C3–C4–C5)','Photograph of the plantar landmark for the phrenic nerve at cervical level','landscape'),
+    figure('/chapter-8/EN/Cartography/NCH 8 EN INLINE PHRENIC SEDILLOT V3.png','Phrenic nerve (Sedillot triangle)','Photograph of the plantar landmark for the phrenic nerve at the Sedillot triangle','landscape'),
+    {type:'para',text:t(31)},{type:'sub',text:t(32)},{type:'para',text:t(33)},
+    {type:'sub',text:t(35)},{type:'para',text:t(36)},{type:'sub',text:t(38)},bullets(39,40,41,42,43),
+    figure('/chapter-8/EN/Cartography/NCH 8 EN INLINE OESOPHAGEAL HIATUS CARDIA V3.png','Oesophageal hiatus and cardia','Photograph of the plantar landmarks for the oesophageal hiatus and cardia','portrait'),
+    figure('/chapter-8/EN/Cartography/NCH 8 EN INLINE MARFAN LARREY V3.png','Marfran and Larrey hiatuses','Photograph of the plantar landmarks for the Marfran and Larrey hiatuses','landscape'),
+    {type:'para',text:'Azygos–caval junction: landmark associated with the right second and third chondrocostal joints.'},
+    figure('/chapter-8/EN/Cartography/NCH 8 EN INLINE AZYGOS CAVAL JUNCTION V3.png','Azygos–caval junction','Photograph of the plantar landmark for the azygos–caval junction','landscape'),
+    {type:'rop',body:[t(44)]},{type:'sub',text:t(45)},{type:'para',text:t(46)},bullets(47,48,49,50,51,52,53,54),{type:'rop',body:[t(56)]},
+    {type:'sub',text:t(57)},{type:'para',text:t(58)},{type:'sub',text:t(59)},bullets(60,61,62,63,64,65,66),
+    figure('/chapter-8/EN/Cartography/NCH 8 EN INLINE COSTOVERTEBRAL JOINTS V3.png','Costovertebral joints','Photograph of the plantar landmarks for the costovertebral joints','landscape'),
+    {type:'para',text:'Hyrtl intercostobrachial nerve: junction between the shaft and lateral head of the fifth metatarsal.'},
+    figure('/chapter-8/EN/Cartography/NCH 8 EN INLINE HYRTL NERVE V3.png','Hyrtl intercostobrachial nerve','Photograph of the plantar landmark for the Hyrtl intercostobrachial nerve','landscape'),
+    {type:'para',text:t(67)},{type:'sub',text:t(68)},{type:'para',text:t(69)},{type:'para',text:t(70)},
+    {type:'sub',text:t(72)},{type:'sub',text:t(73)},{type:'para',text:t(74)},bullets(75,76,77,78),
+    {type:'sub',text:t(79)},{type:'para',text:t(80)},bullets(81,82,83),{type:'para',text:t(84)},
+  ]
+}
+
+const restoreTypes = (id: string, types: Block['type'][]) => {
+  const s=chapter8Section(id)
+  s.blocks=s.blocks.map((block,index) => {
+    const type=types[index]!
+    if (block.type === type) return block
+    const text=block.type === 'lead' ? `${block.label}: ${block.text}` : 'text' in block ? block.text : ''
+    return type === 'lead' ? lead(text ?? '') : {type,text: text ?? ''} as Block
+  })
+}
+restoreTypes('anatomie', ['lead','para','para','para','para','sub','para','lead','lead','lead','sub','para','para','para','sub','para','para','lead','para','lead','para','lead','lead','para','lead','para','para','sub','para','lead','lead','lead','sub','para','para','para','para','para','sub','para','para','para','sub','para','para','sub','sub','para','para','para','para','para','para','sub','para','para','sub','para','para','para'])
+restoreTypes('vascularisation', ['lead','para','lead','lead','para','lead','lead','para','para','para','para','sub','para','para'])
+restoreTypes('innervation', ['lead','sub','para','para','sub','lead','para','lead','lead','para','para','lead','lead','lead','sub','lead','lead','lead','sub','para'])
+
+{
+  const s=chapter8Section('pathologies-courantes-diagnostic-d-exclusion-indications-troubles-fonctionnels')
+  ;(s.blocks[6] as {text:string}).text=cleanSee((s.blocks[6] as {text:string}).text)
+  ;(s.blocks[12] as {text:string}).text=cleanSee((s.blocks[12] as {text:string}).text)
+  s.blocks[6].xrefs=[ref('See the reference in Chapter 9','Stomach','/lecture/chapitre-9?lang=en&xrefBack=%2Flecture%2Fchapitre-8%3Flang%3Den%23p-pathologies-courantes-diagnostic-d-exclusion-indications-troubles-fonctionnels-6&xrefBackLabel=Back%20to%20Chapter%208#p-anatomie-10')]
+  s.blocks[12].xrefs=[ref('See the reference in Chapter 9','Stomach','/lecture/chapitre-9?lang=en&xrefBack=%2Flecture%2Fchapitre-8%3Flang%3Den%23p-pathologies-courantes-diagnostic-d-exclusion-indications-troubles-fonctionnels-12&xrefBackLabel=Back%20to%20Chapter%208#p-indications-troubles-fonctionnels-3')]
+}
+{
+  const s=chapter8Section('relations-viscero-somatiques')
+  ;(s.blocks[10] as {text:string}).text=cleanSee((s.blocks[10] as {text:string}).text)
+  s.blocks[10].xrefs=[ref('See the reference in Chapter 16','Kidneys','/lecture/chapitre-16?lang=en&xrefBack=%2Flecture%2Fchapitre-8%3Flang%3Den%23p-relations-viscero-somatiques-10&xrefBackLabel=Back%20to%20Chapter%208#p-rapports-4')]
+}
+{
+  const s=chapter8Section('zones-reflexes-podales')
+  const attach=(i:number,label:string,text:string,destination:string)=>s.blocks[i].xrefs=[...(s.blocks[i].xrefs??[]),ref(label,text,`${destination}${destination.includes('?')?'&':'?'}xrefBack=${encodeURIComponent(`/lecture/chapitre-8?lang=en#p-zones-reflexes-podales-${i}`)}&xrefBackLabel=Back%20to%20Chapter%208`)]
+  attach(8,'See Chapter 3 — Central Nervous System','Level 1: Regulation of Higher Centers.','/lecture/chapitre-3?lang=en')
+  attach(22,'See Chapter 4 — Autonomic Nervous System','Visceromotor parasympathetic system and viscerosensory vagus nerve.','/lecture/chapitre-4?lang=en')
+  attach(24,'See Chapter 4 — Autonomic Nervous System','Visceromotor sympathetic system and prevertebral plexus chain.','/lecture/chapitre-4?lang=en')
+  attach(33,'See Chapter 7 — Abdominal and Peritoneal Cavities','Peritoneum and local and regional interfaces.','/lecture/chapitre-7?lang=en')
+  attach(44,'See Chapter 3 — Central Nervous System','Central integration and corticolimbic networks.','/lecture/chapitre-3?lang=en')
+  attach(44,'See Chapter 4 — Autonomic Nervous System','Relationships among respiration, the ANS, stress, sleep, and adaptation.','/lecture/chapitre-4?lang=en')
 }

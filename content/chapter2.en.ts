@@ -641,3 +641,95 @@ export const chapter2En: Chapter = {
     "description": "Visual summary of the chapter — technique, treatment arrangements, clinical sequence, safety, and indications for ROP."
   },
 }
+
+// Keep the publication runtime aligned with the canonical French chapter.
+// The English DOCX importer originally folded section 0 into Presentation and
+// represented two short prose sequences as lists. Rebuild only those affected
+// boundaries here so no translated wording is lost.
+const presentation = chapter2En.sections.find((section) => section.id === 'presentation')!
+const technique = chapter2En.sections.find((section) => section.id === 'technique')!
+const hierarchy = chapter2En.sections.find((section) => section.id === 'hierarchisation')!
+
+const guidingNote = presentation.blocks.at(-1)!
+if (guidingNote.type === 'note') {
+  const [label, ...body] = guidingNote.label.split('\n')
+  guidingNote.label = label
+  guidingNote.body = body
+}
+
+chapter2En.sections.splice(0, 1,
+  {
+    id: 'presentation',
+    title: 'Presentation',
+    blocks: [presentation.blocks[0], guidingNote],
+  },
+  {
+    id: 'fondements-modele-clinique',
+    title: '0. Foundations of the ROP clinical model',
+    blocks: presentation.blocks.slice(2, -1),
+  },
+)
+
+const chapter2NumberedSectionTitles: Record<string, string> = {
+  technique: '1. Technique',
+  modalites: '2. Treatment arrangements',
+  hierarchisation: '3. Treatment prioritisation',
+  'zones-reflexes': '4. ROP clinical sequence: four levels',
+  'exemple-clinique': '5. Clinical example: left-sided lumbosciatica after childbirth',
+  'contre-indications': '6. Contraindications and warning signs',
+  indications: '7. Indications',
+  actions: '8. Intended and observed effects',
+  reactions: '9. Post-treatment reactions and reassessment',
+  conseils: '10. Advice to the patient',
+}
+
+for (const [id, title] of Object.entries(chapter2NumberedSectionTitles)) {
+  const section = chapter2En.sections.find((candidate) => candidate.id === id)
+  if (section) section.title = title
+}
+
+const contactItems = technique.blocks[1]
+const receptorItems = technique.blocks[4]
+if (contactItems.type === 'bullets' && receptorItems.type === 'bullets') {
+  technique.blocks = [
+    technique.blocks[0],
+    ...contactItems.items.map((text) => ({ type: 'para' as const, text })),
+    technique.blocks[2],
+    technique.blocks[3],
+    {
+      type: 'leadBullets',
+      items: receptorItems.items.map((item) => {
+        const split = item.indexOf(',')
+        return split < 0
+          ? { label: item, text: '' }
+          : { label: item.slice(0, split), text: item.slice(split + 1).trim() }
+      }),
+    },
+    ...technique.blocks.slice(5),
+  ]
+}
+
+if (hierarchy.blocks[1]?.type === 'numbered') {
+  hierarchy.blocks[1] = {
+    type: 'leadBullets',
+    items: hierarchy.blocks[1].items.map((item) => {
+      const split = item.indexOf(' ')
+      const sentence = item.indexOf('.', split + 1)
+      return sentence < 0
+        ? { label: item, text: '' }
+        : { label: item.slice(0, sentence + 1), text: item.slice(sentence + 1).trim() }
+    }),
+  }
+}
+
+// Four importer-generated notes stored their complete prose in the label and
+// left the semantic body empty. Restore the canonical label/body boundary for
+// every note with that malformed shape (and catch any future recurrence).
+for (const section of chapter2En.sections) {
+  for (const block of section.blocks) {
+    if (block.type !== 'note' || block.body.length !== 0 || !block.label.includes('\n')) continue
+    const [label, ...body] = block.label.split('\n')
+    block.label = label
+    block.body = body.filter(Boolean)
+  }
+}

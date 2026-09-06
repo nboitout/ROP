@@ -10,6 +10,7 @@ type Props = {
   references?: CrossReference[]
   sourceChapterKey: string
   sourceAnchorId: string
+  sourceReaderPath: string
   restrictPaidXrefs: boolean
   lang: Lang
 }
@@ -18,6 +19,7 @@ export default function CrossReferenceLinks({
   references,
   sourceChapterKey,
   sourceAnchorId,
+  sourceReaderPath,
   restrictPaidXrefs,
   lang,
 }: Props) {
@@ -26,7 +28,7 @@ export default function CrossReferenceLinks({
   return references.map((reference, index) => (
     <p key={`${reference.href}-${index}`} className="cr-xref">
       <Link
-        href={readerXrefHref(reference.href, sourceChapterKey, restrictPaidXrefs, sourceAnchorId, lang)}
+        href={readerXrefHref(reference.href, sourceChapterKey, restrictPaidXrefs, sourceAnchorId, lang, sourceReaderPath)}
         className="cr-xref-link"
       >
         <span className="cr-xref-kicker">{applyLocalizedTypography(reference.label, lang)}</span>

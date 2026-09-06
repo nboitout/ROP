@@ -4,7 +4,7 @@ import { Fragment, useEffect, useRef, useState } from 'react'
 import Link from 'next/link'
 import { useSearchParams } from 'next/navigation'
 import dynamic from 'next/dynamic'
-import type { Chapter, Block, Section } from '@/content/types'
+import type { Chapter, Block } from '@/content/types'
 import type { Lang } from '@/app/i18n/translations'
 
 const PdfSlideViewer = dynamic(() => import('@/components/PdfSlideViewer'), { ssr: false })
@@ -17,6 +17,7 @@ import { readerXrefHref } from '@/lib/access'
 import { renderBookReferenceText } from '@/components/BookReferenceText'
 import { applyLocalizedTypography } from '@/lib/frenchTypography'
 import CrossReferenceLinks from '@/components/CrossReferenceLinks'
+import { isRopInterestSection } from '@/lib/ropInterestSection'
 
 type Props = {
   chapter: Chapter
@@ -30,11 +31,6 @@ type Props = {
 }
 
 type XrefReturn = { href: string; label: string } | null
-
-function isRopInterestSection(section: Section) {
-  return /^int[ée]r[êe]t en r\.?o\.?p\.?$/i.test(section.title.trim()) &&
-    section.blocks[0]?.type === 'rop'
-}
 
 function getSafeXrefReturn(params: { get(name: string): string | null } | null): XrefReturn {
   if (!params) return null
@@ -73,6 +69,9 @@ export default function ChapterReader({ chapter, bookTitle, backHref = '/chapitr
   const [slideWidth, setSlideWidth] = useState(800)
   const [slideZoom, setSlideZoom] = useState(0.75)
   const xrefReturn = getSafeXrefReturn(searchParams)
+  const sourceReaderPath = chapter.slug === 'introduction'
+    ? '/introduction'
+    : `/${chapter.slug.replace(/^chapter-/, 'chapitre-')}`
   const imageSlideDeck = chapter.slideDeck ?? []
   const hasImageSlideDeck = imageSlideDeck.length > 0
   const hasSlides = hasImageSlideDeck || Boolean(chapter.slides)
@@ -336,10 +335,10 @@ export default function ChapterReader({ chapter, bookTitle, backHref = '/chapitr
       </div>
 
       {xrefReturn && (
-        <Link href={xrefReturn.href} className="cr-xref-return">
+        <a href={xrefReturn.href} className="cr-xref-return">
           <span aria-hidden>←</span>
           {xrefReturn.label}
-        </Link>
+        </a>
       )}
 
       <div className="cr-layout">
@@ -388,12 +387,14 @@ export default function ChapterReader({ chapter, bookTitle, backHref = '/chapitr
                       onOpenImage={setLightbox}
                       anchorId={anchorId}
                       sourceChapterKey={chapter.slug}
+                      sourceReaderPath={sourceReaderPath}
                       restrictPaidXrefs={restrictPaidXrefs}
                     />
                     <CrossReferenceLinks
                       references={b.xrefs}
                       sourceChapterKey={chapter.slug}
                       sourceAnchorId={anchorId}
+                      sourceReaderPath={sourceReaderPath}
                       restrictPaidXrefs={restrictPaidXrefs}
                       lang={lang}
                     />
@@ -587,12 +588,14 @@ function BlockView({
   onOpenImage,
   anchorId,
   sourceChapterKey,
+  sourceReaderPath,
   restrictPaidXrefs,
 }: {
   block: Block
   onOpenImage: (b: { src: string; alt: string; caption: string; orientation?: 'portrait' | 'landscape' }) => void
   anchorId?: string
   sourceChapterKey: string
+  sourceReaderPath: string
   restrictPaidXrefs: boolean
 }) {
   const { t, lang } = useLanguage()
@@ -700,7 +703,7 @@ function BlockView({
     case 'xref':
       return (
         <p {...anchor} className="cr-xref">
-          <Link href={readerXrefHref(block.href, sourceChapterKey, restrictPaidXrefs, anchorId, lang)} className="cr-xref-link">
+          <Link href={readerXrefHref(block.href, sourceChapterKey, restrictPaidXrefs, anchorId, lang, sourceReaderPath)} className="cr-xref-link">
             <span className="cr-xref-kicker">{applyLocalizedTypography(block.label, lang)}</span>
             {block.text && <span className="cr-xref-title">{applyLocalizedTypography(block.text, lang)}</span>}
             <span className="cr-xref-arrow" aria-hidden>→</span>

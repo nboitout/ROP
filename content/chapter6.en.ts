@@ -12,25 +12,25 @@ export const chapter6En: Chapter = {
   "sections": [
     {
       "id": "presentation-generale",
-      "title": "Introduction",
+      "title": "1. Introduction",
       "blocks": [
         {
           "type": "para",
-          "text": "According to the classical concept of General Adaptation Syndrome (GAS), humans initially respond to a stressful situation by activating the sympathetic nervous system. Dr Stephen Porges proposed an alternative conceptual framework, Polyvagal Theory (PVT), which emphasizes distinct roles for vagal pathways in adaptation to stressful situations associated with fear and anxiety."
+          "text": "According to the classical concept of General Adaptation Syndrome (GAS), human beings respond to a stressful situation by first activating the sympathetic nervous system. Dr Stephen Porges proposed an alternative model, Polyvagal Theory (PVT), which emphasises the differentiated role of vagal pathways in adaptation to stressful situations that generate fear and anxiety."
         },
         {
           "type": "para",
-          "text": "Polyvagal Theory remains a theoretical framework that continues to be debated and investigated. Nevertheless, it offers an additional perspective on the mechanisms underlying stress and behavior. (See Chapter 5, Stress Mechanisms.)"
+          "text": "Polyvagal Theory remains a theory that merits verification, but it is nevertheless of interest because it sheds additional light on the understanding of stress and behavioural mechanisms."
         },
         {
           "type": "para",
-          "text": "PVT explores the role of the autonomic nervous system (ANS) in social and emotional behavior. A substantial proportion of the visceral afferent information transmitted to the brain is conveyed through the vagus nerve. (See the chapter on the Autonomic Nervous System, section “Vagus Nerve.”) Changes within the body can influence mental and emotional states. Therefore, in ROP, our role is to support vagal regulation."
+          "text": "It explores the role of the autonomic nervous system (ANS) in social and emotional behaviour. Approximately 80% of the visceral afferents transmitted to the brain come from the vagus nerve. What happens in the body can influence variations in mental and emotional state. This is why our role in ROP is to promote regulation of the vagus nerve."
         }
       ]
     },
     {
       "id": "theorie-polyvagale",
-      "title": "Polyvagal Theory (PVT)",
+      "title": "2. Polyvagal Theory (PVT)",
       "blocks": [
         {
           "type": "bullets",
@@ -56,7 +56,7 @@ export const chapter6En: Chapter = {
     },
     {
       "id": "malaise-vagal",
-      "title": "Vasovagal Episode",
+      "title": "3. Vasovagal Episode",
       "blocks": [
         {
           "type": "para",
@@ -91,7 +91,7 @@ export const chapter6En: Chapter = {
     },
     {
       "id": "engagement-social",
-      "title": "Social Engagement",
+      "title": "5. Social Engagement",
       "blocks": [
         {
           "type": "bullets",
@@ -103,8 +103,8 @@ export const chapter6En: Chapter = {
             "her gaze, with orientation of the head (accessory nerve, CN XI);",
             "facial expressions (facial nerve, CN VII);",
             "touch (trigeminal nerve, CN V);",
-            "sucking and suckling, followed by mastication and swallowing, through coordinated activity involving several cranial nerves, notably CN V, VII, IX, X, and XII—initially during feeding and later during shared meals that support social interaction;",
-            "vocalization and speech, through coordinated cranial-nerve activity: phonation depends primarily on vagal innervation of the larynx (CN X), while the hypoglossal nerve (CN XII) supports tongue movement and articulation.",
+            "sucking and suckling, followed by mastication and swallowing (glossopharyngeal nerve, CN IX), during suckling and later during shared meals that foster social interaction;",
+            "vocalisation through the hypoglossal nerve, CN XII.",
             "This affective and protective relationship subsequently extends to the family and, more broadly, to the organization and planning of social and interpersonal life. Under optimal conditions, PVT proposes that the ventral vagal branch exerts hierarchical regulatory influence over the other two systems: the sympathetic system and the dorsal vagal branch."
           ]
         }
@@ -112,12 +112,12 @@ export const chapter6En: Chapter = {
     },
     {
       "id": "neuroception",
-      "title": "Neuroception",
+      "title": "6. Neuroception",
       "blocks": [
         {
           "type": "bullets",
           "items": [
-            "Within PVT, neuroception denotes the nervous system’s proposed automatic evaluation of safety, danger, and life threat without conscious awareness. In the clinical framework presented here, the three autonomic patterns may be summarized as follows:",
+            "It is the state we are in, our capacity to probe our inner state:",
             "Old (dorsal) vagal branch: harmonious regulation of digestive, genital, and urinary functions;",
             "Sympathetic system: energy, mobilization, and fight-or-flight responses;",
             "New (ventral) vagal branch: harmonious cardiac and metabolic regulation, emotional balance, and constructive interpersonal relationships.",
@@ -128,7 +128,8 @@ export const chapter6En: Chapter = {
     },
     {
       "id": "consequences-cliniques",
-      "title": "Clinical Consequences",
+      "title": "7. Clinical Consequences",
+      "railHidden": true,
       "blocks": [
         {
           "type": "bullets",
@@ -151,7 +152,7 @@ export const chapter6En: Chapter = {
     },
     {
       "id": "application-clinique-rop",
-      "title": "Clinical Application in ROP",
+      "title": "8. Clinical Application in ROP",
       "blocks": [
         {
           "type": "bullets",
@@ -193,5 +194,81 @@ export const chapter6En: Chapter = {
         }
       ]
     }
+  ]
+}
+
+// The English DOCX flattened most of this short chapter into list paragraphs.
+// Restore the canonical French block boundaries without changing the English
+// wording, and discard the two importer-only figures that have no FR peers.
+const splitLead = (value: string) => {
+  const split = value.indexOf(':')
+  return split < 0
+    ? { label: value, text: '' }
+    : { label: value.slice(0, split), text: value.slice(split + 1).trim() }
+}
+const section = (id: string) => chapter6En.sections.find((entry) => entry.id === id)!
+
+const theory = section('theorie-polyvagale')
+if (theory.blocks[0]?.type === 'bullets') {
+  const items = theory.blocks[0].items
+  theory.blocks = [
+    { type: 'para', text: items[0] },
+    { type: 'bullets', items: items.slice(1, 3) },
+    { type: 'lead', ...splitLead(`${items[3]} ${items[4]}`) },
+    { type: 'lead', ...splitLead(items[5]) },
+    { type: 'lead', ...splitLead(items[6]) },
+  ]
+}
+
+const anatomy = section('anatomie-nerf-vague')
+if (anatomy.blocks[0]?.type === 'bullets') {
+  const items = anatomy.blocks[0].items
+  anatomy.blocks = [
+    { type: 'bullets', items: items.slice(0, 2) },
+    { type: 'lead', ...splitLead(`${items[2]} ${items.slice(3, 6).join(' ')}`) },
+    { type: 'lead', ...splitLead(`${items[6]} ${items.slice(7, 9).join(' ')}`) },
+    { type: 'para', text: items[9] },
+  ]
+}
+
+for (const id of ['engagement-social', 'neuroception'] as const) {
+  const current = section(id)
+  if (current.blocks[0]?.type !== 'bullets') continue
+  const items = current.blocks[0].items
+  current.blocks = [
+    { type: 'para', text: items[0] },
+    { type: 'bullets', items: items.slice(1, -1) },
+    { type: 'para', text: items.at(-1)! },
+  ]
+}
+
+const consequences = section('consequences-cliniques')
+if (consequences.blocks[0]?.type === 'bullets') {
+  const items = consequences.blocks[0].items
+  consequences.blocks = [
+    { type: 'lead', ...splitLead(items[0]) },
+    { type: 'lead', ...splitLead(items[1]) },
+    { type: 'note', label: 'Note', body: [items[2].replace(/^Note:\s*/, '')] },
+    { type: 'lead', ...splitLead(items[3]) },
+    { type: 'rop', body: [consequences.blocks[2].type === 'para' ? consequences.blocks[2].text : ''] },
+  ]
+}
+
+const application = section('application-clinique-rop')
+if (application.blocks[0]?.type === 'bullets' && application.blocks[1]?.type === 'bullets' && application.blocks[2]?.type === 'bullets') {
+  const upper = application.blocks[0].items
+  const middle = application.blocks[1].items
+  const lower = application.blocks[2].items
+  application.blocks = [
+    { type: 'sub', text: upper[0] },
+    { type: 'sub', text: upper[1] },
+    { type: 'leadBullets', items: upper.slice(2).map((item) => splitLead(item)) },
+    {
+      type: 'lead',
+      label: middle[0],
+      text: middle[1].replace(/^Sympathetic system:\s*/u, 'Sympathetic system: ').replace(/\s*\(see Chapter 5, Stress Mechanisms\)\.?$/u, ''),
+    },
+    { type: 'sub', text: lower[0] },
+    { type: 'leadBullets', items: lower.slice(1).map((item) => splitLead(item)) },
   ]
 }

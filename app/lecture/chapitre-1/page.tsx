@@ -12,14 +12,27 @@ import {
   chapter1SlideAnchors,
   chapter1SlideAnchorsEn,
 } from '@/content/chapter1.slidesync'
+import { englishReaderMetadata } from '@/lib/readerDocumentMetadata'
 
 const DECKS = { fr: chapter1Slides, en: chapter1SlidesEn }
 const ANCHORS = { fr: chapter1SlideAnchors, en: chapter1SlideAnchorsEn }
 
-export const metadata: Metadata = {
+const defaultMetadata: Metadata = {
   title: 'Chapitre 1 - Lecture synchronisee · R.O.P. · Guy Boitout',
   description: 'Lecture combinee : le texte du chapitre 1 et les diapositives de synthese affiches ensemble, synchronises au fil de la lecture.',
   robots: { index: false, follow: false },
+}
+
+export async function generateMetadata({
+  searchParams,
+}: {
+  searchParams: Promise<{ lang?: string }>
+}): Promise<Metadata> {
+  const { lang: langParam } = await searchParams
+  const lang = await getServerLang(langParam)
+  if (lang !== 'en') return defaultMetadata
+  const { chapter } = getChapter('chapter-1', 'en')
+  return englishReaderMetadata(chapter, 'synchronized', defaultMetadata)
 }
 
 export default async function Chapitre1SyncPage({

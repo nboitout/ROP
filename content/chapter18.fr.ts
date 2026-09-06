@@ -414,7 +414,7 @@ export const chapter18Fr: Chapter = {
           "type": "xref",
           "label": "Voir la référence dans le chapitre 5",
           "text": "Mécanisme de stress",
-          "href": "/lecture/chapitre-5?lang=fr&xrefBack=%2Flecture%2Fchapitre-18%3Flang%3Dfr%23p-physiologie-16&xrefBackLabel=Retour%20au%20chapitre%2018#p-sga-4"
+          "href": "/lecture/chapitre-5?lang=fr&xrefBack=%2Flecture%2Fchapitre-18%3Flang%3Dfr%23p-physiologie-16&xrefBackLabel=Retour%20au%20chapitre%2018#p-le-syndrome-general-d-adaptation-un-modele-pedagogique-4"
         },
         {
           "type": "rop",
@@ -436,7 +436,7 @@ export const chapter18Fr: Chapter = {
           "type": "xref",
           "label": "Voir la référence dans le chapitre 17",
           "text": "Cavité pelvienne",
-          "href": "/lecture/chapitre-17?lang=fr&xrefBack=%2Flecture%2Fchapitre-18%3Flang%3Dfr%23p-physiologie-19&xrefBackLabel=Retour%20au%20chapitre%2018#p-innervation-15"
+          "href": "/lecture/chapitre-17?lang=fr&xrefBack=%2Flecture%2Fchapitre-18%3Flang%3Dfr%23p-physiologie-19&xrefBackLabel=Retour%20au%20chapitre%2018#p-physiologie-0"
         },
         {
           "type": "sub",
@@ -496,7 +496,7 @@ export const chapter18Fr: Chapter = {
           "type": "xref",
           "label": "Voir la référence dans le chapitre 19",
           "text": "Cycle menstruel",
-          "href": "/lecture/chapitre-19?lang=fr&xrefBack=%2Flecture%2Fchapitre-18%3Flang%3Dfr%23p-pathologies-courantes-4&xrefBackLabel=Retour%20au%20chapitre%2018#p-uterus-physiologie-16"
+          "href": "/lecture/chapitre-19?lang=fr&xrefBack=%2Flecture%2Fchapitre-18%3Flang%3Dfr%23p-pathologies-courantes-4&xrefBackLabel=Retour%20au%20chapitre%2018#p-uterus-physiologie-6"
         },
         {
           "type": "bullets",

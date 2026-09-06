@@ -1,637 +1,128 @@
-// Chapter 14 content — English (Codex Translation V2)
-// Source: public/chapter-14/EN/Chapter14_CodexTranslationV2.docx
-
 import type { Chapter } from './types'
+export type { Block, Section, Chapter } from './types'
 
-export const chapter14En: Chapter = {
-  "slug": "chapter-14",
-  "number": "14",
-  "title": "The Small Intestine",
-  "sections": [
-    {
-      "id": "presentation",
-      "title": "Scope, clinical perspective, and topography",
-      "blocks": [
-        {
-          "type": "sub",
-          "text": "Scope and clinical perspective"
-        },
-        {
-          "type": "para",
-          "text": "The small intestine is a central anatomical and physiological crossroads. Its loops, mesentery, vascular and lymphatic networks, intrinsic nervous system, mucosal barrier, immune tissue and microbiota cooperate in digestion, absorption, motility and defence. In ROP, these relationships are considered within a global functional assessment that also includes autonomic regulation, somatic correspondences and the patient’s wider clinical context."
-        },
-        {
-          "type": "note",
-          "label": "Clinical boundary",
-          "body": [
-            "ROP assessment and care complement — but never replace — medical diagnosis, investigation or follow-up. Warning signs and suspected organic disease require medical referral."
-          ]
-        },
-        {
-          "type": "sub",
-          "text": "1. Jejunum and ileum within the colonic frame"
-        },
-        {
-          "type": "para",
-          "text": "The jejunum and ileum form approximately 15 to 16 intestinal loops, distributed preferentially into two topographic groups. Their features transition progressively rather than changing at a sharply defined boundary."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Feature",
-            "Jejunum",
-            "Ileum"
-          ],
-          "rows": [
-            [
-              "Location",
-              "Predominantly in the left upper quadrant.",
-              "Predominantly in the right lower quadrant."
-            ],
-            [
-              "Orientation",
-              "Loops and vascular pattern tend to be more horizontal.",
-              "Loops and vascular pattern tend to be more vertical."
-            ],
-            [
-              "Relations",
-              "Habitually overlaps the descending colon.",
-              "Generally does not overlap the ascending colon."
-            ],
-            [
-              "General feature",
-              "Usually the more developed group.",
-              "Progressive transition from jejunal characteristics."
-            ]
-          ]
-        }
-      ]
-    },
-    {
-      "id": "anatomie",
-      "title": "Anatomy and mesenteric suspension",
-      "blocks": [
-        {
-          "type": "sub",
-          "text": "2. The mesentery: root and suspension"
-        },
-        {
-          "type": "para",
-          "text": "The mesentery is a double layer of peritoneum that connects the jejunum and ileum to the posterior abdominal wall. Its short, obliquely oriented root extends from the duodenojejunal flexure to the ileocecal junction. The mesentery suspends the intestinal loops while preserving their mobility and carries the vessels, lymphatics and nerves of the small intestine."
-        },
-        {
-          "type": "bullets",
-          "items": [
-            "Proximal landmark: the suspensory muscle of the duodenum (ligament of Treitz) and the duodenojejunal flexure.",
-            "Mesenteric root: approximately 15–18 cm, following an oblique course.",
-            "Distal landmark: the ileocecal junction.",
-            "Functional role: suspension, mobility and conduit for neurovascular and lymphatic structures."
-          ]
-        }
-      ]
-    },
-    {
-      "id": "vascularisation",
-      "title": "Blood supply and lymphatic transport",
-      "blocks": [
-        {
-          "type": "sub",
-          "text": "3. Blood supply and portal venous drainage"
-        },
-        {
-          "type": "sub",
-          "text": "Arterial supply"
-        },
-        {
-          "type": "para",
-          "text": "The superior mesenteric artery (SMA) is the principal arterial axis of the small intestine. It arises from the abdominal aorta approximately 1 cm below the coeliac trunk, opposite T12–L1. It passes behind the pancreas and then anterior to the third part of the duodenum, between the two layers of the mesentery, where it gives rise to numerous branches. Its territory includes the small intestine, ascending colon and proximal two-thirds of the transverse colon."
-        },
-        {
-          "type": "sub",
-          "text": "Venous drainage"
-        },
-        {
-          "type": "para",
-          "text": "The superior mesenteric vein (SMV), located to the right of the SMA, belongs to the portal venous system. It drains nutrient-rich blood absorbed from the small intestine toward the liver through the portal vein."
-        },
-        {
-          "type": "note",
-          "label": "The mesenteric pulse can be palpated in the third part of the duodenum, to the right of the umbilicus",
-          "body": [
-            "It is a vascular landmark, not an isolated functional assessment."
-          ]
-        },
-        {
-          "type": "sub",
-          "text": "4. Lymphatic transport"
-        },
-        {
-          "type": "para",
-          "text": "Intestinal lymphatics transport dietary lipids, long-chain proteins and the fat-soluble vitamins A, D, E and K. They also participate in immune defence by carrying immune cells and molecules."
-        },
-        {
-          "type": "numbered",
-          "items": [
-            "Lacteals within the intestinal villi absorb lipids, long-chain proteins and fat-soluble vitamins.",
-            "The cisterna chyli receives lymph from the small intestine and other abdominal organs.",
-            "The thoracic duct ascends through the thorax alongside the vertebral column.",
-            "The thoracic duct empties into the left venous angle, where the left internal jugular and subclavian veins meet."
-          ]
-        },
-        {
-          "type": "figure",
-          "src": "/chapter-14/EN/figure-14-8.png",
-          "caption": "Figure 14.1 — Principal lymphatic collectors and thoracic duct",
-          "alt": "Principal lymphatic collectors and thoracic duct",
-          "orientation": "landscape"
-        },
-        {
-          "type": "note",
-          "label": "ROP perspective",
-          "body": [
-            "Reflex support directed toward the liver and lymphatic system is presented as a way of supporting absorption, digestive function and immune response; this remains complementary care."
-          ]
-        }
-      ]
-    },
-    {
-      "id": "innervation",
-      "title": "Peritoneal, autonomic, and enteric innervation",
-      "blocks": [
-        {
-          "type": "sub",
-          "text": "5. Peritoneal and autonomic innervation"
-        },
-        {
-          "type": "sub",
-          "text": "The peritoneum has dual innervation"
-        },
-        {
-          "type": "para",
-          "text": "The parietal peritoneum shares somatic innervation with the abdominal wall. Its pathways include the phrenic nerve (C3–C5), the lower six intercostal nerves (T7–T12) and the lumbar plexus (L1–L5). It is sensitive to pain, pressure and temperature; pain may project to cervical, scapular, abdominal or lumbar regions."
-        },
-        {
-          "type": "para",
-          "text": "The visceral peritoneum shares extrinsic autonomic innervation with the viscera. Sympathetic roots from approximately T8–T11 travel through the greater and lesser splanchnic nerves to the coeliac and superior mesenteric prevertebral plexuses. Visceral sensation is relatively insensitive to touch and temperature but responds particularly to distension and chemical stimuli."
-        },
-        {
-          "type": "sub",
-          "text": "Vagus nerve and sympathetic system"
-        },
-        {
-          "type": "bullets",
-          "items": [
-            "Sympathetic activity: conveys visceral information related to distension and chemical stimuli, reduces peristalsis and intestinal secretion, and predominates during stress, anxiety, fear and exertion.",
-            "Vagal activity: is predominantly sensory, informs the brain about visceral state, facilitates peristalsis and secretion, and communicates with the enteric nervous system."
-          ]
-        },
-        {
-          "type": "figure",
-          "src": "/chapter-14/EN/figure-14-12.png",
-          "caption": "Figure 14.2 — Parasympathetic and sympathetic pathways",
-          "alt": "Functional overview of parasympathetic and sympathetic pathways",
-          "orientation": "portrait"
-        },
-        {
-          "type": "note",
-          "label": "Key point",
-          "body": [
-            "In summary: sympathetic activity brakes digestive function, while the vagus nerve conveys information and facilitates digestive motility."
-          ]
-        },
-        {
-          "type": "sub",
-          "text": "6. The enteric nervous system"
-        },
-        {
-          "type": "para",
-          "text": "Often called the ‘second brain’, the enteric nervous system coordinates local motility, secretion and digestive responses. Its intramural plexuses lie within the intestinal wall and function with substantial autonomy from the brain and spinal cord."
-        },
-        {
-          "type": "bullets",
-          "items": [
-            "Submucosal (Meissner) plexus: located in the submucosa and closely related to mucosal function and secretion.",
-            "Myenteric (Auerbach) plexus: located between the circular and longitudinal muscle layers and central to motor coordination.",
-            "Functional sensing: integrates neurohormonal signals and the chemistry of the intestinal lumen.",
-            "Neurochemical production: includes serotonin, acetylcholine, noradrenaline and GABA.",
-            "Interstitial cells of Cajal: generate slow waves and contribute to coordinated intestinal motility."
-          ]
-        }
-      ]
-    },
-    {
-      "id": "physiologie",
-      "title": "Physiology and the intestinal ecosystem",
-      "blocks": [
-        {
-          "type": "sub",
-          "text": "7. Motility of the small intestine"
-        },
-        {
-          "type": "bullets",
-          "items": [
-            "Segmentation: localised contractions divide chyme into small portions and mix it with secretions.",
-            "Pendular movements: back-and-forth movements mix chyme and increase contact with the mucosa.",
-            "Peristalsis: progressive contractions propel chyme toward the colon."
-          ]
-        },
-        {
-          "type": "para",
-          "text": "Motility is modulated by mechanical distension of the intestinal wall, local myenteric coordination influenced by parasympathetic and sympathetic systems, and hormonal or chemical signals, including motilin and luminal nutrients."
-        },
-        {
-          "type": "note",
-          "label": "Key point",
-          "body": [
-            "Segmentation and pendular movements mix and homogenise chyme; peristaltic contractions move it onward toward the colon."
-          ]
-        },
-        {
-          "type": "sub",
-          "text": "8. The intestinal ecosystem and barrier"
-        },
-        {
-          "type": "para",
-          "text": "The intestinal mucosa acts as a selective barrier between the digestive lumen and the internal environment. Three interdependent elements form this biological frontier:"
-        },
-        {
-          "type": "bullets",
-          "items": [
-            "Intestinal mucosa: the interface that supports digestion and absorption; principal components include enterocytes and mucus.",
-            "Gut-associated lymphoid tissue (GALT): including Peyer’s patches, mast cells and Paneth cells; it detects potentially harmful agents and contributes to defence. Paneth cells release antimicrobial peptides.",
-            "Intestinal microbiota: a community of bacteria, fungi, yeasts, viruses and protozoa living in interaction with the host. Each person has a distinctive microbial signature; the microbiota contributes to immunity, digestion, absorption and gut–brain communication."
-          ]
-        },
-        {
-          "type": "sub",
-          "text": "9. Two complementary routes of micronutrient absorption"
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Route",
-            "Absorbed substances",
-            "Destination"
-          ],
-          "rows": [
-            [
-              "Blood capillaries",
-              "Water, mineral salts, simple carbohydrates, amino acids, short-chain fatty acids and water-soluble vitamins.",
-              "Transported to the liver through the portal system."
-            ],
-            [
-              "Lymphatic lacteals",
-              "Fats, long-chain proteins and fat-soluble vitamins A, D, E and K.",
-              "Lymphatic network → cisterna chyli → thoracic duct → left venous angle."
-            ]
-          ]
-        },
-        {
-          "type": "sub",
-          "text": "10. Microanatomy of the intestinal barrier"
-        },
-        {
-          "type": "para",
-          "text": "Villi and microvilli greatly increase the exchange surface. When spread out, the small intestine provides an exchange area often compared, in the source material, with the area of a tennis court."
-        },
-        {
-          "type": "bullets",
-          "items": [
-            "Enterocytes: form a selective barrier, absorb micronutrients and limit the passage of insufficiently digested macromolecules.",
-            "Goblet cells: produce protective mucus.",
-            "Crypt cells (crypts of Lieberkühn): contribute to mildly alkaline intestinal secretion and enzymatic functions.",
-            "Paneth cells: release antimicrobial peptides.",
-            "Villus core: contains blood capillaries, a central lymphatic lacteal, connective tissue and smooth muscle cells."
-          ]
-        }
-      ]
-    },
-    {
-      "id": "pathologies",
-      "title": "Functional disorders, pathology, and medical referral",
-      "blocks": [
-        {
-          "type": "sub",
-          "text": "11. Intestinal hyperpermeability and dysbiosis"
-        },
-        {
-          "type": "para",
-          "text": "Intestinal hyperpermeability and dysbiosis are often associated and may reinforce one another. Hyperpermeability involves altered intercellular junctions, increased passage of luminal macromolecules and immune or inflammatory activation. Dysbiosis involves reduced microbial diversity, imbalance between commensal and potentially pathogenic species, and impaired mucosal protection."
-        },
-        {
-          "type": "sub",
-          "text": "Common contributing factors"
-        },
-        {
-          "type": "bullets",
-          "items": [
-            "Infections",
-            "Chronic stress",
-            "An unbalanced diet",
-            "Medication exposure",
-            "Inflammation",
-            "Prolonged intense exercise with transient reduction in splanchnic perfusion"
-          ]
-        },
-        {
-          "type": "sub",
-          "text": "Possible consequences described in the source"
-        },
-        {
-          "type": "bullets",
-          "items": [
-            "Food-related allergic manifestations",
-            "Immune or inflammatory activation",
-            "Micronutrient deficiencies",
-            "Increased hepatic processing load"
-          ]
-        },
-        {
-          "type": "note",
-          "label": "These associations are not diagnostic",
-          "body": [
-            "Symptoms and suspected barrier or microbiome disorders require appropriate medical evaluation."
-          ]
-        },
-        {
-          "type": "sub",
-          "text": "12. Dysbiosis and the gut–brain axis"
-        },
-        {
-          "type": "para",
-          "text": "The gut–brain axis links the microbiota, enteric nervous system, vagus nerve and central nervous system. Stress, inflammation, infections, dietary imbalance, repeated antibiotic exposure and certain environmental exposures may contribute to dysbiosis."
-        },
-        {
-          "type": "sub",
-          "text": "Features that may prompt further assessment"
-        },
-        {
-          "type": "bullets",
-          "items": [
-            "Halitosis, belching or aerocoly",
-            "Malodorous gas",
-            "Constipation, diarrhoea or alternation between the two",
-            "Heartburn",
-            "Marked cravings for sugar or raw meat"
-          ]
-        },
-        {
-          "type": "para",
-          "text": "The source presents dysbiosis as an associated factor in several disorders and notes that possible links with neurodegenerative disease are being studied. Such associations do not establish causation and should not be used as stand-alone diagnoses."
-        },
-        {
-          "type": "sub",
-          "text": "13. ROP indications and criteria for medical referral"
-        },
-        {
-          "type": "sub",
-          "text": "Functional indications considered in ROP"
-        },
-        {
-          "type": "para",
-          "text": "Only after urgent or organic disease has been excluded, the source identifies the following functional contexts:"
-        },
-        {
-          "type": "bullets",
-          "items": [
-            "Dysbiosis: associated functional digestive disorders.",
-            "Post-gastroenteritis sequelae: persistent symptoms after the acute phase.",
-            "Enteroptosis: abnormal tension of the small intestine accompanied by vasoconstriction, venous and lymphatic stasis, and peri-vascular nerve-plexus spasm.",
-            "Functional paralytic ileus: inhibition of motility and secretion attributed to peritoneal irritation with sympathetic predominance, outside an obstructive presentation and only after medical evaluation."
-          ]
-        },
-        {
-          "type": "sub",
-          "text": "Warning signs requiring medical assessment or exclusion"
-        },
-        {
-          "type": "bullets",
-          "items": [
-            "Fever",
-            "Red or black blood in the stool",
-            "Marked dehydration",
-            "Substantial unexplained weight loss",
-            "Alternating constipation and diarrhoea",
-            "Vomiting",
-            "Colicky pain around the umbilical region",
-            "Marked abdominal distension",
-            "Suspected mechanical or paralytic intestinal obstruction",
-            "Strangulated inguinal hernia",
-            "Troisier’s node or other oncological concern",
-            "Signs suggestive of an intra-abdominal effusion"
-          ]
-        },
-        {
-          "type": "note",
-          "label": "Do not initiate or continue complementary management when a warning sign suggests urgent or serious disease",
-          "body": [
-            "Arrange medical assessment."
-          ]
-        },
-        {
-          "type": "sub",
-          "text": "14. Crohn’s disease"
-        },
-        {
-          "type": "para",
-          "text": "Crohn’s disease is a chronic inflammatory disorder that commonly affects the ileum and colon. The source identifies genetic background, dysbiosis and environmental influences as associated factors, with emotional factors potentially modulating the lived experience of symptoms and, in some patients, disease flares."
-        },
-        {
-          "type": "bullets",
-          "items": [
-            "Digestive symptoms: diarrhoea, abdominal or pelvic pain, weight loss and fatigue.",
-            "Extra-digestive features: oral aphthae, low-back pain, erythema nodosum, pancreatic involvement and depressive symptoms.",
-            "Course: a chronic disorder characterised by flares and remissions. A low-fibre diet may sometimes be required under clinical guidance. Colorectal cancer risk varies with disease duration and extent.",
-            "ROP perspective: may be used only as an adjunct intended to ease some abdominal or pelvic discomfort and support transit; it does not treat intestinal inflammation or replace specialist care."
-          ]
-        },
-        {
-          "type": "figure",
-          "src": "/chapter-14/EN/slides/Chapter14 FigCrohn EN.png",
-          "caption": "Figure 14.3 — Crohn’s disease and associated musculoskeletal presentation",
-          "alt": "Clinical teaching illustration of Crohn’s disease",
-          "orientation": "landscape"
-        }
-      ]
-    },
-    {
-      "id": "relations",
-      "title": "Viscerosomatic and viscero-emotional relationships",
-      "blocks": [
-        {
-          "type": "sub",
-          "text": "15. Viscerosomatic relationships"
-        },
-        {
-          "type": "para",
-          "text": "The source retains thoracolumbar landmarks as clinical reference points in ROP: T10–T12 for thoracic and corresponding costal assessment, and L1–L2 for the upper lumbar and thoracolumbar junction. These correspondences may guide functional assessment and reflex protocols but do not replace anatomical analysis or differential diagnosis."
-        },
-        {
-          "type": "bullets",
-          "items": [
-            "T10–T12: thoracic vertebral restrictions, corresponding ribs and associated thoracoabdominal assessment.",
-            "L1–L2: upper lumbar restrictions, the thoracolumbar junction and associated clinical assessment."
-          ]
-        },
-        {
-          "type": "sub",
-          "text": "16. Viscero-emotional relationships"
-        },
-        {
-          "type": "para",
-          "text": "The gut–brain axis links stress, autonomic regulation and digestive symptoms. When emotional tension rises, sympathetic activation may increase, vagal regulation may decrease, and motility, secretion and visceral sensitivity may be altered. Possible manifestations include bloating, spasms, digestive discomfort, visceral hypersensitivity, fatigue, irritability, anxiety, sleep disturbance and abdominal or lumbar tension. These manifestations are variable and non-specific."
-        },
-        {
-          "type": "sub",
-          "text": "Clinical approach and advice"
-        },
-        {
-          "type": "bullets",
-          "items": [
-            "Listen to and acknowledge the emotional context.",
-            "Support autonomic balance.",
-            "Adapt food choices to digestive tolerance.",
-            "Avoid intense exertion immediately after a large meal."
-          ]
-        },
-        {
-          "type": "note",
-          "label": "Key point",
-          "body": [
-            "Within ROP, exploration of emotional tension complements the functional assessment; it does not substitute for medical or psychological diagnosis."
-          ]
-        }
-      ]
-    },
-    {
-      "id": "rop",
-      "title": "Clinical ROP protocol",
-      "blocks": [
-        {
-          "type": "sub",
-          "text": "17. Clinical ROP protocol for the small intestine"
-        },
-        {
-          "type": "para",
-          "text": "The protocol follows a broad progression: prepare the adaptive terrain, address constraints, and then work with the target organ or function. The four levels are complementary rather than rigidly sequential; history, examination, medical data and contraindications remain decisive."
-        },
-        {
-          "type": "sub",
-          "text": "Level 1 — Regulation of higher centres"
-        },
-        {
-          "type": "bullets",
-          "items": [
-            "Occipital reflex zones",
-            "Brainstem and visceral integration centres",
-            "Diencephalon and hypothalamus",
-            "Hypothalamic–pituitary axis",
-            "Neuro-meningeal environment and cerebrospinal-fluid circulation",
-            "Associated occipito-podal correspondences"
-          ]
-        },
-        {
-          "type": "para",
-          "text": "Role: support integration centres and general regulation."
-        },
-        {
-          "type": "sub",
-          "text": "Level 2 — Autonomic regulation"
-        },
-        {
-          "type": "bullets",
-          "items": [
-            "Vagus nerve (cranial nerve X)",
-            "Thoracolumbar sympathetic pathways",
-            "Coeliac and superior mesenteric plexuses",
-            "Autonomic–enteric nervous system interface",
-            "Diaphragm and breathing",
-            "Functional support, according to testing, for the liver, pancreas and duodenum"
-          ]
-        },
-        {
-          "type": "para",
-          "text": "Role: prepare adaptive capacity and support autonomic balance."
-        },
-        {
-          "type": "sub",
-          "text": "Level 3 — Local and regional visceral regulation"
-        },
-        {
-          "type": "bullets",
-          "items": [
-            "Jejunal and ileal loops",
-            "Mesentery and mesenteric root",
-            "Peritoneum and visceral glide",
-            "Relations with the duodenum and colon",
-            "Mesenteric vascular region"
-          ]
-        },
-        {
-          "type": "para",
-          "text": "Role: support mobility, tissue glide and regional fluid dynamics."
-        },
-        {
-          "type": "sub",
-          "text": "Level 4 — Viscerosomatic and viscero-emotional integration"
-        },
-        {
-          "type": "bullets",
-          "items": [
-            "Thoracolumbar convergences, with emphasis on T9–T11 and T10",
-            "Abdominal wall, lumbar region and pelvis",
-            "Visceral hypersensitivity",
-            "Gut–brain axis",
-            "Emotional context"
-          ]
-        },
-        {
-          "type": "para",
-          "text": "Role: support functional integration and recovery."
-        },
-        {
-          "type": "note",
-          "label": "Clinical principle: assess → prioritise → adapt → treat → reassess",
-          "body": [
-            "Use a global, prudent approach and always respect contraindications."
-          ]
-        },
-        {
-          "type": "sub",
-          "text": "Key takeaways"
-        },
-        {
-          "type": "bullets",
-          "items": [
-            "The jejunum and ileum occupy preferential — not absolute — topographic territories.",
-            "The mesentery suspends the small intestine and carries its blood vessels, lymphatics and nerves.",
-            "Portal blood drainage and lymphatic transport provide complementary absorption pathways.",
-            "Somatic, autonomic and enteric innervation contribute distinct sensory and regulatory functions.",
-            "The mucosal barrier, immune tissue and microbiota form an interdependent intestinal ecosystem.",
-            "ROP assessment is presented as integrative and complementary; it must remain subordinate to medical safety, diagnosis and follow-up."
-          ]
-        },
-        {
-          "type": "xref",
-          "label": "See Chapter 3 — Central Nervous System",
-          "href": "/lecture/chapitre-3?lang=en"
-        },
-        {
-          "type": "xref",
-          "label": "See Chapter 4 — Autonomic Nervous System",
-          "href": "/lecture/chapitre-4?lang=en"
-        },
-        {
-          "type": "xref",
-          "label": "See Chapter 7 — Abdominal and Peritoneal Cavities",
-          "href": "/lecture/chapitre-7?lang=en"
-        }
-      ]
-    }
-  ],
-  "clinicalCase": {
-    "src": "/chapter-14/EN/Chapter14 Cas Clinique EN.png",
-    "caption": "Clinical case — Chapter 14",
-    "alt": "Clinical case: small intestine in ROP."
-  }
-}
+const ret=(path:string,anchor:string)=>{const u=new URL(path,'https://rop.local');u.searchParams.set('xrefBack',`/lecture/chapitre-14?lang=en#${anchor}`);u.searchParams.set('xrefBackLabel','Back to Chapter 14');return `${u.pathname}${u.search}${u.hash}`}
+
+export const chapter14En: Chapter = { slug:'chapter-14', number:'14', title:'Small Intestine', sections:[
+{id:'presentation',title:'1. Overview',blocks:[
+ {type:'para',text:'The small intestine is the longest abdominal viscus in the body: in a cadaver it measures approximately 6–7 metres, whereas in a living person it is considerably shorter because of its muscular tone. It consists of two parts:'},
+ {type:'bullets',items:['The duodenum.','The jejunum–ileum.']},
+ {type:'para',text:'They extend from the pylorus to the ileocaecal valve and play a major role in digestion and absorption. Although part of the small intestine, the duodenum is covered in a separate chapter because of its anatomical and physiological specificity.'},
+ {type:'xref',label:'See the reference in Chapter 10',text:'Duodenum: anatomical and physiological overview',href:ret('/lecture/chapitre-10?lang=en#p-presentation-1','p-presentation-3')},
+ {type:'para',text:'The jejunum–ileum differs from the duodenum in the following ways:'},
+ {type:'bullets',items:['A thin, smooth, fully peritonealised and highly mobile wall. Its lumen is only 2–3 cm in diameter.','A major digestive role through interaction among the mucosa, intestinal secretions and microbiota (intestinal flora).','An important role in metabolism and immunity.','A particularly well-developed intrinsic nervous system.','Close interactions with the brain–gut axis, potentially accompanied by effects on the emotional sphere.','Functionally, the small intestine and colon are interdependent.']}
+]},
+{id:'situation',title:'2. Location',blocks:[{type:'para',text:'The jejunum–ileum occupies a large part of the abdominal cavity, more commonly on the left than the right, within the colonic frame. The jejunum lies preferentially in the upper-left abdominal quadrant. The ileum lies preferentially in the lower-right abdominal quadrant.'}]},
+{id:'anatomie',title:'3. Anatomy',blocks:[
+ {type:'lead',label:'3.1. Jejunum–ileum',text:'it comprises 15–16 U-shaped intestinal loops arranged in two groups. The upper-left group is the jejunum, which is more developed than the ileum and whose loops and vascular system are mainly horizontal. The lower-right group is the ileum, whose loops and vascular system are mainly vertical.'},
+ {type:'lead',label:'3.2. Mesentery',text:'this is a mesentery, meaning a double-layered reflection of the peritoneum. It envelops the jejunum–ileum and connects it to the posterior abdominal wall through the root of the mesentery.'},
+ {type:'lead',label:'3.3. Root of the mesentery',text:'this is the attachment line of the mesentery and helps stabilise the otherwise highly mobile small intestine. It measures 16–18 cm and extends from the duodenojejunal junction to the ileocaecal junction, crossing the abdominal midline at the umbilicus, at the L3–L4 disc.'},
+ {type:'para',text:'The duodenojejunal junction is supported by the muscle of Treitz, whose smooth fibres attach to the right crus of the diaphragm.'},
+ {type:'lead',label:'Muscle of Treitz',text:'through contraction, it helps maintain the duodenojejunal angle by drawing the root of the mesentery upwards and to the left.'},
+ {type:'para',text:'By promoting longitudinal tension, it helps empty duodenal contents into the jejunum. The root of the mesentery supplies the small intestine with blood vessels and nerves.'},
+ {type:'rop',body:['Clinically, loss of longitudinal tension in the root of the mesentery may be considered in relation to aortomesenteric compression, or nutcracker syndrome: compression of the fourth part of the duodenum and the left renal vein between the aorta and superior mesenteric artery. Emptying into the jejunum may be delayed, with a risk of gastroduodenal reflux.','The rich vascular, neural and lymphatic network of the root of the mesentery is highly reflexogenic. Stimulation of its reflex zone is intended to facilitate a functional response of the jejunum–ileum.']}
+]},
+{id:'rapports',title:'4. Anatomical relationships',blocks:[{type:'bullets',items:['The small intestine is intraperitoneal.','On the left, the jejunum overlies the descending colon.','On the right, the ileum leaves the ascending colon uncovered.','Posteriorly, it is related to the posterior abdominal wall and retroperitoneal organs, particularly the supramesocolic duodenum, kidneys, ureters, and ascending and descending colon.','Anteriorly: the greater omentum, formerly the greater epiploon.','Caudally: the pelvic organs, especially the bladder.','Cephalad: the transverse mesocolon.']}]},
+{id:'vascularisation',title:'5. Vascular supply',blocks:[
+ {type:'para',text:'The small intestine requires an extensive vascular and lymphatic supply for its digestive, absorptive and immune functions.'},
+ {type:'lead',label:'5.1. Arterial supply — superior mesenteric artery',text:'this is the principal arterial axis of the small intestine. It branches from the abdominal aorta 1 cm below the coeliac trunk, opposite the T12–L1 disc. Initially retropancreatic and then anterior to the third part of the duodenum, it runs between the two mesenteric layers and gives off numerous branches. It supplies the entire small intestine, ascending colon and proximal two-thirds of the transverse colon.'},
+ {type:'para',text:'Its pulse, palpable at the third part of the duodenum to the right of the umbilicus, may provide a clinical vascular landmark without, by itself, indicating intestinal function.'},
+ {type:'lead',label:'5.2. Venous drainage — superior mesenteric vein',text:'located to the right of the superior mesenteric artery, it forms part of the portal system and drains nutrient-rich venous blood from the small intestine towards the liver.'},
+ {type:'lead',label:'5.3. Lymphatic drainage',text:'the small intestine has a developed lymphatic network that participates in immunity. It transports long-chain lipid and protein molecules and fat-soluble vitamins A, D, E and K to the left jugulosubclavian junction through the cisterna chyli and thoracic duct.'}
+]},
+{id:'innervation',title:'6. Innervation',blocks:[
+ {type:'sub',text:'6.1. Innervation of the peritoneum'},
+ {type:'para',text:'The peritoneum receives dual somatic and autonomic innervation.'},
+ {type:'lead',label:'6.1.1. Parietal peritoneum',text:'it shares somatic innervation with the abdominal wall through the phrenic nerves, lower six intercostal nerves and lumbar plexus nerves. Numerous endings respond to temperature, pressure and pain. This shared supply helps explain projection of cervical, scapular, abdominal and lumbar pain of peritoneal and visceral origin to the musculoskeletal system through somatic fibres of the parietal layer.'},
+ {type:'lead',label:'6.1.2. Visceral peritoneum',text:'it shares extrinsic autonomic innervation with the viscera. Sympathetic roots arise from T8 to T11 and reach the coeliac and superior mesenteric prevertebral plexuses through the greater and lesser splanchnic nerves.'},
+ {type:'sub',text:'Vagus nerve and sympathetic nervous system'},
+ {type:'leadBullets',items:[{label:'Visceral sensation',text:'the visceral peritoneum is relatively insensitive to touch, thermal changes and surgical incision. Visceral sensation depends on the sympathetic system, stimulated by intestinal stretching and chemical substances.'},{label:'Sympathetic motility',text:'the sympathetic system reduces peristalsis and intestinal secretions, particularly during stress, anxiety, fear or exertion.'},{label:'Vagus nerve — motility',text:'it is broadly antagonistic to the sympathetic system and promotes peristalsis, intestinal secretions and intestinal permeability to facilitate absorption.'},{label:'Vagus nerve — sensation',text:'the vagus contains 70–80% sensory fibres that continuously inform the brain about the viscera and connects to the intrinsic nervous system.'}]},
+ {type:'sub',text:'6.2. Intrinsic or enteric nervous system (ENS)'},
+ {type:'para',text:'The intrinsic or enteric nervous system (ENS), often called the second or abdominal brain, consists of intramural plexuses in the small-intestinal wall: Auerbach’s myenteric plexus and Meissner’s submucosal plexus.'},
+ {type:'bullets',items:['The ENS is sensitive to neurohormonal signals and the chemical composition of intestinal contents.','It can function largely autonomously from the brain and spinal cord while physiological conditions permit.','It contributes substantially to neurochemical mediators, including much of the serotonin, acetylcholine, noradrenaline and GABA.','Intestinal pacemaker: interstitial cells of Cajal within the longitudinal and circular muscle layers generate slow waves and help coordinate intestinal motility.']}
+]},
+{id:'physiologie',title:'7. Physiology',blocks:[
+ {type:'sub',text:'7.1. Motility'},{type:'para',text:'It is triggered by three principal types of mechanism:'},
+ {type:'bullets',items:['Mechanical: stretching of the intestinal wall as chyme passes.','Neurological: vagal action influenced by cephalic signals such as sight, smell, taste and touch of food, and by intestinal mechanoreceptors.','Hormonal and chemical: gastric, duodenal, hepatobiliary and pancreatic secretions.']},
+ {type:'para',text:'The small intestine displays rhythmic contractions, to-and-fro and segmentation movements that homogenise chyme, and peristaltic movements that propel it forwards.'},
+ {type:'sub',text:'7.2. Intestinal ecosystem'},{type:'para',text:'The small intestine forms an ecosystem comprising the intestinal mucosa, immune system and intestinal microbiota.'},
+ {type:'lead',label:'7.2.1. Intestinal mucosa',text:'it forms the interface between the body’s internal environment and digestive-lumen contents, acting as a selective barrier that enables digestion and absorption.'},
+ {type:'lead',label:'Digestion',text:'this transforms food into simple absorbable molecules. Goblet cells produce protective mucus. Lieberkühn cells contribute to slightly alkaline secretion and enzymatic and antimicrobial functions. Enterocytes provide a selective barrier through their intercellular arrangement (desmosomes), permitting micronutrient absorption while limiting passage of insufficiently degraded macromolecules.'},
+ {type:'lead',label:'Absorption',text:'the mucosa is covered with finger-like villi whose central axes contain smooth muscle and blood and lymphatic networks. Microvilli form a brush border that greatly increases the exchange surface. Spread flat, the small intestine is said to have the area of a tennis court.'},
+ {type:'leadBullets',items:[{label:'Blood route',text:'blood capillaries absorb water, mineral salts, simple sugars, amino acids, short-chain fatty acids and water-soluble vitamins, conveyed to the liver through the portal system.'},{label:'Lymphatic route',text:'lymphatic capillaries (lacteals) mainly absorb fats, long-chain proteins and fat-soluble vitamins A, D, E and K. They pass into the lymphatic network, cisterna chyli and thoracic duct before entering the venous network at the left jugulosubclavian junction.'}]},
+ {type:'rop',body:['Reflex work on intestinal motility is intended to support digestion and absorption.','Reflex work on the liver and lymphatic system is intended to support absorption quality and immune functions.']},
+ {type:'lead',label:'7.2.2. Intestinal immune system',text:'surface receptors identify certain pathogens or potentially harmful substances and present them to intestinal immune cells: mast cells involved in allergic and inflammatory responses, Paneth cells releasing antimicrobial peptides, and gut-associated lymphoid tissue (GALT), with isolated lymphocytes or Peyer’s patches.'},
+ {type:'lead',label:'Intestinal microbiota',text:'a community of bacteria, fungi, yeasts, viruses and protozoa interacting with their host. The human body is estimated to contain approximately 38 billion bacteria. Each person has an individual microbiota signature. It contributes to immunity, digestion and absorption and interacts with cerebral and emotional functions through the brain–gut axis.'}
+]},
+{id:'pathologies',title:'8. Common disorders',blocks:[
+ {type:'para',text:'Intestinal hyperpermeability and dysbiosis are often described as associated, each causing the other reciprocally.'},
+ {type:'lead',label:'8.1. Intestinal hyperpermeability',text:'when intercellular junctions between enterocytes are altered, permeability may increase, with greater passage of insufficiently degraded luminal macromolecules causing immune or inflammatory activation.'},
+ {type:'sub',text:'Causes'},
+ {type:'bullets',items:['Infectious agents: staphylococci, streptococci, coliform bacteria, salmonella and Candida albicans, which release toxins.','Chronic stress: excessive sympathetic activity and stress hormones (adrenaline and cortisol) cause vasoconstriction and mucosal fragility.','Highly processed or refined foods, high-glycaemic-index foods, saturated fatty acids, and excessive cow’s milk, gluten and meat.','Prolonged sporting activity such as long-distance running may transiently reduce splanchnic perfusion.','Medicines: non-steroidal anti-inflammatory drugs, salicylates, corticosteroids, antibiotics and chemotherapy.']},
+ {type:'sub',text:'Consequences'},
+ {type:'bullets',items:['Food allergies: barrier alteration may increase immune exposure to certain food antigens.','Autoimmune diseases: insufficiently degraded proteins crossing the mucosa are regarded as “non-self”. Antibodies destroy the “non-self” and the tissue to which it has attached.','Micronutrient deficiencies: poor absorption may cause deficiencies in vitamins, minerals and essential fatty acids.','Hepatic overload: increased portal passage of substances from the intestinal lumen may increase the liver’s detoxification workload.']},
+ {type:'rop',body:['With musculoskeletal pain and restrictions, particularly without evident trauma or overuse, the ROP approach invites consideration of a possible link with visceral dysfunction.']},
+ {type:'lead',label:'8.2. Dysbiosis',text:'this is disruption of the microbiota. Reduced diversity or imbalance between commensal and potentially pathogenic species may impair mucosal protection.'},
+ {type:'lead',label:'Causes of dysbiosis',text:'stress, inflammation, infection, unhealthy lifestyle or dietary imbalance (excess alcohol, sugar or protein, or lack of fibre), antibiotics, certain environmental exposures, vertebral restrictions, and fibrosis of the intestine and its attachments.'},
+ {type:'para',text:'Dysbiosis is considered an associated factor in many disorders, including ulcerative colitis, thyroiditis, asthma, sinusitis, allergies, arthralgia (low-back pain), fibromyalgia, cystitis and some forms of depression. Some authors suggest that Parkinson’s disease, multiple sclerosis or Alzheimer’s disease could be linked to the enteric nervous system through the vagus nerve.'},
+ {type:'lead',label:'Warning signs',text:'bad breath, belching, aerocoly, foul-smelling flatulence, constipation/diarrhoea, heartburn, and excessive craving for sugar and raw meat.'},
+ {type:'lead',label:'8.3. Diagnosis of exclusion',text:'medical referral is required for fever; red or black blood in stools; marked dehydration; substantial unexplained weight loss; alternating constipation and diarrhoea; vomiting; colicky umbilical pain; meteorism; obstruction (mechanical or paralytic ileus); strangulated inguinal hernia; Troisier’s node (suspected cancer); or signs of intra-abdominal effusion.'},
+ {type:'rop',body:['8.4. Indications: functional disorders—dysbiosis, sequelae of gastroenteritis, enteroptosis (abnormal small-intestinal tension associated with vasoconstriction, venous and lymphatic stasis, and spasm of perivascular nerve plexuses), and paralytic ileus (inhibition of intestinal motility and secretions due to predominantly sympathetic peritoneal irritation).']},
+ {type:'sub',text:'8.4.3. Crohn’s disease'},
+ {type:'para',text:'This disease mainly affects the ileum and colon. Associated factors include genetics, dysbiosis, environment, and emotional factors as modulators of experience and sometimes of flares.'},
+ {type:'lead',label:'Symptoms',text:'diarrhoea related to intestinal-wall inflammation, abdominopelvic pain, weight loss, asthenia, oral aphthae, low-back pain, erythema nodosum of the limbs, pancreatic involvement and depressive syndrome.'},
+ {type:'lead',label:'Course',text:'chronicity, with increased colorectal-cancer risk according to disease extent and duration. These patients are often obliged to follow a strict low-fibre diet.'},
+ {type:'rop',body:['Our clinical experience has shown that ROP may help relieve some abdominopelvic pain associated with Crohn’s disease and support improved intestinal transit.']}
+]},
+{id:'rop',title:'12. ROP reflex zones',blocks:[
+ {type:'sub',text:'12.1. Landmarks specific to the small intestine'},
+ {type:'para',text:'Local assessment focuses mainly on the jejunum, ileum, ileocaecal junction, mesentery and its root. The root is a particularly important regional landmark: it connects the jejunum–ileum to the posterior abdominal wall and carries some of its vascular, neural and lymphatic structures.'},
+ {type:'rop',body:['The root of the mesentery complements the intestinal reflex zone when indicated by testing; it does not replace the organ’s own zone.']},
+ {type:'xref',label:'See Chapter 7 — Abdominal and peritoneal regional foundation',href:ret('/lecture/chapitre-7?lang=en','p-rop-3')},
+ {type:'sub',text:'12.2. Level 1 — Regulation of higher centres'},
+ {type:'para',text:'Level 1 is not systematic. It is more relevant with chronic stress, digestive hypersensitivity, bodily hypervigilance, sleep disorders or strong interaction between digestive symptoms and emotional context.'},
+ {type:'bullets',items:['Occipital reflex zones.','Brainstem and integration centres.','Diencephalon, particularly the hypothalamus.','Hypothalamic–pituitary axis.','Neuro-meningeal environment in the ROP model.']},
+ {type:'xref',label:'See Chapter 3 — Central nervous system',href:ret('/lecture/chapitre-3?lang=en','p-rop-7')},
+ {type:'rop',body:['Level 1 places intestinal symptoms within their central integration.']},
+ {type:'sub',text:'12.3. Level 2 — Autonomic regulation and adaptation'},
+ {type:'para',text:'Level 2 is of major importance for the small intestine. It combines extrinsic autonomic pathways with the enteric nervous system and functional interfaces of digestion.'},
+ {type:'bullets',items:['Vagus nerve.','Thoracolumbar sympathetic system and splanchnic nerves.','Coeliac plexus.','Superior mesenteric plexus.','ANS–ENS interface: Auerbach’s and Meissner’s plexuses.','Diaphragm as a functional interface.']},
+ {type:'para',text:'Depending on testing, functional support may include the liver and portal system, pancreas, duodenum and, in certain adaptive contexts, adrenal glands. These are not mandatory stages in treatment of the small intestine.'},
+ {type:'xref',label:'See Chapter 4 — Autonomic nervous system',href:ret('/lecture/chapitre-4?lang=en','p-rop-13')},
+ {type:'xref',label:'See Chapter 8 — Diaphragm',href:ret('/lecture/chapitre-8?lang=en','p-rop-14')},
+ {type:'rop',body:['Level 2 addresses autonomic and enteric coordination of motility, secretions and digestive adaptation. Work on the liver, portal system or pancreas remains functional support selected according to clinical context.']},
+ {type:'sub',text:'12.4. Level 3 — Locoregional visceral regulation'},
+ {type:'para',text:'Level 3 is the anatomical core of the intestinal protocol. It combines the intestine’s own zone with only the relevant regional components.'},
+ {type:'bullets',items:['Jejunal and ileal loops.','Mesentery.','Root of the mesentery.','Peritoneum and intervisceral gliding.','Duodenojejunal junction.','Ileocaecal junction.','Relationships with the colon, kidneys, ureters and, caudally, pelvic organs.','Mesenteric vascular supply when justified by the regional context.']},
+ {type:'figure',src:'/chapter-14/EN/Cartography/figure-14-02_EN.png',caption:'Photo: Root of the mesentery — duodenojejunal junction to umbilicus',alt:'Foot landmark for the root of the mesentery between the duodenojejunal junction and the umbilicus',orientation:'portrait'},
+ {type:'figure',src:'/chapter-14/EN/Cartography/figure-14-04_EN.png',caption:'Photo: Root of the mesentery — ileocaecal valve to umbilicus',alt:'Foot landmark for the root of the mesentery between the ileocaecal valve and the umbilicus',orientation:'portrait'},
+ {type:'figure',src:'/chapter-14/EN/Cartography/figure-14-06_EN.png',caption:'Photo: Jejunum — superior and inferior boundaries',alt:'Foot landmark for the jejunum on the left foot',orientation:'portrait'},
+ {type:'figure',src:'/chapter-14/EN/Cartography/figure-14-08_EN.png',caption:'Photo: Ileum — superior and inferior boundaries',alt:'Foot landmark for the ileum on the right foot',orientation:'portrait'},
+ {type:'xref',label:'See Chapter 7 — Abdominal and peritoneal regional foundation',href:ret('/lecture/chapitre-7?lang=en','p-rop-23')},
+ {type:'rop',body:['Level 3 places the intestine within its mesenteric and peritoneal environment. Neither the whole abdominal cavity nor the whole root of the mesentery is treated systematically.']},
+ {type:'sub',text:'12.5. Level 4 — Viscerosomatic integration and the brain–gut axis'},
+ {type:'para',text:'Viscerosomatic aspect. Depending on testing, assessment may include the thoracolumbar junction, T9–T11 segmental territories with predominance at T10, abdominal wall, lumbar region, psoas, quadratus lumborum and pelvis when the presentation extends towards the abdominopelvic region.'},
+ {type:'para',text:'Brain–gut axis. Stress, attention to digestive sensations, visceral hypersensitivity, motility, sleep and emotional experience may influence one another. This interpretation replaces any “intestinal personality” typology.'},
+ {type:'figure',src:'/chapter-14/EN/Cartography/figure-14-09_EN.png',caption:'Photo: Viscero-emotional balance — small intestine',alt:'Viscero-emotional balancing technique for the small intestine',orientation:'portrait'},
+ {type:'xref',label:'See Chapter 3 — Central nervous system',href:ret('/lecture/chapitre-3?lang=en','p-rop-29')},
+ {type:'xref',label:'See Chapter 5 — Stress mechanism',href:ret('/lecture/chapitre-5?lang=en','p-rop-30')},
+ {type:'rop',body:['Level 4 integrates somatic convergences and emotional context without automatically attributing a digestive disorder to a psychological origin.']},
+ {type:'sub',text:'12.6. Associated support according to testing'},
+ {type:'bullets',items:['Duodenum: proximal digestive continuity.','Liver and portal system: absorption and portal circulation.','Pancreas: contribution to digestion.','Colon: functional continuity and ileocaecal junction.','Diaphragm: abdominal dynamics.','Pelvis: only when the presentation extends towards the pelvic region.']},
+ {type:'para',text:'These territories are associated supports, not a systematic list.'},
+ {type:'sub',text:'12.7. Clinical interpretation'},
+ {type:'bullets',items:['Functional transit disorders or bloating: Level 2 + Level 3 intestinal zone + brain–gut axis according to context.','Abdominal sequelae, adhesions or loss of regional mobility after medical exclusion: intestine + mesentery/root + Chapter 7 regional foundation + somatic Level 4 if necessary.','Diagnosed Crohn’s or another inflammatory disease: intervention only as symptomatic support, prioritising medical follow-up and prudent level selection according to symptoms and terrain.']},
+ {type:'note',label:'Safety principle',body:['A sensitive reflex zone or palpatory change is not a diagnostic test for obstruction, infection, inflammatory disease, tumour or another intestinal disorder. Fever, blood in stools, persistent vomiting, unexplained weight loss, dehydration, severe pain or cessation of stool and gas require medical assessment.']}
+]},
+{id:'relations',title:'9–11. Relationships and advice',blocks:[
+ {type:'sub',text:'9. Viscerosomatic relationships'},
+ {type:'bullets',items:['Vertebral restrictions from T10 to T12 and their ribs.','L1 and L2.']},
+ {type:'sub',text:'10. Viscero-emotional relationships'},
+ {type:'para',text:'The abdomen may be a site of somatic expression of emotional tension. Through the brain–gut axis, stress may modulate motility, secretions and visceral sensitivity. Increased sympathetic activation with reduced vagal regulation may therefore contribute to the onset or worsening of certain digestive symptoms.'},
+ {type:'para',text:'Clinically, it is often difficult to distinguish functional manifestations specific to the small intestine from those of the colon. The mucosa, intestinal immune system and enteric nervous system form a neuro-immuno-endocrine interface in constant communication with the brain.'},
+ {type:'para',text:'Some people with chronic digestive disorders also report fatigue, anxiety, irritability, sleep disturbance or bodily hypersensitivity. These manifestations are variable and non-specific. They do not define an intestinal personality and must be considered in each person’s medical, emotional and social context.'},
+ {type:'para',text:'In ROP, exploration of emotional tension may complement functional assessment without automatically attributing digestive symptoms to a psychological origin and without replacing medical diagnosis.'},
+ {type:'sub',text:'11. Advice'},
+ {type:'para',text:'The small intestine reflects emotional and psychological tensions. Intestinal spasms restrict the lumbar spine. Prefer a varied, balanced diet without excessive carbohydrates or animal protein. Do not exercise during digestion.'}
+]}
+],clinicalCase:{src:'/chapter-14/EN/Chapter14 Cas Clinique EN.png',caption:'Clinical case — Chapter 14',alt:'Clinical case: small intestine in ROP.'}}

@@ -6,6 +6,7 @@ import SlideSyncReader from '@/components/SlideSyncReader'
 import { getChapter } from '@/content/registry'
 import { getServerLang } from '@/app/i18n/serverLang'
 import { translations } from '@/app/i18n/translations'
+import { englishReaderMetadata } from '@/lib/readerDocumentMetadata'
 import {
   chapter3ReworkSlides as chapter3Slides,
   chapter3ReworkSlidesEn as chapter3SlidesEn,
@@ -13,10 +14,22 @@ import {
   chapter3ReworkSlideAnchorsEn as chapter3SlideAnchorsEn,
 } from '@/content/chapter3-rework.slidesync'
 
-export const metadata: Metadata = {
+const defaultMetadata: Metadata = {
   title: 'Chapitre 3 — Lecture synchronisée · R.O.P. · Guy Boitout',
   description: 'Lecture combinée : le texte du chapitre 3 (système nerveux central) et les diapositives de synthèse affichés ensemble, synchronisés au fil de la lecture.',
   robots: { index: false, follow: false },
+}
+
+export async function generateMetadata({
+  searchParams,
+}: {
+  searchParams: Promise<{ lang?: string }>
+}): Promise<Metadata> {
+  const { lang: langParam } = await searchParams
+  const lang = await getServerLang(langParam)
+  if (lang !== 'en') return defaultMetadata
+  const { chapter } = getChapter('chapter-3', 'en')
+  return englishReaderMetadata(chapter, 'synchronized', defaultMetadata)
 }
 
 export default async function Chapitre3SyncPage({
@@ -31,7 +44,6 @@ export default async function Chapitre3SyncPage({
 
   const { lang: langParam } = await searchParams
   const lang = await getServerLang(langParam)
-
   const { chapter } = getChapter('chapter-3', lang)
   const hasEnglishEdition = lang === 'en'
   return (

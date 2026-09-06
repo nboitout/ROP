@@ -117,7 +117,7 @@ export default async function FondementsNeuroAnatomiquesPage({
     <main className="nap-root">
       <div className="nap-top">
         <Link href={localizedHref('/', lang)} className="nap-home">← {isEnglish ? 'Back to home' : 'Retour à l’accueil'}</Link>
-        {xrefBack && <Link href={xrefBack} className="btn b-out nap-xref-back">← {xrefBackLabel}</Link>}
+        {xrefBack && <a href={xrefBack} className="btn b-out nap-xref-back">← {xrefBackLabel}</a>}
       </div>
       <article className="nap-article">
         <header className="nap-hero">

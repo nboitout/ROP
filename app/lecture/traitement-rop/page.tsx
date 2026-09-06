@@ -1,3 +1,4 @@
+import { englishReaderMetadata } from '@/lib/readerDocumentMetadata'
 import { cookies } from 'next/headers'
 import { redirect } from 'next/navigation'
 import { canReadFreeChapter, canReadPaidChapter } from '@/lib/access'
@@ -32,10 +33,22 @@ const ANCHORS: Record<Lang, typeof chapter2SlideAnchors> = {
   th: chapter2SlideAnchors,
 }
 
-export const metadata: Metadata = {
+const defaultMetadata: Metadata = {
   title: 'Chapitre 2 — Traitement par la R.O.P. · Guy Boitout',
   description: 'Technique, modalités, hiérarchisation des traitements, indications et contre-indications de la Réflexothérapie Occipito-Podale.',
   robots: { index: false, follow: false },
+}
+
+export async function generateMetadata({
+  searchParams,
+}: {
+  searchParams: Promise<{ lang?: string }>
+}): Promise<Metadata> {
+  const { lang: langParam } = await searchParams
+  const lang = await getServerLang(langParam)
+  if (lang !== 'en') return defaultMetadata
+  const { chapter } = getChapter('chapter-2', 'en')
+  return englishReaderMetadata(chapter, 'synchronized', defaultMetadata)
 }
 
 export default async function TraitementRopPage({

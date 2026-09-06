@@ -1,6 +1,6 @@
 import { permanentRedirect } from 'next/navigation'
+import { retiredChapterRedirectUrl, type RetiredChapterSearchParams } from '@/lib/retiredChapterRedirect'
 
-export default async function RetiredChapter3Rework({ searchParams }: { searchParams: Promise<{ lang?: string }> }) {
-  const { lang = 'fr' } = await searchParams
-  permanentRedirect(`/lecture/chapitre-3?lang=${lang}`)
+export default async function RetiredChapter3Rework({ searchParams }: { searchParams: Promise<RetiredChapterSearchParams> }) {
+  permanentRedirect(retiredChapterRedirectUrl(3, await searchParams))
 }

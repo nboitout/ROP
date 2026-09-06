@@ -36,7 +36,7 @@ const privateReflexPhoto = (
   orientation: 'landscape' | 'portrait' = 'landscape',
 ): Block => ({
   type: 'figure',
-  src: `/chapter-4/rework-reflex/slide-${slide}.png`,
+  src: `/chapter-4/FR/cartographies/slide-${slide}.png`,
   caption: `Photo : ${caption}`,
   alt: `Repère podal — ${caption}`,
   orientation,
@@ -738,7 +738,7 @@ export const chapter4ReworkFr: Chapter = { slug: 'chapter-4-rework', number: '4'
         "type": "xref",
         "label": "Voir la référence dans le chapitre 0",
         "text": "Fondements neuro-anatomiques de la ROP",
-        "href": "/lecture/fondements-neuro-anatomiques?lang=fr"
+        "href": "/fondements-neuro-anatomiques?lang=fr"
       }
     ]
   },

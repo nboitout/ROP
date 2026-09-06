@@ -1,3 +1,4 @@
+import { englishReaderMetadata } from '@/lib/readerDocumentMetadata'
 import { cookies } from 'next/headers'
 import { redirect } from 'next/navigation'
 import { canReadPaidChapter } from '@/lib/access'
@@ -8,10 +9,22 @@ import { getServerLang } from '@/app/i18n/serverLang'
 import { translations } from '@/app/i18n/translations'
 import { chapter8Slides, chapter8SlidesEn, chapter8SlideAnchors, chapter8SlideAnchorsEn } from '@/content/chapter8.slidesync'
 
-export const metadata: Metadata = {
+const defaultMetadata: Metadata = {
   title: 'Chapitre 8 — Lecture synchronisée · R.O.P. · Guy Boitout',
   description: 'Lecture combinée : le texte du chapitre 8 (diaphragme) et les diapositives de synthèse affichés ensemble, synchronisés au fil de la lecture.',
   robots: { index: false, follow: false },
+}
+
+export async function generateMetadata({
+  searchParams,
+}: {
+  searchParams: Promise<{ lang?: string }>
+}): Promise<Metadata> {
+  const { lang: langParam } = await searchParams
+  const lang = await getServerLang(langParam)
+  if (lang !== 'en') return defaultMetadata
+  const { chapter } = getChapter('chapter-8', 'en')
+  return englishReaderMetadata(chapter, 'synchronized', defaultMetadata)
 }
 
 export default async function Chapitre8SyncPage({

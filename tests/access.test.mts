@@ -53,9 +53,28 @@ test('a reflex-zone cross-reference keeps an existing precise reflex destination
   assert.equal(url.searchParams.get('xrefBack'), '/lecture/chapitre-4-rework?lang=fr#p-zones-reflexes-podales-59')
 })
 
-test('a legacy cross-chapter return route is preserved', () => {
+test('the rendered source replaces stale and duplicate authored return parameters', () => {
   const legacy = '/lecture/chapitre-4?lang=fr&xrefBack=%2Flecture%2Fchapitre-7%23p-old&xrefBackLabel=Retour%20au%20chapitre%207#sec-innervation'
-  assert.equal(readerXrefHref(legacy, 'chapter-8', false, 'p-new', 'fr'), legacy)
+  const rendered = new URL(readerXrefHref(legacy, 'chapter-8', false, 'p-new', 'fr'), 'https://example.test')
+  assert.equal(rendered.searchParams.get('xrefBack'), '/lecture/chapitre-8?lang=fr#p-new')
+  assert.equal(rendered.searchParams.get('xrefBackLabel'), 'Retour au chapitre 8')
+  assert.equal(rendered.searchParams.getAll('xrefBack').length, 1)
+  assert.equal(rendered.searchParams.getAll('xrefBackLabel').length, 1)
+  assert.equal(rendered.hash, '#sec-innervation')
+})
+
+test('classic and synchronized readers return to their actual originating routes', () => {
+  const authored = '/lecture/chapitre-9?lang=fr#p-anatomie-10'
+  const classic = new URL(
+    readerXrefHref(authored, 'chapter-8', false, 'p-anatomie-2', 'fr', '/chapitre-8'),
+    'https://example.test',
+  )
+  const synchronized = new URL(
+    readerXrefHref(authored, 'chapter-8', false, 'p-anatomie-2', 'fr', '/lecture/chapitre-8'),
+    'https://example.test',
+  )
+  assert.equal(classic.searchParams.get('xrefBack'), '/chapitre-8?lang=fr#p-anatomie-2')
+  assert.equal(synchronized.searchParams.get('xrefBack'), '/lecture/chapitre-8?lang=fr#p-anatomie-2')
 })
 
 test('a signed session round-trips', async () => {

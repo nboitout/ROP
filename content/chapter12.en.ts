@@ -3,7 +3,7 @@
 
 import type { Chapter } from './types'
 
-export const chapter12En: Chapter = {
+const chapter12EnDraft: Chapter = {
   "slug": "chapter-12",
   "number": "12",
   "title": "Pancreas",
@@ -1114,4 +1114,215 @@ export const chapter12En: Chapter = {
       ]
     }
   ]
+}
+
+const draftSection = (id: string) => {
+  const section = chapter12EnDraft.sections.find((candidate) => candidate.id === id)
+  if (!section) throw new Error(`Missing Chapter 12 English draft section: ${id}`)
+  return section
+}
+
+const paragraphText = (sectionId: string, index: number) => {
+  const block = draftSection(sectionId).blocks[index]
+  if (block.type !== 'para') throw new Error(`Expected paragraph at ${sectionId}:${index}`)
+  return block.text
+}
+
+const translatedXref = (
+  target: string,
+  origin: string,
+  label: string,
+  text?: string,
+  targetHash = '',
+) => ({
+  type: 'xref' as const,
+  label,
+  ...(text ? { text } : {}),
+  href: `${target}?lang=en&xrefBack=${encodeURIComponent(`/lecture/chapitre-12?lang=en#${origin}`)}&xrefBackLabel=${encodeURIComponent('Back to Chapter 12')}${targetHash}`,
+})
+
+const anatomy = draftSection('anatomie').blocks
+const innervation = draftSection('innervation').blocks
+const physiology = draftSection('physiologie').blocks
+const pathology = draftSection('pathologies-courantes').blocks
+const indications = draftSection('indications').blocks
+const somatic = draftSection('relations-viscero-somatiques').blocks
+const reflex = draftSection('zones-reflexes-podales').blocks
+
+/**
+ * Canonical English edition. The French source controls section order, block
+ * structure, figures, and cross-reference placement; the draft above remains
+ * translation material only.
+ */
+export const chapter12En: Chapter = {
+  slug: 'chapter-12',
+  number: '12',
+  title: 'The Pancreas',
+  sections: [
+    draftSection('presentation'),
+    draftSection('situation'),
+    { id: 'anatomie', title: '3. Anatomy', blocks: anatomy.slice(0, 24) },
+    {
+      id: 'moyens-de-fixite',
+      title: '3.6. Means of fixation',
+      blocks: [
+        ...anatomy.slice(25, 33),
+        translatedXref(
+          '/lecture/chapitre-1',
+          'p-moyens-de-fixite-8',
+          'See the reference in Chapter 1',
+          'Serous membranes: gliding and pressures',
+          '#p-articulations-viscerales-3',
+        ),
+      ],
+    },
+    draftSection('rapports'),
+    draftSection('vascularisation'),
+    { id: 'innervation', title: '6. Innervation', blocks: innervation.slice(0, 7) },
+    {
+      id: 'interet-en-rop',
+      title: 'Relevance to ROP',
+      blocks: [{ type: 'rop', body: [paragraphText('innervation', 8), paragraphText('innervation', 9)] }],
+    },
+    {
+      id: 'physiologie',
+      title: '7. Physiology',
+      blocks: [
+        ...physiology.slice(0, 6),
+        { type: 'bullets', items: [6, 7, 8].map((index) => paragraphText('physiologie', index)) },
+        physiology[9],
+        physiology[10],
+        physiology[11],
+        { type: 'bullets', items: [12, 13, 14, 15].map((index) => paragraphText('physiologie', index)) },
+      ],
+    },
+    {
+      id: 'interet-en-rop-2',
+      title: '7.2. Endocrine pancreas',
+      blocks: [
+        { type: 'rop', body: [paragraphText('physiologie', 17), paragraphText('physiologie', 18)] },
+        ...physiology.slice(19, 40),
+        translatedXref(
+          '/lecture/chapitre-5',
+          'p-interet-en-rop-2-22',
+          'See Chapter 5 — Stress Mechanisms',
+          undefined,
+          '#p-la-double-reponse-au-stresseur-urgence-et-soutien-4',
+        ),
+        ...physiology.slice(41, 46),
+        translatedXref(
+          '/lecture/chapitre-14',
+          'p-interet-en-rop-2-28',
+          'See Chapter 14 — Small Intestine: dysbiosis',
+          undefined,
+          '#p-pathologies-7',
+        ),
+        ...physiology.slice(47, 50),
+      ],
+    },
+    draftSection('interet-en-rop-3'),
+    {
+      id: 'pathologies-courantes',
+      title: '9. Common disorders',
+      blocks: [
+        ...pathology.slice(0, 5),
+        { type: 'bullets', items: Array.from({ length: 10 }, (_, offset) => paragraphText('pathologies-courantes', offset + 5)) },
+        ...pathology.slice(15, 19),
+        { type: 'bullets', items: [19, 20].map((index) => paragraphText('pathologies-courantes', index)) },
+        ...pathology.slice(21, 38),
+        { type: 'bullets', items: [38, 39, 40].map((index) => paragraphText('pathologies-courantes', index)) },
+        ...pathology.slice(41, 55),
+        { type: 'bullets', items: [55, 56, 57].map((index) => paragraphText('pathologies-courantes', index)) },
+        ...pathology.slice(58, 65),
+      ],
+    },
+    {
+      id: 'indications',
+      title: '10. Indications: functional disorders',
+      blocks: [
+        indications[0],
+        {
+          type: 'bullets',
+          items: [
+            'Hyperinsulinaemia and hypoinsulinaemia.',
+            ...Array.from({ length: 9 }, (_, offset) => paragraphText('indications', offset + 2)),
+          ],
+        },
+        translatedXref(
+          '/lecture/chapitre-5',
+          'p-indications-2',
+          'See the reference in Chapter 5',
+          'Stress Mechanisms',
+          '#p-la-double-reponse-au-stresseur-urgence-et-soutien-1',
+        ),
+      ],
+    },
+    {
+      id: 'relations-viscero-somatiques',
+      title: '11. Viscerosomatic relationships',
+      blocks: [{ type: 'bullets', items: somatic.map((_, index) => paragraphText('relations-viscero-somatiques', index)) }],
+    },
+    {
+      ...draftSection('relations-viscero-emotionnelles'),
+      blocks: [
+        ...draftSection('relations-viscero-emotionnelles').blocks.slice(0, 2),
+        {
+          type: 'para',
+          text: 'Physiologically, stress and emotions can alter the body’s autonomic, neuroendocrine, and metabolic responses. These general mechanisms are established; however, attributing a particular emotion to a specific organ is not a demonstrated physiological relationship.',
+        },
+      ],
+    },
+    {
+      id: 'zones-reflexes-podales',
+      title: '13. ROP reflex zones',
+      blocks: [
+        {
+          type: 'note',
+          label: 'Interpretive principle',
+          body: [paragraphText('zones-reflexes-podales', 0).replace(/^INTERPRETIVE PRINCIPLE\s*—\s*/, '')],
+        },
+        ...reflex.slice(1, 4),
+        translatedXref('/lecture/chapitre-3', 'p-zones-reflexes-podales-4', 'See Chapter 3 — Central Nervous System', undefined, '#sec-presentation'),
+        translatedXref('/lecture/chapitre-5', 'p-zones-reflexes-podales-5', 'See Chapter 5 — Stress Mechanisms', undefined, '#sec-le-stress-une-reponse-d-adaptation'),
+        ...reflex.slice(5, 8),
+        translatedXref('/lecture/chapitre-4', 'p-zones-reflexes-podales-9', 'See Chapter 4 — Autonomic Nervous System', undefined, '#sec-organisation-du-sna'),
+        ...reflex.slice(9, 12),
+        { type: 'sub', text: paragraphText('zones-reflexes-podales', 12) },
+        reflex[13],
+        {
+          type: 'figure',
+          src: '/chapter-12/EN/cartography/figure-12-02-V2.png',
+          caption: 'Photo: Pancreas — head and neck',
+          alt: 'Plantar landmark for the head and neck of the pancreas',
+          orientation: 'portrait',
+        },
+        {
+          type: 'figure',
+          src: '/chapter-12/EN/cartography/figure-12-04-V2.png',
+          caption: 'Photo: Pancreas — body and tail',
+          alt: 'Plantar landmark for the body and tail of the pancreas',
+          orientation: 'portrait',
+        },
+        {
+          type: 'rop',
+          body: [paragraphText('zones-reflexes-podales', 18).replace(/^RELEVANCE TO ROP\s*—\s*/, '')],
+        },
+        reflex[19],
+        translatedXref('/lecture/chapitre-7', 'p-zones-reflexes-podales-19', 'See Chapter 7 — Abdominal and Peritoneal Regional Foundation', undefined, '#sec-zones-reflexes-podales'),
+        translatedXref('/lecture/chapitre-10', 'p-zones-reflexes-podales-20', 'See Chapter 10 — Duodenum', undefined, '#sec-presentation'),
+        translatedXref('/lecture/chapitre-13', 'p-zones-reflexes-podales-21', 'See Chapter 13 — Spleen', undefined, '#sec-presentation'),
+        ...reflex.slice(21, 24),
+        { type: 'sub', text: paragraphText('zones-reflexes-podales', 24) },
+        reflex[25],
+        translatedXref('/lecture/chapitre-3', 'p-zones-reflexes-podales-27', 'See Chapter 3 — Central Nervous System', undefined, '#sec-presentation'),
+        translatedXref('/lecture/chapitre-5', 'p-zones-reflexes-podales-28', 'See Chapter 5 — Stress Mechanisms', undefined, '#sec-le-stress-une-reponse-d-adaptation'),
+        ...reflex.slice(27, 29),
+        {
+          type: 'note',
+          label: 'Safety principle',
+          body: [paragraphText('zones-reflexes-podales', 29).replace(/^SAFETY PRINCIPLE\s*—\s*/, '')],
+        },
+      ],
+    },
+  ],
 }

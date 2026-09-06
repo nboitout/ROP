@@ -1,6 +1,8 @@
 // Chapter 4 — private reworked-edition slide ↔ text map.
 // The synthesis assets are isolated from the published Chapter 4 deck.
 
+import { chapter4ReworkFr } from './chapter4-rework.fr'
+
 const synthesis = (file: number, title: string) => ({
   src: `/chapter-4/FR/slides/slide-${String(file).padStart(2, '0')}.png`,
   title,
@@ -101,6 +103,22 @@ export const chapter4ReworkSlidesEn = [
   synthesisEn(33, 'The adrenal glands and stress'),
   synthesisEn(34, 'Three coordinated modes of visceral regulation'),
   synthesisEn(35, 'ANS foot reflex zones'),
+  { src: '/chapter-4/EN/IMAGES/NCH 4 EN IMG 33 V3.png', title: 'ROP Cartography: Cephalic Parasympathetic Territory' },
+  { src: '/chapter-4/EN/IMAGES/NCH 4 EN IMG 34 V3.png', title: 'ROP Cartography: Vagus Nerve X in the Medulla Oblongata' },
+  { src: '/chapter-4/EN/IMAGES/NCH 4 EN IMG 35 V3.png', title: 'ROP Cartography: Vagus Nerve X in the Jugular Foramen' },
+  { src: '/chapter-4/EN/IMAGES/NCH 4 EN IMG 36 V3.png', title: 'ROP Cartography: Carotid Sinus' },
+  { src: '/chapter-4/EN/IMAGES/NCH 4 EN IMG 37 V3.png', title: 'ROP Cartography: Left Territory of Vagus Nerve X' },
+  { src: '/chapter-4/EN/IMAGES/NCH 4 EN IMG 38 V3.png', title: 'ROP Cartography: Right Territory of Vagus Nerve X' },
+  { src: '/chapter-4/EN/IMAGES/NCH 4 EN IMG 39 V3.png', title: 'ROP Cartography: Oesophageal Hiatus and Vagus Nerves' },
+  { src: '/chapter-4/EN/IMAGES/NCH 4 EN IMG 40 V3.png', title: 'ROP Cartography: Right Abdominal Territory of Vagus Nerve X' },
+  { src: '/chapter-4/EN/IMAGES/NCH 4 EN IMG 41 V3.png', title: 'ROP Cartography: Pelvic or Sacral Parasympathetic Origin' },
+  { src: '/chapter-4/EN/IMAGES/NCH 4 EN IMG 42 V3.png', title: 'ROP Cartography: Spinal Origin of the Sympathetic System' },
+  { src: '/chapter-4/EN/IMAGES/NCH 4 EN IMG 43 V3.png', title: 'ROP Cartography: Thoracic Sympathetic Chain' },
+  { src: '/chapter-4/EN/IMAGES/NCH 4 EN IMG 44 V3.png', title: 'ROP Cartography: Cervical Sympathetic Chain' },
+  { src: '/chapter-4/EN/IMAGES/NCH 4 EN IMG 45 V3.png', title: 'ROP Cartography: Lumbar Sympathetic Chain' },
+  { src: '/chapter-4/EN/IMAGES/NCH 4 EN IMG 46 V3.png', title: 'ROP Cartography: Sacrococcygeal Sympathetic Chain' },
+  { src: '/chapter-4/EN/IMAGES/NCH 4 EN IMG 47 V3.png', title: 'ROP Cartography: Inferior Hypogastric Plexus, Anterior Fibres' },
+  { src: '/chapter-4/EN/IMAGES/NCH 4 EN IMG 48 V3.png', title: 'ROP Cartography: Inferior Hypogastric Plexus, Middle and Posterior Fibres' },
 ]
 
 export const chapter4ReworkSlideAnchors = [
@@ -169,40 +187,25 @@ export const chapter4ReworkSlideAnchors = [
   { sectionId: 'zones-reflexes-podales', blockIndex: 54, slide: 48, ...endAt('zones-reflexes-podales', 54) },
 ]
 
-export const chapter4ReworkSlideAnchorsEn = [
-  { sectionId: 'presentation', blockIndex: -1, slide: 1 },
-  { sectionId: 'presentation', blockIndex: 0, slide: 2 },
-  { sectionId: 'presentation', blockIndex: 0, slide: 3 },
-  { sectionId: 'presentation', blockIndex: 1, slide: 4 },
-  { sectionId: 'presentation', blockIndex: 6, slide: 5 },
-  { sectionId: 'presentation', blockIndex: 8, slide: 6 },
-  { sectionId: 'presentation', blockIndex: 10, slide: 7 },
-  { sectionId: 'presentation', blockIndex: 12, slide: 8 },
-  { sectionId: 'presentation', blockIndex: 15, slide: 9 },
-  { sectionId: 'presentation', blockIndex: 21, slide: 10 },
-  { sectionId: 'organisation-du-sna', blockIndex: -1, slide: 11 },
-  { sectionId: 'parasympathique-viscero-moteur', blockIndex: -1, slide: 12 },
-  { sectionId: 'parasympathique-viscero-moteur', blockIndex: 1, slide: 13, gapBefore: 'half' as const },
-  { sectionId: 'parasympathique-viscero-moteur', blockIndex: 6, slide: 14 },
-  { sectionId: 'parasympathique-viscero-moteur', blockIndex: 8, slide: 15 },
-  { sectionId: 'parasympathique-viscero-moteur', blockIndex: 23, slide: 16 },
-  { sectionId: 'parasympathique-viscero-moteur', blockIndex: 24, slide: 17 },
-  { sectionId: 'nerf-vague-viscero-sensitif', blockIndex: -1, slide: 18, ...endAt('sympathique-viscero-moteur', -1) },
-  { sectionId: 'sympathique-viscero-moteur', blockIndex: 1, slide: 19 },
-  { sectionId: 'sympathique-viscero-moteur', blockIndex: 4, slide: 20 },
-  { sectionId: 'sympathique-viscero-moteur', blockIndex: 6, slide: 21 },
-  { sectionId: 'sympathique-viscero-moteur', blockIndex: 13, slide: 22 },
-  { sectionId: 'sympathique-viscero-moteur', blockIndex: 24, slide: 23 },
-  { sectionId: 'sympathique-viscero-moteur', blockIndex: 32, slide: 24 },
-  { sectionId: 'sympathique-somato-viscero-sensitif', blockIndex: -1, slide: 25 },
-  { sectionId: 'chaine-plexique-prevertebrale-ou-pre-aortique', blockIndex: 1, slide: 26 },
-  { sectionId: 'plexus-previsceral-pelvien', blockIndex: -1, slide: 27 },
-  { sectionId: 'plexus-previsceral-pelvien', blockIndex: 2, slide: 28 },
-  { sectionId: 'systeme-nerveux-intrinseque-ou-enterique-sne', blockIndex: -1, slide: 29 },
-  { sectionId: 'glandes-surrenales', blockIndex: -1, slide: 30 },
-  { sectionId: 'glandes-surrenales', blockIndex: 6, slide: 31, ...endAt('glandes-surrenales', 6) },
-  { sectionId: 'zones-reflexes-podales', blockIndex: -1, slide: 32 },
-]
+const englishContentIndex = (sectionId: string, frenchBlockIndex: number) => {
+  if (frenchBlockIndex < 0) return frenchBlockIndex
+  const section = chapter4ReworkFr.sections.find((candidate) => candidate.id === sectionId)
+  if (!section) return frenchBlockIndex
+  return section.blocks.slice(0, frenchBlockIndex + 1).filter((block) => block.type !== 'xref').length - 1
+}
+
+// English references are attached to content blocks through `xrefs`, so map
+// canonical French raw indices onto the equivalent non-xref English indices.
+export const chapter4ReworkSlideAnchorsEn = chapter4ReworkSlideAnchors.map((anchor) => ({
+  ...anchor,
+  blockIndex: englishContentIndex(anchor.sectionId, anchor.blockIndex),
+  ...(anchor.end ? {
+    end: {
+      ...anchor.end,
+      blockIndex: englishContentIndex(anchor.end.sectionId, anchor.end.blockIndex),
+    },
+  } : {}),
+}))
 
 export const chapter4ReworkHalfBreaks = [
   { sectionId: 'chaine-plexique-prevertebrale-ou-pre-aortique', blockIndex: -1 },

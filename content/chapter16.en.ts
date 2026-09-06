@@ -3,7 +3,7 @@
 
 import type { Chapter } from './types'
 
-export const chapter16En: Chapter = {
+const chapter16EnDraft: Chapter = {
   "slug": "chapter-16",
   "number": "16",
   "title": "Kidneys",
@@ -1098,4 +1098,191 @@ export const chapter16En: Chapter = {
       ]
     }
   ]
+}
+
+// The previous English source was a medically expanded editorial draft.  Keep
+// its reviewed wording above, but export the canonical French block grammar so
+// the bilingual reader has strict structural and informational parity.
+const byId = (id: string) => chapter16EnDraft.sections.find((section) => section.id === id)!
+const p = (text: string): any => ({ type: 'para', text })
+const s = (text: string): any => ({ type: 'sub', text })
+const b = (...items: string[]): any => ({ type: 'bullets', items })
+const r = (...body: string[]): any => ({ type: 'rop', body })
+const f = (src: string, caption: string, alt: string): any => ({ type: 'figure', src, caption, alt, orientation: 'landscape' })
+const n = (label: string, ...body: string[]): any => ({ type: 'note', label, body })
+const textOf = (block: any) => block.text ?? ''
+const itemsOf = (block: any) => block.items ?? []
+
+const situation = byId('situation').blocks as any[]
+const anatomy = byId('anatomie').blocks as any[]
+const relations = byId('rapports').blocks as any[]
+const vascular = byId('vascularisation').blocks as any[]
+const physiology = byId('physiologie').blocks as any[]
+const indications = byId('indications-troubles-fonctionnels').blocks as any[]
+const reflex = byId('zones-reflexes-podales').blocks as any[]
+
+export const chapter16En: Chapter = {
+  ...chapter16EnDraft,
+  title: 'Kidneys',
+  sections: [
+    byId('presentation'),
+    { id: 'situation', title: '2. Location', blocks: [
+      situation[0], b('Anatomical landmarks:'), s('2.1. Dorsal relationships'),
+      b(...itemsOf(situation[1]).filter((item: string) => /kidney:/i.test(item))),
+      s('2.2. Ventral relationships'), situation[3], situation[4],
+    ] },
+    { id: 'anatomie', title: '3. Anatomy', blocks: [
+      anatomy[0], anatomy[1], anatomy[2], r(textOf(anatomy[4])), anatomy[5], anatomy[6],
+      b('Factors maintaining renal position:'), anatomy[8], anatomy[9], anatomy[10],
+      b(textOf(anatomy[11]), ...itemsOf(anatomy[12])), anatomy[13],
+      b(`Nephron: ${textOf(anatomy[15])}`), anatomy[16], anatomy[17],
+    ] },
+    { id: 'rapports', title: '4. Relationships', blocks: [
+      relations[0], b(textOf(relations[1])), relations[2], relations[3],
+      r(textOf(relations[5]), textOf(relations[6]), textOf(relations[7])),
+      s('4.2. Ventral relationships'), b('Right kidney: relationships include:', itemsOf(relations[10])[0]),
+      s('4.2. Ventral relationships'), b(...itemsOf(relations[10]).slice(1), 'Left kidney: relationships include:'),
+      s('4.2. Ventral relationships'), b(...itemsOf(relations[12])),
+    ] },
+    { id: 'vascularisation', title: '5. Vascular Supply', blocks: [
+      vascular[0], vascular[1], vascular[2], vascular[3], vascular[4], vascular[5],
+      r(textOf(vascular[7])), vascular[8],
+    ] },
+    byId('innervation'),
+    { id: 'physiologie', title: '7. Physiology', blocks: [
+      s('7.1. Renal mobility'),
+      p('The psoas muscle forms a true track running obliquely caudally and laterally along which the kidney moves: during inspiration, the diaphragm displaces the kidney caudally. The superior pole is pushed ventrally, while the inferior pole descends obliquely from medial to lateral.'),
+      p('The amplitude of this movement is 3–4 cm. This movement is repeated 20,000 times per day. Motility occurs in the same direction, but more slowly, at a rate of seven times per minute: during “inspiration”, the kidney descends; during “expiration”, it rises.'),
+      s('7.2. Renal functions'),
+      b(
+        'Homeostasis: through their numerous functions, the kidneys help maintain the balance of the internal environment and interact with other organs and systems: the liver, pancreas, heart, lungs, endocrine system, and sympathetic nervous system.',
+        'Urine formation: this depends on two mechanisms: filtration and reabsorption.',
+        'Glomerular filtration: 1,700 L of blood pass through the kidneys each day. Of this, 170 L of plasma, free of cells and proteins, are filtered by the glomeruli to form the initial urine.',
+        'Tubular reabsorption: as the elimination of final urine (or diuresis) is only 1–1.5 L per day, the great majority of the initial urine is subsequently reabsorbed by the renal tubule. This reabsorption enables the body to recover from the glomerular filtrate the substances it requires, which then return to the blood: water, sodium, potassium, calcium, chloride, and phosphate, thereby maintaining blood osmolarity.',
+        'Blood osmolarity corresponds to the concentration of ions that ensures an appropriate level of water in the body (the human body contains approximately 70% water). This reabsorption is controlled by aldosterone, produced by the adrenal cortex. Aldosterone adjusts sodium excretion to the body’s requirements. It therefore contributes to regulation of blood volume.',
+        'Blood volume is the total volume of blood circulating in the body. By adjusting blood volume, the kidney plays a major role in regulating blood pressure.',
+        'Regulation of blood pressure: the kidney contributes to blood-pressure regulation through several complementary mechanisms.',
+        'It acts first through the reabsorption of sodium and water, which directly influences blood volume, that is, the total volume of circulating blood. When blood volume increases, blood pressure tends to rise; when it decreases, blood pressure tends to fall.',
+        'The kidney also acts through the secretion of renin by the juxtaglomerular apparatus. When renal perfusion pressure decreases, or when sodium delivery to the distal tubule falls, renin is released.',
+        'Renin acts on angiotensinogen, produced by the liver, to form angiotensin I. This is then converted into angiotensin II by angiotensin-converting enzyme.',
+        'Angiotensin II causes vasoconstriction and stimulates aldosterone secretion by the adrenal cortex. Aldosterone promotes the reabsorption of sodium and, with it, water. This entire system, called the renin–angiotensin–aldosterone system, supports blood pressure when the body detects reduced perfusion or circulating volume.',
+        'Conversely, when blood pressure increases, baroreceptors in the carotid sinus and aortic arch contribute to a reflex response intended to modulate vascular tone and cardiac activity.',
+        'Under the control of the hypothalamus, the posterior pituitary secretes ADH, or antidiuretic hormone. This promotes water reabsorption by the kidney. In the event of ADH deficiency or an inadequate renal response to this hormone, marked polyuria may occur, as in diabetes insipidus.',
+        'Regulation of blood glucose: under normal conditions, glucose is completely reabsorbed. In diabetes mellitus, glucose appears in the urine when the maximum tubular reabsorptive capacity is exceeded (glycosuria). Glycosuria is proportional to blood glucose.',
+        'Regulation of acid–base balance: blood pH is around 7.4. To buffer acidity, the kidneys excrete hydrogen ions (H+) in the urine and retain bicarbonate ions (HCO₃−). At the same time, respiration is activated so that the lungs eliminate carbon dioxide. In persistent acidosis, acid is stored in the body’s connective tissues. Excess acidity increases inflammatory reactions, bone demineralisation, and exaggerated responses to stress.'
+      ),
+      s('Foods that cause acidosis include'),
+      b(
+        'sugar, first and foremost, especially when consumed on an empty stomach;',
+        'alcohol;',
+        'animal fats;',
+        'red meat and offal;',
+        'fried foods.'
+      ),
+      s('Alkaline foods include'),
+      b(
+        'potatoes (but not chips);',
+        'onions and garlic;',
+        'carrots;',
+        'cabbage;',
+        'almonds and hazelnuts;',
+        'lemon, in small quantities.',
+        'Endocrine function: the kidney produces erythropoietin, mainly in specialised interstitial cells of the cortex and outer medulla. This hormone increases red blood cell production. The kidney also activates vitamin D, which contributes to the regulation of blood calcium.'
+      ),
+    ] },
+    byId('pathologies-courantes'),
+    { id: 'indications-troubles-fonctionnels', title: '9. Indications and Functional Disorders', blocks: [
+      b(
+        'functional disorders',
+        'low-back pain at “cockcrow”, around 4 or 5 a.m.;',
+        'morning thirst;',
+        'profound so-called essential fatigue in the morning;',
+        'congested eyes with “bags” under the eyes;',
+        'high blood pressure;',
+        'following a fall onto the back, coccyx, heels, or abdomen;',
+        'microlithiasis (calculi smaller than 5 mm);',
+        'following renal lithiasis and microlithiasis;',
+        'lumbar pain with radiation along the femoral nerve;',
+        'infertility;',
+        'reduced libido;',
+        'joint pain due to excess uric acid;',
+        'urinary infection with “clear urine” (or without fever);',
+        'pregnancy-related low-back pain;',
+        'benign prostatic hypertrophy;',
+        'post-traumatic depression;',
+        'Renal ptosis: strictly speaking, the kidneys have no attachments; their means of fixation depend on their environment.',
+        'The radiological sign of a ptosed kidney is loss of contact between its superior pole and the eleventh rib, causing it to lose the effect of thoracic suction and diaphragmatic attraction.',
+        'Ptosis may be congenital or acquired:',
+        'Congenital (or ectopic) ptosis: the adrenal gland follows the kidney. We have little effect, apart from stimulating the kidney.',
+        'Acquired ptosis: the adrenal gland remains in place. Pain is aggravated by prolonged standing and by drinking a large quantity. It is relieved when lying down. Causes include:',
+        'a fall onto the coccyx or heels;',
+        'abdominal hypotonia;',
+        'following a difficult or overly rapid delivery;',
+        'marked weight loss;',
+        'severe or chronic coughing;',
+        'post-infectious or postoperative adhesions;',
+        'fixation of the eleventh and twelfth ribs, from T10 to L1;',
+        'a psoas problem (psoitis);',
+        'Anterior fixations: the right kidney is more prone to anterior fixation and ptosis. Whether the kidney is ptosed or fixed, however, it has lost its normal mobility.',
+        'Women are more affected by ptosis because of pregnancy, childbirth, uterine retroversion, and menopause. Three degrees of ptosis are distinguished:',
+        'First degree: “intercostal” kidney; irritation of the twelfth intercostal nerve radiates towards the greater trochanter.',
+        'Symptoms: the person holds the flank, has difficulty taking a deep breath, and tolerates coughing and sneezing poorly.',
+        'Second degree: “abdomino-genital” or “lateral femoral cutaneous” kidney.',
+        'Symptoms: irritation of the iliohypogastric, ilioinguinal, and lateral femoral cutaneous nerves of the lumbar plexus radiates to the lower abdominal region, scrotum or labia majora, and lateral aspect of the thigh. The kidney is externally rotated. Traction on the vascular pedicle causes high blood pressure.',
+        'Third degree: “femoral” or “pelvic” kidney; the kidney is dislocated through loss of contact with the liver and diaphragm. It is medially rotated and fixed against the psoas.',
+        'Symptoms:',
+        '• Knee pain without a history of trauma, due to irritation of the femoral nerve.',
+        '• Psoas spasm.',
+        '• Urinary infections.',
+        '• Lithiasis: the ureter becomes kinked and urine flow decreases, promoting lithiasis and urinary infections.',
+        '• Colonic or uterine irritation.',
+        'A urinary infection without an identified cause should prompt consideration of renal ptosis.',
+        'Pregnancy-related low-back pain: it is exceptionally osteoarticular in the parturient.'
+      ),
+      s('9.2. Pregnancy-related low-back pain — causes'),
+      b(
+        'Uterovascular compression;',
+        'pericaecal, sigmoid, or obturator tension;',
+        'sequelae of appendicectomy, with the baby’s head placing strain on the right kidney, right lumbar region, inferior vena cava, and nerves of the lumbar plexus. The parturient is advised to lie on her left side;',
+        'vascular compression by the right common iliac artery on the left common iliac vein (May–Thurner or Cockett syndrome);',
+        'strain on the left kidney.'
+      ),
+      r('The purpose of our reflex action is not to “raise” the ptosed kidney, but to release it from the osteomusculoarticular or visceral mechanical constraints acting upon it.'),
+      s('9.3. Posterior fixations — the left kidney is more prone to posterior fixation: a fall onto the back, a direct blow to the lumbar region, rib trauma, or a vertebral fracture of T12, L1, or L2 causes the kidney to be traumatised against the transverse processes of the lumbar vertebrae. The posterior surface of the renal parenchyma fissures, and the perirenal fat becomes fibrotic after the trauma.'),
+      p('The kidney loses its mobility and the nerves of the lumbar plexus are compressed, causing pain in the lumbar region, iliac crest, trochanteric region, and proximal thigh. Intrauterine devices and erectile difficulties in men often affect the motility of the left kidney.'),
+      p('Muscle spasms of the paravertebral muscles, psoas, and quadratus lumborum are responsible for lumbago occurring during an innocuous effort. The patient believes that the “wrong movement” caused the blockage. In fact, the underlying renal problem was simply on the point of decompensating. Traumatic renal fixations affect men more often.'),
+      r(
+        'The plantar reflex zone of the right kidney is particularly relevant in anterior fixations. Following appendicectomy, the right kidney should be combined with the caecum and right ovary.',
+        'The dorsal reflex zone is particularly relevant in posterior fixations. The left kidney should be combined with the spleen and urogenital region.'
+      ),
+    ] },
+    byId('relations-viscero-somatiques'),
+    byId('relations-viscero-emotionnelles'),
+    { id: 'conseils', title: '12. Advice', blocks: [indications.length && byId('conseils').blocks[1]] },
+    { id: 'zones-reflexes-podales', title: '13. Plantar Reflex Zones', blocks: [
+      reflex[0], b(...reflex.slice(1, 5).map(textOf)), p(textOf(reflex[6])),
+      reflex[7], reflex[8], s(textOf(reflex[9])), b(...reflex.slice(10, 13).map(textOf)),
+      s(textOf(reflex[13])), b(...reflex.slice(14, 17).map(textOf)), s(textOf(reflex[17])), reflex[18],
+      s(textOf(reflex[19])), b(...reflex.slice(20, 23).map(textOf)),
+      s('13.3. Level 3 — Local and regional visceral regulation'),
+      s('13.3.1.1. Plantar surface'), b(...reflex.slice(26, 31).map(textOf)),
+      s('13.3.1.2. Dorsal surface'), b(...reflex.slice(32, 35).map(textOf)),
+      s('13.3.1.3. Combined plantar–dorsal manoeuvre'), b(...reflex.slice(36, 40).map(textOf)),
+      s('13.3.2. Kidney and renal compartment'), b(...reflex.slice(41, 48).map(textOf)),
+      s('13.3.3. Posterior interfaces'), b(...reflex.slice(49, 54).map(textOf)),
+      s('13.3.4. Visceral relationships of the right kidney'), b(...reflex.slice(55, 59).map(textOf)),
+      s('13.3.5. Visceral relationships of the left kidney'), b(...reflex.slice(60, 66).map(textOf)),
+      s('13.3.6. Left renal vein and vascular-genital context'), reflex[67], reflex[68], reflex[69],
+      f('/chapter-16/EN/Cartography/figure-16-02-EN.png', 'Photo: Right kidney and adrenal gland', 'ROP reflex-zone treatment landmark — right kidney and adrenal gland'),
+      f('/chapter-16/EN/Cartography/figure-16-04-EN.png', 'Photo: Left kidney', 'ROP reflex-zone treatment landmark — left kidney'),
+      f('/chapter-16/EN/Cartography/figure-16-06-EN.png', 'Photo: Left adrenal gland', 'ROP reflex-zone treatment landmark — left adrenal gland'),
+      f('/chapter-16/EN/Cartography/figure-16-08-EN.png', 'Photo: Combined kidney manoeuvre', 'ROP reflex-zone treatment landmark — combined kidney manoeuvre'),
+      f('/chapter-16/EN/Cartography/figure-16-10-EN.png', 'Photo: Lumbar plexus, Petit and Grynfeltt triangles', 'ROP reflex-zone treatment landmark — lumbar plexus and dorsal renal window'),
+      s('13.4.1. Viscerosomatic component'), b(...reflex.slice(71, 82).map(textOf)), reflex[82],
+      s(textOf(reflex[83])), reflex[84], p(textOf(reflex[85])),
+      reflex[87], reflex[88], b(...reflex.slice(89, 93).map(textOf)),
+      reflex[93], reflex[94], b(...reflex.slice(95, 99).map(textOf)),
+      n('Safety principle', textOf(reflex[99])),
+    ] },
+  ],
 }

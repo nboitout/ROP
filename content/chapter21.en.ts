@@ -454,3 +454,118 @@ export const chapter21En: Chapter = {
     }
   ]
 }
+
+// Keep the runtime edition structurally aligned with the authoritative final
+// French publication source. The translated Word draft above predates the
+// final reflex-zone hierarchy and therefore needs the same final publication
+// pass that is applied to chapter21.fr.ts.
+const chapter21Situation = chapter21En.sections.find((section) => section.id === 'situation')
+if (chapter21Situation) {
+  chapter21Situation.blocks = [{
+    type: 'bullets',
+    items: ['In both men and women, the external genitalia are attached to the inferior surface of the urogenital triangle of the perineum, with which they are intimately connected.'],
+  }]
+}
+
+const chapter21Innervation = chapter21En.sections.find((section) => section.id === 'innervation')
+if (chapter21Innervation) {
+  chapter21Innervation.blocks = chapter21Innervation.blocks.filter(
+    (block) => block.type !== 'para' || block.text !== '(Figures 4.26 and 21.5)',
+  )
+}
+
+const chapter21Disorders = chapter21En.sections.find((section) => section.id === 'pathologies-courantes')
+if (chapter21Disorders) {
+  chapter21Disorders.blocks = [
+    { type: 'sub', text: '7.1. Gonadal insufficiency' },
+    { type: 'para', text: 'Reduced fertility, decreased libido, dysmenorrhea, premature menopause, and early androgen deficiency in men.' },
+    { type: 'xref', label: 'See the reference in Chapter 5', text: 'Stress mechanisms', href: '/lecture/chapitre-5?lang=en#p-le-syndrome-general-d-adaptation-un-modele-pedagogique-2' },
+    { type: 'sub', text: '7.2. Male sexual dysfunction' },
+    { type: 'para', text: 'Sexual dysfunction is varied and common: loss of libido, episodic sexual performance difficulties, erectile dysfunction, premature ejaculation, inability to ejaculate, and pain during intercourse.' },
+    { type: 'xref', label: 'See the reference in Chapter 16', text: 'Kidneys, venous supply, left kidney', href: '/lecture/chapitre-16?lang=en#p-vascularisation-5' },
+    { type: 'sub', text: '7.3. Female sexual dysfunction' },
+    { type: 'para', text: 'Sexual dysfunction is likewise varied and common: lack of sexual interest (low libido), vaginal dryness, pain during intercourse, vaginismus (painful spasms of the vaginal muscles), and anorgasmia.' },
+    { type: 'sub', text: '7.4. Organic causes' },
+    { type: 'para', text: 'Diabetes mellitus, hyperlipidemia, hypertension, coronary artery disease, stroke, and obesity.' },
+    { type: 'sub', text: '7.5. Psycho-emotional causes' },
+    { type: 'para', text: 'Psycho-emotional factors are discussed in Section 9, “Viscero-emotional Relationships.”' },
+    { type: 'xref', label: 'See the reference in this chapter', text: 'Viscero-emotional Relationships', href: '/lecture/chapitre-21?lang=en#p-relations-viscero-emotionnelles-0' },
+  ]
+}
+
+const chapter21Reflex = chapter21En.sections.find((section) => section.id === 'zones-reflexes-podales')
+if (chapter21Reflex) {
+  chapter21Reflex.title = '10. ROP Reflex Zones'
+  chapter21Reflex.blocks = [
+    { type: 'para', text: 'The locations described below form part of the ROP clinical map. Their selection depends on the history, examination findings, palpatory responses, and the functional disorder under consideration.' },
+    { type: 'para', text: 'For the erectile system, reflex-zone assessment may be organized according to the four levels of the ROP protocol. Distinguishing autonomic pathways, somatic innervation, erectile structures, and central integration helps prevent mechanisms of differing natures from being conflated.' },
+    { type: 'sub', text: '10.1. Level 1 — Regulation by Higher Centers' },
+    { type: 'bullets', items: [
+      'Occipital reflex zones.',
+      'Diencephalon, particularly the hypothalamus, in neuroendocrine and autonomic regulation.',
+      'Central and corticolimbic networks involved in perception, motivation, and emotional context.',
+    ] },
+    { type: 'xref', label: 'See Chapter 3 — Central Nervous System, Level 1: Regulation by Higher Centers', href: '/lecture/chapitre-3?lang=en#sec-zones-reflexes-rop' },
+    { type: 'sub', text: '10.2. Level 2 — Autonomic Regulation and Adaptation' },
+    { type: 'para', text: 'Level 2 is essential to erectile function because erection and certain phases of the sexual response depend on coordination between parasympathetic and sympathetic pathways.' },
+    { type: 'bullets', items: [
+      'Pelvic parasympathetic outflow S2–S4: associated with vasodilation and filling of erectile tissues.',
+      'Thoracolumbar sympathetic outflow: described in this chapter around L1–L3 and involved particularly in the ejaculatory phase.',
+      'Inferior hypogastric plexus and pelvic autonomic networks: a functional crossroads between the sympathetic and parasympathetic pathways supplying the pelvic organs.',
+      'Autonomic coordination: a functional interpretation of the arousal–erection–emission sequence should be favored over isolated stimulation of either the sympathetic or parasympathetic system.',
+    ] },
+    { type: 'xref', label: 'See Chapter 4 — Autonomic Nervous System, particularly the sections on the pelvic parasympathetic outflow, thoracolumbar sympathetic outflow, and pelvic previsceral plexus', href: '/lecture/chapitre-4?lang=en#sec-zones-reflexes-podales' },
+    { type: 'sub', text: '10.3. Level 3 — Local and Regional Visceral Regulation' },
+    { type: 'para', text: 'Level 3 encompasses the erectile structures and their immediate pelvic environment.' },
+    { type: 'sub', text: 'Key Foot Landmarks' },
+    { type: 'bullets', items: [
+      'Pudendal nerve S2–S4: lateral aspect of the heel, corresponding on the ROP map to the sacral plexus and ischial spine region.',
+      'Continuation of the pudendal pathway: plantar aspect of the heel, then the medial border of the ischiopubic ramus.',
+      'Corpora cavernosa and ischiocavernosus muscles: medial border of the ischiopubic rami.',
+      'Erectile organs: medial end of the iliopubic ramus, at the anterior border of the heel.',
+      'Sacrotuberous and sacrospinous ligaments: posterior border of the heels.',
+    ] },
+    { type: 'para', text: 'These locations constitute ROP clinical landmarks. They are subsequently prioritized according to the predominant mechanism and clinical context.' },
+    { type: 'para', text: 'The pudendal nerve is a somatic pathway distinct from the pelvic autonomic pathways. It provides sensation to the external genitalia and contributes to motor control of the striated perineal muscles.' },
+    { type: 'bullets', items: ['Inguinal ligament and inguinal canal.'] },
+    { type: 'figure', src: '/chapter-21/EN/Cartography/figure-21-08.png', caption: 'Photo: inguinal ligament and inguinal canal', alt: 'ROP foot landmark for the inguinal ligament and inguinal canal', orientation: 'landscape' },
+    { type: 'xref', label: 'See Chapter 17 — Pelvic Cavity', href: '/lecture/chapitre-17?lang=en' },
+    { type: 'xref', label: 'See Chapter 19 — Female Genital Organs', href: '/lecture/chapitre-19?lang=en' },
+    { type: 'xref', label: 'See Chapter 20 — Male Genital Organs', href: '/lecture/chapitre-20?lang=en' },
+    { type: 'sub', text: '10.4. Level 4 — Viscerosomatic and Viscero-emotional Integration' },
+    { type: 'para', text: 'The erectile system has a major somatic component mediated by the pudendal nerve and perineal muscles, together with strong integration of bodily, relational, and emotional experience.' },
+    { type: 'sub', text: '10.4.1. Viscerosomatic Integration' },
+    { type: 'bullets', items: [
+      'Pelvic floor.',
+      'Sacrum and coccyx.',
+      'Ischial spine and ischiopubic rami.',
+      'Sacrotuberous and sacrospinous ligaments: posterior border of the heels.',
+      'Greater sciatic foramen, piriformis muscle, sacral plexus, and pudendal nerve.',
+      'Lesser sciatic foramen, obturator muscles, and gemelli muscles.',
+    ] },
+    { type: 'figure', src: '/chapter-21/EN/Cartography/figure-21-02.png', caption: 'Photo: greater sciatic foramen, piriformis muscle, sacral plexus, and pudendal nerve', alt: 'ROP foot landmark for the greater sciatic foramen', orientation: 'landscape' },
+    { type: 'figure', src: '/chapter-21/EN/Cartography/figure-21-04.png', caption: 'Photo: lesser sciatic foramen, obturator muscles, and gemelli', alt: 'ROP foot landmark for the lesser sciatic foramen', orientation: 'landscape' },
+    { type: 'figure', src: '/chapter-21/EN/Cartography/figure-21-06.png', caption: 'Photo: sacrotuberous and sacrospinous ligaments', alt: 'ROP foot landmark for the sacrotuberous and sacrospinous ligaments', orientation: 'landscape' },
+    { type: 'figure', src: '/chapter-21/EN/Cartography/figure-21-10.png', caption: 'Photo: pudendal nerve', alt: 'ROP foot landmark for the pudendal nerve', orientation: 'portrait' },
+    { type: 'sub', text: '10.4.2. Viscero-emotional Balance' },
+    { type: 'para', text: 'It is not always easy to distinguish the respective contributions of physical and psycho-emotional factors to sexual dysfunction in either women or men.' },
+    { type: 'para', text: 'Sexuality encompasses cognitive, emotional, and bodily dimensions. Factors such as stress, low self-esteem, anxiety or performance anxiety, depression, relationship conflict, religious or educational taboos, and a history of sexual trauma may be associated with sexual difficulties and may modulate the individual’s experience, without automatically establishing a psychological cause for the disorder.' },
+    { type: 'bullets', items: [
+      'Limbic system.',
+      'Olfactory nerve (CN I): an associated sensory landmark on the ROP map.',
+    ] },
+    { type: 'xref', label: 'See Chapter 3 — Central Nervous System, for the central and corticolimbic networks', href: '/lecture/chapitre-3?lang=en#sec-zones-reflexes-rop', text: 'See also Section 9, “Viscero-emotional Relationships,” in this chapter.' },
+    { type: 'sub', text: '10.5. Clinical Interpretation According to the Disorder' },
+    { type: 'para', text: 'The hierarchy of levels varies with the presenting complaint and should not be applied as a rigid sequence.' },
+    { type: 'bullets', items: [
+      'Erectile dysfunction: Levels 2, 3, and 4 are frequently important, together with Level 1 when desire, anticipation, or anxiety contributes to the clinical presentation.',
+      'Disorders of arousal or lubrication in women: integration of Levels 2 and 3, with Level 4 when pain, stress, or relationship factors are present.',
+      'Premature ejaculation or difficulty ejaculating: an assessment combining autonomic regulation, pudendal innervation, and the central or emotional context.',
+      'Anorgasmia or orgasmic difficulties: an integrated assessment of somatic, autonomic, central, and relational components should be favored, without reducing orgasm to a single branch of the autonomic nervous system.',
+      'Sexual or perineal pain: organic causes should first be excluded, followed by integrated assessment of the pelvis, pelvic floor, pudendal nerve, and relevant genital structures.',
+    ] },
+    { type: 'note', label: 'Safety Principle', body: [
+      'Erectile, lubrication, ejaculatory, or orgasmic dysfunction, as well as sexual pain, may have a vascular, neurologic, endocrine, medication-related, gynecologic, urologic, or psychological cause. ROP does not replace diagnostic evaluation or medical or sexological management when indicated.',
+    ] },
+  ]
+}

@@ -69,23 +69,4 @@ export const chapter6SlidesEn: SyncSlide[] = [
   { src: '/chapter-6/EN/Images/NCH 6 EN IMG 18.png', title: 'Synthesis: The Polyvagal ROP Map' },
 ]
 
-export const chapter6SlideAnchorsEn: SyncAnchor[] = [
-  { sectionId: 'presentation-generale', blockIndex: -1, slide: 1 },
-  { sectionId: 'presentation-generale', blockIndex: 0, slide: 2 },
-  { sectionId: 'theorie-polyvagale', blockIndex: -1, slide: 3 },
-  { sectionId: 'theorie-polyvagale', blockIndex: 0, itemIndex: 3, slide: 4 },
-  { sectionId: 'theorie-polyvagale', blockIndex: 0, itemIndex: 5, slide: 5 },
-  { sectionId: 'theorie-polyvagale', blockIndex: 0, itemIndex: 6, slide: 6 },
-  { sectionId: 'malaise-vagal', blockIndex: -1, slide: 7 },
-  { sectionId: 'malaise-vagal', blockIndex: 1, slide: 8 },
-  { sectionId: 'anatomie-nerf-vague', blockIndex: -1, slide: 9 },
-  { sectionId: 'engagement-social', blockIndex: -1, slide: 10 },
-  { sectionId: 'engagement-social', blockIndex: 0, itemIndex: 8, slide: 11 },
-  { sectionId: 'neuroception', blockIndex: -1, slide: 12 },
-  { sectionId: 'consequences-cliniques', blockIndex: -1, slide: 13 },
-  { sectionId: 'consequences-cliniques', blockIndex: 1, slide: 14 },
-  { sectionId: 'application-clinique-rop', blockIndex: -1, slide: 15 },
-  { sectionId: 'application-clinique-rop', blockIndex: 1, slide: 16 },
-  { sectionId: 'application-clinique-rop', blockIndex: 2, slide: 17 },
-  { sectionId: 'application-clinique-rop', blockIndex: 3, slide: 18 },
-]
+export const chapter6SlideAnchorsEn: SyncAnchor[] = chapter6SlideAnchors.map((anchor) => ({ ...anchor }))

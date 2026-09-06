@@ -1,3 +1,4 @@
+import { englishReaderMetadata } from '@/lib/readerDocumentMetadata'
 import { cookies } from 'next/headers'
 import { redirect } from 'next/navigation'
 import { canReadPaidChapter } from '@/lib/access'
@@ -19,10 +20,22 @@ const DECKS: Record<Lang, typeof chapter19Slides> = {
   th: chapter19Slides,
 }
 
-export const metadata: Metadata = {
+const defaultMetadata: Metadata = {
   title: 'Chapitre 19 — Organes génitaux féminins · R.O.P. · Guy Boitout',
   description: 'Lecture du chapitre 19 : utérus, ovaires, trompes, physiologie, pathologies courantes et zones réflexes podales en R.O.P.',
   robots: { index: false, follow: false },
+}
+
+export async function generateMetadata({
+  searchParams,
+}: {
+  searchParams: Promise<{ lang?: string }>
+}): Promise<Metadata> {
+  const { lang: langParam } = await searchParams
+  const lang = await getServerLang(langParam)
+  if (lang !== 'en') return defaultMetadata
+  const { chapter } = getChapter('chapter-19', 'en')
+  return englishReaderMetadata(chapter, 'synchronized', defaultMetadata)
 }
 
 export default async function Chapitre19LecturePage({

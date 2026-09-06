@@ -769,7 +769,7 @@ export const chapter8Fr: Chapter = {
           "type": "xref",
           "label": "Voir la référence dans le chapitre 9",
           "text": "Estomac",
-          "href": "/lecture/chapitre-9?lang=fr&xrefBack=%2Flecture%2Fchapitre-8%3Flang%3Dfr%23p-pathologies-courantes-diagnostic-d-exclusion-indications-troubles-fonctionnels-12&xrefBackLabel=Retour%20au%20chapitre%208#p-pathologies-courantes-15"
+          "href": "/lecture/chapitre-9?lang=fr&xrefBack=%2Flecture%2Fchapitre-8%3Flang%3Dfr%23p-pathologies-courantes-diagnostic-d-exclusion-indications-troubles-fonctionnels-12&xrefBackLabel=Retour%20au%20chapitre%208#p-indications-troubles-fonctionnels-3"
         },
         {
           "type": "para",

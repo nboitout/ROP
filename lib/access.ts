@@ -23,6 +23,7 @@ export const FREE_CHAPTER_KEYS = new Set(['introduction', 'chapter-2', 'chapter-
 
 const CHAPTER_ROUTE_ALIASES: Record<string, string> = {
   '/introduction': 'introduction',
+  '/lecture/introduction': 'introduction',
   '/lecture/traitement-rop': 'chapter-2',
 }
 
@@ -30,7 +31,10 @@ const REFLEX_SECTION_BY_CHAPTER: Record<string, string> = {
   'chapter-2': 'zones-reflexes',
   'chapter-3': 'zones-reflexes-rop',
   'chapter-4': 'zones-reflexes-podales',
-  'chapter-5': 'zones-reflexes-podales',
+  // Chapter 5 no longer contains the legacy foot-reflex section. References
+  // from another chapter's reflex protocol point to its current stress and
+  // adaptation passage instead.
+  'chapter-5': 'le-stress-une-reponse-d-adaptation',
   'chapter-7': 'zones-reflexes-podales',
   'chapter-8': 'zones-reflexes-podales',
   'chapter-9': 'zones-reflexes-podales',
@@ -49,6 +53,7 @@ const REFLEX_SECTION_BY_CHAPTER: Record<string, string> = {
 }
 
 function chapterKeyIncludingReworkFromPath(pathname: string): string | null {
+  if (pathname === '/lecture/introduction') return 'introduction'
   if (pathname === '/lecture/traitement-rop') return 'chapter-2'
   const match = pathname.match(/^\/lecture\/chapitre-(\d+)(?:-rework)?$/)
   return match ? `chapter-${Number(match[1])}` : null
@@ -73,7 +78,7 @@ function retargetReflexCrossChapterLink(href: string, sourceChapterKey: string, 
 export function chapterKeyFromHref(href: string): string | null {
   if (!href.startsWith('/') || href.startsWith('//')) return null
   const path = href.split(/[?#]/, 1)[0]
-  const chapterMatch = path.match(/^\/(?:lecture\/)?chapitre-(\d+)$/)
+  const chapterMatch = path.match(/^\/(?:lecture\/)?chapitre-(\d+)(?:-rework)?$/)
   if (chapterMatch) return `chapter-${Number(chapterMatch[1])}`
   return CHAPTER_ROUTE_ALIASES[path] ?? null
 }
@@ -92,29 +97,28 @@ export function readerXrefHref(
   sourceChapterKey: string,
   restrictPaidXrefs = false,
   sourceAnchorId?: string,
-  lang = 'fr'
+  lang = 'fr',
+  sourceReaderPath?: string,
 ): string {
   let enrichedHref = retargetReflexCrossChapterLink(href, sourceChapterKey, sourceAnchorId)
 
-  // New references no longer need to hard-code their return route. Preserve
-  // legacy links that already carry one, and add it automatically otherwise.
+  // Authored return parameters are generated navigation data and can become
+  // stale when passages move. The rendered passage is authoritative.
   if (sourceAnchorId && enrichedHref.startsWith('/') && !enrichedHref.startsWith('//')) {
     const [beforeHash, hash = ''] = enrichedHref.split('#', 2)
     const [pathname, query = ''] = beforeHash.split('?', 2)
     const params = new URLSearchParams(query)
-    if (!params.has('xrefBack')) {
-      const sourcePath = sourceChapterKey === 'introduction'
-        ? '/introduction'
-        : sourceChapterKey === 'chapter-2'
-          ? '/lecture/traitement-rop'
-          : `/lecture/${sourceChapterKey.replace(/^chapter-/, 'chapitre-')}`
-      params.set('xrefBack', `${sourcePath}?lang=${lang}#${sourceAnchorId}`)
-      const chapterNumber = sourceChapterKey.match(/^chapter-(\d+)/)?.[1]
-      params.set('xrefBackLabel', lang === 'en'
-        ? (chapterNumber ? `Back to Chapter ${chapterNumber}` : 'Back to the reference')
-        : (chapterNumber ? `Retour au chapitre ${chapterNumber}` : 'Retour à la référence'))
-      enrichedHref = `${pathname}?${params.toString()}${hash ? `#${hash}` : ''}`
-    }
+    const sourcePath = sourceReaderPath ?? (sourceChapterKey === 'introduction'
+      ? '/introduction'
+      : sourceChapterKey === 'chapter-2'
+        ? '/lecture/traitement-rop'
+        : `/lecture/${sourceChapterKey.replace(/^chapter-/, 'chapitre-')}`)
+    params.set('xrefBack', `${sourcePath}?lang=${lang}#${sourceAnchorId}`)
+    const chapterNumber = sourceChapterKey.match(/^chapter-(\d+)/)?.[1]
+    params.set('xrefBackLabel', lang === 'en'
+      ? (chapterNumber ? `Back to Chapter ${chapterNumber}` : 'Back to the reference')
+      : (chapterNumber ? `Retour au chapitre ${chapterNumber}` : 'Retour à la référence'))
+    enrichedHref = `${pathname}?${params.toString()}${hash ? `#${hash}` : ''}`
   }
 
   if (!restrictPaidXrefs || !isFreeChapterKey(sourceChapterKey)) return enrichedHref

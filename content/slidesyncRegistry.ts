@@ -1,3 +1,4 @@
+import { chapter0Slides, chapter0SlidesEn, chapter0SlideAnchors, chapter0SlideAnchorsEn } from './chapter0.slidesync'
 import { chapter1Slides, chapter1SlidesEn, chapter1SlideAnchors, chapter1SlideAnchorsEn } from './chapter1.slidesync'
 import {
   chapter2Slides,
@@ -87,6 +88,7 @@ export type BookSlideSearchRecord = {
 }
 
 const slideVisualSources: Record<string, SlideVisualSource> = {
+  'introduction': { slides: chapter0Slides, anchors: chapter0SlideAnchors },
   'chapter-1': { slides: chapter1Slides, anchors: chapter1SlideAnchors },
   'chapter-2': { slides: chapter2Slides, anchors: chapter2SlideAnchorsFr },
   'chapter-3': { slides: chapter3Slides, anchors: chapter3SlideAnchors },
@@ -111,6 +113,10 @@ const slideVisualSources: Record<string, SlideVisualSource> = {
 }
 
 const slideSearchSources: Record<string, readonly SlideSearchSource[]> = {
+  'introduction': [
+    { lang: 'fr', slides: chapter0Slides, anchors: chapter0SlideAnchors },
+    { lang: 'en', slides: chapter0SlidesEn, anchors: chapter0SlideAnchorsEn },
+  ],
   'chapter-1': [
     { lang: 'fr', slides: chapter1Slides, anchors: chapter1SlideAnchors },
     { lang: 'en', slides: chapter1SlidesEn, anchors: chapter1SlideAnchorsEn },

@@ -48,6 +48,8 @@ export const chapter5ReworkSlideAnchors: SyncAnchor[] = [
   { sectionId: 'la-trilogie-des-stresseurs', blockIndex: -1, slide: 4, ...endAt('le-stress-n-est-pas-seulement-l-evenement-c-est-la-reponse', -1) },
   { sectionId: 'le-stress-n-est-pas-seulement-l-evenement-c-est-la-reponse', blockIndex: -1, slide: 5, ...endAt('la-double-reponse-au-stresseur-urgence-et-soutien', -1) },
   { sectionId: 'la-double-reponse-au-stresseur-urgence-et-soutien', blockIndex: -1, slide: 6, ...endAt('le-syndrome-general-d-adaptation-un-modele-pedagogique', -1) },
+  { sectionId: 'la-double-reponse-au-stresseur-urgence-et-soutien', blockIndex: 0, slide: 29, ...endAt('la-double-reponse-au-stresseur-urgence-et-soutien', 3) },
+  { sectionId: 'la-double-reponse-au-stresseur-urgence-et-soutien', blockIndex: 3, slide: 30, ...endAt('la-double-reponse-au-stresseur-urgence-et-soutien', 7) },
   { sectionId: 'le-syndrome-general-d-adaptation-un-modele-pedagogique', blockIndex: -1, slide: 7, ...endAt('le-syndrome-general-d-adaptation-un-modele-pedagogique', 1) },
   { sectionId: 'le-syndrome-general-d-adaptation-un-modele-pedagogique', blockIndex: 1, slide: 8, ...endAt('le-syndrome-general-d-adaptation-un-modele-pedagogique', 6) },
   { sectionId: 'le-syndrome-general-d-adaptation-un-modele-pedagogique', blockIndex: 6, slide: 9, ...endAt('le-syndrome-general-d-adaptation-un-modele-pedagogique', 9) },

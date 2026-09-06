@@ -1,7 +1,7 @@
 // Chapter 7 content — English
 // Source: public/chapter-7/EN/Chapter_7_Abdominal_and_Peritoneal_Cavities_ROP_CodexTranslationV2.docx
 
-import type { Chapter } from './types'
+import type { Block, Chapter } from './types'
 
 export const chapter7En: Chapter = {
   "slug": "chapter-7",
@@ -1059,5 +1059,138 @@ export const chapter7En: Chapter = {
         }
       ]
     }
+  ]
+}
+
+// Keep the publishable translation's prose while matching the canonical French
+// runtime structure. Composite blocks are significant: slide anchors and
+// cross-reference return paths address these block coordinates directly.
+function chapter7Section(id: string) {
+  const section = chapter7En.sections.find((candidate) => candidate.id === id)
+  if (!section) throw new Error(`Missing Chapter 7 English section: ${id}`)
+  return section
+}
+
+function paragraphsAsBullets(blocks: Block[], indices: number[]): Block {
+  return {
+    type: 'bullets',
+    items: indices.map((index) => {
+      const block = blocks[index]
+      if (block.type !== 'para') throw new Error(`Expected Chapter 7 paragraph at block ${index}`)
+      return block.text.replace(/\s*\(See Chapter \d+[^)]*\)\.?$/i, '')
+    }),
+  }
+}
+
+{
+  const section = chapter7Section('situation')
+  const blocks = section.blocks
+  section.blocks = [
+    blocks[0],
+    blocks[1],
+    paragraphsAsBullets(blocks, [2, 3, 4, 5, 6]),
+    ...blocks.slice(7),
+  ]
+}
+
+{
+  const section = chapter7Section('anatomie')
+  const blocks = section.blocks
+  const ropBody = blocks.slice(54, 61).map((block) => {
+    if (block.type !== 'sub' && block.type !== 'para') throw new Error('Invalid Chapter 7 ROP anatomy block')
+    return block.text
+  })
+  const turgor = blocks[19]
+  if (turgor.type !== 'para') throw new Error('Missing Chapter 7 turgor paragraph')
+  section.blocks = [
+    ...blocks.slice(0, 19),
+    { ...turgor, text: turgor.text.replace(/\s*\(See Chapter 1[^)]*\)\.?$/i, '') },
+    ...blocks.slice(20, 33),
+    paragraphsAsBullets(blocks, [33, 34]),
+    ...blocks.slice(35, 40),
+    paragraphsAsBullets(blocks, [40, 41, 42, 43]),
+    ...blocks.slice(44, 51),
+    paragraphsAsBullets(blocks, [51, 52, 53]),
+    { type: 'rop', body: ropBody },
+  ]
+}
+
+{
+  const section = chapter7Section('vascularisation')
+  const blocks = section.blocks
+  const cleanReference = (index: number): Block => {
+    const block = blocks[index]
+    if (block.type !== 'para') throw new Error(`Missing Chapter 7 vascular paragraph ${index}`)
+    return { ...block, text: block.text.replace(/\s*\(See Chapter \d+[^)]*\)\.?$/i, '') }
+  }
+  const ropHeading = blocks[43]
+  const ropParagraph = blocks[44]
+  if (ropHeading.type !== 'sub' || ropParagraph.type !== 'para') throw new Error('Invalid Chapter 7 vascular ROP block')
+  section.blocks = [
+    ...blocks.slice(0, 9),
+    blocks[10],
+    blocks[9],
+    ...blocks.slice(11, 19),
+    blocks[20],
+    blocks[19],
+    blocks[22],
+    blocks[21],
+    ...blocks.slice(23, 28),
+    cleanReference(28),
+    ...blocks.slice(29, 33),
+    cleanReference(33),
+    ...blocks.slice(34, 38),
+    cleanReference(38),
+    ...blocks.slice(39, 43),
+    { type: 'rop', body: [ropHeading.text, ropParagraph.text] },
+  ]
+}
+
+{
+  const section = chapter7Section('pathologie')
+  const blocks = section.blocks
+  section.blocks = [
+    ...blocks.slice(0, 3),
+    paragraphsAsBullets(blocks, [3, 4, 5, 6, 7]),
+    ...blocks.slice(8, 15),
+    paragraphsAsBullets(blocks, [15, 16, 17, 18, 19]),
+    ...blocks.slice(20),
+  ]
+}
+
+{
+  const section = chapter7Section('relations-peritoneo-somatiques')
+  const blocks = section.blocks
+  section.blocks = [...blocks.slice(0, 6), paragraphsAsBullets(blocks, [6, 7, 8, 9, 10])]
+}
+
+{
+  const section = chapter7Section('zones-reflexes-podales')
+  const blocks = section.blocks
+  const clarification = blocks[0]
+  const relevance = blocks[18]
+  const keyPoint = blocks[26]
+  if (clarification.type !== 'note' || relevance.type !== 'note' || keyPoint.type !== 'note') {
+    throw new Error('Invalid Chapter 7 regional-foundation blocks')
+  }
+  section.blocks = [
+    {
+      ...clarification,
+      body: [
+        'Unlike chapters devoted to an organ, this chapter describes an anatomical region and its interfaces. In ROP, abdominal and peritoneal mapping therefore constitutes the regional foundation of Level 3.',
+        'It does not replace the specific zone of the viscus being treated; it supplements that zone when testing points toward its peritoneal, mesenteric, fascial, or parietal environment.',
+      ],
+    },
+    ...blocks.slice(1, 18),
+    { type: 'rop', body: relevance.body },
+    ...blocks.slice(19, 24),
+    blocks[25],
+    {
+      ...keyPoint,
+      body: [
+        'Chapter 7 constitutes the regional foundation for abdominal and peritoneal Level 3. It does not replace organ-specific mapping.',
+        'The protocol combines the organ-specific zone with a regional component selected on the basis of testing. The peritoneum, mesenteric roots, fasciae, and intervisceral relations are therefore complementary modules, not systematic steps.',
+      ],
+    },
   ]
 }

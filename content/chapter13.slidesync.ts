@@ -83,28 +83,13 @@ export const chapter13SlidesEn: SyncSlide[] = [
   { src: '/chapter-13/EN/Images/NCH 13 EN IMG 15 V2.png', title: 'Infectious Mononucleosis: Splenomegaly and Precautions' },
   { src: '/chapter-13/EN/Images/NCH 13 EN IMG 16 V2.png', title: 'Functional Indications in ROP — Principle of Caution' },
   { src: '/chapter-13/EN/Images/NCH 13 EN IMG 17 V2.png', title: 'Viscero-Somatic Relationships of the Spleen' },
-  { src: '/chapter-13/EN/Images/NCH 13 EN IMG 18.png', title: 'Splenic Trauma: Mechanisms and Signs of Urgency' },
-  { src: '/chapter-13/EN/Images/NCH 13 EN IMG 20 V2.png', title: 'Viscero-Somatic Relationships of the Spleen' },
+  { src: '/chapter-13/EN/Images/NCH 13 EN IMG 18 V3.png', title: 'Viscero-emotional Relationships' },
+  { src: '/chapter-13/EN/Images/NCH 13 EN IMG 20 V3.png', title: 'ROP Synthesis: Assessment of the Spleen' },
+  { src: '/chapter-13/EN/Cartography/figure-13-01.png', title: 'Cartography: Costovertebral Joints' },
+  { src: '/chapter-13/EN/Cartography/figure-13-03.png', title: 'Cartography: Spleen' },
 ]
 
-export const chapter13SlideAnchorsEn: SyncAnchor[] = [
-  { sectionId: 'presentation', blockIndex: 0, slide: 1 },
-  { sectionId: 'presentation', blockIndex: 1, slide: 2 },
-  { sectionId: 'presentation', blockIndex: 2, slide: 3 },
-  { sectionId: 'situation', blockIndex: 0, slide: 4 },
-  { sectionId: 'anatomie', blockIndex: 0, slide: 5 },
-  { sectionId: 'anatomie', blockIndex: 10, slide: 6 },
-  { sectionId: 'anatomie', blockIndex: 14, slide: 7 },
-  { sectionId: 'anatomie', blockIndex: 15, slide: 8 },
-  { sectionId: 'rapports', blockIndex: 0, slide: 9 },
-  { sectionId: 'vascularisation', blockIndex: 0, slide: 10 },
-  { sectionId: 'innervation', blockIndex: 0, slide: 11 },
-  { sectionId: 'physiologie', blockIndex: 0, slide: 12 },
-  { sectionId: 'pathologies-courantes', blockIndex: 1, slide: 13 },
-  { sectionId: 'pathologies-courantes', blockIndex: 17, slide: 14 },
-  { sectionId: 'pathologies-courantes', blockIndex: 22, slide: 15 },
-  { sectionId: 'pathologies-courantes', blockIndex: 32, slide: 16 },
-  { sectionId: 'relations-viscero-somatiques', blockIndex: 0, slide: 17 },
-  { sectionId: 'pathologies-courantes', blockIndex: 19, slide: 18 },
-  { sectionId: 'relations-viscero-somatiques', blockIndex: 1, slide: 19 },
-]
+// Both editions now share the same block structure, so the semantic anchor
+// table is canonical across languages instead of being maintained by index
+// approximation.
+export const chapter13SlideAnchorsEn: SyncAnchor[] = chapter13SlideAnchors

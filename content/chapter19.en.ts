@@ -1,7 +1,7 @@
 // Chapter 19 content — English
 // Source: public/chapter-19/EN/Chapter_19_Female_Genital_Organs_CodexTranslationV2.docx
 
-import type { Chapter } from './types'
+import type { Block, Chapter, CrossReference } from './types'
 
 export const chapter19En: Chapter = {
   "slug": "chapter-19",
@@ -1217,5 +1217,164 @@ export const chapter19En: Chapter = {
         }
       ]
     }
+  ]
+}
+
+// The French edition is the editorial authority.  The source English document
+// contains the same translated statements, but earlier web conversion split
+// many bullet lists into paragraphs and detached figures/references.  Rebuild
+// those boundaries explicitly so reading, slide anchoring and return paths all
+// follow the canonical French sequence without rewriting the translation.
+const chapter19Section = (id: string) => chapter19En.sections.find((section) => section.id === id)!
+const asText = (block: Block): string => block.type === 'para' || block.type === 'sub' ? block.text : ''
+const asItems = (block: Block): string[] => block.type === 'bullets' ? block.items : block.type === 'para' ? [block.text] : []
+const bullets = (...items: string[]): Block => ({ type: 'bullets', items })
+const sub = (text: string): Block => ({ type: 'sub', text })
+const para = (text: string): Block => ({ type: 'para', text })
+const withReference = (block: Block, reference: CrossReference): Block => ({ ...block, xrefs: [...(block.xrefs ?? []), reference] })
+
+const references = {
+  stressIncontinence: { label: 'See the reference in Chapter 18', text: 'Stress Urinary Incontinence', href: '/lecture/chapitre-18?lang=en#p-pathologies-courantes-1' },
+  uterineSupply: { label: 'See the reference in this chapter', text: 'Uterine Vascular Supply', href: '/lecture/chapitre-19?lang=en#p-uterus-vascularisation-0' },
+  renalVein: { label: 'See the reference in Chapter 16', text: 'Kidney, renal vein', href: '/lecture/chapitre-16?lang=en#p-vascularisation-5' },
+  centralLevel1: { label: 'Level 1 — See Chapter 3', href: '/lecture/chapitre-3?lang=en' },
+  autonomicPelvis: { label: 'See the reference in Chapter 4', href: '/lecture/chapitre-4?lang=en' },
+  pelvicLevel3: { label: 'Level 3 — See Chapter 17', href: '/lecture/chapitre-17?lang=en' },
+  centralUterus: { label: 'See the reference in Chapter 3', text: 'See section 1.11, “Viscero-emotional Relationships of the Uterus”, in this chapter.', href: '/lecture/chapitre-3?lang=en' },
+  centralGeneral: { label: 'See the reference in Chapter 3', href: '/lecture/chapitre-3?lang=en' },
+  autonomicGeneral: { label: 'See the reference in Chapter 4', href: '/lecture/chapitre-4?lang=en' },
+  pelvicGeneral: { label: 'See the reference in Chapter 17', href: '/lecture/chapitre-17?lang=en' },
+  centralOvaries: { label: 'See the reference in Chapter 3', text: 'See sections 1.11 and 2.11, “Viscero-emotional Relationships”, for clinical application.', href: '/lecture/chapitre-3?lang=en' },
+} satisfies Record<string, CrossReference>
+
+{
+  const section = chapter19Section('uterus-anatomie')
+  const b = section.blocks
+  section.blocks = [
+    b[0], bullets(...asItems(b[1]), asText(b[2])),
+    b[3], bullets(asText(b[4])),
+    b[5], bullets(asText(b[6]), asText(b[7]), asText(b[8]), asText(b[9])),
+    b[10], sub('Suspensory system'), bullets(...asItems(b[11]).slice(1), asText(b[12]), asText(b[13]), ...asItems(b[14]).slice(0, 4)),
+    sub('Support system'), bullets(...asItems(b[14]).slice(5)),
+    b[15], bullets(asText(b[16]), ...asItems(b[17]), asText(b[18])),
+    { type: 'rop', body: [asText(b[20]), asText(b[21])] },
+  ]
+}
+
+{
+  const section = chapter19Section('uterus-physiologie')
+  const b = section.blocks
+  section.blocks = [
+    bullets(asText(b[0]), asText(b[1])), b[2], b[3],
+    { type: 'rop', body: [asText(b[5])] }, b[6], b[7], b[8],
+    { type: 'rop', body: [asText(b[10])] },
+  ]
+}
+
+{
+  const section = chapter19Section('uterus-pathologies-courantes')
+  const b = section.blocks
+  section.blocks = [b[0], bullets(...b.slice(1).flatMap(asItems))]
+}
+
+{
+  const section = chapter19Section('uterus-indications')
+  const b = section.blocks
+  section.blocks = [withReference(bullets(...asItems(b[0]), asText(b[1])), references.stressIncontinence)]
+}
+
+{
+  const section = chapter19Section('ovaires-trompes-anatomie')
+  const b = section.blocks
+  section.blocks = [
+    b[0], bullets(asText(b[1])),
+    sub(asItems(b[2])[0]), bullets(...asItems(b[2]).slice(1), asText(b[3])),
+    b[4], b[5], b[6], b[7],
+  ]
+}
+
+{
+  const section = chapter19Section('ovaires-trompes-rapports')
+  section.blocks[2] = withReference(section.blocks[2], references.uterineSupply)
+}
+
+{
+  const section = chapter19Section('ovaires-trompes-vascularisation')
+  const b = section.blocks
+  section.blocks = [withReference(bullets(asText(b[0]), ...asItems(b[1])), references.renalVein)]
+}
+
+{
+  const section = chapter19Section('ovaires-trompes-innervation')
+  const items = asItems(section.blocks[0])
+  section.blocks = [sub(items[0]), bullets(...items.slice(1, 4)), sub(items[4]), bullets(...items.slice(5))]
+}
+
+{
+  const section = chapter19Section('ovaires-trompes-physiologie')
+  const b = section.blocks
+  section.blocks = [
+    b[0], bullets(asText(b[1]), asText(b[2])),
+    b[3], bullets(asText(b[4])),
+    b[5], bullets(...b.slice(6, 13).map(asText)),
+    sub(asItems(b[13])[0].replace(/^2\.7\.4\.\s*/, '')),
+  ]
+}
+
+{
+  const section = chapter19Section('ovaires-trompes-pathologies-courantes')
+  const final = section.blocks[13]
+  if (final.type === 'bullets') final.items.splice(4, 0, 'Urinary frequency;')
+}
+
+{
+  const section = chapter19Section('ovaires-trompes-indications')
+  const b = section.blocks
+  section.blocks = [
+    b[0], bullets(...b.slice(1, 8).map(asText)),
+    b[8], b[9],
+    b[10], bullets(asText(b[11])),
+    b[12], bullets(asText(b[13])),
+    b[14], bullets(asText(b[15])),
+    b[16], bullets(asText(b[17]), asText(b[18])),
+  ]
+}
+
+{
+  const section = chapter19Section('ovaires-trompes-relations-viscero-somatiques')
+  section.blocks = [bullets(...section.blocks.map(asText))]
+}
+
+const treatmentFigure = (src: string, caption: string, alt: string, orientation: 'landscape' | 'portrait'): Block => ({
+  type: 'figure', src: `/chapter-19/EN/Cartography/${src}`, caption, alt, orientation,
+})
+
+{
+  const section = chapter19Section('zones-reflexes-podales')
+  const b = section.blocks
+  section.blocks = [
+    b[0], b[1], b[2], withReference(bullets(...b.slice(3, 8).map(asText)), references.centralLevel1),
+    b[9], b[10], withReference(bullets(...b.slice(11, 18).map(asText)), references.autonomicPelvis),
+    b[19], bullets(...b.slice(20, 29).map(asText)),
+    treatmentFigure('Chapter19 Cartography and Photos - 2.png', 'Photo: Bladder Trigone, Cervico-Isthmic Region of the Uterus and Inferior Hypogastric Plexus', 'Foot treatment technique for the bladder trigone, cervico-isthmic region and inferior hypogastric plexus', 'landscape'),
+    treatmentFigure('figure-19-16.png', 'Photo: Inguinal Ligament and Inguinal Canal', 'Foot landmark for the inguinal ligament and inguinal canal', 'landscape'),
+    withReference(treatmentFigure('figure-19-18.png', 'Photo: Central Fibrous Body of the Perineum and Urogenital Cleft', 'Foot landmark for the central fibrous body of the perineum and urogenital cleft', 'landscape'), references.pelvicLevel3),
+    b[30], b[31], bullets(...b.slice(32, 43).map(asText)),
+    treatmentFigure('figure-19-06.png', 'Photo: Greater Sciatic Foramen, Piriformis Muscle, Sacral Plexus and Pudendal Nerve', 'Foot landmark for the greater sciatic foramen, piriformis muscle, sacral plexus and pudendal nerve', 'landscape'),
+    treatmentFigure('figure-19-08.png', 'Photo: Lesser Sciatic Foramen, Obturator Muscles and Gemelli', 'Foot landmark for the lesser sciatic foramen, obturator muscles and gemelli', 'landscape'),
+    treatmentFigure('figure-19-10.png', 'Photo: Obturator Foramen and Obturator Muscles', 'Foot landmark for the obturator foramen and obturator muscles', 'portrait'),
+    treatmentFigure('figure-19-12.png', 'Photo: Sacrotuberous and Sacrospinous Ligaments', 'Foot landmark for the sacrotuberous and sacrospinous ligaments', 'landscape'),
+    treatmentFigure('figure-19-20.png', 'Photo: Sacrotuberous and Sacrospinous Ligaments — Pelvic Landmark', 'Pelvic foot landmark for the sacrotuberous and sacrospinous ligaments', 'landscape'),
+    b[43], b[44], withReference(b[45], references.centralUterus),
+    b[47], b[48], b[49], withReference(bullets(...b.slice(50, 54).map(asText)), references.centralGeneral),
+    b[55], b[56], bullets(...b.slice(57, 62).map(asText)), withReference(b[62], references.autonomicGeneral),
+    b[64], b[65], bullets(...b.slice(66, 75).map(asText)),
+    treatmentFigure('figure-19-14.png', 'Photo: Ovary', 'Foot landmark for the ovary', 'portrait'),
+    withReference(treatmentFigure('figure-19-22.png', 'Photo: Uterine Tube', 'Foot landmark for the uterine tube', 'portrait'), references.pelvicGeneral),
+    b[76], b[77], bullets(...b.slice(78, 85).map(asText)), b[85], b[86], withReference(b[87], references.centralOvaries),
+    b[89], bullets(...b.slice(90, 95).map(asText)),
+    treatmentFigure('figure-19-02.png', 'Photo: Left Kidney', 'Foot landmark for the left kidney', 'portrait'),
+    treatmentFigure('figure-19-04.png', 'Photo: Left Adrenal Gland', 'Foot landmark for the left adrenal gland', 'portrait'),
+    { type: 'note', label: 'Safety principle', body: [asText(b[95]).replace(/^SAFETY PRINCIPLE\s*[—-]\s*/, '')] },
   ]
 }

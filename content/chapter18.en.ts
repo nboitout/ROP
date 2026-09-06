@@ -1,5 +1,5 @@
 // Chapter 18 content — English
-// Source: public/chapter-18/EN/Chapter_18_Urinary_Bladder_CodexTranslationV2.docx
+// Strict structural translation of the final French runtime chapter.
 
 import type { Chapter } from './types'
 
@@ -14,15 +14,15 @@ export const chapter18En: Chapter = {
       "blocks": [
         {
           "type": "para",
-          "text": "French data cited by the authors estimate that 40% of women experience, or will experience, stress urinary incontinence during their lifetime. Leakage may occur during coughing, sneezing, lifting, sexual activity and other forms of exertion."
+          "text": "French statistics estimate that 40% of women have or will have stress urinary incontinence during their lifetime. These episodes occur during coughing, sneezing, lifting, sexual acts, etc."
         },
         {
           "type": "para",
-          "text": "Nearly one woman in two will experience cystitis or bladder pain during her lifetime, according to the estimate cited in the French source. Infectious causes are well recognised, but some episodes are associated with sexual activity or disruption of the intestinal flora. The bladder is highly hormone-dependent. Changes in pelvic support and biomechanics during pregnancy and childbirth may disturb bladder dynamics and contribute to urinary symptoms."
+          "text": "Nearly one in two women will suffer from cystitis or bladder pain in her life. Infectious causes are well known, but many are associated with sexual activity or disruption of the intestinal flora. The bladder is very hormone-dependent. Changes in pelvic statics during pregnancy and childbirth disrupt bladder dynamics and promote cystitis."
         },
         {
           "type": "para",
-          "text": "In men, urinary difficulties often begin after the age of 60 and are most commonly caused by benign prostatic hyperplasia."
+          "text": "In men, it is often from their sixties onwards that urinary difficulties appear. Most of the time, benign prostatic hyperplasia is the cause."
         }
       ]
     },
@@ -31,22 +31,21 @@ export const chapter18En: Chapter = {
       "title": "2. Location",
       "blocks": [
         {
-          "type": "para",
-          "text": "The bladder is a urine reservoir located in the anterior part of the visceral compartment of the pelvic cavity. It rests in a cradle between the levator ani muscles of the pelvic floor and the obturator internus muscles."
+          "type": "bullets",
+          "items": [
+            "The urinary reservoir organ, the bladder is located in the anterior part of the visceral compartment of the pelvic cavity, housed in a cradle between the levator ani muscles of the perineum and the internal obturator muscles."
+          ]
         },
         {
           "type": "sub",
           "text": "2.1. In women"
         },
         {
-          "type": "para",
-          "text": "Posterior to the pubis;"
-        },
-        {
           "type": "bullets",
           "items": [
-            "The superior surface, or bladder dome, is covered by peritoneum; posteriorly, it is related to the body of the uterus;",
-            "The posteroinferior, or trigonal, surface rests on the vagina."
+            "Behind the pubis;",
+            "The upper surface, or bladder dome, is covered, ventrally, by the peritoneum and, dorsally, by the body of the uterus;",
+            "the postero-inferior or trigonal face is placed on the vagina."
           ]
         },
         {
@@ -54,24 +53,15 @@ export const chapter18En: Chapter = {
           "text": "2.2. In men"
         },
         {
-          "type": "para",
-          "text": "Posterior to the pubis;"
-        },
-        {
           "type": "bullets",
           "items": [
-            "The bladder dome is covered by peritoneum;",
-            "Superior to the prostate;",
-            "The posteroinferior, or trigonal, surface lies anterior to the rectum."
+            "Behind the pubis;",
+            "the bladder dome is covered by the peritoneum;",
+            "above the prostate.",
+            "the postero-inferior or trigonal face is in front of the rectum.",
+            "The upper part or body of the bladder is mobile. The lower part comprising the base and the neck, is fixed, integral with the urethra and, through it, to the pelvic floor.",
+            "Empty, the bladder is flattened and not palpable. Full, it is globular, ovoid and protrudes above the pubis to enter the abdominal cavity."
           ]
-        },
-        {
-          "type": "para",
-          "text": "The upper part, or body, of the bladder is mobile. The lower part, comprising the base and neck, is fixed and continuous with the urethra and, through it, with the pelvic floor."
-        },
-        {
-          "type": "para",
-          "text": "When empty, the bladder is flattened and impalpable. When full, it is globular and ovoid, extending above the pubis into the abdominal cavity."
         }
       ]
     },
@@ -81,62 +71,56 @@ export const chapter18En: Chapter = {
       "blocks": [
         {
           "type": "sub",
-          "text": "3.1. Bladder wall"
+          "text": "3.1. Bladder Walls"
         },
         {
           "type": "sub",
-          "text": "3.1.1. Outer layer"
-        },
-        {
-          "type": "para",
-          "text": "This membranous layer is formed by the peritoneum, which invests the body of the bladder and allows it to remain mobile."
-        },
-        {
-          "type": "sub",
-          "text": "3.1.2. Middle layer: detrusor muscle"
-        },
-        {
-          "type": "para",
-          "text": "The detrusor muscle consists of three layers of smooth-muscle fibres:"
-        },
-        {
-          "type": "para",
-          "text": "Outer fibres: these are longitudinal and interweave with the pubovesical ligaments. Within the ROP model, asymmetrical tension in these ligaments is considered capable of contributing to urinary urgency through sustained bladder contraction and reduced filling capacity (vesical irritability)."
-        },
-        {
-          "type": "para",
-          "text": "Middle fibres: these are circular and form the smooth sphincter."
-        },
-        {
-          "type": "para",
-          "text": "Inner fibres: these form an interlacing layer that is poorly developed in young individuals. In older men with prostatic enlargement and chronic straining to void, bladder-wall hypertrophy and trabeculation may develop."
-        },
-        {
-          "type": "sub",
-          "text": "3.1.3. Inner layer"
-        },
-        {
-          "type": "para",
-          "text": "The bladder mucosa is smooth in young individuals. With chronic outlet obstruction, the bladder wall may become trabeculated and may be associated with calculi or diverticula."
-        },
-        {
-          "type": "sub",
-          "text": "3.2. Vesical trigone (trigone of Lieutaud)"
-        },
-        {
-          "type": "para",
-          "text": "Functionally, this is the most important part of the bladder because of its abundance of stretch and volume receptors. Located on the posteroinferior surface, the trigone rests on the anterior vaginal wall in women and contains three openings:"
+          "text": "3.1.1. External wall"
         },
         {
           "type": "bullets",
           "items": [
-            "Two ureteric orifices;",
-            "One urethral orifice."
+            "the outer covering is membranous; the peritoneum follows the body of the bladder and permits its mobility."
+          ]
+        },
+        {
+          "type": "sub",
+          "text": "3.1.2. Middle wall: detrusor muscle"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "the detrusor muscle is formed of three layers of smooth-muscle fibres:",
+            "Outer fibres: longitudinal, they intermingle with the pubovesical ligaments. Any asymmetric tension of the pubovesical ligaments is responsible for a compelling urge to urinate by abnormal and permanent contraction of the bladder leading to a decrease in the filling capacity (bladder irritability).",
+            "Middle fibres: circular, they form the internal urethral sphincter.",
+            "Inner fibres: formed of intersecting fibers, little developed in the younger person, they are in the older man with prostatic obstruction forced to push to urinate: this is the trabeculated bladder."
+          ]
+        },
+        {
+          "type": "sub",
+          "text": "3.1.3. Internal wall"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "the mucosa is smooth in the younger person but has folds in the older person, which predisposes to lithiasis and diverticula."
+          ]
+        },
+        {
+          "type": "sub",
+          "text": "3.2. Vesical Trigone"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "it is the most functionally important part of the bladder due to its high density of stretch receptors and volume receptors. Located on the postero-inferior face, the trigone rests, in women, on the anterior face of the vagina, it is the site of three openings:",
+            "Two ureteral orifices;",
+            "the internal urethral orifice."
           ]
         },
         {
           "type": "para",
-          "text": "During micturition, contraction of the trigonal muscle fibres gives the bladder a funnel shape, allowing laminar urine flow. When inflammation or infection occurs as a result of post-void residual urine, the trigone becomes folded, the bladder loses its funnel shape, and the urethral orifice loses its sphincteric function. This may cause terminal dysuria, bladder spasm (tenesmus) and incontinence."
+          "text": "Through contraction of the muscle fibers of the trigone, during micturition, the bladder takes the form of a funnel, allowing the laminar flow of urine. If there is inflammation or infection by post-micturition stasis, the trigone wrinkles, the bladder loses its funnel shape and the urethral orifice loses its sphincter qualities, creating pain at the end of micturition, bladder spasms (tenesmus), incontinence."
         },
         {
           "type": "sub",
@@ -145,17 +129,17 @@ export const chapter18En: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "It surrounds the origin of the urethra."
+            "it surrounds the origin of the urethra."
           ]
         },
         {
           "type": "sub",
-          "text": "3.4. Bladder neck and trigonal region"
+          "text": "3.4. Cervico-trigonal region"
         },
         {
           "type": "bullets",
           "items": [
-            "This region is highly hormone-dependent. Within the clinical model presented here, changes associated with the menstrual cycle and emotional stress are considered capable of influencing autonomic and hormonal regulation, thereby modifying bladder symptoms and continence."
+            "it is very hormone-dependent: depending on the menstrual cycle and emotional stresses, incontinences appear by autonomic and hormonal imbalances that resonate on the dynamics of the bladder."
           ]
         },
         {
@@ -164,16 +148,29 @@ export const chapter18En: Chapter = {
         },
         {
           "type": "sub",
-          "text": "3.5.1. Suspensory system"
+          "text": "3.5.1. Suspension system"
+        },
+        {
+          "type": "sub",
+          "text": "Peritoneum"
         },
         {
           "type": "bullets",
           "items": [
-            "Peritoneum: it covers the bladder dome and forms the vesicouterine pouch in women and the rectovesical pouch in men. Visceral ptosis of the small intestine, abdominal surgery, infection and visceral spasm affect the peritoneum. Peritoneal tension restricts normal gliding between the peritoneum and bladder.",
-            "Median umbilical ligament and prevesical umbilical ligaments: these suspend the bladder in a manner comparable to a ball held in a net:",
-            "Median umbilical ligament (urachus): this embryological remnant connects the umbilicus to the bladder apex and pubis and is described in the ROP model as continuing the falciform ligament of the liver inferiorly. It exchanges fibres with the pubovesical and pubourethral ligaments, which in turn exchange fibres with the detrusor muscle. The model proposes that surgical division, including during caesarean section, may contribute to urinary incontinence and vesical irritability.",
-            "Prevesical umbilical ligaments: these are two fibrous cords, remnants of the umbilical arteries, extending obliquely from the umbilicus to the inferolateral surfaces of the bladder. Laterally, they continue within the pelvic cavity through the fascia of the obturator internus and piriformis muscles and terminate posteriorly on the ischium, where the sacrotuberous ligament and hamstring muscles attach.",
-            "Pubovesical ligaments in women and puboprostatic ligaments in men: these anchor the bladder to the pubis, and their fibres are continuous with the detrusor. Within the ROP model, ligamentous tension is considered capable of promoting bladder irritability and destabilising the bladder neck, with a sensation of heaviness in the lower abdomen."
+            "It covers the superior surface of the bladder forming the vesico-uterine cul-de-sac in women or vesico-rectal in men. Visceral ptoses of the small intestine, abdominal surgery, infections, visceral spasms, resonate on the peritoneum. The normal slippage between the peritoneum and the bladder is slowed down by the tensions of the peritoneum."
+          ]
+        },
+        {
+          "type": "sub",
+          "text": "Median umbilical ligament and umbilicoprevisical ligaments"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "they have a bladder suspending role comparable to the balloon in its net:",
+            "the median umbilical ligament (urachus): embryonic remnant, it connects the umbilicus to the apex of the bladder and to the pubis, It extends downwards the falciform ligament of the liver. It exchanges fibers with the pubovesical and pubourethral ligaments that exchange fibers with the detrusor muscle of the bladder. Its section by surgery (caesarean section) can be a cause of urinary incontinence and bladder irritability.",
+            "umbilicoprevesical ligaments are two fibrous cords remnants of the umbilical arteries stretched obliquely from the umbilicus to the inferolateral faces of the bladder. They extend laterally into the pelvic cavity through the fascia of the internal obturator muscle and the piriformis muscle and terminate, behind, on the ischium where the sacrotuberous ligament and the hamstring muscles are inserted.",
+            "Pubovesical (in women) and puboprostatic (in men) ligaments: they attach the bladder to the pubis. Their fibres are in continuity with the detrusor. The tension of the ligaments creates a state of hypercontractility (irritability) and the bladder neck is destabilized, with a feeling of gravity in the lower abdomen."
           ]
         },
         {
@@ -183,18 +180,16 @@ export const chapter18En: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Sacrorectogenitocervicopubic fascial laminae (SRGCP laminae);",
-            "Santorini venous plexus: this lies in the prevesical space between the pubis and bladder. Venous tone contributes to maintaining the position of the bladder neck. The French source describes relationships with the haemorrhoidal and portocaval venous systems; this relationship should be interpreted within the anatomical and clinical framework of the ROP model. Laxity of the bladder's musculoligamentous system may destabilise the plexus and may contribute to urinary incontinence.",
-            "Pelvic floor of the perineum."
+            "sacrorectogenitopubic laminae (SRGCP)",
+            "Santorini venous plexus: it is located in the prevesical space (between the pubis and the bladder). The tonicity of the veins keeps the bladder neck in a good place. It is related to the hemorrhoidal and porto-cave systems. Any functional disorder of the portal system affects the venous plexus of Santorini. The relaxation of the bladder musculoligamentous system destabilizes the venous plexus of Santorini promoting urinary incontinence.",
+            "Pelvic floor of the perineum"
           ]
         },
         {
-          "type": "sub",
-          "text": "Relevance to ROP"
-        },
-        {
-          "type": "para",
-          "text": "The ROP model describes an anatomical and functional continuum between the diaphragm, liver, pelvic cavity, bladder and hips. In this model, bladder function is considered in relation to the peritoneum, pubic symphysis, pubovesical and pubourethral ligaments, obturator fossae and hip muscles."
+          "type": "rop",
+          "body": [
+            "There is an anatomical continuum between the diaphragm, liver, pelvic cavity, bladder and hips. The proper functioning of the bladder is based on its links with the peritoneum, the pubic symphysis, the pubovesical and pubourethral ligaments, the obturator fossa on which it is placed, the hip muscles."
+          ]
         }
       ]
     },
@@ -209,12 +204,12 @@ export const chapter18En: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Anteriorly: the pubis and prevesical venous plexus;",
-            "Superiorly and anteriorly: the peritoneum;",
-            "Superiorly and posteriorly: the body of the uterus;",
-            "Inferiorly and posteriorly: the cervix and vagina;",
-            "Laterally: the sacrorectogenitocervicopubic fascial laminae, obturator internus muscles and peritoneum;",
-            "Inferiorly: the pelvic diaphragm."
+            "Anteriorly: pubis and prevesical venous plexus;",
+            "Cephalically and ventrally: the peritoneum;",
+            "Cephalically and dorsally: the body of the uterus;",
+            "Caudally and dorsally: the cervix and vagina;",
+            "Laterally: the sacro-recto-genito-cervico-pubic blades, the internal obturator muscles, the peritoneum.",
+            "Inferiorly: the pelvic diaphragm"
           ]
         },
         {
@@ -225,36 +220,36 @@ export const chapter18En: Chapter = {
           "type": "bullets",
           "items": [
             "Anteriorly: the pubis;",
-            "Superiorly: the peritoneum;",
-            "Posteriorly: Denonvilliers’ rectoprostatic fascia;",
-            "Inferiorly: the prostate;",
-            "Laterally: the obturator internus and levator ani muscles."
+            "Cephalically: the peritoneum",
+            "Dorsally: the prostatoperitoneal fascia of Denonvilliers;",
+            "Caudally: the prostate;",
+            "Lateral: the internal obturator and levator muscles of the anus."
           ]
         }
       ]
     },
     {
       "id": "vascularisation",
-      "title": "5. Vascular Supply",
+      "title": "5. Supply",
       "blocks": [
         {
           "type": "sub",
-          "text": "5.1. Arterial supply"
+          "text": "5.1. Arterial Supply"
         },
         {
           "type": "bullets",
           "items": [
-            "Branches of the internal iliac artery."
+            "branches of the internal iliac artery;"
           ]
         },
         {
           "type": "sub",
-          "text": "5.2. Venous drainage"
+          "text": "5.2. Venous Supply"
         },
         {
           "type": "bullets",
           "items": [
-            "Branches of the internal iliac vein. The French source also describes a relationship between the Santorini venous plexus and the portal venous system."
+            "branches of the internal iliac vein. The venous plexus of Santorini belongs to the portal system."
           ]
         }
       ]
@@ -265,24 +260,37 @@ export const chapter18En: Chapter = {
       "blocks": [
         {
           "type": "sub",
-          "text": "6.1. Somatic innervation: striated sphincter"
+          "text": "6.1. Somatic Innervation: Striated Sphincter"
         },
         {
           "type": "bullets",
           "items": [
-            "Pudendal nerve, S2–S4."
+            "pudendal nerve S2 to W4"
           ]
         },
         {
           "type": "sub",
-          "text": "6.2. Autonomic innervation: smooth sphincter and detrusor"
+          "text": "6.2. Autonomic Innervation: Smooth Sphincter and Detrusor"
+        },
+        {
+          "type": "sub",
+          "text": "Warm-hearted"
         },
         {
           "type": "bullets",
           "items": [
-            "Sympathetic: the spinal origin extends from T11 to L2, corresponding approximately to the T11–T12 vertebral levels, and involves the lumbosacral sympathetic chain and ganglion impar.",
-            "Parasympathetic: the spinal origin lies in the sacral cord segments S2-S4, approximately at the L1 vertebral level. Fibres emerge through the anterior sacral foramina as the pelvic splanchnic nerves (nervi erigentes).",
-            "Sympathetic and parasympathetic fibres converge in the inferior hypogastric plexus, located within the sacrorectogenitocervicopubic fascial lamina."
+            "its medullary origin ranges from T11 to L2 (vertebral height T11-T12), the lumbosacral lymph node chain and the odd lymph node."
+          ]
+        },
+        {
+          "type": "sub",
+          "text": "Parasympathetic nervous system"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "its origin is the sacral marrow S2 to S4 (vertebral height L1). The fibers exit the anterior sacral holes with the anterior branches of the pudendal nerve to form Eckardt's erector nerve.",
+            "The sympathetic and parasympathetic fibers terminate in the inferior hypogastric plexus located in the sacro-recto-genitocervico-pubic blade."
           ]
         },
         {
@@ -292,7 +300,7 @@ export const chapter18En: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Awareness of the need to urinate involves parietal cortical regions, while voluntary micturition is controlled by frontal cortical networks. Voluntary control generally develops at approximately 2-3 years of age through toilet training."
+            "the sensation of the need to urinate comes from the ascending parietal gyrus of the cerebral cortex. Voluntary micturition is controlled by the ascending frontal gyrus. Maturity appears around 2 or 3 years (cleanliness education)."
           ]
         },
         {
@@ -302,8 +310,14 @@ export const chapter18En: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "The hypothalamus and brainstem regulate the sympathetic and parasympathetic systems. The brainstem reticular formation filters peripheral and central inputs, including emotional and fear-related signals arising from limbic networks."
+            "the hypothalamus and brainstem control the sympathetic and parasympathetic systems. The reticular formation of the brain stem plays its role of filtering peripheral impulses (emotion, fear) coming from the limbic brain."
           ]
+        },
+        {
+          "type": "xref",
+          "label": "See Chapter 17",
+          "text": ", Autonomic Innervation of the Pelvic Cavity",
+          "href": "/lecture/chapitre-17?lang=en&xrefBack=%2Flecture%2Fchapitre-18%3Flang%3Dfr%23p-innervation-11&xrefBackLabel=Retour%20au%20chapitre%2018#p-innervation-6"
         }
       ]
     },
@@ -318,29 +332,21 @@ export const chapter18En: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Intravesical detrusor pressure must remain low during filling so that the bladder can store a substantial volume of urine, facilitate ureteric drainage and protect the upper urinary tract. Intraurethral pressure normally remains higher than intravesical pressure during storage, helping to prevent leakage."
-          ]
-        },
-        {
-          "type": "para",
-          "text": "The filling phase is predominantly sympathetic:"
-        },
-        {
-          "type": "bullets",
-          "items": [
-            "Relaxation of the detrusor;",
-            "Contraction of the smooth sphincter;",
-            "Contraction of the striated sphincter, reinforced through toilet training."
+            "the intravesical pressure of the detrusor should always remain low to allow the bladder to store a large amount of urine. If it were higher than the pelvic pressure, urine could not flow from the ureters into the bladder. Similarly, the intraurethral pressure is higher than the intravesical pressure to prevent urethral leakage.",
+            "The filling phase is of the sympathetic type:",
+            "release of the detrusor;",
+            "internal urethral sphincter contraction;",
+            "contraction of the striated sphincter (training in cleanliness)."
           ]
         },
         {
           "type": "sub",
-          "text": "7.2. Bladder-neck and urethral closure"
+          "text": "7.2. Cervico-urethral occlusion"
         },
         {
           "type": "bullets",
           "items": [
-            "Closure is provided by anterior and posterior sling-like loops formed by the outer detrusor layers around the bladder neck."
+            "it is provided by a double posterior and anterior lace of the outer layers of the detrusor surrounding the neck of the bladder."
           ]
         },
         {
@@ -348,16 +354,20 @@ export const chapter18En: Chapter = {
           "text": "7.2.1. Smooth sphincter"
         },
         {
-          "type": "para",
-          "text": "Bladder filling triggers a reflex that relaxes the detrusor and closes the internal sphincter. Urethral pressure remains high, preventing urinary leakage."
+          "type": "bullets",
+          "items": [
+            "bladder filling triggers a reflex releasing the detrusor and closing the internal sphincter. Urethral pressure remains high, preventing urine leakage."
+          ]
         },
         {
           "type": "sub",
           "text": "7.2.2. Striated sphincter"
         },
         {
-          "type": "para",
-          "text": "The occlusive muscular system—the pubovesical, pubococcygeus, levator ani and deep transverse perineal muscles—plays a limited role in continence at rest but an important role during physical exertion, coughing and sneezing."
+          "type": "bullets",
+          "items": [
+            "the occlusive muscle system – pubovesical, pubococcygeal, elevator of the anus, deep transverse - has a weak role in continence at rest but real during physical exertion, coughing, sneezing."
+          ]
         },
         {
           "type": "sub",
@@ -366,7 +376,7 @@ export const chapter18En: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "As urine volume increases, stretching of the bladder wall stimulates stretch and volume receptors. Afferent information is integrated by spinal centres under cortical control. While micturition is deferred, the detrusor remains relaxed and the sphincters maintain continence. When the decision to void is made and circumstances permit, parasympathetic activity promotes detrusor contraction and relaxation of the smooth sphincter."
+            "when the urinary volume increases, stretching of the bladder wall stresses the stretch receptors and volume receptors. The related information is integrated by the medullary centers, under cortical control. As long as micturition is delayed, the detrusor remains relaxed and the sphincters maintain continence. When the decision to urinate is made and the context allows, parasympathetic control promotes detrusor contraction and internal urethral sphincter relaxation."
           ]
         },
         {
@@ -376,42 +386,46 @@ export const chapter18En: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "As bladder volume increases, intravesical pressure rises and the desire to void develops. The French source gives approximate reference volumes of 300 mL for the first desire, 500-600 mL for a stronger desire and 700-800 mL for compelling urgency; individual thresholds vary."
+            "When the filling reaches about 300ml, the intravesical pressure rises, the first need to urinate is felt. The second need appears around 500 to 600ml. The urge appears around 700 to 800 ml."
           ]
         },
         {
           "type": "para",
-          "text": "The micturition phase is predominantly parasympathetic:"
+          "text": "The micturition phase is parasympathetic:"
         },
         {
           "type": "bullets",
           "items": [
-            "Contraction of the detrusor;",
-            "Relaxation of the smooth sphincter;",
-            "Active relaxation of the striated sphincter."
+            "detrusor contraction",
+            "internal urethral sphincter release",
+            "active release of the ridged sphincter"
           ]
         },
         {
           "type": "sub",
-          "text": "7.5. Completion of micturition"
+          "text": "7.5. End of micturition"
         },
         {
           "type": "bullets",
           "items": [
-            "The abdominal muscles assist in completely emptying the bladder base, after which the bulbospongiosus muscles expel the final drops of urine remaining in the urethra through intermittent contractions."
+            "the abdominal muscles intervene to completely empty the bladder fundus, then the bulbo-spongy muscles expel by jerks, the last drops of urine contained in the urethra."
           ]
         },
         {
           "type": "para",
-          "text": "Through learning, the cerebral cortex controls bladder activity. If the limbic system, involved in emotion and fear, overrides cortical control, it may alter neuromuscular regulation of the bladder, resulting in urgency, urinary frequency or enuresis."
+          "text": "Through education, the cerebral cortex controls bladder activity. If the limbic system, the seat of emotions and fear, takes precedence over the cortex, it modifies the neuromuscular control of the bladder, hence urgency, urinary frequency, enuresis."
         },
         {
-          "type": "sub",
-          "text": "Relevance to ROP"
+          "type": "xref",
+          "label": "See Chapter 5",
+          "text": "Stress mechanisms",
+          "href": "/lecture/chapitre-5?lang=en#p-le-syndrome-general-d-adaptation-un-modele-pedagogique-4"
         },
         {
-          "type": "para",
-          "text": "Within the ROP model, reflex treatment is intended to support autonomic and craniosacral balance associated with bladder function. In enuresis, the reflex zones considered are the hypothalamus, limbic brain, brainstem, spheno-occipital synchondrosis, T7, L1 and L2 vertebrae, sacrum and coccyx."
+          "type": "rop",
+          "body": [
+            "Reflex treatment aims to restore the autonomic and craniosacral balance exerted on the bladder. In enuresis, the reflex zones to be solicited are the hypothalamus, the limbic brain, the brainstem, the sphenobasilar symphysis and the vertebrae Th7, L1 and L2, sacrum, coccyx."
+          ]
         },
         {
           "type": "sub",
@@ -420,45 +434,50 @@ export const chapter18En: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "Within the biomechanical model described in the French source, negative thoracic pressure, diaphragmatic excursion, pelvic geometry and, in women, the uterine dome are considered to contribute to the distribution and absorption of pressure acting on the pelvic organs."
+            "thoracic suction and diaphragmatic suspension, orientation of the non-hermetically closed pelvis and the uterine dome exert a off-loading and absorption of pressures on the pelvic organs."
           ]
         },
         {
+          "type": "xref",
+          "label": "See Chapter 17",
+          "text": "Pelvic cavity",
+          "href": "/lecture/chapitre-17?lang=en#p-physiologie-0"
+        },
+        {
           "type": "sub",
-          "text": "7.7. Pelvic manometric enclosure (ROP biomechanical model)"
+          "text": "7.7. Pelvic pressure chamber"
         },
         {
           "type": "bullets",
           "items": [
-            "In the ROP biomechanical model, the perineal muscles perform their support and sphincteric functions most effectively when the urethra remains within the pelvic pressure-support system. If the perineum descends and the urethra moves below this functional zone, abdominal pressure generated during coughing, sneezing, defecation, childbirth or certain sports may act more strongly on the bladder without equivalent urethral support, thereby contributing to stress urinary incontinence."
+            "in order for the perineal muscles to properly perform their supporting and sphincter role, they must remain inside the pelvic pressure chamber. If, during a collapse of the perineum, the urethra lowers and exits the pressure chamber, the abdominal pressure by the contraction of the abdominal muscles during coughing, sneezing, defecation, childbirth or certain sports activities, is exerted only on the bladder. It even strengthens the bladder pressure at the expense of the urethral sphincter exiting the pressure chamber causing stress urinary incontinence."
           ]
         },
         {
-          "type": "para",
-          "text": "Relevance to ROP: within this model, excessively early abdominal strengthening after childbirth may aggravate stress urinary incontinence. Fascial tensions affecting the urethral walls are therefore addressed first, with the aim of restoring balanced urethral support. Abdominal strengthening may then be introduced progressively, with emphasis on coordinated breathing, pelvic-floor function and appropriate activation of the transversus abdominis. Postpartum exercise should be adapted to the individual and, where symptoms persist, supervised by a qualified clinician."
+          "type": "rop",
+          "body": [
+            "Premature strengthening of the abdominal muscles in women in the postpartum period, aggravates this incontinence. It is first necessary to rebalance the tension of the fasciae exerted on the urethral walls in order to reintroduce the urethral sphincter inside the pressure chamber. The strengthening of the abdominal muscles can then be undertaken by favoring hypopressive training based on the expiratory role of the transverse muscle of the abdomen."
+          ]
         }
       ]
     },
     {
       "id": "pathologies-courantes",
-      "title": "8. Common Disorders",
+      "title": "8. Common disorders",
       "blocks": [
         {
           "type": "sub",
-          "text": "8.1. Disorders of micturition"
-        },
-        {
-          "type": "sub",
-          "text": "8.1.1. Leakage preceded by urgency: urgency urinary incontinence and overactive bladder"
+          "text": "8.1. Micturition disorders"
         },
         {
           "type": "bullets",
           "items": [
-            "This presentation is more consistent with urgency urinary incontinence, urinary urgency or overactive bladder. The bladder may be structurally normal but unusually irritable. Within the ROP model, potentially contributing factors include:",
-            "Tension in the pubovesical ligaments;",
-            "Fear and heightened emotional reactivity;",
-            "Contact with water;",
-            "Fear of developing urgency: the person voids pre-emptively without waiting for the first desire to urinate. Over time, urinary frequency develops."
+            "8.1.1. Leakage preceded by urgency: urgency and overactive bladder — Leakage preceded by urgency: this suggests urgency urinary incontinence or overactive bladder. The bladder may be normal but suffer from irritability (abnormal state of arousal) caused by:",
+            "tension of the pubovesical ligaments;",
+            "fear and emotional reactivity;",
+            "contact with water;",
+            "fear of feeling like urinating: the person voids preventively without waiting for the first-urge threshold. Over time, urinary frequency develops.",
+            "Stress urinary incontinence (SUI): this is a urine leakage that occurs during exertion, coughing, sneezing, carrying a load or physical activity. The abdominal muscle contractions then outweigh the occlusal forces of the urethral sphincter and pelvic floor."
           ]
         },
         {
@@ -468,119 +487,114 @@ export const chapter18En: Chapter = {
         {
           "type": "bullets",
           "items": [
-            "This is urinary leakage occurring during exertion, coughing, sneezing, lifting or physical activity. Abdominal muscle contraction then exceeds the closing forces generated by the urethral sphincter and pelvic floor."
+            "It is a urinary leak that occurs during exertion, coughing, sneezing, carrying a load or physical activity. The abdominal muscle contractions then outweigh the occlusal forces of the urethral sphincter and pelvic floor.",
+            "The tension of the pubovesical ligaments, by fixation of the pubic symphysis, stretches the anterior bank of the urethra from where gaping.",
+            "The tension of the fascia by fixing the coccyx between the posterior bank of the urethra and the coccyx, stretches the posterior bank of the urethra, hence gaping."
           ]
         },
         {
-          "type": "para",
-          "text": "Proposed mechanism:"
+          "type": "rop",
+          "body": [
+            "Our action on SUI aims to rebalance the tensions of the fascia surrounding the urethra by acting on the pudendal plexus, the perineal attachments on the coccyx, the pubic symphysis, the ischiopubic branches and the perineal body. The hormonal system participates in this balance of fascia."
+          ]
+        },
+        {
+          "type": "xref",
+          "label": "See Chapter 19",
+          "text": "Menstrual cycle",
+          "href": "/lecture/chapitre-19?lang=en#p-uterus-physiologie-6"
         },
         {
           "type": "bullets",
           "items": [
-            "Within the ROP model, tension in the pubovesical ligaments associated with restriction of the pubic symphysis is considered capable of increasing tension on the anterior urethral wall and reducing closure;",
-            "Fascial tension associated with coccygeal restriction is likewise considered capable of affecting the tissues between the posterior urethral wall and the coccyx and reducing posterior urethral support."
-          ]
-        },
-        {
-          "type": "sub",
-          "text": "Relevance to ROP"
-        },
-        {
-          "type": "para",
-          "text": "The ROP approach to stress urinary incontinence aims to rebalance tension in the fascia surrounding the urethra by addressing the pudendal plexus, the perineal attachments to the coccyx, the pubic symphysis, the ischiopubic rami and the perineal body. Hormonal factors may also influence fascial balance. Leakage that occurs without urgency or exertion requires medical assessment, particularly when associated with pain, previous surgery or recurrent infection."
-        },
-        {
-          "type": "sub",
-          "text": "8.1.3. Neurogenic bladder"
-        },
-        {
-          "type": "bullets",
-          "items": [
-            "Incontinence may result from neurological disorders, including spinal cord injury, spina bifida, multiple sclerosis and diabetic neuropathy."
+            "Leakage not preceded by a need: bladder instability on structural lesions responsible for tenesmes (permanent and painful need for micturition), by surgery or recurrent infections;",
+            "Neurological lesions (neurological bladders): incontinence not preceded by a need for neurological lesions: paraplegia, spina bifida, multiple sclerosis, diabetes."
           ]
         },
         {
           "type": "sub",
-          "text": "8.2. Conditions requiring medical referral"
+          "text": "8.2. Diagnosis of exclusion"
         },
         {
           "type": "bullets",
           "items": [
-            "Urinary leakage that occurs without urgency or exertion warrants medical assessment. Possible causes include structural disease and peripheral or central neurological disorders, such as spina bifida, spinal cord injury or multiple sclerosis.",
-            "Haematuria;",
-            "Fever;"
+            "Urinary leakage not preceded by a need: a bladder that loses its urine outside of any notion of effort forces us to suspect a tumor, peripheral neurological damage (spina bifida) or central (paraplegia, multiple sclerosis).",
+            "BLOOD URINE",
+            "Fever&nbsp;",
+            "Acute cystitis: they are of inflammatory or infectious origin. The causes are multiple: psychic, hormonal, bacterial, viral, parasitic and mechanical or by sexually transmitted diseases (STDs). They are often recurrent.",
+            "Chronic urinary retention",
+            "BLADDER CANCER MALIGNANT"
           ]
         },
         {
-          "type": "para",
-          "text": "Acute cystitis: most cases are infectious, commonly bacterial. Bladder symptoms can also arise from noninfectious inflammatory, mechanical or other causes, and sexually transmitted infections may produce similar symptoms. Recurrent or persistent symptoms require medical assessment;"
+          "type": "sub",
+          "text": "Clinical Signs"
         },
         {
           "type": "bullets",
           "items": [
-            "Chronic urinary retention;",
-            "Bladder cancer;",
-            "Clinical signs:",
-            "Suprapubic or lower abdominal pain, which may accompany cystitis;",
-            "Inability to void or compelling urinary urgency;",
-            "Distended bladder: visible or palpable suprapubic swelling caused by inability to void."
+            "Hypogastric pain: cystitis",
+            "Urinary impossibility or imperative micturition",
+            "Bladder globe: voiding of the hypogastric region due to urinary impossibility."
           ]
         }
       ]
     },
     {
       "id": "indications-troubles-fonctionnels",
-      "title": "9. Indications: Functional Disorders",
+      "title": "9. Indications: functional disorders",
       "blocks": [
         {
           "type": "bullets",
           "items": [
-            "Leakage preceded by urgency - urgency urinary incontinence or compelling urgency: within the ROP model, timing in relation to the menstrual cycle may be considered when planning intervention, although individual response varies;",
-            "Sequelae of abdominopelvic surgery affecting micturition;",
-            "Persistent symptoms following cystitis and chronic bladder pain: once active infection and other organic disease have been assessed, the ROP approach considers associated factors such as intestinal dysbiosis, hormonal and emotional context, and changes in pelvic support during pregnancy and childbirth."
+            "functional pathologies:",
+            "Leaks preceded by a need (urgency, urinary urgency): our action is more effective a few days after menstruation (hormonal peak);",
+            "Sequelae of abdominopelvic surgery having consequences on micturition;",
+            "Sequelae of cystitis, chroniccystalgia: our role is to act on the factors promoting infection - intestinal dysbiosis, hormonal and emotional imbalances, static disorders of the pelvis during pregnancy and childbirth - which disrupt the dynamics of the bladder and promote cystitis."
           ]
         }
       ]
     },
     {
       "id": "relations-viscero-somatiques",
-      "title": "10. Viscerosomatic Relations",
+      "title": "10. Viscero-Somatic Relationships",
       "blocks": [
         {
           "type": "bullets",
           "items": [
-            "T11–T12 and L1–L2 vertebrae, sacrum and sacrococcygeal joint;",
-            "Sacrotuberous and sacrospinous ligaments;",
-            "Pubic symphysis and obturator fossae;",
-            "Proximal and distal tibiofibular joints."
+            "T11-T12- L1–L2 vertebrae, sacrum, coccygeal joint;",
+            "Sacro-tuberous and sacrospinous ligaments;",
+            "Pubic symphysis, obturator fossae;",
+            "Upper and lower tibiofibular joints."
           ]
         }
       ]
     },
     {
       "id": "relations-viscero-emotionnelles",
-      "title": "11. Visceral–Emotional Relations",
+      "title": "11. Viscero-emotional Relationships",
       "blocks": [
         {
           "type": "para",
-          "text": "Bladder function is closely integrated with mechanisms of perception, attention, voluntary control and contextual adaptation. The need to urinate is therefore not determined solely by bladder filling: its perception and the ability to defer micturition may also be influenced by emotional state and level of alertness."
+          "text": "Bladder function is closely integrated with the mechanisms of perception, attention, voluntary control and adaptation to context. Urinary need is therefore not only determined by bladder filling: its perception and ability to delay micturition can also be influenced by emotional state and level of alertness."
         },
         {
           "type": "para",
-          "text": "In some individuals, stress, anxiety, fear of being unable to reach a toilet quickly, or repeated anticipation of the need to void may increase urinary urgency, frequency or bladder discomfort. These interactions form part of a brain–bladder axis linking visceral information with networks involved in interoception, attention, emotion and behavioural control."
+          "text": "Stress, anxiety, fear of not being able to quickly access the toilet or repeated anticipation of the need can, in some people, increase urinary urgency, urinary frequency or bladder discomfort. These interactions are part of a brain-bladder axis, associating visceral information with networks involved in interoception, attention, emotions and behavioral control."
         },
         {
           "type": "para",
-          "text": "Learning continence during childhood also contributes to the development of voiding habits. Particularly restrictive toilet training, or training associated with shame, fear or intense pressure concerning continence, may form part of some patients’ functional history. This relationship, however, is neither constant nor specific to any bladder disorder."
+          "text": "The learning of continence during childhood also participates in the construction of urinary habits. Particularly restrictive education, or associated with shame, fear or strong pressure around cleanliness, can be an element of the functional history of some patients. However, this relationship is neither constant nor specific to a bladder disorder."
         },
         {
           "type": "para",
-          "text": "In practice, emotional context should therefore be regarded as a factor that may modulate certain functional symptoms rather than as their sole cause. Bladder pain, urgency urinary incontinence or urinary frequency may be influenced by stress and bodily hypervigilance, whereas urinary tract infection or any organic disease requires specific assessment and management."
+          "text": "In practice, the emotional context must therefore be considered as a factor likely to modulate certain functional symptoms, and not as their sole cause. Cystalgia, urgency or urinary frequency can be influenced by stress and bodily hypervigilance, while a urinary tract infection or any organic pathology requires specific assessment and management."
         },
         {
-          "type": "para",
-          "text": "Relevance to ROP — Within the ROP clinical model, the visceral–emotional component takes account of the interaction among bladder perception, autonomic regulation, emotional context and central control. It complements local and regional work on the bladder without assigning a systematic organ-specific correspondence to any particular emotion."
+          "type": "rop",
+          "body": [
+            "In the ROP clinical model, the viscero-emotional aspect aims to take into account this interaction between bladder perception, autonomic regulation, emotional context and central control. It completes the locoregional work on the bladder without attributing to a particular emotion a systematic correspondence with the organ."
+          ]
         }
       ]
     },
@@ -589,16 +603,28 @@ export const chapter18En: Chapter = {
       "title": "12. Advice",
       "blocks": [
         {
+          "type": "sub",
+          "text": "EUI Perineal Gymnastics"
+        },
+        {
           "type": "bullets",
           "items": [
-            "Pelvic-floor exercises for stress urinary incontinence",
-            "Lie supine with the pelvis posteriorly tilted and elevated on a large cushion, with the legs supported against a wall. Perform the exercise on an empty stomach and with an empty bladder. Exhale through the nose while applying gentle suprapubic traction towards the umbilicus with the finger pads. Repeat up to 10 times, provided the exercise is comfortable and has been shown by a qualified practitioner.",
-            "To strengthen the external rotators of the hips, lie supine with the legs extended and externally rotated and the pelvis in a posterior tilt. Press the lateral borders of the feet gently into the floor while engaging the gluteal muscles and lifting the pubic region slightly.",
-            "Lie supine with the knees flexed and gently squeeze a book or cushion between the knees to recruit the hip adductors and coordinate them with the pelvic-floor muscles.",
-            "In a four-point kneeling position supported on the elbows, exhale through the nose in short controlled bursts while gently drawing in the lower abdomen.",
-            "Practise pelvic-floor contractions outside micturition. Interrupting the urinary stream may be used once to identify the appropriate muscles, but it should not be repeated as an exercise because it may interfere with normal bladder emptying.",
-            "When about to cough or sneeze, leaning slightly forward with the hands supported on the knees may help redistribute load away from the anterior perineum. This strategy should be adapted to comfort, balance and individual clinical advice.",
-            "Cystitis and bladder pain: maintain adequate hydration unless a clinician has advised fluid restriction. Burning urination, fever, haematuria, flank pain, pregnancy, recurrent symptoms or inability to void require prompt medical assessment."
+            "Dorsal decubitus, retroversed pelvis, declive by large cushion under the buttocks, raised legs resting on a wall, fasting, empty bladder: nasal exhalation + suprapubic traction by the pulps of the fingers towards the umbilicus, 10 times.",
+            "Strengthen the external rotators of the hips: dorsal decubitus, lower limbs elongated in external rotation, pelvis retroversed, press the outer edge of the feet on the floor while contracting the glutes and pushing the pubis upwards.",
+            "Dorsal decubitus, knees bent, squeeze a book between the knees to strengthen the sphincter fibers of the perineum by soliciting the adductors of the hips.",
+            "Quadrupedal position, resting on the elbows: exhalation through the nose by jerking, retracting the belly.",
+            "In the toilet, stop micturition several times to strengthen the sphincter fibers of the perineum.",
+            "Bend forward, hands resting on the knees when the person is about to cough or sneeze, to transfer pressure to the anterior perineum in the lower and upper limbs."
+          ]
+        },
+        {
+          "type": "sub",
+          "text": "Cystitis, cystalgia"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "drink water in small quantities but often."
           ]
         }
       ]
@@ -609,209 +635,214 @@ export const chapter18En: Chapter = {
       "blocks": [
         {
           "type": "para",
-          "text": "For the bladder, this ROP map is particularly useful because it can be organized according to the four levels of the ROP protocol, extending from integration centres to somatic and emotional relations."
+          "text": "For the bladder, this ROP mapping is particularly interesting because it can be organized according to the four levels of the ROP protocol, from integration centres to somatic and emotional relationships."
         },
         {
           "type": "sub",
-          "text": "13.1. Level 1 — Regulation of Higher Centres"
+          "text": "13.1. Level 1 — Regulation of higher centres"
         },
         {
           "type": "para",
-          "text": "Level 1 is not required systematically for every bladder disorder. It becomes particularly relevant when urgency, urinary frequency, enuresis, bodily hypervigilance, stress or anticipation of the need to void suggests significant involvement of central mechanisms."
+          "text": "Level 1 is not systematic for any bladder disorder. It becomes particularly relevant when urgency, urinary frequency, enuresis, bodily hypervigilance, stress or anticipation of need suggest significant involvement of central mechanisms."
         },
         {
-          "type": "para",
-          "text": "Occipital reflex zones."
+          "type": "bullets",
+          "items": [
+            "Occipital reflex areas.",
+            "Brain stem and integration centres.",
+            "Diencephalus, including hypothalamus.",
+            "Hypothalamic Pituitary Unit",
+            "Neuro-meningeal environment and CSF circulation in the ROP model."
+          ]
         },
         {
-          "type": "para",
-          "text": "Brainstem and integration centres."
-        },
-        {
-          "type": "para",
-          "text": "Diencephalon, particularly the hypothalamus."
-        },
-        {
-          "type": "para",
-          "text": "Hypothalamic–pituitary axis."
-        },
-        {
-          "type": "para",
-          "text": "Neuromeningeal environment and cerebrospinal fluid circulation within the ROP model."
-        },
-        {
-          "type": "para",
-          "text": "See Chapter 3 — Central Nervous System, Level 1: Regulation of Higher Centres."
+          "type": "xref",
+          "label": "See Chapter 3 — Central Nervous System",
+          "href": "/lecture/chapitre-3?lang=en",
+          "text": "Level 1: Regulation of the higher centres."
         },
         {
           "type": "sub",
-          "text": "13.2. Level 2 — Autonomic Regulation and Adaptation"
+          "text": "13.2. Level 2 — Autonomic regulation and adaptation"
         },
         {
           "type": "para",
-          "text": "This is one of the essential levels for the bladder. The principal access points are the S2–S4 pelvic parasympathetic pathways, the thoracolumbar sympathetic pathways and the inferior hypogastric plexus."
+          "text": "This is one of the essential levels for the bladder. The main gates are the pelvic parasympathetic S2–S4, the thoracolumbar sympathetic pathways and the inferior hypogastric plexus."
         },
         {
-          "type": "para",
-          "text": "Pelvic (sacral) parasympathetic system: sacral spinal cord segments S2–S4, at the L1–L2 vertebral level, according to ROP spinal mapping."
+          "type": "bullets",
+          "items": [
+            "Pelvic parasympathetic (sacral): Sacral marrow S2–S4 (vertebral stage L1–L2), according to medullary ROP mapping.",
+            "Spine and costotransverse joints from T10 to L2 (T11-T12 vertebral markers).",
+            "Lower thoracic, lumbar and sacral laterovertebral lymph node chain.",
+            "Lower hypogastric plexus: pelvic landmarks from ROP mapping.",
+            "Hypogastric nerves: to be considered as a regional sympathetic distribution pathway.",
+            "Storage-draining coordination: to be preferred as a functional logic rather than an isolated stimulation of the sympathetic or parasympathetic."
+          ]
         },
         {
-          "type": "para",
-          "text": "Vertebral column and costotransverse joints from T10 to L2, with T11–T12 as vertebral landmarks."
-        },
-        {
-          "type": "para",
-          "text": "Lower thoracic, lumbar and sacral paravertebral sympathetic chain."
-        },
-        {
-          "type": "para",
-          "text": "Inferior hypogastric plexus: pelvic landmarks on the ROP map."
-        },
-        {
-          "type": "para",
-          "text": "Hypogastric nerves: to be considered regional sympathetic distribution pathways."
-        },
-        {
-          "type": "para",
-          "text": "Storage–voiding coordination: this functional principle should take precedence over isolated stimulation of either the sympathetic or parasympathetic system."
-        },
-        {
-          "type": "para",
-          "text": "See Chapter 4 — Autonomic Nervous System, particularly the sections ‘Pelvic Parasympathetic System,’ ‘Visceromotor Sympathetic System’ and ‘Pelvic Previsceral Plexus.’"
+          "type": "xref",
+          "label": "See Chapter 4 — Autonomic Nervous System",
+          "href": "/lecture/chapitre-4?lang=en",
+          "text": "\"Pelvic parasympathetic\", \"Visceromotor sympathetic\" and \"Pelvic previsceral plexus\" sections."
         },
         {
           "type": "sub",
-          "text": "13.3. Level 3 — Local and Regional Visceral Regulation"
+          "text": "13.3. Level 3 — Loco-regional visceral regulation"
         },
         {
           "type": "para",
-          "text": "Level 3 comprises the core of the organ-specific map: the pelvic cavity, bladder, bladder neck and trigonal region, urethra, and supporting environment."
+          "text": "Level 3 brings together the heart of organ-specific mapping: pelvic cavity, bladder, cervico-trigonal region, urethra and support environment."
         },
         {
-          "type": "para",
-          "text": "Pelvic cavity and perineum."
+          "type": "bullets",
+          "items": [
+            "Pelvic and perineal cavity.",
+            "Bladder and bladder dome.",
+            "Pubo-vesical ligaments: posterior edge of the tibial malleolus.",
+            "Trigone of the bladder and cervicoisthmic region of the uterus in women / prostate in men: locate the reflex zone of the perineal body, in front of the coccyx; a dorsally and posteriorly oriented groove leads to a dimple on the posteromedial face of the calcaneus.",
+            "Bladder and body of the uterus: slightly domed area anterior to the trigone.",
+            "Urogenital fissure, perineal body, urethra and external sphincter of the bladder: lower edge of the calcaneus in front of the coccyx.",
+            "Pubic symphysis and pubovesical structures.",
+            "Upper peritoneum of the bladder and relations with neighboring organs."
+          ]
         },
         {
-          "type": "para",
-          "text": "Bladder and bladder dome."
+          "type": "figure",
+          "src": "/chapter-18/EN/Cartography/figure-18-10.png",
+          "caption": "Photo: pubovesical ligament",
+          "alt": "Plantar landmark of the pubovesical ligament",
+          "orientation": "landscape"
         },
         {
-          "type": "para",
-          "text": "Pubovesical ligaments: posterior border of the tibial malleolus."
+          "type": "figure",
+          "src": "/chapter-18/EN/Cartography/figure-18-12.png",
+          "caption": "Photo: bladder trigone and hypogastric plexus",
+          "alt": "Plantar landmark of the bladder trigone and hypogastric plexus",
+          "orientation": "landscape"
         },
         {
-          "type": "para",
-          "text": "Vesical trigone and the cervicoisthmic region of the uterus in women/prostate in men: identify the reflex zone of the perineal body anterior to the coccyx; a groove running dorsally and posteriorly terminates in a small depression on the posteromedial surface of the calcaneus."
+          "type": "figure",
+          "src": "/chapter-18/EN/Cartography/figure-18-14.png",
+          "caption": "Photo: perineal body and urogenital cleft",
+          "alt": "Plantar landmark of the perineal body and the urogenital cleft",
+          "orientation": "landscape"
         },
         {
-          "type": "para",
-          "text": "Bladder and body of the uterus: a slightly convex area anterior to the trigone."
-        },
-        {
-          "type": "para",
-          "text": "Urogenital hiatus, perineal body, urethra and external urethral sphincter: inferior border of the calcaneus anterior to the coccyx."
-        },
-        {
-          "type": "para",
-          "text": "Pubic symphysis and pubovesical structures."
-        },
-        {
-          "type": "para",
-          "text": "Superior peritoneal surface of the bladder and relations with adjacent organs."
-        },
-        {
-          "type": "para",
-          "text": "See Chapter 17 — Pelvic Cavity, Level 3: Local and Regional Visceral Regulation."
+          "type": "xref",
+          "label": "See Chapter 17 — Pelvic Cavity",
+          "href": "/lecture/chapitre-17?lang=en",
+          "text": "Level 3: Loco-regional visceral regulation."
         },
         {
           "type": "sub",
-          "text": "13.4. Level 4 — Viscerosomatic and Visceral–Emotional Integration"
+          "text": "13.4. Level 4 — Viscero-somatic and viscero-emotional integration"
         },
         {
           "type": "para",
-          "text": "This section replaces the former ‘Limbic System’ heading. It relates bladder symptoms to somatic convergence, the pelvic floor, and the context of perception and adaptation."
+          "text": "This part replaces the old section \"Limbic system\". It links the bladder symptom to somatic convergences, the pelvic floor and the context of perception and adaptation."
         },
         {
           "type": "sub",
           "text": "13.4.1. Viscerosomatic component"
         },
         {
-          "type": "para",
-          "text": "Pudendal nerve, S2–S4."
+          "type": "bullets",
+          "items": [
+            "Pudendal nerve S2–S4.",
+            "Pelvic floor and external urethral sphincter.",
+            "Sacrum and coccyx.",
+            "Symphysis pubis.",
+            "Lumbosacral territories associated with bladder afferents."
+          ]
+        },
+        {
+          "type": "figure",
+          "src": "/chapter-18/EN/Cartography/figure-18-02.png",
+          "caption": "Photo: greater sciatic foramen, piriformis muscle, sacral plexus and pudendal nerve",
+          "alt": "Plantar landmark of the great ischial foramen and pudendal nerve",
+          "orientation": "landscape"
+        },
+        {
+          "type": "figure",
+          "src": "/chapter-18/EN/Cartography/figure-18-04.png",
+          "caption": "Photo: lesser sciatic foramen, obturator muscles and gemelli",
+          "alt": "Plantar landmark of the lesser sciatic foramen",
+          "orientation": "landscape"
+        },
+        {
+          "type": "figure",
+          "src": "/chapter-18/EN/Cartography/figure-18-06.png",
+          "caption": "Photo: obturator fossa and obturator muscles",
+          "alt": "Plantar landmark of the obturator fossa and obturator muscles",
+          "orientation": "portrait"
+        },
+        {
+          "type": "figure",
+          "src": "/chapter-18/EN/Cartography/figure-18-08.png",
+          "caption": "Photo: sacrotuberous and sacrospinous ligaments",
+          "alt": "Plantar landmark of the sacrotuberous and sacrospinous ligaments",
+          "orientation": "landscape"
         },
         {
           "type": "para",
-          "text": "Pelvic floor and external urethral sphincter."
-        },
-        {
-          "type": "para",
-          "text": "Sacrum and coccyx."
-        },
-        {
-          "type": "para",
-          "text": "Pubic symphysis."
-        },
-        {
-          "type": "para",
-          "text": "Lumbosacral territories associated with bladder afferents."
-        },
-        {
-          "type": "para",
-          "text": "The pudendal nerve is a somatic pathway distinct from the autonomic pelvic splanchnic nerves, although they share the same S2–S4 segmental region."
+          "text": "The pudendal nerve is a somatic pathway distinct from autonomous pelvic splanchnic nerves, although they share a segmental S2–S4 proximity."
         },
         {
           "type": "sub",
-          "text": "13.4.2. Visceral–emotional component"
+          "text": "13.4.2. Viscero-emotional component"
         },
         {
           "type": "para",
-          "text": "The ‘limbic brain–bladder balance’ describes the integration of bladder signals with brain networks involved in interoception, attention, urgency, contextual control and emotional experience."
+          "text": "The “limbic-bladder brain balance” describes the integration of bladder signals with brain networks involved in interoception, attention, urgency, contextual control and emotional experience."
         },
         {
-          "type": "para",
-          "text": "See Chapter 3 — Central Nervous System for the central and corticolimbic networks; see Section 11, ‘Visceral–Emotional Relations,’ in this chapter."
+          "type": "xref",
+          "label": "See Chapter 3 — Central Nervous System",
+          "href": "/lecture/chapitre-3?lang=en",
+          "text": "Central and cortico-limbic networks; see also Section 11 “Viscero-emotional Relationships” of this chapter."
         },
         {
           "type": "sub",
-          "text": "13.5. Associated Areas to Consider Based on Findings"
+          "text": "13.5. Associated supports according to tests"
         },
         {
-          "type": "para",
-          "text": "Kidneys and ureters: when warranted by the urinary or renal context."
-        },
-        {
-          "type": "para",
-          "text": "Small intestine and colon: in the presence of constipation, digestive dysfunction or an associated pelvic context."
-        },
-        {
-          "type": "para",
-          "text": "Liver and other systemic territories: only when supported by the history, findings and overall clinical coherence."
+          "type": "bullets",
+          "items": [
+            "Kidneys and ureters: when the urinary or renal context justifies it.",
+            "Intestine and colon: in the presence of constipation, digestive dysfunction or associated pelvic context.",
+            "Liver and other systemic territories: only when retained by history, testing and clinical consistency."
+          ]
         },
         {
           "type": "sub",
-          "text": "13.6. Clinical Interpretation According to Symptoms"
+          "text": "13.6. Clinical reading according to symptom"
         },
         {
           "type": "para",
           "text": "The hierarchy of zones varies according to the functional disorder and should not be applied as a rigid sequence."
         },
         {
-          "type": "para",
-          "text": "Overactive bladder/urgency urinary incontinence: Levels 1, 2 and 4 may be important, in addition to direct work on the bladder at Level 3."
-        },
-        {
-          "type": "para",
-          "text": "Stress urinary incontinence: Level 3 and the somatic component of Level 4—urethra, pubis, pelvic floor and pudendal nerve—are frequently prioritized, with integration of Level 2 according to the findings."
-        },
-        {
-          "type": "para",
-          "text": "Functional urinary frequency or enuresis: consider central control, voiding habits, the brain–bladder axis and autonomic regulation."
-        },
-        {
-          "type": "para",
-          "text": "Noninfectious bladder pain: assess the bladder, autonomic regulation, pelvic floor and hypersensitivity after excluding infection or organic disease."
+          "type": "bullets",
+          "items": [
+            "Bladder hyperactivity/ urgency: possible importance of Levels 1, 2 and 4, in addition to direct bladder work at Level 3.",
+            "Stress urinary incontinence: frequent priority at Level 3 and the somatic side of Level 4 — urethra, pubis, pelvic floor, pudendal — with integration of Level 2 according to tests.",
+            "Urinary frequency or functional enuresis: taking into account central control, urinary habits, the brain-bladder axis and autonomic regulation.",
+            "Non-infectious cystalgia: reading combining bladder, autonomic regulation, pelvic floor and hypersensitivity, after exclusion of infection or organic pathology."
+          ]
         }
       ]
     }
   ]
+}
+
+for (const section of chapter18En.sections) {
+  section.blocks.forEach((block, blockIndex) => {
+    if (block.type !== 'xref') return
+    const destination = new URL(block.href, 'https://rop.local')
+    destination.searchParams.set('lang', 'en')
+    destination.searchParams.set('xrefBack', `/lecture/chapitre-18?lang=en#p-${section.id}-${blockIndex}`)
+    destination.searchParams.set('xrefBackLabel', 'Back to Chapter 18')
+    block.href = `${destination.pathname}${destination.search}${destination.hash}`
+  })
 }

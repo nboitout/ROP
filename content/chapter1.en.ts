@@ -83,7 +83,7 @@ export const chapter1En: Chapter = {
       blocks: [
         { type: 'para', text: 'The viscera can be viewed as suspended structures in continuous mechanical interaction with their environment.' },
         { type: 'para', text: 'Four elements are essential for gliding and adaptation:' },
-        { type: 'numbered', items: [
+        { type: 'bullets', items: [
           'Contact surfaces and serous membranes.',
           'Interstitium and fascial continuities.',
           'Attachments (ligaments, mesenteries, omenta).',
@@ -156,8 +156,6 @@ export const chapter1En: Chapter = {
       title: '6. Clinical application in ROP',
       blocks: [
         { type: 'para', text: 'Within its methodological framework, ROP uses reflex circuits involving occipital and foot zones to guide assessment and treatment.' },
-        { type: 'sub', text: '6.1. Clinical illustration: limbic system–liver viscero-emotional balance' },
-        { type: 'para', text: 'This technique was selected to illustrate the transition from general principles to clinical application in ROP. It relates a viscus—the liver—to its mobility restrictions, attachments, diaphragmatic environment, and autonomic regulation, while also incorporating the emotional dimension through the limbic system. It thus illustrates that ROP does not consider the organ in isolation, but instead seeks to identify a restriction, its associated reflex pathways, and its integration within the overall functional pattern. At this stage of the book, the aim is not to describe a detailed liver protocol, but to provide the reader with a concrete illustration of the viscero-emotional logic of the method.' },
         { type: 'para', text: 'The practitioner looks for:' },
         { type: 'bullets', items: [
           'a primary restriction (mobility/motility);',
@@ -166,6 +164,8 @@ export const chapter1En: Chapter = {
         ]},
         { type: 'para', text: 'The therapeutic approach aims for a “return to balance”: induce, listen, correct, then verify overall integration.' },
         { type: 'para', text: 'The same principle may be applied to other viscera, depending on the ROP tests and the clinical context.' },
+        { type: 'sub', text: '6.1. Clinical illustration: limbic system–liver viscero-emotional balance' },
+        { type: 'para', text: 'This technique was selected to illustrate the transition from general principles to clinical application in ROP. It relates a viscus—the liver—to its mobility restrictions, attachments, diaphragmatic environment, and autonomic regulation, while also incorporating the emotional dimension through the limbic system. It thus illustrates that ROP does not consider the organ in isolation, but instead seeks to identify a restriction, its associated reflex pathways, and its integration within the overall functional pattern. At this stage of the book, the aim is not to describe a detailed liver protocol, but to provide the reader with a concrete illustration of the viscero-emotional logic of the method.' },
       ],
     },
     {

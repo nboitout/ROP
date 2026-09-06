@@ -753,7 +753,7 @@ export const chapter12Fr: Chapter = {
           "type": "xref",
           "label": "Voir la référence dans le chapitre 5",
           "text": "Mécanisme de stress",
-          "href": "/lecture/chapitre-5?lang=fr&xrefBack=%2Flecture%2Fchapitre-12%3Flang%3Dfr%23p-indications-1&xrefBackLabel=Retour%20au%20chapitre%2012#p-sga-7"
+          "href": "/lecture/chapitre-5?lang=fr&xrefBack=%2Flecture%2Fchapitre-12%3Flang%3Dfr%23p-indications-1&xrefBackLabel=Retour%20au%20chapitre%2012#p-la-double-reponse-au-stresseur-urgence-et-soutien-1"
         }
       ]
     },

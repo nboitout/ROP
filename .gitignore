@@ -34,3 +34,10 @@ desktop.ini
 ~$*
 *.tmp
 .env*
+
+# Local audit and browser artifacts
+.codex_tmp/
+.playwright-cli/
+.qa/
+tmp/
+reports/artifacts/

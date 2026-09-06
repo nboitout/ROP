@@ -191,7 +191,7 @@ export const chapter21Fr: Chapter = {
           "type": "xref",
           "label": "Voir la référence dans le chapitre 5",
           "text": "Mécanisme de stress",
-          "href": "/lecture/chapitre-5?lang=fr#p-sga-9"
+          "href": "/lecture/chapitre-5?lang=fr#p-le-syndrome-general-d-adaptation-un-modele-pedagogique-2"
         },
         {
           "type": "sub",
@@ -587,7 +587,7 @@ if (chapter21Reflex) {
       'Diencéphale, notamment hypothalamus, dans la régulation neuroendocrine et autonome.',
       'Réseaux centraux et cortico-limbiques impliqués dans la perception, la motivation et le contexte émotionnel.',
     ] },
-    { type: 'xref', label: 'Cf. chapitre 3 — Système nerveux central, Niveau 1 : Régulation des centres supérieurs', href: '/lecture/chapitre-3-rework?lang=fr' },
+    { type: 'xref', label: 'Cf. chapitre 3 — Système nerveux central, Niveau 1 : Régulation des centres supérieurs', href: '/lecture/chapitre-3?lang=fr#sec-zones-reflexes-rop' },
     { type: 'sub', text: '10.2. Niveau 2 — Régulation neuro-végétative et adaptation' },
     { type: 'para', text: 'Le Niveau 2 est essentiel pour la fonction érectile, car l’érection et certaines phases de la réponse sexuelle dépendent d’une coordination entre voies parasympathiques et sympathiques.' },
     { type: 'bullets', items: [
@@ -596,7 +596,7 @@ if (chapter21Reflex) {
       'Plexus hypogastrique inférieur et réseaux autonomes pelviens : carrefour fonctionnel entre les voies sympathiques et parasympathiques destinées aux organes pelviens.',
       'Coordination autonome : privilégier une lecture fonctionnelle de la séquence excitation-érection-émission plutôt qu’une stimulation isolée du sympathique ou du parasympathique.',
     ] },
-    { type: 'xref', label: 'Cf. chapitre 4 — Système nerveux autonome, notamment les sections consacrées au parasympathique pelvien, au sympathique thoraco-lombaire et au plexus préviscéral pelvien', href: '/lecture/chapitre-4-rework?lang=fr' },
+    { type: 'xref', label: 'Cf. chapitre 4 — Système nerveux autonome, notamment les sections consacrées au parasympathique pelvien, au sympathique thoraco-lombaire et au plexus préviscéral pelvien', href: '/lecture/chapitre-4?lang=fr#sec-zones-reflexes-podales' },
     { type: 'sub', text: '10.3. Niveau 3 — Régulation viscérale loco-régionale' },
     { type: 'para', text: 'Le Niveau 3 regroupe les structures érectiles et leur environnement pelvien immédiat.' },
     { type: 'sub', text: 'Repères podaux de base' },
@@ -636,7 +636,7 @@ if (chapter21Reflex) {
       'Cerveau limbique.',
       'Nerf olfactif I : repère sensoriel associé de la cartographie ROP.',
     ] },
-    { type: 'xref', label: 'Cf. chapitre 3 — Système nerveux central pour les réseaux centraux et cortico-limbiques', href: '/lecture/chapitre-3-rework?lang=fr', text: 'Voir également la section 9 « Relations viscéro-émotionnelles » du présent chapitre.' },
+    { type: 'xref', label: 'Cf. chapitre 3 — Système nerveux central pour les réseaux centraux et cortico-limbiques', href: '/lecture/chapitre-3?lang=fr#sec-zones-reflexes-rop', text: 'Voir également la section 9 « Relations viscéro-émotionnelles » du présent chapitre.' },
     { type: 'sub', text: '10.5. Lecture clinique selon le trouble' },
     { type: 'para', text: 'La hiérarchie des niveaux varie selon le motif de consultation et ne doit pas être appliquée comme une séquence rigide.' },
     { type: 'bullets', items: [

@@ -1,3 +1,4 @@
+import { englishReaderMetadata } from '@/lib/readerDocumentMetadata'
 import { cookies } from 'next/headers'
 import { redirect } from 'next/navigation'
 import { canReadPaidChapter } from '@/lib/access'
@@ -8,10 +9,22 @@ import { getServerLang } from '@/app/i18n/serverLang'
 import { translations } from '@/app/i18n/translations'
 import { chapter13Slides, chapter13SlidesEn, chapter13SlideAnchors, chapter13SlideAnchorsEn } from '@/content/chapter13.slidesync'
 
-export const metadata: Metadata = {
+const defaultMetadata: Metadata = {
   title: 'Chapitre 13 — Rate · R.O.P. · Guy Boitout',
   description: 'Lecture du chapitre 13 : anatomie, physiologie, pathologies courantes et zones réflexes podales de la rate en R.O.P.',
   robots: { index: false, follow: false },
+}
+
+export async function generateMetadata({
+  searchParams,
+}: {
+  searchParams: Promise<{ lang?: string }>
+}): Promise<Metadata> {
+  const { lang: langParam } = await searchParams
+  const lang = await getServerLang(langParam)
+  if (lang !== 'en') return defaultMetadata
+  const { chapter } = getChapter('chapter-13', 'en')
+  return englishReaderMetadata(chapter, 'synchronized', defaultMetadata)
 }
 
 export default async function Chapitre13LecturePage({

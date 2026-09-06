@@ -24,6 +24,11 @@ for (const [chapterKey, pairs] of Object.entries(ENGLISH_REFLEX_MEDIA)) {
     }
 
     const integrated = integrateEnglishReflexDeck(chapter, [], [])
+    if (chapterKey === 'chapter-9' || chapterKey === 'chapter-19' || chapterKey === 'chapter-20') {
+      assert.equal(integrated.slides.length, 0)
+      assert.equal(integrated.anchors.length, 0)
+      return
+    }
     assert.equal(integrated.slides.length, pairs.length)
     assert.equal(integrated.anchors.length, pairs.length)
     assert.ok(integrated.anchors.every((anchor) => anchor.sectionId === section.id))

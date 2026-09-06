@@ -51,8 +51,8 @@ export const chapter2SlidesEn: SyncSlide[] = [
   { src: '/chapter-2/EN/Images/NCH 2 EN IMG 10 V2.png', title: 'Level 3 — Loco-regional Visceral Regulation' },
   { src: '/chapter-2/EN/Images/NCH 2 EN IMG 11.png', title: 'Level 4 — Viscero-somatic and Viscero-emotional Integration' },
   { src: '/chapter-2/EN/Images/NCH 2 EN IMG 12.png', title: 'Clinical case: postpartum left lumbosciatica' },
-  { src: '/chapter-2/EN/Images/NCH 2 EN IMG 13 V2.png', title: 'Indications for ROP' },
   { src: '/chapter-2/EN/Images/NCH 2 EN IMG 14.png', title: 'Contraindications and warning signs in ROP' },
+  { src: '/chapter-2/EN/Images/NCH 2 EN IMG 13 V2.png', title: 'Indications for ROP' },
 ]
 
 export const chapter2SlideAnchorsFr: SyncAnchor[] = [
@@ -97,20 +97,11 @@ export const chapter2SlideAnchors: SyncAnchor[] = [
   { sectionId: 'conseils', blockIndex: -1, slide: 18, ...endAt('conseils', 4) },
 ]
 
-export const chapter2SlideAnchorsEn: SyncAnchor[] = [
-  { sectionId: 'presentation', blockIndex: -1, slide: 1, ...endAt('technique', -1) },
-  { sectionId: 'technique', blockIndex: 0, slide: 2, ...endAt('technique', 2) },
-  { sectionId: 'technique', blockIndex: 2, slide: 3, ...endAt('technique', 5) },
-  { sectionId: 'technique', blockIndex: 5, slide: 4, ...endAt('technique', 6) },
-  { sectionId: 'technique', blockIndex: 6, slide: 5, ...endAt('technique', 12) },
-  { sectionId: 'technique', blockIndex: 12, slide: 6, ...endAt('modalites', -1) },
-  { sectionId: 'modalites', blockIndex: -1, slide: 7, ...endAt('hierarchisation', -1) },
-  { sectionId: 'hierarchisation', blockIndex: -1, slide: 8, ...endAt('zones-reflexes', -1) },
-  { sectionId: 'zones-reflexes', blockIndex: -1, slide: 9, ...endAt('zones-reflexes', 5) },
-  { sectionId: 'zones-reflexes', blockIndex: 5, slide: 10, ...endAt('zones-reflexes', 9) },
-  { sectionId: 'zones-reflexes', blockIndex: 9, slide: 11, ...endAt('zones-reflexes', 13) },
-  { sectionId: 'zones-reflexes', blockIndex: 13, slide: 12, ...endAt('exemple-clinique', -1) },
-  { sectionId: 'exemple-clinique', blockIndex: -1, slide: 13, ...endAt('contre-indications', -1) },
-  { sectionId: 'contre-indications', blockIndex: -1, slide: 15, ...endAt('indications', -1) },
-  { sectionId: 'indications', blockIndex: -1, slide: 14, ...endAt('actions', -1) },
-]
+// Both languages now expose the same canonical structure, so the semantic
+// anchor ranges are identical. The live French source contains 16 anchor
+// events for 15 slides; slide 7 intentionally appears twice for the immediate
+// post-session window and the later reaction sequence.
+export const chapter2SlideAnchorsEn: SyncAnchor[] = chapter2SlideAnchorsFr.map((anchor) => ({
+  ...anchor,
+  end: anchor.end ? { ...anchor.end } : undefined,
+}))

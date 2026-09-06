@@ -165,16 +165,11 @@ export const chapter9En: Chapter = {
           "text": "It also contains numerous mechanoreceptors."
         },
         {
-          "type": "sub",
-          "text": "Relevance to ROP"
-        },
-        {
-          "type": "para",
-          "text": "Within the ROP framework, particular attention is paid to the lesser curvature because of its rich innervation and vascular supply, and its role in certain clinically described gastric fixations."
-        },
-        {
-          "type": "para",
-          "text": "It is also a common site of ulceration."
+          "type": "rop",
+          "body": [
+            "Within the ROP framework, particular attention is paid to the lesser curvature because of its rich innervation and vascular supply, and its role in certain clinically described gastric fixations.",
+            "It is also a common site of ulceration."
+          ]
         },
         {
           "type": "sub",
@@ -263,28 +258,15 @@ export const chapter9En: Chapter = {
       "title": "4. Anatomical relationships",
       "blocks": [
         {
-          "type": "para",
-          "text": "Superiorly: the stomach is related to the diaphragm, to which it is connected notably by the gastrophrenic ligament."
-        },
-        {
-          "type": "para",
-          "text": "Inferiorly: it is related to the transverse colon, to which it is connected by the greater omentum."
-        },
-        {
-          "type": "para",
-          "text": "Anteriorly: it is related to the left hepatic lobe, the costal margin and the abdominal wall."
-        },
-        {
-          "type": "para",
-          "text": "Posteriorly: it is related to the omental bursa, pancreas and fourth part of the duodenum."
-        },
-        {
-          "type": "para",
-          "text": "Laterally: it is related to the spleen, to which it is connected by the gastrosplenic ligament."
-        },
-        {
-          "type": "para",
-          "text": "Medially: the lesser omentum connects the lesser curvature to the first part of the duodenum and the porta hepatis."
+          "type": "bullets",
+          "items": [
+            "Superiorly: the stomach is related to the diaphragm, to which it is connected notably by the gastrophrenic ligament.",
+            "Inferiorly: it is related to the transverse colon, to which it is connected by the greater omentum.",
+            "Anteriorly: it is related to the left hepatic lobe, the costal margin and the abdominal wall.",
+            "Posteriorly: it is related to the omental bursa, pancreas and fourth part of the duodenum.",
+            "Laterally: it is related to the spleen, to which it is connected by the gastrosplenic ligament.",
+            "Medially: the lesser omentum connects the lesser curvature to the first part of the duodenum and the porta hepatis."
+          ]
         }
       ]
     },
@@ -314,7 +296,7 @@ export const chapter9En: Chapter = {
         },
         {
           "type": "para",
-          "text": "The gastric veins generally accompany the arteries and drain into the portal venous system (see Chapter 11 — Liver)."
+          "text": "The gastric veins generally accompany the arteries and drain into the portal venous system."
         }
       ]
     },
@@ -347,12 +329,10 @@ export const chapter9En: Chapter = {
           "text": "Overall, it acts in opposition to vagal activity on motility and secretion."
         },
         {
-          "type": "sub",
-          "text": "Relevance to ROP"
-        },
-        {
-          "type": "para",
-          "text": "Within the ROP framework, gastric dysfunction may be accompanied by referred tension in the upper thoracic region, particularly around T6."
+          "type": "rop",
+          "body": [
+            "Within the ROP framework, gastric dysfunction may be accompanied by referred tension in the upper thoracic region, particularly around T6."
+          ]
         },
         {
           "type": "sub",
@@ -509,12 +489,10 @@ export const chapter9En: Chapter = {
           "text": "At a later stage, particles that are more difficult to digest undergo further mixing until they reach a size compatible with pyloric passage."
         },
         {
-          "type": "sub",
-          "text": "Relevance to ROP"
-        },
-        {
-          "type": "para",
-          "text": "The combined mechanical and neurohormonal actions lead the ROP framework to give priority to the vagus nerve in reflex treatment, in accordance with the principle of ‘nerve first’."
+          "type": "rop",
+          "body": [
+            "The combined mechanical and neurohormonal actions lead the ROP framework to give priority to the vagus nerve in reflex treatment, in accordance with the principle of ‘nerve first’."
+          ]
         }
       ]
     },
@@ -560,35 +538,19 @@ export const chapter9En: Chapter = {
         },
         {
           "type": "sub",
-          "text": "8.1. Red flags requiring medical evaluation"
+          "text": "8.1. Diagnosis of exclusion"
         },
         {
-          "type": "para",
-          "text": "Rapid, unexplained weight loss."
-        },
-        {
-          "type": "para",
-          "text": "Presence of an enlarged left supraclavicular (Troisier's) lymph node."
-        },
-        {
-          "type": "para",
-          "text": "Deep thoracoabdominal pain."
-        },
-        {
-          "type": "para",
-          "text": "Fever."
-        },
-        {
-          "type": "para",
-          "text": "Haematemesis: vomiting of fresh red blood."
-        },
-        {
-          "type": "para",
-          "text": "Melaena: passage of black, digested blood with tarry stools, consistent with upper gastrointestinal bleeding."
-        },
-        {
-          "type": "para",
-          "text": "Nocturnal or early-morning pain."
+          "type": "bullets",
+          "items": [
+            "Rapid, unexplained weight loss.",
+            "Presence of an enlarged left supraclavicular (Troisier's) lymph node.",
+            "Deep thoracoabdominal pain.",
+            "Fever.",
+            "Haematemesis: vomiting of fresh red blood.",
+            "Melaena: passage of black, digested blood with tarry stools, consistent with upper gastrointestinal bleeding.",
+            "Nocturnal or early-morning pain."
+          ]
         }
       ]
     },
@@ -649,40 +611,20 @@ export const chapter9En: Chapter = {
           "text": "9.3.1. Aetiology"
         },
         {
-          "type": "para",
-          "text": "Excessive alcohol consumption."
-        },
-        {
-          "type": "para",
-          "text": "Prolonged use of anti-inflammatory drugs, including aspirin."
-        },
-        {
-          "type": "para",
-          "text": "Initial infection with Helicobacter pylori."
-        },
-        {
-          "type": "para",
-          "text": "Bacterial gingival or dental infection."
-        },
-        {
-          "type": "para",
-          "text": "Food allergies or intolerances."
-        },
-        {
-          "type": "para",
-          "text": "Autoimmune diseases."
-        },
-        {
-          "type": "para",
-          "text": "Vitamin deficiencies or other nutritional deficiencies."
+          "type": "bullets",
+          "items": [
+            "Excessive alcohol consumption.",
+            "Prolonged use of anti-inflammatory drugs, including aspirin.",
+            "Initial infection with Helicobacter pylori.",
+            "Bacterial gingival or dental infection.",
+            "Food allergies or intolerances.",
+            "Autoimmune diseases.",
+            "Vitamin deficiencies or other nutritional deficiencies."
+          ]
         },
         {
           "type": "sub",
           "text": "9.4. Gastro-oesophageal reflux and hiatal hernia"
-        },
-        {
-          "type": "para",
-          "text": "See Chapter 8 — Diaphragm."
         },
         {
           "type": "sub",
@@ -705,36 +647,25 @@ export const chapter9En: Chapter = {
           "text": "Iron deficiency has multiple causes."
         },
         {
-          "type": "para",
-          "text": "• Abnormal uterine bleeding.\n• Heavy or prolonged menstrual bleeding."
-        },
-        {
-          "type": "para",
-          "text": "• Gastrointestinal bleeding."
-        },
-        {
-          "type": "para",
-          "text": "• Inadequate dietary iron intake."
-        },
-        {
-          "type": "para",
-          "text": "• Pregnancy."
-        },
-        {
-          "type": "para",
-          "text": "• Intense physical activity."
+          "type": "bullets",
+          "items": [
+            "Abnormal uterine bleeding.",
+            "Heavy or prolonged menstrual bleeding.",
+            "Gastrointestinal bleeding.",
+            "Inadequate dietary iron intake.",
+            "Pregnancy.",
+            "Intense physical activity."
+          ]
         },
         {
           "type": "para",
           "text": "Iron requirements are particularly high in children, adolescents and pregnant women."
         },
         {
-          "type": "sub",
-          "text": "Relevance to ROP"
-        },
-        {
-          "type": "para",
-          "text": "In the absence of contraindications, ROP treatment of iron-deficiency anaemia targets the stomach, notably to support the absorption of dietary iron, as well as the liver and spleen because of their roles in iron storage and handling."
+          "type": "rop",
+          "body": [
+            "In the absence of contraindications, ROP treatment of iron-deficiency anaemia targets the stomach, notably to support the absorption of dietary iron, as well as the liver and spleen because of their roles in iron storage and handling."
+          ]
         },
         {
           "type": "sub",
@@ -767,20 +698,13 @@ export const chapter9En: Chapter = {
       "title": "10. Viscerosomatic relationships",
       "blocks": [
         {
-          "type": "para",
-          "text": "Costovertebral back pain at the left sixth and seventh thoracic vertebrae."
-        },
-        {
-          "type": "para",
-          "text": "Left-sided neck pain and left cervicobrachial neuralgia."
-        },
-        {
-          "type": "para",
-          "text": "Left shoulder pain."
-        },
-        {
-          "type": "para",
-          "text": "Cervicobrachial neuralgias."
+          "type": "bullets",
+          "items": [
+            "Costovertebral back pain at the left sixth and seventh thoracic vertebrae.",
+            "Left-sided neck pain and left cervicobrachial neuralgia.",
+            "Left shoulder pain.",
+            "Cervicobrachial neuralgias."
+          ]
         }
       ]
     },
@@ -892,10 +816,6 @@ export const chapter9En: Chapter = {
           ]
         },
         {
-          "type": "para",
-          "text": "See Chapter 3 — Central Nervous System."
-        },
-        {
           "type": "sub",
           "text": "13.3. Level 2 — Autonomic regulation and adaptation"
         },
@@ -914,12 +834,15 @@ export const chapter9En: Chapter = {
           ]
         },
         {
-          "type": "para",
-          "text": "The diaphragm and its crura remain associated with Level 2 as a functional interface, particularly around the oesophageal hiatus, gastro-oesophageal junction and thoracoabdominal dynamics."
+          "type": "figure",
+          "src": "/chapter-9/EN/Cartography/figure-9-02.png",
+          "caption": "Photo: Oesophageal hiatus and right and left vagus nerves",
+          "alt": "Foot treatment landmark for the oesophageal hiatus with the right and left vagus nerves",
+          "orientation": "portrait"
         },
         {
           "type": "para",
-          "text": "See Chapter 4 — Autonomic Nervous System; see Chapter 8 — Diaphragm."
+          "text": "The diaphragm and its crura remain associated with Level 2 as a functional interface, particularly around the oesophageal hiatus, gastro-oesophageal junction and thoracoabdominal dynamics."
         },
         {
           "type": "sub",
@@ -938,12 +861,15 @@ export const chapter9En: Chapter = {
           "text": "Gastric body. Fundus and body, lesser and greater curvatures, lesser omentum, greater omentum, and relationships with the liver, spleen and pancreas."
         },
         {
-          "type": "para",
-          "text": "Antropyloric region. Antrum, pylorus, first part of the duodenum and continuity with gastric emptying."
+          "type": "figure",
+          "src": "/chapter-9/EN/Cartography/figure-9-04.png",
+          "caption": "Photo: Lesser curvature of the stomach",
+          "alt": "Foot treatment landmark for the lesser curvature of the stomach between the cardia and pylorus",
+          "orientation": "portrait"
         },
         {
           "type": "para",
-          "text": "See Chapter 7 — Regional Abdominal and Peritoneal Foundation; see Chapter 10 — Duodenum."
+          "text": "Antropyloric region. Antrum, pylorus, first part of the duodenum and continuity with gastric emptying."
         },
         {
           "type": "sub",
@@ -960,10 +886,6 @@ export const chapter9En: Chapter = {
         {
           "type": "para",
           "text": "This ‘balance’ is a clinical integration technique specific to ROP. It does not describe a direct anatomical connection between the plantar zone, limbic networks and the stomach."
-        },
-        {
-          "type": "para",
-          "text": "See Chapter 3 — Central Nervous System; see Chapter 5 — Stress Mechanism."
         },
         {
           "type": "sub",
@@ -998,8 +920,11 @@ export const chapter9En: Chapter = {
           ]
         },
         {
-          "type": "para",
-          "text": "SAFETY PRINCIPLE — Haematemesis, melaena, unexplained weight loss, persistent nocturnal pain, recurrent vomiting, fever or deep thoracoabdominal pain require medical assessment."
+          "type": "note",
+          "label": "Safety principle",
+          "body": [
+            "Haematemesis, melaena, unexplained weight loss, persistent nocturnal pain, recurrent vomiting, fever or deep thoracoabdominal pain require medical assessment."
+          ]
         }
       ]
     }

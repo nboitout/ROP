@@ -18,6 +18,9 @@ import { renderBookReferenceText } from '@/components/BookReferenceText'
 import { applyLocalizedTypography } from '@/lib/frenchTypography'
 import { integrateEnglishReflexDeck } from '@/lib/englishReflexMedia'
 import CrossReferenceLinks from '@/components/CrossReferenceLinks'
+import { isRopInterestSection } from '@/lib/ropInterestSection'
+
+export { isRopInterestSection } from '@/lib/ropInterestSection'
 
 type SyncSlide = { src: string; title: string; orientation?: 'portrait' }
 type SyncAnchorPoint = { sectionId: string; blockIndex: number; itemIndex?: number }
@@ -57,11 +60,6 @@ type Props = {
 }
 
 type XrefReturn = { href: string; label: string } | null
-
-function isRopInterestSection(section: Section) {
-  return /^int[ée]r[êe]t en r\.?o\.?p\.?$/i.test(section.title.trim()) &&
-    section.blocks[0]?.type === 'rop'
-}
 
 function getSafeXrefReturn(params: { get(name: string): string | null } | null): XrefReturn {
   if (!params) return null
@@ -322,6 +320,11 @@ export default function SlideSyncReader({ chapter, bookTitle, slides: suppliedSl
   // restore chip. The choice is remembered across chapters and visits.
   const [slidesHidden, setSlidesHidden] = useState(false)
   const xrefReturn = getSafeXrefReturn(searchParams)
+  const sourceReaderPath = chapter.slug === 'introduction'
+    ? '/lecture/introduction'
+    : chapter.slug === 'chapter-2'
+      ? '/lecture/traitement-rop'
+      : `/lecture/${chapter.slug.replace(/^chapter-/, 'chapitre-')}`
   const articleRef = useRef<HTMLElement>(null)
   const sectionRailRef = useRef<HTMLElement>(null)
   const lightboxScrollRef = useRef<HTMLDivElement>(null)
@@ -1102,10 +1105,10 @@ export default function SlideSyncReader({ chapter, bookTitle, slides: suppliedSl
       </div>
 
       {xrefReturn && (
-        <Link href={xrefReturn.href} className="cr-xref-return">
+        <a href={xrefReturn.href} className="cr-xref-return">
           <span aria-hidden>←</span>
           {xrefReturn.label}
-        </Link>
+        </a>
       )}
 
       <div className="ss-layout">
@@ -1291,6 +1294,7 @@ export default function SlideSyncReader({ chapter, bookTitle, slides: suppliedSl
                     hasHalfGapBeforeItem={(itemIndex) => hasHalfGapBefore(section.id, i, itemIndex)}
                     sourceChapterKey={chapter.slug}
                     sourceAnchorId={posId}
+                    sourceReaderPath={sourceReaderPath}
                     restrictPaidXrefs={restrictPaidXrefs}
                   />
                 )
@@ -1308,6 +1312,7 @@ export default function SlideSyncReader({ chapter, bookTitle, slides: suppliedSl
                         references={b.xrefs}
                         sourceChapterKey={chapter.slug}
                         sourceAnchorId={posId}
+                        sourceReaderPath={sourceReaderPath}
                         restrictPaidXrefs={restrictPaidXrefs}
                         lang={lang}
                       />
@@ -1340,6 +1345,7 @@ export default function SlideSyncReader({ chapter, bookTitle, slides: suppliedSl
                       references={b.xrefs}
                       sourceChapterKey={chapter.slug}
                       sourceAnchorId={posId}
+                      sourceReaderPath={sourceReaderPath}
                       restrictPaidXrefs={restrictPaidXrefs}
                       lang={lang}
                     />
@@ -1477,6 +1483,7 @@ function BlockView({
   hasHalfGapBeforeItem,
   sourceChapterKey,
   sourceAnchorId,
+  sourceReaderPath,
   restrictPaidXrefs,
 }: {
   block: Block
@@ -1488,6 +1495,7 @@ function BlockView({
   hasHalfGapBeforeItem?: (itemIndex: number) => boolean
   sourceChapterKey: string
   sourceAnchorId?: string
+  sourceReaderPath: string
   restrictPaidXrefs: boolean
 }) {
   const { t, lang } = useLanguage()
@@ -1620,7 +1628,7 @@ function BlockView({
     case 'xref':
       return (
         <p className="cr-xref">
-          <Link href={readerXrefHref(block.href, sourceChapterKey, restrictPaidXrefs, sourceAnchorId, lang)} className="cr-xref-link">
+          <Link href={readerXrefHref(block.href, sourceChapterKey, restrictPaidXrefs, sourceAnchorId, lang, sourceReaderPath)} className="cr-xref-link">
             <span className="cr-xref-kicker">{applyLocalizedTypography(block.label, lang)}</span>
             {block.text && <span className="cr-xref-title">{applyLocalizedTypography(block.text, lang)}</span>}
             <span className="cr-xref-arrow" aria-hidden>→</span>

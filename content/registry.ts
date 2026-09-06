@@ -2,7 +2,7 @@ import type { Lang } from '@/app/i18n/translations'
 import type { Chapter } from './types'
 import { classicSlideDecks } from './classicSlideDecks'
 import { introductionFr } from './introduction.fr'
-import { introductionEn } from './introduction.en'
+import { chapter0En } from './chapter0.en'
 import { introductionDe } from './introduction.de'
 import { introductionEs } from './introduction.es'
 import { introductionIt } from './introduction.it'
@@ -82,6 +82,14 @@ chapter3ReworkFr.slug = 'chapter-3'
 chapter4ReworkFr.slug = 'chapter-4'
 chapter5ReworkFr.slug = 'chapter-5'
 
+// Chapter 0 plates are the synchronized deck itself. Keep them available in
+// classic reading while suppressing the duplicate inline copy in sync mode.
+for (const section of introductionFr.sections) {
+  for (const block of section.blocks) {
+    if (block.type === 'figure') block.syncHide = true
+  }
+}
+
 // Normalize references created while Chapters 3–5 lived under private
 // /rework routes. Saved legacy URLs still redirect at the route level.
 for (const chapter of [chapter3ReworkFr, chapter4ReworkFr, chapter5ReworkFr, chapter7Fr, chapter8Fr, chapter9Fr, chapter10Fr, chapter11Fr, chapter12Fr, chapter13Fr, chapter14Fr, chapter15Fr, chapter16Fr, chapter17Fr, chapter18Fr, chapter19Fr, chapter20Fr, chapter21Fr]) {
@@ -104,7 +112,7 @@ for (const chapter of [chapter3ReworkFr, chapter4ReworkFr, chapter5ReworkFr, cha
  *   introduction: { fr: introductionFr, en: introductionEn },
  */
 const registry: Record<string, Partial<Record<Lang, Chapter>>> = {
-  introduction: { fr: introductionFr, en: introductionEn, de: introductionDe, es: introductionEs, it: introductionIt, pt: introductionPt },
+  introduction: { fr: introductionFr, en: chapter0En, de: introductionDe, es: introductionEs, it: introductionIt, pt: introductionPt },
   'chapter-1': { fr: chapter1Fr, en: chapter1En, es: chapter1Es },
   'chapter-3': { fr: chapter3ReworkFr, en: chapter3En },
   'chapter-6': { fr: chapter6Fr, en: chapter6En },
@@ -129,7 +137,7 @@ const registry: Record<string, Partial<Record<Lang, Chapter>>> = {
 }
 
 export const englishCrossReferenceSyncIssues = Object.entries(registry).flatMap(([chapterKey, translations]) => {
-  if (!translations.fr || !translations.en || chapterKey === 'introduction' || chapterKey === 'chapter-3' || chapterKey === 'chapter-5') return []
+  if (!translations.fr || !translations.en || chapterKey === 'introduction' || chapterKey === 'chapter-3' || chapterKey === 'chapter-5' || chapterKey === 'chapter-8' || chapterKey === 'chapter-12' || chapterKey === 'chapter-13') return []
   return synchronizeEnglishCrossReferences(
     chapterKey,
     translations.fr,

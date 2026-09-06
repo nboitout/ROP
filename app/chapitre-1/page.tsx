@@ -1,3 +1,4 @@
+import { englishReaderMetadata } from '@/lib/readerDocumentMetadata'
 import { cookies } from 'next/headers'
 import { redirect } from 'next/navigation'
 import { canReadPaidChapter } from '@/lib/access'
@@ -8,7 +9,7 @@ import { getChapter } from '@/content/registry'
 import { getServerLang } from '@/app/i18n/serverLang'
 import { translations } from '@/app/i18n/translations'
 
-export const metadata: Metadata = {
+const defaultMetadata: Metadata = {
   title: 'Chapitre 1 — Généralités · R.O.P. · Guy Boitout',
   description: 'Mobilité viscérale, articulations viscérales, fixations, relations viscéro-somatiques et viscéro-émotionnelles — les fondements de la Réflexothérapie Occipito-Podale.',
   robots: { index: false, follow: false },
@@ -16,6 +17,18 @@ export const metadata: Metadata = {
 
 // Classic single-column reading. The synchronized reader at /lecture/chapitre-1 is
 // the default entry; this route is reachable from its large-screen mode switch.
+export async function generateMetadata({
+  searchParams,
+}: {
+  searchParams: Promise<{ lang?: string }>
+}): Promise<Metadata> {
+  const { lang: langParam } = await searchParams
+  const lang = await getServerLang(langParam)
+  if (lang !== 'en') return defaultMetadata
+  const { chapter } = getChapter('chapter-1', 'en')
+  return englishReaderMetadata(chapter, 'classic', defaultMetadata)
+}
+
 export default async function Chapitre1ClassicPage({
   searchParams,
 }: {

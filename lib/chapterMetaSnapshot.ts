@@ -15,7 +15,7 @@ export type ChapterMetaSnapshot = {
 }
 
 export const chapterMetaSnapshot: Record<string, ChapterMetaSnapshot> = {
-  'introduction': { readingMinutes: 29, photoCount: 6, slideCount: 0, cartographyCount: 0, visualCount: 6 },
+  'introduction': { readingMinutes: 29, photoCount: 0, slideCount: 6, cartographyCount: 0, visualCount: 6 },
   'chapter-1': { readingMinutes: 14, photoCount: 0, slideCount: 18, cartographyCount: 1, visualCount: 19 },
   'chapter-2': { readingMinutes: 34, photoCount: 0, slideCount: 10, cartographyCount: 5, visualCount: 15 },
   'chapter-3': { readingMinutes: 27, photoCount: 7, slideCount: 15, cartographyCount: 10, visualCount: 32 },

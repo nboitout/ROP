@@ -37,12 +37,18 @@ test('every chapter has a distinct, complete English slide deck', () => {
 
 test('Chapter 18 English slides use the dedicated English assets with a cache revision', () => {
   const slides = classicSlideDecks['chapter-18'].en ?? []
-  const v2Slides = new Set([14, 21, 22])
+  const expected = [
+    ...Array.from({ length: 18 }, (_, index) => {
+      const number = index + 1
+      return `/chapter-18/EN/Images/NCH 18 EN IMG ${number}${number === 14 || number === 15 ? ' V2' : ''}.png?v=20260826-en`
+    }),
+    '/chapter-18/EN/Images/NCH 18 EN VISCEROSOMATIC RELATIONSHIPS V2.png?v=20260826-en',
+    '/chapter-18/EN/Images/NCH 18 EN IMG 19.png?v=20260826-en',
+    '/chapter-18/EN/Images/NCH 18 EN IMG 20.png?v=20260826-en',
+    '/chapter-18/EN/Images/NCH 18 EN IMG 21 V2.png?v=20260826-en',
+    '/chapter-18/EN/Images/NCH 18 EN IMG 22 V2.png?v=20260826-en',
+    ...[9, 11, 13, 1, 3, 5, 7].map(number => `/chapter-18/EN/Cartography/figure-18-${String(number).padStart(2, '0')}.png?v=20260826-en`),
+  ]
 
-  assert.equal(slides.length, 22)
-  for (const [index, slide] of slides.entries()) {
-    const slideNumber = index + 1
-    const version = v2Slides.has(slideNumber) ? ' V2' : ''
-    assert.equal(slide.src, `/chapter-18/EN/Images/NCH 18 EN IMG ${slideNumber}${version}.png?v=20260826-en`)
-  }
+  assert.deepEqual(slides.map(slide => slide.src), expected)
 })

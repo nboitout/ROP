@@ -27,7 +27,7 @@ export const chapter3ReworkFr: Chapter = { slug: 'chapter-3-rework', number: '3'
         "type": "xref",
         "label": "Voir la référence dans le chapitre 0",
         "text": "Fondements neuro-anatomiques de la ROP",
-        "href": "/lecture/fondements-neuro-anatomiques?lang=fr"
+        "href": "/fondements-neuro-anatomiques?lang=fr"
       },
       {
         "type": "para",
@@ -99,7 +99,7 @@ export const chapter3ReworkFr: Chapter = { slug: 'chapter-3-rework', number: '3'
         "type": "xref",
         "label": "Voir la référence dans le chapitre 0",
         "text": "Fondements neuro-anatomiques de la ROP",
-        "href": "/lecture/fondements-neuro-anatomiques?lang=fr"
+        "href": "/fondements-neuro-anatomiques?lang=fr"
       },
       {
         "type": "xref",
@@ -444,7 +444,7 @@ export const chapter3ReworkFr: Chapter = { slug: 'chapter-3-rework', number: '3'
         "type": "xref",
         "label": "Voir la référence dans le chapitre 0",
         "text": "Fondements neuro-anatomiques de la ROP",
-        "href": "/lecture/fondements-neuro-anatomiques?lang=fr"
+        "href": "/fondements-neuro-anatomiques?lang=fr"
       },
       {
         "type": "xref",
@@ -555,7 +555,7 @@ export const chapter3ReworkFr: Chapter = { slug: 'chapter-3-rework', number: '3'
         "type": "xref",
         "label": "Voir la référence dans le chapitre 0",
         "text": "Fondements neuro-anatomiques de la ROP",
-        "href": "/lecture/fondements-neuro-anatomiques?lang=fr"
+        "href": "/fondements-neuro-anatomiques?lang=fr"
       }
     ]
   },

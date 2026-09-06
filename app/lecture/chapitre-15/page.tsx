@@ -11,6 +11,7 @@ import {
   chapter15Slides, chapter15SlidesEn, chapter15SlidesDe, chapter15SlidesEs, chapter15SlidesIt,
   chapter15HalfBreaks, chapter15SlideAnchors, chapter15SlideAnchorsEn,
 } from '@/content/chapter15.slidesync'
+import { englishReaderMetadata } from '@/lib/readerDocumentMetadata'
 
 const DECKS: Record<Lang, typeof chapter15Slides> = {
   fr: chapter15Slides,
@@ -34,20 +35,22 @@ const ANCHORS: Record<Lang, typeof chapter15SlideAnchors> = {
   th: chapter15SlideAnchorsEn,
 }
 
-const HIDDEN_DOT_SLIDES: Record<Lang, number[]> = {
-  fr: [29, 30, 31, 32, 33],
-  en: [],
-  de: [29, 30, 31, 32, 33],
-  es: [29, 30, 31, 32, 33],
-  it: [29, 30, 31, 32, 33],
-  pt: [],
-  th: [],
-}
-
-export const metadata: Metadata = {
+const defaultMetadata: Metadata = {
   title: 'Chapitre 15 — Côlon et rectum · R.O.P. · Guy Boitout',
   description: 'Lecture du chapitre 15 : anatomie, physiologie, pathologies courantes et zones réflexes podales du côlon et du rectum en R.O.P.',
   robots: { index: false, follow: false },
+}
+
+export async function generateMetadata({
+  searchParams,
+}: {
+  searchParams: Promise<{ lang?: string }>
+}): Promise<Metadata> {
+  const { lang: langParam } = await searchParams
+  const lang = await getServerLang(langParam)
+  if (lang !== 'en') return defaultMetadata
+  const { chapter } = getChapter('chapter-15', 'en')
+  return englishReaderMetadata(chapter, 'synchronized', defaultMetadata)
 }
 
 export default async function Chapitre15LecturePage({
@@ -73,7 +76,6 @@ export default async function Chapitre15LecturePage({
       halfBreaks={chapter15HalfBreaks}
       backHref="/chapitres-gratuits"
       classicHref={`/chapitre-15?lang=${lang}`}
-      hiddenDotSlides={HIDDEN_DOT_SLIDES[lang]}
     />
   )
 }

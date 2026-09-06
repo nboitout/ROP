@@ -1,3 +1,4 @@
+import { englishReaderMetadata } from '@/lib/readerDocumentMetadata'
 import { cookies } from 'next/headers'
 import { redirect } from 'next/navigation'
 import { canReadFreeChapter, canReadPaidChapter } from '@/lib/access'
@@ -7,10 +8,22 @@ import { getChapter } from '@/content/registry'
 import { getServerLang } from '@/app/i18n/serverLang'
 import { translations } from '@/app/i18n/translations'
 
-export const metadata: Metadata = {
+const defaultMetadata: Metadata = {
   title: 'Introduction · R.O.P. · Guy Boitout',
   description: 'Chapitre complet gratuit du troisième ouvrage de Guy Boitout : introduction au viscéral abdomino-pelvien, au système nerveux autonome et au mécanisme du stress.',
   robots: { index: false, follow: false },
+}
+
+export async function generateMetadata({
+  searchParams,
+}: {
+  searchParams: Promise<{ lang?: string }>
+}): Promise<Metadata> {
+  const { lang: langParam } = await searchParams
+  const lang = await getServerLang(langParam)
+  if (lang !== 'en') return defaultMetadata
+  const { chapter } = getChapter('introduction', 'en')
+  return englishReaderMetadata(chapter, 'classic', defaultMetadata)
 }
 
 export default async function IntroductionPage({
@@ -28,5 +41,5 @@ export default async function IntroductionPage({
   const lang = await getServerLang(langParam)
   const { chapter, contentLang } = getChapter('introduction', lang)
   const bookTitle = translations[lang].reader.bookTitle
-  return <ChapterReader chapter={chapter} bookTitle={bookTitle} contentLang={contentLang} restrictPaidXrefs={restrictPaidXrefs} />
+  return <ChapterReader chapter={chapter} bookTitle={bookTitle} contentLang={contentLang} restrictPaidXrefs={restrictPaidXrefs} syncHref={`/lecture/introduction?lang=${lang}`} />
 }

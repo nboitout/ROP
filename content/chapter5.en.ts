@@ -1,5 +1,5 @@
 // Chapter 5 content — English
-// Source: public/chapter-5/EN/Chapter_5_Stress_Mechanism_ROP_EN_CodexTranslationV3.docx
+// Runtime-parity translation of content/chapter5-rework.fr.ts
 
 import type { Chapter } from './types'
 
@@ -8,16 +8,12 @@ export type { Block, Section, Chapter } from './types'
 export const chapter5En: Chapter = {
   "slug": "chapter-5",
   "number": "5",
-  "title": "Stress mechanism",
+  "title": "Stress Mechanism — Physiology of Adaptation, Allostatic Cost, and the ROP Approach",
   "sections": [
     {
       "id": "le-stress-une-reponse-d-adaptation",
       "title": "1. Stress: an adaptive response",
       "blocks": [
-        {
-          "type": "para",
-          "text": "Physiology of adaptation, allostatic cost, and the ROP approach"
-        },
         {
           "type": "quote",
           "text": "Health is not measured by the absence of reaction, but by the organism’s ability to mobilise and then recover."
@@ -222,14 +218,6 @@ export const chapter5En: Chapter = {
           "text": "Cortisol is not inherently a toxic hormone. It is essential to life. The problem lies in excessive exposure, a disrupted circadian rhythm, altered tissue sensitivity, or activation that is inappropriate to the context."
         },
         {
-          "type": "sub",
-          "text": "5.3. Feedback and termination of the response"
-        },
-        {
-          "type": "para",
-          "text": "When the stressor disappears or action has resolved it, feedback mechanisms must reduce activation. The hippocampus, hypothalamus, pituitary gland, adrenal glands, and autonomic pathways all participate in this regulation. Triggering the response is vital; knowing how to stop it is equally so."
-        },
-        {
           "type": "table",
           "headers": [
             "Reference point",
@@ -263,6 +251,14 @@ export const chapter5En: Chapter = {
               "Hormonal feedback and restoration of rhythms"
             ]
           ]
+        },
+        {
+          "type": "sub",
+          "text": "5.3. Feedback and termination of the response"
+        },
+        {
+          "type": "para",
+          "text": "When the stressor disappears or action has resolved it, feedback mechanisms must reduce activation. The hippocampus, hypothalamus, pituitary gland, adrenal glands, and autonomic pathways all participate in this regulation. Triggering the response is vital; knowing how to stop it is equally so."
         }
       ]
     },
@@ -391,11 +387,8 @@ export const chapter5En: Chapter = {
           "text": "Allostatic load therefore represents less an energy leak than a costly regulatory mobilisation. The price is paid when the defensive state remains chronically elevated at the expense of maintenance, recovery, and flexibility."
         },
         {
-          "type": "note",
-          "label": "Key point",
-          "body": [
-            "Chronic stress does not drain a battery. It forces the organism to continually reorganise its priorities. This repeated regulation becomes costly when it is not followed by sufficient recovery."
-          ]
+          "type": "para",
+          "text": "Chronic stress does not drain a battery. It forces the organism to continually reorganise its priorities. This repeated regulation becomes costly when it is not followed by sufficient recovery."
         },
         {
           "type": "para",
@@ -493,13 +486,6 @@ export const chapter5En: Chapter = {
         {
           "type": "para",
           "text": "This interpretation therefore enriches ROP clinical teaching and clarifies our aim: not to impose a state, but to restore the capacity to move flexibly from one state to another."
-        },
-        {
-          "type": "note",
-          "label": "Key point",
-          "body": [
-            "Being able to act when necessary, then naturally return to connection, digestion, rest, and recovery."
-          ]
         }
       ]
     },
@@ -566,13 +552,6 @@ export const chapter5En: Chapter = {
           "body": [
             "The best stimulus is not the strongest. It is the one the patient can integrate without adding load to the system."
           ]
-        },
-        {
-          "type": "note",
-          "label": "Key point",
-          "body": [
-            "SYNTHETIC SEQUENCE\n1. Reduce the persistence of the alarm signal → 2. Reduce mobilisation that has become unnecessary → 3. Release constraints that sustain the signal → 4. Allow the return of the function concerned."
-          ]
         }
       ]
     },
@@ -583,10 +562,6 @@ export const chapter5En: Chapter = {
         {
           "type": "para",
           "text": "The ROP session is organised around four complementary levels: regulation of higher centres; autonomic regulation and adaptation; locoregional regulation and the target; and, finally, viscerosomatic and viscero-emotional integration. This sequence, its anatomical landmarks, and its selection rules are developed in Chapter 2. Here, we recall only how it applies specifically in the context of stress."
-        },
-        {
-          "type": "para",
-          "text": "Summary table — four-level ROP protocol"
         },
         {
           "type": "table",
@@ -627,6 +602,13 @@ export const chapter5En: Chapter = {
         },
         {
           "type": "note",
+          "label": "SYNTHETIC SEQUENCE",
+          "body": [
+            "Reduce the persistence of the alarm signal → Reduce mobilisation that has become unnecessary → Release regional constraints and allow the function to return → Integrate its somatic and emotional expression."
+          ]
+        },
+        {
+          "type": "note",
           "label": "SELECTION PRINCIPLE",
           "body": [
             "The session does not consist of systematically working through all four levels. The practitioner selects the relevant levels, adjusts the dose of tactile input, and then gives the patient time to integrate the response. One patient may mainly require Levels 2 and 3, while another may require Levels 1 and 4."
@@ -647,16 +629,6 @@ export const chapter5En: Chapter = {
         {
           "type": "para",
           "text": "The objective is not to command the autonomic nervous system directly, but to introduce measured sensory information so that the patient is more available for the remainder of treatment. ROP does not make it possible to palpate or directly treat the amygdala, hypothalamus, cortex, or a specific brainstem nucleus."
-        },
-        {
-          "type": "xref",
-          "label": "See Chapter 2 — ROP treatment and the four-level sequence",
-          "href": "/lecture/traitement-rop?lang=en"
-        },
-        {
-          "type": "xref",
-          "label": "See Chapter 8 — Diaphragm",
-          "href": "/lecture/chapitre-8?lang=en"
         }
       ]
     },
@@ -686,6 +658,10 @@ export const chapter5En: Chapter = {
       "title": "16. The place of ROP according to the stage of adaptation",
       "blocks": [
         {
+          "type": "para",
+          "text": "This grading helps the practitioner avoid two errors: abandoning all supportive care as soon as chronic disease is present, or, conversely, promising a curative action on established lesions. ROP may retain a role in comfort, pain, rest, bodily perception, or quality of life, without replacing necessary treatments."
+        },
+        {
           "type": "table",
           "headers": [
             "Stage",
@@ -714,10 +690,6 @@ export const chapter5En: Chapter = {
               "ROP is not the priority; medical assessment or emergency care"
             ]
           ]
-        },
-        {
-          "type": "para",
-          "text": "This grading helps the practitioner avoid two errors: abandoning all supportive care as soon as chronic disease is present, or, conversely, promising a curative action on established lesions. ROP may retain a role in comfort, pain, rest, bodily perception, or quality of life, without replacing necessary treatments."
         }
       ]
     },
@@ -770,7 +742,7 @@ export const chapter5En: Chapter = {
           "text": "18.2. Proposed study design"
         },
         {
-          "type": "numbered",
+          "type": "bullets",
           "items": [
             "ROP group: a standardised sequence respecting the logic of the four clinical levels and a defined dosage, with the zones adapted to the selected target.",
             "Touch-control group: occipital and foot touch of the same duration, without ROP cartography or sequence.",
@@ -816,7 +788,7 @@ export const chapter5En: Chapter = {
           "text": "The most credible bridge with ROP remains the regulation of the response and recovery. Through tissue assessment, measured touch, and an adapted progression encompassing central regulation, autonomic regulation, the locoregional environment and clinical target, followed by integration of its somatic and emotional expressions, we seek to provide the nervous system with new bodily information, reduce mobilisation that is no longer needed, and support the return of respiratory, digestive, and restorative functions."
         },
         {
-          "type": "quote",
+          "type": "para",
           "text": "In ROP, we do not seek to prevent the organism from reacting. We seek to help it avoid remaining locked in its reaction."
         },
         {
@@ -843,66 +815,26 @@ export const chapter5En: Chapter = {
       "title": "Bibliographic references",
       "blocks": [
         {
-          "type": "para",
-          "text": "1. McEwen BS. Physiology and neurobiology of stress and adaptation: central role of the brain. Physiological Reviews. 2007;87(3):873-904. doi:10.1152/physrev.00041.2006."
-        },
-        {
-          "type": "para",
-          "text": "2. Bobba-Alves N, Juster RP, Picard M. The energetic cost of allostasis and allostatic load. Psychoneuroendocrinology. 2022;146:105951. doi:10.1016/j.psyneuen.2022.105951."
-        },
-        {
-          "type": "para",
-          "text": "3. Bobba-Alves N, et al. Cellular allostatic load is linked to increased energy expenditure and accelerated biological aging. Psychoneuroendocrinology. 2023;155:106322. doi:10.1016/j.psyneuen.2023.106322."
-        },
-        {
-          "type": "para",
-          "text": "4. Picard M, Murugan NJ. The energy resistance principle. Cell Metabolism. 2025;37. doi:10.1016/j.cmet.2025.09.002."
-        },
-        {
-          "type": "para",
-          "text": "5. Descamps E, Boussac M, Joineau K, et al. Changes of cerebral functional connectivity induced by foot reflexology in a randomized controlled trial. Scientific Reports. 2023;13:17139. doi:10.1038/s41598-023-44325-x."
-        },
-        {
-          "type": "para",
-          "text": "6. Khalsa SS, et al. Interoception and mental health: a roadmap. Biological Psychiatry: Cognitive Neuroscience and Neuroimaging. 2018;3(6):501-513. doi:10.1016/j.bpsc.2017.12.004."
-        },
-        {
-          "type": "para",
-          "text": "7. Chen WG, et al. The emerging science of interoception: sensing, integrating, interpreting, and regulating signals within the self. Trends in Neurosciences. 2021;44(1):3-16. doi:10.1016/j.tins.2020.10.007."
-        },
-        {
-          "type": "para",
-          "text": "8. Hopper SI, et al. Effectiveness of diaphragmatic breathing for reducing physiological and psychological stress in adults: a quantitative systematic review. JBI Database of Systematic Reviews and Implementation Reports. 2019;17(9):1855-1876. doi:10.11124/JBISRIR-2017-003848."
-        },
-        {
-          "type": "para",
-          "text": "9. Cannon WB. The Wisdom of the Body. New York: W.W. Norton; 1932."
-        },
-        {
-          "type": "para",
-          "text": "10. Selye H. The Stress of Life. New York: McGraw-Hill; 1956."
-        }
-      ]
-    },
-    {
-      "id": "annexe-1",
-      "title": "Appendix 1",
-      "blocks": [
-        {
-          "type": "para",
-          "text": "The SAM response constitutes the rapid component of the stress mechanism. Within seconds, the hypothalamus and brainstem recruit sympathetic pathways and noradrenergic circuits. The adrenal medulla releases adrenaline and noradrenaline: heart rate, breathing, blood pressure, and glucose availability adjust to prepare for action. If the stressor ceases, activation gradually subsides; if it persists, the HPA axis complements and prolongs adaptation."
-        }
-      ]
-    },
-    {
-      "id": "annexe-2",
-      "title": "Appendix 2",
-      "blocks": [
-        {
-          "type": "para",
-          "text": "The HPA axis constitutes the slower and more sustained hormonal component of the stress response. When the stressor persists, the hypothalamus releases CRH, which stimulates the anterior pituitary; this secretes ACTH, which activates the adrenal cortex and promotes cortisol release. Cortisol supports adaptation over time by maintaining energy availability and modulating immune and inflammatory responses. When equilibrium returns, feedback mechanisms progressively reduce the response; if the stressor persists, the HPA axis complements and prolongs the SAM response."
+          "type": "bullets",
+          "items": [
+            "McEwen BS. Physiology and neurobiology of stress and adaptation: central role of the brain. Physiological Reviews. 2007;87(3):873-904. doi:10.1152/physrev.00041.2006.",
+            "Bobba-Alves N, Juster RP, Picard M. The energetic cost of allostasis and allostatic load. Psychoneuroendocrinology. 2022;146:105951. doi:10.1016/j.psyneuen.2022.105951.",
+            "Bobba-Alves N, et al. Cellular allostatic load is linked to increased energy expenditure and accelerated biological aging. Psychoneuroendocrinology. 2023;155:106322. doi:10.1016/j.psyneuen.2023.106322.",
+            "Picard M, Murugan NJ. The energy resistance principle. Cell Metabolism. 2025;37. doi:10.1016/j.cmet.2025.09.002.",
+            "Descamps E, Boussac M, Joineau K, et al. Changes of cerebral functional connectivity induced by foot reflexology in a randomized controlled trial. Scientific Reports. 2023;13:17139. doi:10.1038/s41598-023-44325-x.",
+            "Khalsa SS, et al. Interoception and mental health: a roadmap. Biological Psychiatry: Cognitive Neuroscience and Neuroimaging. 2018;3(6):501-513. doi:10.1016/j.bpsc.2017.12.004.",
+            "Chen WG, et al. The emerging science of interoception: sensing, integrating, interpreting, and regulating signals within the self. Trends in Neurosciences. 2021;44(1):3-16. doi:10.1016/j.tins.2020.10.007.",
+            "Hopper SI, et al. Effectiveness of diaphragmatic breathing for reducing physiological and psychological stress in adults: a quantitative systematic review. JBI Database of Systematic Reviews and Implementation Reports. 2019;17(9):1855-1876. doi:10.11124/JBISRIR-2017-003848.",
+            "Cannon WB. The Wisdom of the Body. New York: W.W. Norton; 1932.",
+            "Selye H. The Stress of Life. New York: McGraw-Hill; 1956."
+          ]
         }
       ]
     }
-  ]
+  ],
+  "clinicalCase": {
+    "src": "/chapter-5/EN/Images/NCH 5 EN IMG 27.png",
+    "alt": "Clinical case — Fibromyalgia · Chapter 5",
+    "caption": "Clinical case · Fibromyalgia — Chapter 5"
+  }
 }

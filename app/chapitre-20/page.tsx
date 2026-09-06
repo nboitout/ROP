@@ -1,3 +1,4 @@
+import { englishReaderMetadata } from '@/lib/readerDocumentMetadata'
 import { cookies } from 'next/headers'
 import { redirect } from 'next/navigation'
 import { canReadPaidChapter } from '@/lib/access'
@@ -8,7 +9,7 @@ import { getChapter } from '@/content/registry'
 import { getServerLang } from '@/app/i18n/serverLang'
 import { translations } from '@/app/i18n/translations'
 
-export const metadata: Metadata = {
+const defaultMetadata: Metadata = {
   title: 'Chapitre 20 — Organes génitaux masculins · R.O.P. · Guy Boitout',
   description: 'Testicules, prostate, vésicules séminales, physiologie, pathologies courantes et zones réflexes podales en R.O.P.',
   robots: { index: false, follow: false },
@@ -16,6 +17,18 @@ export const metadata: Metadata = {
 
 // Classic single-column reading. The synchronized reader at /lecture/chapitre-20 is
 // the default entry; this route is reachable from its large-screen mode switch.
+export async function generateMetadata({
+  searchParams,
+}: {
+  searchParams: Promise<{ lang?: string }>
+}): Promise<Metadata> {
+  const { lang: langParam } = await searchParams
+  const lang = await getServerLang(langParam)
+  if (lang !== 'en') return defaultMetadata
+  const { chapter } = getChapter('chapter-20', 'en')
+  return englishReaderMetadata(chapter, 'classic', defaultMetadata)
+}
+
 export default async function Chapitre20ClassicPage({
   searchParams,
 }: {

@@ -15,8 +15,11 @@ export const chapter3En: Chapter = {
       "title": "1. Overview: why begin with the central nervous system?",
       "blocks": [
         {
-          "type": "para",
-          "text": "Level 1 of the ROP Protocol — Regulation of Higher Centres"
+          "type": "note",
+          "label": "LEVEL 1 OF THE ROP PROTOCOL",
+          "body": [
+            "Level 1 of the ROP protocol — Regulation of higher centres"
+          ]
         },
         {
           "type": "para",
@@ -54,7 +57,7 @@ export const chapter3En: Chapter = {
         },
         {
           "type": "para",
-          "text": "Limbic and cortical networks are also described in this chapter because they are part of the CNS and contribute to supraspinal integration. Their clinical use in viscero-emotional relationships, however, will be revisited at Level 4."
+          "text": "Limbic and cortical networks are also described in this chapter because they are part of the CNS and contribute to supraspinal integration. Their clinical use in viscero-emotional relationships, however, will be revisited at Level 4. (See the organ chapters, sections entitled “Viscero-emotional relationships”, for the clinical application of Level 4.)"
         }
       ]
     },
@@ -89,6 +92,12 @@ export const chapter3En: Chapter = {
             { "label": "See the reference in Chapter 0", "text": "Neuroanatomical Foundations of ROP", "href": "/fondements-neuro-anatomiques?lang=en" },
             { "label": "See the reference in Chapter 4", "text": "Autonomic Nervous System", "href": "/lecture/chapitre-4?lang=en#sec-presentation" }
           ]
+        },
+        {
+          "type": "rop",
+          "body": [
+            "This organisation provides the general framework for the “neuroanatomical bridges” described in the introduction: somatic input may reach spinal and supraspinal networks and then contribute to descending modulation. It does not constitute a direct point-to-organ connection. (See Chapter 0, Neuroanatomical Foundations of ROP, and Chapter 4, Autonomic Nervous System.)"
+          ]
         }
       ]
     },
@@ -120,6 +129,10 @@ export const chapter3En: Chapter = {
           ]
         },
         {
+          "type": "para",
+          "text": "For details of vagal afferents and communication between the viscera and brainstem, see Chapter 4, section “Viscerosensory vagus nerve”."
+        },
+        {
           "type": "sub",
           "text": "3.2. Reticular formation and locus coeruleus"
         },
@@ -132,6 +145,12 @@ export const chapter3En: Chapter = {
           "text": "These structures do not function as isolated switches: they receive multiple sources of input and modulate the overall state of the nervous system.",
           "xrefs": [
             { "label": "See the reference in Chapter 5", "text": "Stress Mechanisms", "href": "/lecture/chapitre-5?lang=en#sec-le-stress-une-reponse-d-adaptation" }
+          ]
+        },
+        {
+          "type": "rop",
+          "body": [
+            "In the ROP model, certain occipital reflex zones are associated with the reticular formation. This correspondence belongs to the method’s own clinical cartography. See Réflexothérapie occipito-podale, Elsevier-Masson, pages 63–66. For the locus coeruleus and mechanisms of adaptation to stress, see Chapter 5, “Stress Mechanisms”."
           ]
         },
         {
@@ -198,6 +217,12 @@ export const chapter3En: Chapter = {
             { "label": "See the reference in Chapter 4", "text": "Autonomic Nervous System Organisation", "href": "/lecture/chapitre-4?lang=en#sec-organisation-du-sna" },
             { "label": "See the reference in Chapter 5", "text": "Stress Mechanisms", "href": "/lecture/chapitre-5?lang=en#sec-le-stress-une-reponse-d-adaptation" }
           ]
+        },
+        {
+          "type": "rop",
+          "body": [
+            "Through their autonomic and hormonal functions, the hypothalamus and pituitary gland occupy a central place in understanding adaptation to stress. Their relationship with the ANS is developed in Chapter 4; the hypothalamic–pituitary–adrenal axis is revisited in Chapter 5, “Stress Mechanisms”."
+          ]
         }
       ]
     },
@@ -251,6 +276,12 @@ export const chapter3En: Chapter = {
           "xrefs": [
             { "label": "See the reference in Chapter 6", "text": "Polyvagal Theory", "href": "/lecture/chapitre-6?lang=en#sec-theorie-polyvagale" }
           ]
+        },
+        {
+          "type": "rop",
+          "body": [
+            "These networks are described here as components of the CNS. Their clinical use in viscero-emotional relationships belongs to Level 4. This does not imply a fixed correspondence between one emotion, one viscus, and one cerebral area; it is an integrative framework. See Chapter 6, “Polyvagal Theory”, and the “Viscero-emotional relationships” sections in the organ chapters."
+          ]
         }
       ]
     },
@@ -290,10 +321,30 @@ export const chapter3En: Chapter = {
           "text": "Likewise, techniques described as compression of the fourth ventricle, SBS–S2 synchronisation, or work on CSF circulation belong to the ROP therapeutic model. Their precise effects on intracranial dynamics or CSF flow have not been directly established."
         },
         {
+          "type": "figure",
+          "src": "/chapter-3/EN/Images/NCH 3 EN INLINE CV4 V3.png",
+          "caption": "Photo: fourth-ventricle compression technique",
+          "alt": "Black-and-white photograph showing the practitioner’s thumb contact on both great toes during the fourth-ventricle compression technique",
+          "orientation": "landscape"
+        },
+        {
+          "type": "figure",
+          "src": "/chapter-3/EN/Images/NCH 3 EN INLINE SBS-S2 V3.png",
+          "caption": "Photo: SBS–S2 synchronisation technique",
+          "alt": "Black-and-white photograph showing one hand holding the great toe while the other supports the heel during the SBS–S2 synchronisation technique",
+          "orientation": "portrait"
+        },
+        {
           "type": "para",
           "text": "This distinction preserves the historical and clinical coherence of the method while clearly separating established anatomy from the therapeutic model.",
           "xrefs": [
             { "label": "See the reference in Chapter 1", "text": "Primary Respiratory Mechanism", "href": "/lecture/chapitre-1?lang=en#sec-mrp" }
+          ]
+        },
+        {
+          "type": "rop",
+          "body": [
+            "The neuro-meningeal environment remains an important Level 1 landmark in the method. PRM, CV4, and SBS–S2 techniques belong to the ROP therapeutic model and are described in previous volumes. For dural landmarks, see Réflexothérapie occipito-podale et système neuro-méningé, Elsevier Masson, page 85, figure 7.8, and page 109, figure 8.12. See also Chapter 1, “General Principles”, for the methodological presentation of the PRM."
           ]
         }
       ]
@@ -325,6 +376,12 @@ export const chapter3En: Chapter = {
         {
           "type": "para",
           "text": "They are presented here as complementary landmarks rather than as structures of the brainstem."
+        },
+        {
+          "type": "rop",
+          "body": [
+            "The cerebellum and basal ganglia remain secondary landmarks in this chapter. Their practical value is primarily cartographic; the corresponding reflex zones are grouped together in section 9.1 so as not to interrupt the anatomical progression."
+          ]
         }
       ]
     },
@@ -401,8 +458,15 @@ export const chapter3En: Chapter = {
           "type": "bullets",
           "items": [
             "Brainstem: medial plantar surface of the distal phalanx of the great toe, extending from the interphalangeal joint to the junction between the shaft and head.",
-            "Basal ganglia: landmark located close to the midbrain landmark, lateral to the medial shaft–head junction. This proximity reflects ROP topography rather than the actual anatomical position of these nuclei."
+            "Basal ganglia: landmark located close to the midbrain landmark, lateral to the medial shaft–head junction."
           ]
+        },
+        {
+          "type": "figure",
+          "src": "/chapter-3/EN/Images/NCH 3 EN INLINE BRAINSTEM V3.png",
+          "caption": "Photo: brainstem",
+          "alt": "Black-and-white photograph showing the ROP brainstem contact between the practitioner’s two thumbs on the great toe",
+          "orientation": "portrait"
         },
         {
           "type": "sub",
@@ -418,6 +482,13 @@ export const chapter3En: Chapter = {
           ]
         },
         {
+          "type": "figure",
+          "src": "/chapter-3/EN/Images/NCH 3 EN INLINE LIMBIC SYSTEM V3.png",
+          "caption": "Photo: limbic system",
+          "alt": "Black-and-white photograph showing the ROP limbic-system amygdala contact on the left great toe",
+          "orientation": "portrait"
+        },
+        {
           "type": "sub",
           "text": "9.3. Diencephalon and pituitary gland"
         },
@@ -429,13 +500,20 @@ export const chapter3En: Chapter = {
           ]
         },
         {
+          "type": "figure",
+          "src": "/chapter-3/EN/Images/NCH 3 EN INLINE DIENCEPHALON PITUITARY V3.png",
+          "caption": "Photo: diencephalon and pituitary gland",
+          "alt": "Black-and-white photograph showing the ROP diencephalon contact on the left great toe",
+          "orientation": "portrait"
+        },
+        {
           "type": "sub",
           "text": "9.4. Meninges, vascular supply, and innervation"
         },
         {
           "type": "bullets",
           "items": [
-            "Dura mater, falx cerebri, falx cerebelli, and tentorium cerebelli: refer to the detailed landmarks in the volume devoted to the neuro-meningeal system.",
+            "Dura mater, falx cerebri, falx cerebelli, and tentorium cerebelli: see Réflexothérapie occipito-podale et système neuro-méningé, Elsevier Masson, page 85, figure 7.8, and page 109, figure 8.12.",
             "Vascular supply: cervical sympathetic chain and carotid sinus in ROP cartography.",
             "Innervation: trigeminal nerve V, vagus nerve X, and hypoglossal nerve XII according to the clinical landmarks developed in previous volumes."
           ]
@@ -453,6 +531,12 @@ export const chapter3En: Chapter = {
           "text": "ROP techniques associated with the PRM, intracranial membranes, or fluid circulation constitute a distinct clinical model.",
           "xrefs": [
             { "label": "See the reference in Chapter 0", "text": "Neuroanatomical Foundations of ROP", "href": "/fondements-neuro-anatomiques?lang=en" }
+          ]
+        },
+        {
+          "type": "rop",
+          "body": [
+            "The absence of a direct cortical reflex zone does not exclude access of the cortex to somatosensory information. Within the method, neuro-meningeal techniques constitute a distinct clinical model. For the pathway foot zone → afferents → spinal cord → higher centres, see Chapter 0, “Neuroanatomical Foundations of ROP”."
           ]
         }
       ]
@@ -550,13 +634,20 @@ export const chapter3En: Chapter = {
       "title": "Additional References for the Neurophysiological Material",
       "blocks": [
         {
-          "type": "numbered",
-          "items": [
-            "Andresen MC, Doyle MW, Bailey TW, Jin YH. Differentiation of autonomic reflex control begins with cellular mechanisms at the first synapse within the nucleus tractus solitarius. Braz J Med Biol Res. 2004;37(4):549-558.",
-            "de Rijk MM, Fernández Chadily S, Knops A, Schoutens Y, Verstegen AMJ. The periaqueductal gray and its role in the neural control of lower urinary tract function. Auton Neurosci. 2026;265:103413.",
-            "Critchley HD, Harrison NA. Visceral influences on brain and behavior. Neuron. 2013;77(4):624-638.",
-            "Strigo IA, Craig AD. Interoception, homeostatic emotions and sympathovagal balance. Philos Trans R Soc Lond B Biol Sci. 2016;371(1708):20160010."
-          ]
+          "type": "para",
+          "text": "Andresen MC, Doyle MW, Bailey TW, Jin YH. Differentiation of autonomic reflex control begins with cellular mechanisms at the first synapse within the nucleus tractus solitarius. Braz J Med Biol Res. 2004;37(4):549-558."
+        },
+        {
+          "type": "para",
+          "text": "de Rijk MM, Fernández Chadily S, Knops A, Schoutens Y, Verstegen AMJ. The periaqueductal gray and its role in the neural control of lower urinary tract function. Auton Neurosci. 2026;265:103413."
+        },
+        {
+          "type": "para",
+          "text": "Critchley HD, Harrison NA. Visceral influences on brain and behavior. Neuron. 2013;77(4):624-638."
+        },
+        {
+          "type": "para",
+          "text": "Strigo IA, Craig AD. Interoception, homeostatic emotions and sympathovagal balance. Philos Trans R Soc Lond B Biol Sci. 2016;371(1708):20160010."
         }
       ]
     }

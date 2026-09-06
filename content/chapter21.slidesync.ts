@@ -60,22 +60,20 @@ export const chapter21SlidesEn: SyncSlide[] = [
   { src: '/chapter-21/EN/Images/NCH 21 EN IMG 3.png', title: 'Muscular Dynamics' },
   { src: '/chapter-21/EN/Images/NCH 21 EN IMG 4 V2.png', title: 'Accessory Glands and Vascular Supply' },
   { src: '/chapter-21/EN/Images/NCH 21 EN IMG 5.png', title: 'Vascular Network and Drainage' },
+  { src: '/chapter-21/EN/Images/NCH 21 EN IMG 6 V2.png', title: 'Somatic Innervation: The Pudendal Nerve' },
   { src: '/chapter-21/EN/Images/NCH 21 EN IMG 7.png', title: 'Physiological Sequence of the Sexual Response' },
   { src: '/chapter-21/EN/Images/NCH 21 EN IMG 8.png', title: 'Common Disorders and Associated Factors' },
   { src: '/chapter-21/EN/Images/NCH 21 EN IMG 9.png', title: 'Viscerosomatic Relationships' },
   { src: '/chapter-21/EN/Images/NCH 21 EN IMG 10.png', title: 'The Psycho-Emotional Dimension' },
   { src: '/chapter-21/EN/Images/NCH 21 EN IMG 11 V2.png', title: 'ROP Clinical Protocol: Male and Female Erectile System' },
+  { src: '/chapter-21/EN/Cartography/figure-21-01.png', title: 'ROP Cartography: Greater Sciatic Foramen' },
+  { src: '/chapter-21/EN/Cartography/figure-21-03.png', title: 'ROP Cartography: Lesser Sciatic Foramen' },
+  { src: '/chapter-21/EN/Cartography/figure-21-05.png', title: 'ROP Cartography: Sacrotuberous and Sacrospinous Ligaments' },
+  { src: '/chapter-21/EN/Cartography/figure-21-07.png', title: 'ROP Cartography: Inguinal Ligament and Canal' },
+  { src: '/chapter-21/EN/Cartography/figure-21-09.png', title: 'ROP Cartography: Pudendal Nerve and Erectile Organs' },
+  { src: '/chapter-21/EN/Cartography/figure-21-11.png', title: 'ROP Cartography: Olfactory Nerve (CN I)' },
 ]
 
-export const chapter21SlideAnchorsEn: SyncAnchor[] = [
-  { sectionId: 'presentation', blockIndex: -1, slide: 1 },
-  { sectionId: 'situation', blockIndex: -1, slide: 2 },
-  { sectionId: 'anatomie', blockIndex: 0, slide: 3 },
-  { sectionId: 'anatomie', blockIndex: 7, slide: 4 },
-  { sectionId: 'vascularisation', blockIndex: 0, slide: 5 },
-  { sectionId: 'physiologie', blockIndex: 0, slide: 6 },
-  { sectionId: 'pathologies-courantes', blockIndex: 0, slide: 7 },
-  { sectionId: 'relations-viscero-somatiques', blockIndex: 0, slide: 8 },
-  { sectionId: 'relations-viscero-emotionnelles', blockIndex: 0, slide: 9 },
-  { sectionId: 'zones-reflexes-podales', blockIndex: -1, slide: 10 },
-]
+export const chapter21SlideAnchorsEn: SyncAnchor[] = chapter21SlideAnchors.map((anchor) =>
+  anchor.end ? { ...anchor, end: { ...anchor.end } } : { ...anchor },
+)
