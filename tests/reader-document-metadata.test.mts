@@ -33,10 +33,10 @@ test('every English chapter has localized classic and synchronized reader metada
   }
 })
 
-test('every classic and synchronized reader route generates localized metadata', () => {
+test('every available classic and synchronized reader route generates localized metadata', () => {
   const root = process.cwd()
   const routes = [
-    ['introduction', 'app/introduction/page.tsx', 'app/lecture/introduction/page.tsx'],
+    ['introduction', 'app/introduction/page.tsx'],
     ...Array.from({ length: 21 }, (_, index) => {
       const number = index + 1
       return [
@@ -50,11 +50,21 @@ test('every classic and synchronized reader route generates localized metadata',
   ]
 
   for (const [chapterKey, classicPath, synchronizedPath] of routes) {
-    for (const path of [classicPath, synchronizedPath]) {
+    for (const path of [classicPath, synchronizedPath].filter((path): path is string => Boolean(path))) {
       const source = readFileSync(join(root, path), 'utf8')
       assert.match(source, /export async function generateMetadata/)
       assert.match(source, /englishReaderMetadata/)
       assert.match(source, new RegExp(`getChapter\\('${chapterKey}'`))
     }
   }
+})
+
+test('Chapter 0 is classic-only and its former synchronized route redirects by language', () => {
+  const root = process.cwd()
+  const classicSource = readFileSync(join(root, 'app/introduction/page.tsx'), 'utf8')
+  const formerSyncSource = readFileSync(join(root, 'app/lecture/introduction/page.tsx'), 'utf8')
+
+  assert.doesNotMatch(classicSource, /syncHref=/)
+  assert.doesNotMatch(formerSyncSource, /SlideSyncReader|englishReaderMetadata/)
+  assert.match(formerSyncSource, /redirect\(`\/introduction\?lang=\$\{lang\}`\)/)
 })

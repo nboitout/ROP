@@ -41,5 +41,5 @@ export default async function IntroductionPage({
   const lang = await getServerLang(langParam)
   const { chapter, contentLang } = getChapter('introduction', lang)
   const bookTitle = translations[lang].reader.bookTitle
-  return <ChapterReader chapter={chapter} bookTitle={bookTitle} contentLang={contentLang} restrictPaidXrefs={restrictPaidXrefs} syncHref={`/lecture/introduction?lang=${lang}`} />
+  return <ChapterReader chapter={chapter} bookTitle={bookTitle} contentLang={contentLang} restrictPaidXrefs={restrictPaidXrefs} />
 }
