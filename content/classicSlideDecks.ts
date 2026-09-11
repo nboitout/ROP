@@ -1,4 +1,5 @@
 import { chapter0Slides, chapter0SlidesEn } from './chapter0.slidesync'
+import { chapter0SlidesEs } from './chapter0.es.slidesync'
 import { chapter1Slides, chapter1SlidesEn } from './chapter1.slidesync'
 import { chapter2Slides, chapter2SlidesEn } from './chapter2.slidesync'
 import { chapter3ReworkSlides, chapter3ReworkSlidesEn } from './chapter3-rework.slidesync'
@@ -26,7 +27,7 @@ import type { Lang } from '@/app/i18n/translations'
 export type ClassicSlide = { src: string; title: string; orientation?: 'portrait' }
 
 export const classicSlideDecks: Record<string, Partial<Record<Lang, ClassicSlide[]>>> = {
-  'introduction': { fr: chapter0Slides, en: chapter0SlidesEn },
+  'introduction': { fr: chapter0Slides, en: chapter0SlidesEn, es: chapter0SlidesEs },
   'chapter-1': { fr: chapter1Slides, en: chapter1SlidesEn },
   'chapter-2': { fr: chapter2Slides, en: chapter2SlidesEn },
   'chapter-3': { fr: chapter3ReworkSlides, en: chapter3ReworkSlidesEn },

@@ -75,8 +75,8 @@ export default function ChapterReader({ chapter, bookTitle, backHref = '/chapitr
   const imageSlideDeck = chapter.slideDeck ?? []
   const hasImageSlideDeck = imageSlideDeck.length > 0
   const hasSlides = hasImageSlideDeck || Boolean(chapter.slides)
-  const slidesLabel = chapter.slides?.label ?? 'Diapositives'
-  const slidesDescription = chapter.slides?.description ?? 'Diaporama de synthèse du chapitre.'
+  const slidesLabel = chapter.slides?.label ?? (lang === 'es' ? 'Diapositivas' : 'Diapositives')
+  const slidesDescription = chapter.slides?.description ?? (lang === 'es' ? 'Diapositivas de síntesis del capítulo.' : 'Diaporama de synthèse du chapitre.')
   const viewerBodyRef = useRef<HTMLDivElement | null>(null)
   const [lightbox, setLightbox] = useState<{ src: string; alt: string; caption: string; orientation?: 'portrait' | 'landscape' } | null>(null)
   const [lightboxZoom, setLightboxZoom] = useState(1)
@@ -431,7 +431,7 @@ export default function ChapterReader({ chapter, bookTitle, backHref = '/chapitr
               className="cr-slides-tab"
               onClick={handleSlidesTabClick}
               aria-expanded={slidesOpen}
-              aria-label={slidesOpen ? 'Fermer les diapositives' : 'Voir les diapositives'}
+              aria-label={lang === 'es' ? (slidesOpen ? 'Cerrar las diapositivas' : 'Ver las diapositivas') : (slidesOpen ? 'Fermer les diapositives' : 'Voir les diapositives')}
             >
               <span className="cr-slides-tab-icon">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
@@ -442,7 +442,7 @@ export default function ChapterReader({ chapter, bookTitle, backHref = '/chapitr
               <span className="cr-slides-pulse" aria-hidden />
             </button>
             <div className="cr-slides-panel" aria-hidden={!slidesOpen}>
-              <button className="cr-slides-close" onClick={() => setSlidesOpen(false)} aria-label="Fermer">×</button>
+              <button className="cr-slides-close" onClick={() => setSlidesOpen(false)} aria-label={lang === 'es' ? 'Cerrar' : 'Fermer'}>×</button>
               <p className="cr-slides-eyebrow">{t.reader.chapterPrefix} {chapter.number}</p>
               <p className="cr-slides-title">{slidesLabel}</p>
               <p className="cr-slides-desc">{slidesDescription}</p>
@@ -456,7 +456,7 @@ export default function ChapterReader({ chapter, bookTitle, backHref = '/chapitr
           </div>
 
           {slidesViewer && (
-            <div className="cr-viewer" role="dialog" aria-modal="true" aria-label="Diapositives">
+            <div className="cr-viewer" role="dialog" aria-modal="true" aria-label={slidesLabel}>
               <div className="cr-viewer-bar">
                 <span className="cr-viewer-title">
                   {slidesLabel}
@@ -467,14 +467,14 @@ export default function ChapterReader({ chapter, bookTitle, backHref = '/chapitr
                     className="cr-viewer-nav-btn"
                     onClick={() => setSlidePage(p => Math.max(1, p - 1))}
                     disabled={slidePage <= 1}
-                    aria-label="Diapositive précédente"
+                    aria-label={lang === 'es' ? 'Diapositiva anterior' : 'Diapositive précédente'}
                   >‹</button>
                   <span className="cr-viewer-nav-count">{slidePage} / {slideCount || '…'}</span>
                   <button
                     className="cr-viewer-nav-btn"
                     onClick={() => setSlidePage(p => Math.min(slideCount, p + 1))}
                     disabled={slidePage >= slideCount}
-                    aria-label="Diapositive suivante"
+                    aria-label={lang === 'es' ? 'Diapositiva siguiente' : 'Diapositive suivante'}
                   >›</button>
                 </div>
                 <div className="cr-viewer-zoom">
@@ -494,7 +494,7 @@ export default function ChapterReader({ chapter, bookTitle, backHref = '/chapitr
                     aria-label="Zoomer"
                   >+</button>
                 </div>
-                <button className="cr-viewer-close" onClick={closeSlidesViewer} aria-label="Fermer">×</button>
+                <button className="cr-viewer-close" onClick={closeSlidesViewer} aria-label={lang === 'es' ? 'Cerrar' : 'Fermer'}>×</button>
               </div>
               <div className="cr-viewer-body" ref={viewerBodyRef}>
                 {hasImageSlideDeck ? (
@@ -561,7 +561,7 @@ export default function ChapterReader({ chapter, bookTitle, backHref = '/chapitr
               <button className="cr-viewer-nav-btn" onClick={() => setLightboxZoom(z => Math.max(0.5, +(z - 0.25).toFixed(2)))} disabled={lightboxZoom <= 0.5} aria-label="Dézoomer">−</button>
               <button className="cr-viewer-zoom-reset" onClick={() => setLightboxZoom(1)} title="Réinitialiser">{Math.round(lightboxZoom * 100)}%</button>
               <button className="cr-viewer-nav-btn" onClick={() => setLightboxZoom(z => Math.min(4, +(z + 0.25).toFixed(2)))} disabled={lightboxZoom >= 4} aria-label="Zoomer">+</button>
-              <button className="cr-lightbox-close" onClick={closeLightbox} aria-label="Fermer">×</button>
+              <button className="cr-lightbox-close" onClick={closeLightbox} aria-label={lang === 'es' ? 'Cerrar' : 'Fermer'}>×</button>
             </div>
           </div>
           <div className="cr-lightbox-scroll" onClick={(e) => e.stopPropagation()}>
@@ -673,7 +673,7 @@ function BlockView({
               caption: block.caption,
               orientation: block.src.startsWith('/chapter-0/FR/figure-0-') ? 'landscape' : undefined,
             })}
-            aria-label={`Agrandir : ${block.caption}`}
+            aria-label={`${lang === 'es' ? 'Ampliar' : 'Agrandir'} : ${block.caption}`}
           >
             <img src={block.src} alt={block.alt} loading="lazy" />
             <span className="cr-fig-zoom" aria-hidden>⌕</span>
@@ -690,7 +690,7 @@ function BlockView({
                 type="button"
                 className="cr-fig-btn"
                 onClick={() => onOpenImage({ src: figure.src, alt: figure.alt, caption: figure.caption, orientation: 'landscape' })}
-                aria-label={`Agrandir : ${figure.caption}`}
+                aria-label={`${lang === 'es' ? 'Ampliar' : 'Agrandir'} : ${figure.caption}`}
               >
                 <img src={figure.src} alt={figure.alt} loading="lazy" />
                 <span className="cr-fig-zoom" aria-hidden>⌕</span>
