@@ -34,6 +34,7 @@ import { chapter10Slides, chapter10SlidesEn, chapter10SlideAnchors, chapter10Sli
 import { chapter11Slides, chapter11SlidesEn, chapter11SlideAnchors, chapter11SlideAnchorsEn } from './chapter11.slidesync'
 import { chapter12Slides, chapter12SlidesEn, chapter12SlideAnchors, chapter12SlideAnchorsEn } from './chapter12.slidesync'
 import { chapter13Slides, chapter13SlidesEn, chapter13SlideAnchors, chapter13SlideAnchorsEn } from './chapter13.slidesync'
+import { chapter14SlidesEs, chapter14SlideAnchorsEs } from './chapter14.es.slidesync'
 import {
   chapter14Slides,
   chapter14SlidesEn,
@@ -174,6 +175,7 @@ const slideSearchSources: Record<string, readonly SlideSearchSource[]> = {
     { lang: 'en', slides: chapter13SlidesEn, anchors: chapter13SlideAnchorsEn },
   ],
   'chapter-14': [
+    { lang: 'es', slides: chapter14SlidesEs, anchors: chapter14SlideAnchorsEs },
     { lang: 'fr', slides: chapter14Slides, anchors: chapter14SlideAnchorsFr },
     { lang: 'en', slides: chapter14SlidesEn, anchors: chapter14SlideAnchors },
   ],

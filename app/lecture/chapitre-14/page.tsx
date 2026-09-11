@@ -8,6 +8,7 @@ import { getChapter } from '@/content/registry'
 import { getServerLang } from '@/app/i18n/serverLang'
 import { translations } from '@/app/i18n/translations'
 import type { Lang } from '@/app/i18n/translations'
+import { chapter14SlidesEs, chapter14SlideAnchorsEs } from '@/content/chapter14.es.slidesync'
 import {
   chapter14Slides, chapter14SlidesEn,
   chapter14SlideAnchors, chapter14SlideAnchorsFr,
@@ -15,7 +16,7 @@ import {
 
 // Chapter 14 is maintained in French and English; unsupported locales use French.
 const DECKS: Record<Lang, typeof chapter14Slides> = {
-  fr: chapter14Slides, en: chapter14SlidesEn, de: chapter14Slides, es: chapter14Slides, it: chapter14Slides, pt: chapter14Slides, th: chapter14Slides,
+  fr: chapter14Slides, en: chapter14SlidesEn, de: chapter14Slides, es: chapter14SlidesEs, it: chapter14Slides, pt: chapter14Slides, th: chapter14Slides,
 }
 
 // The French PDF was reorganised independently, so French uses its own anchor
@@ -23,7 +24,7 @@ const DECKS: Record<Lang, typeof chapter14Slides> = {
 const ANCHORS: Record<Lang, typeof chapter14SlideAnchors> = {
   fr: chapter14SlideAnchorsFr,
   en: chapter14SlideAnchors, de: chapter14SlideAnchorsFr,
-  es: chapter14SlideAnchorsFr, it: chapter14SlideAnchorsFr, pt: chapter14SlideAnchorsFr, th: chapter14SlideAnchorsFr,
+  es: chapter14SlideAnchorsEs, it: chapter14SlideAnchorsFr, pt: chapter14SlideAnchorsFr, th: chapter14SlideAnchorsFr,
 }
 
 const HALF_BREAKS_FR = [

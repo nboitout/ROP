@@ -16,6 +16,7 @@ import { chapter11Slides, chapter11SlidesEn } from './chapter11.slidesync'
 import { chapter12Slides, chapter12SlidesEn } from './chapter12.slidesync'
 import { chapter13Slides, chapter13SlidesEn } from './chapter13.slidesync'
 import { chapter14Slides, chapter14SlidesEn } from './chapter14.slidesync'
+import { chapter14SlidesEs } from './chapter14.es.slidesync'
 import { chapter15Slides, chapter15SlidesDe, chapter15SlidesEn, chapter15SlidesEs, chapter15SlidesIt } from './chapter15.slidesync'
 import { chapter16Slides, chapter16SlidesDe, chapter16SlidesEn, chapter16SlidesEs, chapter16SlidesIt } from './chapter16.slidesync'
 import { chapter17Slides, chapter17SlidesDe, chapter17SlidesEn, chapter17SlidesEs, chapter17SlidesIt } from './chapter17.slidesync'
@@ -42,7 +43,7 @@ export const classicSlideDecks: Record<string, Partial<Record<Lang, ClassicSlide
   'chapter-11': { fr: chapter11Slides, en: chapter11SlidesEn },
   'chapter-12': { fr: chapter12Slides, en: chapter12SlidesEn },
   'chapter-13': { fr: chapter13Slides, en: chapter13SlidesEn },
-  'chapter-14': { fr: chapter14Slides, en: chapter14SlidesEn },
+  'chapter-14': { fr: chapter14Slides, en: chapter14SlidesEn, es: chapter14SlidesEs },
   'chapter-15': { fr: chapter15Slides, en: chapter15SlidesEn, de: chapter15SlidesDe, es: chapter15SlidesEs, it: chapter15SlidesIt },
   'chapter-16': { fr: chapter16Slides, en: chapter16SlidesEn, de: chapter16SlidesDe, es: chapter16SlidesEs, it: chapter16SlidesIt },
   'chapter-17': { fr: chapter17Slides, en: chapter17SlidesEn, de: chapter17SlidesDe, es: chapter17SlidesEs, it: chapter17SlidesIt },
