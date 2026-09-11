@@ -8,6 +8,7 @@ import { getChapter } from '@/content/registry'
 import { getServerLang } from '@/app/i18n/serverLang'
 import { translations } from '@/app/i18n/translations'
 import type { Lang } from '@/app/i18n/translations'
+import { chapter2SlidesEs, chapter2SlideAnchorsEs } from '@/content/chapter2.es.slidesync'
 import {
   chapter2Slides, chapter2SlidesEn,
   chapter2SlideAnchors, chapter2SlideAnchorsEn, chapter2SlideAnchorsFr,
@@ -17,7 +18,7 @@ const DECKS: Record<Lang, typeof chapter2Slides> = {
   fr: chapter2Slides,
   en: chapter2SlidesEn,
   de: chapter2Slides,
-  es: chapter2Slides,
+  es: chapter2SlidesEs,
   it: chapter2Slides,
   pt: chapter2SlidesEn,
   th: chapter2SlidesEn,
@@ -27,7 +28,7 @@ const ANCHORS: Record<Lang, typeof chapter2SlideAnchors> = {
   fr: chapter2SlideAnchorsFr,
   en: chapter2SlideAnchorsEn,
   de: chapter2SlideAnchorsFr,
-  es: chapter2SlideAnchorsFr,
+  es: chapter2SlideAnchorsEs,
   it: chapter2SlideAnchorsFr,
   pt: chapter2SlideAnchors,
   th: chapter2SlideAnchors,
